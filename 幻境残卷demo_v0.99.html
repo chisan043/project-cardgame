@@ -1963,7 +1963,7 @@
         hero_mage: {
             '攻击': ['爆发', '易伤', '燃烧', '虚弱', '回响', '充能', '附魔'],
             '防御': ['咏唱', '充能', '治愈', '回响', '庇护'],
-            '能力': ['咏唱', '充能', '抽牌', '回响', '复刻', '重置', '附魔', '易伤', '虚弱', '燃烧']
+            '能力': ['咏唱', '充能', '抽牌', '回响', '复刻', '重置', '附魔', '易伤', '虚弱', '燃烧', '眩晕', '诅咒']
         },
         hero_archer: {
             '攻击': ['连射', '穿甲', '连击', '多段', '放逐', '剧毒', '出血', '放血'],
@@ -1973,7 +1973,7 @@
         neutral: {
             '攻击': ['吸血', '回响', '放逐', '抽牌', '剧毒', '出血', '放血', '重击', '穿甲', '连击', '多段', '易伤', '虚弱', '充能'],
             '防御': ['复刻', '保留', '回响', '放逐', '易伤', '虚弱', '充能', '荆棘', '治愈'],
-            '能力': ['重置', '血祭', '灵祭', '狂热', '附魔', '庇护', '招魂', '轮回', '拾遗', '复刻', '回响', '放逐', '抽牌', '剧毒', '出血', '放血', '易伤', '虚弱', '充能', '治愈']
+            '能力': ['重置', '血祭', '灵祭', '狂热', '附魔', '庇护', '招魂', '轮回', '拾遗', '复刻', '回响', '放逐', '抽牌', '剧毒', '出血', '放血', '易伤', '虚弱', '眩晕', '诅咒', '充能', '治愈']
         }
     };
 
@@ -2062,8 +2062,11 @@
         { poolId: 'neutral_vow_guard', name: '巡誓护符', type: '防御', cost: 1, icon: '🔰', val: 7, tags: ['庇护', '保留'], rarity: '稀有', desc: '获得 7 点护盾。附带[庇护]与[保留]。战士可把它转成额外护盾，弓手可借保留获得风势。' },
         { poolId: 'neutral_mirror_spark', name: '镜火短章', type: '能力', cost: 1, icon: '🪞', val: 0, tags: ['回响', '充能'], rarity: '稀有', desc: '触发[回响]并[充能]。法师会因回响额外积累咏唱。' },
         { poolId: 'neutral_blood_mark', name: '血契刻痕', type: '能力', cost: 1, icon: '🩸', val: 5, tags: ['血祭', '附魔'], rarity: '稀有', desc: '触发[血祭]与[附魔]。战士会把血祭转成额外护盾。' },
-        { poolId: 'neutral_exile_blade', name: '流亡短刃', type: '攻击', cost: 1, icon: '🗡️', val: 7, tags: ['放逐', '穿甲'], rarity: '稀有', desc: '造成 7 点穿甲伤害并[放逐]。弓手可借放逐获得风势。' },
-        { poolId: 'neutral_return_scroll', name: '归页残卷', type: '能力', cost: 1, icon: '📖', val: 0, tags: ['拾遗', '抽牌'], rarity: '稀有', desc: '从墓地选择 1 张牌回到手牌，并[抽牌]。弓手会因回收牌获得风势。' }
+        { poolId: 'neutral_exile_blade', name: '流亡短刃', type: '攻击', cost: 1, icon: '🗡️', val: 9, tags: ['放逐', '穿甲'], rarity: '稀有', desc: '造成 9 点穿甲伤害并[放逐]。一次性强攻，弓手可借放逐获得风势。' },
+        { poolId: 'neutral_return_scroll', name: '归页残卷', type: '能力', cost: 1, icon: '📖', val: 0, tags: ['拾遗', '抽牌'], rarity: '稀有', desc: '从墓地选择 1 张牌回到手牌，并[抽牌]。弓手会因回收牌获得风势。' },
+        { poolId: 'neutral_soul_flame', name: '魂火祭文', type: '能力', cost: 1, icon: '🔥', val: 0, tags: ['灵祭', '抽牌'], rarity: '稀有', desc: '丢弃 1 张手牌，回复能量并[抽牌]。适合把手牌资源转成职业启动。' },
+        { poolId: 'neutral_frenzy_edge', name: '狂锋断章', type: '攻击', cost: 1, icon: '⚔️', val: 6, tags: ['狂热', '连击'], rarity: '稀有', desc: '丢弃 1 张牌获得[狂热]，随后造成 6 点伤害；若本回合已出牌则触发[连击]。' },
+        { poolId: 'neutral_sealed_thunder', name: '封雷断页', type: '攻击', cost: 2, icon: '🌩️', val: 13, tags: ['眩晕', '放逐'], rarity: '史诗', desc: '造成 13 点伤害，施加[眩晕]后[放逐]。一次性控制牌，放逐威能会额外提高伤害。' }
     ];
 
     const CHARACTER_CARD_POOLS = {
@@ -2082,7 +2085,10 @@
             { poolId: 'warrior_thorn_charge', name: '棘甲冲锋', type: '攻击', cost: 2, icon: '🌹', val: 10, tags: ['圣剑', '荆棘'], rarity: '稀有', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_圣堂守势.png', desc: '造成 10 点伤害。附带[圣剑]与[荆棘]，护盾越高越容易触发盾棘共鸣。' },
             { poolId: 'warrior_banner_guard', name: '战旗压阵', type: '能力', cost: 1, icon: '🚩', val: 5, tags: ['庇护', '抽牌'], rarity: '稀有', art: '新角色一/角色一_卡面插画_遗迹立誓.png', desc: '触发[庇护]并[抽牌]。若已有护盾，战士联动会额外加固护盾。' },
             { poolId: 'warrior_blood_wall', name: '血祭壁垒', type: '能力', cost: 1, icon: '🛡️', val: 5, tags: ['血祭', '庇护', '圣剑'], rarity: '稀有', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_铁壁圣痕.png', desc: '触发[血祭]与[庇护]，并带有[圣剑]。战士会把血祭转成护盾，为下一次圣剑铺垫。' },
-            { poolId: 'warrior_oath_retainer', name: '誓约留锋', type: '防御', cost: 1, icon: '🔰', val: 9, tags: ['保留', '充能'], rarity: '普通', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_破晓格挡.png', desc: '获得 9 点护盾。附带[保留]与[充能]，战士会因防御保留额外获得护盾。' }
+            { poolId: 'warrior_oath_retainer', name: '誓约留锋', type: '防御', cost: 1, icon: '🔰', val: 9, tags: ['保留', '充能'], rarity: '普通', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_破晓格挡.png', desc: '获得 9 点护盾。附带[保留]与[充能]，战士会因防御保留额外获得护盾。' },
+            { poolId: 'warrior_soul_oath', name: '魂誓换锋', type: '能力', cost: 1, icon: '📖', val: 0, tags: ['灵祭', '圣剑', '抽牌'], rarity: '稀有', art: '新角色一/角色一_卡面插画_遗迹立誓.png', desc: '丢弃 1 张手牌，触发[灵祭]并[抽牌]。带[圣剑]，可作为后续圣剑共鸣的铺垫。' },
+            { poolId: 'warrior_frenzy_cleave', name: '狂誓裂斩', type: '攻击', cost: 2, icon: '🔥', val: 9, tags: ['狂热', '圣剑', '重击'], rarity: '史诗', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_裂光一闪.png', desc: '丢弃 1 张手牌获得[狂热]，随后以[圣剑]与[重击]造成重击伤害。' },
+            { poolId: 'warrior_exile_judgement', name: '终誓裁断', type: '攻击', cost: 2, icon: '⚔️', val: 16, tags: ['圣剑', '重击', '放逐'], rarity: '史诗', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_圣剑解放.png', desc: '造成 16 点伤害，附带[圣剑]、[重击]与[放逐]。一次性终结牌，放逐威能会额外提高伤害。' }
         ],
         hero_mage: [
             { poolId: 'mage_flame', name: '紫焰爆裂', type: '攻击', cost: 2, icon: '💥', val: 11, tags: ['爆发', '易伤'], rarity: '稀有' },
@@ -2099,7 +2105,10 @@
             { poolId: 'mage_ember_flow', name: '燃魂导流', type: '攻击', cost: 1, icon: '🔥', val: 5, tags: ['爆发', '燃烧', '充能'], rarity: '稀有', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_余烬点燃.png', desc: '造成 5 点伤害。附带[爆发]、[燃烧]与[充能]，状态词条会为法师标记下一次伤害。' },
             { poolId: 'mage_echo_veil', name: '回声护幕', type: '能力', cost: 1, icon: '🛡️', val: 0, tags: ['回响', '治愈'], rarity: '稀有', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_魔流庇护.png', desc: '触发[回响]与[治愈]。法师会因回响或受伤治疗积累咏唱。' },
             { poolId: 'mage_void_dust', name: '虚弱星尘', type: '攻击', cost: 1, icon: '✦', val: 6, tags: ['爆发', '虚弱'], rarity: '普通', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_星屑预兆.png', desc: '造成 6 点伤害。附带[爆发]与[虚弱]，有咏唱时会标记下一次伤害。' },
-            { poolId: 'mage_arcane_mark', name: '紫焰刻印', type: '能力', cost: 1, icon: '🔮', val: 5, tags: ['附魔', '易伤'], rarity: '稀有', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_裂界紫雷.png', desc: '触发[附魔]并施加[易伤]。法师可把状态词条转成下一次爆发的额外标记。' }
+            { poolId: 'mage_arcane_mark', name: '紫焰刻印', type: '能力', cost: 1, icon: '🔮', val: 5, tags: ['附魔', '易伤'], rarity: '稀有', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_裂界紫雷.png', desc: '触发[附魔]并施加[易伤]。法师可把状态词条转成下一次爆发的额外标记。' },
+            { poolId: 'mage_stasis_hex', name: '星缚咒印', type: '能力', cost: 2, icon: '⛓️', val: 0, tags: ['眩晕', '诅咒', '咏唱'], rarity: '史诗', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_虚空导引.png', desc: '施加[眩晕]与[诅咒]，并积累[咏唱]。控制与爆发铺垫合一。' },
+            { poolId: 'mage_curse_echo', name: '咒回星环', type: '能力', cost: 1, icon: '🌑', val: 0, tags: ['诅咒', '回响'], rarity: '稀有', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_法环回流.png', desc: '施加[诅咒]并触发[回响]。法师会因回响额外积累咏唱，并用诅咒标记下一次伤害。' },
+            { poolId: 'mage_exile_nova', name: '裂星禁术', type: '攻击', cost: 2, icon: '🌌', val: 15, tags: ['爆发', '穿甲', '放逐'], rarity: '史诗', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_裂界紫雷.png', desc: '造成 15 点穿甲伤害，附带[爆发]与[放逐]。一次性禁术，放逐威能会额外提高伤害。' }
         ],
         hero_archer: [
             { poolId: 'archer_aim', name: '拉弓瞄准', type: '能力', cost: 1, icon: '🎯', val: 9, tags: ['蓄力', '抽牌'], rarity: '稀有' },
@@ -2113,10 +2122,13 @@
             { poolId: 'archer_hawkeye', name: '鹰眼贯枝', type: '攻击', cost: 2, icon: '🎯', val: 12, tags: ['蓄力', '穿甲'], rarity: '稀有' },
             { poolId: 'archer_rain', name: '回环箭雨', type: '攻击', cost: 2, icon: '🌧️', val: 6, tags: ['连射', '回响'], rarity: '史诗' },
             { poolId: 'archer_hidden_arrow', name: '回风藏箭', type: '能力', cost: 1, icon: '🪶', val: 6, tags: ['保留', '蓄力'], rarity: '稀有', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_风羽换位.png', desc: '获得风势。附带[保留]与[蓄力]，弓手会因保留额外获得风势。' },
-            { poolId: 'archer_exile_shot', name: '逐影放矢', type: '攻击', cost: 1, icon: '🏹', val: 6, tags: ['放逐', '连射'], rarity: '稀有', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_狩影穿枝.png', desc: '造成 6 点伤害。附带[放逐]与[连射]，弓手会因放逐获得风势。' },
+            { poolId: 'archer_exile_shot', name: '逐影放矢', type: '攻击', cost: 1, icon: '🏹', val: 8, tags: ['放逐', '连射'], rarity: '稀有', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_狩影穿枝.png', desc: '造成 8 点伤害。附带[放逐]与[连射]，弓手会因放逐获得风势，且放逐威能会额外提高伤害。' },
             { poolId: 'archer_cycle_branch', name: '轮枝归射', type: '攻击', cost: 2, icon: '🧭', val: 9, tags: ['轮回', '连射'], rarity: '稀有', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_回环箭雨.png', desc: '造成 9 点伤害。可触发[轮回]并[连射]，回收放逐牌时获得风势。' },
             { poolId: 'archer_pick_feather', name: '拾羽连步', type: '能力', cost: 1, icon: '🍃', val: 0, tags: ['拾遗', '自然'], rarity: '稀有', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_猎手翻步.png', desc: '触发[拾遗]与[自然]。弓手会因回收墓地牌获得风势。' },
-            { poolId: 'archer_venom_flurry', name: '翠毒连矢', type: '攻击', cost: 1, icon: '☠️', val: 5, tags: ['连射', '剧毒'], rarity: '普通', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_森息伏击.png', desc: '造成 5 点伤害。附带[连射]与[剧毒]，适合把风势追射转成多段上毒。' }
+            { poolId: 'archer_venom_flurry', name: '翠毒连矢', type: '攻击', cost: 1, icon: '☠️', val: 5, tags: ['连射', '剧毒'], rarity: '普通', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_森息伏击.png', desc: '造成 5 点伤害。附带[连射]与[剧毒]，适合把风势追射转成多段上毒。' },
+            { poolId: 'archer_soul_return', name: '林魂招矢', type: '能力', cost: 1, icon: '🏮', val: 0, tags: ['招魂', '自然'], rarity: '稀有', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_林风整备.png', desc: '从放逐区选择 1 张牌回到手牌，并触发[自然]。弓手会因招魂获得风势。' },
+            { poolId: 'archer_blood_release', name: '赤痕放血', type: '攻击', cost: 1, icon: '🩸', val: 6, tags: ['出血', '放血', '连射'], rarity: '稀有', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_森息伏击.png', desc: '造成 6 点伤害，施加[出血]后触发[放血]，再以[连射]追加节奏。' },
+            { poolId: 'archer_exile_storm', name: '逐风绝矢', type: '攻击', cost: 2, icon: '💨', val: 12, tags: ['放逐', '连射', '多段'], rarity: '史诗', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_回环箭雨.png', desc: '造成 12 点伤害，附带[放逐]、[连射]与[多段]。一次性爆发，会获得放逐威能。' }
         ]
     };
 
@@ -2279,7 +2291,7 @@
             }
         }
 
-        if (tags.includes('放逐') && type !== '能力') { baseVal += (rarity === '史诗' ? 5 : 3); }
+        if (tags.includes('放逐') && type !== '能力') { baseVal += (rarity === '史诗' ? 10 : 6); }
 
         let name = ""; let icon = "";
         if (type === '能力') {
@@ -4835,6 +4847,11 @@
             if(hasRelic('r_fast_foot') && cardsPlayedThisTurn === 1) { val = Math.floor(val * 1.5); showFloatText("迅影突袭!", "var(--gold)", getCenter('ui-hp')); }
 
             triggerVFX('p-atk'); let finalDmg = val + state.p_battle_dmg;
+            if(card.tags && card.tags.includes('放逐')) {
+                const exileBonus = Math.max(5, Math.floor(val * 0.5));
+                finalDmg += exileBonus;
+                showFloatText(`放逐威能 +${exileBonus}`, "var(--gold)", getCenter('enemy-avatar'));
+            }
             if(card.tags && card.tags.includes('圣剑')) {
                 const swordBonus = Math.floor(state.armor * 0.5) + (state.p_counter * 4);
                 if (swordBonus > 0) {
