@@ -1,0 +1,3007 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUD 布局编辑器</title>
+    <style>
+        :root {
+            --bg-0: #0a0b10;
+            --bg-1: #141821;
+            --panel: rgba(14, 16, 24, 0.96);
+            --panel-soft: rgba(18, 21, 30, 0.84);
+            --line: rgba(198, 164, 97, 0.34);
+            --line-strong: rgba(227, 194, 129, 0.74);
+            --text: #f0e7d0;
+            --muted: #b8ae96;
+            --accent: #d6ae57;
+            --accent-2: #52b9ff;
+            --danger: #d06a5f;
+            --shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+        }
+
+        * { box-sizing: border-box; }
+        html, body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at top, rgba(42, 54, 82, 0.28), transparent 36%),
+                linear-gradient(180deg, var(--bg-1), var(--bg-0));
+            color: var(--text);
+            font-family: "SF Pro Display", "PingFang SC", "Microsoft YaHei", sans-serif;
+        }
+
+        body {
+            display: grid;
+            grid-template-columns: minmax(280px, 300px) minmax(720px, 1fr) minmax(360px, 400px);
+            gap: 12px;
+            padding: 12px;
+            min-width: 1180px;
+            min-height: 760px;
+            overflow: auto;
+        }
+
+        .panel {
+            min-height: 0;
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .panel-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            padding: 12px 14px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            background: linear-gradient(180deg, rgba(255,255,255,0.04), transparent);
+        }
+
+        .panel-header h2,
+        .panel-header h3 {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+        }
+
+        .panel-body {
+            flex: 1;
+            min-height: 0;
+            overflow: auto;
+            padding: 12px 12px 24px;
+        }
+
+        .section {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 14px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--accent);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .row {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .row.wrap { flex-wrap: wrap; }
+
+        .btn {
+            appearance: none;
+            border: 1px solid rgba(218, 183, 112, 0.42);
+            border-radius: 8px;
+            background: linear-gradient(180deg, rgba(48, 58, 80, 0.95), rgba(20, 23, 31, 0.96));
+            color: var(--text);
+            padding: 8px 10px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: 0.18s ease;
+            min-height: 34px;
+        }
+
+        .btn:hover {
+            border-color: var(--line-strong);
+            transform: translateY(-1px);
+        }
+
+        .btn.secondary {
+            background: linear-gradient(180deg, rgba(32, 38, 52, 0.95), rgba(17, 20, 28, 0.96));
+        }
+
+        .btn.danger {
+            border-color: rgba(208, 106, 95, 0.42);
+            background: linear-gradient(180deg, rgba(96, 40, 37, 0.96), rgba(33, 16, 16, 0.96));
+        }
+
+        .btn.ghost {
+            background: rgba(255,255,255,0.03);
+            border-color: rgba(255,255,255,0.08);
+        }
+
+        .btn.small {
+            padding: 6px 8px;
+            min-height: 28px;
+            font-size: 11px;
+        }
+
+        .input,
+        .select,
+        .textarea {
+            width: 100%;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            background: var(--panel-soft);
+            color: var(--text);
+            padding: 8px 10px;
+            font-size: 12px;
+            outline: none;
+        }
+
+        .textarea {
+            min-height: 120px;
+            resize: vertical;
+            font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+            line-height: 1.45;
+        }
+
+        .input:focus,
+        .select:focus,
+        .textarea:focus {
+            border-color: rgba(82, 185, 255, 0.65);
+            box-shadow: 0 0 0 1px rgba(82, 185, 255, 0.2);
+        }
+
+        .grid-2,
+        .grid-3 {
+            display: grid;
+            gap: 8px;
+        }
+
+        .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .field label {
+            font-size: 11px;
+            color: var(--muted);
+        }
+
+        .asset-list {
+            display: grid;
+            gap: 8px;
+        }
+
+        .preset-list {
+            display: grid;
+            gap: 8px;
+        }
+
+        .preset-card {
+            display: grid;
+            gap: 8px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.08);
+            background: rgba(255,255,255,0.03);
+        }
+
+        .preset-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+        }
+
+        .preset-name {
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .preset-meta {
+            font-size: 10px;
+            color: var(--muted);
+        }
+
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            min-height: 22px;
+            padding: 2px 8px;
+            border-radius: 999px;
+            border: 1px solid rgba(82, 185, 255, 0.34);
+            background: rgba(82, 185, 255, 0.08);
+            color: #d7ebff;
+            font-size: 10px;
+            white-space: nowrap;
+        }
+
+        .asset-tile {
+            display: grid;
+            grid-template-columns: 58px minmax(0, 1fr);
+            gap: 10px;
+            align-items: center;
+            padding: 8px;
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 10px;
+            background: rgba(255,255,255,0.02);
+            cursor: pointer;
+            transition: 0.16s ease;
+        }
+
+        .asset-tile:hover {
+            border-color: rgba(214, 174, 87, 0.46);
+            background: rgba(214, 174, 87, 0.06);
+        }
+
+        .asset-thumb {
+            width: 58px;
+            height: 58px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.06);
+            background: rgba(255,255,255,0.03);
+            object-fit: contain;
+            object-position: center;
+        }
+
+        .asset-meta {
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .asset-name {
+            font-size: 12px;
+            font-weight: 700;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .asset-path {
+            font-size: 10px;
+            color: var(--muted);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .workspace {
+            min-width: 0;
+            min-height: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .toolbar {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            padding: 12px 14px;
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .stage-shell {
+            position: relative;
+            flex: 1;
+            min-height: 0;
+            background: rgba(8, 10, 16, 0.85);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .stage-scroll {
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            padding: 18px;
+            display: grid;
+            place-items: center;
+        }
+
+        .stage-fit-frame {
+            position: relative;
+            flex: 0 0 auto;
+            width: 1280px;
+            height: 720px;
+        }
+
+        .stage {
+            position: relative;
+            width: 1280px;
+            height: 720px;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #050508 url("场景/主场景/bg_battle_ancient_forest_day.png") center / cover no-repeat;
+            background-position: center;
+            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+            user-select: none;
+            transform: scale(var(--stage-zoom, 1));
+            transform-origin: top left;
+        }
+
+        .stage-grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .stage.show-grid .stage-grid { opacity: 1; }
+
+        .safe-guides {
+            position: absolute;
+            inset: 20px;
+            border: 1px dashed rgba(82, 185, 255, 0.36);
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .stage.show-guides .safe-guides { opacity: 1; }
+
+        .canvas-layer {
+            position: absolute;
+            inset: 0;
+        }
+
+        .marquee-box {
+            position: absolute;
+            border: 1px dashed rgba(82, 185, 255, 0.95);
+            background: rgba(82, 185, 255, 0.12);
+            box-shadow: inset 0 0 0 1px rgba(82, 185, 255, 0.08);
+            pointer-events: none;
+            z-index: 99997;
+        }
+
+        .snap-guide {
+            position: absolute;
+            background: rgba(82, 185, 255, 0.95);
+            box-shadow: 0 0 0 1px rgba(82, 185, 255, 0.14), 0 0 14px rgba(82, 185, 255, 0.24);
+            pointer-events: none;
+            z-index: 99999;
+        }
+
+        .snap-guide.vertical {
+            top: 0;
+            bottom: 0;
+            width: 1px;
+        }
+
+        .snap-guide.horizontal {
+            left: 0;
+            right: 0;
+            height: 1px;
+        }
+
+        .editor-item {
+            position: absolute;
+            transform-origin: center center;
+            cursor: move;
+        }
+
+        .editor-item img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+            pointer-events: none;
+        }
+
+        .editor-item.fit-fill img {
+            object-fit: fill;
+        }
+
+        .editor-item.fit-cover img {
+            object-fit: cover;
+        }
+
+        .editor-item.selected::after {
+            content: "";
+            position: absolute;
+            inset: -2px;
+            border: 1px solid rgba(82, 185, 255, 0.95);
+            border-radius: 4px;
+            box-shadow: 0 0 0 1px rgba(82, 185, 255, 0.16);
+            pointer-events: none;
+        }
+
+        .handle {
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            background: var(--accent-2);
+            border: 2px solid #fff;
+            border-radius: 50%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.45);
+            display: none;
+        }
+
+        .editor-item.selected .handle { display: block; }
+        .handle.br { right: -8px; bottom: -8px; cursor: nwse-resize; }
+        .handle.tl { left: -8px; top: -8px; cursor: nwse-resize; }
+        .handle.rotate {
+            left: 50%;
+            top: -36px;
+            transform: translateX(-50%);
+            background: #7cc7ff;
+            cursor: grab;
+        }
+        .handle.rotate::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 14px;
+            width: 1px;
+            height: 20px;
+            background: rgba(124,199,255,0.7);
+        }
+
+        .group-box {
+            position: absolute;
+            border: 1px dashed rgba(82, 185, 255, 0.95);
+            border-radius: 6px;
+            pointer-events: none;
+            z-index: 99998;
+        }
+
+        .group-box .group-handle,
+        .group-box .group-label {
+            pointer-events: auto;
+        }
+
+        .group-handle {
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            background: #52b9ff;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.45);
+        }
+
+        .group-handle.tl { left: -8px; top: -8px; cursor: nwse-resize; }
+        .group-handle.br { right: -8px; bottom: -8px; cursor: nwse-resize; }
+
+        .group-label {
+            position: absolute;
+            left: 0;
+            top: -24px;
+            padding: 2px 8px;
+            border-radius: 6px;
+            background: rgba(10, 14, 22, 0.86);
+            border: 1px solid rgba(82, 185, 255, 0.48);
+            font-size: 11px;
+            white-space: nowrap;
+            cursor: move;
+        }
+
+        .item-label {
+            position: absolute;
+            left: 0;
+            top: -22px;
+            padding: 2px 6px;
+            border-radius: 6px;
+            background: rgba(10, 14, 22, 0.82);
+            border: 1px solid rgba(82, 185, 255, 0.45);
+            font-size: 11px;
+            white-space: nowrap;
+            display: none;
+            pointer-events: none;
+        }
+
+        .editor-item.selected .item-label { display: inline-flex; }
+
+        .layer-list {
+            display: grid;
+            gap: 6px;
+        }
+
+        .layer-row {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 8px;
+            align-items: center;
+            padding: 8px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.06);
+            background: rgba(255,255,255,0.03);
+            cursor: pointer;
+        }
+
+        .layer-row.active {
+            border-color: rgba(82, 185, 255, 0.58);
+            background: rgba(82, 185, 255, 0.08);
+        }
+
+        .layer-row.selected {
+            border-color: rgba(82, 185, 255, 0.24);
+            background: rgba(82, 185, 255, 0.04);
+        }
+
+        .layer-row.dragging {
+            opacity: 0.42;
+        }
+
+        .layer-row.drop-before {
+            box-shadow: inset 0 2px 0 rgba(82, 185, 255, 0.95);
+        }
+
+        .layer-row.drop-after {
+            box-shadow: inset 0 -2px 0 rgba(82, 185, 255, 0.95);
+        }
+
+        .layer-grip {
+            width: 26px;
+            min-height: 42px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--muted);
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.06);
+            cursor: grab;
+            font-size: 14px;
+            line-height: 1;
+        }
+
+        .layer-grip:active {
+            cursor: grabbing;
+        }
+
+        .layer-name {
+            font-size: 12px;
+            font-weight: 700;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .layer-z {
+            font-size: 10px;
+            color: var(--muted);
+        }
+
+        .hint {
+            font-size: 11px;
+            color: var(--muted);
+            line-height: 1.55;
+        }
+
+        .empty-state {
+            color: var(--muted);
+            font-size: 12px;
+            padding: 14px;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.03);
+            border: 1px dashed rgba(255,255,255,0.08);
+        }
+    </style>
+</head>
+<body>
+    <aside class="panel">
+        <div class="panel-header">
+            <h2>资产库</h2>
+            <button class="btn small secondary" id="btn-add-player-preset">玩家预设</button>
+        </div>
+        <div class="panel-body">
+            <div class="section">
+                <div class="section-title">画布</div>
+                <div class="field">
+                    <label for="background-select">战斗背景</label>
+                    <select id="background-select" class="select"></select>
+                </div>
+                <div class="grid-3">
+                    <div class="field">
+                        <label for="stage-width-input">画布宽</label>
+                        <input id="stage-width-input" class="input" type="number" min="640" step="10" value="1280">
+                    </div>
+                    <div class="field">
+                        <label for="stage-height-input">画布高</label>
+                        <input id="stage-height-input" class="input" type="number" min="360" step="10" value="720">
+                    </div>
+                    <div class="field">
+                        <label for="background-fit-select">背景显示</label>
+                        <select id="background-fit-select" class="select">
+                            <option value="cover" selected>铺满画布</option>
+                            <option value="contain">完整显示</option>
+                            <option value="stretch">铺满画布</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row wrap">
+                    <button class="btn small ghost" id="preset-stage-demo">Demo 视口</button>
+                    <button class="btn small ghost" id="preset-stage-tall">旧高视口</button>
+                    <button class="btn small ghost" id="toggle-grid">切网格</button>
+                    <button class="btn small ghost" id="toggle-guides">切参考线</button>
+                    <button class="btn small ghost" id="fit-stage">居中画布</button>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">导入</div>
+                <div class="row wrap">
+                    <label class="btn secondary" for="image-upload">导入图片</label>
+                    <input id="image-upload" type="file" accept="image/*" multiple hidden>
+                    <button class="btn secondary" id="add-guide-reference">加参考整图</button>
+                </div>
+                <div class="hint">导入图片会直接加入舞台。适合把你临时生成的 PNG 或截图扔进来对位。</div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">HUD 资产</div>
+                <div class="row wrap">
+                    <button class="btn secondary small" id="pick-asset-folder">选择资产文件夹</button>
+                    <button class="btn secondary small" id="refresh-folder-assets">刷新资产</button>
+                    <input id="asset-folder-upload" type="file" accept="image/*" webkitdirectory directory multiple hidden>
+                </div>
+                <div id="asset-folder-status" class="hint">优先显示你选过的本地文件夹资产。没选文件夹时，资产库保持空白。</div>
+                <div id="asset-list" class="asset-list"></div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">组件组</div>
+                <div class="field">
+                    <label for="group-preset-name">新组名称</label>
+                    <input id="group-preset-name" class="input" type="text" placeholder="例如：玩家血条组">
+                </div>
+                <div class="row wrap">
+                    <button class="btn secondary" id="create-group-from-selection">从当前选区建组</button>
+                    <button class="btn secondary" id="export-selected-group">导出当前组</button>
+                </div>
+                <div class="hint">把摆好的局部模块存成可复用组。后面可以直接导入，再在那个基础上改细节。</div>
+                <div id="group-preset-list" class="preset-list"></div>
+            </div>
+        </div>
+    </aside>
+
+    <main class="workspace">
+        <div class="toolbar">
+            <button class="btn" id="duplicate-selected">复制</button>
+            <button class="btn secondary" id="delete-selected">删除</button>
+            <button class="btn secondary" id="bring-front">上移一层</button>
+            <button class="btn secondary" id="send-back">下移一层</button>
+            <button class="btn secondary" id="bring-top">置顶</button>
+            <button class="btn secondary" id="send-bottom">置底</button>
+            <button class="btn secondary" id="reset-editor">清空画布</button>
+            <button class="btn" id="save-layout">保存布局</button>
+            <button class="btn secondary" id="save-default-layout">保存为默认预设</button>
+            <button class="btn secondary" id="copy-layout-json">复制 JSON</button>
+            <span class="hint">拖拽移动，拖四角点缩放。方向键微调，`Shift` 步长更大，`Delete` 删除，`Ctrl/Cmd + D` 复制。</span>
+        </div>
+
+        <section class="stage-shell">
+            <div class="stage-scroll" id="stage-scroll">
+                <div class="stage-fit-frame" id="stage-fit-frame">
+                    <div class="stage" id="stage">
+                        <div class="stage-grid"></div>
+                        <div class="safe-guides"></div>
+                        <div class="canvas-layer" id="canvas-layer"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <aside class="panel">
+        <div class="panel-header">
+            <h2>属性与图层</h2>
+        </div>
+        <div class="panel-body">
+            <div class="section">
+                <div class="section-title">当前选中</div>
+                <div id="selection-empty" class="empty-state">先从左边加一个资产，或者点舞台上的元素。</div>
+                <div id="selection-panel" style="display:none;">
+                    <div class="grid-2">
+                        <div class="field">
+                            <label for="prop-name">名称</label>
+                            <input id="prop-name" class="input" type="text">
+                        </div>
+                        <div class="field">
+                            <label for="prop-z">层级</label>
+                            <input id="prop-z" class="input" type="number" step="1">
+                        </div>
+                    </div>
+                    <div class="grid-2">
+                        <div class="field">
+                            <label for="prop-x">X</label>
+                            <input id="prop-x" class="input" type="number" step="1">
+                        </div>
+                        <div class="field">
+                            <label for="prop-y">Y</label>
+                            <input id="prop-y" class="input" type="number" step="1">
+                        </div>
+                    </div>
+                    <div class="grid-2">
+                        <div class="field">
+                            <label for="prop-width">宽</label>
+                            <input id="prop-width" class="input" type="number" step="1" min="1">
+                        </div>
+                        <div class="field">
+                            <label for="prop-height">高</label>
+                            <input id="prop-height" class="input" type="number" step="1" min="1">
+                        </div>
+                    </div>
+                    <div class="grid-2">
+                        <div class="field">
+                            <label for="prop-rotation">旋转</label>
+                            <input id="prop-rotation" class="input" type="number" step="1">
+                            <div style="display:flex; gap:8px; margin-top:8px;">
+                                <button id="rotate-left" class="btn" type="button" style="padding:8px 10px;">-90</button>
+                                <button id="rotate-reset" class="btn" type="button" style="padding:8px 10px;">0</button>
+                                <button id="rotate-right" class="btn" type="button" style="padding:8px 10px;">+90</button>
+                            </div>
+                            <div style="display:flex; gap:8px; margin-top:8px;">
+                                <button id="mirror-x" class="btn secondary" type="button" style="padding:8px 10px;">水平镜像</button>
+                                <button id="mirror-y" class="btn secondary" type="button" style="padding:8px 10px;">垂直镜像</button>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="prop-opacity">透明度</label>
+                            <input id="prop-opacity" class="input" type="number" step="0.05" min="0" max="1">
+                        </div>
+                    </div>
+                    <div class="grid-2">
+                        <div class="field">
+                            <label for="prop-locked">锁定</label>
+                            <select id="prop-locked" class="select">
+                                <option value="false">否</option>
+                                <option value="true">是</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="prop-hidden">隐藏</label>
+                            <select id="prop-hidden" class="select">
+                                <option value="false">否</option>
+                                <option value="true">是</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="prop-src">图片路径</label>
+                        <input id="prop-src" class="input" type="text">
+                    </div>
+                    <div class="row wrap" style="margin-top:10px;">
+                        <button class="btn secondary small" id="select-item-group">选中所在组</button>
+                        <button class="btn secondary small" id="remove-item-from-group">移出组</button>
+                        <span id="item-group-chip" class="chip" style="display:none;"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">图层列表</div>
+                <div id="layer-list" class="layer-list"></div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">组 JSON</div>
+                <textarea id="group-json" class="textarea"></textarea>
+                <div class="row wrap">
+                    <button class="btn secondary" id="apply-group-json">导入为组件组</button>
+                    <button class="btn secondary" id="download-group-json">下载组 JSON</button>
+                </div>
+                <div class="hint">适合把别人已经摆好的血条组导进来，再在此基础上继续修。</div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">布局 JSON</div>
+                <textarea id="layout-json" class="textarea"></textarea>
+                <div class="row wrap">
+                    <button class="btn secondary" id="apply-layout-json">导入 JSON</button>
+                    <button class="btn secondary" id="download-layout-json">下载 JSON</button>
+                </div>
+                <div class="hint">布局会自动保存在浏览器本地。你也可以把 JSON 发给我，我来把它接回 demo。</div>
+            </div>
+        </div>
+    </aside>
+
+    <script src="hud-runtime.js?v=20260518-forced-default-hud1"></script>
+    <script src="hud-layout-data.js?v=20260518-forced-default-hud1"></script>
+    <script>
+        const STORAGE_KEY = 'huanjing-hud-layout-editor-v1';
+        const DEFAULT_PRESET_STORAGE_KEY = window.HuanjingHUDRuntime.HUD_DEFAULT_PRESET_STORAGE_KEY || 'huanjing-hud-layout-default-preset-v1';
+        const RUNTIME_EDIT_STORAGE_KEY = 'huanjing-hud-layout-runtime-edit-v1';
+        const FORCED_DEFAULT_VERSION_KEY = 'huanjing-hud-layout-forced-default-version';
+        const EDITOR_FORCED_DEFAULT_VERSION_KEY = 'huanjing-hud-layout-editor-forced-default-version';
+        const FORCED_DEFAULT_VERSION = '20260518-desktop-hud-layout-final-v1';
+        const HANDLE_DB_NAME = 'huanjing-hud-layout-editor-db';
+        const HANDLE_STORE_NAME = 'kv';
+        const HANDLE_KEY = 'asset-folder-handle';
+        const stage = document.getElementById('stage');
+        const stageFitFrame = document.getElementById('stage-fit-frame');
+        const stageScroll = document.getElementById('stage-scroll');
+        const canvasLayer = document.getElementById('canvas-layer');
+        const layerList = document.getElementById('layer-list');
+        const assetList = document.getElementById('asset-list');
+        const groupPresetList = document.getElementById('group-preset-list');
+        const layoutJson = document.getElementById('layout-json');
+        const groupJson = document.getElementById('group-json');
+        const selectionPanel = document.getElementById('selection-panel');
+        const selectionEmpty = document.getElementById('selection-empty');
+        const itemGroupChip = document.getElementById('item-group-chip');
+        const assetFolderStatus = document.getElementById('asset-folder-status');
+
+        const backgrounds = [
+            { label: '古林白天', src: '场景/主场景/bg_battle_ancient_forest_day.png' },
+            { label: '石遗迹白天', src: '场景/主场景/bg_battle_stone_ruins_day.png' },
+            { label: '山原白天', src: '场景/主场景/bg_battle_mountain_plain_day.png' },
+            { label: '神殿大厅', src: '场景/主场景/bg_battle_temple_hall_grand.png' },
+            { label: '寒洞', src: '场景/主场景/bg_battle_cave_cold.png' },
+            { label: '荒原黄昏', src: '场景/主场景/bg_battle_wasteland_dusk.png' }
+        ];
+
+        const assetManifest = [
+            { name: '玩家头像框', src: 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_portrait_frame_asset_v1.png', width: 202, height: 199 },
+            { name: '玩家名牌', src: 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_nameplate_shell_asset_v1.png', width: 434, height: 84 },
+            { name: '玩家生命条框', src: 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_shell_asset_v1.png', width: 472, height: 63 },
+            { name: '玩家护甲条框', src: 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_armor_bar_shell_asset_v1.png', width: 472, height: 84 },
+            { name: '玩家能量槽', src: 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_tray_asset_v1.png', width: 486, height: 86 },
+            { name: '玩家能量晶石亮', src: 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_on_asset_v1.png', width: 28, height: 44 },
+            { name: '玩家能量晶石灭', src: 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_off_asset_v1.png', width: 28, height: 44 },
+            { name: '玩家状态栏', src: 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/player_status_bar_shell_asset_v1.png', width: 410, height: 58 },
+            { name: '敌方头像框', src: 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_portrait_frame_asset_v1.png', width: 198, height: 199 },
+            { name: '敌方名牌', src: 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_nameplate_shell_asset_v1.png', width: 440, height: 84 },
+            { name: '敌方生命条框', src: 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_hp_bar_shell_asset_v1.png', width: 420, height: 64 },
+            { name: '敌方护甲条框', src: 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_armor_bar_shell_asset_v1.png', width: 420, height: 84 },
+            { name: '敌方状态栏', src: 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/enemy_status_bar_shell_asset_v1.png', width: 340, height: 48 },
+            { name: '敌方意图框', src: 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方意图面板/enemy_intent_panel_shell_asset_v1.png', width: 360, height: 44 },
+            { name: '结束回合按钮', src: 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/中轴控件/end_turn_button_shell_asset_v1.png', width: 292, height: 110 },
+            { name: '回合计数器', src: 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/中轴控件/turn_counter_inner_dial_asset_v1.png', width: 56, height: 56 },
+            { name: '抽牌堆', src: 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/draw_pile_stack_asset_v1.png', width: 88, height: 128 },
+            { name: '弃牌堆', src: 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/discard_pile_stack_asset_v1.png', width: 88, height: 128 },
+            { name: '放逐堆', src: 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/exile_pile_stack_asset_v1.png', width: 88, height: 128 },
+            { name: '牌堆计数牌签', src: 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/pile_count_plate_asset_v1.png', width: 66, height: 34 },
+            { name: '手牌承托', src: 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/手牌承托/hand_fan_tray_shell_asset_v1.png', width: 860, height: 206 },
+            { name: '玩家总图参考', src: 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/battle_hud_player_panel_asset_v1.png', width: 618, height: 329 },
+            { name: '敌方总图参考', src: 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/battle_hud_enemy_panel_asset_v1.png', width: 570, height: 206 },
+            { name: '玩家生命空框（组用）', src: 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_empty_frame_editor_asset_v1.png', width: 472, height: 63 },
+            { name: '玩家生命心标（组用）', src: 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_heart_fill_editor_asset_v1.png', width: 28, height: 28 },
+            { name: '玩家生命灰底（组用）', src: 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_editor_asset_v1.png', width: 402, height: 37 },
+            { name: '玩家生命残影（组用）', src: 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_damage_trail_editor_asset_v1.png', width: 402, height: 37 },
+            { name: '玩家生命填充（组用）', src: 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_editor_asset_v1.png', width: 402, height: 37 }
+        ];
+
+        const builtinGroupPresets = [
+            {
+                id: 'builtin-player-damage-hp-bar',
+                name: '玩家动态掉血血条',
+                createdAt: '2026-05-15T00:00:00.000Z',
+                items: [
+                    { name: '生命灰底', src: 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_editor_asset_v1.png', x: 52, y: 16, width: 402, height: 37, rotation: 0, opacity: 1, hidden: false, locked: false, z: 1 },
+                    { name: '生命残影', src: 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_damage_trail_editor_asset_v1.png', x: 52, y: 16, width: 402, height: 37, rotation: 0, opacity: 0.96, hidden: false, locked: false, z: 2 },
+                    { name: '生命填充', src: 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_editor_asset_v1.png', x: 52, y: 16, width: 402, height: 37, rotation: 0, opacity: 1, hidden: false, locked: false, z: 3 },
+                    { name: '生命心标', src: 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_heart_fill_editor_asset_v1.png', x: 46, y: 19, width: 28, height: 28, rotation: 0, opacity: 1, hidden: false, locked: false, z: 4 },
+                    { name: '生命空框', src: 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_empty_frame_editor_asset_v1.png', x: 0, y: 0, width: 472, height: 63, rotation: 0, opacity: 1, hidden: false, locked: false, z: 5 }
+                ]
+            }
+        ];
+
+        const state = {
+            background: backgrounds[0].src,
+            stageWidth: 1280,
+            stageHeight: 720,
+            backgroundFit: 'cover',
+            showGrid: false,
+            showGuides: false,
+            items: [],
+            selectedId: null,
+            selectedIds: [],
+            groupPresets: [],
+            customAssets: [],
+            folderAssetSource: null,
+            assetRegistry: {}
+        };
+
+        const propInputs = {
+            name: document.getElementById('prop-name'),
+            x: document.getElementById('prop-x'),
+            y: document.getElementById('prop-y'),
+            width: document.getElementById('prop-width'),
+            height: document.getElementById('prop-height'),
+            z: document.getElementById('prop-z'),
+            rotation: document.getElementById('prop-rotation'),
+            opacity: document.getElementById('prop-opacity'),
+            locked: document.getElementById('prop-locked'),
+            hidden: document.getElementById('prop-hidden'),
+            src: document.getElementById('prop-src')
+        };
+        const stageWidthInput = document.getElementById('stage-width-input');
+        const stageHeightInput = document.getElementById('stage-height-input');
+        const backgroundFitSelect = document.getElementById('background-fit-select');
+
+        const SNAP_THRESHOLD = 8;
+        let dragState = null;
+        let layerDragState = null;
+        let marqueeState = null;
+        let suppressStageClickClear = false;
+        let assetFolderHandle = null;
+        let handleDbPromise = null;
+        let saveTimer = null;
+        const isEmbeddedMode = new URLSearchParams(window.location.search).get('embedded') === '1';
+
+        function uid(prefix = 'item') {
+            return `${prefix}-${Math.random().toString(36).slice(2, 9)}`;
+        }
+
+        function ensureBuiltinGroupPresets() {
+            const knownNames = new Set(state.groupPresets.map(group => group.name));
+            builtinGroupPresets
+                .slice()
+                .reverse()
+                .forEach((preset) => {
+                    if (knownNames.has(preset.name)) return;
+                    state.groupPresets.unshift({
+                        ...preset,
+                        items: preset.items.map(item => ({ ...item }))
+                    });
+                    knownNames.add(preset.name);
+                });
+        }
+
+        function currentStageWidth() {
+            return state.stageWidth || 1280;
+        }
+
+        function currentStageHeight() {
+            return state.stageHeight || 720;
+        }
+
+        function normalizeImportedBattleStage(data) {
+            const stageWidth = Number(data?.stageWidth) || 1280;
+            const stageHeight = Number(data?.stageHeight) || 720;
+            if (stageWidth === 1280 && stageHeight === 720 && data?.backgroundFit === 'contain') {
+                return { ...data, backgroundFit: 'cover' };
+            }
+            if (stageWidth !== 1280 || stageHeight !== 960 || data?.backgroundFit !== 'contain') return data;
+            const yOffset = 120;
+            return {
+                ...data,
+                stageWidth: 1280,
+                stageHeight: 720,
+                backgroundFit: 'cover',
+                items: (data.items || []).map(item => ({
+                    ...item,
+                    y: Math.round((Number(item.y) || 0) - yOffset)
+                }))
+            };
+        }
+
+        function isFileProtocol() {
+            return window.location.protocol === 'file:';
+        }
+
+        function canUseIndexedDb() {
+            return typeof indexedDB !== 'undefined' && !!indexedDB;
+        }
+
+        function clamp(value, min, max) {
+            return Math.min(max, Math.max(min, value));
+        }
+
+        function openHandleDb() {
+            if (!canUseIndexedDb()) {
+                return Promise.reject(new Error('IndexedDB is unavailable in this browser context.'));
+            }
+            if (handleDbPromise) return handleDbPromise;
+            handleDbPromise = new Promise((resolve, reject) => {
+                const request = indexedDB.open(HANDLE_DB_NAME, 1);
+                request.onupgradeneeded = () => {
+                    const db = request.result;
+                    if (!db.objectStoreNames.contains(HANDLE_STORE_NAME)) {
+                        db.createObjectStore(HANDLE_STORE_NAME);
+                    }
+                };
+                request.onsuccess = () => resolve(request.result);
+                request.onerror = () => reject(request.error);
+            });
+            return handleDbPromise;
+        }
+
+        async function dbSetValue(key, value) {
+            const db = await openHandleDb();
+            await new Promise((resolve, reject) => {
+                const tx = db.transaction(HANDLE_STORE_NAME, 'readwrite');
+                tx.objectStore(HANDLE_STORE_NAME).put(value, key);
+                tx.oncomplete = () => resolve();
+                tx.onerror = () => reject(tx.error);
+                tx.onabort = () => reject(tx.error);
+            });
+        }
+
+        async function dbGetValue(key) {
+            const db = await openHandleDb();
+            return new Promise((resolve, reject) => {
+                const tx = db.transaction(HANDLE_STORE_NAME, 'readonly');
+                const request = tx.objectStore(HANDLE_STORE_NAME).get(key);
+                request.onsuccess = () => resolve(request.result ?? null);
+                request.onerror = () => reject(request.error);
+            });
+        }
+
+        async function persistDirectoryHandle(handle) {
+            if (isFileProtocol()) return;
+            try {
+                await dbSetValue(HANDLE_KEY, handle);
+            } catch (error) {
+                console.warn('保存文件夹句柄失败', error);
+            }
+        }
+
+        async function restorePersistedDirectoryHandle() {
+            if (isFileProtocol()) return null;
+            try {
+                return await dbGetValue(HANDLE_KEY);
+            } catch (error) {
+                console.warn('读取文件夹句柄失败', error);
+                return null;
+            }
+        }
+
+        function createItem(config) {
+            const item = {
+                id: config.id || uid(),
+                name: config.name || '未命名图层',
+                src: config.src,
+                x: config.x ?? 100,
+                y: config.y ?? 100,
+                width: config.width ?? 160,
+                height: config.height ?? 160,
+                z: config.z ?? (state.items.length + 1),
+                rotation: config.rotation ?? 0,
+                flipX: !!config.flipX,
+                flipY: !!config.flipY,
+                opacity: config.opacity ?? 1,
+                hidden: !!config.hidden,
+                locked: !!config.locked,
+                assetId: config.assetId || null,
+                sourceType: config.sourceType || null,
+                groupId: config.groupId || null,
+                groupName: config.groupName || null
+            };
+            state.items.push(item);
+            state.selectedId = item.id;
+            state.selectedIds = [item.id];
+            normalizeZ();
+            render();
+        }
+
+        function normalizeZ(preserveOrder = false) {
+            if (!preserveOrder) {
+                state.items.sort((a, b) => a.z - b.z);
+            }
+            state.items.forEach((item, index) => { item.z = index + 1; });
+        }
+
+        function selectedItem() {
+            return state.items.find(item => item.id === state.selectedId) || null;
+        }
+
+        function selectedItems() {
+            return state.items.filter(item => state.selectedIds.includes(item.id));
+        }
+
+        function isSelected(id) {
+            return state.selectedIds.includes(id);
+        }
+
+        function getGroupMembers(groupId) {
+            return state.items.filter(item => item.groupId === groupId);
+        }
+
+        function getGroupPresetById(id) {
+            return state.groupPresets.find(group => group.id === id) || null;
+        }
+
+        function getGroupPresetByName(name) {
+            return state.groupPresets.find(group => group.name === name) || null;
+        }
+
+        function selectedGroupId() {
+            const item = selectedItem();
+            return item?.groupId || null;
+        }
+
+        function selectGroup(groupId) {
+            if (!groupId) return;
+            const members = getGroupMembers(groupId);
+            if (!members.length) return;
+            state.selectedIds = members.map(item => item.id);
+            state.selectedId = members[members.length - 1].id;
+            render();
+        }
+
+        function getSelectionBounds(ids = state.selectedIds) {
+            const items = state.items.filter(item => ids.includes(item.id));
+            if (!items.length) return null;
+            const left = Math.min(...items.map(item => item.x));
+            const top = Math.min(...items.map(item => item.y));
+            const right = Math.max(...items.map(item => item.x + item.width));
+            const bottom = Math.max(...items.map(item => item.y + item.height));
+            return {
+                left,
+                top,
+                right,
+                bottom,
+                width: right - left,
+                height: bottom - top,
+                centerX: left + (right - left) / 2,
+                centerY: top + (bottom - top) / 2
+            };
+        }
+
+        function setSelected(id, additive = false) {
+            if (!id) {
+                state.selectedId = null;
+                state.selectedIds = [];
+                render();
+                return;
+            }
+            if (additive) {
+                if (isSelected(id)) {
+                    state.selectedIds = state.selectedIds.filter(entry => entry !== id);
+                    state.selectedId = state.selectedIds[state.selectedIds.length - 1] || null;
+                } else {
+                    state.selectedIds = [...state.selectedIds, id];
+                    state.selectedId = id;
+                }
+            } else {
+                state.selectedId = id;
+                state.selectedIds = [id];
+            }
+            render();
+        }
+
+        function deleteSelected() {
+            if (!state.selectedIds.length) return;
+            state.items = state.items.filter(item => !state.selectedIds.includes(item.id));
+            state.selectedIds = [];
+            state.selectedId = state.items.length ? state.items[state.items.length - 1].id : null;
+            if (state.selectedId) state.selectedIds = [state.selectedId];
+            normalizeZ(true);
+            render();
+        }
+
+        function duplicateSelected() {
+            const items = [...selectedItems()].sort((a, b) => a.z - b.z);
+            if (!items.length) return;
+            const createdIds = [];
+            const selectionBounds = getSelectionBounds(items.map(item => item.id));
+            const offsetX = selectionBounds ? 18 : 18;
+            const offsetY = selectionBounds ? 18 : 18;
+            items.forEach((item, index) => {
+                const clone = {
+                    ...item,
+                    id: uid(),
+                    name: `${item.name} 副本`,
+                    x: item.x + offsetX,
+                    y: item.y + offsetY,
+                    z: state.items.length + index + 1,
+                    groupId: item.groupId,
+                    groupName: item.groupName
+                };
+                state.items.push(clone);
+                createdIds.push(clone.id);
+            });
+            state.selectedIds = createdIds;
+            state.selectedId = createdIds[createdIds.length - 1] || null;
+            normalizeZ(true);
+            render();
+        }
+
+        function moveLayer(direction) {
+            const item = selectedItem();
+            if (!item) return;
+            const ordered = [...state.items].sort((a, b) => a.z - b.z);
+            const currentIndex = ordered.findIndex(entry => entry.id === item.id);
+            if (currentIndex === -1) return;
+            if (direction === 'up' && currentIndex < ordered.length - 1) {
+                [ordered[currentIndex], ordered[currentIndex + 1]] = [ordered[currentIndex + 1], ordered[currentIndex]];
+            } else if (direction === 'down' && currentIndex > 0) {
+                [ordered[currentIndex], ordered[currentIndex - 1]] = [ordered[currentIndex - 1], ordered[currentIndex]];
+            } else if (direction === 'top') {
+                ordered.splice(currentIndex, 1);
+                ordered.push(item);
+            } else if (direction === 'bottom') {
+                ordered.splice(currentIndex, 1);
+                ordered.unshift(item);
+            }
+            state.items = ordered;
+            normalizeZ(true);
+            render();
+        }
+
+        function reorderLayerByIds(draggedId, targetId, position = 'after') {
+            if (!draggedId || !targetId || draggedId === targetId) return;
+            const ordered = [...state.items].sort((a, b) => a.z - b.z);
+            const draggedIndex = ordered.findIndex(entry => entry.id === draggedId);
+            const targetIndex = ordered.findIndex(entry => entry.id === targetId);
+            if (draggedIndex === -1 || targetIndex === -1) return;
+
+            const [dragged] = ordered.splice(draggedIndex, 1);
+            let insertIndex = ordered.findIndex(entry => entry.id === targetId);
+            if (insertIndex === -1) insertIndex = ordered.length;
+            if (position === 'after') insertIndex += 1;
+            ordered.splice(insertIndex, 0, dragged);
+
+            state.items = ordered;
+            state.selectedId = dragged.id;
+            state.selectedIds = [dragged.id];
+            normalizeZ(true);
+            render();
+        }
+
+        function updateItem(id, patch) {
+            const item = state.items.find(entry => entry.id === id);
+            if (!item) return;
+            Object.assign(item, patch);
+            render();
+        }
+
+        function stagePoint(event) {
+            const rect = stage.getBoundingClientRect();
+            return {
+                x: (event.clientX - rect.left) * currentStageWidth() / rect.width,
+                y: (event.clientY - rect.top) * currentStageHeight() / rect.height
+            };
+        }
+
+        function calculateStageViewportScale() {
+            const padding = 36;
+            const availableWidth = Math.max(1, stageScroll.clientWidth - padding);
+            const availableHeight = Math.max(1, stageScroll.clientHeight - padding);
+            const fitScale = Math.min(
+                availableWidth / currentStageWidth(),
+                availableHeight / currentStageHeight()
+            );
+            return Math.max(0.25, Math.min(1, fitScale));
+        }
+
+        function applyStageViewportFit() {
+            const scale = calculateStageViewportScale();
+            stage.style.setProperty('--stage-zoom', String(scale));
+            stageFitFrame.style.width = `${currentStageWidth() * scale}px`;
+            stageFitFrame.style.height = `${currentStageHeight() * scale}px`;
+        }
+
+        function clearSnapGuides() {
+            canvasLayer.querySelectorAll('.snap-guide, .group-box, .marquee-box').forEach(el => el.remove());
+        }
+
+        function isCanvasBackgroundTarget(target) {
+            return target === stage
+                || target.classList.contains('canvas-layer')
+                || target.classList.contains('stage-grid')
+                || target.classList.contains('safe-guides');
+        }
+
+        function rectsIntersect(a, b) {
+            return !(a.right < b.left || a.left > b.right || a.bottom < b.top || a.top > b.bottom);
+        }
+
+        function renderMarqueeBox(bounds) {
+            clearSnapGuides();
+            const box = document.createElement('div');
+            box.className = 'marquee-box';
+            box.style.left = `${bounds.left}px`;
+            box.style.top = `${bounds.top}px`;
+            box.style.width = `${bounds.width}px`;
+            box.style.height = `${bounds.height}px`;
+            canvasLayer.appendChild(box);
+        }
+
+        function startMarqueeSelection(event) {
+            const point = stagePoint(event);
+            marqueeState = {
+                startX: point.x,
+                startY: point.y,
+                additive: event.shiftKey || event.metaKey || event.ctrlKey,
+                baseIds: event.shiftKey || event.metaKey || event.ctrlKey ? [...state.selectedIds] : []
+            };
+            window.addEventListener('pointermove', onMarqueeMove);
+            window.addEventListener('pointerup', stopMarqueeSelection);
+        }
+
+        function onMarqueeMove(event) {
+            if (!marqueeState) return;
+            const point = stagePoint(event);
+            const left = Math.min(marqueeState.startX, point.x);
+            const top = Math.min(marqueeState.startY, point.y);
+            const right = Math.max(marqueeState.startX, point.x);
+            const bottom = Math.max(marqueeState.startY, point.y);
+            const bounds = {
+                left,
+                top,
+                right,
+                bottom,
+                width: right - left,
+                height: bottom - top
+            };
+
+            const hitIds = state.items
+                .filter(item => !item.hidden)
+                .filter(item => rectsIntersect(bounds, {
+                    left: item.x,
+                    top: item.y,
+                    right: item.x + item.width,
+                    bottom: item.y + item.height
+                }))
+                .map(item => item.id);
+
+            const nextIds = marqueeState.additive
+                ? [...new Set([...marqueeState.baseIds, ...hitIds])]
+                : hitIds;
+
+            state.selectedIds = nextIds;
+            state.selectedId = nextIds[nextIds.length - 1] || null;
+            render(false, { panels: false });
+            renderMarqueeBox(bounds);
+        }
+
+        function stopMarqueeSelection() {
+            if (!marqueeState) return;
+            marqueeState = null;
+            window.removeEventListener('pointermove', onMarqueeMove);
+            window.removeEventListener('pointerup', stopMarqueeSelection);
+            suppressStageClickClear = true;
+            setTimeout(() => { suppressStageClickClear = false; }, 0);
+            render(false);
+            saveState();
+        }
+
+        function collectSnapTargets(excludeIds = []) {
+            const stageWidth = currentStageWidth();
+            const stageHeight = currentStageHeight();
+            const xs = [
+                { value: 0, type: 'stage' },
+                { value: stageWidth / 2, type: 'stage' },
+                { value: stageWidth, type: 'stage' }
+            ];
+            const ys = [
+                { value: 0, type: 'stage' },
+                { value: stageHeight / 2, type: 'stage' },
+                { value: stageHeight, type: 'stage' }
+            ];
+            state.items
+                .filter(item => !excludeIds.includes(item.id) && !item.hidden)
+                .forEach(item => {
+                    xs.push({ value: item.x, type: 'item' });
+                    xs.push({ value: item.x + item.width / 2, type: 'item' });
+                    xs.push({ value: item.x + item.width, type: 'item' });
+                    ys.push({ value: item.y, type: 'item' });
+                    ys.push({ value: item.y + item.height / 2, type: 'item' });
+                    ys.push({ value: item.y + item.height, type: 'item' });
+                });
+            return { xs, ys };
+        }
+
+        function findBestSnap(movingPositions, targets) {
+            let best = null;
+            for (const moving of movingPositions) {
+                for (const target of targets) {
+                    const diff = target.value - moving.value;
+                    const abs = Math.abs(diff);
+                    if (abs <= SNAP_THRESHOLD && (!best || abs < best.abs)) {
+                        best = { diff, abs, movingRole: moving.role, target: target.value };
+                    }
+                }
+            }
+            return best;
+        }
+
+        function applyMoveSnap(bounds, excludeIds) {
+            const targets = collectSnapTargets(excludeIds);
+            const xBest = findBestSnap([
+                { role: 'left', value: bounds.left },
+                { role: 'center', value: bounds.centerX },
+                { role: 'right', value: bounds.right }
+            ], targets.xs);
+            const yBest = findBestSnap([
+                { role: 'top', value: bounds.top },
+                { role: 'middle', value: bounds.centerY },
+                { role: 'bottom', value: bounds.bottom }
+            ], targets.ys);
+            return {
+                dx: xBest ? xBest.diff : 0,
+                dy: yBest ? yBest.diff : 0,
+                guides: {
+                    x: xBest ? xBest.target : null,
+                    y: yBest ? yBest.target : null
+                }
+            };
+        }
+
+        function applyResizeSnap(bounds, excludeIds, mode) {
+            const targets = collectSnapTargets(excludeIds);
+            const xCandidates = mode.includes('tl')
+                ? [{ role: 'left', value: bounds.left }]
+                : [{ role: 'right', value: bounds.right }];
+            const yCandidates = mode.includes('tl')
+                ? [{ role: 'top', value: bounds.top }]
+                : [{ role: 'bottom', value: bounds.bottom }];
+            const xBest = findBestSnap(xCandidates, targets.xs);
+            const yBest = findBestSnap(yCandidates, targets.ys);
+            return {
+                dx: xBest ? xBest.diff : 0,
+                dy: yBest ? yBest.diff : 0,
+                guides: {
+                    x: xBest ? xBest.target : null,
+                    y: yBest ? yBest.target : null
+                }
+            };
+        }
+
+        function renderSnapGuides(guides) {
+            clearSnapGuides();
+            if (guides.x !== null && guides.x !== undefined) {
+                const line = document.createElement('div');
+                line.className = 'snap-guide vertical';
+                line.style.left = `${guides.x}px`;
+                canvasLayer.appendChild(line);
+            }
+            if (guides.y !== null && guides.y !== undefined) {
+                const line = document.createElement('div');
+                line.className = 'snap-guide horizontal';
+                line.style.top = `${guides.y}px`;
+                canvasLayer.appendChild(line);
+            }
+        }
+
+        function startDrag(event, id, mode) {
+            const item = state.items.find(entry => entry.id === id);
+            if (!item || item.locked) return;
+            event.preventDefault();
+            event.stopPropagation();
+            const additive = event.shiftKey || event.metaKey || event.ctrlKey;
+            const bypassGroup = event.altKey;
+            if (additive) {
+                setSelected(id, true);
+                return;
+            }
+            const point = stagePoint(event);
+            if (!isSelected(id)) {
+                if (item.groupId && !bypassGroup) {
+                    const members = getGroupMembers(item.groupId);
+                    state.selectedIds = members.map(entry => entry.id);
+                    state.selectedId = id;
+                } else {
+                    state.selectedId = id;
+                    state.selectedIds = [id];
+                }
+            }
+            const targets = selectedItems();
+            const multiple = targets.length > 1;
+            const bounds = getSelectionBounds(targets.map(entry => entry.id));
+            dragState = {
+                id,
+                mode: multiple && mode === 'move' ? 'group-move' : mode,
+                startX: point.x,
+                startY: point.y,
+                itemX: item.x,
+                itemY: item.y,
+                itemWidth: item.width,
+                itemHeight: item.height,
+                itemRotation: Number(item.rotation) || 0,
+                centerX: item.x + item.width / 2,
+                centerY: item.y + item.height / 2,
+                startAngle: Math.atan2(point.y - (item.y + item.height / 2), point.x - (item.x + item.width / 2)) * 180 / Math.PI,
+                targets: targets.map(entry => ({
+                    id: entry.id,
+                    x: entry.x,
+                    y: entry.y,
+                    width: entry.width,
+                    height: entry.height
+                })),
+                bounds,
+                excludeIds: targets.map(entry => entry.id)
+            };
+            window.addEventListener('pointermove', onPointerMove);
+            window.addEventListener('pointerup', stopDrag);
+            render(false, { panels: false });
+        }
+
+        function onPointerMove(event) {
+            if (!dragState) return;
+            const point = stagePoint(event);
+            const dx = point.x - dragState.startX;
+            const dy = point.y - dragState.startY;
+
+            if (dragState.mode === 'group-move') {
+                const trialBounds = {
+                    ...dragState.bounds,
+                    left: dragState.bounds.left + dx,
+                    right: dragState.bounds.right + dx,
+                    top: dragState.bounds.top + dy,
+                    bottom: dragState.bounds.bottom + dy,
+                    centerX: dragState.bounds.centerX + dx,
+                    centerY: dragState.bounds.centerY + dy
+                };
+                const snap = applyMoveSnap(trialBounds, dragState.excludeIds);
+                dragState.targets.forEach(target => {
+                    const item = state.items.find(entry => entry.id === target.id);
+                    if (!item) return;
+                    item.x = Math.round(target.x + dx + snap.dx);
+                    item.y = Math.round(target.y + dy + snap.dy);
+                });
+                render(false, { panels: false });
+                renderSnapGuides(snap.guides);
+                return;
+            }
+
+            const item = state.items.find(entry => entry.id === dragState.id);
+            if (!item) return;
+
+            if (dragState.mode === 'move') {
+                const trialBounds = {
+                    left: dragState.itemX + dx,
+                    top: dragState.itemY + dy,
+                    right: dragState.itemX + dx + dragState.itemWidth,
+                    bottom: dragState.itemY + dy + dragState.itemHeight,
+                    centerX: dragState.itemX + dx + dragState.itemWidth / 2,
+                    centerY: dragState.itemY + dy + dragState.itemHeight / 2
+                };
+                const snap = applyMoveSnap(trialBounds, dragState.excludeIds);
+                item.x = Math.round(dragState.itemX + dx + snap.dx);
+                item.y = Math.round(dragState.itemY + dy + snap.dy);
+                render(false, { panels: false });
+                renderSnapGuides(snap.guides);
+                return;
+            } else if (dragState.mode === 'rotate') {
+                const angle = Math.atan2(point.y - dragState.centerY, point.x - dragState.centerX) * 180 / Math.PI;
+                const step = event.shiftKey ? 15 : 1;
+                item.rotation = Math.round((dragState.itemRotation + angle - dragState.startAngle) / step) * step;
+            } else if (dragState.mode === 'resize-br') {
+                item.width = Math.max(8, Math.round(dragState.itemWidth + dx));
+                item.height = Math.max(8, Math.round(dragState.itemHeight + dy));
+            } else if (dragState.mode === 'resize-tl') {
+                const nextWidth = Math.max(8, Math.round(dragState.itemWidth - dx));
+                const nextHeight = Math.max(8, Math.round(dragState.itemHeight - dy));
+                item.x = Math.round(dragState.itemX + (dragState.itemWidth - nextWidth));
+                item.y = Math.round(dragState.itemY + (dragState.itemHeight - nextHeight));
+                item.width = nextWidth;
+                item.height = nextHeight;
+            } else if (dragState.mode === 'group-resize-br' || dragState.mode === 'group-resize-tl') {
+                const fromLeft = dragState.bounds.left;
+                const fromTop = dragState.bounds.top;
+                const fromRight = dragState.bounds.right;
+                const fromBottom = dragState.bounds.bottom;
+                let nextLeft = fromLeft;
+                let nextTop = fromTop;
+                let nextRight = fromRight;
+                let nextBottom = fromBottom;
+                if (dragState.mode === 'group-resize-br') {
+                    nextRight = Math.max(fromLeft + 8, fromRight + dx);
+                    nextBottom = Math.max(fromTop + 8, fromBottom + dy);
+                } else {
+                    nextLeft = Math.min(fromRight - 8, fromLeft + dx);
+                    nextTop = Math.min(fromBottom - 8, fromTop + dy);
+                }
+                const trialBounds = {
+                    left: nextLeft,
+                    top: nextTop,
+                    right: nextRight,
+                    bottom: nextBottom
+                };
+                trialBounds.width = trialBounds.right - trialBounds.left;
+                trialBounds.height = trialBounds.bottom - trialBounds.top;
+                trialBounds.centerX = trialBounds.left + trialBounds.width / 2;
+                trialBounds.centerY = trialBounds.top + trialBounds.height / 2;
+                const snap = applyResizeSnap(trialBounds, dragState.excludeIds, dragState.mode);
+                nextLeft += dragState.mode.includes('tl') ? snap.dx : 0;
+                nextTop += dragState.mode.includes('tl') ? snap.dy : 0;
+                nextRight += dragState.mode.includes('br') ? snap.dx : 0;
+                nextBottom += dragState.mode.includes('br') ? snap.dy : 0;
+                const widthScale = (nextRight - nextLeft) / Math.max(1, dragState.bounds.width);
+                const heightScale = (nextBottom - nextTop) / Math.max(1, dragState.bounds.height);
+                dragState.targets.forEach(target => {
+                    const current = state.items.find(entry => entry.id === target.id);
+                    if (!current) return;
+                    const relLeft = (target.x - dragState.bounds.left) / Math.max(1, dragState.bounds.width);
+                    const relTop = (target.y - dragState.bounds.top) / Math.max(1, dragState.bounds.height);
+                    const relWidth = target.width / Math.max(1, dragState.bounds.width);
+                    const relHeight = target.height / Math.max(1, dragState.bounds.height);
+                    current.x = Math.round(nextLeft + relLeft * (nextRight - nextLeft));
+                    current.y = Math.round(nextTop + relTop * (nextBottom - nextTop));
+                    current.width = Math.max(8, Math.round(relWidth * (nextRight - nextLeft)));
+                    current.height = Math.max(8, Math.round(relHeight * (nextBottom - nextTop)));
+                });
+                render(false, { panels: false });
+                renderSnapGuides(snap.guides);
+                return;
+            }
+            render(false, { panels: false });
+            clearSnapGuides();
+        }
+
+        function stopDrag() {
+            if (!dragState) return;
+            dragState = null;
+            window.removeEventListener('pointermove', onPointerMove);
+            window.removeEventListener('pointerup', stopDrag);
+            clearSnapGuides();
+            render(false);
+            saveState();
+        }
+
+        function renderStage() {
+            stage.style.backgroundImage = `url("${state.background}")`;
+            stage.style.width = `${currentStageWidth()}px`;
+            stage.style.height = `${currentStageHeight()}px`;
+            applyStageViewportFit();
+            stage.style.backgroundSize = state.backgroundFit === 'contain'
+                ? 'contain'
+                : (state.backgroundFit === 'stretch' ? '100% 100%' : 'cover');
+            stage.style.backgroundRepeat = 'no-repeat';
+            stage.classList.toggle('show-grid', state.showGrid);
+            stage.classList.toggle('show-guides', state.showGuides);
+
+            clearSnapGuides();
+            canvasLayer.innerHTML = '';
+            const selectedCount = state.selectedIds.length;
+            window.HuanjingHUDRuntime.renderLayout({
+                root: canvasLayer,
+                layout: {
+                    schema: window.HuanjingHUDRuntime.HUD_CONFIG_SCHEMA,
+                    version: window.HuanjingHUDRuntime.HUD_CONFIG_VERSION,
+                    referenceResolution: {
+                        width: state.stageWidth,
+                        height: state.stageHeight
+                    },
+                    stageWidth: state.stageWidth,
+                    stageHeight: state.stageHeight,
+                    items: state.items.map(item => window.HuanjingHUDRuntime.syncItemLayoutFields({ ...item }))
+                },
+                itemClassName: 'editor-item',
+                selectedIds: state.selectedIds,
+                includeHidden: true,
+                resolveSource: resolveItemAssetSource,
+                decorateItem({ element: el, item }) {
+                const selected = isSelected(item.id);
+                const showItemHandles = selected && selectedCount === 1;
+
+                const label = document.createElement('div');
+                label.className = 'item-label';
+                label.textContent = item.name;
+                el.appendChild(label);
+
+                const tl = document.createElement('div');
+                tl.className = 'handle tl';
+                if (showItemHandles) {
+                    tl.addEventListener('pointerdown', (event) => startDrag(event, item.id, 'resize-tl'));
+                    el.appendChild(tl);
+                }
+
+                const br = document.createElement('div');
+                br.className = 'handle br';
+                if (showItemHandles) {
+                    br.addEventListener('pointerdown', (event) => startDrag(event, item.id, 'resize-br'));
+                    el.appendChild(br);
+                }
+
+                const rotate = document.createElement('div');
+                rotate.className = 'handle rotate';
+                if (showItemHandles) {
+                    rotate.title = '拖动旋转，按住 Shift 以 15 度吸附';
+                    rotate.addEventListener('pointerdown', (event) => startDrag(event, item.id, 'rotate'));
+                    el.appendChild(rotate);
+                }
+
+                el.addEventListener('pointerdown', (event) => startDrag(event, item.id, 'move'));
+                el.addEventListener('click', (event) => {
+                    event.stopPropagation();
+                    const additive = event.shiftKey || event.metaKey || event.ctrlKey;
+                    setSelected(item.id, additive);
+                });
+                }
+            });
+
+            if (selectedCount > 1) {
+                const bounds = getSelectionBounds();
+                if (bounds) {
+                    const group = document.createElement('div');
+                    group.className = 'group-box';
+                    group.style.left = `${bounds.left}px`;
+                    group.style.top = `${bounds.top}px`;
+                    group.style.width = `${bounds.width}px`;
+                    group.style.height = `${bounds.height}px`;
+
+                    const label = document.createElement('div');
+                    label.className = 'group-label';
+                    label.textContent = `多选 ${selectedCount}`;
+                    label.addEventListener('pointerdown', (event) => {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        const point = stagePoint(event);
+                        dragState = {
+                            id: state.selectedId,
+                            mode: 'group-move',
+                            startX: point.x,
+                            startY: point.y,
+                            bounds,
+                            excludeIds: [...state.selectedIds],
+                            targets: selectedItems().map(entry => ({
+                                id: entry.id,
+                                x: entry.x,
+                                y: entry.y,
+                                width: entry.width,
+                                height: entry.height
+                            }))
+                        };
+                        window.addEventListener('pointermove', onPointerMove);
+                        window.addEventListener('pointerup', stopDrag);
+                    });
+                    group.appendChild(label);
+
+                    ['tl', 'br'].forEach(pos => {
+                        const handle = document.createElement('div');
+                        handle.className = `group-handle ${pos}`;
+                        handle.addEventListener('pointerdown', (event) => {
+                            event.preventDefault();
+                            event.stopPropagation();
+                            const point = stagePoint(event);
+                            dragState = {
+                                id: state.selectedId,
+                                mode: pos === 'tl' ? 'group-resize-tl' : 'group-resize-br',
+                                startX: point.x,
+                                startY: point.y,
+                                bounds,
+                                excludeIds: [...state.selectedIds],
+                                targets: selectedItems().map(entry => ({
+                                    id: entry.id,
+                                    x: entry.x,
+                                    y: entry.y,
+                                    width: entry.width,
+                                    height: entry.height
+                                }))
+                            };
+                            window.addEventListener('pointermove', onPointerMove);
+                            window.addEventListener('pointerup', stopDrag);
+                        });
+                        group.appendChild(handle);
+                    });
+                    canvasLayer.appendChild(group);
+                }
+            }
+        }
+
+        function render(shouldSave = true, options = {}) {
+            const { panels = true, assets = false } = options;
+            renderStage();
+            if (panels) {
+                renderLayerList();
+                if (assets) renderAssetLibrary();
+                renderGroupPresetList();
+                renderInspector();
+            }
+            if (shouldSave) saveState();
+        }
+
+        function renderLayerList() {
+            const sorted = [...state.items].sort((a, b) => b.z - a.z);
+            layerList.innerHTML = '';
+            if (!sorted.length) {
+                layerList.innerHTML = '<div class="empty-state">画布还是空的。左边点个资产进来就行。</div>';
+                return;
+            }
+            for (const item of sorted) {
+                const row = document.createElement('div');
+                row.className = `layer-row${item.id === state.selectedId ? ' active' : ''}`;
+                if (isSelected(item.id) && item.id !== state.selectedId) row.classList.add('selected');
+                row.draggable = true;
+                row.dataset.id = item.id;
+                row.addEventListener('click', (event) => {
+                    const additive = event.shiftKey || event.metaKey || event.ctrlKey;
+                    setSelected(item.id, additive);
+                });
+
+                row.addEventListener('dragstart', (event) => {
+                    layerDragState = { id: item.id };
+                    row.classList.add('dragging');
+                    event.dataTransfer.effectAllowed = 'move';
+                    event.dataTransfer.setData('text/plain', item.id);
+                });
+
+                row.addEventListener('dragend', () => {
+                    row.classList.remove('dragging');
+                    layerDragState = null;
+                    layerList.querySelectorAll('.layer-row').forEach(el => {
+                        el.classList.remove('drop-before', 'drop-after', 'dragging');
+                    });
+                });
+
+                row.addEventListener('dragover', (event) => {
+                    event.preventDefault();
+                    if (!layerDragState || layerDragState.id === item.id) return;
+                    const rect = row.getBoundingClientRect();
+                    const before = event.clientY < rect.top + rect.height / 2;
+                    row.classList.toggle('drop-before', before);
+                    row.classList.toggle('drop-after', !before);
+                });
+
+                row.addEventListener('dragleave', () => {
+                    row.classList.remove('drop-before', 'drop-after');
+                });
+
+                row.addEventListener('drop', (event) => {
+                    event.preventDefault();
+                    row.classList.remove('drop-before', 'drop-after');
+                    if (!layerDragState || layerDragState.id === item.id) return;
+                    const rect = row.getBoundingClientRect();
+                    const before = event.clientY < rect.top + rect.height / 2;
+                    reorderLayerByIds(layerDragState.id, item.id, before ? 'before' : 'after');
+                });
+
+                const grip = document.createElement('div');
+                grip.className = 'layer-grip';
+                grip.textContent = '⋮⋮';
+                row.appendChild(grip);
+
+                const meta = document.createElement('div');
+                meta.innerHTML = `<div class="layer-name">${item.name}</div><div class="layer-z">z ${item.z}${item.hidden ? ' · 隐藏' : ''}${item.locked ? ' · 锁定' : ''}</div>`;
+                row.appendChild(meta);
+
+                const miniActions = document.createElement('div');
+                miniActions.className = 'row';
+                miniActions.innerHTML = `
+                    <button class="btn ghost small" data-action="up">上</button>
+                    <button class="btn ghost small" data-action="down">下</button>
+                `;
+                miniActions.querySelectorAll('button').forEach(button => {
+                    button.addEventListener('click', (event) => {
+                        event.stopPropagation();
+                        setSelected(item.id);
+                        moveLayer(button.dataset.action);
+                    });
+                });
+                row.appendChild(miniActions);
+                layerList.appendChild(row);
+            }
+        }
+
+        function exportGroupPresetObject(groupId) {
+            const members = [...getGroupMembers(groupId)].sort((a, b) => a.z - b.z);
+            if (!members.length) return null;
+            const preset = getGroupPresetById(groupId) || { id: groupId, name: members[0].groupName || '未命名组件组' };
+            const bounds = getSelectionBounds(members.map(item => item.id));
+            return {
+                id: preset.id,
+                name: preset.name,
+                createdAt: preset.createdAt || new Date().toISOString(),
+                items: members.map(item => ({
+                    name: item.name,
+                    src: item.src,
+                    assetId: item.assetId || null,
+                    sourceType: item.sourceType || null,
+                    binding: item.binding || null,
+                    role: item.role || null,
+                    fit: item.fit || null,
+                    x: item.x - bounds.left,
+                    y: item.y - bounds.top,
+                    width: item.width,
+                    height: item.height,
+                    rotation: item.rotation,
+                    flipX: !!item.flipX,
+                    flipY: !!item.flipY,
+                    opacity: item.opacity,
+                    hidden: item.hidden,
+                    locked: item.locked,
+                    z: item.z - members[0].z + 1
+                }))
+            };
+        }
+
+        function createGroupPresetFromSelection(nameInput) {
+            const items = [...selectedItems()].sort((a, b) => a.z - b.z);
+            if (!items.length) return null;
+            const presetName = (nameInput || '').trim() || `组件组 ${state.groupPresets.length + 1}`;
+            const existing = getGroupPresetByName(presetName);
+            const groupId = existing?.id || uid('group');
+            items.forEach(item => {
+                item.groupId = groupId;
+                item.groupName = presetName;
+            });
+            const preset = exportGroupPresetObject(groupId);
+            preset.name = presetName;
+            preset.id = groupId;
+            preset.createdAt = existing?.createdAt || new Date().toISOString();
+            if (existing) {
+                Object.assign(existing, preset);
+            } else {
+                state.groupPresets.unshift(preset);
+            }
+            render();
+            return preset;
+        }
+
+        function importGroupPresetToCanvas(preset, anchor = { x: 120, y: 120 }) {
+            if (!preset || !preset.items?.length) return;
+            const groupId = uid('group');
+            const createdIds = [];
+            const ordered = [...preset.items].sort((a, b) => a.z - b.z);
+            ordered.forEach((item, index) => {
+                const clone = {
+                    id: uid(),
+                    name: item.name,
+                    src: item.src,
+                    assetId: item.assetId || null,
+                    sourceType: item.sourceType || null,
+                    binding: item.binding || null,
+                    role: item.role || null,
+                    fit: item.fit || null,
+                    x: anchor.x + item.x,
+                    y: anchor.y + item.y,
+                    width: item.width,
+                    height: item.height,
+                    z: state.items.length + index + 1,
+                    rotation: item.rotation ?? 0,
+                    flipX: !!item.flipX,
+                    flipY: !!item.flipY,
+                    opacity: item.opacity ?? 1,
+                    hidden: !!item.hidden,
+                    locked: !!item.locked,
+                    groupId,
+                    groupName: preset.name
+                };
+                state.items.push(clone);
+                createdIds.push(clone.id);
+            });
+
+            state.selectedIds = createdIds;
+            state.selectedId = createdIds[createdIds.length - 1] || null;
+            normalizeZ(true);
+            render();
+        }
+
+        function removeSelectedFromGroup() {
+            const item = selectedItem();
+            if (!item?.groupId) return;
+            const groupId = item.groupId;
+            if (state.selectedIds.length > 1) {
+                state.selectedIds.forEach(id => {
+                    const current = state.items.find(entry => entry.id === id);
+                    if (current?.groupId === groupId) current.groupId = null;
+                });
+            } else {
+                item.groupId = null;
+            }
+            render();
+        }
+
+        function renderGroupPresetList() {
+            groupPresetList.innerHTML = '';
+            if (!state.groupPresets.length) {
+                groupPresetList.innerHTML = '<div class="empty-state">这里会放你存下来的血条组、玩家 HUD 组之类。</div>';
+                return;
+            }
+            state.groupPresets.forEach(preset => {
+                const card = document.createElement('div');
+                card.className = 'preset-card';
+                card.innerHTML = `
+                    <div class="preset-head">
+                        <div>
+                            <div class="preset-name">${preset.name}</div>
+                            <div class="preset-meta">${preset.items.length} 层</div>
+                        </div>
+                        <span class="chip">${preset.id}</span>
+                    </div>
+                `;
+                const actions = document.createElement('div');
+                actions.className = 'row wrap';
+                actions.innerHTML = `
+                    <button class="btn small secondary" data-action="import">导入到画布</button>
+                    <button class="btn small ghost" data-action="copy">复制组 JSON</button>
+                    <button class="btn small ghost" data-action="delete">删除</button>
+                `;
+                actions.querySelector('[data-action="import"]').addEventListener('click', () => {
+                    importGroupPresetToCanvas(preset, { x: 120 + state.items.length * 4, y: 120 + state.items.length * 4 });
+                });
+                actions.querySelector('[data-action="copy"]').addEventListener('click', async () => {
+                    groupJson.value = JSON.stringify(preset, null, 2);
+                    await navigator.clipboard.writeText(groupJson.value);
+                });
+                actions.querySelector('[data-action="delete"]').addEventListener('click', () => {
+                    state.groupPresets = state.groupPresets.filter(entry => entry.id !== preset.id);
+                    render();
+                });
+                card.appendChild(actions);
+                groupPresetList.appendChild(card);
+            });
+        }
+
+        function renderInspector() {
+            const item = selectedItem();
+            if (!item) {
+                selectionPanel.style.display = 'none';
+                selectionEmpty.textContent = '先从左边加一个资产，或者点舞台上的元素。';
+                selectionEmpty.style.display = 'block';
+                return;
+            }
+            selectionPanel.style.display = 'block';
+            selectionEmpty.style.display = 'none';
+            propInputs.name.value = item.name;
+            propInputs.x.value = item.x;
+            propInputs.y.value = item.y;
+            propInputs.width.value = item.width;
+            propInputs.height.value = item.height;
+            propInputs.z.value = item.z;
+            propInputs.rotation.value = item.rotation;
+            propInputs.opacity.value = item.opacity;
+            propInputs.locked.value = String(item.locked);
+            propInputs.hidden.value = String(item.hidden);
+            propInputs.src.value = item.src;
+            if (item.groupId) {
+                const preset = getGroupPresetById(item.groupId);
+                itemGroupChip.textContent = `所在组：${item.groupName || preset?.name || item.groupId}`;
+                itemGroupChip.style.display = 'inline-flex';
+            } else {
+                itemGroupChip.style.display = 'none';
+            }
+            if (state.selectedIds.length > 1) {
+                selectionEmpty.textContent = `当前多选 ${state.selectedIds.length} 层。右侧属性仍显示主选中图层，拖舞台包围框可整组移动和缩放。若图层属于已分组组件，直接拖成员也会整组移动；按住 Option/Alt 可只选单层细调。`;
+                selectionEmpty.style.display = 'block';
+            } else {
+                selectionEmpty.textContent = item.groupId
+                    ? '当前图层属于一个组件组。直接拖它会带着整组走；按住 Option/Alt 点它可以只调这一层。'
+                    : '';
+                selectionEmpty.style.display = item.groupId ? 'block' : 'none';
+            }
+        }
+
+        function exportLayoutObject() {
+            const layout = window.HuanjingHUDRuntime.normalizeLayout({
+                background: state.background,
+                referenceResolution: {
+                    width: currentStageWidth(),
+                    height: currentStageHeight()
+                },
+                stageWidth: currentStageWidth(),
+                stageHeight: currentStageHeight(),
+                backgroundFit: state.backgroundFit || 'cover',
+                showGrid: state.showGrid,
+                showGuides: state.showGuides,
+                items: state.items.map(item => ({ ...item })),
+                groupPresets: state.groupPresets.map(group => ({ ...group, items: group.items.map(item => ({ ...item })) })),
+                folderAssetSource: state.folderAssetSource,
+                customAssets: state.folderAssetSource?.mode === 'input'
+                    ? state.customAssets.map(asset => ({ ...asset }))
+                    : []
+            });
+            return layout;
+        }
+
+        function importLayoutObject(data) {
+            data = normalizeImportedBattleStage(data);
+            if (Array.isArray(data.items) && data.items.length) {
+                data = window.HuanjingHUDRuntime.normalizeLayout(data);
+            } else {
+                data = window.HuanjingHUDRuntime.createDefaultBattleHudLayout({
+                    background: backgrounds[0].src,
+                    backgroundFit: 'cover'
+                });
+            }
+            if (!Array.isArray(data.items) || !data.items.length) {
+                data = window.HuanjingHUDRuntime.createDefaultBattleHudLayout({
+                    background: backgrounds[0].src,
+                    backgroundFit: 'cover'
+                });
+            }
+            state.background = data.background || backgrounds[0].src;
+            state.stageWidth = Math.max(640, Number(data.referenceResolution?.width ?? data.stageWidth) || 1280);
+            state.stageHeight = Math.max(360, Number(data.referenceResolution?.height ?? data.stageHeight) || 720);
+            state.backgroundFit = data.backgroundFit || 'cover';
+            state.showGrid = !!data.showGrid;
+            state.showGuides = !!data.showGuides;
+            state.items = (data.items || []).map(item => ({
+                id: item.id || uid(),
+                name: item.name || '未命名图层',
+                src: item.src,
+                x: item.x ?? 0,
+                y: item.y ?? 0,
+                width: item.width ?? 100,
+                height: item.height ?? 100,
+                z: item.z ?? 1,
+                rotation: item.rotation ?? 0,
+                flipX: !!item.flipX,
+                flipY: !!item.flipY,
+                opacity: item.opacity ?? 1,
+                hidden: !!item.hidden,
+                locked: !!item.locked,
+                assetId: item.assetId || null,
+                sourceType: item.sourceType || null,
+                groupId: item.groupId || null,
+                groupName: item.groupName || null,
+                anchor: item.anchor || 'top_left',
+                pivot: Array.isArray(item.pivot) ? [...item.pivot] : [0, 0],
+                offset: Array.isArray(item.offset) ? [...item.offset] : [item.x ?? 0, item.y ?? 0],
+                position: Array.isArray(item.position) ? [...item.position] : [item.x ?? 0, item.y ?? 0],
+                size: Array.isArray(item.size) ? [...item.size] : [item.width ?? 100, item.height ?? 100],
+                layoutMode: item.layoutMode || 'absolute',
+                scaleMode: item.scaleMode || 'reference_resolution',
+                fit: item.fit || window.HuanjingHUDRuntime.getItemFitMode(item),
+                binding: item.binding || window.HuanjingHUDRuntime.getItemBinding(item),
+                role: item.role || window.HuanjingHUDRuntime.getItemRole(item)
+            }));
+            state.groupPresets = (data.groupPresets || []).map(group => ({
+                id: group.id || uid('group'),
+                name: group.name || '未命名组件组',
+                createdAt: group.createdAt || new Date().toISOString(),
+                items: (group.items || []).map(item => ({
+                    ...item,
+                    assetId: item.assetId || null,
+                    sourceType: item.sourceType || null
+                }))
+            }));
+            state.folderAssetSource = data.folderAssetSource || null;
+            state.customAssets = (data.customAssets || []).map(asset => ({ ...asset }));
+            ensureBuiltinGroupPresets();
+            rebuildAssetRegistry();
+            rehydrateAssetReferences();
+            normalizeZ();
+            state.selectedId = state.items[0]?.id || null;
+            state.selectedIds = state.selectedId ? [state.selectedId] : [];
+            stageWidthInput.value = state.stageWidth;
+            stageHeightInput.value = state.stageHeight;
+            backgroundFitSelect.value = state.backgroundFit;
+            refreshLayoutJsonPreview();
+            render(true, { assets: true });
+        }
+
+        function buildLayoutJsonString() {
+            return JSON.stringify(exportLayoutObject(), null, 2);
+        }
+
+        function refreshLayoutJsonPreview() {
+            if (document.activeElement === layoutJson) return;
+            layoutJson.value = buildLayoutJsonString();
+        }
+
+        const PERSISTENT_ASSET_PATHS = {
+            'player_hp_bar_long_fill_gray_base_asset_v1.png': 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_asset_v1.png',
+            'avatar_circle_gray_base_asset_v1.png': 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/avatar_circle_gray_base_asset_v1.png',
+            'player_energy_tray_asset_v1_no_circles_transparent.png': 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_tray_asset_v1_no_circles_transparent.png',
+            'pile_count_plate_asset_v1_transparent.png': 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/pile_count_plate_asset_v1_transparent.png',
+            'enemy_intent_panel_shell_asset_v1.png': 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方意图面板/enemy_intent_panel_shell_asset_v1.png',
+            'turn_counter_inner_dial_asset_v1.png': 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/中轴控件/turn_counter_inner_dial_asset_v1.png'
+        };
+
+        function compactHudSrcForStorage(item) {
+            const src = String(item?.src || '');
+            if (!src.startsWith('data:')) return item?.src || '';
+            const assetId = String(item.assetId || '').replace(/^input:/, '');
+            const assetBase = assetId.split('/').pop();
+            if (PERSISTENT_ASSET_PATHS[assetBase]) return PERSISTENT_ASSET_PATHS[assetBase];
+            const name = String(item.name || '');
+            for (const [base, path] of Object.entries(PERSISTENT_ASSET_PATHS)) {
+                if (name.includes(base)) return path;
+            }
+            if (/头像/.test(name)) return PERSISTENT_ASSET_PATHS['avatar_circle_gray_base_asset_v1.png'];
+            if (/意图/.test(name) || item.binding === 'enemy-intent') return PERSISTENT_ASSET_PATHS['enemy_intent_panel_shell_asset_v1.png'];
+            if (/能量槽/.test(name)) return PERSISTENT_ASSET_PATHS['player_energy_tray_asset_v1_no_circles_transparent.png'];
+            if (/灰底|状态底/.test(name)) return PERSISTENT_ASSET_PATHS['player_hp_bar_long_fill_gray_base_asset_v1.png'];
+            return assetId || '';
+        }
+
+        function compactHudItemForStorage(item) {
+            return {
+                ...item,
+                src: compactHudSrcForStorage(item)
+            };
+        }
+
+        function compactHudLayoutForStorage(payload = exportLayoutObject()) {
+            const normalized = window.HuanjingHUDRuntime.normalizeLayout(payload);
+            return window.HuanjingHUDRuntime.normalizeLayout({
+                ...normalized,
+                items: (normalized.items || []).map(compactHudItemForStorage),
+                groupPresets: (normalized.groupPresets || []).map(group => ({
+                    ...group,
+                    items: (group.items || []).map(compactHudItemForStorage)
+                })),
+                folderAssetSource: null,
+                customAssets: []
+            });
+        }
+
+        function replaceLocalStorageItem(key, value) {
+            localStorage.removeItem(key);
+            localStorage.setItem(key, value);
+        }
+
+        function pruneHudLocalStorage(keepKeys = []) {
+            const keep = new Set(keepKeys.filter(Boolean));
+            try {
+                for (let i = localStorage.length - 1; i >= 0; i--) {
+                    const key = localStorage.key(i);
+                    if (!key || keep.has(key)) continue;
+                    if (key.startsWith('huanjing-hud-layout')) localStorage.removeItem(key);
+                }
+            } catch (error) {
+                console.warn('清理旧 HUD 本地缓存失败。', error);
+            }
+        }
+
+        function tryReplaceLocalStorageItem(key, value) {
+            try {
+                replaceLocalStorageItem(key, value);
+                return true;
+            } catch (error) {
+                console.warn(`${key} 写入 localStorage 失败，清理旧 HUD 缓存后重试。`, error);
+            }
+            try {
+                pruneHudLocalStorage([key, FORCED_DEFAULT_VERSION_KEY, EDITOR_FORCED_DEFAULT_VERSION_KEY]);
+                replaceLocalStorageItem(key, value);
+                return true;
+            } catch (retryError) {
+                console.warn(`${key} 写入 localStorage 仍失败，将依赖 IndexedDB 和当前游戏同步。`, retryError);
+                return false;
+            }
+        }
+
+        async function saveStateNow() {
+            const payload = exportLayoutObject();
+            const compactPayload = compactHudLayoutForStorage(payload);
+            try {
+                replaceLocalStorageItem(EDITOR_FORCED_DEFAULT_VERSION_KEY, FORCED_DEFAULT_VERSION);
+            } catch (error) {
+                console.warn('编辑器默认版本标记保存失败。', error);
+            }
+            try {
+                await dbSetValue(STORAGE_KEY, compactPayload);
+                return compactPayload;
+            } catch (error) {
+                console.warn('IndexedDB 保存布局失败，尝试 localStorage。', error);
+            }
+            try {
+                replaceLocalStorageItem(STORAGE_KEY, JSON.stringify(compactPayload));
+            } catch (error) {
+                console.error('保存布局失败', error);
+                assetFolderStatus.textContent = '布局保存失败，可能是浏览器存储被限制了；请用“导出布局 JSON”留一份。';
+            }
+            return compactPayload;
+        }
+
+        function publishLayoutToGame(payload = exportLayoutObject()) {
+            try {
+                localStorage.removeItem(window.HuanjingHUDRuntime.HUD_SYNC_STORAGE_KEY);
+            } catch (error) {
+                console.warn('清理旧实时 HUD 缓存失败。', error);
+            }
+            const normalized = window.HuanjingHUDRuntime.publishConfig(compactHudLayoutForStorage(payload), { source: 'hud-editor' });
+            if (isEmbeddedMode && window.parent && window.parent !== window) {
+                try {
+                    if (typeof window.parent.applyPlayerHudLayout === 'function') {
+                        window.parent.applyPlayerHudLayout(normalized);
+                    } else if (typeof window.parent.persistPlayerHudLayout === 'function') {
+                        window.parent.persistPlayerHudLayout(normalized);
+                    }
+                } catch (error) {
+                    console.warn('嵌入模式直接同步到游戏失败，已保留 BroadcastChannel 同步。', error);
+                }
+                try {
+                    window.parent.postMessage({
+                        type: 'hud-config-updated',
+                        source: 'hud-editor-iframe',
+                        updatedAt: Date.now(),
+                        payload: normalized
+                    }, '*');
+                } catch (error) {
+                    console.warn('嵌入模式 postMessage 同步失败。', error);
+                }
+            }
+            assetFolderStatus.textContent = '布局已保存，并已同步到已打开的游戏窗口。';
+            return normalized;
+        }
+
+        async function saveDefaultPresetToGame(payload = exportLayoutObject()) {
+            const normalized = compactHudLayoutForStorage(payload);
+            const serialized = JSON.stringify(normalized);
+            try {
+                pruneHudLocalStorage([FORCED_DEFAULT_VERSION_KEY, EDITOR_FORCED_DEFAULT_VERSION_KEY, DEFAULT_PRESET_STORAGE_KEY]);
+                localStorage.removeItem(STORAGE_KEY);
+                localStorage.removeItem(RUNTIME_EDIT_STORAGE_KEY);
+                localStorage.removeItem(window.HuanjingHUDRuntime.HUD_SYNC_STORAGE_KEY);
+            } catch (error) {
+                console.warn('清理旧 HUD 预设缓存失败。', error);
+            }
+            tryReplaceLocalStorageItem(FORCED_DEFAULT_VERSION_KEY, FORCED_DEFAULT_VERSION);
+            tryReplaceLocalStorageItem(EDITOR_FORCED_DEFAULT_VERSION_KEY, FORCED_DEFAULT_VERSION);
+            const savedToLocalStorage = tryReplaceLocalStorageItem(DEFAULT_PRESET_STORAGE_KEY, serialized);
+            try {
+                await dbSetValue(DEFAULT_PRESET_STORAGE_KEY, normalized);
+            } catch (error) {
+                console.warn('默认预设 IndexedDB 兜底保存失败。', error);
+            }
+            if (isEmbeddedMode && window.parent && window.parent !== window) {
+                try {
+                    if (typeof window.parent.savePlayerHudDefaultPreset === 'function') {
+                        window.parent.savePlayerHudDefaultPreset(normalized);
+                    } else if (typeof window.parent.applyPlayerHudLayout === 'function') {
+                        window.parent.applyPlayerHudLayout(normalized);
+                    }
+                } catch (error) {
+                    console.warn('嵌入模式保存默认预设到游戏失败，已保存到当前窗口本地存储。', error);
+                }
+                try {
+                    window.parent.postMessage({
+                        type: 'hud-config-updated',
+                        source: 'hud-editor-default-preset',
+                        updatedAt: Date.now(),
+                        payload: normalized
+                    }, '*');
+                } catch (error) {
+                    console.warn('嵌入模式默认预设 postMessage 同步失败。', error);
+                }
+            }
+            window.HuanjingHUDRuntime.publishConfig(normalized, { source: 'hud-editor-default-preset', storage: false });
+            assetFolderStatus.textContent = savedToLocalStorage
+                ? '当前布局已保存为默认预设，并已同步到游戏。'
+                : '当前布局已保存为默认预设，并已同步到游戏；Safari 本地配额已满，已使用 IndexedDB 兜底。';
+            return normalized;
+        }
+
+        function saveState() {
+            clearTimeout(saveTimer);
+            saveTimer = setTimeout(() => {
+                saveTimer = null;
+                saveStateNow();
+            }, 160);
+        }
+
+        async function loadState() {
+            let raw = null;
+            if (isEmbeddedMode) {
+                try {
+                    if (window.parent && window.parent !== window && typeof window.parent.exportPlayerHudLayout === 'function') {
+                        raw = window.parent.exportPlayerHudLayout();
+                    }
+                } catch (error) {
+                    console.warn('嵌入模式读取游戏 HUD 布局失败，将回退到编辑器本地草稿。', error);
+                }
+            }
+            if (raw) {
+                importLayoutObject(raw);
+                return;
+            }
+            try {
+                if (localStorage.getItem(EDITOR_FORCED_DEFAULT_VERSION_KEY) !== FORCED_DEFAULT_VERSION) {
+                    localStorage.removeItem(STORAGE_KEY);
+                    localStorage.setItem(EDITOR_FORCED_DEFAULT_VERSION_KEY, FORCED_DEFAULT_VERSION);
+                    buildDefaultPlayerPreset();
+                    assetFolderStatus.textContent = '已清理旧 HUD 草稿，并载入当前游戏默认 HUD。';
+                    return;
+                }
+            } catch (error) {
+                console.warn('编辑器旧 HUD 草稿清理失败，将直接载入当前游戏默认 HUD。', error);
+                buildDefaultPlayerPreset();
+                return;
+            }
+            try {
+                raw = await dbGetValue(STORAGE_KEY);
+            } catch (error) {
+                console.warn('IndexedDB 读取布局失败，尝试 localStorage。', error);
+            }
+            if (!raw) {
+                try {
+                    const localRaw = localStorage.getItem(STORAGE_KEY);
+                    raw = localRaw ? JSON.parse(localRaw) : null;
+                } catch (error) {
+                    console.warn('localStorage 读取布局失败，使用空白画布。', error);
+                    assetFolderStatus.textContent = '本地布局读取失败，已先打开空白画布。你仍然可以导入 JSON 或重新选择资产文件夹。';
+                }
+            }
+            if (!raw) {
+                buildDefaultPlayerPreset();
+                assetFolderStatus.textContent = isEmbeddedMode
+                    ? '没有从游戏读取到已保存 HUD，已载入完整战斗 HUD 默认结构。'
+                    : '没有本地草稿，已载入完整战斗 HUD 默认结构。';
+                return;
+            }
+            try {
+                importLayoutObject(raw);
+            } catch (error) {
+                console.error(error);
+                state.items = [];
+                state.selectedId = null;
+                state.selectedIds = [];
+                refreshLayoutJsonPreview();
+                render(false, { assets: true });
+            }
+        }
+
+        function buildBuiltinAssets() {
+            return assetManifest.map(asset => ({
+                ...asset,
+                assetId: `builtin:${asset.src}`,
+                sourceType: 'builtin'
+            }));
+        }
+
+        function rebuildAssetRegistry() {
+            const registry = {};
+            [...buildBuiltinAssets(), ...state.customAssets].forEach(asset => {
+                registry[asset.assetId] = asset;
+            });
+            state.assetRegistry = registry;
+        }
+
+        function resolveItemAssetSource(item) {
+            if (item.assetId && state.assetRegistry[item.assetId]) {
+                return state.assetRegistry[item.assetId].src;
+            }
+            return item.src;
+        }
+
+        function inferItemFitMode(item) {
+            return window.HuanjingHUDRuntime.getItemFitMode(item);
+        }
+
+        function rehydrateAssetReferences() {
+            state.items.forEach(item => {
+                if (item.assetId && state.assetRegistry[item.assetId]) {
+                    item.src = state.assetRegistry[item.assetId].src;
+                }
+            });
+            state.groupPresets.forEach(group => {
+                group.items.forEach(item => {
+                    if (item.assetId && state.assetRegistry[item.assetId]) {
+                        item.src = state.assetRegistry[item.assetId].src;
+                    }
+                });
+            });
+        }
+
+        function addAssetTile(asset) {
+            const tile = document.createElement('button');
+            tile.type = 'button';
+            tile.className = 'asset-tile';
+            tile.innerHTML = `
+                <img class="asset-thumb" src="${asset.src}" alt="${asset.name}">
+                <div class="asset-meta">
+                    <div class="asset-name">${asset.name}</div>
+                    <div class="asset-path">${asset.src}</div>
+                </div>
+            `;
+            tile.addEventListener('click', () => {
+                createItem({
+                    name: asset.name,
+                    src: asset.src,
+                    assetId: asset.assetId,
+                    sourceType: asset.sourceType,
+                    width: asset.width,
+                    height: asset.height,
+                    x: 160 + state.items.length * 12,
+                    y: 120 + state.items.length * 12
+                });
+            });
+            assetList.appendChild(tile);
+        }
+
+        function assetFromFileName(name, src, width = 180, height = 180, extra = {}) {
+            return {
+                name: name.replace(/\.[^.]+$/, ''),
+                src,
+                width,
+                height,
+                assetId: extra.assetId || `custom:${name}`,
+                sourceType: extra.sourceType || 'custom',
+                relPath: extra.relPath || name
+            };
+        }
+
+        function renderAssetLibrary() {
+            assetList.innerHTML = '';
+            rebuildAssetRegistry();
+            state.customAssets.forEach(addAssetTile);
+            if (state.folderAssetSource) {
+                const folderLabel = state.folderAssetSource.mode === 'handle'
+                    ? `已连接文件夹：${state.folderAssetSource.label}`
+                    : `已导入文件夹：${state.folderAssetSource.label}`;
+                assetFolderStatus.textContent = `${folderLabel}，当前读取到 ${state.customAssets.length} 张图片。`;
+            } else if (!state.customAssets.length) {
+                assetFolderStatus.textContent = '还没有选择资产文件夹。选一次后，编辑器会尽量记住并在下次自动恢复。';
+                assetList.innerHTML = '<div class="empty-state">资产库当前为空。先选一个本地文件夹。</div>';
+            } else {
+                assetFolderStatus.textContent = '当前没有活动文件夹来源，但画布里已有导入过的资产。';
+            }
+        }
+
+        async function walkDirectoryHandle(handle, bucket = [], prefix = '') {
+            for await (const [name, entry] of handle.entries()) {
+                if (entry.kind === 'directory') {
+                    await walkDirectoryHandle(entry, bucket, `${prefix}${name}/`);
+                    continue;
+                }
+                if (!/\.(png|jpg|jpeg|webp|gif)$/i.test(name)) continue;
+                const file = await entry.getFile();
+                const url = URL.createObjectURL(file);
+                const relPath = `${prefix}${name}`;
+                bucket.push(assetFromFileName(relPath, url, 180, 180, {
+                    assetId: `folder:${relPath}`,
+                    sourceType: 'folder-handle',
+                    relPath
+                }));
+            }
+            return bucket;
+        }
+
+        async function loadAssetsFromDirectoryHandle(handle) {
+            const assets = await walkDirectoryHandle(handle, []);
+            state.customAssets = assets;
+            state.folderAssetSource = {
+                mode: 'handle',
+                label: handle.name || '未命名文件夹'
+            };
+            rebuildAssetRegistry();
+            rehydrateAssetReferences();
+            refreshLayoutJsonPreview();
+            render(true, { assets: true });
+        }
+
+        async function loadAssetsFromFolderFiles(fileList) {
+            const files = [...fileList].filter(file => file.type.startsWith('image/'));
+            const assets = await Promise.all(files.map(file => new Promise((resolve, reject) => {
+                const relPath = file.webkitRelativePath || file.name;
+                const reader = new FileReader();
+                reader.onload = () => resolve(assetFromFileName(relPath, reader.result, 180, 180, {
+                    assetId: `input:${relPath}`,
+                    sourceType: 'folder-input',
+                    relPath
+                }));
+                reader.onerror = () => reject(reader.error);
+                reader.readAsDataURL(file);
+            })));
+            state.customAssets = assets;
+            const root = files[0]?.webkitRelativePath?.split('/')[0] || '已选择文件夹';
+            state.folderAssetSource = {
+                mode: 'input',
+                label: root
+            };
+            assetFolderHandle = null;
+            rebuildAssetRegistry();
+            rehydrateAssetReferences();
+            refreshLayoutJsonPreview();
+            render(true, { assets: true });
+        }
+
+        async function chooseAssetFolder() {
+            if (!isFileProtocol() && window.showDirectoryPicker) {
+                try {
+                    const handle = await window.showDirectoryPicker();
+                    assetFolderHandle = handle;
+                    await persistDirectoryHandle(handle);
+                    await loadAssetsFromDirectoryHandle(handle);
+                    return;
+                } catch (error) {
+                    if (error?.name !== 'AbortError') console.error(error);
+                }
+            }
+            document.getElementById('asset-folder-upload').click();
+        }
+
+        async function refreshFolderAssets() {
+            if (assetFolderHandle) {
+                await loadAssetsFromDirectoryHandle(assetFolderHandle);
+                return;
+            }
+            if (state.folderAssetSource?.mode === 'input') {
+                assetFolderStatus.textContent = '这个文件夹是通过浏览器文件输入导入的，浏览器不允许无提示重新读取。请再点一次“选择资产文件夹”。';
+                return;
+            }
+            assetFolderStatus.textContent = '还没有选过文件夹。先点“选择资产文件夹”。';
+        }
+
+        function buildBackgroundSelect() {
+            const select = document.getElementById('background-select');
+            select.innerHTML = backgrounds.map(bg => `<option value="${bg.src}">${bg.label}</option>`).join('');
+            select.value = state.background;
+            select.addEventListener('change', () => {
+                state.background = select.value;
+                render();
+            });
+        }
+
+        function buildDefaultPlayerPreset() {
+            if (window.HUANJING_HUD_LAYOUT && Array.isArray(window.HUANJING_HUD_LAYOUT.items) && window.HUANJING_HUD_LAYOUT.items.length) {
+                importLayoutObject(window.HUANJING_HUD_LAYOUT);
+                return;
+            }
+            importLayoutObject(window.HuanjingHUDRuntime.createDefaultBattleHudLayout({
+                background: backgrounds[0].src,
+                backgroundFit: 'cover',
+                showGrid: false,
+                showGuides: false
+            }));
+        }
+
+        function addGuideReference() {
+            createItem({
+                name: '玩家整图参考',
+                src: 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/battle_hud_player_panel_asset_v1.png',
+                x: 20,
+                y: 18,
+                width: 618,
+                height: 329,
+                opacity: 0.24,
+                locked: true
+            });
+        }
+
+        document.getElementById('toggle-grid').addEventListener('click', () => {
+            state.showGrid = !state.showGrid;
+            render();
+        });
+
+        function applyStageSettings(width, height, fit = state.backgroundFit) {
+            state.stageWidth = Math.max(640, Math.round(width || 1280));
+            state.stageHeight = Math.max(360, Math.round(height || 720));
+            state.backgroundFit = fit || 'cover';
+            stageWidthInput.value = state.stageWidth;
+            stageHeightInput.value = state.stageHeight;
+            backgroundFitSelect.value = state.backgroundFit;
+            render();
+        }
+
+        document.getElementById('toggle-guides').addEventListener('click', () => {
+            state.showGuides = !state.showGuides;
+            render();
+        });
+
+        document.getElementById('fit-stage').addEventListener('click', () => {
+            applyStageViewportFit();
+            stageScroll.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+        });
+
+        window.addEventListener('resize', () => {
+            applyStageViewportFit();
+        });
+
+        stageWidthInput.addEventListener('input', () => {
+            applyStageSettings(Number(stageWidthInput.value), currentStageHeight(), state.backgroundFit);
+        });
+
+        stageHeightInput.addEventListener('input', () => {
+            applyStageSettings(currentStageWidth(), Number(stageHeightInput.value), state.backgroundFit);
+        });
+
+        backgroundFitSelect.addEventListener('change', () => {
+            applyStageSettings(currentStageWidth(), currentStageHeight(), backgroundFitSelect.value);
+        });
+
+        document.getElementById('preset-stage-demo').addEventListener('click', () => {
+            applyStageSettings(1280, 720, 'cover');
+        });
+
+        document.getElementById('preset-stage-tall').addEventListener('click', () => {
+            applyStageSettings(1280, 960, 'contain');
+        });
+
+        document.getElementById('btn-add-player-preset').addEventListener('click', buildDefaultPlayerPreset);
+        document.getElementById('add-guide-reference').addEventListener('click', addGuideReference);
+        document.getElementById('duplicate-selected').addEventListener('click', duplicateSelected);
+        document.getElementById('delete-selected').addEventListener('click', deleteSelected);
+        document.getElementById('bring-front').addEventListener('click', () => moveLayer('up'));
+        document.getElementById('send-back').addEventListener('click', () => moveLayer('down'));
+        document.getElementById('bring-top').addEventListener('click', () => moveLayer('top'));
+        document.getElementById('send-bottom').addEventListener('click', () => moveLayer('bottom'));
+        document.getElementById('reset-editor').addEventListener('click', () => {
+            if (!confirm('清空当前画布并回到完整战斗 HUD 预设？')) return;
+            buildDefaultPlayerPreset();
+        });
+        document.getElementById('save-layout').addEventListener('click', async () => {
+            refreshLayoutJsonPreview();
+            const payload = await saveStateNow();
+            publishLayoutToGame(payload);
+            alert('布局已保存，并已实时同步到已打开的游戏窗口。');
+        });
+        document.getElementById('save-default-layout').addEventListener('click', async event => {
+            event.preventDefault();
+            refreshLayoutJsonPreview();
+            let payload = exportLayoutObject();
+            try {
+                payload = await saveStateNow();
+            } catch (error) {
+                console.warn('编辑器普通保存失败，继续写入默认预设。', error);
+            }
+            try {
+                await saveDefaultPresetToGame(payload);
+                alert('当前布局已保存为默认预设。以后进入战斗会默认使用这一套 HUD。');
+            } catch (error) {
+                console.error('保存默认预设失败', error);
+                alert(`保存默认预设失败：${error?.message || error}`);
+            }
+        });
+
+        document.getElementById('create-group-from-selection').addEventListener('click', () => {
+            if (!state.selectedIds.length) {
+                alert('先选中你想打包的一组图层。');
+                return;
+            }
+            const name = document.getElementById('group-preset-name').value;
+            const preset = createGroupPresetFromSelection(name);
+            if (preset) {
+                document.getElementById('group-preset-name').value = preset.name;
+                groupJson.value = JSON.stringify(preset, null, 2);
+            }
+        });
+
+        document.getElementById('export-selected-group').addEventListener('click', async () => {
+            const groupId = selectedGroupId();
+            if (!groupId) {
+                alert('先选中一个已经分组的组件成员，或先从当前选区建组。');
+                return;
+            }
+            const preset = exportGroupPresetObject(groupId);
+            groupJson.value = JSON.stringify(preset, null, 2);
+            await navigator.clipboard.writeText(groupJson.value);
+        });
+
+        document.getElementById('copy-layout-json').addEventListener('click', async () => {
+            const json = buildLayoutJsonString();
+            layoutJson.value = json;
+            await navigator.clipboard.writeText(json);
+            alert('布局 JSON 已复制。');
+        });
+        document.getElementById('apply-layout-json').addEventListener('click', () => {
+            try {
+                importLayoutObject(JSON.parse(layoutJson.value));
+            } catch (error) {
+                alert('JSON 解析失败，请检查格式。');
+            }
+        });
+        document.getElementById('download-layout-json').addEventListener('click', () => {
+            const json = buildLayoutJsonString();
+            layoutJson.value = json;
+            const blob = new Blob([json], { type: 'application/json' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'hud-layout.json';
+            a.click();
+            URL.revokeObjectURL(a.href);
+        });
+
+        document.getElementById('apply-group-json').addEventListener('click', () => {
+            try {
+                const preset = JSON.parse(groupJson.value);
+                const normalized = {
+                    id: preset.id || uid('group'),
+                    name: preset.name || `组件组 ${state.groupPresets.length + 1}`,
+                    createdAt: preset.createdAt || new Date().toISOString(),
+                    items: (preset.items || []).map(item => ({
+                        ...item,
+                        assetId: item.assetId || null,
+                        sourceType: item.sourceType || null
+                    }))
+                };
+                const existing = getGroupPresetByName(normalized.name);
+                if (existing) {
+                    Object.assign(existing, normalized);
+                } else {
+                    state.groupPresets.unshift(normalized);
+                }
+                importGroupPresetToCanvas(normalized, { x: 120 + state.items.length * 4, y: 120 + state.items.length * 4 });
+            } catch (error) {
+                alert('组 JSON 解析失败，请检查格式。');
+            }
+        });
+
+        document.getElementById('download-group-json').addEventListener('click', () => {
+            const blob = new Blob([groupJson.value], { type: 'application/json' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'hud-group.json';
+            a.click();
+            URL.revokeObjectURL(a.href);
+        });
+
+        document.getElementById('select-item-group').addEventListener('click', () => {
+            const groupId = selectedGroupId();
+            if (!groupId) {
+                alert('当前主选中图层不在任何组里。');
+                return;
+            }
+            selectGroup(groupId);
+        });
+
+        document.getElementById('remove-item-from-group').addEventListener('click', () => {
+            if (!selectedGroupId()) {
+                alert('当前主选中图层不在任何组里。');
+                return;
+            }
+            removeSelectedFromGroup();
+        });
+
+        document.getElementById('image-upload').addEventListener('change', (event) => {
+            const files = [...event.target.files];
+            files.forEach(file => {
+                const reader = new FileReader();
+                reader.onload = () => {
+                    createItem({
+                        name: file.name,
+                        src: reader.result,
+                        width: 200,
+                        height: 200,
+                        x: 160 + state.items.length * 12,
+                        y: 120 + state.items.length * 12
+                    });
+                };
+                reader.readAsDataURL(file);
+            });
+            event.target.value = '';
+        });
+
+        document.getElementById('pick-asset-folder').addEventListener('click', chooseAssetFolder);
+        document.getElementById('refresh-folder-assets').addEventListener('click', refreshFolderAssets);
+        document.getElementById('asset-folder-upload').addEventListener('change', async (event) => {
+            const files = event.target.files;
+            if (!files?.length) return;
+            await loadAssetsFromFolderFiles(files);
+            event.target.value = '';
+        });
+
+        Object.entries(propInputs).forEach(([key, input]) => {
+            input.addEventListener('input', () => {
+                const item = selectedItem();
+                if (!item) return;
+                if (key === 'name' || key === 'src') {
+                    item[key] = input.value;
+                } else if (key === 'locked' || key === 'hidden') {
+                    item[key] = input.value === 'true';
+                } else {
+                    item[key] = Number(input.value);
+                }
+                if (key === 'z') normalizeZ();
+                render();
+            });
+        });
+
+        function rotateSelection(delta, absolute = false) {
+            const items = selectedItems();
+            if (!items.length) return;
+            items.forEach(item => {
+                item.rotation = absolute ? delta : (Number(item.rotation) || 0) + delta;
+            });
+            render();
+        }
+
+        function mirrorSelection(axis) {
+            const items = selectedItems();
+            if (!items.length) return;
+            const bounds = getSelectionBounds(items.map(item => item.id));
+            if (!bounds) return;
+            items.forEach(item => {
+                if (axis === 'x') {
+                    item.x = Math.round(bounds.left + bounds.width - ((Number(item.x) || 0) + (Number(item.width) || 0)));
+                    item.flipX = !item.flipX;
+                } else {
+                    item.y = Math.round(bounds.top + bounds.height - ((Number(item.y) || 0) + (Number(item.height) || 0)));
+                    item.flipY = !item.flipY;
+                }
+            });
+            render();
+        }
+
+        document.getElementById('rotate-left').addEventListener('click', () => rotateSelection(-90));
+        document.getElementById('rotate-reset').addEventListener('click', () => rotateSelection(0, true));
+        document.getElementById('rotate-right').addEventListener('click', () => rotateSelection(90));
+        document.getElementById('mirror-x').addEventListener('click', () => mirrorSelection('x'));
+        document.getElementById('mirror-y').addEventListener('click', () => mirrorSelection('y'));
+
+        stage.addEventListener('pointerdown', (event) => {
+            if (!isCanvasBackgroundTarget(event.target)) return;
+            event.preventDefault();
+            clearSnapGuides();
+            startMarqueeSelection(event);
+        });
+
+        stage.addEventListener('click', (event) => {
+            if (!isCanvasBackgroundTarget(event.target)) return;
+            if (marqueeState) return;
+            if (suppressStageClickClear) return;
+            setSelected(null);
+        });
+
+        window.addEventListener('keydown', (event) => {
+            const item = selectedItem();
+            if (!item) return;
+            if (['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) return;
+
+            if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'd') {
+                event.preventDefault();
+                duplicateSelected();
+                return;
+            }
+
+            if (event.key === 'Delete' || event.key === 'Backspace') {
+                event.preventDefault();
+                deleteSelected();
+                return;
+            }
+
+            const step = event.shiftKey ? 10 : 1;
+            let moved = false;
+            if (event.key === 'ArrowLeft') { item.x -= step; moved = true; }
+            if (event.key === 'ArrowRight') { item.x += step; moved = true; }
+            if (event.key === 'ArrowUp') { item.y -= step; moved = true; }
+            if (event.key === 'ArrowDown') { item.y += step; moved = true; }
+            if (moved) {
+                event.preventDefault();
+                render();
+            }
+        });
+
+        buildBackgroundSelect();
+        renderAssetLibrary();
+        backgroundFitSelect.value = state.backgroundFit;
+        stageWidthInput.value = state.stageWidth;
+        stageHeightInput.value = state.stageHeight;
+        render(false, { assets: true });
+        loadState();
+        if (isFileProtocol()) {
+            assetFolderStatus.textContent = '本地文件模式已启用：画布会正常显示，资产文件夹请用“选择资产文件夹”手动载入。';
+        }
+        refreshLayoutJsonPreview();
+        document.addEventListener('visibilitychange', () => {
+            if (document.visibilityState === 'hidden') saveStateNow();
+        });
+        (async () => {
+            if (isFileProtocol()) return;
+            if (state.folderAssetSource?.mode && state.folderAssetSource.mode !== 'handle') return;
+            const restoredHandle = await restorePersistedDirectoryHandle();
+            if (!restoredHandle) return;
+            try {
+                const permission = restoredHandle.queryPermission
+                    ? await restoredHandle.queryPermission({ mode: 'read' })
+                    : 'granted';
+                assetFolderHandle = restoredHandle;
+                if (permission === 'granted' || permission === 'prompt') {
+                    await loadAssetsFromDirectoryHandle(restoredHandle);
+                }
+            } catch (error) {
+                console.warn('恢复资产文件夹失败', error);
+            }
+        })();
+    </script>
+</body>
+</html>

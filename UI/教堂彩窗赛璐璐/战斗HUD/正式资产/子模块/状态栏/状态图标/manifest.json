@@ -1,0 +1,203 @@
+{
+  "version": 1,
+  "style": "church stained-glass cel HUD status icons",
+  "sourceSize": [
+    512,
+    512
+  ],
+  "statuses": [
+    {
+      "id": "armor",
+      "name": "护盾",
+      "kind": "buff",
+      "tone": "defense",
+      "symbol": "shield",
+      "file": "status_armor_asset_v1.png",
+      "size": [
+        512,
+        512
+      ]
+    },
+    {
+      "id": "thorns",
+      "name": "荆棘",
+      "kind": "buff",
+      "tone": "nature",
+      "symbol": "thorns",
+      "file": "status_thorns_asset_v1.png",
+      "size": [
+        512,
+        512
+      ]
+    },
+    {
+      "id": "str",
+      "name": "力量",
+      "kind": "buff",
+      "tone": "power",
+      "symbol": "fist",
+      "file": "status_str_asset_v1.png",
+      "size": [
+        512,
+        512
+      ]
+    },
+    {
+      "id": "charge",
+      "name": "蓄力",
+      "kind": "buff",
+      "tone": "gold",
+      "symbol": "charge_crystal",
+      "file": "status_charge_asset_v1.png",
+      "size": [
+        512,
+        512
+      ]
+    },
+    {
+      "id": "echo",
+      "name": "回音",
+      "kind": "buff",
+      "tone": "magic",
+      "symbol": "echo",
+      "file": "status_echo_asset_v1.png",
+      "size": [
+        512,
+        512
+      ]
+    },
+    {
+      "id": "blood",
+      "name": "血祭",
+      "kind": "buff",
+      "tone": "blood",
+      "symbol": "blood_rite",
+      "file": "status_blood_asset_v1.png",
+      "size": [
+        512,
+        512
+      ]
+    },
+    {
+      "id": "enchant",
+      "name": "附魔",
+      "kind": "buff",
+      "tone": "power",
+      "symbol": "sword",
+      "file": "status_enchant_asset_v1.png",
+      "size": [
+        512,
+        512
+      ]
+    },
+    {
+      "id": "guard",
+      "name": "庇护",
+      "kind": "buff",
+      "tone": "defense",
+      "symbol": "ward",
+      "file": "status_guard_asset_v1.png",
+      "size": [
+        512,
+        512
+      ]
+    },
+    {
+      "id": "counter",
+      "name": "招架准备",
+      "kind": "buff",
+      "tone": "gold",
+      "symbol": "bolt",
+      "file": "status_counter_asset_v1.png",
+      "size": [
+        512,
+        512
+      ]
+    },
+    {
+      "id": "poison",
+      "name": "剧毒",
+      "kind": "debuff",
+      "tone": "poison",
+      "symbol": "skull",
+      "file": "status_poison_asset_v1.png",
+      "size": [
+        512,
+        512
+      ]
+    },
+    {
+      "id": "bleed",
+      "name": "出血",
+      "kind": "debuff",
+      "tone": "bleed",
+      "symbol": "slash_drop",
+      "file": "status_bleed_asset_v1.png",
+      "size": [
+        512,
+        512
+      ]
+    },
+    {
+      "id": "burn",
+      "name": "燃烧",
+      "kind": "debuff",
+      "tone": "fire",
+      "symbol": "wildfire",
+      "file": "status_burn_asset_v1.png",
+      "size": [
+        512,
+        512
+      ]
+    },
+    {
+      "id": "stun",
+      "name": "眩晕",
+      "kind": "debuff",
+      "tone": "gold",
+      "symbol": "starburst",
+      "file": "status_stun_asset_v1.png",
+      "size": [
+        512,
+        512
+      ]
+    },
+    {
+      "id": "curse",
+      "name": "诅咒",
+      "kind": "debuff",
+      "tone": "curse",
+      "symbol": "chain",
+      "file": "status_curse_asset_v1.png",
+      "size": [
+        512,
+        512
+      ]
+    },
+    {
+      "id": "vuln",
+      "name": "易伤",
+      "kind": "debuff",
+      "tone": "curse",
+      "symbol": "target",
+      "file": "status_vuln_asset_v1.png",
+      "size": [
+        512,
+        512
+      ]
+    },
+    {
+      "id": "weak",
+      "name": "虚弱",
+      "kind": "debuff",
+      "tone": "curse",
+      "symbol": "down",
+      "file": "status_weak_asset_v1.png",
+      "size": [
+        512,
+        512
+      ]
+    }
+  ],
+  "extensionNote": "Add a new spec entry in generate_status_icons.py and rerun the script to create additional status icons."
+}

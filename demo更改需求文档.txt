@@ -1,0 +1,989 @@
+幻境残卷
+
+代码更改需求文档 v1.2
+
+1. 文档目标
+
+本次改造的目标不是推翻当前玩法骨架，而是把现有 demo 从“单文件可玩原型”升级成“可持续扩展、可承接正式美术资源、可继续做职业与内容系统”的正式前端骨架。
+
+1.1 当前版本的核心判断
+
+当前 demo 已经具备：
+
+* 主菜单
+* 地图推进
+* 战斗循环
+* 手牌渲染
+* 奖励 / 商店 / 营火 / 奇遇弹层
+* 敌人、遗物、状态词条的基础规则
+
+所以当前最优先的工作，不是继续堆新玩法，而是先完成：
+
+1. 视觉方向统一
+2. 资源驱动接入
+3. 角色选择正式落地
+4. 前端结构拆分
+5. 正式卡池逐步替换程序生牌
+
+1.2 当前确认的视觉方向
+
+本项目 UI 与表现层的正式方向，已经从旧版深色暗金奇幻 UI，切换为：
+
+教堂彩窗 + 90 年代赛璐璐奇幻动画融合风格
+
+这意味着后续所有前端实现都必须围绕以下锚点展开：
+
+* 教堂彩窗的分区结构
+* 铅条 / 黄铜骨架式边框语言
+* 宝石透光与彩色玻璃分块
+* 90 年代 OVA 时代赛璐璐角色层
+* 更强的仪式感、圣像感、奇幻宗教感
+* 角色永远是主视觉，UI 是前景功能层
+
+现阶段默认主用 UI 目录为：
+
+* `UI/教堂彩窗赛璐璐/`
+
+旧版深色暗金 UI 已从当前资产目录清理，不再作为主流程默认风格继续扩展。
+
+1.3 核心实现目标
+
+1. 建立 角色层 / 背景层 / UI层 / VFX层 的分层渲染结构。
+2. 建立 资源配置驱动 的角色、卡牌、背景、UI 皮肤接入方式。
+3. 建立 场景管理 + 渲染器 + 状态管理 的代码边界。
+4. 让角色选择、战斗 HUD、弹层系统全面切换到“教堂彩窗赛璐璐”视觉语言。
+5. 让当前 demo 可以继续承接三职业入口、正式卡池、章节内容与更多场景资源。
+
+⸻
+
+2. 当前代码问题归纳
+
+2.1 视图、逻辑、资源耦合过高
+
+当前 HTML 中同时包含：
+
+* 大量场景 DOM
+* 大量样式
+* 事件触发
+* 业务逻辑
+* 卡牌生成与战斗逻辑
+* overlay 控制
+
+这使得后续一旦接入正式 UI、美术资源、角色选择和更多事件模板，修改成本会迅速上升。
+
+2.2 战斗表现层仍是原型态
+
+当前战斗区：
+
+* 我方用固定 `hero.png` 裁切显示
+* 敌方主体仍由 `enemy-avatar` 文本 / emoji 驱动
+* 背景主要依赖渐变和透视网格
+* VFX 仍是几何 slash / flash 原型
+
+这和你现在要的“教堂彩窗 HUD + 赛璐璐角色层 + 正式背景板 + 仪式感界面”还有明显距离。
+
+2.3 卡牌渲染还没有正式资源接入口
+
+当前卡牌已经有：
+
+* 费用结晶
+* 名称
+* 稀有度边框
+* 类型角标
+* 描述区
+* 关键词标签
+
+但卡面中心仍然更接近图标占位，而不是真正的插画容器。手牌仍由 `generateCardHTML()` 直接生成并挂点击逻辑，不适合长期扩内容。
+
+2.4 角色选择尚未正式接入
+
+你已经有角色选择方向图和对应 UI 资产，但当前运行版本仍是：
+
+* 固定初始牌库
+* 固定主角资源
+* 开局直接进入遗物三选一
+
+这意味着三职业入口、职业卡池、职业配色和角色 UI 细节，都还没有进入正式流程。
+
+2.5 交互事件分散
+
+当前主菜单按钮、地图按钮、结束回合、牌堆查看、overlay 关闭等，既有 HTML 内联 `onclick`，也有 JS 运行时 `el.onclick`。
+
+这会导致后续组件化和自动化测试都困难。
+
+⸻
+
+3. 总体改造原则
+
+3.1 保留玩法骨架，优先重构表现层与接入层
+
+不建议推倒重写。
+
+当前已具备的流程骨架都应该保留：
+
+* 场景切换
+* 地图推进
+* 战斗状态更新
+* 手牌渲染
+* overlay 体系
+* 卡牌生成与部分战斗数值逻辑
+
+优先重构“渲染方式、资源接入方式、角色入口、UI 语言”。
+
+3.2 所有视觉实现改为“资源驱动”
+
+未来角色、背景、卡牌、UI 都必须通过配置切换，而不是写死：
+
+* 根目录角色占位图
+* emoji 敌人
+* CSS 渐变假背景
+* 某个按钮直接写某一张图
+
+3.3 所有新界面默认使用新 UI 目录
+
+新做页面、战斗 HUD、角色选择、弹层、商店、营火、图鉴面板，默认优先使用：
+
+* `UI/教堂彩窗赛璐璐/`
+
+避免新旧风格混用。
+
+3.4 可读性优先于装饰密度
+
+虽然 UI 风格升级为“教堂彩窗 + 赛璐璐”，但必须坚持：
+
+* 数值优先可读
+* 卡费优先可读
+* 血量 / 护盾 / 状态优先可读
+* 角色主体优先于 HUD
+* 手牌区不能因为花纹过多而失去扫描速度
+
+⸻
+
+4. 推荐代码架构
+
+4.1 目录结构
+
+/src
+  /assets
+    /bg
+    /characters
+    /cards
+    /ui
+      /stained-cel
+    /icons
+    /vfx
+  /data
+    cards.js
+    enemies.js
+    characters.js
+    backgrounds.js
+    ui-skins.js
+    events.js
+  /core
+    state.js
+    event-bus.js
+    asset-loader.js
+    scene-manager.js
+  /renderers
+    topbar-renderer.js
+    role-select-renderer.js
+    map-renderer.js
+    battle-renderer.js
+    card-renderer.js
+    overlay-renderer.js
+    vfx-renderer.js
+  /controllers
+    battle-controller.js
+    map-controller.js
+    menu-controller.js
+    overlay-controller.js
+    role-select-controller.js
+  /styles
+    base.css
+    theme-stained-cel.css
+    battle.css
+    cards.css
+    overlays.css
+    role-select.css
+index.html
+
+4.2 模块职责
+
+`state.js`
+
+* 负责全局状态源
+* 不直接操作 DOM
+
+`scene-manager.js`
+
+* 切主场景
+* 开弹层
+* 关弹层
+* 管理场景进入 / 离开生命周期
+
+`asset-loader.js`
+
+* 预加载图片
+* 失败占位图
+* 资源缓存
+
+`role-select-renderer.js`
+
+* 渲染角色选择页
+* 渲染角色卡、选中态、职业标签、说明面板
+
+`battle-renderer.js`
+
+* 渲染战斗背景
+* 渲染我方角色
+* 渲染敌方角色
+* 渲染敌我 HUD
+* 渲染牌堆与回合操作区
+
+`card-renderer.js`
+
+* 单卡 HTML 结构
+* 手牌布局
+* 卡牌 hover / 选中 / 禁用状态
+* pile 预览中的静态卡
+
+`battle-controller.js`
+
+* 出牌
+* 抽牌
+* 结束回合
+* 动画时序
+* 战斗状态更新后调用 renderer
+
+⸻
+
+5. 状态模型改造需求
+
+5.1 顶层状态结构
+
+建议从当前散落字段逐步重构为：
+
+```js
+const state = {
+  app: {
+    currentScene: "mainMenu",
+    openOverlay: null,
+    loading: false
+  },
+  run: {
+    floor: 1,
+    gold: 50,
+    seed: null
+  },
+  player: {
+    characterId: "hero_warrior",
+    name: "残卷旅人",
+    hp: 80,
+    maxHp: 80,
+    mp: 5,
+    armor: 0,
+    relics: [],
+    statuses: []
+  },
+  battle: {
+    backgroundId: null,
+    playerPose: "idle_back",
+    enemyPose: "idle_front",
+    hand: [],
+    drawPile: [],
+    discardPile: [],
+    exhaustPile: [],
+    turn: "player",
+    intent: null
+  },
+  map: {
+    currentNodeId: null,
+    pathHistory: []
+  },
+  ui: {
+    skinId: "stained_cel_default",
+    hoveredCardId: null,
+    selectedCardIds: []
+  }
+};
+```
+
+5.2 改造目标
+
+把当前这些分散字段：
+
+* `state.hp`
+* `state.maxHp`
+* `state.gold`
+* `state.floor`
+* `state.enemy`
+* `state.hand`
+* `state.battleDeck`
+* `state.discardPile`
+* `state.exhaustPile`
+
+逐步收束进明确分组，为角色选择、职业卡池、存档和后续扩展做准备。
+
+⸻
+
+6. 角色选择系统需求
+
+6.1 当前判断
+
+角色选择不再是概念展示页，而要升级为正式开局入口。
+
+6.2 必须落地的功能
+
+开局流程建议改为：
+
+1. 主菜单
+2. 角色选择
+3. 初始遗物 / 初始祝福
+4. 进入地图
+
+6.3 每个角色至少要绑定
+
+* `characterId`
+* 名称
+* 职业标签
+* 初始卡组
+* 专属卡池权重
+* 默认 UI 配色细节
+* 角色选择立绘
+* 战斗背面立绘
+
+6.4 推荐配置结构
+
+```js
+const CHARACTERS = {
+  hero_warrior: {
+    name: "勇者战士",
+    tags: ["近战", "防御", "圣剑"],
+    starterDeckId: "starter_warrior",
+    cardPoolId: "pool_warrior",
+    uiAccent: "blue_gold",
+    visuals: {
+      selectPortrait: "assets/characters/warrior/select.png",
+      battleBackIdle: "assets/characters/warrior/back_idle.png"
+    }
+  }
+};
+```
+
+6.5 对应 UI 资产来源
+
+优先承接：
+
+* `UI/教堂彩窗赛璐璐/角色选择/角色卡窗框_普通_v1.png`
+* `UI/教堂彩窗赛璐璐/角色选择/角色卡窗框_选中_v1.png`
+* `UI/教堂彩窗赛璐璐/角色选择/特性标签底板_蓝金_v1.png`
+* `UI/教堂彩窗赛璐璐/角色选择/角色描述面板_v1.png`
+
+⸻
+
+7. 战斗场景重构需求
+
+7.1 新 DOM 结构
+
+当前 `#scene-battle` 可保留容器，但内部建议重构为：
+
+```html
+<section id="scene-battle" class="scene">
+  <div class="battle-bg-layer"></div>
+  <div class="battle-floor-layer"></div>
+  <div class="battle-character-layer">
+    <div id="player-character-slot"></div>
+    <div id="enemy-character-slot"></div>
+  </div>
+  <div class="battle-vfx-layer"></div>
+  <div class="battle-ui-layer">
+    <div id="battle-top-info"></div>
+    <div id="enemy-info-panel"></div>
+    <div id="player-info-panel"></div>
+    <div id="battle-hand-slot"></div>
+    <div id="battle-controls"></div>
+    <div id="battle-piles"></div>
+  </div>
+</section>
+```
+
+7.2 改造意图
+
+把现在混在一起的：
+
+* 背景
+* 地板
+* 角色
+* 血条
+* 意图
+* 手牌
+* pile
+* VFX
+
+拆成独立层，符合“赛璐璐角色叠加静态背景板”的视觉逻辑。
+
+7.3 角色站位要求
+
+我方
+
+* 左下
+* 背面或背侧
+* 重点显示披风、武器、发型轮廓
+* 有独立地面阴影层
+
+敌方
+
+* 右上
+* 正面或 3/4 正面
+* 有名牌、血条、意图、状态栏
+* 可扩展召唤物插槽
+
+7.4 战斗 HUD 资产接入优先级
+
+优先承接：
+
+* `UI/教堂彩窗赛璐璐/战斗HUD/我方铭牌_v1.png`
+* `UI/教堂彩窗赛璐璐/战斗HUD/敌方铭牌_v1.png`
+* `UI/教堂彩窗赛璐璐/战斗HUD/通用条框_v1.png`
+* `UI/教堂彩窗赛璐璐/战斗HUD/生命条填充_v2.png`
+* `UI/教堂彩窗赛璐璐/战斗HUD/护盾条填充_v2.png`
+* `UI/教堂彩窗赛璐璐/战斗HUD/五段能量表_空槽_v2.png`
+* `UI/教堂彩窗赛璐璐/战斗HUD/单格能量晶片_点亮_v2.png`
+
+⸻
+
+8. 角色资源系统需求
+
+8.1 角色配置结构
+
+```js
+const CHARACTER_VISUALS = {
+  hero_warrior: {
+    name: "勇者战士",
+    side: "player",
+    anchor: "left-bottom",
+    poses: {
+      idle_back: "assets/characters/warrior/back_idle.png",
+      attack_back: "assets/characters/warrior/back_attack.png",
+      skill_back: "assets/characters/warrior/back_skill.png",
+      hurt_back: "assets/characters/warrior/back_hurt.png"
+    }
+  },
+  enemy_forest_slime: {
+    name: "病弱史莱姆",
+    side: "enemy",
+    anchor: "right-top",
+    poses: {
+      idle_front: "assets/characters/enemies/slime/front_idle.png",
+      attack_front: "assets/characters/enemies/slime/front_attack.png",
+      skill_front: "assets/characters/enemies/slime/front_skill.png",
+      hurt_front: "assets/characters/enemies/slime/front_hurt.png"
+    }
+  }
+};
+```
+
+8.2 改动要求
+
+* 移除我方固定 `hero.png`
+* 移除敌方 `enemy-avatar` emoji 主体
+* 战斗动画逐步改为 pose 切换
+* 为三角色共用系统留接口
+
+8.3 渲染接口
+
+* `renderPlayerUnit(unitId, poseName)`
+* `renderEnemyUnit(unitId, poseName)`
+* `setUnitPose(side, poseName)`
+* `preloadUnitVisuals(unitId)`
+
+⸻
+
+9. 背景与场景资源系统需求
+
+9.1 背景注册表
+
+```js
+const BATTLE_BACKGROUNDS = {
+  ancient_forest: {
+    image: "assets/bg/battle/ancient_forest.jpg",
+    tone: "green",
+    uiSkin: "stained_cel_forest"
+  },
+  ruins_hall: {
+    image: "assets/bg/battle/ruins_hall.jpg",
+    tone: "stone",
+    uiSkin: "stained_cel_ruins"
+  }
+};
+```
+
+9.2 使用规则
+
+* 每场战斗必须有 `backgroundId`
+* 地图节点可绑定背景池
+* 敌人可绑定默认背景
+* UI 皮肤可随背景切换局部配色
+
+9.3 代码替换目标
+
+当前 `#scene-battle`、`#scene-map` 大量使用纯 CSS 渐变模拟环境气氛。这个可保留为 fallback，但正式显示应优先使用背景资源图。
+
+⸻
+
+10. 卡牌渲染系统重构需求
+
+10.1 当前方向
+
+当前程序生牌仍然可以作为原型验证工具保留，但必须逐步降级为测试工具，而不是正式内容主来源。
+
+10.2 单卡数据结构
+
+```js
+const cardData = {
+  id: "a001",
+  name: "圣辉斩",
+  type: "攻击",
+  cost: 2,
+  rarity: "稀有",
+  desc: "造成 12 点伤害。若敌方处于易伤，再造成 4 点伤害。",
+  artId: "holy_slash_01",
+  frameId: "warrior_rare",
+  keywordIds: ["易伤"],
+  upgraded: false
+};
+```
+
+10.3 单卡视觉结构
+
+```html
+<article class="card rarity-rare type-attack">
+  <div class="card-frame">
+    <div class="card-cost"></div>
+    <div class="card-name-bar"></div>
+    <div class="card-art-wrap">
+      <img class="card-art-img" />
+    </div>
+    <div class="card-text-wrap"></div>
+    <div class="card-tags"></div>
+  </div>
+</article>
+```
+
+10.4 必改点
+
+* `card-art` 从图标容器改成插画容器
+* 稀有度主要通过框体、角饰、底纹表达
+* `generateCardHTML()` 必须拆成模板函数 + 数据输入
+* `renderHand()` 只负责位置与实例状态，不负责拼接视觉细节
+
+10.5 内容层改造要求
+
+优先建立：
+
+* 三职业起始卡组
+* 三职业正式卡池
+* 中立卡池
+* 诅咒卡池
+* 事件卡 / 奖励卡
+
+⸻
+
+11. UI 皮肤系统需求
+
+11.1 当前正式方向
+
+当前 UI 皮肤系统不再沿用旧版“深色暗金通用奇幻风”作为唯一核心，而是以“教堂彩窗赛璐璐”作为默认主主题。
+
+11.2 主题变量层
+
+建立统一 token，例如：
+
+```css
+:root {
+  --ui-glass-deep-blue: #203552;
+  --ui-glass-teal: #2d5f63;
+  --ui-glass-violet: #4c345f;
+  --ui-brass-main: #b99243;
+  --ui-brass-soft: rgba(213, 182, 111, 0.45);
+  --ui-ivory-text: #f2e7cf;
+  --ui-shadow-heavy: 0 10px 28px rgba(0,0,0,0.55);
+  --ui-panel-dark: rgba(16, 14, 22, 0.88);
+}
+```
+
+11.3 适用范围
+
+统一覆盖：
+
+* 顶栏 `top-bar`
+* 地图卡片 `map-title-card`
+* 角色选择页
+* 战斗名牌、血条、意图框
+* 手牌按钮
+* overlay 弹层
+* 商店与奇遇面板
+* 图鉴面板
+
+11.4 资源驱动方案
+
+UI 皮肤至少拆为：
+
+* 按钮皮肤
+* 名牌皮肤
+* 条框皮肤
+* 状态徽章底板
+* 弹窗底板
+* 标签底板
+* 角色卡框
+
+11.5 当前资产目录约束
+
+优先参考：
+
+* `UI/教堂彩窗赛璐璐/README.md`
+* `UI/教堂彩窗赛璐璐/战斗HUD/README.md`
+* `UI/教堂彩窗赛璐璐/角色选择/README.md`
+
+⸻
+
+12. 事件系统改造需求
+
+12.1 当前问题
+
+代码里存在两类事件绑定：
+
+* HTML 内联 `onclick="..."`
+* JS 运行时 `el.onclick = ...`
+
+这会让重构后的组件边界不稳定。
+
+12.2 改造要求
+
+统一改为：
+
+* `bindMenuEvents()`
+* `bindBattleEvents()`
+* `bindOverlayEvents()`
+* `bindMapEvents()`
+* `bindRoleSelectEvents()`
+
+所有按钮通过 `data-action` 或显式查询后 `addEventListener` 绑定。
+
+12.3 禁止项
+
+* 不再新增新的 HTML 内联 `onclick`
+* 不再在渲染函数中夹杂业务逻辑
+* 不再让视图模板直接知道 battle rule
+
+⸻
+
+13. Overlay 系统重构需求
+
+13.1 当前情况
+
+你已经有完整 overlay 体系：
+
+* 初始遗物
+* 初始牌库
+* 图鉴
+* 牌堆查看
+* 战利品
+* 奇遇
+* 选牌
+* 营火
+* 商店
+
+这是很好的基础。
+
+13.2 改造目标
+
+将所有 overlay 统一变成：
+
+* `openOverlay(type, payload)`
+* `closeOverlay(type)`
+* `renderOverlay(type, payload)`
+* `destroyOverlay(type)`
+
+13.3 每类 overlay 要拆成
+
+* 模板
+* 数据绑定
+* 交互绑定
+* 关闭与回收
+
+13.4 视觉特别要求
+
+商店、奇遇、营火、图鉴、奖励弹层都要切换到新风格底板，不再继续沿用旧时代深色面板逻辑混搭。
+
+⸻
+
+14. 动效与 VFX 改造需求
+
+14.1 当前情况
+
+当前已有：
+
+* `vfx-p-atk`
+* `vfx-p-def`
+* `vfx-e-atk`
+* `vfx-e-def`
+* `screen-shake`
+
+属于可用原型。
+
+14.2 改造方向
+
+保留机制，替换表现。
+
+角色动作
+
+* 位移幅度更小
+* 用 pose 切换代替大幅缩放
+* 敌人攻击不宜继续用“emoji 前冲”
+
+特效
+
+* 使用手绘 slash 贴图 / 法阵贴图 / 光束贴图
+* 特效层级在角色上、UI 下
+* 单次技能特效时长控制在 300–800ms
+
+伤害反馈
+
+* 数字出现
+* 角色轻微受击位移
+* 短促闪白
+* 接触点火花
+
+14.3 新接口
+
+* `playAttackSequence(attacker, target, skill)`
+* `playDefenseSequence(target, effect)`
+* `playBuffSequence(target, buffId)`
+* `playDamageNumber(target, amount, type)`
+
+⸻
+
+15. 资源命名规范
+
+15.1 角色
+
+* `warrior_back_idle.png`
+* `warrior_back_attack.png`
+* `mage_back_skill.png`
+* `elf_back_idle.png`
+* `slime_front_idle.png`
+* `slime_front_attack.png`
+
+15.2 背景
+
+* `bg_battle_ancient_forest_day.jpg`
+* `bg_battle_ruins_hall_dusk.jpg`
+* `bg_map_starpath_01.jpg`
+
+15.3 卡图
+
+* `card_art_holy_slash_01.jpg`
+* `card_art_fire_seal_01.jpg`
+
+15.4 UI
+
+* `ui_stained_button_blue_gold_v1.png`
+* `ui_stained_nameplate_player_v1.png`
+* `ui_stained_nameplate_enemy_v1.png`
+* `ui_stained_hp_fill_v2.png`
+* `ui_stained_energy_slot_v2.png`
+
+⸻
+
+16. 迁移顺序
+
+阶段 A：先锁新风格基线
+
+1. 确认 `UI/教堂彩窗赛璐璐/` 为默认主目录
+2. 定义主题 token
+3. 明确角色选择 / 战斗 HUD / 按钮 / 弹层的默认资源表
+
+阶段 B：先落角色选择
+
+1. 新建角色选择场景
+2. 接入角色卡窗框、选中态、标签底板、说明面板
+3. 建立三职业入口与开局流转
+
+阶段 C：再重构战斗显示
+
+1. 新建 battle 分层 DOM
+2. 替换玩家立绘接入
+3. 替换敌方 emoji 为正式立绘容器
+4. 将背景改为资源接入
+5. 接入新版战斗 HUD
+
+阶段 D：再重构卡牌
+
+1. 拆 `generateCardHTML`
+2. 接入卡图
+3. 接入卡框皮肤
+4. 重构手牌布局逻辑
+5. 建立职业正式卡池
+
+阶段 E：再收 UI 和 overlay
+
+1. 统一按钮与弹层
+2. 商店 / 奇遇 / 营火独立 renderer
+3. 接入新版面板皮肤
+
+阶段 F：最后优化
+
+1. preload
+2. 响应式
+3. VFX 资源替换
+4. fallback 与异常处理
+
+⸻
+
+17. 风险点
+
+17.1 最大风险
+
+不是玩法，而是资源接入后布局崩坏。
+
+因为当前很多位置使用固定像素：
+
+* 玩家区
+* 敌方区
+* 手牌区
+* pile 区
+* 结束回合按钮
+
+正式立绘、彩窗 HUD、卡图接入后，很容易发生遮挡。
+
+17.2 第二风险
+
+战斗状态和 DOM 深度耦合。
+
+例如抽牌、手牌渲染、状态更新、浮字和 VFX 都会直接碰 DOM。
+
+17.3 第三风险
+
+继续边开发边往单文件里追加内容，会让重构窗口越来越难。
+
+17.4 第四风险
+
+新 UI 装饰性更强，如果不提前建立统一规范，会出现：
+
+* 角色选择一套语言
+* 战斗 HUD 一套语言
+* 弹层又是另一套语言
+
+最终会失去“这是同一个游戏”的整体感。
+
+⸻
+
+18. 详细验收标准
+
+18.1 角色选择
+
+* 开局先进入角色选择
+* 三职业可以正式选择
+* 每个角色有独立标签、说明、配色与初始卡组
+* 角色选择页完整使用新 UI 风格
+
+18.2 战斗界面
+
+* 我方角色始终为背面 / 背侧立绘
+* 敌方角色始终为正面 / 3/4 正面立绘
+* 背景可配置切换
+* 战斗 HUD 使用彩窗赛璐璐风格
+* 战斗 UI 不压角色主体
+* 特效不会盖住主要文字信息
+
+18.3 卡牌
+
+* 卡图支持正式插画
+* 卡框支持按稀有度 / 职业切换
+* 手牌排布在 5–10 张情况下都稳定
+* pile 预览使用静态卡样式
+* 程序生牌不再是正式内容主来源
+
+18.4 工程
+
+* 无新增内联 `onclick`
+* 场景切换统一走 manager
+* 角色、背景、卡图、UI 都通过 registry 配置
+* 资源加载失败时有 fallback 图
+* 主代码不再依赖单 HTML 大脚本
+
+18.5 风格结果
+
+最终画面要同时满足：
+
+* 角色在前景
+* 背景是静态板
+* UI 是前景功能层
+* 结构语言能看出教堂彩窗与黄铜骨架感
+* 角色仍保有 90 年代赛璐璐奇幻动画的主视觉地位
+
+⸻
+
+19. 程序任务拆分建议
+
+前端架构
+
+* 拆分 CSS / JS 文件
+* 建立状态树
+* 建立 scene manager
+* 建立 asset loader
+
+角色入口
+
+* 角色选择场景
+* 角色卡 renderer
+* 角色选择 controller
+* 角色配置表
+
+战斗系统表现层
+
+* 战斗 DOM 分层
+* 玩家 / 敌人角色 renderer
+* 背景 renderer
+* battle HUD renderer
+* VFX renderer
+
+卡牌系统表现层
+
+* 卡牌模板函数
+* 手牌布局器
+* 卡框 / 卡图注册表
+* pile 预览 renderer
+* 正式卡池数据表
+
+UI 系统
+
+* 主题变量
+* 面板 / 按钮 / 血条组件
+* overlay renderer 标准化
+* 彩窗皮肤资源表
+
+资源系统
+
+* 角色 pose 资源
+* 背景图资源
+* 卡图资源
+* UI 图素资源
+* fallback 资源
+
+⸻
+
+20. 一句话结论
+
+你这个 demo 现在最该做的，不是继续堆新玩法，而是先把“单文件原型”升级成“以教堂彩窗赛璐璐风格为主轴的资源驱动分层前端”。
+
+只要把这一步做好，项目就能真正承接你已经明确的新方向：
+
+* 教堂彩窗结构语言
+* 90 年代赛璐璐奇幻角色层
+* 三职业正式入口
+* 战斗 HUD 仪式感
+* 正式卡池与章节内容扩展
+
+你现有代码已经把场景、战斗、手牌、overlay 骨架搭出来了，完全适合在此基础上演进，而不必推倒重来。
