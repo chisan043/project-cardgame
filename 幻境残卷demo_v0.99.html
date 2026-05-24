@@ -1272,17 +1272,23 @@
         .card.rarity-诅咒 .card-name { color: var(--crimson); }
 
         .card-type-badge { position: absolute !important; left:125px !important; top:16px !important; right:auto !important; width:33px !important; min-width:0 !important; max-width:none !important; height:11px !important; display:inline-flex !important; align-items:center; justify-content:center; text-align:center; font-size: 7px !important; line-height:11px !important; padding: 0 3px !important; border-radius: 999px; font-weight: bold; color: #f7e9c5; z-index: 6; border: 1px solid rgba(241,223,181,0.45); box-shadow:0 2px 8px rgba(0,0,0,0.62); white-space:nowrap; overflow:hidden; box-sizing:border-box;}
-        .card-art { position:absolute !important; left:14px; top:32px; width:145px; height:154px; min-height: 0; margin:0; display: flex; align-items: center; justify-content: center; font-size: 44px; background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 60%); filter: drop-shadow(0 5px 5px rgba(0,0,0,0.5)); overflow:hidden; border:1px solid rgba(199,162,88,0.38); box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04); box-sizing:border-box;}
+        .card-art { position:absolute !important; left:14px; top:32px; width:145px; height:153px; min-height: 0; margin:0; display: flex; align-items: center; justify-content: center; font-size: 44px; background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 60%); filter: drop-shadow(0 5px 5px rgba(0,0,0,0.5)); overflow:hidden; border:1px solid rgba(199,162,88,0.38); box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04); box-sizing:border-box;}
         .card-art.has-art { align-items:stretch; background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(0,0,0,0.18)); }
         .card-art-img { width:100%; height:100%; object-fit:cover; object-position:center 38%; display:block; filter:saturate(1.06) contrast(1.04); }
         .card-art.has-art::after { content:""; position:absolute; inset:0; background: linear-gradient(180deg, rgba(0,0,0,0) 68%, rgba(0,0,0,0.26)); pointer-events:none; }
-        .card-text { position:absolute !important; left:15px; top:192px; width:143px; height:53px; min-height:0; margin:0; padding: 11px 7px 5px; text-align: left; background: transparent; border: 0; display: block; overflow:visible; box-shadow: none; box-sizing:border-box;}
-        .card-desc { font-size: 8.5px; color: #c4c0b5; line-height: 1.18; max-height: 30px; font-family: "Microsoft YaHei", sans-serif; overflow:hidden;}
+        .card-text { position:absolute !important; left:15px; top:190px; width:143px; height:56px; min-height:0; margin:0; padding: 9px 7px 5px; text-align: left; background: transparent; border: 0; display: flex; flex-direction:column; gap:2px; overflow:hidden; box-shadow: none; box-sizing:border-box;}
+        .card-desc { flex:1 1 auto; min-height:0; font-size: 8.2px; color: #c4c0b5; line-height: 1.13; max-height:none; font-family: "Microsoft YaHei", sans-serif; overflow:hidden; display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:3;}
         .card-desc span { font-size: inherit !important; line-height: inherit !important; }
-        .card-desc .card-desc-value { font-size: 12px !important; font-weight: 800; color: var(--gold); }
+        .card-desc .card-desc-value { font-size: 11px !important; font-weight: 800; color: var(--gold); }
+        .card.desc-dense .card-desc { font-size: 7.5px; line-height:1.08; -webkit-line-clamp:3; }
+        .card.desc-dense .card-desc .card-desc-value { font-size: 10px !important; }
+        .card.desc-ultra .card-desc { font-size: 7px; line-height:1.04; -webkit-line-clamp:3; }
+        .card.desc-ultra .card-desc .card-desc-value { font-size: 9px !important; }
         
-        .card-tags-row { position:absolute; left:7px; right:7px; bottom:8px; display:flex; flex-wrap:nowrap; align-content:flex-start; gap:3px; margin:0; padding:0; border-top:0; width:auto; max-height:12px; overflow:visible; box-sizing:border-box; }
-        .keyword-tag { position: relative; display: inline-block; color: var(--gold); font-weight: bold; cursor: help; background: rgba(241,196,15,0.05); border: 1px solid rgba(241,196,15,0.3); border-radius: 2px; padding: 1px 4px; font-size: 8px; line-height:1.15; margin:0; box-shadow: 0 2px 4px rgba(0,0,0,0.8); white-space:nowrap;}
+        .card-tags-row { position:static; flex:0 0 auto; display:flex; flex-wrap:wrap; align-content:flex-start; gap:2px; margin:auto 0 0; padding:0; border-top:0; width:100%; max-height:19px; overflow:hidden; box-sizing:border-box; }
+        .keyword-tag { position: relative; display: inline-block; color: var(--gold); font-weight: bold; cursor: help; background: rgba(241,196,15,0.05); border: 1px solid rgba(241,196,15,0.3); border-radius: 2px; padding: 1px 3px; font-size: 7.5px; line-height:1.1; margin:0; box-shadow: 0 2px 4px rgba(0,0,0,0.8); white-space:nowrap;}
+        .card.desc-dense .keyword-tag { font-size:7px; padding:0 3px; line-height:1.08; }
+        .card.desc-ultra .keyword-tag { font-size:6.7px; padding:0 2px; line-height:1.05; }
         .keyword-tag:hover { z-index:10020; }
         .keyword-tooltip { display:none; }
         .global-keyword-tooltip { position:fixed; width:148px; max-width:calc(100vw - 24px); background: rgba(10,10,15,0.98); border: 1px solid var(--gold-dark); padding: 8px 10px; font-size: 12px; color: #ddd; white-space: normal; border-radius: 4px; box-shadow: 0 0 18px black; z-index: 30000; font-weight: normal; line-height: 1.5; text-align: left; font-family: "STKaiti", serif; pointer-events:none; box-sizing:border-box; }
@@ -2382,6 +2388,18 @@
         if(tagsHtml) return `<div style="display:flex; flex-wrap:wrap; align-content:flex-start; margin-top:auto; padding-top:8px; border-top:1px dashed #444; width:100%;">${tagsHtml}</div>`; return '';
     }
 
+    function getCardTextDensityClass(card, descHtml) {
+        const plain = String(descHtml || '')
+            .replace(/<br\s*\/?>/gi, '\n')
+            .replace(/<[^>]*>/g, '')
+            .replace(/\s+/g, '');
+        const lineHints = (String(descHtml || '').match(/<br\s*\/?>/gi) || []).length;
+        const tagCount = card?.tags ? new Set(card.tags).size : extractTagsFromText(card?.desc || '').length;
+        if (plain.length >= 58 || lineHints >= 2 || tagCount >= 4) return 'desc-ultra';
+        if (plain.length >= 38 || lineHints >= 1 || tagCount >= 3) return 'desc-dense';
+        return '';
+    }
+
     function generateCardHTML(card, isStatic = false) {
         let typeBadgeColor = card.type === '攻击' ? 'var(--crimson)' : (card.type === '防御' ? 'var(--water)' : 'var(--purple)');
         let sealedClass = card.sealed ? 'sealed' : '';
@@ -2390,15 +2408,17 @@
         let framePath = getCardFramePath(card);
         let frameStyle = `--card-frame-image:url('${framePath}')`;
         let artHtml = artPath ? `<img class="card-art-img" src="${artPath}" alt="${escapeAttr(card.name)}" data-fallback-icon="${escapeAttr(card.icon || '✦')}">` : `<span>${card.icon}</span>`;
+        let descHtml = card.isJunk ? `<span style="color:var(--crimson); font-size:11px;">${card.desc}</span>` : parseDesc(card);
+        let densityClass = getCardTextDensityClass(card, descHtml);
         return `
-            <div class="card has-frame-skin frame-${frameTheme} rarity-${card.rarity || '普通'} ${card.up ? 'upgraded' : ''} ${sealedClass} ${isStatic ? 'static-card' : ''}" style="${frameStyle}">
+            <div class="card has-frame-skin frame-${frameTheme} rarity-${card.rarity || '普通'} ${card.up ? 'upgraded' : ''} ${sealedClass} ${densityClass} ${isStatic ? 'static-card' : ''}" style="${frameStyle}">
                 <div class="card-frame-skin"></div>
                 <div class="card-cost"><span>${card.cost}</span></div>
                 <div class="card-type-badge" style="background:${typeBadgeColor};">${card.type}</div>
                 <div class="card-title-plate"><div class="card-name">${card.name}</div></div>
                 <div class="card-art ${artPath ? 'has-art' : ''}">${artHtml}</div>
                 <div class="card-text">
-                    <div class="card-desc">${card.isJunk ? `<span style="color:var(--crimson); font-size:11px;">${card.desc}</span>` : parseDesc(card)}</div>
+                    <div class="card-desc">${descHtml}</div>
                     ${getBottomTags(card)}
                 </div>
             </div>`;
