@@ -1660,7 +1660,7 @@
     const TAGS = {
         '重置': '选择任意张手牌丢弃，并抽取等量的牌。', '血祭': '失去 5 点生命，本局战斗所有伤害提升。', '灵祭': '选择并丢弃 1 张手牌，回复 1 点能量。',
         '狂热': '选择并丢弃 1 张手牌，本回合你的所有伤害增加 {val} 点。', '附魔': '选择并丢弃 1 张手牌，你下一次攻击额外造成 {val} 点伤害。', '庇护': '选择并丢弃 1 张手牌，本回合受到的伤害减少 {val} 点。',
-        '反击': '获得反击：本回合受到下一次敌方攻击时绝对防御，并返还等额伤害。', '招魂': '从放逐区选择 1 张牌回到手牌。', '轮回': '从放逐区选择 1 张牌洗入抽牌堆。',
+        '反击': '进入反击姿态：受到下一次敌方攻击时绝对防御，并返还等额伤害。反击姿态不可叠加。', '招魂': '从放逐区选择 1 张牌回到手牌。', '轮回': '从放逐区选择 1 张牌洗入抽牌堆。',
         '拾遗': '从墓地选择 1 张牌回到手牌。', '复刻': '复制上一张打出的牌的效果。', '吸血': '造成伤害时，回复等同于伤害一半的生命（史诗卡为全额回复）。',
         '保留': '打出后，下回合将回到手牌中。如果不打出则正常丢弃。', '回响': '打出后，此牌的效果会立即再次触发一次。', '放逐': '使用后移至放逐区，本局战斗不可再用。',
         '抽牌': '额外抽取 1 张牌。', '剧毒': '施加 3 层剧毒(每回合造成伤害并衰减)。', '出血': '施加 3 层出血(每回合受层数一半的伤害并衰减)。',
@@ -1718,11 +1718,11 @@
 
     const SPECIAL_EPIC_POOLS = {
         hero_warrior: [
-            { id: 's_shield', name: '圣盾崩击', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_圣剑解放.png', type: '攻击', cost: 2, icon: '🛡️', val: 0, tags: ['圣剑'], rarity: '史诗', isSpecial: true, desc: '造成等同于你当前护盾值 2 倍的伤害。适合在[反击]与护盾叠高后收束。' },
-            { id: 's_thorns', name: '圣棘誓壁', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_圣堂守势.png', type: '防御', cost: 3, icon: '🛡️', val: 0, tags: ['荆棘', '反击'], rarity: '史诗', isSpecial: true, desc: '获得 30 点护甲与 10 层[荆棘]。' },
+            { id: 's_shield', name: '圣盾崩击', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_圣剑解放.png', type: '攻击', cost: 2, icon: '🛡️', val: 0, tags: ['圣剑'], rarity: '史诗', isSpecial: true, desc: '造成等同于你当前护盾值 2 倍的伤害。若已处于[反击]姿态，会吃到圣剑的姿态加成。' },
+            { id: 's_thorns', name: '圣棘誓壁', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_圣堂守势.png', type: '防御', cost: 3, icon: '🛡️', val: 0, tags: ['荆棘'], rarity: '史诗', isSpecial: true, desc: '获得 30 点护甲与 10 层[荆棘]。' },
             { id: 'a_syn_sword', name: '裁决破军', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_裂光一闪.png', type: '攻击', cost: 2, icon: '🗡️', val: 10, tags: ['圣剑'], rarity: '史诗', isSpecial: true, desc: '造成 10 点伤害。<br>你手牌中每有一张带有[圣剑]、[重击]或[穿甲]的牌，额外造成 12 点伤害。' },
-            { id: 'a_syn_array', name: '王誓阵列', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_铁壁圣痕.png', type: '防御', cost: 2, icon: '⛩️', val: 10, tags: ['反击', '保留', '荆棘'], rarity: '史诗', isSpecial: true, desc: '获得 10 点护甲。<br>你手牌中每有一张带有[保留]或[反击]的牌，额外获得 8 点护甲与 3 层[荆棘]。' },
-            { id: 'a_ench_array', name: '盾墙刻印', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_盾墙反身.png', type: '防御', cost: 1, icon: '🔰', val: 8, tags: ['反击', '保留'], rarity: '史诗', isSpecial: true, desc: '获得 8 点护甲。<br>选择一张手牌，为其在本局战斗烙印[反击]与[保留]。' },
+            { id: 'a_syn_array', name: '王誓阵列', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_铁壁圣痕.png', type: '防御', cost: 2, icon: '⛩️', val: 10, tags: ['保留', '荆棘'], rarity: '史诗', isSpecial: true, desc: '获得 10 点护甲。<br>你手牌中每有一张带有[保留]或[荆棘]的牌，额外获得 8 点护甲与 3 层[荆棘]。' },
+            { id: 'a_ench_array', name: '盾墙刻印', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_盾墙反身.png', type: '防御', cost: 1, icon: '🔰', val: 8, tags: ['保留', '荆棘'], rarity: '史诗', isSpecial: true, desc: '获得 8 点护甲。<br>选择一张手牌，为其在本局战斗烙印[保留]与[荆棘]。' },
             { id: 'a_ench_blood', name: '血誓锋印', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_王冠反斩.png', type: '能力', cost: 1, icon: '💉', val: 0, tags: ['吸血', '保留'], rarity: '史诗', isSpecial: true, desc: '选择一张手牌，为其在本局战斗烙印[吸血]与[保留]。' }
         ],
         hero_mage: [
@@ -1753,10 +1753,10 @@
         { id: 'r_bleed_knife', name: '猎痕短刃', icon: '🔪', desc: '弓手：引爆[放血]时，每层额外造成 2 点伤害，并补 1 层[剧毒]。', price: 160 },
         { id: 'r_weak_mask', name: '破势面具', icon: '🎭', desc: '法师/弓手：施加[易伤]或[虚弱]持续回合 +1；攻击虚弱目标伤害提高。', price: 130 },
         { id: 'r_corrupt_cup', name: '毒露圣杯', icon: '🍷', desc: '弓手：敌方每次受到毒素伤害时，你回复 2 点生命，适合[自然]消耗战。', price: 170 },
-        { id: 'r_thorn_shield_new', name: '蔷薇重盾', icon: '🛡️', desc: '战士：[荆棘]效果翻倍；战斗开始时获得 1 层[反击]，更容易启动[圣剑]追加伤害。', price: 180 },
+        { id: 'r_thorn_shield_new', name: '蔷薇重盾', icon: '🛡️', desc: '战士：[荆棘]效果翻倍；战斗开始时进入[反击]姿态一次，但不会在每回合重复刷新。', price: 180 },
         { id: 'r_protect_armor', name: '圣壁石甲', icon: '🪨', desc: '战士：打出[庇护]牌额外获得 5 点减伤；每场战斗免疫首次伤害。', price: 150 },
-        { id: 'r_counter_amulet', name: '招架护符', icon: '🧿', desc: '战士：触发[反击]后立刻获得 5 点[庇护]减伤，强化防御反击循环。', price: 120 },
-        { id: 'r_life_totem', name: '守誓图腾', icon: '🗿', desc: '战士：生命低于 50% 时，防御、护盾与反击收益提升 50%。', price: 140 },
+        { id: 'r_counter_amulet', name: '招架护符', icon: '🧿', desc: '战士：进入[反击]姿态时立刻获得 5 点[庇护]减伤；重复获得反击不会重复触发。', price: 120 },
+        { id: 'r_life_totem', name: '守誓图腾', icon: '🗿', desc: '战士：生命低于 50% 时，防御与护盾收益提升 50%，帮助低血线稳住圣剑回合。', price: 140 },
         { id: 'r_pierce_amulet', name: '裂甲剑坠', icon: '⛓️', desc: '战士/弓手：[穿甲]伤害额外提升 25%，适合[圣剑]或远程破甲路线。', price: 110 },
         { id: 'r_combo_ring', name: '连弦指环', icon: '🤜', desc: '弓手：[连击]增幅提高至 70%；[连射]额外多触发 1 次。', price: 130 },
         { id: 'r_heavy_badge', name: '圣剑重徽', icon: '⚔️', desc: '战士：[重击]倍数提升至 2.5 倍，是高费[圣剑]牌的核心爆点。', price: 150 },
@@ -1778,7 +1778,7 @@
         { id: 'r_return_poison', name: '青毒归羽', icon: '☠️', desc: '弓手：每当卡牌从放逐区回到手牌或牌库，给予敌人 2 层[剧毒]。', price: 150 },
         { id: 'r_return_bleed', name: '赤痕归羽', icon: '🩸', desc: '弓手：每当卡牌从放逐区回到手牌或牌库，给予敌人 2 层[出血]。', price: 150 },
         { id: 'r_skill_cost', name: '秘仪教本', icon: '📘', desc: '法师/弓手：战斗开始时，所有[能力]牌耗能 -1（最低为 0），更容易启动[咏唱]或风势调度。', price: 200 },
-        { id: 'r_def_cost', name: '圣盾甲片', icon: '🐢', desc: '战士：战斗开始时，所有[防御]牌耗能 -1（最低为 0），稳定进入反击姿态。', price: 200 },
+        { id: 'r_def_cost', name: '圣盾甲片', icon: '🐢', desc: '战士：战斗开始时，所有[防御]牌耗能 -1（最低为 0），更容易架起护盾节奏。', price: 200 },
         { id: 'r_bleed_return_exhaust', name: '猎魂镰刃', icon: '🪝', desc: '弓手：触发[放血]时，放逐区的所有卡牌回到手牌，重开连射资源。', price: 250 },
         { id: 'r_return_knife', name: '回风刀鞘', icon: '🪃', desc: '弓手：每当卡牌从放逐区回到手牌或牌库，为手牌添加两张[销毁]飞刀。', price: 180 },
         { id: 'r_base_energy', name: '源能核心', icon: '💠', desc: '通用：战斗开始时基础能量 +1，让三种职业都能更早展开核心节奏。', price: 280 },
@@ -1795,7 +1795,7 @@
         { id: 'r_pierce', name: '破甲箭锋', icon: '🗡️', desc: '弓手：你的[多段]与[连射]攻击视为[穿甲]攻击。', price: 280 },
         { id: 'r_pass_energy', name: '自然回流', icon: '⚡', desc: '弓手：使用带有[放逐]的牌回复 1 点能量；触发[自然]时额外再回复 1 点。', price: 300 },
         { id: 'r_frenzy', name: '连祷狂热', icon: '🔥', desc: '法师：一回合内每打出 4 张牌后，下一张非诅咒卡牌自动触发[回响]。', price: 280 },
-        { id: 'r_pass_draw', name: '职业秘卷', icon: '📚', desc: '通用：通过效果[抽牌]时，按当前职业为抽到的牌赋予[圣剑]、[爆发]或[连射]/风势词条。', price: 250 },
+        { id: 'r_pass_draw', name: '职业秘卷', icon: '📚', desc: '通用：通过效果[抽牌]时，按当前职业为抽到的牌赋予[圣剑]/[保留]、[爆发]/[咏唱]或[连射]/风势词条。', price: 250 },
         { id: 'r_blood', name: '血池圣印', icon: '💉', desc: '战士：你的[吸血]不再基于伤害，而是基于目标身上的[出血]层数，适合持久反击。', price: 220 },
         { id: 'r_plague', name: '森疫孢囊', icon: '🦠', desc: '弓手：每当敌方因[剧毒]受到伤害，有 50% 几率额外获得 1 层[虚弱]。', price: 200 },
         { id: 'r_execute', name: '猎首时刻', icon: '⚖️', desc: '弓手：对处于[易伤]状态的敌人触发[放血]时，不会清空其[出血]层数。', price: 260 },
@@ -1911,8 +1911,8 @@
     const TAG_POOL = {
         hero_warrior: {
             '攻击': ['圣剑', '重击', '穿甲', '连击', '保留'],
-            '防御': ['反击', '庇护', '荆棘', '保留', '充能'],
-            '能力': ['圣剑', '庇护', '反击', '充能', '抽牌']
+            '防御': ['庇护', '荆棘', '保留', '充能'],
+            '能力': ['圣剑', '庇护', '充能', '抽牌']
         },
         hero_mage: {
             '攻击': ['爆发', '易伤', '燃烧', '回响'],
@@ -1926,7 +1926,7 @@
         },
         neutral: {
             '攻击': ['吸血', '回响', '放逐', '抽牌', '剧毒', '出血', '放血', '重击', '穿甲', '连击', '多段', '易伤', '虚弱', '充能'],
-            '防御': ['反击', '复刻', '保留', '回响', '放逐', '易伤', '虚弱', '充能', '荆棘', '治愈'],
+            '防御': ['复刻', '保留', '回响', '放逐', '易伤', '虚弱', '充能', '荆棘', '治愈'],
             '能力': ['重置', '血祭', '灵祭', '狂热', '附魔', '庇护', '招魂', '轮回', '拾遗', '复刻', '回响', '放逐', '抽牌', '剧毒', '出血', '放血', '易伤', '虚弱', '充能', '治愈']
         }
     };
@@ -2019,13 +2019,13 @@
         hero_warrior: [
             { poolId: 'warrior_charge', name: '圣剑突击', type: '攻击', cost: 2, icon: '✨', val: 12, tags: ['圣剑', '重击'], rarity: '稀有' },
             { poolId: 'warrior_oath', name: '遗迹立誓', type: '能力', cost: 2, icon: '📖', val: 6, tags: ['庇护', '反击', '圣剑'], rarity: '稀有' },
-            { poolId: 'warrior_wall', name: '盾墙反身', type: '防御', cost: 1, icon: '🔰', val: 10, tags: ['反击'], rarity: '稀有' },
+            { poolId: 'warrior_wall', name: '盾墙反身', type: '防御', cost: 1, icon: '🔰', val: 10, tags: ['反击'], rarity: '史诗' },
             { poolId: 'warrior_follow', name: '誓约追击', type: '攻击', cost: 1, icon: '🗡️', val: 8, tags: ['圣剑', '连击'], rarity: '普通' },
-            { poolId: 'warrior_guard', name: '圣堂守势', type: '防御', cost: 2, icon: '🛡️', val: 14, tags: ['反击', '荆棘'], rarity: '稀有' },
+            { poolId: 'warrior_guard', name: '圣堂守势', type: '防御', cost: 2, icon: '🛡️', val: 14, tags: ['反击', '荆棘'], rarity: '史诗' },
             { poolId: 'warrior_release', name: '圣剑解放', type: '攻击', cost: 3, icon: '⚔️', val: 18, tags: ['圣剑', '穿甲', '重击'], rarity: '史诗' },
-            { poolId: 'warrior_dawn_guard', name: '破晓格挡', type: '防御', cost: 1, icon: '🌅', val: 8, tags: ['反击', '庇护'], rarity: '普通' },
+            { poolId: 'warrior_dawn_guard', name: '破晓格挡', type: '防御', cost: 1, icon: '🌅', val: 8, tags: ['保留'], rarity: '普通' },
             { poolId: 'warrior_flash', name: '裂光一闪', type: '攻击', cost: 1, icon: '⚡', val: 7, tags: ['圣剑', '穿甲'], rarity: '普通' },
-            { poolId: 'warrior_crown_riposte', name: '王冠反斩', type: '能力', cost: 1, icon: '👑', val: 0, tags: ['反击', '抽牌'], rarity: '稀有' },
+            { poolId: 'warrior_crown_riposte', name: '王冠反斩', type: '能力', cost: 1, icon: '👑', val: 0, tags: ['反击', '抽牌'], rarity: '史诗' },
             { poolId: 'warrior_scar', name: '铁壁圣痕', type: '防御', cost: 2, icon: '🛡️', val: 16, tags: ['庇护', '保留'], rarity: '史诗' }
         ],
         hero_mage: [
@@ -2487,9 +2487,9 @@
             createStarterCard({ name: '基础斩击', type: '攻击', cost: 1, icon: '⚔️', val: 9, tags: ['圣剑'] }),
             createStarterCard({ name: '基础斩击', type: '攻击', cost: 1, icon: '⚔️', val: 9, tags: ['圣剑'] }),
             createStarterCard({ name: '基础斩击', type: '攻击', cost: 1, icon: '⚔️', val: 9, tags: ['圣剑'] }),
-            createStarterCard({ name: '基础防御', type: '防御', cost: 1, icon: '🛡️', val: 7, tags: ['反击'] }),
-            createStarterCard({ name: '基础防御', type: '防御', cost: 1, icon: '🛡️', val: 7, tags: ['反击'] }),
-            createStarterCard({ name: '基础防御', type: '防御', cost: 1, icon: '🛡️', val: 7, tags: ['反击'] }),
+            createStarterCard({ name: '基础防御', type: '防御', cost: 1, icon: '🛡️', val: 7, tags: [] }),
+            createStarterCard({ name: '基础防御', type: '防御', cost: 1, icon: '🛡️', val: 7, tags: [] }),
+            createStarterCard({ name: '基础防御', type: '防御', cost: 1, icon: '🛡️', val: 7, tags: [] }),
             createStarterCard({ name: '圣剑突击', type: '攻击', cost: 2, icon: '✨', val: 11, tags: ['圣剑', '重击'], rarity: '稀有' }),
             createStarterCard({ name: '遗迹立誓', type: '能力', cost: 2, icon: '📖', val: 6, tags: ['庇护', '反击', '圣剑'], rarity: '稀有' }),
             createStarterCard({ name: '盾墙反身', type: '防御', cost: 1, icon: '🔰', val: 9, tags: ['反击'], rarity: '稀有' }),
@@ -3240,7 +3240,9 @@
             add('frenzy', '狂热', '🔥', frenzyDmg, `来自遗物的临时伤害加成，当前额外提高 ${frenzyDmg} 点伤害。`, 'is-fire');
             add('enchant', '附魔', '⚔️', state.p_next_dmg, `下一次攻击额外造成 ${state.p_next_dmg} 点伤害。`, 'is-power');
             add('guard', '庇护', '✨', state.p_reduce_dmg, `下一次受到伤害时，减少 ${state.p_reduce_dmg} 点。`, 'is-defense');
-            add('counter', '招架准备', '⚡', state.p_counter, '受到攻击后会触发反击相关效果。', 'is-gold');
+            if (state.p_counter > 0) {
+                entries.push({ id: 'counter', label: '招架准备', icon: '⚡', value: null, tooltip: '已进入反击姿态；受到下一次敌方攻击时格挡并反伤。此状态不可叠加。', tone: 'is-gold' });
+            }
             add('chant', '咏唱', '✦', state.p_chant, STATUS_DESC.chant, 'is-magic');
             add('aim', '风势', '🪶', state.p_aim, STATUS_DESC.aim, 'is-nature');
         } else if (actor.charged) {
@@ -3940,7 +3942,7 @@
         if(frenzyDmg > 0) pStatus.innerHTML += `<div class="status-badge badge-str">🔥 狂热: +${frenzyDmg}<div class="status-tooltip">来自遗物的临时伤害加成，当前额外提高 ${frenzyDmg} 点伤害。</div></div>`;
         if(state.p_next_dmg > 0) pStatus.innerHTML += `<div class="status-badge badge-str">⚔️ 附魔: 下次+${state.p_next_dmg}<div class="status-tooltip">下一次攻击额外造成 ${state.p_next_dmg} 点伤害。</div></div>`;
         if(state.p_reduce_dmg > 0) pStatus.innerHTML += `<div class="status-badge badge-armor">🛡️ 庇护: 减免${state.p_reduce_dmg}<div class="status-tooltip">下一次受到伤害时，减少 ${state.p_reduce_dmg} 点。</div></div>`;
-        if(state.p_counter > 0) pStatus.innerHTML += `<div class="status-badge badge-str" style="background:rgba(241,196,15,0.9); color:black;">⚡ 招架准备<div class="status-tooltip">受到攻击后会触发反击相关效果。</div></div>`;
+        if(state.p_counter > 0) pStatus.innerHTML += `<div class="status-badge badge-str" style="background:rgba(241,196,15,0.9); color:black;">⚡ 招架准备<div class="status-tooltip">已进入反击姿态；受到下一次敌方攻击时格挡并反伤。此状态不可叠加。</div></div>`;
         if(state.p_chant > 0) pStatus.innerHTML += `<div class="status-badge badge-str" style="background:rgba(142, 68, 173, 0.9);">✦ 咏唱: ${state.p_chant}<div class="status-tooltip">${STATUS_DESC['chant']}</div></div>`;
         if(state.p_aim > 0) pStatus.innerHTML += `<div class="status-badge badge-str" style="background:rgba(48,104,82,0.9);">🪶 风势: ${state.p_aim}<div class="status-tooltip">${STATUS_DESC['aim']}</div></div>`;
 
@@ -4328,7 +4330,7 @@
                     const tag = drawnCard.type === '攻击' ? '连射' : '蓄力';
                     if (!drawnCard.tags.includes(tag)) drawnCard.tags.push(tag);
                 } else {
-                    const tag = drawnCard.type === '攻击' ? '圣剑' : '反击';
+                    const tag = drawnCard.type === '攻击' ? '圣剑' : '保留';
                     if (!drawnCard.tags.includes(tag)) drawnCard.tags.push(tag);
                 }
             }
@@ -4617,7 +4619,7 @@
                 } else { showFloatText("无毒可引", "#888", getCenter('ui-hp')); }
             }
             else if (card.specialId === 'a_syn_array') {
-                let synergyCount = state.hand.filter(c => c.tags && (c.tags.includes('保留') || c.tags.includes('反击'))).length;
+                let synergyCount = state.hand.filter(c => c.tags && (c.tags.includes('保留') || c.tags.includes('荆棘'))).length;
                 let totalArmor = parseInt(card.val) + (8 * synergyCount);
                 state.armor += totalArmor; if(synergyCount > 0) state.player.thorns += 3 * synergyCount;
                 triggerVFX('p-def'); showFloatText(`${card.name} 护甲 +${totalArmor}`, "var(--water)", getCenter('ui-hp'));
@@ -4651,7 +4653,7 @@
                         
                         if(card.specialId === 'a_ench_forge') { addedTags = ['连射', '放逐']; state.mp += 2; showFloatText("能量 +2", "var(--gold)", getCenter('ui-mp')); }
                         else if(card.specialId === 'a_ench_blood') { addedTags = ['吸血', '保留']; }
-                        else if(card.specialId === 'a_ench_array') { addedTags = ['反击', '保留']; state.armor += parseInt(card.val) || 8; triggerVFX('p-def'); showFloatText(`护甲 +${card.val}`, "var(--water)", getCenter('ui-hp')); updateTopBar(); }
+                        else if(card.specialId === 'a_ench_array') { addedTags = ['保留', '荆棘']; state.armor += parseInt(card.val) || 8; triggerVFX('p-def'); showFloatText(`护甲 +${card.val}`, "var(--water)", getCenter('ui-hp')); updateTopBar(); }
                         else if(card.specialId === 'a_ench_spirit') { addedTags = ['回响', '销毁']; }
                         else if(card.specialId === 'a_ench_gather') { addedTags = ['充能', '抽牌']; }
                         else if(card.specialId === 'a_ench_chant') { addedTags = ['咏唱', '爆发']; state.mp += 1; showFloatText("能量 +1", "var(--gold)", getCenter('ui-mp')); }
@@ -4721,7 +4723,15 @@
                 if(hasRelic('r_echo_mirror_relic')) { await new Promise(r => setTimeout(r, 200)); await executeCardTags(state.lastPlayedCard, true, null); } 
             } 
         }
-        if (card.tags && card.tags.includes('反击')) { state.p_counter += 1; showFloatText("招架准备", "var(--gold)", getCenter('ui-hp')); if(hasRelic('r_counter_amulet')) { state.p_reduce_dmg += 5; showFloatText("反击庇护", "var(--water)", getCenter('ui-hp')); } }
+        if (card.tags && card.tags.includes('反击')) {
+            if (state.p_counter > 0) {
+                showFloatText("招架已就绪", "var(--gold)", getCenter('ui-hp'));
+            } else {
+                state.p_counter = 1;
+                showFloatText("招架准备", "var(--gold)", getCenter('ui-hp'));
+                if(hasRelic('r_counter_amulet')) { state.p_reduce_dmg += 5; showFloatText("反击庇护", "var(--water)", getCenter('ui-hp')); }
+            }
+        }
         if (card.tags && card.tags.includes('咏唱') && !isEcho) {
             let chantGain = card.rarity === '史诗' ? 2 : 1;
             if (hasRelic('r_energy_crys')) chantGain += 1;
@@ -4932,7 +4942,7 @@
                 if (state.p_reduce_dmg > 0) { let r = Math.min(dmg, state.p_reduce_dmg); dmg -= r; state.p_reduce_dmg -= r; showFloatText(`庇护抵抗 -${r}`, "var(--water)", getCenter('ui-hp')); }
                 
                 if (state.p_counter > 0 && dmg > 0) {
-                    state.p_counter--;
+                    state.p_counter = 0;
                     let counterDmg = dmg;
                     dmg = 0; 
                     showFloatText("招架反击", "var(--gold)", getCenter('ui-hp'));
@@ -5010,8 +5020,6 @@
             state.mp = getCharacterBaseEnergy(character); 
             if (playerWasAttacked) state.armor = 0;
             cardsPlayedThisTurn = 0; state.turn_first_card = true; 
-            if(hasRelic('r_thorn_shield_new')) state.p_counter = 1; 
-
             if (state.player.thorns > 0) {
                 if (!hasRelic('r_pass_thorns')) {
                     state.player.thorns = Math.max(0, state.player.thorns - 1); 
