@@ -1703,15 +1703,17 @@
 
     const TAGS = {
         '重置': '选择任意张手牌丢弃，并抽取等量的牌。',
-        '血祭': '失去 5 点生命，本局战斗所有伤害大幅提升。', '狂热': '选择并丢弃 1 张手牌，本回合你的所有伤害大幅增加。',
-        '附魔': '选择并丢弃 1 张手牌，你下一次攻击额外造成大量伤害并抽 1 张牌。', '庇护': '本回合受到的伤害减少 {val} 点。',
+        '血祭': '失去 5 点生命，本场战斗所有伤害 +{val}。未升级为 +8，升级后为 +12。',
+        '狂热': '选择并丢弃 1 张手牌，本回合所有伤害 +{val}。数值为卡牌数值 +3；升级后为卡牌数值 +4。',
+        '附魔': '选择并丢弃 1 张手牌，你下一次攻击额外造成 {val} 点伤害并抽 1 张牌。基础为 (卡牌数值+3)×2，升级后为 (卡牌数值+5)×2。',
+        '庇护': '本回合受到的伤害减少 {val} 点。',
         '反击': '进入反击姿态：受到下一次敌方攻击时绝对防御，并返还等额伤害。反击姿态不可叠加。', '招魂': '从放逐区选择 1 张牌回到手牌。', '轮回': '从放逐区选择 1 张牌洗入抽牌堆。',
         '拾遗': '从墓地选择 1 张牌回到手牌。', '复刻': '复制上一张打出的牌的效果。', '吸血': '造成伤害时，回复等同于伤害一半的生命（史诗卡为全额回复）。',
         '保留': '打出后，下回合将回到手牌中。如果不打出则正常丢弃。', '回响': '打出后，此牌的效果会立即再次触发一次。', '放逐': '使用后移至放逐区，本局战斗不可再用。',
         '抽牌': '额外抽取 1 张牌。', '剧毒': '施加 3 层剧毒(每回合造成伤害并衰减)。', '出血': '施加 3 层出血(每回合受层数一半的伤害并衰减)。',
         '燃烧': '施加 2 层燃烧(每层每回合造成最大生命 5% 的伤害并衰减)。', '眩晕': '施加 1 层眩晕(跳过下一次行动回合)。', '诅咒': '施加 2 层诅咒(无法恢复生命并随回合衰减)。',
         '放血': '引爆敌方的出血状态，每层造成 3 点伤害，随后清空。', '重击': '基础数值伤害翻倍。', '穿甲': '无视敌方护甲，直接扣除生命。',
-        '圣剑': '战士专属攻击词条：攻击会借当前护盾与反击姿态追加伤害。', '咏唱': '法师专属：积累 1 层咏唱，之后的爆发牌会消耗咏唱造成额外伤害。',
+        '圣剑': '战士专属攻击词条：额外造成当前护盾 50% 的伤害，反击姿态再 +4；拥有圣剑誓印时护盾比例提高到 75%。', '咏唱': '法师专属：积累 1 层咏唱，之后的爆发牌会消耗咏唱造成额外伤害。',
         '爆发': '法师专属：攻击会消耗所有咏唱层数，每层追加 7 点伤害；没有咏唱时仍追加 4 点伤害。',
         '蓄力': '弓箭手专属：获得风势。打出攻击牌时消耗 1 层风势，追加一次轻灵追射并获得少量庇护。',
         '自然': '弓箭手专属：回复 1 点能量；若已有风势，额外抽 1 张牌并获得少量庇护。',
@@ -2487,9 +2489,62 @@
     
     function upgradeCard(card) {
         if (card.rarity === '传说' || card.up) return false;
-        if (card.type === '能力') { card.cost = Math.max(0, card.cost - 1); }
-        card.val *= 2; if (card.tags && card.tags.includes('放逐') && card.type !== '能力') card.val += 2; 
+        const oldVal = Number(card.val) || 0;
+        const oldCost = Number(card.cost) || 0;
+        if (card.type === '能力' && oldCost > 0) card.cost = Math.max(0, oldCost - 1);
+        if (oldVal > 0) {
+            card.val = oldVal * 2;
+            if (card.tags && card.tags.includes('放逐') && card.type !== '能力') card.val += 2;
+        } else if (oldCost > 0 && card.type !== '能力') {
+            card.cost = Math.max(0, oldCost - 1);
+        } else if (oldVal <= 0 && oldCost <= 0) {
+            card.val = 1;
+        }
+        syncUpgradedCardDescription(card, oldVal, Number(card.val) || 0);
         card.rarity = '史诗'; card.up = true; return true;
+    }
+
+    function syncUpgradedCardDescription(card, oldVal, newVal) {
+        if (!card.desc || !oldVal || oldVal === newVal) return;
+        const replacements = [
+            [`造成 ${oldVal}`, `造成 ${newVal}`],
+            [`获得 ${oldVal}`, `获得 ${newVal}`],
+            [`施加 ${oldVal}`, `施加 ${newVal}`],
+            [`回复 ${oldVal}`, `回复 ${newVal}`]
+        ];
+        for (const [from, to] of replacements) {
+            if (card.desc.includes(from)) {
+                card.desc = card.desc.replace(from, to);
+                return;
+            }
+        }
+    }
+
+    function getFrenzyBonus(card) {
+        let bonus = (parseInt(card?.val) || 4) + (card?.up ? 4 : 3);
+        if (hasRelic('r_frenzy_veil')) bonus += Math.floor(state.r_discard_count / 2);
+        return bonus;
+    }
+
+    function getEnchantBonus(card, includeRelics = true) {
+        let bonus = Math.max(6, ((parseInt(card?.val) || 4) + (card?.up ? 5 : 3)) * 2);
+        if (includeRelics && hasRelic('r_enchant_crys')) bonus *= 2;
+        return bonus;
+    }
+
+    function getSwordBonus(card) {
+        if (!card?.tags?.includes('圣剑')) return 0;
+        const swordRatio = hasRelic('r_sword_oath') ? 0.75 : 0.5;
+        return Math.floor((state.armor || 0) * swordRatio) + ((state.p_counter || 0) * 4);
+    }
+
+    function addSwordBonusToDamage(card, dmg) {
+        const swordBonus = getSwordBonus(card);
+        if (swordBonus > 0) {
+            showFloatText(`圣剑 +${swordBonus}`, "var(--gold)", getCenter('enemy-avatar'));
+            return dmg + swordBonus;
+        }
+        return dmg;
     }
 
     function getBottomTags(card) {
@@ -2499,6 +2554,7 @@
             if(card.tags && card.tags.includes('放逐')) extractedTags.add('放逐'); 
             if(card.tags && card.tags.includes('荆棘')) extractedTags.add('荆棘');
             if(card.tags && card.tags.includes('吸血')) extractedTags.add('吸血');
+            if(card.tags && card.tags.includes('圣剑')) extractedTags.add('圣剑');
         } 
         else if(card.tags) { card.tags.forEach(t => extractedTags.add(t)); }
         
@@ -2507,6 +2563,8 @@
                 let displayVal = card.val; if (t === '充能') displayVal = 1;
                 if (!card.isSpecial && t === '治愈') displayVal = card.up ? card.cost * 7 : card.cost * 5;
                 if (!card.isSpecial && t === '血祭') displayVal = card.up ? 12 : 8;
+                if (!card.isSpecial && t === '狂热') displayVal = getFrenzyBonus(card);
+                if (!card.isSpecial && t === '附魔') displayVal = getEnchantBonus(card, false);
                 let tooltip = TAGS[t].replace(/\{val\}/g, displayVal || 'X');
                 
                 if (card.type === '能力') {
@@ -3595,8 +3653,7 @@
         if (!isEnemy) {
             add('echo', '回音', '🌌', state.p_echo_stack, '接下来打出的卡牌会额外触发 2 次。', 'is-magic');
             add('blood', '血祭', '🔥', state.p_battle_dmg, `本场战斗内，攻击造成的伤害提高 ${state.p_battle_dmg} 点。`, 'is-fire');
-            const frenzyDmg = hasRelic('r_frenzy_veil') ? Math.floor(state.r_discard_count / 2) : 0;
-            add('frenzy', '狂热', '🔥', frenzyDmg, `来自遗物的临时伤害加成，当前额外提高 ${frenzyDmg} 点伤害。`, 'is-fire');
+            add('frenzy', '狂热', '🔥', state.p_dmg_buff, `本回合内，所有伤害额外提高 ${state.p_dmg_buff} 点。`, 'is-fire');
             add('enchant', '附魔', '⚔️', state.p_next_dmg, `下一次攻击额外造成 ${state.p_next_dmg} 点伤害。`, 'is-power');
             add('guard', '庇护', '✨', state.p_reduce_dmg, `下一次受到伤害时，减少 ${state.p_reduce_dmg} 点。`, 'is-defense');
             if (state.p_counter > 0) {
@@ -4314,8 +4371,7 @@
         if(state.p_weak > 0) pStatus.innerHTML += `<div class="status-badge badge-weak">📉 虚弱: ${state.p_weak}<div class="status-tooltip">${STATUS_DESC['weak']}</div></div>`;
         if(state.p_echo_stack > 0) pStatus.innerHTML += `<div class="status-badge badge-str" style="background:rgba(142, 68, 173, 0.9);">🌌 回音: ${state.p_echo_stack}<div class="status-tooltip">接下来打出的卡牌会额外触发2次。</div></div>`;
         if(state.p_battle_dmg > 0) pStatus.innerHTML += `<div class="status-badge badge-str" style="background:#c0392b;">🔥 血祭: +${state.p_battle_dmg}<div class="status-tooltip">本场战斗内，攻击造成的伤害提高 ${state.p_battle_dmg} 点。</div></div>`;
-        let frenzyDmg = hasRelic('r_frenzy_veil') ? Math.floor(state.r_discard_count / 2) : 0;
-        if(frenzyDmg > 0) pStatus.innerHTML += `<div class="status-badge badge-str">🔥 狂热: +${frenzyDmg}<div class="status-tooltip">来自遗物的临时伤害加成，当前额外提高 ${frenzyDmg} 点伤害。</div></div>`;
+        if(state.p_dmg_buff > 0) pStatus.innerHTML += `<div class="status-badge badge-str">🔥 狂热: +${state.p_dmg_buff}<div class="status-tooltip">本回合内，所有伤害额外提高 ${state.p_dmg_buff} 点。</div></div>`;
         if(state.p_next_dmg > 0) pStatus.innerHTML += `<div class="status-badge badge-str">⚔️ 附魔: 下次+${state.p_next_dmg}<div class="status-tooltip">下一次攻击额外造成 ${state.p_next_dmg} 点伤害。</div></div>`;
         if(state.p_reduce_dmg > 0) pStatus.innerHTML += `<div class="status-badge badge-armor">🛡️ 庇护: 减免${state.p_reduce_dmg}<div class="status-tooltip">下一次受到伤害时，减少 ${state.p_reduce_dmg} 点。</div></div>`;
         if(state.p_counter > 0) pStatus.innerHTML += `<div class="status-badge badge-str" style="background:rgba(241,196,15,0.9); color:black;">⚡ 招架准备<div class="status-tooltip">已进入反击姿态；受到下一次敌方攻击时格挡并反伤。此状态不可叠加。</div></div>`;
@@ -4852,6 +4908,16 @@
         return finalDmg;
     }
 
+    function applySpecialCardDamage(card, dmg, isPierce = false) {
+        let boostedDmg = addSwordBonusToDamage(card, dmg);
+        if (state.p_dmg_buff > 0) boostedDmg += state.p_dmg_buff;
+        if (state.p_next_dmg > 0) {
+            boostedDmg += state.p_next_dmg;
+            state.p_next_dmg = 0;
+        }
+        return applySpecialDamage(boostedDmg, isPierce);
+    }
+
     function checkEnemyDeath() {
         if(state.enemy.currentHp <= 0) {
             if (state.enemy.revives > 0) {
@@ -5000,12 +5066,12 @@
         if (card.isSpecial) {
             if(card.specialId === 's_exhaust') {
                 triggerVFX('p-atk'); let count = state.exhaustPile.length; let dmg = count * 15;
-                applySpecialDamage(dmg);
+                applySpecialCardDamage(card, dmg);
                 state.exhaustPile.forEach(c => onCardReturnedFromExhaust());
                 state.battleDeck = state.battleDeck.concat(state.exhaustPile); state.exhaustPile = []; state.battleDeck.sort(()=>0.5-Math.random());
             }
             else if(card.specialId === 's_poison') { let dmg = (state.enemy.poison + state.enemy.bleed) * 2; applyDamageToEnemy(dmg); showFloatText(card.name, "var(--nature)", getCenter('enemy-avatar')); }
-            else if(card.specialId === 's_shield') { triggerVFX('p-atk'); applySpecialDamage(state.armor * 2); }
+            else if(card.specialId === 's_shield') { triggerVFX('p-atk'); applySpecialCardDamage(card, state.armor * 2); }
             else if(card.specialId === 's_magic') { state.p_echo_stack += 3; showFloatText(card.name, "var(--purple)", getCenter('ui-hp')); }
             else if(card.specialId === 's_pierce') { triggerVFX('p-atk'); let dmg = 40; if(state.enemy.vuln > 0) dmg += Math.floor(dmg * (state.enemy.vuln * 0.5)); if(state.p_weak > 0) dmg = Math.floor(dmg * 0.75); applyDamageToEnemy(dmg, true); }
             else if(card.specialId === 's_thorns') { triggerVFX('p-def'); state.armor += 30; state.player.thorns += 10; showFloatText(card.name, "var(--gold)", getCenter('ui-hp')); updateTopBar(); }
@@ -5015,7 +5081,7 @@
             else if (card.specialId === 'a_syn_sword') {
                 let synergyCount = state.hand.filter(c => c.tags && (c.tags.includes('圣剑') || c.tags.includes('重击') || c.tags.includes('穿甲'))).length;
                 let dmg = parseInt(card.val) + (12 * synergyCount) + state.p_battle_dmg;
-                triggerVFX('p-atk'); applySpecialDamage(dmg); showFloatText(`${card.name} 共鸣 ${synergyCount} 次`, "var(--gold)", getCenter('enemy-avatar'));
+                triggerVFX('p-atk'); applySpecialCardDamage(card, dmg); showFloatText(`${card.name} 共鸣 ${synergyCount} 次`, "var(--gold)", getCenter('enemy-avatar'));
             }
             else if (card.specialId === 'a_syn_poison') {
                 let targets = state.hand.filter(c => c.tags && (c.tags.includes('剧毒') || c.tags.includes('出血')));
@@ -5038,7 +5104,7 @@
                 let synergyCount = state.hand.filter(c => c.tags && (c.tags.includes('治愈') || c.tags.includes('吸血'))).length;
                 let dmg = parseInt(card.val) + (15 * synergyCount) + state.p_battle_dmg;
                 if(synergyCount > 0) { state.hp -= 2 * synergyCount; showFloatText(`血祭 -${2*synergyCount}血`, "var(--crimson)", getCenter('ui-hp')); }
-                triggerVFX('p-atk'); const dealt = applySpecialDamage(dmg); healPlayer(Math.floor(dealt/2));
+                triggerVFX('p-atk'); const dealt = applySpecialCardDamage(card, dmg); healPlayer(Math.floor(dealt/2));
                 showFloatText(`${card.name} 共鸣 ${synergyCount} 次`, "var(--crimson)", getCenter('enemy-avatar'));
             }
             else if (card.specialId === 'a_syn_magic') {
@@ -5052,7 +5118,7 @@
                 triggerVFX('p-atk');
                 const wasCountering = state.p_counter > 0;
                 let dmg = 14 + state.p_battle_dmg + (wasCountering ? state.armor : 0);
-                applySpecialDamage(dmg);
+                applySpecialCardDamage(card, dmg);
                 state.p_counter = 1;
                 if(hasRelic('r_counter_amulet')) state.p_reduce_dmg += 5;
                 showFloatText(wasCountering ? "反击回锋" : "进入反击", "var(--gold)", getCenter('ui-hp'));
@@ -5069,7 +5135,7 @@
             else if (card.specialId === 'w_thorn_judgement') {
                 triggerVFX('p-atk');
                 let dmg = 8 + state.p_battle_dmg + (state.player.thorns || 0) * 3;
-                applySpecialDamage(dmg);
+                applySpecialCardDamage(card, dmg);
                 let tVal = hasRelic('r_thorn_shield_new') ? 12 : 6;
                 state.player.thorns += tVal;
                 showFloatText(`荆棘 +${tVal}`, "var(--nature)", getCenter('ui-hp'));
@@ -5090,7 +5156,7 @@
             else if (card.specialId === 'w_last_verdict') {
                 triggerVFX('p-atk');
                 let dmg = 18 + state.p_battle_dmg + state.armor + (state.player.thorns || 0);
-                applySpecialDamage(dmg);
+                applySpecialCardDamage(card, dmg);
                 showFloatText("终誓裁断", "var(--gold)", getCenter('enemy-avatar'));
             }
             else if (card.specialId === 'm_chant_singularity') {
@@ -5103,7 +5169,7 @@
             else if (card.specialId === 'm_status_supernova') {
                 const debuffs = getEnemyDebuffTypeCount();
                 triggerVFX('p-atk');
-                applySpecialDamage(8 + state.p_battle_dmg + debuffs * 8);
+                applySpecialCardDamage(card, 8 + state.p_battle_dmg + debuffs * 8);
                 state.enemy.burn += Math.max(1, debuffs);
                 if(hasRelic('r_status_prism')) state.p_chant = Math.min(12, state.p_chant + 1);
                 showFloatText(`状态共振 ${debuffs}`, "var(--fire)", getCenter('enemy-avatar'));
@@ -5127,7 +5193,7 @@
             else if (card.specialId === 'm_forbidden_comet') {
                 triggerVFX('p-atk');
                 const chantSpent = state.p_chant;
-                applySpecialDamage(20 + state.p_battle_dmg + chantSpent * 6, true);
+                applySpecialCardDamage(card, 20 + state.p_battle_dmg + chantSpent * 6, true);
                 state.p_chant = 0;
                 showFloatText(`咏唱爆裂 ${chantSpent}`, "var(--purple)", getCenter('enemy-avatar'));
             }
@@ -5170,19 +5236,19 @@
                 const shots = Math.min(3, state.p_aim);
                 state.p_aim -= shots;
                 triggerVFX('p-atk');
-                applySpecialDamage(8 + state.p_battle_dmg + shots * 4, true);
+                applySpecialCardDamage(card, 8 + state.p_battle_dmg + shots * 4, true);
                 showFloatText(`追射 ${shots}`, "var(--nature)", getCenter('enemy-avatar'));
             }
             else if (card.specialId === 'a_red_rain') {
                 triggerVFX('p-atk');
-                applySpecialDamage(7 + state.p_battle_dmg);
+                applySpecialCardDamage(card, 7 + state.p_battle_dmg);
                 state.enemy.bleed += hasRelic('r_poison_fang') ? 9 : 8;
                 if (state.p_aim > 0) await drawCards(1);
                 showFloatText("赤痕 +8", "var(--crimson)", getCenter('enemy-avatar'));
             }
             else if (card.specialId === 'a_bloodlet_gale') {
                 triggerVFX('p-atk');
-                applySpecialDamage(6 + state.p_battle_dmg);
+                applySpecialCardDamage(card, 6 + state.p_battle_dmg);
                 const bleedLayers = state.enemy.bleed;
                 if (bleedLayers > 0) {
                     applyDamageToEnemy(bleedLayers * (hasRelic('r_bleed_knife') ? 5 : 3), true);
@@ -5210,7 +5276,7 @@
                 if (state.p_aim >= 3) state.p_aim -= 3;
                 triggerVFX('p-atk');
                 for (let i = 0; i < repeat; i++) {
-                    applySpecialDamage(16 + state.p_battle_dmg, true);
+                    applySpecialCardDamage(card, 16 + state.p_battle_dmg, true);
                     await new Promise(r => setTimeout(r, 160));
                 }
                 showFloatText(repeat > 1 ? "坠星双发" : "坠星绝矢", "var(--nature)", getCenter('enemy-avatar'));
@@ -5239,8 +5305,8 @@
             });
             if (actuallyDiscarded > 0) {
                 renderHand();
-                if (card.tags.includes('狂热')) { let fVal = (parseInt(card.val) || 4) + (card.up ? 4 : 3); if (hasRelic('r_frenzy_veil')) fVal += Math.floor(state.r_discard_count / 2); state.p_dmg_buff += fVal; showFloatText(`狂热 +${fVal}`, "var(--crimson)", getCenter('ui-hp')); }
-                if (card.tags.includes('附魔')) { let eVal = Math.max(6, ((parseInt(card.val) || 4) + (card.up ? 5 : 3)) * 2); state.p_next_dmg += eVal; if(hasRelic('r_enchant_crys')) state.p_next_dmg += eVal; showFloatText(`附魔 +${eVal}`, "var(--crimson)", getCenter('ui-hp')); await drawCards(1); }
+                if (card.tags.includes('狂热')) { let fVal = getFrenzyBonus(card); state.p_dmg_buff += fVal; showFloatText(`狂热 +${fVal}`, "var(--crimson)", getCenter('ui-hp')); }
+                if (card.tags.includes('附魔')) { let eVal = getEnchantBonus(card); state.p_next_dmg += eVal; showFloatText(`附魔 +${eVal}`, "var(--crimson)", getCenter('ui-hp')); await drawCards(1); }
             }
         }
         if (card.tags && card.tags.includes('重置') && targets && targets.reset) { 
@@ -5331,12 +5397,7 @@
                 showFloatText(`放逐威能 +${exileBonus}`, "var(--gold)", getCenter('enemy-avatar'));
             }
             if(card.tags && card.tags.includes('圣剑')) {
-                const swordRatio = hasRelic('r_sword_oath') ? 0.75 : 0.5;
-                const swordBonus = Math.floor(state.armor * swordRatio) + (state.p_counter * 4);
-                if (swordBonus > 0) {
-                    finalDmg += swordBonus;
-                    showFloatText(`圣剑 +${swordBonus}`, "var(--gold)", getCenter('enemy-avatar'));
-                }
+                finalDmg = addSwordBonusToDamage(card, finalDmg);
             }
             if(card.tags && card.tags.includes('爆发')) {
                 const chantSpent = state.p_chant;
