@@ -255,6 +255,17 @@
         .enemy-anim-buff { animation: enemyBuffGlow 0.8s ease-in-out !important; }
         @keyframes enemyBuffGlow { 0% { filter: drop-shadow(0 0 10px var(--gold)); transform: scale(1); } 50% { filter: drop-shadow(0 0 60px var(--gold)) hue-rotate(45deg); transform: scale(1.2); } 100% { filter: drop-shadow(0 0 20px var(--crimson)); transform: scale(1); } }
 
+        .battle-action-log { position:absolute; right: 24px; top: 245px; width: 264px; max-height: 252px; z-index: 5600; pointer-events:none; box-sizing:border-box; padding: 11px 12px 12px; background: linear-gradient(180deg, rgba(8,10,15,0.68), rgba(8,10,15,0.42)); border:1px solid rgba(216,176,93,0.44); border-radius: 6px; box-shadow: 0 10px 24px rgba(0,0,0,0.42), inset 0 0 0 1px rgba(255,255,255,0.05); backdrop-filter: blur(2px); }
+        .battle-action-log-title { color:#e8d196; font-size: 13px; font-weight:bold; letter-spacing: 3px; text-shadow:0 2px 4px #000; margin-bottom: 8px; }
+        .battle-action-log-list { display:flex; flex-direction:column; gap: 6px; }
+        .battle-action-entry { padding: 7px 9px; background: rgba(12,15,22,0.66); border-left: 3px solid rgba(199,162,88,0.78); box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04); color:#d7d2c6; font-size: 12px; line-height:1.38; text-align:left; text-shadow:0 1px 2px #000; }
+        .battle-action-entry.is-player { border-left-color:#58b7ff; background: rgba(12,26,38,0.62); }
+        .battle-action-entry.is-enemy { border-left-color:#d24b54; background: rgba(38,14,18,0.62); }
+        .battle-action-entry.is-system { border-left-color:#d8b05d; }
+        .battle-action-entry-title { color:#fff2c9; font-weight:bold; margin-bottom:2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+        .battle-action-entry-detail { color:#d8d8d8; }
+        .battle-action-empty { color:rgba(232,209,150,0.68); font-size:12px; line-height:1.6; text-align:left; }
+
         .enemy-hud-panel { position: fixed; top: 18px; right: max(22px, calc((100vw - 1280px) / 2 + 22px)); width: 420px; min-height: 146px; padding: 22px 28px 18px; box-sizing: border-box; background: linear-gradient(135deg, rgba(59,27,33,0.94), rgba(14,15,24,0.95)); border:1px solid rgba(199,162,88,0.7); border-radius:12px 4px 18px 4px; filter: drop-shadow(0 14px 24px rgba(0,0,0,0.62)); z-index:5900; pointer-events:auto; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.06); }
         .enemy-name { font-size: 21px; color: #fff6dc; letter-spacing: 4px; margin: 0 0 8px; font-weight: bold; text-shadow: 0 2px 0 #2a1518, 0 0 8px rgba(0,0,0,0.8); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
         .hud-bar-wrap { margin: 8px auto 0; }
@@ -1507,6 +1518,12 @@
                 </div>
             </div>
         </div>
+        <div id="battle-action-log" class="battle-action-log" aria-live="polite">
+            <div class="battle-action-log-title">行动记录</div>
+            <div id="battle-action-log-list" class="battle-action-log-list">
+                <div class="battle-action-empty">等待交锋。</div>
+            </div>
+        </div>
 
         <div class="hand-area" id="hand-area"></div>
         <div id="battle-state-bridge" class="battle-state-bridge" aria-hidden="true">
@@ -2627,7 +2644,7 @@
         enemy: { currentHp: 0, armor: 0, poison: 0, bleed: 0, burn: 0, stun: 0, curse: 0, vuln: 0, weak: 0, str: 0, nextMove: null, charged: false, minion: null, isPhase2: false, turnCount: 0, moveHistory: [] }, 
         mapData: [], currentNode: null, pathHistory: [], player: { thorns: 0, characterId: 'hero_warrior', name: '勇者战士' },
         p_poison: 0, p_bleed: 0, p_burn: 0, p_stun: 0, p_curse: 0, p_vuln: 0, p_weak: 0, p_echo_stack: 0, p_next_dmg: 0, p_reduce_dmg: 0, p_counter: 0, p_battle_dmg: 0, p_dmg_buff: 0, p_chant: 0, p_aim: 0, r_discard_count: 0,
-        isNodeClickLocked: false, next_card_echo: 0, turn_first_card: true, currentShop: null, isEnemyTurn: false
+        isNodeClickLocked: false, next_card_echo: 0, turn_first_card: true, currentShop: null, isEnemyTurn: false, battleLog: []
     };
     let shopDeletePrice = 50;
 
@@ -2773,6 +2790,95 @@
         const el = document.getElementById(id); if(!el) return {x:window.innerWidth/2, y:window.innerHeight/2}; const r = el.getBoundingClientRect(); return {x: r.left+r.width/2, y: r.top+r.height/2};
     }
     function showFloatText(m, c, pos) { const el = document.createElement('div'); el.className = 'floating-text'; el.innerText = m; el.style.color = c; el.style.left = pos.x + "px"; el.style.top = pos.y + "px"; document.body.appendChild(el); setTimeout(()=>el.remove(), 1000); }
+
+    const ACTION_LOG_LIMIT = 5;
+    const ACTION_STATUS_LABELS = { poison: '剧毒', bleed: '流血', burn: '燃烧', stun: '眩晕', curse: '诅咒', vuln: '易伤', weak: '虚弱' };
+    const PLAYER_ACTION_STATUS_KEYS = ['poison', 'bleed', 'burn', 'stun', 'curse', 'vuln', 'weak'];
+    const ENEMY_ACTION_STATUS_KEYS = ['p_poison', 'p_bleed', 'p_burn', 'p_stun', 'p_curse', 'p_vuln', 'p_weak'];
+
+    function getEnemyActionLifeTotal() {
+        return Math.max(0, state.enemy?.currentHp || 0) + Math.max(0, state.enemy?.minion?.hp || 0);
+    }
+
+    function getBattleActionSnapshot() {
+        return {
+            playerHp: state.hp || 0,
+            playerArmor: state.armor || 0,
+            enemyLife: getEnemyActionLifeTotal(),
+            enemyArmor: state.enemy?.armor || 0,
+            enemyStatuses: Object.fromEntries(PLAYER_ACTION_STATUS_KEYS.map(k => [k, state.enemy?.[k] || 0])),
+            playerStatuses: Object.fromEntries(ENEMY_ACTION_STATUS_KEYS.map(k => [k, state[k] || 0])),
+            discardCount: state.discardPile?.length || 0,
+            enemyMinionHp: state.enemy?.minion?.hp || 0
+        };
+    }
+
+    function addBattleActionLog(side, title, detail) {
+        state.battleLog = state.battleLog || [];
+        state.battleLog.unshift({ side, title, detail });
+        state.battleLog = state.battleLog.slice(0, ACTION_LOG_LIMIT);
+        renderBattleActionLog();
+    }
+
+    function resetBattleActionLog() {
+        state.battleLog = [];
+        renderBattleActionLog();
+    }
+
+    function renderBattleActionLog() {
+        const list = document.getElementById('battle-action-log-list');
+        if (!list) return;
+        const entries = state.battleLog || [];
+        if (!entries.length) {
+            list.innerHTML = `<div class="battle-action-empty">等待交锋。</div>`;
+            return;
+        }
+        list.innerHTML = entries.map(entry => `
+            <div class="battle-action-entry is-${escapeAttr(entry.side || 'system')}">
+                <div class="battle-action-entry-title">${escapeAttr(entry.title)}</div>
+                <div class="battle-action-entry-detail">${escapeAttr(entry.detail)}</div>
+            </div>
+        `).join('');
+    }
+
+    function describePlayerCardResult(card, before) {
+        const parts = [];
+        const damage = Math.max(0, before.enemyLife - getEnemyActionLifeTotal());
+        const armorBreak = Math.max(0, before.enemyArmor - (state.enemy?.armor || 0));
+        const shieldGain = Math.max(0, (state.armor || 0) - before.playerArmor);
+        const healGain = Math.max(0, (state.hp || 0) - before.playerHp);
+        if (damage > 0) parts.push(`造成 ${damage} 点伤害`);
+        else if (armorBreak > 0) parts.push(`削减 ${armorBreak} 点护甲`);
+        if (shieldGain > 0) parts.push(`获得 ${shieldGain} 点护盾`);
+        if (healGain > 0) parts.push(`回复 ${healGain} 点生命`);
+        PLAYER_ACTION_STATUS_KEYS.forEach(key => {
+            const gain = (state.enemy?.[key] || 0) - (before.enemyStatuses[key] || 0);
+            if (gain > 0) parts.push(`施加${ACTION_STATUS_LABELS[key]} ${gain} 层`);
+        });
+        return parts.length ? parts.join('，') : '完成效果';
+    }
+
+    function describeEnemyMoveResult(move, before) {
+        const parts = [];
+        const damage = Math.max(0, before.playerHp - (state.hp || 0));
+        const shieldGain = Math.max(0, (state.enemy?.armor || 0) - before.enemyArmor);
+        if (damage > 0) parts.push(`造成 ${damage} 点伤害`);
+        else if (move?.type?.includes('attack')) parts.push('未造成生命伤害');
+        if (shieldGain > 0) parts.push(`获得 ${shieldGain} 点护甲`);
+        ENEMY_ACTION_STATUS_KEYS.forEach(key => {
+            const gain = (state[key] || 0) - (before.playerStatuses[key] || 0);
+            if (gain > 0) parts.push(`施加${ACTION_STATUS_LABELS[key.replace(/^p_/, '')]} ${gain} 层`);
+        });
+        const junkGain = Math.max(0, (state.discardPile?.length || 0) - before.discardCount);
+        if (move?.type === 'junk' && junkGain > 0) parts.push(`塞入 ${junkGain} 张诅咒牌`);
+        const minionGain = Math.max(0, (state.enemy?.minion?.hp || 0) - before.enemyMinionHp);
+        if (move?.type === 'summon' && minionGain > 0) parts.push(`召唤 ${minionGain} 血分身`);
+        if (move?.type === 'buff' && move.val > 0) parts.push(`力量提升 ${move.val}`);
+        if (move?.type === 'buff_thorns' && move.val > 0) parts.push(`获得荆棘 ${move.val}`);
+        if (move?.type === 'charge') parts.push('进入蓄力');
+        if (move?.type === 'seal') parts.push(`封印 ${move.val} 张牌`);
+        return parts.length ? parts.join('，') : '完成行动';
+    }
     function hasRelic(id) { return state.relics.some(r => r.id === id); }
     let activeKeywordTooltip = null;
     function removeGlobalKeywordTooltip() {
@@ -4423,6 +4529,8 @@
         state.enemy.armor = 0; state.enemy.poison = 0; state.enemy.bleed = 0; state.enemy.burn = 0; state.enemy.stun = 0; state.enemy.curse = 0; state.enemy.vuln = 0; state.enemy.weak = 0; state.enemy.str = 0;
         state.enemy.charged = false; state.enemy.minion = null; state.enemy.isPhase2 = false;
         state.enemy.turnCount = 0; state.enemy.moveHistory = [];
+        resetBattleActionLog();
+        addBattleActionLog('system', '遭遇', state.enemy.name);
         
         state.enemy.moves = state.enemy.moves.map(m => { let mScale = (m.type.includes('attack') || m.type === 'defend' || m.type === 'summon') ? scale : 1; return { ...m, val: Math.floor(m.val * mScale) }; });
 
@@ -4596,6 +4704,7 @@
             document.getElementById('m-atk-txt').innerText = state.enemy.minion.atk;
         } else { minionWrapper.style.display = 'none'; }
 
+        renderBattleActionLog();
         document.getElementById('ui-deck-count').innerText = state.battleDeck.length; document.getElementById('ui-discard-count').innerText = state.discardPile.length; document.getElementById('ui-exhaust-count').innerText = state.exhaustPile.length; updateTopBar();
     }
 
@@ -4817,6 +4926,7 @@
 
         const finalIdx = state.hand.findIndex(c => c.instId == instId); 
         if (finalIdx === -1) return;
+        const playerActionSnapshot = getBattleActionSnapshot();
 
         state.mp -= card.cost; cardsPlayedThisTurn++;
         if(card.tags && card.tags.includes('放逐') && hasRelic('r_pass_energy')) { state.mp += 1; showFloatText("能量回流", "var(--gold)", getCenter('ui-mp')); }
@@ -4879,6 +4989,7 @@
             await new Promise(r => setTimeout(r, 200));
         }
         if (card.tags && !card.tags.includes('复刻') && !card.isJunk) { state.lastPlayedCard = card; }
+        addBattleActionLog('player', `我方使用 ${card.name}`, describePlayerCardResult(card, playerActionSnapshot));
         renderHand(); updateBattleUI();
     }
 
@@ -5385,15 +5496,19 @@
         }
         else if (state.enemy.minion && state.enemy.minion.hp > 0) {
             playerWasAttacked = true;
+            const minionActionSnapshot = getBattleActionSnapshot();
             const minionWrapper = document.getElementById('enemy-minion-wrapper');
             minionWrapper?.classList.add('enemy-minion-attack');
             setTimeout(() => minionWrapper?.classList.remove('enemy-minion-attack'), 420);
             let mDmg = state.enemy.minion.atk;
             if(state.armor > 0) { let b = Math.min(state.armor, mDmg); state.armor -= b; mDmg -= b; }
             if(mDmg > 0) { state.hp -= mDmg; showFloatText(`分身攻击 -${mDmg}`, "var(--crimson)", getCenter('ui-hp')); }
+            const minionDamage = Math.max(0, minionActionSnapshot.playerHp - state.hp);
+            addBattleActionLog('enemy', '敌方分身攻击', minionDamage > 0 ? `造成 ${minionDamage} 点伤害` : '未造成生命伤害');
             await new Promise(r => setTimeout(r, 300));
         }
 
+        const enemyMoveSnapshot = getBattleActionSnapshot();
         if(!enemySkippedByStun && move.type.includes('attack')) {
             playerWasAttacked = true;
             let times = move.times || 1;
@@ -5478,6 +5593,11 @@
             }
             updateBattleUI();
             await new Promise(r => setTimeout(r, 500));
+        }
+        if (enemySkippedByStun) {
+            addBattleActionLog('enemy', `${state.enemy.name}无法行动`, '眩晕跳过行动');
+        } else {
+            addBattleActionLog('enemy', `敌方使用 ${move.name}`, describeEnemyMoveResult(move, enemyMoveSnapshot));
         }
         
         if(state.hp <= 0) { alert("神识消散，轮回结束。"); showScene('scene-main-menu'); document.getElementById('game-top-bar').style.display='none'; return; }
