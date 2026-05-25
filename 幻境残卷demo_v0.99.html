@@ -3905,6 +3905,7 @@
             relics: state.relics,
             mapData: state.mapData,
             pathHistory: state.pathHistory,
+            currentNodeId: state.currentNode?.id || null,
             player: state.player,
             shopDeletePrice
         };
@@ -3937,7 +3938,7 @@
             if (!state.mapData.length) generateMap();
             state.pathHistory = payload.pathHistory || [];
             state.player = payload.player || state.player;
-            state.currentNode = null;
+            state.currentNode = resolveSavedCurrentNode(payload.currentNodeId);
             state.currentShop = null;
             state.isNodeClickLocked = false;
             state.p_chant = state.p_chant || 0;
@@ -3956,6 +3957,17 @@
             clearRunSave();
             alert("存档已损坏，已清除。");
         }
+    }
+
+    function resolveSavedCurrentNode(savedNodeId) {
+        const fallbackId = state.pathHistory.length ? state.pathHistory[state.pathHistory.length - 1] : null;
+        const nodeId = savedNodeId || fallbackId;
+        if (!nodeId || !Array.isArray(state.mapData)) return null;
+        for (const floor of state.mapData) {
+            const node = floor?.nodes?.find(n => n.id === nodeId);
+            if (node) return node;
+        }
+        return null;
     }
 
     function getCurrentCharacter() {
