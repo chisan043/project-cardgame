@@ -2096,6 +2096,7 @@
         { poolId: 'neutral_return_scroll', name: '归页残卷', type: '能力', cost: 1, icon: '📖', val: 0, tags: ['拾遗', '抽牌'], rarity: '稀有', desc: '从墓地选择 1 张牌回到手牌，并[抽牌]。弓手会因回收牌获得风势。' },
         { poolId: 'neutral_soul_flame', name: '魂火祭文', type: '能力', cost: 1, icon: '🔥', val: 0, tags: ['灵祭', '抽牌'], rarity: '稀有', desc: '丢弃 1 张手牌，回复能量并[抽牌]。适合把手牌资源转成职业启动。' },
         { poolId: 'neutral_frenzy_edge', name: '狂锋断章', type: '攻击', cost: 1, icon: '⚔️', val: 6, tags: ['狂热', '连击'], rarity: '稀有', desc: '丢弃 1 张牌获得[狂热]，随后造成 6 点伤害；若本回合已出牌则触发[连击]。' },
+        { poolId: 'neutral_bloodlet_rite', name: '断脉残页', type: '能力', cost: 1, icon: '🩸', val: 0, tags: ['放血', '抽牌'], rarity: '稀有', desc: '引爆敌方已有[出血]层数，然后[抽牌]。没有出血时只作为过牌。' },
         { poolId: 'neutral_sealed_thunder', name: '封雷断页', type: '攻击', cost: 2, icon: '🌩️', val: 13, tags: ['眩晕', '放逐'], rarity: '史诗', desc: '造成 13 点伤害，施加[眩晕]后[放逐]。一次性控制牌，放逐威能会额外提高伤害。' }
     ];
 
@@ -2118,6 +2119,7 @@
             { poolId: 'warrior_oath_retainer', name: '誓约留锋', type: '防御', cost: 1, icon: '🔰', val: 9, tags: ['保留', '充能'], rarity: '普通', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_誓约留锋.png', desc: '获得 9 点护盾。附带[保留]与[充能]，战士会因防御保留额外获得护盾。' },
             { poolId: 'warrior_soul_oath', name: '魂誓换锋', type: '能力', cost: 1, icon: '📖', val: 0, tags: ['灵祭', '抽牌', '庇护'], rarity: '稀有', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_魂誓换锋.png', desc: '丢弃 1 张手牌，触发[灵祭]、[抽牌]与[庇护]。把手牌资源转成护盾，为后续圣剑攻击铺垫。' },
             { poolId: 'warrior_bleed_edge', name: '誓血裂口', type: '攻击', cost: 1, icon: '🩸', val: 6, tags: ['圣剑', '出血'], rarity: '普通', desc: '造成 6 点伤害，附带[圣剑]与[出血]。护盾越厚，伤口越深。' },
+            { poolId: 'warrior_bloodlet_cleave', name: '断誓开锋', type: '攻击', cost: 1, icon: '⚔️', val: 7, tags: ['圣剑', '放血'], rarity: '稀有', desc: '造成 7 点伤害，附带[圣剑]。随后引爆敌方已有[出血]层数。' },
             { poolId: 'warrior_venom_scar', name: '蚀毒剑痕', type: '攻击', cost: 1, icon: '☠️', val: 6, tags: ['圣剑', '剧毒'], rarity: '稀有', desc: '造成 6 点伤害，附带[圣剑]与[剧毒]。适合把护盾压制转成持续伤害。' },
             { poolId: 'warrior_ember_oath', name: '烬誓斩', type: '攻击', cost: 2, icon: '🔥', val: 9, tags: ['圣剑', '燃烧', '荆棘'], rarity: '稀有', desc: '造成 9 点伤害，附带[圣剑]、[燃烧]与[荆棘]。战士会用护盾额外放大盾棘收益。' },
             { poolId: 'warrior_frenzy_cleave', name: '狂誓裂斩', type: '攻击', cost: 2, icon: '🔥', val: 9, tags: ['狂热', '圣剑', '重击'], rarity: '史诗', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_狂誓裂斩.png', desc: '丢弃 1 张手牌获得[狂热]，随后以[圣剑]与[重击]造成重击伤害。' },
@@ -2138,6 +2140,7 @@
             { poolId: 'mage_ember_flow', name: '燃魂导流', type: '攻击', cost: 1, icon: '🔥', val: 5, tags: ['爆发', '燃烧', '充能'], rarity: '稀有', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_余烬点燃.png', desc: '造成 5 点伤害。附带[爆发]、[燃烧]与[充能]，状态词条会为法师标记下一次伤害。' },
             { poolId: 'mage_venom_sigils', name: '毒星符阵', type: '能力', cost: 1, icon: '☠️', val: 0, tags: ['剧毒', '咏唱'], rarity: '普通', desc: '施加[剧毒]并积累[咏唱]。持续伤害也能为下一次爆发铺垫。' },
             { poolId: 'mage_blood_orbit', name: '血月星轨', type: '攻击', cost: 1, icon: '🩸', val: 5, tags: ['爆发', '出血'], rarity: '稀有', desc: '造成 5 点伤害。附带[爆发]与[出血]，状态词条会为法师标记下一次伤害。' },
+            { poolId: 'mage_bloodlet_omen', name: '断血预兆', type: '能力', cost: 1, icon: '🌑', val: 0, tags: ['放血', '咏唱'], rarity: '稀有', desc: '引爆敌方已有[出血]层数，并积累[咏唱]。适合把持续伤口转成爆发窗口。' },
             { poolId: 'mage_echo_veil', name: '回声护幕', type: '能力', cost: 1, icon: '🛡️', val: 0, tags: ['回响', '治愈'], rarity: '稀有', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_魔流庇护.png', desc: '触发[回响]与[治愈]。法师会因回响或受伤治疗积累咏唱。' },
             { poolId: 'mage_void_dust', name: '虚弱星尘', type: '攻击', cost: 1, icon: '✦', val: 6, tags: ['爆发', '虚弱'], rarity: '普通', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_星屑预兆.png', desc: '造成 6 点伤害。附带[爆发]与[虚弱]，有咏唱时会标记下一次伤害。' },
             { poolId: 'mage_arcane_mark', name: '紫焰刻印', type: '能力', cost: 1, icon: '🔮', val: 5, tags: ['附魔', '易伤'], rarity: '稀有', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_裂界紫雷.png', desc: '触发[附魔]并施加[易伤]。法师可把状态词条转成下一次爆发的额外标记。' },
@@ -2163,7 +2166,8 @@
             { poolId: 'archer_venom_flurry', name: '翠毒连矢', type: '攻击', cost: 1, icon: '☠️', val: 5, tags: ['连射', '剧毒'], rarity: '普通', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_森息伏击.png', desc: '造成 5 点伤害。附带[连射]与[剧毒]，适合把风势追射转成多段上毒。' },
             { poolId: 'archer_ember_feather', name: '燎羽连射', type: '攻击', cost: 1, icon: '🔥', val: 5, tags: ['连射', '燃烧'], rarity: '普通', desc: '造成 5 点伤害。附带[连射]与[燃烧]，把轻灵追射转成持续压制。' },
             { poolId: 'archer_soul_return', name: '林魂招矢', type: '能力', cost: 1, icon: '🏮', val: 0, tags: ['招魂', '自然'], rarity: '稀有', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_林风整备.png', desc: '从放逐区选择 1 张牌回到手牌，并触发[自然]。弓手会因招魂获得风势。' },
-            { poolId: 'archer_blood_release', name: '赤痕放血', type: '攻击', cost: 1, icon: '🩸', val: 6, tags: ['出血', '放血', '连射'], rarity: '稀有', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_森息伏击.png', desc: '造成 6 点伤害，施加[出血]后触发[放血]，再以[连射]追加节奏。' },
+            { poolId: 'archer_red_mark', name: '赤痕连矢', type: '攻击', cost: 1, icon: '🩸', val: 5, tags: ['出血', '连射'], rarity: '普通', desc: '造成 5 点伤害。附带[出血]与[连射]，专门负责快速叠出血层数。' },
+            { poolId: 'archer_blood_release', name: '赤痕放血', type: '攻击', cost: 1, icon: '🩸', val: 6, tags: ['放血', '连射'], rarity: '稀有', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_森息伏击.png', desc: '造成 6 点伤害，然后引爆敌方已有[出血]层数；[连射]让引爆回合更灵动。' },
             { poolId: 'archer_exile_storm', name: '逐风绝矢', type: '攻击', cost: 2, icon: '💨', val: 12, tags: ['放逐', '连射', '多段'], rarity: '史诗', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_回环箭雨.png', desc: '造成 12 点伤害，附带[放逐]、[连射]与[多段]。一次性爆发，会获得放逐威能。' }
         ]
     };
@@ -2256,6 +2260,27 @@
         return cloneCardDefinition(candidates[Math.floor(Math.random() * candidates.length)]);
     }
 
+    function deckHasTag(tag) {
+        return state.deck.some(card => card.tags && card.tags.includes(tag));
+    }
+
+    function getBloodPartnerTagNeeded() {
+        const hasBleed = deckHasTag('出血');
+        const hasBloodlet = deckHasTag('放血');
+        if (hasBleed && !hasBloodlet) return '放血';
+        if (hasBloodlet && !hasBleed) return '出血';
+        return null;
+    }
+
+    function generateTaggedRewardCard(tag, used = new Set()) {
+        const classPool = getCharacterCardPool();
+        const allCards = [...classPool, ...NEUTRAL_CARD_POOL];
+        let candidates = allCards.filter(card => card.tags && card.tags.includes(tag) && !used.has(getCardChoiceKey(card)));
+        if (!candidates.length) return null;
+        candidates = candidates.sort(() => 0.5 - Math.random());
+        return cloneCardDefinition(candidates[0]);
+    }
+
     function getCardChoiceKey(card) {
         return card.specialId || card.poolId || card.name;
     }
@@ -2263,6 +2288,14 @@
     function generateRewardChoices(count = 3) {
         const choices = [];
         const used = new Set();
+        const partnerTag = getBloodPartnerTagNeeded();
+        if (partnerTag) {
+            const partnerCard = generateTaggedRewardCard(partnerTag, used);
+            if (partnerCard) {
+                used.add(getCardChoiceKey(partnerCard));
+                choices.push(partnerCard);
+            }
+        }
         let guard = 0;
         while (choices.length < count && guard < 40) {
             guard++;
@@ -2325,9 +2358,6 @@
             if (type === '能力' && tags.length === 1 && (tags.includes('放逐') || tags.includes('回响'))) {
                 let extraPool = pool.filter(t => t !== '放逐' && t !== '回响');
                 if (extraPool.length > 0) { tags.push(extraPool[0]); } else { tags.push('重置'); }
-            }
-            if (tags.includes('放血') && !tags.includes('出血')) {
-                tags.push('出血');
             }
         }
 
