@@ -1567,10 +1567,10 @@
 
 <div class="overlay" id="overlay-reward">
     <div class="event-box" style="width: 800px;">
-        <h2 style="color:var(--gold);">战利品</h2>
-        <p style="color:#888;">天道演算中...请选择一张功法加入牌库。</p>
+        <h2 id="reward-title" style="color:var(--gold);">战利品</h2>
+        <p id="reward-desc" style="color:#888;">天道演算中...请选择一张功法加入牌库。</p>
         <div id="reward-items" class="card-grid" style="margin:30px 0;"></div>
-        <button class="btn-gorgeous" onclick="closeOverlay('overlay-reward'); advanceMap();">放弃机缘</button>
+        <button id="reward-skip-btn" class="btn-gorgeous" onclick="skipBattleReward()">换取金币</button>
     </div>
 </div>
 
@@ -1628,6 +1628,7 @@
         <div class="scene-body">
         <div id="shop-options" class="shop-command-row">
             <button class="btn-gorgeous" style="width:300px;" onclick="renderShopBuyWrapper()">交易功法与奇物</button>
+            <button class="btn-gorgeous" style="width:300px;" onclick="renderShopCopy()">复制一张功法</button>
             <button class="btn-gorgeous" style="width:300px;" onclick="renderShopDelete()">请求精简牌库</button>
             <button class="btn-gorgeous" style="width:300px; border-color:#444; color:#888;" onclick="closeOverlay('overlay-shop'); advanceMap();">离 开</button>
         </div>
@@ -1664,8 +1665,9 @@
     createEmbers();
 
     const TAGS = {
-        '重置': '选择任意张手牌丢弃，并抽取等量的牌。', '血祭': '失去 5 点生命，本局战斗所有伤害提升。', '灵祭': '选择并丢弃 1 张手牌，回复 1 点能量。',
-        '狂热': '选择并丢弃 1 张手牌，本回合你的所有伤害增加 {val} 点。', '附魔': '选择并丢弃 1 张手牌，你下一次攻击额外造成 {val} 点伤害。', '庇护': '选择并丢弃 1 张手牌，本回合受到的伤害减少 {val} 点。',
+        '重置': '选择任意张手牌丢弃，并抽取等量的牌。',
+        '血祭': '失去 5 点生命，本局战斗所有伤害大幅提升。', '狂热': '选择并丢弃 1 张手牌，本回合你的所有伤害大幅增加。',
+        '附魔': '选择并丢弃 1 张手牌，你下一次攻击额外造成大量伤害并抽 1 张牌。', '庇护': '本回合受到的伤害减少 {val} 点。',
         '反击': '进入反击姿态：受到下一次敌方攻击时绝对防御，并返还等额伤害。反击姿态不可叠加。', '招魂': '从放逐区选择 1 张牌回到手牌。', '轮回': '从放逐区选择 1 张牌洗入抽牌堆。',
         '拾遗': '从墓地选择 1 张牌回到手牌。', '复刻': '复制上一张打出的牌的效果。', '吸血': '造成伤害时，回复等同于伤害一半的生命（史诗卡为全额回复）。',
         '保留': '打出后，下回合将回到手牌中。如果不打出则正常丢弃。', '回响': '打出后，此牌的效果会立即再次触发一次。', '放逐': '使用后移至放逐区，本局战斗不可再用。',
@@ -1789,7 +1791,7 @@
             { id: 's_exhaust', name: '风葬归矢', roleId: 'hero_archer', frameTheme: 'archer', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_回环箭雨.png', type: '攻击', cost: 3, icon: '🕳️', val: 0, tags: ['放逐', '轮回'], rarity: '史诗', isSpecial: true, desc: '造成伤害，数值为[放逐]区卡牌数 × 15。随后将[放逐]区所有卡牌洗入抽牌堆。' },
             { id: 's_poison', name: '猎毒齐爆', roleId: 'hero_archer', frameTheme: 'archer', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_森息伏击.png', type: '能力', cost: 2, icon: '💥', val: 0, tags: ['剧毒', '出血'], rarity: '史诗', isSpecial: true, desc: '引爆敌方所有的[剧毒]和[出血]层数，直接造成其层数总和 2 倍的真实伤害，且不清除层数。' },
             { id: 'a_syn_poison', name: '万毒箭阵', roleId: 'hero_archer', frameTheme: 'archer', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_鹰眼贯枝.png', type: '能力', cost: 1, icon: '🧪', val: 0, tags: ['剧毒', '出血'], rarity: '史诗', isSpecial: true, desc: '丢弃手牌中所有带[剧毒]或[出血]的牌。<br>每丢弃一张，给予敌方 6 层剧毒与出血，并造成 10 点伤害。' },
-            { id: 's_energy', name: '林风整备', roleId: 'hero_archer', frameTheme: 'archer', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_林风整备.png', type: '能力', cost: 2, icon: '🍃', val: 0, tags: ['重置', '抽牌', '自然'], rarity: '史诗', isSpecial: true, desc: '丢弃你所有的手牌。每丢弃一张，回复 1 点能量并抽取 1 张牌。' },
+            { id: 's_energy', name: '林风整备', roleId: 'hero_archer', frameTheme: 'archer', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_林风整备.png', type: '能力', cost: 2, icon: '🍃', val: 0, tags: ['重置', '自然'], rarity: '史诗', isSpecial: true, desc: '丢弃你所有的手牌。每丢弃一张，回复 1 点能量并抽取 1 张牌。' },
             { id: 'a_ench_forge', name: '裂风箭铭', roleId: 'hero_archer', frameTheme: 'archer', art: '新角色三/角色三_卡面插画_疾风连射.png', type: '能力', cost: 1, icon: '🏹', val: 0, tags: ['连射', '放逐'], rarity: '史诗', isSpecial: true, desc: '选择一张手牌，为其在本局战斗烙印[连射]与[放逐]。<br>完成箭铭后，回复 2 点能量。' },
             { id: 'a_ench_hunt', name: '森息猎印', roleId: 'hero_archer', frameTheme: 'archer', art: '新角色三/角色三_卡面插画_拉弓瞄准.png', type: '能力', cost: 1, icon: '🍃', val: 0, tags: ['蓄力', '自然'], rarity: '史诗', isSpecial: true, desc: '选择一张手牌，为其在本局战斗烙印[蓄力]与[自然]。' }
         ]
@@ -1964,7 +1966,7 @@
         hero_warrior: {
             '攻击': ['圣剑', '重击', '穿甲', '连击', '保留', '吸血', '血祭', '剧毒', '出血', '燃烧', '放血'],
             '防御': ['庇护', '荆棘', '保留', '充能', '治愈'],
-            '能力': ['庇护', '充能', '抽牌', '血祭', '灵祭', '剧毒', '出血', '燃烧', '放血']
+            '能力': ['庇护', '充能', '抽牌', '血祭', '剧毒', '出血', '燃烧', '放血']
         },
         hero_mage: {
             '攻击': ['爆发', '易伤', '燃烧', '剧毒', '出血', '放血', '虚弱', '回响', '充能', '附魔'],
@@ -1979,7 +1981,7 @@
         neutral: {
             '攻击': ['吸血', '回响', '放逐', '抽牌', '剧毒', '出血', '燃烧', '放血', '重击', '穿甲', '连击', '多段', '易伤', '虚弱', '充能'],
             '防御': ['复刻', '保留', '回响', '放逐', '易伤', '虚弱', '充能', '荆棘', '治愈'],
-            '能力': ['重置', '血祭', '灵祭', '狂热', '附魔', '庇护', '招魂', '轮回', '拾遗', '复刻', '回响', '放逐', '抽牌', '剧毒', '出血', '燃烧', '放血', '易伤', '虚弱', '眩晕', '诅咒', '充能', '治愈']
+            '能力': ['重置', '血祭', '狂热', '附魔', '庇护', '招魂', '轮回', '拾遗', '复刻', '回响', '放逐', '抽牌', '剧毒', '出血', '燃烧', '放血', '易伤', '虚弱', '眩晕', '诅咒', '充能', '治愈']
         }
     };
 
@@ -2085,7 +2087,7 @@
 
     const NEUTRAL_CARD_POOL = [
         { poolId: 'neutral_guard', name: '古誓护印', type: '防御', cost: 1, icon: '⛩️', val: 8, tags: ['保留'], rarity: '稀有' },
-        { poolId: 'neutral_cycle', name: '星轨换手', type: '能力', cost: 1, icon: '🌌', val: 0, tags: ['重置', '抽牌'], rarity: '稀有' },
+        { poolId: 'neutral_cycle', name: '星轨换手', type: '能力', cost: 1, icon: '🌌', val: 0, tags: ['重置'], rarity: '稀有' },
         { poolId: 'neutral_spark', name: '碎星短刃', type: '攻击', cost: 0, icon: '✨', val: 4, tags: ['销毁'], rarity: '普通' },
         { poolId: 'neutral_bless', name: '圣像微光', type: '能力', cost: 1, icon: '🕯️', val: 0, tags: ['治愈'], rarity: '普通' },
         { poolId: 'neutral_echo', name: '回音残卷', type: '能力', cost: 2, icon: '📜', val: 0, tags: ['回响', '抽牌'], rarity: '史诗' },
@@ -2094,7 +2096,7 @@
         { poolId: 'neutral_blood_mark', name: '血契刻痕', type: '能力', cost: 1, icon: '🩸', val: 5, tags: ['血祭', '附魔'], rarity: '稀有', desc: '触发[血祭]与[附魔]。战士会把血祭转成额外护盾。' },
         { poolId: 'neutral_exile_blade', name: '流亡短刃', type: '攻击', cost: 1, icon: '🗡️', val: 9, tags: ['放逐', '穿甲'], rarity: '稀有', desc: '造成 9 点穿甲伤害并[放逐]。一次性强攻，弓手可借放逐获得风势。' },
         { poolId: 'neutral_return_scroll', name: '归页残卷', type: '能力', cost: 1, icon: '📖', val: 0, tags: ['拾遗', '抽牌'], rarity: '稀有', desc: '从墓地选择 1 张牌回到手牌，并[抽牌]。弓手会因回收牌获得风势。' },
-        { poolId: 'neutral_soul_flame', name: '魂火祭文', type: '能力', cost: 1, icon: '🔥', val: 0, tags: ['灵祭', '抽牌'], rarity: '稀有', desc: '丢弃 1 张手牌，回复能量并[抽牌]。适合把手牌资源转成职业启动。' },
+        { poolId: 'neutral_soul_flame', name: '魂火祭文', type: '能力', cost: 1, icon: '🔥', val: 0, tags: ['充能', '抽牌'], rarity: '稀有', desc: '回复能量并[抽牌]。适合把手牌资源转成职业启动。' },
         { poolId: 'neutral_frenzy_edge', name: '狂锋断章', type: '攻击', cost: 1, icon: '⚔️', val: 6, tags: ['狂热', '连击'], rarity: '稀有', desc: '丢弃 1 张牌获得[狂热]，随后造成 6 点伤害；若本回合已出牌则触发[连击]。' },
         { poolId: 'neutral_bloodlet_rite', name: '断脉残页', type: '能力', cost: 1, icon: '🩸', val: 0, tags: ['放血', '抽牌'], rarity: '稀有', desc: '引爆敌方已有[出血]层数，然后[抽牌]。没有出血时只作为过牌。' },
         { poolId: 'neutral_sealed_thunder', name: '封雷断页', type: '攻击', cost: 2, icon: '🌩️', val: 13, tags: ['眩晕', '放逐'], rarity: '史诗', desc: '造成 13 点伤害，施加[眩晕]后[放逐]。一次性控制牌，放逐威能会额外提高伤害。' }
@@ -2117,7 +2119,7 @@
             { poolId: 'warrior_banner_guard', name: '战旗压阵', type: '能力', cost: 1, icon: '🚩', val: 5, tags: ['庇护', '抽牌'], rarity: '稀有', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_战旗压阵.png', desc: '触发[庇护]并[抽牌]。若已有护盾，战士联动会额外加固护盾。' },
             { poolId: 'warrior_blood_wall', name: '血祭壁垒', type: '能力', cost: 1, icon: '🛡️', val: 5, tags: ['血祭', '庇护', '荆棘'], rarity: '稀有', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_血祭壁垒.png', desc: '触发[血祭]与[庇护]，并获得[荆棘]。战士会把血祭转成护盾，为盾棘和下一次圣剑铺垫。' },
             { poolId: 'warrior_oath_retainer', name: '誓约留锋', type: '防御', cost: 1, icon: '🔰', val: 9, tags: ['保留', '充能'], rarity: '普通', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_誓约留锋.png', desc: '获得 9 点护盾。附带[保留]与[充能]，战士会因防御保留额外获得护盾。' },
-            { poolId: 'warrior_soul_oath', name: '魂誓换锋', type: '能力', cost: 1, icon: '📖', val: 0, tags: ['灵祭', '抽牌', '庇护'], rarity: '稀有', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_魂誓换锋.png', desc: '丢弃 1 张手牌，触发[灵祭]、[抽牌]与[庇护]。把手牌资源转成护盾，为后续圣剑攻击铺垫。' },
+            { poolId: 'warrior_soul_oath', name: '魂誓换锋', type: '能力', cost: 1, icon: '📖', val: 5, tags: ['充能', '抽牌', '庇护'], rarity: '稀有', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_魂誓换锋.png', desc: '触发[充能]、[抽牌]与[庇护]。把节奏转成护盾，为后续圣剑攻击铺垫。' },
             { poolId: 'warrior_bleed_edge', name: '誓血裂口', type: '攻击', cost: 1, icon: '🩸', val: 6, tags: ['圣剑', '出血'], rarity: '普通', desc: '造成 6 点伤害，附带[圣剑]与[出血]。护盾越厚，伤口越深。' },
             { poolId: 'warrior_bloodlet_cleave', name: '断誓开锋', type: '攻击', cost: 1, icon: '⚔️', val: 7, tags: ['圣剑', '放血'], rarity: '稀有', desc: '造成 7 点伤害，附带[圣剑]。随后引爆敌方已有[出血]层数。' },
             { poolId: 'warrior_venom_scar', name: '蚀毒剑痕', type: '攻击', cost: 1, icon: '☠️', val: 6, tags: ['圣剑', '剧毒'], rarity: '稀有', desc: '造成 6 点伤害，附带[圣剑]与[剧毒]。适合把护盾压制转成持续伤害。' },
@@ -2156,7 +2158,7 @@
             { poolId: 'archer_shadow', name: '狩影穿枝', type: '攻击', cost: 2, icon: '🗡️', val: 10, tags: ['连射', '穿甲'], rarity: '稀有' },
             { poolId: 'archer_grove', name: '森冠齐射', type: '攻击', cost: 2, icon: '🏹', val: 7, tags: ['连射', '多段', '穿甲'], rarity: '史诗' },
             { poolId: 'archer_ambush', name: '森息伏击', type: '能力', cost: 0, icon: '🍃', val: 4, tags: ['蓄力', '销毁'], rarity: '普通' },
-            { poolId: 'archer_shift', name: '风羽换位', type: '能力', cost: 1, icon: '🪶', val: 0, tags: ['自然', '重置', '抽牌'], rarity: '稀有' },
+            { poolId: 'archer_shift', name: '风羽换位', type: '能力', cost: 1, icon: '🪶', val: 0, tags: ['自然', '重置'], rarity: '稀有' },
             { poolId: 'archer_hawkeye', name: '鹰眼贯枝', type: '攻击', cost: 2, icon: '🎯', val: 12, tags: ['蓄力', '穿甲'], rarity: '稀有' },
             { poolId: 'archer_rain', name: '回环箭雨', type: '攻击', cost: 2, icon: '🌧️', val: 6, tags: ['连射', '回响'], rarity: '史诗' },
             { poolId: 'archer_hidden_arrow', name: '回风藏箭', type: '能力', cost: 1, icon: '🪶', val: 6, tags: ['保留', '蓄力'], rarity: '稀有', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_风羽换位.png', desc: '获得风势。附带[保留]与[蓄力]，弓手会因保留额外获得风势。' },
@@ -2191,10 +2193,29 @@
         return pool;
     }
 
+    function normalizeTagConflicts(tags = []) {
+        const result = [...new Set(tags)];
+        const removeTag = (tag) => {
+            const idx = result.indexOf(tag);
+            if (idx !== -1) result.splice(idx, 1);
+        };
+        if (result.includes('灵祭')) {
+            removeTag('灵祭');
+            if (!result.includes('充能')) result.push('充能');
+        }
+        if (result.includes('重置') && result.includes('抽牌')) removeTag('抽牌');
+        if (result.includes('放逐') && result.includes('保留')) removeTag('保留');
+        if (result.includes('销毁')) {
+            removeTag('放逐');
+            removeTag('保留');
+        }
+        return result;
+    }
+
     function cloneCardDefinition(cardDef) {
         const card = JSON.parse(JSON.stringify(cardDef));
         card.id = Math.random().toString(36).substr(2, 9);
-        card.tags = card.tags ? [...card.tags] : [];
+        card.tags = card.tags ? normalizeTagConflicts(card.tags) : [];
         card.rarity = card.rarity || '普通';
         card.up = !!card.up;
         return card;
@@ -2241,7 +2262,7 @@
     function cloneSpecialEpic(special) {
         const sTags = extractTagsFromText(special.desc);
         if (special.tags) special.tags.forEach(t => { if (!sTags.includes(t)) sTags.push(t); });
-        return { ...JSON.parse(JSON.stringify(special)), id: Math.random().toString(36).substr(2, 9), specialId: special.id, tags: sTags, up: false };
+        return { ...JSON.parse(JSON.stringify(special)), id: Math.random().toString(36).substr(2, 9), specialId: special.id, tags: normalizeTagConflicts(sTags), up: false };
     }
 
     function generateRewardCard() {
@@ -2361,6 +2382,8 @@
             }
         }
 
+        tags = normalizeTagConflicts(tags);
+
         if (tags.includes('放逐') && type !== '能力') { baseVal += (rarity === '史诗' ? 10 : 6); }
 
         let name = ""; let icon = "";
@@ -2397,9 +2420,9 @@
         
         extractedTags.forEach(t => {
             if(TAGS[t]) {
-                let displayVal = card.val; if (['灵祭', '充能'].includes(t)) displayVal = 1; 
+                let displayVal = card.val; if (t === '充能') displayVal = 1;
                 if (!card.isSpecial && t === '治愈') displayVal = card.up ? card.cost * 7 : card.cost * 5;
-                if (!card.isSpecial && t === '血祭') displayVal = card.up ? 8 : 5;
+                if (!card.isSpecial && t === '血祭') displayVal = card.up ? 12 : 8;
                 let tooltip = TAGS[t].replace(/\{val\}/g, displayVal || 'X');
                 
                 if (card.type === '能力') {
@@ -3841,7 +3864,10 @@
             state.hp = payload.hp || 80;
             state.maxHp = payload.maxHp || 80;
             state.gold = payload.gold || 0;
-            state.deck = payload.deck || [];
+            state.deck = (payload.deck || []).map(card => {
+                if (card.tags) card.tags = normalizeTagConflicts(card.tags);
+                return card;
+            });
             state.relics = payload.relics || [];
             state.mapData = payload.mapData || [];
             if (!state.mapData.length) generateMap();
@@ -3971,7 +3997,7 @@
         playerHpLagRatio = null;
         if (playerHpLagTimer) clearTimeout(playerHpLagTimer);
         state.deck = JSON.parse(JSON.stringify(initialDeck));
-        state.deck.forEach(c => c.id = Math.random().toString(36).substr(2, 9));
+        state.deck.forEach(c => { c.id = Math.random().toString(36).substr(2, 9); if (c.tags) c.tags = normalizeTagConflicts(c.tags); });
         updateTopBar();
         closeOverlay('overlay-role-select');
         showInitRelicOverlay();
@@ -4638,7 +4664,7 @@
 
         let targets = {};
         
-        let requireDiscard1 = ['灵祭', '狂热', '附魔', '庇护'].filter(t => card.tags && card.tags.includes(t));
+        let requireDiscard1 = ['狂热', '附魔'].filter(t => card.tags && card.tags.includes(t));
         if (requireDiscard1.length > 0) {
             let selectableHand = state.hand.filter(c => c.instId !== instId && !c.sealed);
             if (selectableHand.length < 1) { showFloatText("无牌可丢弃", "var(--crimson)", getCenter('ui-hp')); return; }
@@ -4834,9 +4860,16 @@
         }
 
         // ====== 原有普通词条标签逻辑 ======
-        if (card.tags && card.tags.includes('血祭')) { let dmgBonus = card.up ? 8 : 5; state.hp -= 5; state.p_battle_dmg += dmgBonus; showFloatText(`血祭 扣5血 / +${dmgBonus}攻`, "var(--crimson)", getCenter('ui-hp')); if(state.hp <= 0) { winBattle(); return; } }
+        if (card.tags && card.tags.includes('血祭')) { let dmgBonus = card.up ? 12 : 8; state.hp -= 5; state.p_battle_dmg += dmgBonus; showFloatText(`血祭 扣5血 / +${dmgBonus}攻`, "var(--crimson)", getCenter('ui-hp')); if(state.hp <= 0) { winBattle(); return; } }
 
-        let requireDiscard1 = ['灵祭', '狂热', '附魔', '庇护'].filter(t => card.tags && card.tags.includes(t));
+        if (card.tags && card.tags.includes('庇护')) {
+            let pVal = parseInt(card.val) || (card.up ? 10 : 6);
+            if (hasRelic('r_protect_armor')) pVal += 5;
+            state.p_reduce_dmg += pVal;
+            showFloatText(`庇护 +${pVal}`, "var(--water)", getCenter('ui-hp'));
+        }
+
+        let requireDiscard1 = ['狂热', '附魔'].filter(t => card.tags && card.tags.includes(t));
         if (requireDiscard1.length > 0 && targets && targets.discard1) {
             let actuallyDiscarded = 0;
             targets.discard1.forEach(c => {
@@ -4844,10 +4877,8 @@
             });
             if (actuallyDiscarded > 0) {
                 renderHand();
-                if (card.tags.includes('灵祭')) { state.mp += 1; showFloatText(`能量 +1`, "var(--gold)", getCenter('ui-mp')); }
-                if (card.tags.includes('狂热')) { let fVal = parseInt(card.val) || 0; if (hasRelic('r_frenzy_veil')) fVal += Math.floor(state.r_discard_count / 2); state.p_dmg_buff += fVal; showFloatText(`狂热 +${fVal}`, "var(--crimson)", getCenter('ui-hp')); }
-                if (card.tags.includes('附魔')) { let eVal = parseInt(card.val) || 0; state.p_next_dmg += eVal; if(hasRelic('r_enchant_crys')) state.p_next_dmg += eVal; showFloatText(`附魔 +${eVal}`, "var(--crimson)", getCenter('ui-hp')); }
-                if (card.tags.includes('庇护')) { let pVal = parseInt(card.val) || 0; if (hasRelic('r_protect_armor')) pVal += 5; state.p_reduce_dmg += pVal; showFloatText(`庇护 +${pVal}`, "var(--water)", getCenter('ui-hp')); }
+                if (card.tags.includes('狂热')) { let fVal = (parseInt(card.val) || 4) + (card.up ? 4 : 3); if (hasRelic('r_frenzy_veil')) fVal += Math.floor(state.r_discard_count / 2); state.p_dmg_buff += fVal; showFloatText(`狂热 +${fVal}`, "var(--crimson)", getCenter('ui-hp')); }
+                if (card.tags.includes('附魔')) { let eVal = Math.max(6, ((parseInt(card.val) || 4) + (card.up ? 5 : 3)) * 2); state.p_next_dmg += eVal; if(hasRelic('r_enchant_crys')) state.p_next_dmg += eVal; showFloatText(`附魔 +${eVal}`, "var(--crimson)", getCenter('ui-hp')); await drawCards(1); }
             }
         }
         if (card.tags && card.tags.includes('重置') && targets && targets.reset) { 
@@ -5224,6 +5255,10 @@
 
         updateTopBar(); showRewardOverlay(); 
     }
+
+    function getBattleRewardSkipGold() {
+        return 25 + Math.min(30, state.floor * 2);
+    }
     
     function openInitDeck() { showOverlay('overlay-init-deck'); renderInitDeck(); }
     function renderInitDeck(characterId = starterPreviewCharacterId) {
@@ -5316,9 +5351,38 @@
         actions.forEach(action => actionRow.appendChild(makeButton(action.label, action.onClick, action.className || '')));
     }
     
+    function skipBattleReward() {
+        const gold = getBattleRewardSkipGold();
+        state.gold += gold;
+        updateTopBar();
+        closeOverlay('overlay-reward');
+        showFloatText(`金币 +${gold}`, "var(--gold)", getCenter('ui-gold'));
+        advanceMap();
+    }
+
     function showRewardOverlay() {
         const container = document.getElementById('reward-items'); container.innerHTML = '';
-        generateRewardChoices(3).forEach(card => { const el = document.createElement('div'); el.innerHTML = generateCardHTML(card, true); el.onclick = () => { state.deck.push(card); closeOverlay('overlay-reward'); advanceMap(); }; container.appendChild(el); }); showOverlay('overlay-reward');
+        const availableRelics = getRolePreferredRelics(RELIC_POOL.filter(r => !hasRelic(r.id)));
+        const showRelicReward = availableRelics.length > 0 && Math.random() < 0.2;
+        document.getElementById('reward-title').innerText = showRelicReward ? '奇珍战利品' : '功法战利品';
+        document.getElementById('reward-desc').innerText = showRelicReward ? '战斗余烬里浮出三件奇珍，请选择一件收入囊中。' : '天道演算中...请选择一张功法加入牌库。';
+        document.getElementById('reward-skip-btn').innerText = `放弃机缘，换取金币 +${getBattleRewardSkipGold()}`;
+        if (showRelicReward) {
+            availableRelics.slice(0, 3).forEach(r => {
+                const el = document.createElement('div');
+                el.innerHTML = renderRelicCard(r, { iconSize: 45, iconClass: 'relic-card-icon' });
+                el.onclick = () => { state.relics.push(r); closeOverlay('overlay-reward'); updateTopBar(); advanceMap(); };
+                container.appendChild(el);
+            });
+        } else {
+            generateRewardChoices(3).forEach(card => {
+                const el = document.createElement('div');
+                el.innerHTML = generateCardHTML(card, true);
+                el.onclick = () => { state.deck.push(card); closeOverlay('overlay-reward'); advanceMap(); };
+                container.appendChild(el);
+            });
+        }
+        showOverlay('overlay-reward');
     }
 
     function triggerEventNode() {
@@ -5432,6 +5496,53 @@
         grid.innerHTML = `<div style="width:100%; color:var(--gold); margin-bottom:4px; font-size:20px; text-align:center;">遗忘功法需供奉: 💰${shopDeletePrice}</div><div id="shop-delete-grid" class="shop-delete-grid"></div>`;
         const deleteGrid = document.getElementById('shop-delete-grid');
         state.deck.forEach(card => { const el = document.createElement('div'); el.innerHTML = generateCardHTML(card, true); el.onclick = () => { let html = `<div>${generateCardHTML(card, true)}</div><div style="font-size: 24px; color: var(--crimson);">彻底遗忘此牌？</div>`; openConfirmPanel('确认遗忘', html, () => { if(state.gold >= shopDeletePrice) { state.gold -= shopDeletePrice; state.deck = state.deck.filter(x => x.id !== card.id); shopDeletePrice += 25; updateTopBar(); saveRun(); renderShopDelete(); } else { alert("金币不足！"); } }); }; deleteGrid.appendChild(el); }); document.getElementById('shop-back-btn').style.display = 'inline-block';
+    }
+
+    function getShopCopyPrice(card) {
+        let price = 65;
+        if (card.rarity === '稀有') price += 20;
+        if (card.rarity === '史诗') price += 45;
+        if (card.up) price += 25;
+        return price;
+    }
+
+    function copyDeckCard(card) {
+        const clone = cloneCardDefinition(card);
+        delete clone.instId;
+        delete clone.purchased;
+        delete clone._roleSynergyKey;
+        clone.sealed = false;
+        return clone;
+    }
+
+    function renderShopCopy() {
+        showShopContent({ canRefresh: false });
+        const grid = document.getElementById('shop-items-grid');
+        grid.innerHTML = '<div style="width:100%; color:var(--gold); margin-bottom:4px; font-size:20px; text-align:center;">选择一张功法复制到牌库</div><div id="shop-copy-grid" class="shop-delete-grid"></div>';
+        const copyGrid = document.getElementById('shop-copy-grid');
+        state.deck.forEach(card => {
+            const price = getShopCopyPrice(card);
+            const el = document.createElement('div');
+            el.className = 'shop-card-wrapper';
+            el.innerHTML = `${generateCardHTML(card, true)}<button class="btn-gorgeous shop-price-btn">复制 💰 ${price}</button>`;
+            el.querySelector('button').onclick = () => {
+                let html = `<div>${generateCardHTML(card, true)}</div><div style="font-size: 24px; color: var(--gold);">复制此功法？需供奉 💰${price}</div>`;
+                openConfirmPanel('确认复制', html, () => {
+                    if (state.gold >= price) {
+                        state.gold -= price;
+                        state.deck.push(copyDeckCard(card));
+                        updateTopBar();
+                        saveRun();
+                        showFloatText("功法复写完成", "var(--gold)", getCenter('ui-gold'));
+                        renderShopCopy();
+                    } else {
+                        alert("金币不足！");
+                    }
+                });
+            };
+            copyGrid.appendChild(el);
+        });
+        document.getElementById('shop-back-btn').style.display = 'inline-block';
     }
 
     function resolveRest() { state.hp = Math.min(state.maxHp, state.hp+30); updateTopBar(); closeOverlay('overlay-rest'); advanceMap(); }
