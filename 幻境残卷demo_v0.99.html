@@ -1589,7 +1589,7 @@
 
 <div class="overlay" id="overlay-tag-select" style="z-index: 5000;">
     <div class="event-box" style="width: 800px;">
-        <h2 style="color:var(--water);">请选择要烙印的法则</h2>
+        <h2 style="color:var(--water);">请选择目标功法</h2>
         <div id="tag-select-card-preview" style="display:flex; justify-content:center; margin-bottom: 20px;"></div>
         <div id="tag-select-options" style="display:flex; justify-content:center; flex-wrap:wrap; gap:20px; margin-bottom:30px; width:100%;"></div>
         <button class="btn-gorgeous" style="border-color:#444; color:#888; background:#111;" onclick="closeOverlay('overlay-tag-select'); showOverlay('overlay-event');">返回重选</button>
@@ -1764,8 +1764,9 @@
             if (tags.includes('重置') && targets?.reset?.length) windGain += Math.min(2, targets.reset.length);
             if ((tags.includes('招魂') && targets?.zhaohun?.length) || (tags.includes('轮回') && targets?.lunhui?.length) || (tags.includes('拾遗') && targets?.shiyi?.length)) windGain += 1;
             if (windGain > 0) {
-                state.p_aim = Math.min(6, state.p_aim + windGain);
-                showFloatText(`弓手联动 风势 +${windGain}`, "var(--nature)", getCenter('ui-hp'));
+                const totalWind = windGain + (hasRelic('r_wind_quiver') ? 1 : 0);
+                state.p_aim = Math.min(6, state.p_aim + totalWind);
+                showFloatText(`弓手联动 风势 +${totalWind}`, "var(--nature)", getCenter('ui-hp'));
             }
         }
     }
@@ -1776,27 +1777,43 @@
             { id: 's_thorns', name: '圣棘誓壁', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_圣堂守势.png', type: '防御', cost: 3, icon: '🛡️', val: 0, tags: ['荆棘'], rarity: '史诗', isSpecial: true, desc: '获得 30 点护甲与 10 层[荆棘]。' },
             { id: 'a_syn_sword', name: '裁决破军', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_裂光一闪.png', type: '攻击', cost: 2, icon: '🗡️', val: 10, tags: ['圣剑'], rarity: '史诗', isSpecial: true, desc: '造成 10 点伤害。<br>你手牌中每有一张带有[圣剑]、[重击]或[穿甲]的牌，额外造成 12 点伤害。' },
             { id: 'a_syn_array', name: '王誓阵列', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_铁壁圣痕.png', type: '防御', cost: 2, icon: '⛩️', val: 10, tags: ['保留', '荆棘'], rarity: '史诗', isSpecial: true, desc: '获得 10 点护甲。<br>你手牌中每有一张带有[保留]或[荆棘]的牌，额外获得 8 点护甲与 3 层[荆棘]。' },
-            { id: 'a_ench_array', name: '盾墙刻印', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_盾墙反身.png', type: '防御', cost: 1, icon: '🔰', val: 8, tags: ['保留', '荆棘'], rarity: '史诗', isSpecial: true, desc: '获得 8 点护甲。<br>选择一张手牌，为其在本局战斗烙印[保留]与[荆棘]。' },
-            { id: 'a_ench_blood', name: '血誓锋印', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_王冠反斩.png', type: '能力', cost: 1, icon: '💉', val: 0, tags: ['吸血', '保留'], rarity: '史诗', isSpecial: true, desc: '选择一张手牌，为其在本局战斗烙印[吸血]与[保留]。' }
+            { id: 'a_syn_blood', name: '血海誓斩', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_血誓斩.png', type: '攻击', cost: 2, icon: '🩸', val: 6, tags: ['吸血', '血祭'], rarity: '史诗', isSpecial: true, desc: '造成 6 点伤害。你手牌中每有一张带[治愈]或[吸血]的牌，失去 2 点生命并额外造成 15 点伤害，随后吸血。' },
+            { id: 'w_counter_crown', name: '王冠回锋', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_王冠反斩.png', type: '攻击', cost: 2, icon: '👑', val: 14, tags: ['反击', '圣剑'], rarity: '史诗', isSpecial: true, desc: '造成 14 点伤害并进入[反击]姿态。若已处于反击姿态，改为额外造成等同护盾值的伤害。' },
+            { id: 'w_bastion_prayer', name: '圣壁祷言', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_战旗压阵.png', type: '能力', cost: 1, icon: '🚩', val: 10, tags: ['庇护', '抽牌'], rarity: '史诗', isSpecial: true, desc: '获得 10 点[庇护]，若当前拥有护盾，再获得等同庇护值的护盾并[抽牌]。' },
+            { id: 'w_thorn_judgement', name: '荆冠审判', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_棘甲冲锋.png', type: '攻击', cost: 2, icon: '🌹', val: 8, tags: ['圣剑', '荆棘'], rarity: '史诗', isSpecial: true, desc: '造成 8 点伤害。额外造成当前[荆棘]层数 3 倍的伤害，并获得 6 层[荆棘]。' },
+            { id: 'w_oath_fortress', name: '誓约壁垒', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_铁壁圣痕.png', type: '防御', cost: 2, icon: '🏰', val: 18, tags: ['庇护', '保留'], rarity: '史诗', isSpecial: true, desc: '获得 18 点护盾与 8 点[庇护]。若生命低于一半，额外进入[反击]姿态。' },
+            { id: 'w_last_verdict', name: '终誓裁断', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_终誓裁断.png', type: '攻击', cost: 2, icon: '⚔️', val: 18, tags: ['圣剑', '重击', '放逐'], rarity: '史诗', isSpecial: true, desc: '造成 18 点伤害并[放逐]。伤害额外提高你当前护盾值与[荆棘]层数之和。' }
         ],
         hero_mage: [
             { id: 's_magic', name: '星界回音', roleId: 'hero_mage', frameTheme: 'mage', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_星火连祷.png', type: '能力', cost: 3, icon: '🌌', val: 0, tags: ['回响'], rarity: '史诗', isSpecial: true, desc: '本回合接下来打出的 3 张牌，其所有的标签效果会额外触发 2 次。' },
             { id: 's_pierce', name: '裂界紫雷', roleId: 'hero_mage', frameTheme: 'mage', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_裂界紫雷.png', type: '攻击', cost: 4, icon: '⚡', val: 40, tags: ['爆发', '穿甲', '易伤'], rarity: '史诗', isSpecial: true, desc: '造成 40 点穿甲伤害。敌方每有 1 层[易伤]，伤害额外提升 50%。' },
             { id: 'a_syn_magic', name: '森罗雷仪', roleId: 'hero_mage', frameTheme: 'mage', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_虚空导引.png', type: '能力', cost: 3, icon: '🌌', val: 0, tags: ['回响', '复刻', '充能'], rarity: '史诗', isSpecial: true, desc: '手牌中每有一张带[回响]或[复刻]的牌，降下一次天雷（造成 15 点穿甲伤害），并回复 1 点能量。' },
-            { id: 'a_ench_spirit', name: '回响铭文', roleId: 'hero_mage', frameTheme: 'mage', art: '角色二/角色二_卡面插画_遗迹咏唱.png', type: '能力', cost: 0, icon: '📜', val: 0, tags: ['回响', '销毁'], rarity: '史诗', isSpecial: true, desc: '选择一张手牌，为其在本局战斗烙印[回响]与[销毁]。' },
-            { id: 'a_ench_gather', name: '星火聚灵', roleId: 'hero_mage', frameTheme: 'mage', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_法环回流.png', type: '能力', cost: 1, icon: '✨', val: 0, tags: ['充能', '抽牌'], rarity: '史诗', isSpecial: true, desc: '选择一张手牌，为其在本局战斗烙印[充能]与[抽牌]。' },
-            { id: 'a_ench_chant', name: '紫焰秘契', roleId: 'hero_mage', frameTheme: 'mage', art: '角色二/角色二_卡面插画_紫焰爆裂.png', type: '能力', cost: 1, icon: '🔮', val: 0, tags: ['咏唱', '爆发'], rarity: '史诗', isSpecial: true, desc: '选择一张手牌，为其在本局战斗烙印[咏唱]与[爆发]，并回复 1 点能量。' }
+            { id: 'm_chant_singularity', name: '星核咏唱', roleId: 'hero_mage', frameTheme: 'mage', art: '角色二/角色二_卡面插画_遗迹咏唱.png', type: '能力', cost: 1, icon: '🔮', val: 0, tags: ['咏唱', '充能'], rarity: '史诗', isSpecial: true, desc: '获得 3 层[咏唱]并回复 1 点能量。若敌方有负面状态，额外[抽牌] 1 张。' },
+            { id: 'm_status_supernova', name: '万象超新星', roleId: 'hero_mage', frameTheme: 'mage', art: '角色二/角色二_卡面插画_紫焰爆裂.png', type: '攻击', cost: 2, icon: '💥', val: 8, tags: ['爆发', '燃烧'], rarity: '史诗', isSpecial: true, desc: '造成 8 点伤害。敌方每有一种负面状态，额外造成 8 点伤害并施加 1 层[燃烧]。' },
+            { id: 'm_echo_archive', name: '回声秘藏', roleId: 'hero_mage', frameTheme: 'mage', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_法环回流.png', type: '能力', cost: 1, icon: '🪞', val: 0, tags: ['回响', '复刻'], rarity: '史诗', isSpecial: true, desc: '复制上一张打出的牌的效果；若没有可复制目标，则获得 2 层[咏唱]并[抽牌]。' },
+            { id: 'm_ember_orbit', name: '余烬星轨', roleId: 'hero_mage', frameTheme: 'mage', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_余烬点燃.png', type: '能力', cost: 1, icon: '🔥', val: 0, tags: ['燃烧', '易伤'], rarity: '史诗', isSpecial: true, desc: '施加 6 层[燃烧]与 3 层[易伤]。若有[咏唱]，保留咏唱并[抽牌] 2 张。' },
+            { id: 'm_forbidden_comet', name: '裂星禁术', roleId: 'hero_mage', frameTheme: 'mage', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_裂界紫雷.png', type: '攻击', cost: 2, icon: '🌌', val: 20, tags: ['爆发', '穿甲', '放逐'], rarity: '史诗', isSpecial: true, desc: '造成 20 点穿甲伤害并[放逐]。每有 1 层[咏唱]，额外造成 6 点伤害，然后消耗所有咏唱。' },
+            { id: 'm_curse_gravity', name: '咒星重力', roleId: 'hero_mage', frameTheme: 'mage', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_虚空导引.png', type: '能力', cost: 2, icon: '⛓️', val: 0, tags: ['诅咒', '虚弱'], rarity: '史诗', isSpecial: true, desc: '施加 5 层[诅咒]与 3 层[虚弱]。敌方每有一种负面状态，你获得 1 层[咏唱]。' },
+            { id: 'm_blood_moon_rite', name: '血月仪轨', roleId: 'hero_mage', frameTheme: 'mage', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_星屑预兆.png', type: '能力', cost: 1, icon: '🩸', val: 0, tags: ['出血', '放血'], rarity: '史诗', isSpecial: true, desc: '施加 6 层[出血]，随后立刻触发[放血]，并获得 2 层[咏唱]。' }
         ],
         hero_archer: [
             { id: 's_exhaust', name: '风葬归矢', roleId: 'hero_archer', frameTheme: 'archer', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_回环箭雨.png', type: '攻击', cost: 3, icon: '🕳️', val: 0, tags: ['放逐', '轮回'], rarity: '史诗', isSpecial: true, desc: '造成伤害，数值为[放逐]区卡牌数 × 15。随后将[放逐]区所有卡牌洗入抽牌堆。' },
             { id: 's_poison', name: '猎毒齐爆', roleId: 'hero_archer', frameTheme: 'archer', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_森息伏击.png', type: '能力', cost: 2, icon: '💥', val: 0, tags: ['剧毒', '出血'], rarity: '史诗', isSpecial: true, desc: '引爆敌方所有的[剧毒]和[出血]层数，直接造成其层数总和 2 倍的真实伤害，且不清除层数。' },
             { id: 'a_syn_poison', name: '万毒箭阵', roleId: 'hero_archer', frameTheme: 'archer', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_鹰眼贯枝.png', type: '能力', cost: 1, icon: '🧪', val: 0, tags: ['剧毒', '出血'], rarity: '史诗', isSpecial: true, desc: '丢弃手牌中所有带[剧毒]或[出血]的牌。<br>每丢弃一张，给予敌方 6 层剧毒与出血，并造成 10 点伤害。' },
             { id: 's_energy', name: '林风整备', roleId: 'hero_archer', frameTheme: 'archer', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_林风整备.png', type: '能力', cost: 2, icon: '🍃', val: 0, tags: ['重置', '自然'], rarity: '史诗', isSpecial: true, desc: '丢弃你所有的手牌。每丢弃一张，回复 1 点能量并抽取 1 张牌。' },
-            { id: 'a_ench_forge', name: '裂风箭铭', roleId: 'hero_archer', frameTheme: 'archer', art: '新角色三/角色三_卡面插画_疾风连射.png', type: '能力', cost: 1, icon: '🏹', val: 0, tags: ['连射', '放逐'], rarity: '史诗', isSpecial: true, desc: '选择一张手牌，为其在本局战斗烙印[连射]与[放逐]。<br>完成箭铭后，回复 2 点能量。' },
-            { id: 'a_ench_hunt', name: '森息猎印', roleId: 'hero_archer', frameTheme: 'archer', art: '新角色三/角色三_卡面插画_拉弓瞄准.png', type: '能力', cost: 1, icon: '🍃', val: 0, tags: ['蓄力', '自然'], rarity: '史诗', isSpecial: true, desc: '选择一张手牌，为其在本局战斗烙印[蓄力]与[自然]。' }
+            { id: 'a_wind_dance', name: '踏风连步', roleId: 'hero_archer', frameTheme: 'archer', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_风羽换位.png', type: '能力', cost: 1, icon: '🪶', val: 0, tags: ['蓄力', '自然'], rarity: '史诗', isSpecial: true, desc: '获得 4 层风势，回复 1 点能量并[抽牌] 1 张。若已有风势，额外获得 6 点[庇护]。' },
+            { id: 'a_gale_verdict', name: '疾风裁决', roleId: 'hero_archer', frameTheme: 'archer', art: '新角色三/角色三_卡面插画_疾风连射.png', type: '攻击', cost: 2, icon: '💨', val: 8, tags: ['连射', '穿甲'], rarity: '史诗', isSpecial: true, desc: '造成 8 点穿甲伤害。每有 1 层风势，额外追加一次 4 点追射，并消耗最多 3 层风势。' },
+            { id: 'a_red_rain', name: '赤痕箭雨', roleId: 'hero_archer', frameTheme: 'archer', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_回环箭雨.png', type: '攻击', cost: 2, icon: '🩸', val: 7, tags: ['出血', '连射'], rarity: '史诗', isSpecial: true, desc: '造成 7 点伤害并施加 8 层[出血]。若你有风势，额外[抽牌] 1 张。' },
+            { id: 'a_bloodlet_gale', name: '断脉疾风', roleId: 'hero_archer', frameTheme: 'archer', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_森息伏击.png', type: '攻击', cost: 1, icon: '🩸', val: 6, tags: ['放血', '连射'], rarity: '史诗', isSpecial: true, desc: '造成 6 点伤害并触发[放血]。每引爆 4 层出血，获得 1 层风势。' },
+            { id: 'a_green_resonance', name: '翠林回响', roleId: 'hero_archer', frameTheme: 'archer', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_林风整备.png', type: '能力', cost: 1, icon: '🍃', val: 0, tags: ['自然', '拾遗'], rarity: '史诗', isSpecial: true, desc: '从墓地选择 1 张牌回到手牌，随后触发[自然]并获得 2 层风势。' },
+            { id: 'a_skyfall_shot', name: '坠星绝矢', roleId: 'hero_archer', frameTheme: 'archer', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_狩影穿枝.png', type: '攻击', cost: 2, icon: '🌠', val: 16, tags: ['放逐', '连射', '穿甲'], rarity: '史诗', isSpecial: true, desc: '造成 16 点穿甲伤害并[放逐]。若风势达到 3 层以上，此牌额外触发一次。' }
         ]
     };
     const SPECIAL_EPICS = Object.values(SPECIAL_EPIC_POOLS).flat();
+    const REMOVED_BATTLE_IMPRINT_SPECIAL_IDS = new Set([
+        'a_ench_array', 'a_ench_blood', 'a_ench_spirit', 'a_ench_gather',
+        'a_ench_chant', 'a_ench_forge', 'a_ench_hunt'
+    ]);
 
     const RELIC_POOL = [
         { id: 'r_bone_ring', name: '誓约骨环', icon: '🦴', desc: '战士/弓手：每丢弃 1 张非诅咒手牌，本场战斗所有伤害 +1；适合把弃牌转成[圣剑]或[连射]爆发。', price: 100 },
@@ -1857,7 +1874,19 @@
         { id: 'r_overheal', name: '圣疗溢光', icon: '💖', desc: '战士/法师：满生命时，溢出的[治愈]或[吸血]转化为等量护盾。', price: 240 },
         { id: 'r_despair', name: '虚弱星环', icon: '🌑', desc: '法师：敌方每拥有 1 层[虚弱]，你的攻击伤害提高 10%。', price: 250 },
         { id: 'r_perma_curse', name: '永续法印', icon: '⛓️', desc: '法师：敌方身上的[易伤]与[虚弱]在回合结束时不再衰减。', price: 260 },
-        { id: 'r_long_decay', name: '长驻猎痕', icon: '⏳', desc: '弓手：敌方的[剧毒]与[出血]层数在回合结束时不再自动衰减。', price: 260 }
+        { id: 'r_long_decay', name: '长驻猎痕', icon: '⏳', desc: '弓手：敌方的[剧毒]与[出血]层数在回合结束时不再自动衰减。', price: 260 },
+        { id: 'r_guardian_core', name: '守誓炉心', icon: '🛡️', desc: '战士：获得[庇护]时，同时获得其数值一半的护盾。', price: 170 },
+        { id: 'r_sword_oath', name: '圣剑誓印', icon: '⚔️', desc: '战士：[圣剑]攻击从护盾获得的伤害提升，由 50% 提高到 75%。', price: 190 },
+        { id: 'r_thorn_bloom', name: '棘辉冠冕', icon: '🌹', desc: '战士：打出[圣剑]攻击后，若你拥有[荆棘]，额外造成等同荆棘层数的穿甲伤害。', price: 210 },
+        { id: 'r_counter_gate', name: '招架门徽', icon: '🚪', desc: '战士：每场战斗第一次单张防御牌获得 15 点以上护盾时，进入[反击]姿态。', price: 180 },
+        { id: 'r_status_prism', name: '星蚀棱镜', icon: '💠', desc: '法师：每张牌首次施加负面状态时，获得 1 层[咏唱]。', price: 190 },
+        { id: 'r_burst_lens', name: '聚爆透镜', icon: '🔍', desc: '法师：[爆发]消耗咏唱后会保留一半咏唱层数。', price: 230 },
+        { id: 'r_chant_ink', name: '恒咏墨瓶', icon: '🖋️', desc: '法师：你的回合开始时，若[咏唱]低于 2 层，补到 2 层。', price: 210 },
+        { id: 'r_wind_quiver', name: '踏风箭囊', icon: '🏹', desc: '弓手：每次通过卡牌或职业联动获得风势时，额外获得 1 层。', price: 190 },
+        { id: 'r_exile_cache', name: '流亡箭匣', icon: '📦', desc: '弓手：带[放逐]的攻击牌获得的放逐威能从 50% 提高到 75%。', price: 200 },
+        { id: 'r_bloodlet_draw', name: '赤脉弦扣', icon: '🩸', desc: '弓手：触发[放血]并成功引爆出血后，额外[抽牌] 1 张。', price: 170 },
+        { id: 'r_copy_seal', name: '复写印泥', icon: '📜', desc: '通用：商店复制功法的价格降低 20 金币。', price: 160 },
+        { id: 'r_reward_crown', name: '弃赏王冠', icon: '👑', desc: '通用：放弃战斗后的卡牌或遗物奖励时，换取的金币额外 +15。', price: 170 }
     ];
     const FORMAL_RELIC_ICON_IDS = new Set([
         'r_fast_foot', 'r_decay_seal', 'r_poison_leech', 'r_skill_cost', 'r_yin_yang',
@@ -1870,7 +1899,9 @@
         'r_omni_seal', 'r_bleed_return_exhaust', 'r_pass_thorns', 'r_corrupt_cup', 'r_life_totem',
         'r_return_knife', 'r_pass_energy', 'r_base_energy', 'r_exhaust_knife', 'r_heal_relic',
         'r_counter_amulet', 'r_bleed_knife', 'r_execute', 'r_cycle_compass', 'r_soul_lantern',
-        'r_protect_armor'
+        'r_protect_armor', 'r_guardian_core', 'r_sword_oath', 'r_thorn_bloom', 'r_counter_gate',
+        'r_status_prism', 'r_burst_lens', 'r_chant_ink', 'r_wind_quiver', 'r_exile_cache',
+        'r_bloodlet_draw', 'r_copy_seal', 'r_reward_crown'
     ]);
     const RELIC_MASTER_ICON_BY_ID = {
         r_echo_mirror_relic: '遗物/母版/relic_master_echo_mirror.png',
@@ -1929,23 +1960,38 @@
         r_pierce: '遗物/母版/relic_master_martial_crest.png',
         r_exhaust_dmg: '遗物/母版/relic_master_ghost_banner.png',
         r_return_poison: '遗物/母版/relic_master_ghost_banner.png',
-        r_return_bleed: '遗物/母版/relic_master_ghost_banner.png'
+        r_return_bleed: '遗物/母版/relic_master_ghost_banner.png',
+        r_guardian_core: '遗物/母版/relic_master_stone_totem.png',
+        r_sword_oath: '遗物/母版/relic_master_martial_crest.png',
+        r_thorn_bloom: '遗物/母版/relic_master_thorn_shield.png',
+        r_counter_gate: '遗物/母版/relic_master_stone_totem.png',
+        r_status_prism: '遗物/母版/relic_master_energy_core.png',
+        r_burst_lens: '遗物/母版/relic_master_grimoire_lockbox.png',
+        r_chant_ink: '遗物/母版/relic_master_grimoire_lockbox.png',
+        r_wind_quiver: '遗物/母版/relic_master_martial_crest.png',
+        r_exile_cache: '遗物/母版/relic_master_ghost_banner.png',
+        r_bloodlet_draw: '遗物/母版/relic_master_blood_dagger.png',
+        r_copy_seal: '遗物/母版/relic_master_grimoire_lockbox.png',
+        r_reward_crown: '遗物/母版/relic_master_cycle_compass.png'
     };
     const COMMON_RELIC_IDS = new Set([
         'r_base_energy', 'r_pass_draw', 'r_shield', 'r_combo',
-        'r_battle_whetstone', 'r_first_draw', 'r_warm_pendant', 'r_silver_purse'
+        'r_battle_whetstone', 'r_first_draw', 'r_warm_pendant', 'r_silver_purse',
+        'r_copy_seal', 'r_reward_crown'
     ]);
     const ROLE_RELIC_IDS = {
         hero_warrior: new Set([
             'r_bone_ring', 'r_thorn_shield_new', 'r_protect_armor', 'r_counter_amulet',
             'r_life_totem', 'r_pierce_amulet', 'r_heavy_badge', 'r_vamp_ring',
-            'r_def_cost', 'r_blood', 'r_pass_thorns', 'r_overheal'
+            'r_def_cost', 'r_blood', 'r_pass_thorns', 'r_overheal',
+            'r_guardian_core', 'r_sword_oath', 'r_thorn_bloom', 'r_counter_gate'
         ]),
         hero_mage: new Set([
             'r_sac_jade', 'r_enchant_crys', 'r_weak_mask', 'r_echo_mirror_relic',
             'r_energy_crys', 'r_heal_relic', 'r_luck_box', 'r_decay_seal',
             'r_yin_yang', 'r_omni_seal', 'r_skill_cost', 'r_brutal',
-            'r_frenzy', 'r_despair', 'r_perma_curse'
+            'r_frenzy', 'r_despair', 'r_perma_curse',
+            'r_status_prism', 'r_burst_lens', 'r_chant_ink'
         ]),
         hero_archer: new Set([
             'r_bone_ring', 'r_frenzy_veil', 'r_poison_fang', 'r_bleed_knife',
@@ -1953,7 +1999,8 @@
             'r_exhaust_dmg', 'r_exhaust_knife', 'r_return_poison', 'r_return_bleed',
             'r_skill_cost', 'r_bleed_return_exhaust', 'r_return_knife', 'r_ethereal',
             'r_poison_leech', 'r_pierce', 'r_pass_energy', 'r_plague',
-            'r_execute', 'r_long_decay', 'r_combo_ring', 'r_fast_foot'
+            'r_execute', 'r_long_decay', 'r_combo_ring', 'r_fast_foot',
+            'r_wind_quiver', 'r_exile_cache', 'r_bloodlet_draw'
         ])
     };
 
@@ -3864,10 +3911,12 @@
             state.hp = payload.hp || 80;
             state.maxHp = payload.maxHp || 80;
             state.gold = payload.gold || 0;
-            state.deck = (payload.deck || []).map(card => {
-                if (card.tags) card.tags = normalizeTagConflicts(card.tags);
-                return card;
-            });
+            state.deck = (payload.deck || [])
+                .filter(card => !REMOVED_BATTLE_IMPRINT_SPECIAL_IDS.has(card.specialId || card.id))
+                .map(card => {
+                    if (card.tags) card.tags = normalizeTagConflicts(card.tags);
+                    return card;
+                });
             state.relics = payload.relics || [];
             state.mapData = payload.mapData || [];
             if (!state.mapData.length) generateMap();
@@ -4347,6 +4396,7 @@
 
         state.p_poison = 0; state.p_bleed = 0; state.p_burn = 0; state.p_stun = 0; state.p_curse = 0; state.p_vuln = 0; state.p_weak = 0; state.p_echo_stack = 0;
         state.p_next_dmg = 0; state.p_reduce_dmg = 0; state.p_counter = 0; state.p_battle_dmg = 0; state.p_dmg_buff = 0; state.p_chant = 0; state.p_aim = 0; state.r_discard_count = 0; state.next_card_echo = 0; state.lastPlayedCard = null; state.turn_first_card = true; state.isEnemyTurn = false;
+        state.r_counter_gate_used = false;
         if (hasRelic('r_battle_whetstone')) state.p_battle_dmg += 2;
         
         state.playedRetainPile = []; 
@@ -4630,6 +4680,18 @@
         if (hasRelic('r_overheal') && overheal > 0) { let armorGain = overheal; state.armor += armorGain; showFloatText(`圣疗转盾 +${armorGain}`, "var(--water)", getCenter('ui-hp')); }
     }
 
+    function getEnemyDebuffTypeCount() {
+        return ['poison', 'bleed', 'burn', 'stun', 'curse', 'vuln', 'weak'].filter(k => (state.enemy?.[k] || 0) > 0).length;
+    }
+
+    function applySpecialDamage(dmg, isPierce = false) {
+        let finalDmg = Math.max(0, Math.floor(dmg));
+        if(state.enemy.vuln > 0) finalDmg = Math.floor(finalDmg * (1 + state.enemy.vuln * 0.05));
+        if(state.p_weak > 0) finalDmg = Math.floor(finalDmg * 0.75);
+        applyDamageToEnemy(finalDmg, isPierce);
+        return finalDmg;
+    }
+
     function checkEnemyDeath() {
         if(state.enemy.currentHp <= 0) {
             if (state.enemy.revives > 0) {
@@ -4772,21 +4834,18 @@
     async function executeCardTags(card, isEcho, targets = null) {
         if (card.isJunk) return; 
 
-        // ====== 特殊史诗卡 (包含原传说与流派共鸣/附魔) ======
+        // ====== 特殊史诗核心卡 ======
         if (card.isSpecial) {
-            // --- 原传说秘宝 ---
             if(card.specialId === 's_exhaust') {
                 triggerVFX('p-atk'); let count = state.exhaustPile.length; let dmg = count * 15;
-                if(state.enemy.vuln > 0) dmg = Math.floor(dmg * (1 + state.enemy.vuln*0.05)); if(state.p_weak > 0) dmg = Math.floor(dmg * 0.75);
-                applyDamageToEnemy(dmg);
+                applySpecialDamage(dmg);
                 state.exhaustPile.forEach(c => onCardReturnedFromExhaust());
                 state.battleDeck = state.battleDeck.concat(state.exhaustPile); state.exhaustPile = []; state.battleDeck.sort(()=>0.5-Math.random());
             }
             else if(card.specialId === 's_poison') { let dmg = (state.enemy.poison + state.enemy.bleed) * 2; applyDamageToEnemy(dmg); showFloatText(card.name, "var(--nature)", getCenter('enemy-avatar')); }
-            else if(card.specialId === 's_shield') { triggerVFX('p-atk'); let dmg = state.armor * 2; if(state.enemy.vuln > 0) dmg = Math.floor(dmg * (1 + state.enemy.vuln*0.05)); if(state.p_weak > 0) dmg = Math.floor(dmg * 0.75); applyDamageToEnemy(dmg); }
+            else if(card.specialId === 's_shield') { triggerVFX('p-atk'); applySpecialDamage(state.armor * 2); }
             else if(card.specialId === 's_magic') { state.p_echo_stack += 3; showFloatText(card.name, "var(--purple)", getCenter('ui-hp')); }
             else if(card.specialId === 's_pierce') { triggerVFX('p-atk'); let dmg = 40; if(state.enemy.vuln > 0) dmg += Math.floor(dmg * (state.enemy.vuln * 0.5)); if(state.p_weak > 0) dmg = Math.floor(dmg * 0.75); applyDamageToEnemy(dmg, true); }
-            else if(card.specialId === 's_vampire') { triggerVFX('p-atk'); let dmg = state.maxHp - state.hp; if (dmg <= 0) dmg = 10; if(state.enemy.vuln > 0) dmg = Math.floor(dmg * (1 + state.enemy.vuln*0.05)); if(state.p_weak > 0) dmg = Math.floor(dmg * 0.75); applyDamageToEnemy(dmg); healPlayer(dmg); }
             else if(card.specialId === 's_thorns') { triggerVFX('p-def'); state.armor += 30; state.player.thorns += 10; showFloatText(card.name, "var(--gold)", getCenter('ui-hp')); updateTopBar(); }
             else if(card.specialId === 's_energy') { let discardCount = state.hand.length; state.hand.forEach(c => { state.discardPile.push(c); state.r_discard_count++; }); state.hand = []; renderHand(); if (discardCount > 0) { state.mp += discardCount; if(hasRelic('r_bone_ring')) state.p_battle_dmg += discardCount; showFloatText(`${card.name} +${discardCount}能`, "var(--gold)", getCenter('ui-mp')); await drawCards(discardCount); } }
             
@@ -4794,8 +4853,7 @@
             else if (card.specialId === 'a_syn_sword') {
                 let synergyCount = state.hand.filter(c => c.tags && (c.tags.includes('圣剑') || c.tags.includes('重击') || c.tags.includes('穿甲'))).length;
                 let dmg = parseInt(card.val) + (12 * synergyCount) + state.p_battle_dmg;
-                if(state.enemy.vuln > 0) dmg = Math.floor(dmg * (1 + state.enemy.vuln * 0.05)); if(state.p_weak > 0) dmg = Math.floor(dmg * 0.75);
-                triggerVFX('p-atk'); applyDamageToEnemy(dmg); showFloatText(`${card.name} 共鸣 ${synergyCount} 次`, "var(--gold)", getCenter('enemy-avatar'));
+                triggerVFX('p-atk'); applySpecialDamage(dmg); showFloatText(`${card.name} 共鸣 ${synergyCount} 次`, "var(--gold)", getCenter('enemy-avatar'));
             }
             else if (card.specialId === 'a_syn_poison') {
                 let targets = state.hand.filter(c => c.tags && (c.tags.includes('剧毒') || c.tags.includes('出血')));
@@ -4817,9 +4875,8 @@
             else if (card.specialId === 'a_syn_blood') {
                 let synergyCount = state.hand.filter(c => c.tags && (c.tags.includes('治愈') || c.tags.includes('吸血'))).length;
                 let dmg = parseInt(card.val) + (15 * synergyCount) + state.p_battle_dmg;
-                if(state.enemy.vuln > 0) dmg = Math.floor(dmg * (1 + state.enemy.vuln * 0.05)); if(state.p_weak > 0) dmg = Math.floor(dmg * 0.75);
                 if(synergyCount > 0) { state.hp -= 2 * synergyCount; showFloatText(`血祭 -${2*synergyCount}血`, "var(--crimson)", getCenter('ui-hp')); }
-                triggerVFX('p-atk'); applyDamageToEnemy(dmg); healPlayer(Math.floor(dmg/2)); 
+                triggerVFX('p-atk'); const dealt = applySpecialDamage(dmg); healPlayer(Math.floor(dealt/2));
                 showFloatText(`${card.name} 共鸣 ${synergyCount} 次`, "var(--crimson)", getCenter('enemy-avatar'));
             }
             else if (card.specialId === 'a_syn_magic') {
@@ -4829,30 +4886,172 @@
                     showFloatText(`${card.name} 天雷 ${synergyCount} 道`, "var(--purple)", getCenter('enemy-avatar'));
                 } else { showFloatText("无道可借", "#888", getCenter('ui-hp')); }
             }
-
-            // --- 动态附魔 ---
-            else if (card.specialId && card.specialId.startsWith('a_ench_')) {
-                let selectable = state.hand.filter(c => !c.sealed && c.instId !== card.instId && !c.isJunk);
-                if (selectable.length > 0) {
-                    let sel = await selectCardsAsync(selectable, 1, 1, "请选择要动态附魔的功法", true);
-                    if (sel && sel.length === 1) {
-                        let targetCard = sel[0];
-                        if (!targetCard.tags) targetCard.tags = [];
-                        let addedTags = [];
-                        
-                        if(card.specialId === 'a_ench_forge') { addedTags = ['连射', '放逐']; state.mp += 2; showFloatText("能量 +2", "var(--gold)", getCenter('ui-mp')); }
-                        else if(card.specialId === 'a_ench_blood') { addedTags = ['吸血', '保留']; }
-                        else if(card.specialId === 'a_ench_array') { addedTags = ['保留', '荆棘']; state.armor += parseInt(card.val) || 8; triggerVFX('p-def'); showFloatText(`护甲 +${card.val}`, "var(--water)", getCenter('ui-hp')); updateTopBar(); }
-                        else if(card.specialId === 'a_ench_spirit') { addedTags = ['回响', '销毁']; }
-                        else if(card.specialId === 'a_ench_gather') { addedTags = ['充能', '抽牌']; }
-                        else if(card.specialId === 'a_ench_chant') { addedTags = ['咏唱', '爆发']; state.mp += 1; showFloatText("能量 +1", "var(--gold)", getCenter('ui-mp')); }
-                        else if(card.specialId === 'a_ench_hunt') { addedTags = ['蓄力', '自然']; }
-
-                        addedTags.forEach(t => { if(!targetCard.tags.includes(t)) targetCard.tags.push(t); });
-                        showFloatText("本局法则烙印成功！", "var(--purple)", getCenter('hand-area'));
-                        renderHand(); 
-                    }
-                } else { showFloatText("无牌可附魔", "#888", getCenter('ui-hp')); }
+            else if (card.specialId === 'w_counter_crown') {
+                triggerVFX('p-atk');
+                const wasCountering = state.p_counter > 0;
+                let dmg = 14 + state.p_battle_dmg + (wasCountering ? state.armor : 0);
+                applySpecialDamage(dmg);
+                state.p_counter = 1;
+                if(hasRelic('r_counter_amulet')) state.p_reduce_dmg += 5;
+                showFloatText(wasCountering ? "反击回锋" : "进入反击", "var(--gold)", getCenter('ui-hp'));
+            }
+            else if (card.specialId === 'w_bastion_prayer') {
+                let pVal = 10 + (hasRelic('r_protect_armor') ? 5 : 0);
+                const hadArmor = state.armor > 0;
+                state.p_reduce_dmg += pVal;
+                if (hasRelic('r_guardian_core')) state.armor += Math.floor(pVal / 2);
+                if (hadArmor) state.armor += pVal;
+                showFloatText(`庇护 +${pVal}`, "var(--water)", getCenter('ui-hp'));
+                await drawCards(1);
+            }
+            else if (card.specialId === 'w_thorn_judgement') {
+                triggerVFX('p-atk');
+                let dmg = 8 + state.p_battle_dmg + (state.player.thorns || 0) * 3;
+                applySpecialDamage(dmg);
+                let tVal = hasRelic('r_thorn_shield_new') ? 12 : 6;
+                state.player.thorns += tVal;
+                showFloatText(`荆棘 +${tVal}`, "var(--nature)", getCenter('ui-hp'));
+            }
+            else if (card.specialId === 'w_oath_fortress') {
+                triggerVFX('p-def');
+                state.armor += 18;
+                let pVal = 8 + (hasRelic('r_protect_armor') ? 5 : 0);
+                state.p_reduce_dmg += pVal;
+                if (hasRelic('r_guardian_core')) state.armor += Math.floor(pVal / 2);
+                if (state.hp <= Math.floor(state.maxHp / 2)) {
+                    state.p_counter = 1;
+                    if(hasRelic('r_counter_amulet')) state.p_reduce_dmg += 5;
+                    showFloatText("低血反击", "var(--gold)", getCenter('ui-hp'));
+                }
+                showFloatText(`护盾 +18 / 庇护 +${pVal}`, "var(--water)", getCenter('ui-hp'));
+            }
+            else if (card.specialId === 'w_last_verdict') {
+                triggerVFX('p-atk');
+                let dmg = 18 + state.p_battle_dmg + state.armor + (state.player.thorns || 0);
+                applySpecialDamage(dmg);
+                showFloatText("终誓裁断", "var(--gold)", getCenter('enemy-avatar'));
+            }
+            else if (card.specialId === 'm_chant_singularity') {
+                let chantGain = 3 + (hasRelic('r_energy_crys') ? 1 : 0);
+                state.p_chant = Math.min(12, state.p_chant + chantGain);
+                state.mp += hasRelic('r_sac_jade') ? 2 : 1;
+                showFloatText(`咏唱 +${chantGain}`, "var(--purple)", getCenter('ui-hp'));
+                if (getEnemyDebuffTypeCount() > 0) await drawCards(1);
+            }
+            else if (card.specialId === 'm_status_supernova') {
+                const debuffs = getEnemyDebuffTypeCount();
+                triggerVFX('p-atk');
+                applySpecialDamage(8 + state.p_battle_dmg + debuffs * 8);
+                state.enemy.burn += Math.max(1, debuffs);
+                if(hasRelic('r_status_prism')) state.p_chant = Math.min(12, state.p_chant + 1);
+                showFloatText(`状态共振 ${debuffs}`, "var(--fire)", getCenter('enemy-avatar'));
+            }
+            else if (card.specialId === 'm_echo_archive') {
+                if (state.lastPlayedCard && !state.lastPlayedCard.isJunk) {
+                    showFloatText("回声复写", "var(--purple)", getCenter('ui-hp'));
+                    await executeCardTags(state.lastPlayedCard, true, null);
+                } else {
+                    state.p_chant = Math.min(12, state.p_chant + 2);
+                    await drawCards(1);
+                }
+            }
+            else if (card.specialId === 'm_ember_orbit') {
+                state.enemy.burn += 6;
+                state.enemy.vuln += 3;
+                if(hasRelic('r_status_prism')) state.p_chant = Math.min(12, state.p_chant + 1);
+                showFloatText("余烬星轨", "var(--fire)", getCenter('enemy-avatar'));
+                if (state.p_chant > 0) await drawCards(2);
+            }
+            else if (card.specialId === 'm_forbidden_comet') {
+                triggerVFX('p-atk');
+                const chantSpent = state.p_chant;
+                applySpecialDamage(20 + state.p_battle_dmg + chantSpent * 6, true);
+                state.p_chant = 0;
+                showFloatText(`咏唱爆裂 ${chantSpent}`, "var(--purple)", getCenter('enemy-avatar'));
+            }
+            else if (card.specialId === 'm_curse_gravity') {
+                state.enemy.curse += 5;
+                state.enemy.weak += 3;
+                const chantGain = Math.max(1, getEnemyDebuffTypeCount());
+                state.p_chant = Math.min(12, state.p_chant + chantGain + (hasRelic('r_status_prism') ? 1 : 0));
+                showFloatText(`咏唱 +${chantGain}`, "var(--purple)", getCenter('ui-hp'));
+            }
+            else if (card.specialId === 'm_blood_moon_rite') {
+                state.enemy.bleed += 6;
+                if(hasRelic('r_status_prism')) state.p_chant = Math.min(12, state.p_chant + 1);
+                const bleedLayers = state.enemy.bleed;
+                if (bleedLayers > 0) {
+                    applyDamageToEnemy(bleedLayers * (hasRelic('r_bleed_knife') ? 5 : 3), true);
+                    if(!(hasRelic('r_execute') && state.enemy.vuln > 0)) state.enemy.bleed = 0;
+                }
+                state.p_chant = Math.min(12, state.p_chant + 2);
+                showFloatText("血月放血", "var(--crimson)", getCenter('enemy-avatar'));
+            }
+            else if (card.specialId === 'm_arcane_aegis') {
+                const missing = state.maxHp - state.hp;
+                healPlayer(12);
+                let pVal = 8 + (hasRelic('r_protect_armor') ? 5 : 0);
+                state.p_reduce_dmg += pVal;
+                if (hasRelic('r_guardian_core')) state.armor += Math.floor(pVal / 2);
+                if (missing < 12) state.p_chant = Math.min(12, state.p_chant + 2);
+                showFloatText(`秘仪护幕 +${pVal}`, "var(--water)", getCenter('ui-hp'));
+            }
+            else if (card.specialId === 'a_wind_dance') {
+                const hadWind = state.p_aim > 0;
+                state.p_aim = Math.min(6, state.p_aim + 4 + (hasRelic('r_wind_quiver') ? 1 : 0));
+                state.mp += hasRelic('r_pass_energy') ? 2 : 1;
+                if (hadWind) state.p_reduce_dmg += 6;
+                showFloatText("风势 +4", "var(--nature)", getCenter('ui-hp'));
+                await drawCards(1);
+            }
+            else if (card.specialId === 'a_gale_verdict') {
+                const shots = Math.min(3, state.p_aim);
+                state.p_aim -= shots;
+                triggerVFX('p-atk');
+                applySpecialDamage(8 + state.p_battle_dmg + shots * 4, true);
+                showFloatText(`追射 ${shots}`, "var(--nature)", getCenter('enemy-avatar'));
+            }
+            else if (card.specialId === 'a_red_rain') {
+                triggerVFX('p-atk');
+                applySpecialDamage(7 + state.p_battle_dmg);
+                state.enemy.bleed += hasRelic('r_poison_fang') ? 9 : 8;
+                if (state.p_aim > 0) await drawCards(1);
+                showFloatText("赤痕 +8", "var(--crimson)", getCenter('enemy-avatar'));
+            }
+            else if (card.specialId === 'a_bloodlet_gale') {
+                triggerVFX('p-atk');
+                applySpecialDamage(6 + state.p_battle_dmg);
+                const bleedLayers = state.enemy.bleed;
+                if (bleedLayers > 0) {
+                    applyDamageToEnemy(bleedLayers * (hasRelic('r_bleed_knife') ? 5 : 3), true);
+                    state.p_aim = Math.min(6, state.p_aim + Math.floor(bleedLayers / 4) + (hasRelic('r_wind_quiver') ? 1 : 0));
+                    if(hasRelic('r_bloodlet_draw')) await drawCards(1);
+                    if(hasRelic('r_execute') && state.enemy.vuln > 0) { showFloatText(`处决不断!`, "var(--gold)", getCenter('enemy-avatar')); } else { state.enemy.bleed = 0; }
+                }
+                showFloatText("断脉疾风", "var(--crimson)", getCenter('enemy-avatar'));
+            }
+            else if (card.specialId === 'a_green_resonance') {
+                let broughtBack = false;
+                if (targets && targets.shiyi) {
+                    targets.shiyi.forEach(c => {
+                        let dIdx = state.discardPile.findIndex(x => x.instId === c.instId);
+                        if (dIdx !== -1) { state.discardPile.splice(dIdx, 1); state.hand.push(c); broughtBack = true; }
+                    });
+                }
+                state.p_aim = Math.min(6, state.p_aim + 2 + (hasRelic('r_wind_quiver') ? 1 : 0));
+                state.mp += hasRelic('r_pass_energy') ? 2 : 1;
+                if (broughtBack) renderHand();
+                showFloatText("翠林回响", "var(--nature)", getCenter('ui-hp'));
+            }
+            else if (card.specialId === 'a_skyfall_shot') {
+                const repeat = state.p_aim >= 3 ? 2 : 1;
+                if (state.p_aim >= 3) state.p_aim -= 3;
+                triggerVFX('p-atk');
+                for (let i = 0; i < repeat; i++) {
+                    applySpecialDamage(16 + state.p_battle_dmg, true);
+                    await new Promise(r => setTimeout(r, 160));
+                }
+                showFloatText(repeat > 1 ? "坠星双发" : "坠星绝矢", "var(--nature)", getCenter('enemy-avatar'));
             }
 
             if(checkEnemyDeath()) { winBattle(); } else { updateBattleUI(); }
@@ -4866,6 +5065,7 @@
             let pVal = parseInt(card.val) || (card.up ? 10 : 6);
             if (hasRelic('r_protect_armor')) pVal += 5;
             state.p_reduce_dmg += pVal;
+            if (hasRelic('r_guardian_core')) state.armor += Math.floor(pVal / 2);
             showFloatText(`庇护 +${pVal}`, "var(--water)", getCenter('ui-hp'));
         }
 
@@ -4937,7 +5137,7 @@
             }
         }
         if (card.tags && card.tags.includes('蓄力') && !isEcho) {
-            const aimGain = getWindGain(card);
+            const aimGain = getWindGain(card) + (hasRelic('r_wind_quiver') ? 1 : 0);
             state.p_aim = Math.min(6, state.p_aim + aimGain);
             showFloatText(`风势 +${aimGain}`, "var(--nature)", getCenter('ui-hp'));
         }
@@ -4963,12 +5163,14 @@
 
             triggerVFX('p-atk'); let finalDmg = val + state.p_battle_dmg;
             if(card.tags && card.tags.includes('放逐')) {
-                const exileBonus = Math.max(5, Math.floor(val * 0.5));
+                const exileRatio = hasRelic('r_exile_cache') ? 0.75 : 0.5;
+                const exileBonus = Math.max(5, Math.floor(val * exileRatio));
                 finalDmg += exileBonus;
                 showFloatText(`放逐威能 +${exileBonus}`, "var(--gold)", getCenter('enemy-avatar'));
             }
             if(card.tags && card.tags.includes('圣剑')) {
-                const swordBonus = Math.floor(state.armor * 0.5) + (state.p_counter * 4);
+                const swordRatio = hasRelic('r_sword_oath') ? 0.75 : 0.5;
+                const swordBonus = Math.floor(state.armor * swordRatio) + (state.p_counter * 4);
                 if (swordBonus > 0) {
                     finalDmg += swordBonus;
                     showFloatText(`圣剑 +${swordBonus}`, "var(--gold)", getCenter('enemy-avatar'));
@@ -4979,7 +5181,7 @@
                 let burstBonus = chantSpent > 0 ? chantSpent * 7 : 4;
                 if (hasRelic('r_enchant_crys')) burstBonus += Math.max(3, chantSpent * 2);
                 finalDmg += burstBonus;
-                if (chantSpent > 0) state.p_chant = 0;
+                if (chantSpent > 0) state.p_chant = hasRelic('r_burst_lens') ? Math.ceil(chantSpent / 2) : 0;
                 showFloatText(chantSpent > 0 ? `爆发 +${burstBonus}` : "微光爆发 +4", "var(--purple)", getCenter('enemy-avatar'));
             }
             if(state.p_dmg_buff > 0) finalDmg += state.p_dmg_buff;
@@ -4993,6 +5195,10 @@
             if(isPierce && hasRelic('r_pierce_amulet')) finalDmg = Math.floor(finalDmg * 1.25);
 
             applyDamageToEnemy(finalDmg, isPierce);
+            if(card.tags && card.tags.includes('圣剑') && hasRelic('r_thorn_bloom') && state.player.thorns > 0) {
+                applyDamageToEnemy(state.player.thorns, true);
+                showFloatText(`棘辉 +${state.player.thorns}`, "var(--nature)", getCenter('enemy-avatar'));
+            }
             
             if(card.tags && card.tags.includes('吸血')) { 
                 let baseHeal = card.up ? finalDmg : Math.floor(finalDmg/2); let hAmt = hasRelic('r_blood') ? state.enemy.bleed : baseHeal;
@@ -5006,6 +5212,11 @@
             let armorVal = val; 
             if(hasRelic('r_shield')) armorVal += 4; 
             state.armor += armorVal; 
+            if(hasRelic('r_counter_gate') && !state.r_counter_gate_used && armorVal >= 15) {
+                state.p_counter = 1;
+                state.r_counter_gate_used = true;
+                showFloatText("招架门徽", "var(--gold)", getCenter('ui-hp'));
+            }
             showFloatText(`盾 +${armorVal}`, "var(--water)", getCenter('ui-hp')); 
             updateTopBar(); // 强制将护盾渲染到UI上
             updateBattleUI(); 
@@ -5014,14 +5225,16 @@
         let debuffMult = (card.type === '能力') ? 2 : 1;
 
         if(card.tags && card.tags.includes('治愈')) { let healVal = card.up ? card.cost * 7 : card.cost * 5; if(hasRelic('r_heal_relic')) healVal += 3; healPlayer(healVal); }
-        if(card.tags && card.tags.includes('剧毒')) { let pVal = 3 * debuffMult; if(hasRelic('r_poison_fang')) pVal += 1; state.enemy.poison += pVal; showFloatText(`施毒 +${pVal}`, "var(--nature)", getCenter('enemy-avatar')); }
-        if(card.tags && card.tags.includes('出血')) { let bVal = 3 * debuffMult; if(hasRelic('r_poison_fang')) bVal += 1; state.enemy.bleed += bVal; showFloatText(`出血 +${bVal}`, "var(--crimson)", getCenter('enemy-avatar')); }
-        if(card.tags && card.tags.includes('燃烧')) { let burnVal = 2 * debuffMult; state.enemy.burn += burnVal; showFloatText(`燃烧 +${burnVal}`, "var(--fire)", getCenter('enemy-avatar')); }
-        if(card.tags && card.tags.includes('眩晕')) { let stunVal = 1; state.enemy.stun += stunVal; showFloatText("眩晕", "var(--gold)", getCenter('enemy-avatar')); }
-        if(card.tags && card.tags.includes('诅咒')) { let curseVal = 2 * debuffMult; state.enemy.curse += curseVal; showFloatText(`诅咒 +${curseVal}`, "var(--purple)", getCenter('enemy-avatar')); }
+        let statusApplied = false;
+        if(card.tags && card.tags.includes('剧毒')) { let pVal = 3 * debuffMult; if(hasRelic('r_poison_fang')) pVal += 1; state.enemy.poison += pVal; statusApplied = true; showFloatText(`施毒 +${pVal}`, "var(--nature)", getCenter('enemy-avatar')); }
+        if(card.tags && card.tags.includes('出血')) { let bVal = 3 * debuffMult; if(hasRelic('r_poison_fang')) bVal += 1; state.enemy.bleed += bVal; statusApplied = true; showFloatText(`出血 +${bVal}`, "var(--crimson)", getCenter('enemy-avatar')); }
+        if(card.tags && card.tags.includes('燃烧')) { let burnVal = 2 * debuffMult; state.enemy.burn += burnVal; statusApplied = true; showFloatText(`燃烧 +${burnVal}`, "var(--fire)", getCenter('enemy-avatar')); }
+        if(card.tags && card.tags.includes('眩晕')) { let stunVal = 1; state.enemy.stun += stunVal; statusApplied = true; showFloatText("眩晕", "var(--gold)", getCenter('enemy-avatar')); }
+        if(card.tags && card.tags.includes('诅咒')) { let curseVal = 2 * debuffMult; state.enemy.curse += curseVal; statusApplied = true; showFloatText(`诅咒 +${curseVal}`, "var(--purple)", getCenter('enemy-avatar')); }
         
         if(card.tags && card.tags.includes('放血') && state.enemy.bleed > 0) { 
             let boomDmg = state.enemy.bleed * (hasRelic('r_bleed_knife') ? 5 : 3); applyDamageToEnemy(boomDmg, true); 
+            if(hasRelic('r_bloodlet_draw')) await drawCards(1);
             if(hasRelic('r_execute') && state.enemy.vuln > 0) { showFloatText(`处决不断!`, "var(--gold)", getCenter('enemy-avatar')); } else { state.enemy.bleed = 0; }
             showFloatText(`引爆出血`, "var(--crimson)", getCenter('enemy-avatar')); 
             if (hasRelic('r_bleed_return_exhaust')) {
@@ -5030,8 +5243,9 @@
             }
         }
 
-        if(card.tags && card.tags.includes('易伤')) { let vVal = 2 * debuffMult; if(hasRelic('r_weak_mask')) vVal += 1; state.enemy.vuln += vVal; showFloatText("易伤", "var(--purple)", getCenter('enemy-avatar')); }
-        if(card.tags && card.tags.includes('虚弱')) { let wVal = 2 * debuffMult; if(hasRelic('r_weak_mask')) wVal += 1; state.enemy.weak += wVal; showFloatText("虚弱", "#bbb", getCenter('enemy-avatar')); }
+        if(card.tags && card.tags.includes('易伤')) { let vVal = 2 * debuffMult; if(hasRelic('r_weak_mask')) vVal += 1; state.enemy.vuln += vVal; statusApplied = true; showFloatText("易伤", "var(--purple)", getCenter('enemy-avatar')); }
+        if(card.tags && card.tags.includes('虚弱')) { let wVal = 2 * debuffMult; if(hasRelic('r_weak_mask')) wVal += 1; state.enemy.weak += wVal; statusApplied = true; showFloatText("虚弱", "#bbb", getCenter('enemy-avatar')); }
+        if(statusApplied && hasRelic('r_status_prism')) { state.p_chant = Math.min(12, state.p_chant + 1); showFloatText("棱镜咏唱 +1", "var(--purple)", getCenter('ui-hp')); }
         if(card.tags && card.tags.includes('充能')) { let eAmt = 1; if(hasRelic('r_energy_crys')) eAmt += 1; state.mp += eAmt; showFloatText(`充能 +${eAmt}`, "var(--gold)", getCenter('ui-mp')); }
         if(card.tags && card.tags.includes('荆棘')) { let tVal = 8; if(hasRelic('r_thorn_shield_new')) tVal *= 2; state.player.thorns += tVal; showFloatText(`获得荆棘 +${tVal}`, "var(--nature)", getCenter('ui-hp')); updateTopBar(); }
         if(card.tags && card.tags.includes('抽牌') && !isEcho) { let drawCount = card.tags.includes('回响') ? 2 : 1; if(hasRelic('r_luck_box')) drawCount += 1; await drawCards(drawCount); }
@@ -5218,6 +5432,10 @@
         setTimeout(async () => { 
             const character = getCurrentCharacter();
             state.mp = getCharacterBaseEnergy(character); 
+            if (hasRelic('r_chant_ink') && state.p_chant < 2) {
+                state.p_chant = 2;
+                showFloatText("恒咏墨瓶", "var(--purple)", getCenter('ui-hp'));
+            }
             if (playerWasAttacked) state.armor = 0;
             cardsPlayedThisTurn = 0; state.turn_first_card = true; 
             if (state.player.thorns > 0) {
@@ -5257,7 +5475,7 @@
     }
 
     function getBattleRewardSkipGold() {
-        return 25 + Math.min(30, state.floor * 2);
+        return 25 + Math.min(30, state.floor * 2) + (hasRelic('r_reward_crown') ? 15 : 0);
     }
     
     function openInitDeck() { showOverlay('overlay-init-deck'); renderInitDeck(); }
@@ -5503,7 +5721,8 @@
         if (card.rarity === '稀有') price += 20;
         if (card.rarity === '史诗') price += 45;
         if (card.up) price += 25;
-        return price;
+        if (hasRelic('r_copy_seal')) price -= 20;
+        return Math.max(30, price);
     }
 
     function copyDeckCard(card) {
