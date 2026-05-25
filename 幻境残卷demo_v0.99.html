@@ -255,9 +255,12 @@
         .enemy-anim-buff { animation: enemyBuffGlow 0.8s ease-in-out !important; }
         @keyframes enemyBuffGlow { 0% { filter: drop-shadow(0 0 10px var(--gold)); transform: scale(1); } 50% { filter: drop-shadow(0 0 60px var(--gold)) hue-rotate(45deg); transform: scale(1.2); } 100% { filter: drop-shadow(0 0 20px var(--crimson)); transform: scale(1); } }
 
-        .battle-action-log { position:absolute; right: 24px; top: 185px; width: 264px; height: 228px; z-index: 5600; pointer-events:none; box-sizing:border-box; overflow:hidden; padding: 10px 12px 11px; background: linear-gradient(180deg, rgba(8,10,15,0.68), rgba(8,10,15,0.42)); border:1px solid rgba(216,176,93,0.44); border-radius: 6px; box-shadow: 0 10px 24px rgba(0,0,0,0.42), inset 0 0 0 1px rgba(255,255,255,0.05); backdrop-filter: blur(2px); }
+        .battle-action-log { position:absolute; right: 24px; top: 185px; width: 264px; height: 228px; z-index: 5600; pointer-events:auto; box-sizing:border-box; overflow:hidden; padding: 10px 12px 11px; background: linear-gradient(180deg, rgba(8,10,15,0.68), rgba(8,10,15,0.42)); border:1px solid rgba(216,176,93,0.44); border-radius: 6px; box-shadow: 0 10px 24px rgba(0,0,0,0.42), inset 0 0 0 1px rgba(255,255,255,0.05); backdrop-filter: blur(2px); }
         .battle-action-log-title { color:#e8d196; font-size: 13px; font-weight:bold; letter-spacing: 3px; text-shadow:0 2px 4px #000; margin-bottom: 6px; }
-        .battle-action-log-list { display:flex; flex-direction:column; gap: 4px; }
+        .battle-action-log-list { display:flex; flex-direction:column; gap: 4px; height: calc(100% - 21px); overflow-y:auto; padding-right:5px; scrollbar-width: thin; scrollbar-color: rgba(216,176,93,0.62) rgba(8,10,15,0.32); }
+        .battle-action-log-list::-webkit-scrollbar { width: 6px; }
+        .battle-action-log-list::-webkit-scrollbar-track { background: rgba(8,10,15,0.32); border-radius: 8px; }
+        .battle-action-log-list::-webkit-scrollbar-thumb { background: rgba(216,176,93,0.62); border-radius: 8px; }
         .battle-action-entry { padding: 5px 8px; background: rgba(12,15,22,0.66); border-left: 3px solid rgba(199,162,88,0.78); box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04); color:#d7d2c6; font-size: 11px; line-height:1.3; text-align:left; text-shadow:0 1px 2px #000; }
         .battle-action-entry.is-player { border-left-color:#58b7ff; background: rgba(12,26,38,0.62); }
         .battle-action-entry.is-enemy { border-left-color:#d24b54; background: rgba(38,14,18,0.62); }
@@ -2293,7 +2296,7 @@
     }
     function showFloatText(m, c, pos) { const el = document.createElement('div'); el.className = 'floating-text'; el.innerText = m; el.style.color = c; el.style.left = pos.x + "px"; el.style.top = pos.y + "px"; document.body.appendChild(el); setTimeout(()=>el.remove(), 1000); }
 
-    const ACTION_LOG_LIMIT = 4;
+    const ACTION_LOG_LIMIT = 30;
     const ACTION_STATUS_LABELS = { poison: '剧毒', bleed: '流血', burn: '燃烧', stun: '眩晕', curse: '诅咒', vuln: '易伤', weak: '虚弱' };
     const PLAYER_ACTION_STATUS_KEYS = ['poison', 'bleed', 'burn', 'stun', 'curse', 'vuln', 'weak'];
     const ENEMY_ACTION_STATUS_KEYS = ['p_poison', 'p_bleed', 'p_burn', 'p_stun', 'p_curse', 'p_vuln', 'p_weak'];
