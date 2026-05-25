@@ -46,12 +46,6 @@
             --asset-discard-pile: url('UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/discard_pile_stack_asset_v1.png');
             --asset-exile-pile: url('UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/exile_pile_stack_asset_v1.png');
             --asset-pile-count: url('UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/pile_count_plate_asset_v1.png');
-            --asset-map-bg: url('UI/教堂彩窗赛璐璐/地图UI/正式资产/bg_map_silverwind_hills_01.png');
-            --asset-map-frame: url('UI/教堂彩窗赛璐璐/地图UI/正式资产/map_full_layout_frame_asset_v2.png');
-            --asset-map-region-banner: url('UI/教堂彩窗赛璐璐/地图UI/正式资产/map_region_banner_asset_v2.png');
-            --asset-map-legend: url('UI/教堂彩窗赛璐璐/地图UI/正式资产/map_side_legend_panel_asset_v2.png');
-            --asset-map-detail: url('UI/教堂彩窗赛璐璐/地图UI/正式资产/map_detail_panel_asset_v2.png');
-            --asset-map-enter-button: url('UI/教堂彩窗赛璐璐/地图UI/正式资产/map_enter_button_asset_v2.png');
         }
         
         body, html { margin: 0; padding: 0; height: 100%; background: var(--dark-bg); color: #ddd; font-family: "STKaiti", "华文楷体", "Microsoft YaHei", serif; overflow: hidden; user-select: none; }
@@ -161,93 +155,57 @@
 
         /* ================= 地图场景 ================= */
         #scene-map {
-            isolation: isolate;
-            overflow: hidden;
             background:
-                linear-gradient(90deg, rgba(4,18,26,0.62), rgba(0,0,0,0) 18%, rgba(0,0,0,0) 74%, rgba(5,17,25,0.74)),
-                var(--asset-map-bg) center / cover no-repeat,
-                #0a1b23;
+                radial-gradient(circle at 50% 18%, rgba(80, 36, 24, 0.24) 0%, transparent 30%),
+                linear-gradient(180deg, rgba(6, 7, 12, 0.98) 0%, rgba(12, 9, 12, 1) 54%, rgba(2, 2, 3, 1) 100%),
+                linear-gradient(rgba(241, 196, 15, 0.035) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(241, 196, 15, 0.03) 1px, transparent 1px);
+            background-size: 100% 100%, 100% 100%, 72px 72px, 72px 72px;
         }
-        #scene-map::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            z-index: 9;
-            pointer-events: none;
-            background: var(--asset-map-frame) center / 100% 100% no-repeat;
-        }
-        .map-region-banner {
-            position: fixed;
-            top: 74px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 12;
-            width: min(34vw, 420px);
-            height: 84px;
-            background: var(--asset-map-region-banner) center / contain no-repeat;
-            pointer-events: none;
-        }
-        .map-scroll-container { position: absolute; left: 170px; right: 298px; top: 136px; bottom: 56px; height: auto; overflow-y: auto; overflow-x: hidden; padding: 74px 0 94px 0; scrollbar-width: none; z-index: 3; }
+        .map-scroll-container { height: 100%; overflow-y: auto; overflow-x: hidden; padding: 100px 0 110px 0; scrollbar-width: none; position: relative; }
         .map-scroll-container::-webkit-scrollbar { display: none; }
         #map-svg-layer { position: absolute; top: 0; left: 0; width: 100%; pointer-events: none; z-index: 1; }
         .map-nodes-layer { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; }
         
-        .map-title-card { position: fixed; top: 150px; left: calc(50% - 610px); z-index: 11; width: 196px; height: 486px; padding: 0; border: 0; background: var(--asset-map-legend) center / contain no-repeat; filter: drop-shadow(0 12px 18px rgba(0,0,0,0.42)); pointer-events: none; }
-        .map-title-card h2,
-        .map-title-card p,
-        .map-legend { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-        .legend-pill { display: none; }
-        .map-detail-panel { position: fixed; top: 150px; right: calc(50% - 620px); z-index: 11; width: 292px; height: 468px; background: var(--asset-map-detail) center / contain no-repeat; filter: drop-shadow(0 14px 20px rgba(0,0,0,0.48)); pointer-events: none; }
+        .map-title-card { position: fixed; top: 86px; left: calc(50% - 610px); z-index: 1400; width: 230px; padding: 16px 18px; border: 1px solid rgba(241,196,15,0.2); background: rgba(8,8,12,0.78); box-shadow: 0 10px 28px rgba(0,0,0,0.55); backdrop-filter: blur(6px); pointer-events: none; }
+        .map-title-card h2 { margin: 0 0 8px; color: var(--gold); font-size: 22px; letter-spacing: 4px; }
+        .map-title-card p { margin: 0; color: #aaa; font-size: 13px; line-height: 1.6; font-family: "Microsoft YaHei", sans-serif; }
+        .map-legend { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+        .legend-pill { padding: 4px 8px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.04); color: #bbb; font-size: 12px; border-radius: 3px; }
         .map-floor { display: flex; justify-content: center; width: 100%; margin-bottom: 100px; pointer-events: none; }
-        .floor-label { position: absolute; left: 50%; transform: translateX(-50%); color: rgba(45,34,22,0.42); font-size: 12px; letter-spacing: 4px; font-family: "Microsoft YaHei", sans-serif; pointer-events: none; text-shadow: 0 1px rgba(230,202,145,0.32); }
-        .node-slot { width: 104px; height: 102px; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; pointer-events: auto; position: absolute;}
+        .floor-label { position: absolute; left: 50%; transform: translateX(-50%); color: rgba(241,196,15,0.28); font-size: 12px; letter-spacing: 4px; font-family: "Microsoft YaHei", sans-serif; pointer-events: none; }
+        .node-slot { width: 108px; height: 86px; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; pointer-events: auto; position: absolute;}
         
-        .node { width: 86px; height: 86px; border: 0; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: default; transition: 0.22s; box-shadow: none; position: relative; z-index: 5; background: center / contain no-repeat;}
-        .node-content { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-        .node-label { margin-top: -5px; color: rgba(42,31,19,0.84); font-size: 12px; letter-spacing: 1px; font-family: "Microsoft YaHei", sans-serif; text-shadow: 0 1px 0 rgba(230,206,150,0.55); opacity: 0.88; white-space: nowrap; font-weight: 700; }
+        .node { width: 58px; height: 58px; background: radial-gradient(circle at 35% 28%, rgba(255,255,255,0.08), rgba(10,10,15,0.94)); border: 2px solid #25252d; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: default; transition: 0.25s; box-shadow: 0 0 10px rgba(0,0,0,0.9); position: relative; z-index: 5;}
+        .node-content { font-size: 24px; filter: grayscale(1); opacity: 0.2; transition: 0.3s;}
+        .node-label { margin-top: 8px; color: #777; font-size: 12px; letter-spacing: 1px; font-family: "Microsoft YaHei", sans-serif; text-shadow: 0 2px 4px black; opacity: 0.75; white-space: nowrap; }
         
-        .node.reachable { cursor: pointer; filter: drop-shadow(0 0 10px rgba(241,196,15,0.54));}
-        .node.reachable:hover { transform: scale(1.14); filter: drop-shadow(0 0 15px rgba(241,196,15,0.72)); }
-        .node.reachable + .node-label { color: #4f3718; opacity: 1; }
+        .node.reachable { cursor: pointer; border-color: var(--gold-dark); box-shadow: 0 0 18px rgba(241, 196, 15, 0.34); background: radial-gradient(circle at 35% 28%, rgba(241,196,15,0.18), rgba(20,20,15,0.95));}
+        .node.reachable .node-content { filter: grayscale(0.5); opacity: 0.8; }
+        .node.reachable:hover { transform: scale(1.2); box-shadow: 0 0 25px var(--gold); border-color: var(--gold); }
+        .node.reachable:hover .node-content { filter: grayscale(0); opacity: 1; }
+        .node.reachable + .node-label { color: #d6b24a; opacity: 1; }
         
-        .node.current { filter: drop-shadow(0 0 13px rgba(158,20,20,0.62));}
-        .node.current + .node-label { color: #5a251c; opacity: 1; }
+        .node.current { border-color: var(--crimson); box-shadow: 0 0 25px var(--crimson); background: rgba(30,10,10,0.9);}
+        .node.current .node-content { filter: grayscale(0); opacity: 1; }
+        .node.current + .node-label { color: #e6e6e6; opacity: 1; }
         
-        .node.passed { pointer-events: none; filter: drop-shadow(0 0 7px rgba(92,38,24,0.46));}
-        .node.passed + .node-label { color: rgba(86,44,28,0.82); }
-        .node.node-battle { background-image: url('UI/教堂彩窗赛璐璐/地图UI/正式资产/节点/map_node_battle_normal_asset_v2.png'); }
-        .node.node-battle.reachable { background-image: url('UI/教堂彩窗赛璐璐/地图UI/正式资产/节点/map_node_battle_reachable_asset_v2.png'); }
-        .node.node-battle.current { background-image: url('UI/教堂彩窗赛璐璐/地图UI/正式资产/节点/map_node_battle_current_asset_v2.png'); }
-        .node.node-battle.passed { background-image: url('UI/教堂彩窗赛璐璐/地图UI/正式资产/节点/map_node_battle_passed_asset_v2.png'); }
-        .node.node-elite { background-image: url('UI/教堂彩窗赛璐璐/地图UI/正式资产/节点/map_node_elite_normal_asset_v2.png'); }
-        .node.node-elite.reachable { background-image: url('UI/教堂彩窗赛璐璐/地图UI/正式资产/节点/map_node_elite_reachable_asset_v2.png'); }
-        .node.node-elite.current { background-image: url('UI/教堂彩窗赛璐璐/地图UI/正式资产/节点/map_node_elite_current_asset_v2.png'); }
-        .node.node-elite.passed { background-image: url('UI/教堂彩窗赛璐璐/地图UI/正式资产/节点/map_node_elite_passed_asset_v2.png'); }
-        .node.node-rest { background-image: url('UI/教堂彩窗赛璐璐/地图UI/正式资产/节点/map_node_rest_normal_asset_v2.png'); }
-        .node.node-rest.reachable { background-image: url('UI/教堂彩窗赛璐璐/地图UI/正式资产/节点/map_node_rest_reachable_asset_v2.png'); }
-        .node.node-rest.current { background-image: url('UI/教堂彩窗赛璐璐/地图UI/正式资产/节点/map_node_rest_current_asset_v2.png'); }
-        .node.node-rest.passed { background-image: url('UI/教堂彩窗赛璐璐/地图UI/正式资产/节点/map_node_rest_passed_asset_v2.png'); }
-        .node.node-shop { background-image: url('UI/教堂彩窗赛璐璐/地图UI/正式资产/节点/map_node_shop_normal_asset_v2.png'); }
-        .node.node-shop.reachable { background-image: url('UI/教堂彩窗赛璐璐/地图UI/正式资产/节点/map_node_shop_reachable_asset_v2.png'); }
-        .node.node-shop.current { background-image: url('UI/教堂彩窗赛璐璐/地图UI/正式资产/节点/map_node_shop_current_asset_v2.png'); }
-        .node.node-shop.passed { background-image: url('UI/教堂彩窗赛璐璐/地图UI/正式资产/节点/map_node_shop_passed_asset_v2.png'); }
-        .node.node-event { background-image: url('UI/教堂彩窗赛璐璐/地图UI/正式资产/节点/map_node_event_normal_asset_v2.png'); }
-        .node.node-event.reachable { background-image: url('UI/教堂彩窗赛璐璐/地图UI/正式资产/节点/map_node_event_reachable_asset_v2.png'); }
-        .node.node-event.current { background-image: url('UI/教堂彩窗赛璐璐/地图UI/正式资产/节点/map_node_event_current_asset_v2.png'); }
-        .node.node-event.passed { background-image: url('UI/教堂彩窗赛璐璐/地图UI/正式资产/节点/map_node_event_passed_asset_v2.png'); }
-        .node.node-boss { background-image: url('UI/教堂彩窗赛璐璐/地图UI/正式资产/节点/map_node_boss_normal_asset_v2.png'); width: 98px; height: 98px; }
-        .node.node-boss.reachable { background-image: url('UI/教堂彩窗赛璐璐/地图UI/正式资产/节点/map_node_boss_reachable_asset_v2.png'); }
-        .node.node-boss.current { background-image: url('UI/教堂彩窗赛璐璐/地图UI/正式资产/节点/map_node_boss_current_asset_v2.png'); }
-        .node.node-boss.passed { background-image: url('UI/教堂彩窗赛璐璐/地图UI/正式资产/节点/map_node_boss_passed_asset_v2.png'); }
+        .node.passed { border-color: #621; background: rgba(20,5,5,0.8); pointer-events: none; box-shadow: 0 0 10px rgba(158,20,20,0.3);}
+        .node.passed .node-content { filter: grayscale(0.6); opacity: 0.5; }
+        .node.passed + .node-label { color: #855; }
+        .node.node-elite { border-radius: 12px; }
+        .node.node-boss { width: 72px; height: 72px; border-radius: 14px; border-color: rgba(158,20,20,0.75); }
+        .node.node-rest { border-color: rgba(211,84,0,0.45); }
+        .node.node-shop { border-color: rgba(241,196,15,0.38); }
         .map-path { fill: none; stroke-linecap: round; opacity: 0.9; }
-        .map-path.path-gray { stroke: rgba(46,35,22,0.62); stroke-width: 7; }
-        .map-path.path-red { stroke: #9e1414; stroke-width: 7; filter: drop-shadow(0 0 4px rgba(95,22,18,0.45)); }
-        .map-path.path-yellow { stroke: #d8b04b; stroke-width: 7; stroke-dasharray: 14 10; filter: drop-shadow(0 0 5px rgba(241,196,15,0.48)); animation: pathPulse 1.8s linear infinite; }
+        .map-path.path-gray { stroke: rgba(75,75,86,0.72); stroke-width: 2; }
+        .map-path.path-red { stroke: var(--crimson); stroke-width: 4; filter: drop-shadow(0 0 6px rgba(158,20,20,0.75)); }
+        .map-path.path-yellow { stroke: var(--gold); stroke-width: 4; stroke-dasharray: 10 10; filter: drop-shadow(0 0 7px rgba(241,196,15,0.75)); animation: pathPulse 1.8s linear infinite; }
         @keyframes pathPulse { to { stroke-dashoffset: -20; } }
         
-        .map-bottom-ui { position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%); width: 100%; max-width: 1280px; display: flex; justify-content: space-between; padding: 0 48px; box-sizing: border-box; z-index: 15; pointer-events: none; }
-        .map-ui-btn { pointer-events: auto; min-width: 210px; min-height: 58px; padding: 10px 26px; background: var(--asset-map-enter-button) center / 100% 100% no-repeat; border: 0; color: #f1dfb5; font-size: 17px; font-weight: bold; letter-spacing: 2px; border-radius: 0; cursor: pointer; text-shadow: 0 2px 0 rgba(0,0,0,0.72); transition: 0.22s; font-family: "STKaiti", serif;}
-        .map-ui-btn:hover { color: #fff5c8; filter: drop-shadow(0 0 12px rgba(241,196,15,0.48)); transform: translateY(-3px); }
+        .map-bottom-ui { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); width: 100%; max-width: 1280px; display: flex; justify-content: space-between; padding: 0 60px; box-sizing: border-box; z-index: 1500; pointer-events: none; }
+        .map-ui-btn { pointer-events: auto; padding: 12px 25px; background: rgba(15, 15, 20, 0.95); border: 1px solid #444; color: var(--text-gray); font-size: 16px; font-weight: bold; letter-spacing: 2px; border-radius: 4px; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.8); transition: 0.3s; font-family: "STKaiti", serif;}
+        .map-ui-btn:hover { background: rgba(30, 20, 10, 0.9); border-color: var(--gold); color: var(--gold); box-shadow: 0 0 20px rgba(241,196,15,0.4); transform: translateY(-3px); }
 
         /* ================= 战斗界面 ================= */
         #scene-battle {
@@ -1510,7 +1468,6 @@
     </div>
 
     <div id="scene-map" class="scene">
-        <div class="map-region-banner" aria-hidden="true"></div>
         <div class="map-title-card">
             <h2>命途星图</h2>
             <p>选择下一处幻境。金色路线可前进，红色路线记录已踏过的命运。</p>
@@ -1522,7 +1479,6 @@
                 <span class="legend-pill">📜 奇遇</span>
             </div>
         </div>
-        <div class="map-detail-panel" aria-hidden="true"></div>
         <div class="map-bottom-ui">
             <button class="map-ui-btn" onclick="returnToMenu()">🏠 返回主界</button>
             <button class="map-ui-btn" onclick="viewGlobalDeck()">🎴 查看牌组 (<span id="ui-deck-total-map">0</span>)</button>

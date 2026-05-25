@@ -32,12 +32,11 @@ const ENEMIES = [
 
 const MAP_NODE_META = {
     battle: { icon: "⚔️", label: "战斗" },
-    elite: { icon: "💀", label: "精英战斗" },
-    rest: { icon: "🔥", label: "休整" },
+    elite: { icon: "💀", label: "精英" },
+    rest: { icon: "🔥", label: "营火" },
     event: { icon: "📜", label: "奇遇" },
     boss: { icon: "🐉", label: "首领" },
-    shop: { icon: "💰", label: "商店" },
-    empty: { icon: "◇", label: "传送门" }
+    shop: { icon: "💰", label: "商店" }
 };
 const MAP_LANE_LEFT = [18, 32, 46, 60, 74];
 const MAP_FLOOR_GAP = 150;

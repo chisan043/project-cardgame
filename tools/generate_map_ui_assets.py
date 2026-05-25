@@ -492,7 +492,7 @@ def create_side_legend_panel():
     img = Image.new("RGBA", (250, 620), (0, 0, 0, 0))
     d = ImageDraw.Draw(img, "RGBA")
     draw_ornate_frame(d, (12, 12, 238, 608), radius=8, line=3, fill=(113, 96, 62, 180))
-    entries = [("battle", "战斗"), ("elite", "精英战斗"), ("shop", "商店"), ("rest", "休整"), ("event", "奇遇"), ("empty", "传送门"), ("boss", "首领")]
+    entries = [("battle", "战斗"), ("elite", "精英战斗"), ("shop", "商店"), ("rest", "奇遇"), ("event", "事件"), ("empty", "传送门"), ("boss", "首领")]
     for i, (kind, label) in enumerate(entries):
         y = 54 + i * 72
         node = create_node(kind, "normal").resize((48, 48), Image.LANCZOS)
@@ -659,8 +659,8 @@ def create_node_sheet_v2(node_paths):
         "battle": "战斗",
         "elite": "精英战斗",
         "shop": "商店",
-        "rest": "休整",
-        "event": "奇遇",
+        "rest": "奇遇",
+        "event": "事件",
         "empty": "传送门",
         "boss": "首领",
     }
