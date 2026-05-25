@@ -1,0 +1,61 @@
+// Extracted gameplay data. Keep this file free of DOM/runtime side effects.
+const CHARACTER_ORDER = ['hero_warrior', 'hero_mage', 'hero_archer'];
+const CHARACTERS = {
+    hero_warrior: {
+        id: 'hero_warrior',
+        name: '勇者战士',
+        subtitle: '近战 / 防御 / 圣剑',
+        desc: '稳定的护盾与反击路线，适合喜欢明确信号与稳步压制的对局体验。',
+        tags: ['防御', '反击', '圣剑'],
+        maxHp: 90,
+        baseEnergy: 5,
+        openingHand: 5,
+        startingGold: 50,
+        starterDeckId: 'starter_warrior',
+        cardPoolId: 'pool_warrior',
+        passive: '更高生命上限。每场战斗开始获得 5 点护盾；圣剑攻击会借护盾与反击姿态追加伤害。',
+        portrait: '新角色一/角色一_角色选择_立绘.png',
+        avatarPortrait: '头像/角色/hero_warrior.png',
+        battleBack: '新角色一/角色一_我方背面_待机.png',
+        accentClass: '',
+        starterHint: '先架盾与立誓，再用圣剑牌把护盾和反击姿态转成伤害。'
+    },
+    hero_mage: {
+        id: 'hero_mage',
+        name: '萝莉魔导士',
+        subtitle: '法术 / 爆发 / 咏唱',
+        desc: '先积累咏唱，再用爆发法术一次性倾斜战局，适合偏爱节奏铺垫与高回报连段的路线。',
+        tags: ['咏唱', '爆发', '充能'],
+        maxHp: 72,
+        baseEnergy: 6,
+        openingHand: 5,
+        startingGold: 55,
+        starterDeckId: 'starter_mage',
+        cardPoolId: 'pool_mage',
+        passive: '基础能量 +1，初始金币略高，但生命上限较低；爆发牌会消耗咏唱造成追加伤害。',
+        portrait: '角色二/角色二_角色选择_立绘.png',
+        avatarPortrait: '头像/角色/hero_mage.png',
+        battleBack: '角色二/角色二_我方背面_待机.png',
+        accentClass: 'featured',
+        starterHint: '用咏唱牌攒层数和手牌，再用紫焰爆裂、紫焰火花打爆发窗口。'
+    },
+    hero_archer: {
+        id: 'hero_archer',
+        name: '精灵弓箭手',
+        subtitle: '连射 / 操作 / 自然',
+        desc: '通过风势、自然调度与连射组织持续输出，攻击之间穿插走位与追射，更像远程游走型构筑。',
+        tags: ['连射', '蓄力', '自然'],
+        maxHp: 78,
+        baseEnergy: 5,
+        openingHand: 6,
+        startingGold: 45,
+        starterDeckId: 'starter_archer',
+        cardPoolId: 'pool_archer',
+        passive: '每回合抽牌多 1 张；蓄力会转化为风势，攻击时消耗 1 层风势追加追射并获得庇护。',
+        portrait: '新角色三/角色三_角色选择_立绘.png',
+        avatarPortrait: '头像/角色/hero_archer.png',
+        battleBack: '新角色三/角色三_我方背面_待机.png',
+        accentClass: '',
+        starterHint: '先用拉弓/林风积攒风势，再用连射和自然牌边走位边追射。'
+    }
+};
