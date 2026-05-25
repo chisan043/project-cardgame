@@ -234,12 +234,14 @@
         .enemy-avatar-fallback { font-size: 140px; }
         @keyframes floatAnim { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); filter: drop-shadow(0 26px 18px rgba(0,0,0,0.56)) drop-shadow(0 0 28px rgba(83,35,112,0.28)); } }
         
-        #enemy-minion-wrapper { display: none; position:absolute; right: 260px; bottom: -2px; width: 360px; height: 430px; align-items:flex-end; justify-content:center; z-index:1; pointer-events:none; animation: cloneFloatAnim 3.2s infinite ease-in-out reverse; transform-origin:center bottom; }
-        #enemy-minion-wrapper::before { content:""; position:absolute; left: 50%; bottom: 18px; width: 205px; height: 34px; border-radius:50%; background: radial-gradient(ellipse, rgba(0,0,0,0.42), transparent 70%); transform: translateX(-50%) skewX(-14deg); opacity:0.7; }
+        #enemy-minion-wrapper { display: none; position:absolute; left: -8px; bottom: 20px; width: 390px; height: 500px; align-items:flex-end; justify-content:center; z-index:25; pointer-events:none; animation: cloneFloatAnim 3.2s infinite ease-in-out reverse; transform-origin:center bottom; }
+        #enemy-minion-wrapper::before { content:""; position:absolute; left: 50%; bottom: 26px; width: 235px; height: 38px; border-radius:50%; background: radial-gradient(ellipse, rgba(0,0,0,0.5), transparent 70%); transform: translateX(-50%) skewX(-14deg); opacity:0.82; }
         .enemy-minion-avatar { position:absolute; inset:0; display:flex; align-items:flex-end; justify-content:center; }
-        .enemy-minion-avatar img { max-width:100%; max-height:100%; object-fit:contain; object-position:center bottom; opacity:0.44; filter: grayscale(1) brightness(0.72) contrast(1.24) drop-shadow(0 18px 18px rgba(0,0,0,0.74)); mix-blend-mode: luminosity; }
-        .enemy-minion-fallback { display:none; font-size: 120px; opacity:0.42; filter: grayscale(1) drop-shadow(0 18px 18px rgba(0,0,0,0.74)); }
-        .enemy-minion-info { position:absolute; left:50%; bottom: 20px; display:flex; align-items:center; gap:8px; min-width: 150px; padding: 6px 10px; border: 1px solid rgba(210,210,210,0.36); border-radius: 6px; background: rgba(10,10,14,0.68); box-shadow: 0 8px 18px rgba(0,0,0,0.5), inset 0 0 0 1px rgba(255,255,255,0.06); transform: translateX(-50%); z-index:3; }
+        .enemy-minion-avatar img { max-width:100%; max-height:100%; object-fit:contain; object-position:center bottom; opacity:0.68; filter: grayscale(1) brightness(0.9) contrast(1.32) drop-shadow(0 0 2px rgba(255,255,255,0.9)) drop-shadow(0 0 16px rgba(255,255,255,0.3)) drop-shadow(0 18px 18px rgba(0,0,0,0.78)); mix-blend-mode: luminosity; }
+        .enemy-minion-fallback { display:none; font-size: 132px; opacity:0.68; filter: grayscale(1) drop-shadow(0 0 2px rgba(255,255,255,0.85)) drop-shadow(0 18px 18px rgba(0,0,0,0.74)); }
+        .enemy-minion-info { position:absolute; left:50%; bottom: 72px; display:flex; flex-direction:column; gap:5px; min-width: 182px; padding: 7px 11px; border: 1px solid rgba(235,235,235,0.58); border-radius: 6px; background: rgba(8,8,12,0.78); box-shadow: 0 8px 18px rgba(0,0,0,0.58), 0 0 12px rgba(255,255,255,0.18), inset 0 0 0 1px rgba(255,255,255,0.08); transform: translateX(-50%); z-index:3; }
+        .enemy-minion-hp { color:#f4f4f4; font-size:13px; font-weight:bold; line-height:1; text-align:center; text-shadow:0 1px 3px #000, 0 0 6px rgba(255,255,255,0.28); white-space:nowrap; }
+        .enemy-minion-row { display:flex; align-items:center; gap:8px; }
         .enemy-minion-info .hp-bar-bg { flex:1; width:auto; height: 10px; margin:0; }
         .enemy-minion-atk { min-width: 34px; color:#d6d6d6; font-size:12px; font-weight:bold; text-shadow:0 1px 2px #000; }
         .enemy-minion-attack { animation: cloneStrike 0.38s cubic-bezier(0.2, 0.8, 0.2, 1) !important; }
@@ -1496,8 +1498,11 @@
                         <span id="enemy-minion-fallback" class="enemy-minion-fallback">影</span>
                     </div>
                     <div class="enemy-minion-info">
-                        <div class="hp-bar-bg"><div id="m-hp-fill" class="hp-bar-fill armor-bar-fill"></div></div>
-                        <div class="enemy-minion-atk">⚔ <span id="m-atk-txt"></span></div>
+                        <div class="enemy-minion-hp">分身 <span id="m-hp-txt"></span></div>
+                        <div class="enemy-minion-row">
+                            <div class="hp-bar-bg"><div id="m-hp-fill" class="hp-bar-fill armor-bar-fill"></div></div>
+                            <div class="enemy-minion-atk">⚔ <span id="m-atk-txt"></span></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -4587,6 +4592,7 @@
                 minionImg.src = minionSrc;
             }
             document.getElementById('m-hp-fill').style.width = (Math.max(0, state.enemy.minion.hp) / state.enemy.minion.maxHp * 100) + '%';
+            document.getElementById('m-hp-txt').innerText = `${Math.max(0, state.enemy.minion.hp)}/${state.enemy.minion.maxHp}`;
             document.getElementById('m-atk-txt').innerText = state.enemy.minion.atk;
         } else { minionWrapper.style.display = 'none'; }
 
