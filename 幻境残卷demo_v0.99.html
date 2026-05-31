@@ -60,6 +60,7 @@
             --asset-map-node-event: url('UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_event_imagegen_transparent_v1.png');
             --asset-map-node-rest: url('UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_rest_imagegen_transparent_v1.png');
             --asset-map-node-shop: url('UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_shop_imagegen_transparent_v1.png');
+            --battle-scene-bg: var(--battle-forest-bg);
             --asset-npc-shopkeeper: url('NPC/shopkeeper_portrait.png');
             --asset-npc-campfire-elder: url('NPC/campfire_elder_portrait.png');
             --asset-npc-encounter-angel: url('NPC/encounter_angel_portrait.png');
@@ -344,6 +345,19 @@
             border-radius: 0;
             text-shadow: 0 2px 0 #0e0906, 0 0 7px rgba(0,0,0,0.88);
         }
+        .legend-node-icon {
+            width: 23px;
+            height: 24px;
+            margin-right: 7px;
+            flex: 0 0 auto;
+            background: center / contain no-repeat;
+            filter: saturate(1.05) brightness(1.03) drop-shadow(0 0 5px rgba(238,187,80,0.35));
+        }
+        .legend-node-icon.node-battle { background-image: var(--asset-map-node-battle); }
+        .legend-node-icon.node-elite { background-image: var(--asset-map-node-elite); }
+        .legend-node-icon.node-rest { background-image: var(--asset-map-node-rest); }
+        .legend-node-icon.node-shop { background-image: var(--asset-map-node-shop); }
+        .legend-node-icon.node-event { background-image: var(--asset-map-node-event); }
         .map-floor { display: flex; justify-content: center; width: 100%; margin-bottom: 100px; pointer-events: none; }
         .floor-label { position: absolute; left: 50%; transform: translateX(-50%); color: rgba(58, 36, 19, 0.45); font-size: 12px; letter-spacing: 4px; font-family: "Microsoft YaHei", sans-serif; font-weight: 800; pointer-events: none; text-shadow: 0 1px 0 rgba(255,237,190,0.38); }
         .node-slot { width: 108px; height: 92px; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; pointer-events: auto; position: absolute;}
@@ -541,7 +555,7 @@
             background-color: #050508;
             background:
                 linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.1) 54%, rgba(0,0,0,0.55)),
-                var(--battle-forest-bg) center / cover no-repeat;
+                var(--battle-scene-bg, var(--battle-forest-bg)) center / cover no-repeat;
         }
         #scene-battle::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,0.42), transparent 18%, transparent 76%, rgba(0,0,0,0.4)), linear-gradient(180deg, rgba(0,0,0,0.52), transparent 28%, transparent 72%, rgba(0,0,0,0.58)); pointer-events:none; z-index:0; }
         .battle-floor { display:none; }
@@ -1616,11 +1630,11 @@
             <h2>幻境星图</h2>
             <p>选择下一处幻境。金色路线可前进，红色路线记录已踏过的命运。</p>
             <div class="map-legend">
-                <span class="legend-pill">⚔️ 战斗</span>
-                <span class="legend-pill">💀 精英</span>
-                <span class="legend-pill">🔥 营火</span>
-                <span class="legend-pill">💰 商栈</span>
-                <span class="legend-pill">📜 奇遇</span>
+                <span class="legend-pill"><span class="legend-node-icon node-battle"></span>战斗</span>
+                <span class="legend-pill"><span class="legend-node-icon node-elite"></span>精英</span>
+                <span class="legend-pill"><span class="legend-node-icon node-rest"></span>营火</span>
+                <span class="legend-pill"><span class="legend-node-icon node-shop"></span>商栈</span>
+                <span class="legend-pill"><span class="legend-node-icon node-event"></span>奇遇</span>
             </div>
         </div>
         <div class="map-right-panel">
@@ -3728,6 +3742,11 @@
         document.body.classList.toggle('scene-map-active', id === 'scene-map');
     }
 
+    function setTopBarVisible(isVisible) {
+        const topBar = document.getElementById('game-top-bar');
+        if (topBar) topBar.style.display = isVisible ? 'flex' : 'none';
+    }
+
     function updateContinueButton() {
         const btn = document.getElementById('btn-continue-run');
         if (!btn) return;
@@ -3788,7 +3807,7 @@
             initialDeck = buildStarterDeckForCharacter(state.player.characterId);
             starterPreviewCharacterId = state.player.characterId;
             document.querySelectorAll('.overlay').forEach(el => el.style.display = 'none');
-            document.getElementById('game-top-bar').style.display = 'flex';
+            setTopBarVisible(true);
             updatePlayerPresentation();
             renderMap();
             updateTopBar();
@@ -3861,6 +3880,38 @@
         return `头像/怪物/${cleanName}.png`;
     }
 
+    const BATTLE_BACKGROUND_BY_ENEMY = {
+        '病弱史莱姆': '场景/主场景/bg_battle_ancient_forest_day.png',
+        '迷途妖狐': '场景/色调变体/bg_battle_ancient_forest_sunset.png',
+        '荒野煞狼': '场景/色调变体/bg_battle_mountain_plain_night.png',
+        '暴躁野猪': '场景/主场景/bg_battle_mountain_plain_day.png',
+        '剧毒蟾蜍': '场景/主场景/bg_battle_ancient_forest_day.png',
+        '千载魔蛛': '场景/主场景/bg_battle_cave_cold.png',
+        '嗜血蝙蝠': '场景/主场景/bg_battle_cave_cold.png',
+        '铁甲巨蟹': '场景/色调变体/bg_battle_mountain_plain_rain.png',
+        '枯骨煞兵': '场景/主场景/bg_battle_dungeon_corridor_torch.png',
+        '贪婪盗贼': '场景/主场景/bg_battle_stone_ruins_day.png',
+        '堕落剑客': '场景/色调变体/bg_battle_stone_ruins_sunset.png',
+        '幽冥法师': '场景/主场景/bg_battle_temple_inner_light.png',
+        '巨力石魔': '场景/主场景/bg_battle_wasteland_dusk.png',
+        '魅影刺客': '场景/色调变体/bg_battle_stone_ruins_night.png',
+        '缝合巨怪': '场景/主场景/bg_battle_dungeon_corridor_torch.png',
+        '【精英】狂暴牛头人': '场景/主场景/bg_battle_wasteland_dusk.png',
+        '【精英】猩红血巫': '场景/主场景/bg_battle_temple_hall_grand.png',
+        '【精英】不死骨龙': '场景/主场景/bg_battle_temple_hall_grand.png',
+        '【首领】鬼面修罗': '场景/主场景/bg_battle_temple_hall_grand.png',
+        '【深渊主宰】': '场景/主场景/bg_battle_temple_inner_light.png'
+    };
+
+    function getBaseEnemyName(enemy) {
+        return (enemy?.name || '').replace(/·.*?(?=】)/, '').replace(/·暴走/g, '');
+    }
+
+    function applyBattleBackgroundForEnemy(enemy) {
+        const bgPath = BATTLE_BACKGROUND_BY_ENEMY[getBaseEnemyName(enemy)] || '场景/主场景/bg_battle_ancient_forest_day.png';
+        document.documentElement.style.setProperty('--battle-scene-bg', `url('${bgPath}')`);
+    }
+
     function setCurrentCharacter(characterId) {
         const character = CHARACTERS[characterId] || CHARACTERS.hero_warrior;
         state.player.characterId = character.id;
@@ -3930,7 +3981,7 @@
         if (playerHpLagTimer) clearTimeout(playerHpLagTimer);
         state.deck = [];
         document.querySelectorAll('.overlay').forEach(el => el.style.display = 'none');
-        document.getElementById('game-top-bar').style.display = 'flex';
+        setTopBarVisible(false);
         updatePlayerPresentation();
         showRoleSelectOverlay();
     }
@@ -3944,7 +3995,7 @@
             rw.onclick = () => {
                 state.relics.push(JSON.parse(JSON.stringify(r)));
                 closeOverlay('overlay-init-relic');
-                generateMap(); renderMap(); updateTopBar(); showScene('scene-map');
+                generateMap(); renderMap(); updateTopBar(); setTopBarVisible(true); showScene('scene-map');
                 saveRun();
                 showFloatText("获得本命奇珍：" + r.name, "var(--gold)", {x: window.innerWidth/2, y: window.innerHeight/2});
             };
@@ -3956,7 +4007,7 @@
     function returnToMenu() {
         if(confirm("确定要放弃本局进度返回主界面吗？")) {
             clearRunSave();
-            document.getElementById('game-top-bar').style.display = 'none'; document.querySelectorAll('.overlay').forEach(el => el.style.display = 'none'); showScene('scene-main-menu');
+            setTopBarVisible(false); document.querySelectorAll('.overlay').forEach(el => el.style.display = 'none'); showScene('scene-main-menu');
         }
     }
 
@@ -4147,6 +4198,29 @@
         }
     };
 
+    const MAP_BATTLE_PREVIEW_VARIANTS = [
+        {
+            title: '雾岭小径',
+            desc: '山雾贴着旧路流动，前方的敌影正从林线后靠近。',
+            image: 'UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_v1.png'
+        },
+        {
+            title: '碎石古道',
+            desc: '残破石阶通向荒废哨站，那里常有伏击者守候。',
+            image: 'UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_v1.png'
+        },
+        {
+            title: '暮色荒原',
+            desc: '风卷起暗红尘沙，野性的敌人会在开阔处逼近。',
+            image: 'UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_v1.png'
+        },
+        {
+            title: '寒洞裂隙',
+            desc: '岩壁间传来低响，潮冷洞窟里潜伏着不安的轮廓。',
+            image: 'UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_cold_cave_imagegen_transparent_v1.png'
+        }
+    ];
+
     function findMapNodeById(nodeId) {
         if (!nodeId || !Array.isArray(state.mapData)) return null;
         for (const floor of state.mapData) {
@@ -4190,9 +4264,33 @@
         updateMapDetailPanel(node);
     }
 
+    function getMapNodeRouteStatus(node) {
+        if (!node) return '';
+        if (state.currentNode && state.currentNode.id === node.id) return '当前驻足点';
+        if (state.pathHistory.includes(node.id)) return '已踏过';
+        if (isMapNodeReachable(node)) return '可前往';
+        return '尚未连通';
+    }
+
+    function getNodeFloorLabel(node) {
+        if (!node) return '';
+        if (node.type === 'boss') return '首领';
+        return `第 ${Number(node.floor || 0) + 1} 层`;
+    }
+
+    function getMapPreviewVariant(node) {
+        if (!node) return MAP_PREVIEW_PANEL_DATA.battle;
+        if (node.type === 'battle') {
+            const lane = Math.round(Number(node.x || 0));
+            const idx = Math.abs((Number(node.floor || 0) * 3 + lane)) % MAP_BATTLE_PREVIEW_VARIANTS.length;
+            return MAP_BATTLE_PREVIEW_VARIANTS[idx];
+        }
+        return MAP_PREVIEW_PANEL_DATA[node.type] || MAP_PREVIEW_PANEL_DATA.battle;
+    }
+
     function updateMapDetailPanel(node = null) {
         const previewNode = node || getSelectedMapPreviewNode() || getDefaultMapPreviewNode();
-        const panelData = MAP_PREVIEW_PANEL_DATA[previewNode?.type] || MAP_PREVIEW_PANEL_DATA.battle;
+        const panelData = getMapPreviewVariant(previewNode);
         const meta = MAP_NODE_META[previewNode?.type] || MAP_NODE_META.battle;
         const imageEl = document.getElementById('map-preview-image');
         const titleEl = document.getElementById('map-detail-title');
@@ -4200,8 +4298,8 @@
         const enterButton = document.querySelector('.map-detail-enter');
         state.mapPreviewNodeId = previewNode?.id || null;
         if (imageEl && imageEl.getAttribute('src') !== panelData.image) imageEl.src = panelData.image;
-        if (titleEl) titleEl.textContent = panelData.title || meta.label;
-        if (descEl) descEl.textContent = panelData.desc || meta.label;
+        if (titleEl) titleEl.textContent = `${getNodeFloorLabel(previewNode)} · ${panelData.title || meta.label}`;
+        if (descEl) descEl.textContent = `${getMapNodeRouteStatus(previewNode)}。${panelData.desc || meta.label}`;
         if (enterButton) enterButton.disabled = !isMapNodeReachable(previewNode) || state.isNodeClickLocked;
         syncMapNodeSelection();
     }
@@ -4235,6 +4333,8 @@
                 const meta = MAP_NODE_META[node.type] || MAP_NODE_META.battle;
                 nodeDiv.setAttribute('title', meta.label);
                 nodeDiv.innerHTML = `<div class="node-content">${meta.icon}</div>`;
+                nodeDiv.onmouseenter = () => selectMapPreviewNode(node);
+                nodeDiv.onpointerenter = () => selectMapPreviewNode(node);
                 nodeDiv.onclick = () => selectMapPreviewNode(node);
                 if(isReachable) nodeDiv.ondblclick = () => handleNodeClick(node);
                 if(isReachable || isCurrent) {
@@ -4298,7 +4398,7 @@
 
     function advanceMap() {
         state.floor++; state.isNodeClickLocked = false;
-        if(state.floor >= 20) { clearRunSave(); alert("恭喜你，穿越层层试炼，夺回了残卷！"); showScene('scene-main-menu'); document.getElementById('game-top-bar').style.display='none'; }
+        if(state.floor >= 20) { clearRunSave(); alert("恭喜你，穿越层层试炼，夺回了残卷！"); showScene('scene-main-menu'); setTopBarVisible(false); }
         else { showScene('scene-map'); setTimeout(()=>renderMap(), 50); updateTopBar(); saveRun(); }
     }
 
@@ -4345,6 +4445,7 @@
         state.enemy.armor = 0; state.enemy.poison = 0; state.enemy.bleed = 0; state.enemy.burn = 0; state.enemy.stun = 0; state.enemy.curse = 0; state.enemy.vuln = 0; state.enemy.weak = 0; state.enemy.str = 0;
         state.enemy.charged = false; state.enemy.minion = null; state.enemy.isPhase2 = false;
         state.enemy.turnCount = 0; state.enemy.moveHistory = [];
+        applyBattleBackgroundForEnemy(state.enemy);
         resetBattleActionLog();
         addBattleActionLog('system', '遭遇', state.enemy.name);
         
@@ -4675,6 +4776,7 @@
                 state.enemy.currentHp = state.enemy.maxHp;
                 state.enemy.charged = false; state.enemy.minion = null;
                 state.enemy.turnCount = 0; state.enemy.moveHistory = [];
+                applyBattleBackgroundForEnemy(state.enemy);
                 showFloatText("二阶段觉醒！", "var(--crimson)", getCenter('enemy-avatar'));
                 setEnemyIntent(); updateBattleUI();
                 return false; 
@@ -5244,7 +5346,7 @@
         if (junks.length > 0) {
             let junkDmg = junks.length * 5; state.hp -= junkDmg;
             showFloatText(`诅咒反噬 -${junkDmg}`, "var(--purple)", getCenter('ui-hp'));
-            if(state.hp <= 0) { alert("意志被暗影吞没，探索结束。"); showScene('scene-main-menu'); document.getElementById('game-top-bar').style.display='none'; return; }
+            if(state.hp <= 0) { alert("意志被暗影吞没，探索结束。"); showScene('scene-main-menu'); setTopBarVisible(false); return; }
             await new Promise(r => setTimeout(r, 600));
         }
 
@@ -5253,7 +5355,7 @@
         if(state.p_burn > 0) { let burnDmg = Math.max(1, Math.ceil(state.maxHp * 0.05 * state.p_burn)); state.hp -= burnDmg; state.p_burn--; showFloatText(`燃烧 -${burnDmg}`, "var(--fire)", getCenter('ui-hp')); }
         if(state.p_curse > 0) state.p_curse--;
         
-        if(state.hp <= 0) { alert("旅者倒在幻境深处，探索结束。"); showScene('scene-main-menu'); document.getElementById('game-top-bar').style.display='none'; return; }
+        if(state.hp <= 0) { alert("旅者倒在幻境深处，探索结束。"); showScene('scene-main-menu'); setTopBarVisible(false); return; }
 
         if(state.p_vuln > 0) state.p_vuln--; if(state.p_weak > 0) state.p_weak--; state.p_dmg_buff = 0; state.p_next_dmg = 0; state.p_reduce_dmg = 0;
 
@@ -5403,7 +5505,7 @@
             addBattleActionLog('enemy', `敌方使用 ${move.name}`, describeEnemyMoveResult(move, enemyMoveSnapshot));
         }
         
-        if(state.hp <= 0) { alert("旅者倒在幻境深处，探索结束。"); showScene('scene-main-menu'); document.getElementById('game-top-bar').style.display='none'; return; }
+        if(state.hp <= 0) { alert("旅者倒在幻境深处，探索结束。"); showScene('scene-main-menu'); setTopBarVisible(false); return; }
         if(!hasRelic('r_yin_yang') && !hasRelic('r_perma_curse')) { if(state.enemy.vuln > 0) state.enemy.vuln--; if(state.enemy.weak > 0) state.enemy.weak--; } else if (hasRelic('r_yin_yang')) { state.enemy.vuln = Math.ceil(state.enemy.vuln / 2); state.enemy.weak = Math.ceil(state.enemy.weak / 2); }
         
         setTimeout(async () => { 
