@@ -60,6 +60,9 @@
             --asset-map-node-event: url('UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_event_imagegen_transparent_v1.png');
             --asset-map-node-rest: url('UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_rest_imagegen_transparent_v1.png');
             --asset-map-node-shop: url('UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_shop_imagegen_transparent_v1.png');
+            --asset-npc-shopkeeper: url('NPC/shopkeeper_portrait.png');
+            --asset-npc-campfire-elder: url('NPC/campfire_elder_portrait.png');
+            --asset-main-menu-bg: url('UI/主菜单/main_menu_key_art_candidate_v3_cel.png');
         }
         
         body, html { margin: 0; padding: 0; height: 100%; background: var(--dark-bg); color: #ddd; font-family: "STKaiti", "华文楷体", "Microsoft YaHei", serif; overflow: hidden; user-select: none; }
@@ -74,60 +77,67 @@
         .scene { display: none !important; width: 100%; height: 100%; position: absolute; top: 0; left: 0; animation: fadeScene 0.8s ease forwards; z-index: 10;}
         .scene.active { display: block !important; }
         #scene-main-menu.active { display: flex !important; }
-        #scene-hud-editor.active { display: block !important; }
         @keyframes fadeScene { 0% { opacity: 0; filter: blur(10px); } 100% { opacity: 1; filter: blur(0); } }
 
         /* ================= 主菜单 ================= */
-        #scene-main-menu { flex-direction: column; justify-content: center; align-items: center; background: radial-gradient(circle at 50% 30%, rgba(30, 15, 15, 0.8) 0%, rgba(5, 5, 8, 1) 70%); }
-        
-        .title-container { position: relative; margin-bottom: 100px; display: flex; justify-content: center; align-items: center;}
-        .game-title-glow { position: absolute; width: 350px; height: 100px; background: radial-gradient(ellipse, rgba(158, 20, 20, 0.6) 0%, transparent 70%); filter: blur(25px); z-index: -1; }
-        .game-title { 
-            font-size: 130px; font-weight: bold; letter-spacing: 35px; margin-left: 35px;
-            background: linear-gradient(180deg, #dfdfdf 0%, #888 40%, #555 70%, #222 100%);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-            text-shadow: 0px 10px 20px rgba(0,0,0,0.9); position: relative;
+        #scene-main-menu {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            background: #050508;
+            isolation: isolate;
+            overflow: hidden;
         }
-        .game-title::after { content: ""; position: absolute; top: 48%; left: -5%; width: 110%; height: 4px; background: #020203; transform: rotate(-4deg); box-shadow: 0 0 10px rgba(0,0,0,1), inset 0 0 5px var(--crimson); }
+        #scene-main-menu::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(180deg, rgba(2, 2, 5, 0.12) 0%, rgba(2, 2, 5, 0.2) 45%, rgba(2, 2, 5, 0.72) 100%),
+                var(--asset-main-menu-bg);
+            background-size: cover;
+            background-position: center center;
+            transform: scale(1.01);
+            z-index: 0;
+        }
+        #scene-main-menu::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 50% 10%, rgba(6, 8, 14, 0.52) 0%, rgba(6, 8, 14, 0.2) 32%, transparent 48%),
+                radial-gradient(ellipse at 26% 82%, rgba(6, 5, 8, 0.38) 0%, rgba(6, 5, 8, 0.2) 24%, transparent 45%),
+                radial-gradient(ellipse at 50% 54%, transparent 0%, transparent 48%, rgba(0, 0, 0, 0.54) 100%);
+            pointer-events: none;
+            z-index: 1;
+        }
 
-        .menu-btn-group { display: flex; flex-direction: column; gap: 25px; width: 320px; z-index: 5;}
-        .menu-btn { padding: 18px; background: rgba(10, 10, 12, 0.9); border: 1px solid #444; border-left: 3px solid var(--gold-dark); border-right: 3px solid var(--gold-dark); color: #ccc; font-size: 20px; letter-spacing: 8px; cursor: pointer; transition: 0.4s; position: relative; overflow: hidden; font-family: "STKaiti", serif;}
+        .title-container {
+            position: absolute;
+            top: 6.4%;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+        }
+        .game-title-glow { position: absolute; width: 520px; height: 130px; background: radial-gradient(ellipse, rgba(5, 7, 14, 0.76) 0%, rgba(90, 20, 20, 0.42) 44%, transparent 72%); filter: blur(20px); z-index: -1; }
+        .game-title {
+            font-size: clamp(52px, 8.7vw, 112px); font-weight: bold; letter-spacing: clamp(12px, 2.2vw, 28px); margin-left: clamp(12px, 2.2vw, 28px);
+            background: linear-gradient(180deg, #f5e7b8 0%, #caa258 42%, #76511d 72%, #251309 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 7px 8px rgba(0,0,0,0.96)) drop-shadow(0 0 14px rgba(158,20,20,0.48));
+            text-shadow: none; position: relative; white-space: nowrap; line-height: 1.05;
+        }
+        .game-title::after { content: ""; position: absolute; top: 52%; left: -5%; width: 110%; height: 3px; background: rgba(2, 2, 3, 0.9); transform: rotate(-4deg); box-shadow: 0 0 10px rgba(0,0,0,1), inset 0 0 5px var(--crimson); }
+
+        .menu-btn-group { position: absolute; left: clamp(20px, 7.2%, 92px); bottom: 8.2%; display: flex; flex-direction: column; gap: 18px; width: clamp(220px, 34vw, 330px); z-index: 2;}
+        .menu-btn { padding: 17px 18px; background: linear-gradient(90deg, rgba(5, 6, 10, 0.94), rgba(22, 16, 12, 0.9) 52%, rgba(5, 6, 10, 0.94)); border: 1px solid rgba(199,162,88,0.52); border-left: 4px solid var(--gold-dark); border-right: 4px solid var(--gold-dark); color: #e6d6ad; font-size: 20px; letter-spacing: 8px; cursor: pointer; transition: 0.4s; position: relative; overflow: hidden; font-family: "STKaiti", serif; box-shadow: 0 10px 22px rgba(0,0,0,0.6), inset 0 0 0 1px rgba(255,255,255,0.04);}
         .menu-btn::before { content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%; background: linear-gradient(90deg, transparent, rgba(241,196,15,0.2), transparent); transition: 0.5s; }
         .menu-btn:hover::before { left: 100%; }
         .menu-btn:hover { background: rgba(30, 20, 10, 0.9); color: var(--gold); border-color: var(--gold); box-shadow: 0 0 25px rgba(158, 20, 20, 0.5); transform: scale(1.05); text-shadow: 0 0 10px var(--gold);}
-
-        #scene-hud-editor {
-            background: #050508;
-        }
-        .hud-editor-frame {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-            background: #050508;
-        }
-        .hud-editor-back {
-            position: absolute;
-            left: 18px;
-            top: 16px;
-            z-index: 20;
-            min-width: 110px;
-            padding: 9px 14px;
-            border: 1px solid rgba(199,162,88,0.72);
-            border-radius: 4px;
-            background: rgba(9, 10, 14, 0.88);
-            color: var(--gold);
-            font-family: "STKaiti", serif;
-            font-size: 15px;
-            letter-spacing: 2px;
-            cursor: pointer;
-            box-shadow: 0 8px 18px rgba(0,0,0,0.45), inset 0 0 0 1px rgba(255,255,255,0.06);
-        }
-        .hud-editor-back:hover {
-            background: rgba(30, 20, 10, 0.94);
-            box-shadow: 0 0 18px rgba(241,196,15,0.3);
-        }
 
         /* ================= 顶栏 ================= */
         .top-bar { display: none; position: fixed; top: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 1280px; padding: 10px 28px 12px; box-sizing: border-box; justify-content: space-between; background: linear-gradient(180deg, rgba(12,12,18,0.97), rgba(13,18,29,0.88) 72%, rgba(13,18,29,0)); z-index: 6000; border-bottom: 1px solid rgba(199,162,88,0.34); backdrop-filter: blur(8px); box-shadow: 0 10px 24px rgba(0,0,0,0.42); }
@@ -1485,15 +1495,17 @@
         .event-box::-webkit-scrollbar { display: none; }
         .card-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
         .anime-panel { background: linear-gradient(180deg, rgba(241,223,181,0.96), rgba(199,164,105,0.96)); color: #2a1b16; border: 3px solid #38261e; border-radius: 6px; box-shadow: 0 8px 0 rgba(0,0,0,0.24), inset 0 0 0 2px rgba(255,255,255,0.34); font-family: "Microsoft YaHei", sans-serif; }
-        .shop-scene, .event-scene { width: 1120px; padding: 0; overflow: hidden; text-align: left; max-width: calc(100vw - 64px); }
-        .shop-scene { max-height: calc(100vh - 64px); }
+        .shop-scene, .event-scene, .rest-scene { width: 1120px; padding: 0; overflow: hidden; text-align: left; max-width: calc(100vw - 64px); }
+        .shop-scene, .rest-scene { max-height: calc(100vh - 64px); }
         .scene-banner { min-height: 154px; padding: 28px 36px 24px 260px; border-bottom: 3px solid rgba(56,38,30,0.75); background: linear-gradient(90deg, rgba(32,74,122,0.92), rgba(47,107,99,0.78)), url('场景/主场景/bg_battle_ancient_forest_day.png'); background-size: cover; background-position: center 28%; color: #fff7dc; position: relative; }
         .scene-banner::before { content:""; position:absolute; left:30px; bottom:0; width:200px; height:150px; background: url('新角色三/角色三_角色选择_立绘.png') 50% 18% / cover no-repeat; filter: drop-shadow(0 12px 10px rgba(0,0,0,0.48)); }
-        .shop-scene .scene-banner::before { background-image: url('角色二/角色二_角色选择_立绘.png'); background-position: 50% 18%; }
+        .shop-scene .scene-banner::before { background-image: var(--asset-npc-shopkeeper); background-position: 50% 0%; }
+        .rest-scene .scene-banner { background-image: linear-gradient(90deg, rgba(72,52,43,0.94), rgba(92,54,39,0.74)), url('场景/主场景/bg_battle_dungeon_corridor_torch.png'); background-position: center 42%; }
+        .rest-scene .scene-banner::before { background-image: var(--asset-npc-campfire-elder); background-position: 50% 0%; }
         .scene-banner h2 { margin:0 0 10px; color: #fff1a8; font-size: 30px; letter-spacing: 5px; text-shadow: 0 3px 0 rgba(0,0,0,0.5); }
         .scene-banner p { margin:0; max-width: 660px; line-height:1.65; font-size:14px; text-shadow: 0 2px 0 rgba(0,0,0,0.45); }
         .scene-body { padding: 26px 32px 32px; background: linear-gradient(180deg, rgba(16,18,25,0.98), rgba(7,8,12,0.98)); }
-        .shop-scene .scene-body, .event-scene .scene-body { max-height: calc(100vh - 230px); overflow-y:auto; box-sizing:border-box; }
+        .shop-scene .scene-body, .event-scene .scene-body, .rest-scene .scene-body { max-height: calc(100vh - 230px); overflow-y:auto; box-sizing:border-box; }
         .event-scene #event-content { max-height: calc(100vh - 390px) !important; padding-bottom:16px; box-sizing:border-box; }
         .event-scene #event-actions { flex:none; margin-bottom:0; padding-bottom:18px; }
         .choice-grid { display:grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
@@ -1539,7 +1551,7 @@
         .shop-price-btn { width:165px; min-height:46px; margin-top:12px; font-size:15px; padding:10px 12px; flex:none; }
         .sold-out-stamp { width: 165px; height: 260px; border: 2px dashed rgba(241,223,181,0.3); display:flex; align-items:center; justify-content:center; color:#86755f; letter-spacing:3px; transform: rotate(-5deg); box-sizing:border-box; }
         .shop-delete-grid { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; width:100%; max-height: calc(100vh - 350px); overflow-y:auto; padding: 6px 8px 80px; box-sizing:border-box; }
-        .rest-card-action-list { max-height: calc(100vh - 260px) !important; padding-bottom:90px; box-sizing:border-box; }
+        .rest-card-action-list { max-height: calc(100vh - 400px) !important; padding-bottom:90px; box-sizing:border-box; }
         
         .btn-gorgeous { padding: 14px 35px; background: var(--ui-button-blue); border: 1px solid rgba(199,162,88,0.52); color: #efe2bd; cursor: pointer; border-radius: 5px 2px 5px 2px; transition: 0.3s; font-family: "STKaiti", serif; font-weight: bold; font-size: 18px; box-shadow: 0 8px 18px rgba(0,0,0,0.66), inset 0 0 0 1px rgba(255,255,255,0.08), inset 0 -10px 22px rgba(0,0,0,0.26); letter-spacing: 2px; text-shadow: 0 2px 0 #000; }
         .btn-gorgeous.btn-secondary { background: var(--ui-button-secondary); }
@@ -1592,18 +1604,7 @@
             <button class="menu-btn" id="btn-continue-run" onclick="loadSavedRun()" style="display:none;">继 续 残 卷</button>
             <button class="menu-btn" onclick="openInitDeck()">初 始 法 则</button>
             <button class="menu-btn" onclick="openLibrary()">万 象 图 鉴</button>
-            <button class="menu-btn" onclick="openHudEditor()">编 修 界 面</button>
         </div>
-    </div>
-
-    <div id="scene-hud-editor" class="scene">
-        <button class="hud-editor-back" onclick="closeHudEditor()">返回主界</button>
-        <iframe
-            id="hud-editor-frame"
-            class="hud-editor-frame"
-            title="HUD 布局编辑器"
-            data-src="hud_layout_editor.html?embedded=1">
-        </iframe>
     </div>
 
     <div id="scene-map" class="scene">
@@ -1788,14 +1789,19 @@
 </div>
 
 <div class="overlay" id="overlay-rest">
-    <div class="event-box">
-        <h2 style="color:var(--gold);">🔥 营火残迹</h2>
-        <div id="rest-options" style="display:flex; flex-direction:column; gap:20px; align-items:center; margin-top:30px;">
+    <div class="event-box rest-scene">
+        <div class="scene-banner">
+            <h2>营火老者</h2>
+            <p>灰烬旁的长者守着一盏不灭火。你可以在此稍作休整，也可以借火光参悟功法，或将不再需要的招式交还给夜色。</p>
+        </div>
+        <div class="scene-body">
+        <div id="rest-options" style="display:flex; flex-direction:column; gap:20px; align-items:center; margin-top:4px;">
             <button class="btn-gorgeous" style="width:300px;" onclick="resolveRest()">休 息 (恢复 40% 生命)</button>
             <button class="btn-gorgeous" style="width:300px;" onclick="renderRestUpgrade()">参 悟 (强化功法)</button>
             <button class="btn-gorgeous" style="width:300px;" onclick="renderRestDelete()">遗 忘 (精简牌库)</button>
         </div>
         <div id="card-action-list" class="card-grid rest-card-action-list" style="display:none; margin-top: 30px; max-height:50vh; overflow-y:auto;"></div>
+        </div>
     </div>
 </div>
 
@@ -3918,24 +3924,6 @@
         showRoleSelectOverlay();
     }
 
-    function openHudEditor() {
-        document.querySelectorAll('.overlay').forEach(el => el.style.display = 'none');
-        document.getElementById('game-top-bar').style.display = 'none';
-        const frame = document.getElementById('hud-editor-frame');
-        if (frame) {
-            const baseSrc = frame.dataset.src || 'hud_layout_editor.html?embedded=1';
-            const separator = baseSrc.includes('?') ? '&' : '?';
-            frame.src = `${baseSrc}${separator}v=${Date.now()}`;
-            frame.dataset.loaded = '1';
-        }
-        showScene('scene-hud-editor');
-    }
-
-    function closeHudEditor() {
-        showScene('scene-main-menu');
-        document.getElementById('game-top-bar').style.display = 'none';
-    }
-    
     function showInitRelicOverlay() {
         const container = document.getElementById('init-relic-content'); container.innerHTML = '';
         let pool = getRolePreferredRelics(RELIC_POOL).slice(0, 3);
