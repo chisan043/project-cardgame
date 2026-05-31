@@ -62,6 +62,7 @@
             --asset-map-node-shop: url('UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_shop_imagegen_transparent_v1.png');
             --asset-npc-shopkeeper: url('NPC/shopkeeper_portrait.png');
             --asset-npc-campfire-elder: url('NPC/campfire_elder_portrait.png');
+            --asset-npc-encounter-angel: url('NPC/encounter_angel_portrait.png');
             --asset-main-menu-bg: url('UI/主菜单/main_menu_key_art_candidate_v3_cel.png');
         }
         
@@ -1499,6 +1500,8 @@
         .shop-scene, .rest-scene { max-height: calc(100vh - 64px); }
         .scene-banner { min-height: 154px; padding: 28px 36px 24px 260px; border-bottom: 3px solid rgba(56,38,30,0.75); background: linear-gradient(90deg, rgba(32,74,122,0.92), rgba(47,107,99,0.78)), url('场景/主场景/bg_battle_ancient_forest_day.png'); background-size: cover; background-position: center 28%; color: #fff7dc; position: relative; }
         .scene-banner::before { content:""; position:absolute; left:30px; bottom:0; width:200px; height:150px; background: url('新角色三/角色三_角色选择_立绘.png') 50% 18% / cover no-repeat; filter: drop-shadow(0 12px 10px rgba(0,0,0,0.48)); }
+        .event-scene .scene-banner { background-image: linear-gradient(90deg, rgba(42,62,106,0.92), rgba(174,133,64,0.64)), url('场景/主场景/bg_battle_ancient_forest_day.png'); background-position: center 22%; }
+        .event-scene .scene-banner::before { background-image: var(--asset-npc-encounter-angel); background-position: 50% 0%; }
         .shop-scene .scene-banner::before { background-image: var(--asset-npc-shopkeeper); background-position: 50% 0%; }
         .rest-scene .scene-banner { background-image: linear-gradient(90deg, rgba(72,52,43,0.94), rgba(92,54,39,0.74)), url('场景/主场景/bg_battle_dungeon_corridor_torch.png'); background-position: center 42%; }
         .rest-scene .scene-banner::before { background-image: var(--asset-npc-campfire-elder); background-position: 50% 0%; }
