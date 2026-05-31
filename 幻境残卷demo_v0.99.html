@@ -2019,8 +2019,8 @@
     </div>
 </div>
 
-<script src="hud-runtime.js?v=20260531-pages-hud-default-v2"></script>
-<script src="hud-layout-data.js?v=20260531-pages-hud-default-v2"></script>
+<script src="hud-runtime.js?v=20260518-forced-default-hud1"></script>
+<script src="hud-layout-data.js?v=20260518-forced-default-hud1"></script>
 <script src="src/data/relics.js?v=20260525-data-split1"></script>
 <script src="src/data/cards.js?v=20260525-data-split1"></script>
 <script src="src/data/enemies.js?v=20260525-data-split1"></script>
@@ -2835,7 +2835,7 @@
     const HUD_EDIT_SAVE_KEY = 'huanjing-hud-layout-runtime-edit-v1';
     const HUD_DEFAULT_PRESET_KEY = window.HuanjingHUDRuntime.HUD_DEFAULT_PRESET_STORAGE_KEY || 'huanjing-hud-layout-default-preset-v1';
     const HUD_FORCED_DEFAULT_VERSION_KEY = 'huanjing-hud-layout-forced-default-version';
-    const HUD_FORCED_DEFAULT_VERSION = '20260531-pages-hud-default-v2';
+    const HUD_FORCED_DEFAULT_VERSION = '20260518-desktop-hud-layout-final-v1';
     const HUD_IDB_NAME = 'huanjing-hud-layout-editor-db';
     const HUD_IDB_STORE_NAME = 'kv';
     const SHOW_RUNTIME_HUD_TEXT = true;
@@ -2999,8 +2999,8 @@
         try {
             if (localStorage.getItem(HUD_FORCED_DEFAULT_VERSION_KEY) !== HUD_FORCED_DEFAULT_VERSION) {
                 localStorage.removeItem(window.HuanjingHUDRuntime.HUD_SYNC_STORAGE_KEY);
+                localStorage.removeItem(HUD_DEFAULT_PRESET_KEY);
                 localStorage.removeItem(HUD_EDIT_SAVE_KEY);
-                localStorage.setItem(HUD_DEFAULT_PRESET_KEY, JSON.stringify(fallback));
                 localStorage.setItem(HUD_FORCED_DEFAULT_VERSION_KEY, HUD_FORCED_DEFAULT_VERSION);
             }
         } catch (error) {
