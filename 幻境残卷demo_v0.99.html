@@ -920,16 +920,6 @@
         .battle-state-bridge {
             display:none !important;
         }
-        .battle-state-bridge,
-        .battle-state-bridge * {
-            position: fixed !important;
-            width: 0 !important;
-            height: 0 !important;
-            overflow: hidden !important;
-            visibility: hidden !important;
-            opacity: 0 !important;
-            pointer-events: none !important;
-        }
         body.scene-battle-active .hud-runtime-text {
             display:flex;
             align-items:center;
@@ -1467,6 +1457,28 @@
         }
         .card { z-index: 2; }
 
+        body.scene-battle-active #btn-end-turn {
+            width: 292px !important;
+            height: 110px !important;
+            right: 24px !important;
+            bottom: 214px !important;
+            padding: 0 0 8px !important;
+            background: transparent !important;
+            background-image: var(--asset-end-turn) !important;
+            background-repeat:no-repeat !important;
+            background-position:center !important;
+            background-size:contain !important;
+            border: 0 !important;
+            box-shadow: none !important;
+            color: #24180f !important;
+            font-size: 34px !important;
+            letter-spacing: 6px !important;
+            text-shadow: 0 1px 0 rgba(255,240,210,0.52) !important;
+            z-index: 40 !important;
+        }
+        body.scene-battle-active #btn-end-turn:hover { transform: translateY(-2px); filter: brightness(1.08); }
+        body.scene-battle-active #btn-end-turn:disabled { filter: grayscale(0.5) brightness(0.72); opacity: 0.8; }
+
         .pile-container {
             bottom: 18px;
             width: 104px;
@@ -1537,11 +1549,13 @@
             display: none !important;
         }
         body.scene-battle-active .enemy-hud-panel .status-row,
-        body.scene-battle-active .intent-box {
+        body.scene-battle-active .intent-box,
+        body.scene-battle-active #btn-end-turn {
             background-image: none !important;
         }
         body.scene-battle-active .enemy-hud-panel,
-        body.scene-battle-active .pile-container {
+        body.scene-battle-active .pile-container,
+        body.scene-battle-active #btn-end-turn {
             display: none !important;
             opacity:0 !important;
             pointer-events:none !important;
@@ -1708,6 +1722,8 @@
         .btn-gorgeous.btn-secondary { background: var(--ui-button-secondary); }
         .btn-gorgeous.btn-confirm { background: var(--ui-button-confirm); }
         .btn-gorgeous.btn-back { background: var(--ui-button-back); }
+        #btn-end-turn { width:170px !important; height:58px !important; right:42px !important; bottom:245px !important; padding:0 !important; background:var(--ui-button-confirm) !important; border:1px solid rgba(199,162,88,0.7) !important; box-shadow:0 10px 22px rgba(0,0,0,0.58), inset 0 0 0 1px rgba(255,255,255,0.08) !important; color:#fff0c6 !important; font-size:20px !important; letter-spacing:4px !important; }
+        #btn-end-turn:hover { transform:translateY(-2px); filter:brightness(1.12); }
         .btn-gorgeous:hover { border-color: var(--gold); color: #fff4c5; box-shadow: 0 0 20px rgba(241,196,15,0.24), 0 8px 18px rgba(0,0,0,0.7); transform: translateY(-2px); filter: brightness(1.08);}
         .btn-gorgeous:active { transform: translateY(1px); box-shadow: 0 0 5px var(--gold); }
         .btn-gorgeous:disabled { opacity: 0.4; cursor: not-allowed; box-shadow: none; border-color: #333; color: #666; background: #111;}
@@ -1845,7 +1861,7 @@
         </div>
 
         <div class="hand-area" id="hand-area"></div>
-        <div id="battle-state-bridge" class="battle-state-bridge" hidden inert aria-hidden="true">
+        <div id="battle-state-bridge" class="battle-state-bridge" aria-hidden="true">
             <span id="enemy-name">妖兽</span>
             <span id="intent-icon">⚔️</span>
             <span id="intent-text">准备攻击</span>
@@ -1853,7 +1869,7 @@
             <span id="e-hp-txt">100/100</span>
             <span id="e-hp-fill"></span>
             <div id="enemy-status-row"></div>
-            <span id="battle-end-turn-state"></span>
+            <button id="btn-end-turn" type="button" onclick="endTurn()">结束回合</button>
             <span id="ui-deck-count">0</span>
             <span id="ui-discard-count">0</span>
             <span id="ui-exhaust-count">0</span>
@@ -2003,8 +2019,8 @@
     </div>
 </div>
 
-<script src="hud-runtime.js?v=20260531-dom-hud-removed-v1"></script>
-<script src="hud-layout-data.js?v=20260531-dom-hud-removed-v1"></script>
+<script src="hud-runtime.js?v=20260531-pages-hud-default-v2"></script>
+<script src="hud-layout-data.js?v=20260531-pages-hud-default-v2"></script>
 <script src="src/data/relics.js?v=20260525-data-split1"></script>
 <script src="src/data/cards.js?v=20260525-data-split1"></script>
 <script src="src/data/enemies.js?v=20260525-data-split1"></script>
@@ -2600,6 +2616,7 @@
         'ui-exhaust-count': 'exhaust-pile',
         'enemy-name': 'enemy-name',
         'e-hp-txt': 'enemy-hp',
+        'btn-end-turn': 'end-turn',
         'hand-area': 'hand-tray'
     };
     function getCenter(id) {
@@ -2818,7 +2835,7 @@
     const HUD_EDIT_SAVE_KEY = 'huanjing-hud-layout-runtime-edit-v1';
     const HUD_DEFAULT_PRESET_KEY = window.HuanjingHUDRuntime.HUD_DEFAULT_PRESET_STORAGE_KEY || 'huanjing-hud-layout-default-preset-v1';
     const HUD_FORCED_DEFAULT_VERSION_KEY = 'huanjing-hud-layout-forced-default-version';
-    const HUD_FORCED_DEFAULT_VERSION = '20260531-dom-hud-removed-v1';
+    const HUD_FORCED_DEFAULT_VERSION = '20260531-pages-hud-default-v2';
     const HUD_IDB_NAME = 'huanjing-hud-layout-editor-db';
     const HUD_IDB_STORE_NAME = 'kv';
     const SHOW_RUNTIME_HUD_TEXT = true;

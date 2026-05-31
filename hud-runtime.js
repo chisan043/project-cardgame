@@ -296,8 +296,7 @@
 
             const img = document.createElement('img');
             img.src = resolveItemSource(item, resolveSource);
-            img.alt = '';
-            img.setAttribute('aria-hidden', 'true');
+            img.alt = item.name || 'HUD 图层';
             element.appendChild(img);
 
             if (role === 'hp-fill') metrics.hpFillWidth = rect.width;
