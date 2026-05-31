@@ -1,0 +1,191 @@
+{
+  "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/map_ui_fullscreen_imagegen_v1.png",
+  "output": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1",
+  "assets": [
+    {
+      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/fullscreen/map_ui_fullscreen_imagegen_v1.png",
+      "category": "fullscreen",
+      "source_box": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "note": "完整 image-gen 概念图"
+    },
+    {
+      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/backgrounds/map_center_painted_area_v1.png",
+      "category": "backgrounds",
+      "source_box": [
+        296,
+        66,
+        1233,
+        875
+      ],
+      "note": "中央手绘地图区，含路线与节点构图参考"
+    },
+    {
+      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/backgrounds/map_center_landscape_crop_v1.png",
+      "category": "backgrounds",
+      "source_box": [
+        318,
+        90,
+        1210,
+        850
+      ],
+      "note": "中央地貌绘制参考，可作为后续净背景重绘底稿"
+    },
+    {
+      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/panels/map_left_legend_panel_v1.png",
+      "category": "panels",
+      "source_box": [
+        61,
+        95,
+        298,
+        710
+      ],
+      "note": "左侧图例面板"
+    },
+    {
+      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/panels/map_right_detail_panel_v1.png",
+      "category": "panels",
+      "source_box": [
+        1252,
+        17,
+        1639,
+        881
+      ],
+      "note": "右侧地点详情面板整件"
+    },
+    {
+      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/panels/map_right_church_window_v1.png",
+      "category": "panels",
+      "source_box": [
+        1264,
+        38,
+        1621,
+        459
+      ],
+      "note": "右侧教堂彩窗预览图"
+    },
+    {
+      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/panels/map_right_text_area_v1.png",
+      "category": "panels",
+      "source_box": [
+        1265,
+        477,
+        1618,
+        865
+      ],
+      "note": "右侧文字与按钮区域"
+    },
+    {
+      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/panels/map_top_region_banner_v1.png",
+      "category": "panels",
+      "source_box": [
+        515,
+        8,
+        1146,
+        125
+      ],
+      "note": "顶部区域标题铭牌"
+    },
+    {
+      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/buttons/map_enter_button_v1.png",
+      "category": "buttons",
+      "source_box": [
+        1305,
+        724,
+        1572,
+        804
+      ],
+      "note": "进入按钮"
+    },
+    {
+      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/frames/map_main_frame_v1.png",
+      "category": "frames",
+      "source_box": [
+        28,
+        39,
+        1236,
+        886
+      ],
+      "note": "左侧与中央地图大框架"
+    },
+    {
+      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/nodes/map_node_battle_imagegen_v1.png",
+      "category": "nodes",
+      "source_center": [
+        123,
+        150
+      ],
+      "source_radius": 50,
+      "note": "战斗节点徽章"
+    },
+    {
+      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/nodes/map_node_elite_imagegen_v1.png",
+      "category": "nodes",
+      "source_center": [
+        123,
+        237
+      ],
+      "source_radius": 50,
+      "note": "精英战斗节点徽章"
+    },
+    {
+      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/nodes/map_node_shop_imagegen_v1.png",
+      "category": "nodes",
+      "source_center": [
+        123,
+        323
+      ],
+      "source_radius": 50,
+      "note": "商店节点徽章"
+    },
+    {
+      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/nodes/map_node_rest_imagegen_v1.png",
+      "category": "nodes",
+      "source_center": [
+        123,
+        408
+      ],
+      "source_radius": 50,
+      "note": "休整节点徽章"
+    },
+    {
+      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/nodes/map_node_event_imagegen_v1.png",
+      "category": "nodes",
+      "source_center": [
+        123,
+        493
+      ],
+      "source_radius": 50,
+      "note": "奇遇节点徽章"
+    },
+    {
+      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/nodes/map_node_portal_imagegen_v1.png",
+      "category": "nodes",
+      "source_center": [
+        123,
+        578
+      ],
+      "source_radius": 50,
+      "note": "传送门节点徽章"
+    },
+    {
+      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/nodes/map_node_boss_imagegen_v1.png",
+      "category": "nodes",
+      "source_center": [
+        123,
+        663
+      ],
+      "source_radius": 50,
+      "note": "首领节点徽章"
+    },
+    {
+      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/map_imagegen_sliced_overview_v1.png",
+      "category": "overview",
+      "note": "切图总览板"
+    }
+  ]
+}

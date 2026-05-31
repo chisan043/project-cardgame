@@ -1,0 +1,159 @@
+{
+  "generated_with": "built-in image_gen on #ff00ff chroma-key background, local chroma-key removal, alpha trim, normalized height",
+  "assets": [
+    {
+      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_town_castle_imagegen_transparent_v1.png",
+      "source_chromakey": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_town_castle_imagegen_chromakey_v1.png",
+      "source_transparent_full": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_town_castle_imagegen_transparent_full_v1.png",
+      "label": "城镇与远方城堡",
+      "size": [
+        309,
+        432
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "magenta_fringe_pixels": 0
+    },
+    {
+      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_v1.png",
+      "source_chromakey": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_mountain_plain_imagegen_chromakey_v1.png",
+      "source_transparent_full": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_mountain_plain_imagegen_transparent_full_v1.png",
+      "label": "山地平原",
+      "size": [
+        306,
+        432
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "magenta_fringe_pixels": 0
+    },
+    {
+      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_v1.png",
+      "source_chromakey": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_stone_ruins_imagegen_chromakey_v1.png",
+      "source_transparent_full": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_stone_ruins_imagegen_transparent_full_v1.png",
+      "label": "阳光石遗迹",
+      "size": [
+        304,
+        432
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "magenta_fringe_pixels": 0
+    },
+    {
+      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_v1.png",
+      "source_chromakey": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_ancient_forest_imagegen_chromakey_v1.png",
+      "source_transparent_full": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_ancient_forest_imagegen_transparent_full_v1.png",
+      "label": "古森林溪流",
+      "size": [
+        316,
+        432
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "magenta_fringe_pixels": 0
+    },
+    {
+      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_cold_cave_imagegen_transparent_v1.png",
+      "source_chromakey": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_cold_cave_imagegen_chromakey_v1.png",
+      "source_transparent_full": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_cold_cave_imagegen_transparent_full_v1.png",
+      "label": "冷洞窟",
+      "size": [
+        314,
+        432
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "magenta_fringe_pixels": 0
+    },
+    {
+      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_v1.png",
+      "source_chromakey": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_wasteland_dusk_imagegen_chromakey_v1.png",
+      "source_transparent_full": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_wasteland_dusk_imagegen_transparent_full_v1.png",
+      "label": "荒原黄昏",
+      "size": [
+        304,
+        432
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "magenta_fringe_pixels": 0
+    },
+    {
+      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_dungeon_corridor_imagegen_transparent_v1.png",
+      "source_chromakey": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_dungeon_corridor_imagegen_chromakey_v1.png",
+      "source_transparent_full": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_dungeon_corridor_imagegen_transparent_full_v1.png",
+      "label": "火把地牢长廊",
+      "size": [
+        308,
+        432
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "magenta_fringe_pixels": 0
+    },
+    {
+      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_temple_hall_imagegen_transparent_v1.png",
+      "source_chromakey": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_temple_hall_imagegen_chromakey_v1.png",
+      "source_transparent_full": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_temple_hall_imagegen_transparent_full_v1.png",
+      "label": "宏大圣殿大厅",
+      "size": [
+        323,
+        432
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "magenta_fringe_pixels": 0
+    },
+    {
+      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_temple_inner_light_imagegen_transparent_v1.png",
+      "source_chromakey": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_temple_inner_light_imagegen_chromakey_v1.png",
+      "source_transparent_full": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_temple_inner_light_imagegen_transparent_full_v1.png",
+      "label": "圣殿内光",
+      "size": [
+        309,
+        432
+      ],
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "magenta_fringe_pixels": 0
+    }
+  ],
+  "overview": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/overview_map_stained_windows_imagegen_v1.png"
+}
