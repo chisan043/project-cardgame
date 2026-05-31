@@ -587,8 +587,6 @@
         .battle-action-entry-detail { color:#d8d8d8; }
         .battle-action-empty { color:rgba(232,209,150,0.68); font-size:12px; line-height:1.6; text-align:left; }
 
-        .enemy-hud-panel { position: fixed; top: 18px; right: max(22px, calc((100vw - 1280px) / 2 + 22px)); width: 420px; min-height: 146px; padding: 22px 28px 18px; box-sizing: border-box; background: linear-gradient(135deg, rgba(59,27,33,0.94), rgba(14,15,24,0.95)); border:1px solid rgba(199,162,88,0.7); border-radius:12px 4px 18px 4px; filter: drop-shadow(0 14px 24px rgba(0,0,0,0.62)); z-index:5900; pointer-events:auto; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.06); }
-        .enemy-name { font-size: 21px; color: #fff6dc; letter-spacing: 4px; margin: 0 0 8px; font-weight: bold; text-shadow: 0 2px 0 #2a1518, 0 0 8px rgba(0,0,0,0.8); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
         .hud-bar-wrap { margin: 8px auto 0; }
         .hp-bar-bg { width: 100%; height: 16px; padding: 3px; box-sizing: border-box; background: var(--hud-bar-frame); border-radius: 4px; overflow: hidden; position: relative; border: 1px solid rgba(199,162,88,0.46); box-shadow: 0 0 10px black;}
         .hp-bar-fill { height: 100%; background: var(--hud-hp-fill); transition: width 0.3s cubic-bezier(0.2, 0.8, 0.2, 1); box-shadow: inset 0 0 8px rgba(255,255,255,0.16); }
@@ -606,20 +604,8 @@
 
         .status-tooltip { pointer-events: none; visibility: hidden; opacity: 0; position: absolute; bottom: 130%; left: 50%; transform: translateX(-50%); background: rgba(10,10,15,0.98); border: 1px solid var(--gold-dark); padding: 10px 15px; font-size: 13px; color: #ddd; white-space: nowrap; border-radius: 4px; box-shadow: 0 0 20px black; z-index: 9999; transition: 0.2s; font-weight: normal; text-align: left; line-height: 1.5; font-family: "STKaiti", serif;}
         
-        .status-row .status-badge .status-tooltip, .intent-box .status-tooltip { bottom: auto; top: 130%; }
-        .status-badge:hover .status-tooltip, .intent-box:hover .status-tooltip, .relic-icon:hover .status-tooltip { visibility: visible; opacity: 1; z-index: 9999;}
-
-        .intent-box { position: relative; margin: 0 auto 7px auto; min-width: 230px; min-height: 42px; font-size: 14px; padding: 8px 20px; border-radius:6px; display: inline-flex; align-items: center; justify-content:center; gap: 8px; background:linear-gradient(135deg, rgba(69,22,37,0.72), rgba(22,18,31,0.72)); border:1px solid rgba(199,162,88,0.42); color: #fff; font-weight: bold; cursor: help; transition: 0.3s; box-shadow: none;}
-        .intent-box:hover { border-color: var(--gold); box-shadow: 0 0 15px rgba(241,196,15,0.5); }
-        
-        .pile-container { position: absolute; bottom: 64px; width: 110px; min-height: 158px; text-align: center; cursor: pointer; transition: 0.3s; z-index: 100; padding-top: 92px; box-sizing:border-box; background:linear-gradient(180deg, rgba(28,48,76,0.62), rgba(12,12,16,0.82)); border:1px solid rgba(199,162,88,0.28); box-shadow:0 8px 18px rgba(0,0,0,0.45), inset 0 0 0 1px rgba(255,255,255,0.05); }
-        .pile-container:hover { transform: scale(1.1); filter: brightness(1.2); }
-        .deck-pile { left: 34px; }
-        .discard-pile { right: 34px; }
-        #pile-exhaust { right: 154px !important; }
-        .pile-icon { display:block; font-size:42px; filter:drop-shadow(0 10px 10px rgba(0,0,0,0.8)); } 
-        .pile-count { position: absolute; top: 22px; right: 18px; background: linear-gradient(135deg, #64202b, #14080d); color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; border: 2px solid var(--stained-brass); box-shadow: 0 0 10px black; font-family: "Arial", sans-serif;}
-        .pile-label { font-size: 14px; color: #d9c28a; font-weight: bold; margin-top: 5px; letter-spacing: 2px; text-shadow: 0 0 5px black;}
+        .status-row .status-badge .status-tooltip { bottom: auto; top: 130%; }
+        .status-badge:hover .status-tooltip, .relic-icon:hover .status-tooltip { visibility: visible; opacity: 1; z-index: 9999;}
 
         .vfx-layer { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 999; display: none; justify-content: center; align-items: center; overflow: hidden;}
         .vfx-p-atk .slash { width: 0; height: 8px; background: white; box-shadow: 0 0 30px var(--water), 0 0 10px white; transform: rotate(-35deg); opacity: 0; border-radius: 50%;}
@@ -710,6 +696,19 @@
             transform-origin: top center;
             z-index:180;
             pointer-events:none;
+        }
+        body.scene-battle-active,
+        body.scene-battle-active * {
+            -webkit-user-select:none;
+            user-select:none;
+            -webkit-user-drag:none;
+        }
+        body.scene-battle-active input,
+        body.scene-battle-active textarea,
+        body.scene-battle-active [contenteditable="true"],
+        body.scene-battle-active .allow-text-select {
+            -webkit-user-select:text;
+            user-select:text;
         }
         body.scene-battle-active .player-hud-layer,
         body.scene-battle-active .player-hud-live-portrait {
@@ -875,7 +874,11 @@
             align-content:flex-start;
             gap:8px;
             overflow:visible;
+            background: transparent !important;
+            border: 0 !important;
+            box-shadow: none !important;
         }
+        .battle-status-strip:empty { display:none !important; }
         .battle-status-strip-player {
             width:470px;
             min-height:36px;
@@ -916,9 +919,6 @@
             width:470px;
             min-height:36px;
             justify-content:flex-start;
-        }
-        .battle-state-bridge {
-            display:none !important;
         }
         body.scene-battle-active .hud-runtime-text {
             display:flex;
@@ -1112,13 +1112,54 @@
             white-space:nowrap;
         }
         body.scene-battle-active .hud-runtime-intent .status-tooltip {
+            position:fixed;
             bottom:auto;
-            top:120%;
-            left:8%;
+            top:auto;
+            left:auto;
             transform:none;
-            z-index:10050;
+            z-index:32000;
+            min-width:210px;
+            max-width:276px;
+            white-space:normal;
+            box-sizing:border-box;
         }
         body.scene-battle-active .hud-runtime-intent:hover .status-tooltip {
+            visibility:visible;
+            opacity:1;
+        }
+        .battle-fixed-tooltip {
+            position:fixed !important;
+            display:block;
+            visibility:hidden;
+            opacity:0;
+            z-index:32000;
+            width:fit-content;
+            min-width:220px;
+            max-width:min(320px, calc(100vw - 20px));
+            height:auto;
+            min-height:40px;
+            padding:10px 14px;
+            box-sizing:border-box;
+            pointer-events:none;
+            background:rgba(10,10,15,0.98);
+            border:1px solid var(--gold-dark);
+            border-radius:4px;
+            box-shadow:0 0 20px black;
+            color:#ddd;
+            font-size:13px;
+            font-weight:normal;
+            font-family:"STKaiti", serif;
+            text-align:left;
+            white-space:normal;
+            overflow:visible !important;
+            overflow-wrap:anywhere;
+            word-break:break-word;
+            line-break:anywhere;
+            line-height:1.55;
+            transform:none !important;
+            transition:opacity 0.12s ease;
+        }
+        .battle-fixed-tooltip.is-visible {
             visibility:visible;
             opacity:1;
         }
@@ -1313,120 +1354,6 @@
             pointer-events: none;
         }
 
-        .enemy-hud-panel {
-            top: 18px;
-            right: max(14px, calc((100vw - 1280px) / 2 + 14px));
-            width: 570px;
-            min-height: 206px;
-            padding: 0;
-            background: transparent !important;
-            border: 0 !important;
-            box-shadow: none !important;
-            filter: none !important;
-            overflow: visible;
-            z-index: 18;
-        }
-        .enemy-hud-panel::before {
-            content:"";
-            position:absolute;
-            inset:0;
-            background-image: var(--asset-enemy-panel);
-            background-repeat: no-repeat;
-            background-position: right top;
-            background-size: contain;
-            pointer-events:none;
-        }
-        .enemy-name {
-            position:absolute;
-            left: 92px;
-            top: 9px;
-            width: 212px;
-            margin: 0;
-            font-size: 14px;
-            text-align:center;
-            letter-spacing: 2px;
-        }
-        .enemy-hud-panel .hud-bar-wrap {
-            position:absolute;
-            left: 71px;
-            top: 49px;
-            width: 330px;
-            margin: 0;
-        }
-        .enemy-hud-panel .hp-bar-bg {
-            width: 100%;
-            height: 23px;
-            padding: 4px 11px;
-            background: transparent;
-            border: 0;
-            box-shadow: none;
-        }
-        .enemy-hud-panel .hp-bar-fill {
-            border-radius: 5px;
-            box-shadow: inset 0 0 8px rgba(255,255,255,0.16), 0 0 10px rgba(190,32,42,0.34);
-        }
-        .enemy-hud-panel .hp-text-line {
-            margin-top: 2px;
-            padding-right: 10px;
-            text-align: right;
-            color:#f3e6c3;
-            font-size: 0;
-            letter-spacing: 0;
-        }
-        #e-hp-txt {
-            font-size: 14px;
-            color:#f3e6c3;
-            text-shadow: 0 2px 0 #180b0d, 0 0 6px rgba(0,0,0,0.8);
-        }
-        .enemy-hud-panel .status-row {
-            position:absolute;
-            left: 72px;
-            top: 94px;
-            width: 322px;
-            min-height: 42px;
-            margin: 0;
-            padding: 6px 18px 4px;
-            justify-content:flex-start;
-            background-image: var(--asset-enemy-status);
-            background-repeat:no-repeat;
-            background-position:center;
-            background-size: contain;
-            background-color: transparent;
-            border: 0;
-            border-radius: 0;
-        }
-        .intent-box {
-            position:absolute;
-            left: 69px;
-            top: 133px;
-            width: 360px;
-            min-width: 0;
-            min-height: 44px;
-            margin: 0;
-            padding: 0 18px 0 54px;
-            gap: 8px;
-            background-image: var(--asset-intent-panel);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 100% 100%;
-            background-color: transparent;
-            border: 0;
-            border-radius: 0;
-            box-shadow: none;
-        }
-        .intent-box:hover { box-shadow:none; filter: brightness(1.06); }
-        #intent-icon {
-            position:absolute;
-            left: 16px;
-            top: 7px;
-            font-size: 18px;
-            filter: drop-shadow(0 2px 3px rgba(0,0,0,0.72));
-        }
-        #intent-text {
-            font-size: 14px;
-            color:#f2dfb8;
-            text-shadow: 0 2px 0 #180b0d, 0 0 6px rgba(0,0,0,0.8);
-        }
         .enemy-avatar-wrapper {
             right: -18px;
             bottom: 20px;
@@ -1457,117 +1384,13 @@
         }
         .card { z-index: 2; }
 
-        body.scene-battle-active #btn-end-turn {
-            width: 292px !important;
-            height: 110px !important;
-            right: 24px !important;
-            bottom: 214px !important;
-            padding: 0 0 8px !important;
-            background: transparent !important;
-            background-image: var(--asset-end-turn) !important;
-            background-repeat:no-repeat !important;
-            background-position:center !important;
-            background-size:contain !important;
-            border: 0 !important;
-            box-shadow: none !important;
-            color: #24180f !important;
-            font-size: 34px !important;
-            letter-spacing: 6px !important;
-            text-shadow: 0 1px 0 rgba(255,240,210,0.52) !important;
-            z-index: 40 !important;
-        }
-        body.scene-battle-active #btn-end-turn:hover { transform: translateY(-2px); filter: brightness(1.08); }
-        body.scene-battle-active #btn-end-turn:disabled { filter: grayscale(0.5) brightness(0.72); opacity: 0.8; }
-
-        .pile-container {
-            bottom: 18px;
-            width: 104px;
-            min-height: 182px;
-            padding-top: 118px;
-            background: transparent !important;
-            border: 0 !important;
-            box-shadow: none !important;
-            z-index: 32;
-        }
-        .pile-container:hover { transform: translateY(-4px) scale(1.04); filter: brightness(1.08); }
-        .deck-pile { left: 28px; }
-        .discard-pile { right: 28px; }
-        #pile-exhaust { right: 150px !important; }
-        .deck-pile::before,
-        .discard-pile::before,
-        #pile-exhaust::before {
-            content:"";
-            position:absolute;
-            inset: 0;
-            background-repeat:no-repeat;
-            background-position:center top;
-            background-size: 88px auto;
-            pointer-events:none;
-        }
-        .deck-pile::before { background-image: var(--asset-draw-pile); }
-        .discard-pile::before { background-image: var(--asset-discard-pile); }
-        #pile-exhaust::before { background-image: var(--asset-exile-pile); }
-        .pile-icon { display:none; }
-        .pile-count {
-            top: 124px;
-            left: 50%;
-            right: auto;
-            width: 48px;
-            height: 28px;
-            transform: translateX(-50%);
-            background: transparent;
-            border: 0;
-            border-radius: 0;
-            box-shadow: none;
-            font-size: 15px;
-            color:#f6e4ba;
-            text-shadow: 0 2px 0 #12090c, 0 0 8px rgba(0,0,0,0.92);
-        }
-        .pile-count::before {
-            content:"";
-            position:absolute;
-            inset:-3px -5px;
-            background-image: var(--asset-pile-count);
-            background-repeat:no-repeat;
-            background-position:center;
-            background-size:contain;
-            z-index:-1;
-        }
-        .pile-label {
-            margin-top: 6px;
-            font-size: 13px;
-            letter-spacing: 1px;
-            color:#dbc793 !important;
-        }
-
-        body.scene-battle-active .enemy-hud-panel::before,
-        body.scene-battle-active .hand-area::after,
-        body.scene-battle-active .deck-pile::before,
-        body.scene-battle-active .discard-pile::before,
-        body.scene-battle-active #pile-exhaust::before,
-        body.scene-battle-active .pile-count::before {
+        body.scene-battle-active .hand-area::after {
             display: none !important;
-        }
-        body.scene-battle-active .enemy-hud-panel .status-row,
-        body.scene-battle-active .intent-box,
-        body.scene-battle-active #btn-end-turn {
-            background-image: none !important;
-        }
-        body.scene-battle-active .enemy-hud-panel,
-        body.scene-battle-active .pile-container,
-        body.scene-battle-active #btn-end-turn {
-            display: none !important;
-            opacity:0 !important;
-            pointer-events:none !important;
         }
         body.scene-battle-active .top-bar {
             display: none !important;
             opacity: 0 !important;
             pointer-events: none !important;
-        }
-        body.scene-battle-active .enemy-hud-panel,
-        body.scene-battle-active .pile-container {
-            z-index: 45;
         }
         
         .card.sealed { filter: grayscale(1) brightness(0.6); }
@@ -1722,8 +1545,6 @@
         .btn-gorgeous.btn-secondary { background: var(--ui-button-secondary); }
         .btn-gorgeous.btn-confirm { background: var(--ui-button-confirm); }
         .btn-gorgeous.btn-back { background: var(--ui-button-back); }
-        #btn-end-turn { width:170px !important; height:58px !important; right:42px !important; bottom:245px !important; padding:0 !important; background:var(--ui-button-confirm) !important; border:1px solid rgba(199,162,88,0.7) !important; box-shadow:0 10px 22px rgba(0,0,0,0.58), inset 0 0 0 1px rgba(255,255,255,0.08) !important; color:#fff0c6 !important; font-size:20px !important; letter-spacing:4px !important; }
-        #btn-end-turn:hover { transform:translateY(-2px); filter:brightness(1.12); }
         .btn-gorgeous:hover { border-color: var(--gold); color: #fff4c5; box-shadow: 0 0 20px rgba(241,196,15,0.24), 0 8px 18px rgba(0,0,0,0.7); transform: translateY(-2px); filter: brightness(1.08);}
         .btn-gorgeous:active { transform: translateY(1px); box-shadow: 0 0 5px var(--gold); }
         .btn-gorgeous:disabled { opacity: 0.4; cursor: not-allowed; box-shadow: none; border-color: #333; color: #666; background: #111;}
@@ -1861,19 +1682,6 @@
         </div>
 
         <div class="hand-area" id="hand-area"></div>
-        <div id="battle-state-bridge" class="battle-state-bridge" aria-hidden="true">
-            <span id="enemy-name">妖兽</span>
-            <span id="intent-icon">⚔️</span>
-            <span id="intent-text">准备攻击</span>
-            <span id="intent-tooltip">对玩家造成伤害。</span>
-            <span id="e-hp-txt">100/100</span>
-            <span id="e-hp-fill"></span>
-            <div id="enemy-status-row"></div>
-            <button id="btn-end-turn" type="button" onclick="endTurn()">结束回合</button>
-            <span id="ui-deck-count">0</span>
-            <span id="ui-discard-count">0</span>
-            <span id="ui-exhaust-count">0</span>
-        </div>
     </div>
 </div>
 
@@ -2546,6 +2354,27 @@
     };
     let shopDeletePrice = 50;
 
+    function shouldSuppressBattleSelection(event) {
+        if (!document.body.classList.contains('scene-battle-active')) return false;
+        const target = event?.target;
+        if (target?.closest?.('input, textarea, [contenteditable="true"], .allow-text-select')) return false;
+        return true;
+    }
+
+    document.addEventListener('selectstart', event => {
+        if (shouldSuppressBattleSelection(event)) event.preventDefault();
+    }, true);
+    document.addEventListener('dragstart', event => {
+        if (shouldSuppressBattleSelection(event)) event.preventDefault();
+    }, true);
+    document.addEventListener('selectionchange', () => {
+        if (!document.body.classList.contains('scene-battle-active')) return;
+        const active = document.activeElement;
+        if (active?.closest?.('input, textarea, [contenteditable="true"], .allow-text-select')) return;
+        const selection = window.getSelection?.();
+        if (selection && !selection.isCollapsed) selection.removeAllRanges();
+    });
+
     function createStarterCard({ name, type, cost, icon, val, tags = [], rarity = '普通' }) {
         return {
             id: Math.random().toString(36).substr(2, 9),
@@ -2616,7 +2445,6 @@
         'ui-exhaust-count': 'exhaust-pile',
         'enemy-name': 'enemy-name',
         'e-hp-txt': 'enemy-hp',
-        'btn-end-turn': 'end-turn',
         'hand-area': 'hand-tray'
     };
     function getCenter(id) {
@@ -2835,11 +2663,28 @@
     const HUD_EDIT_SAVE_KEY = 'huanjing-hud-layout-runtime-edit-v1';
     const HUD_DEFAULT_PRESET_KEY = window.HuanjingHUDRuntime.HUD_DEFAULT_PRESET_STORAGE_KEY || 'huanjing-hud-layout-default-preset-v1';
     const HUD_FORCED_DEFAULT_VERSION_KEY = 'huanjing-hud-layout-forced-default-version';
-    const HUD_FORCED_DEFAULT_VERSION = '20260518-desktop-hud-layout-final-v1';
+    const HUD_FORCED_DEFAULT_VERSION = '20260531-bundled-compact-hud-v1';
     const HUD_IDB_NAME = 'huanjing-hud-layout-editor-db';
     const HUD_IDB_STORE_NAME = 'kv';
     const SHOW_RUNTIME_HUD_TEXT = true;
+    const BUNDLED_ENEMY_INTENT_TRAY_SRC = 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_tray_asset_v1_no_circles_transparent.png';
+    const LEGACY_BATTLE_HUD_ITEM_RE = /玩家护甲条框|玩家能量槽|玩家状态栏|敌方总图参考|敌方护甲条框|敌方状态栏|player_hp_bar_long_fill_gray_base_asset_v1|enemy_status_bar_shell_asset_v1|battle_hud_enemy_panel_asset_v1|敌方状态底/;
+
+    function isLegacyBattleHudItem(item) {
+        const key = `${item?.name || ''} ${item?.src || ''} ${item?.assetId || ''}`;
+        return LEGACY_BATTLE_HUD_ITEM_RE.test(key);
+    }
+
+    function pruneLegacyBattleHudItems(layout) {
+        if (!layout || !Array.isArray(layout.items)) return layout;
+        layout.items = layout.items.filter(item => !isLegacyBattleHudItem(item));
+        return layout;
+    }
+
     function getDefaultBattleHudLayout(seed = window.HUANJING_HUD_LAYOUT || {}) {
+        if (seed && Array.isArray(seed.items) && seed.items.length) {
+            return window.HuanjingHUDRuntime.normalizeLayout(seed);
+        }
         return window.HuanjingHUDRuntime.createDefaultBattleHudLayout(seed);
     }
 
@@ -2852,6 +2697,12 @@
             const key = `${name} ${item.assetId || ''} ${item.src || ''}`;
             const x = Number(item.x ?? item.position?.[0] ?? 0);
             const isEnemySide = /敌|enemy|副本/i.test(key) || (x > referenceWidth * 0.52 && /(生命|状态|头像|名牌|意图)/.test(key));
+
+            if (/敌方意图框/.test(name)) {
+                item.src = BUNDLED_ENEMY_INTENT_TRAY_SRC;
+                item.flipX = true;
+                item.binding = 'enemy-intent';
+            }
 
             if (isEnemySide) {
                 if (/生命残影/.test(key) || item.binding === 'player-hp-lag') item.binding = 'enemy-hp-lag';
@@ -2918,10 +2769,10 @@
     }
 
     function normalizeBattleHudLayout(config) {
-        if (config && Array.isArray(config.items) && config.items.length) {
-            return migrateBattleHudBindings(window.HuanjingHUDRuntime.normalizeLayout(config));
-        }
-        return migrateBattleHudBindings(getDefaultBattleHudLayout(config || window.HUANJING_HUD_LAYOUT || {}));
+        const layout = config && Array.isArray(config.items) && config.items.length
+            ? window.HuanjingHUDRuntime.normalizeLayout(config)
+            : getDefaultBattleHudLayout(config || window.HUANJING_HUD_LAYOUT || {});
+        return pruneLegacyBattleHudItems(migrateBattleHudBindings(layout));
     }
 
     let PLAYER_HUD_LAYOUT_SOURCE = {
@@ -2997,49 +2848,19 @@
     function loadPlayerHudLayout() {
         const fallback = getDefaultBattleHudLayout(window.HUANJING_HUD_LAYOUT || {});
         try {
-            if (localStorage.getItem(HUD_FORCED_DEFAULT_VERSION_KEY) !== HUD_FORCED_DEFAULT_VERSION) {
-                localStorage.removeItem(window.HuanjingHUDRuntime.HUD_SYNC_STORAGE_KEY);
-                localStorage.removeItem(HUD_DEFAULT_PRESET_KEY);
-                localStorage.removeItem(HUD_EDIT_SAVE_KEY);
-                localStorage.setItem(HUD_FORCED_DEFAULT_VERSION_KEY, HUD_FORCED_DEFAULT_VERSION);
-            }
+            localStorage.removeItem(window.HuanjingHUDRuntime.HUD_SYNC_STORAGE_KEY);
+            localStorage.removeItem(HUD_DEFAULT_PRESET_KEY);
+            localStorage.removeItem(HUD_EDIT_SAVE_KEY);
+            localStorage.setItem(HUD_FORCED_DEFAULT_VERSION_KEY, HUD_FORCED_DEFAULT_VERSION);
         } catch (error) {
             console.warn('HUD 旧缓存清理失败，将直接使用内置默认布局。', error);
         }
-        try {
-            const live = JSON.parse(localStorage.getItem(window.HuanjingHUDRuntime.HUD_SYNC_STORAGE_KEY) || 'null');
-            if (live && Array.isArray(live.items)) return rememberPlayerHudLayoutSource('live-runtime-json', window.HuanjingHUDRuntime.HUD_SYNC_STORAGE_KEY, normalizeBattleHudLayout(live));
-            const defaultPreset = JSON.parse(localStorage.getItem(HUD_DEFAULT_PRESET_KEY) || 'null');
-            if (defaultPreset && Array.isArray(defaultPreset.items)) return rememberPlayerHudLayoutSource('default-preset-json', HUD_DEFAULT_PRESET_KEY, normalizeBattleHudLayout(defaultPreset));
-            const saved = JSON.parse(localStorage.getItem(HUD_EDIT_SAVE_KEY) || 'null');
-            if (saved && Array.isArray(saved.items)) return rememberPlayerHudLayoutSource('runtime-edit-json', HUD_EDIT_SAVE_KEY, normalizeBattleHudLayout(saved));
-        } catch (error) {
-            console.warn('HUD 编辑配置读取失败，回退到内置布局。', error);
-        }
-        return rememberPlayerHudLayoutSource('bundled-hud-layout-data', 'window.HUANJING_HUD_LAYOUT / runtime defaults', normalizeBattleHudLayout(fallback));
+        return rememberPlayerHudLayoutSource('bundled-hud-layout-data', 'window.HUANJING_HUD_LAYOUT only', normalizeBattleHudLayout(fallback));
     }
 
     async function hydratePlayerHudLayoutFromIndexedDb() {
-        try {
-            const localLayout = localStorage.getItem(window.HuanjingHUDRuntime.HUD_SYNC_STORAGE_KEY)
-                || localStorage.getItem(HUD_DEFAULT_PRESET_KEY)
-                || localStorage.getItem(HUD_EDIT_SAVE_KEY);
-            if (localLayout) return;
-        } catch (error) {
-            console.warn('HUD 本地缓存检查失败，将尝试 IndexedDB 默认预设。', error);
-        }
-        try {
-            const stored = await hudDbGetValue(HUD_DEFAULT_PRESET_KEY);
-            if (!stored || !Array.isArray(stored.items)) return;
-            const payload = normalizeBattleHudLayout(stored);
-            window.HuanjingHUDRuntime.applyConfig(PLAYER_HUD_LAYOUT, payload);
-            window.HUANJING_HUD_LAYOUT = payload;
-            rememberPlayerHudLayoutSource('default-preset-indexeddb', `IndexedDB:${HUD_DEFAULT_PRESET_KEY}`, payload);
-            renderPlayerHudAssembly();
-            refreshRuntimeHudBindings();
-        } catch (error) {
-            console.warn('HUD IndexedDB 默认预设读取失败。', error);
-        }
+        // The bundled HUD layout is the source of truth for the playable demo.
+        // Old editor presets can contain the abandoned oversized HUD pieces.
     }
     const PLAYER_HUD_LAYOUT = loadPlayerHudLayout();
     const PLAYER_HUD_BATTLE_WIDTH = 1280;
@@ -3304,6 +3125,52 @@
         return el;
     }
 
+    function getBattleFixedTooltip() {
+        let tooltip = document.getElementById('battle-fixed-tooltip');
+        if (!tooltip) {
+            tooltip = document.createElement('div');
+            tooltip.id = 'battle-fixed-tooltip';
+            tooltip.className = 'battle-fixed-tooltip';
+            document.body.appendChild(tooltip);
+        }
+        return tooltip;
+    }
+
+    function positionBattleIntentTooltip(intentHotspot, tooltip = getBattleFixedTooltip()) {
+        if (!tooltip) return;
+        const intentRect = intentHotspot.getBoundingClientRect();
+        const actionLogRect = document.getElementById('battle-action-log')?.getBoundingClientRect();
+        const margin = 10;
+        const tooltipWidth = tooltip.offsetWidth || 260;
+        const tooltipHeight = Math.max(54, tooltip.offsetHeight || 80);
+        let left = intentRect.left + 8;
+        if (actionLogRect && left + tooltipWidth > actionLogRect.left - margin) {
+            left = actionLogRect.left - tooltipWidth - margin;
+        }
+        left = Math.max(margin, Math.min(left, window.innerWidth - tooltipWidth - margin));
+        let top = intentRect.bottom + 8;
+        if (top + tooltipHeight > window.innerHeight - margin) {
+            top = Math.max(margin, intentRect.top - tooltipHeight - 8);
+        }
+        tooltip.style.left = `${Math.round(left)}px`;
+        tooltip.style.top = `${Math.round(top)}px`;
+    }
+
+    function showBattleIntentTooltip(intentHotspot, text) {
+        const tooltip = getBattleFixedTooltip();
+        tooltip.textContent = text || '';
+        tooltip.style.left = '-9999px';
+        tooltip.style.top = '0';
+        tooltip.style.height = 'auto';
+        tooltip.classList.add('is-visible');
+        positionBattleIntentTooltip(intentHotspot, tooltip);
+    }
+
+    function hideBattleIntentTooltip() {
+        const tooltip = document.getElementById('battle-fixed-tooltip');
+        if (tooltip) tooltip.classList.remove('is-visible');
+    }
+
     function createHudBindingFromRect(root, sourceItem, className, rect, options = {}) {
         if (!sourceItem || !rect) return null;
         const item = window.HuanjingHUDRuntime.syncItemLayoutFields({
@@ -3455,7 +3322,7 @@
     function renderHudStatusIcons(target) {
         return getStatusEntries(target).map(entry => (
             `<div class="status-badge ${entry.tone || ''}">` +
-                (getStatusIconPath(entry.id) ? `<img class="status-icon-img" src="${getStatusIconPath(entry.id)}" alt="${escapeAttr(entry.label)}">` : `<span class="status-icon-glyph">${entry.icon}</span>`) +
+                (getStatusIconPath(entry.id) ? `<img class="status-icon-img" src="${getStatusIconPath(entry.id)}" alt="" aria-hidden="true">` : `<span class="status-icon-glyph" aria-hidden="true">${entry.icon}</span>`) +
                 (entry.value !== null && entry.value !== undefined ? `<span class="status-stack">x${entry.value}</span>` : '') +
                 `<div class="status-tooltip"><span style="color:var(--gold); font-weight:bold;">${entry.label}</span><br>${entry.tooltip}</div>` +
             `</div>`
@@ -3592,13 +3459,19 @@
 
         updateBattlefieldStatusStrips();
         if (enemyIntentItem) {
-            const icon = state.enemy?.intentIcon || document.getElementById('intent-icon')?.innerText || '';
-            const intent = state.enemy?.intentText || document.getElementById('intent-text')?.innerText || '';
-            const tooltip = state.enemy?.intentTooltip || document.getElementById('intent-tooltip')?.innerText || `${icon} ${intent}`.trim();
+            const icon = state.enemy?.intentIcon || '';
+            const intent = state.enemy?.intentText || '';
+            const tooltip = state.enemy?.intentTooltip || `${icon} ${intent}`.trim();
             const intentHotspot = createHudBinding(root, enemyIntentItem, 'hud-runtime-intent', { inset: [38, 9, 110, 11], zIndex: 9310 });
             if (intentHotspot) {
-                intentHotspot.title = tooltip;
-                intentHotspot.innerHTML = `<span class="intent-icon">${escapeAttr(icon)}</span><span class="intent-label">${escapeAttr(intent)}</span><div class="status-tooltip">${escapeAttr(tooltip)}</div>`;
+                intentHotspot.removeAttribute('title');
+                intentHotspot.setAttribute('aria-label', tooltip);
+                intentHotspot.innerHTML = `<span class="intent-icon">${escapeAttr(icon)}</span><span class="intent-label">${escapeAttr(intent)}</span>`;
+                intentHotspot.onmouseenter = () => showBattleIntentTooltip(intentHotspot, tooltip);
+                intentHotspot.onmousemove = () => positionBattleIntentTooltip(intentHotspot);
+                intentHotspot.onmouseleave = hideBattleIntentTooltip;
+                intentHotspot.onfocus = () => showBattleIntentTooltip(intentHotspot, tooltip);
+                intentHotspot.onblur = hideBattleIntentTooltip;
             }
         }
 
@@ -3756,6 +3629,9 @@
             itemClassName: 'player-hud-layer',
             selectedIds: hudEditSelectedId ? [hudEditSelectedId] : [],
             selectedClassName: 'hud-edit-selected',
+            filterItem(item) {
+                return !isLegacyBattleHudItem(item);
+            },
             decorateItem({ element, img, item, role, rect }) {
                 if (role === 'hp-lag' || role === 'hp-fill' || role === 'enemy-hp-lag' || role === 'enemy-hp-fill') {
                     img.style.width = `${Math.round(rect.width)}px`;
@@ -4572,9 +4448,6 @@
             };
             enemyAvatarImg.src = getEnemyVisualPath(state.enemy);
         }
-        document.getElementById('enemy-name').innerText = state.enemy.name; 
-        document.getElementById('e-hp-txt').innerText = `${state.enemy.currentHp}/${state.enemy.maxHp}`; document.getElementById('e-hp-fill').style.width = (Math.max(0, state.enemy.currentHp) / state.enemy.maxHp * 100) + '%';
-        
         let move = state.enemy.nextMove; 
         let vText = move.val;
         
@@ -4602,21 +4475,6 @@
         state.enemy.intentIcon = iIcon;
         state.enemy.intentText = intentLabel;
         state.enemy.intentTooltip = iDesc;
-        document.getElementById('intent-icon').innerText = iIcon; 
-        document.getElementById('intent-text').innerText = intentLabel; 
-        document.getElementById('intent-tooltip').innerText = iDesc;
-        
-        const statusRow = document.getElementById('enemy-status-row'); statusRow.innerHTML = '';
-        if(state.enemy.armor > 0) statusRow.innerHTML += `<div class="status-badge badge-armor">🛡️ 护盾: ${state.enemy.armor}<div class="status-tooltip">${STATUS_DESC['armor']}</div></div>`;
-        if(state.enemy.poison > 0) statusRow.innerHTML += `<div class="status-badge badge-poison">☠️ 剧毒: ${state.enemy.poison}<div class="status-tooltip">${STATUS_DESC['poison']}</div></div>`;
-        if(state.enemy.bleed > 0) statusRow.innerHTML += `<div class="status-badge badge-bleed">🩸 出血: ${state.enemy.bleed}<div class="status-tooltip">${STATUS_DESC['bleed']}</div></div>`;
-        if(state.enemy.burn > 0) statusRow.innerHTML += `<div class="status-badge badge-str">🔥 燃烧: ${state.enemy.burn}<div class="status-tooltip">${STATUS_DESC['burn']}</div></div>`;
-        if(state.enemy.stun > 0) statusRow.innerHTML += `<div class="status-badge badge-str">✦ 眩晕: ${state.enemy.stun}<div class="status-tooltip">${STATUS_DESC['stun']}</div></div>`;
-        if(state.enemy.curse > 0) statusRow.innerHTML += `<div class="status-badge badge-vuln">⛓️ 诅咒: ${state.enemy.curse}<div class="status-tooltip">${STATUS_DESC['curse']}</div></div>`;
-        if(state.enemy.vuln > 0) statusRow.innerHTML += `<div class="status-badge badge-vuln">🎯 易伤: ${state.enemy.vuln}<div class="status-tooltip">${STATUS_DESC['vuln']}</div></div>`;
-        if(state.enemy.weak > 0) statusRow.innerHTML += `<div class="status-badge badge-weak">📉 虚弱: ${state.enemy.weak}<div class="status-tooltip">${STATUS_DESC['weak']}</div></div>`;
-        if(state.enemy.str > 0) statusRow.innerHTML += `<div class="status-badge badge-str">💪 力量: ${state.enemy.str}<div class="status-tooltip">${STATUS_DESC['str']}</div></div>`;
-        if(state.enemy.charged) statusRow.innerHTML += `<div class="status-badge badge-str" style="background:#c0392b;">🔥 蓄力<div class="status-tooltip">${STATUS_DESC['charge']}</div></div>`;
         updateBattlefieldStatusStrips();
 
         const minionWrapper = document.getElementById('enemy-minion-wrapper');
@@ -4646,7 +4504,7 @@
         } else { minionWrapper.style.display = 'none'; }
 
         renderBattleActionLog();
-        document.getElementById('ui-deck-count').innerText = state.battleDeck.length; document.getElementById('ui-discard-count').innerText = state.discardPile.length; document.getElementById('ui-exhaust-count').innerText = state.exhaustPile.length; updateTopBar();
+        updateTopBar();
     }
 
     async function drawCards(num) {

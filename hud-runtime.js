@@ -284,6 +284,7 @@
             element.dataset.flipY = item.flipY ? 'true' : 'false';
             element.dataset.baseWidth = String(Math.round(rect.width));
             element.dataset.baseHeight = String(Math.round(rect.height));
+            element.setAttribute('aria-hidden', 'true');
             element.style.left = `${Math.round(rect.x)}px`;
             element.style.top = `${Math.round(rect.y)}px`;
             element.style.width = `${Math.round(rect.width)}px`;
@@ -296,7 +297,8 @@
 
             const img = document.createElement('img');
             img.src = resolveItemSource(item, resolveSource);
-            img.alt = item.name || 'HUD 图层';
+            img.alt = '';
+            img.setAttribute('aria-hidden', 'true');
             element.appendChild(img);
 
             if (role === 'hp-fill') metrics.hpFillWidth = rect.width;
