@@ -1600,23 +1600,23 @@
             <div class="game-title">幻境残卷</div>
         </div>
         <div class="menu-btn-group">
-            <button class="menu-btn" onclick="startGame()">踏 入 轮 回</button>
+            <button class="menu-btn" onclick="startGame()">踏 入 幻 境</button>
             <button class="menu-btn" id="btn-continue-run" onclick="loadSavedRun()" style="display:none;">继 续 残 卷</button>
-            <button class="menu-btn" onclick="openInitDeck()">初 始 法 则</button>
-            <button class="menu-btn" onclick="openLibrary()">万 象 图 鉴</button>
+            <button class="menu-btn" onclick="openInitDeck()">初 始 牌 组</button>
+            <button class="menu-btn" onclick="openLibrary()">残 卷 图 鉴</button>
         </div>
     </div>
 
     <div id="scene-map" class="scene">
         <div class="map-region-banner">银风丘陵</div>
         <div class="map-title-card">
-            <h2>命途星图</h2>
+            <h2>幻境星图</h2>
             <p>选择下一处幻境。金色路线可前进，红色路线记录已踏过的命运。</p>
             <div class="map-legend">
                 <span class="legend-pill">⚔️ 战斗</span>
                 <span class="legend-pill">💀 精英</span>
                 <span class="legend-pill">🔥 营火</span>
-                <span class="legend-pill">💰 商店</span>
+                <span class="legend-pill">💰 商栈</span>
                 <span class="legend-pill">📜 奇遇</span>
             </div>
         </div>
@@ -1659,7 +1659,7 @@
         </div>
         <div class="combat-stage">
             <div class="enemy-avatar-wrapper" id="enemy-avatar-wrapper">
-                <div id="enemy-avatar" class="enemy-avatar"><img id="enemy-avatar-img" alt="妖兽"></div>
+                <div id="enemy-avatar" class="enemy-avatar"><img id="enemy-avatar-img" alt="敌影"></div>
                 <div id="enemy-minion-wrapper">
                     <div class="enemy-minion-avatar">
                         <img id="enemy-minion-img" alt="敌人分身">
@@ -1699,16 +1699,16 @@
 
 <div class="overlay" id="overlay-role-select" style="z-index: 5200;">
     <div class="event-box role-select-box">
-        <h2 style="color:var(--gold); margin:0 0 8px; letter-spacing: 8px;">命 途 之 选</h2>
-        <p style="color:#aaa; margin:0 0 20px;">从三位旅者中选择本次轮回的起点。选定角色后，将进入本命奇珍选择。</p>
+        <h2 style="color:var(--gold); margin:0 0 8px; letter-spacing: 8px;">旅 者 之 选</h2>
+        <p style="color:#aaa; margin:0 0 20px;">从三位旅者中选择本次探索的起点。选定角色后，将进入本命奇珍选择。</p>
         <div id="role-select-grid" class="role-select-grid"></div>
     </div>
 </div>
 
 <div class="overlay" id="overlay-init-relic">
     <div class="event-box" style="width: 1000px;">
-        <h2 style="color:var(--gold); margin-top:0;">命运的馈赠</h2>
-        <p style="color:#aaa;">轮回伊始，请选择一件本命奇珍相伴，定下你此局修行的流派。</p>
+        <h2 style="color:var(--gold); margin-top:0;">旧王的馈赠</h2>
+        <p style="color:#aaa;">远征启幕，请选择一件本命奇珍相伴，定下你此局牌组的方向。</p>
         <div id="init-relic-content" style="display:flex; justify-content:center; gap:30px; margin:40px 0;"></div>
     </div>
 </div>
@@ -1716,23 +1716,23 @@
 <div class="overlay" id="overlay-init-deck">
     <div class="event-box" style="width: 1000px;">
         <button class="btn-close" onclick="closeOverlay('overlay-init-deck')">×</button>
-        <h2 id="init-deck-title" style="color:var(--gold); margin-top:0;">初始法则</h2>
-        <p id="init-deck-subtitle" style="color:#aaa;">查看当前职业的起始法则与战斗倾向。</p>
+        <h2 id="init-deck-title" style="color:var(--gold); margin-top:0;">初始牌组</h2>
+        <p id="init-deck-subtitle" style="color:#aaa;">查看当前职业的起始卡牌与战斗倾向。</p>
         <div id="init-deck-switcher" class="starter-preview-switch"></div>
         <div id="init-deck-content" class="card-grid" style="max-height: 50vh; overflow-y:auto; margin-bottom:30px;"></div>
-        <button class="btn-gorgeous" onclick="cyclePreviewCharacter()">查看下一个职业初始法则</button>
+        <button class="btn-gorgeous" onclick="cyclePreviewCharacter()">查看下一个职业初始牌组</button>
     </div>
 </div>
 
 <div class="overlay" id="overlay-library">
     <div class="event-box" style="width: 1100px;">
         <button class="btn-close" onclick="closeOverlay('overlay-library')">×</button>
-        <h2 style="color:var(--gold); margin-top:0;">万象图鉴</h2>
+        <h2 style="color:var(--gold); margin-top:0;">残卷图鉴</h2>
         <div class="lib-tabs">
-            <button class="lib-tab-btn" id="btn-tab-cards" onclick="renderLibTab('cards')">职业法则 (卡池)</button>
+            <button class="lib-tab-btn" id="btn-tab-cards" onclick="renderLibTab('cards')">职业卡牌 (卡池)</button>
             <button class="lib-tab-btn" id="btn-tab-legend" onclick="renderLibTab('legend')">传说神话 (机制卡)</button>
             <button class="lib-tab-btn" id="btn-tab-relics" onclick="renderLibTab('relics')">奇珍异宝 (遗物)</button>
-            <button class="lib-tab-btn" id="btn-tab-enemies" onclick="renderLibTab('enemies')">妖兽异志 (敌人)</button>
+            <button class="lib-tab-btn" id="btn-tab-enemies" onclick="renderLibTab('enemies')">敌影名录 (敌人)</button>
         </div>
         <div id="lib-content" class="card-grid" style="max-height: 60vh; overflow-y:auto; padding-bottom:20px;"></div>
     </div>
@@ -1749,7 +1749,7 @@
 <div class="overlay" id="overlay-reward">
     <div class="event-box" style="width: 800px;">
         <h2 id="reward-title" style="color:var(--gold);">战利品</h2>
-        <p id="reward-desc" style="color:#888;">天道演算中...请选择一张功法加入牌库。</p>
+        <p id="reward-desc" style="color:#888;">战斗余烬仍在发光...请选择一张卡牌加入牌组。</p>
         <div id="reward-items" class="card-grid" style="margin:30px 0;"></div>
         <button id="reward-skip-btn" class="btn-gorgeous" onclick="skipBattleReward()">换取金币</button>
     </div>
@@ -1770,7 +1770,7 @@
 
 <div class="overlay" id="overlay-tag-select" style="z-index: 5000;">
     <div class="event-box" style="width: 800px;">
-        <h2 style="color:var(--water);">请选择目标功法</h2>
+        <h2 style="color:var(--water);">请选择目标卡牌</h2>
         <div id="tag-select-card-preview" style="display:flex; justify-content:center; margin-bottom: 20px;"></div>
         <div id="tag-select-options" style="display:flex; justify-content:center; flex-wrap:wrap; gap:20px; margin-bottom:30px; width:100%;"></div>
         <button class="btn-gorgeous" style="border-color:#444; color:#888; background:#111;" onclick="closeOverlay('overlay-tag-select'); showOverlay('overlay-event');">返回重选</button>
@@ -1791,13 +1791,13 @@
 <div class="overlay" id="overlay-rest">
     <div class="event-box rest-scene">
         <div class="scene-banner">
-            <h2>营火老者</h2>
-            <p>灰烬旁的长者守着一盏不灭火。你可以在此稍作休整，也可以借火光参悟功法，或将不再需要的招式交还给夜色。</p>
+            <h2>营火守望者</h2>
+            <p>灰烬旁的守望者护着一盏不灭火。你可以在此稍作休整，也可以借火光淬炼卡牌，或将不再需要的招式交还给夜色。</p>
         </div>
         <div class="scene-body">
         <div id="rest-options" style="display:flex; flex-direction:column; gap:20px; align-items:center; margin-top:4px;">
             <button class="btn-gorgeous" style="width:300px;" onclick="resolveRest()">休 息 (恢复 40% 生命)</button>
-            <button class="btn-gorgeous" style="width:300px;" onclick="renderRestUpgrade()">参 悟 (强化功法)</button>
+            <button class="btn-gorgeous" style="width:300px;" onclick="renderRestUpgrade()">淬 炼 (强化卡牌)</button>
             <button class="btn-gorgeous" style="width:300px;" onclick="renderRestDelete()">遗 忘 (精简牌库)</button>
         </div>
         <div id="card-action-list" class="card-grid rest-card-action-list" style="display:none; margin-top: 30px; max-height:50vh; overflow-y:auto;"></div>
@@ -1813,16 +1813,16 @@
         </div>
         <div class="scene-body">
         <div id="shop-options" class="shop-command-row">
-            <button class="btn-gorgeous" style="width:300px;" onclick="renderShopBuyWrapper()">交易功法与奇物</button>
-            <button class="btn-gorgeous" style="width:300px;" onclick="renderShopCopy()">复制一张功法</button>
+            <button class="btn-gorgeous" style="width:300px;" onclick="renderShopBuyWrapper()">交易卡牌与奇物</button>
+            <button class="btn-gorgeous" style="width:300px;" onclick="renderShopCopy()">拓印一张卡牌</button>
             <button class="btn-gorgeous" style="width:300px;" onclick="renderShopDelete()">请求精简牌库</button>
             <button class="btn-gorgeous" style="width:300px; border-color:#444; color:#888;" onclick="closeOverlay('overlay-shop'); advanceMap();">离 开</button>
         </div>
         <div id="shop-content" style="display:none; flex-direction:column; width:100%; margin-top: 10px;">
             <div style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:1px solid rgba(241,223,181,0.18); padding-bottom:10px; margin-bottom:20px;">
-                <span style="color:#888; font-size:14px;">货品每逢盛世自然更新，或以金石叩问天意。</span>
+                <span style="color:#888; font-size:14px;">货品会随旅程更新，也可付金币请商人换出新货。</span>
                 <div style="display:flex; gap:12px; align-items:center;">
-                    <button id="shop-refresh-btn" class="btn-gorgeous" style="padding: 8px 20px; font-size: 15px;" onclick="refreshShop()">🔄 进货 (💰 10)</button>
+                    <button id="shop-refresh-btn" class="btn-gorgeous" style="padding: 8px 20px; font-size: 15px;" onclick="refreshShop()">🔄 补货 (💰 10)</button>
                     <button class="btn-gorgeous btn-back" style="padding: 8px 20px; font-size: 15px;" onclick="showShopHome()">返 回</button>
                 </div>
             </div>
@@ -1878,6 +1878,14 @@
         '销毁': '打出后彻底消失，不进入放逐区或墓地。'
     };
 
+    const TAG_DISPLAY_NAMES = {
+        '轮回': '回流'
+    };
+
+    function getTagDisplayName(tag) {
+        return TAG_DISPLAY_NAMES[tag] || tag;
+    }
+
     const STATUS_DESC = {
         'armor': '<span style="color:white; font-weight:bold;">护盾</span><br>抵挡等量的伤害，回合结束时若未被打破则保留。', 'poison': '<span style="color:var(--nature); font-weight:bold;">剧毒</span><br>回合结束时受到等量的伤害。触发后层数减少1层。',
         'bleed': '<span style="color:var(--crimson); font-weight:bold;">出血</span><br>回合结束时受到层数一半的伤害(向上取整)。触发后层数减少1层。', 'burn': '<span style="color:var(--fire); font-weight:bold;">燃烧</span><br>每层每回合造成最大生命 5% 的伤害。触发后层数减少1层。',
@@ -1893,7 +1901,7 @@
     function formatKeywords(text) {
         if (!text) return ""; let res = text;
         Object.keys(TAGS).forEach(tag => {
-            let regex = new RegExp(`\\[${tag}\\]`, 'g'); res = res.replace(regex, `<span style="color:var(--gold); font-weight:bold;">「${tag}」</span>`);
+            let regex = new RegExp(`\\[${tag}\\]`, 'g'); res = res.replace(regex, `<span style="color:var(--gold); font-weight:bold;">「${getTagDisplayName(tag)}」</span>`);
         }); return res;
     }
 
@@ -1901,7 +1909,7 @@
         let base = formatKeywords(text); let tags = extractTagsFromText(text);
         if(tags.length > 0) {
             base += `<br><div style="border-top:1px solid #444; margin:5px 0; padding-top:5px; text-align:left;">`;
-            tags.forEach(t => { base += `<span style="color:var(--gold);">${t}:</span> ${formatKeywords(TAGS[t].replace(/\{val\}/g, 'X'))}<br>`; });
+            tags.forEach(t => { base += `<span style="color:var(--gold);">${getTagDisplayName(t)}:</span> ${formatKeywords(TAGS[t].replace(/\{val\}/g, 'X'))}<br>`; });
             base += `</div>`;
         } return base;
     }
@@ -2175,7 +2183,7 @@
                 ? [["秘仪", "星火", "遗迹", "紫焰", "虚空"], ["咏唱", "法印", "预兆", "回流"]]
                 : (state.player.characterId === 'hero_archer'
                     ? [["林风", "森冠", "猎手", "疾风", "翠影"], ["整备", "瞄准", "步法", "调息"]]
-                    : [["玄妙", "虚空", "灵动", "上古", "太虚"], ["法则", "真诀", "秘术", "道印"]]);
+                    : [["玄妙", "虚空", "灵动", "上古", "太虚"], ["誓印", "战纹", "古誓", "号令"]]);
             name = roleNameParts[0][Math.floor(Math.random()*roleNameParts[0].length)] + roleNameParts[1][Math.floor(Math.random()*roleNameParts[1].length)];
             icon = ["✨","🌀","🍃","🔮","☯️"][Math.floor(Math.random()*5)];
         } 
@@ -2271,7 +2279,7 @@
                     if (t === '虚弱') tooltip = tooltip.replace('2 层', '4 层');
                 }
 
-                tagsHtml += `<span class="keyword-tag">${t}<span class="keyword-tooltip">${formatKeywords(tooltip)}</span></span>`;
+                tagsHtml += `<span class="keyword-tag">${getTagDisplayName(t)}<span class="keyword-tooltip">${formatKeywords(tooltip)}</span></span>`;
             }
         });
         if(tagsHtml) return `<div class="card-tags-row">${tagsHtml}</div>`; return '';
@@ -2309,7 +2317,7 @@
     function getRelicBottomTags(r) {
         let tagsHtml = ''; let extractedTags = new Set(extractTagsFromText(r.desc));
         extractedTags.forEach(t => {
-            if(TAGS[t]) { let tooltip = TAGS[t].replace(/\{val\}/g, 'X'); tagsHtml += `<span class="keyword-tag">${t}<span class="keyword-tooltip">${formatKeywords(tooltip)}</span></span>`; }
+            if(TAGS[t]) { let tooltip = TAGS[t].replace(/\{val\}/g, 'X'); tagsHtml += `<span class="keyword-tag">${getTagDisplayName(t)}<span class="keyword-tooltip">${formatKeywords(tooltip)}</span></span>`; }
         });
         if(tagsHtml) return `<div style="display:flex; flex-wrap:wrap; align-content:flex-start; margin-top:auto; padding-top:8px; border-top:1px dashed #444; width:100%;">${tagsHtml}</div>`; return '';
     }
@@ -3907,7 +3915,7 @@
         updateTopBar();
         closeOverlay('overlay-role-select');
         showInitRelicOverlay();
-        showFloatText(`命途既定：${getCurrentCharacter().name}`, "var(--gold)", {x: window.innerWidth / 2, y: window.innerHeight / 2});
+        showFloatText(`旅者已选：${getCurrentCharacter().name}`, "var(--gold)", {x: window.innerWidth / 2, y: window.innerHeight / 2});
     }
 
     async function startGame() {
@@ -4131,7 +4139,7 @@
         },
         shop: {
             title: '灯火商栈',
-            desc: '旅商在旧城门下等待。金币可以换来功法、奇珍与一次喘息。',
+            desc: '旅商在旧城门下等待。金币可以换来卡牌、奇珍与一次喘息。',
             image: 'UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_town_castle_imagegen_transparent_v1.png'
         }
     };
@@ -4287,7 +4295,7 @@
 
     function advanceMap() {
         state.floor++; state.isNodeClickLocked = false;
-        if(state.floor >= 20) { clearRunSave(); alert("恭喜你，突破了层层试炼，打破了轮回！"); showScene('scene-main-menu'); document.getElementById('game-top-bar').style.display='none'; }
+        if(state.floor >= 20) { clearRunSave(); alert("恭喜你，穿越层层试炼，夺回了残卷！"); showScene('scene-main-menu'); document.getElementById('game-top-bar').style.display='none'; }
         else { showScene('scene-map'); setTimeout(()=>renderMap(), 50); updateTopBar(); saveRun(); }
     }
 
@@ -4767,7 +4775,7 @@
             if (hasRelic('r_combo_ring')) runCount += 1;
             showFloatText(windStepTriggered ? "踏风连射!" : "连射", "var(--nature)", getCenter('hand-area'));
         }
-        if (state.p_echo_stack > 0 && card.rarity !== '传说' && !card.isJunk) { runCount += 2; state.p_echo_stack--; showFloatText(`天道回音触发`, "var(--purple)", getCenter('ui-hp')); }
+        if (state.p_echo_stack > 0 && card.rarity !== '传说' && !card.isJunk) { runCount += 2; state.p_echo_stack--; showFloatText(`回音触发`, "var(--purple)", getCenter('ui-hp')); }
         if (state.next_card_echo > 0 && !card.isJunk) { runCount += state.next_card_echo; state.next_card_echo = 0; showFloatText(`狂热回响!`, "var(--crimson)", getCenter('ui-hp')); }
         let isOmniTriggered = false; if (hasRelic('r_omni_seal') && state.turn_first_card && !card.isJunk) { runCount += 1; isOmniTriggered = true; showFloatText(`万法空印!`, "var(--gold)", getCenter('ui-hp')); }
         if(!card.isJunk) state.turn_first_card = false;
@@ -4843,7 +4851,7 @@
                 if(synergyCount > 0) {
                     for(let i=0; i<synergyCount; i++) { applyDamageToEnemy(15, true); state.mp += 1; await new Promise(r => setTimeout(r, 200)); }
                     showFloatText(`${card.name} 天雷 ${synergyCount} 道`, "var(--purple)", getCenter('enemy-avatar'));
-                } else { showFloatText("无道可借", "#888", getCenter('ui-hp')); }
+                } else { showFloatText("无回音可借", "#888", getCenter('ui-hp')); }
             }
             else if (card.specialId === 'w_counter_crown') {
                 triggerVFX('p-atk');
@@ -5233,7 +5241,7 @@
         if (junks.length > 0) {
             let junkDmg = junks.length * 5; state.hp -= junkDmg;
             showFloatText(`诅咒反噬 -${junkDmg}`, "var(--purple)", getCenter('ui-hp'));
-            if(state.hp <= 0) { alert("神识被反噬，轮回结束。"); showScene('scene-main-menu'); document.getElementById('game-top-bar').style.display='none'; return; }
+            if(state.hp <= 0) { alert("意志被暗影吞没，探索结束。"); showScene('scene-main-menu'); document.getElementById('game-top-bar').style.display='none'; return; }
             await new Promise(r => setTimeout(r, 600));
         }
 
@@ -5242,7 +5250,7 @@
         if(state.p_burn > 0) { let burnDmg = Math.max(1, Math.ceil(state.maxHp * 0.05 * state.p_burn)); state.hp -= burnDmg; state.p_burn--; showFloatText(`燃烧 -${burnDmg}`, "var(--fire)", getCenter('ui-hp')); }
         if(state.p_curse > 0) state.p_curse--;
         
-        if(state.hp <= 0) { alert("神识消散，轮回结束。"); showScene('scene-main-menu'); document.getElementById('game-top-bar').style.display='none'; return; }
+        if(state.hp <= 0) { alert("旅者倒在幻境深处，探索结束。"); showScene('scene-main-menu'); document.getElementById('game-top-bar').style.display='none'; return; }
 
         if(state.p_vuln > 0) state.p_vuln--; if(state.p_weak > 0) state.p_weak--; state.p_dmg_buff = 0; state.p_next_dmg = 0; state.p_reduce_dmg = 0;
 
@@ -5392,7 +5400,7 @@
             addBattleActionLog('enemy', `敌方使用 ${move.name}`, describeEnemyMoveResult(move, enemyMoveSnapshot));
         }
         
-        if(state.hp <= 0) { alert("神识消散，轮回结束。"); showScene('scene-main-menu'); document.getElementById('game-top-bar').style.display='none'; return; }
+        if(state.hp <= 0) { alert("旅者倒在幻境深处，探索结束。"); showScene('scene-main-menu'); document.getElementById('game-top-bar').style.display='none'; return; }
         if(!hasRelic('r_yin_yang') && !hasRelic('r_perma_curse')) { if(state.enemy.vuln > 0) state.enemy.vuln--; if(state.enemy.weak > 0) state.enemy.weak--; } else if (hasRelic('r_yin_yang')) { state.enemy.vuln = Math.ceil(state.enemy.vuln / 2); state.enemy.weak = Math.ceil(state.enemy.weak / 2); }
         
         setTimeout(async () => { 
@@ -5449,7 +5457,7 @@
         const character = CHARACTERS[characterId] || CHARACTERS.hero_warrior;
         starterPreviewCharacterId = character.id;
         const previewDeck = buildStarterDeckForCharacter(character.id);
-        document.getElementById('init-deck-title').innerText = `${character.name}的初始法则`;
+        document.getElementById('init-deck-title').innerText = `${character.name}的初始牌组`;
         document.getElementById('init-deck-subtitle').innerText = character.starterHint;
         const switcher = document.getElementById('init-deck-switcher');
         switcher.innerHTML = CHARACTER_ORDER.map(id => `<button class="starter-preview-btn ${id === character.id ? 'active' : ''}" onclick="renderInitDeck('${id}')">${CHARACTERS[id].name}</button>`).join('');
@@ -5472,7 +5480,7 @@
         if (tab === 'cards') {
             const character = getCurrentCharacter();
             const classPool = getCharacterCardPool(character.id);
-            c.innerHTML = `<div style="width:100%; color:#d9c28a; text-align:center; margin-bottom:12px;">当前职业：${character.name}。奖励与商店会优先从这些职业法则中抽取，并混入少量中立法则。</div>`;
+            c.innerHTML = `<div style="width:100%; color:#d9c28a; text-align:center; margin-bottom:12px;">当前职业：${character.name}。奖励与商栈会优先从这些职业卡牌中抽取，并混入少量中立卡牌。</div>`;
             [...classPool, ...NEUTRAL_CARD_POOL].forEach(card => {
                 c.innerHTML += generateCardHTML(cloneCardDefinition(card), true);
             });
@@ -5548,8 +5556,8 @@
         const container = document.getElementById('reward-items'); container.innerHTML = '';
         const availableRelics = getRolePreferredRelics(RELIC_POOL.filter(r => !hasRelic(r.id)));
         const showRelicReward = availableRelics.length > 0 && Math.random() < 0.2;
-        document.getElementById('reward-title').innerText = showRelicReward ? '奇珍战利品' : '功法战利品';
-        document.getElementById('reward-desc').innerText = showRelicReward ? '战斗余烬里浮出三件奇珍，请选择一件收入囊中。' : '天道演算中...请选择一张功法加入牌库。';
+        document.getElementById('reward-title').innerText = showRelicReward ? '奇珍战利品' : '卡牌战利品';
+        document.getElementById('reward-desc').innerText = showRelicReward ? '战斗余烬里浮出三件奇珍，请选择一件收入囊中。' : '战斗余烬仍在发光...请选择一张卡牌加入牌组。';
         document.getElementById('reward-skip-btn').innerText = `放弃机缘，换取金币 +${getBattleRewardSkipGold()}`;
         if (showRelicReward) {
             availableRelics.slice(0, 3).forEach(r => {
@@ -5570,12 +5578,12 @@
     }
 
     function triggerEventNode() {
-        // 直接触发宝库与高人抉择，移除其他干扰项
+        // 直接触发宝库与守望者抉择，移除其他干扰项
         document.getElementById('event-title').innerText = "奇遇：命运的岔路";
-        document.getElementById('event-desc').innerText = "云层后方透出旧王国的遗迹。精灵斥候指向两处微光：一座沉默宝库，以及一位等候旅人的隐修者。";
+        document.getElementById('event-desc').innerText = "云层后方透出旧王国的遗迹。精灵斥候指向两处微光：一座沉默宝库，以及一位等候旅人的守望者。";
         renderEventChoiceGrid([
             { icon: '💎', title: '探寻宝库', desc: '开启古代宝匣，获得一件随机奇珍。更适合想快速形成流派的旅程。', onClick: selectEventRelic },
-            { icon: '🧙', title: '求教高人', desc: '请隐修者指点一张功法，使其突破。更适合稳定强化核心卡。', onClick: selectEventUpgrade },
+            { icon: '🧙', title: '接受试炼', desc: '请守望者淬炼一张卡牌，使其获得强化。更适合稳定提升核心卡。', onClick: selectEventUpgrade },
             { icon: '🌙', title: '绕路离开', desc: '不承担任何风险，也不获得机缘。保留状态，继续向下一层前进。', onClick: () => { closeOverlay('overlay-event'); advanceMap(); } }
         ]);
         setEventActions([{ label: '放弃机缘，直接离开', className: 'btn-back', onClick: () => { closeOverlay('overlay-event'); advanceMap(); } }]);
@@ -5593,12 +5601,12 @@
     }
 
     function selectEventUpgrade() {
-        document.getElementById('event-title').innerText = "奇遇：隐修者的试炼"; document.getElementById('event-desc').innerText = "对方没有多说，只在地上画出古老的法阵。请选择一张要参悟的功法。";
+        document.getElementById('event-title').innerText = "奇遇：守望者的试炼"; document.getElementById('event-desc').innerText = "对方没有多说，只在地上点亮古老的纹章。请选择一张要淬炼的卡牌。";
         const cList = document.createElement('div'); cList.className = 'card-grid';
         state.deck.forEach(card => {
             const el = document.createElement('div'); el.innerHTML = generateCardHTML(card, true);
             if (card.rarity === '传说' || card.up) { el.style.opacity = '0.5'; el.style.filter = 'grayscale(1)'; } 
-            else { el.onclick = () => { let clone = JSON.parse(JSON.stringify(card)); upgradeCard(clone); let html = `<div>${generateCardHTML(card, true)}</div><div style="font-size: 40px; color: var(--gold);">➡️</div><div>${generateCardHTML(clone, true)}</div>`; openConfirmPanel('确认参悟', html, () => { upgradeCard(card); showFloatText("功法突破！", "var(--gold)", getCenter('event-content')); setTimeout(() => { closeOverlay('overlay-event'); advanceMap(); }, 800); }); }; }
+            else { el.onclick = () => { let clone = JSON.parse(JSON.stringify(card)); upgradeCard(clone); let html = `<div>${generateCardHTML(card, true)}</div><div style="font-size: 40px; color: var(--gold);">➡️</div><div>${generateCardHTML(clone, true)}</div>`; openConfirmPanel('确认淬炼', html, () => { upgradeCard(card); showFloatText("卡牌强化完成！", "var(--gold)", getCenter('event-content')); setTimeout(() => { closeOverlay('overlay-event'); advanceMap(); }, 800); }); }; }
             cList.appendChild(el);
         });
         document.getElementById('event-content').innerHTML = ''; document.getElementById('event-content').appendChild(cList); setEventActions([{ label: '婉拒离开', className: 'btn-back', onClick: () => { closeOverlay('overlay-event'); advanceMap(); } }]);
@@ -5643,11 +5651,11 @@
 
     function renderShopBuy() {
         showShopContent({ canRefresh: true });
-        document.getElementById('shop-refresh-btn').innerText = `🔄 进货 (💰 ${state.currentShop.refreshCost})`;
+        document.getElementById('shop-refresh-btn').innerText = `🔄 补货 (💰 ${state.currentShop.refreshCost})`;
         const grid = document.getElementById('shop-items-grid'); grid.innerHTML = '';
         const cardRow = document.createElement('div');
         cardRow.className = 'shop-row';
-        cardRow.innerHTML = '<div class="shop-row-title">功法</div>';
+        cardRow.innerHTML = '<div class="shop-row-title">卡牌</div>';
         const relicRow = document.createElement('div');
         relicRow.className = 'shop-row';
         relicRow.innerHTML = '<div class="shop-row-title">遗物</div>';
@@ -5677,7 +5685,7 @@
     function renderShopDelete() {
         showShopContent({ canRefresh: false });
         const grid = document.getElementById('shop-items-grid');
-        grid.innerHTML = `<div style="width:100%; color:var(--gold); margin-bottom:4px; font-size:20px; text-align:center;">遗忘功法需供奉: 💰${shopDeletePrice}</div><div id="shop-delete-grid" class="shop-delete-grid"></div>`;
+        grid.innerHTML = `<div style="width:100%; color:var(--gold); margin-bottom:4px; font-size:20px; text-align:center;">移除卡牌费用: 💰${shopDeletePrice}</div><div id="shop-delete-grid" class="shop-delete-grid"></div>`;
         const deleteGrid = document.getElementById('shop-delete-grid');
         state.deck.forEach(card => { const el = document.createElement('div'); el.innerHTML = generateCardHTML(card, true); el.onclick = () => { let html = `<div>${generateCardHTML(card, true)}</div><div style="font-size: 24px; color: var(--crimson);">彻底遗忘此牌？</div>`; openConfirmPanel('确认遗忘', html, () => { if(state.gold >= shopDeletePrice) { state.gold -= shopDeletePrice; state.deck = state.deck.filter(x => x.id !== card.id); shopDeletePrice += 25; updateTopBar(); saveRun(); renderShopDelete(); } else { alert("金币不足！"); } }); }; deleteGrid.appendChild(el); }); document.getElementById('shop-back-btn').style.display = 'inline-block';
     }
@@ -5703,22 +5711,22 @@
     function renderShopCopy() {
         showShopContent({ canRefresh: false });
         const grid = document.getElementById('shop-items-grid');
-        grid.innerHTML = '<div style="width:100%; color:var(--gold); margin-bottom:4px; font-size:20px; text-align:center;">选择一张功法复制到牌库</div><div id="shop-copy-grid" class="shop-delete-grid"></div>';
+        grid.innerHTML = '<div style="width:100%; color:var(--gold); margin-bottom:4px; font-size:20px; text-align:center;">选择一张卡牌拓印到牌组</div><div id="shop-copy-grid" class="shop-delete-grid"></div>';
         const copyGrid = document.getElementById('shop-copy-grid');
         state.deck.forEach(card => {
             const price = getShopCopyPrice(card);
             const el = document.createElement('div');
             el.className = 'shop-card-wrapper';
-            el.innerHTML = `${generateCardHTML(card, true)}<button class="btn-gorgeous shop-price-btn">复制 💰 ${price}</button>`;
+            el.innerHTML = `${generateCardHTML(card, true)}<button class="btn-gorgeous shop-price-btn">拓印 💰 ${price}</button>`;
             el.querySelector('button').onclick = () => {
-                let html = `<div>${generateCardHTML(card, true)}</div><div style="font-size: 24px; color: var(--gold);">复制此功法？需供奉 💰${price}</div>`;
-                openConfirmPanel('确认复制', html, () => {
+                let html = `<div>${generateCardHTML(card, true)}</div><div style="font-size: 24px; color: var(--gold);">拓印此卡牌？需支付 💰${price}</div>`;
+                openConfirmPanel('确认拓印', html, () => {
                     if (state.gold >= price) {
                         state.gold -= price;
                         state.deck.push(copyDeckCard(card));
                         updateTopBar();
                         saveRun();
-                        showFloatText("功法复写完成", "var(--gold)", getCenter('ui-gold'));
+                        showFloatText("卡牌拓印完成", "var(--gold)", getCenter('ui-gold'));
                         renderShopCopy();
                     } else {
                         alert("金币不足！");
@@ -5733,20 +5741,20 @@
     function resolveRest() { state.hp = Math.min(state.maxHp, state.hp+30); updateTopBar(); closeOverlay('overlay-rest'); advanceMap(); }
     
     function renderRestDelete() {
-        document.getElementById('rest-options').style.display = 'none'; const c = document.getElementById('card-action-list'); c.style.display = 'flex'; c.innerHTML = '<div style="width:100%; color:var(--gold); margin-bottom:20px; font-size:20px;">请选择一张要在营火中遗忘的功法：</div>';
+        document.getElementById('rest-options').style.display = 'none'; const c = document.getElementById('card-action-list'); c.style.display = 'flex'; c.innerHTML = '<div style="width:100%; color:var(--gold); margin-bottom:20px; font-size:20px;">请选择一张要在营火中移除的卡牌：</div>';
         state.deck.forEach(card => { const el = document.createElement('div'); el.innerHTML = generateCardHTML(card, true); el.onclick = () => { let html = `<div>${generateCardHTML(card, true)}</div><div style="font-size: 24px; color: var(--crimson);">彻底遗忘此牌？</div>`; openConfirmPanel('确认遗忘', html, () => { state.deck = state.deck.filter(x => x.id !== card.id); closeOverlay('overlay-rest'); advanceMap(); }); }; c.appendChild(el); });
-        const skipBtn = document.createElement('button'); skipBtn.className = 'btn-gorgeous'; skipBtn.style.marginTop = '30px'; skipBtn.style.width = '100%'; skipBtn.innerText = '放弃遗忘，继续前行'; skipBtn.onclick = () => { closeOverlay('overlay-rest'); advanceMap(); }; c.appendChild(skipBtn);
+        const skipBtn = document.createElement('button'); skipBtn.className = 'btn-gorgeous'; skipBtn.style.marginTop = '30px'; skipBtn.style.width = '100%'; skipBtn.innerText = '放弃移除，继续前行'; skipBtn.onclick = () => { closeOverlay('overlay-rest'); advanceMap(); }; c.appendChild(skipBtn);
     }
 
     function renderRestUpgrade() {
-        document.getElementById('rest-options').style.display = 'none'; const c = document.getElementById('card-action-list'); c.style.display = 'flex'; c.innerHTML = '<div style="width:100%; color:var(--gold); margin-bottom:20px; font-size:20px;">请选择一张要参悟的功法（大幅提高其基础数值/降低耗能）：</div>';
+        document.getElementById('rest-options').style.display = 'none'; const c = document.getElementById('card-action-list'); c.style.display = 'flex'; c.innerHTML = '<div style="width:100%; color:var(--gold); margin-bottom:20px; font-size:20px;">请选择一张要淬炼的卡牌（提高基础数值或降低耗能）：</div>';
         state.deck.forEach(card => {
             const el = document.createElement('div'); el.innerHTML = generateCardHTML(card, true);
             if(card.rarity === '传说' || card.up) { el.style.opacity = '0.5'; el.style.filter = 'grayscale(1)'; } 
-            else { el.onclick = () => { let clone = JSON.parse(JSON.stringify(card)); upgradeCard(clone); let html = `<div>${generateCardHTML(card, true)}</div><div style="font-size: 40px; color: var(--gold);">➡️</div><div>${generateCardHTML(clone, true)}</div>`; openConfirmPanel('确认参悟', html, () => { upgradeCard(card); showFloatText("参悟成功！", "var(--gold)", getCenter('card-action-list')); setTimeout(() => { closeOverlay('overlay-rest'); advanceMap(); }, 600); }); }; }
+            else { el.onclick = () => { let clone = JSON.parse(JSON.stringify(card)); upgradeCard(clone); let html = `<div>${generateCardHTML(card, true)}</div><div style="font-size: 40px; color: var(--gold);">➡️</div><div>${generateCardHTML(clone, true)}</div>`; openConfirmPanel('确认淬炼', html, () => { upgradeCard(card); showFloatText("淬炼完成！", "var(--gold)", getCenter('card-action-list')); setTimeout(() => { closeOverlay('overlay-rest'); advanceMap(); }, 600); }); }; }
             c.appendChild(el);
         });
-        const skipBtn = document.createElement('button'); skipBtn.className = 'btn-gorgeous'; skipBtn.style.marginTop = '30px'; skipBtn.style.width = '100%'; skipBtn.innerText = '放弃参悟，继续前行'; skipBtn.onclick = () => { closeOverlay('overlay-rest'); advanceMap(); }; c.appendChild(skipBtn);
+        const skipBtn = document.createElement('button'); skipBtn.className = 'btn-gorgeous'; skipBtn.style.marginTop = '30px'; skipBtn.style.width = '100%'; skipBtn.innerText = '放弃淬炼，继续前行'; skipBtn.onclick = () => { closeOverlay('overlay-rest'); advanceMap(); }; c.appendChild(skipBtn);
     }
     window.addEventListener('keydown', (event) => {
         const tagName = document.activeElement?.tagName;

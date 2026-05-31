@@ -26,7 +26,7 @@ const ENEMIES = [
     { name: "【深渊主宰】", icon: "👁️", baseHp: 400, type: 'boss', 
         ai: { type: 'sequence', pattern: [0, 3, 2, 1] },
         moves: [{type:'summon', val:60, atk:10, name:"深渊触须"}, {type:'junk', val:3, name:"理智剥夺"}, {type:'attack', val:12, name:"精神鞭笞", times:2}, {type:'debuff', subType:'weak', val:3, name:"深渊凝视"}],
-        phase2: { name: "【深渊主宰·暴走】", icon: "🌌", maxHp: 350, ai: { type: 'sequence', pattern: [1, 2, 3, 0] }, moves: [{type:'attack', val:15, name:"湮灭射线", times:3}, {type:'seal', val:3, name:"法则崩坏"}, {type:'charge', val:0, name:"深渊坍缩"}, {type:'attack', val:50, name:"纪元终结"}] }
+        phase2: { name: "【深渊主宰·暴走】", icon: "🌌", maxHp: 350, ai: { type: 'sequence', pattern: [1, 2, 3, 0] }, moves: [{type:'attack', val:15, name:"湮灭射线", times:3}, {type:'seal', val:3, name:"秩序崩坏"}, {type:'charge', val:0, name:"深渊坍缩"}, {type:'attack', val:50, name:"纪元终结"}] }
     }
 ];
 
@@ -36,7 +36,7 @@ const MAP_NODE_META = {
     rest: { icon: "🔥", label: "营火" },
     event: { icon: "📜", label: "奇遇" },
     boss: { icon: "🐉", label: "首领" },
-    shop: { icon: "💰", label: "商店" }
+    shop: { icon: "💰", label: "商栈" }
 };
 const MAP_LANE_LEFT = [18, 32, 46, 60, 74];
 const MAP_FLOOR_GAP = 150;

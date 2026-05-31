@@ -86,7 +86,7 @@ const RELIC_POOL = [
     { id: 'r_battle_whetstone', name: '磨锋砥石', icon: '🪨', desc: '通用：每场战斗开始时，本场战斗所有伤害 +2。', price: 170 },
     { id: 'r_first_draw', name: '启程星图', icon: '🌠', desc: '通用：每回合摸牌数 +1，让任意职业都更容易凑齐核心组合。', price: 230 },
     { id: 'r_warm_pendant', name: '余烬护符', icon: '🔆', desc: '通用：每场战斗胜利后回复 6 点生命，适合长线探索。', price: 160 },
-    { id: 'r_silver_purse', name: '银纹钱袋', icon: '👛', desc: '通用：每场战斗胜利后额外获得 10 枚金币，强化商店路线。', price: 180 },
+    { id: 'r_silver_purse', name: '银纹钱袋', icon: '👛', desc: '通用：每场战斗胜利后额外获得 10 枚金币，强化商栈路线。', price: 180 },
     
     { id: 'r_brutal', name: '血色回响', icon: '🩸', desc: '法师：每触发一次[回响]，对敌人施加 2 层[出血]，让连锁法术带来持续压力。', price: 250 },
     { id: 'r_ethereal', name: '风行之手', icon: '🖐️', desc: '弓手：具有[保留]的卡牌回到手牌时，本回合耗能 -1，方便保留风势后的收束牌。', price: 200 },
@@ -113,7 +113,7 @@ const RELIC_POOL = [
     { id: 'r_wind_quiver', name: '踏风箭囊', icon: '🏹', desc: '弓手：每次通过卡牌或职业联动获得风势时，额外获得 1 层。', price: 190 },
     { id: 'r_exile_cache', name: '流亡箭匣', icon: '📦', desc: '弓手：带[放逐]的攻击牌获得的放逐威能从 50% 提高到 75%。', price: 200 },
     { id: 'r_bloodlet_draw', name: '赤脉弦扣', icon: '🩸', desc: '弓手：触发[放血]并成功引爆出血后，额外[抽牌] 1 张。', price: 170 },
-    { id: 'r_copy_seal', name: '复写印泥', icon: '📜', desc: '通用：商店复制功法的价格降低 20 金币。', price: 160 },
+    { id: 'r_copy_seal', name: '复写印泥', icon: '📜', desc: '通用：商栈拓印卡牌的价格降低 20 金币。', price: 160 },
     { id: 'r_reward_crown', name: '弃赏王冠', icon: '👑', desc: '通用：放弃战斗后的卡牌或遗物奖励时，换取的金币额外 +15。', price: 170 }
 ];
 const FORMAL_RELIC_ICON_IDS = new Set([
