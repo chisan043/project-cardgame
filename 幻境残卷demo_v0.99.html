@@ -1858,7 +1858,6 @@
             </div>
             <div id="shop-items-grid" class="shop-items-grid"></div>
         </div>
-        <button id="shop-back-btn" class="btn-gorgeous btn-back" style="display:none; margin-top:40px;" onclick="showShopHome()">返 回</button>
         </div>
     </div>
 </div>
@@ -5755,13 +5754,11 @@
     function showShopHome() {
         document.getElementById('shop-options').style.display = 'flex';
         document.getElementById('shop-content').style.display = 'none';
-        document.getElementById('shop-back-btn').style.display = 'none';
     }
 
     function showShopContent({ canRefresh = true } = {}) {
         document.getElementById('shop-options').style.display = 'none';
         document.getElementById('shop-content').style.display = 'flex';
-        document.getElementById('shop-back-btn').style.display = 'none';
         document.getElementById('shop-refresh-btn').style.display = canRefresh ? 'inline-block' : 'none';
     }
 
@@ -5819,7 +5816,6 @@
         });
         grid.appendChild(cardRow);
         grid.appendChild(relicRow);
-        document.getElementById('shop-back-btn').style.display = 'inline-block';
     }
     
     function renderShopDelete() {
@@ -5827,7 +5823,7 @@
         const grid = document.getElementById('shop-items-grid');
         grid.innerHTML = `<div style="width:100%; color:var(--gold); margin-bottom:4px; font-size:20px; text-align:center;">移除卡牌费用: 💰${shopDeletePrice}</div><div id="shop-delete-grid" class="shop-delete-grid"></div>`;
         const deleteGrid = document.getElementById('shop-delete-grid');
-        state.deck.forEach(card => { const el = document.createElement('div'); el.innerHTML = generateCardHTML(card, true); el.onclick = () => { let html = `<div>${generateCardHTML(card, true)}</div><div style="font-size: 24px; color: var(--crimson);">彻底遗忘此牌？</div>`; openConfirmPanel('确认遗忘', html, () => { if(state.gold >= shopDeletePrice) { state.gold -= shopDeletePrice; state.deck = state.deck.filter(x => x.id !== card.id); shopDeletePrice += 25; updateTopBar(); saveRun(); renderShopDelete(); } else { alert("金币不足！"); } }); }; deleteGrid.appendChild(el); }); document.getElementById('shop-back-btn').style.display = 'inline-block';
+        state.deck.forEach(card => { const el = document.createElement('div'); el.innerHTML = generateCardHTML(card, true); el.onclick = () => { let html = `<div>${generateCardHTML(card, true)}</div><div style="font-size: 24px; color: var(--crimson);">彻底遗忘此牌？</div>`; openConfirmPanel('确认遗忘', html, () => { if(state.gold >= shopDeletePrice) { state.gold -= shopDeletePrice; state.deck = state.deck.filter(x => x.id !== card.id); shopDeletePrice += 25; updateTopBar(); saveRun(); renderShopDelete(); } else { alert("金币不足！"); } }); }; deleteGrid.appendChild(el); });
     }
 
     function getShopCopyPrice(card) {
@@ -5875,7 +5871,6 @@
             };
             copyGrid.appendChild(el);
         });
-        document.getElementById('shop-back-btn').style.display = 'inline-block';
     }
 
     function resolveRest() { state.hp = Math.min(state.maxHp, state.hp+30); updateTopBar(); closeOverlay('overlay-rest'); advanceMap(); }
