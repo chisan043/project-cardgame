@@ -2143,6 +2143,23 @@
         ].join('|');
     }
 
+    function getCardNameFamilyKey(card) {
+        if (!card || card.isSpecial || card.isJunk || card.isKnife) return '';
+        return [
+            getCardFrameTheme(card),
+            card.type || '',
+            Number(card.cost) || 0,
+            Number(card.val) || 0
+        ].join('|');
+    }
+
+    function getCardDisplayTags(card) {
+        return normalizeTagConflicts(card?.tags || [])
+            .filter(Boolean)
+            .sort()
+            .map(tag => getTagDisplayName(tag));
+    }
+
     const CARD_EFFECT_ART_BY_SIGNATURE = (() => {
         const map = new Map();
         const register = (card) => {
@@ -2155,9 +2172,57 @@
         return map;
     })();
 
+    const CARD_EFFECT_NAME_BY_SIGNATURE = (() => {
+        const map = new Map();
+        const register = (card) => {
+            const signature = getCardEffectSignature(card);
+            if (!signature || !card?.name) return;
+            const entry = map.get(signature);
+            if (entry) entry.count += 1;
+            else map.set(signature, { name: card.name, count: 1 });
+        };
+        [...NEUTRAL_CARD_POOL, ...Object.values(CHARACTER_CARD_POOLS).flat()].forEach(register);
+        if (typeof SPECIAL_EPICS !== 'undefined') SPECIAL_EPICS.forEach(register);
+        return map;
+    })();
+
+    const CARD_NAME_FAMILY_BY_KEY = (() => {
+        const map = new Map();
+        const register = (card) => {
+            const key = getCardNameFamilyKey(card);
+            if (!key || !card?.name || map.has(key)) return;
+            map.set(key, {
+                name: card.name,
+                signature: getCardEffectSignature(card),
+                tags: new Set(getCardDisplayTags(card))
+            });
+        };
+        [...NEUTRAL_CARD_POOL, ...Object.values(CHARACTER_CARD_POOLS).flat()].forEach(register);
+        return map;
+    })();
+
     function getCardArtPath(card) {
         const signature = getCardEffectSignature(card);
         return CARD_EFFECT_ART_BY_SIGNATURE.get(signature) || getDirectCardArtPath(card);
+    }
+
+    function getCardNameVariantSuffix(card, baseTags) {
+        const tags = getCardDisplayTags(card);
+        const diffTags = tags.filter(tag => !baseTags.has(tag));
+        const suffixTags = diffTags.length ? diffTags : tags;
+        return suffixTags.length ? `·${suffixTags.slice(0, 2).join('')}` : '';
+    }
+
+    function getCardDisplayName(card) {
+        if (!card) return '';
+        if (card.displayName) return card.displayName;
+        if (card.isSpecial || card.isJunk || card.isKnife) return card.name || '';
+        const signature = getCardEffectSignature(card);
+        const exactName = CARD_EFFECT_NAME_BY_SIGNATURE.get(signature);
+        if (exactName && exactName.count > 1) return exactName.name;
+        const family = CARD_NAME_FAMILY_BY_KEY.get(getCardNameFamilyKey(card));
+        if (!family || family.signature === signature) return card.name || '';
+        return `${family.name}${getCardNameVariantSuffix(card, family.tags)}`;
     }
 
     function getCardFrameTheme(card) {
@@ -2485,7 +2550,9 @@
         let frameTheme = getCardFrameTheme(card);
         let framePath = getCardFramePath(card);
         let frameStyle = `--card-frame-image:url('${framePath}')`;
-        let artHtml = artPath ? `<img class="card-art-img" src="${artPath}" alt="${escapeAttr(card.name)}" data-fallback-icon="${escapeAttr(card.icon || '✦')}">` : `<span>${card.icon}</span>`;
+        let displayName = getCardDisplayName(card);
+        let originalNameTitle = displayName !== card.name ? ` title="${escapeAttr(card.name)}"` : '';
+        let artHtml = artPath ? `<img class="card-art-img" src="${artPath}" alt="${escapeAttr(displayName)}" data-fallback-icon="${escapeAttr(card.icon || '✦')}">` : `<span>${card.icon}</span>`;
         let descHtml = card.isJunk ? `<span style="color:var(--crimson); font-size:11px;">${card.desc}</span>` : parseDesc(card);
         let densityClass = getCardTextDensityClass(card, descHtml);
         return `
@@ -2493,7 +2560,7 @@
                 <div class="card-frame-skin"></div>
                 <div class="card-cost"><span>${card.cost}</span></div>
                 <div class="card-type-badge" style="background:${typeBadgeColor};">${card.type}</div>
-                <div class="card-title-plate"><div class="card-name">${card.name}</div></div>
+                <div class="card-title-plate"><div class="card-name"${originalNameTitle}>${displayName}</div></div>
                 <div class="card-art ${artPath ? 'has-art' : ''}">${artHtml}</div>
                 <div class="card-text">
                     <div class="card-desc">${descHtml}</div>
@@ -5067,7 +5134,7 @@
             await new Promise(r => setTimeout(r, 200));
         }
         if (card.tags && !card.tags.includes('复刻') && !card.isJunk) { state.lastPlayedCard = card; }
-        addBattleActionLog('player', `我方使用 ${card.name}`, describePlayerCardResult(card, playerActionSnapshot));
+        addBattleActionLog('player', `我方使用 ${getCardDisplayName(card)}`, describePlayerCardResult(card, playerActionSnapshot));
         renderHand(); updateBattleUI();
     }
 
