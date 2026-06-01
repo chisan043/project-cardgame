@@ -1509,8 +1509,6 @@
         .card.upgraded .card-frame-skin::after { content: "★"; position: absolute; top: 3px; right: 5px; color: var(--gold); font-size: 18px; text-shadow: 0 0 5px black; filter: drop-shadow(0 0 5px var(--gold)); z-index: 10;}
         .static-card { position: relative !important; left: auto !important; bottom: auto !important; transform: none !important; margin: 0; transition: 0.3s;}
         .static-card:hover { transform: translateY(-10px) !important; z-index: 1000 !important; }
-        #overlay-library #lib-content .static-card.special-full-desc { transform: scale(1.3) !important; transform-origin:center top; margin:0 32px 92px; }
-        #overlay-library #lib-content .static-card.special-full-desc:hover { transform: translateY(-10px) scale(1.3) !important; }
 
         /* ================= 遗物 & UI弹窗 ================= */
         .relic-item-box { width: 250px; background: linear-gradient(180deg, rgba(28,37,54,0.96), rgba(10,12,18,0.98)); border: 1px solid rgba(199,162,88,0.58); border-radius: 3px; padding: 20px 15px; text-align: center; transition: 0.3s; display: flex; flex-direction: column; position: relative; overflow: hidden; box-shadow: 0 10px 24px rgba(0,0,0,0.72), inset 0 0 0 1px rgba(255,255,255,0.05);}
@@ -1532,6 +1530,13 @@
         .event-box::after { content:""; position:absolute; left:28px; right:28px; top:18px; height:2px; background:linear-gradient(90deg, transparent, rgba(241,196,15,0.58), transparent); pointer-events:none; }
         .event-box::-webkit-scrollbar { display: none; }
         .card-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+        #overlay-library #lib-content { display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); justify-items:center; align-items:start; column-gap:20px; row-gap:28px; }
+        #overlay-library #lib-content .lib-grid-note,
+        #overlay-library #lib-content .lib-section-title { grid-column:1 / -1; width:100%; }
+        #overlay-library #lib-content .static-card { transform:scale(1.3) !important; transform-origin:center top; margin:0 0 92px; }
+        #overlay-library #lib-content .static-card:hover { transform:translateY(-10px) scale(1.3) !important; }
+        #overlay-library #lib-content .relic-item-box,
+        #overlay-library #lib-content .lib-enemy-card { width:100%; min-width:0; box-sizing:border-box; }
         .anime-panel { background: linear-gradient(180deg, rgba(28,38,54,0.98), rgba(12,14,20,0.99)); color: #efe2bd; border: 1px solid rgba(199,162,88,0.62); border-radius: 3px; box-shadow: 0 10px 22px rgba(0,0,0,0.68), inset 0 0 0 1px rgba(255,255,255,0.06); font-family: "Microsoft YaHei", sans-serif; }
         .shop-scene, .event-scene, .rest-scene { width: 1120px; padding: 0; overflow: hidden; text-align: left; max-width: calc(100vw - 64px); background: linear-gradient(180deg, rgba(8,12,18,0.98), rgba(5,6,10,0.99)); }
         .shop-scene, .rest-scene { max-height: calc(100vh - 64px); }
@@ -5705,7 +5710,7 @@
         if (tab === 'cards') {
             const character = getCurrentCharacter();
             const classPool = getCharacterCardPool(character.id);
-            c.innerHTML = `<div style="width:100%; color:#d9c28a; text-align:center; margin-bottom:12px;">当前职业：${character.name}。奖励与商栈会优先从这些职业卡牌中抽取，并混入少量中立卡牌。</div>`;
+            c.innerHTML = `<div class="lib-grid-note" style="color:#d9c28a; text-align:center; margin-bottom:12px;">当前职业：${character.name}。奖励与商栈会优先从这些职业卡牌中抽取，并混入少量中立卡牌。</div>`;
             [...classPool, ...NEUTRAL_CARD_POOL].forEach(card => {
                 c.innerHTML += generateCardHTML(cloneCardDefinition(card), true);
             });
@@ -5713,9 +5718,9 @@
         else if (tab === 'legend') {
             const character = getCurrentCharacter();
             document.getElementById('btn-tab-legend').innerText = "史诗核心 (流派与秘宝)";
-            c.innerHTML = `<div style="width:100%; color:#d9c28a; text-align:center; margin-bottom:12px;">当前职业：${character.name}。战斗奖励只会从当前职业分组中抽取；图鉴按角色分组展示。</div>`;
+            c.innerHTML = `<div class="lib-grid-note" style="color:#d9c28a; text-align:center; margin-bottom:12px;">当前职业：${character.name}。战斗奖励只会从当前职业分组中抽取；图鉴按角色分组展示。</div>`;
             CHARACTER_ORDER.forEach(roleId => {
-                c.innerHTML += `<div style="width:100%; color:#fff1c0; font-size:18px; letter-spacing:3px; padding:12px 0 4px; border-top:1px solid rgba(241,196,15,0.22);">${CHARACTERS[roleId].name} · 史诗核心</div>`;
+                c.innerHTML += `<div class="lib-section-title" style="color:#fff1c0; font-size:18px; letter-spacing:3px; padding:12px 0 4px; border-top:1px solid rgba(241,196,15,0.22);">${CHARACTERS[roleId].name} · 史诗核心</div>`;
                 getSpecialEpicPool(roleId).forEach(s => {
                     c.innerHTML += generateCardHTML(s, true);
                 });
