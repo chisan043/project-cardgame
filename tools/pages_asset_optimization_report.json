@@ -1,0 +1,1893 @@
+{
+  "assetCount": 269,
+  "rewrittenAssetCount": 269,
+  "sourceBytes": 345381910,
+  "webpBytes": 32664464,
+  "savedBytes": 312717446,
+  "referenceChanges": [],
+  "assets": [
+    {
+      "source": "NPC/campfire_elder_portrait.png",
+      "webp": "NPC/campfire_elder_portrait.webp",
+      "sourceBytes": 629492,
+      "webpBytes": 86528,
+      "status": "cached"
+    },
+    {
+      "source": "NPC/encounter_angel_portrait.png",
+      "webp": "NPC/encounter_angel_portrait.webp",
+      "sourceBytes": 623025,
+      "webpBytes": 96584,
+      "status": "cached"
+    },
+    {
+      "source": "NPC/shopkeeper_portrait.png",
+      "webp": "NPC/shopkeeper_portrait.webp",
+      "sourceBytes": 577942,
+      "webpBytes": 79994,
+      "status": "cached"
+    },
+    {
+      "source": "UI/主菜单/main_menu_key_art_candidate_v3_cel.png",
+      "webp": "UI/主菜单/main_menu_key_art_candidate_v3_cel.webp",
+      "sourceBytes": 2680109,
+      "webpBytes": 237418,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_parchment_fullscreen_background_imagegen_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_parchment_fullscreen_background_imagegen_v1.webp",
+      "sourceBytes": 3289821,
+      "webpBytes": 347212,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/buttons/map_detail_panel_button_imagegen_transparent_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/buttons/map_detail_panel_button_imagegen_transparent_v1.webp",
+      "sourceBytes": 46487,
+      "webpBytes": 5814,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_battle_imagegen_transparent_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_battle_imagegen_transparent_v1.webp",
+      "sourceBytes": 53884,
+      "webpBytes": 8478,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_boss_imagegen_transparent_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_boss_imagegen_transparent_v1.webp",
+      "sourceBytes": 53642,
+      "webpBytes": 8292,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_elite_imagegen_transparent_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_elite_imagegen_transparent_v1.webp",
+      "sourceBytes": 49594,
+      "webpBytes": 8042,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_event_imagegen_transparent_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_event_imagegen_transparent_v1.webp",
+      "sourceBytes": 52072,
+      "webpBytes": 8236,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_rest_imagegen_transparent_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_rest_imagegen_transparent_v1.webp",
+      "sourceBytes": 55756,
+      "webpBytes": 12082,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_shop_imagegen_transparent_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_shop_imagegen_transparent_v1.webp",
+      "sourceBytes": 54425,
+      "webpBytes": 8866,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_church_preview_frame_imagegen_transparent_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_church_preview_frame_imagegen_transparent_v1.webp",
+      "sourceBytes": 296511,
+      "webpBytes": 43112,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_detail_panel_no_button_imagegen_transparent_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_detail_panel_no_button_imagegen_transparent_v1.webp",
+      "sourceBytes": 211194,
+      "webpBytes": 9798,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_region_banner_imagegen_transparent_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_region_banner_imagegen_transparent_v1.webp",
+      "sourceBytes": 177656,
+      "webpBytes": 20118,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_right_simple_outer_wrapper_frame_imagegen_transparent_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_right_simple_outer_wrapper_frame_imagegen_transparent_v1.webp",
+      "sourceBytes": 281376,
+      "webpBytes": 50268,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_side_legend_panel_imagegen_transparent_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_side_legend_panel_imagegen_transparent_v1.webp",
+      "sourceBytes": 241556,
+      "webpBytes": 14530,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_v1.webp",
+      "sourceBytes": 319762,
+      "webpBytes": 51894,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_cold_cave_imagegen_transparent_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_cold_cave_imagegen_transparent_v1.webp",
+      "sourceBytes": 306372,
+      "webpBytes": 45672,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_v1.webp",
+      "sourceBytes": 307010,
+      "webpBytes": 47762,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_v1.webp",
+      "sourceBytes": 313229,
+      "webpBytes": 48694,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_temple_hall_imagegen_transparent_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_temple_hall_imagegen_transparent_v1.webp",
+      "sourceBytes": 304818,
+      "webpBytes": 44460,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_town_castle_imagegen_transparent_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_town_castle_imagegen_transparent_v1.webp",
+      "sourceBytes": 314962,
+      "webpBytes": 51232,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_v1.webp",
+      "sourceBytes": 297976,
+      "webpBytes": 58976,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/battle_hud_enemy_panel_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/battle_hud_enemy_panel_asset_v1.webp",
+      "sourceBytes": 1463254,
+      "webpBytes": 126362,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/中轴控件/end_turn_button_shell_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/中轴控件/end_turn_button_shell_asset_v1.webp",
+      "sourceBytes": 1365592,
+      "webpBytes": 112580,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/中轴控件/turn_counter_inner_dial_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/中轴控件/turn_counter_inner_dial_asset_v1.webp",
+      "sourceBytes": 1427776,
+      "webpBytes": 112262,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/手牌承托/hand_fan_tray_shell_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/手牌承托/hand_fan_tray_shell_asset_v1.webp",
+      "sourceBytes": 1481588,
+      "webpBytes": 107970,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方意图面板/enemy_intent_panel_shell_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方意图面板/enemy_intent_panel_shell_asset_v1.webp",
+      "sourceBytes": 1143687,
+      "webpBytes": 95920,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_armor_bar_shell_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_armor_bar_shell_asset_v1.webp",
+      "sourceBytes": 782472,
+      "webpBytes": 58734,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_hp_bar_shell_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_hp_bar_shell_asset_v1.webp",
+      "sourceBytes": 690949,
+      "webpBytes": 56086,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_nameplate_shell_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_nameplate_shell_asset_v1.webp",
+      "sourceBytes": 824715,
+      "webpBytes": 64242,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_portrait_frame_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_portrait_frame_asset_v1.webp",
+      "sourceBytes": 891314,
+      "webpBytes": 110958,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/discard_pile_stack_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/discard_pile_stack_asset_v1.webp",
+      "sourceBytes": 1856516,
+      "webpBytes": 162566,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/draw_pile_stack_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/draw_pile_stack_asset_v1.webp",
+      "sourceBytes": 2107298,
+      "webpBytes": 174140,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/exile_pile_stack_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/exile_pile_stack_asset_v1.webp",
+      "sourceBytes": 2303887,
+      "webpBytes": 216184,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/pile_count_plate_asset_v1_transparent.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/pile_count_plate_asset_v1_transparent.webp",
+      "sourceBytes": 1531383,
+      "webpBytes": 54580,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/enemy_status_bar_shell_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/enemy_status_bar_shell_asset_v1.webp",
+      "sourceBytes": 1268680,
+      "webpBytes": 108472,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/player_status_bar_shell_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/player_status_bar_shell_asset_v1.webp",
+      "sourceBytes": 1128872,
+      "webpBytes": 126876,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_armor_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_armor_asset_v1.webp",
+      "sourceBytes": 149567,
+      "webpBytes": 52532,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_bleed_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_bleed_asset_v1.webp",
+      "sourceBytes": 156674,
+      "webpBytes": 54210,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_blood_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_blood_asset_v1.webp",
+      "sourceBytes": 163565,
+      "webpBytes": 55342,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_burn_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_burn_asset_v1.webp",
+      "sourceBytes": 143484,
+      "webpBytes": 51302,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_charge_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_charge_asset_v1.webp",
+      "sourceBytes": 146600,
+      "webpBytes": 50146,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_counter_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_counter_asset_v1.webp",
+      "sourceBytes": 147008,
+      "webpBytes": 50494,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_curse_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_curse_asset_v1.webp",
+      "sourceBytes": 156464,
+      "webpBytes": 52730,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_echo_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_echo_asset_v1.webp",
+      "sourceBytes": 181806,
+      "webpBytes": 55880,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_enchant_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_enchant_asset_v1.webp",
+      "sourceBytes": 143574,
+      "webpBytes": 49824,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_guard_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_guard_asset_v1.webp",
+      "sourceBytes": 149362,
+      "webpBytes": 52062,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_poison_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_poison_asset_v1.webp",
+      "sourceBytes": 150473,
+      "webpBytes": 51388,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_str_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_str_asset_v1.webp",
+      "sourceBytes": 144199,
+      "webpBytes": 50810,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_stun_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_stun_asset_v1.webp",
+      "sourceBytes": 159360,
+      "webpBytes": 53732,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_thorns_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_thorns_asset_v1.webp",
+      "sourceBytes": 165956,
+      "webpBytes": 54760,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_vuln_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_vuln_asset_v1.webp",
+      "sourceBytes": 172325,
+      "webpBytes": 55442,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_weak_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_weak_asset_v1.webp",
+      "sourceBytes": 151506,
+      "webpBytes": 51134,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/avatar_circle_gray_base_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/avatar_circle_gray_base_asset_v1.webp",
+      "sourceBytes": 1606121,
+      "webpBytes": 95058,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_armor_bar_shell_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_armor_bar_shell_asset_v1.webp",
+      "sourceBytes": 728715,
+      "webpBytes": 55478,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_off_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_off_asset_v1.webp",
+      "sourceBytes": 1010228,
+      "webpBytes": 74964,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_on_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_on_asset_v1.webp",
+      "sourceBytes": 933878,
+      "webpBytes": 68666,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_tray_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_tray_asset_v1.webp",
+      "sourceBytes": 1090213,
+      "webpBytes": 82836,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_tray_asset_v1_no_circles_transparent.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_tray_asset_v1_no_circles_transparent.webp",
+      "sourceBytes": 1132763,
+      "webpBytes": 73380,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_empty_frame_editor_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_empty_frame_editor_asset_v1.webp",
+      "sourceBytes": 370998,
+      "webpBytes": 36598,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_heart_fill_editor_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_heart_fill_editor_asset_v1.webp",
+      "sourceBytes": 28766,
+      "webpBytes": 4350,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_damage_trail_editor_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_damage_trail_editor_asset_v1.webp",
+      "sourceBytes": 491070,
+      "webpBytes": 39922,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_editor_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_editor_asset_v1.webp",
+      "sourceBytes": 487708,
+      "webpBytes": 34334,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_asset_v1.webp",
+      "sourceBytes": 176556,
+      "webpBytes": 12392,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_editor_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_editor_asset_v1.webp",
+      "sourceBytes": 158424,
+      "webpBytes": 10036,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_shell_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_shell_asset_v1.webp",
+      "sourceBytes": 701880,
+      "webpBytes": 48266,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_nameplate_shell_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_nameplate_shell_asset_v1.webp",
+      "sourceBytes": 847022,
+      "webpBytes": 60544,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_portrait_frame_asset_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_portrait_frame_asset_v1.webp",
+      "sourceBytes": 883168,
+      "webpBytes": 111258,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/按钮/主按钮_蓝金_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/按钮/主按钮_蓝金_v1.webp",
+      "sourceBytes": 1349649,
+      "webpBytes": 99288,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/按钮/确认按钮_紫金_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/按钮/确认按钮_紫金_v1.webp",
+      "sourceBytes": 1328111,
+      "webpBytes": 110052,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/按钮/返回按钮_青金_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/按钮/返回按钮_青金_v1.webp",
+      "sourceBytes": 1286541,
+      "webpBytes": 108146,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_archer_uniform_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_archer_uniform_v1.webp",
+      "sourceBytes": 1492523,
+      "webpBytes": 167302,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_mage_uniform_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_mage_uniform_v1.webp",
+      "sourceBytes": 1495370,
+      "webpBytes": 162754,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_warrior_uniform_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_warrior_uniform_v1.webp",
+      "sourceBytes": 1511527,
+      "webpBytes": 166476,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/角色选择/特性标签底板_蓝金_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/角色选择/特性标签底板_蓝金_v1.webp",
+      "sourceBytes": 759633,
+      "webpBytes": 42850,
+      "status": "cached"
+    },
+    {
+      "source": "UI/教堂彩窗赛璐璐/角色选择/角色描述面板_v1.png",
+      "webp": "UI/教堂彩窗赛璐璐/角色选择/角色描述面板_v1.webp",
+      "sourceBytes": 1515942,
+      "webpBytes": 113122,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡框UI/中立彩窗框.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡框UI/中立彩窗框.webp",
+      "sourceBytes": 42327,
+      "webpBytes": 24996,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡框UI/圣剑彩窗框.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡框UI/圣剑彩窗框.webp",
+      "sourceBytes": 43630,
+      "webpBytes": 25660,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡框UI/森灵彩窗框.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡框UI/森灵彩窗框.webp",
+      "sourceBytes": 41501,
+      "webpBytes": 24066,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡框UI/秘法彩窗框.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡框UI/秘法彩窗框.webp",
+      "sourceBytes": 43146,
+      "webpBytes": 23666,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/中立法则_古誓护印.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/中立法则_古誓护印.webp",
+      "sourceBytes": 3443141,
+      "webpBytes": 326044,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/中立法则_回音残卷.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/中立法则_回音残卷.webp",
+      "sourceBytes": 3440604,
+      "webpBytes": 338798,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/中立法则_圣像微光.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/中立法则_圣像微光.webp",
+      "sourceBytes": 3326073,
+      "webpBytes": 294704,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/中立法则_星轨换手.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/中立法则_星轨换手.webp",
+      "sourceBytes": 3181129,
+      "webpBytes": 254084,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/中立法则_碎星短刃.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/中立法则_碎星短刃.webp",
+      "sourceBytes": 3154141,
+      "webpBytes": 254488,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_圣剑解放.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_圣剑解放.webp",
+      "sourceBytes": 3322066,
+      "webpBytes": 308292,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_圣堂守势.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_圣堂守势.webp",
+      "sourceBytes": 3166493,
+      "webpBytes": 274728,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_战旗压阵.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_战旗压阵.webp",
+      "sourceBytes": 2992115,
+      "webpBytes": 276400,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_棘甲冲锋.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_棘甲冲锋.webp",
+      "sourceBytes": 3072956,
+      "webpBytes": 282344,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_狂誓裂斩.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_狂誓裂斩.webp",
+      "sourceBytes": 3360568,
+      "webpBytes": 348052,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_王冠反斩.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_王冠反斩.webp",
+      "sourceBytes": 3349229,
+      "webpBytes": 313804,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_盾墙反身.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_盾墙反身.webp",
+      "sourceBytes": 3050533,
+      "webpBytes": 225492,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_破晓格挡.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_破晓格挡.webp",
+      "sourceBytes": 3246768,
+      "webpBytes": 295340,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_终誓裁断.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_终誓裁断.webp",
+      "sourceBytes": 3048974,
+      "webpBytes": 280816,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_血祭壁垒.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_血祭壁垒.webp",
+      "sourceBytes": 3094969,
+      "webpBytes": 290112,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_血誓斩.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_血誓斩.webp",
+      "sourceBytes": 2768444,
+      "webpBytes": 200556,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_裂光一闪.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_裂光一闪.webp",
+      "sourceBytes": 3276309,
+      "webpBytes": 294852,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_誓约留锋.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_誓约留锋.webp",
+      "sourceBytes": 3007662,
+      "webpBytes": 255642,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_誓约追击.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_誓约追击.webp",
+      "sourceBytes": 3073823,
+      "webpBytes": 233536,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_铁壁圣痕.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_铁壁圣痕.webp",
+      "sourceBytes": 3402113,
+      "webpBytes": 335334,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_魂誓换锋.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_魂誓换锋.webp",
+      "sourceBytes": 3090508,
+      "webpBytes": 293388,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_回环箭雨.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_回环箭雨.webp",
+      "sourceBytes": 3354073,
+      "webpBytes": 339560,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_回风藏箭.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_回风藏箭.webp",
+      "sourceBytes": 2976700,
+      "webpBytes": 250552,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_拾羽连步.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_拾羽连步.webp",
+      "sourceBytes": 3049553,
+      "webpBytes": 289628,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_林风整备.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_林风整备.webp",
+      "sourceBytes": 2994697,
+      "webpBytes": 219918,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_林魂招矢.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_林魂招矢.webp",
+      "sourceBytes": 3141115,
+      "webpBytes": 313500,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_森冠齐射.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_森冠齐射.webp",
+      "sourceBytes": 3282968,
+      "webpBytes": 311992,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_森息伏击.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_森息伏击.webp",
+      "sourceBytes": 3216657,
+      "webpBytes": 288000,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_狩影穿枝.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_狩影穿枝.webp",
+      "sourceBytes": 3183450,
+      "webpBytes": 274546,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_猎手翻步.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_猎手翻步.webp",
+      "sourceBytes": 2877787,
+      "webpBytes": 202504,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_翠毒连矢.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_翠毒连矢.webp",
+      "sourceBytes": 2909649,
+      "webpBytes": 251806,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_赤痕放血.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_赤痕放血.webp",
+      "sourceBytes": 3041351,
+      "webpBytes": 290748,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_轮枝归射.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_轮枝归射.webp",
+      "sourceBytes": 3406145,
+      "webpBytes": 322072,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_逐影放矢.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_逐影放矢.webp",
+      "sourceBytes": 2785955,
+      "webpBytes": 223690,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_逐风绝矢.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_逐风绝矢.webp",
+      "sourceBytes": 3125052,
+      "webpBytes": 300708,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_风羽换位.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_风羽换位.webp",
+      "sourceBytes": 3311071,
+      "webpBytes": 371434,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_鹰眼贯枝.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_鹰眼贯枝.webp",
+      "sourceBytes": 3520605,
+      "webpBytes": 366792,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_余烬点燃.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_余烬点燃.webp",
+      "sourceBytes": 3226502,
+      "webpBytes": 291368,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_咒回星环.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_咒回星环.webp",
+      "sourceBytes": 3108438,
+      "webpBytes": 288682,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_回声护幕.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_回声护幕.webp",
+      "sourceBytes": 3182455,
+      "webpBytes": 306634,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_星屑预兆.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_星屑预兆.webp",
+      "sourceBytes": 3279193,
+      "webpBytes": 299228,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_星火连祷.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_星火连祷.webp",
+      "sourceBytes": 3389590,
+      "webpBytes": 345936,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_星环复写.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_星环复写.webp",
+      "sourceBytes": 3092792,
+      "webpBytes": 282134,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_星缚咒印.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_星缚咒印.webp",
+      "sourceBytes": 3278073,
+      "webpBytes": 320502,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_法环回流.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_法环回流.webp",
+      "sourceBytes": 3330217,
+      "webpBytes": 306568,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_燃魂导流.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_燃魂导流.webp",
+      "sourceBytes": 3149192,
+      "webpBytes": 310020,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_紫焰刻印.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_紫焰刻印.webp",
+      "sourceBytes": 2988169,
+      "webpBytes": 266568,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_紫焰火花.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_紫焰火花.webp",
+      "sourceBytes": 3065414,
+      "webpBytes": 233532,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_虚弱星尘.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_虚弱星尘.webp",
+      "sourceBytes": 2937672,
+      "webpBytes": 230436,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_虚空导引.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_虚空导引.webp",
+      "sourceBytes": 3212700,
+      "webpBytes": 277146,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_裂星禁术.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_裂星禁术.webp",
+      "sourceBytes": 3176819,
+      "webpBytes": 301240,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_裂界紫雷.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_裂界紫雷.webp",
+      "sourceBytes": 3308905,
+      "webpBytes": 305014,
+      "status": "cached"
+    },
+    {
+      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_魔流庇护.png",
+      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_魔流庇护.webp",
+      "sourceBytes": 3144501,
+      "webpBytes": 242986,
+      "status": "cached"
+    },
+    {
+      "source": "场景/主场景/bg_battle_ancient_forest_day.png",
+      "webp": "场景/主场景/bg_battle_ancient_forest_day.webp",
+      "sourceBytes": 3053263,
+      "webpBytes": 290864,
+      "status": "cached"
+    },
+    {
+      "source": "场景/主场景/bg_battle_cave_cold.png",
+      "webp": "场景/主场景/bg_battle_cave_cold.webp",
+      "sourceBytes": 2639165,
+      "webpBytes": 186992,
+      "status": "cached"
+    },
+    {
+      "source": "场景/主场景/bg_battle_dungeon_corridor_torch.png",
+      "webp": "场景/主场景/bg_battle_dungeon_corridor_torch.webp",
+      "sourceBytes": 2585907,
+      "webpBytes": 147024,
+      "status": "cached"
+    },
+    {
+      "source": "场景/主场景/bg_battle_mountain_plain_day.png",
+      "webp": "场景/主场景/bg_battle_mountain_plain_day.webp",
+      "sourceBytes": 3022579,
+      "webpBytes": 281020,
+      "status": "cached"
+    },
+    {
+      "source": "场景/主场景/bg_battle_stone_ruins_day.png",
+      "webp": "场景/主场景/bg_battle_stone_ruins_day.webp",
+      "sourceBytes": 3278178,
+      "webpBytes": 359522,
+      "status": "cached"
+    },
+    {
+      "source": "场景/主场景/bg_battle_temple_hall_grand.png",
+      "webp": "场景/主场景/bg_battle_temple_hall_grand.webp",
+      "sourceBytes": 2809510,
+      "webpBytes": 236072,
+      "status": "cached"
+    },
+    {
+      "source": "场景/主场景/bg_battle_temple_inner_light.png",
+      "webp": "场景/主场景/bg_battle_temple_inner_light.webp",
+      "sourceBytes": 2623927,
+      "webpBytes": 170922,
+      "status": "cached"
+    },
+    {
+      "source": "场景/主场景/bg_battle_wasteland_dusk.png",
+      "webp": "场景/主场景/bg_battle_wasteland_dusk.webp",
+      "sourceBytes": 2735487,
+      "webpBytes": 181130,
+      "status": "cached"
+    },
+    {
+      "source": "场景/主场景/bg_event_town_distant_day.png",
+      "webp": "场景/主场景/bg_event_town_distant_day.webp",
+      "sourceBytes": 3028635,
+      "webpBytes": 295070,
+      "status": "cached"
+    },
+    {
+      "source": "场景/色调变体/bg_battle_ancient_forest_sunset.png",
+      "webp": "场景/色调变体/bg_battle_ancient_forest_sunset.webp",
+      "sourceBytes": 2386791,
+      "webpBytes": 138832,
+      "status": "cached"
+    },
+    {
+      "source": "场景/色调变体/bg_battle_mountain_plain_night.png",
+      "webp": "场景/色调变体/bg_battle_mountain_plain_night.webp",
+      "sourceBytes": 1867887,
+      "webpBytes": 60088,
+      "status": "cached"
+    },
+    {
+      "source": "场景/色调变体/bg_battle_mountain_plain_rain.png",
+      "webp": "场景/色调变体/bg_battle_mountain_plain_rain.webp",
+      "sourceBytes": 2673440,
+      "webpBytes": 195900,
+      "status": "cached"
+    },
+    {
+      "source": "场景/色调变体/bg_battle_stone_ruins_night.png",
+      "webp": "场景/色调变体/bg_battle_stone_ruins_night.webp",
+      "sourceBytes": 2070353,
+      "webpBytes": 85840,
+      "status": "cached"
+    },
+    {
+      "source": "场景/色调变体/bg_battle_stone_ruins_sunset.png",
+      "webp": "场景/色调变体/bg_battle_stone_ruins_sunset.webp",
+      "sourceBytes": 2592273,
+      "webpBytes": 192508,
+      "status": "cached"
+    },
+    {
+      "source": "头像/怪物/【深渊主宰】.png",
+      "webp": "头像/怪物/【深渊主宰】.webp",
+      "sourceBytes": 403713,
+      "webpBytes": 86700,
+      "status": "cached"
+    },
+    {
+      "source": "头像/怪物/【精英】不死骨龙.png",
+      "webp": "头像/怪物/【精英】不死骨龙.webp",
+      "sourceBytes": 282841,
+      "webpBytes": 58244,
+      "status": "cached"
+    },
+    {
+      "source": "头像/怪物/【精英】狂暴牛头人.png",
+      "webp": "头像/怪物/【精英】狂暴牛头人.webp",
+      "sourceBytes": 280426,
+      "webpBytes": 35514,
+      "status": "cached"
+    },
+    {
+      "source": "头像/怪物/【精英】猩红血巫.png",
+      "webp": "头像/怪物/【精英】猩红血巫.webp",
+      "sourceBytes": 278248,
+      "webpBytes": 45842,
+      "status": "cached"
+    },
+    {
+      "source": "头像/怪物/【首领】鬼面修罗.png",
+      "webp": "头像/怪物/【首领】鬼面修罗.webp",
+      "sourceBytes": 261207,
+      "webpBytes": 40276,
+      "status": "cached"
+    },
+    {
+      "source": "头像/怪物/剧毒蟾蜍.png",
+      "webp": "头像/怪物/剧毒蟾蜍.webp",
+      "sourceBytes": 352577,
+      "webpBytes": 42696,
+      "status": "cached"
+    },
+    {
+      "source": "头像/怪物/千载魔蛛.png",
+      "webp": "头像/怪物/千载魔蛛.webp",
+      "sourceBytes": 258328,
+      "webpBytes": 37022,
+      "status": "cached"
+    },
+    {
+      "source": "头像/怪物/嗜血蝙蝠.png",
+      "webp": "头像/怪物/嗜血蝙蝠.webp",
+      "sourceBytes": 183264,
+      "webpBytes": 20668,
+      "status": "cached"
+    },
+    {
+      "source": "头像/怪物/堕落剑客.png",
+      "webp": "头像/怪物/堕落剑客.webp",
+      "sourceBytes": 313899,
+      "webpBytes": 48204,
+      "status": "cached"
+    },
+    {
+      "source": "头像/怪物/巨力石魔.png",
+      "webp": "头像/怪物/巨力石魔.webp",
+      "sourceBytes": 348204,
+      "webpBytes": 52798,
+      "status": "cached"
+    },
+    {
+      "source": "头像/怪物/幽冥法师.png",
+      "webp": "头像/怪物/幽冥法师.webp",
+      "sourceBytes": 270578,
+      "webpBytes": 58642,
+      "status": "cached"
+    },
+    {
+      "source": "头像/怪物/暴躁野猪.png",
+      "webp": "头像/怪物/暴躁野猪.webp",
+      "sourceBytes": 327215,
+      "webpBytes": 36972,
+      "status": "cached"
+    },
+    {
+      "source": "头像/怪物/枯骨煞兵.png",
+      "webp": "头像/怪物/枯骨煞兵.webp",
+      "sourceBytes": 293947,
+      "webpBytes": 39822,
+      "status": "cached"
+    },
+    {
+      "source": "头像/怪物/病弱史莱姆.png",
+      "webp": "头像/怪物/病弱史莱姆.webp",
+      "sourceBytes": 302960,
+      "webpBytes": 34164,
+      "status": "cached"
+    },
+    {
+      "source": "头像/怪物/缝合巨怪.png",
+      "webp": "头像/怪物/缝合巨怪.webp",
+      "sourceBytes": 373835,
+      "webpBytes": 53514,
+      "status": "cached"
+    },
+    {
+      "source": "头像/怪物/荒野煞狼.png",
+      "webp": "头像/怪物/荒野煞狼.webp",
+      "sourceBytes": 264394,
+      "webpBytes": 24542,
+      "status": "cached"
+    },
+    {
+      "source": "头像/怪物/贪婪盗贼.png",
+      "webp": "头像/怪物/贪婪盗贼.webp",
+      "sourceBytes": 246699,
+      "webpBytes": 21248,
+      "status": "cached"
+    },
+    {
+      "source": "头像/怪物/迷途妖狐.png",
+      "webp": "头像/怪物/迷途妖狐.webp",
+      "sourceBytes": 341319,
+      "webpBytes": 36192,
+      "status": "cached"
+    },
+    {
+      "source": "头像/怪物/铁甲巨蟹.png",
+      "webp": "头像/怪物/铁甲巨蟹.webp",
+      "sourceBytes": 261846,
+      "webpBytes": 41774,
+      "status": "cached"
+    },
+    {
+      "source": "头像/怪物/魅影刺客.png",
+      "webp": "头像/怪物/魅影刺客.webp",
+      "sourceBytes": 291385,
+      "webpBytes": 29250,
+      "status": "cached"
+    },
+    {
+      "source": "头像/角色/hero_archer.png",
+      "webp": "头像/角色/hero_archer.webp",
+      "sourceBytes": 165112,
+      "webpBytes": 25622,
+      "status": "cached"
+    },
+    {
+      "source": "头像/角色/hero_mage.png",
+      "webp": "头像/角色/hero_mage.webp",
+      "sourceBytes": 242751,
+      "webpBytes": 30156,
+      "status": "cached"
+    },
+    {
+      "source": "头像/角色/hero_warrior.png",
+      "webp": "头像/角色/hero_warrior.webp",
+      "sourceBytes": 195533,
+      "webpBytes": 27810,
+      "status": "cached"
+    },
+    {
+      "source": "怪物/战斗立绘/【深渊主宰】.png",
+      "webp": "怪物/战斗立绘/【深渊主宰】.webp",
+      "sourceBytes": 2163839,
+      "webpBytes": 401780,
+      "status": "cached"
+    },
+    {
+      "source": "怪物/战斗立绘/【精英】不死骨龙.png",
+      "webp": "怪物/战斗立绘/【精英】不死骨龙.webp",
+      "sourceBytes": 1630361,
+      "webpBytes": 204976,
+      "status": "cached"
+    },
+    {
+      "source": "怪物/战斗立绘/【精英】狂暴牛头人.png",
+      "webp": "怪物/战斗立绘/【精英】狂暴牛头人.webp",
+      "sourceBytes": 1752782,
+      "webpBytes": 158722,
+      "status": "cached"
+    },
+    {
+      "source": "怪物/战斗立绘/【精英】猩红血巫.png",
+      "webp": "怪物/战斗立绘/【精英】猩红血巫.webp",
+      "sourceBytes": 1912705,
+      "webpBytes": 203668,
+      "status": "cached"
+    },
+    {
+      "source": "怪物/战斗立绘/【首领】鬼面修罗.png",
+      "webp": "怪物/战斗立绘/【首领】鬼面修罗.webp",
+      "sourceBytes": 1935231,
+      "webpBytes": 219328,
+      "status": "cached"
+    },
+    {
+      "source": "怪物/战斗立绘/剧毒蟾蜍.png",
+      "webp": "怪物/战斗立绘/剧毒蟾蜍.webp",
+      "sourceBytes": 1895079,
+      "webpBytes": 181494,
+      "status": "cached"
+    },
+    {
+      "source": "怪物/战斗立绘/千载魔蛛.png",
+      "webp": "怪物/战斗立绘/千载魔蛛.webp",
+      "sourceBytes": 1834549,
+      "webpBytes": 236326,
+      "status": "cached"
+    },
+    {
+      "source": "怪物/战斗立绘/嗜血蝙蝠.png",
+      "webp": "怪物/战斗立绘/嗜血蝙蝠.webp",
+      "sourceBytes": 1165739,
+      "webpBytes": 102590,
+      "status": "cached"
+    },
+    {
+      "source": "怪物/战斗立绘/堕落剑客.png",
+      "webp": "怪物/战斗立绘/堕落剑客.webp",
+      "sourceBytes": 1936108,
+      "webpBytes": 190226,
+      "status": "cached"
+    },
+    {
+      "source": "怪物/战斗立绘/巨力石魔.png",
+      "webp": "怪物/战斗立绘/巨力石魔.webp",
+      "sourceBytes": 2288828,
+      "webpBytes": 246278,
+      "status": "cached"
+    },
+    {
+      "source": "怪物/战斗立绘/幽冥法师.png",
+      "webp": "怪物/战斗立绘/幽冥法师.webp",
+      "sourceBytes": 1769508,
+      "webpBytes": 253944,
+      "status": "cached"
+    },
+    {
+      "source": "怪物/战斗立绘/暴躁野猪.png",
+      "webp": "怪物/战斗立绘/暴躁野猪.webp",
+      "sourceBytes": 1873947,
+      "webpBytes": 170052,
+      "status": "cached"
+    },
+    {
+      "source": "怪物/战斗立绘/枯骨煞兵.png",
+      "webp": "怪物/战斗立绘/枯骨煞兵.webp",
+      "sourceBytes": 1340862,
+      "webpBytes": 136774,
+      "status": "cached"
+    },
+    {
+      "source": "怪物/战斗立绘/病弱史莱姆.png",
+      "webp": "怪物/战斗立绘/病弱史莱姆.webp",
+      "sourceBytes": 1482914,
+      "webpBytes": 120670,
+      "status": "cached"
+    },
+    {
+      "source": "怪物/战斗立绘/缝合巨怪.png",
+      "webp": "怪物/战斗立绘/缝合巨怪.webp",
+      "sourceBytes": 2122629,
+      "webpBytes": 240944,
+      "status": "cached"
+    },
+    {
+      "source": "怪物/战斗立绘/荒野煞狼.png",
+      "webp": "怪物/战斗立绘/荒野煞狼.webp",
+      "sourceBytes": 1293336,
+      "webpBytes": 104906,
+      "status": "cached"
+    },
+    {
+      "source": "怪物/战斗立绘/贪婪盗贼.png",
+      "webp": "怪物/战斗立绘/贪婪盗贼.webp",
+      "sourceBytes": 1386440,
+      "webpBytes": 98024,
+      "status": "cached"
+    },
+    {
+      "source": "怪物/战斗立绘/迷途妖狐.png",
+      "webp": "怪物/战斗立绘/迷途妖狐.webp",
+      "sourceBytes": 1909254,
+      "webpBytes": 190864,
+      "status": "cached"
+    },
+    {
+      "source": "怪物/战斗立绘/铁甲巨蟹.png",
+      "webp": "怪物/战斗立绘/铁甲巨蟹.webp",
+      "sourceBytes": 1918969,
+      "webpBytes": 206228,
+      "status": "cached"
+    },
+    {
+      "source": "怪物/战斗立绘/魅影刺客.png",
+      "webp": "怪物/战斗立绘/魅影刺客.webp",
+      "sourceBytes": 1693010,
+      "webpBytes": 130308,
+      "status": "cached"
+    },
+    {
+      "source": "新角色一/角色一_卡面插画_圣剑突击.png",
+      "webp": "新角色一/角色一_卡面插画_圣剑突击.webp",
+      "sourceBytes": 3122584,
+      "webpBytes": 258122,
+      "status": "cached"
+    },
+    {
+      "source": "新角色一/角色一_卡面插画_遗迹立誓.png",
+      "webp": "新角色一/角色一_卡面插画_遗迹立誓.webp",
+      "sourceBytes": 2970444,
+      "webpBytes": 235922,
+      "status": "cached"
+    },
+    {
+      "source": "新角色一/角色一_我方背面_待机.png",
+      "webp": "新角色一/角色一_我方背面_待机.webp",
+      "sourceBytes": 1183203,
+      "webpBytes": 93332,
+      "status": "cached"
+    },
+    {
+      "source": "新角色一/角色一_角色选择_立绘.png",
+      "webp": "新角色一/角色一_角色选择_立绘.webp",
+      "sourceBytes": 584492,
+      "webpBytes": 67006,
+      "status": "cached"
+    },
+    {
+      "source": "新角色三/角色三_卡面插画_拉弓瞄准.png",
+      "webp": "新角色三/角色三_卡面插画_拉弓瞄准.webp",
+      "sourceBytes": 3007124,
+      "webpBytes": 227718,
+      "status": "cached"
+    },
+    {
+      "source": "新角色三/角色三_卡面插画_疾风连射.png",
+      "webp": "新角色三/角色三_卡面插画_疾风连射.webp",
+      "sourceBytes": 3043828,
+      "webpBytes": 248284,
+      "status": "cached"
+    },
+    {
+      "source": "新角色三/角色三_我方背面_待机.png",
+      "webp": "新角色三/角色三_我方背面_待机.webp",
+      "sourceBytes": 877527,
+      "webpBytes": 111686,
+      "status": "cached"
+    },
+    {
+      "source": "新角色三/角色三_角色选择_立绘.png",
+      "webp": "新角色三/角色三_角色选择_立绘.webp",
+      "sourceBytes": 429418,
+      "webpBytes": 64824,
+      "status": "cached"
+    },
+    {
+      "source": "角色二/角色二_卡面插画_紫焰爆裂.png",
+      "webp": "角色二/角色二_卡面插画_紫焰爆裂.webp",
+      "sourceBytes": 2694754,
+      "webpBytes": 190874,
+      "status": "cached"
+    },
+    {
+      "source": "角色二/角色二_卡面插画_遗迹咏唱.png",
+      "webp": "角色二/角色二_卡面插画_遗迹咏唱.webp",
+      "sourceBytes": 3227721,
+      "webpBytes": 278934,
+      "status": "cached"
+    },
+    {
+      "source": "角色二/角色二_我方背面_待机.png",
+      "webp": "角色二/角色二_我方背面_待机.webp",
+      "sourceBytes": 988055,
+      "webpBytes": 82226,
+      "status": "cached"
+    },
+    {
+      "source": "角色二/角色二_角色选择_立绘.png",
+      "webp": "角色二/角色二_角色选择_立绘.webp",
+      "sourceBytes": 627974,
+      "webpBytes": 81936,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_base_energy.png",
+      "webp": "遗物/图标/r_base_energy.webp",
+      "sourceBytes": 266088,
+      "webpBytes": 27522,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_bleed_knife.png",
+      "webp": "遗物/图标/r_bleed_knife.webp",
+      "sourceBytes": 249642,
+      "webpBytes": 25402,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_bleed_return_exhaust.png",
+      "webp": "遗物/图标/r_bleed_return_exhaust.webp",
+      "sourceBytes": 249642,
+      "webpBytes": 25402,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_blood.png",
+      "webp": "遗物/图标/r_blood.webp",
+      "sourceBytes": 249642,
+      "webpBytes": 25402,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_bone_ring.png",
+      "webp": "遗物/图标/r_bone_ring.webp",
+      "sourceBytes": 249642,
+      "webpBytes": 25402,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_brutal.png",
+      "webp": "遗物/图标/r_brutal.webp",
+      "sourceBytes": 249642,
+      "webpBytes": 25402,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_combo_ring.png",
+      "webp": "遗物/图标/r_combo_ring.webp",
+      "sourceBytes": 275280,
+      "webpBytes": 34002,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_corrupt_cup.png",
+      "webp": "遗物/图标/r_corrupt_cup.webp",
+      "sourceBytes": 268187,
+      "webpBytes": 32008,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_counter_amulet.png",
+      "webp": "遗物/图标/r_counter_amulet.webp",
+      "sourceBytes": 255708,
+      "webpBytes": 27966,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_cycle_compass.png",
+      "webp": "遗物/图标/r_cycle_compass.webp",
+      "sourceBytes": 263063,
+      "webpBytes": 27374,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_decay_seal.png",
+      "webp": "遗物/图标/r_decay_seal.webp",
+      "sourceBytes": 268187,
+      "webpBytes": 32008,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_def_cost.png",
+      "webp": "遗物/图标/r_def_cost.webp",
+      "sourceBytes": 255708,
+      "webpBytes": 27966,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_despair.png",
+      "webp": "遗物/图标/r_despair.webp",
+      "sourceBytes": 268187,
+      "webpBytes": 32008,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_echo_mirror_relic.png",
+      "webp": "遗物/图标/r_echo_mirror_relic.webp",
+      "sourceBytes": 220891,
+      "webpBytes": 22576,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_enchant_crys.png",
+      "webp": "遗物/图标/r_enchant_crys.webp",
+      "sourceBytes": 266088,
+      "webpBytes": 27522,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_energy_crys.png",
+      "webp": "遗物/图标/r_energy_crys.webp",
+      "sourceBytes": 266088,
+      "webpBytes": 27522,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_ethereal.png",
+      "webp": "遗物/图标/r_ethereal.webp",
+      "sourceBytes": 257568,
+      "webpBytes": 28600,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_execute.png",
+      "webp": "遗物/图标/r_execute.webp",
+      "sourceBytes": 249642,
+      "webpBytes": 25402,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_exhaust_dmg.png",
+      "webp": "遗物/图标/r_exhaust_dmg.webp",
+      "sourceBytes": 269345,
+      "webpBytes": 32884,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_exhaust_knife.png",
+      "webp": "遗物/图标/r_exhaust_knife.webp",
+      "sourceBytes": 275280,
+      "webpBytes": 34002,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_exhaust_stone.png",
+      "webp": "遗物/图标/r_exhaust_stone.webp",
+      "sourceBytes": 255708,
+      "webpBytes": 27966,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_fast_foot.png",
+      "webp": "遗物/图标/r_fast_foot.webp",
+      "sourceBytes": 275280,
+      "webpBytes": 34002,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_frenzy.png",
+      "webp": "遗物/图标/r_frenzy.webp",
+      "sourceBytes": 256038,
+      "webpBytes": 27196,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_frenzy_veil.png",
+      "webp": "遗物/图标/r_frenzy_veil.webp",
+      "sourceBytes": 256038,
+      "webpBytes": 27196,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_heal_relic.png",
+      "webp": "遗物/图标/r_heal_relic.webp",
+      "sourceBytes": 269145,
+      "webpBytes": 32654,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_heavy_badge.png",
+      "webp": "遗物/图标/r_heavy_badge.webp",
+      "sourceBytes": 275280,
+      "webpBytes": 34002,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_life_totem.png",
+      "webp": "遗物/图标/r_life_totem.webp",
+      "sourceBytes": 255708,
+      "webpBytes": 27966,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_long_decay.png",
+      "webp": "遗物/图标/r_long_decay.webp",
+      "sourceBytes": 268187,
+      "webpBytes": 32008,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_luck_box.png",
+      "webp": "遗物/图标/r_luck_box.webp",
+      "sourceBytes": 266754,
+      "webpBytes": 28238,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_omni_seal.png",
+      "webp": "遗物/图标/r_omni_seal.webp",
+      "sourceBytes": 268187,
+      "webpBytes": 32008,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_overheal.png",
+      "webp": "遗物/图标/r_overheal.webp",
+      "sourceBytes": 269145,
+      "webpBytes": 32654,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_pass_draw.png",
+      "webp": "遗物/图标/r_pass_draw.webp",
+      "sourceBytes": 266754,
+      "webpBytes": 28238,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_pass_energy.png",
+      "webp": "遗物/图标/r_pass_energy.webp",
+      "sourceBytes": 266088,
+      "webpBytes": 27522,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_pass_thorns.png",
+      "webp": "遗物/图标/r_pass_thorns.webp",
+      "sourceBytes": 280494,
+      "webpBytes": 36206,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_perma_curse.png",
+      "webp": "遗物/图标/r_perma_curse.webp",
+      "sourceBytes": 268187,
+      "webpBytes": 32008,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_pierce.png",
+      "webp": "遗物/图标/r_pierce.webp",
+      "sourceBytes": 275280,
+      "webpBytes": 34002,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_pierce_amulet.png",
+      "webp": "遗物/图标/r_pierce_amulet.webp",
+      "sourceBytes": 275280,
+      "webpBytes": 34002,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_plague.png",
+      "webp": "遗物/图标/r_plague.webp",
+      "sourceBytes": 254725,
+      "webpBytes": 28402,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_poison_fang.png",
+      "webp": "遗物/图标/r_poison_fang.webp",
+      "sourceBytes": 254725,
+      "webpBytes": 28402,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_poison_leech.png",
+      "webp": "遗物/图标/r_poison_leech.webp",
+      "sourceBytes": 254725,
+      "webpBytes": 28402,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_protect_armor.png",
+      "webp": "遗物/图标/r_protect_armor.webp",
+      "sourceBytes": 255708,
+      "webpBytes": 27966,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_return_bleed.png",
+      "webp": "遗物/图标/r_return_bleed.webp",
+      "sourceBytes": 269345,
+      "webpBytes": 32884,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_return_knife.png",
+      "webp": "遗物/图标/r_return_knife.webp",
+      "sourceBytes": 275280,
+      "webpBytes": 34002,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_return_poison.png",
+      "webp": "遗物/图标/r_return_poison.webp",
+      "sourceBytes": 269345,
+      "webpBytes": 32884,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_sac_jade.png",
+      "webp": "遗物/图标/r_sac_jade.webp",
+      "sourceBytes": 269145,
+      "webpBytes": 32654,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_skill_cost.png",
+      "webp": "遗物/图标/r_skill_cost.webp",
+      "sourceBytes": 266754,
+      "webpBytes": 28238,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_soul_lantern.png",
+      "webp": "遗物/图标/r_soul_lantern.webp",
+      "sourceBytes": 257568,
+      "webpBytes": 28600,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_thorn_shield_new.png",
+      "webp": "遗物/图标/r_thorn_shield_new.webp",
+      "sourceBytes": 280494,
+      "webpBytes": 36206,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_vamp_ring.png",
+      "webp": "遗物/图标/r_vamp_ring.webp",
+      "sourceBytes": 269145,
+      "webpBytes": 32654,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_weak_mask.png",
+      "webp": "遗物/图标/r_weak_mask.webp",
+      "sourceBytes": 256038,
+      "webpBytes": 27196,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/图标/r_yin_yang.png",
+      "webp": "遗物/图标/r_yin_yang.webp",
+      "sourceBytes": 263063,
+      "webpBytes": 27374,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/母版/relic_master_blood_dagger.png",
+      "webp": "遗物/母版/relic_master_blood_dagger.webp",
+      "sourceBytes": 425934,
+      "webpBytes": 38676,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/母版/relic_master_cursed_mask.png",
+      "webp": "遗物/母版/relic_master_cursed_mask.webp",
+      "sourceBytes": 435870,
+      "webpBytes": 42622,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/母版/relic_master_cursed_seal.png",
+      "webp": "遗物/母版/relic_master_cursed_seal.webp",
+      "sourceBytes": 457288,
+      "webpBytes": 49900,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/母版/relic_master_cycle_compass.png",
+      "webp": "遗物/母版/relic_master_cycle_compass.webp",
+      "sourceBytes": 449580,
+      "webpBytes": 46800,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/母版/relic_master_echo_mirror.png",
+      "webp": "遗物/母版/relic_master_echo_mirror.webp",
+      "sourceBytes": 373825,
+      "webpBytes": 35010,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/母版/relic_master_energy_core.png",
+      "webp": "遗物/母版/relic_master_energy_core.webp",
+      "sourceBytes": 454129,
+      "webpBytes": 47294,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/母版/relic_master_ghost_banner.png",
+      "webp": "遗物/母版/relic_master_ghost_banner.webp",
+      "sourceBytes": 460921,
+      "webpBytes": 51764,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/母版/relic_master_grimoire_lockbox.png",
+      "webp": "遗物/母版/relic_master_grimoire_lockbox.webp",
+      "sourceBytes": 457497,
+      "webpBytes": 49330,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/母版/relic_master_holy_bloom.png",
+      "webp": "遗物/母版/relic_master_holy_bloom.webp",
+      "sourceBytes": 458395,
+      "webpBytes": 49962,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/母版/relic_master_martial_crest.png",
+      "webp": "遗物/母版/relic_master_martial_crest.webp",
+      "sourceBytes": 469673,
+      "webpBytes": 53214,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/母版/relic_master_soul_lantern.png",
+      "webp": "遗物/母版/relic_master_soul_lantern.webp",
+      "sourceBytes": 436515,
+      "webpBytes": 43894,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/母版/relic_master_stone_totem.png",
+      "webp": "遗物/母版/relic_master_stone_totem.webp",
+      "sourceBytes": 440252,
+      "webpBytes": 44918,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/母版/relic_master_thorn_shield.png",
+      "webp": "遗物/母版/relic_master_thorn_shield.webp",
+      "sourceBytes": 480499,
+      "webpBytes": 56090,
+      "status": "cached"
+    },
+    {
+      "source": "遗物/母版/relic_master_venom_fang.png",
+      "webp": "遗物/母版/relic_master_venom_fang.webp",
+      "sourceBytes": 431444,
+      "webpBytes": 43972,
+      "status": "cached"
+    }
+  ]
+}

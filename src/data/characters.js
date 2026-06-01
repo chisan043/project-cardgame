@@ -14,9 +14,9 @@ const CHARACTERS = {
         starterDeckId: 'starter_warrior',
         cardPoolId: 'pool_warrior',
         passive: '更高生命上限。每场战斗开始获得 5 点护盾；圣剑攻击会借护盾与反击姿态追加伤害。',
-        portrait: '新角色一/角色一_角色选择_立绘.png',
-        avatarPortrait: '头像/角色/hero_warrior.png',
-        battleBack: '新角色一/角色一_我方背面_待机.png',
+        portrait: '新角色一/角色一_角色选择_立绘.webp',
+        avatarPortrait: '头像/角色/hero_warrior.webp',
+        battleBack: '新角色一/角色一_我方背面_待机.webp',
         accentClass: '',
         starterHint: '先架盾与立誓，再用圣剑牌把护盾和反击姿态转成伤害。'
     },
@@ -33,9 +33,9 @@ const CHARACTERS = {
         starterDeckId: 'starter_mage',
         cardPoolId: 'pool_mage',
         passive: '基础能量 +1，初始金币略高，但生命上限较低；爆发牌会消耗咏唱造成追加伤害。',
-        portrait: '角色二/角色二_角色选择_立绘.png',
-        avatarPortrait: '头像/角色/hero_mage.png',
-        battleBack: '角色二/角色二_我方背面_待机.png',
+        portrait: '角色二/角色二_角色选择_立绘.webp',
+        avatarPortrait: '头像/角色/hero_mage.webp',
+        battleBack: '角色二/角色二_我方背面_待机.webp',
         accentClass: 'featured',
         starterHint: '用咏唱牌攒层数和手牌，再用紫焰爆裂、紫焰火花打爆发窗口。'
     },
@@ -52,9 +52,9 @@ const CHARACTERS = {
         starterDeckId: 'starter_archer',
         cardPoolId: 'pool_archer',
         passive: '每回合抽牌多 1 张；蓄力会转化为风势，攻击时消耗 1 层风势追加追射并获得庇护。',
-        portrait: '新角色三/角色三_角色选择_立绘.png',
-        avatarPortrait: '头像/角色/hero_archer.png',
-        battleBack: '新角色三/角色三_我方背面_待机.png',
+        portrait: '新角色三/角色三_角色选择_立绘.webp',
+        avatarPortrait: '头像/角色/hero_archer.webp',
+        battleBack: '新角色三/角色三_我方背面_待机.webp',
         accentClass: '',
         starterHint: '先用拉弓/林风积攒风势，再用连射和自然牌边走位边追射。'
     }

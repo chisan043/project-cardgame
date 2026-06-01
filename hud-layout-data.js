@@ -1,5 +1,5 @@
 window.HUANJING_HUD_LAYOUT = {
-  "background": "场景/主场景/bg_battle_ancient_forest_day.png",
+  "background": "场景/主场景/bg_battle_ancient_forest_day.webp",
   "referenceResolution": {
     "width": 1280,
     "height": 720
@@ -13,7 +13,7 @@ window.HUANJING_HUD_LAYOUT = {
     {
       "id": "hud-手牌承托",
       "name": "手牌承托",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/手牌承托/hand_fan_tray_shell_asset_v1.png",
+      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/手牌承托/hand_fan_tray_shell_asset_v1.webp",
       "x": 172,
       "y": 513,
       "width": 937,
@@ -55,7 +55,7 @@ window.HUANJING_HUD_LAYOUT = {
     {
       "id": "hud-结束回合按钮",
       "name": "结束回合按钮",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/中轴控件/end_turn_button_shell_asset_v1.png",
+      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/中轴控件/end_turn_button_shell_asset_v1.webp",
       "x": 986,
       "y": 400,
       "width": 292,
@@ -97,7 +97,7 @@ window.HUANJING_HUD_LAYOUT = {
     {
       "id": "hud-回合计数器",
       "name": "回合计数器",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/中轴控件/turn_counter_inner_dial_asset_v1.png",
+      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/中轴控件/turn_counter_inner_dial_asset_v1.webp",
       "x": 607,
       "y": 13,
       "width": 67,
@@ -139,7 +139,7 @@ window.HUANJING_HUD_LAYOUT = {
     {
       "id": "hud-抽牌堆",
       "name": "抽牌堆",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/draw_pile_stack_asset_v1.png",
+      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/draw_pile_stack_asset_v1.webp",
       "x": 36,
       "y": 520,
       "width": 88,
@@ -181,7 +181,7 @@ window.HUANJING_HUD_LAYOUT = {
     {
       "id": "hud-弃牌堆",
       "name": "弃牌堆",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/discard_pile_stack_asset_v1.png",
+      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/discard_pile_stack_asset_v1.webp",
       "x": 1156,
       "y": 520,
       "width": 88,
@@ -223,7 +223,7 @@ window.HUANJING_HUD_LAYOUT = {
     {
       "id": "hud-放逐堆",
       "name": "放逐堆",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/exile_pile_stack_asset_v1.png",
+      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/exile_pile_stack_asset_v1.webp",
       "x": 1034,
       "y": 520,
       "width": 88,
@@ -265,7 +265,7 @@ window.HUANJING_HUD_LAYOUT = {
     {
       "id": "item-drq27qm",
       "name": "玩家面板/player_hp_bar_long_fill_gray_base_asset_v1",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_asset_v1.png",
+      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_asset_v1.webp",
       "x": 76,
       "y": 92,
       "width": 298,
@@ -306,7 +306,7 @@ window.HUANJING_HUD_LAYOUT = {
     {
       "id": "item-86orh2k",
       "name": "玩家名牌",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_nameplate_shell_asset_v1.png",
+      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_nameplate_shell_asset_v1.webp",
       "x": 117,
       "y": 15,
       "width": 325,
@@ -348,7 +348,7 @@ window.HUANJING_HUD_LAYOUT = {
     {
       "id": "item-twdkx6f",
       "name": "player_energy_tray_asset_v1_no_circles_transparent.png",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_tray_asset_v1_no_circles_transparent.png",
+      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_tray_asset_v1_no_circles_transparent.webp",
       "x": 98,
       "y": 81,
       "width": 363,
@@ -389,7 +389,7 @@ window.HUANJING_HUD_LAYOUT = {
     {
       "id": "item-ft8mjek",
       "name": "玩家状态栏",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/player_status_bar_shell_asset_v1.png",
+      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/player_status_bar_shell_asset_v1.webp",
       "x": 85,
       "y": 133,
       "width": 287,
@@ -431,7 +431,7 @@ window.HUANJING_HUD_LAYOUT = {
     {
       "id": "item-clz10qa",
       "name": "能量晶石 1",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_on_asset_v1.png",
+      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_on_asset_v1.webp",
       "x": 244,
       "y": 124,
       "width": 21,
@@ -473,7 +473,7 @@ window.HUANJING_HUD_LAYOUT = {
     {
       "id": "item-d1kiimt",
       "name": "能量晶石 2",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_on_asset_v1.png",
+      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_on_asset_v1.webp",
       "x": 277,
       "y": 124,
       "width": 21,
@@ -515,7 +515,7 @@ window.HUANJING_HUD_LAYOUT = {
     {
       "id": "item-as61n9g",
       "name": "能量晶石 3",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_on_asset_v1.png",
+      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_on_asset_v1.webp",
       "x": 311,
       "y": 124,
       "width": 21,
@@ -557,7 +557,7 @@ window.HUANJING_HUD_LAYOUT = {
     {
       "id": "item-lxoy2ug",
       "name": "能量晶石 4",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_on_asset_v1.png",
+      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_on_asset_v1.webp",
       "x": 345,
       "y": 124,
       "width": 21,
@@ -599,7 +599,7 @@ window.HUANJING_HUD_LAYOUT = {
     {
       "id": "item-kseyctz",
       "name": "能量晶石 5",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_on_asset_v1.png",
+      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_on_asset_v1.webp",
       "x": 378,
       "y": 124,
       "width": 21,
@@ -641,7 +641,7 @@ window.HUANJING_HUD_LAYOUT = {
     {
       "id": "item-rtg403e",
       "name": "生命灰底",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_editor_asset_v1.png",
+      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_editor_asset_v1.webp",
       "x": 154,
       "y": 76,
       "width": 300,
@@ -682,7 +682,7 @@ window.HUANJING_HUD_LAYOUT = {
     {
       "id": "item-tmvgo6w",
       "name": "生命残影",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_damage_trail_editor_asset_v1.png",
+      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_damage_trail_editor_asset_v1.webp",
       "x": 154,
       "y": 76,
       "width": 300,
@@ -724,7 +724,7 @@ window.HUANJING_HUD_LAYOUT = {
     {
       "id": "item-uoveutk",
       "name": "生命填充",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_editor_asset_v1.png",
+      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_editor_asset_v1.webp",
       "x": 154,
       "y": 76,
       "width": 300,
@@ -766,7 +766,7 @@ window.HUANJING_HUD_LAYOUT = {
     {
       "id": "item-8gbkasb",
       "name": "生命心标",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_heart_fill_editor_asset_v1.png",
+      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_heart_fill_editor_asset_v1.webp",
       "x": 157,
       "y": 79,
       "width": 30,
@@ -807,7 +807,7 @@ window.HUANJING_HUD_LAYOUT = {
     {
       "id": "item-1uxydgc",
       "name": "生命空框",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_empty_frame_editor_asset_v1.png",
+      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_empty_frame_editor_asset_v1.webp",
       "x": 127,
       "y": 68,
       "width": 355,
@@ -849,7 +849,7 @@ window.HUANJING_HUD_LAYOUT = {
     {
       "id": "item-hr1r7j9",
       "name": "玩家面板/avatar_circle_gray_base_asset_v1",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/avatar_circle_gray_base_asset_v1.png",
+      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/avatar_circle_gray_base_asset_v1.webp",
       "x": 16,
       "y": 19,
       "width": 135,
@@ -890,7 +890,7 @@ window.HUANJING_HUD_LAYOUT = {
     {
       "id": "item-tlfo2hh",
       "name": "玩家头像框",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_portrait_frame_asset_v1.png",
+      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_portrait_frame_asset_v1.webp",
       "x": 8,
       "y": 11,
       "width": 151,
@@ -932,7 +932,7 @@ window.HUANJING_HUD_LAYOUT = {
     {
       "id": "item-6kbu9mx",
       "name": "pile_count_plate_asset_v1_transparent",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/pile_count_plate_asset_v1_transparent.png",
+      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/pile_count_plate_asset_v1_transparent.webp",
       "x": 27,
       "y": 599,
       "width": 107,
@@ -974,7 +974,7 @@ window.HUANJING_HUD_LAYOUT = {
     {
       "id": "item-ucft2gu",
       "name": "pile_count_plate_asset_v1_transparent 副本",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/pile_count_plate_asset_v1_transparent.png",
+      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/pile_count_plate_asset_v1_transparent.webp",
       "x": 1147,
       "y": 599,
       "width": 107,
@@ -1016,7 +1016,7 @@ window.HUANJING_HUD_LAYOUT = {
     {
       "id": "item-qv62zbb",
       "name": "pile_count_plate_asset_v1_transparent 副本 副本",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/pile_count_plate_asset_v1_transparent.png",
+      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/pile_count_plate_asset_v1_transparent.webp",
       "x": 1025,
       "y": 599,
       "width": 107,
@@ -1058,7 +1058,7 @@ window.HUANJING_HUD_LAYOUT = {
     {
       "id": "hud-敌方名牌",
       "name": "敌方名牌",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_nameplate_shell_asset_v1.png",
+      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_nameplate_shell_asset_v1.webp",
       "x": 799,
       "y": -25,
       "width": 395,
@@ -1100,7 +1100,7 @@ window.HUANJING_HUD_LAYOUT = {
     {
       "id": "item-15c9qkq",
       "name": "敌方状态底",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_asset_v1.png",
+      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_asset_v1.webp",
       "x": 896,
       "y": 92,
       "width": 298,
@@ -1141,7 +1141,7 @@ window.HUANJING_HUD_LAYOUT = {
     {
       "id": "item-nsiuppt",
       "name": "敌方意图框",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方意图面板/enemy_intent_panel_shell_asset_v1.png",
+      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方意图面板/enemy_intent_panel_shell_asset_v1.webp",
       "x": 809,
       "y": 81,
       "width": 363,
@@ -1183,7 +1183,7 @@ window.HUANJING_HUD_LAYOUT = {
     {
       "id": "item-4yspg7n",
       "name": "敌方状态栏",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/player_status_bar_shell_asset_v1.png",
+      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/player_status_bar_shell_asset_v1.webp",
       "x": 898,
       "y": 133,
       "width": 287,
@@ -1225,7 +1225,7 @@ window.HUANJING_HUD_LAYOUT = {
     {
       "id": "item-5dkxe6e",
       "name": "生命灰底 副本",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_editor_asset_v1.png",
+      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_editor_asset_v1.webp",
       "x": 816,
       "y": 76,
       "width": 300,
@@ -1266,7 +1266,7 @@ window.HUANJING_HUD_LAYOUT = {
     {
       "id": "item-f24xsej",
       "name": "生命残影 副本",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_damage_trail_editor_asset_v1.png",
+      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_damage_trail_editor_asset_v1.webp",
       "x": 816,
       "y": 76,
       "width": 300,
@@ -1308,7 +1308,7 @@ window.HUANJING_HUD_LAYOUT = {
     {
       "id": "item-6ef6qab",
       "name": "生命填充 副本",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_editor_asset_v1.png",
+      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_editor_asset_v1.webp",
       "x": 816,
       "y": 76,
       "width": 300,
@@ -1350,7 +1350,7 @@ window.HUANJING_HUD_LAYOUT = {
     {
       "id": "item-ltjpty9",
       "name": "生命心标 副本",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_heart_fill_editor_asset_v1.png",
+      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_heart_fill_editor_asset_v1.webp",
       "x": 1083,
       "y": 79,
       "width": 30,
@@ -1391,7 +1391,7 @@ window.HUANJING_HUD_LAYOUT = {
     {
       "id": "item-ttomk42",
       "name": "生命空框 副本",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_empty_frame_editor_asset_v1.png",
+      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_empty_frame_editor_asset_v1.webp",
       "x": 788,
       "y": 68,
       "width": 355,
@@ -1433,7 +1433,7 @@ window.HUANJING_HUD_LAYOUT = {
     {
       "id": "item-3pryd2x",
       "name": "敌方头像滴",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/avatar_circle_gray_base_asset_v1.png",
+      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/avatar_circle_gray_base_asset_v1.webp",
       "x": 1119,
       "y": 19,
       "width": 135,
@@ -1474,7 +1474,7 @@ window.HUANJING_HUD_LAYOUT = {
     {
       "id": "hud-敌方头像框",
       "name": "敌方头像框",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_portrait_frame_asset_v1.png",
+      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_portrait_frame_asset_v1.webp",
       "x": 1112,
       "y": 10,
       "width": 150,
@@ -1522,7 +1522,7 @@ window.HUANJING_HUD_LAYOUT = {
       "items": [
         {
           "name": "玩家面板/player_hp_bar_long_fill_gray_base_asset_v1",
-          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_asset_v1.png",
+          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_asset_v1.webp",
           "assetId": "input:玩家面板/player_hp_bar_long_fill_gray_base_asset_v1.png",
           "sourceType": "folder-input",
           "x": 91,
@@ -1537,7 +1537,7 @@ window.HUANJING_HUD_LAYOUT = {
         },
         {
           "name": "玩家名牌",
-          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_nameplate_shell_asset_v1.png",
+          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_nameplate_shell_asset_v1.webp",
           "assetId": null,
           "sourceType": null,
           "x": 145,
@@ -1552,7 +1552,7 @@ window.HUANJING_HUD_LAYOUT = {
         },
         {
           "name": "player_energy_tray_asset_v1_no_circles_transparent.png",
-          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_tray_asset_v1_no_circles_transparent.png",
+          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_tray_asset_v1_no_circles_transparent.webp",
           "assetId": null,
           "sourceType": null,
           "x": 120,
@@ -1567,7 +1567,7 @@ window.HUANJING_HUD_LAYOUT = {
         },
         {
           "name": "玩家状态栏",
-          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/player_status_bar_shell_asset_v1.png",
+          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/player_status_bar_shell_asset_v1.webp",
           "assetId": null,
           "sourceType": null,
           "x": 103,
@@ -1582,7 +1582,7 @@ window.HUANJING_HUD_LAYOUT = {
         },
         {
           "name": "能量晶石 1",
-          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_on_asset_v1.png",
+          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_on_asset_v1.webp",
           "assetId": null,
           "sourceType": null,
           "x": 315,
@@ -1597,7 +1597,7 @@ window.HUANJING_HUD_LAYOUT = {
         },
         {
           "name": "能量晶石 2",
-          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_on_asset_v1.png",
+          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_on_asset_v1.webp",
           "assetId": null,
           "sourceType": null,
           "x": 360,
@@ -1612,7 +1612,7 @@ window.HUANJING_HUD_LAYOUT = {
         },
         {
           "name": "能量晶石 3",
-          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_on_asset_v1.png",
+          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_on_asset_v1.webp",
           "assetId": null,
           "sourceType": null,
           "x": 405,
@@ -1627,7 +1627,7 @@ window.HUANJING_HUD_LAYOUT = {
         },
         {
           "name": "能量晶石 4",
-          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_on_asset_v1.png",
+          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_on_asset_v1.webp",
           "assetId": null,
           "sourceType": null,
           "x": 450,
@@ -1642,7 +1642,7 @@ window.HUANJING_HUD_LAYOUT = {
         },
         {
           "name": "能量晶石 5",
-          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_on_asset_v1.png",
+          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_on_asset_v1.webp",
           "assetId": null,
           "sourceType": null,
           "x": 495,
@@ -1657,7 +1657,7 @@ window.HUANJING_HUD_LAYOUT = {
         },
         {
           "name": "生命灰底",
-          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_editor_asset_v1.png",
+          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_editor_asset_v1.webp",
           "assetId": null,
           "sourceType": null,
           "x": 195,
@@ -1672,7 +1672,7 @@ window.HUANJING_HUD_LAYOUT = {
         },
         {
           "name": "生命残影",
-          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_damage_trail_editor_asset_v1.png",
+          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_damage_trail_editor_asset_v1.webp",
           "assetId": null,
           "sourceType": null,
           "x": 195,
@@ -1687,7 +1687,7 @@ window.HUANJING_HUD_LAYOUT = {
         },
         {
           "name": "生命填充",
-          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_editor_asset_v1.png",
+          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_editor_asset_v1.webp",
           "assetId": null,
           "sourceType": null,
           "x": 195,
@@ -1702,7 +1702,7 @@ window.HUANJING_HUD_LAYOUT = {
         },
         {
           "name": "生命心标",
-          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_heart_fill_editor_asset_v1.png",
+          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_heart_fill_editor_asset_v1.webp",
           "assetId": null,
           "sourceType": null,
           "x": 200,
@@ -1717,7 +1717,7 @@ window.HUANJING_HUD_LAYOUT = {
         },
         {
           "name": "生命空框",
-          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_empty_frame_editor_asset_v1.png",
+          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_empty_frame_editor_asset_v1.webp",
           "assetId": null,
           "sourceType": null,
           "x": 160,
@@ -1732,7 +1732,7 @@ window.HUANJING_HUD_LAYOUT = {
         },
         {
           "name": "玩家面板/avatar_circle_gray_base_asset_v1",
-          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/avatar_circle_gray_base_asset_v1.png",
+          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/avatar_circle_gray_base_asset_v1.webp",
           "assetId": "input:玩家面板/avatar_circle_gray_base_asset_v1.png",
           "sourceType": "folder-input",
           "x": 11,
@@ -1747,7 +1747,7 @@ window.HUANJING_HUD_LAYOUT = {
         },
         {
           "name": "玩家头像框",
-          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_portrait_frame_asset_v1.png",
+          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_portrait_frame_asset_v1.webp",
           "assetId": null,
           "sourceType": null,
           "x": 0,
@@ -1769,7 +1769,7 @@ window.HUANJING_HUD_LAYOUT = {
       "items": [
         {
           "name": "生命灰底",
-          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_editor_asset_v1.png",
+          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_editor_asset_v1.webp",
           "x": 52,
           "y": 16,
           "width": 402,
@@ -1784,7 +1784,7 @@ window.HUANJING_HUD_LAYOUT = {
         },
         {
           "name": "生命残影",
-          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_damage_trail_editor_asset_v1.png",
+          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_damage_trail_editor_asset_v1.webp",
           "x": 52,
           "y": 16,
           "width": 402,
@@ -1799,7 +1799,7 @@ window.HUANJING_HUD_LAYOUT = {
         },
         {
           "name": "生命填充",
-          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_editor_asset_v1.png",
+          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_editor_asset_v1.webp",
           "x": 52,
           "y": 16,
           "width": 402,
@@ -1814,7 +1814,7 @@ window.HUANJING_HUD_LAYOUT = {
         },
         {
           "name": "生命心标",
-          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_heart_fill_editor_asset_v1.png",
+          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_heart_fill_editor_asset_v1.webp",
           "x": 46,
           "y": 19,
           "width": 28,
@@ -1829,7 +1829,7 @@ window.HUANJING_HUD_LAYOUT = {
         },
         {
           "name": "生命空框",
-          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_empty_frame_editor_asset_v1.png",
+          "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_empty_frame_editor_asset_v1.webp",
           "x": 0,
           "y": 0,
           "width": 472,

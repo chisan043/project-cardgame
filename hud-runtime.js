@@ -368,33 +368,33 @@
 
     function createDefaultBattleHudLayout(seed = {}) {
         const items = [
-            createHudItem('玩家头像框', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_portrait_frame_asset_v1.png', 14, 18, 202, 199, 10),
-            createHudItem('玩家名牌', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_nameplate_shell_asset_v1.png', 170, 20, 434, 84, 11),
-            createHudItem('玩家生命条框', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_shell_asset_v1.png', 202, 91, 472, 63, 12),
-            createHudItem('玩家护甲条框', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_armor_bar_shell_asset_v1.png', 198, 147, 472, 84, 13),
-            createHudItem('玩家能量槽', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_tray_asset_v1.png', 166, 221, 486, 86, 14),
-            createHudItem('玩家状态栏', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/player_status_bar_shell_asset_v1.png', 32, 275, 392, 56, 15, { fit: 'fill' }),
+            createHudItem('玩家头像框', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_portrait_frame_asset_v1.webp', 14, 18, 202, 199, 10),
+            createHudItem('玩家名牌', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_nameplate_shell_asset_v1.webp', 170, 20, 434, 84, 11),
+            createHudItem('玩家生命条框', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_shell_asset_v1.webp', 202, 91, 472, 63, 12),
+            createHudItem('玩家护甲条框', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_armor_bar_shell_asset_v1.webp', 198, 147, 472, 84, 13),
+            createHudItem('玩家能量槽', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_tray_asset_v1.webp', 166, 221, 486, 86, 14),
+            createHudItem('玩家状态栏', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/player_status_bar_shell_asset_v1.webp', 32, 275, 392, 56, 15, { fit: 'fill' }),
 
-            createHudItem('敌方总图参考', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/battle_hud_enemy_panel_asset_v1.png', 696, 18, 570, 206, 20, { opacity: 0.22, locked: true }),
-            createHudItem('敌方头像框', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_portrait_frame_asset_v1.png', 1060, 21, 198, 199, 21),
-            createHudItem('敌方名牌', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_nameplate_shell_asset_v1.png', 788, 27, 440, 84, 22),
-            createHudItem('敌方生命条框', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_hp_bar_shell_asset_v1.png', 767, 67, 420, 64, 23),
-            createHudItem('敌方护甲条框', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_armor_bar_shell_asset_v1.png', 767, 106, 420, 84, 24),
-            createHudItem('敌方状态栏', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/enemy_status_bar_shell_asset_v1.png', 768, 112, 340, 48, 25, { fit: 'fill' }),
-            createHudItem('敌方意图框', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方意图面板/enemy_intent_panel_shell_asset_v1.png', 765, 151, 360, 44, 26, { fit: 'fill' }),
+            createHudItem('敌方总图参考', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/battle_hud_enemy_panel_asset_v1.webp', 696, 18, 570, 206, 20, { opacity: 0.22, locked: true }),
+            createHudItem('敌方头像框', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_portrait_frame_asset_v1.webp', 1060, 21, 198, 199, 21),
+            createHudItem('敌方名牌', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_nameplate_shell_asset_v1.webp', 788, 27, 440, 84, 22),
+            createHudItem('敌方生命条框', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_hp_bar_shell_asset_v1.webp', 767, 67, 420, 64, 23),
+            createHudItem('敌方护甲条框', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_armor_bar_shell_asset_v1.webp', 767, 106, 420, 84, 24),
+            createHudItem('敌方状态栏', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/enemy_status_bar_shell_asset_v1.webp', 768, 112, 340, 48, 25, { fit: 'fill' }),
+            createHudItem('敌方意图框', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方意图面板/enemy_intent_panel_shell_asset_v1.webp', 765, 151, 360, 44, 26, { fit: 'fill' }),
 
-            createHudItem('手牌承托', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/手牌承托/hand_fan_tray_shell_asset_v1.png', 210, 528, 860, 206, 30),
-            createHudItem('结束回合按钮', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/中轴控件/end_turn_button_shell_asset_v1.png', 964, 396, 292, 110, 31),
-            createHudItem('回合计数器', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/中轴控件/turn_counter_inner_dial_asset_v1.png', 607, 13, 67, 67, 31.5, { binding: 'turn-counter' }),
-            createHudItem('抽牌堆', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/draw_pile_stack_asset_v1.png', 36, 520, 88, 128, 32),
-            createHudItem('弃牌堆', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/discard_pile_stack_asset_v1.png', 1156, 520, 88, 128, 33),
-            createHudItem('放逐堆', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/exile_pile_stack_asset_v1.png', 1034, 520, 88, 128, 34),
-            createHudItem('抽牌堆计数牌签', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/pile_count_plate_asset_v1.png', 47, 641, 66, 34, 35),
-            createHudItem('弃牌堆计数牌签', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/pile_count_plate_asset_v1.png', 1167, 641, 66, 34, 36),
-            createHudItem('放逐堆计数牌签', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/pile_count_plate_asset_v1.png', 1045, 641, 66, 34, 37)
+            createHudItem('手牌承托', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/手牌承托/hand_fan_tray_shell_asset_v1.webp', 210, 528, 860, 206, 30),
+            createHudItem('结束回合按钮', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/中轴控件/end_turn_button_shell_asset_v1.webp', 964, 396, 292, 110, 31),
+            createHudItem('回合计数器', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/中轴控件/turn_counter_inner_dial_asset_v1.webp', 607, 13, 67, 67, 31.5, { binding: 'turn-counter' }),
+            createHudItem('抽牌堆', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/draw_pile_stack_asset_v1.webp', 36, 520, 88, 128, 32),
+            createHudItem('弃牌堆', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/discard_pile_stack_asset_v1.webp', 1156, 520, 88, 128, 33),
+            createHudItem('放逐堆', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/exile_pile_stack_asset_v1.webp', 1034, 520, 88, 128, 34),
+            createHudItem('抽牌堆计数牌签', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/pile_count_plate_asset_v1_transparent.webp', 47, 641, 66, 34, 35),
+            createHudItem('弃牌堆计数牌签', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/pile_count_plate_asset_v1_transparent.webp', 1167, 641, 66, 34, 36),
+            createHudItem('放逐堆计数牌签', 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/pile_count_plate_asset_v1_transparent.webp', 1045, 641, 66, 34, 37)
         ];
         for (let i = 0; i < 5; i += 1) {
-            items.push(createHudItem(`能量晶石 ${i + 1}`, 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_on_asset_v1.png', 348 + i * 52, 238, 28, 44, 40 + i, { role: 'energy' }));
+            items.push(createHudItem(`能量晶石 ${i + 1}`, 'UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_on_asset_v1.webp', 348 + i * 52, 238, 28, 44, 40 + i, { role: 'energy' }));
         }
         const defaults = normalizeLayout({
             ...seed,
@@ -403,7 +403,7 @@
             referenceResolution: { width: 1280, height: 720 },
             stageWidth: 1280,
             stageHeight: 720,
-            background: seed.background || '场景/主场景/bg_battle_ancient_forest_day.png',
+            background: seed.background || '场景/主场景/bg_battle_ancient_forest_day.webp',
             backgroundFit: seed.backgroundFit || 'cover',
             items
         });
