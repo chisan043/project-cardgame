@@ -2116,8 +2116,48 @@
         return card;
     }
 
+    function getDirectCardArtPath(card) {
+        return card?.art || CARD_ART_REGISTRY[card?.name] || CARD_TYPE_ART_FALLBACK[card?.type] || null;
+    }
+
+    function normalizeCardEffectText(text = '') {
+        return String(text)
+            .replace(/<br\s*\/?>/gi, '\n')
+            .replace(/<[^>]*>/g, '')
+            .replace(/\s+/g, '');
+    }
+
+    function getCardEffectSignature(card) {
+        if (!card) return '';
+        const tags = normalizeTagConflicts(card.tags || [])
+            .filter(Boolean)
+            .sort()
+            .join('+');
+        const specialText = card.isSpecial ? normalizeCardEffectText(card.desc) : '';
+        return [
+            card.type || '',
+            Number(card.cost) || 0,
+            Number(card.val) || 0,
+            tags,
+            specialText
+        ].join('|');
+    }
+
+    const CARD_EFFECT_ART_BY_SIGNATURE = (() => {
+        const map = new Map();
+        const register = (card) => {
+            const signature = getCardEffectSignature(card);
+            const art = getDirectCardArtPath(card);
+            if (signature && art && !map.has(signature)) map.set(signature, art);
+        };
+        [...NEUTRAL_CARD_POOL, ...Object.values(CHARACTER_CARD_POOLS).flat()].forEach(register);
+        if (typeof SPECIAL_EPICS !== 'undefined') SPECIAL_EPICS.forEach(register);
+        return map;
+    })();
+
     function getCardArtPath(card) {
-        return card.art || CARD_ART_REGISTRY[card.name] || CARD_TYPE_ART_FALLBACK[card.type] || null;
+        const signature = getCardEffectSignature(card);
+        return CARD_EFFECT_ART_BY_SIGNATURE.get(signature) || getDirectCardArtPath(card);
     }
 
     function getCardFrameTheme(card) {
