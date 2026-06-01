@@ -450,6 +450,7 @@
             width: 206px;
             height: 288px;
             z-index: 1;
+            background: var(--asset-map-window-image) center / 100% 100% no-repeat;
         }
         .map-window-frame { z-index: 2; }
         .map-detail-stack {
@@ -1639,7 +1640,7 @@
         </div>
         <div class="map-right-panel">
             <div class="map-window-stack">
-                <img id="map-preview-image" class="map-window-image" src="UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_v1.png" alt="">
+                <div id="map-preview-image" class="map-window-image" role="img" aria-label="雾岭小径"></div>
                 <img class="map-window-frame" src="UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_church_preview_frame_imagegen_transparent_v1.png" alt="">
             </div>
             <div class="map-detail-stack">
@@ -4297,7 +4298,10 @@
         const descEl = document.getElementById('map-detail-desc');
         const enterButton = document.querySelector('.map-detail-enter');
         state.mapPreviewNodeId = previewNode?.id || null;
-        if (imageEl && imageEl.getAttribute('src') !== panelData.image) imageEl.src = panelData.image;
+        if (imageEl) {
+            imageEl.style.backgroundImage = `url('${panelData.image}')`;
+            imageEl.setAttribute('aria-label', panelData.title || meta.label);
+        }
         if (titleEl) titleEl.textContent = `${getNodeFloorLabel(previewNode)} · ${panelData.title || meta.label}`;
         if (descEl) descEl.textContent = `${getMapNodeRouteStatus(previewNode)}。${panelData.desc || meta.label}`;
         if (enterButton) enterButton.disabled = !isMapNodeReachable(previewNode) || state.isNodeClickLocked;
