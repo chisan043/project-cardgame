@@ -3913,6 +3913,15 @@
         document.documentElement.style.setProperty('--battle-scene-bg', `url('${bgPath}')`);
     }
 
+    function applyBattleBackgroundForEncounter(node, enemy) {
+        const nodeBgPath = getMapPreviewVariant(node)?.battleBg;
+        if (nodeBgPath) {
+            document.documentElement.style.setProperty('--battle-scene-bg', `url('${nodeBgPath}')`);
+            return;
+        }
+        applyBattleBackgroundForEnemy(enemy);
+    }
+
     function setCurrentCharacter(characterId) {
         const character = CHARACTERS[characterId] || CHARACTERS.hero_warrior;
         state.player.characterId = character.id;
@@ -4170,32 +4179,38 @@
         battle: {
             title: '雾岭小径',
             desc: '敌影在山道间游荡。沿着金色路线前进，踏入下一场战斗。',
-            image: 'UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_v1.png'
+            image: 'UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_v1.png',
+            battleBg: '场景/主场景/bg_battle_mountain_plain_day.png'
         },
         elite: {
             title: '失落圣堂',
             desc: '更强的守卫盘踞于此。胜利后，稀有机缘也会随之显现。',
-            image: 'UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_temple_hall_imagegen_transparent_v1.png'
+            image: 'UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_temple_hall_imagegen_transparent_v1.png',
+            battleBg: '场景/主场景/bg_battle_temple_hall_grand.png'
         },
         rest: {
             title: '静息营火',
             desc: '短暂的火光能修整伤势，也能让一页残卷变得更锋利。',
-            image: 'UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_v1.png'
+            image: 'UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_v1.png',
+            battleBg: '场景/主场景/bg_battle_ancient_forest_day.png'
         },
         event: {
             title: '古碑回廊',
             desc: '残留的低语藏着转机，也可能把命运推向另一条岔路。',
-            image: 'UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_v1.png'
+            image: 'UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_v1.png',
+            battleBg: '场景/主场景/bg_battle_stone_ruins_day.png'
         },
         boss: {
             title: '终幕尖塔',
             desc: '首领守在高处。穿过最后一段路，试炼将在此收束。',
-            image: 'UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_town_castle_imagegen_transparent_v1.png'
+            image: 'UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_town_castle_imagegen_transparent_v1.png',
+            battleBg: '场景/主场景/bg_battle_temple_hall_grand.png'
         },
         shop: {
             title: '灯火商栈',
             desc: '旅商在旧城门下等待。金币可以换来卡牌、奇珍与一次喘息。',
-            image: 'UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_town_castle_imagegen_transparent_v1.png'
+            image: 'UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_town_castle_imagegen_transparent_v1.png',
+            battleBg: '场景/主场景/bg_event_town_distant_day.png'
         }
     };
 
@@ -4203,22 +4218,26 @@
         {
             title: '雾岭小径',
             desc: '山雾贴着旧路流动，前方的敌影正从林线后靠近。',
-            image: 'UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_v1.png'
+            image: 'UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_v1.png',
+            battleBg: '场景/主场景/bg_battle_mountain_plain_day.png'
         },
         {
             title: '碎石古道',
             desc: '残破石阶通向荒废哨站，那里常有伏击者守候。',
-            image: 'UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_v1.png'
+            image: 'UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_v1.png',
+            battleBg: '场景/主场景/bg_battle_stone_ruins_day.png'
         },
         {
             title: '暮色荒原',
             desc: '风卷起暗红尘沙，野性的敌人会在开阔处逼近。',
-            image: 'UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_v1.png'
+            image: 'UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_v1.png',
+            battleBg: '场景/主场景/bg_battle_wasteland_dusk.png'
         },
         {
             title: '寒洞裂隙',
             desc: '岩壁间传来低响，潮冷洞窟里潜伏着不安的轮廓。',
-            image: 'UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_cold_cave_imagegen_transparent_v1.png'
+            image: 'UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_cold_cave_imagegen_transparent_v1.png',
+            battleBg: '场景/主场景/bg_battle_cave_cold.png'
         }
     ];
 
@@ -4449,7 +4468,7 @@
         state.enemy.armor = 0; state.enemy.poison = 0; state.enemy.bleed = 0; state.enemy.burn = 0; state.enemy.stun = 0; state.enemy.curse = 0; state.enemy.vuln = 0; state.enemy.weak = 0; state.enemy.str = 0;
         state.enemy.charged = false; state.enemy.minion = null; state.enemy.isPhase2 = false;
         state.enemy.turnCount = 0; state.enemy.moveHistory = [];
-        applyBattleBackgroundForEnemy(state.enemy);
+        applyBattleBackgroundForEncounter(state.currentNode, state.enemy);
         resetBattleActionLog();
         addBattleActionLog('system', '遭遇', state.enemy.name);
         
@@ -4780,7 +4799,7 @@
                 state.enemy.currentHp = state.enemy.maxHp;
                 state.enemy.charged = false; state.enemy.minion = null;
                 state.enemy.turnCount = 0; state.enemy.moveHistory = [];
-                applyBattleBackgroundForEnemy(state.enemy);
+                applyBattleBackgroundForEncounter(state.currentNode, state.enemy);
                 showFloatText("二阶段觉醒！", "var(--crimson)", getCenter('enemy-avatar'));
                 setEnemyIntent(); updateBattleUI();
                 return false; 
