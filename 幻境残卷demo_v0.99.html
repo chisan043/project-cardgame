@@ -1964,7 +1964,7 @@
         '狂热': '选择并丢弃 1 张手牌，本回合所有伤害 +{val}。数值为卡牌数值 +3；升级后为卡牌数值 +4。',
         '附魔': '选择并丢弃 1 张手牌，你下一次攻击额外造成 {val} 点伤害并抽 1 张牌。基础为 (卡牌数值+3)×2，升级后为 (卡牌数值+5)×2。',
         '庇护': '本回合受到的伤害减少 {val} 点。',
-        '反击': '进入反击姿态：受到下一次敌方主体攻击时，招架 18 点或本次伤害 35% 的较高值，并按招架值反击。反击姿态不可叠加。', '招魂': '从放逐区选择 1 张牌回到手牌。', '轮回': '从放逐区选择 1 张牌洗入抽牌堆。',
+        '反击': '进入反击姿态：受到下一次敌方主体攻击时，招架本次伤害的 50%，并按招架值反击。反击姿态不可叠加。', '招魂': '从放逐区选择 1 张牌回到手牌。', '轮回': '从放逐区选择 1 张牌洗入抽牌堆。',
         '拾遗': '从墓地选择 1 张牌回到手牌。', '复刻': '复制上一张打出的牌的效果。', '吸血': '造成伤害时，回复等同于伤害一半的生命（史诗卡为全额回复）。',
         '保留': '打出后，下回合将回到手牌中。如果不打出则正常丢弃。', '回响': '打出后，此牌的效果会立即再次触发一次。', '放逐': '使用后移至放逐区，本局战斗不可再用。',
         '抽牌': '额外抽取 1 张牌。', '剧毒': '施加 3 层剧毒(每回合造成伤害并衰减)。', '出血': '施加 3 层出血(每回合受层数一半的伤害并衰减)。',
@@ -2704,7 +2704,7 @@
 
     function getCounterParryValue(incomingDamage) {
         const dmg = Math.max(0, Number(incomingDamage) || 0);
-        return Math.min(dmg, Math.max(18, Math.floor(dmg * 0.35)));
+        return Math.min(dmg, Math.ceil(dmg * 0.5));
     }
 
     function getBottomTags(card) {
@@ -3849,7 +3849,7 @@
             add('enchant', '附魔', '⚔️', state.p_next_dmg, `下一次攻击额外造成 ${state.p_next_dmg} 点伤害。`, 'is-power');
             add('guard', '庇护', '✨', state.p_reduce_dmg, `下一次受到伤害时，减少 ${state.p_reduce_dmg} 点。`, 'is-defense');
             if (state.p_counter > 0) {
-                entries.push({ id: 'counter', label: '招架准备', icon: '⚡', value: null, tooltip: '已进入反击姿态；受到下一次敌方主体攻击时招架 18 点或本次伤害 35% 的较高值并反伤。此状态不可叠加。', tone: 'is-gold' });
+                entries.push({ id: 'counter', label: '招架准备', icon: '⚡', value: null, tooltip: '已进入反击姿态；受到下一次敌方主体攻击时招架本次伤害的 50% 并反伤。此状态不可叠加。', tone: 'is-gold' });
             }
             add('chant', '咏唱', '✦', state.p_chant, STATUS_DESC.chant, 'is-magic');
             add('aim', '风势', '🪶', state.p_aim, STATUS_DESC.aim, 'is-nature');
@@ -4622,7 +4622,7 @@
         if(state.p_dmg_buff > 0) pStatus.innerHTML += `<div class="status-badge badge-str">🔥 狂热: +${state.p_dmg_buff}<div class="status-tooltip">本回合内，所有伤害额外提高 ${state.p_dmg_buff} 点。</div></div>`;
         if(state.p_next_dmg > 0) pStatus.innerHTML += `<div class="status-badge badge-str">⚔️ 附魔: 下次+${state.p_next_dmg}<div class="status-tooltip">下一次攻击额外造成 ${state.p_next_dmg} 点伤害。</div></div>`;
         if(state.p_reduce_dmg > 0) pStatus.innerHTML += `<div class="status-badge badge-armor">🛡️ 庇护: 减免${state.p_reduce_dmg}<div class="status-tooltip">下一次受到伤害时，减少 ${state.p_reduce_dmg} 点。</div></div>`;
-        if(state.p_counter > 0) pStatus.innerHTML += `<div class="status-badge badge-str" style="background:rgba(241,196,15,0.9); color:black;">⚡ 招架准备<div class="status-tooltip">已进入反击姿态；受到下一次敌方主体攻击时招架 18 点或本次伤害 35% 的较高值并反伤。此状态不可叠加。</div></div>`;
+        if(state.p_counter > 0) pStatus.innerHTML += `<div class="status-badge badge-str" style="background:rgba(241,196,15,0.9); color:black;">⚡ 招架准备<div class="status-tooltip">已进入反击姿态；受到下一次敌方主体攻击时招架本次伤害的 50% 并反伤。此状态不可叠加。</div></div>`;
         if(state.p_chant > 0) pStatus.innerHTML += `<div class="status-badge badge-str" style="background:rgba(142, 68, 173, 0.9);">✦ 咏唱: ${state.p_chant}<div class="status-tooltip">${STATUS_DESC['chant']}</div></div>`;
         if(state.p_aim > 0) pStatus.innerHTML += `<div class="status-badge badge-str" style="background:rgba(48,104,82,0.9);">🪶 风势: ${state.p_aim}<div class="status-tooltip">${STATUS_DESC['aim']}</div></div>`;
 
