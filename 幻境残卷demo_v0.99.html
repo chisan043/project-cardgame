@@ -2010,7 +2010,7 @@
     }
 
     function getTooltipTextWithKeywords(text) {
-        let base = formatKeywords(text); let tags = extractTagsFromText(text);
+        let base = formatKeywords(text); let tags = inferTagsFromEffectText(text);
         if(tags.length > 0) {
             base += `<br><div style="border-top:1px solid #444; margin:5px 0; padding-top:5px; text-align:left;">`;
             tags.forEach(t => { base += `<span style="color:var(--gold);">${getTagDisplayName(t)}:</span> ${formatKeywords(TAGS[t].replace(/\{val\}/g, 'X'))}<br>`; });
@@ -2020,7 +2020,35 @@
 
     function extractTagsFromText(text) {
         let extractedTags = new Set();
-        Object.keys(TAGS).forEach(tag => { if (text.includes(`[${tag}]`)) extractedTags.add(tag); }); return Array.from(extractedTags);
+        const source = String(text || '');
+        Object.keys(TAGS).forEach(tag => { if (source.includes(`[${tag}]`)) extractedTags.add(tag); }); return Array.from(extractedTags);
+    }
+
+    function inferTagsFromEffectText(text = '') {
+        const plain = String(text)
+            .replace(/<br\s*\/?>/gi, '。')
+            .replace(/<[^>]*>/g, '')
+            .replace(/[「」]/g, '');
+        const extractedTags = new Set(extractTagsFromText(text || ''));
+        Object.keys(TAGS).forEach(tag => {
+            const displayName = getTagDisplayName(tag);
+            if (displayName && plain.includes(displayName)) extractedTags.add(tag);
+        });
+        if (/穿甲(?:伤害|攻击|重击|斩击)?/.test(plain)) extractedTags.add('穿甲');
+        return Array.from(extractedTags);
+    }
+
+    function getDisplayTags(entity = {}) {
+        const tagSet = new Set();
+        (entity.tags || []).forEach(tag => tagSet.add(tag));
+        inferTagsFromEffectText(entity.desc || '').forEach(tag => tagSet.add(tag));
+        return Object.keys(TAGS).filter(tag => tagSet.has(tag));
+    }
+
+    function getCardBottomTagList(card = {}) {
+        if (card.isSpecial || !Array.isArray(card.tags) || card.tags.length === 0) return getDisplayTags(card);
+        const tagSet = new Set(card.tags);
+        return Object.keys(TAGS).filter(tag => tagSet.has(tag));
     }
 
     function getWindGain(card) {
@@ -2675,17 +2703,8 @@
     }
 
     function getBottomTags(card) {
-        let tagsHtml = ''; let extractedTags = new Set();
-        if (card.isSpecial) { 
-            extractedTags = new Set(extractTagsFromText(card.desc)); 
-            if(card.tags && card.tags.includes('放逐')) extractedTags.add('放逐'); 
-            if(card.tags && card.tags.includes('荆棘')) extractedTags.add('荆棘');
-            if(card.tags && card.tags.includes('吸血')) extractedTags.add('吸血');
-            if(card.tags && card.tags.includes('圣剑')) extractedTags.add('圣剑');
-        } 
-        else if(card.tags) { card.tags.forEach(t => extractedTags.add(t)); }
-        
-        extractedTags.forEach(t => {
+        let tagsHtml = '';
+        getCardBottomTagList(card).forEach(t => {
             if(TAGS[t]) {
                 let displayVal = card.val; if (t === '充能') displayVal = 1;
                 if (!card.isSpecial && t === '治愈') displayVal = card.up ? card.cost * 7 : card.cost * 5;
@@ -2780,8 +2799,8 @@
     }
 
     function getRelicBottomTags(r) {
-        let tagsHtml = ''; let extractedTags = new Set(extractTagsFromText(r.desc));
-        extractedTags.forEach(t => {
+        let tagsHtml = '';
+        getDisplayTags(r).forEach(t => {
             if(TAGS[t]) { let tooltip = TAGS[t].replace(/\{val\}/g, 'X'); tagsHtml += `<span class="keyword-tag">${getTagDisplayName(t)}<span class="keyword-tooltip">${formatKeywords(tooltip)}</span></span>`; }
         });
         if(tagsHtml) return `<div style="display:flex; flex-wrap:wrap; align-content:flex-start; margin-top:auto; padding-top:8px; border-top:1px dashed #444; width:100%;">${tagsHtml}</div>`; return '';
@@ -2793,7 +2812,7 @@
             .replace(/<[^>]*>/g, '')
             .replace(/\s+/g, '');
         const lineHints = (String(descHtml || '').match(/<br\s*\/?>/gi) || []).length;
-        const tagCount = card?.tags ? new Set(card.tags).size : extractTagsFromText(card?.desc || '').length;
+        const tagCount = getCardBottomTagList(card).length;
         if (plain.length >= 58 || lineHints >= 2 || tagCount >= 4) return 'desc-ultra';
         if (plain.length >= 38 || lineHints >= 1 || tagCount >= 3) return 'desc-dense';
         return '';
