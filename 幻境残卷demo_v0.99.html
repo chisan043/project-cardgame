@@ -2153,11 +2153,62 @@
         ].join('|');
     }
 
-    function getCardDisplayTags(card) {
+    const CARD_NAME_TAG_PRIORITY = [
+        '出血', '吸血', '放血', '血祭', '荆棘', '剧毒', '燃烧',
+        '易伤', '虚弱', '诅咒', '眩晕',
+        '圣剑', '穿甲', '重击', '连击', '连射', '多段', '爆发',
+        '咏唱', '回响', '复刻', '充能', '附魔',
+        '庇护', '治愈', '抽牌', '保留', '蓄力', '自然', '重置',
+        '放逐', '轮回', '拾遗', '招魂', '销毁', '狂热'
+    ];
+
+    const CARD_NAME_VARIANT_WORD_BY_TAG = {
+        '出血': '溢血',
+        '吸血': '汲血',
+        '放血': '裂血',
+        '血祭': '血誓',
+        '荆棘': '棘甲',
+        '剧毒': '蚀毒',
+        '燃烧': '烬焰',
+        '易伤': '裂隙',
+        '虚弱': '虚蚀',
+        '诅咒': '咒印',
+        '眩晕': '星缚',
+        '圣剑': '圣剑',
+        '穿甲': '裂甲',
+        '重击': '重锋',
+        '连击': '连锋',
+        '连射': '疾射',
+        '多段': '骤射',
+        '爆发': '爆焰',
+        '咏唱': '咏星',
+        '回响': '回音',
+        '复刻': '复写',
+        '充能': '充灵',
+        '附魔': '魔印',
+        '庇护': '护誓',
+        '治愈': '愈光',
+        '抽牌': '灵引',
+        '保留': '留锋',
+        '蓄力': '蓄势',
+        '自然': '林息',
+        '重置': '回流',
+        '放逐': '逐影',
+        '轮回': '回环',
+        '拾遗': '拾羽',
+        '招魂': '魂引',
+        '销毁': '碎尘',
+        '狂热': '狂焰'
+    };
+
+    function getCardNameTags(card) {
         return normalizeTagConflicts(card?.tags || [])
             .filter(Boolean)
-            .sort()
-            .map(tag => getTagDisplayName(tag));
+            .sort((a, b) => {
+                const aIdx = CARD_NAME_TAG_PRIORITY.indexOf(a);
+                const bIdx = CARD_NAME_TAG_PRIORITY.indexOf(b);
+                return (aIdx === -1 ? 999 : aIdx) - (bIdx === -1 ? 999 : bIdx) || a.localeCompare(b);
+            });
     }
 
     const CARD_EFFECT_ART_BY_SIGNATURE = (() => {
@@ -2194,7 +2245,7 @@
             map.set(key, {
                 name: card.name,
                 signature: getCardEffectSignature(card),
-                tags: new Set(getCardDisplayTags(card))
+                tags: new Set(getCardNameTags(card))
             });
         };
         [...NEUTRAL_CARD_POOL, ...Object.values(CHARACTER_CARD_POOLS).flat()].forEach(register);
@@ -2206,11 +2257,29 @@
         return CARD_EFFECT_ART_BY_SIGNATURE.get(signature) || getDirectCardArtPath(card);
     }
 
-    function getCardNameVariantSuffix(card, baseTags) {
-        const tags = getCardDisplayTags(card);
-        const diffTags = tags.filter(tag => !baseTags.has(tag));
-        const suffixTags = diffTags.length ? diffTags : tags;
-        return suffixTags.length ? `·${suffixTags.slice(0, 2).join('')}` : '';
+    function getCardNameVariantWord(variantTags) {
+        if (!variantTags.length) return '';
+        if (variantTags.includes('血祭') && variantTags.includes('荆棘')) return '血棘';
+        if (variantTags.includes('出血') && variantTags.includes('放血')) return '裂血';
+        if (variantTags.includes('剧毒') && variantTags.includes('出血')) return '毒血';
+        if (variantTags.includes('燃烧') && variantTags.includes('荆棘')) return '烬棘';
+        if (variantTags.includes('回响') && variantTags.includes('复刻')) return '回写';
+        if (variantTags.includes('庇护') && variantTags.includes('抽牌')) return '护引';
+        return CARD_NAME_VARIANT_WORD_BY_TAG[variantTags[0]] || variantTags[0].slice(0, 2);
+    }
+
+    function applyCardNameVariant(baseName, variantWord) {
+        if (!baseName || !variantWord) return baseName || '';
+        const chars = [...baseName];
+        if (chars.length <= 2) return variantWord;
+        return `${variantWord}${chars.slice(-2).join('')}`;
+    }
+
+    function getCardVariantName(card, family) {
+        const tags = getCardNameTags(card);
+        const diffTags = tags.filter(tag => !family.tags.has(tag));
+        const variantTags = diffTags.length ? diffTags : tags;
+        return applyCardNameVariant(family.name, getCardNameVariantWord(variantTags));
     }
 
     function getCardDisplayName(card) {
@@ -2222,7 +2291,7 @@
         if (exactName && exactName.count > 1) return exactName.name;
         const family = CARD_NAME_FAMILY_BY_KEY.get(getCardNameFamilyKey(card));
         if (!family || family.signature === signature) return card.name || '';
-        return `${family.name}${getCardNameVariantSuffix(card, family.tags)}`;
+        return getCardVariantName(card, family);
     }
 
     function getCardFrameTheme(card) {
