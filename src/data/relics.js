@@ -1,16 +1,16 @@
 // Extracted gameplay data. Keep this file free of DOM/runtime side effects.
 const SPECIAL_EPIC_POOLS = {
     hero_warrior: [
-        { id: 's_shield', name: '圣盾崩击', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_圣剑解放.webp', type: '攻击', cost: 2, icon: '🛡️', val: 0, tags: ['圣剑'], rarity: '史诗', isSpecial: true, desc: '造成等同于你当前护盾值 2 倍的伤害。若已处于[反击]姿态，会吃到圣剑的姿态加成。' },
+        { id: 's_shield', name: '圣盾崩击', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_圣剑解放.webp', type: '能力', cost: 3, icon: '🛡️', val: 0, tags: ['圣剑'], rarity: '史诗', isSpecial: true, desc: '造成等同于你当前护盾值 2 倍的伤害。若已处于[反击]姿态，触发[圣剑]姿态加成。' },
         { id: 's_thorns', name: '圣棘誓壁', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_圣堂守势.webp', type: '防御', cost: 3, icon: '🛡️', val: 0, tags: ['荆棘'], rarity: '史诗', isSpecial: true, desc: '获得 30 点护甲与 10 层[荆棘]。' },
-        { id: 'a_syn_sword', name: '裁决破军', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_裂光一闪.webp', type: '攻击', cost: 2, icon: '🗡️', val: 10, tags: ['圣剑'], rarity: '史诗', isSpecial: true, desc: '造成 10 点伤害。<br>你手牌中每有一张带有[圣剑]、[重击]或[穿甲]的牌，额外造成 12 点伤害。' },
+        { id: 'a_syn_sword', name: '裁决破军', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_裂光一闪.webp', type: '攻击', cost: 2, icon: '🗡️', val: 10, tags: ['穿甲', '易伤'], rarity: '史诗', isSpecial: true, desc: '造成 10 点穿甲伤害。<br>你手牌中每有一张带有[易伤]、[穿甲]、[连击]或[重击]的牌，额外造成 12 点伤害。' },
         { id: 'a_syn_array', name: '王誓阵列', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_铁壁圣痕.webp', type: '防御', cost: 2, icon: '⛩️', val: 10, tags: ['保留', '荆棘'], rarity: '史诗', isSpecial: true, desc: '获得 10 点护甲。<br>你手牌中每有一张带有[保留]或[荆棘]的牌，额外获得 8 点护甲与 3 层[荆棘]。' },
-        { id: 'a_syn_blood', name: '血海誓斩', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_血誓斩.webp', type: '攻击', cost: 2, icon: '🩸', val: 6, tags: ['吸血', '血祭'], rarity: '史诗', isSpecial: true, desc: '造成 6 点伤害。你手牌中每有一张带[治愈]或[吸血]的牌，失去 2 点生命并额外造成 15 点伤害，随后吸血。' },
-        { id: 'w_counter_crown', name: '王冠回锋', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_王冠反斩.webp', type: '攻击', cost: 2, icon: '👑', val: 14, tags: ['反击', '圣剑'], rarity: '史诗', isSpecial: true, desc: '造成 14 点伤害并进入[反击]姿态。若已处于反击姿态，改为额外造成等同护盾值的伤害。' },
+        { id: 'a_syn_blood', name: '血海誓斩', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_血誓斩.webp', type: '攻击', cost: 2, icon: '🩸', val: 6, tags: ['吸血', '血祭', '放血'], rarity: '史诗', isSpecial: true, desc: '造成 6 点伤害。你手牌中每有一张带[血祭]、[吸血]、[出血]或[放血]的牌，失去 2 点生命并额外造成 15 点伤害，随后吸血。' },
+        { id: 'w_counter_crown', name: '王冠回锋', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_王冠反斩.webp', type: '攻击', cost: 3, icon: '👑', val: 16, tags: ['反击', '圣剑'], rarity: '史诗', isSpecial: true, desc: '造成 16 点伤害并进入[反击]姿态。若已处于反击姿态，额外造成等同护盾值的伤害。' },
         { id: 'w_bastion_prayer', name: '圣壁祷言', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_战旗压阵.webp', type: '能力', cost: 1, icon: '🚩', val: 10, tags: ['庇护', '抽牌'], rarity: '史诗', isSpecial: true, desc: '获得 10 点[庇护]，若当前拥有护盾，再获得等同庇护值的护盾并[抽牌]。' },
         { id: 'w_thorn_judgement', name: '荆冠审判', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_棘甲冲锋.webp', type: '攻击', cost: 2, icon: '🌹', val: 8, tags: ['圣剑', '荆棘'], rarity: '史诗', isSpecial: true, desc: '造成 8 点伤害。额外造成当前[荆棘]层数 3 倍的伤害，并获得 6 层[荆棘]。' },
         { id: 'w_oath_fortress', name: '誓约壁垒', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_铁壁圣痕.webp', type: '防御', cost: 2, icon: '🏰', val: 18, tags: ['庇护', '保留'], rarity: '史诗', isSpecial: true, desc: '获得 18 点护盾与 8 点[庇护]。若生命低于一半，额外进入[反击]姿态。' },
-        { id: 'w_last_verdict', name: '终誓裁断', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_终誓裁断.webp', type: '攻击', cost: 2, icon: '⚔️', val: 18, tags: ['圣剑', '重击', '放逐'], rarity: '史诗', isSpecial: true, desc: '造成 18 点伤害并[放逐]。伤害额外提高你当前护盾值与[荆棘]层数之和。' }
+        { id: 'w_last_verdict', name: '终誓处刑', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_终誓裁断.webp', type: '攻击', cost: 2, icon: '⚔️', val: 18, tags: ['穿甲', '重击'], rarity: '史诗', isSpecial: true, desc: '造成 18 点穿甲伤害。敌方每有 1 层[易伤]，额外造成 4 点伤害；你手牌中每有一张[连击]或[穿甲]牌，再额外造成 6 点伤害。' }
     ],
     hero_mage: [
         { id: 's_magic', name: '星界回音', roleId: 'hero_mage', frameTheme: 'mage', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_星火连祷.webp', type: '能力', cost: 3, icon: '🌌', val: 0, tags: ['回响'], rarity: '史诗', isSpecial: true, desc: '本回合接下来打出的 3 张牌，其所有的标签效果会额外触发 2 次。' },
@@ -19,24 +19,78 @@ const SPECIAL_EPIC_POOLS = {
         { id: 'm_chant_singularity', name: '星核咏唱', roleId: 'hero_mage', frameTheme: 'mage', art: '角色二/角色二_卡面插画_遗迹咏唱.webp', type: '能力', cost: 1, icon: '🔮', val: 0, tags: ['咏唱', '充能'], rarity: '史诗', isSpecial: true, desc: '获得 3 层[咏唱]并回复 1 点能量。若敌方有负面状态，额外[抽牌] 1 张。' },
         { id: 'm_status_supernova', name: '万象超新星', roleId: 'hero_mage', frameTheme: 'mage', art: '角色二/角色二_卡面插画_紫焰爆裂.webp', type: '攻击', cost: 2, icon: '💥', val: 8, tags: ['爆发', '燃烧'], rarity: '史诗', isSpecial: true, desc: '造成 8 点伤害。敌方每有一种负面状态，额外造成 8 点伤害并施加 1 层[燃烧]。' },
         { id: 'm_echo_archive', name: '回声秘藏', roleId: 'hero_mage', frameTheme: 'mage', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_法环回流.webp', type: '能力', cost: 1, icon: '🪞', val: 0, tags: ['回响', '复刻'], rarity: '史诗', isSpecial: true, desc: '复制上一张打出的牌的效果；若没有可复制目标，则获得 2 层[咏唱]并[抽牌]。' },
-        { id: 'm_ember_orbit', name: '余烬星轨', roleId: 'hero_mage', frameTheme: 'mage', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_余烬点燃.webp', type: '能力', cost: 1, icon: '🔥', val: 0, tags: ['燃烧', '易伤'], rarity: '史诗', isSpecial: true, desc: '施加 6 层[燃烧]与 3 层[易伤]。若有[咏唱]，保留咏唱并[抽牌] 2 张。' },
+        { id: 'm_ember_orbit', name: '余烬星轨', roleId: 'hero_mage', frameTheme: 'mage', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_余烬点燃.webp', type: '能力', cost: 1, icon: '🔥', val: 0, tags: ['燃烧', '易伤', '抽牌'], rarity: '史诗', isSpecial: true, desc: '施加 6 层[燃烧]与 3 层[易伤]。若敌方已有任意负面状态，额外[抽牌] 2 张。' },
         { id: 'm_forbidden_comet', name: '裂星禁术', roleId: 'hero_mage', frameTheme: 'mage', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_裂界紫雷.webp', type: '攻击', cost: 2, icon: '🌌', val: 20, tags: ['爆发', '穿甲', '放逐'], rarity: '史诗', isSpecial: true, desc: '造成 20 点穿甲伤害并[放逐]。每有 1 层[咏唱]，额外造成 6 点伤害，然后消耗所有咏唱。' },
-        { id: 'm_curse_gravity', name: '咒星重力', roleId: 'hero_mage', frameTheme: 'mage', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_虚空导引.webp', type: '能力', cost: 2, icon: '⛓️', val: 0, tags: ['诅咒', '虚弱'], rarity: '史诗', isSpecial: true, desc: '施加 5 层[诅咒]与 3 层[虚弱]。敌方每有一种负面状态，你获得 1 层[咏唱]。' },
-        { id: 'm_blood_moon_rite', name: '血月仪轨', roleId: 'hero_mage', frameTheme: 'mage', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_星屑预兆.webp', type: '能力', cost: 1, icon: '🩸', val: 0, tags: ['出血', '放血'], rarity: '史诗', isSpecial: true, desc: '施加 6 层[出血]，随后立刻触发[放血]，并获得 2 层[咏唱]。' }
+        { id: 'm_curse_gravity', name: '咒星重力', roleId: 'hero_mage', frameTheme: 'mage', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_虚空导引.webp', type: '能力', cost: 2, icon: '⛓️', val: 0, tags: ['诅咒', '虚弱', '抽牌'], rarity: '史诗', isSpecial: true, desc: '施加 5 层[诅咒]与 3 层[虚弱]。敌方每有一种负面状态，你下一次伤害 +2；若已有 3 种以上负面状态，额外[抽牌] 1 张。' },
+        { id: 'm_blood_moon_rite', name: '血月仪轨', roleId: 'hero_mage', frameTheme: 'mage', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_星屑预兆.webp', type: '能力', cost: 1, icon: '🩸', val: 0, tags: ['出血', '放血', '易伤'], rarity: '史诗', isSpecial: true, desc: '施加 6 层[出血]与 2 层[易伤]，随后立刻触发[放血]。若成功引爆出血，额外[抽牌] 1 张。' }
     ],
     hero_archer: [
-        { id: 's_exhaust', name: '风葬归矢', roleId: 'hero_archer', frameTheme: 'archer', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_回环箭雨.webp', type: '攻击', cost: 3, icon: '🕳️', val: 0, tags: ['放逐', '轮回'], rarity: '史诗', isSpecial: true, desc: '造成伤害，数值为[放逐]区卡牌数 × 15。随后将[放逐]区所有卡牌洗入抽牌堆。' },
+        { id: 's_exhaust', name: '风葬归矢', roleId: 'hero_archer', frameTheme: 'archer', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_回环箭雨.webp', type: '能力', cost: 3, icon: '🕳️', val: 0, tags: ['放逐', '轮回'], rarity: '史诗', isSpecial: true, desc: '造成伤害，数值为[放逐]区卡牌数 × 15。随后将[放逐]区所有卡牌洗入抽牌堆。' },
         { id: 's_poison', name: '猎毒齐爆', roleId: 'hero_archer', frameTheme: 'archer', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_森息伏击.webp', type: '能力', cost: 2, icon: '💥', val: 0, tags: ['剧毒', '出血'], rarity: '史诗', isSpecial: true, desc: '引爆敌方所有的[剧毒]和[出血]层数，直接造成其层数总和 2 倍的真实伤害，且不清除层数。' },
         { id: 'a_syn_poison', name: '万毒箭阵', roleId: 'hero_archer', frameTheme: 'archer', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_鹰眼贯枝.webp', type: '能力', cost: 1, icon: '🧪', val: 0, tags: ['剧毒', '出血'], rarity: '史诗', isSpecial: true, desc: '丢弃手牌中所有带[剧毒]或[出血]的牌。<br>每丢弃一张，给予敌方 6 层剧毒与出血，并造成 10 点伤害。' },
         { id: 's_energy', name: '林风整备', roleId: 'hero_archer', frameTheme: 'archer', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_林风整备.webp', type: '能力', cost: 2, icon: '🍃', val: 0, tags: ['重置', '自然'], rarity: '史诗', isSpecial: true, desc: '丢弃你所有的手牌。每丢弃一张，回复 1 点能量并抽取 1 张牌。' },
         { id: 'a_wind_dance', name: '踏风连步', roleId: 'hero_archer', frameTheme: 'archer', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_风羽换位.webp', type: '能力', cost: 1, icon: '🪶', val: 0, tags: ['蓄力', '自然'], rarity: '史诗', isSpecial: true, desc: '获得 4 层风势，回复 1 点能量并[抽牌] 1 张。若已有风势，额外获得 6 点[庇护]。' },
         { id: 'a_gale_verdict', name: '疾风裁决', roleId: 'hero_archer', frameTheme: 'archer', art: '新角色三/角色三_卡面插画_疾风连射.webp', type: '攻击', cost: 2, icon: '💨', val: 8, tags: ['连射', '穿甲'], rarity: '史诗', isSpecial: true, desc: '造成 8 点穿甲伤害。每有 1 层风势，额外追加一次 4 点追射，并消耗最多 3 层风势。' },
-        { id: 'a_red_rain', name: '赤痕箭雨', roleId: 'hero_archer', frameTheme: 'archer', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_回环箭雨.webp', type: '攻击', cost: 2, icon: '🩸', val: 7, tags: ['出血', '连射'], rarity: '史诗', isSpecial: true, desc: '造成 7 点伤害并施加 8 层[出血]。若你有风势，额外[抽牌] 1 张。' },
-        { id: 'a_bloodlet_gale', name: '断脉疾风', roleId: 'hero_archer', frameTheme: 'archer', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_森息伏击.webp', type: '攻击', cost: 1, icon: '🩸', val: 6, tags: ['放血', '连射'], rarity: '史诗', isSpecial: true, desc: '造成 6 点伤害并触发[放血]。每引爆 4 层出血，获得 1 层风势。' },
+        { id: 'a_red_rain', name: '赤痕箭雨', roleId: 'hero_archer', frameTheme: 'archer', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_回环箭雨.webp', type: '攻击', cost: 2, icon: '🩸', val: 7, tags: ['出血', '多段'], rarity: '史诗', isSpecial: true, desc: '造成 7 点伤害并施加 8 层[出血]。若敌方已有[剧毒]，额外施加 4 层[剧毒]并[抽牌] 1 张。' },
+        { id: 'a_bloodlet_gale', name: '断脉齐爆', roleId: 'hero_archer', frameTheme: 'archer', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_森息伏击.webp', type: '攻击', cost: 1, icon: '🩸', val: 6, tags: ['放血', '抽牌'], rarity: '史诗', isSpecial: true, desc: '造成 6 点伤害并触发[放血]。成功引爆出血时，额外[抽牌] 1 张；若敌方有[剧毒]，不清空出血。' },
         { id: 'a_green_resonance', name: '翠林回响', roleId: 'hero_archer', frameTheme: 'archer', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_林风整备.webp', type: '能力', cost: 1, icon: '🍃', val: 0, tags: ['自然', '拾遗'], rarity: '史诗', isSpecial: true, desc: '从墓地选择 1 张牌回到手牌，随后触发[自然]并获得 2 层风势。' },
-        { id: 'a_skyfall_shot', name: '坠星绝矢', roleId: 'hero_archer', frameTheme: 'archer', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_狩影穿枝.webp', type: '攻击', cost: 2, icon: '🌠', val: 16, tags: ['放逐', '连射', '穿甲'], rarity: '史诗', isSpecial: true, desc: '造成 16 点穿甲伤害并[放逐]。若风势达到 3 层以上，此牌额外触发一次。' }
+        { id: 'a_skyfall_shot', name: '坠星绝矢', roleId: 'hero_archer', frameTheme: 'archer', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_狩影穿枝.webp', type: '攻击', cost: 2, icon: '🌠', val: 16, tags: ['放逐', '穿甲', '多段'], rarity: '史诗', isSpecial: true, desc: '造成 16 点穿甲伤害并[放逐]。放逐区每有 2 张牌，此牌额外造成 4 点伤害。' }
     ]
 };
+
+const BUILD_EXPANSION_SPECIAL_EPICS = {
+    hero_warrior: [
+        { id: 'w_oath_clock', name: '誓钟回击', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_王冠反斩.webp', type: '能力', cost: 3, icon: '🕰️', val: 0, tags: ['反击', '保留'], buildTags: ['oathblade'], rarity: '史诗', isSpecial: true, desc: '进入[反击]并[保留]关键牌。' },
+        { id: 'w_exec_silence', name: '断声处决', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_裂光一闪.webp', type: '能力', cost: 1, icon: '⛓️', val: 0, tags: ['眩晕', '易伤'], buildTags: ['execution'], rarity: '史诗', isSpecial: true, desc: '施加[眩晕]与[易伤]。用一回合控制打开处刑窗口。' },
+        { id: 'w_exec_line', name: '一线断甲', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_裂光一闪.webp', type: '攻击', cost: 2, icon: '🗡️', val: 13, tags: ['穿甲', '连击'], buildTags: ['execution'], rarity: '史诗', isSpecial: true, desc: '造成 13 点伤害。若本回合已出牌，[连击]会放大这次[穿甲]攻击。' },
+        { id: 'w_exec_flash', name: '白刃瞬裁', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_裂光一闪.webp', type: '攻击', cost: 0, icon: '⚡', val: 7, tags: ['穿甲', '销毁'], buildTags: ['execution'], rarity: '史诗', isSpecial: true, desc: '造成 7 点穿甲伤害后[销毁]。压缩牌组，让处刑收束更快出现。' },
+        { id: 'w_exec_claim', name: '认罪剑痕', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_终誓裁断.webp', type: '攻击', cost: 1, icon: '⚖️', val: 8, tags: ['易伤', '重击'], buildTags: ['execution'], rarity: '史诗', isSpecial: true, desc: '造成 8 点伤害并施加[易伤]。附带[重击]，适合作为处刑链中段。' },
+        { id: 'w_exec_rehearse', name: '刑步预演', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_狂誓裂斩.webp', type: '能力', cost: 1, icon: '👣', val: 0, tags: ['重置', '抽牌'], buildTags: ['execution'], rarity: '史诗', isSpecial: true, desc: '[重置]手牌并[抽牌]。' },
+        { id: 'w_exec_finisher', name: '裂冠终斩', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_终誓裁断.webp', type: '攻击', cost: 3, icon: '👑', val: 18, tags: ['穿甲', '重击'], buildTags: ['execution'], rarity: '史诗', isSpecial: true, desc: '造成 18 点穿甲伤害并触发[重击]。处刑线的高费收束。' },
+        { id: 'w_blood_crucible', name: '血誓坩埚', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_血祭壁垒.webp', type: '能力', cost: 1, icon: '🏺', val: 5, tags: ['血祭', '治愈'], buildTags: ['bloodoath'], rarity: '史诗', isSpecial: true, desc: '触发[血祭]后[治愈]。先把生命变成攻势，再立刻回稳。' },
+        { id: 'w_blood_rain', name: '赤雨冲锋', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_血誓斩.webp', type: '攻击', cost: 2, icon: '🩸', val: 7, tags: ['出血', '多段'], buildTags: ['bloodoath'], rarity: '史诗', isSpecial: true, desc: '多段攻击并施加[出血]，快速制造可被放血引爆的伤口。' },
+        { id: 'w_blood_siphon', name: '噬誓回流', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_血誓斩.webp', type: '攻击', cost: 1, icon: '💍', val: 8, tags: ['吸血', '放血'], buildTags: ['bloodoath'], rarity: '史诗', isSpecial: true, desc: '造成伤害并触发[放血]，随后[吸血]，用于把危险血线拉回来。' },
+        { id: 'w_blood_drum', name: '战血鼓点', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_血祭壁垒.webp', type: '能力', cost: 0, icon: '🥁', val: 5, tags: ['血祭', '充能'], buildTags: ['bloodoath'], rarity: '史诗', isSpecial: true, desc: '免费触发[血祭]并[充能]。用血量换一个更长的爆发回合。' },
+        { id: 'w_blood_chain', name: '赤链二斩', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_狂誓裂斩.webp', type: '攻击', cost: 1, icon: '⛓️', val: 6, tags: ['出血', '连击'], buildTags: ['bloodoath'], rarity: '史诗', isSpecial: true, desc: '铺[出血]并触发[连击]，适合接在血祭启动之后。' },
+        { id: 'w_blood_oathmark', name: '血印再立', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_血祭壁垒.webp', type: '能力', cost: 1, icon: '📜', val: 5, tags: ['血祭', '抽牌'], buildTags: ['bloodoath'], rarity: '史诗', isSpecial: true, desc: '触发[血祭]并[抽牌]，把生命投入到继续找血誓组件。' },
+        { id: 'w_blood_lastcup', name: '末杯回命', roleId: 'hero_warrior', frameTheme: 'warrior', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_血誓斩.webp', type: '攻击', cost: 2, icon: '🍷', val: 11, tags: ['吸血', '重击'], buildTags: ['bloodoath'], rarity: '史诗', isSpecial: true, desc: '高伤[吸血]并触发[重击]。不制造伤口，只负责血誓线的生命回收。' }
+    ],
+    hero_mage: [
+        { id: 'm_chant_overflow', name: '溢星咏唱', roleId: 'hero_mage', frameTheme: 'mage', art: '角色二/角色二_卡面插画_遗迹咏唱.webp', type: '能力', cost: 1, icon: '🔮', val: 0, tags: ['咏唱', '抽牌'], buildTags: ['chant'], rarity: '史诗', isSpecial: true, desc: '获得[咏唱]并[抽牌]。' },
+        { id: 'm_chant_bolt', name: '星涌雷令', roleId: 'hero_mage', frameTheme: 'mage', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_裂界紫雷.webp', type: '攻击', cost: 1, icon: '⚡', val: 7, tags: ['爆发', '充能'], buildTags: ['chant'], rarity: '史诗', isSpecial: true, desc: '造成 7 点伤害，附带[爆发]与[充能]。' },
+        { id: 'm_chant_ward', name: '恒咏护星', roleId: 'hero_mage', frameTheme: 'mage', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_魔流庇护.webp', type: '防御', cost: 2, icon: '🛡️', val: 12, tags: ['咏唱', '庇护'], buildTags: ['chant'], rarity: '史诗', isSpecial: true, desc: '获得 12 点护盾，积累[咏唱]并触发[庇护]。' },
+        { id: 'm_chant_lockstar', name: '锁星终读', roleId: 'hero_mage', frameTheme: 'mage', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_裂界紫雷.webp', type: '能力', cost: 2, icon: '🎯', val: 0, tags: ['咏唱', '易伤'], buildTags: ['chant'], rarity: '史诗', isSpecial: true, desc: '积累[咏唱]并施加[易伤]。' },
+        { id: 'm_mirror_twinseal', name: '双镜印', roleId: 'hero_mage', frameTheme: 'mage', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_星环复写.webp', type: '能力', cost: 1, icon: '🪞', val: 0, tags: ['回响', '复刻'], buildTags: ['mirror'], rarity: '史诗', isSpecial: true, desc: '同时触发[回响]与[复刻]。' },
+        { id: 'm_mirror_rewind', name: '倒带法环', roleId: 'hero_mage', frameTheme: 'mage', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_法环回流.webp', type: '能力', cost: 1, icon: '🔁', val: 0, tags: ['复刻', '重置'], buildTags: ['mirror'], rarity: '史诗', isSpecial: true, desc: '触发[复刻]并[重置]手牌。' },
+        { id: 'm_mirror_footnote', name: '镜页脚注', roleId: 'hero_mage', frameTheme: 'mage', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_星环复写.webp', type: '能力', cost: 0, icon: '📝', val: 0, tags: ['复刻', '销毁'], buildTags: ['mirror'], rarity: '史诗', isSpecial: true, desc: '触发[复刻]后[销毁]。' },
+        { id: 'm_mirror_hallway', name: '折廊回声', roleId: 'hero_mage', frameTheme: 'mage', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_法环回流.webp', type: '能力', cost: 2, icon: '🏛️', val: 0, tags: ['回响', '保留'], buildTags: ['mirror'], rarity: '史诗', isSpecial: true, desc: '触发[回响]并[保留]。' },
+        { id: 'm_mirror_glassbolt', name: '镜棱短雷', roleId: 'hero_mage', frameTheme: 'mage', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_裂界紫雷.webp', type: '攻击', cost: 1, icon: '💠', val: 6, tags: ['回响', '穿甲'], buildTags: ['mirror'], rarity: '史诗', isSpecial: true, desc: '造成 6 点穿甲伤害，附带[回响]。' },
+        { id: 'm_calamity_plague_star', name: '疫星坠落', roleId: 'hero_mage', frameTheme: 'mage', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_星缚咒印.webp', type: '能力', cost: 2, icon: '☠️', val: 0, tags: ['剧毒', '诅咒'], buildTags: ['calamity'], rarity: '史诗', isSpecial: true, desc: '施加[剧毒]与[诅咒]。' },
+        { id: 'm_calamity_black_snow', name: '黑雪预兆', roleId: 'hero_mage', frameTheme: 'mage', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_星屑预兆.webp', type: '攻击', cost: 1, icon: '🌑', val: 6, tags: ['虚弱', '燃烧'], buildTags: ['calamity'], rarity: '史诗', isSpecial: true, desc: '造成 6 点伤害，施加[虚弱]与[燃烧]。' },
+        { id: 'm_calamity_silence', name: '血月禁言', roleId: 'hero_mage', frameTheme: 'mage', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_星屑预兆.webp', type: '能力', cost: 1, icon: '🩸', val: 0, tags: ['眩晕', '出血'], buildTags: ['calamity'], rarity: '史诗', isSpecial: true, desc: '施加[眩晕]与[出血]。' },
+        { id: 'm_calamity_blacklist', name: '厄名黑册', roleId: 'hero_mage', frameTheme: 'mage', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_星缚咒印.webp', type: '能力', cost: 1, icon: '📓', val: 0, tags: ['诅咒', '易伤'], buildTags: ['calamity'], rarity: '史诗', isSpecial: true, desc: '施加[诅咒]与[易伤]。' }
+    ],
+    hero_archer: [
+        { id: 'a_gale_updraft', name: '上升气流', roleId: 'hero_archer', frameTheme: 'archer', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_风羽换位.webp', type: '能力', cost: 1, icon: '🪶', val: 0, tags: ['蓄力', '抽牌'], buildTags: ['gale'], rarity: '史诗', isSpecial: true, desc: '获得风势并[抽牌]。' },
+        { id: 'a_gale_splinter', name: '碎风齐射', roleId: 'hero_archer', frameTheme: 'archer', art: '新角色三/角色三_卡面插画_疾风连射.webp', type: '攻击', cost: 1, icon: '💨', val: 5, tags: ['连射', '多段'], buildTags: ['gale'], rarity: '史诗', isSpecial: true, desc: '造成 5 点伤害，附带[连射]与[多段]。' },
+        { id: 'a_gale_crosswind', name: '侧风判线', roleId: 'hero_archer', frameTheme: 'archer', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_风羽换位.webp', type: '能力', cost: 1, icon: '📏', val: 0, tags: ['自然', '易伤'], buildTags: ['gale'], rarity: '史诗', isSpecial: true, desc: '触发[自然]并施加[易伤]。' },
+        { id: 'a_gale_featherbank', name: '羽库连装', roleId: 'hero_archer', frameTheme: 'archer', art: '新角色三/角色三_卡面插画_疾风连射.webp', type: '攻击', cost: 2, icon: '🏹', val: 6, tags: ['连射', '抽牌'], buildTags: ['gale'], rarity: '史诗', isSpecial: true, desc: '造成 6 点伤害，触发[连射]并[抽牌]。' },
+        { id: 'a_venom_bloom', name: '毒花齐绽', roleId: 'hero_archer', frameTheme: 'archer', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_森息伏击.webp', type: '能力', cost: 1, icon: '🌿', val: 0, tags: ['剧毒', '出血'], buildTags: ['venom'], rarity: '史诗', isSpecial: true, desc: '施加[剧毒]与[出血]。' },
+        { id: 'a_venom_burst', name: '毒脉爆箭', roleId: 'hero_archer', frameTheme: 'archer', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_赤痕放血.webp', type: '攻击', cost: 1, icon: '☠️', val: 6, tags: ['放血', '剧毒'], buildTags: ['venom'], rarity: '史诗', isSpecial: true, desc: '造成 6 点伤害，触发[放血]并施加[剧毒]。' },
+        { id: 'a_venom_cage', name: '腐藤囚笼', roleId: 'hero_archer', frameTheme: 'archer', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_森息伏击.webp', type: '能力', cost: 2, icon: '🕸️', val: 0, tags: ['剧毒', '眩晕'], buildTags: ['venom'], rarity: '史诗', isSpecial: true, desc: '施加[剧毒]并[眩晕]。' },
+        { id: 'a_venom_redfog', name: '赤雾落弦', roleId: 'hero_archer', frameTheme: 'archer', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_回环箭雨.webp', type: '攻击', cost: 2, icon: '🩸', val: 6, tags: ['出血', '多段'], buildTags: ['venom'], rarity: '史诗', isSpecial: true, desc: '造成 6 点伤害，附带[多段]并施加[出血]。' },
+        { id: 'a_exile_map', name: '流亡路线图', roleId: 'hero_archer', frameTheme: 'archer', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_狩影穿枝.webp', type: '能力', cost: 1, icon: '🗺️', val: 0, tags: ['放逐', '抽牌'], buildTags: ['exile'], rarity: '史诗', isSpecial: true, desc: '自身[放逐]并[抽牌]。' },
+        { id: 'a_exile_recall', name: '归途双令', roleId: 'hero_archer', frameTheme: 'archer', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_林风整备.webp', type: '能力', cost: 1, icon: '🧭', val: 0, tags: ['招魂', '轮回'], buildTags: ['exile'], rarity: '史诗', isSpecial: true, desc: '触发[招魂]与[轮回]。' },
+        { id: 'a_exile_knives', name: '影匣飞刀', roleId: 'hero_archer', frameTheme: 'archer', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_狩影穿枝.webp', type: '攻击', cost: 0, icon: '🗡️', val: 4, tags: ['放逐', '销毁'], buildTags: ['exile'], rarity: '史诗', isSpecial: true, desc: '造成 4 点伤害后[放逐]并[销毁]。' },
+        { id: 'a_exile_piercer', name: '界外穿枝', roleId: 'hero_archer', frameTheme: 'archer', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_狩影穿枝.webp', type: '攻击', cost: 2, icon: '🌠', val: 12, tags: ['放逐', '穿甲'], buildTags: ['exile'], rarity: '史诗', isSpecial: true, desc: '造成 12 点穿甲伤害并[放逐]。' },
+        { id: 'a_exile_archive', name: '失林归档', roleId: 'hero_archer', frameTheme: 'archer', art: '卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_轮枝归射.webp', type: '能力', cost: 2, icon: '📚', val: 0, tags: ['拾遗', '轮回'], buildTags: ['exile'], rarity: '史诗', isSpecial: true, desc: '触发[拾遗]与[轮回]。' }
+    ]
+};
+
+Object.entries(BUILD_EXPANSION_SPECIAL_EPICS).forEach(([characterId, cards]) => {
+    SPECIAL_EPIC_POOLS[characterId].push(...cards);
+});
+
 const SPECIAL_EPICS = Object.values(SPECIAL_EPIC_POOLS).flat();
 const REMOVED_BATTLE_IMPRINT_SPECIAL_IDS = new Set([
     'a_ench_array', 'a_ench_blood', 'a_ench_spirit', 'a_ench_gather',
@@ -44,7 +98,7 @@ const REMOVED_BATTLE_IMPRINT_SPECIAL_IDS = new Set([
 ]);
 
 const RELIC_POOL = [
-    { id: 'r_bone_ring', name: '誓约骨环', icon: '🦴', desc: '战士/弓手：每丢弃 1 张非诅咒手牌，本场战斗所有伤害 +1；适合把弃牌转成[圣剑]或[连射]爆发。', price: 100 },
+    { id: 'r_bone_ring', name: '誓约骨环', icon: '🦴', desc: '战士/弓手：每丢弃 1 张非诅咒手牌，本场战斗所有伤害 +1；适合把弃牌转成血誓卖血、处刑连段或重置爆发。', price: 100 },
     { id: 'r_frenzy_veil', name: '疾影面纱', icon: '🎭', desc: '弓手：触发[重置]时额外[抽牌] 1 张；本战斗弃牌越多，[狂热]提供的伤害越高。', price: 130 },
     { id: 'r_sac_jade', name: '咏唱玉坠', icon: '📿', desc: '法师：每次获得[咏唱]时，额外回复 1 点能量。', price: 150 },
     { id: 'r_enchant_crys', name: '紫焰棱晶', icon: '💎', desc: '法师：触发[附魔]时加成翻倍；[爆发]结算时额外追加紫焰伤害。', price: 140 },
@@ -53,22 +107,22 @@ const RELIC_POOL = [
     { id: 'r_weak_mask', name: '破势面具', icon: '🎭', desc: '法师/弓手：施加[易伤]或[虚弱]持续回合 +1；攻击虚弱目标伤害提高。', price: 130 },
     { id: 'r_corrupt_cup', name: '毒露圣杯', icon: '🍷', desc: '弓手：敌方每次受到毒素伤害时，你回复 2 点生命，适合[自然]消耗战。', price: 170 },
     { id: 'r_thorn_shield_new', name: '蔷薇重盾', icon: '🛡️', desc: '战士：[荆棘]效果翻倍；战斗开始时进入[反击]姿态一次，但不会在每回合重复刷新。', price: 180 },
-    { id: 'r_protect_armor', name: '圣壁石甲', icon: '🪨', desc: '战士：打出[庇护]牌额外获得 5 点减伤；每场战斗免疫首次伤害。', price: 150 },
+    { id: 'r_protect_armor', name: '圣壁石甲', icon: '🪨', desc: '战士：打出[庇护]牌额外获得 5 点减伤；每场战斗首次受到生命伤害时免疫该次伤害。', price: 150 },
     { id: 'r_counter_amulet', name: '招架护符', icon: '🧿', desc: '战士：进入[反击]姿态时立刻获得 5 点[庇护]减伤；重复获得反击不会重复触发。', price: 120 },
-    { id: 'r_life_totem', name: '守誓图腾', icon: '🗿', desc: '战士：生命低于 50% 时，防御与护盾收益提升 50%，帮助低血线稳住圣剑回合。', price: 140 },
-    { id: 'r_pierce_amulet', name: '裂甲剑坠', icon: '⛓️', desc: '战士/弓手：[穿甲]伤害额外提升 25%，适合[圣剑]或远程破甲路线。', price: 110 },
+    { id: 'r_life_totem', name: '守誓图腾', icon: '🗿', desc: '战士：生命低于 50% 时，[防御]牌护盾与[庇护]减伤提升 50%，用于低血线稳住下一轮。', price: 140 },
+    { id: 'r_pierce_amulet', name: '裂甲剑坠', icon: '⛓️', desc: '战士/弓手：[穿甲]伤害额外提升 25%，适合处刑破甲或放逐穿枝路线。', price: 110 },
     { id: 'r_combo_ring', name: '连弦指环', icon: '🤜', desc: '弓手：[连击]增幅提高至 70%；[连射]额外多触发 1 次。', price: 130 },
-    { id: 'r_heavy_badge', name: '圣剑重徽', icon: '⚔️', desc: '战士：[重击]倍数提升至 2.5 倍，是高费[圣剑]牌的核心爆点。', price: 150 },
+    { id: 'r_heavy_badge', name: '重锋徽记', icon: '⚔️', desc: '战士：[重击]倍数提升至 2.5 倍，是易伤、穿甲和处刑收束牌的核心爆点。', price: 150 },
     { id: 'r_fast_foot', name: '先手靴扣', icon: '🥾', desc: '弓手：每回合第一张攻击牌伤害 +50%，适合以[蓄力]形成风势后轻灵开弓。', price: 160 },
     { id: 'r_soul_lantern', name: '林魂灯笼', icon: '🏮', desc: '弓手：[招魂]和[拾遗]可选数量 +1，带回的牌获得[保留]，便于保留风势窗口。', price: 140 },
     { id: 'r_cycle_compass', name: '风轮罗盘', icon: '🧭', desc: '弓手：通过[轮回]洗入牌库的牌，抽到时立刻免费触发一次效果。', price: 170 },
     { id: 'r_echo_mirror_relic', name: '秘仪魔镜', icon: '🪞', desc: '法师：[回响]额外触发 1 次；[复刻]可复制双倍效果。', price: 190 },
     { id: 'r_exhaust_stone', name: '归林石碑', icon: '🪦', desc: '弓手：被[放逐]的牌，每回合有 10% 概率自动回到手牌，补足循环资源。', price: 120 },
     { id: 'r_energy_crys', name: '星辉法核', icon: '🔮', desc: '法师：每次[充能]额外回 1 点能量；获得[咏唱]时额外 +1 层。', price: 160 },
-    { id: 'r_vamp_ring', name: '血誓指环', icon: '💍', desc: '战士：带[吸血]的攻击溢出治疗会转化为等量护盾，服务防御反击。', price: 140 },
+    { id: 'r_vamp_ring', name: '血誓指环', icon: '💍', desc: '战士：带[吸血]的攻击溢出治疗会转化为等量护盾，作为血誓卖血后的安全阀。', price: 140 },
     { id: 'r_heal_relic', name: '月露圣物', icon: '🌿', desc: '法师/弓手：[治愈]效果额外 +3，提供铺垫回合的生存空间。', price: 130 },
-    { id: 'r_luck_box', name: '占星牌匣', icon: '📦', desc: '法师/弓手：[抽牌]额外抽 1 张，帮助寻找[爆发]或[连射]收束牌。', price: 150 },
-    { id: 'r_decay_seal', name: '破绽咒印', icon: '📜', desc: '法师：对带有任意负面状态的敌人，全伤害 +20%，适合[易伤]后接[爆发]。', price: 160 },
+    { id: 'r_luck_box', name: '占星牌匣', icon: '📦', desc: '法师/弓手：[抽牌]额外抽 1 张，帮助寻找回响、灾厄、放逐或毒血收束牌。', price: 150 },
+    { id: 'r_decay_seal', name: '破绽咒印', icon: '📜', desc: '法师：对带有任意负面状态的敌人，全伤害 +20%，适合先叠状态再接爆发或灾厄收束。', price: 160 },
     { id: 'r_yin_yang', name: '星轨命盘', icon: '☯️', desc: '法师：你的正面增益在回合结束时不再清零，只缓慢衰减一半。', price: 180 },
     { id: 'r_omni_seal', name: '万法空印', icon: '🕉️', desc: '法师：每回合首次打出的非诅咒卡牌额外免费触发一次，可复制[咏唱]或[爆发]节奏。', price: 200 },
     
@@ -76,9 +130,9 @@ const RELIC_POOL = [
     { id: 'r_exhaust_knife', name: '猎手飞刀带', icon: '🥋', desc: '弓手：每当有卡牌被[放逐]，为手牌添加两张 0 耗能、4 点伤害的[销毁]飞刀。', price: 170 },
     { id: 'r_return_poison', name: '青毒归羽', icon: '☠️', desc: '弓手：每当卡牌从放逐区回到手牌或牌库，给予敌人 2 层[剧毒]。', price: 150 },
     { id: 'r_return_bleed', name: '赤痕归羽', icon: '🩸', desc: '弓手：每当卡牌从放逐区回到手牌或牌库，给予敌人 2 层[出血]。', price: 150 },
-    { id: 'r_skill_cost', name: '秘仪教本', icon: '📘', desc: '法师/弓手：战斗开始时，所有[能力]牌耗能 -1（最低为 0），更容易启动[咏唱]或风势调度。', price: 200 },
+    { id: 'r_skill_cost', name: '秘仪教本', icon: '📘', desc: '法师/弓手：战斗开始时，所有[能力]牌耗能 -1（最低为 0），更容易启动咏唱、回响、灾厄或风势调度。', price: 200 },
     { id: 'r_def_cost', name: '圣盾甲片', icon: '🐢', desc: '战士：战斗开始时，所有[防御]牌耗能 -1（最低为 0），更容易架起护盾节奏。', price: 200 },
-    { id: 'r_bleed_return_exhaust', name: '猎魂镰刃', icon: '🪝', desc: '弓手：触发[放血]时，放逐区的所有卡牌回到手牌，重开连射资源。', price: 250 },
+    { id: 'r_bleed_return_exhaust', name: '猎魂镰刃', icon: '🪝', desc: '弓手：触发[放血]时，放逐区的所有卡牌回到手牌，把毒血引爆和放逐循环接在一起。', price: 250 },
     { id: 'r_return_knife', name: '回风刀鞘', icon: '🪃', desc: '弓手：每当卡牌从放逐区回到手牌或牌库，为手牌添加两张[销毁]飞刀。', price: 180 },
     { id: 'r_base_energy', name: '源能核心', icon: '💠', desc: '通用：战斗开始时基础能量 +1，让三种职业都能更早展开核心节奏。', price: 280 },
     { id: 'r_shield', name: '古誓护印', icon: '🔰', desc: '通用：所有[防御]牌额外获得 4 点护甲，适合任何需要稳住节奏的牌组。', price: 150 },
@@ -94,8 +148,8 @@ const RELIC_POOL = [
     { id: 'r_pierce', name: '破甲箭锋', icon: '🗡️', desc: '弓手：你的[多段]与[连射]攻击视为[穿甲]攻击。', price: 280 },
     { id: 'r_pass_energy', name: '自然回流', icon: '⚡', desc: '弓手：使用带有[放逐]的牌回复 1 点能量；触发[自然]时额外再回复 1 点。', price: 300 },
     { id: 'r_frenzy', name: '连祷狂热', icon: '🔥', desc: '法师：一回合内每打出 4 张牌后，下一张非诅咒卡牌自动触发[回响]。', price: 280 },
-    { id: 'r_pass_draw', name: '职业秘卷', icon: '📚', desc: '通用：通过效果[抽牌]时，按当前职业为抽到的牌赋予[圣剑]/[保留]、[爆发]/[咏唱]或[连射]/风势词条。', price: 250 },
-    { id: 'r_blood', name: '血池圣印', icon: '💉', desc: '战士：你的[吸血]不再基于伤害，而是基于目标身上的[出血]层数，适合持久反击。', price: 220 },
+    { id: 'r_pass_draw', name: '职业秘卷', icon: '📚', desc: '通用：通过效果[抽牌]时，按当前职业为抽到的牌赋予职业基础词条，适合作为临时转向或补强工具。', price: 250 },
+    { id: 'r_blood', name: '血池圣印', icon: '💉', desc: '战士：你的[吸血]不再基于伤害，而是基于目标身上的[出血]层数，适合血誓牌组用伤口回血。', price: 220 },
     { id: 'r_plague', name: '森疫孢囊', icon: '🦠', desc: '弓手：每当敌方因[剧毒]受到伤害，有 50% 几率额外获得 1 层[虚弱]。', price: 200 },
     { id: 'r_execute', name: '猎首时刻', icon: '⚖️', desc: '弓手：对处于[易伤]状态的敌人触发[放血]时，不会清空其[出血]层数。', price: 260 },
     { id: 'r_pass_thorns', name: '圣棘花冠', icon: '🌹', desc: '战士：[荆棘]受击时不再减少，新回合开始时也不再自动减半。', price: 280 },
@@ -230,4 +284,181 @@ const ROLE_RELIC_IDS = {
         'r_execute', 'r_long_decay', 'r_combo_ring', 'r_fast_foot',
         'r_wind_quiver', 'r_exile_cache', 'r_bloodlet_draw'
     ])
+};
+
+const RELIC_BUILD_TAGS_BY_ID = {
+    r_guardian_core: ['oathblade'],
+    r_sword_oath: ['oathblade'],
+    r_thorn_bloom: ['oathblade'],
+    r_counter_gate: ['oathblade'],
+    r_thorn_shield_new: ['oathblade'],
+    r_counter_amulet: ['oathblade'],
+    r_protect_armor: ['oathblade', 'execution'],
+    r_life_totem: ['oathblade'],
+    r_def_cost: ['oathblade'],
+    r_heavy_badge: ['execution', 'oathblade'],
+    r_pierce_amulet: ['execution'],
+    r_battle_whetstone: ['execution'],
+    r_combo: ['execution'],
+    r_vamp_ring: ['bloodoath'],
+    r_blood: ['bloodoath'],
+    r_overheal: ['bloodoath', 'oathblade'],
+    r_bone_ring: ['bloodoath', 'execution', 'gale'],
+    r_status_prism: ['calamity'],
+    r_burst_lens: ['chant'],
+    r_chant_ink: ['chant'],
+    r_sac_jade: ['chant'],
+    r_energy_crys: ['chant'],
+    r_enchant_crys: ['chant', 'calamity'],
+    r_heal_relic: ['chant'],
+    r_luck_box: ['chant', 'mirror', 'calamity'],
+    r_yin_yang: ['chant', 'mirror'],
+    r_echo_mirror_relic: ['mirror'],
+    r_omni_seal: ['mirror'],
+    r_frenzy: ['mirror'],
+    r_brutal: ['mirror', 'calamity'],
+    r_decay_seal: ['calamity'],
+    r_despair: ['calamity'],
+    r_perma_curse: ['calamity'],
+    r_weak_mask: ['calamity'],
+    r_wind_quiver: ['gale'],
+    r_fast_foot: ['gale'],
+    r_combo_ring: ['gale'],
+    r_frenzy_veil: ['gale'],
+    r_pierce: ['gale'],
+    r_skill_cost: ['gale', 'chant', 'mirror'],
+    r_poison_fang: ['venom'],
+    r_bleed_knife: ['venom'],
+    r_corrupt_cup: ['venom'],
+    r_poison_leech: ['venom'],
+    r_plague: ['venom'],
+    r_execute: ['venom'],
+    r_long_decay: ['venom'],
+    r_bloodlet_draw: ['venom'],
+    r_exile_cache: ['exile'],
+    r_exhaust_stone: ['exile'],
+    r_exhaust_dmg: ['exile'],
+    r_exhaust_knife: ['exile'],
+    r_return_poison: ['exile', 'venom'],
+    r_return_bleed: ['exile', 'venom'],
+    r_bleed_return_exhaust: ['exile', 'venom'],
+    r_return_knife: ['exile'],
+    r_soul_lantern: ['exile'],
+    r_cycle_compass: ['exile'],
+    r_pass_energy: ['exile', 'gale'],
+    r_ethereal: ['exile', 'gale']
+};
+
+const BUILD_EXPANSION_RELICS = [
+    { id: 'r_oathblade_beacon', name: '圣誓航标', icon: '🛡️', desc: '战士：卡牌奖励中，圣剑反击方向的卡牌出现权重提高。', price: 180 },
+    { id: 'r_execution_warrant', name: '处刑令状', icon: '⚖️', desc: '战士：卡牌奖励中，处刑连斩方向的卡牌出现权重提高。', price: 180 },
+    { id: 'r_flaw_lens', name: '破绽透镜', icon: '🔍', desc: '战士：[穿甲]攻击命中带[易伤]的敌人时，伤害提高 15%。', price: 170 },
+    { id: 'r_duel_glove', name: '决斗手甲', icon: '🥊', desc: '战士：每回合首次触发[连击]时额外[抽牌] 1 张。', price: 150 },
+    { id: 'r_stun_chain', name: '缄默锁链', icon: '⛓️', desc: '战士：施加[眩晕]时，额外施加 1 层[易伤]。', price: 160 },
+    { id: 'r_execute_scabbard', name: '断罪剑鞘', icon: '🗡️', desc: '战士：[重击]攻击命中带[易伤]的敌人时，额外造成 8 点穿甲伤害。', price: 190 },
+    { id: 'r_pierce_meter', name: '裂甲刻尺', icon: '📏', desc: '战士：每回合首次打出[穿甲]攻击时，获得 1 点能量。', price: 160 },
+    { id: 'r_combo_warrant', name: '连斩密令', icon: '📜', desc: '战士：一回合内每打出第 2 张攻击牌，下一次伤害 +6。', price: 170 },
+    { id: 'r_finisher_coin', name: '终斩金币', icon: '🪙', desc: '战士：击败敌人时若敌方带有[易伤]，战后额外获得 10 金币。', price: 150 },
+    { id: 'r_bloodoath_contract', name: '血誓招令', icon: '🩸', desc: '战士：卡牌奖励中，血誓狂战方向的卡牌出现权重提高。', price: 180 },
+    { id: 'r_blood_suture', name: '赤线缝针', icon: '🧵', desc: '战士：每次触发[血祭]后，回复 2 点生命。', price: 160 },
+    { id: 'r_vein_cup', name: '脉搏圣杯', icon: '🍷', desc: '战士：敌方获得[出血]时，你回复 1 点生命。', price: 170 },
+    { id: 'r_rupture_charm', name: '裂口护符', icon: '💔', desc: '战士：触发[放血]后，若清空了出血，额外施加 2 层[出血]。', price: 170 },
+    { id: 'r_lifedebt_scale', name: '命债天平', icon: '⚖️', desc: '战士：生命低于一半时，[吸血]回复量提高 50%。', price: 190 },
+    { id: 'r_scarlet_whet', name: '猩红砥石', icon: '🪨', desc: '战士：[血祭]额外再获得 3 点本场战斗伤害。', price: 160 },
+    { id: 'r_bloodlet_hourglass', name: '放血沙漏', icon: '⌛', desc: '战士：每场战斗首次触发[放血]后，额外[抽牌] 1 张。', price: 170 },
+    { id: 'r_oath_transfusion', name: '誓血导管', icon: '🧪', desc: '战士：每回合首次[治愈]若造成溢出，获得等量本回合[庇护]。', price: 180 },
+    { id: 'r_chant_astrolabe', name: '咏星仪', icon: '🔮', desc: '法师：卡牌奖励中，星火咏唱方向的卡牌出现权重提高。', price: 180 },
+    { id: 'r_chant_reservoir', name: '蓄咏水晶', icon: '💎', desc: '法师：每回合首次获得[咏唱]时，额外获得 1 层[咏唱]。', price: 160 },
+    { id: 'r_burst_censer', name: '聚爆香炉', icon: '🕯️', desc: '法师：[爆发]消耗至少 3 层咏唱时，额外施加 2 层[燃烧]。', price: 170 },
+    { id: 'r_mirror_catalog', name: '镜像目录', icon: '🪞', desc: '法师：卡牌奖励中，镜像回路方向的卡牌出现权重提高。', price: 180 },
+    { id: 'r_echo_archive_pin', name: '回声书签', icon: '🔖', desc: '法师：每回合首次触发[回响]时，额外获得 1 点能量。', price: 160 },
+    { id: 'r_copy_lattice', name: '复写晶格', icon: '💠', desc: '法师：[复刻]没有目标时，改为[抽牌] 1 张并获得 1 层[咏唱]。', price: 170 },
+    { id: 'r_rewind_sand', name: '倒带砂瓶', icon: '⌛', desc: '法师：触发[重置]并实际弃牌后，额外[抽牌] 1 张。', price: 160 },
+    { id: 'r_double_quill', name: '双墨羽笔', icon: '🖋️', desc: '法师：每回合第二张能力牌额外[抽牌] 1 张。', price: 170 },
+    { id: 'r_calamity_orb', name: '灾厄星核', icon: '🌑', desc: '法师：卡牌奖励中，灾厄术士方向的卡牌出现权重提高。', price: 180 },
+    { id: 'r_hex_incense', name: '咒雾香', icon: '🕯️', desc: '法师：施加[诅咒]时，额外施加 1 层[虚弱]。', price: 160 },
+    { id: 'r_plague_glass', name: '疫光玻片', icon: '🧫', desc: '法师：敌方每有一种负面状态，你的能力牌造成的状态层数 +1。', price: 170 },
+    { id: 'r_status_ledger', name: '异状账簿', icon: '📒', desc: '法师：敌方负面状态达到 4 种时，每回合首次能力牌额外[抽牌] 1 张。', price: 170 },
+    { id: 'r_gale_weatherwane', name: '疾风风标', icon: '🏹', desc: '弓手：卡牌奖励中，疾风连射方向的卡牌出现权重提高。', price: 180 },
+    { id: 'r_tailwind_spool', name: '顺风线轴', icon: '🧵', desc: '弓手：每回合首次获得风势时，额外获得 1 层风势。', price: 160 },
+    { id: 'r_multishot_fletching', name: '分羽箭尾', icon: '🪶', desc: '弓手：[多段]攻击额外造成 2 点伤害。', price: 170 },
+    { id: 'r_venom_seedcase', name: '毒种匣', icon: '☠️', desc: '弓手：卡牌奖励中，猎毒陷袭方向的卡牌出现权重提高。', price: 180 },
+    { id: 'r_exile_roadsign', name: '流亡路标', icon: '🗺️', desc: '弓手：卡牌奖励中，放逐游侠方向的卡牌出现权重提高。', price: 180 },
+    { id: 'r_gray_market_map', name: '灰市地图', icon: '🗺️', desc: '通用：卡牌奖励与商栈补货中，带职业构筑方向的卡牌权重提高。', price: 180 },
+    { id: 'r_campfire_pouch', name: '营火锦囊', icon: '🎒', desc: '通用：放弃奖励时获得更多金币，适合慢慢寻找关键构筑件。', price: 170 }
+];
+
+RELIC_POOL.push(...BUILD_EXPANSION_RELICS);
+
+[
+    'r_oathblade_beacon'
+].forEach(id => ROLE_RELIC_IDS.hero_warrior.add(id));
+[
+    'r_execution_warrant', 'r_flaw_lens', 'r_duel_glove', 'r_stun_chain',
+    'r_execute_scabbard', 'r_pierce_meter', 'r_combo_warrant', 'r_finisher_coin'
+].forEach(id => ROLE_RELIC_IDS.hero_warrior.add(id));
+[
+    'r_bloodoath_contract', 'r_blood_suture', 'r_vein_cup', 'r_rupture_charm',
+    'r_lifedebt_scale', 'r_scarlet_whet', 'r_bloodlet_hourglass', 'r_oath_transfusion'
+].forEach(id => ROLE_RELIC_IDS.hero_warrior.add(id));
+[
+    'r_chant_astrolabe', 'r_chant_reservoir', 'r_burst_censer',
+    'r_mirror_catalog', 'r_echo_archive_pin', 'r_copy_lattice', 'r_rewind_sand', 'r_double_quill',
+    'r_calamity_orb', 'r_hex_incense', 'r_plague_glass', 'r_status_ledger'
+].forEach(id => ROLE_RELIC_IDS.hero_mage.add(id));
+[
+    'r_gale_weatherwane', 'r_tailwind_spool', 'r_multishot_fletching',
+    'r_venom_seedcase', 'r_exile_roadsign'
+].forEach(id => ROLE_RELIC_IDS.hero_archer.add(id));
+[
+    'r_gray_market_map', 'r_campfire_pouch'
+].forEach(id => COMMON_RELIC_IDS.add(id));
+
+Object.assign(RELIC_BUILD_TAGS_BY_ID, {
+    r_oathblade_beacon: ['oathblade'],
+    r_execution_warrant: ['execution'],
+    r_flaw_lens: ['execution'],
+    r_duel_glove: ['execution'],
+    r_stun_chain: ['execution'],
+    r_execute_scabbard: ['execution'],
+    r_pierce_meter: ['execution'],
+    r_combo_warrant: ['execution'],
+    r_finisher_coin: ['execution'],
+    r_bloodoath_contract: ['bloodoath'],
+    r_blood_suture: ['bloodoath'],
+    r_vein_cup: ['bloodoath'],
+    r_rupture_charm: ['bloodoath'],
+    r_lifedebt_scale: ['bloodoath'],
+    r_scarlet_whet: ['bloodoath'],
+    r_bloodlet_hourglass: ['bloodoath'],
+    r_oath_transfusion: ['bloodoath'],
+    r_chant_astrolabe: ['chant'],
+    r_chant_reservoir: ['chant'],
+    r_burst_censer: ['chant'],
+    r_mirror_catalog: ['mirror'],
+    r_echo_archive_pin: ['mirror'],
+    r_copy_lattice: ['mirror'],
+    r_rewind_sand: ['mirror'],
+    r_double_quill: ['mirror'],
+    r_calamity_orb: ['calamity'],
+    r_hex_incense: ['calamity'],
+    r_plague_glass: ['calamity'],
+    r_status_ledger: ['calamity'],
+    r_gale_weatherwane: ['gale'],
+    r_tailwind_spool: ['gale'],
+    r_multishot_fletching: ['gale'],
+    r_venom_seedcase: ['venom'],
+    r_exile_roadsign: ['exile']
+});
+
+const RELIC_CARD_REWARD_BONUS_BY_ID = {
+    r_oathblade_beacon: 'oathblade',
+    r_execution_warrant: 'execution',
+    r_bloodoath_contract: 'bloodoath',
+    r_chant_astrolabe: 'chant',
+    r_mirror_catalog: 'mirror',
+    r_calamity_orb: 'calamity',
+    r_gale_weatherwane: 'gale',
+    r_venom_seedcase: 'venom',
+    r_exile_roadsign: 'exile'
 };
