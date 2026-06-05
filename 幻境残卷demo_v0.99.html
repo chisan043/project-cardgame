@@ -1974,6 +1974,7 @@
         '爆发': '法师专属：攻击会消耗所有咏唱层数，每层追加 7 点伤害；没有咏唱时仍追加 4 点伤害。',
         '蓄力': '弓箭手专属：获得风势。打出攻击牌时消耗 1 层风势，追加一次轻灵追射并获得少量庇护。',
         '自然': '弓箭手专属：回复 1 点能量；若已有风势，额外抽 1 张牌并获得少量庇护。',
+        '闪避': '弓箭手专属：获得身法减免，下一次受到伤害时优先抵消。',
         '连射': '弓箭手专属：攻击额外触发 1 次；若踏风出手，会形成更灵动的多段节奏。',
         '连击': '若本回合已打出过其他牌，此牌数值增加50%。', '多段': '效果触发 2 次。', '易伤': '给予目标 2 层易伤(每层使受到的伤害增加5%)。',
         '虚弱': '给予目标 2 层虚弱(造成的伤害减少25%)。', '充能': '回复 1 点能量。', 
@@ -2323,7 +2324,7 @@
         '易伤', '虚弱', '诅咒', '眩晕',
         '圣剑', '穿甲', '重击', '连击', '连射', '多段', '爆发',
         '咏唱', '回响', '复刻', '充能', '附魔',
-        '庇护', '治愈', '抽牌', '保留', '蓄力', '自然', '重置',
+        '庇护', '闪避', '治愈', '抽牌', '保留', '蓄力', '自然', '重置',
         '放逐', '轮回', '拾遗', '招魂', '销毁', '狂热'
     ];
 
@@ -2905,8 +2906,8 @@
             return [
                 createStarterCard({ name: '基础法弹', type: '攻击', cost: 1, icon: '🪄', val: 7, tags: ['爆发'] }),
                 createStarterCard({ name: '基础法弹', type: '攻击', cost: 1, icon: '🪄', val: 7, tags: ['爆发'] }),
-                createStarterCard({ name: '基础护幕', type: '防御', cost: 1, icon: '🛡️', val: 6, tags: [] }),
-                createStarterCard({ name: '基础护幕', type: '防御', cost: 1, icon: '🛡️', val: 6, tags: [] }),
+                createStarterCard({ name: '基础愈流', type: '能力', cost: 1, icon: '✚', val: 0, tags: ['治愈'] }),
+                createStarterCard({ name: '基础愈流', type: '能力', cost: 1, icon: '✚', val: 0, tags: ['治愈'] }),
                 createStarterCard({ name: '秘仪预兆', type: '能力', cost: 1, icon: '🔮', val: 0, tags: ['咏唱'] }),
                 createStarterCard({ name: '紫焰火花', type: '攻击', cost: 1, icon: '🔥', val: 7, tags: ['爆发', '燃烧'], rarity: '稀有' }),
                 createStarterCard({ name: '镜页试抄', type: '能力', cost: 1, icon: '🪞', val: 0, tags: ['复刻', '抽牌'], rarity: '普通' }),
@@ -2919,14 +2920,14 @@
             return [
                 createStarterCard({ name: '基础射击', type: '攻击', cost: 1, icon: '🏹', val: 6, tags: [] }),
                 createStarterCard({ name: '基础射击', type: '攻击', cost: 1, icon: '🏹', val: 6, tags: [] }),
-                createStarterCard({ name: '林地回避', type: '防御', cost: 1, icon: '🍃', val: 6, tags: [] }),
-                createStarterCard({ name: '林地回避', type: '防御', cost: 1, icon: '🍃', val: 6, tags: [] }),
+                createStarterCard({ name: '林地回避', type: '能力', cost: 1, icon: '🍃', val: 5, tags: ['闪避'] }),
+                createStarterCard({ name: '林地回避', type: '能力', cost: 1, icon: '🍃', val: 5, tags: ['闪避'] }),
                 createStarterCard({ name: '拉弓瞄准', type: '能力', cost: 1, icon: '🎯', val: 7, tags: ['蓄力'], rarity: '稀有' }),
                 createStarterCard({ name: '疾风连射', type: '攻击', cost: 1, icon: '💨', val: 5, tags: ['连射'], rarity: '稀有' }),
                 createStarterCard({ name: '青牙试射', type: '攻击', cost: 0, icon: '☠️', val: 3, tags: ['剧毒', '销毁'], rarity: '普通' }),
                 createStarterCard({ name: '赤露布陷', type: '能力', cost: 1, icon: '🩸', val: 0, tags: ['出血', '虚弱'], rarity: '普通' }),
                 createStarterCard({ name: '空弦藏牌', type: '能力', cost: 0, icon: '🏹', val: 0, tags: ['放逐', '抽牌'], rarity: '普通' }),
-                createStarterCard({ name: '飞叶封存', type: '防御', cost: 1, icon: '🍂', val: 7, tags: ['放逐', '保留'], rarity: '普通' })
+                createStarterCard({ name: '飞叶封存', type: '能力', cost: 1, icon: '🍂', val: 6, tags: ['闪避', '放逐', '保留'], rarity: '普通' })
             ];
         }
         return [
@@ -3852,7 +3853,7 @@
             add('blood', '血祭', '🔥', state.p_battle_dmg, `本场战斗内，攻击造成的伤害提高 ${state.p_battle_dmg} 点。`, 'is-fire');
             add('frenzy', '狂热', '🔥', state.p_dmg_buff, `本回合内，所有伤害额外提高 ${state.p_dmg_buff} 点。`, 'is-fire');
             add('enchant', '附魔', '⚔️', state.p_next_dmg, `下一次攻击额外造成 ${state.p_next_dmg} 点伤害。`, 'is-power');
-            add('guard', '庇护', '✨', state.p_reduce_dmg, `下一次受到伤害时，减少 ${state.p_reduce_dmg} 点。`, 'is-defense');
+            add('guard', '减免', '✨', state.p_reduce_dmg, `下一次受到伤害时，减少 ${state.p_reduce_dmg} 点。`, 'is-defense');
             if (state.p_counter > 0) {
                 entries.push({ id: 'counter', label: '招架准备', icon: '⚡', value: null, tooltip: '已进入反击姿态；受到下一次敌方主体攻击时招架本次伤害的 50% 并反伤。此状态不可叠加。', tone: 'is-gold' });
             }
@@ -4626,7 +4627,7 @@
         if(state.p_battle_dmg > 0) pStatus.innerHTML += `<div class="status-badge badge-str" style="background:#c0392b;">🔥 血祭: +${state.p_battle_dmg}<div class="status-tooltip">本场战斗内，攻击造成的伤害提高 ${state.p_battle_dmg} 点。</div></div>`;
         if(state.p_dmg_buff > 0) pStatus.innerHTML += `<div class="status-badge badge-str">🔥 狂热: +${state.p_dmg_buff}<div class="status-tooltip">本回合内，所有伤害额外提高 ${state.p_dmg_buff} 点。</div></div>`;
         if(state.p_next_dmg > 0) pStatus.innerHTML += `<div class="status-badge badge-str">⚔️ 附魔: 下次+${state.p_next_dmg}<div class="status-tooltip">下一次攻击额外造成 ${state.p_next_dmg} 点伤害。</div></div>`;
-        if(state.p_reduce_dmg > 0) pStatus.innerHTML += `<div class="status-badge badge-armor">🛡️ 庇护: 减免${state.p_reduce_dmg}<div class="status-tooltip">下一次受到伤害时，减少 ${state.p_reduce_dmg} 点。</div></div>`;
+        if(state.p_reduce_dmg > 0) pStatus.innerHTML += `<div class="status-badge badge-armor">✨ 减免: ${state.p_reduce_dmg}<div class="status-tooltip">下一次受到伤害时，减少 ${state.p_reduce_dmg} 点。</div></div>`;
         if(state.p_counter > 0) pStatus.innerHTML += `<div class="status-badge badge-str" style="background:rgba(241,196,15,0.9); color:black;">⚡ 招架准备<div class="status-tooltip">已进入反击姿态；受到下一次敌方主体攻击时招架本次伤害的 50% 并反伤。此状态不可叠加。</div></div>`;
         if(state.p_chant > 0) pStatus.innerHTML += `<div class="status-badge badge-str" style="background:rgba(142, 68, 173, 0.9);">✦ 咏唱: ${state.p_chant}<div class="status-tooltip">${STATUS_DESC['chant']}</div></div>`;
         if(state.p_aim > 0) pStatus.innerHTML += `<div class="status-badge badge-str" style="background:rgba(48,104,82,0.9);">🪶 风势: ${state.p_aim}<div class="status-tooltip">${STATUS_DESC['aim']}</div></div>`;
@@ -5857,6 +5858,11 @@
             if (hasRelic('r_guardian_core')) state.armor += Math.floor(pVal / 2);
             showFloatText(`庇护 +${pVal}`, "var(--water)", getCenter('ui-hp'));
         }
+        if (card.tags && card.tags.includes('闪避')) {
+            let evadeVal = parseInt(card.val) || (card.up ? 8 : 5);
+            state.p_reduce_dmg += evadeVal;
+            showFloatText(`闪避 +${evadeVal}`, "var(--nature)", getCenter('ui-hp'));
+        }
 
         let requireDiscard1 = ['狂热', '附魔'].filter(t => card.tags && card.tags.includes(t));
         if (requireDiscard1.length > 0 && targets && targets.discard1) {
@@ -6207,7 +6213,7 @@
                 triggerVFX('e-atk'); 
                 
                 let dmg = baseDmg;
-                if (state.p_reduce_dmg > 0) { let r = Math.min(dmg, state.p_reduce_dmg); dmg -= r; state.p_reduce_dmg -= r; showFloatText(`庇护抵抗 -${r}`, "var(--water)", getCenter('ui-hp')); }
+                if (state.p_reduce_dmg > 0) { let r = Math.min(dmg, state.p_reduce_dmg); dmg -= r; state.p_reduce_dmg -= r; showFloatText(`减免抵抗 -${r}`, "var(--water)", getCenter('ui-hp')); }
                 
                 if (state.p_counter > 0 && dmg > 0) {
                     state.p_counter = 0;
