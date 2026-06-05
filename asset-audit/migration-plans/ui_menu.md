@@ -5,21 +5,22 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 ## Scope
 
 - Source prefix: `UI/主菜单/`
+- Include prefixes: `assets/ui/menu/`, `assets/source/ui/menu/`
 - Target runtime directory: `assets/ui/menu`
 - Assets in scope: 4
-- Duplicate extension groups: 1
+- Duplicate extension groups: 0
 
 ## Counts
 
 ### Status
 - active: 1
-- candidate: 3
+- candidate: 2
+- source: 1
 
 ### Action
 
+- already_migrated: 2
 - copy_as_candidate: 2
-- copy_as_source: 1
-- copy_then_rewrite_runtime_refs: 1
 
 ### Git Tracking
 
@@ -46,19 +47,19 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - References: none
 - Notes: untracked file; do not include in migration commit unless intentionally accepted; candidate asset; keep outside formal runtime directory
 
-### `UI/主菜单/main_menu_key_art_candidate_v3_cel.png`
+### `assets/source/ui/menu/main_menu_key_art_v1_source.png`
 
 - Suggested path: `assets/source/ui/menu/main_menu_key_art_v1_source.png`
-- Action: `copy_as_source`
-- Status: `candidate`
+- Action: `already_migrated`
+- Status: `source`
 - Tracked: `True`
 - References: none
-- Notes: candidate asset; keep outside formal runtime directory; source counterpart for active runtime asset
+- Notes: review before migration
 
-### `UI/主菜单/main_menu_key_art_candidate_v3_cel.webp`
+### `assets/ui/menu/main_menu_key_art_v1.webp`
 
 - Suggested path: `assets/ui/menu/main_menu_key_art_v1.webp`
-- Action: `copy_then_rewrite_runtime_refs`
+- Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
 - References: 幻境残卷demo_v0.99.html:67 (runtime)
@@ -66,7 +67,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 
 ## Duplicate Extension Groups
 
-- `UI/主菜单/main_menu_key_art_candidate_v3_cel`: .png, .webp
+- None.
 
 ## Next Review Questions
 

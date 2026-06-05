@@ -11,16 +11,16 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - Unreferenced assets: 823
 - Missing asset-like references: 287
 - Missing runtime/config references: 42
-- Duplicate extension groups: 269
+- Duplicate extension groups: 268
 - Identical content groups: 45
 
 ## Status Counts
 
 - active: 378
-- candidate: 101
+- candidate: 100
 - documented: 5
 - legacy: 48
-- source: 52
+- source: 53
 - unreferenced: 622
 
 ## Risk Counts
@@ -29,7 +29,7 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - long_component: 79
 - long_path: 11
 - multi_module_reference: 53
-- non_ascii_path: 1197
+- non_ascii_path: 1195
 - unreferenced: 627
 
 ## Longest Paths
@@ -60,10 +60,10 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - `NPC/源图/shopkeeper_source_chromakey.png`
 - `UI/主菜单/main_menu_key_art_candidate_v1.png`
 - `UI/主菜单/main_menu_key_art_candidate_v2.png`
-- `UI/主菜单/main_menu_key_art_candidate_v3_cel.png`
-- `UI/主菜单/main_menu_key_art_candidate_v3_cel.webp`
 - `UI/教堂彩窗赛璐璐/图标样式/状态徽章底板_v1.png`
 - `UI/教堂彩窗赛璐璐/图标样式/状态徽章底板_v1_source.png`
+- `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/map_ui_fullscreen_imagegen_v1.png`
+- `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/backgrounds/map_center_landscape_crop_v1.png`
 
 ## Unreferenced Examples
 
@@ -141,7 +141,6 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - `assets/characters/mage`: 3 active risky assets
 - `assets/characters/portrait`: 3 active risky assets
 - `assets/characters/warrior`: 3 active risky assets
-- `assets/ui/menu`: 1 active risky assets
 
 ## Notes
 

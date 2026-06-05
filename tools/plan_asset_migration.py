@@ -41,6 +41,8 @@ def menu_suggestion(source_path: str, status: str, target_dir: str) -> tuple[str
     suffix = path.suffix.lower()
     stem = path.stem
 
+    if source_path.startswith(f"{target_dir}/") or source_path.startswith("assets/source/ui/menu/"):
+        return source_path, "already_migrated"
     if stem == "main_menu_key_art_candidate_v3_cel" and suffix == ".webp":
         return f"{target_dir}/main_menu_key_art_v1.webp", "copy_then_rewrite_runtime_refs"
     if stem == "main_menu_key_art_candidate_v3_cel" and suffix == ".png":
@@ -70,13 +72,18 @@ def suggested_path(source_path: str, status: str, target_dir: str, module_slug: 
     return default_suggestion(source_path, status, target_dir, module_slug)
 
 
-def load_assets(usage_report: Path, prefix: str) -> list[dict]:
+def load_assets(usage_report: Path, prefixes: list[str]) -> list[dict]:
     data = json.loads((ROOT / usage_report).read_text(encoding="utf-8"))
-    return [asset for asset in data["assets"] if asset["path"].startswith(prefix)]
+    return [
+        asset
+        for asset in data["assets"]
+        if any(asset["path"].startswith(prefix) for prefix in prefixes)
+    ]
 
 
-def build_plan(prefix: str, target_dir: str, module_slug: str, usage_report: Path) -> dict:
-    assets = load_assets(usage_report, prefix)
+def build_plan(prefix: str, include_prefixes: list[str], target_dir: str, module_slug: str, usage_report: Path) -> dict:
+    prefixes = [prefix, *include_prefixes]
+    assets = load_assets(usage_report, prefixes)
     tracked = git_tracked_paths()
 
     by_stem: dict[str, list[dict]] = defaultdict(list)
@@ -125,6 +132,7 @@ def build_plan(prefix: str, target_dir: str, module_slug: str, usage_report: Pat
         "proposalType": "review_only",
         "moduleSlug": module_slug,
         "sourcePrefix": prefix,
+        "includePrefixes": include_prefixes,
         "targetDirectory": target_dir,
         "strategy": [
             "Review this plan before executing any filesystem migration.",
@@ -170,6 +178,7 @@ def render_markdown(plan: dict) -> str:
         "## Scope",
         "",
         f"- Source prefix: `{plan['sourcePrefix']}`",
+        f"- Include prefixes: {', '.join(f'`{prefix}`' for prefix in plan['includePrefixes']) or 'none'}",
         f"- Target runtime directory: `{plan['targetDirectory']}`",
         f"- Assets in scope: {summary['assetCount']}",
         f"- Duplicate extension groups: {summary['duplicateExtensionGroupCount']}",
@@ -244,13 +253,19 @@ def write_plan(plan: dict, output_dir: Path) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Generate a review-only migration plan for one asset module.")
     parser.add_argument("--prefix", required=True, help="Source path prefix to include.")
+    parser.add_argument(
+        "--include-prefix",
+        action="append",
+        default=[],
+        help="Additional path prefix to include in the same module plan.",
+    )
     parser.add_argument("--target-dir", required=True, help="Target runtime asset directory.")
     parser.add_argument("--module-slug", required=True, help="Short ASCII module id for output filenames.")
     parser.add_argument("--usage-report", default=as_posix(DEFAULT_USAGE_REPORT))
     parser.add_argument("--output-dir", default=as_posix(DEFAULT_OUTPUT_DIR))
     args = parser.parse_args()
 
-    plan = build_plan(args.prefix, args.target_dir, args.module_slug, Path(args.usage_report))
+    plan = build_plan(args.prefix, args.include_prefix, args.target_dir, args.module_slug, Path(args.usage_report))
     write_plan(plan, Path(args.output_dir))
 
 

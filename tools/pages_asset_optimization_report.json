@@ -28,8 +28,8 @@
       "status": "cached"
     },
     {
-      "source": "UI/主菜单/main_menu_key_art_candidate_v3_cel.png",
-      "webp": "UI/主菜单/main_menu_key_art_candidate_v3_cel.webp",
+      "source": "assets/source/ui/menu/main_menu_key_art_v1_source.png",
+      "webp": "assets/ui/menu/main_menu_key_art_v1.webp",
       "sourceBytes": 2680109,
       "webpBytes": 237418,
       "status": "cached"

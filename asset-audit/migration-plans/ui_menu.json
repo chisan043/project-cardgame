@@ -3,6 +3,10 @@
   "proposalType": "review_only",
   "moduleSlug": "ui_menu",
   "sourcePrefix": "UI/主菜单/",
+  "includePrefixes": [
+    "assets/ui/menu/",
+    "assets/source/ui/menu/"
+  ],
   "targetDirectory": "assets/ui/menu",
   "strategy": [
     "Review this plan before executing any filesystem migration.",
@@ -15,18 +19,18 @@
     "assetCount": 4,
     "statusCounts": {
       "active": 1,
-      "candidate": 3
+      "candidate": 2,
+      "source": 1
     },
     "actionCounts": {
-      "copy_as_candidate": 2,
-      "copy_as_source": 1,
-      "copy_then_rewrite_runtime_refs": 1
+      "already_migrated": 2,
+      "copy_as_candidate": 2
     },
     "trackedCounts": {
       "tracked": 2,
       "untracked": 2
     },
-    "duplicateExtensionGroupCount": 1
+    "duplicateExtensionGroupCount": 0
   },
   "entries": [
     {
@@ -62,25 +66,23 @@
       "notes": "untracked file; do not include in migration commit unless intentionally accepted; candidate asset; keep outside formal runtime directory"
     },
     {
-      "sourcePath": "UI/主菜单/main_menu_key_art_candidate_v3_cel.png",
+      "sourcePath": "assets/source/ui/menu/main_menu_key_art_v1_source.png",
       "suggestedPath": "assets/source/ui/menu/main_menu_key_art_v1_source.png",
-      "action": "copy_as_source",
-      "status": "candidate",
+      "action": "already_migrated",
+      "status": "source",
       "tracked": true,
       "references": [],
       "referenceModules": [],
-      "risks": [
-        "non_ascii_path"
-      ],
+      "risks": [],
       "sha256": "3b18ddca5cec537069df3390d75b3548ae4637dfd4a425bac27a99cc7b6cb845",
-      "derivedFrom": "UI/主菜单/main_menu_key_art_candidate_v3_cel.png",
+      "derivedFrom": "assets/source/ui/menu/main_menu_key_art_v1_source.png",
       "visualGroup": "visual_3b18ddca5c",
-      "notes": "candidate asset; keep outside formal runtime directory; source counterpart for active runtime asset"
+      "notes": "review before migration"
     },
     {
-      "sourcePath": "UI/主菜单/main_menu_key_art_candidate_v3_cel.webp",
+      "sourcePath": "assets/ui/menu/main_menu_key_art_v1.webp",
       "suggestedPath": "assets/ui/menu/main_menu_key_art_v1.webp",
-      "action": "copy_then_rewrite_runtime_refs",
+      "action": "already_migrated",
       "status": "active",
       "tracked": true,
       "references": [
@@ -94,26 +96,12 @@
       "referenceModules": [
         "demo"
       ],
-      "risks": [
-        "non_ascii_path"
-      ],
+      "risks": [],
       "sha256": "5ff34aec2920018f997377bc0eaec4f1a1724246dd86aee7e61fa4f0e53fe26d",
-      "derivedFrom": "UI/主菜单/main_menu_key_art_candidate_v3_cel.webp",
+      "derivedFrom": "assets/ui/menu/main_menu_key_art_v1.webp",
       "visualGroup": "visual_5ff34aec29",
       "notes": "runtime/config referenced"
     }
   ],
-  "duplicateExtensionGroups": [
-    {
-      "basePath": "UI/主菜单/main_menu_key_art_candidate_v3_cel",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "UI/主菜单/main_menu_key_art_candidate_v3_cel.png",
-        "UI/主菜单/main_menu_key_art_candidate_v3_cel.webp"
-      ]
-    }
-  ]
+  "duplicateExtensionGroups": []
 }

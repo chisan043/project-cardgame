@@ -30,10 +30,10 @@
     "missingRuntimeReferenceCount": 42,
     "statusCounts": {
       "active": 378,
-      "candidate": 101,
+      "candidate": 100,
       "documented": 5,
       "legacy": 48,
-      "source": 52,
+      "source": 53,
       "unreferenced": 622
     },
     "riskCounts": {
@@ -41,7 +41,7 @@
       "long_component": 79,
       "long_path": 11,
       "multi_module_reference": 53,
-      "non_ascii_path": 1197,
+      "non_ascii_path": 1195,
       "unreferenced": 627
     },
     "referenceModuleCounts": {
@@ -53,7 +53,7 @@
       "relics": 45,
       "ui.hud": 67
     },
-    "duplicateExtensionGroupCount": 269,
+    "duplicateExtensionGroupCount": 268,
     "identicalContentGroupCount": 45
   },
   "assets": [
@@ -296,47 +296,6 @@
       "referenceModules": [],
       "pathLength": 41,
       "maxComponentLength": 34,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/主菜单/main_menu_key_art_candidate_v3_cel.png",
-      "extension": ".png",
-      "bytes": 2680109,
-      "sha256": "3b18ddca5cec537069df3390d75b3548ae4637dfd4a425bac27a99cc7b6cb845",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 45,
-      "maxComponentLength": 38,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/主菜单/main_menu_key_art_candidate_v3_cel.webp",
-      "extension": ".webp",
-      "bytes": 237418,
-      "sha256": "5ff34aec2920018f997377bc0eaec4f1a1724246dd86aee7e61fa4f0e53fe26d",
-      "status": "active",
-      "references": [
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 67,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo"
-      ],
-      "pathLength": 46,
-      "maxComponentLength": 39,
       "containsNonAscii": true,
       "risks": [
         "non_ascii_path"
@@ -7829,6 +7788,43 @@
       "risks": [
         "non_ascii_path"
       ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/menu/main_menu_key_art_v1_source.png",
+      "extension": ".png",
+      "bytes": 2680109,
+      "sha256": "3b18ddca5cec537069df3390d75b3548ae4637dfd4a425bac27a99cc7b6cb845",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 53,
+      "maxComponentLength": 31,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/menu/main_menu_key_art_v1.webp",
+      "extension": ".webp",
+      "bytes": 237418,
+      "sha256": "5ff34aec2920018f997377bc0eaec4f1a1724246dd86aee7e61fa4f0e53fe26d",
+      "status": "active",
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 67,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "pathLength": 40,
+      "maxComponentLength": 25,
+      "containsNonAscii": false,
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -28427,13 +28423,6 @@
     },
     {
       "basePath": "NPC/shopkeeper_portrait",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/主菜单/main_menu_key_art_candidate_v3_cel",
       "extensions": [
         ".png",
         ".webp"
