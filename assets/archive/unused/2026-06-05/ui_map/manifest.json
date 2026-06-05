@@ -1,0 +1,24 @@
+{
+  "generatedBy": "manual archive batch from asset-audit/migration-plans/ui_map.json",
+  "archivedAt": "2026-06-05",
+  "moduleSlug": "ui_map",
+  "policy": "unused assets are archived with manifest; no direct deletion",
+  "entries": [
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_center_clean_background_imagegen_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_map/backgrounds/map_center_clean_background_imagegen_v1.png",
+      "sha256": "4b52c34e63a4a80ab3f8471e03ac4dd94cb6b3776d50893daaccdf323da83469",
+      "status": "unreferenced",
+      "references": [],
+      "reason": "unreferenced after map UI runtime/source/candidate migration"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_center_parchment_background_imagegen_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_map/backgrounds/map_center_parchment_background_imagegen_v1.png",
+      "sha256": "41551bb8943d2f6bde41a02327afcf8b6bee2edec6d8b5626d0aef53fee3503f",
+      "status": "unreferenced",
+      "references": [],
+      "reason": "unreferenced after map UI runtime/source/candidate migration"
+    }
+  ]
+}

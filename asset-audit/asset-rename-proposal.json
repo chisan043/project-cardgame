@@ -8653,36 +8653,6 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_center_clean_background_imagegen_v1.png",
-      "suggestedPath": "assets/ui/review/map_center_clean_background_imagegen_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_center_clean_background_imagegen_v1.png",
-      "visualGroup": "visual_4b52c34e63",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_center_parchment_background_imagegen_v1.png",
-      "suggestedPath": "assets/ui/review/map_center_parchment_background_imagegen_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_center_parchment_background_imagegen_v1.png",
-      "visualGroup": "visual_41551bb894",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
       "sourcePath": "UI/教堂彩窗赛璐璐/概念图/02_教堂彩窗_赛璐璐融合方向图.png",
       "suggestedPath": "assets/ui/review/review_feba749afd.png",
       "suggestedDirectory": "assets/ui/review",

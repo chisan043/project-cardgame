@@ -19,17 +19,17 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - active: 481
 - candidate: 106
 - documented: 61
-- legacy: 48
+- legacy: 50
 - source: 255
-- unreferenced: 279
+- unreferenced: 277
 
 ## Risk Counts
 
 - identical_content: 181
 - long_component: 82
 - multi_module_reference: 63
-- non_ascii_path: 355
-- unreferenced: 340
+- non_ascii_path: 353
+- unreferenced: 338
 
 ## Longest Paths
 
@@ -55,20 +55,18 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - `UI/主菜单/main_menu_key_art_candidate_v2.png`
 - `UI/教堂彩窗赛璐璐/图标样式/状态徽章底板_v1.png`
 - `UI/教堂彩窗赛璐璐/图标样式/状态徽章底板_v1_source.png`
-- `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_center_clean_background_imagegen_v1.png`
-- `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_center_parchment_background_imagegen_v1.png`
 - `UI/教堂彩窗赛璐璐/战斗HUD/战斗HUD_整体概念板_v1.png`
 - `UI/教堂彩窗赛璐璐/战斗HUD/战斗HUD_整体概念板_v2.png`
 - `UI/教堂彩窗赛璐璐/战斗HUD/战斗HUD_牌堆家族图_v1.png`
 - `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_discard_pile_clean_v1.png`
 - `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_discard_pile_v1.png`
 - `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_draw_pile_clean_v1.png`
+- `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_draw_pile_v1.png`
+- `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_end_turn_button_v1.png`
 
 ## Unreferenced Examples
 
 - `UI/教堂彩窗赛璐璐/图标样式/状态徽章底板_v1.png`
-- `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_center_clean_background_imagegen_v1.png`
-- `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_center_parchment_background_imagegen_v1.png`
 - `UI/教堂彩窗赛璐璐/战斗HUD/战斗HUD_整体概念板_v1.png`
 - `UI/教堂彩窗赛璐璐/战斗HUD/战斗HUD_整体概念板_v2.png`
 - `UI/教堂彩窗赛璐璐/战斗HUD/战斗HUD_牌堆家族图_v1.png`
@@ -78,6 +76,8 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_draw_pile_v1.png`
 - `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_end_turn_button_v1.png`
 - `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_enemy_intent_panel_v1.png`
+- `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_enemy_panel_v1.png`
+- `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_enemy_status_bar_v1.png`
 
 ## Multi-Module Reference Examples
 

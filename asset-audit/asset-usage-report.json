@@ -32,16 +32,16 @@
       "active": 481,
       "candidate": 106,
       "documented": 61,
-      "legacy": 48,
+      "legacy": 50,
       "source": 255,
-      "unreferenced": 279
+      "unreferenced": 277
     },
     "riskCounts": {
       "identical_content": 181,
       "long_component": 82,
       "multi_module_reference": 63,
-      "non_ascii_path": 355,
-      "unreferenced": 340
+      "non_ascii_path": 353,
+      "unreferenced": 338
     },
     "referenceModuleCounts": {
       "cards": 178,
@@ -118,40 +118,6 @@
       "containsNonAscii": true,
       "risks": [
         "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_center_clean_background_imagegen_v1.png",
-      "extension": ".png",
-      "bytes": 1822219,
-      "sha256": "4b52c34e63a4a80ab3f8471e03ac4dd94cb6b3776d50893daaccdf323da83469",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 92,
-      "maxComponentLength": 43,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_center_parchment_background_imagegen_v1.png",
-      "extension": ".png",
-      "bytes": 1637354,
-      "sha256": "41551bb8943d2f6bde41a02327afcf8b6bee2edec6d8b5626d0aef53fee3503f",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 96,
-      "maxComponentLength": 47,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
       ],
       "identicalContentGroup": []
     },
@@ -1388,6 +1354,34 @@
       "risks": [
         "non_ascii_path"
       ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/ui_map/backgrounds/map_center_clean_background_imagegen_v1.png",
+      "extension": ".png",
+      "bytes": 1822219,
+      "sha256": "4b52c34e63a4a80ab3f8471e03ac4dd94cb6b3776d50893daaccdf323da83469",
+      "status": "legacy",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 95,
+      "maxComponentLength": 43,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/ui_map/backgrounds/map_center_parchment_background_imagegen_v1.png",
+      "extension": ".png",
+      "bytes": 1637354,
+      "sha256": "41551bb8943d2f6bde41a02327afcf8b6bee2edec6d8b5626d0aef53fee3503f",
+      "status": "legacy",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 99,
+      "maxComponentLength": 47,
+      "containsNonAscii": false,
+      "risks": [],
       "identicalContentGroup": []
     },
     {

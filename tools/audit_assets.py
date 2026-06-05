@@ -116,6 +116,8 @@ def collect_text_files() -> list[TextFile]:
     for rel in iter_files():
         if as_posix(rel) in EXCLUDED_TEXT_FILES:
             continue
+        if as_posix(rel).startswith("assets/archive/unused/"):
+            continue
         if rel.suffix.lower() not in TEXT_EXTENSIONS:
             continue
         abs_path = ROOT / rel

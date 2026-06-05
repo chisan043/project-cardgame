@@ -17,64 +17,27 @@
     "Do not archive unreferenced assets until active migration validation passes."
   ],
   "summary": {
-    "assetCount": 116,
+    "assetCount": 114,
     "statusCounts": {
       "active": 84,
       "candidate": 16,
-      "source": 10,
-      "unreferenced": 6
+      "source": 14
     },
     "actionCounts": {
-      "already_migrated": 114,
-      "defer_archive_review": 2
+      "already_migrated": 114
     },
     "trackedCounts": {
-      "tracked": 2,
-      "untracked": 114
+      "tracked": 114
     },
     "duplicateExtensionGroupCount": 0
   },
   "entries": [
     {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_center_clean_background_imagegen_v1.png",
-      "suggestedPath": "assets/archive/review/ui_map/backgrounds/map_center_clean_background_imagegen_v1.png",
-      "action": "defer_archive_review",
-      "status": "unreferenced",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "4b52c34e63a4a80ab3f8471e03ac4dd94cb6b3776d50893daaccdf323da83469",
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_center_clean_background_imagegen_v1.png",
-      "visualGroup": "visual_4b52c34e63",
-      "notes": "unreferenced asset; defer to archive manifest batch"
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_center_parchment_background_imagegen_v1.png",
-      "suggestedPath": "assets/archive/review/ui_map/backgrounds/map_center_parchment_background_imagegen_v1.png",
-      "action": "defer_archive_review",
-      "status": "unreferenced",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "41551bb8943d2f6bde41a02327afcf8b6bee2edec6d8b5626d0aef53fee3503f",
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_center_parchment_background_imagegen_v1.png",
-      "visualGroup": "visual_41551bb894",
-      "notes": "unreferenced asset; defer to archive manifest batch"
-    },
-    {
       "sourcePath": "assets/candidates/ui/map/backgrounds/map_center_landscape_crop_v1.png",
       "suggestedPath": "assets/candidates/ui/map/backgrounds/map_center_landscape_crop_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
@@ -90,14 +53,14 @@
       "sha256": "f595336a26d4dc1416ab1f4514a054bc3badf75f7573731a174d8b6c023dea18",
       "derivedFrom": "assets/candidates/ui/map/backgrounds/map_center_landscape_crop_v1.png",
       "visualGroup": "visual_f595336a26",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/backgrounds/map_center_painted_area_v1.png",
       "suggestedPath": "assets/candidates/ui/map/backgrounds/map_center_painted_area_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
@@ -113,14 +76,14 @@
       "sha256": "2c1379ffa0f8f6b483a27ddbf9c783cd7b23bf856630264b8850858bc2e3b1f9",
       "derivedFrom": "assets/candidates/ui/map/backgrounds/map_center_painted_area_v1.png",
       "visualGroup": "visual_2c1379ffa0",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/buttons/map_enter_button_v1.png",
       "suggestedPath": "assets/candidates/ui/map/buttons/map_enter_button_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
@@ -136,14 +99,14 @@
       "sha256": "ce5faf7a7bc52d2e449f50c142ddf034405db410bf48bea4f48f1f5109b3cd90",
       "derivedFrom": "assets/candidates/ui/map/buttons/map_enter_button_v1.png",
       "visualGroup": "visual_ce5faf7a7b",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/frames/map_main_frame_v1.png",
       "suggestedPath": "assets/candidates/ui/map/frames/map_main_frame_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
@@ -159,14 +122,14 @@
       "sha256": "227f983798dd712737ec5e99dd1d758a1cf1a6cce820c95be333a331ccf9c651",
       "derivedFrom": "assets/candidates/ui/map/frames/map_main_frame_v1.png",
       "visualGroup": "visual_227f983798",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/fullscreen/map_ui_fullscreen_imagegen_v1.png",
       "suggestedPath": "assets/candidates/ui/map/fullscreen/map_ui_fullscreen_imagegen_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
@@ -182,14 +145,14 @@
       "sha256": "a3de5fdbea07526b6f1889c9838670255cf23e5a50e16886251382c8c4d216c3",
       "derivedFrom": "assets/candidates/ui/map/fullscreen/map_ui_fullscreen_imagegen_v1.png",
       "visualGroup": "visual_a3de5fdbea",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/nodes/map_node_battle_imagegen_v1.png",
       "suggestedPath": "assets/candidates/ui/map/nodes/map_node_battle_imagegen_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
@@ -205,14 +168,14 @@
       "sha256": "4aa3ecba7e27e8b649f831ede36fcfca1b293c9d8a8f118802e34594e252d766",
       "derivedFrom": "assets/candidates/ui/map/nodes/map_node_battle_imagegen_v1.png",
       "visualGroup": "visual_4aa3ecba7e",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/nodes/map_node_boss_imagegen_v1.png",
       "suggestedPath": "assets/candidates/ui/map/nodes/map_node_boss_imagegen_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
@@ -228,14 +191,14 @@
       "sha256": "3983d4ca00d03433a802da5a8dc2235bfd04f95ecdf45d06a4fc044cb658e36c",
       "derivedFrom": "assets/candidates/ui/map/nodes/map_node_boss_imagegen_v1.png",
       "visualGroup": "visual_3983d4ca00",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/nodes/map_node_elite_imagegen_v1.png",
       "suggestedPath": "assets/candidates/ui/map/nodes/map_node_elite_imagegen_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
@@ -251,14 +214,14 @@
       "sha256": "80aca98958bee0910a90c4827afdf597b6acf24c32f07c3f7aa469a5a5ecb257",
       "derivedFrom": "assets/candidates/ui/map/nodes/map_node_elite_imagegen_v1.png",
       "visualGroup": "visual_80aca98958",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/nodes/map_node_event_imagegen_v1.png",
       "suggestedPath": "assets/candidates/ui/map/nodes/map_node_event_imagegen_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
@@ -274,14 +237,14 @@
       "sha256": "5e93353203d686b7f7e54ae0858e8de51bc620a08f41adce22a3434273f4833a",
       "derivedFrom": "assets/candidates/ui/map/nodes/map_node_event_imagegen_v1.png",
       "visualGroup": "visual_5e93353203",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/nodes/map_node_portal_imagegen_v1.png",
       "suggestedPath": "assets/candidates/ui/map/nodes/map_node_portal_imagegen_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
@@ -297,14 +260,14 @@
       "sha256": "be00365d575744d5808420d95c73c034471a5c26102f48f48b3cac40c5c1b9c8",
       "derivedFrom": "assets/candidates/ui/map/nodes/map_node_portal_imagegen_v1.png",
       "visualGroup": "visual_be00365d57",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/nodes/map_node_rest_imagegen_v1.png",
       "suggestedPath": "assets/candidates/ui/map/nodes/map_node_rest_imagegen_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
@@ -320,14 +283,14 @@
       "sha256": "158120d7c309bd2098e05b8b01cdb8b9edc1ea6625cb1129e53d490a0f954595",
       "derivedFrom": "assets/candidates/ui/map/nodes/map_node_rest_imagegen_v1.png",
       "visualGroup": "visual_158120d7c3",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/nodes/map_node_shop_imagegen_v1.png",
       "suggestedPath": "assets/candidates/ui/map/nodes/map_node_shop_imagegen_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
@@ -343,14 +306,14 @@
       "sha256": "eca1ab505bdb0282f3366440abbf383131d9e9bea9b0a818fec6093f0042bb51",
       "derivedFrom": "assets/candidates/ui/map/nodes/map_node_shop_imagegen_v1.png",
       "visualGroup": "visual_eca1ab505b",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/overview/overview_map_ui_imagegen_transparent_assets_v1.png",
       "suggestedPath": "assets/candidates/ui/map/overview/overview_map_ui_imagegen_transparent_assets_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
@@ -374,14 +337,14 @@
       "sha256": "d4f0839dc1ec379c09e0e8dbbeaf817805cb743adcec5b320a336e66ac8fc555",
       "derivedFrom": "assets/candidates/ui/map/overview/overview_map_ui_imagegen_transparent_assets_v1.png",
       "visualGroup": "visual_d4f0839dc1",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/panels/map_left_legend_panel_v1.png",
       "suggestedPath": "assets/candidates/ui/map/panels/map_left_legend_panel_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
@@ -397,14 +360,14 @@
       "sha256": "2380b9a8837ed18fb072038f6f128216e9da48256db73da7af5dc125a9f6ac57",
       "derivedFrom": "assets/candidates/ui/map/panels/map_left_legend_panel_v1.png",
       "visualGroup": "visual_2380b9a883",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/panels/map_right_church_window_v1.png",
       "suggestedPath": "assets/candidates/ui/map/panels/map_right_church_window_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
@@ -420,14 +383,14 @@
       "sha256": "b7caa88903fc59fee5f375e5d63191a81759f514f88a809a547efcbc1da4e377",
       "derivedFrom": "assets/candidates/ui/map/panels/map_right_church_window_v1.png",
       "visualGroup": "visual_b7caa88903",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/panels/map_right_detail_panel_v1.png",
       "suggestedPath": "assets/candidates/ui/map/panels/map_right_detail_panel_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
@@ -443,14 +406,14 @@
       "sha256": "799d4e272105cd07b17d49b441de3572cce841dd5731f3307118c15ac1e4e137",
       "derivedFrom": "assets/candidates/ui/map/panels/map_right_detail_panel_v1.png",
       "visualGroup": "visual_799d4e2721",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/panels/map_right_text_area_v1.png",
       "suggestedPath": "assets/candidates/ui/map/panels/map_right_text_area_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
@@ -466,14 +429,14 @@
       "sha256": "859c134235d4137fb31732953f00143c5c10e042863fa9113da796b4b33cef91",
       "derivedFrom": "assets/candidates/ui/map/panels/map_right_text_area_v1.png",
       "visualGroup": "visual_859c134235",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/panels/map_top_region_banner_v1.png",
       "suggestedPath": "assets/candidates/ui/map/panels/map_top_region_banner_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
@@ -489,84 +452,84 @@
       "sha256": "d089c452f345b17618f65f7d3f79540e8cac40089e3a4c5402b8a18b7c6631d9",
       "derivedFrom": "assets/candidates/ui/map/panels/map_top_region_banner_v1.png",
       "visualGroup": "visual_d089c452f3",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/preview/map_demo_adapted_screenshot_v1.png",
       "suggestedPath": "assets/candidates/ui/map/preview/map_demo_adapted_screenshot_v1.png",
       "action": "already_migrated",
       "status": "candidate",
-      "tracked": false,
+      "tracked": true,
       "references": [],
       "referenceModules": [],
       "risks": [],
       "sha256": "3ce882be1d19d2668cdbcdf39f145174bd64a38cefb5ef32e255f2653238bd90",
       "derivedFrom": "assets/candidates/ui/map/preview/map_demo_adapted_screenshot_v1.png",
       "visualGroup": "visual_3ce882be1d",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; candidate asset; keep outside formal runtime directory"
+      "notes": "candidate asset; keep outside formal runtime directory"
     },
     {
       "sourcePath": "assets/candidates/ui/map/preview/map_demo_adapted_screenshot_v2.png",
       "suggestedPath": "assets/candidates/ui/map/preview/map_demo_adapted_screenshot_v2.png",
       "action": "already_migrated",
       "status": "candidate",
-      "tracked": false,
+      "tracked": true,
       "references": [],
       "referenceModules": [],
       "risks": [],
       "sha256": "58257e26012d92cdabfb304347dfd556af795fc7f2b0b83a7f00cb09c200d353",
       "derivedFrom": "assets/candidates/ui/map/preview/map_demo_adapted_screenshot_v2.png",
       "visualGroup": "visual_58257e2601",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; candidate asset; keep outside formal runtime directory"
+      "notes": "candidate asset; keep outside formal runtime directory"
     },
     {
       "sourcePath": "assets/candidates/ui/map/preview/map_demo_adapted_screenshot_v3.png",
       "suggestedPath": "assets/candidates/ui/map/preview/map_demo_adapted_screenshot_v3.png",
       "action": "already_migrated",
       "status": "candidate",
-      "tracked": false,
+      "tracked": true,
       "references": [],
       "referenceModules": [],
       "risks": [],
       "sha256": "03ade8e1baa2c8df137ca1635b8d10f939be5e5b48090343469ccd9eadd49487",
       "derivedFrom": "assets/candidates/ui/map/preview/map_demo_adapted_screenshot_v3.png",
       "visualGroup": "visual_03ade8e1ba",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; candidate asset; keep outside formal runtime directory"
+      "notes": "candidate asset; keep outside formal runtime directory"
     },
     {
       "sourcePath": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v1.png",
       "suggestedPath": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v1.png",
       "action": "already_migrated",
       "status": "candidate",
-      "tracked": false,
+      "tracked": true,
       "references": [],
       "referenceModules": [],
       "risks": [],
       "sha256": "2bb5996b5b186b3681bfd90cbeee53fe7aa71cd5431c89b6fb41273c77e6e5a9",
       "derivedFrom": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v1.png",
       "visualGroup": "visual_2bb5996b5b",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; candidate asset; keep outside formal runtime directory"
+      "notes": "candidate asset; keep outside formal runtime directory"
     },
     {
       "sourcePath": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v2.png",
       "suggestedPath": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v2.png",
       "action": "already_migrated",
       "status": "candidate",
-      "tracked": false,
+      "tracked": true,
       "references": [],
       "referenceModules": [],
       "risks": [],
       "sha256": "7cd178ab8876bad613619fd96a390883b3afbc8d37022cb52a3a874452ec64ff",
       "derivedFrom": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v2.png",
       "visualGroup": "visual_7cd178ab88",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; candidate asset; keep outside formal runtime directory"
+      "notes": "candidate asset; keep outside formal runtime directory"
     },
     {
       "sourcePath": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v3_clean_map_background.png",
       "suggestedPath": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v3_clean_map_background.png",
       "action": "already_migrated",
       "status": "candidate",
-      "tracked": false,
+      "tracked": true,
       "references": [],
       "referenceModules": [],
       "risks": [
@@ -575,28 +538,28 @@
       "sha256": "dc8d90f92f299224d4430408b0d844a440b1bf8d143da7ad2896430ffe390d36",
       "derivedFrom": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v3_clean_map_background.png",
       "visualGroup": "visual_dc8d90f92f",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; candidate asset; keep outside formal runtime directory"
+      "notes": "candidate asset; keep outside formal runtime directory"
     },
     {
       "sourcePath": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v4_parchment.png",
       "suggestedPath": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v4_parchment.png",
       "action": "already_migrated",
       "status": "candidate",
-      "tracked": false,
+      "tracked": true,
       "references": [],
       "referenceModules": [],
       "risks": [],
       "sha256": "bb8f41e18db3fe423a4e5af8369efa936885dcb872b7416149113e1c204efaa8",
       "derivedFrom": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v4_parchment.png",
       "visualGroup": "visual_bb8f41e18d",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; candidate asset; keep outside formal runtime directory"
+      "notes": "candidate asset; keep outside formal runtime directory"
     },
     {
       "sourcePath": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v5_parchment_simplified.png",
       "suggestedPath": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v5_parchment_simplified.png",
       "action": "already_migrated",
       "status": "candidate",
-      "tracked": false,
+      "tracked": true,
       "references": [],
       "referenceModules": [],
       "risks": [
@@ -605,14 +568,14 @@
       "sha256": "48a3c8efd54b731498093bcbcb9f0f1962aa4ab970a6fab2ee3c9b87b429603c",
       "derivedFrom": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v5_parchment_simplified.png",
       "visualGroup": "visual_48a3c8efd5",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; candidate asset; keep outside formal runtime directory"
+      "notes": "candidate asset; keep outside formal runtime directory"
     },
     {
       "sourcePath": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v6_right_group_frame.png",
       "suggestedPath": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v6_right_group_frame.png",
       "action": "already_migrated",
       "status": "candidate",
-      "tracked": false,
+      "tracked": true,
       "references": [],
       "referenceModules": [],
       "risks": [
@@ -621,14 +584,14 @@
       "sha256": "6078ab0e610f1050b9cfd06a643e946554a87a34682684756c37647aa3738248",
       "derivedFrom": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v6_right_group_frame.png",
       "visualGroup": "visual_6078ab0e61",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; candidate asset; keep outside formal runtime directory"
+      "notes": "candidate asset; keep outside formal runtime directory"
     },
     {
       "sourcePath": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v7_imagegen_right_group_frame.png",
       "suggestedPath": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v7_imagegen_right_group_frame.png",
       "action": "already_migrated",
       "status": "candidate",
-      "tracked": false,
+      "tracked": true,
       "references": [],
       "referenceModules": [],
       "risks": [
@@ -637,14 +600,14 @@
       "sha256": "2158fdbb2aa2ddc99329dde9fb1fe9d2962aeb1d45506c4e4731117e66715752",
       "derivedFrom": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v7_imagegen_right_group_frame.png",
       "visualGroup": "visual_2158fdbb2a",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; candidate asset; keep outside formal runtime directory"
+      "notes": "candidate asset; keep outside formal runtime directory"
     },
     {
       "sourcePath": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v8_detail_wrapped_frame.png",
       "suggestedPath": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v8_detail_wrapped_frame.png",
       "action": "already_migrated",
       "status": "candidate",
-      "tracked": false,
+      "tracked": true,
       "references": [],
       "referenceModules": [],
       "risks": [
@@ -653,14 +616,14 @@
       "sha256": "2a135e6c1495680fcd834c1adee512382a1e6ef868bacab0321465929ae550d4",
       "derivedFrom": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v8_detail_wrapped_frame.png",
       "visualGroup": "visual_2a135e6c14",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; candidate asset; keep outside formal runtime directory"
+      "notes": "candidate asset; keep outside formal runtime directory"
     },
     {
       "sourcePath": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v9_simple_outer_wrapper.png",
       "suggestedPath": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v9_simple_outer_wrapper.png",
       "action": "already_migrated",
       "status": "candidate",
-      "tracked": false,
+      "tracked": true,
       "references": [],
       "referenceModules": [],
       "risks": [
@@ -669,14 +632,14 @@
       "sha256": "e992d7e10b0338b3c92dcdb75fce6483abc298b0d8ea3f5b0b94c8080f0889e8",
       "derivedFrom": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v9_simple_outer_wrapper.png",
       "visualGroup": "visual_e992d7e10b",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; candidate asset; keep outside formal runtime directory"
+      "notes": "candidate asset; keep outside formal runtime directory"
     },
     {
       "sourcePath": "assets/candidates/ui/map/review/map_center_clean_background_preview_930x790_v1.png",
       "suggestedPath": "assets/candidates/ui/map/review/map_center_clean_background_preview_930x790_v1.png",
       "action": "already_migrated",
       "status": "candidate",
-      "tracked": false,
+      "tracked": true,
       "references": [],
       "referenceModules": [],
       "risks": [
@@ -685,14 +648,14 @@
       "sha256": "0279bf11e6ad3d822edac4ba19d36d23ad1154fc317b48bb8ebcaf4d3c9c3781",
       "derivedFrom": "assets/candidates/ui/map/review/map_center_clean_background_preview_930x790_v1.png",
       "visualGroup": "visual_0279bf11e6",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; candidate asset; keep outside formal runtime directory"
+      "notes": "candidate asset; keep outside formal runtime directory"
     },
     {
       "sourcePath": "assets/candidates/ui/map/review/map_church_preview_frame_imagegen_transparent_v1.png",
       "suggestedPath": "assets/candidates/ui/map/review/map_church_preview_frame_imagegen_transparent_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
@@ -716,14 +679,14 @@
       "sha256": "07bf134b559955d520841960d7756ba43174b535ea95393f5e70a0019b03f759",
       "derivedFrom": "assets/candidates/ui/map/review/map_church_preview_frame_imagegen_transparent_v1.png",
       "visualGroup": "visual_07bf134b55",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/review/map_detail_panel_imagegen_transparent_v1.png",
       "suggestedPath": "assets/candidates/ui/map/review/map_detail_panel_imagegen_transparent_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
@@ -745,14 +708,14 @@
       "sha256": "6930c6a167ccc3358a71091419602deab71bcd458ed2da02f36049a071b77218",
       "derivedFrom": "assets/candidates/ui/map/review/map_detail_panel_imagegen_transparent_v1.png",
       "visualGroup": "visual_6930c6a167",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/review/map_enter_button_imagegen_transparent_v1.png",
       "suggestedPath": "assets/candidates/ui/map/review/map_enter_button_imagegen_transparent_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
@@ -774,14 +737,14 @@
       "sha256": "b4b5a5e8bd2b6181a7518ca4937136f5ad07884e564350aee54808d974832b26",
       "derivedFrom": "assets/candidates/ui/map/review/map_enter_button_imagegen_transparent_v1.png",
       "visualGroup": "visual_b4b5a5e8bd",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/review/map_location_text_panel_imagegen_transparent_v1.png",
       "suggestedPath": "assets/candidates/ui/map/review/map_location_text_panel_imagegen_transparent_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
@@ -805,14 +768,14 @@
       "sha256": "12113764bc39dac5d53c453bb0ad41f235b3ef2613084e1289d1f95697ed83f8",
       "derivedFrom": "assets/candidates/ui/map/review/map_location_text_panel_imagegen_transparent_v1.png",
       "visualGroup": "visual_12113764bc",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/review/map_main_frame_overlay_imagegen_transparent_v1.png",
       "suggestedPath": "assets/candidates/ui/map/review/map_main_frame_overlay_imagegen_transparent_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
@@ -836,14 +799,14 @@
       "sha256": "9d362ec0d94663beb115a301eac4940cefa92916c85180b13620fb868db65410",
       "derivedFrom": "assets/candidates/ui/map/review/map_main_frame_overlay_imagegen_transparent_v1.png",
       "visualGroup": "visual_9d362ec0d9",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/review/map_node_battle_imagegen_transparent_v1.png",
       "suggestedPath": "assets/candidates/ui/map/review/map_node_battle_imagegen_transparent_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
@@ -865,14 +828,14 @@
       "sha256": "76b3aae280fda6cfd11403aa1be6a8df52bedcea3b149bf53be4269afacfc50c",
       "derivedFrom": "assets/candidates/ui/map/review/map_node_battle_imagegen_transparent_v1.png",
       "visualGroup": "visual_76b3aae280",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/review/map_node_boss_imagegen_transparent_v1.png",
       "suggestedPath": "assets/candidates/ui/map/review/map_node_boss_imagegen_transparent_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
@@ -894,14 +857,14 @@
       "sha256": "76e19f0ad04250b06a65e3f343c7ea69e34b4cde1607dfe63fd106e7b522c653",
       "derivedFrom": "assets/candidates/ui/map/review/map_node_boss_imagegen_transparent_v1.png",
       "visualGroup": "visual_76e19f0ad0",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/review/map_node_elite_imagegen_transparent_v1.png",
       "suggestedPath": "assets/candidates/ui/map/review/map_node_elite_imagegen_transparent_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
@@ -923,14 +886,14 @@
       "sha256": "1af051e22b9be464ee975ba7ab82f242d0261269f857f3696fdddb870eeb8c63",
       "derivedFrom": "assets/candidates/ui/map/review/map_node_elite_imagegen_transparent_v1.png",
       "visualGroup": "visual_1af051e22b",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/review/map_node_event_imagegen_transparent_v1.png",
       "suggestedPath": "assets/candidates/ui/map/review/map_node_event_imagegen_transparent_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
@@ -952,14 +915,14 @@
       "sha256": "1bb363fdbd965d29c6832320601dba41579872370babd0a8386ef8b2bbe97c78",
       "derivedFrom": "assets/candidates/ui/map/review/map_node_event_imagegen_transparent_v1.png",
       "visualGroup": "visual_1bb363fdbd",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/review/map_node_portal_imagegen_transparent_v1.png",
       "suggestedPath": "assets/candidates/ui/map/review/map_node_portal_imagegen_transparent_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
@@ -981,14 +944,14 @@
       "sha256": "9399b0a4b165daf34a474d133f87d6cf0d5ffc22a20abb5cfd26b1e86eff790c",
       "derivedFrom": "assets/candidates/ui/map/review/map_node_portal_imagegen_transparent_v1.png",
       "visualGroup": "visual_9399b0a4b1",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/review/map_node_rest_imagegen_transparent_v1.png",
       "suggestedPath": "assets/candidates/ui/map/review/map_node_rest_imagegen_transparent_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
@@ -1010,14 +973,14 @@
       "sha256": "a3a6eff5c40b7baaab50da9e9d3df16963d0f0fadea836304c2b6a76231f8822",
       "derivedFrom": "assets/candidates/ui/map/review/map_node_rest_imagegen_transparent_v1.png",
       "visualGroup": "visual_a3a6eff5c4",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/review/map_node_shop_imagegen_transparent_v1.png",
       "suggestedPath": "assets/candidates/ui/map/review/map_node_shop_imagegen_transparent_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
@@ -1039,14 +1002,14 @@
       "sha256": "5d5466742ef2d60293ac4f8f14dc5d88e6c1cc6806136b3213dd3b238e6d8919",
       "derivedFrom": "assets/candidates/ui/map/review/map_node_shop_imagegen_transparent_v1.png",
       "visualGroup": "visual_5d5466742e",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/review/map_region_banner_imagegen_transparent_v1.png",
       "suggestedPath": "assets/candidates/ui/map/review/map_region_banner_imagegen_transparent_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
@@ -1068,14 +1031,14 @@
       "sha256": "09655773d0a847904d68c9c6eec772bc1ba8b43003f0caf325eb0bd25e6045f3",
       "derivedFrom": "assets/candidates/ui/map/review/map_region_banner_imagegen_transparent_v1.png",
       "visualGroup": "visual_09655773d0",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/review/map_right_preview_detail_group_frame_imagegen_transparent_v1.png",
       "suggestedPath": "assets/candidates/ui/map/review/map_right_preview_detail_group_frame_imagegen_transparent_v1.png",
       "action": "already_migrated",
       "status": "candidate",
-      "tracked": false,
+      "tracked": true,
       "references": [],
       "referenceModules": [],
       "risks": [
@@ -1084,14 +1047,14 @@
       "sha256": "49f1a295c3d51fffd37b9a3403ca5f3028f6d643de7d0df504537818e161e1c5",
       "derivedFrom": "assets/candidates/ui/map/review/map_right_preview_detail_group_frame_imagegen_transparent_v1.png",
       "visualGroup": "visual_49f1a295c3",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; candidate asset; keep outside formal runtime directory"
+      "notes": "candidate asset; keep outside formal runtime directory"
     },
     {
       "sourcePath": "assets/candidates/ui/map/review/map_right_preview_detail_group_frame_imagegen_transparent_v2.png",
       "suggestedPath": "assets/candidates/ui/map/review/map_right_preview_detail_group_frame_imagegen_transparent_v2.png",
       "action": "already_migrated",
       "status": "candidate",
-      "tracked": false,
+      "tracked": true,
       "references": [],
       "referenceModules": [],
       "risks": [
@@ -1100,14 +1063,14 @@
       "sha256": "7ff15d7631c9a5e2ce6e6891d386bee3c9115e90a7deed67720be1443cfb5074",
       "derivedFrom": "assets/candidates/ui/map/review/map_right_preview_detail_group_frame_imagegen_transparent_v2.png",
       "visualGroup": "visual_7ff15d7631",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; candidate asset; keep outside formal runtime directory"
+      "notes": "candidate asset; keep outside formal runtime directory"
     },
     {
       "sourcePath": "assets/candidates/ui/map/review/map_right_preview_detail_group_frame_transparent_v1.png",
       "suggestedPath": "assets/candidates/ui/map/review/map_right_preview_detail_group_frame_transparent_v1.png",
       "action": "already_migrated",
       "status": "candidate",
-      "tracked": false,
+      "tracked": true,
       "references": [],
       "referenceModules": [],
       "risks": [
@@ -1116,14 +1079,14 @@
       "sha256": "3256f8cb04b9c1e657bf5661212786b9a104cf7ce8688d1590308794257b7b74",
       "derivedFrom": "assets/candidates/ui/map/review/map_right_preview_detail_group_frame_transparent_v1.png",
       "visualGroup": "visual_3256f8cb04",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; candidate asset; keep outside formal runtime directory"
+      "notes": "candidate asset; keep outside formal runtime directory"
     },
     {
       "sourcePath": "assets/candidates/ui/map/review/map_side_legend_panel_imagegen_transparent_v1.png",
       "suggestedPath": "assets/candidates/ui/map/review/map_side_legend_panel_imagegen_transparent_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
@@ -1147,14 +1110,14 @@
       "sha256": "1b7792721eb5b0a2d285bac7fb515c979f1359f2ba3efbdc5855a91093076107",
       "derivedFrom": "assets/candidates/ui/map/review/map_side_legend_panel_imagegen_transparent_v1.png",
       "visualGroup": "visual_1b7792721e",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/review/map_stained_window_ancient_forest_imagegen_transparent_v1.png",
       "suggestedPath": "assets/candidates/ui/map/review/map_stained_window_ancient_forest_imagegen_transparent_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
@@ -1178,14 +1141,14 @@
       "sha256": "82fede4f533a5b2ca225d7b872fb337148c6c33a19909ed20cc0d5c5e3907713",
       "derivedFrom": "assets/candidates/ui/map/review/map_stained_window_ancient_forest_imagegen_transparent_v1.png",
       "visualGroup": "visual_82fede4f53",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/review/map_stained_window_cold_cave_imagegen_transparent_v1.png",
       "suggestedPath": "assets/candidates/ui/map/review/map_stained_window_cold_cave_imagegen_transparent_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
@@ -1209,14 +1172,14 @@
       "sha256": "4862a4627d34959e94f94c3b414c876ef7c77b8911b9814f1542a16d0fe021b8",
       "derivedFrom": "assets/candidates/ui/map/review/map_stained_window_cold_cave_imagegen_transparent_v1.png",
       "visualGroup": "visual_4862a4627d",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/review/map_stained_window_dungeon_corridor_imagegen_transparent_v1.png",
       "suggestedPath": "assets/candidates/ui/map/review/map_stained_window_dungeon_corridor_imagegen_transparent_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
@@ -1240,14 +1203,14 @@
       "sha256": "d92f5d5ac7890f235cffbdb08dd0fd9d04c2aac765e907a8ae2ad286e7eeed05",
       "derivedFrom": "assets/candidates/ui/map/review/map_stained_window_dungeon_corridor_imagegen_transparent_v1.png",
       "visualGroup": "visual_d92f5d5ac7",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/review/map_stained_window_mountain_plain_imagegen_transparent_v1.png",
       "suggestedPath": "assets/candidates/ui/map/review/map_stained_window_mountain_plain_imagegen_transparent_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
@@ -1271,14 +1234,14 @@
       "sha256": "9600636dfdf22d77b0ffbef9e482f61905527dc5caf68a33c8e5402d783f7f52",
       "derivedFrom": "assets/candidates/ui/map/review/map_stained_window_mountain_plain_imagegen_transparent_v1.png",
       "visualGroup": "visual_9600636dfd",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/review/map_stained_window_stone_ruins_imagegen_transparent_v1.png",
       "suggestedPath": "assets/candidates/ui/map/review/map_stained_window_stone_ruins_imagegen_transparent_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
@@ -1302,14 +1265,14 @@
       "sha256": "908dc1b0425bb43210a943b71daa9741b28d8ae1335dcd442197d35ee0d258e5",
       "derivedFrom": "assets/candidates/ui/map/review/map_stained_window_stone_ruins_imagegen_transparent_v1.png",
       "visualGroup": "visual_908dc1b042",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/review/map_stained_window_temple_hall_imagegen_transparent_v1.png",
       "suggestedPath": "assets/candidates/ui/map/review/map_stained_window_temple_hall_imagegen_transparent_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
@@ -1333,14 +1296,14 @@
       "sha256": "4c39a82edd16e7ece161302f9f2f8ea376e5f9bef6b95c1b865f67580b873f7c",
       "derivedFrom": "assets/candidates/ui/map/review/map_stained_window_temple_hall_imagegen_transparent_v1.png",
       "visualGroup": "visual_4c39a82edd",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/review/map_stained_window_temple_inner_light_imagegen_transparent_v1.png",
       "suggestedPath": "assets/candidates/ui/map/review/map_stained_window_temple_inner_light_imagegen_transparent_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
@@ -1364,14 +1327,14 @@
       "sha256": "99a3925c061c0ea0a2d6216f6a08f08bf854a854f41179b8ff349f6693defe97",
       "derivedFrom": "assets/candidates/ui/map/review/map_stained_window_temple_inner_light_imagegen_transparent_v1.png",
       "visualGroup": "visual_99a3925c06",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/review/map_stained_window_town_castle_imagegen_transparent_v1.png",
       "suggestedPath": "assets/candidates/ui/map/review/map_stained_window_town_castle_imagegen_transparent_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
@@ -1395,14 +1358,14 @@
       "sha256": "ec1b2a84554944fd83bd8123ea81fca4d7e77f16541b52a42716d7512484e60c",
       "derivedFrom": "assets/candidates/ui/map/review/map_stained_window_town_castle_imagegen_transparent_v1.png",
       "visualGroup": "visual_ec1b2a8455",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/review/map_stained_window_wasteland_dusk_imagegen_transparent_v1.png",
       "suggestedPath": "assets/candidates/ui/map/review/map_stained_window_wasteland_dusk_imagegen_transparent_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
@@ -1426,14 +1389,14 @@
       "sha256": "4854e7d588cfca351f8aa0539c8984a750bd0ebfcb4888e72e0c75e4954cacd3",
       "derivedFrom": "assets/candidates/ui/map/review/map_stained_window_wasteland_dusk_imagegen_transparent_v1.png",
       "visualGroup": "visual_4854e7d588",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/review/map_ui_fullscreen_imagegen_v1.png",
       "suggestedPath": "assets/candidates/ui/map/review/map_ui_fullscreen_imagegen_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
@@ -1449,14 +1412,14 @@
       "sha256": "f442879cce6e0dc4c3d0bd2c4a01c763bfc4154f5c1ddb4647b654b218a8e128",
       "derivedFrom": "assets/candidates/ui/map/review/map_ui_fullscreen_imagegen_v1.png",
       "visualGroup": "visual_f442879cce",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/review/overview_map_stained_windows_imagegen_v1.png",
       "suggestedPath": "assets/candidates/ui/map/review/overview_map_stained_windows_imagegen_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
@@ -1478,14 +1441,14 @@
       "sha256": "acf9bd04143e1411c52858312fd63ab0e62a8eb341591afee0e9a3c3a2cfa7da",
       "derivedFrom": "assets/candidates/ui/map/review/overview_map_stained_windows_imagegen_v1.png",
       "visualGroup": "visual_acf9bd0414",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/candidates/ui/map/sliced_candidates/map_imagegen_sliced_overview_v1.png",
       "suggestedPath": "assets/candidates/ui/map/sliced_candidates/map_imagegen_sliced_overview_v1.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
@@ -1501,14 +1464,14 @@
       "sha256": "ff4d16e8b9294b243ba1c192b454311be5c397f03a8f10fdd75a8bb64affd79e",
       "derivedFrom": "assets/candidates/ui/map/sliced_candidates/map_imagegen_sliced_overview_v1.png",
       "visualGroup": "visual_ff4d16e8b9",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/source/ui/map/backgrounds/map_center_clean_background_imagegen_source_v1_source.png",
       "suggestedPath": "assets/source/ui/map/backgrounds/map_center_clean_background_imagegen_source_v1_source.png",
       "action": "already_migrated",
       "status": "source",
-      "tracked": false,
+      "tracked": true,
       "references": [],
       "referenceModules": [],
       "risks": [
@@ -1517,14 +1480,14 @@
       "sha256": "68bf923ec850650a317b7c5a8e919d7d1b0f05dacb9ebccc15c4688eaf1e3b45",
       "derivedFrom": "assets/source/ui/map/backgrounds/map_center_clean_background_imagegen_source_v1_source.png",
       "visualGroup": "visual_68bf923ec8",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+      "notes": "review before migration"
     },
     {
       "sourcePath": "assets/source/ui/map/backgrounds/map_parchment_background_imagegen_source_v1_source.png",
       "suggestedPath": "assets/source/ui/map/backgrounds/map_parchment_background_imagegen_source_v1_source.png",
       "action": "already_migrated",
       "status": "source",
-      "tracked": false,
+      "tracked": true,
       "references": [],
       "referenceModules": [],
       "risks": [
@@ -1534,69 +1497,63 @@
       "sha256": "ff237466f0fd1d6acec0d605b75d05bbb763f8242f7792a5a977e05a09c039e4",
       "derivedFrom": "assets/source/ui/map/backgrounds/map_parchment_background_imagegen_source_v1_source.png",
       "visualGroup": "visual_ff237466f0",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+      "notes": "review before migration"
     },
     {
       "sourcePath": "assets/source/ui/map/backgrounds/map_parchment_fullscreen_background_imagegen_v1_source.png",
       "suggestedPath": "assets/source/ui/map/backgrounds/map_parchment_fullscreen_background_imagegen_v1_source.png",
       "action": "already_migrated",
-      "status": "unreferenced",
-      "tracked": false,
+      "status": "source",
+      "tracked": true,
       "references": [],
       "referenceModules": [],
       "risks": [
-        "non_ascii_path",
         "long_component",
-        "unreferenced",
         "identical_content"
       ],
       "sha256": "ff237466f0fd1d6acec0d605b75d05bbb763f8242f7792a5a977e05a09c039e4",
       "derivedFrom": "assets/source/ui/map/backgrounds/map_parchment_fullscreen_background_imagegen_v1_source.png",
       "visualGroup": "visual_ff237466f0",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+      "notes": "review before migration"
     },
     {
       "sourcePath": "assets/source/ui/map/buttons/map_detail_panel_button_imagegen_transparent_v1_source.png",
       "suggestedPath": "assets/source/ui/map/buttons/map_detail_panel_button_imagegen_transparent_v1_source.png",
       "action": "already_migrated",
-      "status": "unreferenced",
-      "tracked": false,
+      "status": "source",
+      "tracked": true,
       "references": [],
       "referenceModules": [],
       "risks": [
-        "non_ascii_path",
-        "long_component",
-        "unreferenced"
+        "long_component"
       ],
       "sha256": "c7cde9a34a3e5c91379f5bd869c099f011352bebe0047b65de06ab8e37530628",
       "derivedFrom": "assets/source/ui/map/buttons/map_detail_panel_button_imagegen_transparent_v1_source.png",
       "visualGroup": "visual_c7cde9a34a",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+      "notes": "review before migration"
     },
     {
       "sourcePath": "assets/source/ui/map/panels/map_detail_panel_no_button_imagegen_transparent_v1_source.png",
       "suggestedPath": "assets/source/ui/map/panels/map_detail_panel_no_button_imagegen_transparent_v1_source.png",
       "action": "already_migrated",
-      "status": "unreferenced",
-      "tracked": false,
+      "status": "source",
+      "tracked": true,
       "references": [],
       "referenceModules": [],
       "risks": [
-        "non_ascii_path",
-        "long_component",
-        "unreferenced"
+        "long_component"
       ],
       "sha256": "2e4a14bfc99e65a820b04e517006d0333abde62d0787f6025c9c882580b0cb2d",
       "derivedFrom": "assets/source/ui/map/panels/map_detail_panel_no_button_imagegen_transparent_v1_source.png",
       "visualGroup": "visual_2e4a14bfc9",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+      "notes": "review before migration"
     },
     {
       "sourcePath": "assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_chromakey_v1_source.png",
       "suggestedPath": "assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_chromakey_v1_source.png",
       "action": "already_migrated",
       "status": "source",
-      "tracked": false,
+      "tracked": true,
       "references": [],
       "referenceModules": [],
       "risks": [
@@ -1605,14 +1562,14 @@
       "sha256": "965a2399d8f5e3b182f209de84bb9d0c374a32ebed38bcda5402afcdf461d4d4",
       "derivedFrom": "assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_chromakey_v1_source.png",
       "visualGroup": "visual_965a2399d8",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+      "notes": "review before migration"
     },
     {
       "sourcePath": "assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_chromakey_v2_source.png",
       "suggestedPath": "assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_chromakey_v2_source.png",
       "action": "already_migrated",
       "status": "source",
-      "tracked": false,
+      "tracked": true,
       "references": [],
       "referenceModules": [],
       "risks": [
@@ -1621,14 +1578,14 @@
       "sha256": "a6a51685aeae65812eeac6cca9b44d972e4e644975898ecf784f17439ed05f2f",
       "derivedFrom": "assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_chromakey_v2_source.png",
       "visualGroup": "visual_a6a51685ae",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+      "notes": "review before migration"
     },
     {
       "sourcePath": "assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_chromakey_v3_source.png",
       "suggestedPath": "assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_chromakey_v3_source.png",
       "action": "already_migrated",
       "status": "source",
-      "tracked": false,
+      "tracked": true,
       "references": [],
       "referenceModules": [],
       "risks": [
@@ -1637,14 +1594,14 @@
       "sha256": "ade9523b2580db5009543bf99ea5e85dde9ffd54ff75ba9ae8eda5c9ad7a1d18",
       "derivedFrom": "assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_chromakey_v3_source.png",
       "visualGroup": "visual_ade9523b25",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+      "notes": "review before migration"
     },
     {
       "sourcePath": "assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_transparent_full_v1_source.png",
       "suggestedPath": "assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_transparent_full_v1_source.png",
       "action": "already_migrated",
       "status": "source",
-      "tracked": false,
+      "tracked": true,
       "references": [],
       "referenceModules": [],
       "risks": [
@@ -1653,14 +1610,14 @@
       "sha256": "ba4254a988f3cfbe791ef2b61b78109aca11e119a4383322217549bb3895ab38",
       "derivedFrom": "assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_transparent_full_v1_source.png",
       "visualGroup": "visual_ba4254a988",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+      "notes": "review before migration"
     },
     {
       "sourcePath": "assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_transparent_full_v2_source.png",
       "suggestedPath": "assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_transparent_full_v2_source.png",
       "action": "already_migrated",
       "status": "source",
-      "tracked": false,
+      "tracked": true,
       "references": [],
       "referenceModules": [],
       "risks": [
@@ -1669,14 +1626,14 @@
       "sha256": "febee5f8d216dd56905091ea1e4b658c3a53dc07ae34bffda6231ad6cb9070db",
       "derivedFrom": "assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_transparent_full_v2_source.png",
       "visualGroup": "visual_febee5f8d2",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+      "notes": "review before migration"
     },
     {
       "sourcePath": "assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_transparent_full_v3_source.png",
       "suggestedPath": "assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_transparent_full_v3_source.png",
       "action": "already_migrated",
       "status": "source",
-      "tracked": false,
+      "tracked": true,
       "references": [],
       "referenceModules": [],
       "risks": [
@@ -1685,14 +1642,14 @@
       "sha256": "c1de95abeff25e0d7c375d6bc5bc2fc90051a8ee86da67bda07ebd48ded8b482",
       "derivedFrom": "assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_transparent_full_v3_source.png",
       "visualGroup": "visual_c1de95abef",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+      "notes": "review before migration"
     },
     {
       "sourcePath": "assets/source/ui/map/panels/map_right_simple_outer_wrapper_frame_imagegen_chromakey_v1_source.png",
       "suggestedPath": "assets/source/ui/map/panels/map_right_simple_outer_wrapper_frame_imagegen_chromakey_v1_source.png",
       "action": "already_migrated",
       "status": "source",
-      "tracked": false,
+      "tracked": true,
       "references": [],
       "referenceModules": [],
       "risks": [
@@ -1701,14 +1658,14 @@
       "sha256": "b8a6a1ec0e1f10d0ae9dff600f5b34a4b30cd5775273153396b2ba577e9475d7",
       "derivedFrom": "assets/source/ui/map/panels/map_right_simple_outer_wrapper_frame_imagegen_chromakey_v1_source.png",
       "visualGroup": "visual_b8a6a1ec0e",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+      "notes": "review before migration"
     },
     {
       "sourcePath": "assets/source/ui/map/panels/map_right_simple_outer_wrapper_frame_imagegen_transparent_full_v1_source.png",
       "suggestedPath": "assets/source/ui/map/panels/map_right_simple_outer_wrapper_frame_imagegen_transparent_full_v1_source.png",
       "action": "already_migrated",
       "status": "source",
-      "tracked": false,
+      "tracked": true,
       "references": [],
       "referenceModules": [],
       "risks": [
@@ -1717,32 +1674,30 @@
       "sha256": "aca9be1805a6db9f73a8126c4c5ce5425c881c24e6f4a97d21771f5a86261e1f",
       "derivedFrom": "assets/source/ui/map/panels/map_right_simple_outer_wrapper_frame_imagegen_transparent_full_v1_source.png",
       "visualGroup": "visual_aca9be1805",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+      "notes": "review before migration"
     },
     {
       "sourcePath": "assets/source/ui/map/panels/map_right_simple_outer_wrapper_frame_imagegen_transparent_v1_source.png",
       "suggestedPath": "assets/source/ui/map/panels/map_right_simple_outer_wrapper_frame_imagegen_transparent_v1_source.png",
       "action": "already_migrated",
-      "status": "unreferenced",
-      "tracked": false,
+      "status": "source",
+      "tracked": true,
       "references": [],
       "referenceModules": [],
       "risks": [
-        "non_ascii_path",
-        "long_component",
-        "unreferenced"
+        "long_component"
       ],
       "sha256": "421e1c2e05c4b6bc17948bb1acc5bd5740e5f84cd745512f01d42d260b787a2a",
       "derivedFrom": "assets/source/ui/map/panels/map_right_simple_outer_wrapper_frame_imagegen_transparent_v1_source.png",
       "visualGroup": "visual_421e1c2e05",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+      "notes": "review before migration"
     },
     {
       "sourcePath": "assets/source/ui/map/review/map_ui_imagegen_component_sheet_chromakey_v1_source.png",
       "suggestedPath": "assets/source/ui/map/review/map_ui_imagegen_component_sheet_chromakey_v1_source.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
@@ -1760,14 +1715,14 @@
       "sha256": "4ff03a1a019c48f4c60b99f667c43150d651b5feca1ecf1cfa9ac031fd3533dc",
       "derivedFrom": "assets/source/ui/map/review/map_ui_imagegen_component_sheet_chromakey_v1_source.png",
       "visualGroup": "visual_4ff03a1a01",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/source/ui/map/review/map_ui_imagegen_component_sheet_transparent_v1_source.png",
       "suggestedPath": "assets/source/ui/map/review/map_ui_imagegen_component_sheet_transparent_v1_source.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
@@ -1785,14 +1740,14 @@
       "sha256": "03dbcbc44d16f96e4a22cc74c1329a7e103d1ef649f8bf946eb7c2c93a3b5b40",
       "derivedFrom": "assets/source/ui/map/review/map_ui_imagegen_component_sheet_transparent_v1_source.png",
       "visualGroup": "visual_03dbcbc44d",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_ancient_forest_imagegen_chromakey_v1_source.png",
       "suggestedPath": "assets/source/ui/map/stained_windows/map_stained_window_ancient_forest_imagegen_chromakey_v1_source.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
@@ -1810,14 +1765,14 @@
       "sha256": "57a18395d792f0074a3638c49c7c70dd761b83876b244713ead06473c9c14271",
       "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_ancient_forest_imagegen_chromakey_v1_source.png",
       "visualGroup": "visual_57a18395d7",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_full_v1_source.png",
       "suggestedPath": "assets/source/ui/map/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_full_v1_source.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
@@ -1835,14 +1790,14 @@
       "sha256": "c868cf595eef50d250a8e6068fb429150c84adc6e05a568ec7e60800f398eabf",
       "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_full_v1_source.png",
       "visualGroup": "visual_c868cf595e",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_cold_cave_imagegen_chromakey_v1_source.png",
       "suggestedPath": "assets/source/ui/map/stained_windows/map_stained_window_cold_cave_imagegen_chromakey_v1_source.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
@@ -1860,14 +1815,14 @@
       "sha256": "52f929f5b25efe0db7b673249da0861254be906192af273ca2ee50a654ccacc3",
       "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_cold_cave_imagegen_chromakey_v1_source.png",
       "visualGroup": "visual_52f929f5b2",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_cold_cave_imagegen_transparent_full_v1_source.png",
       "suggestedPath": "assets/source/ui/map/stained_windows/map_stained_window_cold_cave_imagegen_transparent_full_v1_source.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
@@ -1885,14 +1840,14 @@
       "sha256": "9272a9f25508f6eab0349320275b012222394f14a420aefbba30bf896d962853",
       "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_cold_cave_imagegen_transparent_full_v1_source.png",
       "visualGroup": "visual_9272a9f255",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_dungeon_corridor_imagegen_chromakey_v1_source.png",
       "suggestedPath": "assets/source/ui/map/stained_windows/map_stained_window_dungeon_corridor_imagegen_chromakey_v1_source.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
@@ -1910,14 +1865,14 @@
       "sha256": "862c8951d063c0dcbb7fe39be084ce83b8c5b27ce1551f023773712558045556",
       "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_dungeon_corridor_imagegen_chromakey_v1_source.png",
       "visualGroup": "visual_862c8951d0",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_dungeon_corridor_imagegen_transparent_full_v1_source.png",
       "suggestedPath": "assets/source/ui/map/stained_windows/map_stained_window_dungeon_corridor_imagegen_transparent_full_v1_source.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
@@ -1935,14 +1890,14 @@
       "sha256": "fa4affc8b80b7c96bfe837285c5f8b335d98b5f9b09c54ddcf43598a80ab1e4b",
       "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_dungeon_corridor_imagegen_transparent_full_v1_source.png",
       "visualGroup": "visual_fa4affc8b8",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_mountain_plain_imagegen_chromakey_v1_source.png",
       "suggestedPath": "assets/source/ui/map/stained_windows/map_stained_window_mountain_plain_imagegen_chromakey_v1_source.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
@@ -1960,14 +1915,14 @@
       "sha256": "be35d82a8991655aee6fa6cc9b2d0c28d591af65c8d4891d100a88caaf5ee823",
       "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_mountain_plain_imagegen_chromakey_v1_source.png",
       "visualGroup": "visual_be35d82a89",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_full_v1_source.png",
       "suggestedPath": "assets/source/ui/map/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_full_v1_source.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
@@ -1985,14 +1940,14 @@
       "sha256": "ba8b1664b2d2ea4a28f1401f44c195e4032f69c5445f6b1a4a51831e3dce1dc4",
       "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_full_v1_source.png",
       "visualGroup": "visual_ba8b1664b2",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_stone_ruins_imagegen_chromakey_v1_source.png",
       "suggestedPath": "assets/source/ui/map/stained_windows/map_stained_window_stone_ruins_imagegen_chromakey_v1_source.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
@@ -2010,14 +1965,14 @@
       "sha256": "2d8eeb8f65c751e60cb723a8b747076805b5eab2dc49710396682a8be430485a",
       "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_stone_ruins_imagegen_chromakey_v1_source.png",
       "visualGroup": "visual_2d8eeb8f65",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_full_v1_source.png",
       "suggestedPath": "assets/source/ui/map/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_full_v1_source.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
@@ -2035,14 +1990,14 @@
       "sha256": "878ed2fc423ca4bd17177bcd0087717357c92ed5d94028cb5d35929bd42b33ad",
       "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_full_v1_source.png",
       "visualGroup": "visual_878ed2fc42",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_temple_hall_imagegen_chromakey_v1_source.png",
       "suggestedPath": "assets/source/ui/map/stained_windows/map_stained_window_temple_hall_imagegen_chromakey_v1_source.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
@@ -2060,14 +2015,14 @@
       "sha256": "256aca86c21a76aa2d0c14498ea571b3fb221556d4e72ebd602c26ab960eddaf",
       "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_temple_hall_imagegen_chromakey_v1_source.png",
       "visualGroup": "visual_256aca86c2",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_temple_hall_imagegen_transparent_full_v1_source.png",
       "suggestedPath": "assets/source/ui/map/stained_windows/map_stained_window_temple_hall_imagegen_transparent_full_v1_source.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
@@ -2085,14 +2040,14 @@
       "sha256": "59106078034ff44349b0ac8cb08ca25363050d0d5838977914266c1088e5974a",
       "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_temple_hall_imagegen_transparent_full_v1_source.png",
       "visualGroup": "visual_5910607803",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_temple_inner_light_imagegen_chromakey_v1_source.png",
       "suggestedPath": "assets/source/ui/map/stained_windows/map_stained_window_temple_inner_light_imagegen_chromakey_v1_source.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
@@ -2110,14 +2065,14 @@
       "sha256": "5ff30b63a591f565b3450633346cbfbe62443100b32c7db9e082e4e97f00ace0",
       "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_temple_inner_light_imagegen_chromakey_v1_source.png",
       "visualGroup": "visual_5ff30b63a5",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_temple_inner_light_imagegen_transparent_full_v1_source.png",
       "suggestedPath": "assets/source/ui/map/stained_windows/map_stained_window_temple_inner_light_imagegen_transparent_full_v1_source.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
@@ -2135,14 +2090,14 @@
       "sha256": "c5bf76fa348291511e564279d25a2b13cdd1834be4893ff3338159762ca4fca6",
       "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_temple_inner_light_imagegen_transparent_full_v1_source.png",
       "visualGroup": "visual_c5bf76fa34",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_town_castle_imagegen_chromakey_v1_source.png",
       "suggestedPath": "assets/source/ui/map/stained_windows/map_stained_window_town_castle_imagegen_chromakey_v1_source.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
@@ -2160,14 +2115,14 @@
       "sha256": "71e1d682b7b162105e3bb4eeadb56653a97d4e537479f956d04dcf053060902a",
       "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_town_castle_imagegen_chromakey_v1_source.png",
       "visualGroup": "visual_71e1d682b7",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_town_castle_imagegen_transparent_full_v1_source.png",
       "suggestedPath": "assets/source/ui/map/stained_windows/map_stained_window_town_castle_imagegen_transparent_full_v1_source.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
@@ -2185,14 +2140,14 @@
       "sha256": "af5ca0ad32b87165f0a831af2ceb0cb060a1eb011e27b33cd52089acdefb7794",
       "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_town_castle_imagegen_transparent_full_v1_source.png",
       "visualGroup": "visual_af5ca0ad32",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_wasteland_dusk_imagegen_chromakey_v1_source.png",
       "suggestedPath": "assets/source/ui/map/stained_windows/map_stained_window_wasteland_dusk_imagegen_chromakey_v1_source.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
@@ -2210,14 +2165,14 @@
       "sha256": "b1c8522d1ea8e4db2ef353c26bf3325d796b0f42f331be2b2771a6c0e097dd16",
       "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_wasteland_dusk_imagegen_chromakey_v1_source.png",
       "visualGroup": "visual_b1c8522d1e",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_full_v1_source.png",
       "suggestedPath": "assets/source/ui/map/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_full_v1_source.png",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
@@ -2235,14 +2190,14 @@
       "sha256": "9bdc2dca0c875ae2f49d4c812d5f5601e98808e05ba81cf86ae5e6cff6b83097",
       "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_full_v1_source.png",
       "visualGroup": "visual_9bdc2dca0c",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/ui/map/backgrounds/map_parchment_fullscreen_background_imagegen_v1.webp",
       "suggestedPath": "assets/ui/map/backgrounds/map_parchment_fullscreen_background_imagegen_v1.webp",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
@@ -2260,14 +2215,14 @@
       "sha256": "2cc92339f752fc62e51a334bdd60746b10147ca701fe453edd24f1287aecb22a",
       "derivedFrom": "assets/ui/map/backgrounds/map_parchment_fullscreen_background_imagegen_v1.webp",
       "visualGroup": "visual_2cc92339f7",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/ui/map/buttons/map_detail_panel_button_imagegen_transparent_v1.webp",
       "suggestedPath": "assets/ui/map/buttons/map_detail_panel_button_imagegen_transparent_v1.webp",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
@@ -2285,14 +2240,14 @@
       "sha256": "b9bcc1010407c532b298eccce4ca96854ff9b1e4a2fac5f5f38c7290e11e3272",
       "derivedFrom": "assets/ui/map/buttons/map_detail_panel_button_imagegen_transparent_v1.webp",
       "visualGroup": "visual_b9bcc10104",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/ui/map/nodes/map_node_battle_imagegen_transparent_v1.webp",
       "suggestedPath": "assets/ui/map/nodes/map_node_battle_imagegen_transparent_v1.webp",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
@@ -2308,14 +2263,14 @@
       "sha256": "1fb7eb2a52ff0d9a674dd7507025d007aa1b5ea27634b66cc9d48dbb0bac57c9",
       "derivedFrom": "assets/ui/map/nodes/map_node_battle_imagegen_transparent_v1.webp",
       "visualGroup": "visual_1fb7eb2a52",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/ui/map/nodes/map_node_boss_imagegen_transparent_v1.webp",
       "suggestedPath": "assets/ui/map/nodes/map_node_boss_imagegen_transparent_v1.webp",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
@@ -2331,14 +2286,14 @@
       "sha256": "35bdc7ac5336f70a1c7e3be4e77860e4e2d9117007a7b6114b999b7291d75ca5",
       "derivedFrom": "assets/ui/map/nodes/map_node_boss_imagegen_transparent_v1.webp",
       "visualGroup": "visual_35bdc7ac53",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/ui/map/nodes/map_node_elite_imagegen_transparent_v1.webp",
       "suggestedPath": "assets/ui/map/nodes/map_node_elite_imagegen_transparent_v1.webp",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
@@ -2354,14 +2309,14 @@
       "sha256": "70783e33ad0da0aaacf562c2bc643df476034928ab28dc34402292b04db069b3",
       "derivedFrom": "assets/ui/map/nodes/map_node_elite_imagegen_transparent_v1.webp",
       "visualGroup": "visual_70783e33ad",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/ui/map/nodes/map_node_event_imagegen_transparent_v1.webp",
       "suggestedPath": "assets/ui/map/nodes/map_node_event_imagegen_transparent_v1.webp",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
@@ -2377,14 +2332,14 @@
       "sha256": "7b6ac5626e4ddf2dbb3056069dddd5019b589007024f975439f9d6e3f122eab7",
       "derivedFrom": "assets/ui/map/nodes/map_node_event_imagegen_transparent_v1.webp",
       "visualGroup": "visual_7b6ac5626e",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/ui/map/nodes/map_node_rest_imagegen_transparent_v1.webp",
       "suggestedPath": "assets/ui/map/nodes/map_node_rest_imagegen_transparent_v1.webp",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
@@ -2400,14 +2355,14 @@
       "sha256": "781e2fdf37392fe9f1bb6290d121e4ba86f85fe82532f43af8a7981ef008e9ae",
       "derivedFrom": "assets/ui/map/nodes/map_node_rest_imagegen_transparent_v1.webp",
       "visualGroup": "visual_781e2fdf37",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/ui/map/nodes/map_node_shop_imagegen_transparent_v1.webp",
       "suggestedPath": "assets/ui/map/nodes/map_node_shop_imagegen_transparent_v1.webp",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
@@ -2423,14 +2378,14 @@
       "sha256": "43033b16fa9353ceef849a4bba063dc7a21ea05c3419eb810b23b2985f3a8ea6",
       "derivedFrom": "assets/ui/map/nodes/map_node_shop_imagegen_transparent_v1.webp",
       "visualGroup": "visual_43033b16fa",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/ui/map/panels/map_church_preview_frame_imagegen_transparent_v1.webp",
       "suggestedPath": "assets/ui/map/panels/map_church_preview_frame_imagegen_transparent_v1.webp",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
@@ -2454,14 +2409,14 @@
       "sha256": "fdb894eb612590f2e1d86945317b782d75bb23cf34a03fe105099d6b1ede6f6e",
       "derivedFrom": "assets/ui/map/panels/map_church_preview_frame_imagegen_transparent_v1.webp",
       "visualGroup": "visual_fdb894eb61",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/ui/map/panels/map_detail_panel_no_button_imagegen_transparent_v1.webp",
       "suggestedPath": "assets/ui/map/panels/map_detail_panel_no_button_imagegen_transparent_v1.webp",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
@@ -2479,14 +2434,14 @@
       "sha256": "8b15729286b39d612438073ccf0add34ff34bf1fa3e26a3160b2ea4673fd19d1",
       "derivedFrom": "assets/ui/map/panels/map_detail_panel_no_button_imagegen_transparent_v1.webp",
       "visualGroup": "visual_8b15729286",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/ui/map/panels/map_region_banner_imagegen_transparent_v1.webp",
       "suggestedPath": "assets/ui/map/panels/map_region_banner_imagegen_transparent_v1.webp",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
@@ -2502,14 +2457,14 @@
       "sha256": "89880282fbbdf663eb4a5c4aba643b284b896c034672484eea0092e8d8547eb3",
       "derivedFrom": "assets/ui/map/panels/map_region_banner_imagegen_transparent_v1.webp",
       "visualGroup": "visual_89880282fb",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/ui/map/panels/map_right_simple_outer_wrapper_frame_imagegen_transparent_v1.webp",
       "suggestedPath": "assets/ui/map/panels/map_right_simple_outer_wrapper_frame_imagegen_transparent_v1.webp",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
@@ -2533,14 +2488,14 @@
       "sha256": "c7baa713cb76800753b3b119d81fb53782a276679c5ecc4b9ec1dc9b2e0d8d26",
       "derivedFrom": "assets/ui/map/panels/map_right_simple_outer_wrapper_frame_imagegen_transparent_v1.webp",
       "visualGroup": "visual_c7baa713cb",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/ui/map/panels/map_side_legend_panel_imagegen_transparent_v1.webp",
       "suggestedPath": "assets/ui/map/panels/map_side_legend_panel_imagegen_transparent_v1.webp",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
@@ -2558,14 +2513,14 @@
       "sha256": "c765c41b41b239590b72984218bd7da75e99ca732fadea303abe739bce9c269c",
       "derivedFrom": "assets/ui/map/panels/map_side_legend_panel_imagegen_transparent_v1.webp",
       "visualGroup": "visual_c765c41b41",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/ui/map/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_v1.webp",
       "suggestedPath": "assets/ui/map/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_v1.webp",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
@@ -2583,14 +2538,14 @@
       "sha256": "c8266cbef055fde9516d8d49570e39d9fb961be6cba38bb3d24e859f64bbbb51",
       "derivedFrom": "assets/ui/map/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_v1.webp",
       "visualGroup": "visual_c8266cbef0",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/ui/map/stained_windows/map_stained_window_cold_cave_imagegen_transparent_v1.webp",
       "suggestedPath": "assets/ui/map/stained_windows/map_stained_window_cold_cave_imagegen_transparent_v1.webp",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
@@ -2608,14 +2563,14 @@
       "sha256": "b61d4a51a601977a0bf370c29fd901eb4884d6a88b191611ae641418a664b7ff",
       "derivedFrom": "assets/ui/map/stained_windows/map_stained_window_cold_cave_imagegen_transparent_v1.webp",
       "visualGroup": "visual_b61d4a51a6",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/ui/map/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_v1.webp",
       "suggestedPath": "assets/ui/map/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_v1.webp",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
@@ -2645,14 +2600,14 @@
       "sha256": "9ca5aae00eab138041114f21e4e13ac0fb4270e249179d4dca5ad463329ed639",
       "derivedFrom": "assets/ui/map/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_v1.webp",
       "visualGroup": "visual_9ca5aae00e",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/ui/map/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_v1.webp",
       "suggestedPath": "assets/ui/map/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_v1.webp",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
@@ -2676,14 +2631,14 @@
       "sha256": "7c7814fc1e4563cd4592ce1ac2e4e2ec41ca3146f4c950fc5678b12b131947da",
       "derivedFrom": "assets/ui/map/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_v1.webp",
       "visualGroup": "visual_7c7814fc1e",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/ui/map/stained_windows/map_stained_window_temple_hall_imagegen_transparent_v1.webp",
       "suggestedPath": "assets/ui/map/stained_windows/map_stained_window_temple_hall_imagegen_transparent_v1.webp",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
@@ -2701,14 +2656,14 @@
       "sha256": "c9da038d62c3e904be60be04b94643feea1237f135140aceb4e4af22d2e8514b",
       "derivedFrom": "assets/ui/map/stained_windows/map_stained_window_temple_hall_imagegen_transparent_v1.webp",
       "visualGroup": "visual_c9da038d62",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/ui/map/stained_windows/map_stained_window_town_castle_imagegen_transparent_v1.webp",
       "suggestedPath": "assets/ui/map/stained_windows/map_stained_window_town_castle_imagegen_transparent_v1.webp",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
@@ -2732,14 +2687,14 @@
       "sha256": "bed47bc5e0282906eec0eb02f89e2b87b69e7ddc08ef8dcbee26730b402a0fbf",
       "derivedFrom": "assets/ui/map/stained_windows/map_stained_window_town_castle_imagegen_transparent_v1.webp",
       "visualGroup": "visual_bed47bc5e0",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/ui/map/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_v1.webp",
       "suggestedPath": "assets/ui/map/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_v1.webp",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
@@ -2757,7 +2712,7 @@
       "sha256": "d66e9d2079c1d3493db47cc1990f1f2a0891d8bff9aa5448fe681b86870b1fe5",
       "derivedFrom": "assets/ui/map/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_v1.webp",
       "visualGroup": "visual_d66e9d2079",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     }
   ],
   "duplicateExtensionGroups": []
