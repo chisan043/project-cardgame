@@ -9,9 +9,9 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - Referenced assets: 432
 - Active runtime/config assets: 481
 - Unreferenced assets: 798
-- Missing asset-like references: 232
-- Missing runtime/config references: 45
-- Duplicate extension groups: 82
+- Missing asset-like references: 231
+- Missing runtime/config references: 44
+- Duplicate extension groups: 66
 - Identical content groups: 61
 
 ## Status Counts
@@ -20,8 +20,8 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - candidate: 106
 - documented: 54
 - legacy: 48
-- source: 237
-- unreferenced: 304
+- source: 253
+- unreferenced: 288
 
 ## Risk Counts
 
@@ -29,8 +29,8 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - long_component: 79
 - long_path: 11
 - multi_module_reference: 59
-- non_ascii_path: 589
-- unreferenced: 358
+- non_ascii_path: 491
+- unreferenced: 342
 
 ## Longest Paths
 
@@ -82,18 +82,18 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 
 ## Multi-Module Reference Examples
 
-- `UI/教堂彩窗赛璐璐/战斗HUD/正式资产/battle_hud_enemy_panel_asset_v1.webp` used by demo, ui.hud
-- `UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/中轴控件/end_turn_button_shell_asset_v1.webp` used by demo, ui.hud
-- `UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/中轴控件/turn_counter_inner_dial_asset_v1.webp` used by demo, ui.hud
-- `UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/手牌承托/hand_fan_tray_shell_asset_v1.webp` used by demo, ui.hud
-- `UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方意图面板/enemy_intent_panel_shell_asset_v1.webp` used by demo, ui.hud
-- `UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/discard_pile_stack_asset_v1.webp` used by demo, ui.hud
-- `UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/draw_pile_stack_asset_v1.webp` used by demo, ui.hud
-- `UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/exile_pile_stack_asset_v1.webp` used by demo, ui.hud
-- `UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/pile_count_plate_asset_v1_transparent.webp` used by demo, ui.hud
-- `UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/enemy_status_bar_shell_asset_v1.webp` used by demo, ui.hud
-- `UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/player_status_bar_shell_asset_v1.webp` used by demo, ui.hud
-- `UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_armor_bar_shell_asset_v1.webp` used by demo, ui.hud
+- `assets/cards/art/archer/archer_ambush_art_v1.webp` used by cards, relics
+- `assets/cards/art/archer/archer_barrage_art_v1.webp` used by cards, relics
+- `assets/cards/art/archer/archer_blood_release_art_v1.webp` used by cards, relics
+- `assets/cards/art/archer/archer_cycle_branch_art_v1.webp` used by cards, relics
+- `assets/cards/art/archer/archer_hawkeye_art_v1.webp` used by cards, relics
+- `assets/cards/art/archer/archer_rain_art_v1.webp` used by cards, relics
+- `assets/cards/art/archer/archer_ready_art_v1.webp` used by cards, relics
+- `assets/cards/art/archer/archer_shadow_art_v1.webp` used by cards, relics
+- `assets/cards/art/archer/archer_shift_art_v1.webp` used by cards, relics
+- `assets/cards/art/mage/mage_barrier_art_v1.webp` used by cards, relics
+- `assets/cards/art/mage/mage_cascade_art_v1.webp` used by cards, relics
+- `assets/cards/art/mage/mage_chant_art_v1.webp` used by cards, relics
 
 ## Missing References
 
@@ -103,7 +103,6 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - `UI/教堂彩窗赛璐璐/战斗HUD/我方铭牌_v1.png` in `demo更改需求文档.txt:445`
 - `UI/教堂彩窗赛璐璐/战斗HUD/护盾条填充_v2.png` in `demo更改需求文档.txt:449`
 - `UI/教堂彩窗赛璐璐/战斗HUD/敌方铭牌_v1.png` in `demo更改需求文档.txt:446`
-- `UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/pile_count_plate_asset_v1.png` in `hud_layout_editor.html:896`
 - `UI/教堂彩窗赛璐璐/战斗HUD/生命条填充_v2.png` in `demo更改需求文档.txt:448`
 - `UI/教堂彩窗赛璐璐/战斗HUD/通用条框_v1.png` in `demo更改需求文档.txt:447`
 - `_asset_v1.png` in `UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/README.md:10`
@@ -127,16 +126,17 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - `assets/characters/warrior/back_skill.png` in `demo更改需求文档.txt:468`
 - `assets/characters/warrior/select.png` in `demo更改需求文档.txt:366`
 - `avatar_circle_gray_base_asset_v1.png` in `hud_layout_editor.html:2202`
+- `avatar_circle_gray_base_asset_v1.png` in `hud_layout_editor.html:2219`
 
 ## First Migration Candidates
 
 - `assets/ui/review`: 87 active risky assets
-- `assets/ui/hud`: 61 active risky assets
+- `assets/review`: 28 active risky assets
 - `assets/cards/art/mage`: 11 active risky assets
 - `assets/cards/art/warrior`: 11 active risky assets
-- `assets/review`: 10 active risky assets
 - `assets/cards/art/archer`: 9 active risky assets
 - `assets/scenes/battle/variants`: 5 active risky assets
+- `assets/ui/hud/review`: 5 active risky assets
 - `assets/ui/character_select`: 2 active risky assets
 
 ## Notes

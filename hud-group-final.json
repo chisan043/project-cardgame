@@ -20,7 +20,7 @@
     },
     {
       "name": "玩家名牌",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_nameplate_shell_asset_v1.png",
+      "src": "assets/ui/hud/player_panel/player_nameplate_shell_asset_v1.png",
       "assetId": null,
       "sourceType": null,
       "x": 145,
@@ -50,7 +50,7 @@
     },
     {
       "name": "玩家状态栏",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/player_status_bar_shell_asset_v1.png",
+      "src": "assets/ui/hud/status_bar/player_status_bar_shell_asset_v1.png",
       "assetId": null,
       "sourceType": null,
       "x": 101,
@@ -65,7 +65,7 @@
     },
     {
       "name": "能量晶石 1",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_on_asset_v1.png",
+      "src": "assets/ui/hud/player_panel/player_energy_gem_on_asset_v1.png",
       "assetId": null,
       "sourceType": null,
       "x": 308,
@@ -80,7 +80,7 @@
     },
     {
       "name": "能量晶石 2",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_on_asset_v1.png",
+      "src": "assets/ui/hud/player_panel/player_energy_gem_on_asset_v1.png",
       "assetId": null,
       "sourceType": null,
       "x": 358,
@@ -95,7 +95,7 @@
     },
     {
       "name": "能量晶石 3",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_on_asset_v1.png",
+      "src": "assets/ui/hud/player_panel/player_energy_gem_on_asset_v1.png",
       "assetId": null,
       "sourceType": null,
       "x": 408,
@@ -110,7 +110,7 @@
     },
     {
       "name": "能量晶石 4",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_on_asset_v1.png",
+      "src": "assets/ui/hud/player_panel/player_energy_gem_on_asset_v1.png",
       "assetId": null,
       "sourceType": null,
       "x": 458,
@@ -125,7 +125,7 @@
     },
     {
       "name": "能量晶石 5",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_on_asset_v1.png",
+      "src": "assets/ui/hud/player_panel/player_energy_gem_on_asset_v1.png",
       "assetId": null,
       "sourceType": null,
       "x": 508,
@@ -140,7 +140,7 @@
     },
     {
       "name": "生命灰底",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_editor_asset_v1.png",
+      "src": "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_editor_asset_v1.png",
       "assetId": null,
       "sourceType": null,
       "x": 195,
@@ -155,7 +155,7 @@
     },
     {
       "name": "生命残影",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_damage_trail_editor_asset_v1.png",
+      "src": "assets/ui/hud/player_panel/player_hp_bar_long_fill_damage_trail_editor_asset_v1.png",
       "assetId": null,
       "sourceType": null,
       "x": 195,
@@ -170,7 +170,7 @@
     },
     {
       "name": "生命填充",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_editor_asset_v1.png",
+      "src": "assets/ui/hud/player_panel/player_hp_bar_long_fill_editor_asset_v1.png",
       "assetId": null,
       "sourceType": null,
       "x": 195,
@@ -185,7 +185,7 @@
     },
     {
       "name": "生命心标",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_heart_fill_editor_asset_v1.png",
+      "src": "assets/ui/hud/player_panel/player_hp_bar_heart_fill_editor_asset_v1.png",
       "assetId": null,
       "sourceType": null,
       "x": 200,
@@ -200,7 +200,7 @@
     },
     {
       "name": "生命空框",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_empty_frame_editor_asset_v1.png",
+      "src": "assets/ui/hud/player_panel/player_hp_bar_empty_frame_editor_asset_v1.png",
       "assetId": null,
       "sourceType": null,
       "x": 160,
@@ -230,7 +230,7 @@
     },
     {
       "name": "玩家头像框",
-      "src": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_portrait_frame_asset_v1.png",
+      "src": "assets/ui/hud/player_panel/player_portrait_frame_asset_v1.png",
       "assetId": null,
       "sourceType": null,
       "x": 0,

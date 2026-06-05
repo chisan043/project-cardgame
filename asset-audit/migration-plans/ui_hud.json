@@ -1,0 +1,3975 @@
+{
+  "generatedBy": "tools/plan_asset_migration.py",
+  "proposalType": "review_only",
+  "moduleSlug": "ui_hud",
+  "sourcePrefix": "UI/教堂彩窗赛璐璐/战斗HUD/",
+  "includePrefixes": [
+    "assets/ui/hud/",
+    "assets/source/ui/hud/",
+    "assets/candidates/ui/hud/"
+  ],
+  "targetDirectory": "assets/ui/hud",
+  "strategy": [
+    "Review this plan before executing any filesystem migration.",
+    "Copy active runtime assets into the owning module first.",
+    "Rewrite references only after copied assets exist.",
+    "Keep source and candidate assets separate from formal runtime assets.",
+    "Do not archive unreferenced assets until active migration validation passes."
+  ],
+  "summary": {
+    "assetCount": 158,
+    "statusCounts": {
+      "active": 61,
+      "active_dynamic": 16,
+      "candidate": 4,
+      "source": 17,
+      "unreferenced": 60
+    },
+    "actionCounts": {
+      "already_migrated": 82,
+      "already_migrated_dynamic": 16,
+      "defer_archive_review": 60
+    },
+    "trackedCounts": {
+      "tracked": 60,
+      "untracked": 98
+    },
+    "duplicateExtensionGroupCount": 30
+  },
+  "entries": [
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/战斗HUD_整体概念板_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/overview/hud_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "d8aa772b6d56ba8b4f373b487393c5cf6404f10f492a44d86e18631f675ec1ba",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/战斗HUD_整体概念板_v1.png",
+      "visualGroup": "visual_d8aa772b6d",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/战斗HUD_整体概念板_v2.png",
+      "suggestedPath": "assets/archive/review/ui_hud/overview/hud_v2.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "a9dbd5eabaeb25deb1a344bcd7971a42e84798cf75a056dfd586e1c74716117d",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/战斗HUD_整体概念板_v2.png",
+      "visualGroup": "visual_a9dbd5eaba",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/战斗HUD_牌堆家族图_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/piles/hud_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "1210516387049715b525433324d3b590c1baaefe0575e7dfbd92185fe070af38",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/战斗HUD_牌堆家族图_v1.png",
+      "visualGroup": "visual_1210516387",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_discard_pile_clean_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/split_previews/battle_hud_discard_pile_clean_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "33bcdb8086d73a2342695c6c8c2462c99643cd653035d6be82f121865a2149c6",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_discard_pile_clean_v1.png",
+      "visualGroup": "visual_33bcdb8086",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_discard_pile_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/split_previews/battle_hud_discard_pile_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "e031d144c86e3644ed38af079835ebc5536974e419cf8b72282eba13c4b9ffb9",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_discard_pile_v1.png",
+      "visualGroup": "visual_e031d144c8",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_draw_pile_clean_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/split_previews/battle_hud_draw_pile_clean_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "c55e49b14e22476c7738cd99a374f7bf3a250ed4f846b57181790b657d38ab2f",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_draw_pile_clean_v1.png",
+      "visualGroup": "visual_c55e49b14e",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_draw_pile_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/split_previews/battle_hud_draw_pile_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "8d6cc753ba21551028f698f08afe9b6892c1d5f8fb418bc1987156faab7e6d1b",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_draw_pile_v1.png",
+      "visualGroup": "visual_8d6cc753ba",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_end_turn_button_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/split_previews/battle_hud_end_turn_button_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "c3aa8ff3aa97173986836188acb6fd93b1aa2f1a5ce58a5c790fefc82aaf6c61",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_end_turn_button_v1.png",
+      "visualGroup": "visual_c3aa8ff3aa",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_enemy_intent_panel_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/split_previews/battle_hud_enemy_intent_panel_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "efde69630970cee74bb41fe584001f8d62447a9c91347e94309e304746a67958",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_enemy_intent_panel_v1.png",
+      "visualGroup": "visual_efde696309",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_enemy_panel_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/split_previews/battle_hud_enemy_panel_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "e5e0c266ac1cd14cf8983466c563b4e42572ddfb230f8f1df3470eca6d3e0ad9",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_enemy_panel_v1.png",
+      "visualGroup": "visual_e5e0c266ac",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_enemy_status_bar_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/split_previews/battle_hud_enemy_status_bar_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "02701d8cd4c47a10466c7a3e6ce9af9d7dcd429113ea46cc7b21545ebd8e8e4a",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_enemy_status_bar_v1.png",
+      "visualGroup": "visual_02701d8cd4",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_energy_gems_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/split_previews/battle_hud_energy_gems_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "dbb8a9453afd2442ed745f1af08e8f4c5382e1eed0c3a1c67566b8f5fc6496fe",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_energy_gems_v1.png",
+      "visualGroup": "visual_dbb8a9453a",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_exile_pile_clean_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/split_previews/battle_hud_exile_pile_clean_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "a5e9770f01acb35c50d644fef64fbf7ea5108cd08daa21eaf2a959594dfb7263",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_exile_pile_clean_v1.png",
+      "visualGroup": "visual_a5e9770f01",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_exile_pile_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/split_previews/battle_hud_exile_pile_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "8663febdc711b7d068c00066db1a762b2179d35f6100277eceedbd264d1ba705",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_exile_pile_v1.png",
+      "visualGroup": "visual_8663febdc7",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_hand_fan_area_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/split_previews/battle_hud_hand_fan_area_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "0c892f59baee5bb849a193297fb0886a8cc07efc36b49768e810171a9c13b982",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_hand_fan_area_v1.png",
+      "visualGroup": "visual_0c892f59ba",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_icon_set_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/split_previews/battle_hud_icon_set_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "605c100f334a048915f6807b38a26466831312b36d3296526bea028f084146b7",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_icon_set_v1.png",
+      "visualGroup": "visual_605c100f33",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_material_swatches_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/split_previews/battle_hud_material_swatches_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "482094f026c17b226057f327bf79331c4f411c2734e18b98c121ec35932668f8",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_material_swatches_v1.png",
+      "visualGroup": "visual_482094f026",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_player_panel_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/split_previews/battle_hud_player_panel_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "68f05eb98aa8667dba5d8e4a907c61f89128875d3a798f6b0941ddd8319292b5",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_player_panel_v1.png",
+      "visualGroup": "visual_68f05eb98a",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_player_status_bar_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/split_previews/battle_hud_player_status_bar_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "ef4f585850380223d901b884d830b858b22f1c6c6bfb15ca3215e1b508805894",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_player_status_bar_v1.png",
+      "visualGroup": "visual_ef4f585850",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_turn_counter_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/split_previews/battle_hud_turn_counter_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "f1ee571bfcb2abb7e7ef75a264d50420b2f4f3ab5acb61485b2c81394f614e06",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_turn_counter_v1.png",
+      "visualGroup": "visual_f1ee571bfc",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_typography_sample_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/split_previews/battle_hud_typography_sample_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "fddfdc655ecd5c74014c31ce04c09c711cd3b0d238643f5361b2edd3d63b0f63",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_typography_sample_v1.png",
+      "visualGroup": "visual_fddfdc655e",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/中轴控件/end_turn_button_gem_asset_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/center_controls/end_turn_button_gem_asset_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "e914963c9889f5a7fd316ce02516490cd84d1441f0ca3e9d2f5b228b36bdc091",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/中轴控件/end_turn_button_gem_asset_v1.png",
+      "visualGroup": "visual_e914963c98",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/中轴控件/turn_counter_outer_frame_asset_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/center_controls/turn_counter_outer_frame_asset_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "76a3c1db4d93dbb7d6161419b0634d1ae616cf95fca5049503bf6fa6c132825e",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/中轴控件/turn_counter_outer_frame_asset_v1.png",
+      "visualGroup": "visual_76a3c1db4d",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/图标徽记/icon_attack_asset_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/intent_icons/icon_attack_asset_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "d4696a0a3850fc95364ddc665f6f4b69002c5f2fd2d0182e68ebe4442c8667bf",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/图标徽记/icon_attack_asset_v1.png",
+      "visualGroup": "visual_d4696a0a38",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/图标徽记/icon_curse_asset_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/intent_icons/icon_curse_asset_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "500362d496816517aeeae05f07ecd55dceae910bff7844537ab64d78039bc1a1",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/图标徽记/icon_curse_asset_v1.png",
+      "visualGroup": "visual_500362d496",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/图标徽记/icon_defense_asset_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/intent_icons/icon_defense_asset_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "968b6279758e3270621fc5ee3315338c04caf0eb882f2ceced27558f12db4914",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/图标徽记/icon_defense_asset_v1.png",
+      "visualGroup": "visual_968b627975",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/图标徽记/icon_energy_asset_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/intent_icons/icon_energy_asset_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "c95b421cff530c63bfd5bc5a51667ba3661779212b658ec270b06e4aa7a820c6",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/图标徽记/icon_energy_asset_v1.png",
+      "visualGroup": "visual_c95b421cff",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/图标徽记/icon_heal_asset_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/intent_icons/icon_heal_asset_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "9cd3a7648b6fd8facd320d8f58772055b1244dcdaf9fc8a2cb5c13c898fab335",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/图标徽记/icon_heal_asset_v1.png",
+      "visualGroup": "visual_9cd3a7648b",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/图标徽记/icon_skill_asset_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/intent_icons/icon_skill_asset_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "73d47839945b6f61c19b3680a2571e33f2eae326c0b90212adfe2c39645ee99a",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/图标徽记/icon_skill_asset_v1.png",
+      "visualGroup": "visual_73d4783994",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/手牌承托/hand_fan_center_crest_asset_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/hand_tray/hand_fan_center_crest_asset_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "6231163e90599e070d764e9522f27d237f521dff9d56b0c08b01b51326fbf6cf",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/手牌承托/hand_fan_center_crest_asset_v1.png",
+      "visualGroup": "visual_6231163e90",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/手牌承托/hand_fan_endcap_left_asset_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/hand_tray/hand_fan_endcap_left_asset_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "b3e40e3ff28df89c105217afa9d77827955713d03a02675fdf579f6c572153c6",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/手牌承托/hand_fan_endcap_left_asset_v1.png",
+      "visualGroup": "visual_b3e40e3ff2",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/手牌承托/hand_fan_endcap_right_asset_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/hand_tray/hand_fan_endcap_right_asset_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "28294eb63d7e9f1695cd7d6a0b74891eb7cdf1c193ae22e3536c1173301d059e",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/手牌承托/hand_fan_endcap_right_asset_v1.png",
+      "visualGroup": "visual_28294eb63d",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方意图面板/enemy_intent_attack_medallion_asset_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/enemy_intent/enemy_intent_attack_medallion_asset_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "a13608dc709574b7de7f066ba636018e1e522449bdd03fbb75a12353ae4484d0",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方意图面板/enemy_intent_attack_medallion_asset_v1.png",
+      "visualGroup": "visual_a13608dc70",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方意图面板/enemy_intent_aux_socket_asset_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/enemy_intent/enemy_intent_aux_socket_asset_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "b2bd7e00ff3d4834c45b3ca4979310df96f3434faefc530043346b373003bbb0",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方意图面板/enemy_intent_aux_socket_asset_v1.png",
+      "visualGroup": "visual_b2bd7e00ff",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方意图面板/enemy_intent_value_lane_asset_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/enemy_intent/enemy_intent_value_lane_asset_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "3b8ee0aa07030b1413c2f29d84f05faa0b23fee8e0247d8879b8c7205e923640",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方意图面板/enemy_intent_value_lane_asset_v1.png",
+      "visualGroup": "visual_3b8ee0aa07",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_status_crest_asset_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/enemy_panel/enemy_status_crest_asset_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "35a99111127120ee1d49eb477f9d04eff1b9a7c969edbd4b063f0113abeea2bf",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_status_crest_asset_v1.png",
+      "visualGroup": "visual_35a9911112",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/数值文字承载/count_plate_small_asset_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/number_plates/count_plate_small_asset_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "21b8c878f0a87dacf9bba51d50dc212d9d3921d66ace30f420077b0f57a220d7",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/数值文字承载/count_plate_small_asset_v1.png",
+      "visualGroup": "visual_21b8c878f0",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/数值文字承载/diamond_crest_accent_asset_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/number_plates/diamond_crest_accent_asset_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "6b10e8b1f6df12737a011dbd8b468a0547cc27eb8889bef7d23ed18350532b2c",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/数值文字承载/diamond_crest_accent_asset_v1.png",
+      "visualGroup": "visual_6b10e8b1f6",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/数值文字承载/number_medallion_round_asset_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/number_plates/number_medallion_round_asset_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "8a07c94793bc3e2cfa14400bfc3d58dbae9ba6bab59f401de6ca3e718a1ef533",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/数值文字承载/number_medallion_round_asset_v1.png",
+      "visualGroup": "visual_8a07c94793",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/数值文字承载/title_banner_long_asset_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/number_plates/title_banner_long_asset_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "a59d9be3803c48abccf0d8486fbfdff10ab3fc19cd2ad2997491a7343e05af61",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/数值文字承载/title_banner_long_asset_v1.png",
+      "visualGroup": "visual_a59d9be380",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/数值文字承载/title_plate_dark_short_asset_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/number_plates/title_plate_dark_short_asset_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "bee4edd74c8d0703b00a5e825fd27b175835238edd26a5a05bed9a9afbfbfbf5",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/数值文字承载/title_plate_dark_short_asset_v1.png",
+      "visualGroup": "visual_bee4edd74c",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/材质边框/glass_blue_panel_tile_asset_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/materials/glass_blue_panel_tile_asset_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "50111f31bf988af714f0ab1b9bae5dd150edcfea465622a5aa6493876397c682",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/材质边框/glass_blue_panel_tile_asset_v1.png",
+      "visualGroup": "visual_50111f31bf",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/材质边框/glass_green_panel_tile_asset_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/materials/glass_green_panel_tile_asset_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "bed5e96e0e5b913d6ec845e1601c7f80c3caf2b32c0de1000d31b804c569b6f5",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/材质边框/glass_green_panel_tile_asset_v1.png",
+      "visualGroup": "visual_bed5e96e0e",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/材质边框/glass_purple_panel_tile_asset_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/materials/glass_purple_panel_tile_asset_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "bb65b27f2dca1f3ce64f76870cbf5620df7d393207bff0970e79d95dde25263f",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/材质边框/glass_purple_panel_tile_asset_v1.png",
+      "visualGroup": "visual_bb65b27f2d",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/材质边框/glass_red_panel_tile_asset_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/materials/glass_red_panel_tile_asset_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "667620748d44480895b0658f9d8e8b1d293602223670ffeabbf228b624aa4697",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/材质边框/glass_red_panel_tile_asset_v1.png",
+      "visualGroup": "visual_667620748d",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/材质边框/parchment_panel_tile_asset_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/materials/parchment_panel_tile_asset_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "e13a7879fd44600b14e729b892bf5794469e72fe592ae6e9731fd79bb4206866",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/材质边框/parchment_panel_tile_asset_v1.png",
+      "visualGroup": "visual_e13a7879fd",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/status_socket_empty_asset_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/status_bar/status_socket_empty_asset_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "46fb4c2bd64c943548c96dd4a7c58bf4c2be1cdd1349a694c97398ef06bf9f51",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/status_socket_empty_asset_v1.png",
+      "visualGroup": "visual_46fb4c2bd6",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/status_socket_highlight_asset_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/status_bar/status_socket_highlight_asset_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "642c017f870e4ee2f3952d52c5db45e3486722c30efda17af1a02cce188b8b49",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/status_socket_highlight_asset_v1.png",
+      "visualGroup": "visual_642c017f87",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_icon_focus_reds_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/status_icons/status_icon_focus_reds_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "5754aa80aabec85331a75b13ebde27fbbc1d2ff2efa8dda7e2a2c684cdc5e756",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_icon_focus_reds_v1.png",
+      "visualGroup": "visual_5754aa80aa",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_icon_overview_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/status_icons/status_icon_overview_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "1bb24ffa1adcc6cb18c46b14fbf3679da54d0c3a5f0e95ffb0fb66c384d9abb8",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_icon_overview_v1.png",
+      "visualGroup": "visual_1bb24ffa1a",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_damage_mask_asset_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/player_panel/player_hp_bar_damage_mask_asset_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "f50097f4c78186d84d46335b389dd274de6a1898cfea0209f591e52b7ca22712",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_damage_mask_asset_v1.png",
+      "visualGroup": "visual_f50097f4c7",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_empty_frame_asset_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/player_panel/player_hp_bar_empty_frame_asset_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "15d366e9c9dc5d61dfe41ef7313572884c1a533da64b49464fab9e4a0bc80e6f",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_empty_frame_asset_v1.png",
+      "visualGroup": "visual_15d366e9c9",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_fill_asset_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/player_panel/player_hp_bar_fill_asset_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "ba163bf654ade0241216be8ff97351d42d03188851d5e5d23123f6c47233e99f",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_fill_asset_v1.png",
+      "visualGroup": "visual_ba163bf654",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_heart_fill_asset_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/player_panel/player_hp_bar_heart_fill_asset_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "d6dca4cf309a31b1166e0726db497f071d78a29d50a393baa0437d74f68eb96a",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_heart_fill_asset_v1.png",
+      "visualGroup": "visual_d6dca4cf30",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_asset_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/player_panel/player_hp_bar_long_fill_asset_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "f9c8cc36e5629fa829c9a1e00feb357a3df1460935387bb566cdda618099d12c",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_asset_v1.png",
+      "visualGroup": "visual_f9c8cc36e5",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_damage_trail_asset_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/player_panel/player_hp_bar_long_fill_damage_trail_asset_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "long_component",
+        "unreferenced"
+      ],
+      "sha256": "f06f0070dc70f67d56f29f729f6a485a4c004ea36ccc1c92ce05f520409f3531",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_damage_trail_asset_v1.png",
+      "visualGroup": "visual_f06f0070dc",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/status_bar_long_gray_base_asset_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/player_panel/status_bar_long_gray_base_asset_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced",
+        "identical_content"
+      ],
+      "sha256": "0d9845fb0c17b2baeb3d3e687db1819bc7991a7019e8bf3fcaa57505ff239f98",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/status_bar_long_gray_base_asset_v1.png",
+      "visualGroup": "visual_0d9845fb0c",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/程序集缓存/avatar_circle_gray_base_asset_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/assembly_cache/avatar_circle_gray_base_asset_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced",
+        "identical_content"
+      ],
+      "sha256": "601039e38609b5d1627d45cae387760af01bdfd8425f3acbaa5951cb50aef4a5",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/程序集缓存/avatar_circle_gray_base_asset_v1.png",
+      "visualGroup": "visual_601039e386",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/程序集缓存/player_energy_tray_asset_v1_no_circles_transparent.png",
+      "suggestedPath": "assets/archive/review/ui_hud/assembly_cache/player_energy_tray_asset_v1_no_circles_transparent.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "long_component",
+        "unreferenced",
+        "identical_content"
+      ],
+      "sha256": "83e1325bdd8e6875ded4346d0915f0c0a02c065d198ebf106d1facd063ff6369",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/程序集缓存/player_energy_tray_asset_v1_no_circles_transparent.png",
+      "visualGroup": "visual_83e1325bdd",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/程序集缓存/status_bar_long_gray_base_asset_v1.png",
+      "suggestedPath": "assets/archive/review/ui_hud/assembly_cache/status_bar_long_gray_base_asset_v1.png",
+      "action": "defer_archive_review",
+      "status": "unreferenced",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced",
+        "identical_content"
+      ],
+      "sha256": "0d9845fb0c17b2baeb3d3e687db1819bc7991a7019e8bf3fcaa57505ff239f98",
+      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/程序集缓存/status_bar_long_gray_base_asset_v1.png",
+      "visualGroup": "visual_0d9845fb0c",
+      "notes": "unreferenced HUD asset; defer to archive manifest batch"
+    },
+    {
+      "sourcePath": "assets/candidates/ui/hud/player_panel/player_hp_bar_damage_preview_v1.png",
+      "suggestedPath": "assets/candidates/ui/hud/player_panel/player_hp_bar_damage_preview_v1.png",
+      "action": "already_migrated",
+      "status": "candidate",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "9b351d05c7f57f3e28f83c52c40d0cdaa8e70128b29f4477683f4fc3cb4665b8",
+      "derivedFrom": "assets/candidates/ui/hud/player_panel/player_hp_bar_damage_preview_v1.png",
+      "visualGroup": "visual_9b351d05c7",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; candidate asset; keep outside formal runtime directory"
+    },
+    {
+      "sourcePath": "assets/candidates/ui/hud/split_previews/battle_hud_discard_pile_clean_preview_v1.png",
+      "suggestedPath": "assets/candidates/ui/hud/split_previews/battle_hud_discard_pile_clean_preview_v1.png",
+      "action": "already_migrated",
+      "status": "candidate",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "c8bf812a886deda7f21448533c389fbc7fc5940727952abcac03e09f69b0efd0",
+      "derivedFrom": "assets/candidates/ui/hud/split_previews/battle_hud_discard_pile_clean_preview_v1.png",
+      "visualGroup": "visual_c8bf812a88",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; candidate asset; keep outside formal runtime directory"
+    },
+    {
+      "sourcePath": "assets/candidates/ui/hud/split_previews/battle_hud_draw_pile_clean_preview_v1.png",
+      "suggestedPath": "assets/candidates/ui/hud/split_previews/battle_hud_draw_pile_clean_preview_v1.png",
+      "action": "already_migrated",
+      "status": "candidate",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "5496bdae7bf9e9973180a5eeec940fc9e147a7af5e70c694f8c477fb8797c706",
+      "derivedFrom": "assets/candidates/ui/hud/split_previews/battle_hud_draw_pile_clean_preview_v1.png",
+      "visualGroup": "visual_5496bdae7b",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; candidate asset; keep outside formal runtime directory"
+    },
+    {
+      "sourcePath": "assets/candidates/ui/hud/split_previews/battle_hud_exile_pile_clean_preview_v1.png",
+      "suggestedPath": "assets/candidates/ui/hud/split_previews/battle_hud_exile_pile_clean_preview_v1.png",
+      "action": "already_migrated",
+      "status": "candidate",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "10f68a715ce97810a091243706dcde32b7b137ac34128da9a32509a62e0de797",
+      "derivedFrom": "assets/candidates/ui/hud/split_previews/battle_hud_exile_pile_clean_preview_v1.png",
+      "visualGroup": "visual_10f68a715c",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; candidate asset; keep outside formal runtime directory"
+    },
+    {
+      "sourcePath": "assets/source/ui/hud/materials/frame_master_border_asset_v1_source.png",
+      "suggestedPath": "assets/source/ui/hud/materials/frame_master_border_asset_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "99627ce878b15fbc41e1f31ac4466e765de9d588083e7e4b735ea3d9ee05b77f",
+      "derivedFrom": "assets/source/ui/hud/materials/frame_master_border_asset_v1_source.png",
+      "visualGroup": "visual_99627ce878",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
+      "sourcePath": "assets/source/ui/hud/status_icons/status_armor_asset_v1_source.png",
+      "suggestedPath": "assets/source/ui/hud/status_icons/status_armor_asset_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "65baf75628889138cc26a3884ce998291715cc469b19727cfb64810fbe576373",
+      "derivedFrom": "assets/source/ui/hud/status_icons/status_armor_asset_v1_source.png",
+      "visualGroup": "visual_65baf75628",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
+      "sourcePath": "assets/source/ui/hud/status_icons/status_bleed_asset_v1_source.png",
+      "suggestedPath": "assets/source/ui/hud/status_icons/status_bleed_asset_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "5934ea848b1c9364e74ef0c131332efc29d0514d87494e7b933f43443527cfd9",
+      "derivedFrom": "assets/source/ui/hud/status_icons/status_bleed_asset_v1_source.png",
+      "visualGroup": "visual_5934ea848b",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
+      "sourcePath": "assets/source/ui/hud/status_icons/status_blood_asset_v1_source.png",
+      "suggestedPath": "assets/source/ui/hud/status_icons/status_blood_asset_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "d742dc8a81b126e9279fd19ba59019bc0e290672bb482d902a821e6585ef028a",
+      "derivedFrom": "assets/source/ui/hud/status_icons/status_blood_asset_v1_source.png",
+      "visualGroup": "visual_d742dc8a81",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
+      "sourcePath": "assets/source/ui/hud/status_icons/status_burn_asset_v1_source.png",
+      "suggestedPath": "assets/source/ui/hud/status_icons/status_burn_asset_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "61dea975e7ab1252de8fb6a21ecc4c7a07edaf1d26eae56437da371015f84382",
+      "derivedFrom": "assets/source/ui/hud/status_icons/status_burn_asset_v1_source.png",
+      "visualGroup": "visual_61dea975e7",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
+      "sourcePath": "assets/source/ui/hud/status_icons/status_charge_asset_v1_source.png",
+      "suggestedPath": "assets/source/ui/hud/status_icons/status_charge_asset_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "629076cabd3e6f3da02679a189dc00fa5ed51c74f58b61b4bfdfabbf554ffe04",
+      "derivedFrom": "assets/source/ui/hud/status_icons/status_charge_asset_v1_source.png",
+      "visualGroup": "visual_629076cabd",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
+      "sourcePath": "assets/source/ui/hud/status_icons/status_counter_asset_v1_source.png",
+      "suggestedPath": "assets/source/ui/hud/status_icons/status_counter_asset_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "c00f47cc4e798fce60268a3b1a3dba9a43034db064cbe9a09f3d55ba688d67ff",
+      "derivedFrom": "assets/source/ui/hud/status_icons/status_counter_asset_v1_source.png",
+      "visualGroup": "visual_c00f47cc4e",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
+      "sourcePath": "assets/source/ui/hud/status_icons/status_curse_asset_v1_source.png",
+      "suggestedPath": "assets/source/ui/hud/status_icons/status_curse_asset_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "402300e59e882572adada4c90fc9e7a494eb1316d6faf9db0662a5d88a7eca4d",
+      "derivedFrom": "assets/source/ui/hud/status_icons/status_curse_asset_v1_source.png",
+      "visualGroup": "visual_402300e59e",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
+      "sourcePath": "assets/source/ui/hud/status_icons/status_echo_asset_v1_source.png",
+      "suggestedPath": "assets/source/ui/hud/status_icons/status_echo_asset_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "3991a46b33646163ee5194568ab62032875189692f3d4d0f2d27f0ab77b1fc06",
+      "derivedFrom": "assets/source/ui/hud/status_icons/status_echo_asset_v1_source.png",
+      "visualGroup": "visual_3991a46b33",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
+      "sourcePath": "assets/source/ui/hud/status_icons/status_enchant_asset_v1_source.png",
+      "suggestedPath": "assets/source/ui/hud/status_icons/status_enchant_asset_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "f7758e9a1f1a43554d967720df71eca7d953579df11299d3271e788c486ec836",
+      "derivedFrom": "assets/source/ui/hud/status_icons/status_enchant_asset_v1_source.png",
+      "visualGroup": "visual_f7758e9a1f",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
+      "sourcePath": "assets/source/ui/hud/status_icons/status_guard_asset_v1_source.png",
+      "suggestedPath": "assets/source/ui/hud/status_icons/status_guard_asset_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "19c1b35d49d1827370d871a00ceb8fdf039ecafd88e2610cc8cc56a69cc301c1",
+      "derivedFrom": "assets/source/ui/hud/status_icons/status_guard_asset_v1_source.png",
+      "visualGroup": "visual_19c1b35d49",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
+      "sourcePath": "assets/source/ui/hud/status_icons/status_poison_asset_v1_source.png",
+      "suggestedPath": "assets/source/ui/hud/status_icons/status_poison_asset_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "d44f7a738defcc4cebac5134cf572c56e0df36b3265b8b70c188e63fe00f82d3",
+      "derivedFrom": "assets/source/ui/hud/status_icons/status_poison_asset_v1_source.png",
+      "visualGroup": "visual_d44f7a738d",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
+      "sourcePath": "assets/source/ui/hud/status_icons/status_str_asset_v1_source.png",
+      "suggestedPath": "assets/source/ui/hud/status_icons/status_str_asset_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "227df47eb1017c84cb0de05a9486ee6b7cc1d12122d893504a1f0e32b3eceed5",
+      "derivedFrom": "assets/source/ui/hud/status_icons/status_str_asset_v1_source.png",
+      "visualGroup": "visual_227df47eb1",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
+      "sourcePath": "assets/source/ui/hud/status_icons/status_stun_asset_v1_source.png",
+      "suggestedPath": "assets/source/ui/hud/status_icons/status_stun_asset_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "21fccccf7b75c81ef6c83c86b0783dbdedb2c2611f6ef5b8454c6db1f21b1bd7",
+      "derivedFrom": "assets/source/ui/hud/status_icons/status_stun_asset_v1_source.png",
+      "visualGroup": "visual_21fccccf7b",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
+      "sourcePath": "assets/source/ui/hud/status_icons/status_thorns_asset_v1_source.png",
+      "suggestedPath": "assets/source/ui/hud/status_icons/status_thorns_asset_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "5be3dbfba88e543a66af0ed03246e94eb20cc312f88afb6bee8dc9b0dad98a95",
+      "derivedFrom": "assets/source/ui/hud/status_icons/status_thorns_asset_v1_source.png",
+      "visualGroup": "visual_5be3dbfba8",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
+      "sourcePath": "assets/source/ui/hud/status_icons/status_vuln_asset_v1_source.png",
+      "suggestedPath": "assets/source/ui/hud/status_icons/status_vuln_asset_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "49072e7039921451ffb70f6f325a6579762014ded8f8b51e21c4fb0e3bfb25c1",
+      "derivedFrom": "assets/source/ui/hud/status_icons/status_vuln_asset_v1_source.png",
+      "visualGroup": "visual_49072e7039",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
+      "sourcePath": "assets/source/ui/hud/status_icons/status_weak_asset_v1_source.png",
+      "suggestedPath": "assets/source/ui/hud/status_icons/status_weak_asset_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "32ccd7c6ad8f789d4f1957859f36e0f40c797d9e76f05bd4354f53a901868ea5",
+      "derivedFrom": "assets/source/ui/hud/status_icons/status_weak_asset_v1_source.png",
+      "visualGroup": "visual_32ccd7c6ad",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
+      "sourcePath": "assets/ui/hud/center_controls/end_turn_button_shell_asset_v1.png",
+      "suggestedPath": "assets/ui/hud/center_controls/end_turn_button_shell_asset_v1.png",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 891,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [],
+      "sha256": "9c6a981fd6a8ad0e9945604855207b8c8c26c6727d4730c00df4453461477a6c",
+      "derivedFrom": "assets/ui/hud/center_controls/end_turn_button_shell_asset_v1.png",
+      "visualGroup": "visual_9c6a981fd6",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/center_controls/end_turn_button_shell_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/center_controls/end_turn_button_shell_asset_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 58,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-runtime.js",
+          "line": 387,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 33,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "risks": [
+        "multi_module_reference"
+      ],
+      "sha256": "9ffa9f4e957ac4211f234687fb69589b1ae241b038a53c6ef90f3a612bd0820a",
+      "derivedFrom": "assets/ui/hud/center_controls/end_turn_button_shell_asset_v1.webp",
+      "visualGroup": "visual_9ffa9f4e95",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/center_controls/turn_counter_inner_dial_asset_v1.png",
+      "suggestedPath": "assets/ui/hud/center_controls/turn_counter_inner_dial_asset_v1.png",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 892,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud_layout_editor.html",
+          "line": 2206,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [],
+      "sha256": "6f0207e9244e1f62ae28e651158a69ef5a6d1fd06aff679bb78778169bdef350",
+      "derivedFrom": "assets/ui/hud/center_controls/turn_counter_inner_dial_asset_v1.png",
+      "visualGroup": "visual_6f0207e924",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/center_controls/turn_counter_inner_dial_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/center_controls/turn_counter_inner_dial_asset_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 100,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-runtime.js",
+          "line": 388,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 34,
+          "module": "demo",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 3296,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "risks": [
+        "multi_module_reference"
+      ],
+      "sha256": "fcbc8c5d4917abeccc243b3b4dbbd7e80dbcbe95a8feb5b71e8559de2d49e343",
+      "derivedFrom": "assets/ui/hud/center_controls/turn_counter_inner_dial_asset_v1.webp",
+      "visualGroup": "visual_fcbc8c5d49",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/enemy_intent/enemy_intent_panel_shell_asset_v1.png",
+      "suggestedPath": "assets/ui/hud/enemy_intent/enemy_intent_panel_shell_asset_v1.png",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 890,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud_layout_editor.html",
+          "line": 2205,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [],
+      "sha256": "ba4686abf693d9e31a3940542724f4986298d4f6d62cdbc148598db2727bcbef",
+      "derivedFrom": "assets/ui/hud/enemy_intent/enemy_intent_panel_shell_asset_v1.png",
+      "visualGroup": "visual_ba4686abf6",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/enemy_intent/enemy_intent_panel_shell_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/enemy_intent/enemy_intent_panel_shell_asset_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 1144,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-runtime.js",
+          "line": 384,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 32,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "risks": [
+        "multi_module_reference"
+      ],
+      "sha256": "e22c274490d77a1aa845775325d44f81d6cae1207326517191f5b2aa2f1c3d44",
+      "derivedFrom": "assets/ui/hud/enemy_intent/enemy_intent_panel_shell_asset_v1.webp",
+      "visualGroup": "visual_e22c274490",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/enemy_panel/battle_hud_enemy_panel_asset_v1.png",
+      "suggestedPath": "assets/ui/hud/enemy_panel/battle_hud_enemy_panel_asset_v1.png",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 899,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [],
+      "sha256": "9ae26a8401df5c0a0cd9a846416ac6a9e4ff9e4c26219673f861256a51b7e13a",
+      "derivedFrom": "assets/ui/hud/enemy_panel/battle_hud_enemy_panel_asset_v1.png",
+      "visualGroup": "visual_9ae26a8401",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/enemy_panel/battle_hud_enemy_panel_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/enemy_panel/battle_hud_enemy_panel_asset_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud-runtime.js",
+          "line": 378,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 31,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "risks": [
+        "multi_module_reference"
+      ],
+      "sha256": "23a8d3166ef4cb8df0f1fe1eac2d50c686379cd7ab8811549664e95368925f44",
+      "derivedFrom": "assets/ui/hud/enemy_panel/battle_hud_enemy_panel_asset_v1.webp",
+      "visualGroup": "visual_23a8d3166e",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/enemy_panel/enemy_armor_bar_shell_asset_v1.png",
+      "suggestedPath": "assets/ui/hud/enemy_panel/enemy_armor_bar_shell_asset_v1.png",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 888,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [],
+      "sha256": "88b5803effbf27a86544425951e467bef243873279968b3aa93f1a52f973c984",
+      "derivedFrom": "assets/ui/hud/enemy_panel/enemy_armor_bar_shell_asset_v1.png",
+      "visualGroup": "visual_88b5803eff",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/enemy_panel/enemy_armor_bar_shell_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/enemy_panel/enemy_armor_bar_shell_asset_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud-runtime.js",
+          "line": 382,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [],
+      "sha256": "e896173d2e3fb401f0d85aa2de17a871bb0e07511a1792dedb27b2a3f6fb4fa2",
+      "derivedFrom": "assets/ui/hud/enemy_panel/enemy_armor_bar_shell_asset_v1.webp",
+      "visualGroup": "visual_e896173d2e",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/enemy_panel/enemy_hp_bar_shell_asset_v1.png",
+      "suggestedPath": "assets/ui/hud/enemy_panel/enemy_hp_bar_shell_asset_v1.png",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 887,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [],
+      "sha256": "2c2fd41093ce1c7df8d0ec6cb75deee1990809ce8713a0e5c785630cf6d337a7",
+      "derivedFrom": "assets/ui/hud/enemy_panel/enemy_hp_bar_shell_asset_v1.png",
+      "visualGroup": "visual_2c2fd41093",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/enemy_panel/enemy_hp_bar_shell_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/enemy_panel/enemy_hp_bar_shell_asset_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud-runtime.js",
+          "line": 381,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [],
+      "sha256": "cc5872e264a248f2f19fe23baa95f97b6f449e906f1f34f4114040b88fa9ef7d",
+      "derivedFrom": "assets/ui/hud/enemy_panel/enemy_hp_bar_shell_asset_v1.webp",
+      "visualGroup": "visual_cc5872e264",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/enemy_panel/enemy_nameplate_shell_asset_v1.png",
+      "suggestedPath": "assets/ui/hud/enemy_panel/enemy_nameplate_shell_asset_v1.png",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 886,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [],
+      "sha256": "42042462d90a4146cc30ed077a83f6caf7420a4cd0a503319fefc3207acc3e74",
+      "derivedFrom": "assets/ui/hud/enemy_panel/enemy_nameplate_shell_asset_v1.png",
+      "visualGroup": "visual_42042462d9",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/enemy_panel/enemy_nameplate_shell_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/enemy_panel/enemy_nameplate_shell_asset_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 1061,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-runtime.js",
+          "line": 380,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [],
+      "sha256": "6d2dbb5f8eb89a7096a84bc2bd3ebe68217afa52e43c897ee7569154c3cf4a29",
+      "derivedFrom": "assets/ui/hud/enemy_panel/enemy_nameplate_shell_asset_v1.webp",
+      "visualGroup": "visual_6d2dbb5f8e",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/enemy_panel/enemy_portrait_frame_asset_v1.png",
+      "suggestedPath": "assets/ui/hud/enemy_panel/enemy_portrait_frame_asset_v1.png",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 885,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [],
+      "sha256": "59ddc6b51b7940bf887aa10c1618259b3a48a45a17b3bb470ac31f66b731ad73",
+      "derivedFrom": "assets/ui/hud/enemy_panel/enemy_portrait_frame_asset_v1.png",
+      "visualGroup": "visual_59ddc6b51b",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/enemy_panel/enemy_portrait_frame_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/enemy_panel/enemy_portrait_frame_asset_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 1477,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-runtime.js",
+          "line": 379,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [],
+      "sha256": "1c3b02368569d5ae87b6a5d50a7f3fa02dd30a0fcad8c263f859756bd90194fd",
+      "derivedFrom": "assets/ui/hud/enemy_panel/enemy_portrait_frame_asset_v1.webp",
+      "visualGroup": "visual_1c3b023685",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/hand_tray/hand_fan_tray_shell_asset_v1.png",
+      "suggestedPath": "assets/ui/hud/hand_tray/hand_fan_tray_shell_asset_v1.png",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 897,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [],
+      "sha256": "75e774917f8f5b3d4321ccea4deedd7e76baea0469cf63f1cf1aa41e80b80633",
+      "derivedFrom": "assets/ui/hud/hand_tray/hand_fan_tray_shell_asset_v1.png",
+      "visualGroup": "visual_75e774917f",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/hand_tray/hand_fan_tray_shell_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/hand_tray/hand_fan_tray_shell_asset_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 16,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-runtime.js",
+          "line": 386,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 35,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "risks": [
+        "multi_module_reference"
+      ],
+      "sha256": "56d36504a8475e534ae22b600d40cb42c9ef179ff2b32b1f54c39002fa48aaf5",
+      "derivedFrom": "assets/ui/hud/hand_tray/hand_fan_tray_shell_asset_v1.webp",
+      "visualGroup": "visual_56d36504a8",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/piles/discard_pile_stack_asset_v1.png",
+      "suggestedPath": "assets/ui/hud/piles/discard_pile_stack_asset_v1.png",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 894,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [],
+      "sha256": "0abac899ca611cd71ba4bb58ad9ee362bd0c8097e213aebb290d7f7f3447157c",
+      "derivedFrom": "assets/ui/hud/piles/discard_pile_stack_asset_v1.png",
+      "visualGroup": "visual_0abac899ca",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/piles/discard_pile_stack_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/piles/discard_pile_stack_asset_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 184,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-runtime.js",
+          "line": 390,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 46,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "risks": [
+        "multi_module_reference"
+      ],
+      "sha256": "d2bd4f5f193af140849b10d6d3fa5a7b962cf7d3bfc043f9a12aff24bde86a7c",
+      "derivedFrom": "assets/ui/hud/piles/discard_pile_stack_asset_v1.webp",
+      "visualGroup": "visual_d2bd4f5f19",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/piles/draw_pile_stack_asset_v1.png",
+      "suggestedPath": "assets/ui/hud/piles/draw_pile_stack_asset_v1.png",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 893,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [],
+      "sha256": "4bfc0a29c5bb468dcf1f766a09383e82a24ac6949791b0f78e450980ca2dac9c",
+      "derivedFrom": "assets/ui/hud/piles/draw_pile_stack_asset_v1.png",
+      "visualGroup": "visual_4bfc0a29c5",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/piles/draw_pile_stack_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/piles/draw_pile_stack_asset_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 142,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-runtime.js",
+          "line": 389,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 45,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "risks": [
+        "multi_module_reference"
+      ],
+      "sha256": "39ceb11564bfd2e37d3e6ef3eebc25c97e80a9fd0c2f287b8ae910174920dd55",
+      "derivedFrom": "assets/ui/hud/piles/draw_pile_stack_asset_v1.webp",
+      "visualGroup": "visual_39ceb11564",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/piles/exile_pile_stack_asset_v1.png",
+      "suggestedPath": "assets/ui/hud/piles/exile_pile_stack_asset_v1.png",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 895,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [],
+      "sha256": "dc6e7c906a1495f8225c59cb34930e009180e371f6d2a1c78f5142f40a1d0d5d",
+      "derivedFrom": "assets/ui/hud/piles/exile_pile_stack_asset_v1.png",
+      "visualGroup": "visual_dc6e7c906a",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/piles/exile_pile_stack_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/piles/exile_pile_stack_asset_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 226,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-runtime.js",
+          "line": 391,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 47,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "risks": [
+        "multi_module_reference"
+      ],
+      "sha256": "a0fafed38511dd1bc53a155e898df2749349352554492252c4ae69afa40a8a3f",
+      "derivedFrom": "assets/ui/hud/piles/exile_pile_stack_asset_v1.webp",
+      "visualGroup": "visual_a0fafed385",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/piles/pile_count_plate_asset_v1_transparent.png",
+      "suggestedPath": "assets/ui/hud/piles/pile_count_plate_asset_v1_transparent.png",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 896,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud_layout_editor.html",
+          "line": 2204,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [],
+      "sha256": "005526ed345548b3398387deef5af388d7abc95ca6ce7adaa3fc65dcf25f6140",
+      "derivedFrom": "assets/ui/hud/piles/pile_count_plate_asset_v1_transparent.png",
+      "visualGroup": "visual_005526ed34",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/piles/pile_count_plate_asset_v1_transparent.webp",
+      "suggestedPath": "assets/ui/hud/piles/pile_count_plate_asset_v1_transparent.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 935,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 977,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1019,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-runtime.js",
+          "line": 392,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-runtime.js",
+          "line": 393,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-runtime.js",
+          "line": 394,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 48,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "risks": [
+        "multi_module_reference"
+      ],
+      "sha256": "0e75945f4c82528252b1e1d1631e1bacd2dfb9b90fad7505a8b39c9f01076a7c",
+      "derivedFrom": "assets/ui/hud/piles/pile_count_plate_asset_v1_transparent.webp",
+      "visualGroup": "visual_0e75945f4c",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/avatar_circle_gray_base_asset_v1.png",
+      "suggestedPath": "assets/ui/hud/player_panel/avatar_circle_gray_base_asset_v1.png",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 2202,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [
+        "identical_content"
+      ],
+      "sha256": "601039e38609b5d1627d45cae387760af01bdfd8425f3acbaa5951cb50aef4a5",
+      "derivedFrom": "assets/ui/hud/player_panel/avatar_circle_gray_base_asset_v1.png",
+      "visualGroup": "visual_601039e386",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/avatar_circle_gray_base_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/player_panel/avatar_circle_gray_base_asset_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 852,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1436,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1735,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [],
+      "sha256": "def5afa3cfc02e7970878bf197e265e9cf5fd9024e02f2dc8440564eaaf13b37",
+      "derivedFrom": "assets/ui/hud/player_panel/avatar_circle_gray_base_asset_v1.webp",
+      "visualGroup": "visual_def5afa3cf",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/battle_hud_player_panel_asset_v1.png",
+      "suggestedPath": "assets/ui/hud/player_panel/battle_hud_player_panel_asset_v1.png",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 898,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud_layout_editor.html",
+          "line": 2661,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [],
+      "sha256": "8c4aa6e53f28b7888c0f8c862c5afc648da997cf775eee4fc45c8701b79283f6",
+      "derivedFrom": "assets/ui/hud/player_panel/battle_hud_player_panel_asset_v1.png",
+      "visualGroup": "visual_8c4aa6e53f",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_armor_bar_shell_asset_v1.png",
+      "suggestedPath": "assets/ui/hud/player_panel/player_armor_bar_shell_asset_v1.png",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 880,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [],
+      "sha256": "79bb1c1b47786b7990ceadd675ac731dc84f268b830348e72c398e22275ec8f5",
+      "derivedFrom": "assets/ui/hud/player_panel/player_armor_bar_shell_asset_v1.png",
+      "visualGroup": "visual_79bb1c1b47",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_armor_bar_shell_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/player_panel/player_armor_bar_shell_asset_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud-runtime.js",
+          "line": 374,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 39,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "risks": [
+        "multi_module_reference"
+      ],
+      "sha256": "75a328e199bfc6a692054fd6a38d8c3b07bb94702fbb820cb6ff700ea95ec945",
+      "derivedFrom": "assets/ui/hud/player_panel/player_armor_bar_shell_asset_v1.webp",
+      "visualGroup": "visual_75a328e199",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_energy_gem_off_asset_v1.png",
+      "suggestedPath": "assets/ui/hud/player_panel/player_energy_gem_off_asset_v1.png",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 883,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [],
+      "sha256": "f77b609aa1f37c36218dcddf394e812abf20195b15113a98e101d28912a3dce9",
+      "derivedFrom": "assets/ui/hud/player_panel/player_energy_gem_off_asset_v1.png",
+      "visualGroup": "visual_f77b609aa1",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_energy_gem_off_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/player_panel/player_energy_gem_off_asset_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 42,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "risks": [],
+      "sha256": "3bbcdd44c22b722899cd5a94922a8639ad43a99d268543145b2349b8b5cb4348",
+      "derivedFrom": "assets/ui/hud/player_panel/player_energy_gem_off_asset_v1.webp",
+      "visualGroup": "visual_3bbcdd44c2",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_energy_gem_on_asset_v1.png",
+      "suggestedPath": "assets/ui/hud/player_panel/player_energy_gem_on_asset_v1.png",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud-group-final.json",
+          "line": 68,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-group-final.json",
+          "line": 83,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-group-final.json",
+          "line": 98,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-group-final.json",
+          "line": 113,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-group-final.json",
+          "line": 128,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud_layout_editor.html",
+          "line": 882,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [],
+      "sha256": "cae0f3f232413187f224ab3ebce1ad1087c3ad73a83c985373441972af196dee",
+      "derivedFrom": "assets/ui/hud/player_panel/player_energy_gem_on_asset_v1.png",
+      "visualGroup": "visual_cae0f3f232",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_energy_gem_on_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/player_panel/player_energy_gem_on_asset_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 434,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 476,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 518,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 560,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 602,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1585,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1600,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1615,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1630,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1645,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-runtime.js",
+          "line": 397,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 41,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "risks": [
+        "multi_module_reference"
+      ],
+      "sha256": "2a395b128f7b31f92ead9395ab0e491133080f99af4db2e66fe6925c7579ced9",
+      "derivedFrom": "assets/ui/hud/player_panel/player_energy_gem_on_asset_v1.webp",
+      "visualGroup": "visual_2a395b128f",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_energy_tray_asset_v1.png",
+      "suggestedPath": "assets/ui/hud/player_panel/player_energy_tray_asset_v1.png",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 881,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [],
+      "sha256": "cbe8c9e1bfde1aad03e7106d3a0ac15584f0e69b86fb308bbabfd3b3f5a1bcc9",
+      "derivedFrom": "assets/ui/hud/player_panel/player_energy_tray_asset_v1.png",
+      "visualGroup": "visual_cbe8c9e1bf",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_energy_tray_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/player_panel/player_energy_tray_asset_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud-runtime.js",
+          "line": 375,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 40,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "risks": [
+        "multi_module_reference"
+      ],
+      "sha256": "f5d05f1b72382ef80206a7157e07da975c48d38a19a150170d4859e5d36f8d7c",
+      "derivedFrom": "assets/ui/hud/player_panel/player_energy_tray_asset_v1.webp",
+      "visualGroup": "visual_f5d05f1b72",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_energy_tray_asset_v1_no_circles_transparent.png",
+      "suggestedPath": "assets/ui/hud/player_panel/player_energy_tray_asset_v1_no_circles_transparent.png",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 2203,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [
+        "long_component",
+        "identical_content"
+      ],
+      "sha256": "83e1325bdd8e6875ded4346d0915f0c0a02c065d198ebf106d1facd063ff6369",
+      "derivedFrom": "assets/ui/hud/player_panel/player_energy_tray_asset_v1_no_circles_transparent.png",
+      "visualGroup": "visual_83e1325bdd",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_energy_tray_asset_v1_no_circles_transparent.webp",
+      "suggestedPath": "assets/ui/hud/player_panel/player_energy_tray_asset_v1_no_circles_transparent.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 351,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1555,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 3222,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "risks": [
+        "long_component",
+        "multi_module_reference"
+      ],
+      "sha256": "bc47f9054e71e850fcdd73699619c12b738979c4766d71ae7bc7457ac3e48520",
+      "derivedFrom": "assets/ui/hud/player_panel/player_energy_tray_asset_v1_no_circles_transparent.webp",
+      "visualGroup": "visual_bc47f9054e",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_hp_bar_empty_frame_editor_asset_v1.png",
+      "suggestedPath": "assets/ui/hud/player_panel/player_hp_bar_empty_frame_editor_asset_v1.png",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud-group-final.json",
+          "line": 203,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud_layout_editor.html",
+          "line": 900,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud_layout_editor.html",
+          "line": 917,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [],
+      "sha256": "c185ce13dfcfea2194a3826c5fcf8496e1f3f2bca20789c6277790539764fc13",
+      "derivedFrom": "assets/ui/hud/player_panel/player_hp_bar_empty_frame_editor_asset_v1.png",
+      "visualGroup": "visual_c185ce13df",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_hp_bar_empty_frame_editor_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/player_panel/player_hp_bar_empty_frame_editor_asset_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 810,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1394,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1720,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1832,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [],
+      "sha256": "e90154102e2dca8bdabf4c10dcb245bfef8a228b8fa5e716ec5b7948b07e6b92",
+      "derivedFrom": "assets/ui/hud/player_panel/player_hp_bar_empty_frame_editor_asset_v1.webp",
+      "visualGroup": "visual_e90154102e",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_hp_bar_heart_fill_editor_asset_v1.png",
+      "suggestedPath": "assets/ui/hud/player_panel/player_hp_bar_heart_fill_editor_asset_v1.png",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud-group-final.json",
+          "line": 188,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud_layout_editor.html",
+          "line": 901,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud_layout_editor.html",
+          "line": 916,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [],
+      "sha256": "3bfdaaf05a023d2f9c2988dd413b4f6514ecff96e4fc2c37922d093ac7d20e33",
+      "derivedFrom": "assets/ui/hud/player_panel/player_hp_bar_heart_fill_editor_asset_v1.png",
+      "visualGroup": "visual_3bfdaaf05a",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_hp_bar_heart_fill_editor_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/player_panel/player_hp_bar_heart_fill_editor_asset_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 769,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1353,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1705,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1817,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [],
+      "sha256": "22bcb3127e68736093c2a5e479c6f21fc927ebde927a44802828143c34ae8c03",
+      "derivedFrom": "assets/ui/hud/player_panel/player_hp_bar_heart_fill_editor_asset_v1.webp",
+      "visualGroup": "visual_22bcb3127e",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_hp_bar_long_fill_damage_trail_editor_asset_v1.png",
+      "suggestedPath": "assets/ui/hud/player_panel/player_hp_bar_long_fill_damage_trail_editor_asset_v1.png",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud-group-final.json",
+          "line": 158,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud_layout_editor.html",
+          "line": 903,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud_layout_editor.html",
+          "line": 914,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [
+        "long_component"
+      ],
+      "sha256": "21ad1d52baeb213f291612af2f1717f248d943a496a8dfe12689946613837ed8",
+      "derivedFrom": "assets/ui/hud/player_panel/player_hp_bar_long_fill_damage_trail_editor_asset_v1.png",
+      "visualGroup": "visual_21ad1d52ba",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_hp_bar_long_fill_damage_trail_editor_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/player_panel/player_hp_bar_long_fill_damage_trail_editor_asset_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 685,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1269,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1675,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1787,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [
+        "long_component"
+      ],
+      "sha256": "487f14f119c7b18e08707ff8bd6ef20d195586f715074affe4da864aebb966e1",
+      "derivedFrom": "assets/ui/hud/player_panel/player_hp_bar_long_fill_damage_trail_editor_asset_v1.webp",
+      "visualGroup": "visual_487f14f119",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_hp_bar_long_fill_editor_asset_v1.png",
+      "suggestedPath": "assets/ui/hud/player_panel/player_hp_bar_long_fill_editor_asset_v1.png",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud-group-final.json",
+          "line": 173,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud_layout_editor.html",
+          "line": 904,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud_layout_editor.html",
+          "line": 915,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [],
+      "sha256": "7e426ec2ac73dc1b8263f34becdf343c0a110b3f27aa312351a6c2a75356b67e",
+      "derivedFrom": "assets/ui/hud/player_panel/player_hp_bar_long_fill_editor_asset_v1.png",
+      "visualGroup": "visual_7e426ec2ac",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_hp_bar_long_fill_editor_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/player_panel/player_hp_bar_long_fill_editor_asset_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 727,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1311,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1690,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1802,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [],
+      "sha256": "f568c834e9c900d87c801e28ece215910e7ba5960e0e6a0e5d98abc25a99dfbe",
+      "derivedFrom": "assets/ui/hud/player_panel/player_hp_bar_long_fill_editor_asset_v1.webp",
+      "visualGroup": "visual_f568c834e9",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_asset_v1.png",
+      "suggestedPath": "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_asset_v1.png",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 2201,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [
+        "identical_content"
+      ],
+      "sha256": "033684e88e3ffc1a706392b2fc37f5483416c084c23bc9f42e353a4eb9d8b67f",
+      "derivedFrom": "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_asset_v1.png",
+      "visualGroup": "visual_033684e88e",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_asset_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 268,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1103,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1525,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [],
+      "sha256": "a8e401d34094377557509e385cf66b8a74985258011d75d0ecc1ef13f8a93876",
+      "derivedFrom": "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_asset_v1.webp",
+      "visualGroup": "visual_a8e401d340",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_editor_asset_v1.png",
+      "suggestedPath": "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_editor_asset_v1.png",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud-group-final.json",
+          "line": 143,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud_layout_editor.html",
+          "line": 902,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud_layout_editor.html",
+          "line": 913,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [
+        "long_component",
+        "identical_content"
+      ],
+      "sha256": "0d9845fb0c17b2baeb3d3e687db1819bc7991a7019e8bf3fcaa57505ff239f98",
+      "derivedFrom": "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_editor_asset_v1.png",
+      "visualGroup": "visual_0d9845fb0c",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_editor_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_editor_asset_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 644,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1228,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1660,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1772,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [
+        "long_component"
+      ],
+      "sha256": "a4dbb09806b6b55b15a0cef83d714734e1b9eef63c57238e34b64f4b9eedfc0c",
+      "derivedFrom": "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_editor_asset_v1.webp",
+      "visualGroup": "visual_a4dbb09806",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_hp_bar_shell_asset_v1.png",
+      "suggestedPath": "assets/ui/hud/player_panel/player_hp_bar_shell_asset_v1.png",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 879,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [],
+      "sha256": "0557f109dd9d0e14a0e83549c197660ecf29116bb9a3e4550aad14b116c98838",
+      "derivedFrom": "assets/ui/hud/player_panel/player_hp_bar_shell_asset_v1.png",
+      "visualGroup": "visual_0557f109dd",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_hp_bar_shell_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/player_panel/player_hp_bar_shell_asset_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud-runtime.js",
+          "line": 373,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 38,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "risks": [
+        "multi_module_reference"
+      ],
+      "sha256": "c14ab233d2197fc0c85dfe35bb6c7809a282ea6df2408bf09dd93fe6cb24aa69",
+      "derivedFrom": "assets/ui/hud/player_panel/player_hp_bar_shell_asset_v1.webp",
+      "visualGroup": "visual_c14ab233d2",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_nameplate_shell_asset_v1.png",
+      "suggestedPath": "assets/ui/hud/player_panel/player_nameplate_shell_asset_v1.png",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud-group-final.json",
+          "line": 23,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud_layout_editor.html",
+          "line": 878,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [],
+      "sha256": "b3ca3f3f925fcd71fa587a5dfcb9d37276477ad783c81802374bf16b910c2375",
+      "derivedFrom": "assets/ui/hud/player_panel/player_nameplate_shell_asset_v1.png",
+      "visualGroup": "visual_b3ca3f3f92",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_nameplate_shell_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/player_panel/player_nameplate_shell_asset_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 309,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1540,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-runtime.js",
+          "line": 372,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 37,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "risks": [
+        "multi_module_reference"
+      ],
+      "sha256": "ca401dae3bd82c8252b64a8b50c8be5d0212d9f4d297bbb2049fae658baa8403",
+      "derivedFrom": "assets/ui/hud/player_panel/player_nameplate_shell_asset_v1.webp",
+      "visualGroup": "visual_ca401dae3b",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_portrait_frame_asset_v1.png",
+      "suggestedPath": "assets/ui/hud/player_panel/player_portrait_frame_asset_v1.png",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud-group-final.json",
+          "line": 233,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud_layout_editor.html",
+          "line": 877,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [],
+      "sha256": "72caebf0a4a6ccfea5c47ac00820a0218e07b478c26e5ebda8c0ef6c38000e4c",
+      "derivedFrom": "assets/ui/hud/player_panel/player_portrait_frame_asset_v1.png",
+      "visualGroup": "visual_72caebf0a4",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_portrait_frame_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/player_panel/player_portrait_frame_asset_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 893,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1750,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-runtime.js",
+          "line": 371,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 36,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "risks": [
+        "multi_module_reference"
+      ],
+      "sha256": "68d5024efa3a14f07cbd8bab986c6e70593fd39b7c9759995b42c7fbd0ef70be",
+      "derivedFrom": "assets/ui/hud/player_panel/player_portrait_frame_asset_v1.webp",
+      "visualGroup": "visual_68d5024efa",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_bar/enemy_status_bar_shell_asset_v1.png",
+      "suggestedPath": "assets/ui/hud/status_bar/enemy_status_bar_shell_asset_v1.png",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 889,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [],
+      "sha256": "3e718f34e2a625fe264b4aa8ef9e2b8b992ea1ba4367861b4ed8cb91b0ccb0be",
+      "derivedFrom": "assets/ui/hud/status_bar/enemy_status_bar_shell_asset_v1.png",
+      "visualGroup": "visual_3e718f34e2",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_bar/enemy_status_bar_shell_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/status_bar/enemy_status_bar_shell_asset_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud-runtime.js",
+          "line": 383,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 44,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "risks": [
+        "multi_module_reference"
+      ],
+      "sha256": "d6c7c84bd7bc76f0857d0abd4e8448962cf13c61fb86695cdc1dfb1430256177",
+      "derivedFrom": "assets/ui/hud/status_bar/enemy_status_bar_shell_asset_v1.webp",
+      "visualGroup": "visual_d6c7c84bd7",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_bar/player_status_bar_shell_asset_v1.png",
+      "suggestedPath": "assets/ui/hud/status_bar/player_status_bar_shell_asset_v1.png",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud-group-final.json",
+          "line": 53,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud_layout_editor.html",
+          "line": 884,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "risks": [],
+      "sha256": "03884c35798d0d1ed56afd083adbd25ff9fccf6c4729264549e6587ec5d774f6",
+      "derivedFrom": "assets/ui/hud/status_bar/player_status_bar_shell_asset_v1.png",
+      "visualGroup": "visual_03884c3579",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_bar/player_status_bar_shell_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/status_bar/player_status_bar_shell_asset_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 392,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1186,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1570,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-runtime.js",
+          "line": 376,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 43,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "risks": [
+        "multi_module_reference"
+      ],
+      "sha256": "6c091e9ce69eb4692ad193316f5707d48eb6782ece3e2b86d5677b7bafd4f039",
+      "derivedFrom": "assets/ui/hud/status_bar/player_status_bar_shell_asset_v1.webp",
+      "visualGroup": "visual_6c091e9ce6",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_icons/status_armor_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/status_icons/status_armor_asset_v1.webp",
+      "action": "already_migrated_dynamic",
+      "status": "active_dynamic",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "1b6bfc824a7e5e1b2406cb2ecd757f58f6959c6242d622c80e4bba4c30ccb04f",
+      "derivedFrom": "assets/ui/hud/status_icons/status_armor_asset_v1.webp",
+      "visualGroup": "visual_1b6bfc824a",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; dynamic runtime HUD asset inferred from status icon template"
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_icons/status_bleed_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/status_icons/status_bleed_asset_v1.webp",
+      "action": "already_migrated_dynamic",
+      "status": "active_dynamic",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "bb43a7df63e2e769ba834ef9a3d3f0d44fc828b6b690909b05201943ff0ca5d2",
+      "derivedFrom": "assets/ui/hud/status_icons/status_bleed_asset_v1.webp",
+      "visualGroup": "visual_bb43a7df63",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; dynamic runtime HUD asset inferred from status icon template"
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_icons/status_blood_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/status_icons/status_blood_asset_v1.webp",
+      "action": "already_migrated_dynamic",
+      "status": "active_dynamic",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "dcc814bec28e803e441822b19c74beed4678c8f7afe8f974ea175c1ae02a14c0",
+      "derivedFrom": "assets/ui/hud/status_icons/status_blood_asset_v1.webp",
+      "visualGroup": "visual_dcc814bec2",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; dynamic runtime HUD asset inferred from status icon template"
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_icons/status_burn_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/status_icons/status_burn_asset_v1.webp",
+      "action": "already_migrated_dynamic",
+      "status": "active_dynamic",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "9ff09d611f078a05ef35d1ce2562f046f74c203b07267f02cde83ca8c86a69d4",
+      "derivedFrom": "assets/ui/hud/status_icons/status_burn_asset_v1.webp",
+      "visualGroup": "visual_9ff09d611f",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; dynamic runtime HUD asset inferred from status icon template"
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_icons/status_charge_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/status_icons/status_charge_asset_v1.webp",
+      "action": "already_migrated_dynamic",
+      "status": "active_dynamic",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "fc42ca0526513cbba7ede076a1b721253880b577dd66816085ae0531fe0669ab",
+      "derivedFrom": "assets/ui/hud/status_icons/status_charge_asset_v1.webp",
+      "visualGroup": "visual_fc42ca0526",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; dynamic runtime HUD asset inferred from status icon template"
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_icons/status_counter_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/status_icons/status_counter_asset_v1.webp",
+      "action": "already_migrated_dynamic",
+      "status": "active_dynamic",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "63e6af357f6074407afb2b6fc118982613660463948dab63de82e8cbf71de361",
+      "derivedFrom": "assets/ui/hud/status_icons/status_counter_asset_v1.webp",
+      "visualGroup": "visual_63e6af357f",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; dynamic runtime HUD asset inferred from status icon template"
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_icons/status_curse_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/status_icons/status_curse_asset_v1.webp",
+      "action": "already_migrated_dynamic",
+      "status": "active_dynamic",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "972bd17ac3afa44f96f6360ea853247c46cf35dc5695de59af64bcab33e2205e",
+      "derivedFrom": "assets/ui/hud/status_icons/status_curse_asset_v1.webp",
+      "visualGroup": "visual_972bd17ac3",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; dynamic runtime HUD asset inferred from status icon template"
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_icons/status_echo_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/status_icons/status_echo_asset_v1.webp",
+      "action": "already_migrated_dynamic",
+      "status": "active_dynamic",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "d15008713c64af6fb3b3445390929419728165e050ff1a6470bd6aa0d31c1a56",
+      "derivedFrom": "assets/ui/hud/status_icons/status_echo_asset_v1.webp",
+      "visualGroup": "visual_d15008713c",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; dynamic runtime HUD asset inferred from status icon template"
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_icons/status_enchant_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/status_icons/status_enchant_asset_v1.webp",
+      "action": "already_migrated_dynamic",
+      "status": "active_dynamic",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "dd885be8185a377ef156ce85aba8be50a09980a57eec4d31b21c6cedd4e6f354",
+      "derivedFrom": "assets/ui/hud/status_icons/status_enchant_asset_v1.webp",
+      "visualGroup": "visual_dd885be818",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; dynamic runtime HUD asset inferred from status icon template"
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_icons/status_guard_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/status_icons/status_guard_asset_v1.webp",
+      "action": "already_migrated_dynamic",
+      "status": "active_dynamic",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "69a8b78da3af6f204ea1950313c94f1be34a9ecdd0d2bb67573a86928173d798",
+      "derivedFrom": "assets/ui/hud/status_icons/status_guard_asset_v1.webp",
+      "visualGroup": "visual_69a8b78da3",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; dynamic runtime HUD asset inferred from status icon template"
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_icons/status_poison_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/status_icons/status_poison_asset_v1.webp",
+      "action": "already_migrated_dynamic",
+      "status": "active_dynamic",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "404d5be62196b152a79571d421f8e264fbb54296b77e3611dd68e755a0c64920",
+      "derivedFrom": "assets/ui/hud/status_icons/status_poison_asset_v1.webp",
+      "visualGroup": "visual_404d5be621",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; dynamic runtime HUD asset inferred from status icon template"
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_icons/status_str_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/status_icons/status_str_asset_v1.webp",
+      "action": "already_migrated_dynamic",
+      "status": "active_dynamic",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "4e1ee31c6ba61841efa260c5f69bd5409a43395557559f3acacbe5467380f96d",
+      "derivedFrom": "assets/ui/hud/status_icons/status_str_asset_v1.webp",
+      "visualGroup": "visual_4e1ee31c6b",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; dynamic runtime HUD asset inferred from status icon template"
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_icons/status_stun_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/status_icons/status_stun_asset_v1.webp",
+      "action": "already_migrated_dynamic",
+      "status": "active_dynamic",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "a59f28d0f6029549baa19123686f4a3bcdbc736067df6350f924a6aa0f003291",
+      "derivedFrom": "assets/ui/hud/status_icons/status_stun_asset_v1.webp",
+      "visualGroup": "visual_a59f28d0f6",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; dynamic runtime HUD asset inferred from status icon template"
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_icons/status_thorns_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/status_icons/status_thorns_asset_v1.webp",
+      "action": "already_migrated_dynamic",
+      "status": "active_dynamic",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "11d33d45e4b32178bb77186dcddedbf0b690aaf03d800fd032a05d2933979b74",
+      "derivedFrom": "assets/ui/hud/status_icons/status_thorns_asset_v1.webp",
+      "visualGroup": "visual_11d33d45e4",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; dynamic runtime HUD asset inferred from status icon template"
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_icons/status_vuln_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/status_icons/status_vuln_asset_v1.webp",
+      "action": "already_migrated_dynamic",
+      "status": "active_dynamic",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "70fc0c9597f5a9d0e10bbfad6993a2f7dde224b354fe3a1f8b2b23e6dddbb35e",
+      "derivedFrom": "assets/ui/hud/status_icons/status_vuln_asset_v1.webp",
+      "visualGroup": "visual_70fc0c9597",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; dynamic runtime HUD asset inferred from status icon template"
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_icons/status_weak_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/status_icons/status_weak_asset_v1.webp",
+      "action": "already_migrated_dynamic",
+      "status": "active_dynamic",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "88573068979c5f40eee547084abdee4490792eda7137ff19cda1aed092dcd087",
+      "derivedFrom": "assets/ui/hud/status_icons/status_weak_asset_v1.webp",
+      "visualGroup": "visual_8857306897",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; dynamic runtime HUD asset inferred from status icon template"
+    }
+  ],
+  "duplicateExtensionGroups": [
+    {
+      "basePath": "assets/ui/hud/center_controls/end_turn_button_shell_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ],
+      "paths": [
+        "assets/ui/hud/center_controls/end_turn_button_shell_asset_v1.png",
+        "assets/ui/hud/center_controls/end_turn_button_shell_asset_v1.webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/center_controls/turn_counter_inner_dial_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ],
+      "paths": [
+        "assets/ui/hud/center_controls/turn_counter_inner_dial_asset_v1.png",
+        "assets/ui/hud/center_controls/turn_counter_inner_dial_asset_v1.webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/enemy_intent/enemy_intent_panel_shell_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ],
+      "paths": [
+        "assets/ui/hud/enemy_intent/enemy_intent_panel_shell_asset_v1.png",
+        "assets/ui/hud/enemy_intent/enemy_intent_panel_shell_asset_v1.webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/enemy_panel/battle_hud_enemy_panel_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ],
+      "paths": [
+        "assets/ui/hud/enemy_panel/battle_hud_enemy_panel_asset_v1.png",
+        "assets/ui/hud/enemy_panel/battle_hud_enemy_panel_asset_v1.webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/enemy_panel/enemy_armor_bar_shell_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ],
+      "paths": [
+        "assets/ui/hud/enemy_panel/enemy_armor_bar_shell_asset_v1.png",
+        "assets/ui/hud/enemy_panel/enemy_armor_bar_shell_asset_v1.webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/enemy_panel/enemy_hp_bar_shell_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ],
+      "paths": [
+        "assets/ui/hud/enemy_panel/enemy_hp_bar_shell_asset_v1.png",
+        "assets/ui/hud/enemy_panel/enemy_hp_bar_shell_asset_v1.webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/enemy_panel/enemy_nameplate_shell_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ],
+      "paths": [
+        "assets/ui/hud/enemy_panel/enemy_nameplate_shell_asset_v1.png",
+        "assets/ui/hud/enemy_panel/enemy_nameplate_shell_asset_v1.webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/enemy_panel/enemy_portrait_frame_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ],
+      "paths": [
+        "assets/ui/hud/enemy_panel/enemy_portrait_frame_asset_v1.png",
+        "assets/ui/hud/enemy_panel/enemy_portrait_frame_asset_v1.webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/hand_tray/hand_fan_tray_shell_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ],
+      "paths": [
+        "assets/ui/hud/hand_tray/hand_fan_tray_shell_asset_v1.png",
+        "assets/ui/hud/hand_tray/hand_fan_tray_shell_asset_v1.webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/piles/discard_pile_stack_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ],
+      "paths": [
+        "assets/ui/hud/piles/discard_pile_stack_asset_v1.png",
+        "assets/ui/hud/piles/discard_pile_stack_asset_v1.webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/piles/draw_pile_stack_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ],
+      "paths": [
+        "assets/ui/hud/piles/draw_pile_stack_asset_v1.png",
+        "assets/ui/hud/piles/draw_pile_stack_asset_v1.webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/piles/exile_pile_stack_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ],
+      "paths": [
+        "assets/ui/hud/piles/exile_pile_stack_asset_v1.png",
+        "assets/ui/hud/piles/exile_pile_stack_asset_v1.webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/piles/pile_count_plate_asset_v1_transparent",
+      "extensions": [
+        ".png",
+        ".webp"
+      ],
+      "paths": [
+        "assets/ui/hud/piles/pile_count_plate_asset_v1_transparent.png",
+        "assets/ui/hud/piles/pile_count_plate_asset_v1_transparent.webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/player_panel/avatar_circle_gray_base_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ],
+      "paths": [
+        "assets/ui/hud/player_panel/avatar_circle_gray_base_asset_v1.png",
+        "assets/ui/hud/player_panel/avatar_circle_gray_base_asset_v1.webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/player_panel/player_armor_bar_shell_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ],
+      "paths": [
+        "assets/ui/hud/player_panel/player_armor_bar_shell_asset_v1.png",
+        "assets/ui/hud/player_panel/player_armor_bar_shell_asset_v1.webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/player_panel/player_energy_gem_off_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ],
+      "paths": [
+        "assets/ui/hud/player_panel/player_energy_gem_off_asset_v1.png",
+        "assets/ui/hud/player_panel/player_energy_gem_off_asset_v1.webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/player_panel/player_energy_gem_on_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ],
+      "paths": [
+        "assets/ui/hud/player_panel/player_energy_gem_on_asset_v1.png",
+        "assets/ui/hud/player_panel/player_energy_gem_on_asset_v1.webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/player_panel/player_energy_tray_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ],
+      "paths": [
+        "assets/ui/hud/player_panel/player_energy_tray_asset_v1.png",
+        "assets/ui/hud/player_panel/player_energy_tray_asset_v1.webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/player_panel/player_energy_tray_asset_v1_no_circles_transparent",
+      "extensions": [
+        ".png",
+        ".webp"
+      ],
+      "paths": [
+        "assets/ui/hud/player_panel/player_energy_tray_asset_v1_no_circles_transparent.png",
+        "assets/ui/hud/player_panel/player_energy_tray_asset_v1_no_circles_transparent.webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/player_panel/player_hp_bar_empty_frame_editor_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ],
+      "paths": [
+        "assets/ui/hud/player_panel/player_hp_bar_empty_frame_editor_asset_v1.png",
+        "assets/ui/hud/player_panel/player_hp_bar_empty_frame_editor_asset_v1.webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/player_panel/player_hp_bar_heart_fill_editor_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ],
+      "paths": [
+        "assets/ui/hud/player_panel/player_hp_bar_heart_fill_editor_asset_v1.png",
+        "assets/ui/hud/player_panel/player_hp_bar_heart_fill_editor_asset_v1.webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/player_panel/player_hp_bar_long_fill_damage_trail_editor_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ],
+      "paths": [
+        "assets/ui/hud/player_panel/player_hp_bar_long_fill_damage_trail_editor_asset_v1.png",
+        "assets/ui/hud/player_panel/player_hp_bar_long_fill_damage_trail_editor_asset_v1.webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/player_panel/player_hp_bar_long_fill_editor_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ],
+      "paths": [
+        "assets/ui/hud/player_panel/player_hp_bar_long_fill_editor_asset_v1.png",
+        "assets/ui/hud/player_panel/player_hp_bar_long_fill_editor_asset_v1.webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ],
+      "paths": [
+        "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_asset_v1.png",
+        "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_asset_v1.webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_editor_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ],
+      "paths": [
+        "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_editor_asset_v1.png",
+        "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_editor_asset_v1.webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/player_panel/player_hp_bar_shell_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ],
+      "paths": [
+        "assets/ui/hud/player_panel/player_hp_bar_shell_asset_v1.png",
+        "assets/ui/hud/player_panel/player_hp_bar_shell_asset_v1.webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/player_panel/player_nameplate_shell_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ],
+      "paths": [
+        "assets/ui/hud/player_panel/player_nameplate_shell_asset_v1.png",
+        "assets/ui/hud/player_panel/player_nameplate_shell_asset_v1.webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/player_panel/player_portrait_frame_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ],
+      "paths": [
+        "assets/ui/hud/player_panel/player_portrait_frame_asset_v1.png",
+        "assets/ui/hud/player_panel/player_portrait_frame_asset_v1.webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/status_bar/enemy_status_bar_shell_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ],
+      "paths": [
+        "assets/ui/hud/status_bar/enemy_status_bar_shell_asset_v1.png",
+        "assets/ui/hud/status_bar/enemy_status_bar_shell_asset_v1.webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/status_bar/player_status_bar_shell_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ],
+      "paths": [
+        "assets/ui/hud/status_bar/player_status_bar_shell_asset_v1.png",
+        "assets/ui/hud/status_bar/player_status_bar_shell_asset_v1.webp"
+      ]
+    }
+  ]
+}

@@ -2557,6 +2557,537 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
+      "sourcePath": "assets/ui/hud/center_controls/end_turn_button_shell_asset_v1.webp",
+      "suggestedPath": "assets/review/end_turn_button_shell_asset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/ui/hud/center_controls/end_turn_button_shell_asset_v1.webp",
+      "visualGroup": "visual_9ffa9f4e95",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/center_controls/turn_counter_inner_dial_asset_v1.webp",
+      "suggestedPath": "assets/review/turn_counter_inner_dial_asset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/ui/hud/center_controls/turn_counter_inner_dial_asset_v1.webp",
+      "visualGroup": "visual_fcbc8c5d49",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/enemy_intent/enemy_intent_panel_shell_asset_v1.webp",
+      "suggestedPath": "assets/review/enemy_intent_panel_shell_asset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/ui/hud/enemy_intent/enemy_intent_panel_shell_asset_v1.webp",
+      "visualGroup": "visual_e22c274490",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/enemy_panel/battle_hud_enemy_panel_asset_v1.webp",
+      "suggestedPath": "assets/review/battle_hud_enemy_panel_asset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/ui/hud/enemy_panel/battle_hud_enemy_panel_asset_v1.webp",
+      "visualGroup": "visual_23a8d3166e",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/hand_tray/hand_fan_tray_shell_asset_v1.webp",
+      "suggestedPath": "assets/review/hand_fan_tray_shell_asset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/ui/hud/hand_tray/hand_fan_tray_shell_asset_v1.webp",
+      "visualGroup": "visual_56d36504a8",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/piles/discard_pile_stack_asset_v1.webp",
+      "suggestedPath": "assets/review/discard_pile_stack_asset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/ui/hud/piles/discard_pile_stack_asset_v1.webp",
+      "visualGroup": "visual_d2bd4f5f19",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/piles/draw_pile_stack_asset_v1.webp",
+      "suggestedPath": "assets/review/draw_pile_stack_asset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/ui/hud/piles/draw_pile_stack_asset_v1.webp",
+      "visualGroup": "visual_39ceb11564",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/piles/exile_pile_stack_asset_v1.webp",
+      "suggestedPath": "assets/review/exile_pile_stack_asset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/ui/hud/piles/exile_pile_stack_asset_v1.webp",
+      "visualGroup": "visual_a0fafed385",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/piles/pile_count_plate_asset_v1_transparent.webp",
+      "suggestedPath": "assets/review/pile_count_plate_asset_v1_transparent.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/ui/hud/piles/pile_count_plate_asset_v1_transparent.webp",
+      "visualGroup": "visual_0e75945f4c",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_armor_bar_shell_asset_v1.webp",
+      "suggestedPath": "assets/review/player_armor_bar_shell_asset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/ui/hud/player_panel/player_armor_bar_shell_asset_v1.webp",
+      "visualGroup": "visual_75a328e199",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_energy_gem_on_asset_v1.webp",
+      "suggestedPath": "assets/review/player_energy_gem_on_asset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/ui/hud/player_panel/player_energy_gem_on_asset_v1.webp",
+      "visualGroup": "visual_2a395b128f",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_energy_tray_asset_v1.webp",
+      "suggestedPath": "assets/review/player_energy_tray_asset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/ui/hud/player_panel/player_energy_tray_asset_v1.webp",
+      "visualGroup": "visual_f5d05f1b72",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_energy_tray_asset_v1_no_circles_transparent.webp",
+      "suggestedPath": "assets/review/player_energy_tray_asset_v1_no_circles_transparent.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component",
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/ui/hud/player_panel/player_energy_tray_asset_v1_no_circles_transparent.webp",
+      "visualGroup": "visual_bc47f9054e",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_hp_bar_shell_asset_v1.webp",
+      "suggestedPath": "assets/review/player_hp_bar_shell_asset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/ui/hud/player_panel/player_hp_bar_shell_asset_v1.webp",
+      "visualGroup": "visual_c14ab233d2",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_nameplate_shell_asset_v1.webp",
+      "suggestedPath": "assets/review/player_nameplate_shell_asset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/ui/hud/player_panel/player_nameplate_shell_asset_v1.webp",
+      "visualGroup": "visual_ca401dae3b",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_portrait_frame_asset_v1.webp",
+      "suggestedPath": "assets/review/player_portrait_frame_asset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/ui/hud/player_panel/player_portrait_frame_asset_v1.webp",
+      "visualGroup": "visual_68d5024efa",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_bar/enemy_status_bar_shell_asset_v1.webp",
+      "suggestedPath": "assets/review/enemy_status_bar_shell_asset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/ui/hud/status_bar/enemy_status_bar_shell_asset_v1.webp",
+      "visualGroup": "visual_d6c7c84bd7",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_bar/player_status_bar_shell_asset_v1.webp",
+      "suggestedPath": "assets/review/player_status_bar_shell_asset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/ui/hud/status_bar/player_status_bar_shell_asset_v1.webp",
+      "visualGroup": "visual_6c091e9ce6",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_icons/status_armor_asset_v1.webp",
+      "suggestedPath": "assets/review/status_armor_asset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/ui/hud/status_icons/status_armor_asset_v1.webp",
+      "visualGroup": "visual_1b6bfc824a",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_icons/status_bleed_asset_v1.webp",
+      "suggestedPath": "assets/review/status_bleed_asset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/ui/hud/status_icons/status_bleed_asset_v1.webp",
+      "visualGroup": "visual_bb43a7df63",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_icons/status_blood_asset_v1.webp",
+      "suggestedPath": "assets/review/status_blood_asset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/ui/hud/status_icons/status_blood_asset_v1.webp",
+      "visualGroup": "visual_dcc814bec2",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_icons/status_burn_asset_v1.webp",
+      "suggestedPath": "assets/review/status_burn_asset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/ui/hud/status_icons/status_burn_asset_v1.webp",
+      "visualGroup": "visual_9ff09d611f",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_icons/status_charge_asset_v1.webp",
+      "suggestedPath": "assets/review/status_charge_asset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/ui/hud/status_icons/status_charge_asset_v1.webp",
+      "visualGroup": "visual_fc42ca0526",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_icons/status_counter_asset_v1.webp",
+      "suggestedPath": "assets/review/status_counter_asset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/ui/hud/status_icons/status_counter_asset_v1.webp",
+      "visualGroup": "visual_63e6af357f",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_icons/status_curse_asset_v1.webp",
+      "suggestedPath": "assets/review/status_curse_asset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/ui/hud/status_icons/status_curse_asset_v1.webp",
+      "visualGroup": "visual_972bd17ac3",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_icons/status_echo_asset_v1.webp",
+      "suggestedPath": "assets/review/status_echo_asset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/ui/hud/status_icons/status_echo_asset_v1.webp",
+      "visualGroup": "visual_d15008713c",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_icons/status_enchant_asset_v1.webp",
+      "suggestedPath": "assets/review/status_enchant_asset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/ui/hud/status_icons/status_enchant_asset_v1.webp",
+      "visualGroup": "visual_dd885be818",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_icons/status_guard_asset_v1.webp",
+      "suggestedPath": "assets/review/status_guard_asset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/ui/hud/status_icons/status_guard_asset_v1.webp",
+      "visualGroup": "visual_69a8b78da3",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_icons/status_poison_asset_v1.webp",
+      "suggestedPath": "assets/review/status_poison_asset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/ui/hud/status_icons/status_poison_asset_v1.webp",
+      "visualGroup": "visual_404d5be621",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_icons/status_str_asset_v1.webp",
+      "suggestedPath": "assets/review/status_str_asset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/ui/hud/status_icons/status_str_asset_v1.webp",
+      "visualGroup": "visual_4e1ee31c6b",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_icons/status_stun_asset_v1.webp",
+      "suggestedPath": "assets/review/status_stun_asset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/ui/hud/status_icons/status_stun_asset_v1.webp",
+      "visualGroup": "visual_a59f28d0f6",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_icons/status_thorns_asset_v1.webp",
+      "suggestedPath": "assets/review/status_thorns_asset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/ui/hud/status_icons/status_thorns_asset_v1.webp",
+      "visualGroup": "visual_11d33d45e4",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_icons/status_vuln_asset_v1.webp",
+      "suggestedPath": "assets/review/status_vuln_asset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/ui/hud/status_icons/status_vuln_asset_v1.webp",
+      "visualGroup": "visual_70fc0c9597",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_icons/status_weak_asset_v1.webp",
+      "suggestedPath": "assets/review/status_weak_asset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/ui/hud/status_icons/status_weak_asset_v1.webp",
+      "visualGroup": "visual_8857306897",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
       "sourcePath": "tmp_hud_group2_assets/avatar_circle_gray_base_asset_v1.png",
       "suggestedPath": "assets/review/avatar_circle_gray_base_asset_v1.png",
       "suggestedDirectory": "assets/review",
@@ -6005,20 +6536,6 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_discard_pile_clean_preview_v1.png",
-      "suggestedPath": "assets/ui/hud/battle_hud_discard_pile_clean_preview_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "candidate",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_discard_pile_clean_preview_v1.png",
-      "visualGroup": "visual_c8bf812a88",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
       "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_discard_pile_clean_v1.png",
       "suggestedPath": "assets/ui/hud/battle_hud_discard_pile_clean_v1.png",
       "suggestedDirectory": "assets/ui/hud",
@@ -6046,20 +6563,6 @@
       ],
       "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_discard_pile_v1.png",
       "visualGroup": "visual_e031d144c8",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_draw_pile_clean_preview_v1.png",
-      "suggestedPath": "assets/ui/hud/battle_hud_draw_pile_clean_preview_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "candidate",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_draw_pile_clean_preview_v1.png",
-      "visualGroup": "visual_5496bdae7b",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -6165,20 +6668,6 @@
       ],
       "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_energy_gems_v1.png",
       "visualGroup": "visual_dbb8a9453a",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_exile_pile_clean_preview_v1.png",
-      "suggestedPath": "assets/ui/hud/battle_hud_exile_pile_clean_preview_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "candidate",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_exile_pile_clean_preview_v1.png",
-      "visualGroup": "visual_10f68a715c",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -6317,56 +6806,6 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/battle_hud_enemy_panel_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/battle_hud_enemy_panel_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/battle_hud_enemy_panel_asset_v1.png",
-      "visualGroup": "visual_9ae26a8401",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/battle_hud_enemy_panel_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/battle_hud_enemy_panel_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "demo",
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/battle_hud_enemy_panel_asset_v1.webp",
-      "visualGroup": "visual_23a8d3166e",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/battle_hud_player_panel_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/battle_hud_player_panel_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/battle_hud_player_panel_asset_v1.png",
-      "visualGroup": "visual_8c4aa6e53f",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
       "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/中轴控件/end_turn_button_gem_asset_v1.png",
       "suggestedPath": "assets/ui/hud/end_turn_button_gem_asset_v1.png",
       "suggestedDirectory": "assets/ui/hud",
@@ -6379,74 +6818,6 @@
       ],
       "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/中轴控件/end_turn_button_gem_asset_v1.png",
       "visualGroup": "visual_e914963c98",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/中轴控件/end_turn_button_shell_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/end_turn_button_shell_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/中轴控件/end_turn_button_shell_asset_v1.png",
-      "visualGroup": "visual_9c6a981fd6",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/中轴控件/end_turn_button_shell_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/end_turn_button_shell_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "demo",
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/中轴控件/end_turn_button_shell_asset_v1.webp",
-      "visualGroup": "visual_9ffa9f4e95",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/中轴控件/turn_counter_inner_dial_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/turn_counter_inner_dial_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/中轴控件/turn_counter_inner_dial_asset_v1.png",
-      "visualGroup": "visual_6f0207e924",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/中轴控件/turn_counter_inner_dial_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/turn_counter_inner_dial_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "demo",
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/中轴控件/turn_counter_inner_dial_asset_v1.webp",
-      "visualGroup": "visual_fcbc8c5d49",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -6600,40 +6971,6 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/手牌承托/hand_fan_tray_shell_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/hand_fan_tray_shell_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/手牌承托/hand_fan_tray_shell_asset_v1.png",
-      "visualGroup": "visual_75e774917f",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/手牌承托/hand_fan_tray_shell_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/hand_fan_tray_shell_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "demo",
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/手牌承托/hand_fan_tray_shell_asset_v1.webp",
-      "visualGroup": "visual_56d36504a8",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
       "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方意图面板/enemy_intent_attack_medallion_asset_v1.png",
       "suggestedPath": "assets/ui/hud/enemy_intent_attack_medallion_asset_v1.png",
       "suggestedDirectory": "assets/ui/hud",
@@ -6664,40 +7001,6 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方意图面板/enemy_intent_panel_shell_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/enemy_intent_panel_shell_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方意图面板/enemy_intent_panel_shell_asset_v1.png",
-      "visualGroup": "visual_ba4686abf6",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方意图面板/enemy_intent_panel_shell_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/enemy_intent_panel_shell_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "demo",
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方意图面板/enemy_intent_panel_shell_asset_v1.webp",
-      "visualGroup": "visual_e22c274490",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
       "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方意图面板/enemy_intent_value_lane_asset_v1.png",
       "suggestedPath": "assets/ui/hud/enemy_intent_value_lane_asset_v1.png",
       "suggestedDirectory": "assets/ui/hud",
@@ -6710,134 +7013,6 @@
       ],
       "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方意图面板/enemy_intent_value_lane_asset_v1.png",
       "visualGroup": "visual_3b8ee0aa07",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_armor_bar_shell_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/enemy_armor_bar_shell_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_armor_bar_shell_asset_v1.png",
-      "visualGroup": "visual_88b5803eff",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_armor_bar_shell_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/enemy_armor_bar_shell_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_armor_bar_shell_asset_v1.webp",
-      "visualGroup": "visual_e896173d2e",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_hp_bar_shell_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/enemy_hp_bar_shell_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_hp_bar_shell_asset_v1.png",
-      "visualGroup": "visual_2c2fd41093",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_hp_bar_shell_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/enemy_hp_bar_shell_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_hp_bar_shell_asset_v1.webp",
-      "visualGroup": "visual_cc5872e264",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_nameplate_shell_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/enemy_nameplate_shell_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_nameplate_shell_asset_v1.png",
-      "visualGroup": "visual_42042462d9",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_nameplate_shell_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/enemy_nameplate_shell_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_nameplate_shell_asset_v1.webp",
-      "visualGroup": "visual_6d2dbb5f8e",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_portrait_frame_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/enemy_portrait_frame_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_portrait_frame_asset_v1.png",
-      "visualGroup": "visual_59ddc6b51b",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_portrait_frame_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/enemy_portrait_frame_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_portrait_frame_asset_v1.webp",
-      "visualGroup": "visual_1c3b023685",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -6931,20 +7106,6 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/材质边框/frame_master_border_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/frame_master_border_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "source",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/材质边框/frame_master_border_asset_v1.png",
-      "visualGroup": "visual_99627ce878",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
       "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/材质边框/glass_blue_panel_tile_asset_v1.png",
       "suggestedPath": "assets/ui/hud/glass_blue_panel_tile_asset_v1.png",
       "suggestedDirectory": "assets/ui/hud",
@@ -7020,210 +7181,6 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/discard_pile_stack_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/discard_pile_stack_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/discard_pile_stack_asset_v1.png",
-      "visualGroup": "visual_0abac899ca",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/discard_pile_stack_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/discard_pile_stack_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "demo",
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/discard_pile_stack_asset_v1.webp",
-      "visualGroup": "visual_d2bd4f5f19",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/draw_pile_stack_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/draw_pile_stack_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/draw_pile_stack_asset_v1.png",
-      "visualGroup": "visual_4bfc0a29c5",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/draw_pile_stack_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/draw_pile_stack_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "demo",
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/draw_pile_stack_asset_v1.webp",
-      "visualGroup": "visual_39ceb11564",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/exile_pile_stack_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/exile_pile_stack_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/exile_pile_stack_asset_v1.png",
-      "visualGroup": "visual_dc6e7c906a",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/exile_pile_stack_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/exile_pile_stack_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "demo",
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/exile_pile_stack_asset_v1.webp",
-      "visualGroup": "visual_a0fafed385",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/pile_count_plate_asset_v1_transparent.png",
-      "suggestedPath": "assets/ui/hud/pile_count_plate_asset_v1_transparent.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/pile_count_plate_asset_v1_transparent.png",
-      "visualGroup": "visual_005526ed34",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/pile_count_plate_asset_v1_transparent.webp",
-      "suggestedPath": "assets/ui/hud/pile_count_plate_asset_v1_transparent.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "demo",
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/pile_count_plate_asset_v1_transparent.webp",
-      "visualGroup": "visual_0e75945f4c",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/enemy_status_bar_shell_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/enemy_status_bar_shell_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/enemy_status_bar_shell_asset_v1.png",
-      "visualGroup": "visual_3e718f34e2",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/enemy_status_bar_shell_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/enemy_status_bar_shell_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "demo",
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/enemy_status_bar_shell_asset_v1.webp",
-      "visualGroup": "visual_d6c7c84bd7",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/player_status_bar_shell_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/player_status_bar_shell_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/player_status_bar_shell_asset_v1.png",
-      "visualGroup": "visual_03884c3579",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/player_status_bar_shell_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/player_status_bar_shell_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "demo",
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/player_status_bar_shell_asset_v1.webp",
-      "visualGroup": "visual_6c091e9ce6",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
       "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/status_socket_empty_asset_v1.png",
       "suggestedPath": "assets/ui/hud/status_socket_empty_asset_v1.png",
       "suggestedDirectory": "assets/ui/hud",
@@ -7251,306 +7208,6 @@
       ],
       "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/status_socket_highlight_asset_v1.png",
       "visualGroup": "visual_642c017f87",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_armor_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/status_armor_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_armor_asset_v1.png",
-      "visualGroup": "visual_65baf75628",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_armor_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/status_armor_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_armor_asset_v1.webp",
-      "visualGroup": "visual_1b6bfc824a",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_bleed_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/status_bleed_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_bleed_asset_v1.png",
-      "visualGroup": "visual_5934ea848b",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_bleed_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/status_bleed_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_bleed_asset_v1.webp",
-      "visualGroup": "visual_bb43a7df63",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_blood_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/status_blood_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_blood_asset_v1.png",
-      "visualGroup": "visual_d742dc8a81",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_blood_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/status_blood_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_blood_asset_v1.webp",
-      "visualGroup": "visual_dcc814bec2",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_burn_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/status_burn_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_burn_asset_v1.png",
-      "visualGroup": "visual_61dea975e7",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_burn_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/status_burn_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_burn_asset_v1.webp",
-      "visualGroup": "visual_9ff09d611f",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_charge_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/status_charge_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_charge_asset_v1.png",
-      "visualGroup": "visual_629076cabd",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_charge_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/status_charge_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_charge_asset_v1.webp",
-      "visualGroup": "visual_fc42ca0526",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_counter_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/status_counter_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_counter_asset_v1.png",
-      "visualGroup": "visual_c00f47cc4e",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_counter_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/status_counter_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_counter_asset_v1.webp",
-      "visualGroup": "visual_63e6af357f",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_curse_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/status_curse_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_curse_asset_v1.png",
-      "visualGroup": "visual_402300e59e",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_curse_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/status_curse_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_curse_asset_v1.webp",
-      "visualGroup": "visual_972bd17ac3",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_echo_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/status_echo_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_echo_asset_v1.png",
-      "visualGroup": "visual_3991a46b33",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_echo_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/status_echo_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_echo_asset_v1.webp",
-      "visualGroup": "visual_d15008713c",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_enchant_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/status_enchant_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_enchant_asset_v1.png",
-      "visualGroup": "visual_f7758e9a1f",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_enchant_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/status_enchant_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_enchant_asset_v1.webp",
-      "visualGroup": "visual_dd885be818",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_guard_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/status_guard_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_guard_asset_v1.png",
-      "visualGroup": "visual_19c1b35d49",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_guard_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/status_guard_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_guard_asset_v1.webp",
-      "visualGroup": "visual_69a8b78da3",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -7584,390 +7241,6 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_poison_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/status_poison_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_poison_asset_v1.png",
-      "visualGroup": "visual_d44f7a738d",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_poison_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/status_poison_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_poison_asset_v1.webp",
-      "visualGroup": "visual_404d5be621",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_str_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/status_str_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_str_asset_v1.png",
-      "visualGroup": "visual_227df47eb1",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_str_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/status_str_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_str_asset_v1.webp",
-      "visualGroup": "visual_4e1ee31c6b",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_stun_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/status_stun_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_stun_asset_v1.png",
-      "visualGroup": "visual_21fccccf7b",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_stun_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/status_stun_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_stun_asset_v1.webp",
-      "visualGroup": "visual_a59f28d0f6",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_thorns_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/status_thorns_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_thorns_asset_v1.png",
-      "visualGroup": "visual_5be3dbfba8",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_thorns_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/status_thorns_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_thorns_asset_v1.webp",
-      "visualGroup": "visual_11d33d45e4",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_vuln_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/status_vuln_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_vuln_asset_v1.png",
-      "visualGroup": "visual_49072e7039",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_vuln_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/status_vuln_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_vuln_asset_v1.webp",
-      "visualGroup": "visual_70fc0c9597",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_weak_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/status_weak_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_weak_asset_v1.png",
-      "visualGroup": "visual_32ccd7c6ad",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_weak_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/status_weak_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_weak_asset_v1.webp",
-      "visualGroup": "visual_8857306897",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/avatar_circle_gray_base_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/avatar_circle_gray_base_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "identical_content"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/avatar_circle_gray_base_asset_v1.png",
-      "visualGroup": "visual_601039e386",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/avatar_circle_gray_base_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/avatar_circle_gray_base_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/avatar_circle_gray_base_asset_v1.webp",
-      "visualGroup": "visual_def5afa3cf",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_armor_bar_shell_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/player_armor_bar_shell_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_armor_bar_shell_asset_v1.png",
-      "visualGroup": "visual_79bb1c1b47",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_armor_bar_shell_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/player_armor_bar_shell_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "demo",
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_armor_bar_shell_asset_v1.webp",
-      "visualGroup": "visual_75a328e199",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_off_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/player_energy_gem_off_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_off_asset_v1.png",
-      "visualGroup": "visual_f77b609aa1",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_off_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/player_energy_gem_off_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "demo"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_off_asset_v1.webp",
-      "visualGroup": "visual_3bbcdd44c2",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_on_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/player_energy_gem_on_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_on_asset_v1.png",
-      "visualGroup": "visual_cae0f3f232",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_on_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/player_energy_gem_on_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "demo",
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_on_asset_v1.webp",
-      "visualGroup": "visual_2a395b128f",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_tray_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/player_energy_tray_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_tray_asset_v1.png",
-      "visualGroup": "visual_cbe8c9e1bf",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_tray_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/player_energy_tray_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "demo",
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_tray_asset_v1.webp",
-      "visualGroup": "visual_f5d05f1b72",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_tray_asset_v1_no_circles_transparent.png",
-      "suggestedPath": "assets/ui/hud/player_energy_tray_asset_v1_no_circles_transparent.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component",
-        "identical_content"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_tray_asset_v1_no_circles_transparent.png",
-      "visualGroup": "visual_83e1325bdd",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_tray_asset_v1_no_circles_transparent.webp",
-      "suggestedPath": "assets/ui/hud/player_energy_tray_asset_v1_no_circles_transparent.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "demo",
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component",
-        "multi_module_reference"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_tray_asset_v1_no_circles_transparent.webp",
-      "visualGroup": "visual_bc47f9054e",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
       "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_damage_mask_asset_v1.png",
       "suggestedPath": "assets/ui/hud/player_hp_bar_damage_mask_asset_v1.png",
       "suggestedDirectory": "assets/ui/hud",
@@ -7983,20 +7256,6 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_damage_preview_v1.png",
-      "suggestedPath": "assets/ui/hud/player_hp_bar_damage_preview_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "candidate",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_damage_preview_v1.png",
-      "visualGroup": "visual_9b351d05c7",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
       "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_empty_frame_asset_v1.png",
       "suggestedPath": "assets/ui/hud/player_hp_bar_empty_frame_asset_v1.png",
       "suggestedDirectory": "assets/ui/hud",
@@ -8009,38 +7268,6 @@
       ],
       "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_empty_frame_asset_v1.png",
       "visualGroup": "visual_15d366e9c9",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_empty_frame_editor_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/player_hp_bar_empty_frame_editor_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_empty_frame_editor_asset_v1.png",
-      "visualGroup": "visual_c185ce13df",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_empty_frame_editor_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/player_hp_bar_empty_frame_editor_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_empty_frame_editor_asset_v1.webp",
-      "visualGroup": "visual_e90154102e",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -8074,38 +7301,6 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_heart_fill_editor_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/player_hp_bar_heart_fill_editor_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_heart_fill_editor_asset_v1.png",
-      "visualGroup": "visual_3bfdaaf05a",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_heart_fill_editor_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/player_hp_bar_heart_fill_editor_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_heart_fill_editor_asset_v1.webp",
-      "visualGroup": "visual_22bcb3127e",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
       "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_asset_v1.png",
       "suggestedPath": "assets/ui/hud/player_hp_bar_long_fill_asset_v1.png",
       "suggestedDirectory": "assets/ui/hud",
@@ -8134,242 +7329,6 @@
       ],
       "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_damage_trail_asset_v1.png",
       "visualGroup": "visual_f06f0070dc",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_damage_trail_editor_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/player_hp_bar_long_fill_damage_trail_editor_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_damage_trail_editor_asset_v1.png",
-      "visualGroup": "visual_21ad1d52ba",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_damage_trail_editor_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/player_hp_bar_long_fill_damage_trail_editor_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_damage_trail_editor_asset_v1.webp",
-      "visualGroup": "visual_487f14f119",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_editor_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/player_hp_bar_long_fill_editor_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_editor_asset_v1.png",
-      "visualGroup": "visual_7e426ec2ac",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_editor_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/player_hp_bar_long_fill_editor_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_editor_asset_v1.webp",
-      "visualGroup": "visual_f568c834e9",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/player_hp_bar_long_fill_gray_base_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "identical_content"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_asset_v1.png",
-      "visualGroup": "visual_033684e88e",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/player_hp_bar_long_fill_gray_base_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_asset_v1.webp",
-      "visualGroup": "visual_a8e401d340",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_editor_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/player_hp_bar_long_fill_gray_base_editor_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component",
-        "identical_content"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_editor_asset_v1.png",
-      "visualGroup": "visual_0d9845fb0c",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_editor_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/player_hp_bar_long_fill_gray_base_editor_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_editor_asset_v1.webp",
-      "visualGroup": "visual_a4dbb09806",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_shell_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/player_hp_bar_shell_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_shell_asset_v1.png",
-      "visualGroup": "visual_0557f109dd",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_shell_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/player_hp_bar_shell_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "demo",
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_shell_asset_v1.webp",
-      "visualGroup": "visual_c14ab233d2",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_nameplate_shell_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/player_nameplate_shell_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_nameplate_shell_asset_v1.png",
-      "visualGroup": "visual_b3ca3f3f92",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_nameplate_shell_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/player_nameplate_shell_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "demo",
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_nameplate_shell_asset_v1.webp",
-      "visualGroup": "visual_ca401dae3b",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_portrait_frame_asset_v1.png",
-      "suggestedPath": "assets/ui/hud/player_portrait_frame_asset_v1.png",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_portrait_frame_asset_v1.png",
-      "visualGroup": "visual_72caebf0a4",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_portrait_frame_asset_v1.webp",
-      "suggestedPath": "assets/ui/hud/player_portrait_frame_asset_v1.webp",
-      "suggestedDirectory": "assets/ui/hud",
-      "status": "active",
-      "referenceModules": [
-        "demo",
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_portrait_frame_asset_v1.webp",
-      "visualGroup": "visual_68d5024efa",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -8435,6 +7394,88 @@
       ],
       "derivedFrom": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/程序集缓存/status_bar_long_gray_base_asset_v1.png",
       "visualGroup": "visual_0d9845fb0c",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_energy_tray_asset_v1_no_circles_transparent.png",
+      "suggestedPath": "assets/ui/hud/review/player_energy_tray_asset_v1_no_circles_transparent.png",
+      "suggestedDirectory": "assets/ui/hud/review",
+      "status": "active",
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component",
+        "identical_content"
+      ],
+      "derivedFrom": "assets/ui/hud/player_panel/player_energy_tray_asset_v1_no_circles_transparent.png",
+      "visualGroup": "visual_83e1325bdd",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_hp_bar_long_fill_damage_trail_editor_asset_v1.png",
+      "suggestedPath": "assets/ui/hud/review/player_hp_bar_long_fill_damage_trail_editor_asset_v1.png",
+      "suggestedDirectory": "assets/ui/hud/review",
+      "status": "active",
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/ui/hud/player_panel/player_hp_bar_long_fill_damage_trail_editor_asset_v1.png",
+      "visualGroup": "visual_21ad1d52ba",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_hp_bar_long_fill_damage_trail_editor_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/review/player_hp_bar_long_fill_damage_trail_editor_asset_v1.webp",
+      "suggestedDirectory": "assets/ui/hud/review",
+      "status": "active",
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/ui/hud/player_panel/player_hp_bar_long_fill_damage_trail_editor_asset_v1.webp",
+      "visualGroup": "visual_487f14f119",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_editor_asset_v1.png",
+      "suggestedPath": "assets/ui/hud/review/player_hp_bar_long_fill_gray_base_editor_asset_v1.png",
+      "suggestedDirectory": "assets/ui/hud/review",
+      "status": "active",
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component",
+        "identical_content"
+      ],
+      "derivedFrom": "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_editor_asset_v1.png",
+      "visualGroup": "visual_0d9845fb0c",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_editor_asset_v1.webp",
+      "suggestedPath": "assets/ui/hud/review/player_hp_bar_long_fill_gray_base_editor_asset_v1.webp",
+      "suggestedDirectory": "assets/ui/hud/review",
+      "status": "active",
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_editor_asset_v1.webp",
+      "visualGroup": "visual_a4dbb09806",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {

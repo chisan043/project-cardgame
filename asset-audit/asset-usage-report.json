@@ -26,23 +26,23 @@
     "referencedAssetCount": 432,
     "activeAssetCount": 481,
     "unreferencedAssetCount": 798,
-    "missingReferenceCount": 232,
-    "missingRuntimeReferenceCount": 45,
+    "missingReferenceCount": 231,
+    "missingRuntimeReferenceCount": 44,
     "statusCounts": {
       "active": 481,
       "candidate": 106,
       "documented": 54,
       "legacy": 48,
-      "source": 237,
-      "unreferenced": 304
+      "source": 253,
+      "unreferenced": 288
     },
     "riskCounts": {
       "identical_content": 181,
       "long_component": 79,
       "long_path": 11,
       "multi_module_reference": 59,
-      "non_ascii_path": 589,
-      "unreferenced": 358
+      "non_ascii_path": 491,
+      "unreferenced": 342
     },
     "referenceModuleCounts": {
       "cards": 178,
@@ -53,7 +53,7 @@
       "relics": 45,
       "ui.hud": 67
     },
-    "duplicateExtensionGroupCount": 82,
+    "duplicateExtensionGroupCount": 66,
     "identicalContentGroupCount": 61
   },
   "assets": [
@@ -3066,22 +3066,6 @@
       "identicalContentGroup": []
     },
     {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_discard_pile_clean_preview_v1.png",
-      "extension": ".png",
-      "bytes": 73545,
-      "sha256": "c8bf812a886deda7f21448533c389fbc7fc5940727952abcac03e09f69b0efd0",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 64,
-      "maxComponentLength": 44,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
       "path": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_discard_pile_clean_v1.png",
       "extension": ".png",
       "bytes": 71969,
@@ -3112,22 +3096,6 @@
       "risks": [
         "non_ascii_path",
         "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_draw_pile_clean_preview_v1.png",
-      "extension": ".png",
-      "bytes": 79566,
-      "sha256": "5496bdae7bf9e9973180a5eeec940fc9e147a7af5e70c694f8c477fb8797c706",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 61,
-      "maxComponentLength": 41,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
       ],
       "identicalContentGroup": []
     },
@@ -3247,22 +3215,6 @@
       "risks": [
         "non_ascii_path",
         "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_exile_pile_clean_preview_v1.png",
-      "extension": ".png",
-      "bytes": 78171,
-      "sha256": "10f68a715ce97810a091243706dcde32b7b137ac34128da9a32509a62e0de797",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 62,
-      "maxComponentLength": 42,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
       ],
       "identicalContentGroup": []
     },
@@ -3420,95 +3372,6 @@
       "identicalContentGroup": []
     },
     {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/battle_hud_enemy_panel_asset_v1.png",
-      "extension": ".png",
-      "bytes": 1463254,
-      "sha256": "9ae26a8401df5c0a0cd9a846416ac6a9e4ff9e4c26219673f861256a51b7e13a",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud_layout_editor.html",
-          "line": 899,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 57,
-      "maxComponentLength": 35,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/battle_hud_enemy_panel_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 126362,
-      "sha256": "23a8d3166ef4cb8df0f1fe1eac2d50c686379cd7ab8811549664e95368925f44",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud-runtime.js",
-          "line": 378,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 31,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo",
-        "ui.hud"
-      ],
-      "pathLength": 58,
-      "maxComponentLength": 36,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/battle_hud_player_panel_asset_v1.png",
-      "extension": ".png",
-      "bytes": 1697658,
-      "sha256": "8c4aa6e53f28b7888c0f8c862c5afc648da997cf775eee4fc45c8701b79283f6",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud_layout_editor.html",
-          "line": 898,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud_layout_editor.html",
-          "line": 2661,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 58,
-      "maxComponentLength": 36,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
       "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/中轴控件/end_turn_button_gem_asset_v1.png",
       "extension": ".png",
       "bytes": 691405,
@@ -3522,146 +3385,6 @@
       "risks": [
         "non_ascii_path",
         "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/中轴控件/end_turn_button_shell_asset_v1.png",
-      "extension": ".png",
-      "bytes": 1365592,
-      "sha256": "9c6a981fd6a8ad0e9945604855207b8c8c26c6727d4730c00df4453461477a6c",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud_layout_editor.html",
-          "line": 891,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 65,
-      "maxComponentLength": 34,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/中轴控件/end_turn_button_shell_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 112580,
-      "sha256": "9ffa9f4e957ac4211f234687fb69589b1ae241b038a53c6ef90f3a612bd0820a",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud-layout-data.js",
-          "line": 58,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-runtime.js",
-          "line": 387,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 33,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo",
-        "ui.hud"
-      ],
-      "pathLength": 66,
-      "maxComponentLength": 35,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/中轴控件/turn_counter_inner_dial_asset_v1.png",
-      "extension": ".png",
-      "bytes": 1427776,
-      "sha256": "6f0207e9244e1f62ae28e651158a69ef5a6d1fd06aff679bb78778169bdef350",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud_layout_editor.html",
-          "line": 892,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud_layout_editor.html",
-          "line": 2206,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 67,
-      "maxComponentLength": 36,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/中轴控件/turn_counter_inner_dial_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 112262,
-      "sha256": "fcbc8c5d4917abeccc243b3b4dbbd7e80dbcbe95a8feb5b71e8559de2d49e343",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud-layout-data.js",
-          "line": 100,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-runtime.js",
-          "line": 388,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 34,
-          "module": "demo",
-          "kind": "runtime"
-        },
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 3296,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo",
-        "ui.hud"
-      ],
-      "pathLength": 68,
-      "maxComponentLength": 37,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
       ],
       "identicalContentGroup": []
     },
@@ -3836,70 +3559,6 @@
       "identicalContentGroup": []
     },
     {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/手牌承托/hand_fan_tray_shell_asset_v1.png",
-      "extension": ".png",
-      "bytes": 1481588,
-      "sha256": "75e774917f8f5b3d4321ccea4deedd7e76baea0469cf63f1cf1aa41e80b80633",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud_layout_editor.html",
-          "line": 897,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 63,
-      "maxComponentLength": 32,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/手牌承托/hand_fan_tray_shell_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 107970,
-      "sha256": "56d36504a8475e534ae22b600d40cb42c9ef179ff2b32b1f54c39002fa48aaf5",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud-layout-data.js",
-          "line": 16,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-runtime.js",
-          "line": 386,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 35,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo",
-        "ui.hud"
-      ],
-      "pathLength": 64,
-      "maxComponentLength": 33,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
-      ],
-      "identicalContentGroup": []
-    },
-    {
       "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方意图面板/enemy_intent_attack_medallion_asset_v1.png",
       "extension": ".png",
       "bytes": 1944357,
@@ -3934,76 +3593,6 @@
       "identicalContentGroup": []
     },
     {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方意图面板/enemy_intent_panel_shell_asset_v1.png",
-      "extension": ".png",
-      "bytes": 1143687,
-      "sha256": "ba4686abf693d9e31a3940542724f4986298d4f6d62cdbc148598db2727bcbef",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud_layout_editor.html",
-          "line": 890,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud_layout_editor.html",
-          "line": 2205,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 70,
-      "maxComponentLength": 37,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方意图面板/enemy_intent_panel_shell_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 95920,
-      "sha256": "e22c274490d77a1aa845775325d44f81d6cae1207326517191f5b2aa2f1c3d44",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud-layout-data.js",
-          "line": 1144,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-runtime.js",
-          "line": 384,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 32,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo",
-        "ui.hud"
-      ],
-      "pathLength": 71,
-      "maxComponentLength": 38,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
-      ],
-      "identicalContentGroup": []
-    },
-    {
       "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方意图面板/enemy_intent_value_lane_asset_v1.png",
       "extension": ".png",
       "bytes": 834862,
@@ -4017,218 +3606,6 @@
       "risks": [
         "non_ascii_path",
         "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_armor_bar_shell_asset_v1.png",
-      "extension": ".png",
-      "bytes": 782472,
-      "sha256": "88b5803effbf27a86544425951e467bef243873279968b3aa93f1a52f973c984",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud_layout_editor.html",
-          "line": 888,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 65,
-      "maxComponentLength": 34,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_armor_bar_shell_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 58734,
-      "sha256": "e896173d2e3fb401f0d85aa2de17a871bb0e07511a1792dedb27b2a3f6fb4fa2",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud-runtime.js",
-          "line": 382,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 66,
-      "maxComponentLength": 35,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_hp_bar_shell_asset_v1.png",
-      "extension": ".png",
-      "bytes": 690949,
-      "sha256": "2c2fd41093ce1c7df8d0ec6cb75deee1990809ce8713a0e5c785630cf6d337a7",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud_layout_editor.html",
-          "line": 887,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 62,
-      "maxComponentLength": 31,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_hp_bar_shell_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 56086,
-      "sha256": "cc5872e264a248f2f19fe23baa95f97b6f449e906f1f34f4114040b88fa9ef7d",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud-runtime.js",
-          "line": 381,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 63,
-      "maxComponentLength": 32,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_nameplate_shell_asset_v1.png",
-      "extension": ".png",
-      "bytes": 824715,
-      "sha256": "42042462d90a4146cc30ed077a83f6caf7420a4cd0a503319fefc3207acc3e74",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud_layout_editor.html",
-          "line": 886,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 65,
-      "maxComponentLength": 34,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_nameplate_shell_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 64242,
-      "sha256": "6d2dbb5f8eb89a7096a84bc2bd3ebe68217afa52e43c897ee7569154c3cf4a29",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud-layout-data.js",
-          "line": 1061,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-runtime.js",
-          "line": 380,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 66,
-      "maxComponentLength": 35,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_portrait_frame_asset_v1.png",
-      "extension": ".png",
-      "bytes": 891314,
-      "sha256": "59ddc6b51b7940bf887aa10c1618259b3a48a45a17b3bb470ac31f66b731ad73",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud_layout_editor.html",
-          "line": 885,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 64,
-      "maxComponentLength": 33,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_portrait_frame_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 110958,
-      "sha256": "1c3b02368569d5ae87b6a5d50a7f3fa02dd30a0fcad8c263f859756bd90194fd",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud-layout-data.js",
-          "line": 1477,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-runtime.js",
-          "line": 379,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 65,
-      "maxComponentLength": 34,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
       ],
       "identicalContentGroup": []
     },
@@ -4335,22 +3712,6 @@
       "identicalContentGroup": []
     },
     {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/材质边框/frame_master_border_asset_v1.png",
-      "extension": ".png",
-      "bytes": 736680,
-      "sha256": "99627ce878b15fbc41e1f31ac4466e765de9d588083e7e4b735ea3d9ee05b77f",
-      "status": "source",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 63,
-      "maxComponentLength": 32,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
       "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/材质边框/glass_blue_panel_tile_asset_v1.png",
       "extension": ".png",
       "bytes": 2239051,
@@ -4436,426 +3797,6 @@
       "identicalContentGroup": []
     },
     {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/discard_pile_stack_asset_v1.png",
-      "extension": ".png",
-      "bytes": 1856516,
-      "sha256": "0abac899ca611cd71ba4bb58ad9ee362bd0c8097e213aebb290d7f7f3447157c",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud_layout_editor.html",
-          "line": 894,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 60,
-      "maxComponentLength": 31,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/discard_pile_stack_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 162566,
-      "sha256": "d2bd4f5f193af140849b10d6d3fa5a7b962cf7d3bfc043f9a12aff24bde86a7c",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud-layout-data.js",
-          "line": 184,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-runtime.js",
-          "line": 390,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 46,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo",
-        "ui.hud"
-      ],
-      "pathLength": 61,
-      "maxComponentLength": 32,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/draw_pile_stack_asset_v1.png",
-      "extension": ".png",
-      "bytes": 2107298,
-      "sha256": "4bfc0a29c5bb468dcf1f766a09383e82a24ac6949791b0f78e450980ca2dac9c",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud_layout_editor.html",
-          "line": 893,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 57,
-      "maxComponentLength": 28,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/draw_pile_stack_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 174140,
-      "sha256": "39ceb11564bfd2e37d3e6ef3eebc25c97e80a9fd0c2f287b8ae910174920dd55",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud-layout-data.js",
-          "line": 142,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-runtime.js",
-          "line": 389,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 45,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo",
-        "ui.hud"
-      ],
-      "pathLength": 58,
-      "maxComponentLength": 29,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/exile_pile_stack_asset_v1.png",
-      "extension": ".png",
-      "bytes": 2303887,
-      "sha256": "dc6e7c906a1495f8225c59cb34930e009180e371f6d2a1c78f5142f40a1d0d5d",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud_layout_editor.html",
-          "line": 895,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 58,
-      "maxComponentLength": 29,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/exile_pile_stack_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 216184,
-      "sha256": "a0fafed38511dd1bc53a155e898df2749349352554492252c4ae69afa40a8a3f",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud-layout-data.js",
-          "line": 226,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-runtime.js",
-          "line": 391,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 47,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo",
-        "ui.hud"
-      ],
-      "pathLength": 59,
-      "maxComponentLength": 30,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/pile_count_plate_asset_v1_transparent.png",
-      "extension": ".png",
-      "bytes": 1531383,
-      "sha256": "005526ed345548b3398387deef5af388d7abc95ca6ce7adaa3fc65dcf25f6140",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud_layout_editor.html",
-          "line": 2204,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 70,
-      "maxComponentLength": 41,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/pile_count_plate_asset_v1_transparent.webp",
-      "extension": ".webp",
-      "bytes": 54580,
-      "sha256": "0e75945f4c82528252b1e1d1631e1bacd2dfb9b90fad7505a8b39c9f01076a7c",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud-layout-data.js",
-          "line": 935,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-layout-data.js",
-          "line": 977,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-layout-data.js",
-          "line": 1019,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-runtime.js",
-          "line": 392,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-runtime.js",
-          "line": 393,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-runtime.js",
-          "line": 394,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 48,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo",
-        "ui.hud"
-      ],
-      "pathLength": 71,
-      "maxComponentLength": 42,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/enemy_status_bar_shell_asset_v1.png",
-      "extension": ".png",
-      "bytes": 1268680,
-      "sha256": "3e718f34e2a625fe264b4aa8ef9e2b8b992ea1ba4367861b4ed8cb91b0ccb0be",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud_layout_editor.html",
-          "line": 889,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 65,
-      "maxComponentLength": 35,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/enemy_status_bar_shell_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 108472,
-      "sha256": "d6c7c84bd7bc76f0857d0abd4e8448962cf13c61fb86695cdc1dfb1430256177",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud-runtime.js",
-          "line": 383,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 44,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo",
-        "ui.hud"
-      ],
-      "pathLength": 66,
-      "maxComponentLength": 36,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/player_status_bar_shell_asset_v1.png",
-      "extension": ".png",
-      "bytes": 1128872,
-      "sha256": "03884c35798d0d1ed56afd083adbd25ff9fccf6c4729264549e6587ec5d774f6",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud-group-final.json",
-          "line": 53,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud_layout_editor.html",
-          "line": 884,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 66,
-      "maxComponentLength": 36,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/player_status_bar_shell_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 126876,
-      "sha256": "6c091e9ce69eb4692ad193316f5707d48eb6782ece3e2b86d5677b7bafd4f039",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud-layout-data.js",
-          "line": 392,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-layout-data.js",
-          "line": 1186,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-layout-data.js",
-          "line": 1570,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-runtime.js",
-          "line": 376,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 43,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo",
-        "ui.hud"
-      ],
-      "pathLength": 67,
-      "maxComponentLength": 37,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
-      ],
-      "identicalContentGroup": []
-    },
-    {
       "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/status_socket_empty_asset_v1.png",
       "extension": ".png",
       "bytes": 1488992,
@@ -4882,346 +3823,6 @@
       "referenceModules": [],
       "pathLength": 66,
       "maxComponentLength": 36,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_armor_asset_v1.png",
-      "extension": ".png",
-      "bytes": 149567,
-      "sha256": "65baf75628889138cc26a3884ce998291715cc469b19727cfb64810fbe576373",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 60,
-      "maxComponentLength": 25,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_armor_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 52532,
-      "sha256": "1b6bfc824a7e5e1b2406cb2ecd757f58f6959c6242d622c80e4bba4c30ccb04f",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 61,
-      "maxComponentLength": 26,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_bleed_asset_v1.png",
-      "extension": ".png",
-      "bytes": 156674,
-      "sha256": "5934ea848b1c9364e74ef0c131332efc29d0514d87494e7b933f43443527cfd9",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 60,
-      "maxComponentLength": 25,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_bleed_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 54210,
-      "sha256": "bb43a7df63e2e769ba834ef9a3d3f0d44fc828b6b690909b05201943ff0ca5d2",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 61,
-      "maxComponentLength": 26,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_blood_asset_v1.png",
-      "extension": ".png",
-      "bytes": 163565,
-      "sha256": "d742dc8a81b126e9279fd19ba59019bc0e290672bb482d902a821e6585ef028a",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 60,
-      "maxComponentLength": 25,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_blood_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 55342,
-      "sha256": "dcc814bec28e803e441822b19c74beed4678c8f7afe8f974ea175c1ae02a14c0",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 61,
-      "maxComponentLength": 26,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_burn_asset_v1.png",
-      "extension": ".png",
-      "bytes": 143484,
-      "sha256": "61dea975e7ab1252de8fb6a21ecc4c7a07edaf1d26eae56437da371015f84382",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 59,
-      "maxComponentLength": 24,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_burn_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 51302,
-      "sha256": "9ff09d611f078a05ef35d1ce2562f046f74c203b07267f02cde83ca8c86a69d4",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 60,
-      "maxComponentLength": 25,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_charge_asset_v1.png",
-      "extension": ".png",
-      "bytes": 146600,
-      "sha256": "629076cabd3e6f3da02679a189dc00fa5ed51c74f58b61b4bfdfabbf554ffe04",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 61,
-      "maxComponentLength": 26,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_charge_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 50146,
-      "sha256": "fc42ca0526513cbba7ede076a1b721253880b577dd66816085ae0531fe0669ab",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 62,
-      "maxComponentLength": 27,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_counter_asset_v1.png",
-      "extension": ".png",
-      "bytes": 147008,
-      "sha256": "c00f47cc4e798fce60268a3b1a3dba9a43034db064cbe9a09f3d55ba688d67ff",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 62,
-      "maxComponentLength": 27,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_counter_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 50494,
-      "sha256": "63e6af357f6074407afb2b6fc118982613660463948dab63de82e8cbf71de361",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 63,
-      "maxComponentLength": 28,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_curse_asset_v1.png",
-      "extension": ".png",
-      "bytes": 156464,
-      "sha256": "402300e59e882572adada4c90fc9e7a494eb1316d6faf9db0662a5d88a7eca4d",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 60,
-      "maxComponentLength": 25,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_curse_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 52730,
-      "sha256": "972bd17ac3afa44f96f6360ea853247c46cf35dc5695de59af64bcab33e2205e",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 61,
-      "maxComponentLength": 26,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_echo_asset_v1.png",
-      "extension": ".png",
-      "bytes": 181806,
-      "sha256": "3991a46b33646163ee5194568ab62032875189692f3d4d0f2d27f0ab77b1fc06",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 59,
-      "maxComponentLength": 24,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_echo_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 55880,
-      "sha256": "d15008713c64af6fb3b3445390929419728165e050ff1a6470bd6aa0d31c1a56",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 60,
-      "maxComponentLength": 25,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_enchant_asset_v1.png",
-      "extension": ".png",
-      "bytes": 143574,
-      "sha256": "f7758e9a1f1a43554d967720df71eca7d953579df11299d3271e788c486ec836",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 62,
-      "maxComponentLength": 27,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_enchant_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 49824,
-      "sha256": "dd885be8185a377ef156ce85aba8be50a09980a57eec4d31b21c6cedd4e6f354",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 63,
-      "maxComponentLength": 28,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_guard_asset_v1.png",
-      "extension": ".png",
-      "bytes": 149362,
-      "sha256": "19c1b35d49d1827370d871a00ceb8fdf039ecafd88e2610cc8cc56a69cc301c1",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 60,
-      "maxComponentLength": 25,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_guard_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 52062,
-      "sha256": "69a8b78da3af6f204ea1950313c94f1be34a9ecdd0d2bb67573a86928173d798",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 61,
-      "maxComponentLength": 26,
       "containsNonAscii": true,
       "risks": [
         "non_ascii_path",
@@ -5264,662 +3865,6 @@
       "identicalContentGroup": []
     },
     {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_poison_asset_v1.png",
-      "extension": ".png",
-      "bytes": 150473,
-      "sha256": "d44f7a738defcc4cebac5134cf572c56e0df36b3265b8b70c188e63fe00f82d3",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 61,
-      "maxComponentLength": 26,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_poison_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 51388,
-      "sha256": "404d5be62196b152a79571d421f8e264fbb54296b77e3611dd68e755a0c64920",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 62,
-      "maxComponentLength": 27,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_str_asset_v1.png",
-      "extension": ".png",
-      "bytes": 144199,
-      "sha256": "227df47eb1017c84cb0de05a9486ee6b7cc1d12122d893504a1f0e32b3eceed5",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 58,
-      "maxComponentLength": 23,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_str_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 50810,
-      "sha256": "4e1ee31c6ba61841efa260c5f69bd5409a43395557559f3acacbe5467380f96d",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 59,
-      "maxComponentLength": 24,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_stun_asset_v1.png",
-      "extension": ".png",
-      "bytes": 159360,
-      "sha256": "21fccccf7b75c81ef6c83c86b0783dbdedb2c2611f6ef5b8454c6db1f21b1bd7",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 59,
-      "maxComponentLength": 24,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_stun_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 53732,
-      "sha256": "a59f28d0f6029549baa19123686f4a3bcdbc736067df6350f924a6aa0f003291",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 60,
-      "maxComponentLength": 25,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_thorns_asset_v1.png",
-      "extension": ".png",
-      "bytes": 165956,
-      "sha256": "5be3dbfba88e543a66af0ed03246e94eb20cc312f88afb6bee8dc9b0dad98a95",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 61,
-      "maxComponentLength": 26,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_thorns_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 54760,
-      "sha256": "11d33d45e4b32178bb77186dcddedbf0b690aaf03d800fd032a05d2933979b74",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 62,
-      "maxComponentLength": 27,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_vuln_asset_v1.png",
-      "extension": ".png",
-      "bytes": 172325,
-      "sha256": "49072e7039921451ffb70f6f325a6579762014ded8f8b51e21c4fb0e3bfb25c1",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 59,
-      "maxComponentLength": 24,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_vuln_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 55442,
-      "sha256": "70fc0c9597f5a9d0e10bbfad6993a2f7dde224b354fe3a1f8b2b23e6dddbb35e",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 60,
-      "maxComponentLength": 25,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_weak_asset_v1.png",
-      "extension": ".png",
-      "bytes": 151506,
-      "sha256": "32ccd7c6ad8f789d4f1957859f36e0f40c797d9e76f05bd4354f53a901868ea5",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 59,
-      "maxComponentLength": 24,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_weak_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 51134,
-      "sha256": "88573068979c5f40eee547084abdee4490792eda7137ff19cda1aed092dcd087",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 60,
-      "maxComponentLength": 25,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/avatar_circle_gray_base_asset_v1.png",
-      "extension": ".png",
-      "bytes": 1606121,
-      "sha256": "601039e38609b5d1627d45cae387760af01bdfd8425f3acbaa5951cb50aef4a5",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud_layout_editor.html",
-          "line": 2202,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 67,
-      "maxComponentLength": 36,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "identical_content"
-      ],
-      "identicalContentGroup": [
-        "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/avatar_circle_gray_base_asset_v1.png",
-        "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/程序集缓存/avatar_circle_gray_base_asset_v1.png",
-        "tmp_hud_group2_assets/avatar_circle_gray_base_asset_v1.png"
-      ]
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/avatar_circle_gray_base_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 95058,
-      "sha256": "def5afa3cfc02e7970878bf197e265e9cf5fd9024e02f2dc8440564eaaf13b37",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud-layout-data.js",
-          "line": 852,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-layout-data.js",
-          "line": 1436,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-layout-data.js",
-          "line": 1735,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 68,
-      "maxComponentLength": 37,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_armor_bar_shell_asset_v1.png",
-      "extension": ".png",
-      "bytes": 728715,
-      "sha256": "79bb1c1b47786b7990ceadd675ac731dc84f268b830348e72c398e22275ec8f5",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud_layout_editor.html",
-          "line": 880,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 66,
-      "maxComponentLength": 35,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_armor_bar_shell_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 55478,
-      "sha256": "75a328e199bfc6a692054fd6a38d8c3b07bb94702fbb820cb6ff700ea95ec945",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud-runtime.js",
-          "line": 374,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 39,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo",
-        "ui.hud"
-      ],
-      "pathLength": 67,
-      "maxComponentLength": 36,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_off_asset_v1.png",
-      "extension": ".png",
-      "bytes": 1010228,
-      "sha256": "f77b609aa1f37c36218dcddf394e812abf20195b15113a98e101d28912a3dce9",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud_layout_editor.html",
-          "line": 883,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 65,
-      "maxComponentLength": 34,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_off_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 74964,
-      "sha256": "3bbcdd44c22b722899cd5a94922a8639ad43a99d268543145b2349b8b5cb4348",
-      "status": "active",
-      "references": [
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 42,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo"
-      ],
-      "pathLength": 66,
-      "maxComponentLength": 35,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_on_asset_v1.png",
-      "extension": ".png",
-      "bytes": 933878,
-      "sha256": "cae0f3f232413187f224ab3ebce1ad1087c3ad73a83c985373441972af196dee",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud-group-final.json",
-          "line": 68,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-group-final.json",
-          "line": 83,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-group-final.json",
-          "line": 98,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-group-final.json",
-          "line": 113,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-group-final.json",
-          "line": 128,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud_layout_editor.html",
-          "line": 882,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 64,
-      "maxComponentLength": 33,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_on_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 68666,
-      "sha256": "2a395b128f7b31f92ead9395ab0e491133080f99af4db2e66fe6925c7579ced9",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud-layout-data.js",
-          "line": 434,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-layout-data.js",
-          "line": 476,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-layout-data.js",
-          "line": 518,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-layout-data.js",
-          "line": 560,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-layout-data.js",
-          "line": 602,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-layout-data.js",
-          "line": 1585,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-layout-data.js",
-          "line": 1600,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-layout-data.js",
-          "line": 1615,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-layout-data.js",
-          "line": 1630,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-layout-data.js",
-          "line": 1645,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-runtime.js",
-          "line": 397,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 41,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo",
-        "ui.hud"
-      ],
-      "pathLength": 65,
-      "maxComponentLength": 34,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_tray_asset_v1.png",
-      "extension": ".png",
-      "bytes": 1090213,
-      "sha256": "cbe8c9e1bfde1aad03e7106d3a0ac15584f0e69b86fb308bbabfd3b3f5a1bcc9",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud_layout_editor.html",
-          "line": 881,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 62,
-      "maxComponentLength": 31,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_tray_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 82836,
-      "sha256": "f5d05f1b72382ef80206a7157e07da975c48d38a19a150170d4859e5d36f8d7c",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud-runtime.js",
-          "line": 375,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 40,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo",
-        "ui.hud"
-      ],
-      "pathLength": 63,
-      "maxComponentLength": 32,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_tray_asset_v1_no_circles_transparent.png",
-      "extension": ".png",
-      "bytes": 1132763,
-      "sha256": "83e1325bdd8e6875ded4346d0915f0c0a02c065d198ebf106d1facd063ff6369",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud_layout_editor.html",
-          "line": 2203,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 85,
-      "maxComponentLength": 54,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component",
-        "identical_content"
-      ],
-      "identicalContentGroup": [
-        "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_tray_asset_v1_no_circles_transparent.png",
-        "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/程序集缓存/player_energy_tray_asset_v1_no_circles_transparent.png",
-        "tmp_hud_group2_assets/player_energy_tray_asset_v1_no_circles_transparent.png"
-      ]
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_tray_asset_v1_no_circles_transparent.webp",
-      "extension": ".webp",
-      "bytes": 73380,
-      "sha256": "bc47f9054e71e850fcdd73699619c12b738979c4766d71ae7bc7457ac3e48520",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud-layout-data.js",
-          "line": 351,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-layout-data.js",
-          "line": 1555,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 3222,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo",
-        "ui.hud"
-      ],
-      "pathLength": 86,
-      "maxComponentLength": 55,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component",
-        "multi_module_reference"
-      ],
-      "identicalContentGroup": []
-    },
-    {
       "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_damage_mask_asset_v1.png",
       "extension": ".png",
       "bytes": 12845,
@@ -5937,22 +3882,6 @@
       "identicalContentGroup": []
     },
     {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_damage_preview_v1.png",
-      "extension": ".png",
-      "bytes": 771998,
-      "sha256": "9b351d05c7f57f3e28f83c52c40d0cdaa8e70128b29f4477683f4fc3cb4665b8",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 66,
-      "maxComponentLength": 35,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
       "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_empty_frame_asset_v1.png",
       "extension": ".png",
       "bytes": 377797,
@@ -5966,86 +3895,6 @@
       "risks": [
         "non_ascii_path",
         "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_empty_frame_editor_asset_v1.png",
-      "extension": ".png",
-      "bytes": 370998,
-      "sha256": "c185ce13dfcfea2194a3826c5fcf8496e1f3f2bca20789c6277790539764fc13",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud-group-final.json",
-          "line": 203,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud_layout_editor.html",
-          "line": 900,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud_layout_editor.html",
-          "line": 917,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 76,
-      "maxComponentLength": 45,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_empty_frame_editor_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 36598,
-      "sha256": "e90154102e2dca8bdabf4c10dcb245bfef8a228b8fa5e716ec5b7948b07e6b92",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud-layout-data.js",
-          "line": 810,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-layout-data.js",
-          "line": 1394,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-layout-data.js",
-          "line": 1720,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-layout-data.js",
-          "line": 1832,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 77,
-      "maxComponentLength": 46,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
       ],
       "identicalContentGroup": []
     },
@@ -6080,86 +3929,6 @@
       "risks": [
         "non_ascii_path",
         "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_heart_fill_editor_asset_v1.png",
-      "extension": ".png",
-      "bytes": 28766,
-      "sha256": "3bfdaaf05a023d2f9c2988dd413b4f6514ecff96e4fc2c37922d093ac7d20e33",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud-group-final.json",
-          "line": 188,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud_layout_editor.html",
-          "line": 901,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud_layout_editor.html",
-          "line": 916,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 75,
-      "maxComponentLength": 44,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_heart_fill_editor_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 4350,
-      "sha256": "22bcb3127e68736093c2a5e479c6f21fc927ebde927a44802828143c34ae8c03",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud-layout-data.js",
-          "line": 769,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-layout-data.js",
-          "line": 1353,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-layout-data.js",
-          "line": 1705,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-layout-data.js",
-          "line": 1817,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 76,
-      "maxComponentLength": 45,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
       ],
       "identicalContentGroup": []
     },
@@ -6199,531 +3968,6 @@
       "identicalContentGroup": []
     },
     {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_damage_trail_editor_asset_v1.png",
-      "extension": ".png",
-      "bytes": 491070,
-      "sha256": "21ad1d52baeb213f291612af2f1717f248d943a496a8dfe12689946613837ed8",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud-group-final.json",
-          "line": 158,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud_layout_editor.html",
-          "line": 903,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud_layout_editor.html",
-          "line": 914,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 87,
-      "maxComponentLength": 56,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_damage_trail_editor_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 39922,
-      "sha256": "487f14f119c7b18e08707ff8bd6ef20d195586f715074affe4da864aebb966e1",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud-layout-data.js",
-          "line": 685,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-layout-data.js",
-          "line": 1269,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-layout-data.js",
-          "line": 1675,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-layout-data.js",
-          "line": 1787,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 88,
-      "maxComponentLength": 57,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_editor_asset_v1.png",
-      "extension": ".png",
-      "bytes": 487708,
-      "sha256": "7e426ec2ac73dc1b8263f34becdf343c0a110b3f27aa312351a6c2a75356b67e",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud-group-final.json",
-          "line": 173,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud_layout_editor.html",
-          "line": 904,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud_layout_editor.html",
-          "line": 915,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 74,
-      "maxComponentLength": 43,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_editor_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 34334,
-      "sha256": "f568c834e9c900d87c801e28ece215910e7ba5960e0e6a0e5d98abc25a99dfbe",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud-layout-data.js",
-          "line": 727,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-layout-data.js",
-          "line": 1311,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-layout-data.js",
-          "line": 1690,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-layout-data.js",
-          "line": 1802,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 75,
-      "maxComponentLength": 44,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_asset_v1.png",
-      "extension": ".png",
-      "bytes": 176556,
-      "sha256": "033684e88e3ffc1a706392b2fc37f5483416c084c23bc9f42e353a4eb9d8b67f",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud_layout_editor.html",
-          "line": 2201,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 77,
-      "maxComponentLength": 46,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "identical_content"
-      ],
-      "identicalContentGroup": [
-        "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_asset_v1.png",
-        "tmp_hud_group2_assets/player_hp_bar_long_fill_gray_base_asset_v1.png"
-      ]
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 12392,
-      "sha256": "a8e401d34094377557509e385cf66b8a74985258011d75d0ecc1ef13f8a93876",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud-layout-data.js",
-          "line": 268,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-layout-data.js",
-          "line": 1103,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-layout-data.js",
-          "line": 1525,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 78,
-      "maxComponentLength": 47,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_editor_asset_v1.png",
-      "extension": ".png",
-      "bytes": 158424,
-      "sha256": "0d9845fb0c17b2baeb3d3e687db1819bc7991a7019e8bf3fcaa57505ff239f98",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud-group-final.json",
-          "line": 143,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud_layout_editor.html",
-          "line": 902,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud_layout_editor.html",
-          "line": 913,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 84,
-      "maxComponentLength": 53,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component",
-        "identical_content"
-      ],
-      "identicalContentGroup": [
-        "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_editor_asset_v1.png",
-        "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/status_bar_long_gray_base_asset_v1.png",
-        "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/程序集缓存/status_bar_long_gray_base_asset_v1.png"
-      ]
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_editor_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 10036,
-      "sha256": "a4dbb09806b6b55b15a0cef83d714734e1b9eef63c57238e34b64f4b9eedfc0c",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud-layout-data.js",
-          "line": 644,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-layout-data.js",
-          "line": 1228,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-layout-data.js",
-          "line": 1660,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-layout-data.js",
-          "line": 1772,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 85,
-      "maxComponentLength": 54,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_shell_asset_v1.png",
-      "extension": ".png",
-      "bytes": 701880,
-      "sha256": "0557f109dd9d0e14a0e83549c197660ecf29116bb9a3e4550aad14b116c98838",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud_layout_editor.html",
-          "line": 879,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 63,
-      "maxComponentLength": 32,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_shell_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 48266,
-      "sha256": "c14ab233d2197fc0c85dfe35bb6c7809a282ea6df2408bf09dd93fe6cb24aa69",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud-runtime.js",
-          "line": 373,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 38,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo",
-        "ui.hud"
-      ],
-      "pathLength": 64,
-      "maxComponentLength": 33,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_nameplate_shell_asset_v1.png",
-      "extension": ".png",
-      "bytes": 847022,
-      "sha256": "b3ca3f3f925fcd71fa587a5dfcb9d37276477ad783c81802374bf16b910c2375",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud-group-final.json",
-          "line": 23,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud_layout_editor.html",
-          "line": 878,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 66,
-      "maxComponentLength": 35,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_nameplate_shell_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 60544,
-      "sha256": "ca401dae3bd82c8252b64a8b50c8be5d0212d9f4d297bbb2049fae658baa8403",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud-layout-data.js",
-          "line": 309,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-layout-data.js",
-          "line": 1540,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-runtime.js",
-          "line": 372,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 37,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo",
-        "ui.hud"
-      ],
-      "pathLength": 67,
-      "maxComponentLength": 36,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_portrait_frame_asset_v1.png",
-      "extension": ".png",
-      "bytes": 883168,
-      "sha256": "72caebf0a4a6ccfea5c47ac00820a0218e07b478c26e5ebda8c0ef6c38000e4c",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud-group-final.json",
-          "line": 233,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud_layout_editor.html",
-          "line": 877,
-          "module": "ui.hud",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "ui.hud"
-      ],
-      "pathLength": 65,
-      "maxComponentLength": 34,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_portrait_frame_asset_v1.webp",
-      "extension": ".webp",
-      "bytes": 111258,
-      "sha256": "68d5024efa3a14f07cbd8bab986c6e70593fd39b7c9759995b42c7fbd0ef70be",
-      "status": "active",
-      "references": [
-        {
-          "file": "hud-layout-data.js",
-          "line": 893,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-layout-data.js",
-          "line": 1750,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "hud-runtime.js",
-          "line": 371,
-          "module": "ui.hud",
-          "kind": "runtime"
-        },
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 36,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo",
-        "ui.hud"
-      ],
-      "pathLength": 66,
-      "maxComponentLength": 35,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
-      ],
-      "identicalContentGroup": []
-    },
-    {
       "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/status_bar_long_gray_base_asset_v1.png",
       "extension": ".png",
       "bytes": 158424,
@@ -6740,9 +3984,9 @@
         "identical_content"
       ],
       "identicalContentGroup": [
-        "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_editor_asset_v1.png",
         "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/status_bar_long_gray_base_asset_v1.png",
-        "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/程序集缓存/status_bar_long_gray_base_asset_v1.png"
+        "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/程序集缓存/status_bar_long_gray_base_asset_v1.png",
+        "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_editor_asset_v1.png"
       ]
     },
     {
@@ -6762,8 +4006,8 @@
         "identical_content"
       ],
       "identicalContentGroup": [
-        "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/avatar_circle_gray_base_asset_v1.png",
         "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/程序集缓存/avatar_circle_gray_base_asset_v1.png",
+        "assets/ui/hud/player_panel/avatar_circle_gray_base_asset_v1.png",
         "tmp_hud_group2_assets/avatar_circle_gray_base_asset_v1.png"
       ]
     },
@@ -6785,8 +4029,8 @@
         "identical_content"
       ],
       "identicalContentGroup": [
-        "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_tray_asset_v1_no_circles_transparent.png",
         "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/程序集缓存/player_energy_tray_asset_v1_no_circles_transparent.png",
+        "assets/ui/hud/player_panel/player_energy_tray_asset_v1_no_circles_transparent.png",
         "tmp_hud_group2_assets/player_energy_tray_asset_v1_no_circles_transparent.png"
       ]
     },
@@ -6807,9 +4051,9 @@
         "identical_content"
       ],
       "identicalContentGroup": [
-        "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_editor_asset_v1.png",
         "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/status_bar_long_gray_base_asset_v1.png",
-        "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/程序集缓存/status_bar_long_gray_base_asset_v1.png"
+        "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/程序集缓存/status_bar_long_gray_base_asset_v1.png",
+        "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_editor_asset_v1.png"
       ]
     },
     {
@@ -8255,6 +5499,62 @@
       "referenceModules": [],
       "pathLength": 58,
       "maxComponentLength": 33,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/hud/player_panel/player_hp_bar_damage_preview_v1.png",
+      "extension": ".png",
+      "bytes": 771998,
+      "sha256": "9b351d05c7f57f3e28f83c52c40d0cdaa8e70128b29f4477683f4fc3cb4665b8",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 73,
+      "maxComponentLength": 35,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/hud/split_previews/battle_hud_discard_pile_clean_preview_v1.png",
+      "extension": ".png",
+      "bytes": 73545,
+      "sha256": "c8bf812a886deda7f21448533c389fbc7fc5940727952abcac03e09f69b0efd0",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 84,
+      "maxComponentLength": 44,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/hud/split_previews/battle_hud_draw_pile_clean_preview_v1.png",
+      "extension": ".png",
+      "bytes": 79566,
+      "sha256": "5496bdae7bf9e9973180a5eeec940fc9e147a7af5e70c694f8c477fb8797c706",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 81,
+      "maxComponentLength": 41,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/hud/split_previews/battle_hud_exile_pile_clean_preview_v1.png",
+      "extension": ".png",
+      "bytes": 78171,
+      "sha256": "10f68a715ce97810a091243706dcde32b7b137ac34128da9a32509a62e0de797",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 82,
+      "maxComponentLength": 42,
       "containsNonAscii": false,
       "risks": [],
       "identicalContentGroup": []
@@ -21389,6 +18689,244 @@
       ]
     },
     {
+      "path": "assets/source/ui/hud/materials/frame_master_border_asset_v1_source.png",
+      "extension": ".png",
+      "bytes": 736680,
+      "sha256": "99627ce878b15fbc41e1f31ac4466e765de9d588083e7e4b735ea3d9ee05b77f",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 70,
+      "maxComponentLength": 39,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/hud/status_icons/status_armor_asset_v1_source.png",
+      "extension": ".png",
+      "bytes": 149567,
+      "sha256": "65baf75628889138cc26a3884ce998291715cc469b19727cfb64810fbe576373",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 66,
+      "maxComponentLength": 32,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/hud/status_icons/status_bleed_asset_v1_source.png",
+      "extension": ".png",
+      "bytes": 156674,
+      "sha256": "5934ea848b1c9364e74ef0c131332efc29d0514d87494e7b933f43443527cfd9",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 66,
+      "maxComponentLength": 32,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/hud/status_icons/status_blood_asset_v1_source.png",
+      "extension": ".png",
+      "bytes": 163565,
+      "sha256": "d742dc8a81b126e9279fd19ba59019bc0e290672bb482d902a821e6585ef028a",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 66,
+      "maxComponentLength": 32,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/hud/status_icons/status_burn_asset_v1_source.png",
+      "extension": ".png",
+      "bytes": 143484,
+      "sha256": "61dea975e7ab1252de8fb6a21ecc4c7a07edaf1d26eae56437da371015f84382",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 65,
+      "maxComponentLength": 31,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/hud/status_icons/status_charge_asset_v1_source.png",
+      "extension": ".png",
+      "bytes": 146600,
+      "sha256": "629076cabd3e6f3da02679a189dc00fa5ed51c74f58b61b4bfdfabbf554ffe04",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 67,
+      "maxComponentLength": 33,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/hud/status_icons/status_counter_asset_v1_source.png",
+      "extension": ".png",
+      "bytes": 147008,
+      "sha256": "c00f47cc4e798fce60268a3b1a3dba9a43034db064cbe9a09f3d55ba688d67ff",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 68,
+      "maxComponentLength": 34,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/hud/status_icons/status_curse_asset_v1_source.png",
+      "extension": ".png",
+      "bytes": 156464,
+      "sha256": "402300e59e882572adada4c90fc9e7a494eb1316d6faf9db0662a5d88a7eca4d",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 66,
+      "maxComponentLength": 32,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/hud/status_icons/status_echo_asset_v1_source.png",
+      "extension": ".png",
+      "bytes": 181806,
+      "sha256": "3991a46b33646163ee5194568ab62032875189692f3d4d0f2d27f0ab77b1fc06",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 65,
+      "maxComponentLength": 31,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/hud/status_icons/status_enchant_asset_v1_source.png",
+      "extension": ".png",
+      "bytes": 143574,
+      "sha256": "f7758e9a1f1a43554d967720df71eca7d953579df11299d3271e788c486ec836",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 68,
+      "maxComponentLength": 34,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/hud/status_icons/status_guard_asset_v1_source.png",
+      "extension": ".png",
+      "bytes": 149362,
+      "sha256": "19c1b35d49d1827370d871a00ceb8fdf039ecafd88e2610cc8cc56a69cc301c1",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 66,
+      "maxComponentLength": 32,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/hud/status_icons/status_poison_asset_v1_source.png",
+      "extension": ".png",
+      "bytes": 150473,
+      "sha256": "d44f7a738defcc4cebac5134cf572c56e0df36b3265b8b70c188e63fe00f82d3",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 67,
+      "maxComponentLength": 33,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/hud/status_icons/status_str_asset_v1_source.png",
+      "extension": ".png",
+      "bytes": 144199,
+      "sha256": "227df47eb1017c84cb0de05a9486ee6b7cc1d12122d893504a1f0e32b3eceed5",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 64,
+      "maxComponentLength": 30,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/hud/status_icons/status_stun_asset_v1_source.png",
+      "extension": ".png",
+      "bytes": 159360,
+      "sha256": "21fccccf7b75c81ef6c83c86b0783dbdedb2c2611f6ef5b8454c6db1f21b1bd7",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 65,
+      "maxComponentLength": 31,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/hud/status_icons/status_thorns_asset_v1_source.png",
+      "extension": ".png",
+      "bytes": 165956,
+      "sha256": "5be3dbfba88e543a66af0ed03246e94eb20cc312f88afb6bee8dc9b0dad98a95",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 67,
+      "maxComponentLength": 33,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/hud/status_icons/status_vuln_asset_v1_source.png",
+      "extension": ".png",
+      "bytes": 172325,
+      "sha256": "49072e7039921451ffb70f6f325a6579762014ded8f8b51e21c4fb0e3bfb25c1",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 65,
+      "maxComponentLength": 31,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/hud/status_icons/status_weak_asset_v1_source.png",
+      "extension": ".png",
+      "bytes": 151506,
+      "sha256": "32ccd7c6ad8f789d4f1957859f36e0f40c797d9e76f05bd4354f53a901868ea5",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 65,
+      "maxComponentLength": 31,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
       "path": "assets/source/ui/menu/main_menu_key_art_v1_source.png",
       "extension": ".png",
       "bytes": 2680109,
@@ -21400,6 +18938,2303 @@
       "maxComponentLength": 31,
       "containsNonAscii": false,
       "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/center_controls/end_turn_button_shell_asset_v1.png",
+      "extension": ".png",
+      "bytes": 1365592,
+      "sha256": "9c6a981fd6a8ad0e9945604855207b8c8c26c6727d4730c00df4453461477a6c",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 891,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 64,
+      "maxComponentLength": 34,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/center_controls/end_turn_button_shell_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 112580,
+      "sha256": "9ffa9f4e957ac4211f234687fb69589b1ae241b038a53c6ef90f3a612bd0820a",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 58,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-runtime.js",
+          "line": 387,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 33,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "pathLength": 65,
+      "maxComponentLength": 35,
+      "containsNonAscii": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/center_controls/turn_counter_inner_dial_asset_v1.png",
+      "extension": ".png",
+      "bytes": 1427776,
+      "sha256": "6f0207e9244e1f62ae28e651158a69ef5a6d1fd06aff679bb78778169bdef350",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 892,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud_layout_editor.html",
+          "line": 2206,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 66,
+      "maxComponentLength": 36,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/center_controls/turn_counter_inner_dial_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 112262,
+      "sha256": "fcbc8c5d4917abeccc243b3b4dbbd7e80dbcbe95a8feb5b71e8559de2d49e343",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 100,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-runtime.js",
+          "line": 388,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 34,
+          "module": "demo",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 3296,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "pathLength": 67,
+      "maxComponentLength": 37,
+      "containsNonAscii": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/enemy_intent/enemy_intent_panel_shell_asset_v1.png",
+      "extension": ".png",
+      "bytes": 1143687,
+      "sha256": "ba4686abf693d9e31a3940542724f4986298d4f6d62cdbc148598db2727bcbef",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 890,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud_layout_editor.html",
+          "line": 2205,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 64,
+      "maxComponentLength": 37,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/enemy_intent/enemy_intent_panel_shell_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 95920,
+      "sha256": "e22c274490d77a1aa845775325d44f81d6cae1207326517191f5b2aa2f1c3d44",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 1144,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-runtime.js",
+          "line": 384,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 32,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "pathLength": 65,
+      "maxComponentLength": 38,
+      "containsNonAscii": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/enemy_panel/battle_hud_enemy_panel_asset_v1.png",
+      "extension": ".png",
+      "bytes": 1463254,
+      "sha256": "9ae26a8401df5c0a0cd9a846416ac6a9e4ff9e4c26219673f861256a51b7e13a",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 899,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 61,
+      "maxComponentLength": 35,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/enemy_panel/battle_hud_enemy_panel_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 126362,
+      "sha256": "23a8d3166ef4cb8df0f1fe1eac2d50c686379cd7ab8811549664e95368925f44",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud-runtime.js",
+          "line": 378,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 31,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "pathLength": 62,
+      "maxComponentLength": 36,
+      "containsNonAscii": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/enemy_panel/enemy_armor_bar_shell_asset_v1.png",
+      "extension": ".png",
+      "bytes": 782472,
+      "sha256": "88b5803effbf27a86544425951e467bef243873279968b3aa93f1a52f973c984",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 888,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 60,
+      "maxComponentLength": 34,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/enemy_panel/enemy_armor_bar_shell_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 58734,
+      "sha256": "e896173d2e3fb401f0d85aa2de17a871bb0e07511a1792dedb27b2a3f6fb4fa2",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud-runtime.js",
+          "line": 382,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 61,
+      "maxComponentLength": 35,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/enemy_panel/enemy_hp_bar_shell_asset_v1.png",
+      "extension": ".png",
+      "bytes": 690949,
+      "sha256": "2c2fd41093ce1c7df8d0ec6cb75deee1990809ce8713a0e5c785630cf6d337a7",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 887,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 57,
+      "maxComponentLength": 31,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/enemy_panel/enemy_hp_bar_shell_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 56086,
+      "sha256": "cc5872e264a248f2f19fe23baa95f97b6f449e906f1f34f4114040b88fa9ef7d",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud-runtime.js",
+          "line": 381,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 58,
+      "maxComponentLength": 32,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/enemy_panel/enemy_nameplate_shell_asset_v1.png",
+      "extension": ".png",
+      "bytes": 824715,
+      "sha256": "42042462d90a4146cc30ed077a83f6caf7420a4cd0a503319fefc3207acc3e74",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 886,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 60,
+      "maxComponentLength": 34,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/enemy_panel/enemy_nameplate_shell_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 64242,
+      "sha256": "6d2dbb5f8eb89a7096a84bc2bd3ebe68217afa52e43c897ee7569154c3cf4a29",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 1061,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-runtime.js",
+          "line": 380,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 61,
+      "maxComponentLength": 35,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/enemy_panel/enemy_portrait_frame_asset_v1.png",
+      "extension": ".png",
+      "bytes": 891314,
+      "sha256": "59ddc6b51b7940bf887aa10c1618259b3a48a45a17b3bb470ac31f66b731ad73",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 885,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 59,
+      "maxComponentLength": 33,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/enemy_panel/enemy_portrait_frame_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 110958,
+      "sha256": "1c3b02368569d5ae87b6a5d50a7f3fa02dd30a0fcad8c263f859756bd90194fd",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 1477,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-runtime.js",
+          "line": 379,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 60,
+      "maxComponentLength": 34,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/hand_tray/hand_fan_tray_shell_asset_v1.png",
+      "extension": ".png",
+      "bytes": 1481588,
+      "sha256": "75e774917f8f5b3d4321ccea4deedd7e76baea0469cf63f1cf1aa41e80b80633",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 897,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 56,
+      "maxComponentLength": 32,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/hand_tray/hand_fan_tray_shell_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 107970,
+      "sha256": "56d36504a8475e534ae22b600d40cb42c9ef179ff2b32b1f54c39002fa48aaf5",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 16,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-runtime.js",
+          "line": 386,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 35,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "pathLength": 57,
+      "maxComponentLength": 33,
+      "containsNonAscii": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/piles/discard_pile_stack_asset_v1.png",
+      "extension": ".png",
+      "bytes": 1856516,
+      "sha256": "0abac899ca611cd71ba4bb58ad9ee362bd0c8097e213aebb290d7f7f3447157c",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 894,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 51,
+      "maxComponentLength": 31,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/piles/discard_pile_stack_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 162566,
+      "sha256": "d2bd4f5f193af140849b10d6d3fa5a7b962cf7d3bfc043f9a12aff24bde86a7c",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 184,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-runtime.js",
+          "line": 390,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 46,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "pathLength": 52,
+      "maxComponentLength": 32,
+      "containsNonAscii": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/piles/draw_pile_stack_asset_v1.png",
+      "extension": ".png",
+      "bytes": 2107298,
+      "sha256": "4bfc0a29c5bb468dcf1f766a09383e82a24ac6949791b0f78e450980ca2dac9c",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 893,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 48,
+      "maxComponentLength": 28,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/piles/draw_pile_stack_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 174140,
+      "sha256": "39ceb11564bfd2e37d3e6ef3eebc25c97e80a9fd0c2f287b8ae910174920dd55",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 142,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-runtime.js",
+          "line": 389,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 45,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "pathLength": 49,
+      "maxComponentLength": 29,
+      "containsNonAscii": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/piles/exile_pile_stack_asset_v1.png",
+      "extension": ".png",
+      "bytes": 2303887,
+      "sha256": "dc6e7c906a1495f8225c59cb34930e009180e371f6d2a1c78f5142f40a1d0d5d",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 895,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 49,
+      "maxComponentLength": 29,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/piles/exile_pile_stack_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 216184,
+      "sha256": "a0fafed38511dd1bc53a155e898df2749349352554492252c4ae69afa40a8a3f",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 226,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-runtime.js",
+          "line": 391,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 47,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "pathLength": 50,
+      "maxComponentLength": 30,
+      "containsNonAscii": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/piles/pile_count_plate_asset_v1_transparent.png",
+      "extension": ".png",
+      "bytes": 1531383,
+      "sha256": "005526ed345548b3398387deef5af388d7abc95ca6ce7adaa3fc65dcf25f6140",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 896,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud_layout_editor.html",
+          "line": 2204,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 61,
+      "maxComponentLength": 41,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/piles/pile_count_plate_asset_v1_transparent.webp",
+      "extension": ".webp",
+      "bytes": 54580,
+      "sha256": "0e75945f4c82528252b1e1d1631e1bacd2dfb9b90fad7505a8b39c9f01076a7c",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 935,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 977,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1019,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-runtime.js",
+          "line": 392,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-runtime.js",
+          "line": 393,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-runtime.js",
+          "line": 394,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 48,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "pathLength": 62,
+      "maxComponentLength": 42,
+      "containsNonAscii": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/player_panel/avatar_circle_gray_base_asset_v1.png",
+      "extension": ".png",
+      "bytes": 1606121,
+      "sha256": "601039e38609b5d1627d45cae387760af01bdfd8425f3acbaa5951cb50aef4a5",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 2202,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 63,
+      "maxComponentLength": 36,
+      "containsNonAscii": false,
+      "risks": [
+        "identical_content"
+      ],
+      "identicalContentGroup": [
+        "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/程序集缓存/avatar_circle_gray_base_asset_v1.png",
+        "assets/ui/hud/player_panel/avatar_circle_gray_base_asset_v1.png",
+        "tmp_hud_group2_assets/avatar_circle_gray_base_asset_v1.png"
+      ]
+    },
+    {
+      "path": "assets/ui/hud/player_panel/avatar_circle_gray_base_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 95058,
+      "sha256": "def5afa3cfc02e7970878bf197e265e9cf5fd9024e02f2dc8440564eaaf13b37",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 852,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1436,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1735,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 64,
+      "maxComponentLength": 37,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/player_panel/battle_hud_player_panel_asset_v1.png",
+      "extension": ".png",
+      "bytes": 1697658,
+      "sha256": "8c4aa6e53f28b7888c0f8c862c5afc648da997cf775eee4fc45c8701b79283f6",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 898,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud_layout_editor.html",
+          "line": 2661,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 63,
+      "maxComponentLength": 36,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/player_panel/player_armor_bar_shell_asset_v1.png",
+      "extension": ".png",
+      "bytes": 728715,
+      "sha256": "79bb1c1b47786b7990ceadd675ac731dc84f268b830348e72c398e22275ec8f5",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 880,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 62,
+      "maxComponentLength": 35,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/player_panel/player_armor_bar_shell_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 55478,
+      "sha256": "75a328e199bfc6a692054fd6a38d8c3b07bb94702fbb820cb6ff700ea95ec945",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud-runtime.js",
+          "line": 374,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 39,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "pathLength": 63,
+      "maxComponentLength": 36,
+      "containsNonAscii": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/player_panel/player_energy_gem_off_asset_v1.png",
+      "extension": ".png",
+      "bytes": 1010228,
+      "sha256": "f77b609aa1f37c36218dcddf394e812abf20195b15113a98e101d28912a3dce9",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 883,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 61,
+      "maxComponentLength": 34,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/player_panel/player_energy_gem_off_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 74964,
+      "sha256": "3bbcdd44c22b722899cd5a94922a8639ad43a99d268543145b2349b8b5cb4348",
+      "status": "active",
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 42,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "pathLength": 62,
+      "maxComponentLength": 35,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/player_panel/player_energy_gem_on_asset_v1.png",
+      "extension": ".png",
+      "bytes": 933878,
+      "sha256": "cae0f3f232413187f224ab3ebce1ad1087c3ad73a83c985373441972af196dee",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud-group-final.json",
+          "line": 68,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-group-final.json",
+          "line": 83,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-group-final.json",
+          "line": 98,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-group-final.json",
+          "line": 113,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-group-final.json",
+          "line": 128,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud_layout_editor.html",
+          "line": 882,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 60,
+      "maxComponentLength": 33,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/player_panel/player_energy_gem_on_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 68666,
+      "sha256": "2a395b128f7b31f92ead9395ab0e491133080f99af4db2e66fe6925c7579ced9",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 434,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 476,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 518,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 560,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 602,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1585,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1600,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1615,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1630,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1645,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-runtime.js",
+          "line": 397,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 41,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "pathLength": 61,
+      "maxComponentLength": 34,
+      "containsNonAscii": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/player_panel/player_energy_tray_asset_v1.png",
+      "extension": ".png",
+      "bytes": 1090213,
+      "sha256": "cbe8c9e1bfde1aad03e7106d3a0ac15584f0e69b86fb308bbabfd3b3f5a1bcc9",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 881,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 58,
+      "maxComponentLength": 31,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/player_panel/player_energy_tray_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 82836,
+      "sha256": "f5d05f1b72382ef80206a7157e07da975c48d38a19a150170d4859e5d36f8d7c",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud-runtime.js",
+          "line": 375,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 40,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "pathLength": 59,
+      "maxComponentLength": 32,
+      "containsNonAscii": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/player_panel/player_energy_tray_asset_v1_no_circles_transparent.png",
+      "extension": ".png",
+      "bytes": 1132763,
+      "sha256": "83e1325bdd8e6875ded4346d0915f0c0a02c065d198ebf106d1facd063ff6369",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 2203,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 81,
+      "maxComponentLength": 54,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component",
+        "identical_content"
+      ],
+      "identicalContentGroup": [
+        "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/程序集缓存/player_energy_tray_asset_v1_no_circles_transparent.png",
+        "assets/ui/hud/player_panel/player_energy_tray_asset_v1_no_circles_transparent.png",
+        "tmp_hud_group2_assets/player_energy_tray_asset_v1_no_circles_transparent.png"
+      ]
+    },
+    {
+      "path": "assets/ui/hud/player_panel/player_energy_tray_asset_v1_no_circles_transparent.webp",
+      "extension": ".webp",
+      "bytes": 73380,
+      "sha256": "bc47f9054e71e850fcdd73699619c12b738979c4766d71ae7bc7457ac3e48520",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 351,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1555,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 3222,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "pathLength": 82,
+      "maxComponentLength": 55,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component",
+        "multi_module_reference"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/player_panel/player_hp_bar_empty_frame_editor_asset_v1.png",
+      "extension": ".png",
+      "bytes": 370998,
+      "sha256": "c185ce13dfcfea2194a3826c5fcf8496e1f3f2bca20789c6277790539764fc13",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud-group-final.json",
+          "line": 203,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud_layout_editor.html",
+          "line": 900,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud_layout_editor.html",
+          "line": 917,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 72,
+      "maxComponentLength": 45,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/player_panel/player_hp_bar_empty_frame_editor_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 36598,
+      "sha256": "e90154102e2dca8bdabf4c10dcb245bfef8a228b8fa5e716ec5b7948b07e6b92",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 810,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1394,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1720,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1832,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 73,
+      "maxComponentLength": 46,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/player_panel/player_hp_bar_heart_fill_editor_asset_v1.png",
+      "extension": ".png",
+      "bytes": 28766,
+      "sha256": "3bfdaaf05a023d2f9c2988dd413b4f6514ecff96e4fc2c37922d093ac7d20e33",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud-group-final.json",
+          "line": 188,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud_layout_editor.html",
+          "line": 901,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud_layout_editor.html",
+          "line": 916,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 71,
+      "maxComponentLength": 44,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/player_panel/player_hp_bar_heart_fill_editor_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 4350,
+      "sha256": "22bcb3127e68736093c2a5e479c6f21fc927ebde927a44802828143c34ae8c03",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 769,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1353,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1705,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1817,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 72,
+      "maxComponentLength": 45,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/player_panel/player_hp_bar_long_fill_damage_trail_editor_asset_v1.png",
+      "extension": ".png",
+      "bytes": 491070,
+      "sha256": "21ad1d52baeb213f291612af2f1717f248d943a496a8dfe12689946613837ed8",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud-group-final.json",
+          "line": 158,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud_layout_editor.html",
+          "line": 903,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud_layout_editor.html",
+          "line": 914,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 83,
+      "maxComponentLength": 56,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/player_panel/player_hp_bar_long_fill_damage_trail_editor_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 39922,
+      "sha256": "487f14f119c7b18e08707ff8bd6ef20d195586f715074affe4da864aebb966e1",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 685,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1269,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1675,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1787,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 84,
+      "maxComponentLength": 57,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/player_panel/player_hp_bar_long_fill_editor_asset_v1.png",
+      "extension": ".png",
+      "bytes": 487708,
+      "sha256": "7e426ec2ac73dc1b8263f34becdf343c0a110b3f27aa312351a6c2a75356b67e",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud-group-final.json",
+          "line": 173,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud_layout_editor.html",
+          "line": 904,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud_layout_editor.html",
+          "line": 915,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 70,
+      "maxComponentLength": 43,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/player_panel/player_hp_bar_long_fill_editor_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 34334,
+      "sha256": "f568c834e9c900d87c801e28ece215910e7ba5960e0e6a0e5d98abc25a99dfbe",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 727,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1311,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1690,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1802,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 71,
+      "maxComponentLength": 44,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_asset_v1.png",
+      "extension": ".png",
+      "bytes": 176556,
+      "sha256": "033684e88e3ffc1a706392b2fc37f5483416c084c23bc9f42e353a4eb9d8b67f",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 2201,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 73,
+      "maxComponentLength": 46,
+      "containsNonAscii": false,
+      "risks": [
+        "identical_content"
+      ],
+      "identicalContentGroup": [
+        "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_asset_v1.png",
+        "tmp_hud_group2_assets/player_hp_bar_long_fill_gray_base_asset_v1.png"
+      ]
+    },
+    {
+      "path": "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 12392,
+      "sha256": "a8e401d34094377557509e385cf66b8a74985258011d75d0ecc1ef13f8a93876",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 268,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1103,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1525,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 74,
+      "maxComponentLength": 47,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_editor_asset_v1.png",
+      "extension": ".png",
+      "bytes": 158424,
+      "sha256": "0d9845fb0c17b2baeb3d3e687db1819bc7991a7019e8bf3fcaa57505ff239f98",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud-group-final.json",
+          "line": 143,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud_layout_editor.html",
+          "line": 902,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud_layout_editor.html",
+          "line": 913,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 80,
+      "maxComponentLength": 53,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component",
+        "identical_content"
+      ],
+      "identicalContentGroup": [
+        "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/status_bar_long_gray_base_asset_v1.png",
+        "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/程序集缓存/status_bar_long_gray_base_asset_v1.png",
+        "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_editor_asset_v1.png"
+      ]
+    },
+    {
+      "path": "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_editor_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 10036,
+      "sha256": "a4dbb09806b6b55b15a0cef83d714734e1b9eef63c57238e34b64f4b9eedfc0c",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 644,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1228,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1660,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1772,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 81,
+      "maxComponentLength": 54,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/player_panel/player_hp_bar_shell_asset_v1.png",
+      "extension": ".png",
+      "bytes": 701880,
+      "sha256": "0557f109dd9d0e14a0e83549c197660ecf29116bb9a3e4550aad14b116c98838",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 879,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 59,
+      "maxComponentLength": 32,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/player_panel/player_hp_bar_shell_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 48266,
+      "sha256": "c14ab233d2197fc0c85dfe35bb6c7809a282ea6df2408bf09dd93fe6cb24aa69",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud-runtime.js",
+          "line": 373,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 38,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "pathLength": 60,
+      "maxComponentLength": 33,
+      "containsNonAscii": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/player_panel/player_nameplate_shell_asset_v1.png",
+      "extension": ".png",
+      "bytes": 847022,
+      "sha256": "b3ca3f3f925fcd71fa587a5dfcb9d37276477ad783c81802374bf16b910c2375",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud-group-final.json",
+          "line": 23,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud_layout_editor.html",
+          "line": 878,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 62,
+      "maxComponentLength": 35,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/player_panel/player_nameplate_shell_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 60544,
+      "sha256": "ca401dae3bd82c8252b64a8b50c8be5d0212d9f4d297bbb2049fae658baa8403",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 309,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1540,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-runtime.js",
+          "line": 372,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 37,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "pathLength": 63,
+      "maxComponentLength": 36,
+      "containsNonAscii": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/player_panel/player_portrait_frame_asset_v1.png",
+      "extension": ".png",
+      "bytes": 883168,
+      "sha256": "72caebf0a4a6ccfea5c47ac00820a0218e07b478c26e5ebda8c0ef6c38000e4c",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud-group-final.json",
+          "line": 233,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud_layout_editor.html",
+          "line": 877,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 61,
+      "maxComponentLength": 34,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/player_panel/player_portrait_frame_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 111258,
+      "sha256": "68d5024efa3a14f07cbd8bab986c6e70593fd39b7c9759995b42c7fbd0ef70be",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 893,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1750,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-runtime.js",
+          "line": 371,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 36,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "pathLength": 62,
+      "maxComponentLength": 35,
+      "containsNonAscii": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/status_bar/enemy_status_bar_shell_asset_v1.png",
+      "extension": ".png",
+      "bytes": 1268680,
+      "sha256": "3e718f34e2a625fe264b4aa8ef9e2b8b992ea1ba4367861b4ed8cb91b0ccb0be",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud_layout_editor.html",
+          "line": 889,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 60,
+      "maxComponentLength": 35,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/status_bar/enemy_status_bar_shell_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 108472,
+      "sha256": "d6c7c84bd7bc76f0857d0abd4e8448962cf13c61fb86695cdc1dfb1430256177",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud-runtime.js",
+          "line": 383,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 44,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "pathLength": 61,
+      "maxComponentLength": 36,
+      "containsNonAscii": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/status_bar/player_status_bar_shell_asset_v1.png",
+      "extension": ".png",
+      "bytes": 1128872,
+      "sha256": "03884c35798d0d1ed56afd083adbd25ff9fccf6c4729264549e6587ec5d774f6",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud-group-final.json",
+          "line": 53,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud_layout_editor.html",
+          "line": 884,
+          "module": "ui.hud",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "ui.hud"
+      ],
+      "pathLength": 61,
+      "maxComponentLength": 36,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/status_bar/player_status_bar_shell_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 126876,
+      "sha256": "6c091e9ce69eb4692ad193316f5707d48eb6782ece3e2b86d5677b7bafd4f039",
+      "status": "active",
+      "references": [
+        {
+          "file": "hud-layout-data.js",
+          "line": 392,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1186,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-layout-data.js",
+          "line": 1570,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "hud-runtime.js",
+          "line": 376,
+          "module": "ui.hud",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 43,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "ui.hud"
+      ],
+      "pathLength": 62,
+      "maxComponentLength": 37,
+      "containsNonAscii": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/status_icons/status_armor_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 52532,
+      "sha256": "1b6bfc824a7e5e1b2406cb2ecd757f58f6959c6242d622c80e4bba4c30ccb04f",
+      "status": "unreferenced",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 53,
+      "maxComponentLength": 26,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/status_icons/status_bleed_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 54210,
+      "sha256": "bb43a7df63e2e769ba834ef9a3d3f0d44fc828b6b690909b05201943ff0ca5d2",
+      "status": "unreferenced",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 53,
+      "maxComponentLength": 26,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/status_icons/status_blood_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 55342,
+      "sha256": "dcc814bec28e803e441822b19c74beed4678c8f7afe8f974ea175c1ae02a14c0",
+      "status": "unreferenced",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 53,
+      "maxComponentLength": 26,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/status_icons/status_burn_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 51302,
+      "sha256": "9ff09d611f078a05ef35d1ce2562f046f74c203b07267f02cde83ca8c86a69d4",
+      "status": "unreferenced",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 52,
+      "maxComponentLength": 25,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/status_icons/status_charge_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 50146,
+      "sha256": "fc42ca0526513cbba7ede076a1b721253880b577dd66816085ae0531fe0669ab",
+      "status": "unreferenced",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 54,
+      "maxComponentLength": 27,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/status_icons/status_counter_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 50494,
+      "sha256": "63e6af357f6074407afb2b6fc118982613660463948dab63de82e8cbf71de361",
+      "status": "unreferenced",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 55,
+      "maxComponentLength": 28,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/status_icons/status_curse_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 52730,
+      "sha256": "972bd17ac3afa44f96f6360ea853247c46cf35dc5695de59af64bcab33e2205e",
+      "status": "unreferenced",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 53,
+      "maxComponentLength": 26,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/status_icons/status_echo_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 55880,
+      "sha256": "d15008713c64af6fb3b3445390929419728165e050ff1a6470bd6aa0d31c1a56",
+      "status": "unreferenced",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 52,
+      "maxComponentLength": 25,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/status_icons/status_enchant_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 49824,
+      "sha256": "dd885be8185a377ef156ce85aba8be50a09980a57eec4d31b21c6cedd4e6f354",
+      "status": "unreferenced",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 55,
+      "maxComponentLength": 28,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/status_icons/status_guard_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 52062,
+      "sha256": "69a8b78da3af6f204ea1950313c94f1be34a9ecdd0d2bb67573a86928173d798",
+      "status": "unreferenced",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 53,
+      "maxComponentLength": 26,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/status_icons/status_poison_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 51388,
+      "sha256": "404d5be62196b152a79571d421f8e264fbb54296b77e3611dd68e755a0c64920",
+      "status": "unreferenced",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 54,
+      "maxComponentLength": 27,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/status_icons/status_str_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 50810,
+      "sha256": "4e1ee31c6ba61841efa260c5f69bd5409a43395557559f3acacbe5467380f96d",
+      "status": "unreferenced",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 51,
+      "maxComponentLength": 24,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/status_icons/status_stun_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 53732,
+      "sha256": "a59f28d0f6029549baa19123686f4a3bcdbc736067df6350f924a6aa0f003291",
+      "status": "unreferenced",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 52,
+      "maxComponentLength": 25,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/status_icons/status_thorns_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 54760,
+      "sha256": "11d33d45e4b32178bb77186dcddedbf0b690aaf03d800fd032a05d2933979b74",
+      "status": "unreferenced",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 54,
+      "maxComponentLength": 27,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/status_icons/status_vuln_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 55442,
+      "sha256": "70fc0c9597f5a9d0e10bbfad6993a2f7dde224b354fe3a1f8b2b23e6dddbb35e",
+      "status": "unreferenced",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 52,
+      "maxComponentLength": 25,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/hud/status_icons/status_weak_asset_v1.webp",
+      "extension": ".webp",
+      "bytes": 51134,
+      "sha256": "88573068979c5f40eee547084abdee4490792eda7137ff19cda1aed092dcd087",
+      "status": "unreferenced",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 52,
+      "maxComponentLength": 25,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
       "identicalContentGroup": []
     },
     {
@@ -21441,8 +21276,8 @@
         "identical_content"
       ],
       "identicalContentGroup": [
-        "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/avatar_circle_gray_base_asset_v1.png",
         "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/程序集缓存/avatar_circle_gray_base_asset_v1.png",
+        "assets/ui/hud/player_panel/avatar_circle_gray_base_asset_v1.png",
         "tmp_hud_group2_assets/avatar_circle_gray_base_asset_v1.png"
       ]
     },
@@ -21463,8 +21298,8 @@
         "identical_content"
       ],
       "identicalContentGroup": [
-        "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_tray_asset_v1_no_circles_transparent.png",
         "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/程序集缓存/player_energy_tray_asset_v1_no_circles_transparent.png",
+        "assets/ui/hud/player_panel/player_energy_tray_asset_v1_no_circles_transparent.png",
         "tmp_hud_group2_assets/player_energy_tray_asset_v1_no_circles_transparent.png"
       ]
     },
@@ -21484,7 +21319,7 @@
         "identical_content"
       ],
       "identicalContentGroup": [
-        "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_asset_v1.png",
+        "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_asset_v1.png",
         "tmp_hud_group2_assets/player_hp_bar_long_fill_gray_base_asset_v1.png"
       ]
     },
@@ -26281,13 +26116,6 @@
       "kind": "documentation"
     },
     {
-      "path": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/pile_count_plate_asset_v1.png",
-      "file": "hud_layout_editor.html",
-      "line": 896,
-      "module": "ui.hud",
-      "kind": "runtime"
-    },
-    {
       "path": "UI/教堂彩窗赛璐璐/战斗HUD/生命条填充_v2.png",
       "file": "demo更改需求文档.txt",
       "line": 448,
@@ -28005,328 +27833,6 @@
       ]
     },
     {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/battle_hud_enemy_panel_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/中轴控件/end_turn_button_shell_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/中轴控件/turn_counter_inner_dial_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/手牌承托/hand_fan_tray_shell_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方意图面板/enemy_intent_panel_shell_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_armor_bar_shell_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_hp_bar_shell_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_nameplate_shell_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方面板/enemy_portrait_frame_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/discard_pile_stack_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/draw_pile_stack_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/exile_pile_stack_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/牌堆/pile_count_plate_asset_v1_transparent",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/enemy_status_bar_shell_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/player_status_bar_shell_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_armor_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_bleed_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_blood_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_burn_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_charge_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_counter_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_curse_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_echo_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_enchant_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_guard_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_poison_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_str_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_stun_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_thorns_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_vuln_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_weak_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/avatar_circle_gray_base_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_armor_bar_shell_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_off_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_gem_on_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_tray_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_tray_asset_v1_no_circles_transparent",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_empty_frame_editor_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_heart_fill_editor_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_damage_trail_editor_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_editor_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_editor_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_shell_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_nameplate_shell_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_portrait_frame_asset_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
       "basePath": "UI/教堂彩窗赛璐璐/按钮/主按钮_蓝金_v1",
       "extensions": [
         ".png",
@@ -28404,6 +27910,216 @@
       ]
     },
     {
+      "basePath": "assets/ui/hud/center_controls/end_turn_button_shell_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/center_controls/turn_counter_inner_dial_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/enemy_intent/enemy_intent_panel_shell_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/enemy_panel/battle_hud_enemy_panel_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/enemy_panel/enemy_armor_bar_shell_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/enemy_panel/enemy_hp_bar_shell_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/enemy_panel/enemy_nameplate_shell_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/enemy_panel/enemy_portrait_frame_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/hand_tray/hand_fan_tray_shell_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/piles/discard_pile_stack_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/piles/draw_pile_stack_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/piles/exile_pile_stack_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/piles/pile_count_plate_asset_v1_transparent",
+      "extensions": [
+        ".png",
+        ".webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/player_panel/avatar_circle_gray_base_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/player_panel/player_armor_bar_shell_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/player_panel/player_energy_gem_off_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/player_panel/player_energy_gem_on_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/player_panel/player_energy_tray_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/player_panel/player_energy_tray_asset_v1_no_circles_transparent",
+      "extensions": [
+        ".png",
+        ".webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/player_panel/player_hp_bar_empty_frame_editor_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/player_panel/player_hp_bar_heart_fill_editor_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/player_panel/player_hp_bar_long_fill_damage_trail_editor_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/player_panel/player_hp_bar_long_fill_editor_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_editor_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/player_panel/player_hp_bar_shell_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/player_panel/player_nameplate_shell_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/player_panel/player_portrait_frame_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/status_bar/enemy_status_bar_shell_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ]
+    },
+    {
+      "basePath": "assets/ui/hud/status_bar/player_status_bar_shell_asset_v1",
+      "extensions": [
+        ".png",
+        ".webp"
+      ]
+    },
+    {
       "basePath": "场景/色调变体/bg_battle_ancient_forest_sunset",
       "extensions": [
         ".png",
@@ -28443,7 +28159,7 @@
     {
       "sha256": "033684e88e3ffc1a706392b2fc37f5483416c084c23bc9f42e353a4eb9d8b67f",
       "paths": [
-        "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_asset_v1.png",
+        "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_asset_v1.png",
         "tmp_hud_group2_assets/player_hp_bar_long_fill_gray_base_asset_v1.png"
       ]
     },
@@ -28497,9 +28213,9 @@
     {
       "sha256": "0d9845fb0c17b2baeb3d3e687db1819bc7991a7019e8bf3fcaa57505ff239f98",
       "paths": [
-        "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_hp_bar_long_fill_gray_base_editor_asset_v1.png",
         "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/status_bar_long_gray_base_asset_v1.png",
-        "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/程序集缓存/status_bar_long_gray_base_asset_v1.png"
+        "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/程序集缓存/status_bar_long_gray_base_asset_v1.png",
+        "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_editor_asset_v1.png"
       ]
     },
     {
@@ -28605,8 +28321,8 @@
     {
       "sha256": "601039e38609b5d1627d45cae387760af01bdfd8425f3acbaa5951cb50aef4a5",
       "paths": [
-        "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/avatar_circle_gray_base_asset_v1.png",
         "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/程序集缓存/avatar_circle_gray_base_asset_v1.png",
+        "assets/ui/hud/player_panel/avatar_circle_gray_base_asset_v1.png",
         "tmp_hud_group2_assets/avatar_circle_gray_base_asset_v1.png"
       ]
     },
@@ -28676,8 +28392,8 @@
     {
       "sha256": "83e1325bdd8e6875ded4346d0915f0c0a02c065d198ebf106d1facd063ff6369",
       "paths": [
-        "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/玩家面板/player_energy_tray_asset_v1_no_circles_transparent.png",
         "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/程序集缓存/player_energy_tray_asset_v1_no_circles_transparent.png",
+        "assets/ui/hud/player_panel/player_energy_tray_asset_v1_no_circles_transparent.png",
         "tmp_hud_group2_assets/player_energy_tray_asset_v1_no_circles_transparent.png"
       ]
     },

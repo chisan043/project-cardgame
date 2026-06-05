@@ -61,6 +61,84 @@ def menu_suggestion(source_path: str, status: str, target_dir: str) -> tuple[str
     return f"{target_dir}/{normalize_slug(stem)}{suffix}", "review"
 
 
+HUD_CATEGORY_MARKERS = (
+    ("玩家面板", "player_panel"),
+    ("敌方面板", "enemy_panel"),
+    ("敌方意图面板", "enemy_intent"),
+    ("中轴控件", "center_controls"),
+    ("手牌承托", "hand_tray"),
+    ("牌堆", "piles"),
+    ("状态栏/状态图标", "status_icons"),
+    ("状态栏", "status_bar"),
+    ("图标徽记", "intent_icons"),
+    ("数值文字承载", "number_plates"),
+    ("材质边框", "materials"),
+    ("程序集缓存", "assembly_cache"),
+    ("拆分", "split_previews"),
+)
+
+
+HUD_STATUS_ICON_IDS = {
+    "armor",
+    "thorns",
+    "str",
+    "charge",
+    "echo",
+    "blood",
+    "enchant",
+    "guard",
+    "counter",
+    "poison",
+    "bleed",
+    "burn",
+    "stun",
+    "curse",
+    "vuln",
+    "weak",
+}
+
+
+def hud_category(source_path: str, stem: str) -> str:
+    if "/status_icons/" in source_path:
+        return "status_icons"
+    for marker, category in HUD_CATEGORY_MARKERS:
+        if marker in source_path:
+            return category
+    if "enemy" in stem:
+        return "enemy_panel"
+    if "player" in stem:
+        return "player_panel"
+    return "overview"
+
+
+def hud_suggestion(source_path: str, status: str) -> tuple[str, str]:
+    path = Path(source_path)
+    suffix = path.suffix.lower()
+    stem = normalize_slug(path.stem)
+    category = hud_category(source_path, stem)
+    status_icon_match = re.fullmatch(r"status_([a-z_]+)_asset_v1", stem)
+
+    if category == "status_icons" and status_icon_match and status_icon_match.group(1) in HUD_STATUS_ICON_IDS:
+        if source_path.startswith("assets/ui/hud/status_icons/") and suffix == ".webp":
+            return source_path, "already_migrated_dynamic"
+        if source_path.startswith("assets/source/ui/hud/status_icons/") and suffix == ".png":
+            return source_path, "already_migrated_source"
+        if suffix == ".webp":
+            return f"assets/ui/hud/status_icons/{stem}{suffix}", "move_then_rewrite_dynamic_refs"
+        if suffix == ".png":
+            return f"assets/source/ui/hud/status_icons/{stem}_source{suffix}", "move_as_source"
+    if source_path.startswith(("assets/ui/hud/", "assets/source/ui/hud/", "assets/candidates/ui/hud/")):
+        return source_path, "already_migrated"
+    if status == "active":
+        return f"assets/ui/hud/{category}/{stem}{suffix}", "move_then_rewrite_runtime_refs"
+    if status == "source":
+        source_stem = stem if stem.endswith("_source") else f"{stem}_source"
+        return f"assets/source/ui/hud/{category}/{source_stem}{suffix}", "move_as_source"
+    if status == "candidate":
+        return f"assets/candidates/ui/hud/{category}/{stem}{suffix}", "move_as_candidate"
+    return f"assets/archive/review/ui_hud/{category}/{stem}{suffix}", "defer_archive_review"
+
+
 def scene_main_suggestion(source_path: str, status: str) -> tuple[str, str]:
     path = Path(source_path)
     suffix = path.suffix.lower()
@@ -477,6 +555,8 @@ def default_suggestion(source_path: str, status: str, target_dir: str, module_sl
 def suggested_path(source_path: str, status: str, target_dir: str, module_slug: str) -> tuple[str, str]:
     if module_slug == "ui_menu":
         return menu_suggestion(source_path, status, target_dir)
+    if module_slug == "ui_hud":
+        return hud_suggestion(source_path, status)
     if module_slug == "scenes_main":
         return scene_main_suggestion(source_path, status)
     if module_slug == "npc":
@@ -646,6 +726,10 @@ def build_plan(prefix: str, include_prefixes: list[str], target_dir: str, module
 
 
 def effective_status(audit_status: str, action: str) -> str:
+    if action == "already_migrated_dynamic":
+        return "active_dynamic"
+    if action == "already_migrated_source":
+        return "source"
     if action == "move_then_rewrite_dynamic_refs":
         return "active_dynamic"
     if action == "copy_from_master_runtime":
@@ -653,6 +737,8 @@ def effective_status(audit_status: str, action: str) -> str:
     if action == "copy_from_master_source":
         return "source"
     if action == "defer_untracked_review":
+        return audit_status
+    if action == "defer_archive_review":
         return audit_status
     if action == "move_as_source" and audit_status == "unreferenced":
         return "source"
@@ -665,6 +751,10 @@ def notes_for(asset: dict, is_tracked: bool, action: str) -> str:
         notes.append("untracked file; do not include in migration commit unless intentionally accepted")
     if action == "defer_untracked_review":
         notes.append("deferred to candidate/source/archive review batch")
+    if action == "defer_archive_review":
+        notes.append("unreferenced HUD asset; defer to archive manifest batch")
+    if action == "already_migrated_dynamic":
+        notes.append("dynamic runtime HUD asset inferred from status icon template")
     if (
         asset["status"] == "active"
         and not asset["references"]
