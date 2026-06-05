@@ -27,7 +27,7 @@
             --ui-button-secondary: linear-gradient(135deg, rgba(35,91,88,0.94), rgba(13,25,31,0.98));
             --ui-button-confirm: linear-gradient(135deg, rgba(83,52,112,0.96), rgba(23,18,35,0.98));
             --ui-button-back: linear-gradient(135deg, rgba(32,83,88,0.92), rgba(13,20,28,0.98));
-            --battle-forest-bg: url('场景/主场景/bg_battle_ancient_forest_day.webp');
+            --battle-forest-bg: url('assets/scenes/battle/ancient_forest_day_v1.webp');
             --asset-enemy-panel: url('UI/教堂彩窗赛璐璐/战斗HUD/正式资产/battle_hud_enemy_panel_asset_v1.webp');
             --asset-intent-panel: url('UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/敌方意图面板/enemy_intent_panel_shell_asset_v1.webp');
             --asset-end-turn: url('UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/中轴控件/end_turn_button_shell_asset_v1.webp');
@@ -65,7 +65,7 @@
             --asset-npc-campfire-elder: url('NPC/campfire_elder_portrait.webp');
             --asset-npc-encounter-angel: url('NPC/encounter_angel_portrait.webp');
             --asset-main-menu-bg: url('assets/ui/menu/main_menu_key_art_v1.webp');
-            --asset-role-select-bg: url('场景/主场景/bg_battle_temple_hall_grand.webp');
+            --asset-role-select-bg: url('assets/scenes/battle/temple_hall_grand_v1.webp');
             --asset-role-desc-panel: url('UI/教堂彩窗赛璐璐/角色选择/角色描述面板_v1.webp');
             --asset-role-tag-plate: url('UI/教堂彩窗赛璐璐/角色选择/特性标签底板_蓝金_v1.webp');
             --asset-role-frame-warrior-v2: url('UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_warrior_uniform_v1.webp');
@@ -1543,14 +1543,14 @@
         .anime-panel { background: linear-gradient(180deg, rgba(28,38,54,0.98), rgba(12,14,20,0.99)); color: #efe2bd; border: 1px solid rgba(199,162,88,0.62); border-radius: 3px; box-shadow: 0 10px 22px rgba(0,0,0,0.68), inset 0 0 0 1px rgba(255,255,255,0.06); font-family: "Microsoft YaHei", sans-serif; }
         .shop-scene, .event-scene, .rest-scene { width: 1120px; padding: 0; overflow: hidden; text-align: left; max-width: calc(100vw - 64px); background: linear-gradient(180deg, rgba(8,12,18,0.98), rgba(5,6,10,0.99)); }
         .shop-scene, .rest-scene { max-height: calc(100vh - 64px); }
-        .scene-banner { min-height: 176px; padding: 34px 46px 28px 286px; border-bottom: 1px solid rgba(222,190,111,0.46); background: linear-gradient(90deg, rgba(8,12,20,0.98) 0%, rgba(24,56,90,0.82) 42%, rgba(9,13,20,0.72)), url('场景/主场景/bg_battle_ancient_forest_day.webp'); background-size: cover; background-position: center 28%; color: #fff7dc; position: relative; box-shadow: inset 0 -34px 36px rgba(0,0,0,0.62); }
+        .scene-banner { min-height: 176px; padding: 34px 46px 28px 286px; border-bottom: 1px solid rgba(222,190,111,0.46); background: linear-gradient(90deg, rgba(8,12,20,0.98) 0%, rgba(24,56,90,0.82) 42%, rgba(9,13,20,0.72)), url('assets/scenes/battle/ancient_forest_day_v1.webp'); background-size: cover; background-position: center 28%; color: #fff7dc; position: relative; box-shadow: inset 0 -34px 36px rgba(0,0,0,0.62); }
         .scene-banner::before { content:""; position:absolute; left:34px; bottom:0; width:216px; height:168px; background: url('新角色三/角色三_角色选择_立绘.webp') 50% 18% / cover no-repeat; filter: drop-shadow(0 15px 12px rgba(0,0,0,0.58)); z-index:1; }
         .scene-banner::after { content:""; position:absolute; left:286px; right:44px; bottom:18px; height:2px; background: linear-gradient(90deg, rgba(241,196,15,0.72), transparent); pointer-events:none; }
-        .event-scene .scene-banner { background-image: linear-gradient(90deg, rgba(12,16,31,0.98), rgba(42,62,106,0.86) 48%, rgba(174,133,64,0.46)), url('场景/主场景/bg_battle_stone_ruins_day.webp'); background-position: center 32%; }
+        .event-scene .scene-banner { background-image: linear-gradient(90deg, rgba(12,16,31,0.98), rgba(42,62,106,0.86) 48%, rgba(174,133,64,0.46)), url('assets/scenes/battle/stone_ruins_day_v1.webp'); background-position: center 32%; }
         .event-scene .scene-banner::before { background-image: var(--asset-npc-encounter-angel); background-position: 50% 0%; }
-        .shop-scene .scene-banner { background-image: linear-gradient(90deg, rgba(9,12,18,0.98), rgba(72,52,43,0.86) 46%, rgba(137,91,45,0.44)), url('场景/主场景/bg_event_town_distant_day.webp'); background-position: center 42%; }
+        .shop-scene .scene-banner { background-image: linear-gradient(90deg, rgba(9,12,18,0.98), rgba(72,52,43,0.86) 46%, rgba(137,91,45,0.44)), url('assets/scenes/event/town_distant_day_v1.webp'); background-position: center 42%; }
         .shop-scene .scene-banner::before { background-image: var(--asset-npc-shopkeeper); background-position: 50% 0%; }
-        .rest-scene .scene-banner { background-image: linear-gradient(90deg, rgba(12,10,13,0.98), rgba(92,54,39,0.88) 48%, rgba(180,95,45,0.42)), url('场景/主场景/bg_battle_dungeon_corridor_torch.webp'); background-position: center 42%; }
+        .rest-scene .scene-banner { background-image: linear-gradient(90deg, rgba(12,10,13,0.98), rgba(92,54,39,0.88) 48%, rgba(180,95,45,0.42)), url('assets/scenes/battle/dungeon_corridor_torch_v1.webp'); background-position: center 42%; }
         .rest-scene .scene-banner::before { background-image: var(--asset-npc-campfire-elder); background-position: 50% 0%; }
         .scene-banner h2 { margin:0 0 12px; color: #ffe69c; font-size: 34px; letter-spacing: 6px; text-shadow: 0 3px 0 rgba(0,0,0,0.62), 0 0 16px rgba(241,196,15,0.22); position:relative; z-index:2; }
         .scene-banner p { margin:0; max-width: 660px; line-height:1.7; font-size:14px; color:#e6d7b5; text-shadow: 0 2px 0 rgba(0,0,0,0.58); position:relative; z-index:2; }
@@ -4404,26 +4404,26 @@
     }
 
     const BATTLE_BACKGROUND_BY_ENEMY = {
-        '病弱史莱姆': '场景/主场景/bg_battle_ancient_forest_day.webp',
+        '病弱史莱姆': 'assets/scenes/battle/ancient_forest_day_v1.webp',
         '迷途妖狐': '场景/色调变体/bg_battle_ancient_forest_sunset.webp',
         '荒野煞狼': '场景/色调变体/bg_battle_mountain_plain_night.webp',
-        '暴躁野猪': '场景/主场景/bg_battle_mountain_plain_day.webp',
-        '剧毒蟾蜍': '场景/主场景/bg_battle_ancient_forest_day.webp',
-        '千载魔蛛': '场景/主场景/bg_battle_cave_cold.webp',
-        '嗜血蝙蝠': '场景/主场景/bg_battle_cave_cold.webp',
+        '暴躁野猪': 'assets/scenes/battle/mountain_plain_day_v1.webp',
+        '剧毒蟾蜍': 'assets/scenes/battle/ancient_forest_day_v1.webp',
+        '千载魔蛛': 'assets/scenes/battle/cave_cold_v1.webp',
+        '嗜血蝙蝠': 'assets/scenes/battle/cave_cold_v1.webp',
         '铁甲巨蟹': '场景/色调变体/bg_battle_mountain_plain_rain.webp',
-        '枯骨煞兵': '场景/主场景/bg_battle_dungeon_corridor_torch.webp',
-        '贪婪盗贼': '场景/主场景/bg_battle_stone_ruins_day.webp',
+        '枯骨煞兵': 'assets/scenes/battle/dungeon_corridor_torch_v1.webp',
+        '贪婪盗贼': 'assets/scenes/battle/stone_ruins_day_v1.webp',
         '堕落剑客': '场景/色调变体/bg_battle_stone_ruins_sunset.webp',
-        '幽冥法师': '场景/主场景/bg_battle_temple_inner_light.webp',
-        '巨力石魔': '场景/主场景/bg_battle_wasteland_dusk.webp',
+        '幽冥法师': 'assets/scenes/battle/temple_inner_light_v1.webp',
+        '巨力石魔': 'assets/scenes/battle/wasteland_dusk_v1.webp',
         '魅影刺客': '场景/色调变体/bg_battle_stone_ruins_night.webp',
-        '缝合巨怪': '场景/主场景/bg_battle_dungeon_corridor_torch.webp',
-        '【精英】狂暴牛头人': '场景/主场景/bg_battle_wasteland_dusk.webp',
-        '【精英】猩红血巫': '场景/主场景/bg_battle_temple_hall_grand.webp',
-        '【精英】不死骨龙': '场景/主场景/bg_battle_temple_hall_grand.webp',
-        '【首领】鬼面修罗': '场景/主场景/bg_battle_temple_hall_grand.webp',
-        '【深渊主宰】': '场景/主场景/bg_battle_temple_inner_light.webp'
+        '缝合巨怪': 'assets/scenes/battle/dungeon_corridor_torch_v1.webp',
+        '【精英】狂暴牛头人': 'assets/scenes/battle/wasteland_dusk_v1.webp',
+        '【精英】猩红血巫': 'assets/scenes/battle/temple_hall_grand_v1.webp',
+        '【精英】不死骨龙': 'assets/scenes/battle/temple_hall_grand_v1.webp',
+        '【首领】鬼面修罗': 'assets/scenes/battle/temple_hall_grand_v1.webp',
+        '【深渊主宰】': 'assets/scenes/battle/temple_inner_light_v1.webp'
     };
 
     function getBaseEnemyName(enemy) {
@@ -4431,7 +4431,7 @@
     }
 
     function applyBattleBackgroundForEnemy(enemy) {
-        const bgPath = BATTLE_BACKGROUND_BY_ENEMY[getBaseEnemyName(enemy)] || '场景/主场景/bg_battle_ancient_forest_day.webp';
+        const bgPath = BATTLE_BACKGROUND_BY_ENEMY[getBaseEnemyName(enemy)] || 'assets/scenes/battle/ancient_forest_day_v1.webp';
         document.documentElement.style.setProperty('--battle-scene-bg', `url('${bgPath}')`);
     }
 
@@ -4721,37 +4721,37 @@
             title: '雾岭小径',
             desc: '敌影在山道间游荡。沿着金色路线前进，踏入下一场战斗。',
             image: 'UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_v1.webp',
-            battleBg: '场景/主场景/bg_battle_mountain_plain_day.webp'
+            battleBg: 'assets/scenes/battle/mountain_plain_day_v1.webp'
         },
         elite: {
             title: '失落圣堂',
             desc: '更强的守卫盘踞于此。胜利后，稀有机缘也会随之显现。',
             image: 'UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_temple_hall_imagegen_transparent_v1.webp',
-            battleBg: '场景/主场景/bg_battle_temple_hall_grand.webp'
+            battleBg: 'assets/scenes/battle/temple_hall_grand_v1.webp'
         },
         rest: {
             title: '静息营火',
             desc: '短暂的火光能修整伤势，也能让一页残卷变得更锋利。',
             image: 'UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_v1.webp',
-            battleBg: '场景/主场景/bg_battle_ancient_forest_day.webp'
+            battleBg: 'assets/scenes/battle/ancient_forest_day_v1.webp'
         },
         event: {
             title: '古碑回廊',
             desc: '残留的低语藏着转机，也可能把命运推向另一条岔路。',
             image: 'UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_v1.webp',
-            battleBg: '场景/主场景/bg_battle_stone_ruins_day.webp'
+            battleBg: 'assets/scenes/battle/stone_ruins_day_v1.webp'
         },
         boss: {
             title: '终幕尖塔',
             desc: '首领守在高处。穿过最后一段路，试炼将在此收束。',
             image: 'UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_town_castle_imagegen_transparent_v1.webp',
-            battleBg: '场景/主场景/bg_battle_temple_hall_grand.webp'
+            battleBg: 'assets/scenes/battle/temple_hall_grand_v1.webp'
         },
         shop: {
             title: '灯火商栈',
             desc: '旅商在旧城门下等待。金币可以换来卡牌、奇珍与一次喘息。',
             image: 'UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_town_castle_imagegen_transparent_v1.webp',
-            battleBg: '场景/主场景/bg_event_town_distant_day.webp'
+            battleBg: 'assets/scenes/event/town_distant_day_v1.webp'
         }
     };
 
@@ -4760,25 +4760,25 @@
             title: '雾岭小径',
             desc: '山雾贴着旧路流动，前方的敌影正从林线后靠近。',
             image: 'UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_v1.webp',
-            battleBg: '场景/主场景/bg_battle_mountain_plain_day.webp'
+            battleBg: 'assets/scenes/battle/mountain_plain_day_v1.webp'
         },
         {
             title: '碎石古道',
             desc: '残破石阶通向荒废哨站，那里常有伏击者守候。',
             image: 'UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_v1.webp',
-            battleBg: '场景/主场景/bg_battle_stone_ruins_day.webp'
+            battleBg: 'assets/scenes/battle/stone_ruins_day_v1.webp'
         },
         {
             title: '暮色荒原',
             desc: '风卷起暗红尘沙，野性的敌人会在开阔处逼近。',
             image: 'UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_v1.webp',
-            battleBg: '场景/主场景/bg_battle_wasteland_dusk.webp'
+            battleBg: 'assets/scenes/battle/wasteland_dusk_v1.webp'
         },
         {
             title: '寒洞裂隙',
             desc: '岩壁间传来低响，潮冷洞窟里潜伏着不安的轮廓。',
             image: 'UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_cold_cave_imagegen_transparent_v1.webp',
-            battleBg: '场景/主场景/bg_battle_cave_cold.webp'
+            battleBg: 'assets/scenes/battle/cave_cold_v1.webp'
         }
     ];
 

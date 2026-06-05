@@ -52,6 +52,32 @@ def menu_suggestion(source_path: str, status: str, target_dir: str) -> tuple[str
     return f"{target_dir}/{normalize_slug(stem)}{suffix}", "review"
 
 
+def scene_main_suggestion(source_path: str, status: str) -> tuple[str, str]:
+    path = Path(source_path)
+    suffix = path.suffix.lower()
+    stem = path.stem
+
+    if source_path.startswith(("assets/scenes/battle/", "assets/scenes/event/", "assets/source/scenes/")):
+        return source_path, "already_migrated"
+
+    replacements = {
+        "bg_battle_ancient_forest_day": ("battle", "ancient_forest_day"),
+        "bg_battle_cave_cold": ("battle", "cave_cold"),
+        "bg_battle_dungeon_corridor_torch": ("battle", "dungeon_corridor_torch"),
+        "bg_battle_mountain_plain_day": ("battle", "mountain_plain_day"),
+        "bg_battle_stone_ruins_day": ("battle", "stone_ruins_day"),
+        "bg_battle_temple_hall_grand": ("battle", "temple_hall_grand"),
+        "bg_battle_temple_inner_light": ("battle", "temple_inner_light"),
+        "bg_battle_wasteland_dusk": ("battle", "wasteland_dusk"),
+        "bg_event_town_distant_day": ("event", "town_distant_day"),
+    }
+    scene_type, scene_slug = replacements.get(stem, ("review", normalize_slug(stem)))
+
+    if status == "active":
+        return f"assets/scenes/{scene_type}/{scene_slug}_v1{suffix}", "move_then_rewrite_runtime_refs"
+    return f"assets/source/scenes/{scene_type}/{scene_slug}_v1_source{suffix}", "move_as_source"
+
+
 def default_suggestion(source_path: str, status: str, target_dir: str, module_slug: str) -> tuple[str, str]:
     path = Path(source_path)
     filename = f"{normalize_slug(path.stem)}{path.suffix.lower()}"
@@ -69,6 +95,8 @@ def default_suggestion(source_path: str, status: str, target_dir: str, module_sl
 def suggested_path(source_path: str, status: str, target_dir: str, module_slug: str) -> tuple[str, str]:
     if module_slug == "ui_menu":
         return menu_suggestion(source_path, status, target_dir)
+    if module_slug == "scenes_main":
+        return scene_main_suggestion(source_path, status)
     return default_suggestion(source_path, status, target_dir, module_slug)
 
 

@@ -403,7 +403,7 @@
             referenceResolution: { width: 1280, height: 720 },
             stageWidth: 1280,
             stageHeight: 720,
-            background: seed.background || '场景/主场景/bg_battle_ancient_forest_day.webp',
+            background: seed.background || 'assets/scenes/battle/ancient_forest_day_v1.webp',
             backgroundFit: seed.backgroundFit || 'cover',
             items
         });

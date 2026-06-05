@@ -1,5 +1,5 @@
 window.HUANJING_HUD_LAYOUT = {
-  "background": "场景/主场景/bg_battle_ancient_forest_day.webp",
+  "background": "assets/scenes/battle/ancient_forest_day_v1.webp",
   "referenceResolution": {
     "width": 1280,
     "height": 720

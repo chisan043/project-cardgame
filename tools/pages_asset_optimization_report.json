@@ -952,64 +952,64 @@
       "status": "cached"
     },
     {
-      "source": "场景/主场景/bg_battle_ancient_forest_day.png",
-      "webp": "场景/主场景/bg_battle_ancient_forest_day.webp",
+      "source": "assets/scenes/battle/ancient_forest_day_v1.png",
+      "webp": "assets/scenes/battle/ancient_forest_day_v1.webp",
       "sourceBytes": 3053263,
       "webpBytes": 290864,
       "status": "cached"
     },
     {
-      "source": "场景/主场景/bg_battle_cave_cold.png",
-      "webp": "场景/主场景/bg_battle_cave_cold.webp",
+      "source": "assets/scenes/battle/cave_cold_v1.png",
+      "webp": "assets/scenes/battle/cave_cold_v1.webp",
       "sourceBytes": 2639165,
       "webpBytes": 186992,
       "status": "cached"
     },
     {
-      "source": "场景/主场景/bg_battle_dungeon_corridor_torch.png",
-      "webp": "场景/主场景/bg_battle_dungeon_corridor_torch.webp",
+      "source": "assets/source/scenes/battle/dungeon_corridor_torch_v1_source.png",
+      "webp": "assets/scenes/battle/dungeon_corridor_torch_v1.webp",
       "sourceBytes": 2585907,
       "webpBytes": 147024,
       "status": "cached"
     },
     {
-      "source": "场景/主场景/bg_battle_mountain_plain_day.png",
-      "webp": "场景/主场景/bg_battle_mountain_plain_day.webp",
+      "source": "assets/scenes/battle/mountain_plain_day_v1.png",
+      "webp": "assets/scenes/battle/mountain_plain_day_v1.webp",
       "sourceBytes": 3022579,
       "webpBytes": 281020,
       "status": "cached"
     },
     {
-      "source": "场景/主场景/bg_battle_stone_ruins_day.png",
-      "webp": "场景/主场景/bg_battle_stone_ruins_day.webp",
+      "source": "assets/scenes/battle/stone_ruins_day_v1.png",
+      "webp": "assets/scenes/battle/stone_ruins_day_v1.webp",
       "sourceBytes": 3278178,
       "webpBytes": 359522,
       "status": "cached"
     },
     {
-      "source": "场景/主场景/bg_battle_temple_hall_grand.png",
-      "webp": "场景/主场景/bg_battle_temple_hall_grand.webp",
+      "source": "assets/scenes/battle/temple_hall_grand_v1.png",
+      "webp": "assets/scenes/battle/temple_hall_grand_v1.webp",
       "sourceBytes": 2809510,
       "webpBytes": 236072,
       "status": "cached"
     },
     {
-      "source": "场景/主场景/bg_battle_temple_inner_light.png",
-      "webp": "场景/主场景/bg_battle_temple_inner_light.webp",
+      "source": "assets/source/scenes/battle/temple_inner_light_v1_source.png",
+      "webp": "assets/scenes/battle/temple_inner_light_v1.webp",
       "sourceBytes": 2623927,
       "webpBytes": 170922,
       "status": "cached"
     },
     {
-      "source": "场景/主场景/bg_battle_wasteland_dusk.png",
-      "webp": "场景/主场景/bg_battle_wasteland_dusk.webp",
+      "source": "assets/scenes/battle/wasteland_dusk_v1.png",
+      "webp": "assets/scenes/battle/wasteland_dusk_v1.webp",
       "sourceBytes": 2735487,
       "webpBytes": 181130,
       "status": "cached"
     },
     {
-      "source": "场景/主场景/bg_event_town_distant_day.png",
-      "webp": "场景/主场景/bg_event_town_distant_day.webp",
+      "source": "assets/source/scenes/event/town_distant_day_v1_source.png",
+      "webp": "assets/scenes/event/town_distant_day_v1.webp",
       "sourceBytes": 3028635,
       "webpBytes": 295070,
       "status": "cached"
