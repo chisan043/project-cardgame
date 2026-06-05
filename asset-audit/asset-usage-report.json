@@ -23,253 +23,40 @@
   "summary": {
     "assetCount": 1206,
     "textFileCount": 41,
-    "referencedAssetCount": 383,
+    "referencedAssetCount": 389,
     "activeAssetCount": 378,
-    "unreferencedAssetCount": 823,
-    "missingReferenceCount": 287,
+    "unreferencedAssetCount": 817,
+    "missingReferenceCount": 275,
     "missingRuntimeReferenceCount": 42,
     "statusCounts": {
       "active": 378,
       "candidate": 100,
-      "documented": 5,
+      "documented": 11,
       "legacy": 48,
-      "source": 56,
-      "unreferenced": 619
+      "source": 53,
+      "unreferenced": 616
     },
     "riskCounts": {
       "identical_content": 141,
       "long_component": 79,
       "long_path": 11,
-      "multi_module_reference": 53,
-      "non_ascii_path": 1177,
-      "unreferenced": 624
+      "multi_module_reference": 56,
+      "non_ascii_path": 1171,
+      "unreferenced": 627
     },
     "referenceModuleCounts": {
       "cards": 178,
       "characters": 9,
       "demo": 68,
       "enemies": 1,
-      "misc": 68,
+      "misc": 77,
       "relics": 45,
       "ui.hud": 67
     },
-    "duplicateExtensionGroupCount": 265,
+    "duplicateExtensionGroupCount": 262,
     "identicalContentGroupCount": 45
   },
   "assets": [
-    {
-      "path": "NPC/campfire_elder_portrait.png",
-      "extension": ".png",
-      "bytes": 629492,
-      "sha256": "dd83d75e897f04690fe8c1d18b19fab46f38afadf666b26bc9ff22313bed785d",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 31,
-      "maxComponentLength": 27,
-      "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "NPC/campfire_elder_portrait.webp",
-      "extension": ".webp",
-      "bytes": 86528,
-      "sha256": "8edc1585e49015c9a919c9fa5b667a25380e51bc539bfaefb7352050d787b83d",
-      "status": "active",
-      "references": [
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 65,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo"
-      ],
-      "pathLength": 32,
-      "maxComponentLength": 28,
-      "containsNonAscii": false,
-      "risks": [],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "NPC/encounter_angel_portrait.png",
-      "extension": ".png",
-      "bytes": 623025,
-      "sha256": "1fcefcaae59929057f489d532eb4973a1977c43e0ccff91bd7c66822bc1262ac",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 32,
-      "maxComponentLength": 28,
-      "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "NPC/encounter_angel_portrait.webp",
-      "extension": ".webp",
-      "bytes": 96584,
-      "sha256": "0aa2de60170694bfdc794be190531fa5c8581eae59b52ee0466426c61d31b37c",
-      "status": "active",
-      "references": [
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 66,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo"
-      ],
-      "pathLength": 33,
-      "maxComponentLength": 29,
-      "containsNonAscii": false,
-      "risks": [],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "NPC/shopkeeper_portrait.png",
-      "extension": ".png",
-      "bytes": 577942,
-      "sha256": "e0fdbd2920d720f4e7fe2b0d22cc12b12111f162142498439f6c067c81169f75",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 27,
-      "maxComponentLength": 23,
-      "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "NPC/shopkeeper_portrait.webp",
-      "extension": ".webp",
-      "bytes": 79994,
-      "sha256": "489987e19965a5681e093f11735bbfd4483d08cd1da04bf85a88b41d7c6b3746",
-      "status": "active",
-      "references": [
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 64,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo"
-      ],
-      "pathLength": 28,
-      "maxComponentLength": 24,
-      "containsNonAscii": false,
-      "risks": [],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "NPC/源图/campfire_elder_alpha_fullres.png",
-      "extension": ".png",
-      "bytes": 1773445,
-      "sha256": "b59773182324fc50a0b4eca69aea99eaace73328578b3765dcea2bec0061ce9c",
-      "status": "source",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 39,
-      "maxComponentLength": 32,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "NPC/源图/campfire_elder_source_chromakey.png",
-      "extension": ".png",
-      "bytes": 2094715,
-      "sha256": "28e9e2f94f0bd740d299a54303b1b33a84ac9c06f18174466efbdab22603d70a",
-      "status": "source",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 42,
-      "maxComponentLength": 35,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "NPC/源图/encounter_angel_alpha_fullres.png",
-      "extension": ".png",
-      "bytes": 1686203,
-      "sha256": "857b42d6134879fcbcbccf6c734ceba464f8da9c39f82edc400f3bee69ed205f",
-      "status": "source",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 40,
-      "maxComponentLength": 33,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "NPC/源图/encounter_angel_source_chromakey.png",
-      "extension": ".png",
-      "bytes": 1997504,
-      "sha256": "56645ae742c235cb4bb79aefa116bff870911282a712ed35eae49abddbd6e802",
-      "status": "source",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 43,
-      "maxComponentLength": 36,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "NPC/源图/shopkeeper_alpha_fullres.png",
-      "extension": ".png",
-      "bytes": 1604516,
-      "sha256": "34c25e16887278399a827fe9c48086259c5d90d92a75dcee1bf5e3d06b079a9d",
-      "status": "source",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 35,
-      "maxComponentLength": 28,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "NPC/源图/shopkeeper_source_chromakey.png",
-      "extension": ".png",
-      "bytes": 1937696,
-      "sha256": "a43fcb5ab5ac9137d18c183011105b79d329f5eba20de61e413b7195dbe400da",
-      "status": "source",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 38,
-      "maxComponentLength": 31,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
     {
       "path": "UI/主菜单/main_menu_key_art_candidate_v1.png",
       "extension": ".png",
@@ -7791,6 +7578,120 @@
       "identicalContentGroup": []
     },
     {
+      "path": "assets/npc/campfire_elder_portrait_v1.webp",
+      "extension": ".webp",
+      "bytes": 86528,
+      "sha256": "8edc1585e49015c9a919c9fa5b667a25380e51bc539bfaefb7352050d787b83d",
+      "status": "active",
+      "references": [
+        {
+          "file": "NPC/资产清单.txt",
+          "line": 8,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "NPC/资产清单.txt",
+          "line": 21,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 65,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "misc"
+      ],
+      "pathLength": 42,
+      "maxComponentLength": 31,
+      "containsNonAscii": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/npc/encounter_angel_portrait_v1.webp",
+      "extension": ".webp",
+      "bytes": 96584,
+      "sha256": "0aa2de60170694bfdc794be190531fa5c8581eae59b52ee0466426c61d31b37c",
+      "status": "active",
+      "references": [
+        {
+          "file": "NPC/资产清单.txt",
+          "line": 9,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "NPC/资产清单.txt",
+          "line": 22,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 66,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "misc"
+      ],
+      "pathLength": 43,
+      "maxComponentLength": 32,
+      "containsNonAscii": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/npc/shopkeeper_portrait_v1.webp",
+      "extension": ".webp",
+      "bytes": 79994,
+      "sha256": "489987e19965a5681e093f11735bbfd4483d08cd1da04bf85a88b41d7c6b3746",
+      "status": "active",
+      "references": [
+        {
+          "file": "NPC/资产清单.txt",
+          "line": 7,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "NPC/资产清单.txt",
+          "line": 20,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 64,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "misc"
+      ],
+      "pathLength": 38,
+      "maxComponentLength": 27,
+      "containsNonAscii": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "identicalContentGroup": []
+    },
+    {
       "path": "assets/scenes/battle/ancient_forest_day_v1.png",
       "extension": ".png",
       "bytes": 3053263,
@@ -8320,6 +8221,198 @@
       ],
       "pathLength": 44,
       "maxComponentLength": 24,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/npc/campfire_elder_alpha_fullres_v1_source.png",
+      "extension": ".png",
+      "bytes": 1773445,
+      "sha256": "b59773182324fc50a0b4eca69aea99eaace73328578b3765dcea2bec0061ce9c",
+      "status": "documented",
+      "references": [
+        {
+          "file": "NPC/资产清单.txt",
+          "line": 15,
+          "module": "misc",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 60,
+      "maxComponentLength": 42,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/npc/campfire_elder_chromakey_source_v1.png",
+      "extension": ".png",
+      "bytes": 2094715,
+      "sha256": "28e9e2f94f0bd740d299a54303b1b33a84ac9c06f18174466efbdab22603d70a",
+      "status": "documented",
+      "references": [
+        {
+          "file": "NPC/资产清单.txt",
+          "line": 14,
+          "module": "misc",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 56,
+      "maxComponentLength": 38,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/npc/campfire_elder_portrait_v1_source.png",
+      "extension": ".png",
+      "bytes": 629492,
+      "sha256": "dd83d75e897f04690fe8c1d18b19fab46f38afadf666b26bc9ff22313bed785d",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 55,
+      "maxComponentLength": 37,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/npc/encounter_angel_alpha_fullres_v1_source.png",
+      "extension": ".png",
+      "bytes": 1686203,
+      "sha256": "857b42d6134879fcbcbccf6c734ceba464f8da9c39f82edc400f3bee69ed205f",
+      "status": "documented",
+      "references": [
+        {
+          "file": "NPC/资产清单.txt",
+          "line": 17,
+          "module": "misc",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 61,
+      "maxComponentLength": 43,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/npc/encounter_angel_chromakey_source_v1.png",
+      "extension": ".png",
+      "bytes": 1997504,
+      "sha256": "56645ae742c235cb4bb79aefa116bff870911282a712ed35eae49abddbd6e802",
+      "status": "documented",
+      "references": [
+        {
+          "file": "NPC/资产清单.txt",
+          "line": 16,
+          "module": "misc",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 57,
+      "maxComponentLength": 39,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/npc/encounter_angel_portrait_v1_source.png",
+      "extension": ".png",
+      "bytes": 623025,
+      "sha256": "1fcefcaae59929057f489d532eb4973a1977c43e0ccff91bd7c66822bc1262ac",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 56,
+      "maxComponentLength": 38,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/npc/shopkeeper_alpha_fullres_v1_source.png",
+      "extension": ".png",
+      "bytes": 1604516,
+      "sha256": "34c25e16887278399a827fe9c48086259c5d90d92a75dcee1bf5e3d06b079a9d",
+      "status": "documented",
+      "references": [
+        {
+          "file": "NPC/资产清单.txt",
+          "line": 13,
+          "module": "misc",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 56,
+      "maxComponentLength": 38,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/npc/shopkeeper_chromakey_source_v1.png",
+      "extension": ".png",
+      "bytes": 1937696,
+      "sha256": "a43fcb5ab5ac9137d18c183011105b79d329f5eba20de61e413b7195dbe400da",
+      "status": "documented",
+      "references": [
+        {
+          "file": "NPC/资产清单.txt",
+          "line": 12,
+          "module": "misc",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 52,
+      "maxComponentLength": 34,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/npc/shopkeeper_portrait_v1_source.png",
+      "extension": ".png",
+      "bytes": 577942,
+      "sha256": "e0fdbd2920d720f4e7fe2b0d22cc12b12111f162142498439f6c067c81169f75",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 51,
+      "maxComponentLength": 33,
       "containsNonAscii": false,
       "risks": [],
       "identicalContentGroup": []
@@ -26578,20 +26671,6 @@
       "kind": "documentation"
     },
     {
-      "path": "campfire_elder_portrait.png",
-      "file": "NPC/资产清单.txt",
-      "line": 8,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "campfire_elder_portrait.png",
-      "file": "NPC/资产清单.txt",
-      "line": 21,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
       "path": "card_art_fire_seal_01.jpg",
       "file": "demo更改需求文档.txt",
       "line": 787,
@@ -26609,20 +26688,6 @@
       "path": "elf_back_idle.png",
       "file": "demo更改需求文档.txt",
       "line": 774,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "encounter_angel_portrait.png",
-      "file": "NPC/资产清单.txt",
-      "line": 9,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "encounter_angel_portrait.png",
-      "file": "NPC/资产清单.txt",
-      "line": 22,
       "module": "misc",
       "kind": "documentation"
     },
@@ -26848,20 +26913,6 @@
       "file": "旧美术资产/角色三/资产清单.txt",
       "line": 24,
       "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "shopkeeper_portrait.png",
-      "file": "NPC/资产清单.txt",
-      "line": 7,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "shopkeeper_portrait.png",
-      "file": "NPC/资产清单.txt",
-      "line": 20,
-      "module": "misc",
       "kind": "documentation"
     },
     {
@@ -27628,48 +27679,6 @@
       "kind": "documentation"
     },
     {
-      "path": "源图/campfire_elder_alpha_fullres.png",
-      "file": "NPC/资产清单.txt",
-      "line": 15,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "源图/campfire_elder_source_chromakey.png",
-      "file": "NPC/资产清单.txt",
-      "line": 14,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "源图/encounter_angel_alpha_fullres.png",
-      "file": "NPC/资产清单.txt",
-      "line": 17,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "源图/encounter_angel_source_chromakey.png",
-      "file": "NPC/资产清单.txt",
-      "line": 16,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "源图/shopkeeper_alpha_fullres.png",
-      "file": "NPC/资产清单.txt",
-      "line": 13,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "源图/shopkeeper_source_chromakey.png",
-      "file": "NPC/资产清单.txt",
-      "line": 12,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
       "path": "特性标签底板_蓝金_v1.png",
       "file": "UI/教堂彩窗赛璐璐/角色选择/README.md",
       "line": 12,
@@ -28378,27 +28387,6 @@
     }
   ],
   "duplicateExtensionGroups": [
-    {
-      "basePath": "NPC/campfire_elder_portrait",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "NPC/encounter_angel_portrait",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "NPC/shopkeeper_portrait",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
     {
       "basePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_parchment_fullscreen_background_imagegen_v1",
       "extensions": [

@@ -7,22 +7,22 @@
   "referenceChanges": [],
   "assets": [
     {
-      "source": "NPC/campfire_elder_portrait.png",
-      "webp": "NPC/campfire_elder_portrait.webp",
+      "source": "assets/source/npc/campfire_elder_portrait_v1_source.png",
+      "webp": "assets/npc/campfire_elder_portrait_v1.webp",
       "sourceBytes": 629492,
       "webpBytes": 86528,
       "status": "cached"
     },
     {
-      "source": "NPC/encounter_angel_portrait.png",
-      "webp": "NPC/encounter_angel_portrait.webp",
+      "source": "assets/source/npc/encounter_angel_portrait_v1_source.png",
+      "webp": "assets/npc/encounter_angel_portrait_v1.webp",
       "sourceBytes": 623025,
       "webpBytes": 96584,
       "status": "cached"
     },
     {
-      "source": "NPC/shopkeeper_portrait.png",
-      "webp": "NPC/shopkeeper_portrait.webp",
+      "source": "assets/source/npc/shopkeeper_portrait_v1_source.png",
+      "webp": "assets/npc/shopkeeper_portrait_v1.webp",
       "sourceBytes": 577942,
       "webpBytes": 79994,
       "status": "cached"

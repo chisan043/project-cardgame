@@ -1,0 +1,342 @@
+{
+  "generatedBy": "tools/plan_asset_migration.py",
+  "proposalType": "review_only",
+  "moduleSlug": "npc",
+  "sourcePrefix": "NPC/",
+  "includePrefixes": [
+    "assets/npc/",
+    "assets/source/npc/"
+  ],
+  "targetDirectory": "assets/npc",
+  "strategy": [
+    "Review this plan before executing any filesystem migration.",
+    "Copy active runtime assets into the owning module first.",
+    "Rewrite references only after copied assets exist.",
+    "Keep source and candidate assets separate from formal runtime assets.",
+    "Do not archive unreferenced assets until active migration validation passes."
+  ],
+  "summary": {
+    "assetCount": 12,
+    "statusCounts": {
+      "active": 3,
+      "documented": 6,
+      "source": 3
+    },
+    "actionCounts": {
+      "already_migrated": 12
+    },
+    "trackedCounts": {
+      "tracked": 12
+    },
+    "duplicateExtensionGroupCount": 0
+  },
+  "entries": [
+    {
+      "sourcePath": "assets/npc/campfire_elder_portrait_v1.webp",
+      "suggestedPath": "assets/npc/campfire_elder_portrait_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [
+        {
+          "file": "NPC/资产清单.txt",
+          "line": 8,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "NPC/资产清单.txt",
+          "line": 21,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 65,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "misc"
+      ],
+      "risks": [
+        "multi_module_reference"
+      ],
+      "sha256": "8edc1585e49015c9a919c9fa5b667a25380e51bc539bfaefb7352050d787b83d",
+      "derivedFrom": "assets/npc/campfire_elder_portrait_v1.webp",
+      "visualGroup": "visual_8edc1585e4",
+      "notes": "runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/npc/encounter_angel_portrait_v1.webp",
+      "suggestedPath": "assets/npc/encounter_angel_portrait_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [
+        {
+          "file": "NPC/资产清单.txt",
+          "line": 9,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "NPC/资产清单.txt",
+          "line": 22,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 66,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "misc"
+      ],
+      "risks": [
+        "multi_module_reference"
+      ],
+      "sha256": "0aa2de60170694bfdc794be190531fa5c8581eae59b52ee0466426c61d31b37c",
+      "derivedFrom": "assets/npc/encounter_angel_portrait_v1.webp",
+      "visualGroup": "visual_0aa2de6017",
+      "notes": "runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/npc/shopkeeper_portrait_v1.webp",
+      "suggestedPath": "assets/npc/shopkeeper_portrait_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [
+        {
+          "file": "NPC/资产清单.txt",
+          "line": 7,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "NPC/资产清单.txt",
+          "line": 20,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 64,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo",
+        "misc"
+      ],
+      "risks": [
+        "multi_module_reference"
+      ],
+      "sha256": "489987e19965a5681e093f11735bbfd4483d08cd1da04bf85a88b41d7c6b3746",
+      "derivedFrom": "assets/npc/shopkeeper_portrait_v1.webp",
+      "visualGroup": "visual_489987e199",
+      "notes": "runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/source/npc/campfire_elder_alpha_fullres_v1_source.png",
+      "suggestedPath": "assets/source/npc/campfire_elder_alpha_fullres_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "NPC/资产清单.txt",
+          "line": 15,
+          "module": "misc",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "b59773182324fc50a0b4eca69aea99eaace73328578b3765dcea2bec0061ce9c",
+      "derivedFrom": "assets/source/npc/campfire_elder_alpha_fullres_v1_source.png",
+      "visualGroup": "visual_b597731823",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/npc/campfire_elder_chromakey_source_v1.png",
+      "suggestedPath": "assets/source/npc/campfire_elder_chromakey_source_v1.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "NPC/资产清单.txt",
+          "line": 14,
+          "module": "misc",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "28e9e2f94f0bd740d299a54303b1b33a84ac9c06f18174466efbdab22603d70a",
+      "derivedFrom": "assets/source/npc/campfire_elder_chromakey_source_v1.png",
+      "visualGroup": "visual_28e9e2f94f",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/npc/campfire_elder_portrait_v1_source.png",
+      "suggestedPath": "assets/source/npc/campfire_elder_portrait_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "dd83d75e897f04690fe8c1d18b19fab46f38afadf666b26bc9ff22313bed785d",
+      "derivedFrom": "assets/source/npc/campfire_elder_portrait_v1_source.png",
+      "visualGroup": "visual_dd83d75e89",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/npc/encounter_angel_alpha_fullres_v1_source.png",
+      "suggestedPath": "assets/source/npc/encounter_angel_alpha_fullres_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "NPC/资产清单.txt",
+          "line": 17,
+          "module": "misc",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "857b42d6134879fcbcbccf6c734ceba464f8da9c39f82edc400f3bee69ed205f",
+      "derivedFrom": "assets/source/npc/encounter_angel_alpha_fullres_v1_source.png",
+      "visualGroup": "visual_857b42d613",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/npc/encounter_angel_chromakey_source_v1.png",
+      "suggestedPath": "assets/source/npc/encounter_angel_chromakey_source_v1.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "NPC/资产清单.txt",
+          "line": 16,
+          "module": "misc",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "56645ae742c235cb4bb79aefa116bff870911282a712ed35eae49abddbd6e802",
+      "derivedFrom": "assets/source/npc/encounter_angel_chromakey_source_v1.png",
+      "visualGroup": "visual_56645ae742",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/npc/encounter_angel_portrait_v1_source.png",
+      "suggestedPath": "assets/source/npc/encounter_angel_portrait_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "1fcefcaae59929057f489d532eb4973a1977c43e0ccff91bd7c66822bc1262ac",
+      "derivedFrom": "assets/source/npc/encounter_angel_portrait_v1_source.png",
+      "visualGroup": "visual_1fcefcaae5",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/npc/shopkeeper_alpha_fullres_v1_source.png",
+      "suggestedPath": "assets/source/npc/shopkeeper_alpha_fullres_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "NPC/资产清单.txt",
+          "line": 13,
+          "module": "misc",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "34c25e16887278399a827fe9c48086259c5d90d92a75dcee1bf5e3d06b079a9d",
+      "derivedFrom": "assets/source/npc/shopkeeper_alpha_fullres_v1_source.png",
+      "visualGroup": "visual_34c25e1688",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/npc/shopkeeper_chromakey_source_v1.png",
+      "suggestedPath": "assets/source/npc/shopkeeper_chromakey_source_v1.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "NPC/资产清单.txt",
+          "line": 12,
+          "module": "misc",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "a43fcb5ab5ac9137d18c183011105b79d329f5eba20de61e413b7195dbe400da",
+      "derivedFrom": "assets/source/npc/shopkeeper_chromakey_source_v1.png",
+      "visualGroup": "visual_a43fcb5ab5",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/npc/shopkeeper_portrait_v1_source.png",
+      "suggestedPath": "assets/source/npc/shopkeeper_portrait_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "e0fdbd2920d720f4e7fe2b0d22cc12b12111f162142498439f6c067c81169f75",
+      "derivedFrom": "assets/source/npc/shopkeeper_portrait_v1_source.png",
+      "visualGroup": "visual_e0fdbd2920",
+      "notes": "review before migration"
+    }
+  ],
+  "duplicateExtensionGroups": []
+}

@@ -7788,45 +7788,99 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "NPC/campfire_elder_portrait.png",
-      "suggestedPath": "assets/npc/campfire_elder_portrait.png",
-      "suggestedDirectory": "assets/npc",
-      "status": "unreferenced",
-      "referenceModules": [],
+      "sourcePath": "assets/source/npc/campfire_elder_alpha_fullres_v1_source.png",
+      "suggestedPath": "assets/misc/review/campfire_elder_alpha_fullres_v1_source.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "documented",
+      "referenceModules": [
+        "misc"
+      ],
       "requiresHumanNameReview": false,
       "risks": [
         "unreferenced"
       ],
-      "derivedFrom": "NPC/campfire_elder_portrait.png",
-      "visualGroup": "visual_dd83d75e89",
+      "derivedFrom": "assets/source/npc/campfire_elder_alpha_fullres_v1_source.png",
+      "visualGroup": "visual_b597731823",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "NPC/encounter_angel_portrait.png",
-      "suggestedPath": "assets/npc/encounter_angel_portrait.png",
-      "suggestedDirectory": "assets/npc",
-      "status": "unreferenced",
-      "referenceModules": [],
+      "sourcePath": "assets/source/npc/campfire_elder_chromakey_source_v1.png",
+      "suggestedPath": "assets/misc/review/campfire_elder_chromakey_source_v1.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "documented",
+      "referenceModules": [
+        "misc"
+      ],
       "requiresHumanNameReview": false,
       "risks": [
         "unreferenced"
       ],
-      "derivedFrom": "NPC/encounter_angel_portrait.png",
-      "visualGroup": "visual_1fcefcaae5",
+      "derivedFrom": "assets/source/npc/campfire_elder_chromakey_source_v1.png",
+      "visualGroup": "visual_28e9e2f94f",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "NPC/shopkeeper_portrait.png",
-      "suggestedPath": "assets/npc/shopkeeper_portrait.png",
-      "suggestedDirectory": "assets/npc",
-      "status": "unreferenced",
-      "referenceModules": [],
+      "sourcePath": "assets/source/npc/encounter_angel_alpha_fullres_v1_source.png",
+      "suggestedPath": "assets/misc/review/encounter_angel_alpha_fullres_v1_source.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "documented",
+      "referenceModules": [
+        "misc"
+      ],
       "requiresHumanNameReview": false,
       "risks": [
         "unreferenced"
       ],
-      "derivedFrom": "NPC/shopkeeper_portrait.png",
-      "visualGroup": "visual_e0fdbd2920",
+      "derivedFrom": "assets/source/npc/encounter_angel_alpha_fullres_v1_source.png",
+      "visualGroup": "visual_857b42d613",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/npc/encounter_angel_chromakey_source_v1.png",
+      "suggestedPath": "assets/misc/review/encounter_angel_chromakey_source_v1.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "documented",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/npc/encounter_angel_chromakey_source_v1.png",
+      "visualGroup": "visual_56645ae742",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/npc/shopkeeper_alpha_fullres_v1_source.png",
+      "suggestedPath": "assets/misc/review/shopkeeper_alpha_fullres_v1_source.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "documented",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/npc/shopkeeper_alpha_fullres_v1_source.png",
+      "visualGroup": "visual_34c25e1688",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/npc/shopkeeper_chromakey_source_v1.png",
+      "suggestedPath": "assets/misc/review/shopkeeper_chromakey_source_v1.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "documented",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/npc/shopkeeper_chromakey_source_v1.png",
+      "visualGroup": "visual_a43fcb5ab5",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -9919,6 +9973,57 @@
       ],
       "derivedFrom": "_preview_角色二.png",
       "visualGroup": "visual_315a00ed50",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/npc/campfire_elder_portrait_v1.webp",
+      "suggestedPath": "assets/review/campfire_elder_portrait_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/npc/campfire_elder_portrait_v1.webp",
+      "visualGroup": "visual_8edc1585e4",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/npc/encounter_angel_portrait_v1.webp",
+      "suggestedPath": "assets/review/encounter_angel_portrait_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/npc/encounter_angel_portrait_v1.webp",
+      "visualGroup": "visual_0aa2de6017",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/npc/shopkeeper_portrait_v1.webp",
+      "suggestedPath": "assets/review/shopkeeper_portrait_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/npc/shopkeeper_portrait_v1.webp",
+      "visualGroup": "visual_489987e199",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -12930,90 +13035,6 @@
       ],
       "derivedFrom": "场景/色板参考/scene_palette_overview.png",
       "visualGroup": "visual_4394781dcd",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "NPC/源图/campfire_elder_alpha_fullres.png",
-      "suggestedPath": "assets/source/npc/campfire_elder_alpha_fullres.png",
-      "suggestedDirectory": "assets/source/npc",
-      "status": "source",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "NPC/源图/campfire_elder_alpha_fullres.png",
-      "visualGroup": "visual_b597731823",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "NPC/源图/campfire_elder_source_chromakey.png",
-      "suggestedPath": "assets/source/npc/campfire_elder_source_chromakey.png",
-      "suggestedDirectory": "assets/source/npc",
-      "status": "source",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "NPC/源图/campfire_elder_source_chromakey.png",
-      "visualGroup": "visual_28e9e2f94f",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "NPC/源图/encounter_angel_alpha_fullres.png",
-      "suggestedPath": "assets/source/npc/encounter_angel_alpha_fullres.png",
-      "suggestedDirectory": "assets/source/npc",
-      "status": "source",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "NPC/源图/encounter_angel_alpha_fullres.png",
-      "visualGroup": "visual_857b42d613",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "NPC/源图/encounter_angel_source_chromakey.png",
-      "suggestedPath": "assets/source/npc/encounter_angel_source_chromakey.png",
-      "suggestedDirectory": "assets/source/npc",
-      "status": "source",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "NPC/源图/encounter_angel_source_chromakey.png",
-      "visualGroup": "visual_56645ae742",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "NPC/源图/shopkeeper_alpha_fullres.png",
-      "suggestedPath": "assets/source/npc/shopkeeper_alpha_fullres.png",
-      "suggestedDirectory": "assets/source/npc",
-      "status": "source",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "NPC/源图/shopkeeper_alpha_fullres.png",
-      "visualGroup": "visual_34c25e1688",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "NPC/源图/shopkeeper_source_chromakey.png",
-      "suggestedPath": "assets/source/npc/shopkeeper_source_chromakey.png",
-      "suggestedDirectory": "assets/source/npc",
-      "status": "source",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "NPC/源图/shopkeeper_source_chromakey.png",
-      "visualGroup": "visual_a43fcb5ab5",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {

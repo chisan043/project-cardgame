@@ -4,20 +4,20 @@ NPC 立绘资产清单
 90 年代日本赛璐璐奇幻动画风、传统手绘线稿、2 到 3 阶硬边阴影、胶片时代配色、非 Q 版。NPC 立绘规格对齐角色选择立绘：512 x 1024、RGBA、透明背景。
 
 已交付文件：
-1. shopkeeper_portrait.png
-2. campfire_elder_portrait.png
-3. encounter_angel_portrait.png
+1. assets/npc/shopkeeper_portrait_v1.webp
+2. assets/npc/campfire_elder_portrait_v1.webp
+3. assets/npc/encounter_angel_portrait_v1.webp
 
 源图与处理文件：
-1. 源图/shopkeeper_source_chromakey.png
-2. 源图/shopkeeper_alpha_fullres.png
-3. 源图/campfire_elder_source_chromakey.png
-4. 源图/campfire_elder_alpha_fullres.png
-5. 源图/encounter_angel_source_chromakey.png
-6. 源图/encounter_angel_alpha_fullres.png
+1. assets/source/npc/shopkeeper_chromakey_source_v1.png
+2. assets/source/npc/shopkeeper_alpha_fullres_v1_source.png
+3. assets/source/npc/campfire_elder_chromakey_source_v1.png
+4. assets/source/npc/campfire_elder_alpha_fullres_v1_source.png
+5. assets/source/npc/encounter_angel_chromakey_source_v1.png
+6. assets/source/npc/encounter_angel_alpha_fullres_v1_source.png
 
 说明：
-- shopkeeper_portrait.png 用于商店横幅的幻市商人立绘。
-- campfire_elder_portrait.png 用于营火横幅的营火老者立绘。
-- encounter_angel_portrait.png 用于奇遇横幅的天使 NPC 立绘。
-- 源图目录保留绿幕源图和全分辨率透明图，便于后续重裁切或二次处理。
+- assets/npc/shopkeeper_portrait_v1.webp 用于商店横幅的幻市商人立绘。
+- assets/npc/campfire_elder_portrait_v1.webp 用于营火横幅的营火老者立绘。
+- assets/npc/encounter_angel_portrait_v1.webp 用于奇遇横幅的天使 NPC 立绘。
+- assets/source/npc/ 保留绿幕源图和全分辨率透明图，便于后续重裁切或二次处理。

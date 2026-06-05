@@ -78,6 +78,33 @@ def scene_main_suggestion(source_path: str, status: str) -> tuple[str, str]:
     return f"assets/source/scenes/{scene_type}/{scene_slug}_v1_source{suffix}", "move_as_source"
 
 
+def npc_suggestion(source_path: str, status: str) -> tuple[str, str]:
+    path = Path(source_path)
+    suffix = path.suffix.lower()
+    stem = path.stem
+
+    if source_path.startswith(("assets/npc/", "assets/source/npc/")):
+        return source_path, "already_migrated"
+
+    name_map = {
+        "shopkeeper_portrait": "shopkeeper_portrait_v1",
+        "campfire_elder_portrait": "campfire_elder_portrait_v1",
+        "encounter_angel_portrait": "encounter_angel_portrait_v1",
+        "shopkeeper_alpha_fullres": "shopkeeper_alpha_fullres_v1",
+        "campfire_elder_alpha_fullres": "campfire_elder_alpha_fullres_v1",
+        "encounter_angel_alpha_fullres": "encounter_angel_alpha_fullres_v1",
+        "shopkeeper_source_chromakey": "shopkeeper_chromakey_source_v1",
+        "campfire_elder_source_chromakey": "campfire_elder_chromakey_source_v1",
+        "encounter_angel_source_chromakey": "encounter_angel_chromakey_source_v1",
+    }
+    slug = name_map.get(stem, f"{normalize_slug(stem)}_v1")
+
+    if status == "active":
+        return f"assets/npc/{slug}{suffix}", "move_then_rewrite_runtime_refs"
+    source_slug = slug if "source" in slug else f"{slug}_source"
+    return f"assets/source/npc/{source_slug}{suffix}", "move_as_source"
+
+
 def default_suggestion(source_path: str, status: str, target_dir: str, module_slug: str) -> tuple[str, str]:
     path = Path(source_path)
     filename = f"{normalize_slug(path.stem)}{path.suffix.lower()}"
@@ -97,6 +124,8 @@ def suggested_path(source_path: str, status: str, target_dir: str, module_slug: 
         return menu_suggestion(source_path, status, target_dir)
     if module_slug == "scenes_main":
         return scene_main_suggestion(source_path, status)
+    if module_slug == "npc":
+        return npc_suggestion(source_path, status)
     return default_suggestion(source_path, status, target_dir, module_slug)
 
 

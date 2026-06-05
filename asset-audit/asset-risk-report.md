@@ -6,31 +6,31 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 
 - Assets scanned: 1206
 - Text files scanned for references: 41
-- Referenced assets: 383
+- Referenced assets: 389
 - Active runtime/config assets: 378
-- Unreferenced assets: 823
-- Missing asset-like references: 287
+- Unreferenced assets: 817
+- Missing asset-like references: 275
 - Missing runtime/config references: 42
-- Duplicate extension groups: 265
+- Duplicate extension groups: 262
 - Identical content groups: 45
 
 ## Status Counts
 
 - active: 378
 - candidate: 100
-- documented: 5
+- documented: 11
 - legacy: 48
-- source: 56
-- unreferenced: 619
+- source: 53
+- unreferenced: 616
 
 ## Risk Counts
 
 - identical_content: 141
 - long_component: 79
 - long_path: 11
-- multi_module_reference: 53
-- non_ascii_path: 1177
-- unreferenced: 624
+- multi_module_reference: 56
+- non_ascii_path: 1171
+- unreferenced: 627
 
 ## Longest Paths
 
@@ -52,24 +52,21 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 
 ## Non-ASCII Path Examples
 
-- `NPC/源图/campfire_elder_alpha_fullres.png`
-- `NPC/源图/campfire_elder_source_chromakey.png`
-- `NPC/源图/encounter_angel_alpha_fullres.png`
-- `NPC/源图/encounter_angel_source_chromakey.png`
-- `NPC/源图/shopkeeper_alpha_fullres.png`
-- `NPC/源图/shopkeeper_source_chromakey.png`
 - `UI/主菜单/main_menu_key_art_candidate_v1.png`
 - `UI/主菜单/main_menu_key_art_candidate_v2.png`
 - `UI/教堂彩窗赛璐璐/图标样式/状态徽章底板_v1.png`
 - `UI/教堂彩窗赛璐璐/图标样式/状态徽章底板_v1_source.png`
 - `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/map_ui_fullscreen_imagegen_v1.png`
 - `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/backgrounds/map_center_landscape_crop_v1.png`
+- `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/backgrounds/map_center_painted_area_v1.png`
+- `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/buttons/map_enter_button_v1.png`
+- `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/frames/map_main_frame_v1.png`
+- `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/fullscreen/map_ui_fullscreen_imagegen_v1.png`
+- `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/map_imagegen_sliced_overview_v1.png`
+- `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/nodes/map_node_battle_imagegen_v1.png`
 
 ## Unreferenced Examples
 
-- `NPC/campfire_elder_portrait.png`
-- `NPC/encounter_angel_portrait.png`
-- `NPC/shopkeeper_portrait.png`
 - `UI/教堂彩窗赛璐璐/图标样式/状态徽章底板_v1.png`
 - `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_center_clean_background_imagegen_v1.png`
 - `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_center_parchment_background_imagegen_v1.png`
@@ -79,6 +76,9 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_right_simple_outer_wrapper_frame_imagegen_transparent_v1.png`
 - `UI/教堂彩窗赛璐璐/战斗HUD/战斗HUD_整体概念板_v1.png`
 - `UI/教堂彩窗赛璐璐/战斗HUD/战斗HUD_整体概念板_v2.png`
+- `UI/教堂彩窗赛璐璐/战斗HUD/战斗HUD_牌堆家族图_v1.png`
+- `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_discard_pile_clean_v1.png`
+- `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_discard_pile_v1.png`
 
 ## Multi-Module Reference Examples
 
@@ -136,11 +136,11 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - `assets/relics/masters`: 14 active risky assets
 - `assets/ui/character_select`: 8 active risky assets
 - `assets/scenes/battle/variants`: 5 active risky assets
+- `assets/review`: 4 active risky assets
 - `assets/characters/archer`: 3 active risky assets
 - `assets/characters/mage`: 3 active risky assets
 - `assets/characters/portrait`: 3 active risky assets
 - `assets/characters/warrior`: 3 active risky assets
-- `assets/review`: 1 active risky assets
 
 ## Notes
 
