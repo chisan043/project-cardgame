@@ -4013,50 +4013,6 @@
       "derivedFrom": "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_editor_asset_v1.webp",
       "visualGroup": "visual_a4dbb09806",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/图标样式/状态徽章底板_v1.png",
-      "suggestedPath": "assets/ui/review/review_72a5d188c3.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/图标样式/状态徽章底板_v1.png",
-      "visualGroup": "visual_72a5d188c3",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/图标样式/状态徽章底板_v1_source.png",
-      "suggestedPath": "assets/ui/review/review_b17b2b2de6.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "source",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/图标样式/状态徽章底板_v1_source.png",
-      "visualGroup": "visual_b17b2b2de6",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/概念图/02_教堂彩窗_赛璐璐融合方向图.png",
-      "suggestedPath": "assets/ui/review/review_feba749afd.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/概念图/02_教堂彩窗_赛璐璐融合方向图.png",
-      "visualGroup": "visual_feba749afd",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     }
   ]
 }

@@ -17,19 +17,19 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 ## Status Counts
 
 - active: 481
-- candidate: 129
+- candidate: 130
 - documented: 61
 - legacy: 242
-- source: 293
-- unreferenced: 24
+- source: 294
+- unreferenced: 22
 
 ## Risk Counts
 
 - identical_content: 181
 - long_component: 81
 - multi_module_reference: 63
-- non_ascii_path: 42
-- unreferenced: 85
+- non_ascii_path: 39
+- unreferenced: 83
 
 ## Longest Paths
 
@@ -51,9 +51,6 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 
 ## Non-ASCII Path Examples
 
-- `UI/教堂彩窗赛璐璐/图标样式/状态徽章底板_v1.png`
-- `UI/教堂彩窗赛璐璐/图标样式/状态徽章底板_v1_source.png`
-- `UI/教堂彩窗赛璐璐/概念图/02_教堂彩窗_赛璐璐融合方向图.png`
 - `_preview_新角色一三_带背景卡图.png`
 - `_preview_新角色三.png`
 - `_preview_角色二.png`
@@ -63,11 +60,12 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - `怪物/contact_sheet_36.png`
 - `怪物/contact_sheet_60.png`
 - `怪物/动作关键帧_总览.png`
+- `怪物/怪物纵览.png`
+- `怪物/战斗立绘_总览.png`
+- `旧美术资产/角色一/角色一_三视图_线稿版.png`
 
 ## Unreferenced Examples
 
-- `UI/教堂彩窗赛璐璐/图标样式/状态徽章底板_v1.png`
-- `UI/教堂彩窗赛璐璐/概念图/02_教堂彩窗_赛璐璐融合方向图.png`
 - `assets/candidates/ui/role_select/buttons/secondary_button_teal_gold_v1.png`
 - `assets/candidates/ui/role_select/frames/role_card_frame_normal_v1.png`
 - `assets/candidates/ui/role_select/frames/role_card_frame_selected_v1.png`
@@ -78,6 +76,8 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - `assets/source/characters/archer/battle_back/idle_v1_source.png`
 - `assets/source/characters/archer/battle_back/skill_cast_v1_source.png`
 - `assets/source/characters/archer/battle_front/attack_start_v1_source.png`
+- `assets/source/characters/archer/battle_front/hurt_v1_source.png`
+- `assets/source/characters/archer/battle_front/idle_v1_source.png`
 
 ## Multi-Module Reference Examples
 

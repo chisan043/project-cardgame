@@ -1,0 +1,76 @@
+{
+  "generatedBy": "manual UI misc cleanup plan from asset-audit/asset-usage-report.json",
+  "proposalType": "asset_migration_plan",
+  "moduleSlug": "ui_misc",
+  "sourcePrefix": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u56fe\u6807\u6837\u5f0f/ + \u6982\u5ff5\u56fe/",
+  "targetDirectory": "assets/source/ui",
+  "strategy": [
+    "Move UI source/concept images to assets/source/ui.",
+    "Move unreferenced but potentially useful UI candidate image to assets/candidates/ui."
+  ],
+  "summary": {
+    "assetCount": 3,
+    "actionCounts": {
+      "already_migrated": 3
+    },
+    "statusCounts": {
+      "candidate": 1,
+      "source": 2
+    }
+  },
+  "entries": [
+    {
+      "sourcePath": "assets/candidates/ui/icon_styles/status_badge_plate_v1.png",
+      "suggestedPath": "assets/candidates/ui/icon_styles/status_badge_plate_v1.png",
+      "action": "already_migrated",
+      "status": "candidate",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "72a5d188c3893a7c4e04f44a7f000c4a545c3324093d7d515b1587b87fa0e950",
+      "derivedFrom": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u56fe\u6807\u6837\u5f0f/\u72b6\u6001\u5fbd\u7ae0\u5e95\u677f_v1.png",
+      "visualGroup": "visual_72a5d188c3",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u56fe\u6807\u6837\u5f0f/\u72b6\u6001\u5fbd\u7ae0\u5e95\u677f_v1.png"
+    },
+    {
+      "sourcePath": "assets/source/ui/icon_styles/status_badge_plate_v1_source.png",
+      "suggestedPath": "assets/source/ui/icon_styles/status_badge_plate_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path"
+      ],
+      "sha256": "b17b2b2de66b2a06417043db3291fc94616cbd477d12fc0c28d86676c716d902",
+      "derivedFrom": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u56fe\u6807\u6837\u5f0f/\u72b6\u6001\u5fbd\u7ae0\u5e95\u677f_v1_source.png",
+      "visualGroup": "visual_b17b2b2de6",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u56fe\u6807\u6837\u5f0f/\u72b6\u6001\u5fbd\u7ae0\u5e95\u677f_v1_source.png"
+    },
+    {
+      "sourcePath": "assets/source/ui/concepts/stained_glass_cel_fusion_direction_v1.png",
+      "suggestedPath": "assets/source/ui/concepts/stained_glass_cel_fusion_direction_v1.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "feba749afd16fd1f7e3199592103e3e415dd64ae55dde02ac82e6dc346cfead2",
+      "derivedFrom": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6982\u5ff5\u56fe/02_\u6559\u5802\u5f69\u7a97_\u8d5b\u7490\u7490\u878d\u5408\u65b9\u5411\u56fe.png",
+      "visualGroup": "visual_feba749afd",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6982\u5ff5\u56fe/02_\u6559\u5802\u5f69\u7a97_\u8d5b\u7490\u7490\u878d\u5408\u65b9\u5411\u56fe.png"
+    }
+  ]
+}

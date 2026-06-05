@@ -30,18 +30,18 @@
     "missingRuntimeReferenceCount": 44,
     "statusCounts": {
       "active": 481,
-      "candidate": 129,
+      "candidate": 130,
       "documented": 61,
       "legacy": 242,
-      "source": 293,
-      "unreferenced": 24
+      "source": 294,
+      "unreferenced": 22
     },
     "riskCounts": {
       "identical_content": 181,
       "long_component": 81,
       "multi_module_reference": 63,
-      "non_ascii_path": 42,
-      "unreferenced": 85
+      "non_ascii_path": 39,
+      "unreferenced": 83
     },
     "referenceModuleCounts": {
       "cards": 178,
@@ -56,56 +56,6 @@
     "identicalContentGroupCount": 61
   },
   "assets": [
-    {
-      "path": "UI/教堂彩窗赛璐璐/图标样式/状态徽章底板_v1.png",
-      "extension": ".png",
-      "bytes": 1734205,
-      "sha256": "72a5d188c3893a7c4e04f44a7f000c4a545c3324093d7d515b1587b87fa0e950",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 29,
-      "maxComponentLength": 13,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/图标样式/状态徽章底板_v1_source.png",
-      "extension": ".png",
-      "bytes": 2123085,
-      "sha256": "b17b2b2de66b2a06417043db3291fc94616cbd477d12fc0c28d86676c716d902",
-      "status": "source",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 36,
-      "maxComponentLength": 20,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/概念图/02_教堂彩窗_赛璐璐融合方向图.png",
-      "extension": ".png",
-      "bytes": 3195695,
-      "sha256": "feba749afd16fd1f7e3199592103e3e415dd64ae55dde02ac82e6dc346cfead2",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 35,
-      "maxComponentLength": 20,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
     {
       "path": "_preview_新角色一三_带背景卡图.png",
       "extension": ".png",
@@ -4934,6 +4884,20 @@
       "referenceModules": [],
       "pathLength": 82,
       "maxComponentLength": 42,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/icon_styles/status_badge_plate_v1.png",
+      "extension": ".png",
+      "bytes": 1734205,
+      "sha256": "72a5d188c3893a7c4e04f44a7f000c4a545c3324093d7d515b1587b87fa0e950",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 58,
+      "maxComponentLength": 25,
       "containsNonAscii": false,
       "risks": [],
       "identicalContentGroup": []
@@ -20196,6 +20160,20 @@
       "identicalContentGroup": []
     },
     {
+      "path": "assets/source/ui/concepts/stained_glass_cel_fusion_direction_v1.png",
+      "extension": ".png",
+      "bytes": 3195695,
+      "sha256": "feba749afd16fd1f7e3199592103e3e415dd64ae55dde02ac82e6dc346cfead2",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 67,
+      "maxComponentLength": 41,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
       "path": "assets/source/ui/hud/materials/frame_master_border_asset_v1_source.png",
       "extension": ".png",
       "bytes": 736680,
@@ -20429,6 +20407,20 @@
       "referenceModules": [],
       "pathLength": 65,
       "maxComponentLength": 31,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/icon_styles/status_badge_plate_v1_source.png",
+      "extension": ".png",
+      "bytes": 2123085,
+      "sha256": "b17b2b2de66b2a06417043db3291fc94616cbd477d12fc0c28d86676c716d902",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 61,
+      "maxComponentLength": 32,
       "containsNonAscii": false,
       "risks": [],
       "identicalContentGroup": []
