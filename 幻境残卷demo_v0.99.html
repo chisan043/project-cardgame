@@ -2141,20 +2141,24 @@
         return [...new Set([...explicit, ...inferred])];
     }
 
+    const STARTER_BUILD_PROFILE_WEIGHT = 0.25;
+    const MIN_PRIMARY_BUILD_PROFILE_SCORE = 1;
+
     function getDeckBuildProfile(characterId = state.player?.characterId) {
         const directions = getBuildDirectionsForCharacter(characterId);
         const profile = Object.fromEntries(Object.keys(directions).map(key => [key, 0]));
         state.deck.forEach(card => {
+            const weight = card.isStarter ? STARTER_BUILD_PROFILE_WEIGHT : 1;
             const explicit = getExplicitBuildTags(card);
-            explicit.forEach(tag => { if (profile[tag] !== undefined) profile[tag] += 2; });
-            getCardBuildTags(card, characterId).forEach(tag => { if (profile[tag] !== undefined) profile[tag] += 1; });
+            explicit.forEach(tag => { if (profile[tag] !== undefined) profile[tag] += 2 * weight; });
+            getCardBuildTags(card, characterId).forEach(tag => { if (profile[tag] !== undefined) profile[tag] += 1 * weight; });
         });
         return profile;
     }
 
     function getPrimaryBuildTag(profile = getDeckBuildProfile()) {
         const ranked = Object.entries(profile).sort((a, b) => b[1] - a[1]);
-        if (!ranked.length || ranked[0][1] <= 0) return null;
+        if (!ranked.length || ranked[0][1] <= MIN_PRIMARY_BUILD_PROFILE_SCORE) return null;
         return ranked[0][0];
     }
 
@@ -2890,6 +2894,7 @@
             val,
             tags: [...tags],
             rarity,
+            isStarter: true,
             up: false
         };
     }
@@ -2900,41 +2905,41 @@
             return [
                 createStarterCard({ name: '基础法弹', type: '攻击', cost: 1, icon: '🪄', val: 7, tags: ['爆发'] }),
                 createStarterCard({ name: '基础法弹', type: '攻击', cost: 1, icon: '🪄', val: 7, tags: ['爆发'] }),
-                createStarterCard({ name: '秘仪预兆', type: '能力', cost: 1, icon: '🔮', val: 0, tags: ['咏唱'] }),
+                createStarterCard({ name: '基础护幕', type: '防御', cost: 1, icon: '🛡️', val: 6, tags: [] }),
+                createStarterCard({ name: '基础护幕', type: '防御', cost: 1, icon: '🛡️', val: 6, tags: [] }),
                 createStarterCard({ name: '秘仪预兆', type: '能力', cost: 1, icon: '🔮', val: 0, tags: ['咏唱'] }),
                 createStarterCard({ name: '紫焰火花', type: '攻击', cost: 1, icon: '🔥', val: 7, tags: ['爆发', '燃烧'], rarity: '稀有' }),
-                createStarterCard({ name: '紫焰火花', type: '攻击', cost: 1, icon: '🔥', val: 7, tags: ['爆发', '燃烧'], rarity: '稀有' }),
-                createStarterCard({ name: '魔流庇护', type: '能力', cost: 1, icon: '🛡️', val: 0, tags: ['咏唱', '治愈'], rarity: '稀有' }),
-                createStarterCard({ name: '遗迹咏唱', type: '能力', cost: 2, icon: '📜', val: 0, tags: ['咏唱', '充能', '抽牌'], rarity: '稀有' }),
-                createStarterCard({ name: '紫焰爆裂', type: '攻击', cost: 2, icon: '💥', val: 10, tags: ['爆发', '易伤'], rarity: '稀有' }),
-                createStarterCard({ name: '虚空导引', type: '能力', cost: 2, icon: '🌌', val: 0, tags: ['咏唱', '回响'], rarity: '稀有' })
+                createStarterCard({ name: '镜页试抄', type: '能力', cost: 1, icon: '🪞', val: 0, tags: ['复刻', '抽牌'], rarity: '普通' }),
+                createStarterCard({ name: '回声索引', type: '能力', cost: 1, icon: '🔖', val: 0, tags: ['回响', '抽牌'], rarity: '普通' }),
+                createStarterCard({ name: '蚀星雾', type: '能力', cost: 1, icon: '☠️', val: 0, tags: ['剧毒', '诅咒'], rarity: '普通' }),
+                createStarterCard({ name: '灰烬路标', type: '能力', cost: 1, icon: '🔥', val: 0, tags: ['易伤', '抽牌'], rarity: '稀有' })
             ];
         }
         if (character.starterDeckId === 'starter_archer') {
             return [
-                createStarterCard({ name: '基础射击', type: '攻击', cost: 1, icon: '🏹', val: 4, tags: ['连射'] }),
-                createStarterCard({ name: '基础射击', type: '攻击', cost: 1, icon: '🏹', val: 4, tags: ['连射'] }),
-                createStarterCard({ name: '基础射击', type: '攻击', cost: 1, icon: '🏹', val: 4, tags: ['连射'] }),
+                createStarterCard({ name: '基础射击', type: '攻击', cost: 1, icon: '🏹', val: 6, tags: [] }),
+                createStarterCard({ name: '基础射击', type: '攻击', cost: 1, icon: '🏹', val: 6, tags: [] }),
+                createStarterCard({ name: '林地回避', type: '防御', cost: 1, icon: '🍃', val: 6, tags: [] }),
+                createStarterCard({ name: '林地回避', type: '防御', cost: 1, icon: '🍃', val: 6, tags: [] }),
                 createStarterCard({ name: '拉弓瞄准', type: '能力', cost: 1, icon: '🎯', val: 7, tags: ['蓄力'], rarity: '稀有' }),
-                createStarterCard({ name: '林地回避', type: '能力', cost: 1, icon: '🍃', val: 4, tags: ['自然'] }),
-                createStarterCard({ name: '林地回避', type: '能力', cost: 1, icon: '🍃', val: 4, tags: ['自然'] }),
                 createStarterCard({ name: '疾风连射', type: '攻击', cost: 1, icon: '💨', val: 5, tags: ['连射'], rarity: '稀有' }),
-                createStarterCard({ name: '林风整备', type: '能力', cost: 1, icon: '🪶', val: 6, tags: ['自然', '蓄力'], rarity: '稀有' }),
-                createStarterCard({ name: '猎手翻步', type: '能力', cost: 1, icon: '🥾', val: 5, tags: ['自然', '保留'], rarity: '稀有' }),
-                createStarterCard({ name: '狩影穿枝', type: '攻击', cost: 2, icon: '🗡️', val: 9, tags: ['连射', '穿甲'], rarity: '稀有' })
+                createStarterCard({ name: '青牙试射', type: '攻击', cost: 0, icon: '☠️', val: 3, tags: ['剧毒', '销毁'], rarity: '普通' }),
+                createStarterCard({ name: '赤露布陷', type: '能力', cost: 1, icon: '🩸', val: 0, tags: ['出血', '虚弱'], rarity: '普通' }),
+                createStarterCard({ name: '空弦藏牌', type: '能力', cost: 0, icon: '🏹', val: 0, tags: ['放逐', '抽牌'], rarity: '普通' }),
+                createStarterCard({ name: '飞叶封存', type: '防御', cost: 1, icon: '🍂', val: 7, tags: ['放逐', '保留'], rarity: '普通' })
             ];
         }
         return [
-            createStarterCard({ name: '基础斩击', type: '攻击', cost: 1, icon: '⚔️', val: 9, tags: ['圣剑'] }),
-            createStarterCard({ name: '基础斩击', type: '攻击', cost: 1, icon: '⚔️', val: 9, tags: ['圣剑'] }),
-            createStarterCard({ name: '基础斩击', type: '攻击', cost: 1, icon: '⚔️', val: 9, tags: ['圣剑'] }),
-            createStarterCard({ name: '基础防御', type: '防御', cost: 1, icon: '🛡️', val: 7, tags: [] }),
+            createStarterCard({ name: '基础斩击', type: '攻击', cost: 1, icon: '⚔️', val: 8, tags: [] }),
+            createStarterCard({ name: '基础斩击', type: '攻击', cost: 1, icon: '⚔️', val: 8, tags: [] }),
             createStarterCard({ name: '基础防御', type: '防御', cost: 1, icon: '🛡️', val: 7, tags: [] }),
             createStarterCard({ name: '基础防御', type: '防御', cost: 1, icon: '🛡️', val: 7, tags: [] }),
             createStarterCard({ name: '圣剑突击', type: '攻击', cost: 2, icon: '✨', val: 11, tags: ['圣剑', '重击'], rarity: '稀有' }),
-            createStarterCard({ name: '遗迹立誓', type: '能力', cost: 2, icon: '📖', val: 6, tags: ['庇护', '抽牌', '保留'], rarity: '稀有' }),
             createStarterCard({ name: '盾墙反身', type: '防御', cost: 1, icon: '🔰', val: 9, tags: ['庇护'], rarity: '稀有' }),
-            createStarterCard({ name: '誓约追击', type: '攻击', cost: 1, icon: '🗡️', val: 8, tags: ['圣剑', '连击'], rarity: '稀有' })
+            createStarterCard({ name: '穿心试探', type: '攻击', cost: 1, icon: '🎯', val: 6, tags: ['穿甲', '易伤'], rarity: '普通' }),
+            createStarterCard({ name: '残红回锋', type: '攻击', cost: 1, icon: '💍', val: 6, tags: ['出血', '吸血'], rarity: '普通' }),
+            createStarterCard({ name: '遗迹立誓', type: '能力', cost: 2, icon: '📖', val: 6, tags: ['庇护', '抽牌', '保留'], rarity: '稀有' }),
+            createStarterCard({ name: '空白契约', type: '能力', cost: 0, icon: '📄', val: 0, tags: ['抽牌', '销毁'], rarity: '普通' })
         ];
     }
 
