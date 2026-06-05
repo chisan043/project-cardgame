@@ -17,19 +17,19 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 ## Status Counts
 
 - active: 481
-- candidate: 110
+- candidate: 128
 - documented: 61
-- legacy: 50
+- legacy: 92
 - source: 270
-- unreferenced: 258
+- unreferenced: 198
 
 ## Risk Counts
 
 - identical_content: 181
 - long_component: 82
 - multi_module_reference: 63
-- non_ascii_path: 329
-- unreferenced: 319
+- non_ascii_path: 269
+- unreferenced: 259
 
 ## Longest Paths
 
@@ -38,6 +38,7 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - 110 chars: `assets/source/ui/map/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_full_v1_source.png`
 - 110 chars: `assets/source/ui/map/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_full_v1_source.png`
 - 110 chars: `assets/source/ui/map/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_full_v1_source.png`
+- 109 chars: `assets/archive/unused/2026-06-05/ui_hud/assembly_cache/player_energy_tray_asset_v1_no_circles_transparent.png`
 - 107 chars: `assets/source/ui/map/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_full_v1_source.png`
 - 107 chars: `assets/source/ui/map/stained_windows/map_stained_window_temple_hall_imagegen_transparent_full_v1_source.png`
 - 107 chars: `assets/source/ui/map/stained_windows/map_stained_window_temple_inner_light_imagegen_chromakey_v1_source.png`
@@ -47,37 +48,36 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - 104 chars: `assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_transparent_full_v1_source.png`
 - 104 chars: `assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_transparent_full_v2_source.png`
 - 104 chars: `assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_transparent_full_v3_source.png`
-- 104 chars: `assets/source/ui/map/panels/map_right_simple_outer_wrapper_frame_imagegen_transparent_full_v1_source.png`
 
 ## Non-ASCII Path Examples
 
 - `UI/教堂彩窗赛璐璐/图标样式/状态徽章底板_v1.png`
 - `UI/教堂彩窗赛璐璐/图标样式/状态徽章底板_v1_source.png`
-- `UI/教堂彩窗赛璐璐/战斗HUD/战斗HUD_整体概念板_v1.png`
-- `UI/教堂彩窗赛璐璐/战斗HUD/战斗HUD_整体概念板_v2.png`
-- `UI/教堂彩窗赛璐璐/战斗HUD/战斗HUD_牌堆家族图_v1.png`
-- `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_discard_pile_clean_v1.png`
-- `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_discard_pile_v1.png`
-- `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_draw_pile_clean_v1.png`
-- `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_draw_pile_v1.png`
-- `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_end_turn_button_v1.png`
-- `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_enemy_intent_panel_v1.png`
-- `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_enemy_panel_v1.png`
+- `UI/教堂彩窗赛璐璐/概念图/02_教堂彩窗_赛璐璐融合方向图.png`
+- `_preview_新角色一三_带背景卡图.png`
+- `_preview_新角色三.png`
+- `_preview_角色二.png`
+- `场景/分层导视/bg_battle_ancient_forest_day_layer_guide.png`
+- `场景/分层导视/bg_battle_cave_cold_layer_guide.png`
+- `场景/分层导视/bg_battle_dungeon_corridor_torch_layer_guide.png`
+- `场景/分层导视/bg_battle_mountain_plain_day_layer_guide.png`
+- `场景/分层导视/bg_battle_stone_ruins_day_layer_guide.png`
+- `场景/分层导视/bg_battle_temple_hall_grand_layer_guide.png`
 
 ## Unreferenced Examples
 
 - `UI/教堂彩窗赛璐璐/图标样式/状态徽章底板_v1.png`
-- `UI/教堂彩窗赛璐璐/战斗HUD/战斗HUD_整体概念板_v1.png`
-- `UI/教堂彩窗赛璐璐/战斗HUD/战斗HUD_整体概念板_v2.png`
-- `UI/教堂彩窗赛璐璐/战斗HUD/战斗HUD_牌堆家族图_v1.png`
-- `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_discard_pile_clean_v1.png`
-- `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_discard_pile_v1.png`
-- `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_draw_pile_clean_v1.png`
-- `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_draw_pile_v1.png`
-- `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_end_turn_button_v1.png`
-- `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_enemy_intent_panel_v1.png`
-- `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_enemy_panel_v1.png`
-- `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_enemy_status_bar_v1.png`
+- `UI/教堂彩窗赛璐璐/概念图/02_教堂彩窗_赛璐璐融合方向图.png`
+- `assets/candidates/ui/role_select/buttons/secondary_button_teal_gold_v1.png`
+- `assets/candidates/ui/role_select/frames/role_card_frame_normal_v1.png`
+- `assets/candidates/ui/role_select/frames/role_card_frame_selected_v1.png`
+- `assets/candidates/ui/role_select/review/role_select_concept_v1.png`
+- `assets/source/characters/archer/avatar_portrait_v1_source.png`
+- `assets/source/characters/archer/battle_back/attack_start_v1_source.png`
+- `assets/source/characters/archer/battle_back/hurt_v1_source.png`
+- `assets/source/characters/archer/battle_back/idle_v1_source.png`
+- `assets/source/characters/archer/battle_back/skill_cast_v1_source.png`
+- `assets/source/characters/archer/battle_front/attack_start_v1_source.png`
 
 ## Multi-Module Reference Examples
 

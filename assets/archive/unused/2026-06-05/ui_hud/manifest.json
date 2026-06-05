@@ -1,0 +1,548 @@
+{
+  "generatedBy": "manual archive batch from asset-audit/migration-plans/ui_hud.json",
+  "archivedAt": "2026-06-05",
+  "moduleSlug": "ui_hud",
+  "policy": "unused assets are archived with manifest; no direct deletion",
+  "entries": [
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6218\u6597HUD_\u6574\u4f53\u6982\u5ff5\u677f_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/overview/hud_v1.png",
+      "sha256": "d8aa772b6d56ba8b4f373b487393c5cf6404f10f492a44d86e18631f675ec1ba",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/overview/hud_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6218\u6597HUD_\u6574\u4f53\u6982\u5ff5\u677f_v2.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/overview/hud_v2.png",
+      "sha256": "a9dbd5eabaeb25deb1a344bcd7971a42e84798cf75a056dfd586e1c74716117d",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/overview/hud_v2.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6218\u6597HUD_\u724c\u5806\u5bb6\u65cf\u56fe_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/piles/hud_v1.png",
+      "sha256": "1210516387049715b525433324d3b590c1baaefe0575e7dfbd92185fe070af38",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/piles/hud_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u62c6\u5206/battle_hud_discard_pile_clean_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/split_previews/battle_hud_discard_pile_clean_v1.png",
+      "sha256": "33bcdb8086d73a2342695c6c8c2462c99643cd653035d6be82f121865a2149c6",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/split_previews/battle_hud_discard_pile_clean_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u62c6\u5206/battle_hud_discard_pile_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/split_previews/battle_hud_discard_pile_v1.png",
+      "sha256": "e031d144c86e3644ed38af079835ebc5536974e419cf8b72282eba13c4b9ffb9",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/split_previews/battle_hud_discard_pile_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u62c6\u5206/battle_hud_draw_pile_clean_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/split_previews/battle_hud_draw_pile_clean_v1.png",
+      "sha256": "c55e49b14e22476c7738cd99a374f7bf3a250ed4f846b57181790b657d38ab2f",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/split_previews/battle_hud_draw_pile_clean_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u62c6\u5206/battle_hud_draw_pile_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/split_previews/battle_hud_draw_pile_v1.png",
+      "sha256": "8d6cc753ba21551028f698f08afe9b6892c1d5f8fb418bc1987156faab7e6d1b",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/split_previews/battle_hud_draw_pile_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u62c6\u5206/battle_hud_end_turn_button_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/split_previews/battle_hud_end_turn_button_v1.png",
+      "sha256": "c3aa8ff3aa97173986836188acb6fd93b1aa2f1a5ce58a5c790fefc82aaf6c61",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/split_previews/battle_hud_end_turn_button_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u62c6\u5206/battle_hud_enemy_intent_panel_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/split_previews/battle_hud_enemy_intent_panel_v1.png",
+      "sha256": "efde69630970cee74bb41fe584001f8d62447a9c91347e94309e304746a67958",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/split_previews/battle_hud_enemy_intent_panel_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u62c6\u5206/battle_hud_enemy_panel_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/split_previews/battle_hud_enemy_panel_v1.png",
+      "sha256": "e5e0c266ac1cd14cf8983466c563b4e42572ddfb230f8f1df3470eca6d3e0ad9",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/split_previews/battle_hud_enemy_panel_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u62c6\u5206/battle_hud_enemy_status_bar_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/split_previews/battle_hud_enemy_status_bar_v1.png",
+      "sha256": "02701d8cd4c47a10466c7a3e6ce9af9d7dcd429113ea46cc7b21545ebd8e8e4a",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/split_previews/battle_hud_enemy_status_bar_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u62c6\u5206/battle_hud_energy_gems_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/split_previews/battle_hud_energy_gems_v1.png",
+      "sha256": "dbb8a9453afd2442ed745f1af08e8f4c5382e1eed0c3a1c67566b8f5fc6496fe",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/split_previews/battle_hud_energy_gems_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u62c6\u5206/battle_hud_exile_pile_clean_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/split_previews/battle_hud_exile_pile_clean_v1.png",
+      "sha256": "a5e9770f01acb35c50d644fef64fbf7ea5108cd08daa21eaf2a959594dfb7263",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/split_previews/battle_hud_exile_pile_clean_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u62c6\u5206/battle_hud_exile_pile_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/split_previews/battle_hud_exile_pile_v1.png",
+      "sha256": "8663febdc711b7d068c00066db1a762b2179d35f6100277eceedbd264d1ba705",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/split_previews/battle_hud_exile_pile_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u62c6\u5206/battle_hud_hand_fan_area_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/split_previews/battle_hud_hand_fan_area_v1.png",
+      "sha256": "0c892f59baee5bb849a193297fb0886a8cc07efc36b49768e810171a9c13b982",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/split_previews/battle_hud_hand_fan_area_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u62c6\u5206/battle_hud_icon_set_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/split_previews/battle_hud_icon_set_v1.png",
+      "sha256": "605c100f334a048915f6807b38a26466831312b36d3296526bea028f084146b7",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/split_previews/battle_hud_icon_set_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u62c6\u5206/battle_hud_material_swatches_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/split_previews/battle_hud_material_swatches_v1.png",
+      "sha256": "482094f026c17b226057f327bf79331c4f411c2734e18b98c121ec35932668f8",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/split_previews/battle_hud_material_swatches_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u62c6\u5206/battle_hud_player_panel_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/split_previews/battle_hud_player_panel_v1.png",
+      "sha256": "68f05eb98aa8667dba5d8e4a907c61f89128875d3a798f6b0941ddd8319292b5",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/split_previews/battle_hud_player_panel_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u62c6\u5206/battle_hud_player_status_bar_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/split_previews/battle_hud_player_status_bar_v1.png",
+      "sha256": "ef4f585850380223d901b884d830b858b22f1c6c6bfb15ca3215e1b508805894",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/split_previews/battle_hud_player_status_bar_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u62c6\u5206/battle_hud_turn_counter_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/split_previews/battle_hud_turn_counter_v1.png",
+      "sha256": "f1ee571bfcb2abb7e7ef75a264d50420b2f4f3ab5acb61485b2c81394f614e06",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/split_previews/battle_hud_turn_counter_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u62c6\u5206/battle_hud_typography_sample_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/split_previews/battle_hud_typography_sample_v1.png",
+      "sha256": "fddfdc655ecd5c74014c31ce04c09c711cd3b0d238643f5361b2edd3d63b0f63",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/split_previews/battle_hud_typography_sample_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6b63\u5f0f\u8d44\u4ea7/\u5b50\u6a21\u5757/\u4e2d\u8f74\u63a7\u4ef6/end_turn_button_gem_asset_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/center_controls/end_turn_button_gem_asset_v1.png",
+      "sha256": "e914963c9889f5a7fd316ce02516490cd84d1441f0ca3e9d2f5b228b36bdc091",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/center_controls/end_turn_button_gem_asset_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6b63\u5f0f\u8d44\u4ea7/\u5b50\u6a21\u5757/\u4e2d\u8f74\u63a7\u4ef6/turn_counter_outer_frame_asset_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/center_controls/turn_counter_outer_frame_asset_v1.png",
+      "sha256": "76a3c1db4d93dbb7d6161419b0634d1ae616cf95fca5049503bf6fa6c132825e",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/center_controls/turn_counter_outer_frame_asset_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6b63\u5f0f\u8d44\u4ea7/\u5b50\u6a21\u5757/\u56fe\u6807\u5fbd\u8bb0/icon_attack_asset_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/intent_icons/icon_attack_asset_v1.png",
+      "sha256": "d4696a0a3850fc95364ddc665f6f4b69002c5f2fd2d0182e68ebe4442c8667bf",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/intent_icons/icon_attack_asset_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6b63\u5f0f\u8d44\u4ea7/\u5b50\u6a21\u5757/\u56fe\u6807\u5fbd\u8bb0/icon_curse_asset_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/intent_icons/icon_curse_asset_v1.png",
+      "sha256": "500362d496816517aeeae05f07ecd55dceae910bff7844537ab64d78039bc1a1",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/intent_icons/icon_curse_asset_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6b63\u5f0f\u8d44\u4ea7/\u5b50\u6a21\u5757/\u56fe\u6807\u5fbd\u8bb0/icon_defense_asset_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/intent_icons/icon_defense_asset_v1.png",
+      "sha256": "968b6279758e3270621fc5ee3315338c04caf0eb882f2ceced27558f12db4914",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/intent_icons/icon_defense_asset_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6b63\u5f0f\u8d44\u4ea7/\u5b50\u6a21\u5757/\u56fe\u6807\u5fbd\u8bb0/icon_energy_asset_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/intent_icons/icon_energy_asset_v1.png",
+      "sha256": "c95b421cff530c63bfd5bc5a51667ba3661779212b658ec270b06e4aa7a820c6",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/intent_icons/icon_energy_asset_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6b63\u5f0f\u8d44\u4ea7/\u5b50\u6a21\u5757/\u56fe\u6807\u5fbd\u8bb0/icon_heal_asset_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/intent_icons/icon_heal_asset_v1.png",
+      "sha256": "9cd3a7648b6fd8facd320d8f58772055b1244dcdaf9fc8a2cb5c13c898fab335",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/intent_icons/icon_heal_asset_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6b63\u5f0f\u8d44\u4ea7/\u5b50\u6a21\u5757/\u56fe\u6807\u5fbd\u8bb0/icon_skill_asset_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/intent_icons/icon_skill_asset_v1.png",
+      "sha256": "73d47839945b6f61c19b3680a2571e33f2eae326c0b90212adfe2c39645ee99a",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/intent_icons/icon_skill_asset_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6b63\u5f0f\u8d44\u4ea7/\u5b50\u6a21\u5757/\u624b\u724c\u627f\u6258/hand_fan_center_crest_asset_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/hand_tray/hand_fan_center_crest_asset_v1.png",
+      "sha256": "6231163e90599e070d764e9522f27d237f521dff9d56b0c08b01b51326fbf6cf",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/hand_tray/hand_fan_center_crest_asset_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6b63\u5f0f\u8d44\u4ea7/\u5b50\u6a21\u5757/\u624b\u724c\u627f\u6258/hand_fan_endcap_left_asset_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/hand_tray/hand_fan_endcap_left_asset_v1.png",
+      "sha256": "b3e40e3ff28df89c105217afa9d77827955713d03a02675fdf579f6c572153c6",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/hand_tray/hand_fan_endcap_left_asset_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6b63\u5f0f\u8d44\u4ea7/\u5b50\u6a21\u5757/\u624b\u724c\u627f\u6258/hand_fan_endcap_right_asset_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/hand_tray/hand_fan_endcap_right_asset_v1.png",
+      "sha256": "28294eb63d7e9f1695cd7d6a0b74891eb7cdf1c193ae22e3536c1173301d059e",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/hand_tray/hand_fan_endcap_right_asset_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6b63\u5f0f\u8d44\u4ea7/\u5b50\u6a21\u5757/\u654c\u65b9\u610f\u56fe\u9762\u677f/enemy_intent_attack_medallion_asset_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/enemy_intent/enemy_intent_attack_medallion_asset_v1.png",
+      "sha256": "a13608dc709574b7de7f066ba636018e1e522449bdd03fbb75a12353ae4484d0",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/enemy_intent/enemy_intent_attack_medallion_asset_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6b63\u5f0f\u8d44\u4ea7/\u5b50\u6a21\u5757/\u654c\u65b9\u610f\u56fe\u9762\u677f/enemy_intent_aux_socket_asset_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/enemy_intent/enemy_intent_aux_socket_asset_v1.png",
+      "sha256": "b2bd7e00ff3d4834c45b3ca4979310df96f3434faefc530043346b373003bbb0",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/enemy_intent/enemy_intent_aux_socket_asset_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6b63\u5f0f\u8d44\u4ea7/\u5b50\u6a21\u5757/\u654c\u65b9\u610f\u56fe\u9762\u677f/enemy_intent_value_lane_asset_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/enemy_intent/enemy_intent_value_lane_asset_v1.png",
+      "sha256": "3b8ee0aa07030b1413c2f29d84f05faa0b23fee8e0247d8879b8c7205e923640",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/enemy_intent/enemy_intent_value_lane_asset_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6b63\u5f0f\u8d44\u4ea7/\u5b50\u6a21\u5757/\u654c\u65b9\u9762\u677f/enemy_status_crest_asset_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/enemy_panel/enemy_status_crest_asset_v1.png",
+      "sha256": "35a99111127120ee1d49eb477f9d04eff1b9a7c969edbd4b063f0113abeea2bf",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/enemy_panel/enemy_status_crest_asset_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6b63\u5f0f\u8d44\u4ea7/\u5b50\u6a21\u5757/\u6570\u503c\u6587\u5b57\u627f\u8f7d/count_plate_small_asset_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/number_plates/count_plate_small_asset_v1.png",
+      "sha256": "21b8c878f0a87dacf9bba51d50dc212d9d3921d66ace30f420077b0f57a220d7",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/number_plates/count_plate_small_asset_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6b63\u5f0f\u8d44\u4ea7/\u5b50\u6a21\u5757/\u6570\u503c\u6587\u5b57\u627f\u8f7d/diamond_crest_accent_asset_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/number_plates/diamond_crest_accent_asset_v1.png",
+      "sha256": "6b10e8b1f6df12737a011dbd8b468a0547cc27eb8889bef7d23ed18350532b2c",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/number_plates/diamond_crest_accent_asset_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6b63\u5f0f\u8d44\u4ea7/\u5b50\u6a21\u5757/\u6570\u503c\u6587\u5b57\u627f\u8f7d/number_medallion_round_asset_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/number_plates/number_medallion_round_asset_v1.png",
+      "sha256": "8a07c94793bc3e2cfa14400bfc3d58dbae9ba6bab59f401de6ca3e718a1ef533",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/number_plates/number_medallion_round_asset_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6b63\u5f0f\u8d44\u4ea7/\u5b50\u6a21\u5757/\u6570\u503c\u6587\u5b57\u627f\u8f7d/title_banner_long_asset_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/number_plates/title_banner_long_asset_v1.png",
+      "sha256": "a59d9be3803c48abccf0d8486fbfdff10ab3fc19cd2ad2997491a7343e05af61",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/number_plates/title_banner_long_asset_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6b63\u5f0f\u8d44\u4ea7/\u5b50\u6a21\u5757/\u6570\u503c\u6587\u5b57\u627f\u8f7d/title_plate_dark_short_asset_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/number_plates/title_plate_dark_short_asset_v1.png",
+      "sha256": "bee4edd74c8d0703b00a5e825fd27b175835238edd26a5a05bed9a9afbfbfbf5",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/number_plates/title_plate_dark_short_asset_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6b63\u5f0f\u8d44\u4ea7/\u5b50\u6a21\u5757/\u6750\u8d28\u8fb9\u6846/glass_blue_panel_tile_asset_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/materials/glass_blue_panel_tile_asset_v1.png",
+      "sha256": "50111f31bf988af714f0ab1b9bae5dd150edcfea465622a5aa6493876397c682",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/materials/glass_blue_panel_tile_asset_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6b63\u5f0f\u8d44\u4ea7/\u5b50\u6a21\u5757/\u6750\u8d28\u8fb9\u6846/glass_green_panel_tile_asset_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/materials/glass_green_panel_tile_asset_v1.png",
+      "sha256": "bed5e96e0e5b913d6ec845e1601c7f80c3caf2b32c0de1000d31b804c569b6f5",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/materials/glass_green_panel_tile_asset_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6b63\u5f0f\u8d44\u4ea7/\u5b50\u6a21\u5757/\u6750\u8d28\u8fb9\u6846/glass_purple_panel_tile_asset_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/materials/glass_purple_panel_tile_asset_v1.png",
+      "sha256": "bb65b27f2dca1f3ce64f76870cbf5620df7d393207bff0970e79d95dde25263f",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/materials/glass_purple_panel_tile_asset_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6b63\u5f0f\u8d44\u4ea7/\u5b50\u6a21\u5757/\u6750\u8d28\u8fb9\u6846/glass_red_panel_tile_asset_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/materials/glass_red_panel_tile_asset_v1.png",
+      "sha256": "667620748d44480895b0658f9d8e8b1d293602223670ffeabbf228b624aa4697",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/materials/glass_red_panel_tile_asset_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6b63\u5f0f\u8d44\u4ea7/\u5b50\u6a21\u5757/\u6750\u8d28\u8fb9\u6846/parchment_panel_tile_asset_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/materials/parchment_panel_tile_asset_v1.png",
+      "sha256": "e13a7879fd44600b14e729b892bf5794469e72fe592ae6e9731fd79bb4206866",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/materials/parchment_panel_tile_asset_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6b63\u5f0f\u8d44\u4ea7/\u5b50\u6a21\u5757/\u72b6\u6001\u680f/status_socket_empty_asset_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/status_bar/status_socket_empty_asset_v1.png",
+      "sha256": "46fb4c2bd64c943548c96dd4a7c58bf4c2be1cdd1349a694c97398ef06bf9f51",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/status_bar/status_socket_empty_asset_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6b63\u5f0f\u8d44\u4ea7/\u5b50\u6a21\u5757/\u72b6\u6001\u680f/status_socket_highlight_asset_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/status_bar/status_socket_highlight_asset_v1.png",
+      "sha256": "642c017f870e4ee2f3952d52c5db45e3486722c30efda17af1a02cce188b8b49",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/status_bar/status_socket_highlight_asset_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6b63\u5f0f\u8d44\u4ea7/\u5b50\u6a21\u5757/\u72b6\u6001\u680f/\u72b6\u6001\u56fe\u6807/status_icon_focus_reds_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/status_icons/status_icon_focus_reds_v1.png",
+      "sha256": "5754aa80aabec85331a75b13ebde27fbbc1d2ff2efa8dda7e2a2c684cdc5e756",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/status_icons/status_icon_focus_reds_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6b63\u5f0f\u8d44\u4ea7/\u5b50\u6a21\u5757/\u72b6\u6001\u680f/\u72b6\u6001\u56fe\u6807/status_icon_overview_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/status_icons/status_icon_overview_v1.png",
+      "sha256": "1bb24ffa1adcc6cb18c46b14fbf3679da54d0c3a5f0e95ffb0fb66c384d9abb8",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/status_icons/status_icon_overview_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6b63\u5f0f\u8d44\u4ea7/\u5b50\u6a21\u5757/\u73a9\u5bb6\u9762\u677f/player_hp_bar_damage_mask_asset_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/player_panel/player_hp_bar_damage_mask_asset_v1.png",
+      "sha256": "f50097f4c78186d84d46335b389dd274de6a1898cfea0209f591e52b7ca22712",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/player_panel/player_hp_bar_damage_mask_asset_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6b63\u5f0f\u8d44\u4ea7/\u5b50\u6a21\u5757/\u73a9\u5bb6\u9762\u677f/player_hp_bar_empty_frame_asset_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/player_panel/player_hp_bar_empty_frame_asset_v1.png",
+      "sha256": "15d366e9c9dc5d61dfe41ef7313572884c1a533da64b49464fab9e4a0bc80e6f",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/player_panel/player_hp_bar_empty_frame_asset_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6b63\u5f0f\u8d44\u4ea7/\u5b50\u6a21\u5757/\u73a9\u5bb6\u9762\u677f/player_hp_bar_fill_asset_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/player_panel/player_hp_bar_fill_asset_v1.png",
+      "sha256": "ba163bf654ade0241216be8ff97351d42d03188851d5e5d23123f6c47233e99f",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/player_panel/player_hp_bar_fill_asset_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6b63\u5f0f\u8d44\u4ea7/\u5b50\u6a21\u5757/\u73a9\u5bb6\u9762\u677f/player_hp_bar_heart_fill_asset_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/player_panel/player_hp_bar_heart_fill_asset_v1.png",
+      "sha256": "d6dca4cf309a31b1166e0726db497f071d78a29d50a393baa0437d74f68eb96a",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/player_panel/player_hp_bar_heart_fill_asset_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6b63\u5f0f\u8d44\u4ea7/\u5b50\u6a21\u5757/\u73a9\u5bb6\u9762\u677f/player_hp_bar_long_fill_asset_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/player_panel/player_hp_bar_long_fill_asset_v1.png",
+      "sha256": "f9c8cc36e5629fa829c9a1e00feb357a3df1460935387bb566cdda618099d12c",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/player_panel/player_hp_bar_long_fill_asset_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6b63\u5f0f\u8d44\u4ea7/\u5b50\u6a21\u5757/\u73a9\u5bb6\u9762\u677f/player_hp_bar_long_fill_damage_trail_asset_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/player_panel/player_hp_bar_long_fill_damage_trail_asset_v1.png",
+      "sha256": "f06f0070dc70f67d56f29f729f6a485a4c004ea36ccc1c92ce05f520409f3531",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/player_panel/player_hp_bar_long_fill_damage_trail_asset_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6b63\u5f0f\u8d44\u4ea7/\u5b50\u6a21\u5757/\u73a9\u5bb6\u9762\u677f/status_bar_long_gray_base_asset_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/player_panel/status_bar_long_gray_base_asset_v1.png",
+      "sha256": "0d9845fb0c17b2baeb3d3e687db1819bc7991a7019e8bf3fcaa57505ff239f98",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/player_panel/status_bar_long_gray_base_asset_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6b63\u5f0f\u8d44\u4ea7/\u7a0b\u5e8f\u96c6\u7f13\u5b58/avatar_circle_gray_base_asset_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/assembly_cache/avatar_circle_gray_base_asset_v1.png",
+      "sha256": "601039e38609b5d1627d45cae387760af01bdfd8425f3acbaa5951cb50aef4a5",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/assembly_cache/avatar_circle_gray_base_asset_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6b63\u5f0f\u8d44\u4ea7/\u7a0b\u5e8f\u96c6\u7f13\u5b58/player_energy_tray_asset_v1_no_circles_transparent.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/assembly_cache/player_energy_tray_asset_v1_no_circles_transparent.png",
+      "sha256": "83e1325bdd8e6875ded4346d0915f0c0a02c065d198ebf106d1facd063ff6369",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/assembly_cache/player_energy_tray_asset_v1_no_circles_transparent.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    },
+    {
+      "sourcePath": "UI/\u6559\u5802\u5f69\u7a97\u8d5b\u7490\u7490/\u6218\u6597HUD/\u6b63\u5f0f\u8d44\u4ea7/\u7a0b\u5e8f\u96c6\u7f13\u5b58/status_bar_long_gray_base_asset_v1.png",
+      "archivePath": "assets/archive/unused/2026-06-05/ui_hud/assembly_cache/status_bar_long_gray_base_asset_v1.png",
+      "sha256": "0d9845fb0c17b2baeb3d3e687db1819bc7991a7019e8bf3fcaa57505ff239f98",
+      "status": "unreferenced",
+      "references": [],
+      "suggestedReviewPath": "assets/archive/review/ui_hud/assembly_cache/status_bar_long_gray_base_asset_v1.png",
+      "reason": "unreferenced legacy battle HUD asset after formal HUD migration"
+    }
+  ]
+}
