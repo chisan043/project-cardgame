@@ -24,12 +24,10 @@
       "source": 1
     },
     "actionCounts": {
-      "already_migrated": 2,
-      "copy_as_candidate": 2
+      "already_migrated": 4
     },
     "trackedCounts": {
-      "tracked": 2,
-      "untracked": 2
+      "tracked": 4
     },
     "duplicateExtensionGroupCount": 0
   },
@@ -37,30 +35,30 @@
     {
       "sourcePath": "assets/candidates/ui/menu/main_menu_key_art_candidate_v1.png",
       "suggestedPath": "assets/candidates/ui/menu/main_menu_key_art_candidate_v1.png",
-      "action": "copy_as_candidate",
+      "action": "already_migrated",
       "status": "candidate",
-      "tracked": false,
+      "tracked": true,
       "references": [],
       "referenceModules": [],
       "risks": [],
       "sha256": "d7df4354f52dcd36c3e724b4027d2453a5a3a70cc19815211b3aae6005a4690e",
       "derivedFrom": "assets/candidates/ui/menu/main_menu_key_art_candidate_v1.png",
       "visualGroup": "visual_d7df4354f5",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; candidate asset; keep outside formal runtime directory"
+      "notes": "candidate asset; keep outside formal runtime directory"
     },
     {
       "sourcePath": "assets/candidates/ui/menu/main_menu_key_art_candidate_v2.png",
       "suggestedPath": "assets/candidates/ui/menu/main_menu_key_art_candidate_v2.png",
-      "action": "copy_as_candidate",
+      "action": "already_migrated",
       "status": "candidate",
-      "tracked": false,
+      "tracked": true,
       "references": [],
       "referenceModules": [],
       "risks": [],
       "sha256": "8d302187b576a283eb1389d56de52cf93972f3d06af81d686c0873c355d4c9cf",
       "derivedFrom": "assets/candidates/ui/menu/main_menu_key_art_candidate_v2.png",
       "visualGroup": "visual_8d302187b5",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; candidate asset; keep outside formal runtime directory"
+      "notes": "candidate asset; keep outside formal runtime directory"
     },
     {
       "sourcePath": "assets/source/ui/menu/main_menu_key_art_v1_source.png",

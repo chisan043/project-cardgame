@@ -50,7 +50,11 @@ def menu_suggestion(source_path: str, status: str, target_dir: str) -> tuple[str
     suffix = path.suffix.lower()
     stem = path.stem
 
-    if source_path.startswith(f"{target_dir}/") or source_path.startswith("assets/source/ui/menu/"):
+    if (
+        source_path.startswith(f"{target_dir}/")
+        or source_path.startswith("assets/source/ui/menu/")
+        or source_path.startswith("assets/candidates/ui/menu/")
+    ):
         return source_path, "already_migrated"
     if stem == "main_menu_key_art_candidate_v3_cel" and suffix == ".webp":
         return f"{target_dir}/main_menu_key_art_v1.webp", "copy_then_rewrite_runtime_refs"

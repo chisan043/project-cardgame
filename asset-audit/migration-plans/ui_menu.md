@@ -19,33 +19,31 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 
 ### Action
 
-- already_migrated: 2
-- copy_as_candidate: 2
+- already_migrated: 4
 
 ### Git Tracking
 
-- tracked: 2
-- untracked: 2
+- tracked: 4
 
 ## Proposed Entries
 
 ### `assets/candidates/ui/menu/main_menu_key_art_candidate_v1.png`
 
 - Suggested path: `assets/candidates/ui/menu/main_menu_key_art_candidate_v1.png`
-- Action: `copy_as_candidate`
+- Action: `already_migrated`
 - Status: `candidate`
-- Tracked: `False`
+- Tracked: `True`
 - References: none
-- Notes: untracked file; do not include in migration commit unless intentionally accepted; candidate asset; keep outside formal runtime directory
+- Notes: candidate asset; keep outside formal runtime directory
 
 ### `assets/candidates/ui/menu/main_menu_key_art_candidate_v2.png`
 
 - Suggested path: `assets/candidates/ui/menu/main_menu_key_art_candidate_v2.png`
-- Action: `copy_as_candidate`
+- Action: `already_migrated`
 - Status: `candidate`
-- Tracked: `False`
+- Tracked: `True`
 - References: none
-- Notes: untracked file; do not include in migration commit unless intentionally accepted; candidate asset; keep outside formal runtime directory
+- Notes: candidate asset; keep outside formal runtime directory
 
 ### `assets/source/ui/menu/main_menu_key_art_v1_source.png`
 
