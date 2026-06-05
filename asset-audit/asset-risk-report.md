@@ -4,33 +4,33 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 
 ## Summary
 
-- Assets scanned: 1206
+- Assets scanned: 1230
 - Text files scanned for references: 41
 - Referenced assets: 432
-- Active runtime/config assets: 418
-- Unreferenced assets: 774
-- Missing asset-like references: 243
-- Missing runtime/config references: 44
-- Duplicate extension groups: 210
-- Identical content groups: 45
+- Active runtime/config assets: 473
+- Unreferenced assets: 798
+- Missing asset-like references: 232
+- Missing runtime/config references: 45
+- Duplicate extension groups: 145
+- Identical content groups: 61
 
 ## Status Counts
 
-- active: 418
-- candidate: 100
+- active: 473
+- candidate: 102
 - documented: 54
 - legacy: 48
-- source: 93
-- unreferenced: 493
+- source: 164
+- unreferenced: 389
 
 ## Risk Counts
 
-- identical_content: 141
+- identical_content: 181
 - long_component: 79
 - long_path: 11
 - multi_module_reference: 59
-- non_ascii_path: 1036
-- unreferenced: 547
+- non_ascii_path: 904
+- unreferenced: 443
 
 ## Longest Paths
 
@@ -110,6 +110,9 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - `_asset_v1.webp` in `幻境残卷demo_v0.99.html:3872`
 - `_battle_v1.webp` in `幻境残卷demo_v0.99.html:4425`
 - `_clean_v1.png` in `UI/教堂彩窗赛璐璐/战斗HUD/README.md:132`
+- `_icon_v1.webp` in `assets/relics/README.md:9`
+- `_icon_v1.webp` in `幻境残卷demo_v0.99.html:3119`
+- `_master_v1.webp` in `assets/relics/README.md:14`
 - `_portrait_v1.webp` in `幻境残卷demo_v0.99.html:4430`
 - `assets/bg/battle/ancient_forest.jpg` in `demo更改需求文档.txt:509`
 - `assets/bg/battle/ruins_hall.jpg` in `demo更改需求文档.txt:514`
@@ -124,16 +127,12 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - `assets/characters/warrior/back_skill.png` in `demo更改需求文档.txt:468`
 - `assets/characters/warrior/select.png` in `demo更改需求文档.txt:366`
 - `avatar_circle_gray_base_asset_v1.png` in `hud_layout_editor.html:2202`
-- `avatar_circle_gray_base_asset_v1.png` in `hud_layout_editor.html:2219`
-- `battle_hud_exile_pile_v1.png` in `UI/教堂彩窗赛璐璐/战斗HUD/README.md:131`
-- `bg_battle_ancient_forest_day.jpg` in `demo更改需求文档.txt:780`
 
 ## First Migration Candidates
 
 - `assets/cards/review`: 172 active risky assets
 - `assets/ui/review`: 87 active risky assets
 - `assets/ui/hud`: 61 active risky assets
-- `assets/relics/masters`: 14 active risky assets
 - `assets/review`: 10 active risky assets
 - `assets/scenes/battle/variants`: 5 active risky assets
 - `assets/characters/archer`: 2 active risky assets

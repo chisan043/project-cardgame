@@ -129,6 +129,21 @@ def collect_text_files() -> list[TextFile]:
     return sorted(text_files, key=lambda item: as_posix(item.path))
 
 
+def relic_formal_icon_ids() -> set[str]:
+    data_path = ROOT / "src/data/relics.js"
+    try:
+        text = data_path.read_text(encoding="utf-8")
+    except FileNotFoundError:
+        return set()
+    match = re.search(r"FORMAL_RELIC_ICON_IDS = new Set\(\[(.*?)\]\);", text, re.S)
+    if not match:
+        return set()
+    return set(re.findall(r"'([^']+)'", match.group(1)))
+
+
+FORMAL_RELIC_ICON_IDS = relic_formal_icon_ids()
+
+
 def infer_reference_context(text_path: Path) -> tuple[str, str]:
     path = as_posix(text_path)
     if path in {
@@ -167,6 +182,10 @@ def infer_reference_context(text_path: Path) -> tuple[str, str]:
 
 def infer_asset_module(asset_path: Path, references: list[dict]) -> str:
     path = as_posix(asset_path)
+    if path.startswith("assets/relics/"):
+        return str(Path(path).parent)
+    if path.startswith("assets/source/relics/"):
+        return str(Path(path).parent)
     if path.startswith("遗物/图标/"):
         return "assets/relics/icons"
     if path.startswith("遗物/母版/"):
@@ -288,6 +307,14 @@ def classify_status(asset_path: Path, references: list[dict]) -> str:
     runtime_references = [ref for ref in references if ref["kind"] in {"runtime", "config"}]
     if runtime_references:
         return "active"
+    if path.startswith("遗物/图标/") and asset_path.stem in FORMAL_RELIC_ICON_IDS:
+        if asset_path.suffix.lower() == ".webp":
+            return "active"
+        return "source"
+    if path.startswith("assets/relics/icons/") and path.endswith("_icon_v1.webp"):
+        return "active"
+    if path.startswith("assets/source/relics/"):
+        return "source"
     if (
         path.startswith(("assets/enemies/battle/", "assets/enemies/portraits/"))
         and asset_path.suffix.lower() == ".webp"

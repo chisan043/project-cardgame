@@ -34,8 +34,9 @@ IMAGE_EXT_RE = re.compile(r"\.(png|jpg|jpeg)$", re.IGNORECASE)
 DYNAMIC_IMAGE_GLOBS = [
     "assets/source/enemies/battle/*.png",
     "assets/source/enemies/portraits/*.png",
+    "assets/source/relics/icons/*.png",
+    "assets/source/relics/masters/*.png",
     "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_*_asset_v1.png",
-    "遗物/图标/*.png",
 ]
 
 
@@ -49,6 +50,10 @@ def webp_path_for(asset_path: Path) -> Path:
         return Path(path.replace("assets/source/enemies/battle/", "assets/enemies/battle/").replace("_battle_v1_source.png", "_battle_v1.webp"))
     if path.startswith("assets/source/enemies/portraits/") and path.endswith("_portrait_v1_source.png"):
         return Path(path.replace("assets/source/enemies/portraits/", "assets/enemies/portraits/").replace("_portrait_v1_source.png", "_portrait_v1.webp"))
+    if path.startswith("assets/source/relics/icons/") and path.endswith("_icon_v1_source.png"):
+        return Path(path.replace("assets/source/relics/icons/", "assets/relics/icons/").replace("_icon_v1_source.png", "_icon_v1.webp"))
+    if path.startswith("assets/source/relics/masters/") and path.endswith("_master_v1_source.png"):
+        return Path(path.replace("assets/source/relics/masters/", "assets/relics/masters/").replace("_master_v1_source.png", "_master_v1.webp"))
     return asset_path.with_suffix(".webp")
 
 

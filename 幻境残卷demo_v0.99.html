@@ -3116,7 +3116,7 @@
     }
     function resolveRelicIconPath(relic) {
         if (!relic || !relic.id) return '';
-        if (FORMAL_RELIC_ICON_IDS.has(relic.id)) return `遗物/图标/${relic.id}.webp`;
+        if (FORMAL_RELIC_ICON_IDS.has(relic.id)) return `assets/relics/icons/${relic.id}_icon_v1.webp`;
         return RELIC_MASTER_ICON_BY_ID[relic.id] || '';
     }
     function relicHasFormalArt(relic) {

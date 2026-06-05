@@ -8,6 +8,7 @@ does not move, rename, copy, or archive assets.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import subprocess
@@ -34,6 +35,14 @@ def normalize_slug(value: str) -> str:
 def git_tracked_paths() -> set[str]:
     output = subprocess.check_output(["git", "-c", "core.quotePath=false", "ls-files"], cwd=ROOT, text=True)
     return set(output.splitlines())
+
+
+def file_sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
 
 
 def menu_suggestion(source_path: str, status: str, target_dir: str) -> tuple[str, str]:
@@ -225,6 +234,63 @@ def character_suggestion(source_path: str, status: str) -> tuple[str, str]:
     return f"assets/characters/review/{normalize_slug(Path(source_path).stem)}{Path(source_path).suffix.lower()}", "review"
 
 
+def relic_data() -> tuple[set[str], dict[str, str]]:
+    text = (ROOT / "src/data/relics.js").read_text(encoding="utf-8")
+    formal_match = re.search(r"FORMAL_RELIC_ICON_IDS = new Set\(\[(.*?)\]\);", text, re.S)
+    master_match = re.search(r"RELIC_MASTER_ICON_BY_ID = \{(.*?)\n\};", text, re.S)
+    formal_ids = set(re.findall(r"'([^']+)'", formal_match.group(1))) if formal_match else set()
+    master_by_id = dict(re.findall(r"(r_[a-z0-9_]+): '([^']+)'", master_match.group(1))) if master_match else {}
+    return formal_ids, master_by_id
+
+
+def relic_master_slug(path: Path) -> str:
+    stem = path.stem
+    if stem.startswith("relic_master_"):
+        stem = stem.removeprefix("relic_master_")
+    return normalize_slug(stem)
+
+
+def relic_icon_id(path: Path) -> str:
+    stem = path.stem
+    if stem.endswith("_icon_v1"):
+        return stem.removesuffix("_icon_v1")
+    return stem
+
+
+def relic_suggestion(source_path: str, status: str) -> tuple[str, str]:
+    path = Path(source_path)
+    suffix = path.suffix.lower()
+
+    if source_path.startswith((
+        "assets/relics/icons/",
+        "assets/relics/masters/",
+        "assets/source/relics/",
+        "assets/candidates/relics/",
+    )):
+        return source_path, "already_migrated"
+
+    if source_path.startswith("遗物/图标/"):
+        icon_id = relic_icon_id(path)
+        if suffix == ".webp":
+            return f"assets/relics/icons/{icon_id}_icon_v1.webp", "move_then_rewrite_dynamic_refs"
+        return f"assets/source/relics/icons/{icon_id}_icon_v1_source{suffix}", "move_as_source"
+
+    if source_path.startswith("遗物/母版/"):
+        slug = relic_master_slug(path)
+        if suffix == ".webp":
+            return f"assets/relics/masters/{slug}_master_v1.webp", "move_then_rewrite_runtime_refs"
+        return f"assets/source/relics/masters/{slug}_master_v1_source{suffix}", "move_as_source"
+
+    concept_names = {
+        "03614FA0-1D7F-4432-8472-D0902EE0CE9E": "relic_icon_sheet_candidate_v1",
+        "55E4AE04-98F0-4560-AD06-1441CE8F3FA9": "relic_icon_sheet_candidate_v2",
+    }
+    if source_path.startswith("遗物/") and path.stem in concept_names:
+        return f"assets/candidates/relics/{concept_names[path.stem]}{suffix}", "move_as_candidate"
+
+    return f"assets/archive/review/relics/{normalize_slug(path.stem)}{suffix}", "review_before_archive"
+
+
 def default_suggestion(source_path: str, status: str, target_dir: str, module_slug: str) -> tuple[str, str]:
     path = Path(source_path)
     filename = f"{normalize_slug(path.stem)}{path.suffix.lower()}"
@@ -250,6 +316,8 @@ def suggested_path(source_path: str, status: str, target_dir: str, module_slug: 
         return enemy_suggestion(source_path, status)
     if module_slug == "characters":
         return character_suggestion(source_path, status)
+    if module_slug == "relics_visuals":
+        return relic_suggestion(source_path, status)
     return default_suggestion(source_path, status, target_dir, module_slug)
 
 
@@ -263,6 +331,64 @@ def load_assets(usage_report: Path, prefixes: list[str], module_slug: str) -> li
     if module_slug == "characters":
         return [asset for asset in assets if is_character_asset(asset["path"])]
     return assets
+
+
+def missing_relic_icon_entries(existing_paths: set[str], tracked: set[str]) -> list[dict]:
+    formal_ids, master_by_id = relic_data()
+    entries = []
+    for relic_id in sorted(formal_ids):
+        runtime_target = f"assets/relics/icons/{relic_id}_icon_v1.webp"
+        source_target = f"assets/source/relics/icons/{relic_id}_icon_v1_source.png"
+        if runtime_target in existing_paths or f"遗物/图标/{relic_id}.webp" in existing_paths:
+            continue
+
+        master_path = master_by_id.get(relic_id)
+        if not master_path:
+            continue
+        master_source = str(Path(master_path).with_suffix(".png"))
+        if master_path not in existing_paths or master_source not in existing_paths:
+            continue
+        digest = file_sha256(ROOT / master_path)
+        source_digest = file_sha256(ROOT / master_source)
+        entries.extend(
+            [
+                {
+                    "sourcePath": master_path,
+                    "suggestedPath": runtime_target,
+                    "action": "copy_from_master_runtime",
+                    "status": "active_dynamic",
+                    "tracked": master_path in tracked,
+                    "references": [
+                        {
+                            "file": "src/data/relics.js",
+                            "line": 173,
+                            "kind": "runtime",
+                        }
+                    ],
+                    "referenceModules": ["relics"],
+                    "risks": [],
+                    "sha256": digest,
+                    "derivedFrom": master_path,
+                    "visualGroup": f"visual_{digest[:10]}",
+                    "notes": f"missing formal relic icon for {relic_id}; copy from master fallback",
+                },
+                {
+                    "sourcePath": master_source,
+                    "suggestedPath": source_target,
+                    "action": "copy_from_master_source",
+                    "status": "source",
+                    "tracked": master_source in tracked,
+                    "references": [],
+                    "referenceModules": ["relics"],
+                    "risks": [],
+                    "sha256": source_digest,
+                    "derivedFrom": master_source,
+                    "visualGroup": f"visual_{source_digest[:10]}",
+                    "notes": f"source counterpart for missing formal relic icon {relic_id}",
+                },
+            ]
+        )
+    return entries
 
 
 def build_plan(prefix: str, include_prefixes: list[str], target_dir: str, module_slug: str, usage_report: Path) -> dict:
@@ -295,6 +421,9 @@ def build_plan(prefix: str, include_prefixes: list[str], target_dir: str, module
                 "notes": notes_for(asset, is_tracked, action),
             }
         )
+    if module_slug == "relics_visuals":
+        existing_paths = {asset["path"] for asset in assets}
+        entries.extend(missing_relic_icon_entries(existing_paths, tracked))
 
     duplicate_extension_groups = []
     for stem_key, group in sorted(by_stem.items()):
@@ -341,6 +470,10 @@ def build_plan(prefix: str, include_prefixes: list[str], target_dir: str, module
 def effective_status(audit_status: str, action: str) -> str:
     if action == "move_then_rewrite_dynamic_refs":
         return "active_dynamic"
+    if action == "copy_from_master_runtime":
+        return "active_dynamic"
+    if action == "copy_from_master_source":
+        return "source"
     if action == "move_as_source" and audit_status == "unreferenced":
         return "source"
     return audit_status
@@ -363,7 +496,14 @@ def notes_for(asset: dict, is_tracked: bool, action: str) -> str:
     if action == "copy_as_source":
         notes.append("source counterpart for active runtime asset")
     if action == "move_then_rewrite_dynamic_refs":
-        notes.append("dynamic runtime reference from src/data/enemies.js and demo path helpers")
+        if asset["path"].startswith(("遗物/图标/", "assets/relics/icons/")):
+            notes.append("dynamic runtime reference from FORMAL_RELIC_ICON_IDS and resolveRelicIconPath")
+        else:
+            notes.append("dynamic runtime reference from src/data/enemies.js and demo path helpers")
+    if action == "copy_from_master_runtime":
+        notes.append("copy runtime relic icon from master fallback for a formal relic id")
+    if action == "copy_from_master_source":
+        notes.append("copy source relic icon from master source for a formal relic id")
     if not notes:
         notes.append("review before migration")
     return "; ".join(notes)
