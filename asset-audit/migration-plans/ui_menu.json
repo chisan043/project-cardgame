@@ -1,0 +1,119 @@
+{
+  "generatedBy": "tools/plan_asset_migration.py",
+  "proposalType": "review_only",
+  "moduleSlug": "ui_menu",
+  "sourcePrefix": "UI/主菜单/",
+  "targetDirectory": "assets/ui/menu",
+  "strategy": [
+    "Review this plan before executing any filesystem migration.",
+    "Copy active runtime assets into the owning module first.",
+    "Rewrite references only after copied assets exist.",
+    "Keep source and candidate assets separate from formal runtime assets.",
+    "Do not archive unreferenced assets until active migration validation passes."
+  ],
+  "summary": {
+    "assetCount": 4,
+    "statusCounts": {
+      "active": 1,
+      "candidate": 3
+    },
+    "actionCounts": {
+      "copy_as_candidate": 2,
+      "copy_as_source": 1,
+      "copy_then_rewrite_runtime_refs": 1
+    },
+    "trackedCounts": {
+      "tracked": 2,
+      "untracked": 2
+    },
+    "duplicateExtensionGroupCount": 1
+  },
+  "entries": [
+    {
+      "sourcePath": "UI/主菜单/main_menu_key_art_candidate_v1.png",
+      "suggestedPath": "assets/candidates/ui/menu/main_menu_key_art_candidate_v1.png",
+      "action": "copy_as_candidate",
+      "status": "candidate",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path"
+      ],
+      "sha256": "d7df4354f52dcd36c3e724b4027d2453a5a3a70cc19815211b3aae6005a4690e",
+      "derivedFrom": "UI/主菜单/main_menu_key_art_candidate_v1.png",
+      "visualGroup": "visual_d7df4354f5",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; candidate asset; keep outside formal runtime directory"
+    },
+    {
+      "sourcePath": "UI/主菜单/main_menu_key_art_candidate_v2.png",
+      "suggestedPath": "assets/candidates/ui/menu/main_menu_key_art_candidate_v2.png",
+      "action": "copy_as_candidate",
+      "status": "candidate",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path"
+      ],
+      "sha256": "8d302187b576a283eb1389d56de52cf93972f3d06af81d686c0873c355d4c9cf",
+      "derivedFrom": "UI/主菜单/main_menu_key_art_candidate_v2.png",
+      "visualGroup": "visual_8d302187b5",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; candidate asset; keep outside formal runtime directory"
+    },
+    {
+      "sourcePath": "UI/主菜单/main_menu_key_art_candidate_v3_cel.png",
+      "suggestedPath": "assets/source/ui/menu/main_menu_key_art_v1_source.png",
+      "action": "copy_as_source",
+      "status": "candidate",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path"
+      ],
+      "sha256": "3b18ddca5cec537069df3390d75b3548ae4637dfd4a425bac27a99cc7b6cb845",
+      "derivedFrom": "UI/主菜单/main_menu_key_art_candidate_v3_cel.png",
+      "visualGroup": "visual_3b18ddca5c",
+      "notes": "candidate asset; keep outside formal runtime directory; source counterpart for active runtime asset"
+    },
+    {
+      "sourcePath": "UI/主菜单/main_menu_key_art_candidate_v3_cel.webp",
+      "suggestedPath": "assets/ui/menu/main_menu_key_art_v1.webp",
+      "action": "copy_then_rewrite_runtime_refs",
+      "status": "active",
+      "tracked": true,
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 67,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "risks": [
+        "non_ascii_path"
+      ],
+      "sha256": "5ff34aec2920018f997377bc0eaec4f1a1724246dd86aee7e61fa4f0e53fe26d",
+      "derivedFrom": "UI/主菜单/main_menu_key_art_candidate_v3_cel.webp",
+      "visualGroup": "visual_5ff34aec29",
+      "notes": "runtime/config referenced"
+    }
+  ],
+  "duplicateExtensionGroups": [
+    {
+      "basePath": "UI/主菜单/main_menu_key_art_candidate_v3_cel",
+      "extensions": [
+        ".png",
+        ".webp"
+      ],
+      "paths": [
+        "UI/主菜单/main_menu_key_art_candidate_v3_cel.png",
+        "UI/主菜单/main_menu_key_art_candidate_v3_cel.webp"
+      ]
+    }
+  ]
+}
