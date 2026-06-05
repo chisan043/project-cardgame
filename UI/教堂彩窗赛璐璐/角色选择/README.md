@@ -2,22 +2,22 @@
 
 当前已有：
 
-- `角色选择界面_概念图_v1.png`
+- `assets/candidates/ui/role_select/review/role_select_concept_v1.png`
   - 第一版角色选择界面方向图
   - 目标是确认整体语言，而不是直接切前端
-- `角色卡窗框_普通_v1.png`
+- `assets/candidates/ui/role_select/frames/role_card_frame_normal_v1.png`
   - 蓝金基调的普通角色卡窗框
-- `角色卡窗框_选中_v1.png`
+- `assets/candidates/ui/role_select/frames/role_card_frame_selected_v1.png`
   - 紫金基调的选中角色卡窗框
-- `特性标签底板_蓝金_v1.png`
+- `assets/source/ui/role_select/tags/tag_plate_blue_gold_v1_source.png`
   - 用于防御、爆发、连射等短标签
-- `角色描述面板_v1.png`
+- `assets/source/ui/role_select/panels/role_desc_panel_v1_source.png`
   - 角色卡下方的说明文字面板
 
 保留了对应生成源图：
 
-- `角色卡窗框_普通_v1_source.png`
-- `角色卡窗框_选中_v1_source.png`
+- `assets/source/ui/role_select/frames/role_card_frame_normal_v1_source.png`
+- `assets/source/ui/role_select/frames/role_card_frame_selected_v1_source.png`
 - `特性标签底板_蓝金_v1_source.png`
 - `角色描述面板_v1_source.png`
 

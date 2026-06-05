@@ -374,10 +374,10 @@ const CHARACTERS = {
 
 优先承接：
 
-* `UI/教堂彩窗赛璐璐/角色选择/角色卡窗框_普通_v1.png`
-* `UI/教堂彩窗赛璐璐/角色选择/角色卡窗框_选中_v1.png`
-* `UI/教堂彩窗赛璐璐/角色选择/特性标签底板_蓝金_v1.png`
-* `UI/教堂彩窗赛璐璐/角色选择/角色描述面板_v1.png`
+* `assets/candidates/ui/role_select/frames/role_card_frame_normal_v1.png`
+* `assets/candidates/ui/role_select/frames/role_card_frame_selected_v1.png`
+* `assets/source/ui/role_select/tags/tag_plate_blue_gold_v1_source.png`
+* `assets/source/ui/role_select/panels/role_desc_panel_v1_source.png`
 
 ⸻
 

@@ -6,30 +6,30 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 
 - Assets scanned: 1230
 - Text files scanned for references: 41
-- Referenced assets: 432
+- Referenced assets: 439
 - Active runtime/config assets: 481
-- Unreferenced assets: 798
-- Missing asset-like references: 231
+- Unreferenced assets: 791
+- Missing asset-like references: 216
 - Missing runtime/config references: 44
-- Duplicate extension groups: 46
+- Duplicate extension groups: 41
 - Identical content groups: 61
 
 ## Status Counts
 
 - active: 481
 - candidate: 106
-- documented: 54
+- documented: 61
 - legacy: 48
-- source: 257
-- unreferenced: 284
+- source: 255
+- unreferenced: 279
 
 ## Risk Counts
 
 - identical_content: 181
-- long_component: 81
-- multi_module_reference: 59
-- non_ascii_path: 377
-- unreferenced: 338
+- long_component: 82
+- multi_module_reference: 63
+- non_ascii_path: 355
+- unreferenced: 340
 
 ## Longest Paths
 
@@ -81,6 +81,8 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 
 ## Multi-Module Reference Examples
 
+- `assets/candidates/ui/role_select/frames/role_card_frame_normal_v1.png` used by characters, misc
+- `assets/candidates/ui/role_select/frames/role_card_frame_selected_v1.png` used by characters, misc
 - `assets/cards/art/archer/archer_ambush_art_v1.webp` used by cards, relics
 - `assets/cards/art/archer/archer_barrage_art_v1.webp` used by cards, relics
 - `assets/cards/art/archer/archer_blood_release_art_v1.webp` used by cards, relics
@@ -91,8 +93,6 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - `assets/cards/art/archer/archer_shadow_art_v1.webp` used by cards, relics
 - `assets/cards/art/archer/archer_shift_art_v1.webp` used by cards, relics
 - `assets/cards/art/mage/mage_barrier_art_v1.webp` used by cards, relics
-- `assets/cards/art/mage/mage_cascade_art_v1.webp` used by cards, relics
-- `assets/cards/art/mage/mage_chant_art_v1.webp` used by cards, relics
 
 ## Missing References
 
@@ -137,8 +137,6 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - `assets/cards/art/archer`: 9 active risky assets
 - `assets/scenes/battle/variants`: 5 active risky assets
 - `assets/ui/hud/review`: 5 active risky assets
-- `assets/ui/review`: 3 active risky assets
-- `assets/ui/character_select`: 2 active risky assets
 
 ## Notes
 

@@ -38,20 +38,20 @@
 
 ### 角色选择
 
-- `角色选择/角色卡窗框_普通_v1.png`
-- `角色选择/角色卡窗框_选中_v1.png`
+- `assets/candidates/ui/role_select/frames/role_card_frame_normal_v1.png`
+- `assets/candidates/ui/role_select/frames/role_card_frame_selected_v1.png`
 
 ### 按钮
 
-- `按钮/主按钮_蓝金_v1.png`
-- `按钮/确认按钮_紫金_v1.png`
-- `按钮/次按钮_青金_v1.png`
-- `按钮/返回按钮_青金_v1.png`
+- `assets/source/ui/role_select/buttons/main_button_blue_gold_v1_source.png`
+- `assets/source/ui/role_select/buttons/confirm_button_purple_gold_v1_source.png`
+- `assets/candidates/ui/role_select/buttons/secondary_button_teal_gold_v1.png`
+- `assets/source/ui/role_select/buttons/back_button_teal_gold_v1_source.png`
 
 ### 角色选择补充组件
 
-- `角色选择/特性标签底板_蓝金_v1.png`
-- `角色选择/角色描述面板_v1.png`
+- `assets/source/ui/role_select/tags/tag_plate_blue_gold_v1_source.png`
+- `assets/source/ui/role_select/panels/role_desc_panel_v1_source.png`
 
 ### 战斗 HUD
 

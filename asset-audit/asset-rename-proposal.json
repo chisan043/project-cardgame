@@ -755,6 +755,22 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
+      "sourcePath": "assets/candidates/ui/role_select/review/role_select_concept_v1.png",
+      "suggestedPath": "assets/characters/review/role_select_concept_v1.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/candidates/ui/role_select/review/role_select_concept_v1.png",
+      "visualGroup": "visual_224e2b8d8f",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
       "sourcePath": "assets/source/characters/archer/avatar_portrait_v1_source.png",
       "suggestedPath": "assets/characters/review/avatar_portrait_v1_source.png",
       "suggestedDirectory": "assets/characters/review",
@@ -1441,6 +1457,38 @@
       ],
       "derivedFrom": "assets/source/characters/warrior/select_portrait_v1_source.png",
       "visualGroup": "visual_a270491077",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/role_select/frames/role_card_frame_normal_v1_source.png",
+      "suggestedPath": "assets/characters/review/role_card_frame_normal_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/ui/role_select/frames/role_card_frame_normal_v1_source.png",
+      "visualGroup": "visual_429118a68e",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/role_select/frames/role_card_frame_selected_v1_source.png",
+      "suggestedPath": "assets/characters/review/role_card_frame_selected_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/ui/role_select/frames/role_card_frame_selected_v1_source.png",
+      "visualGroup": "visual_aca0c4f69f",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -2681,6 +2729,22 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
+      "sourcePath": "assets/candidates/ui/role_select/buttons/secondary_button_teal_gold_v1.png",
+      "suggestedPath": "assets/misc/review/secondary_button_teal_gold_v1.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "documented",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/candidates/ui/role_select/buttons/secondary_button_teal_gold_v1.png",
+      "visualGroup": "visual_982814ed75",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
       "sourcePath": "assets/source/npc/campfire_elder_alpha_fullres_v1_source.png",
       "suggestedPath": "assets/misc/review/campfire_elder_alpha_fullres_v1_source.png",
       "suggestedDirectory": "assets/misc/review",
@@ -3097,6 +3161,54 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
+      "sourcePath": "assets/source/ui/role_select/buttons/back_button_teal_gold_v1_source.png",
+      "suggestedPath": "assets/misc/review/back_button_teal_gold_v1_source.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "documented",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/ui/role_select/buttons/back_button_teal_gold_v1_source.png",
+      "visualGroup": "visual_49facd4a8d",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/role_select/buttons/confirm_button_purple_gold_v1_source.png",
+      "suggestedPath": "assets/misc/review/confirm_button_purple_gold_v1_source.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "documented",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/ui/role_select/buttons/confirm_button_purple_gold_v1_source.png",
+      "visualGroup": "visual_a5b0b4f9b9",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/role_select/buttons/main_button_blue_gold_v1_source.png",
+      "suggestedPath": "assets/misc/review/main_button_blue_gold_v1_source.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "documented",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/ui/role_select/buttons/main_button_blue_gold_v1_source.png",
+      "visualGroup": "visual_61d0da9fec",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
       "sourcePath": "_preview_新角色一三_带背景卡图.png",
       "suggestedPath": "assets/review/review_bb304cc123.png",
       "suggestedDirectory": "assets/review",
@@ -3276,6 +3388,42 @@
       ],
       "derivedFrom": "assets/candidates/ui/map/review/map_right_preview_detail_group_frame_transparent_v1.png",
       "visualGroup": "visual_3256f8cb04",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/candidates/ui/role_select/frames/role_card_frame_normal_v1.png",
+      "suggestedPath": "assets/review/role_card_frame_normal_v1.png",
+      "suggestedDirectory": "assets/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced",
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/candidates/ui/role_select/frames/role_card_frame_normal_v1.png",
+      "visualGroup": "visual_2679f6aabf",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/candidates/ui/role_select/frames/role_card_frame_selected_v1.png",
+      "suggestedPath": "assets/review/role_card_frame_selected_v1.png",
+      "suggestedDirectory": "assets/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced",
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/candidates/ui/role_select/frames/role_card_frame_selected_v1.png",
+      "visualGroup": "visual_23dbdae760",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -3644,6 +3792,56 @@
       ],
       "derivedFrom": "assets/source/ui/map/panels/map_right_simple_outer_wrapper_frame_imagegen_transparent_v1_source.png",
       "visualGroup": "visual_421e1c2e05",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/role_select/buttons/confirm_button_purple_gold_v1_original_source.png",
+      "suggestedPath": "assets/review/confirm_button_purple_gold_v1_original_source.png",
+      "suggestedDirectory": "assets/review",
+      "status": "source",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/role_select/buttons/confirm_button_purple_gold_v1_original_source.png",
+      "visualGroup": "visual_81e2d97fd8",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/role_select/panels/role_desc_panel_v1_source.png",
+      "suggestedPath": "assets/review/role_desc_panel_v1_source.png",
+      "suggestedDirectory": "assets/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced",
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/source/ui/role_select/panels/role_desc_panel_v1_source.png",
+      "visualGroup": "visual_d0e8b1bff1",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/role_select/tags/tag_plate_blue_gold_v1_source.png",
+      "suggestedPath": "assets/review/tag_plate_blue_gold_v1_source.png",
+      "suggestedDirectory": "assets/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced",
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/source/ui/role_select/tags/tag_plate_blue_gold_v1_source.png",
+      "visualGroup": "visual_2867ab4fbd",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -7382,177 +7580,6 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "UI/教堂彩窗赛璐璐/角色选择/特性标签底板_蓝金_v1.png",
-      "suggestedPath": "assets/ui/character_select/review_2867ab4fbd.png",
-      "suggestedDirectory": "assets/ui/character_select",
-      "status": "documented",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/角色选择/特性标签底板_蓝金_v1.png",
-      "visualGroup": "visual_2867ab4fbd",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/角色选择/特性标签底板_蓝金_v1.webp",
-      "suggestedPath": "assets/ui/character_select/review_8948d63c1a.webp",
-      "suggestedDirectory": "assets/ui/character_select",
-      "status": "active",
-      "referenceModules": [
-        "demo"
-      ],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/角色选择/特性标签底板_蓝金_v1.webp",
-      "visualGroup": "visual_8948d63c1a",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/角色选择/特性标签底板_蓝金_v1_source.png",
-      "suggestedPath": "assets/ui/character_select/review_34d92856c2.png",
-      "suggestedDirectory": "assets/ui/character_select",
-      "status": "source",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/角色选择/特性标签底板_蓝金_v1_source.png",
-      "visualGroup": "visual_34d92856c2",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/角色选择/角色卡窗框_普通_v1.png",
-      "suggestedPath": "assets/ui/character_select/review_2679f6aabf.png",
-      "suggestedDirectory": "assets/ui/character_select",
-      "status": "documented",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/角色选择/角色卡窗框_普通_v1.png",
-      "visualGroup": "visual_2679f6aabf",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/角色选择/角色卡窗框_普通_v1_source.png",
-      "suggestedPath": "assets/ui/character_select/review_429118a68e.png",
-      "suggestedDirectory": "assets/ui/character_select",
-      "status": "source",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/角色选择/角色卡窗框_普通_v1_source.png",
-      "visualGroup": "visual_429118a68e",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/角色选择/角色卡窗框_选中_v1.png",
-      "suggestedPath": "assets/ui/character_select/review_23dbdae760.png",
-      "suggestedDirectory": "assets/ui/character_select",
-      "status": "documented",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/角色选择/角色卡窗框_选中_v1.png",
-      "visualGroup": "visual_23dbdae760",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/角色选择/角色卡窗框_选中_v1_source.png",
-      "suggestedPath": "assets/ui/character_select/review_aca0c4f69f.png",
-      "suggestedDirectory": "assets/ui/character_select",
-      "status": "source",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/角色选择/角色卡窗框_选中_v1_source.png",
-      "visualGroup": "visual_aca0c4f69f",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/角色选择/角色描述面板_v1.png",
-      "suggestedPath": "assets/ui/character_select/review_d0e8b1bff1.png",
-      "suggestedDirectory": "assets/ui/character_select",
-      "status": "documented",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/角色选择/角色描述面板_v1.png",
-      "visualGroup": "visual_d0e8b1bff1",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/角色选择/角色描述面板_v1.webp",
-      "suggestedPath": "assets/ui/character_select/review_a059d6cc12.webp",
-      "suggestedDirectory": "assets/ui/character_select",
-      "status": "active",
-      "referenceModules": [
-        "demo"
-      ],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/角色选择/角色描述面板_v1.webp",
-      "visualGroup": "visual_a059d6cc12",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/角色选择/角色描述面板_v1_source.png",
-      "suggestedPath": "assets/ui/character_select/review_e1674d1c8d.png",
-      "suggestedDirectory": "assets/ui/character_select",
-      "status": "source",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/角色选择/角色描述面板_v1_source.png",
-      "visualGroup": "visual_e1674d1c8d",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/角色选择/角色选择界面_概念图_v1.png",
-      "suggestedPath": "assets/ui/character_select/review_224e2b8d8f.png",
-      "suggestedDirectory": "assets/ui/character_select",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/角色选择/角色选择界面_概念图_v1.png",
-      "visualGroup": "visual_224e2b8d8f",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
       "sourcePath": "旧美术资产/角色一/角色一_角色选择_彩窗立绘.png",
       "suggestedPath": "assets/ui/character_select/review_cc99d0267b.png",
       "suggestedDirectory": "assets/ui/character_select",
@@ -8653,170 +8680,6 @@
       ],
       "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_center_parchment_background_imagegen_v1.png",
       "visualGroup": "visual_41551bb894",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/按钮/主按钮_蓝金_v1.png",
-      "suggestedPath": "assets/ui/review/review_61d0da9fec.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/按钮/主按钮_蓝金_v1.png",
-      "visualGroup": "visual_61d0da9fec",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/按钮/主按钮_蓝金_v1.webp",
-      "suggestedPath": "assets/ui/review/review_826ff26498.webp",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "demo"
-      ],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/按钮/主按钮_蓝金_v1.webp",
-      "visualGroup": "visual_826ff26498",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/按钮/主按钮_蓝金_v1_source.png",
-      "suggestedPath": "assets/ui/review/review_e9d1368356.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "source",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/按钮/主按钮_蓝金_v1_source.png",
-      "visualGroup": "visual_e9d1368356",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/按钮/次按钮_青金_v1.png",
-      "suggestedPath": "assets/ui/review/review_982814ed75.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/按钮/次按钮_青金_v1.png",
-      "visualGroup": "visual_982814ed75",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/按钮/次按钮_青金_v1_source.png",
-      "suggestedPath": "assets/ui/review/review_20e14fe55f.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "source",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/按钮/次按钮_青金_v1_source.png",
-      "visualGroup": "visual_20e14fe55f",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/按钮/确认按钮_紫金_v1.png",
-      "suggestedPath": "assets/ui/review/review_a5b0b4f9b9.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/按钮/确认按钮_紫金_v1.png",
-      "visualGroup": "visual_a5b0b4f9b9",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/按钮/确认按钮_紫金_v1.webp",
-      "suggestedPath": "assets/ui/review/review_bb2e3ea99a.webp",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "demo"
-      ],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/按钮/确认按钮_紫金_v1.webp",
-      "visualGroup": "visual_bb2e3ea99a",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/按钮/确认按钮_紫金_v1_source.png",
-      "suggestedPath": "assets/ui/review/review_81e2d97fd8.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "source",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/按钮/确认按钮_紫金_v1_source.png",
-      "visualGroup": "visual_81e2d97fd8",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/按钮/返回按钮_青金_v1.png",
-      "suggestedPath": "assets/ui/review/review_49facd4a8d.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/按钮/返回按钮_青金_v1.png",
-      "visualGroup": "visual_49facd4a8d",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/按钮/返回按钮_青金_v1.webp",
-      "suggestedPath": "assets/ui/review/review_25a35c68af.webp",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "demo"
-      ],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/按钮/返回按钮_青金_v1.webp",
-      "visualGroup": "visual_25a35c68af",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/按钮/返回按钮_青金_v1_source.png",
-      "suggestedPath": "assets/ui/review/review_212029ae22.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "source",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/按钮/返回按钮_青金_v1_source.png",
-      "visualGroup": "visual_212029ae22",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {

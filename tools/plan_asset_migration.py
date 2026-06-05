@@ -195,6 +195,131 @@ def map_suggestion_for_asset(asset: dict, runtime_stems: set[str] | None = None)
     return f"assets/candidates/ui/map/review/{stem}{suffix}", "review_before_candidate"
 
 
+ROLE_SELECT_PATH_MAP = {
+    "UI/教堂彩窗赛璐璐/按钮/主按钮_蓝金_v1.webp": (
+        "assets/ui/role_select/buttons/main_button_blue_gold_v1.webp",
+        "move_then_rewrite_runtime_refs",
+    ),
+    "UI/教堂彩窗赛璐璐/按钮/主按钮_蓝金_v1.png": (
+        "assets/source/ui/role_select/buttons/main_button_blue_gold_v1_source.png",
+        "move_as_source",
+    ),
+    "UI/教堂彩窗赛璐璐/按钮/主按钮_蓝金_v1_source.png": (
+        "assets/source/ui/role_select/buttons/main_button_blue_gold_v1_original_source.png",
+        "move_as_source",
+    ),
+    "UI/教堂彩窗赛璐璐/按钮/确认按钮_紫金_v1.webp": (
+        "assets/ui/role_select/buttons/confirm_button_purple_gold_v1.webp",
+        "move_then_rewrite_runtime_refs",
+    ),
+    "UI/教堂彩窗赛璐璐/按钮/确认按钮_紫金_v1.png": (
+        "assets/source/ui/role_select/buttons/confirm_button_purple_gold_v1_source.png",
+        "move_as_source",
+    ),
+    "UI/教堂彩窗赛璐璐/按钮/确认按钮_紫金_v1_source.png": (
+        "assets/source/ui/role_select/buttons/confirm_button_purple_gold_v1_original_source.png",
+        "move_as_source",
+    ),
+    "UI/教堂彩窗赛璐璐/按钮/返回按钮_青金_v1.webp": (
+        "assets/ui/role_select/buttons/back_button_teal_gold_v1.webp",
+        "move_then_rewrite_runtime_refs",
+    ),
+    "UI/教堂彩窗赛璐璐/按钮/返回按钮_青金_v1.png": (
+        "assets/source/ui/role_select/buttons/back_button_teal_gold_v1_source.png",
+        "move_as_source",
+    ),
+    "UI/教堂彩窗赛璐璐/按钮/返回按钮_青金_v1_source.png": (
+        "assets/source/ui/role_select/buttons/back_button_teal_gold_v1_original_source.png",
+        "move_as_source",
+    ),
+    "UI/教堂彩窗赛璐璐/按钮/次按钮_青金_v1.png": (
+        "assets/candidates/ui/role_select/buttons/secondary_button_teal_gold_v1.png",
+        "move_as_candidate",
+    ),
+    "UI/教堂彩窗赛璐璐/按钮/次按钮_青金_v1_source.png": (
+        "assets/source/ui/role_select/buttons/secondary_button_teal_gold_v1_source.png",
+        "move_as_source",
+    ),
+    "UI/教堂彩窗赛璐璐/角色选择/特性标签底板_蓝金_v1.webp": (
+        "assets/ui/role_select/tags/tag_plate_blue_gold_v1.webp",
+        "move_then_rewrite_runtime_refs",
+    ),
+    "UI/教堂彩窗赛璐璐/角色选择/特性标签底板_蓝金_v1.png": (
+        "assets/source/ui/role_select/tags/tag_plate_blue_gold_v1_source.png",
+        "move_as_source",
+    ),
+    "UI/教堂彩窗赛璐璐/角色选择/特性标签底板_蓝金_v1_source.png": (
+        "assets/source/ui/role_select/tags/tag_plate_blue_gold_v1_original_source.png",
+        "move_as_source",
+    ),
+    "UI/教堂彩窗赛璐璐/角色选择/角色描述面板_v1.webp": (
+        "assets/ui/role_select/panels/role_desc_panel_v1.webp",
+        "move_then_rewrite_runtime_refs",
+    ),
+    "UI/教堂彩窗赛璐璐/角色选择/角色描述面板_v1.png": (
+        "assets/source/ui/role_select/panels/role_desc_panel_v1_source.png",
+        "move_as_source",
+    ),
+    "UI/教堂彩窗赛璐璐/角色选择/角色描述面板_v1_source.png": (
+        "assets/source/ui/role_select/panels/role_desc_panel_v1_original_source.png",
+        "move_as_source",
+    ),
+    "UI/教堂彩窗赛璐璐/角色选择/角色卡窗框_普通_v1.png": (
+        "assets/candidates/ui/role_select/frames/role_card_frame_normal_v1.png",
+        "move_as_candidate",
+    ),
+    "UI/教堂彩窗赛璐璐/角色选择/角色卡窗框_普通_v1_source.png": (
+        "assets/source/ui/role_select/frames/role_card_frame_normal_v1_source.png",
+        "move_as_source",
+    ),
+    "UI/教堂彩窗赛璐璐/角色选择/角色卡窗框_选中_v1.png": (
+        "assets/candidates/ui/role_select/frames/role_card_frame_selected_v1.png",
+        "move_as_candidate",
+    ),
+    "UI/教堂彩窗赛璐璐/角色选择/角色卡窗框_选中_v1_source.png": (
+        "assets/source/ui/role_select/frames/role_card_frame_selected_v1_source.png",
+        "move_as_source",
+    ),
+    "UI/教堂彩窗赛璐璐/角色选择/角色选择界面_概念图_v1.png": (
+        "assets/candidates/ui/role_select/review/role_select_concept_v1.png",
+        "move_as_candidate",
+    ),
+}
+
+
+def role_arch_suggestion(source_path: str) -> tuple[str, str]:
+    path = Path(source_path)
+    stem = normalize_slug(path.stem)
+    suffix = path.suffix.lower()
+    if "_source_" in stem or stem.endswith("_source_v2"):
+        return f"assets/source/ui/role_select/role_arch/{stem}{suffix}", "move_as_source"
+    return f"assets/candidates/ui/role_select/role_arch/{stem}{suffix}", "move_as_candidate"
+
+
+def role_select_suggestion(source_path: str, status: str) -> tuple[str, str]:
+    path = Path(source_path)
+    suffix = path.suffix.lower()
+    stem = normalize_slug(path.stem)
+
+    if source_path.startswith((
+        "assets/ui/role_select/",
+        "assets/source/ui/role_select/",
+        "assets/candidates/ui/role_select/",
+    )):
+        return source_path, "already_migrated"
+
+    if source_path in ROLE_SELECT_PATH_MAP:
+        return ROLE_SELECT_PATH_MAP[source_path]
+
+    if source_path.startswith("UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/"):
+        return role_arch_suggestion(source_path)
+
+    if status == "active":
+        return f"assets/ui/role_select/review/{stem}{suffix}", "move_then_rewrite_runtime_refs"
+
+    return f"assets/archive/review/ui_role_select/{stem}{suffix}", "defer_archive_review"
+
+
 def scene_main_suggestion(source_path: str, status: str) -> tuple[str, str]:
     path = Path(source_path)
     suffix = path.suffix.lower()
@@ -636,6 +761,8 @@ def suggested_path_for_asset(
 ) -> tuple[str, str]:
     if module_slug == "ui_map":
         return map_suggestion_for_asset(asset, runtime_stems)
+    if module_slug == "ui_role_select":
+        return role_select_suggestion(asset["path"], asset["status"])
     return suggested_path(asset["path"], asset["status"], target_dir, module_slug)
 
 
@@ -726,7 +853,7 @@ def build_plan(prefix: str, include_prefixes: list[str], target_dir: str, module
         target_path, action = suggested_path_for_asset(asset, target_dir, module_slug, map_runtime_stems)
         is_tracked = source_path in tracked
         if (
-            module_slug == "cards_visuals"
+            module_slug in {"cards_visuals", "ui_role_select"}
             and action != "already_migrated"
             and not is_tracked
             and asset["status"] != "active"

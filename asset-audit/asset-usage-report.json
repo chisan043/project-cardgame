@@ -23,36 +23,36 @@
   "summary": {
     "assetCount": 1230,
     "textFileCount": 41,
-    "referencedAssetCount": 432,
+    "referencedAssetCount": 439,
     "activeAssetCount": 481,
-    "unreferencedAssetCount": 798,
-    "missingReferenceCount": 231,
+    "unreferencedAssetCount": 791,
+    "missingReferenceCount": 216,
     "missingRuntimeReferenceCount": 44,
     "statusCounts": {
       "active": 481,
       "candidate": 106,
-      "documented": 54,
+      "documented": 61,
       "legacy": 48,
-      "source": 257,
-      "unreferenced": 284
+      "source": 255,
+      "unreferenced": 279
     },
     "riskCounts": {
       "identical_content": 181,
-      "long_component": 81,
-      "multi_module_reference": 59,
-      "non_ascii_path": 377,
-      "unreferenced": 338
+      "long_component": 82,
+      "multi_module_reference": 63,
+      "non_ascii_path": 355,
+      "unreferenced": 340
     },
     "referenceModuleCounts": {
       "cards": 178,
-      "characters": 55,
+      "characters": 62,
       "demo": 68,
       "enemies": 1,
-      "misc": 77,
+      "misc": 81,
       "relics": 45,
       "ui.hud": 67
     },
-    "duplicateExtensionGroupCount": 46,
+    "duplicateExtensionGroupCount": 41,
     "identicalContentGroupCount": 61
   },
   "assets": [
@@ -1198,213 +1198,6 @@
       ]
     },
     {
-      "path": "UI/教堂彩窗赛璐璐/按钮/主按钮_蓝金_v1.png",
-      "extension": ".png",
-      "bytes": 1349649,
-      "sha256": "61d0da9fec72e17b0faafe00a3188456a9b25e2189576ecda7e3c1b20be2da10",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 27,
-      "maxComponentLength": 13,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/按钮/主按钮_蓝金_v1.webp",
-      "extension": ".webp",
-      "bytes": 99288,
-      "sha256": "826ff26498425fcf64cce6ab57301896e5a90e99c4d9625644a3827fe0509edc",
-      "status": "active",
-      "references": [
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 74,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo"
-      ],
-      "pathLength": 28,
-      "maxComponentLength": 14,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/按钮/主按钮_蓝金_v1_source.png",
-      "extension": ".png",
-      "bytes": 1769452,
-      "sha256": "e9d13683566de9b1868dfb1b4edc52e89662ba6876d7d7fbf4d525c729a78e5c",
-      "status": "source",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 34,
-      "maxComponentLength": 20,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/按钮/次按钮_青金_v1.png",
-      "extension": ".png",
-      "bytes": 1407069,
-      "sha256": "982814ed75fa7d74fef0b5cae5da40cb3f0f7f980156729d543a0c615330ca45",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 27,
-      "maxComponentLength": 13,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/按钮/次按钮_青金_v1_source.png",
-      "extension": ".png",
-      "bytes": 1809261,
-      "sha256": "20e14fe55f740974346c73baf27003607d4306cc1931bd17ad0d33edda1fd3d0",
-      "status": "source",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 34,
-      "maxComponentLength": 20,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/按钮/确认按钮_紫金_v1.png",
-      "extension": ".png",
-      "bytes": 1328111,
-      "sha256": "a5b0b4f9b925c2ab61ae601122937046d1ee585e776537526323a3502f1ae287",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 28,
-      "maxComponentLength": 14,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/按钮/确认按钮_紫金_v1.webp",
-      "extension": ".webp",
-      "bytes": 110052,
-      "sha256": "bb2e3ea99a2ddd8c025b16d084f8266ba90787e81e50034933b771f886677891",
-      "status": "active",
-      "references": [
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 75,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo"
-      ],
-      "pathLength": 29,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/按钮/确认按钮_紫金_v1_source.png",
-      "extension": ".png",
-      "bytes": 1787250,
-      "sha256": "81e2d97fd809c177d9a4a36d57bf57fa782ec48fb22835c2bc2048443e4a1432",
-      "status": "source",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 35,
-      "maxComponentLength": 21,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/按钮/返回按钮_青金_v1.png",
-      "extension": ".png",
-      "bytes": 1286541,
-      "sha256": "49facd4a8dcb1c19bae8299ff66a95af54b56bc69a95ed6ff61f0c531a4e3c2f",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 28,
-      "maxComponentLength": 14,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/按钮/返回按钮_青金_v1.webp",
-      "extension": ".webp",
-      "bytes": 108146,
-      "sha256": "25a35c68af2613d6ede45191877e8f378847cc73a6d6df9abf942a9432169268",
-      "status": "active",
-      "references": [
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 76,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo"
-      ],
-      "pathLength": 29,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/按钮/返回按钮_青金_v1_source.png",
-      "extension": ".png",
-      "bytes": 1718727,
-      "sha256": "212029ae22dac88a40d1ee856f883233bf640e8f49794c52e57f2099fc443790",
-      "status": "source",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 35,
-      "maxComponentLength": 21,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
       "path": "UI/教堂彩窗赛璐璐/概念图/02_教堂彩窗_赛璐璐融合方向图.png",
       "extension": ".png",
       "bytes": 3195695,
@@ -1548,241 +1341,6 @@
         "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_warrior_v2.png",
         "assets/source/characters/warrior/role_select_frame_v1_source.png"
       ]
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/角色选择/特性标签底板_蓝金_v1.png",
-      "extension": ".png",
-      "bytes": 759633,
-      "sha256": "2867ab4fbde4dce722f369b33f72453b78c2edb3ae597ec6528831305726fac3",
-      "status": "documented",
-      "references": [
-        {
-          "file": "demo更改需求文档.txt",
-          "line": 379,
-          "module": "misc",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 32,
-      "maxComponentLength": 16,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/角色选择/特性标签底板_蓝金_v1.webp",
-      "extension": ".webp",
-      "bytes": 42850,
-      "sha256": "8948d63c1a046ba77abae3db42901d3d46919e1a5f2e4432b744e867fa182d77",
-      "status": "active",
-      "references": [
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 70,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo"
-      ],
-      "pathLength": 33,
-      "maxComponentLength": 17,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/角色选择/特性标签底板_蓝金_v1_source.png",
-      "extension": ".png",
-      "bytes": 1353772,
-      "sha256": "34d92856c21f093434dafba2906d51791c4dd02c1e463c4ed1d265058a5b8baf",
-      "status": "source",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 39,
-      "maxComponentLength": 23,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/角色选择/角色卡窗框_普通_v1.png",
-      "extension": ".png",
-      "bytes": 1427982,
-      "sha256": "2679f6aabfffbe24e82720019ce876f73eebc9b212c106d04e45ae8bf535f1a0",
-      "status": "documented",
-      "references": [
-        {
-          "file": "demo更改需求文档.txt",
-          "line": 377,
-          "module": "misc",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 31,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/角色选择/角色卡窗框_普通_v1_source.png",
-      "extension": ".png",
-      "bytes": 1882663,
-      "sha256": "429118a68e6538d0debb86a305fc67ce3951fe5bcf896d9fae4ec10ee136a2d7",
-      "status": "source",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 38,
-      "maxComponentLength": 22,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/角色选择/角色卡窗框_选中_v1.png",
-      "extension": ".png",
-      "bytes": 1318702,
-      "sha256": "23dbdae760a448ff55bf2f3a292525748a7326a1a984118b7415ca52490762b9",
-      "status": "documented",
-      "references": [
-        {
-          "file": "demo更改需求文档.txt",
-          "line": 378,
-          "module": "misc",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 31,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/角色选择/角色卡窗框_选中_v1_source.png",
-      "extension": ".png",
-      "bytes": 1783264,
-      "sha256": "aca0c4f69f49a1dc45ce72a9a6e6a848e1902d4c2f874b81e1f18ef143d37072",
-      "status": "source",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 38,
-      "maxComponentLength": 22,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/角色选择/角色描述面板_v1.png",
-      "extension": ".png",
-      "bytes": 1515942,
-      "sha256": "d0e8b1bff14bda4ec2d753bde874d565f4ba1a8b0f8cda9edace85daf7975384",
-      "status": "documented",
-      "references": [
-        {
-          "file": "demo更改需求文档.txt",
-          "line": 380,
-          "module": "misc",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 29,
-      "maxComponentLength": 13,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/角色选择/角色描述面板_v1.webp",
-      "extension": ".webp",
-      "bytes": 113122,
-      "sha256": "a059d6cc1287f2b5c98fed7990b1e8fac76353d4b2899afdea52b16a5e455646",
-      "status": "active",
-      "references": [
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 69,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo"
-      ],
-      "pathLength": 30,
-      "maxComponentLength": 14,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/角色选择/角色描述面板_v1_source.png",
-      "extension": ".png",
-      "bytes": 1887293,
-      "sha256": "e1674d1c8d9df235fcd38cf9dd7565fa7e56b66ac81f271a4567a8b42482a550",
-      "status": "source",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 36,
-      "maxComponentLength": 20,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/角色选择/角色选择界面_概念图_v1.png",
-      "extension": ".png",
-      "bytes": 2785840,
-      "sha256": "224e2b8d8f49a0ca4c6dd9512181c66b3bf6be9a15547789e3932bf7f73661b0",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 33,
-      "maxComponentLength": 17,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
     },
     {
       "path": "_preview_新角色一三_带背景卡图.png",
@@ -4132,6 +3690,134 @@
       "maxComponentLength": 35,
       "containsNonAscii": false,
       "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/role_select/buttons/secondary_button_teal_gold_v1.png",
+      "extension": ".png",
+      "bytes": 1407069,
+      "sha256": "982814ed75fa7d74fef0b5cae5da40cb3f0f7f980156729d543a0c615330ca45",
+      "status": "documented",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/README.md",
+          "line": 48,
+          "module": "misc",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 74,
+      "maxComponentLength": 33,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/role_select/frames/role_card_frame_normal_v1.png",
+      "extension": ".png",
+      "bytes": 1427982,
+      "sha256": "2679f6aabfffbe24e82720019ce876f73eebc9b212c106d04e45ae8bf535f1a0",
+      "status": "documented",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/README.md",
+          "line": 41,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "UI/教堂彩窗赛璐璐/角色选择/README.md",
+          "line": 8,
+          "module": "characters",
+          "kind": "documentation"
+        },
+        {
+          "file": "demo更改需求文档.txt",
+          "line": 377,
+          "module": "misc",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "pathLength": 69,
+      "maxComponentLength": 29,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced",
+        "multi_module_reference"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/role_select/frames/role_card_frame_selected_v1.png",
+      "extension": ".png",
+      "bytes": 1318702,
+      "sha256": "23dbdae760a448ff55bf2f3a292525748a7326a1a984118b7415ca52490762b9",
+      "status": "documented",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/README.md",
+          "line": 42,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "UI/教堂彩窗赛璐璐/角色选择/README.md",
+          "line": 10,
+          "module": "characters",
+          "kind": "documentation"
+        },
+        {
+          "file": "demo更改需求文档.txt",
+          "line": 378,
+          "module": "misc",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "pathLength": 71,
+      "maxComponentLength": 31,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced",
+        "multi_module_reference"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/role_select/review/role_select_concept_v1.png",
+      "extension": ".png",
+      "bytes": 2785840,
+      "sha256": "224e2b8d8f49a0ca4c6dd9512181c66b3bf6be9a15547789e3932bf7f73661b0",
+      "status": "documented",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/角色选择/README.md",
+          "line": 5,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 66,
+      "maxComponentLength": 26,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
       "identicalContentGroup": []
     },
     {
@@ -18248,6 +17934,295 @@
       "identicalContentGroup": []
     },
     {
+      "path": "assets/source/ui/role_select/buttons/back_button_teal_gold_v1_original_source.png",
+      "extension": ".png",
+      "bytes": 1718727,
+      "sha256": "212029ae22dac88a40d1ee856f883233bf640e8f49794c52e57f2099fc443790",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 81,
+      "maxComponentLength": 44,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/role_select/buttons/back_button_teal_gold_v1_source.png",
+      "extension": ".png",
+      "bytes": 1286541,
+      "sha256": "49facd4a8dcb1c19bae8299ff66a95af54b56bc69a95ed6ff61f0c531a4e3c2f",
+      "status": "documented",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/README.md",
+          "line": 49,
+          "module": "misc",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 72,
+      "maxComponentLength": 35,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/role_select/buttons/confirm_button_purple_gold_v1_original_source.png",
+      "extension": ".png",
+      "bytes": 1787250,
+      "sha256": "81e2d97fd809c177d9a4a36d57bf57fa782ec48fb22835c2bc2048443e4a1432",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 86,
+      "maxComponentLength": 49,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/role_select/buttons/confirm_button_purple_gold_v1_source.png",
+      "extension": ".png",
+      "bytes": 1328111,
+      "sha256": "a5b0b4f9b925c2ab61ae601122937046d1ee585e776537526323a3502f1ae287",
+      "status": "documented",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/README.md",
+          "line": 47,
+          "module": "misc",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 77,
+      "maxComponentLength": 40,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/role_select/buttons/main_button_blue_gold_v1_original_source.png",
+      "extension": ".png",
+      "bytes": 1769452,
+      "sha256": "e9d13683566de9b1868dfb1b4edc52e89662ba6876d7d7fbf4d525c729a78e5c",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 81,
+      "maxComponentLength": 44,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/role_select/buttons/main_button_blue_gold_v1_source.png",
+      "extension": ".png",
+      "bytes": 1349649,
+      "sha256": "61d0da9fec72e17b0faafe00a3188456a9b25e2189576ecda7e3c1b20be2da10",
+      "status": "documented",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/README.md",
+          "line": 46,
+          "module": "misc",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 72,
+      "maxComponentLength": 35,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/role_select/buttons/secondary_button_teal_gold_v1_source.png",
+      "extension": ".png",
+      "bytes": 1809261,
+      "sha256": "20e14fe55f740974346c73baf27003607d4306cc1931bd17ad0d33edda1fd3d0",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 77,
+      "maxComponentLength": 40,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/role_select/frames/role_card_frame_normal_v1_source.png",
+      "extension": ".png",
+      "bytes": 1882663,
+      "sha256": "429118a68e6538d0debb86a305fc67ce3951fe5bcf896d9fae4ec10ee136a2d7",
+      "status": "documented",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/角色选择/README.md",
+          "line": 19,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 72,
+      "maxComponentLength": 36,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/role_select/frames/role_card_frame_selected_v1_source.png",
+      "extension": ".png",
+      "bytes": 1783264,
+      "sha256": "aca0c4f69f49a1dc45ce72a9a6e6a848e1902d4c2f874b81e1f18ef143d37072",
+      "status": "documented",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/角色选择/README.md",
+          "line": 20,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 74,
+      "maxComponentLength": 38,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/role_select/panels/role_desc_panel_v1_original_source.png",
+      "extension": ".png",
+      "bytes": 1887293,
+      "sha256": "e1674d1c8d9df235fcd38cf9dd7565fa7e56b66ac81f271a4567a8b42482a550",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 74,
+      "maxComponentLength": 38,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/role_select/panels/role_desc_panel_v1_source.png",
+      "extension": ".png",
+      "bytes": 1515942,
+      "sha256": "d0e8b1bff14bda4ec2d753bde874d565f4ba1a8b0f8cda9edace85daf7975384",
+      "status": "documented",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/README.md",
+          "line": 54,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "UI/教堂彩窗赛璐璐/角色选择/README.md",
+          "line": 14,
+          "module": "characters",
+          "kind": "documentation"
+        },
+        {
+          "file": "demo更改需求文档.txt",
+          "line": 380,
+          "module": "misc",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "pathLength": 65,
+      "maxComponentLength": 29,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced",
+        "multi_module_reference"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/role_select/tags/tag_plate_blue_gold_v1_original_source.png",
+      "extension": ".png",
+      "bytes": 1353772,
+      "sha256": "34d92856c21f093434dafba2906d51791c4dd02c1e463c4ed1d265058a5b8baf",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 76,
+      "maxComponentLength": 42,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/role_select/tags/tag_plate_blue_gold_v1_source.png",
+      "extension": ".png",
+      "bytes": 759633,
+      "sha256": "2867ab4fbde4dce722f369b33f72453b78c2edb3ae597ec6528831305726fac3",
+      "status": "documented",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/README.md",
+          "line": 53,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "UI/教堂彩窗赛璐璐/角色选择/README.md",
+          "line": 12,
+          "module": "characters",
+          "kind": "documentation"
+        },
+        {
+          "file": "demo更改需求文档.txt",
+          "line": 379,
+          "module": "misc",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "pathLength": 67,
+      "maxComponentLength": 33,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced",
+        "multi_module_reference"
+      ],
+      "identicalContentGroup": []
+    },
+    {
       "path": "assets/ui/hud/center_controls/end_turn_button_shell_asset_v1.png",
       "extension": ".png",
       "bytes": 1365592,
@@ -21085,6 +21060,121 @@
       ],
       "pathLength": 40,
       "maxComponentLength": 25,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/role_select/buttons/back_button_teal_gold_v1.webp",
+      "extension": ".webp",
+      "bytes": 108146,
+      "sha256": "25a35c68af2613d6ede45191877e8f378847cc73a6d6df9abf942a9432169268",
+      "status": "active",
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 76,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "pathLength": 59,
+      "maxComponentLength": 29,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/role_select/buttons/confirm_button_purple_gold_v1.webp",
+      "extension": ".webp",
+      "bytes": 110052,
+      "sha256": "bb2e3ea99a2ddd8c025b16d084f8266ba90787e81e50034933b771f886677891",
+      "status": "active",
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 75,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "pathLength": 64,
+      "maxComponentLength": 34,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/role_select/buttons/main_button_blue_gold_v1.webp",
+      "extension": ".webp",
+      "bytes": 99288,
+      "sha256": "826ff26498425fcf64cce6ab57301896e5a90e99c4d9625644a3827fe0509edc",
+      "status": "active",
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 74,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "pathLength": 59,
+      "maxComponentLength": 29,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/role_select/panels/role_desc_panel_v1.webp",
+      "extension": ".webp",
+      "bytes": 113122,
+      "sha256": "a059d6cc1287f2b5c98fed7990b1e8fac76353d4b2899afdea52b16a5e455646",
+      "status": "active",
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 69,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "pathLength": 52,
+      "maxComponentLength": 23,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/role_select/tags/tag_plate_blue_gold_v1.webp",
+      "extension": ".webp",
+      "bytes": 42850,
+      "sha256": "8948d63c1a046ba77abae3db42901d3d46919e1a5f2e4432b744e867fa182d77",
+      "status": "active",
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 70,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "pathLength": 54,
+      "maxComponentLength": 27,
       "containsNonAscii": false,
       "risks": [],
       "identicalContentGroup": []
@@ -26652,34 +26742,6 @@
       "kind": "documentation"
     },
     {
-      "path": "按钮/主按钮_蓝金_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/README.md",
-      "line": 46,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "按钮/次按钮_青金_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/README.md",
-      "line": 48,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "按钮/确认按钮_紫金_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/README.md",
-      "line": 47,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "按钮/返回按钮_青金_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/README.md",
-      "line": 49,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
       "path": "概念图/01_教堂彩窗方向图.png",
       "file": "UI/教堂彩窗赛璐璐/README.md",
       "line": 11,
@@ -27048,13 +27110,6 @@
       "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
       "line": 50,
       "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "特性标签底板_蓝金_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/角色选择/README.md",
-      "line": 12,
-      "module": "characters",
       "kind": "documentation"
     },
     {
@@ -27443,119 +27498,14 @@
       "kind": "documentation"
     },
     {
-      "path": "角色卡窗框_普通_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/角色选择/README.md",
-      "line": 8,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色卡窗框_普通_v1_source.png",
-      "file": "UI/教堂彩窗赛璐璐/角色选择/README.md",
-      "line": 19,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色卡窗框_选中_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/角色选择/README.md",
-      "line": 10,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色卡窗框_选中_v1_source.png",
-      "file": "UI/教堂彩窗赛璐璐/角色选择/README.md",
-      "line": 20,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色描述面板_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/角色选择/README.md",
-      "line": 14,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
       "path": "角色描述面板_v1_source.png",
       "file": "UI/教堂彩窗赛璐璐/角色选择/README.md",
       "line": 22,
       "module": "characters",
       "kind": "documentation"
-    },
-    {
-      "path": "角色选择/特性标签底板_蓝金_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/README.md",
-      "line": 53,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色选择/角色卡窗框_普通_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/README.md",
-      "line": 41,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色选择/角色卡窗框_选中_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/README.md",
-      "line": 42,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色选择/角色描述面板_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/README.md",
-      "line": 54,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色选择界面_概念图_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/角色选择/README.md",
-      "line": 5,
-      "module": "characters",
-      "kind": "documentation"
     }
   ],
   "duplicateExtensionGroups": [
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/按钮/主按钮_蓝金_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/按钮/确认按钮_紫金_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/按钮/返回按钮_青金_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/角色选择/特性标签底板_蓝金_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/角色选择/角色描述面板_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
     {
       "basePath": "assets/scenes/battle/ancient_forest_day_v1",
       "extensions": [

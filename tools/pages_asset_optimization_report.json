@@ -497,22 +497,22 @@
       "status": "cached"
     },
     {
-      "source": "UI/教堂彩窗赛璐璐/按钮/主按钮_蓝金_v1.png",
-      "webp": "UI/教堂彩窗赛璐璐/按钮/主按钮_蓝金_v1.webp",
+      "source": "assets/source/ui/role_select/buttons/main_button_blue_gold_v1_source.png",
+      "webp": "assets/ui/role_select/buttons/main_button_blue_gold_v1.webp",
       "sourceBytes": 1349649,
       "webpBytes": 99288,
       "status": "cached"
     },
     {
-      "source": "UI/教堂彩窗赛璐璐/按钮/确认按钮_紫金_v1.png",
-      "webp": "UI/教堂彩窗赛璐璐/按钮/确认按钮_紫金_v1.webp",
+      "source": "assets/source/ui/role_select/buttons/confirm_button_purple_gold_v1_source.png",
+      "webp": "assets/ui/role_select/buttons/confirm_button_purple_gold_v1.webp",
       "sourceBytes": 1328111,
       "webpBytes": 110052,
       "status": "cached"
     },
     {
-      "source": "UI/教堂彩窗赛璐璐/按钮/返回按钮_青金_v1.png",
-      "webp": "UI/教堂彩窗赛璐璐/按钮/返回按钮_青金_v1.webp",
+      "source": "assets/source/ui/role_select/buttons/back_button_teal_gold_v1_source.png",
+      "webp": "assets/ui/role_select/buttons/back_button_teal_gold_v1.webp",
       "sourceBytes": 1286541,
       "webpBytes": 108146,
       "status": "cached"
@@ -539,15 +539,15 @@
       "status": "cached"
     },
     {
-      "source": "UI/教堂彩窗赛璐璐/角色选择/特性标签底板_蓝金_v1.png",
-      "webp": "UI/教堂彩窗赛璐璐/角色选择/特性标签底板_蓝金_v1.webp",
+      "source": "assets/source/ui/role_select/tags/tag_plate_blue_gold_v1_source.png",
+      "webp": "assets/ui/role_select/tags/tag_plate_blue_gold_v1.webp",
       "sourceBytes": 759633,
       "webpBytes": 42850,
       "status": "cached"
     },
     {
-      "source": "UI/教堂彩窗赛璐璐/角色选择/角色描述面板_v1.png",
-      "webp": "UI/教堂彩窗赛璐璐/角色选择/角色描述面板_v1.webp",
+      "source": "assets/source/ui/role_select/panels/role_desc_panel_v1_source.png",
+      "webp": "assets/ui/role_select/panels/role_desc_panel_v1.webp",
       "sourceBytes": 1515942,
       "webpBytes": 113122,
       "status": "cached"
