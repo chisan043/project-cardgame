@@ -1974,12 +1974,12 @@
         '爆发': '法师专属：攻击会消耗所有咏唱层数，每层追加 7 点伤害；没有咏唱时仍追加 4 点伤害。',
         '蓄力': '弓箭手专属：获得风势。打出攻击牌时消耗 1 层风势，追加一次轻灵追射并获得少量庇护。',
         '自然': '弓箭手专属：回复 1 点能量；若已有风势，额外抽 1 张牌并获得少量庇护。',
-        '闪避': '弓箭手专属：获得身法减免，下一次受到伤害时优先抵消。',
+        '错身': '弓箭手专属：敌方主体下一次攻击时卸掉 40% 伤害并获得 1 层风势；若敌方没有主体攻击，回合转换时抽牌。',
         '连射': '弓箭手专属：攻击额外触发 1 次；若踏风出手，会形成更灵动的多段节奏。',
         '连击': '若本回合已打出过其他牌，此牌数值增加50%。', '多段': '效果触发 2 次。', '易伤': '给予目标 2 层易伤(每层使受到的伤害增加5%)。',
         '虚弱': '给予目标 2 层虚弱(造成的伤害减少25%)。', '充能': '回复 1 点能量。', 
         '荆棘': '获得 8 层荆棘(被攻击时反弹等于荆棘层数的伤害，战士会根据护盾额外获得荆棘)。',
-        '治愈': '回复等同于 [耗能×5] 的生命（史诗卡为 [耗能×7]）。',
+        '治愈': '回复等同于 [耗能×8] 的生命（史诗卡为 [耗能×10]）。',
         '销毁': '打出后彻底消失，不进入放逐区或墓地。'
     };
 
@@ -2081,7 +2081,6 @@
         } else if (roleId === 'hero_mage') {
             let chantGain = 0;
             if (tags.includes('回响') || tags.includes('复刻')) chantGain += 1;
-            if (tags.includes('治愈') && state.hp < state.maxHp) chantGain += 1;
             if (chantGain > 0) {
                 state.p_chant = Math.min(9, state.p_chant + chantGain);
                 showFloatText(`法师联动 咏唱 +${chantGain}`, "var(--purple)", getCenter('ui-hp'));
@@ -2324,7 +2323,7 @@
         '易伤', '虚弱', '诅咒', '眩晕',
         '圣剑', '穿甲', '重击', '连击', '连射', '多段', '爆发',
         '咏唱', '回响', '复刻', '充能', '附魔',
-        '庇护', '闪避', '治愈', '抽牌', '保留', '蓄力', '自然', '重置',
+        '庇护', '错身', '治愈', '抽牌', '保留', '蓄力', '自然', '重置',
         '放逐', '轮回', '拾遗', '招魂', '销毁', '狂热'
     ];
 
@@ -2717,7 +2716,7 @@
         getCardBottomTagList(card).forEach(t => {
             if(TAGS[t]) {
                 let displayVal = card.val; if (t === '充能') displayVal = 1;
-                if (!card.isSpecial && t === '治愈') displayVal = card.up ? card.cost * 7 : card.cost * 5;
+                if (!card.isSpecial && t === '治愈') displayVal = card.up ? card.cost * 10 : card.cost * 8;
                 if (!card.isSpecial && t === '血祭') displayVal = card.up ? 12 : 8;
                 if (!card.isSpecial && t === '狂热') displayVal = getFrenzyBonus(card);
                 if (!card.isSpecial && t === '附魔') displayVal = getEnchantBonus(card, false);
@@ -2799,8 +2798,9 @@
         else if (card.type === '能力') {
             const lines = [];
             if (tags.includes('蓄力')) lines.push(`获得 <span class="card-desc-value">${getWindGain(card)}</span> 层风势。`);
+            if (tags.includes('错身')) lines.push(`获得 <span class="card-desc-value">${parseInt(card.val) || 1}</span> 层错身。`);
             if (tags.includes('咏唱')) lines.push(`积累 <span class="card-desc-value">1</span> 层咏唱。`);
-            const otherTags = tags.filter(x => x !== '蓄力' && x !== '咏唱');
+            const otherTags = tags.filter(x => x !== '蓄力' && x !== '错身' && x !== '咏唱');
             if (otherTags.length) lines.push(`触发 ${renderTagNames(otherTags)}。`);
             d = lines.join('<br>');
         } 
@@ -2859,7 +2859,7 @@
         deck: [], battleDeck: [], discardPile: [], exhaustPile: [], hand: [], relics: [], playedRetainPile: [], lastPlayedCard: null,
         enemy: { currentHp: 0, armor: 0, poison: 0, bleed: 0, burn: 0, stun: 0, curse: 0, vuln: 0, weak: 0, str: 0, nextMove: null, charged: false, minion: null, isPhase2: false, turnCount: 0, moveHistory: [] }, 
         mapData: [], currentNode: null, pathHistory: [], player: { thorns: 0, characterId: 'hero_warrior', name: '勇者战士' },
-        p_poison: 0, p_bleed: 0, p_burn: 0, p_stun: 0, p_curse: 0, p_vuln: 0, p_weak: 0, p_echo_stack: 0, p_next_dmg: 0, p_reduce_dmg: 0, p_counter: 0, p_battle_dmg: 0, p_dmg_buff: 0, p_chant: 0, p_aim: 0, r_discard_count: 0,
+        p_poison: 0, p_bleed: 0, p_burn: 0, p_stun: 0, p_curse: 0, p_vuln: 0, p_weak: 0, p_echo_stack: 0, p_next_dmg: 0, p_reduce_dmg: 0, p_counter: 0, p_battle_dmg: 0, p_dmg_buff: 0, p_chant: 0, p_aim: 0, p_sidestep: 0, r_discard_count: 0,
         isNodeClickLocked: false, next_card_echo: 0, turn_first_card: true, currentShop: null, isEnemyTurn: false, battleLog: []
     };
     let shopDeletePrice = 50;
@@ -2920,14 +2920,14 @@
             return [
                 createStarterCard({ name: '基础射击', type: '攻击', cost: 1, icon: '🏹', val: 6, tags: [] }),
                 createStarterCard({ name: '基础射击', type: '攻击', cost: 1, icon: '🏹', val: 6, tags: [] }),
-                createStarterCard({ name: '林地回避', type: '能力', cost: 1, icon: '🍃', val: 5, tags: ['闪避'] }),
-                createStarterCard({ name: '林地回避', type: '能力', cost: 1, icon: '🍃', val: 5, tags: ['闪避'] }),
+                createStarterCard({ name: '林地回避', type: '能力', cost: 1, icon: '🍃', val: 1, tags: ['错身'] }),
+                createStarterCard({ name: '林地回避', type: '能力', cost: 1, icon: '🍃', val: 1, tags: ['错身'] }),
                 createStarterCard({ name: '拉弓瞄准', type: '能力', cost: 1, icon: '🎯', val: 7, tags: ['蓄力'], rarity: '稀有' }),
                 createStarterCard({ name: '疾风连射', type: '攻击', cost: 1, icon: '💨', val: 5, tags: ['连射'], rarity: '稀有' }),
                 createStarterCard({ name: '青牙试射', type: '攻击', cost: 0, icon: '☠️', val: 3, tags: ['剧毒', '销毁'], rarity: '普通' }),
                 createStarterCard({ name: '赤露布陷', type: '能力', cost: 1, icon: '🩸', val: 0, tags: ['出血', '虚弱'], rarity: '普通' }),
                 createStarterCard({ name: '空弦藏牌', type: '能力', cost: 0, icon: '🏹', val: 0, tags: ['放逐', '抽牌'], rarity: '普通' }),
-                createStarterCard({ name: '飞叶封存', type: '能力', cost: 1, icon: '🍂', val: 6, tags: ['闪避', '放逐', '保留'], rarity: '普通' })
+                createStarterCard({ name: '飞叶封存', type: '能力', cost: 1, icon: '🍂', val: 1, tags: ['错身', '放逐', '保留'], rarity: '普通' })
             ];
         }
         return [
@@ -3859,6 +3859,7 @@
             }
             add('chant', '咏唱', '✦', state.p_chant, STATUS_DESC.chant, 'is-magic');
             add('aim', '风势', '🪶', state.p_aim, STATUS_DESC.aim, 'is-nature');
+            add('sidestep', '错身', '🍃', state.p_sidestep, '敌方主体下一次攻击时卸掉 40% 伤害并获得 1 层风势；若敌方没有主体攻击，回合转换时抽牌。', 'is-nature');
         } else if (actor.charged) {
             entries.push({ id: 'charge', label: '蓄力', icon: '🔥', value: null, tooltip: STATUS_DESC.charge, tone: 'is-fire' });
         }
@@ -4324,6 +4325,7 @@
             state.isNodeClickLocked = false;
             state.p_chant = state.p_chant || 0;
             state.p_aim = state.p_aim || 0;
+            state.p_sidestep = 0;
             shopDeletePrice = payload.shopDeletePrice || 50;
             initialDeck = buildStarterDeckForCharacter(state.player.characterId);
             starterPreviewCharacterId = state.player.characterId;
@@ -4631,6 +4633,7 @@
         if(state.p_counter > 0) pStatus.innerHTML += `<div class="status-badge badge-str" style="background:rgba(241,196,15,0.9); color:black;">⚡ 招架准备<div class="status-tooltip">已进入反击姿态；受到下一次敌方主体攻击时招架本次伤害的 50% 并反伤。此状态不可叠加。</div></div>`;
         if(state.p_chant > 0) pStatus.innerHTML += `<div class="status-badge badge-str" style="background:rgba(142, 68, 173, 0.9);">✦ 咏唱: ${state.p_chant}<div class="status-tooltip">${STATUS_DESC['chant']}</div></div>`;
         if(state.p_aim > 0) pStatus.innerHTML += `<div class="status-badge badge-str" style="background:rgba(48,104,82,0.9);">🪶 风势: ${state.p_aim}<div class="status-tooltip">${STATUS_DESC['aim']}</div></div>`;
+        if(state.p_sidestep > 0) pStatus.innerHTML += `<div class="status-badge badge-str" style="background:rgba(48,104,82,0.9);">🍃 错身: ${state.p_sidestep}<div class="status-tooltip">敌方主体下一次攻击时卸掉 40% 伤害并获得 1 层风势；若敌方没有主体攻击，回合转换时抽牌。</div></div>`;
 
         const rBar = document.getElementById('ui-relics-bar'); rBar.innerHTML = '';
         state.relics.forEach(r => { rBar.innerHTML += `<div class="relic-icon">${renderRelicVisual(r)}<div class="status-tooltip"><span style="color:var(--gold); font-weight:bold;">${r.name}</span><br>${getTooltipTextWithKeywords(getDisplayRelicDesc(r))}</div></div>`; });
@@ -5013,7 +5016,7 @@
         state.enemy.moves = state.enemy.moves.map(m => { let mScale = (m.type.includes('attack') || m.type === 'defend' || m.type === 'summon') ? scale : 1; return { ...m, val: Math.floor(m.val * mScale) }; });
 
         state.p_poison = 0; state.p_bleed = 0; state.p_burn = 0; state.p_stun = 0; state.p_curse = 0; state.p_vuln = 0; state.p_weak = 0; state.p_echo_stack = 0;
-        state.p_next_dmg = 0; state.p_reduce_dmg = 0; state.p_counter = 0; state.p_battle_dmg = 0; state.p_dmg_buff = 0; state.p_chant = 0; state.p_aim = 0; state.r_discard_count = 0; state.next_card_echo = 0; state.lastPlayedCard = null; state.turn_first_card = true; state.isEnemyTurn = false;
+        state.p_next_dmg = 0; state.p_reduce_dmg = 0; state.p_counter = 0; state.p_battle_dmg = 0; state.p_dmg_buff = 0; state.p_chant = 0; state.p_aim = 0; state.p_sidestep = 0; state.r_discard_count = 0; state.next_card_echo = 0; state.lastPlayedCard = null; state.turn_first_card = true; state.isEnemyTurn = false;
         state.r_counter_gate_used = false;
         state.r_protect_armor_used = false;
         state.r_bloodlet_hourglass_used = false;
@@ -5858,10 +5861,10 @@
             if (hasRelic('r_guardian_core')) state.armor += Math.floor(pVal / 2);
             showFloatText(`庇护 +${pVal}`, "var(--water)", getCenter('ui-hp'));
         }
-        if (card.tags && card.tags.includes('闪避')) {
-            let evadeVal = parseInt(card.val) || (card.up ? 8 : 5);
-            state.p_reduce_dmg += evadeVal;
-            showFloatText(`闪避 +${evadeVal}`, "var(--nature)", getCenter('ui-hp'));
+        if (card.tags && card.tags.includes('错身')) {
+            let sidestepVal = parseInt(card.val) || 1;
+            state.p_sidestep = Math.min(3, (state.p_sidestep || 0) + sidestepVal);
+            showFloatText(`错身 +${sidestepVal}`, "var(--nature)", getCenter('ui-hp'));
         }
 
         let requireDiscard1 = ['狂热', '附魔'].filter(t => card.tags && card.tags.includes(t));
@@ -6055,7 +6058,7 @@
         let debuffMult = (card.type === '能力') ? 2 : 1;
 
         if(card.tags && card.tags.includes('治愈')) {
-            let healVal = card.up ? card.cost * 7 : card.cost * 5;
+            let healVal = card.up ? card.cost * 10 : card.cost * 8;
             if(hasRelic('r_heal_relic')) healVal += 3;
             const beforeHp = state.hp;
             healPlayer(healVal);
@@ -6175,6 +6178,7 @@
 
         let move = state.enemy.nextMove; let avatar = document.getElementById('enemy-avatar');
         let playerWasAttacked = false;
+        let sidestepTriggeredThisTurn = false;
 
         let enemySkippedByStun = false;
         if (state.enemy.stun > 0) {
@@ -6214,6 +6218,14 @@
                 
                 let dmg = baseDmg;
                 if (state.p_reduce_dmg > 0) { let r = Math.min(dmg, state.p_reduce_dmg); dmg -= r; state.p_reduce_dmg -= r; showFloatText(`减免抵抗 -${r}`, "var(--water)", getCenter('ui-hp')); }
+                if (state.p_sidestep > 0 && dmg > 0) {
+                    const reduced = Math.max(1, Math.floor(dmg * 0.4));
+                    dmg -= reduced;
+                    state.p_sidestep--;
+                    state.p_aim = Math.min(6, state.p_aim + 1 + (hasRelic('r_wind_quiver') ? 1 : 0));
+                    sidestepTriggeredThisTurn = true;
+                    showFloatText(`错身 -${reduced} / 风势 +1`, "var(--nature)", getCenter('ui-hp'));
+                }
                 
                 if (state.p_counter > 0 && dmg > 0) {
                     state.p_counter = 0;
@@ -6298,6 +6310,14 @@
         setTimeout(async () => { 
             const character = getCurrentCharacter();
             state.mp = getCharacterBaseEnergy(character); 
+            if (!sidestepTriggeredThisTurn && state.p_sidestep > 0) {
+                const sidestepDraw = Math.min(2, state.p_sidestep);
+                state.p_sidestep = 0;
+                showFloatText(`错身转机 抽${sidestepDraw}`, "var(--nature)", getCenter('ui-deck-count'));
+                await drawCards(sidestepDraw);
+            } else {
+                state.p_sidestep = 0;
+            }
             if (hasRelic('r_chant_ink') && state.p_chant < 2) {
                 state.p_chant = 2;
                 showFloatText("恒咏墨瓶", "var(--purple)", getCenter('ui-hp'));
@@ -6340,7 +6360,7 @@
         if (hasRelic('r_finisher_coin') && state.enemy.vuln > 0) state.gold += 10;
         if (hasRelic('r_warm_pendant')) state.hp = Math.min(state.maxHp, state.hp + 6);
         state.armor = 0; state.player.thorns = 0; state.p_poison = 0; state.p_bleed = 0; state.p_burn = 0; state.p_stun = 0; state.p_curse = 0; state.p_vuln = 0; state.p_weak = 0;
-        state.p_next_dmg = 0; state.p_reduce_dmg = 0; state.p_dmg_buff = 0; state.p_counter = 0; state.p_echo_stack = 0; state.p_battle_dmg = 0; state.p_chant = 0; state.p_aim = 0; state.p_buffs = {}; 
+        state.p_next_dmg = 0; state.p_reduce_dmg = 0; state.p_dmg_buff = 0; state.p_counter = 0; state.p_echo_stack = 0; state.p_battle_dmg = 0; state.p_chant = 0; state.p_aim = 0; state.p_sidestep = 0; state.p_buffs = {};
         
         state.deck.forEach(c => c.sealed = false);
         state.deck = state.deck.filter(c => !c.isJunk && !c.isKnife);
