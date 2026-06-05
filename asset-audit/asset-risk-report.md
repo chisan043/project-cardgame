@@ -28,7 +28,6 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - identical_content: 181
 - long_component: 81
 - multi_module_reference: 63
-- non_ascii_path: 28
 - unreferenced: 80
 
 ## Longest Paths
@@ -51,18 +50,6 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 
 ## Non-ASCII Path Examples
 
-- `旧美术资产/角色一/角色一_三视图_线稿版.png`
-- `旧美术资产/角色一/角色一_三视图_配色版.png`
-- `旧美术资产/角色一/角色一_卡面插画_圣剑突击.png`
-- `旧美术资产/角色一/角色一_卡面插画_遗迹立誓.png`
-- `旧美术资产/角色一/角色一_我方背面_受击.png`
-- `旧美术资产/角色一/角色一_我方背面_待机.png`
-- `旧美术资产/角色一/角色一_我方背面_技能释放.png`
-- `旧美术资产/角色一/角色一_我方背面_攻击起手.png`
-- `旧美术资产/角色一/角色一_敌方正面_受击.png`
-- `旧美术资产/角色一/角色一_敌方正面_待机.png`
-- `旧美术资产/角色一/角色一_敌方正面_技能释放.png`
-- `旧美术资产/角色一/角色一_敌方正面_攻击起手.png`
 
 ## Unreferenced Examples
 
