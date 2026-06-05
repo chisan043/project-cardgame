@@ -1,11 +1,11 @@
 # 怪物动作关键帧资产
 
-本目录资源基于 `assets/enemies/battle/` 的运行时主立绘和 `assets/source/enemies/battle/` 的源图扩展而来，用于首版战斗动作接入。
+本批动作关键帧基于 `assets/enemies/battle/` 的运行时主立绘和 `assets/source/enemies/battle/` 的源图扩展而来。当前未接入运行时的旧动作帧已归档到 `assets/archive/unused/2026-06-05/enemies_keyframes/`。
 
 ## 输出位置
 
-- `怪物/动作关键帧/怪物名/动作名.png`
-- `怪物/动作关键帧_总览.png`
+- 新候选动作帧：`assets/candidates/enemies/keyframes/<enemy_slug>/<action>.png`
+- 动作评审总览：`assets/candidates/enemies/review/enemy_keyframes_overview_v1.png`
 
 ## 命名规范
 

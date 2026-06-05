@@ -4,8 +4,9 @@
 
 ## 目录
 
-- `战斗立绘/`：20 张透明背景 PNG，可直接作为敌方战斗头像/立绘底图使用
-- `战斗立绘_总览.png`：整套怪物快速预览
+- `../assets/enemies/battle/`：20 张运行时透明背景 WebP，可直接作为敌方战斗头像/立绘底图使用
+- `../assets/source/enemies/battle/`：20 张源 PNG
+- `../assets/candidates/enemies/review/enemy_battle_overview_v1.png`：整套怪物快速预览
 
 ## 已交付怪物
 

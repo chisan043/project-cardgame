@@ -9,9 +9,10 @@ from PIL import Image, ImageChops, ImageColor, ImageDraw, ImageEnhance, ImageFil
 
 
 ROOT = Path(__file__).resolve().parent
-SOURCE_DIR = ROOT / "战斗立绘"
-OUTPUT_DIR = ROOT / "动作关键帧"
-PREVIEW_PATH = ROOT / "动作关键帧_总览.png"
+PROJECT_ROOT = ROOT.parent
+SOURCE_DIR = PROJECT_ROOT / "assets" / "source" / "enemies" / "battle"
+OUTPUT_DIR = PROJECT_ROOT / "assets" / "candidates" / "enemies" / "keyframes"
+PREVIEW_PATH = PROJECT_ROOT / "assets" / "candidates" / "enemies" / "review" / "enemy_keyframes_overview_v1.png"
 
 
 @dataclass(frozen=True)
@@ -43,6 +44,29 @@ MONSTERS: dict[str, MonsterSpec] = {
     "【精英】不死骨龙": MonsterSpec("bosslite", "#5db8d8", "#e1fdff", "bone"),
     "【首领】鬼面修罗": MonsterSpec("boss", "#7f4de0", "#f0ddff", "fire"),
     "【深渊主宰】": MonsterSpec("boss", "#8a3bd6", "#f4c0ff", "abyss"),
+}
+
+MONSTER_ASSET_SLUGS: dict[str, str] = {
+    "病弱史莱姆": "sick_slime",
+    "枯骨煞兵": "bone_soldier",
+    "贪婪盗贼": "greedy_thief",
+    "嗜血蝙蝠": "blood_bat",
+    "迷途妖狐": "lost_fox",
+    "荒野煞狼": "wild_wolf",
+    "千载魔蛛": "ancient_spider",
+    "剧毒蟾蜍": "venom_toad",
+    "暴躁野猪": "angry_boar",
+    "铁甲巨蟹": "iron_crab",
+    "堕落剑客": "fallen_swordsman",
+    "幽冥法师": "nether_mage",
+    "巨力石魔": "stone_golem",
+    "魅影刺客": "shadow_assassin",
+    "缝合巨怪": "stitched_brute",
+    "【精英】狂暴牛头人": "elite_minotaur",
+    "【精英】猩红血巫": "crimson_blood_witch",
+    "【精英】不死骨龙": "undead_bone_dragon",
+    "【首领】鬼面修罗": "boss_oni_shura",
+    "【深渊主宰】": "abyss_overlord",
 }
 
 
@@ -392,6 +416,7 @@ def make_preview(entries: list[tuple[str, str, Path]]) -> None:
         draw.text((ox + 18, oy + thumb_h + 4), monster, fill=(245, 236, 221, 255))
         draw.text((ox + 18, oy + thumb_h + 28), action, fill=(185, 172, 205, 255))
 
+    PREVIEW_PATH.parent.mkdir(parents=True, exist_ok=True)
     sheet.save(PREVIEW_PATH)
 
 
@@ -399,11 +424,12 @@ def build_assets() -> list[tuple[str, str, Path]]:
     ensure_clean_output()
     preview_entries: list[tuple[str, str, Path]] = []
     for monster, spec in MONSTERS.items():
-        source_name = f"{monster}.png"
+        slug = MONSTER_ASSET_SLUGS[monster]
+        source_name = f"{slug}_battle_v1_source.png"
         source_path = SOURCE_DIR / source_name
         if not source_path.exists():
             raise FileNotFoundError(f"Missing source art: {source_path}")
-        out_dir = OUTPUT_DIR / monster
+        out_dir = OUTPUT_DIR / slug
         out_dir.mkdir(parents=True, exist_ok=True)
         base = Image.open(source_path).convert("RGBA")
         actions = ACTIONS_BY_TIER[spec.tier]

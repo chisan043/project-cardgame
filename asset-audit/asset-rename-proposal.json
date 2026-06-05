@@ -1475,19 +1475,18 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "怪物/动作关键帧_总览.png",
-      "suggestedPath": "assets/enemies/review/review_4ca957ae69.png",
+      "sourcePath": "assets/candidates/enemies/review/enemy_keyframes_overview_v1.png",
+      "suggestedPath": "assets/enemies/review/enemy_keyframes_overview_v1.png",
       "suggestedDirectory": "assets/enemies/review",
       "status": "documented",
       "referenceModules": [
         "enemies"
       ],
-      "requiresHumanNameReview": true,
+      "requiresHumanNameReview": false,
       "risks": [
-        "non_ascii_path",
         "unreferenced"
       ],
-      "derivedFrom": "怪物/动作关键帧_总览.png",
+      "derivedFrom": "assets/candidates/enemies/review/enemy_keyframes_overview_v1.png",
       "visualGroup": "visual_4ca957ae69",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
@@ -3759,93 +3758,6 @@
       ],
       "derivedFrom": "tmp_hud_group2_assets/player_hp_bar_long_fill_gray_base_asset_v1.png",
       "visualGroup": "visual_033684e88e",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "怪物/contact_latest15.png",
-      "suggestedPath": "assets/review/contact_latest15.png",
-      "suggestedDirectory": "assets/review",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "怪物/contact_latest15.png",
-      "visualGroup": "visual_568e1b80c1",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "怪物/contact_sheet.png",
-      "suggestedPath": "assets/review/contact_sheet.png",
-      "suggestedDirectory": "assets/review",
-      "status": "candidate",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "怪物/contact_sheet.png",
-      "visualGroup": "visual_d3fedca15f",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "怪物/contact_sheet_36.png",
-      "suggestedPath": "assets/review/contact_sheet_36.png",
-      "suggestedDirectory": "assets/review",
-      "status": "candidate",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "怪物/contact_sheet_36.png",
-      "visualGroup": "visual_12dc8cdcd5",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "怪物/contact_sheet_60.png",
-      "suggestedPath": "assets/review/contact_sheet_60.png",
-      "suggestedDirectory": "assets/review",
-      "status": "candidate",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "怪物/contact_sheet_60.png",
-      "visualGroup": "visual_2b2234306f",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "怪物/怪物纵览.png",
-      "suggestedPath": "assets/review/review_bfab4f8355.png",
-      "suggestedDirectory": "assets/review",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "怪物/怪物纵览.png",
-      "visualGroup": "visual_bfab4f8355",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "怪物/战斗立绘_总览.png",
-      "suggestedPath": "assets/review/review_79275a0b6b.png",
-      "suggestedDirectory": "assets/review",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "怪物/战斗立绘_总览.png",
-      "visualGroup": "visual_79275a0b6b",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {

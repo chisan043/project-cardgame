@@ -1,0 +1,133 @@
+{
+  "generatedBy": "manual enemy review asset migration plan from refreshed asset-audit/asset-usage-report.json",
+  "proposalType": "asset_migration_plan",
+  "moduleSlug": "enemy_review_assets",
+  "sourcePrefix": "怪物/",
+  "targetDirectory": "assets/candidates/enemies/review",
+  "strategy": [
+    "Treat contact sheets and overview boards as enemy candidate/review assets, not runtime assets.",
+    "Update documentation and generator preview output to ASCII paths.",
+    "Do not infer runtime ownership from file names; current references are documentation-only or absent."
+  ],
+  "summary": {
+    "assetCount": 7,
+    "actionCounts": {
+      "already_migrated": 7
+    },
+    "statusCounts": {
+      "candidate": 6,
+      "documented": 1
+    }
+  },
+  "entries": [
+    {
+      "sourcePath": "assets/candidates/enemies/review/contact_latest15_v1.png",
+      "suggestedPath": "assets/candidates/enemies/review/contact_latest15_v1.png",
+      "action": "already_migrated",
+      "status": "candidate",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "568e1b80c1baa87f1f45677d0c464fec26b7c7ced06b28b92d3a38260297444f",
+      "visualGroup": "visual_568e1b80c1",
+      "notes": "migrated to enemy candidate/review directory; originalSourcePath records previous location",
+      "originalSourcePath": "怪物/contact_latest15.png"
+    },
+    {
+      "sourcePath": "assets/candidates/enemies/review/contact_sheet_v1.png",
+      "suggestedPath": "assets/candidates/enemies/review/contact_sheet_v1.png",
+      "action": "already_migrated",
+      "status": "candidate",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "d3fedca15fa5373e86d566d438728e03c24bad4f0ce6fd65dabfca7206a30c8e",
+      "visualGroup": "visual_d3fedca15f",
+      "notes": "migrated to enemy candidate/review directory; originalSourcePath records previous location",
+      "originalSourcePath": "怪物/contact_sheet.png"
+    },
+    {
+      "sourcePath": "assets/candidates/enemies/review/contact_sheet_36_v1.png",
+      "suggestedPath": "assets/candidates/enemies/review/contact_sheet_36_v1.png",
+      "action": "already_migrated",
+      "status": "candidate",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "12dc8cdcd59bbced93fd4dfb0d99f652e10034b146a916557384bc6a18e87175",
+      "visualGroup": "visual_12dc8cdcd5",
+      "notes": "migrated to enemy candidate/review directory; originalSourcePath records previous location",
+      "originalSourcePath": "怪物/contact_sheet_36.png"
+    },
+    {
+      "sourcePath": "assets/candidates/enemies/review/contact_sheet_60_v1.png",
+      "suggestedPath": "assets/candidates/enemies/review/contact_sheet_60_v1.png",
+      "action": "already_migrated",
+      "status": "candidate",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "2b2234306fdfa3294a39fcc5cad7203f4b189ba653c09ef0965371e8a9ef3ea5",
+      "visualGroup": "visual_2b2234306f",
+      "notes": "migrated to enemy candidate/review directory; originalSourcePath records previous location",
+      "originalSourcePath": "怪物/contact_sheet_60.png"
+    },
+    {
+      "sourcePath": "assets/candidates/enemies/review/enemy_keyframes_overview_v1.png",
+      "suggestedPath": "assets/candidates/enemies/review/enemy_keyframes_overview_v1.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "怪物/动作关键帧_README.md",
+          "line": 8,
+          "module": "enemies",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "enemies"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "4ca957ae69311d7a5706a1aa8c845836e9f664c322dcbacd93d56d3938c49d6c",
+      "visualGroup": "visual_4ca957ae69",
+      "notes": "migrated to enemy candidate/review directory; originalSourcePath records previous location",
+      "originalSourcePath": "怪物/动作关键帧_总览.png"
+    },
+    {
+      "sourcePath": "assets/candidates/enemies/review/enemy_overview_v1.png",
+      "suggestedPath": "assets/candidates/enemies/review/enemy_overview_v1.png",
+      "action": "already_migrated",
+      "status": "candidate",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "bfab4f83552a1f972531f35a2fa8755eb0b4b5ecc78bfb4823d7280466e87e4d",
+      "visualGroup": "visual_bfab4f8355",
+      "notes": "migrated to enemy candidate/review directory; originalSourcePath records previous location",
+      "originalSourcePath": "怪物/怪物纵览.png"
+    },
+    {
+      "sourcePath": "assets/candidates/enemies/review/enemy_battle_overview_v1.png",
+      "suggestedPath": "assets/candidates/enemies/review/enemy_battle_overview_v1.png",
+      "action": "already_migrated",
+      "status": "candidate",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "79275a0b6b3c2e7d3b41fcc192a98303407a0206ae905657baa6ea05f168887e",
+      "visualGroup": "visual_79275a0b6b",
+      "notes": "migrated to enemy candidate/review directory; originalSourcePath records previous location",
+      "originalSourcePath": "怪物/战斗立绘_总览.png"
+    }
+  ]
+}

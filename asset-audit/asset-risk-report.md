@@ -9,7 +9,7 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - Referenced assets: 439
 - Active runtime/config assets: 481
 - Unreferenced assets: 791
-- Missing asset-like references: 251
+- Missing asset-like references: 250
 - Missing runtime/config references: 44
 - Duplicate extension groups: 36
 - Identical content groups: 61
@@ -17,19 +17,19 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 ## Status Counts
 
 - active: 481
-- candidate: 130
+- candidate: 133
 - documented: 61
 - legacy: 242
 - source: 294
-- unreferenced: 22
+- unreferenced: 19
 
 ## Risk Counts
 
 - identical_content: 181
 - long_component: 81
 - multi_module_reference: 63
-- non_ascii_path: 35
-- unreferenced: 83
+- non_ascii_path: 28
+- unreferenced: 80
 
 ## Longest Paths
 
@@ -51,21 +51,22 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 
 ## Non-ASCII Path Examples
 
-- `怪物/contact_latest15.png`
-- `怪物/contact_sheet.png`
-- `怪物/contact_sheet_36.png`
-- `怪物/contact_sheet_60.png`
-- `怪物/动作关键帧_总览.png`
-- `怪物/怪物纵览.png`
-- `怪物/战斗立绘_总览.png`
 - `旧美术资产/角色一/角色一_三视图_线稿版.png`
 - `旧美术资产/角色一/角色一_三视图_配色版.png`
 - `旧美术资产/角色一/角色一_卡面插画_圣剑突击.png`
 - `旧美术资产/角色一/角色一_卡面插画_遗迹立誓.png`
 - `旧美术资产/角色一/角色一_我方背面_受击.png`
+- `旧美术资产/角色一/角色一_我方背面_待机.png`
+- `旧美术资产/角色一/角色一_我方背面_技能释放.png`
+- `旧美术资产/角色一/角色一_我方背面_攻击起手.png`
+- `旧美术资产/角色一/角色一_敌方正面_受击.png`
+- `旧美术资产/角色一/角色一_敌方正面_待机.png`
+- `旧美术资产/角色一/角色一_敌方正面_技能释放.png`
+- `旧美术资产/角色一/角色一_敌方正面_攻击起手.png`
 
 ## Unreferenced Examples
 
+- `assets/candidates/enemies/review/enemy_keyframes_overview_v1.png`
 - `assets/candidates/ui/role_select/buttons/secondary_button_teal_gold_v1.png`
 - `assets/candidates/ui/role_select/frames/role_card_frame_normal_v1.png`
 - `assets/candidates/ui/role_select/frames/role_card_frame_selected_v1.png`
@@ -77,7 +78,6 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - `assets/source/characters/archer/battle_back/skill_cast_v1_source.png`
 - `assets/source/characters/archer/battle_front/attack_start_v1_source.png`
 - `assets/source/characters/archer/battle_front/hurt_v1_source.png`
-- `assets/source/characters/archer/battle_front/idle_v1_source.png`
 
 ## Multi-Module Reference Examples
 
@@ -96,6 +96,7 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 
 ## Missing References
 
+- `../assets/candidates/enemies/review/enemy_battle_overview_v1.png` in `怪物/README.md:9`
 - `../概念图/02_教堂彩窗_赛璐璐融合方向图.png` in `UI/教堂彩窗赛璐璐/战斗HUD/README.md:6`
 - `/Users/chi/Desktop/幻境残卷/场景/分层导视/bg_battle_ancient_forest_day_layer_guide.png` in `场景/资产清单.txt:21`
 - `/Users/chi/Desktop/幻境残卷/场景/分层导视/bg_battle_cave_cold_layer_guide.png` in `场景/资产清单.txt:31`
@@ -125,7 +126,6 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - `/Users/chi/Desktop/幻境残卷/场景/色调变体/bg_battle_mountain_plain_fog.png` in `场景/资产清单.txt:18`
 - `/Users/chi/Desktop/幻境残卷/场景/色调变体/bg_battle_mountain_plain_night.png` in `场景/资产清单.txt:15`
 - `/Users/chi/Desktop/幻境残卷/场景/色调变体/bg_battle_mountain_plain_rain.png` in `场景/资产清单.txt:17`
-- `/Users/chi/Desktop/幻境残卷/场景/色调变体/bg_battle_mountain_plain_sunset.png` in `场景/资产清单.txt:14`
 
 ## First Migration Candidates
 
