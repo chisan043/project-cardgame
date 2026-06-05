@@ -105,6 +105,53 @@ def npc_suggestion(source_path: str, status: str) -> tuple[str, str]:
     return f"assets/source/npc/{source_slug}{suffix}", "move_as_source"
 
 
+ENEMY_NAME_SLUGS = {
+    "病弱史莱姆": "sick_slime",
+    "枯骨煞兵": "bone_soldier",
+    "贪婪盗贼": "greedy_thief",
+    "嗜血蝙蝠": "blood_bat",
+    "迷途妖狐": "lost_fox",
+    "荒野煞狼": "wild_wolf",
+    "千载魔蛛": "ancient_spider",
+    "剧毒蟾蜍": "venom_toad",
+    "暴躁野猪": "angry_boar",
+    "铁甲巨蟹": "iron_crab",
+    "堕落剑客": "fallen_swordsman",
+    "幽冥法师": "nether_mage",
+    "巨力石魔": "stone_golem",
+    "魅影刺客": "shadow_assassin",
+    "缝合巨怪": "stitched_brute",
+    "【精英】狂暴牛头人": "elite_minotaur",
+    "【精英】猩红血巫": "crimson_blood_witch",
+    "【精英】不死骨龙": "undead_bone_dragon",
+    "【首领】鬼面修罗": "boss_oni_shura",
+    "【深渊主宰】": "abyss_overlord",
+}
+
+
+def enemy_slug(stem: str) -> str:
+    clean_name = re.sub(r"·.*?(?=】)", "", stem).replace("·暴走", "")
+    return ENEMY_NAME_SLUGS.get(clean_name, normalize_slug(stem))
+
+
+def enemy_suggestion(source_path: str, status: str) -> tuple[str, str]:
+    path = Path(source_path)
+    suffix = path.suffix.lower()
+    slug = enemy_slug(path.stem)
+
+    if source_path.startswith(("assets/enemies/", "assets/source/enemies/")):
+        return source_path, "already_migrated"
+    if source_path.startswith("头像/怪物/"):
+        if suffix == ".webp":
+            return f"assets/enemies/portraits/{slug}_portrait_v1.webp", "move_then_rewrite_dynamic_refs"
+        return f"assets/source/enemies/portraits/{slug}_portrait_v1_source{suffix}", "move_as_source"
+    if source_path.startswith("怪物/战斗立绘/"):
+        if suffix == ".webp":
+            return f"assets/enemies/battle/{slug}_battle_v1.webp", "move_then_rewrite_dynamic_refs"
+        return f"assets/source/enemies/battle/{slug}_battle_v1_source{suffix}", "move_as_source"
+    return f"assets/enemies/review/{slug}{suffix}", "review"
+
+
 def default_suggestion(source_path: str, status: str, target_dir: str, module_slug: str) -> tuple[str, str]:
     path = Path(source_path)
     filename = f"{normalize_slug(path.stem)}{path.suffix.lower()}"
@@ -126,6 +173,8 @@ def suggested_path(source_path: str, status: str, target_dir: str, module_slug: 
         return scene_main_suggestion(source_path, status)
     if module_slug == "npc":
         return npc_suggestion(source_path, status)
+    if module_slug == "enemies_visuals":
+        return enemy_suggestion(source_path, status)
     return default_suggestion(source_path, status, target_dir, module_slug)
 
 
@@ -148,6 +197,7 @@ def build_plan(prefix: str, include_prefixes: list[str], target_dir: str, module
     for asset in assets:
         source_path = asset["path"]
         target_path, action = suggested_path(source_path, asset["status"], target_dir, module_slug)
+        status = effective_status(asset["status"], action)
         is_tracked = source_path in tracked
         stem_key = as_posix(Path(source_path).with_suffix(""))
         by_stem[stem_key].append(asset)
@@ -156,7 +206,7 @@ def build_plan(prefix: str, include_prefixes: list[str], target_dir: str, module
                 "sourcePath": source_path,
                 "suggestedPath": target_path,
                 "action": action,
-                "status": asset["status"],
+                "status": status,
                 "tracked": is_tracked,
                 "references": asset["references"],
                 "referenceModules": asset["referenceModules"],
@@ -210,6 +260,14 @@ def build_plan(prefix: str, include_prefixes: list[str], target_dir: str, module
     }
 
 
+def effective_status(audit_status: str, action: str) -> str:
+    if action == "move_then_rewrite_dynamic_refs":
+        return "active_dynamic"
+    if action == "move_as_source" and audit_status == "unreferenced":
+        return "source"
+    return audit_status
+
+
 def notes_for(asset: dict, is_tracked: bool, action: str) -> str:
     notes = []
     if not is_tracked:
@@ -220,6 +278,8 @@ def notes_for(asset: dict, is_tracked: bool, action: str) -> str:
         notes.append("candidate asset; keep outside formal runtime directory")
     if action == "copy_as_source":
         notes.append("source counterpart for active runtime asset")
+    if action == "move_then_rewrite_dynamic_refs":
+        notes.append("dynamic runtime reference from src/data/enemies.js and demo path helpers")
     if not notes:
         notes.append("review before migration")
     return "; ".join(notes)
