@@ -19,8 +19,8 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - active: 481
 - candidate: 129
 - documented: 61
-- legacy: 248
-- source: 287
+- legacy: 242
+- source: 293
 - unreferenced: 24
 
 ## Risk Counts
@@ -28,7 +28,7 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - identical_content: 181
 - long_component: 81
 - multi_module_reference: 63
-- non_ascii_path: 72
+- non_ascii_path: 42
 - unreferenced: 85
 
 ## Longest Paths
@@ -43,11 +43,11 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - 107 chars: `assets/source/ui/map/stained_windows/map_stained_window_temple_hall_imagegen_transparent_full_v1_source.png`
 - 107 chars: `assets/source/ui/map/stained_windows/map_stained_window_temple_inner_light_imagegen_chromakey_v1_source.png`
 - 107 chars: `assets/source/ui/map/stained_windows/map_stained_window_town_castle_imagegen_transparent_full_v1_source.png`
+- 106 chars: `assets/archive/unused/2026-06-05/legacy_cards/framed_previews/warrior_release_framed_preview_legacy_v1.png`
+- 105 chars: `assets/archive/unused/2026-06-05/legacy_cards/framed_previews/archer_barrage_framed_preview_legacy_v1.png`
 - 105 chars: `assets/source/ui/map/stained_windows/map_stained_window_cold_cave_imagegen_transparent_full_v1_source.png`
 - 105 chars: `assets/source/ui/map/stained_windows/map_stained_window_dungeon_corridor_imagegen_chromakey_v1_source.png`
-- 104 chars: `assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_transparent_full_v1_source.png`
-- 104 chars: `assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_transparent_full_v2_source.png`
-- 104 chars: `assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_transparent_full_v3_source.png`
+- 104 chars: `assets/archive/unused/2026-06-05/legacy_cards/framed_previews/warrior_slash_framed_preview_legacy_v1.png`
 
 ## Non-ASCII Path Examples
 

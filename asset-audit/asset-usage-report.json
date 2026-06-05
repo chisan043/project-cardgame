@@ -32,15 +32,15 @@
       "active": 481,
       "candidate": 129,
       "documented": 61,
-      "legacy": 248,
-      "source": 287,
+      "legacy": 242,
+      "source": 293,
       "unreferenced": 24
     },
     "riskCounts": {
       "identical_content": 181,
       "long_component": 81,
       "multi_module_reference": 63,
-      "non_ascii_path": 72,
+      "non_ascii_path": 42,
       "unreferenced": 85
     },
     "referenceModuleCounts": {
@@ -2418,6 +2418,436 @@
       "referenceModules": [],
       "pathLength": 81,
       "maxComponentLength": 20,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/legacy_cards/art_sources/archer_aim_art_legacy_v1.png",
+      "extension": ".png",
+      "bytes": 2525532,
+      "sha256": "5578d97cf73563c70b5d0089955c71b5f42b36b1bd4c73bf2140f6592080db69",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 86,
+      "maxComponentLength": 28,
+      "containsNonAscii": false,
+      "risks": [
+        "identical_content"
+      ],
+      "identicalContentGroup": [
+        "assets/archive/unused/2026-06-05/legacy_cards/art_sources/archer_aim_art_legacy_v1.png",
+        "旧美术资产/角色三/角色三_卡面插画_拉弓瞄准.png"
+      ]
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/legacy_cards/art_sources/archer_barrage_art_legacy_v1.png",
+      "extension": ".png",
+      "bytes": 2626176,
+      "sha256": "adf3cfc5ffed714bb5f9eda240d651cc96e268c04f30fbd8b345049f7315c7bb",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 90,
+      "maxComponentLength": 32,
+      "containsNonAscii": false,
+      "risks": [
+        "identical_content"
+      ],
+      "identicalContentGroup": [
+        "assets/archive/unused/2026-06-05/legacy_cards/art_sources/archer_barrage_art_legacy_v1.png",
+        "旧美术资产/角色三/角色三_卡面插画_疾风连射.png"
+      ]
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/legacy_cards/art_sources/mage_chant_art_legacy_v1.png",
+      "extension": ".png",
+      "bytes": 2625685,
+      "sha256": "a1b1a5caa39702a4312203e237a55d5993d682463cd59eab1eff47dd7c09d50d",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 86,
+      "maxComponentLength": 28,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/legacy_cards/art_sources/mage_flame_art_legacy_v1.png",
+      "extension": ".png",
+      "bytes": 2574890,
+      "sha256": "a6385cec2e9a81a9f171e44f6b830d45a667f366382c00cda11594d90bd9e482",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 86,
+      "maxComponentLength": 28,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/legacy_cards/art_sources/warrior_release_art_legacy_v1.png",
+      "extension": ".png",
+      "bytes": 2729461,
+      "sha256": "82d8bb1fecb169768ce3f90a5cd1eca363b1289f8ba380d55add6ac9f903e919",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 91,
+      "maxComponentLength": 33,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/legacy_cards/art_sources/warrior_slash_art_legacy_v1.png",
+      "extension": ".png",
+      "bytes": 2885956,
+      "sha256": "d5aabc1d1e997b5ead0b74165cea445b8432bbfd797709243148b74e49671667",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 89,
+      "maxComponentLength": 31,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/legacy_cards/framed_previews/archer_aim_framed_preview_legacy_v1.png",
+      "extension": ".png",
+      "bytes": 1019138,
+      "sha256": "9bf0d3ce6dc770ffee0aed5568c6b620057ed551ea68507b14eb9a0327880e0e",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 101,
+      "maxComponentLength": 39,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/legacy_cards/framed_previews/archer_barrage_framed_preview_legacy_v1.png",
+      "extension": ".png",
+      "bytes": 1024688,
+      "sha256": "4333825f0c3115b2688ba28cd5b8c51cafe26084e867af5ee40d5500e66e78e1",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 105,
+      "maxComponentLength": 43,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/legacy_cards/framed_previews/mage_chant_framed_preview_legacy_v1.png",
+      "extension": ".png",
+      "bytes": 1014823,
+      "sha256": "f552eab33f9159de612741c85ed38f4b529dde1d9d346af298dbf6fbc94afb1a",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 101,
+      "maxComponentLength": 39,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/legacy_cards/framed_previews/mage_flame_framed_preview_legacy_v1.png",
+      "extension": ".png",
+      "bytes": 990123,
+      "sha256": "26833af8f392f8306dcb5063ce3eb6f7b440c4a4b4b63559a0b5206d738903f0",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 101,
+      "maxComponentLength": 39,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/legacy_cards/framed_previews/warrior_release_framed_preview_legacy_v1.png",
+      "extension": ".png",
+      "bytes": 1041151,
+      "sha256": "89c95b52f1b3100c6c534033211c746c2e4380481267e21c60d985cd3c2da820",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 106,
+      "maxComponentLength": 44,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/legacy_cards/framed_previews/warrior_slash_framed_preview_legacy_v1.png",
+      "extension": ".png",
+      "bytes": 1107165,
+      "sha256": "b83b60113b5e30615152da230966c87135180956e2d9ad28f323546ce71590da",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 104,
+      "maxComponentLength": 42,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/legacy_cards/frames/archer_green_gold_frame_legacy_v1.png",
+      "extension": ".png",
+      "bytes": 10513,
+      "sha256": "a194b565a352336b5b039a3b33124a77ef6fbcadae19826a12241c4f23b9e94d",
+      "status": "legacy",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 90,
+      "maxComponentLength": 37,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/legacy_cards/frames/archer_green_gold_frame_safe_area_legacy_v1.png",
+      "extension": ".png",
+      "bytes": 13230,
+      "sha256": "f3f6c43d2f12ed3ce5083936df7c514802e1ff1eb66617063d85ecd6d09f5711",
+      "status": "legacy",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 100,
+      "maxComponentLength": 47,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/legacy_cards/frames/mage_purple_gold_frame_legacy_v1.png",
+      "extension": ".png",
+      "bytes": 10550,
+      "sha256": "72fe2f9983191b9ce70aa29c6010b03dbc4d005789ddf8167c61d35feb259de9",
+      "status": "legacy",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 89,
+      "maxComponentLength": 36,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/legacy_cards/frames/mage_purple_gold_frame_safe_area_legacy_v1.png",
+      "extension": ".png",
+      "bytes": 13262,
+      "sha256": "f4a45bcad50cb53523db979595c67d75b06fa43906eaae4a6a03bab1cc64753a",
+      "status": "legacy",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 99,
+      "maxComponentLength": 46,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/legacy_cards/frames/warrior_gold_red_frame_legacy_v1.png",
+      "extension": ".png",
+      "bytes": 10525,
+      "sha256": "22f5adcd6ac427462204bb2db3ed7380609582ca105d32d4d8013817d7d20ad5",
+      "status": "legacy",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 89,
+      "maxComponentLength": 36,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/legacy_cards/frames/warrior_gold_red_frame_safe_area_legacy_v1.png",
+      "extension": ".png",
+      "bytes": 13234,
+      "sha256": "cee5c996e67f6e1e9af07897fadf47697e2b381157f0c0b8cd9bfb63b2674811",
+      "status": "legacy",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 99,
+      "maxComponentLength": 46,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/legacy_cards/review/candidate_review_board_legacy_v1.png",
+      "extension": ".png",
+      "bytes": 1246193,
+      "sha256": "1c2fb3ccd87f212bb2e2c3f01fab9288162deb4dad7c80828872737a2a855cd0",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 89,
+      "maxComponentLength": 36,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/legacy_cards/review/card_design_overview_legacy_v1.png",
+      "extension": ".png",
+      "bytes": 924022,
+      "sha256": "2bfb164b1f1b0ced60cfee7fc7152404d57403cb246f02ebd8f35e16c64a1e0c",
+      "status": "legacy",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 87,
+      "maxComponentLength": 34,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/legacy_cards/review/elf_candidates_legacy_v1.png",
+      "extension": ".png",
+      "bytes": 576197,
+      "sha256": "212e0867ed723cbafeb662eeaf1fded67601406fb859f39ee91c28402f3a543d",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 81,
+      "maxComponentLength": 28,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/legacy_cards/review/mage_candidates_legacy_v1.png",
+      "extension": ".png",
+      "bytes": 556965,
+      "sha256": "ea06acdb43fe9b243a693d7cdb0ae9940c6c7911059c49a20cae2370d4b1c6e3",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 82,
+      "maxComponentLength": 29,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/legacy_cards/review/new_warrior_check_legacy_v1.png",
+      "extension": ".png",
+      "bytes": 459365,
+      "sha256": "f65f546bfa93e352c29fade85cfa2af52919537cc999a3340610203e19d675b8",
+      "status": "legacy",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 84,
+      "maxComponentLength": 31,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/legacy_cards/review/warrior_candidates_legacy_v1.png",
+      "extension": ".png",
+      "bytes": 557556,
+      "sha256": "984fd57edb988e8947af03c67ca907727ccd03240fc1b703be578334d0e4241d",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 85,
+      "maxComponentLength": 32,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/legacy_cards/text_safe_area/archer_aim_safe_area_legacy_v1.png",
+      "extension": ".png",
+      "bytes": 999474,
+      "sha256": "2a9c3b96acf775b8b68bc7642a0ada4b246ea20a3b4c18f1e4c95c989b1d8089",
+      "status": "legacy",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 95,
+      "maxComponentLength": 34,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/legacy_cards/text_safe_area/archer_barrage_safe_area_legacy_v1.png",
+      "extension": ".png",
+      "bytes": 1006695,
+      "sha256": "13c2c3e6320a5037a29985b882b9a83caeab04641c2bf2c691055578cd2bb7de",
+      "status": "legacy",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 99,
+      "maxComponentLength": 38,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/legacy_cards/text_safe_area/mage_chant_safe_area_legacy_v1.png",
+      "extension": ".png",
+      "bytes": 995759,
+      "sha256": "3c71b6e197f5d176716add3c84bfda253582dcac31fc1ad1e1b29cf97dee53f1",
+      "status": "legacy",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 95,
+      "maxComponentLength": 34,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/legacy_cards/text_safe_area/mage_flame_safe_area_legacy_v1.png",
+      "extension": ".png",
+      "bytes": 969891,
+      "sha256": "19209fbcb6375a6d2724f72862d7504d1681dbfa9d6a4aeddece2f6b2d48ac25",
+      "status": "legacy",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 95,
+      "maxComponentLength": 34,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/legacy_cards/text_safe_area/warrior_release_safe_area_legacy_v1.png",
+      "extension": ".png",
+      "bytes": 1025263,
+      "sha256": "5151662872f81a186d9f17d6029bca7be4ca2ce0c678ac6ee6a4a9eeae08125e",
+      "status": "legacy",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 100,
+      "maxComponentLength": 39,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/legacy_cards/text_safe_area/warrior_slash_safe_area_legacy_v1.png",
+      "extension": ".png",
+      "bytes": 1086955,
+      "sha256": "099c051743875f5212a1f51023815ef9594de28a857de60f78194903ab1cec82",
+      "status": "legacy",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 98,
+      "maxComponentLength": 37,
       "containsNonAscii": false,
       "risks": [],
       "identicalContentGroup": []
@@ -24242,494 +24672,6 @@
       "identicalContentGroup": []
     },
     {
-      "path": "旧美术资产/卡牌设计/卡框UI/圣剑金红框.png",
-      "extension": ".png",
-      "bytes": 10525,
-      "sha256": "22f5adcd6ac427462204bb2db3ed7380609582ca105d32d4d8013817d7d20ad5",
-      "status": "legacy",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 25,
-      "maxComponentLength": 9,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "旧美术资产/卡牌设计/卡框UI/圣剑金红框_安全区模板.png",
-      "extension": ".png",
-      "bytes": 13234,
-      "sha256": "cee5c996e67f6e1e9af07897fadf47697e2b381157f0c0b8cd9bfb63b2674811",
-      "status": "legacy",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 31,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "旧美术资产/卡牌设计/卡框UI/森灵翠金框.png",
-      "extension": ".png",
-      "bytes": 10513,
-      "sha256": "a194b565a352336b5b039a3b33124a77ef6fbcadae19826a12241c4f23b9e94d",
-      "status": "legacy",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 25,
-      "maxComponentLength": 9,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "旧美术资产/卡牌设计/卡框UI/森灵翠金框_安全区模板.png",
-      "extension": ".png",
-      "bytes": 13230,
-      "sha256": "f3f6c43d2f12ed3ce5083936df7c514802e1ff1eb66617063d85ecd6d09f5711",
-      "status": "legacy",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 31,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "旧美术资产/卡牌设计/卡框UI/秘法紫金框.png",
-      "extension": ".png",
-      "bytes": 10550,
-      "sha256": "72fe2f9983191b9ce70aa29c6010b03dbc4d005789ddf8167c61d35feb259de9",
-      "status": "legacy",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 25,
-      "maxComponentLength": 9,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "旧美术资产/卡牌设计/卡框UI/秘法紫金框_安全区模板.png",
-      "extension": ".png",
-      "bytes": 13262,
-      "sha256": "f4a45bcad50cb53523db979595c67d75b06fa43906eaae4a6a03bab1cc64753a",
-      "status": "legacy",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 31,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "旧美术资产/卡牌设计/卡牌设计总览.png",
-      "extension": ".png",
-      "bytes": 924022,
-      "sha256": "2bfb164b1f1b0ced60cfee7fc7152404d57403cb246f02ebd8f35e16c64a1e0c",
-      "status": "legacy",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 21,
-      "maxComponentLength": 10,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "旧美术资产/卡牌设计/套框预览/勇者战士_圣剑解放_套框预览.png",
-      "extension": ".png",
-      "bytes": 1041151,
-      "sha256": "89c95b52f1b3100c6c534033211c746c2e4380481267e21c60d985cd3c2da820",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 34,
-      "maxComponentLength": 18,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "旧美术资产/卡牌设计/套框预览/勇者战士_拔剑斩_套框预览.png",
-      "extension": ".png",
-      "bytes": 1107165,
-      "sha256": "b83b60113b5e30615152da230966c87135180956e2d9ad28f323546ce71590da",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 33,
-      "maxComponentLength": 17,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "旧美术资产/卡牌设计/套框预览/精灵弓箭手_拉弓瞄准_套框预览.png",
-      "extension": ".png",
-      "bytes": 1019138,
-      "sha256": "9bf0d3ce6dc770ffee0aed5568c6b620057ed551ea68507b14eb9a0327880e0e",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 35,
-      "maxComponentLength": 19,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "旧美术资产/卡牌设计/套框预览/精灵弓箭手_疾风连射_套框预览.png",
-      "extension": ".png",
-      "bytes": 1024688,
-      "sha256": "4333825f0c3115b2688ba28cd5b8c51cafe26084e867af5ee40d5500e66e78e1",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 35,
-      "maxComponentLength": 19,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "旧美术资产/卡牌设计/套框预览/萝莉魔导士_火球术_套框预览.png",
-      "extension": ".png",
-      "bytes": 990123,
-      "sha256": "26833af8f392f8306dcb5063ce3eb6f7b440c4a4b4b63559a0b5206d738903f0",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 34,
-      "maxComponentLength": 18,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "旧美术资产/卡牌设计/套框预览/萝莉魔导士_秘仪咏唱_套框预览.png",
-      "extension": ".png",
-      "bytes": 1014823,
-      "sha256": "f552eab33f9159de612741c85ed38f4b529dde1d9d346af298dbf6fbc94afb1a",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 35,
-      "maxComponentLength": 19,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "旧美术资产/卡牌设计/插画原图/勇者战士_圣剑解放.png",
-      "extension": ".png",
-      "bytes": 2729461,
-      "sha256": "82d8bb1fecb169768ce3f90a5cd1eca363b1289f8ba380d55add6ac9f903e919",
-      "status": "legacy",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 29,
-      "maxComponentLength": 13,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "旧美术资产/卡牌设计/插画原图/勇者战士_拔剑斩.png",
-      "extension": ".png",
-      "bytes": 2885956,
-      "sha256": "d5aabc1d1e997b5ead0b74165cea445b8432bbfd797709243148b74e49671667",
-      "status": "legacy",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 28,
-      "maxComponentLength": 12,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "旧美术资产/卡牌设计/插画原图/精灵弓箭手_拉弓瞄准.png",
-      "extension": ".png",
-      "bytes": 2525532,
-      "sha256": "5578d97cf73563c70b5d0089955c71b5f42b36b1bd4c73bf2140f6592080db69",
-      "status": "legacy",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 30,
-      "maxComponentLength": 14,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "identical_content"
-      ],
-      "identicalContentGroup": [
-        "旧美术资产/卡牌设计/插画原图/精灵弓箭手_拉弓瞄准.png",
-        "旧美术资产/角色三/角色三_卡面插画_拉弓瞄准.png"
-      ]
-    },
-    {
-      "path": "旧美术资产/卡牌设计/插画原图/精灵弓箭手_疾风连射.png",
-      "extension": ".png",
-      "bytes": 2626176,
-      "sha256": "adf3cfc5ffed714bb5f9eda240d651cc96e268c04f30fbd8b345049f7315c7bb",
-      "status": "legacy",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 30,
-      "maxComponentLength": 14,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "identical_content"
-      ],
-      "identicalContentGroup": [
-        "旧美术资产/卡牌设计/插画原图/精灵弓箭手_疾风连射.png",
-        "旧美术资产/角色三/角色三_卡面插画_疾风连射.png"
-      ]
-    },
-    {
-      "path": "旧美术资产/卡牌设计/插画原图/萝莉魔导士_火球术.png",
-      "extension": ".png",
-      "bytes": 2574890,
-      "sha256": "a6385cec2e9a81a9f171e44f6b830d45a667f366382c00cda11594d90bd9e482",
-      "status": "legacy",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 29,
-      "maxComponentLength": 13,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "旧美术资产/卡牌设计/插画原图/萝莉魔导士_秘仪咏唱.png",
-      "extension": ".png",
-      "bytes": 2625685,
-      "sha256": "a1b1a5caa39702a4312203e237a55d5993d682463cd59eab1eff47dd7c09d50d",
-      "status": "legacy",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 30,
-      "maxComponentLength": 14,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "旧美术资产/卡牌设计/文案安全区/勇者战士_圣剑解放_安全区版.png",
-      "extension": ".png",
-      "bytes": 1025263,
-      "sha256": "5151662872f81a186d9f17d6029bca7be4ca2ce0c678ac6ee6a4a9eeae08125e",
-      "status": "legacy",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 35,
-      "maxComponentLength": 18,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "旧美术资产/卡牌设计/文案安全区/勇者战士_拔剑斩_安全区版.png",
-      "extension": ".png",
-      "bytes": 1086955,
-      "sha256": "099c051743875f5212a1f51023815ef9594de28a857de60f78194903ab1cec82",
-      "status": "legacy",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 34,
-      "maxComponentLength": 17,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "旧美术资产/卡牌设计/文案安全区/精灵弓箭手_拉弓瞄准_安全区版.png",
-      "extension": ".png",
-      "bytes": 999474,
-      "sha256": "2a9c3b96acf775b8b68bc7642a0ada4b246ea20a3b4c18f1e4c95c989b1d8089",
-      "status": "legacy",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 36,
-      "maxComponentLength": 19,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "旧美术资产/卡牌设计/文案安全区/精灵弓箭手_疾风连射_安全区版.png",
-      "extension": ".png",
-      "bytes": 1006695,
-      "sha256": "13c2c3e6320a5037a29985b882b9a83caeab04641c2bf2c691055578cd2bb7de",
-      "status": "legacy",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 36,
-      "maxComponentLength": 19,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "旧美术资产/卡牌设计/文案安全区/萝莉魔导士_火球术_安全区版.png",
-      "extension": ".png",
-      "bytes": 969891,
-      "sha256": "19209fbcb6375a6d2724f72862d7504d1681dbfa9d6a4aeddece2f6b2d48ac25",
-      "status": "legacy",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 35,
-      "maxComponentLength": 18,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "旧美术资产/卡牌设计/文案安全区/萝莉魔导士_秘仪咏唱_安全区版.png",
-      "extension": ".png",
-      "bytes": 995759,
-      "sha256": "3c71b6e197f5d176716add3c84bfda253582dcac31fc1ad1e1b29cf97dee53f1",
-      "status": "legacy",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 36,
-      "maxComponentLength": 19,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "旧美术资产/卡牌设计/说明/elf_candidates.png",
-      "extension": ".png",
-      "bytes": 576197,
-      "sha256": "212e0867ed723cbafeb662eeaf1fded67601406fb859f39ee91c28402f3a543d",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 32,
-      "maxComponentLength": 18,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "旧美术资产/卡牌设计/说明/mage_candidates.png",
-      "extension": ".png",
-      "bytes": 556965,
-      "sha256": "ea06acdb43fe9b243a693d7cdb0ae9940c6c7911059c49a20cae2370d4b1c6e3",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 33,
-      "maxComponentLength": 19,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "旧美术资产/卡牌设计/说明/new_warrior_check.png",
-      "extension": ".png",
-      "bytes": 459365,
-      "sha256": "f65f546bfa93e352c29fade85cfa2af52919537cc999a3340610203e19d675b8",
-      "status": "legacy",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 35,
-      "maxComponentLength": 21,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "旧美术资产/卡牌设计/说明/warrior_candidates.png",
-      "extension": ".png",
-      "bytes": 557556,
-      "sha256": "984fd57edb988e8947af03c67ca907727ccd03240fc1b703be578334d0e4241d",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 36,
-      "maxComponentLength": 22,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "旧美术资产/卡牌设计/说明/候选检视板.png",
-      "extension": ".png",
-      "bytes": 1246193,
-      "sha256": "1c2fb3ccd87f212bb2e2c3f01fab9288162deb4dad7c80828872737a2a855cd0",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 23,
-      "maxComponentLength": 9,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
       "path": "旧美术资产/角色一/角色一_三视图_线稿版.png",
       "extension": ".png",
       "bytes": 1717216,
@@ -25001,7 +24943,7 @@
         "identical_content"
       ],
       "identicalContentGroup": [
-        "旧美术资产/卡牌设计/插画原图/精灵弓箭手_拉弓瞄准.png",
+        "assets/archive/unused/2026-06-05/legacy_cards/art_sources/archer_aim_art_legacy_v1.png",
         "旧美术资产/角色三/角色三_卡面插画_拉弓瞄准.png"
       ]
     },
@@ -25021,7 +24963,7 @@
         "identical_content"
       ],
       "identicalContentGroup": [
-        "旧美术资产/卡牌设计/插画原图/精灵弓箭手_疾风连射.png",
+        "assets/archive/unused/2026-06-05/legacy_cards/art_sources/archer_barrage_art_legacy_v1.png",
         "旧美术资产/角色三/角色三_卡面插画_疾风连射.png"
       ]
     },
@@ -27351,7 +27293,7 @@
     {
       "sha256": "5578d97cf73563c70b5d0089955c71b5f42b36b1bd4c73bf2140f6592080db69",
       "paths": [
-        "旧美术资产/卡牌设计/插画原图/精灵弓箭手_拉弓瞄准.png",
+        "assets/archive/unused/2026-06-05/legacy_cards/art_sources/archer_aim_art_legacy_v1.png",
         "旧美术资产/角色三/角色三_卡面插画_拉弓瞄准.png"
       ]
     },
@@ -27493,7 +27435,7 @@
     {
       "sha256": "adf3cfc5ffed714bb5f9eda240d651cc96e268c04f30fbd8b345049f7315c7bb",
       "paths": [
-        "旧美术资产/卡牌设计/插画原图/精灵弓箭手_疾风连射.png",
+        "assets/archive/unused/2026-06-05/legacy_cards/art_sources/archer_barrage_art_legacy_v1.png",
         "旧美术资产/角色三/角色三_卡面插画_疾风连射.png"
       ]
     },
