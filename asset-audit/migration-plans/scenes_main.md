@@ -7,22 +7,23 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Source prefix: `场景/主场景/`
 - Include prefixes: `assets/scenes/battle/`, `assets/scenes/event/`, `assets/source/scenes/`
 - Target runtime directory: `assets/scenes/battle`
-- Assets in scope: 18
+- Assets in scope: 46
 - Duplicate extension groups: 6
 
 ## Counts
 
 ### Status
-- active: 15
-- source: 3
+- active: 20
+- source: 26
 
 ### Action
 
-- already_migrated: 18
+- already_migrated: 46
 
 ### Git Tracking
 
 - tracked: 18
+- untracked: 28
 
 ## Proposed Entries
 
@@ -41,8 +42,17 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: hud-layout-data.js:2 (runtime), hud-runtime.js:406 (runtime), 幻境残卷demo_v0.99.html:30 (runtime), 幻境残卷demo_v0.99.html:1546 (runtime), 幻境残卷demo_v0.99.html:4407 (runtime), 幻境残卷demo_v0.99.html:4411 (runtime), 幻境残卷demo_v0.99.html:4434 (runtime), 幻境残卷demo_v0.99.html:4736 (runtime)
+- References: hud-layout-data.js:2 (runtime), hud-runtime.js:406 (runtime), 幻境残卷demo_v0.99.html:30 (runtime), 幻境残卷demo_v0.99.html:1546 (runtime), 幻境残卷demo_v0.99.html:4434 (runtime), 幻境残卷demo_v0.99.html:4438 (runtime), 幻境残卷demo_v0.99.html:4461 (runtime), 幻境残卷demo_v0.99.html:4763 (runtime)
 - Notes: runtime/config referenced
+
+### `assets/scenes/battle/ancient_forest_sunset_v1.webp`
+
+- Suggested path: `assets/scenes/battle/ancient_forest_sunset_v1.webp`
+- Action: `already_migrated`
+- Status: `active`
+- Tracked: `False`
+- References: 幻境残卷demo_v0.99.html:4435 (runtime)
+- Notes: untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced
 
 ### `assets/scenes/battle/cave_cold_v1.png`
 
@@ -59,7 +69,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:4412 (runtime), 幻境残卷demo_v0.99.html:4413 (runtime), 幻境残卷demo_v0.99.html:4781 (runtime)
+- References: 幻境残卷demo_v0.99.html:4439 (runtime), 幻境残卷demo_v0.99.html:4440 (runtime), 幻境残卷demo_v0.99.html:4808 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/scenes/battle/dungeon_corridor_torch_v1.webp`
@@ -68,7 +78,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:1553 (runtime), 幻境残卷demo_v0.99.html:4415 (runtime), 幻境残卷demo_v0.99.html:4421 (runtime)
+- References: 幻境残卷demo_v0.99.html:1553 (runtime), 幻境残卷demo_v0.99.html:4442 (runtime), 幻境残卷demo_v0.99.html:4448 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/scenes/battle/mountain_plain_day_v1.png`
@@ -86,8 +96,26 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:4410 (runtime), 幻境残卷demo_v0.99.html:4724 (runtime), 幻境残卷demo_v0.99.html:4763 (runtime)
+- References: 幻境残卷demo_v0.99.html:4437 (runtime), 幻境残卷demo_v0.99.html:4751 (runtime), 幻境残卷demo_v0.99.html:4790 (runtime)
 - Notes: runtime/config referenced
+
+### `assets/scenes/battle/mountain_plain_night_v1.webp`
+
+- Suggested path: `assets/scenes/battle/mountain_plain_night_v1.webp`
+- Action: `already_migrated`
+- Status: `active`
+- Tracked: `False`
+- References: 幻境残卷demo_v0.99.html:4436 (runtime)
+- Notes: untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced
+
+### `assets/scenes/battle/mountain_plain_rain_v1.webp`
+
+- Suggested path: `assets/scenes/battle/mountain_plain_rain_v1.webp`
+- Action: `already_migrated`
+- Status: `active`
+- Tracked: `False`
+- References: 幻境残卷demo_v0.99.html:4441 (runtime)
+- Notes: untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced
 
 ### `assets/scenes/battle/stone_ruins_day_v1.png`
 
@@ -104,8 +132,26 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:1549 (runtime), 幻境残卷demo_v0.99.html:4416 (runtime), 幻境残卷demo_v0.99.html:4742 (runtime), 幻境残卷demo_v0.99.html:4769 (runtime)
+- References: 幻境残卷demo_v0.99.html:1549 (runtime), 幻境残卷demo_v0.99.html:4443 (runtime), 幻境残卷demo_v0.99.html:4769 (runtime), 幻境残卷demo_v0.99.html:4796 (runtime)
 - Notes: runtime/config referenced
+
+### `assets/scenes/battle/stone_ruins_night_v1.webp`
+
+- Suggested path: `assets/scenes/battle/stone_ruins_night_v1.webp`
+- Action: `already_migrated`
+- Status: `active`
+- Tracked: `False`
+- References: 幻境残卷demo_v0.99.html:4447 (runtime)
+- Notes: untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced
+
+### `assets/scenes/battle/stone_ruins_sunset_v1.webp`
+
+- Suggested path: `assets/scenes/battle/stone_ruins_sunset_v1.webp`
+- Action: `already_migrated`
+- Status: `active`
+- Tracked: `False`
+- References: 幻境残卷demo_v0.99.html:4444 (runtime)
+- Notes: untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced
 
 ### `assets/scenes/battle/temple_hall_grand_v1.png`
 
@@ -122,7 +168,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:68 (runtime), 幻境残卷demo_v0.99.html:4423 (runtime), 幻境残卷demo_v0.99.html:4424 (runtime), 幻境残卷demo_v0.99.html:4425 (runtime), 幻境残卷demo_v0.99.html:4730 (runtime), 幻境残卷demo_v0.99.html:4748 (runtime)
+- References: 幻境残卷demo_v0.99.html:68 (runtime), 幻境残卷demo_v0.99.html:4450 (runtime), 幻境残卷demo_v0.99.html:4451 (runtime), 幻境残卷demo_v0.99.html:4452 (runtime), 幻境残卷demo_v0.99.html:4757 (runtime), 幻境残卷demo_v0.99.html:4775 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/scenes/battle/temple_inner_light_v1.webp`
@@ -131,7 +177,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:4418 (runtime), 幻境残卷demo_v0.99.html:4426 (runtime)
+- References: 幻境残卷demo_v0.99.html:4445 (runtime), 幻境残卷demo_v0.99.html:4453 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/scenes/battle/wasteland_dusk_v1.png`
@@ -149,7 +195,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:4419 (runtime), 幻境残卷demo_v0.99.html:4422 (runtime), 幻境残卷demo_v0.99.html:4775 (runtime)
+- References: 幻境残卷demo_v0.99.html:4446 (runtime), 幻境残卷demo_v0.99.html:4449 (runtime), 幻境残卷demo_v0.99.html:4802 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/scenes/event/town_distant_day_v1.webp`
@@ -158,8 +204,26 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:1551 (runtime), 幻境残卷demo_v0.99.html:4754 (runtime)
+- References: 幻境残卷demo_v0.99.html:1551 (runtime), 幻境残卷demo_v0.99.html:4781 (runtime)
 - Notes: runtime/config referenced
+
+### `assets/source/scenes/battle/ancient_forest_day_v1_source.png`
+
+- Suggested path: `assets/source/scenes/battle/ancient_forest_day_v1_source.png`
+- Action: `already_migrated`
+- Status: `source`
+- Tracked: `False`
+- References: none
+- Notes: untracked file; do not include in migration commit unless intentionally accepted
+
+### `assets/source/scenes/battle/cave_cold_v1_source.png`
+
+- Suggested path: `assets/source/scenes/battle/cave_cold_v1_source.png`
+- Action: `already_migrated`
+- Status: `source`
+- Tracked: `False`
+- References: none
+- Notes: untracked file; do not include in migration commit unless intentionally accepted
 
 ### `assets/source/scenes/battle/dungeon_corridor_torch_v1_source.png`
 
@@ -170,6 +234,33 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - References: none
 - Notes: review before migration
 
+### `assets/source/scenes/battle/mountain_plain_day_v1_source.png`
+
+- Suggested path: `assets/source/scenes/battle/mountain_plain_day_v1_source.png`
+- Action: `already_migrated`
+- Status: `source`
+- Tracked: `False`
+- References: none
+- Notes: untracked file; do not include in migration commit unless intentionally accepted
+
+### `assets/source/scenes/battle/stone_ruins_day_v1_source.png`
+
+- Suggested path: `assets/source/scenes/battle/stone_ruins_day_v1_source.png`
+- Action: `already_migrated`
+- Status: `source`
+- Tracked: `False`
+- References: none
+- Notes: untracked file; do not include in migration commit unless intentionally accepted
+
+### `assets/source/scenes/battle/temple_hall_grand_v1_source.png`
+
+- Suggested path: `assets/source/scenes/battle/temple_hall_grand_v1_source.png`
+- Action: `already_migrated`
+- Status: `source`
+- Tracked: `False`
+- References: none
+- Notes: untracked file; do not include in migration commit unless intentionally accepted
+
 ### `assets/source/scenes/battle/temple_inner_light_v1_source.png`
 
 - Suggested path: `assets/source/scenes/battle/temple_inner_light_v1_source.png`
@@ -179,6 +270,60 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - References: none
 - Notes: review before migration
 
+### `assets/source/scenes/battle/variants/ancient_forest_sunset_v1_source.png`
+
+- Suggested path: `assets/source/scenes/battle/variants/ancient_forest_sunset_v1_source.png`
+- Action: `already_migrated`
+- Status: `source`
+- Tracked: `False`
+- References: none
+- Notes: untracked file; do not include in migration commit unless intentionally accepted
+
+### `assets/source/scenes/battle/variants/mountain_plain_night_v1_source.png`
+
+- Suggested path: `assets/source/scenes/battle/variants/mountain_plain_night_v1_source.png`
+- Action: `already_migrated`
+- Status: `source`
+- Tracked: `False`
+- References: none
+- Notes: untracked file; do not include in migration commit unless intentionally accepted
+
+### `assets/source/scenes/battle/variants/mountain_plain_rain_v1_source.png`
+
+- Suggested path: `assets/source/scenes/battle/variants/mountain_plain_rain_v1_source.png`
+- Action: `already_migrated`
+- Status: `source`
+- Tracked: `False`
+- References: none
+- Notes: untracked file; do not include in migration commit unless intentionally accepted
+
+### `assets/source/scenes/battle/variants/stone_ruins_night_v1_source.png`
+
+- Suggested path: `assets/source/scenes/battle/variants/stone_ruins_night_v1_source.png`
+- Action: `already_migrated`
+- Status: `source`
+- Tracked: `False`
+- References: none
+- Notes: untracked file; do not include in migration commit unless intentionally accepted
+
+### `assets/source/scenes/battle/variants/stone_ruins_sunset_v1_source.png`
+
+- Suggested path: `assets/source/scenes/battle/variants/stone_ruins_sunset_v1_source.png`
+- Action: `already_migrated`
+- Status: `source`
+- Tracked: `False`
+- References: none
+- Notes: untracked file; do not include in migration commit unless intentionally accepted
+
+### `assets/source/scenes/battle/wasteland_dusk_v1_source.png`
+
+- Suggested path: `assets/source/scenes/battle/wasteland_dusk_v1_source.png`
+- Action: `already_migrated`
+- Status: `source`
+- Tracked: `False`
+- References: none
+- Notes: untracked file; do not include in migration commit unless intentionally accepted
+
 ### `assets/source/scenes/event/town_distant_day_v1_source.png`
 
 - Suggested path: `assets/source/scenes/event/town_distant_day_v1_source.png`
@@ -187,6 +332,114 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Tracked: `True`
 - References: none
 - Notes: review before migration
+
+### `assets/source/scenes/layer_guides/battle/ancient_forest_day_layer_guide_v1.png`
+
+- Suggested path: `assets/source/scenes/layer_guides/battle/ancient_forest_day_layer_guide_v1.png`
+- Action: `already_migrated`
+- Status: `source`
+- Tracked: `False`
+- References: none
+- Notes: untracked file; do not include in migration commit unless intentionally accepted
+
+### `assets/source/scenes/layer_guides/battle/cave_cold_layer_guide_v1.png`
+
+- Suggested path: `assets/source/scenes/layer_guides/battle/cave_cold_layer_guide_v1.png`
+- Action: `already_migrated`
+- Status: `source`
+- Tracked: `False`
+- References: none
+- Notes: untracked file; do not include in migration commit unless intentionally accepted
+
+### `assets/source/scenes/layer_guides/battle/dungeon_corridor_torch_layer_guide_v1.png`
+
+- Suggested path: `assets/source/scenes/layer_guides/battle/dungeon_corridor_torch_layer_guide_v1.png`
+- Action: `already_migrated`
+- Status: `source`
+- Tracked: `False`
+- References: none
+- Notes: untracked file; do not include in migration commit unless intentionally accepted
+
+### `assets/source/scenes/layer_guides/battle/mountain_plain_day_layer_guide_v1.png`
+
+- Suggested path: `assets/source/scenes/layer_guides/battle/mountain_plain_day_layer_guide_v1.png`
+- Action: `already_migrated`
+- Status: `source`
+- Tracked: `False`
+- References: none
+- Notes: untracked file; do not include in migration commit unless intentionally accepted
+
+### `assets/source/scenes/layer_guides/battle/stone_ruins_day_layer_guide_v1.png`
+
+- Suggested path: `assets/source/scenes/layer_guides/battle/stone_ruins_day_layer_guide_v1.png`
+- Action: `already_migrated`
+- Status: `source`
+- Tracked: `False`
+- References: none
+- Notes: untracked file; do not include in migration commit unless intentionally accepted
+
+### `assets/source/scenes/layer_guides/battle/temple_hall_grand_layer_guide_v1.png`
+
+- Suggested path: `assets/source/scenes/layer_guides/battle/temple_hall_grand_layer_guide_v1.png`
+- Action: `already_migrated`
+- Status: `source`
+- Tracked: `False`
+- References: none
+- Notes: untracked file; do not include in migration commit unless intentionally accepted
+
+### `assets/source/scenes/layer_guides/battle/temple_inner_light_layer_guide_v1.png`
+
+- Suggested path: `assets/source/scenes/layer_guides/battle/temple_inner_light_layer_guide_v1.png`
+- Action: `already_migrated`
+- Status: `source`
+- Tracked: `False`
+- References: none
+- Notes: untracked file; do not include in migration commit unless intentionally accepted
+
+### `assets/source/scenes/layer_guides/battle/wasteland_dusk_layer_guide_v1.png`
+
+- Suggested path: `assets/source/scenes/layer_guides/battle/wasteland_dusk_layer_guide_v1.png`
+- Action: `already_migrated`
+- Status: `source`
+- Tracked: `False`
+- References: none
+- Notes: untracked file; do not include in migration commit unless intentionally accepted
+
+### `assets/source/scenes/layer_guides/event/town_distant_day_layer_guide_v1.png`
+
+- Suggested path: `assets/source/scenes/layer_guides/event/town_distant_day_layer_guide_v1.png`
+- Action: `already_migrated`
+- Status: `source`
+- Tracked: `False`
+- References: none
+- Notes: untracked file; do not include in migration commit unless intentionally accepted
+
+### `assets/source/scenes/layer_guides/review/mountain_plain_far_v1.png`
+
+- Suggested path: `assets/source/scenes/layer_guides/review/mountain_plain_far_v1.png`
+- Action: `already_migrated`
+- Status: `source`
+- Tracked: `False`
+- References: none
+- Notes: untracked file; do not include in migration commit unless intentionally accepted
+
+### `assets/source/scenes/layer_guides/review/mountain_plain_front_v1.png`
+
+- Suggested path: `assets/source/scenes/layer_guides/review/mountain_plain_front_v1.png`
+- Action: `already_migrated`
+- Status: `source`
+- Tracked: `False`
+- References: none
+- Notes: untracked file; do not include in migration commit unless intentionally accepted
+
+### `assets/source/scenes/layer_guides/review/mountain_plain_mid_v1.png`
+
+- Suggested path: `assets/source/scenes/layer_guides/review/mountain_plain_mid_v1.png`
+- Action: `already_migrated`
+- Status: `source`
+- Tracked: `False`
+- References: none
+- Notes: untracked file; do not include in migration commit unless intentionally accepted
 
 ## Duplicate Extension Groups
 

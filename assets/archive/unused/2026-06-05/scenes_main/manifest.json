@@ -1,0 +1,104 @@
+{
+  "generatedBy": "manual archive batch from asset-audit/migration-plans/scenes_cleanup.json",
+  "archivedAt": "2026-06-05",
+  "moduleSlug": "scenes_main",
+  "policy": "unused assets are archived with manifest; no direct deletion",
+  "entries": [
+    {
+      "sourcePath": "\u573a\u666f/\u573a\u666f.png",
+      "archivePath": "assets/archive/unused/2026-06-05/scenes_main/review/scene_overview.png",
+      "sha256": "dc4c99d93c58e1918f8547acd720a0fac138b7efdb5e925fd51e2d62ac8e5412",
+      "status": "unreferenced",
+      "references": [],
+      "reason": "unreferenced or duplicate legacy scene asset after formal scene migration"
+    },
+    {
+      "sourcePath": "\u573a\u666f/\u6e90\u56fe/bg_battle_dungeon_corridor_torch_source.png",
+      "archivePath": "assets/archive/unused/2026-06-05/scenes_main/duplicate_sources/dungeon_corridor_torch_v1_source.png",
+      "sha256": "6f2d8a8a0a884357d4fb2d23b2261d13bfc71eab3faae624472a42a9adbff6a5",
+      "status": "unreferenced",
+      "references": [],
+      "reason": "unreferenced or duplicate legacy scene asset after formal scene migration"
+    },
+    {
+      "sourcePath": "\u573a\u666f/\u6e90\u56fe/bg_battle_temple_inner_light_source.png",
+      "archivePath": "assets/archive/unused/2026-06-05/scenes_main/duplicate_sources/temple_inner_light_v1_source.png",
+      "sha256": "e0a5d80da192423821927f21530bbcf684d62dcf3c8c8b09067c6181c9333df0",
+      "status": "unreferenced",
+      "references": [],
+      "reason": "unreferenced or duplicate legacy scene asset after formal scene migration"
+    },
+    {
+      "sourcePath": "\u573a\u666f/\u6e90\u56fe/bg_event_town_distant_day_source.png",
+      "archivePath": "assets/archive/unused/2026-06-05/scenes_main/duplicate_sources/town_distant_day_v1_source.png",
+      "sha256": "5c17af2391e086dddf49a05703e04bb7e839ecae6f00a298f935eeec8de3a727",
+      "status": "unreferenced",
+      "references": [],
+      "reason": "unreferenced or duplicate legacy scene asset after formal scene migration"
+    },
+    {
+      "sourcePath": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_battle_ancient_forest_night.png",
+      "archivePath": "assets/archive/unused/2026-06-05/scenes_main/variants/bg_battle_ancient_forest_night.png",
+      "sha256": "31ce376f234e5afa1b491e00f67bae69da26d770e743f35710c2f3b47eddcb40",
+      "status": "unreferenced",
+      "references": [],
+      "reason": "unreferenced or duplicate legacy scene asset after formal scene migration"
+    },
+    {
+      "sourcePath": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_battle_mountain_plain_cloudy.png",
+      "archivePath": "assets/archive/unused/2026-06-05/scenes_main/variants/bg_battle_mountain_plain_cloudy.png",
+      "sha256": "25e92470a5bddec4582185650a48a4aa46fe8b601fde06436b58e483424193c3",
+      "status": "unreferenced",
+      "references": [],
+      "reason": "unreferenced or duplicate legacy scene asset after formal scene migration"
+    },
+    {
+      "sourcePath": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_battle_mountain_plain_fog.png",
+      "archivePath": "assets/archive/unused/2026-06-05/scenes_main/variants/bg_battle_mountain_plain_fog.png",
+      "sha256": "228ea97d16378c293b5bc5b49f5fbe16b62bb9e85d16e5b047436a6438428ef2",
+      "status": "unreferenced",
+      "references": [],
+      "reason": "unreferenced or duplicate legacy scene asset after formal scene migration"
+    },
+    {
+      "sourcePath": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_battle_mountain_plain_sunset.png",
+      "archivePath": "assets/archive/unused/2026-06-05/scenes_main/variants/bg_battle_mountain_plain_sunset.png",
+      "sha256": "b44fea9e1b6c01d2dc202fa4e1cccaaca08f2c50ebf1c9316b0eb3b07ed3a6ba",
+      "status": "unreferenced",
+      "references": [],
+      "reason": "unreferenced or duplicate legacy scene asset after formal scene migration"
+    },
+    {
+      "sourcePath": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_battle_wasteland_day.png",
+      "archivePath": "assets/archive/unused/2026-06-05/scenes_main/variants/bg_battle_wasteland_day.png",
+      "sha256": "f53ff4d4eb509a19a2473c30ec1dbcfadbd670227ca54352cdc39e9c29de2b6a",
+      "status": "unreferenced",
+      "references": [],
+      "reason": "unreferenced or duplicate legacy scene asset after formal scene migration"
+    },
+    {
+      "sourcePath": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_battle_wasteland_night.png",
+      "archivePath": "assets/archive/unused/2026-06-05/scenes_main/variants/bg_battle_wasteland_night.png",
+      "sha256": "3ba4f67c030de21ce6e429beed66ecf42b224b4c7278f43256590125a468bb7e",
+      "status": "unreferenced",
+      "references": [],
+      "reason": "unreferenced or duplicate legacy scene asset after formal scene migration"
+    },
+    {
+      "sourcePath": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_event_town_distant_night.png",
+      "archivePath": "assets/archive/unused/2026-06-05/scenes_main/variants/bg_event_town_distant_night.png",
+      "sha256": "65026da5bd9e0cca848c7b872f9d004953fdf96d7ae2a5cbd3cb256217a69310",
+      "status": "unreferenced",
+      "references": [],
+      "reason": "unreferenced or duplicate legacy scene asset after formal scene migration"
+    },
+    {
+      "sourcePath": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_event_town_distant_sunset.png",
+      "archivePath": "assets/archive/unused/2026-06-05/scenes_main/variants/bg_event_town_distant_sunset.png",
+      "sha256": "23f8492dfc3cff4f4c4b87c074dd4111a71426d0946d77a89e8eec465f08d02b",
+      "status": "unreferenced",
+      "references": [],
+      "reason": "unreferenced or duplicate legacy scene asset after formal scene migration"
+    }
+  ]
+}

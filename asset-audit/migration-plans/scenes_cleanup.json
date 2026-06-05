@@ -1,0 +1,964 @@
+{
+  "generatedBy": "manual scene cleanup plan from asset-audit/asset-usage-report.json",
+  "proposalType": "asset_migration_plan",
+  "moduleSlug": "scenes_cleanup",
+  "sourcePrefix": "\u573a\u666f/",
+  "includePrefixes": [
+    "assets/scenes/",
+    "assets/source/scenes/",
+    "assets/candidates/scenes/"
+  ],
+  "targetDirectory": "assets/scenes",
+  "strategy": [
+    "Move active runtime scene variants to assets/scenes and rewrite refs.",
+    "Move source/candidate scene support images to source/candidates.",
+    "Archive duplicate or unused legacy scene images to assets/archive/unused/2026-06-05/scenes_main with manifest."
+  ],
+  "summary": {
+    "assetCount": 50,
+    "actionCounts": {
+      "already_migrated": 38,
+      "already_archived": 12
+    },
+    "statusCounts": {
+      "source": 23,
+      "archived": 12,
+      "candidate": 10,
+      "active": 5
+    }
+  },
+  "entries": [
+    {
+      "sourcePath": "assets/source/scenes/layer_guides/battle/ancient_forest_day_layer_guide_v1.png",
+      "suggestedPath": "assets/source/scenes/layer_guides/battle/ancient_forest_day_layer_guide_v1.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "df25a2efbe523659c01bbb64e55ae26d42ec4189c87bd08247068d7151624a57",
+      "derivedFrom": "\u573a\u666f/\u5206\u5c42\u5bfc\u89c6/bg_battle_ancient_forest_day_layer_guide.png",
+      "visualGroup": "visual_df25a2efbe",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u5206\u5c42\u5bfc\u89c6/bg_battle_ancient_forest_day_layer_guide.png"
+    },
+    {
+      "sourcePath": "assets/source/scenes/layer_guides/battle/cave_cold_layer_guide_v1.png",
+      "suggestedPath": "assets/source/scenes/layer_guides/battle/cave_cold_layer_guide_v1.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "85177b034838269751cef158a214b9d6d891556ac1c72e42ce6eb22b7db059a2",
+      "derivedFrom": "\u573a\u666f/\u5206\u5c42\u5bfc\u89c6/bg_battle_cave_cold_layer_guide.png",
+      "visualGroup": "visual_85177b0348",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u5206\u5c42\u5bfc\u89c6/bg_battle_cave_cold_layer_guide.png"
+    },
+    {
+      "sourcePath": "assets/source/scenes/layer_guides/battle/dungeon_corridor_torch_layer_guide_v1.png",
+      "suggestedPath": "assets/source/scenes/layer_guides/battle/dungeon_corridor_torch_layer_guide_v1.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "64a7c63bda786a414c36d2ed8c00cffbd995d1d6cb94baa8243d434b3d877b8b",
+      "derivedFrom": "\u573a\u666f/\u5206\u5c42\u5bfc\u89c6/bg_battle_dungeon_corridor_torch_layer_guide.png",
+      "visualGroup": "visual_64a7c63bda",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u5206\u5c42\u5bfc\u89c6/bg_battle_dungeon_corridor_torch_layer_guide.png"
+    },
+    {
+      "sourcePath": "assets/source/scenes/layer_guides/battle/mountain_plain_day_layer_guide_v1.png",
+      "suggestedPath": "assets/source/scenes/layer_guides/battle/mountain_plain_day_layer_guide_v1.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "5e856b6cd4c384156ba1578ae89ae5374f68008ae0b9fcb719a947da65501f18",
+      "derivedFrom": "\u573a\u666f/\u5206\u5c42\u5bfc\u89c6/bg_battle_mountain_plain_day_layer_guide.png",
+      "visualGroup": "visual_5e856b6cd4",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u5206\u5c42\u5bfc\u89c6/bg_battle_mountain_plain_day_layer_guide.png"
+    },
+    {
+      "sourcePath": "assets/source/scenes/layer_guides/battle/stone_ruins_day_layer_guide_v1.png",
+      "suggestedPath": "assets/source/scenes/layer_guides/battle/stone_ruins_day_layer_guide_v1.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "a0ff4a3afb12226b46dd7fc23e33729434c1bc335987a0d04cbd57e98bc82304",
+      "derivedFrom": "\u573a\u666f/\u5206\u5c42\u5bfc\u89c6/bg_battle_stone_ruins_day_layer_guide.png",
+      "visualGroup": "visual_a0ff4a3afb",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u5206\u5c42\u5bfc\u89c6/bg_battle_stone_ruins_day_layer_guide.png"
+    },
+    {
+      "sourcePath": "assets/source/scenes/layer_guides/battle/temple_hall_grand_layer_guide_v1.png",
+      "suggestedPath": "assets/source/scenes/layer_guides/battle/temple_hall_grand_layer_guide_v1.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "53b91aef262c203d4aa1480dfcdeff3767f76fc32fdac65297492de04da401ef",
+      "derivedFrom": "\u573a\u666f/\u5206\u5c42\u5bfc\u89c6/bg_battle_temple_hall_grand_layer_guide.png",
+      "visualGroup": "visual_53b91aef26",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u5206\u5c42\u5bfc\u89c6/bg_battle_temple_hall_grand_layer_guide.png"
+    },
+    {
+      "sourcePath": "assets/source/scenes/layer_guides/battle/temple_inner_light_layer_guide_v1.png",
+      "suggestedPath": "assets/source/scenes/layer_guides/battle/temple_inner_light_layer_guide_v1.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "a6aea6c5024a0eab26f60cd312cf0cb423e548fa5418c1dcbe6fe97af603e5a5",
+      "derivedFrom": "\u573a\u666f/\u5206\u5c42\u5bfc\u89c6/bg_battle_temple_inner_light_layer_guide.png",
+      "visualGroup": "visual_a6aea6c502",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u5206\u5c42\u5bfc\u89c6/bg_battle_temple_inner_light_layer_guide.png"
+    },
+    {
+      "sourcePath": "assets/source/scenes/layer_guides/battle/wasteland_dusk_layer_guide_v1.png",
+      "suggestedPath": "assets/source/scenes/layer_guides/battle/wasteland_dusk_layer_guide_v1.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "c38d8cd6398ebf1053438c9524269fd9237141295a13c19470ede4ab6237f7b7",
+      "derivedFrom": "\u573a\u666f/\u5206\u5c42\u5bfc\u89c6/bg_battle_wasteland_dusk_layer_guide.png",
+      "visualGroup": "visual_c38d8cd639",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u5206\u5c42\u5bfc\u89c6/bg_battle_wasteland_dusk_layer_guide.png"
+    },
+    {
+      "sourcePath": "assets/source/scenes/layer_guides/event/town_distant_day_layer_guide_v1.png",
+      "suggestedPath": "assets/source/scenes/layer_guides/event/town_distant_day_layer_guide_v1.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "79ff22c31f39012cf3bc9d0a61a8228fd0f4c740a4327bd6800e98d3ff8c7beb",
+      "derivedFrom": "\u573a\u666f/\u5206\u5c42\u5bfc\u89c6/bg_event_town_distant_day_layer_guide.png",
+      "visualGroup": "visual_79ff22c31f",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u5206\u5c42\u5bfc\u89c6/bg_event_town_distant_day_layer_guide.png"
+    },
+    {
+      "sourcePath": "assets/source/scenes/layer_guides/review/mountain_plain_far_v1.png",
+      "suggestedPath": "assets/source/scenes/layer_guides/review/mountain_plain_far_v1.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "f8fd3c14adcada68bf6c7fa351b133934e6f78baff9bd6e8d6a414d720f88c0b",
+      "derivedFrom": "\u573a\u666f/\u5206\u5c42\u5bfc\u89c6/bg_mountain_plain_far.png",
+      "visualGroup": "visual_f8fd3c14ad",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u5206\u5c42\u5bfc\u89c6/bg_mountain_plain_far.png"
+    },
+    {
+      "sourcePath": "assets/source/scenes/layer_guides/review/mountain_plain_front_v1.png",
+      "suggestedPath": "assets/source/scenes/layer_guides/review/mountain_plain_front_v1.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "40e0a07f662fe5584aaf33077c82f1d9158d5f038f8db752fa8f0509c994cdfe",
+      "derivedFrom": "\u573a\u666f/\u5206\u5c42\u5bfc\u89c6/bg_mountain_plain_front.png",
+      "visualGroup": "visual_40e0a07f66",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u5206\u5c42\u5bfc\u89c6/bg_mountain_plain_front.png"
+    },
+    {
+      "sourcePath": "assets/source/scenes/layer_guides/review/mountain_plain_mid_v1.png",
+      "suggestedPath": "assets/source/scenes/layer_guides/review/mountain_plain_mid_v1.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "5bfe8cde3d707a3731041446440d9473f2f1cfed54f5f12bfb588ec14a4375f0",
+      "derivedFrom": "\u573a\u666f/\u5206\u5c42\u5bfc\u89c6/bg_mountain_plain_mid.png",
+      "visualGroup": "visual_5bfe8cde3d",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u5206\u5c42\u5bfc\u89c6/bg_mountain_plain_mid.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/scenes_main/review/scene_overview.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/scenes_main/review/scene_overview.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "dc4c99d93c58e1918f8547acd720a0fac138b7efdb5e925fd51e2d62ac8e5412",
+      "derivedFrom": "\u573a\u666f/\u573a\u666f.png",
+      "visualGroup": "visual_dc4c99d93c",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u573a\u666f.png"
+    },
+    {
+      "sourcePath": "assets/candidates/scenes/battle_previews/ancient_forest_day_preview_v1.png",
+      "suggestedPath": "assets/candidates/scenes/battle_previews/ancient_forest_day_preview_v1.png",
+      "action": "already_migrated",
+      "status": "candidate",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path"
+      ],
+      "sha256": "5c93230332d88dc0502353fc75dda801e0139d7988ce85e02c8a03939acb9c47",
+      "derivedFrom": "\u573a\u666f/\u6218\u6597\u9884\u89c8/bg_battle_ancient_forest_day_battle_preview.png",
+      "visualGroup": "visual_5c93230332",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u6218\u6597\u9884\u89c8/bg_battle_ancient_forest_day_battle_preview.png"
+    },
+    {
+      "sourcePath": "assets/candidates/scenes/battle_previews/cave_cold_preview_v1.png",
+      "suggestedPath": "assets/candidates/scenes/battle_previews/cave_cold_preview_v1.png",
+      "action": "already_migrated",
+      "status": "candidate",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path"
+      ],
+      "sha256": "feedbf2efcd21bda2097e0e3c697362ba43ba72c062a94d08f36e08db7ff6b7a",
+      "derivedFrom": "\u573a\u666f/\u6218\u6597\u9884\u89c8/bg_battle_cave_cold_battle_preview.png",
+      "visualGroup": "visual_feedbf2efc",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u6218\u6597\u9884\u89c8/bg_battle_cave_cold_battle_preview.png"
+    },
+    {
+      "sourcePath": "assets/candidates/scenes/battle_previews/dungeon_corridor_torch_preview_v1.png",
+      "suggestedPath": "assets/candidates/scenes/battle_previews/dungeon_corridor_torch_preview_v1.png",
+      "action": "already_migrated",
+      "status": "candidate",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "long_component"
+      ],
+      "sha256": "6136b79facf8102d9c1be5511cc68c48fa8b099db7540bd98e89429094cd37d3",
+      "derivedFrom": "\u573a\u666f/\u6218\u6597\u9884\u89c8/bg_battle_dungeon_corridor_torch_battle_preview.png",
+      "visualGroup": "visual_6136b79fac",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u6218\u6597\u9884\u89c8/bg_battle_dungeon_corridor_torch_battle_preview.png"
+    },
+    {
+      "sourcePath": "assets/candidates/scenes/battle_previews/mountain_plain_day_preview_v1.png",
+      "suggestedPath": "assets/candidates/scenes/battle_previews/mountain_plain_day_preview_v1.png",
+      "action": "already_migrated",
+      "status": "candidate",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path"
+      ],
+      "sha256": "cccf278ee24062ae785fc7de9a76a79961547df9c867ef37c4c1748e48ef99da",
+      "derivedFrom": "\u573a\u666f/\u6218\u6597\u9884\u89c8/bg_battle_mountain_plain_day_battle_preview.png",
+      "visualGroup": "visual_cccf278ee2",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u6218\u6597\u9884\u89c8/bg_battle_mountain_plain_day_battle_preview.png"
+    },
+    {
+      "sourcePath": "assets/candidates/scenes/battle_previews/stone_ruins_day_preview_v1.png",
+      "suggestedPath": "assets/candidates/scenes/battle_previews/stone_ruins_day_preview_v1.png",
+      "action": "already_migrated",
+      "status": "candidate",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path"
+      ],
+      "sha256": "4b91b270d8e5c0f5c77c1e636ae480734b715fdf6238941ab30525c147def798",
+      "derivedFrom": "\u573a\u666f/\u6218\u6597\u9884\u89c8/bg_battle_stone_ruins_day_battle_preview.png",
+      "visualGroup": "visual_4b91b270d8",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u6218\u6597\u9884\u89c8/bg_battle_stone_ruins_day_battle_preview.png"
+    },
+    {
+      "sourcePath": "assets/candidates/scenes/battle_previews/temple_hall_grand_preview_v1.png",
+      "suggestedPath": "assets/candidates/scenes/battle_previews/temple_hall_grand_preview_v1.png",
+      "action": "already_migrated",
+      "status": "candidate",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path"
+      ],
+      "sha256": "00a6d1bea5d4f952f12a56a765a36624c172199b9c13c7973c75263e9a1b12ed",
+      "derivedFrom": "\u573a\u666f/\u6218\u6597\u9884\u89c8/bg_battle_temple_hall_grand_battle_preview.png",
+      "visualGroup": "visual_00a6d1bea5",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u6218\u6597\u9884\u89c8/bg_battle_temple_hall_grand_battle_preview.png"
+    },
+    {
+      "sourcePath": "assets/candidates/scenes/battle_previews/temple_inner_light_preview_v1.png",
+      "suggestedPath": "assets/candidates/scenes/battle_previews/temple_inner_light_preview_v1.png",
+      "action": "already_migrated",
+      "status": "candidate",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path"
+      ],
+      "sha256": "faaa3d1f618dd771faa2de98078644e1a40183f44045f425817fb5b0b1407246",
+      "derivedFrom": "\u573a\u666f/\u6218\u6597\u9884\u89c8/bg_battle_temple_inner_light_battle_preview.png",
+      "visualGroup": "visual_faaa3d1f61",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u6218\u6597\u9884\u89c8/bg_battle_temple_inner_light_battle_preview.png"
+    },
+    {
+      "sourcePath": "assets/candidates/scenes/battle_previews/wasteland_dusk_preview_v1.png",
+      "suggestedPath": "assets/candidates/scenes/battle_previews/wasteland_dusk_preview_v1.png",
+      "action": "already_migrated",
+      "status": "candidate",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path"
+      ],
+      "sha256": "e45725b6d9c8ecddead69fc2f03e596593554040ecf5f49bf5af4dd53ff7d7ea",
+      "derivedFrom": "\u573a\u666f/\u6218\u6597\u9884\u89c8/bg_battle_wasteland_dusk_battle_preview.png",
+      "visualGroup": "visual_e45725b6d9",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u6218\u6597\u9884\u89c8/bg_battle_wasteland_dusk_battle_preview.png"
+    },
+    {
+      "sourcePath": "assets/candidates/scenes/event_previews/town_distant_day_preview_v1.png",
+      "suggestedPath": "assets/candidates/scenes/event_previews/town_distant_day_preview_v1.png",
+      "action": "already_migrated",
+      "status": "candidate",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path"
+      ],
+      "sha256": "b8eb3bcddcdb533f8235bfe44f3c47ae57041a4233a9e824421f7ca74ee97fcf",
+      "derivedFrom": "\u573a\u666f/\u6218\u6597\u9884\u89c8/bg_event_town_distant_day_battle_preview.png",
+      "visualGroup": "visual_b8eb3bcddc",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u6218\u6597\u9884\u89c8/bg_event_town_distant_day_battle_preview.png"
+    },
+    {
+      "sourcePath": "assets/source/scenes/battle/ancient_forest_day_v1_source.png",
+      "suggestedPath": "assets/source/scenes/battle/ancient_forest_day_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "identical_content"
+      ],
+      "sha256": "e122084cfb4eae131b92c37d63c5ec3f246f1d3b85059e95df96f4ac9d11fd60",
+      "derivedFrom": "\u573a\u666f/\u6e90\u56fe/bg_battle_ancient_forest_day_source.png",
+      "visualGroup": "visual_e122084cfb",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u6e90\u56fe/bg_battle_ancient_forest_day_source.png"
+    },
+    {
+      "sourcePath": "assets/source/scenes/battle/cave_cold_v1_source.png",
+      "suggestedPath": "assets/source/scenes/battle/cave_cold_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "identical_content"
+      ],
+      "sha256": "6d9cecc7bedf2dbaafbace23528965518c4ef64efd6ee09253f470814b861486",
+      "derivedFrom": "\u573a\u666f/\u6e90\u56fe/bg_battle_cave_cold_source.png",
+      "visualGroup": "visual_6d9cecc7be",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u6e90\u56fe/bg_battle_cave_cold_source.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/scenes_main/duplicate_sources/dungeon_corridor_torch_v1_source.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/scenes_main/duplicate_sources/dungeon_corridor_torch_v1_source.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "identical_content"
+      ],
+      "sha256": "6f2d8a8a0a884357d4fb2d23b2261d13bfc71eab3faae624472a42a9adbff6a5",
+      "derivedFrom": "\u573a\u666f/\u6e90\u56fe/bg_battle_dungeon_corridor_torch_source.png",
+      "visualGroup": "visual_6f2d8a8a0a",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u6e90\u56fe/bg_battle_dungeon_corridor_torch_source.png"
+    },
+    {
+      "sourcePath": "assets/source/scenes/battle/mountain_plain_day_v1_source.png",
+      "suggestedPath": "assets/source/scenes/battle/mountain_plain_day_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "identical_content"
+      ],
+      "sha256": "e0c067a6247d20c76e8f92e15f387018eec4b2cc85525dd5ce3e2849e5612ef3",
+      "derivedFrom": "\u573a\u666f/\u6e90\u56fe/bg_battle_mountain_plain_day_source.png",
+      "visualGroup": "visual_e0c067a624",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u6e90\u56fe/bg_battle_mountain_plain_day_source.png"
+    },
+    {
+      "sourcePath": "assets/source/scenes/battle/stone_ruins_day_v1_source.png",
+      "suggestedPath": "assets/source/scenes/battle/stone_ruins_day_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "identical_content"
+      ],
+      "sha256": "223d5dad541c9e21cd90cb6497c851961fbb2ac570c4d1d419c99b67e73ffded",
+      "derivedFrom": "\u573a\u666f/\u6e90\u56fe/bg_battle_stone_ruins_day_source.png",
+      "visualGroup": "visual_223d5dad54",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u6e90\u56fe/bg_battle_stone_ruins_day_source.png"
+    },
+    {
+      "sourcePath": "assets/source/scenes/battle/temple_hall_grand_v1_source.png",
+      "suggestedPath": "assets/source/scenes/battle/temple_hall_grand_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "identical_content"
+      ],
+      "sha256": "b63f68c3d9e89e37eb9275ba0d5284fe320562c41c7b467f32639a0690c14552",
+      "derivedFrom": "\u573a\u666f/\u6e90\u56fe/bg_battle_temple_hall_grand_source.png",
+      "visualGroup": "visual_b63f68c3d9",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u6e90\u56fe/bg_battle_temple_hall_grand_source.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/scenes_main/duplicate_sources/temple_inner_light_v1_source.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/scenes_main/duplicate_sources/temple_inner_light_v1_source.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "identical_content"
+      ],
+      "sha256": "e0a5d80da192423821927f21530bbcf684d62dcf3c8c8b09067c6181c9333df0",
+      "derivedFrom": "\u573a\u666f/\u6e90\u56fe/bg_battle_temple_inner_light_source.png",
+      "visualGroup": "visual_e0a5d80da1",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u6e90\u56fe/bg_battle_temple_inner_light_source.png"
+    },
+    {
+      "sourcePath": "assets/source/scenes/battle/wasteland_dusk_v1_source.png",
+      "suggestedPath": "assets/source/scenes/battle/wasteland_dusk_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "identical_content"
+      ],
+      "sha256": "81bfee3250aec4449bd0bf232262a524e0e450ef6dcfe6dc29b4a7d8dec0de77",
+      "derivedFrom": "\u573a\u666f/\u6e90\u56fe/bg_battle_wasteland_dusk_source.png",
+      "visualGroup": "visual_81bfee3250",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u6e90\u56fe/bg_battle_wasteland_dusk_source.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/scenes_main/duplicate_sources/town_distant_day_v1_source.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/scenes_main/duplicate_sources/town_distant_day_v1_source.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "identical_content"
+      ],
+      "sha256": "5c17af2391e086dddf49a05703e04bb7e839ecae6f00a298f935eeec8de3a727",
+      "derivedFrom": "\u573a\u666f/\u6e90\u56fe/bg_event_town_distant_day_source.png",
+      "visualGroup": "visual_5c17af2391",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u6e90\u56fe/bg_event_town_distant_day_source.png"
+    },
+    {
+      "sourcePath": "assets/candidates/scenes/review/scene_palette_overview_v1.png",
+      "suggestedPath": "assets/candidates/scenes/review/scene_palette_overview_v1.png",
+      "action": "already_migrated",
+      "status": "candidate",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "4394781dcd2670cc27b0d97b6c877f99f32e248405db50435f5ac9788c9bda3e",
+      "derivedFrom": "\u573a\u666f/\u8272\u677f\u53c2\u8003/scene_palette_overview.png",
+      "visualGroup": "visual_4394781dcd",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u8272\u677f\u53c2\u8003/scene_palette_overview.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/scenes_main/variants/bg_battle_ancient_forest_night.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/scenes_main/variants/bg_battle_ancient_forest_night.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "31ce376f234e5afa1b491e00f67bae69da26d770e743f35710c2f3b47eddcb40",
+      "derivedFrom": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_battle_ancient_forest_night.png",
+      "visualGroup": "visual_31ce376f23",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_battle_ancient_forest_night.png"
+    },
+    {
+      "sourcePath": "assets/source/scenes/battle/variants/ancient_forest_sunset_v1_source.png",
+      "suggestedPath": "assets/source/scenes/battle/variants/ancient_forest_sunset_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "69cb9810c715aa155260ad23aa2834c84f49cca675ba7f10c629f20ef819114a",
+      "derivedFrom": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_battle_ancient_forest_sunset.png",
+      "visualGroup": "visual_69cb9810c7",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_battle_ancient_forest_sunset.png"
+    },
+    {
+      "sourcePath": "assets/scenes/battle/ancient_forest_sunset_v1.webp",
+      "suggestedPath": "assets/scenes/battle/ancient_forest_sunset_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [
+        {
+          "file": "\u5e7b\u5883\u6b8b\u5377demo_v0.99.html",
+          "line": 4435,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "risks": [
+        "non_ascii_path"
+      ],
+      "sha256": "5d92b4e856c19b0d33c8ab6ac90eb21f9764d99ca68a91e55a982b8432a8eaee",
+      "derivedFrom": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_battle_ancient_forest_sunset.webp",
+      "visualGroup": "visual_5d92b4e856",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_battle_ancient_forest_sunset.webp"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/scenes_main/variants/bg_battle_mountain_plain_cloudy.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/scenes_main/variants/bg_battle_mountain_plain_cloudy.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "25e92470a5bddec4582185650a48a4aa46fe8b601fde06436b58e483424193c3",
+      "derivedFrom": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_battle_mountain_plain_cloudy.png",
+      "visualGroup": "visual_25e92470a5",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_battle_mountain_plain_cloudy.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/scenes_main/variants/bg_battle_mountain_plain_fog.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/scenes_main/variants/bg_battle_mountain_plain_fog.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "228ea97d16378c293b5bc5b49f5fbe16b62bb9e85d16e5b047436a6438428ef2",
+      "derivedFrom": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_battle_mountain_plain_fog.png",
+      "visualGroup": "visual_228ea97d16",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_battle_mountain_plain_fog.png"
+    },
+    {
+      "sourcePath": "assets/source/scenes/battle/variants/mountain_plain_night_v1_source.png",
+      "suggestedPath": "assets/source/scenes/battle/variants/mountain_plain_night_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "8b9b9c23173f8a17a1156d8c9f4fe9b586312b3baf28ed4bf334fccc6b0874c3",
+      "derivedFrom": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_battle_mountain_plain_night.png",
+      "visualGroup": "visual_8b9b9c2317",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_battle_mountain_plain_night.png"
+    },
+    {
+      "sourcePath": "assets/scenes/battle/mountain_plain_night_v1.webp",
+      "suggestedPath": "assets/scenes/battle/mountain_plain_night_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [
+        {
+          "file": "\u5e7b\u5883\u6b8b\u5377demo_v0.99.html",
+          "line": 4436,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "risks": [
+        "non_ascii_path"
+      ],
+      "sha256": "1e2b7afb0267d9d7052ce4e531dd5f1d12fa8602d5ad8c236ff4a264de1a998c",
+      "derivedFrom": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_battle_mountain_plain_night.webp",
+      "visualGroup": "visual_1e2b7afb02",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_battle_mountain_plain_night.webp"
+    },
+    {
+      "sourcePath": "assets/source/scenes/battle/variants/mountain_plain_rain_v1_source.png",
+      "suggestedPath": "assets/source/scenes/battle/variants/mountain_plain_rain_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "07e97678114031f8a83f184659c618e0fae66617fde9281b00ed3cfc4a1c5468",
+      "derivedFrom": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_battle_mountain_plain_rain.png",
+      "visualGroup": "visual_07e9767811",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_battle_mountain_plain_rain.png"
+    },
+    {
+      "sourcePath": "assets/scenes/battle/mountain_plain_rain_v1.webp",
+      "suggestedPath": "assets/scenes/battle/mountain_plain_rain_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [
+        {
+          "file": "\u5e7b\u5883\u6b8b\u5377demo_v0.99.html",
+          "line": 4441,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "risks": [
+        "non_ascii_path"
+      ],
+      "sha256": "a2665d7e81c4e1ad1ca6f7fb0eb2d6dbdd243351967e2a04ff628cc7f3f7ae1b",
+      "derivedFrom": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_battle_mountain_plain_rain.webp",
+      "visualGroup": "visual_a2665d7e81",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_battle_mountain_plain_rain.webp"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/scenes_main/variants/bg_battle_mountain_plain_sunset.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/scenes_main/variants/bg_battle_mountain_plain_sunset.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "b44fea9e1b6c01d2dc202fa4e1cccaaca08f2c50ebf1c9316b0eb3b07ed3a6ba",
+      "derivedFrom": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_battle_mountain_plain_sunset.png",
+      "visualGroup": "visual_b44fea9e1b",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_battle_mountain_plain_sunset.png"
+    },
+    {
+      "sourcePath": "assets/source/scenes/battle/variants/stone_ruins_night_v1_source.png",
+      "suggestedPath": "assets/source/scenes/battle/variants/stone_ruins_night_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "0968fc1889bf5a77a00951943c789d2eddc9d04d0f6d7ac99caf9466b3cebacc",
+      "derivedFrom": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_battle_stone_ruins_night.png",
+      "visualGroup": "visual_0968fc1889",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_battle_stone_ruins_night.png"
+    },
+    {
+      "sourcePath": "assets/scenes/battle/stone_ruins_night_v1.webp",
+      "suggestedPath": "assets/scenes/battle/stone_ruins_night_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [
+        {
+          "file": "\u5e7b\u5883\u6b8b\u5377demo_v0.99.html",
+          "line": 4447,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "risks": [
+        "non_ascii_path"
+      ],
+      "sha256": "dc9f2fb1bb5ef65d5a5a96b9434de419b9581306417cdacec36b4e9e24d0d68f",
+      "derivedFrom": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_battle_stone_ruins_night.webp",
+      "visualGroup": "visual_dc9f2fb1bb",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_battle_stone_ruins_night.webp"
+    },
+    {
+      "sourcePath": "assets/source/scenes/battle/variants/stone_ruins_sunset_v1_source.png",
+      "suggestedPath": "assets/source/scenes/battle/variants/stone_ruins_sunset_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "d9a9f4601febbd93c30ca8413722027e0e4b27d42a0775b0d4fc9019a55556e4",
+      "derivedFrom": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_battle_stone_ruins_sunset.png",
+      "visualGroup": "visual_d9a9f4601f",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_battle_stone_ruins_sunset.png"
+    },
+    {
+      "sourcePath": "assets/scenes/battle/stone_ruins_sunset_v1.webp",
+      "suggestedPath": "assets/scenes/battle/stone_ruins_sunset_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [
+        {
+          "file": "\u5e7b\u5883\u6b8b\u5377demo_v0.99.html",
+          "line": 4444,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "risks": [
+        "non_ascii_path"
+      ],
+      "sha256": "34cff147434478d6e6993c3298b3523a9c8f034eeec36fbd5bc0e5466763f958",
+      "derivedFrom": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_battle_stone_ruins_sunset.webp",
+      "visualGroup": "visual_34cff14743",
+      "notes": "already migrated; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_battle_stone_ruins_sunset.webp"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/scenes_main/variants/bg_battle_wasteland_day.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/scenes_main/variants/bg_battle_wasteland_day.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "f53ff4d4eb509a19a2473c30ec1dbcfadbd670227ca54352cdc39e9c29de2b6a",
+      "derivedFrom": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_battle_wasteland_day.png",
+      "visualGroup": "visual_f53ff4d4eb",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_battle_wasteland_day.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/scenes_main/variants/bg_battle_wasteland_night.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/scenes_main/variants/bg_battle_wasteland_night.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "3ba4f67c030de21ce6e429beed66ecf42b224b4c7278f43256590125a468bb7e",
+      "derivedFrom": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_battle_wasteland_night.png",
+      "visualGroup": "visual_3ba4f67c03",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_battle_wasteland_night.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/scenes_main/variants/bg_event_town_distant_night.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/scenes_main/variants/bg_event_town_distant_night.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "65026da5bd9e0cca848c7b872f9d004953fdf96d7ae2a5cbd3cb256217a69310",
+      "derivedFrom": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_event_town_distant_night.png",
+      "visualGroup": "visual_65026da5bd",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_event_town_distant_night.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/scenes_main/variants/bg_event_town_distant_sunset.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/scenes_main/variants/bg_event_town_distant_sunset.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "23f8492dfc3cff4f4c4b87c074dd4111a71426d0946d77a89e8eec465f08d02b",
+      "derivedFrom": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_event_town_distant_sunset.png",
+      "visualGroup": "visual_23f8492dfc",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u573a\u666f/\u8272\u8c03\u53d8\u4f53/bg_event_town_distant_sunset.png"
+    }
+  ]
+}

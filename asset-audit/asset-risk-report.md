@@ -9,27 +9,27 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - Referenced assets: 439
 - Active runtime/config assets: 481
 - Unreferenced assets: 791
-- Missing asset-like references: 216
+- Missing asset-like references: 251
 - Missing runtime/config references: 44
-- Duplicate extension groups: 41
+- Duplicate extension groups: 36
 - Identical content groups: 61
 
 ## Status Counts
 
 - active: 481
-- candidate: 128
+- candidate: 129
 - documented: 61
-- legacy: 92
-- source: 270
-- unreferenced: 198
+- legacy: 101
+- source: 287
+- unreferenced: 171
 
 ## Risk Counts
 
 - identical_content: 181
-- long_component: 82
+- long_component: 81
 - multi_module_reference: 63
-- non_ascii_path: 269
-- unreferenced: 259
+- non_ascii_path: 219
+- unreferenced: 232
 
 ## Longest Paths
 
@@ -57,12 +57,12 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - `_preview_新角色一三_带背景卡图.png`
 - `_preview_新角色三.png`
 - `_preview_角色二.png`
-- `场景/分层导视/bg_battle_ancient_forest_day_layer_guide.png`
-- `场景/分层导视/bg_battle_cave_cold_layer_guide.png`
-- `场景/分层导视/bg_battle_dungeon_corridor_torch_layer_guide.png`
-- `场景/分层导视/bg_battle_mountain_plain_day_layer_guide.png`
-- `场景/分层导视/bg_battle_stone_ruins_day_layer_guide.png`
-- `场景/分层导视/bg_battle_temple_hall_grand_layer_guide.png`
+- `头像/头像裁切预览.png`
+- `怪物/contact_latest15.png`
+- `怪物/contact_sheet.png`
+- `怪物/contact_sheet_36.png`
+- `怪物/contact_sheet_60.png`
+- `怪物/动作关键帧/【深渊主宰】/attack_hit_front.png`
 
 ## Unreferenced Examples
 
@@ -97,35 +97,35 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 ## Missing References
 
 - `../概念图/02_教堂彩窗_赛璐璐融合方向图.png` in `UI/教堂彩窗赛璐璐/战斗HUD/README.md:6`
-- `UI/教堂彩窗赛璐璐/战斗HUD/五段能量表_空槽_v2.png` in `demo更改需求文档.txt:450`
-- `UI/教堂彩窗赛璐璐/战斗HUD/单格能量晶片_点亮_v2.png` in `demo更改需求文档.txt:451`
-- `UI/教堂彩窗赛璐璐/战斗HUD/我方铭牌_v1.png` in `demo更改需求文档.txt:445`
-- `UI/教堂彩窗赛璐璐/战斗HUD/护盾条填充_v2.png` in `demo更改需求文档.txt:449`
-- `UI/教堂彩窗赛璐璐/战斗HUD/敌方铭牌_v1.png` in `demo更改需求文档.txt:446`
-- `UI/教堂彩窗赛璐璐/战斗HUD/生命条填充_v2.png` in `demo更改需求文档.txt:448`
-- `UI/教堂彩窗赛璐璐/战斗HUD/通用条框_v1.png` in `demo更改需求文档.txt:447`
-- `_asset_v1.png` in `UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/README.md:10`
-- `_asset_v1.webp` in `幻境残卷demo_v0.99.html:3872`
-- `_battle_v1.webp` in `幻境残卷demo_v0.99.html:4425`
-- `_clean_v1.png` in `UI/教堂彩窗赛璐璐/战斗HUD/README.md:132`
-- `_icon_v1.webp` in `assets/relics/README.md:9`
-- `_icon_v1.webp` in `幻境残卷demo_v0.99.html:3119`
-- `_master_v1.webp` in `assets/relics/README.md:14`
-- `_portrait_v1.webp` in `幻境残卷demo_v0.99.html:4430`
-- `assets/bg/battle/ancient_forest.jpg` in `demo更改需求文档.txt:509`
-- `assets/bg/battle/ruins_hall.jpg` in `demo更改需求文档.txt:514`
-- `assets/characters/enemies/slime/front_attack.png` in `demo更改需求文档.txt:478`
-- `assets/characters/enemies/slime/front_hurt.png` in `demo更改需求文档.txt:480`
-- `assets/characters/enemies/slime/front_idle.png` in `demo更改需求文档.txt:477`
-- `assets/characters/enemies/slime/front_skill.png` in `demo更改需求文档.txt:479`
-- `assets/characters/warrior/back_attack.png` in `demo更改需求文档.txt:467`
-- `assets/characters/warrior/back_hurt.png` in `demo更改需求文档.txt:469`
-- `assets/characters/warrior/back_idle.png` in `demo更改需求文档.txt:367`
-- `assets/characters/warrior/back_idle.png` in `demo更改需求文档.txt:466`
-- `assets/characters/warrior/back_skill.png` in `demo更改需求文档.txt:468`
-- `assets/characters/warrior/select.png` in `demo更改需求文档.txt:366`
-- `avatar_circle_gray_base_asset_v1.png` in `hud_layout_editor.html:2202`
-- `avatar_circle_gray_base_asset_v1.png` in `hud_layout_editor.html:2219`
+- `/Users/chi/Desktop/幻境残卷/场景/分层导视/bg_battle_ancient_forest_day_layer_guide.png` in `场景/资产清单.txt:21`
+- `/Users/chi/Desktop/幻境残卷/场景/分层导视/bg_battle_cave_cold_layer_guide.png` in `场景/资产清单.txt:31`
+- `/Users/chi/Desktop/幻境残卷/场景/分层导视/bg_battle_dungeon_corridor_torch_layer_guide.png` in `场景/资产清单.txt:34`
+- `/Users/chi/Desktop/幻境残卷/场景/分层导视/bg_battle_mountain_plain_day_layer_guide.png` in `场景/资产清单.txt:13`
+- `/Users/chi/Desktop/幻境残卷/场景/分层导视/bg_battle_stone_ruins_day_layer_guide.png` in `场景/资产清单.txt:37`
+- `/Users/chi/Desktop/幻境残卷/场景/分层导视/bg_battle_temple_hall_grand_layer_guide.png` in `场景/资产清单.txt:50`
+- `/Users/chi/Desktop/幻境残卷/场景/分层导视/bg_battle_temple_inner_light_layer_guide.png` in `场景/资产清单.txt:42`
+- `/Users/chi/Desktop/幻境残卷/场景/分层导视/bg_battle_wasteland_dusk_layer_guide.png` in `场景/资产清单.txt:26`
+- `/Users/chi/Desktop/幻境残卷/场景/分层导视/bg_event_town_distant_day_layer_guide.png` in `场景/资产清单.txt:45`
+- `/Users/chi/Desktop/幻境残卷/场景/分层导视/bg_mountain_plain_far.png` in `场景/资产清单.txt:51`
+- `/Users/chi/Desktop/幻境残卷/场景/分层导视/bg_mountain_plain_front.png` in `场景/资产清单.txt:53`
+- `/Users/chi/Desktop/幻境残卷/场景/分层导视/bg_mountain_plain_mid.png` in `场景/资产清单.txt:52`
+- `/Users/chi/Desktop/幻境残卷/场景/战斗预览/bg_battle_ancient_forest_day_battle_preview.png` in `场景/资产清单.txt:20`
+- `/Users/chi/Desktop/幻境残卷/场景/战斗预览/bg_battle_cave_cold_battle_preview.png` in `场景/资产清单.txt:30`
+- `/Users/chi/Desktop/幻境残卷/场景/战斗预览/bg_battle_dungeon_corridor_torch_battle_preview.png` in `场景/资产清单.txt:33`
+- `/Users/chi/Desktop/幻境残卷/场景/战斗预览/bg_battle_mountain_plain_day_battle_preview.png` in `场景/资产清单.txt:12`
+- `/Users/chi/Desktop/幻境残卷/场景/战斗预览/bg_battle_stone_ruins_day_battle_preview.png` in `场景/资产清单.txt:36`
+- `/Users/chi/Desktop/幻境残卷/场景/战斗预览/bg_battle_temple_hall_grand_battle_preview.png` in `场景/资产清单.txt:49`
+- `/Users/chi/Desktop/幻境残卷/场景/战斗预览/bg_battle_temple_inner_light_battle_preview.png` in `场景/资产清单.txt:41`
+- `/Users/chi/Desktop/幻境残卷/场景/战斗预览/bg_battle_wasteland_dusk_battle_preview.png` in `场景/资产清单.txt:25`
+- `/Users/chi/Desktop/幻境残卷/场景/战斗预览/bg_event_town_distant_day_battle_preview.png` in `场景/资产清单.txt:44`
+- `/Users/chi/Desktop/幻境残卷/场景/色板参考/scene_palette_overview.png` in `场景/资产清单.txt:54`
+- `/Users/chi/Desktop/幻境残卷/场景/色调变体/bg_battle_ancient_forest_night.png` in `场景/资产清单.txt:23`
+- `/Users/chi/Desktop/幻境残卷/场景/色调变体/bg_battle_ancient_forest_sunset.png` in `场景/资产清单.txt:22`
+- `/Users/chi/Desktop/幻境残卷/场景/色调变体/bg_battle_mountain_plain_cloudy.png` in `场景/资产清单.txt:16`
+- `/Users/chi/Desktop/幻境残卷/场景/色调变体/bg_battle_mountain_plain_fog.png` in `场景/资产清单.txt:18`
+- `/Users/chi/Desktop/幻境残卷/场景/色调变体/bg_battle_mountain_plain_night.png` in `场景/资产清单.txt:15`
+- `/Users/chi/Desktop/幻境残卷/场景/色调变体/bg_battle_mountain_plain_rain.png` in `场景/资产清单.txt:17`
+- `/Users/chi/Desktop/幻境残卷/场景/色调变体/bg_battle_mountain_plain_sunset.png` in `场景/资产清单.txt:14`
 
 ## First Migration Candidates
 
@@ -135,7 +135,6 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - `assets/cards/art/mage`: 11 active risky assets
 - `assets/cards/art/warrior`: 11 active risky assets
 - `assets/cards/art/archer`: 9 active risky assets
-- `assets/scenes/battle/variants`: 5 active risky assets
 - `assets/ui/hud/review`: 5 active risky assets
 
 ## Notes

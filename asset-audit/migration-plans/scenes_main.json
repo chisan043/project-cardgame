@@ -17,16 +17,17 @@
     "Do not archive unreferenced assets until active migration validation passes."
   ],
   "summary": {
-    "assetCount": 18,
+    "assetCount": 46,
     "statusCounts": {
-      "active": 15,
-      "source": 3
+      "active": 20,
+      "source": 26
     },
     "actionCounts": {
-      "already_migrated": 18
+      "already_migrated": 46
     },
     "trackedCounts": {
-      "tracked": 18
+      "tracked": 18,
+      "untracked": 28
     },
     "duplicateExtensionGroupCount": 6
   },
@@ -95,25 +96,25 @@
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4407,
-          "module": "demo",
-          "kind": "runtime"
-        },
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 4411,
-          "module": "demo",
-          "kind": "runtime"
-        },
-        {
-          "file": "幻境残卷demo_v0.99.html",
           "line": 4434,
           "module": "demo",
           "kind": "runtime"
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4736,
+          "line": 4438,
+          "module": "demo",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 4461,
+          "module": "demo",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 4763,
           "module": "demo",
           "kind": "runtime"
         }
@@ -129,6 +130,29 @@
       "derivedFrom": "assets/scenes/battle/ancient_forest_day_v1.webp",
       "visualGroup": "visual_a6f0d83d7d",
       "notes": "runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/scenes/battle/ancient_forest_sunset_v1.webp",
+      "suggestedPath": "assets/scenes/battle/ancient_forest_sunset_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 4435,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "risks": [],
+      "sha256": "5d92b4e856c19b0d33c8ab6ac90eb21f9764d99ca68a91e55a982b8432a8eaee",
+      "derivedFrom": "assets/scenes/battle/ancient_forest_sunset_v1.webp",
+      "visualGroup": "visual_5d92b4e856",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
     },
     {
       "sourcePath": "assets/scenes/battle/cave_cold_v1.png",
@@ -164,19 +188,19 @@
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4412,
+          "line": 4439,
           "module": "demo",
           "kind": "runtime"
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4413,
+          "line": 4440,
           "module": "demo",
           "kind": "runtime"
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4781,
+          "line": 4808,
           "module": "demo",
           "kind": "runtime"
         }
@@ -205,13 +229,13 @@
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4415,
+          "line": 4442,
           "module": "demo",
           "kind": "runtime"
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4421,
+          "line": 4448,
           "module": "demo",
           "kind": "runtime"
         }
@@ -259,19 +283,19 @@
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4410,
+          "line": 4437,
           "module": "demo",
           "kind": "runtime"
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4724,
+          "line": 4751,
           "module": "demo",
           "kind": "runtime"
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4763,
+          "line": 4790,
           "module": "demo",
           "kind": "runtime"
         }
@@ -284,6 +308,52 @@
       "derivedFrom": "assets/scenes/battle/mountain_plain_day_v1.webp",
       "visualGroup": "visual_1951276e53",
       "notes": "runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/scenes/battle/mountain_plain_night_v1.webp",
+      "suggestedPath": "assets/scenes/battle/mountain_plain_night_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 4436,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "risks": [],
+      "sha256": "1e2b7afb0267d9d7052ce4e531dd5f1d12fa8602d5ad8c236ff4a264de1a998c",
+      "derivedFrom": "assets/scenes/battle/mountain_plain_night_v1.webp",
+      "visualGroup": "visual_1e2b7afb02",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/scenes/battle/mountain_plain_rain_v1.webp",
+      "suggestedPath": "assets/scenes/battle/mountain_plain_rain_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 4441,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "risks": [],
+      "sha256": "a2665d7e81c4e1ad1ca6f7fb0eb2d6dbdd243351967e2a04ff628cc7f3f7ae1b",
+      "derivedFrom": "assets/scenes/battle/mountain_plain_rain_v1.webp",
+      "visualGroup": "visual_a2665d7e81",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
     },
     {
       "sourcePath": "assets/scenes/battle/stone_ruins_day_v1.png",
@@ -325,19 +395,19 @@
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4416,
-          "module": "demo",
-          "kind": "runtime"
-        },
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 4742,
+          "line": 4443,
           "module": "demo",
           "kind": "runtime"
         },
         {
           "file": "幻境残卷demo_v0.99.html",
           "line": 4769,
+          "module": "demo",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 4796,
           "module": "demo",
           "kind": "runtime"
         }
@@ -350,6 +420,52 @@
       "derivedFrom": "assets/scenes/battle/stone_ruins_day_v1.webp",
       "visualGroup": "visual_21e2c1cbd7",
       "notes": "runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/scenes/battle/stone_ruins_night_v1.webp",
+      "suggestedPath": "assets/scenes/battle/stone_ruins_night_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 4447,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "risks": [],
+      "sha256": "dc9f2fb1bb5ef65d5a5a96b9434de419b9581306417cdacec36b4e9e24d0d68f",
+      "derivedFrom": "assets/scenes/battle/stone_ruins_night_v1.webp",
+      "visualGroup": "visual_dc9f2fb1bb",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/scenes/battle/stone_ruins_sunset_v1.webp",
+      "suggestedPath": "assets/scenes/battle/stone_ruins_sunset_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": false,
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 4444,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "risks": [],
+      "sha256": "34cff147434478d6e6993c3298b3523a9c8f034eeec36fbd5bc0e5466763f958",
+      "derivedFrom": "assets/scenes/battle/stone_ruins_sunset_v1.webp",
+      "visualGroup": "visual_34cff14743",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
     },
     {
       "sourcePath": "assets/scenes/battle/temple_hall_grand_v1.png",
@@ -391,31 +507,31 @@
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4423,
+          "line": 4450,
           "module": "demo",
           "kind": "runtime"
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4424,
+          "line": 4451,
           "module": "demo",
           "kind": "runtime"
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4425,
+          "line": 4452,
           "module": "demo",
           "kind": "runtime"
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4730,
+          "line": 4757,
           "module": "demo",
           "kind": "runtime"
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4748,
+          "line": 4775,
           "module": "demo",
           "kind": "runtime"
         }
@@ -438,13 +554,13 @@
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4418,
+          "line": 4445,
           "module": "demo",
           "kind": "runtime"
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4426,
+          "line": 4453,
           "module": "demo",
           "kind": "runtime"
         }
@@ -492,19 +608,19 @@
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4419,
+          "line": 4446,
           "module": "demo",
           "kind": "runtime"
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4422,
+          "line": 4449,
           "module": "demo",
           "kind": "runtime"
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4775,
+          "line": 4802,
           "module": "demo",
           "kind": "runtime"
         }
@@ -533,7 +649,7 @@
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4754,
+          "line": 4781,
           "module": "demo",
           "kind": "runtime"
         }
@@ -546,6 +662,38 @@
       "derivedFrom": "assets/scenes/event/town_distant_day_v1.webp",
       "visualGroup": "visual_1a55d19ee1",
       "notes": "runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/source/scenes/battle/ancient_forest_day_v1_source.png",
+      "suggestedPath": "assets/source/scenes/battle/ancient_forest_day_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "identical_content"
+      ],
+      "sha256": "e122084cfb4eae131b92c37d63c5ec3f246f1d3b85059e95df96f4ac9d11fd60",
+      "derivedFrom": "assets/source/scenes/battle/ancient_forest_day_v1_source.png",
+      "visualGroup": "visual_e122084cfb",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
+      "sourcePath": "assets/source/scenes/battle/cave_cold_v1_source.png",
+      "suggestedPath": "assets/source/scenes/battle/cave_cold_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "identical_content"
+      ],
+      "sha256": "6d9cecc7bedf2dbaafbace23528965518c4ef64efd6ee09253f470814b861486",
+      "derivedFrom": "assets/source/scenes/battle/cave_cold_v1_source.png",
+      "visualGroup": "visual_6d9cecc7be",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
     },
     {
       "sourcePath": "assets/source/scenes/battle/dungeon_corridor_torch_v1_source.png",
@@ -564,6 +712,54 @@
       "notes": "review before migration"
     },
     {
+      "sourcePath": "assets/source/scenes/battle/mountain_plain_day_v1_source.png",
+      "suggestedPath": "assets/source/scenes/battle/mountain_plain_day_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "identical_content"
+      ],
+      "sha256": "e0c067a6247d20c76e8f92e15f387018eec4b2cc85525dd5ce3e2849e5612ef3",
+      "derivedFrom": "assets/source/scenes/battle/mountain_plain_day_v1_source.png",
+      "visualGroup": "visual_e0c067a624",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
+      "sourcePath": "assets/source/scenes/battle/stone_ruins_day_v1_source.png",
+      "suggestedPath": "assets/source/scenes/battle/stone_ruins_day_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "identical_content"
+      ],
+      "sha256": "223d5dad541c9e21cd90cb6497c851961fbb2ac570c4d1d419c99b67e73ffded",
+      "derivedFrom": "assets/source/scenes/battle/stone_ruins_day_v1_source.png",
+      "visualGroup": "visual_223d5dad54",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
+      "sourcePath": "assets/source/scenes/battle/temple_hall_grand_v1_source.png",
+      "suggestedPath": "assets/source/scenes/battle/temple_hall_grand_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "identical_content"
+      ],
+      "sha256": "b63f68c3d9e89e37eb9275ba0d5284fe320562c41c7b467f32639a0690c14552",
+      "derivedFrom": "assets/source/scenes/battle/temple_hall_grand_v1_source.png",
+      "visualGroup": "visual_b63f68c3d9",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
       "sourcePath": "assets/source/scenes/battle/temple_inner_light_v1_source.png",
       "suggestedPath": "assets/source/scenes/battle/temple_inner_light_v1_source.png",
       "action": "already_migrated",
@@ -580,6 +776,92 @@
       "notes": "review before migration"
     },
     {
+      "sourcePath": "assets/source/scenes/battle/variants/ancient_forest_sunset_v1_source.png",
+      "suggestedPath": "assets/source/scenes/battle/variants/ancient_forest_sunset_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "69cb9810c715aa155260ad23aa2834c84f49cca675ba7f10c629f20ef819114a",
+      "derivedFrom": "assets/source/scenes/battle/variants/ancient_forest_sunset_v1_source.png",
+      "visualGroup": "visual_69cb9810c7",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
+      "sourcePath": "assets/source/scenes/battle/variants/mountain_plain_night_v1_source.png",
+      "suggestedPath": "assets/source/scenes/battle/variants/mountain_plain_night_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "8b9b9c23173f8a17a1156d8c9f4fe9b586312b3baf28ed4bf334fccc6b0874c3",
+      "derivedFrom": "assets/source/scenes/battle/variants/mountain_plain_night_v1_source.png",
+      "visualGroup": "visual_8b9b9c2317",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
+      "sourcePath": "assets/source/scenes/battle/variants/mountain_plain_rain_v1_source.png",
+      "suggestedPath": "assets/source/scenes/battle/variants/mountain_plain_rain_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "07e97678114031f8a83f184659c618e0fae66617fde9281b00ed3cfc4a1c5468",
+      "derivedFrom": "assets/source/scenes/battle/variants/mountain_plain_rain_v1_source.png",
+      "visualGroup": "visual_07e9767811",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
+      "sourcePath": "assets/source/scenes/battle/variants/stone_ruins_night_v1_source.png",
+      "suggestedPath": "assets/source/scenes/battle/variants/stone_ruins_night_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "0968fc1889bf5a77a00951943c789d2eddc9d04d0f6d7ac99caf9466b3cebacc",
+      "derivedFrom": "assets/source/scenes/battle/variants/stone_ruins_night_v1_source.png",
+      "visualGroup": "visual_0968fc1889",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
+      "sourcePath": "assets/source/scenes/battle/variants/stone_ruins_sunset_v1_source.png",
+      "suggestedPath": "assets/source/scenes/battle/variants/stone_ruins_sunset_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "d9a9f4601febbd93c30ca8413722027e0e4b27d42a0775b0d4fc9019a55556e4",
+      "derivedFrom": "assets/source/scenes/battle/variants/stone_ruins_sunset_v1_source.png",
+      "visualGroup": "visual_d9a9f4601f",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
+      "sourcePath": "assets/source/scenes/battle/wasteland_dusk_v1_source.png",
+      "suggestedPath": "assets/source/scenes/battle/wasteland_dusk_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "identical_content"
+      ],
+      "sha256": "81bfee3250aec4449bd0bf232262a524e0e450ef6dcfe6dc29b4a7d8dec0de77",
+      "derivedFrom": "assets/source/scenes/battle/wasteland_dusk_v1_source.png",
+      "visualGroup": "visual_81bfee3250",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
       "sourcePath": "assets/source/scenes/event/town_distant_day_v1_source.png",
       "suggestedPath": "assets/source/scenes/event/town_distant_day_v1_source.png",
       "action": "already_migrated",
@@ -594,6 +876,174 @@
       "derivedFrom": "assets/source/scenes/event/town_distant_day_v1_source.png",
       "visualGroup": "visual_5c17af2391",
       "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/scenes/layer_guides/battle/ancient_forest_day_layer_guide_v1.png",
+      "suggestedPath": "assets/source/scenes/layer_guides/battle/ancient_forest_day_layer_guide_v1.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "df25a2efbe523659c01bbb64e55ae26d42ec4189c87bd08247068d7151624a57",
+      "derivedFrom": "assets/source/scenes/layer_guides/battle/ancient_forest_day_layer_guide_v1.png",
+      "visualGroup": "visual_df25a2efbe",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
+      "sourcePath": "assets/source/scenes/layer_guides/battle/cave_cold_layer_guide_v1.png",
+      "suggestedPath": "assets/source/scenes/layer_guides/battle/cave_cold_layer_guide_v1.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "85177b034838269751cef158a214b9d6d891556ac1c72e42ce6eb22b7db059a2",
+      "derivedFrom": "assets/source/scenes/layer_guides/battle/cave_cold_layer_guide_v1.png",
+      "visualGroup": "visual_85177b0348",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
+      "sourcePath": "assets/source/scenes/layer_guides/battle/dungeon_corridor_torch_layer_guide_v1.png",
+      "suggestedPath": "assets/source/scenes/layer_guides/battle/dungeon_corridor_torch_layer_guide_v1.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "64a7c63bda786a414c36d2ed8c00cffbd995d1d6cb94baa8243d434b3d877b8b",
+      "derivedFrom": "assets/source/scenes/layer_guides/battle/dungeon_corridor_torch_layer_guide_v1.png",
+      "visualGroup": "visual_64a7c63bda",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
+      "sourcePath": "assets/source/scenes/layer_guides/battle/mountain_plain_day_layer_guide_v1.png",
+      "suggestedPath": "assets/source/scenes/layer_guides/battle/mountain_plain_day_layer_guide_v1.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "5e856b6cd4c384156ba1578ae89ae5374f68008ae0b9fcb719a947da65501f18",
+      "derivedFrom": "assets/source/scenes/layer_guides/battle/mountain_plain_day_layer_guide_v1.png",
+      "visualGroup": "visual_5e856b6cd4",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
+      "sourcePath": "assets/source/scenes/layer_guides/battle/stone_ruins_day_layer_guide_v1.png",
+      "suggestedPath": "assets/source/scenes/layer_guides/battle/stone_ruins_day_layer_guide_v1.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "a0ff4a3afb12226b46dd7fc23e33729434c1bc335987a0d04cbd57e98bc82304",
+      "derivedFrom": "assets/source/scenes/layer_guides/battle/stone_ruins_day_layer_guide_v1.png",
+      "visualGroup": "visual_a0ff4a3afb",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
+      "sourcePath": "assets/source/scenes/layer_guides/battle/temple_hall_grand_layer_guide_v1.png",
+      "suggestedPath": "assets/source/scenes/layer_guides/battle/temple_hall_grand_layer_guide_v1.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "53b91aef262c203d4aa1480dfcdeff3767f76fc32fdac65297492de04da401ef",
+      "derivedFrom": "assets/source/scenes/layer_guides/battle/temple_hall_grand_layer_guide_v1.png",
+      "visualGroup": "visual_53b91aef26",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
+      "sourcePath": "assets/source/scenes/layer_guides/battle/temple_inner_light_layer_guide_v1.png",
+      "suggestedPath": "assets/source/scenes/layer_guides/battle/temple_inner_light_layer_guide_v1.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "a6aea6c5024a0eab26f60cd312cf0cb423e548fa5418c1dcbe6fe97af603e5a5",
+      "derivedFrom": "assets/source/scenes/layer_guides/battle/temple_inner_light_layer_guide_v1.png",
+      "visualGroup": "visual_a6aea6c502",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
+      "sourcePath": "assets/source/scenes/layer_guides/battle/wasteland_dusk_layer_guide_v1.png",
+      "suggestedPath": "assets/source/scenes/layer_guides/battle/wasteland_dusk_layer_guide_v1.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "c38d8cd6398ebf1053438c9524269fd9237141295a13c19470ede4ab6237f7b7",
+      "derivedFrom": "assets/source/scenes/layer_guides/battle/wasteland_dusk_layer_guide_v1.png",
+      "visualGroup": "visual_c38d8cd639",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
+      "sourcePath": "assets/source/scenes/layer_guides/event/town_distant_day_layer_guide_v1.png",
+      "suggestedPath": "assets/source/scenes/layer_guides/event/town_distant_day_layer_guide_v1.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "79ff22c31f39012cf3bc9d0a61a8228fd0f4c740a4327bd6800e98d3ff8c7beb",
+      "derivedFrom": "assets/source/scenes/layer_guides/event/town_distant_day_layer_guide_v1.png",
+      "visualGroup": "visual_79ff22c31f",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
+      "sourcePath": "assets/source/scenes/layer_guides/review/mountain_plain_far_v1.png",
+      "suggestedPath": "assets/source/scenes/layer_guides/review/mountain_plain_far_v1.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "f8fd3c14adcada68bf6c7fa351b133934e6f78baff9bd6e8d6a414d720f88c0b",
+      "derivedFrom": "assets/source/scenes/layer_guides/review/mountain_plain_far_v1.png",
+      "visualGroup": "visual_f8fd3c14ad",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
+      "sourcePath": "assets/source/scenes/layer_guides/review/mountain_plain_front_v1.png",
+      "suggestedPath": "assets/source/scenes/layer_guides/review/mountain_plain_front_v1.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "40e0a07f662fe5584aaf33077c82f1d9158d5f038f8db752fa8f0509c994cdfe",
+      "derivedFrom": "assets/source/scenes/layer_guides/review/mountain_plain_front_v1.png",
+      "visualGroup": "visual_40e0a07f66",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
+      "sourcePath": "assets/source/scenes/layer_guides/review/mountain_plain_mid_v1.png",
+      "suggestedPath": "assets/source/scenes/layer_guides/review/mountain_plain_mid_v1.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "5bfe8cde3d707a3731041446440d9473f2f1cfed54f5f12bfb588ec14a4375f0",
+      "derivedFrom": "assets/source/scenes/layer_guides/review/mountain_plain_mid_v1.png",
+      "visualGroup": "visual_5bfe8cde3d",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
     }
   ],
   "duplicateExtensionGroups": [

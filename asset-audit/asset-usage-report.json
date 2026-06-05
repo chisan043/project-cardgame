@@ -26,22 +26,22 @@
     "referencedAssetCount": 439,
     "activeAssetCount": 481,
     "unreferencedAssetCount": 791,
-    "missingReferenceCount": 216,
+    "missingReferenceCount": 251,
     "missingRuntimeReferenceCount": 44,
     "statusCounts": {
       "active": 481,
-      "candidate": 128,
+      "candidate": 129,
       "documented": 61,
-      "legacy": 92,
-      "source": 270,
-      "unreferenced": 198
+      "legacy": 101,
+      "source": 287,
+      "unreferenced": 171
     },
     "riskCounts": {
       "identical_content": 181,
-      "long_component": 82,
+      "long_component": 81,
       "multi_module_reference": 63,
-      "non_ascii_path": 269,
-      "unreferenced": 259
+      "non_ascii_path": 219,
+      "unreferenced": 232
     },
     "referenceModuleCounts": {
       "cards": 178,
@@ -52,7 +52,7 @@
       "relics": 45,
       "ui.hud": 67
     },
-    "duplicateExtensionGroupCount": 41,
+    "duplicateExtensionGroupCount": 36,
     "identicalContentGroupCount": 61
   },
   "assets": [
@@ -360,6 +360,189 @@
       "referenceModules": [],
       "pathLength": 98,
       "maxComponentLength": 39,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/scenes_main/duplicate_sources/dungeon_corridor_torch_v1_source.png",
+      "extension": ".png",
+      "bytes": 2585907,
+      "sha256": "6f2d8a8a0a884357d4fb2d23b2261d13bfc71eab3faae624472a42a9adbff6a5",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 99,
+      "maxComponentLength": 36,
+      "containsNonAscii": false,
+      "risks": [
+        "identical_content"
+      ],
+      "identicalContentGroup": [
+        "assets/archive/unused/2026-06-05/scenes_main/duplicate_sources/dungeon_corridor_torch_v1_source.png",
+        "assets/source/scenes/battle/dungeon_corridor_torch_v1_source.png"
+      ]
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/scenes_main/duplicate_sources/temple_inner_light_v1_source.png",
+      "extension": ".png",
+      "bytes": 2623927,
+      "sha256": "e0a5d80da192423821927f21530bbcf684d62dcf3c8c8b09067c6181c9333df0",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 95,
+      "maxComponentLength": 32,
+      "containsNonAscii": false,
+      "risks": [
+        "identical_content"
+      ],
+      "identicalContentGroup": [
+        "assets/archive/unused/2026-06-05/scenes_main/duplicate_sources/temple_inner_light_v1_source.png",
+        "assets/source/scenes/battle/temple_inner_light_v1_source.png"
+      ]
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/scenes_main/duplicate_sources/town_distant_day_v1_source.png",
+      "extension": ".png",
+      "bytes": 3028635,
+      "sha256": "5c17af2391e086dddf49a05703e04bb7e839ecae6f00a298f935eeec8de3a727",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 93,
+      "maxComponentLength": 30,
+      "containsNonAscii": false,
+      "risks": [
+        "identical_content"
+      ],
+      "identicalContentGroup": [
+        "assets/archive/unused/2026-06-05/scenes_main/duplicate_sources/town_distant_day_v1_source.png",
+        "assets/source/scenes/event/town_distant_day_v1_source.png"
+      ]
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/scenes_main/review/scene_overview.png",
+      "extension": ".png",
+      "bytes": 2956266,
+      "sha256": "dc4c99d93c58e1918f8547acd720a0fac138b7efdb5e925fd51e2d62ac8e5412",
+      "status": "legacy",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 70,
+      "maxComponentLength": 18,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/scenes_main/variants/bg_battle_ancient_forest_night.png",
+      "extension": ".png",
+      "bytes": 1901740,
+      "sha256": "31ce376f234e5afa1b491e00f67bae69da26d770e743f35710c2f3b47eddcb40",
+      "status": "legacy",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 88,
+      "maxComponentLength": 34,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/scenes_main/variants/bg_battle_mountain_plain_cloudy.png",
+      "extension": ".png",
+      "bytes": 2786260,
+      "sha256": "25e92470a5bddec4582185650a48a4aa46fe8b601fde06436b58e483424193c3",
+      "status": "legacy",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 89,
+      "maxComponentLength": 35,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/scenes_main/variants/bg_battle_mountain_plain_fog.png",
+      "extension": ".png",
+      "bytes": 2491745,
+      "sha256": "228ea97d16378c293b5bc5b49f5fbe16b62bb9e85d16e5b047436a6438428ef2",
+      "status": "legacy",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 86,
+      "maxComponentLength": 32,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/scenes_main/variants/bg_battle_mountain_plain_sunset.png",
+      "extension": ".png",
+      "bytes": 2388335,
+      "sha256": "b44fea9e1b6c01d2dc202fa4e1cccaaca08f2c50ebf1c9316b0eb3b07ed3a6ba",
+      "status": "legacy",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 89,
+      "maxComponentLength": 35,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/scenes_main/variants/bg_battle_wasteland_day.png",
+      "extension": ".png",
+      "bytes": 2499326,
+      "sha256": "f53ff4d4eb509a19a2473c30ec1dbcfadbd670227ca54352cdc39e9c29de2b6a",
+      "status": "legacy",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 81,
+      "maxComponentLength": 27,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/scenes_main/variants/bg_battle_wasteland_night.png",
+      "extension": ".png",
+      "bytes": 1638115,
+      "sha256": "3ba4f67c030de21ce6e429beed66ecf42b224b4c7278f43256590125a468bb7e",
+      "status": "legacy",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 83,
+      "maxComponentLength": 29,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/scenes_main/variants/bg_event_town_distant_night.png",
+      "extension": ".png",
+      "bytes": 1889634,
+      "sha256": "65026da5bd9e0cca848c7b872f9d004953fdf96d7ae2a5cbd3cb256217a69310",
+      "status": "legacy",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 85,
+      "maxComponentLength": 31,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/scenes_main/variants/bg_event_town_distant_sunset.png",
+      "extension": ".png",
+      "bytes": 2402544,
+      "sha256": "23f8492dfc3cff4f4c4b87c074dd4111a71426d0946d77a89e8eec465f08d02b",
+      "status": "legacy",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 86,
+      "maxComponentLength": 32,
       "containsNonAscii": false,
       "risks": [],
       "identicalContentGroup": []
@@ -2067,6 +2250,146 @@
       "referenceModules": [],
       "pathLength": 58,
       "maxComponentLength": 33,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/scenes/battle_previews/ancient_forest_day_preview_v1.png",
+      "extension": ".png",
+      "bytes": 2964316,
+      "sha256": "5c93230332d88dc0502353fc75dda801e0139d7988ce85e02c8a03939acb9c47",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 74,
+      "maxComponentLength": 33,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/scenes/battle_previews/cave_cold_preview_v1.png",
+      "extension": ".png",
+      "bytes": 2575615,
+      "sha256": "feedbf2efcd21bda2097e0e3c697362ba43ba72c062a94d08f36e08db7ff6b7a",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 65,
+      "maxComponentLength": 24,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/scenes/battle_previews/dungeon_corridor_torch_preview_v1.png",
+      "extension": ".png",
+      "bytes": 2526147,
+      "sha256": "6136b79facf8102d9c1be5511cc68c48fa8b099db7540bd98e89429094cd37d3",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 78,
+      "maxComponentLength": 37,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/scenes/battle_previews/mountain_plain_day_preview_v1.png",
+      "extension": ".png",
+      "bytes": 2941171,
+      "sha256": "cccf278ee24062ae785fc7de9a76a79961547df9c867ef37c4c1748e48ef99da",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 74,
+      "maxComponentLength": 33,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/scenes/battle_previews/stone_ruins_day_preview_v1.png",
+      "extension": ".png",
+      "bytes": 3183029,
+      "sha256": "4b91b270d8e5c0f5c77c1e636ae480734b715fdf6238941ab30525c147def798",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 71,
+      "maxComponentLength": 30,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/scenes/battle_previews/temple_hall_grand_preview_v1.png",
+      "extension": ".png",
+      "bytes": 2732288,
+      "sha256": "00a6d1bea5d4f952f12a56a765a36624c172199b9c13c7973c75263e9a1b12ed",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 73,
+      "maxComponentLength": 32,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/scenes/battle_previews/temple_inner_light_preview_v1.png",
+      "extension": ".png",
+      "bytes": 2558171,
+      "sha256": "faaa3d1f618dd771faa2de98078644e1a40183f44045f425817fb5b0b1407246",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 74,
+      "maxComponentLength": 33,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/scenes/battle_previews/wasteland_dusk_preview_v1.png",
+      "extension": ".png",
+      "bytes": 2665057,
+      "sha256": "e45725b6d9c8ecddead69fc2f03e596593554040ecf5f49bf5af4dd53ff7d7ea",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 70,
+      "maxComponentLength": 29,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/scenes/event_previews/town_distant_day_preview_v1.png",
+      "extension": ".png",
+      "bytes": 2947175,
+      "sha256": "b8eb3bcddcdb533f8235bfe44f3c47ae57041a4233a9e824421f7ca74ee97fcf",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 71,
+      "maxComponentLength": 31,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/scenes/review/scene_palette_overview_v1.png",
+      "extension": ".png",
+      "bytes": 1553056,
+      "sha256": "4394781dcd2670cc27b0d97b6c877f99f32e248405db50435f5ac9788c9bda3e",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 61,
+      "maxComponentLength": 29,
       "containsNonAscii": false,
       "risks": [],
       "identicalContentGroup": []
@@ -11814,7 +12137,7 @@
       ],
       "identicalContentGroup": [
         "assets/scenes/battle/ancient_forest_day_v1.png",
-        "场景/源图/bg_battle_ancient_forest_day_source.png"
+        "assets/source/scenes/battle/ancient_forest_day_v1_source.png"
       ]
     },
     {
@@ -11886,6 +12209,29 @@
       "identicalContentGroup": []
     },
     {
+      "path": "assets/scenes/battle/ancient_forest_sunset_v1.webp",
+      "extension": ".webp",
+      "bytes": 138832,
+      "sha256": "5d92b4e856c19b0d33c8ab6ac90eb21f9764d99ca68a91e55a982b8432a8eaee",
+      "status": "active",
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 4435,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "pathLength": 50,
+      "maxComponentLength": 29,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
       "path": "assets/scenes/battle/cave_cold_v1.png",
       "extension": ".png",
       "bytes": 2639165,
@@ -11910,7 +12256,7 @@
       ],
       "identicalContentGroup": [
         "assets/scenes/battle/cave_cold_v1.png",
-        "场景/源图/bg_battle_cave_cold_source.png"
+        "assets/source/scenes/battle/cave_cold_v1_source.png"
       ]
     },
     {
@@ -12008,7 +12354,7 @@
       ],
       "identicalContentGroup": [
         "assets/scenes/battle/mountain_plain_day_v1.png",
-        "场景/源图/bg_battle_mountain_plain_day_source.png"
+        "assets/source/scenes/battle/mountain_plain_day_v1_source.png"
       ]
     },
     {
@@ -12047,6 +12393,52 @@
       "identicalContentGroup": []
     },
     {
+      "path": "assets/scenes/battle/mountain_plain_night_v1.webp",
+      "extension": ".webp",
+      "bytes": 60088,
+      "sha256": "1e2b7afb0267d9d7052ce4e531dd5f1d12fa8602d5ad8c236ff4a264de1a998c",
+      "status": "active",
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 4436,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "pathLength": 49,
+      "maxComponentLength": 28,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/scenes/battle/mountain_plain_rain_v1.webp",
+      "extension": ".webp",
+      "bytes": 195900,
+      "sha256": "a2665d7e81c4e1ad1ca6f7fb0eb2d6dbdd243351967e2a04ff628cc7f3f7ae1b",
+      "status": "active",
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 4441,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "pathLength": 48,
+      "maxComponentLength": 27,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
       "path": "assets/scenes/battle/stone_ruins_day_v1.png",
       "extension": ".png",
       "bytes": 3278178,
@@ -12071,7 +12463,7 @@
       ],
       "identicalContentGroup": [
         "assets/scenes/battle/stone_ruins_day_v1.png",
-        "场景/源图/bg_battle_stone_ruins_day_source.png"
+        "assets/source/scenes/battle/stone_ruins_day_v1_source.png"
       ]
     },
     {
@@ -12116,6 +12508,52 @@
       "identicalContentGroup": []
     },
     {
+      "path": "assets/scenes/battle/stone_ruins_night_v1.webp",
+      "extension": ".webp",
+      "bytes": 85840,
+      "sha256": "dc9f2fb1bb5ef65d5a5a96b9434de419b9581306417cdacec36b4e9e24d0d68f",
+      "status": "active",
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 4447,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "pathLength": 46,
+      "maxComponentLength": 25,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/scenes/battle/stone_ruins_sunset_v1.webp",
+      "extension": ".webp",
+      "bytes": 192508,
+      "sha256": "34cff147434478d6e6993c3298b3523a9c8f034eeec36fbd5bc0e5466763f958",
+      "status": "active",
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 4444,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "pathLength": 47,
+      "maxComponentLength": 26,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
       "path": "assets/scenes/battle/temple_hall_grand_v1.png",
       "extension": ".png",
       "bytes": 2809510,
@@ -12140,7 +12578,7 @@
       ],
       "identicalContentGroup": [
         "assets/scenes/battle/temple_hall_grand_v1.png",
-        "场景/源图/bg_battle_temple_hall_grand_source.png"
+        "assets/source/scenes/battle/temple_hall_grand_v1_source.png"
       ]
     },
     {
@@ -12250,7 +12688,7 @@
       ],
       "identicalContentGroup": [
         "assets/scenes/battle/wasteland_dusk_v1.png",
-        "场景/源图/bg_battle_wasteland_dusk_source.png"
+        "assets/source/scenes/battle/wasteland_dusk_v1_source.png"
       ]
     },
     {
@@ -16861,6 +17299,44 @@
       "identicalContentGroup": []
     },
     {
+      "path": "assets/source/scenes/battle/ancient_forest_day_v1_source.png",
+      "extension": ".png",
+      "bytes": 3053263,
+      "sha256": "e122084cfb4eae131b92c37d63c5ec3f246f1d3b85059e95df96f4ac9d11fd60",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 60,
+      "maxComponentLength": 32,
+      "containsNonAscii": false,
+      "risks": [
+        "identical_content"
+      ],
+      "identicalContentGroup": [
+        "assets/scenes/battle/ancient_forest_day_v1.png",
+        "assets/source/scenes/battle/ancient_forest_day_v1_source.png"
+      ]
+    },
+    {
+      "path": "assets/source/scenes/battle/cave_cold_v1_source.png",
+      "extension": ".png",
+      "bytes": 2639165,
+      "sha256": "6d9cecc7bedf2dbaafbace23528965518c4ef64efd6ee09253f470814b861486",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 51,
+      "maxComponentLength": 23,
+      "containsNonAscii": false,
+      "risks": [
+        "identical_content"
+      ],
+      "identicalContentGroup": [
+        "assets/scenes/battle/cave_cold_v1.png",
+        "assets/source/scenes/battle/cave_cold_v1_source.png"
+      ]
+    },
+    {
       "path": "assets/source/scenes/battle/dungeon_corridor_torch_v1_source.png",
       "extension": ".png",
       "bytes": 2585907,
@@ -16875,8 +17351,65 @@
         "identical_content"
       ],
       "identicalContentGroup": [
-        "assets/source/scenes/battle/dungeon_corridor_torch_v1_source.png",
-        "场景/源图/bg_battle_dungeon_corridor_torch_source.png"
+        "assets/archive/unused/2026-06-05/scenes_main/duplicate_sources/dungeon_corridor_torch_v1_source.png",
+        "assets/source/scenes/battle/dungeon_corridor_torch_v1_source.png"
+      ]
+    },
+    {
+      "path": "assets/source/scenes/battle/mountain_plain_day_v1_source.png",
+      "extension": ".png",
+      "bytes": 3022579,
+      "sha256": "e0c067a6247d20c76e8f92e15f387018eec4b2cc85525dd5ce3e2849e5612ef3",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 60,
+      "maxComponentLength": 32,
+      "containsNonAscii": false,
+      "risks": [
+        "identical_content"
+      ],
+      "identicalContentGroup": [
+        "assets/scenes/battle/mountain_plain_day_v1.png",
+        "assets/source/scenes/battle/mountain_plain_day_v1_source.png"
+      ]
+    },
+    {
+      "path": "assets/source/scenes/battle/stone_ruins_day_v1_source.png",
+      "extension": ".png",
+      "bytes": 3278178,
+      "sha256": "223d5dad541c9e21cd90cb6497c851961fbb2ac570c4d1d419c99b67e73ffded",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 57,
+      "maxComponentLength": 29,
+      "containsNonAscii": false,
+      "risks": [
+        "identical_content"
+      ],
+      "identicalContentGroup": [
+        "assets/scenes/battle/stone_ruins_day_v1.png",
+        "assets/source/scenes/battle/stone_ruins_day_v1_source.png"
+      ]
+    },
+    {
+      "path": "assets/source/scenes/battle/temple_hall_grand_v1_source.png",
+      "extension": ".png",
+      "bytes": 2809510,
+      "sha256": "b63f68c3d9e89e37eb9275ba0d5284fe320562c41c7b467f32639a0690c14552",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 59,
+      "maxComponentLength": 31,
+      "containsNonAscii": false,
+      "risks": [
+        "identical_content"
+      ],
+      "identicalContentGroup": [
+        "assets/scenes/battle/temple_hall_grand_v1.png",
+        "assets/source/scenes/battle/temple_hall_grand_v1_source.png"
       ]
     },
     {
@@ -16894,8 +17427,97 @@
         "identical_content"
       ],
       "identicalContentGroup": [
-        "assets/source/scenes/battle/temple_inner_light_v1_source.png",
-        "场景/源图/bg_battle_temple_inner_light_source.png"
+        "assets/archive/unused/2026-06-05/scenes_main/duplicate_sources/temple_inner_light_v1_source.png",
+        "assets/source/scenes/battle/temple_inner_light_v1_source.png"
+      ]
+    },
+    {
+      "path": "assets/source/scenes/battle/variants/ancient_forest_sunset_v1_source.png",
+      "extension": ".png",
+      "bytes": 2386791,
+      "sha256": "69cb9810c715aa155260ad23aa2834c84f49cca675ba7f10c629f20ef819114a",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 72,
+      "maxComponentLength": 35,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/scenes/battle/variants/mountain_plain_night_v1_source.png",
+      "extension": ".png",
+      "bytes": 1867887,
+      "sha256": "8b9b9c23173f8a17a1156d8c9f4fe9b586312b3baf28ed4bf334fccc6b0874c3",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 71,
+      "maxComponentLength": 34,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/scenes/battle/variants/mountain_plain_rain_v1_source.png",
+      "extension": ".png",
+      "bytes": 2673440,
+      "sha256": "07e97678114031f8a83f184659c618e0fae66617fde9281b00ed3cfc4a1c5468",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 70,
+      "maxComponentLength": 33,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/scenes/battle/variants/stone_ruins_night_v1_source.png",
+      "extension": ".png",
+      "bytes": 2070353,
+      "sha256": "0968fc1889bf5a77a00951943c789d2eddc9d04d0f6d7ac99caf9466b3cebacc",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 68,
+      "maxComponentLength": 31,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/scenes/battle/variants/stone_ruins_sunset_v1_source.png",
+      "extension": ".png",
+      "bytes": 2592273,
+      "sha256": "d9a9f4601febbd93c30ca8413722027e0e4b27d42a0775b0d4fc9019a55556e4",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 69,
+      "maxComponentLength": 32,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/scenes/battle/wasteland_dusk_v1_source.png",
+      "extension": ".png",
+      "bytes": 2735487,
+      "sha256": "81bfee3250aec4449bd0bf232262a524e0e450ef6dcfe6dc29b4a7d8dec0de77",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 56,
+      "maxComponentLength": 28,
+      "containsNonAscii": false,
+      "risks": [
+        "identical_content"
+      ],
+      "identicalContentGroup": [
+        "assets/scenes/battle/wasteland_dusk_v1.png",
+        "assets/source/scenes/battle/wasteland_dusk_v1_source.png"
       ]
     },
     {
@@ -16913,9 +17535,177 @@
         "identical_content"
       ],
       "identicalContentGroup": [
-        "assets/source/scenes/event/town_distant_day_v1_source.png",
-        "场景/源图/bg_event_town_distant_day_source.png"
+        "assets/archive/unused/2026-06-05/scenes_main/duplicate_sources/town_distant_day_v1_source.png",
+        "assets/source/scenes/event/town_distant_day_v1_source.png"
       ]
+    },
+    {
+      "path": "assets/source/scenes/layer_guides/battle/ancient_forest_day_layer_guide_v1.png",
+      "extension": ".png",
+      "bytes": 2878613,
+      "sha256": "df25a2efbe523659c01bbb64e55ae26d42ec4189c87bd08247068d7151624a57",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 78,
+      "maxComponentLength": 37,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/scenes/layer_guides/battle/cave_cold_layer_guide_v1.png",
+      "extension": ".png",
+      "bytes": 2493203,
+      "sha256": "85177b034838269751cef158a214b9d6d891556ac1c72e42ce6eb22b7db059a2",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 69,
+      "maxComponentLength": 28,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/scenes/layer_guides/battle/dungeon_corridor_torch_layer_guide_v1.png",
+      "extension": ".png",
+      "bytes": 2443191,
+      "sha256": "64a7c63bda786a414c36d2ed8c00cffbd995d1d6cb94baa8243d434b3d877b8b",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 82,
+      "maxComponentLength": 41,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/scenes/layer_guides/battle/mountain_plain_day_layer_guide_v1.png",
+      "extension": ".png",
+      "bytes": 2849262,
+      "sha256": "5e856b6cd4c384156ba1578ae89ae5374f68008ae0b9fcb719a947da65501f18",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 78,
+      "maxComponentLength": 37,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/scenes/layer_guides/battle/stone_ruins_day_layer_guide_v1.png",
+      "extension": ".png",
+      "bytes": 3088565,
+      "sha256": "a0ff4a3afb12226b46dd7fc23e33729434c1bc335987a0d04cbd57e98bc82304",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 75,
+      "maxComponentLength": 34,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/scenes/layer_guides/battle/temple_hall_grand_layer_guide_v1.png",
+      "extension": ".png",
+      "bytes": 2646609,
+      "sha256": "53b91aef262c203d4aa1480dfcdeff3767f76fc32fdac65297492de04da401ef",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 77,
+      "maxComponentLength": 36,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/scenes/layer_guides/battle/temple_inner_light_layer_guide_v1.png",
+      "extension": ".png",
+      "bytes": 2471324,
+      "sha256": "a6aea6c5024a0eab26f60cd312cf0cb423e548fa5418c1dcbe6fe97af603e5a5",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 78,
+      "maxComponentLength": 37,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/scenes/layer_guides/battle/wasteland_dusk_layer_guide_v1.png",
+      "extension": ".png",
+      "bytes": 2579665,
+      "sha256": "c38d8cd6398ebf1053438c9524269fd9237141295a13c19470ede4ab6237f7b7",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 74,
+      "maxComponentLength": 33,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/scenes/layer_guides/event/town_distant_day_layer_guide_v1.png",
+      "extension": ".png",
+      "bytes": 2858207,
+      "sha256": "79ff22c31f39012cf3bc9d0a61a8228fd0f4c740a4327bd6800e98d3ff8c7beb",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 75,
+      "maxComponentLength": 35,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/scenes/layer_guides/review/mountain_plain_far_v1.png",
+      "extension": ".png",
+      "bytes": 980454,
+      "sha256": "f8fd3c14adcada68bf6c7fa351b133934e6f78baff9bd6e8d6a414d720f88c0b",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 66,
+      "maxComponentLength": 25,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/scenes/layer_guides/review/mountain_plain_front_v1.png",
+      "extension": ".png",
+      "bytes": 1304450,
+      "sha256": "40e0a07f662fe5584aaf33077c82f1d9158d5f038f8db752fa8f0509c994cdfe",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 68,
+      "maxComponentLength": 27,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/scenes/layer_guides/review/mountain_plain_mid_v1.png",
+      "extension": ".png",
+      "bytes": 1615837,
+      "sha256": "5bfe8cde3d707a3731041446440d9473f2f1cfed54f5f12bfb588ec14a4375f0",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 66,
+      "maxComponentLength": 25,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
     },
     {
       "path": "assets/source/ui/hud/materials/frame_master_border_asset_v1_source.png",
@@ -21253,915 +22043,6 @@
       ]
     },
     {
-      "path": "场景/分层导视/bg_battle_ancient_forest_day_layer_guide.png",
-      "extension": ".png",
-      "bytes": 2878613,
-      "sha256": "df25a2efbe523659c01bbb64e55ae26d42ec4189c87bd08247068d7151624a57",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 52,
-      "maxComponentLength": 44,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/分层导视/bg_battle_cave_cold_layer_guide.png",
-      "extension": ".png",
-      "bytes": 2493203,
-      "sha256": "85177b034838269751cef158a214b9d6d891556ac1c72e42ce6eb22b7db059a2",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 43,
-      "maxComponentLength": 35,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/分层导视/bg_battle_dungeon_corridor_torch_layer_guide.png",
-      "extension": ".png",
-      "bytes": 2443191,
-      "sha256": "64a7c63bda786a414c36d2ed8c00cffbd995d1d6cb94baa8243d434b3d877b8b",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 56,
-      "maxComponentLength": 48,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/分层导视/bg_battle_mountain_plain_day_layer_guide.png",
-      "extension": ".png",
-      "bytes": 2849262,
-      "sha256": "5e856b6cd4c384156ba1578ae89ae5374f68008ae0b9fcb719a947da65501f18",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 52,
-      "maxComponentLength": 44,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/分层导视/bg_battle_stone_ruins_day_layer_guide.png",
-      "extension": ".png",
-      "bytes": 3088565,
-      "sha256": "a0ff4a3afb12226b46dd7fc23e33729434c1bc335987a0d04cbd57e98bc82304",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 49,
-      "maxComponentLength": 41,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/分层导视/bg_battle_temple_hall_grand_layer_guide.png",
-      "extension": ".png",
-      "bytes": 2646609,
-      "sha256": "53b91aef262c203d4aa1480dfcdeff3767f76fc32fdac65297492de04da401ef",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 51,
-      "maxComponentLength": 43,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/分层导视/bg_battle_temple_inner_light_layer_guide.png",
-      "extension": ".png",
-      "bytes": 2471324,
-      "sha256": "a6aea6c5024a0eab26f60cd312cf0cb423e548fa5418c1dcbe6fe97af603e5a5",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 52,
-      "maxComponentLength": 44,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/分层导视/bg_battle_wasteland_dusk_layer_guide.png",
-      "extension": ".png",
-      "bytes": 2579665,
-      "sha256": "c38d8cd6398ebf1053438c9524269fd9237141295a13c19470ede4ab6237f7b7",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 48,
-      "maxComponentLength": 40,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/分层导视/bg_event_town_distant_day_layer_guide.png",
-      "extension": ".png",
-      "bytes": 2858207,
-      "sha256": "79ff22c31f39012cf3bc9d0a61a8228fd0f4c740a4327bd6800e98d3ff8c7beb",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 49,
-      "maxComponentLength": 41,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/分层导视/bg_mountain_plain_far.png",
-      "extension": ".png",
-      "bytes": 980454,
-      "sha256": "f8fd3c14adcada68bf6c7fa351b133934e6f78baff9bd6e8d6a414d720f88c0b",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 33,
-      "maxComponentLength": 25,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/分层导视/bg_mountain_plain_front.png",
-      "extension": ".png",
-      "bytes": 1304450,
-      "sha256": "40e0a07f662fe5584aaf33077c82f1d9158d5f038f8db752fa8f0509c994cdfe",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 35,
-      "maxComponentLength": 27,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/分层导视/bg_mountain_plain_mid.png",
-      "extension": ".png",
-      "bytes": 1615837,
-      "sha256": "5bfe8cde3d707a3731041446440d9473f2f1cfed54f5f12bfb588ec14a4375f0",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 33,
-      "maxComponentLength": 25,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/场景.png",
-      "extension": ".png",
-      "bytes": 2956266,
-      "sha256": "dc4c99d93c58e1918f8547acd720a0fac138b7efdb5e925fd51e2d62ac8e5412",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 9,
-      "maxComponentLength": 6,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/战斗预览/bg_battle_ancient_forest_day_battle_preview.png",
-      "extension": ".png",
-      "bytes": 2964316,
-      "sha256": "5c93230332d88dc0502353fc75dda801e0139d7988ce85e02c8a03939acb9c47",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 55,
-      "maxComponentLength": 47,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/战斗预览/bg_battle_cave_cold_battle_preview.png",
-      "extension": ".png",
-      "bytes": 2575615,
-      "sha256": "feedbf2efcd21bda2097e0e3c697362ba43ba72c062a94d08f36e08db7ff6b7a",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 46,
-      "maxComponentLength": 38,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/战斗预览/bg_battle_dungeon_corridor_torch_battle_preview.png",
-      "extension": ".png",
-      "bytes": 2526147,
-      "sha256": "6136b79facf8102d9c1be5511cc68c48fa8b099db7540bd98e89429094cd37d3",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 59,
-      "maxComponentLength": 51,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/战斗预览/bg_battle_mountain_plain_day_battle_preview.png",
-      "extension": ".png",
-      "bytes": 2941171,
-      "sha256": "cccf278ee24062ae785fc7de9a76a79961547df9c867ef37c4c1748e48ef99da",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 55,
-      "maxComponentLength": 47,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/战斗预览/bg_battle_stone_ruins_day_battle_preview.png",
-      "extension": ".png",
-      "bytes": 3183029,
-      "sha256": "4b91b270d8e5c0f5c77c1e636ae480734b715fdf6238941ab30525c147def798",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 52,
-      "maxComponentLength": 44,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/战斗预览/bg_battle_temple_hall_grand_battle_preview.png",
-      "extension": ".png",
-      "bytes": 2732288,
-      "sha256": "00a6d1bea5d4f952f12a56a765a36624c172199b9c13c7973c75263e9a1b12ed",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 54,
-      "maxComponentLength": 46,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/战斗预览/bg_battle_temple_inner_light_battle_preview.png",
-      "extension": ".png",
-      "bytes": 2558171,
-      "sha256": "faaa3d1f618dd771faa2de98078644e1a40183f44045f425817fb5b0b1407246",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 55,
-      "maxComponentLength": 47,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/战斗预览/bg_battle_wasteland_dusk_battle_preview.png",
-      "extension": ".png",
-      "bytes": 2665057,
-      "sha256": "e45725b6d9c8ecddead69fc2f03e596593554040ecf5f49bf5af4dd53ff7d7ea",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 51,
-      "maxComponentLength": 43,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/战斗预览/bg_event_town_distant_day_battle_preview.png",
-      "extension": ".png",
-      "bytes": 2947175,
-      "sha256": "b8eb3bcddcdb533f8235bfe44f3c47ae57041a4233a9e824421f7ca74ee97fcf",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 52,
-      "maxComponentLength": 44,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/源图/bg_battle_ancient_forest_day_source.png",
-      "extension": ".png",
-      "bytes": 3053263,
-      "sha256": "e122084cfb4eae131b92c37d63c5ec3f246f1d3b85059e95df96f4ac9d11fd60",
-      "status": "source",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 45,
-      "maxComponentLength": 39,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "identical_content"
-      ],
-      "identicalContentGroup": [
-        "assets/scenes/battle/ancient_forest_day_v1.png",
-        "场景/源图/bg_battle_ancient_forest_day_source.png"
-      ]
-    },
-    {
-      "path": "场景/源图/bg_battle_cave_cold_source.png",
-      "extension": ".png",
-      "bytes": 2639165,
-      "sha256": "6d9cecc7bedf2dbaafbace23528965518c4ef64efd6ee09253f470814b861486",
-      "status": "source",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 36,
-      "maxComponentLength": 30,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "identical_content"
-      ],
-      "identicalContentGroup": [
-        "assets/scenes/battle/cave_cold_v1.png",
-        "场景/源图/bg_battle_cave_cold_source.png"
-      ]
-    },
-    {
-      "path": "场景/源图/bg_battle_dungeon_corridor_torch_source.png",
-      "extension": ".png",
-      "bytes": 2585907,
-      "sha256": "6f2d8a8a0a884357d4fb2d23b2261d13bfc71eab3faae624472a42a9adbff6a5",
-      "status": "source",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 49,
-      "maxComponentLength": 43,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "identical_content"
-      ],
-      "identicalContentGroup": [
-        "assets/source/scenes/battle/dungeon_corridor_torch_v1_source.png",
-        "场景/源图/bg_battle_dungeon_corridor_torch_source.png"
-      ]
-    },
-    {
-      "path": "场景/源图/bg_battle_mountain_plain_day_source.png",
-      "extension": ".png",
-      "bytes": 3022579,
-      "sha256": "e0c067a6247d20c76e8f92e15f387018eec4b2cc85525dd5ce3e2849e5612ef3",
-      "status": "source",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 45,
-      "maxComponentLength": 39,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "identical_content"
-      ],
-      "identicalContentGroup": [
-        "assets/scenes/battle/mountain_plain_day_v1.png",
-        "场景/源图/bg_battle_mountain_plain_day_source.png"
-      ]
-    },
-    {
-      "path": "场景/源图/bg_battle_stone_ruins_day_source.png",
-      "extension": ".png",
-      "bytes": 3278178,
-      "sha256": "223d5dad541c9e21cd90cb6497c851961fbb2ac570c4d1d419c99b67e73ffded",
-      "status": "source",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 42,
-      "maxComponentLength": 36,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "identical_content"
-      ],
-      "identicalContentGroup": [
-        "assets/scenes/battle/stone_ruins_day_v1.png",
-        "场景/源图/bg_battle_stone_ruins_day_source.png"
-      ]
-    },
-    {
-      "path": "场景/源图/bg_battle_temple_hall_grand_source.png",
-      "extension": ".png",
-      "bytes": 2809510,
-      "sha256": "b63f68c3d9e89e37eb9275ba0d5284fe320562c41c7b467f32639a0690c14552",
-      "status": "source",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 44,
-      "maxComponentLength": 38,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "identical_content"
-      ],
-      "identicalContentGroup": [
-        "assets/scenes/battle/temple_hall_grand_v1.png",
-        "场景/源图/bg_battle_temple_hall_grand_source.png"
-      ]
-    },
-    {
-      "path": "场景/源图/bg_battle_temple_inner_light_source.png",
-      "extension": ".png",
-      "bytes": 2623927,
-      "sha256": "e0a5d80da192423821927f21530bbcf684d62dcf3c8c8b09067c6181c9333df0",
-      "status": "source",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 45,
-      "maxComponentLength": 39,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "identical_content"
-      ],
-      "identicalContentGroup": [
-        "assets/source/scenes/battle/temple_inner_light_v1_source.png",
-        "场景/源图/bg_battle_temple_inner_light_source.png"
-      ]
-    },
-    {
-      "path": "场景/源图/bg_battle_wasteland_dusk_source.png",
-      "extension": ".png",
-      "bytes": 2735487,
-      "sha256": "81bfee3250aec4449bd0bf232262a524e0e450ef6dcfe6dc29b4a7d8dec0de77",
-      "status": "source",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 41,
-      "maxComponentLength": 35,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "identical_content"
-      ],
-      "identicalContentGroup": [
-        "assets/scenes/battle/wasteland_dusk_v1.png",
-        "场景/源图/bg_battle_wasteland_dusk_source.png"
-      ]
-    },
-    {
-      "path": "场景/源图/bg_event_town_distant_day_source.png",
-      "extension": ".png",
-      "bytes": 3028635,
-      "sha256": "5c17af2391e086dddf49a05703e04bb7e839ecae6f00a298f935eeec8de3a727",
-      "status": "source",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 42,
-      "maxComponentLength": 36,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "identical_content"
-      ],
-      "identicalContentGroup": [
-        "assets/source/scenes/event/town_distant_day_v1_source.png",
-        "场景/源图/bg_event_town_distant_day_source.png"
-      ]
-    },
-    {
-      "path": "场景/色板参考/scene_palette_overview.png",
-      "extension": ".png",
-      "bytes": 1553056,
-      "sha256": "4394781dcd2670cc27b0d97b6c877f99f32e248405db50435f5ac9788c9bda3e",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 34,
-      "maxComponentLength": 26,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/色调变体/bg_battle_ancient_forest_night.png",
-      "extension": ".png",
-      "bytes": 1901740,
-      "sha256": "31ce376f234e5afa1b491e00f67bae69da26d770e743f35710c2f3b47eddcb40",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 42,
-      "maxComponentLength": 34,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/色调变体/bg_battle_ancient_forest_sunset.png",
-      "extension": ".png",
-      "bytes": 2386791,
-      "sha256": "69cb9810c715aa155260ad23aa2834c84f49cca675ba7f10c629f20ef819114a",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 43,
-      "maxComponentLength": 35,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/色调变体/bg_battle_ancient_forest_sunset.webp",
-      "extension": ".webp",
-      "bytes": 138832,
-      "sha256": "5d92b4e856c19b0d33c8ab6ac90eb21f9764d99ca68a91e55a982b8432a8eaee",
-      "status": "active",
-      "references": [
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 4435,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo"
-      ],
-      "pathLength": 44,
-      "maxComponentLength": 36,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/色调变体/bg_battle_mountain_plain_cloudy.png",
-      "extension": ".png",
-      "bytes": 2786260,
-      "sha256": "25e92470a5bddec4582185650a48a4aa46fe8b601fde06436b58e483424193c3",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 43,
-      "maxComponentLength": 35,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/色调变体/bg_battle_mountain_plain_fog.png",
-      "extension": ".png",
-      "bytes": 2491745,
-      "sha256": "228ea97d16378c293b5bc5b49f5fbe16b62bb9e85d16e5b047436a6438428ef2",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 40,
-      "maxComponentLength": 32,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/色调变体/bg_battle_mountain_plain_night.png",
-      "extension": ".png",
-      "bytes": 1867887,
-      "sha256": "8b9b9c23173f8a17a1156d8c9f4fe9b586312b3baf28ed4bf334fccc6b0874c3",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 42,
-      "maxComponentLength": 34,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/色调变体/bg_battle_mountain_plain_night.webp",
-      "extension": ".webp",
-      "bytes": 60088,
-      "sha256": "1e2b7afb0267d9d7052ce4e531dd5f1d12fa8602d5ad8c236ff4a264de1a998c",
-      "status": "active",
-      "references": [
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 4436,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo"
-      ],
-      "pathLength": 43,
-      "maxComponentLength": 35,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/色调变体/bg_battle_mountain_plain_rain.png",
-      "extension": ".png",
-      "bytes": 2673440,
-      "sha256": "07e97678114031f8a83f184659c618e0fae66617fde9281b00ed3cfc4a1c5468",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 41,
-      "maxComponentLength": 33,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/色调变体/bg_battle_mountain_plain_rain.webp",
-      "extension": ".webp",
-      "bytes": 195900,
-      "sha256": "a2665d7e81c4e1ad1ca6f7fb0eb2d6dbdd243351967e2a04ff628cc7f3f7ae1b",
-      "status": "active",
-      "references": [
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 4441,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo"
-      ],
-      "pathLength": 42,
-      "maxComponentLength": 34,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/色调变体/bg_battle_mountain_plain_sunset.png",
-      "extension": ".png",
-      "bytes": 2388335,
-      "sha256": "b44fea9e1b6c01d2dc202fa4e1cccaaca08f2c50ebf1c9316b0eb3b07ed3a6ba",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 43,
-      "maxComponentLength": 35,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/色调变体/bg_battle_stone_ruins_night.png",
-      "extension": ".png",
-      "bytes": 2070353,
-      "sha256": "0968fc1889bf5a77a00951943c789d2eddc9d04d0f6d7ac99caf9466b3cebacc",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 39,
-      "maxComponentLength": 31,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/色调变体/bg_battle_stone_ruins_night.webp",
-      "extension": ".webp",
-      "bytes": 85840,
-      "sha256": "dc9f2fb1bb5ef65d5a5a96b9434de419b9581306417cdacec36b4e9e24d0d68f",
-      "status": "active",
-      "references": [
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 4447,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo"
-      ],
-      "pathLength": 40,
-      "maxComponentLength": 32,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/色调变体/bg_battle_stone_ruins_sunset.png",
-      "extension": ".png",
-      "bytes": 2592273,
-      "sha256": "d9a9f4601febbd93c30ca8413722027e0e4b27d42a0775b0d4fc9019a55556e4",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 40,
-      "maxComponentLength": 32,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/色调变体/bg_battle_stone_ruins_sunset.webp",
-      "extension": ".webp",
-      "bytes": 192508,
-      "sha256": "34cff147434478d6e6993c3298b3523a9c8f034eeec36fbd5bc0e5466763f958",
-      "status": "active",
-      "references": [
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 4444,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo"
-      ],
-      "pathLength": 41,
-      "maxComponentLength": 33,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/色调变体/bg_battle_wasteland_day.png",
-      "extension": ".png",
-      "bytes": 2499326,
-      "sha256": "f53ff4d4eb509a19a2473c30ec1dbcfadbd670227ca54352cdc39e9c29de2b6a",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 35,
-      "maxComponentLength": 27,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/色调变体/bg_battle_wasteland_night.png",
-      "extension": ".png",
-      "bytes": 1638115,
-      "sha256": "3ba4f67c030de21ce6e429beed66ecf42b224b4c7278f43256590125a468bb7e",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 37,
-      "maxComponentLength": 29,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/色调变体/bg_event_town_distant_night.png",
-      "extension": ".png",
-      "bytes": 1889634,
-      "sha256": "65026da5bd9e0cca848c7b872f9d004953fdf96d7ae2a5cbd3cb256217a69310",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 39,
-      "maxComponentLength": 31,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "场景/色调变体/bg_event_town_distant_sunset.png",
-      "extension": ".png",
-      "bytes": 2402544,
-      "sha256": "23f8492dfc3cff4f4c4b87c074dd4111a71426d0946d77a89e8eec465f08d02b",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 40,
-      "maxComponentLength": 32,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
       "path": "头像/头像裁切预览.png",
       "extension": ".png",
       "bytes": 550636,
@@ -25755,6 +25636,251 @@
       "kind": "documentation"
     },
     {
+      "path": "/Users/chi/Desktop/幻境残卷/场景/分层导视/bg_battle_ancient_forest_day_layer_guide.png",
+      "file": "场景/资产清单.txt",
+      "line": 21,
+      "module": "misc",
+      "kind": "documentation"
+    },
+    {
+      "path": "/Users/chi/Desktop/幻境残卷/场景/分层导视/bg_battle_cave_cold_layer_guide.png",
+      "file": "场景/资产清单.txt",
+      "line": 31,
+      "module": "misc",
+      "kind": "documentation"
+    },
+    {
+      "path": "/Users/chi/Desktop/幻境残卷/场景/分层导视/bg_battle_dungeon_corridor_torch_layer_guide.png",
+      "file": "场景/资产清单.txt",
+      "line": 34,
+      "module": "misc",
+      "kind": "documentation"
+    },
+    {
+      "path": "/Users/chi/Desktop/幻境残卷/场景/分层导视/bg_battle_mountain_plain_day_layer_guide.png",
+      "file": "场景/资产清单.txt",
+      "line": 13,
+      "module": "misc",
+      "kind": "documentation"
+    },
+    {
+      "path": "/Users/chi/Desktop/幻境残卷/场景/分层导视/bg_battle_stone_ruins_day_layer_guide.png",
+      "file": "场景/资产清单.txt",
+      "line": 37,
+      "module": "misc",
+      "kind": "documentation"
+    },
+    {
+      "path": "/Users/chi/Desktop/幻境残卷/场景/分层导视/bg_battle_temple_hall_grand_layer_guide.png",
+      "file": "场景/资产清单.txt",
+      "line": 50,
+      "module": "misc",
+      "kind": "documentation"
+    },
+    {
+      "path": "/Users/chi/Desktop/幻境残卷/场景/分层导视/bg_battle_temple_inner_light_layer_guide.png",
+      "file": "场景/资产清单.txt",
+      "line": 42,
+      "module": "misc",
+      "kind": "documentation"
+    },
+    {
+      "path": "/Users/chi/Desktop/幻境残卷/场景/分层导视/bg_battle_wasteland_dusk_layer_guide.png",
+      "file": "场景/资产清单.txt",
+      "line": 26,
+      "module": "misc",
+      "kind": "documentation"
+    },
+    {
+      "path": "/Users/chi/Desktop/幻境残卷/场景/分层导视/bg_event_town_distant_day_layer_guide.png",
+      "file": "场景/资产清单.txt",
+      "line": 45,
+      "module": "misc",
+      "kind": "documentation"
+    },
+    {
+      "path": "/Users/chi/Desktop/幻境残卷/场景/分层导视/bg_mountain_plain_far.png",
+      "file": "场景/资产清单.txt",
+      "line": 51,
+      "module": "misc",
+      "kind": "documentation"
+    },
+    {
+      "path": "/Users/chi/Desktop/幻境残卷/场景/分层导视/bg_mountain_plain_front.png",
+      "file": "场景/资产清单.txt",
+      "line": 53,
+      "module": "misc",
+      "kind": "documentation"
+    },
+    {
+      "path": "/Users/chi/Desktop/幻境残卷/场景/分层导视/bg_mountain_plain_mid.png",
+      "file": "场景/资产清单.txt",
+      "line": 52,
+      "module": "misc",
+      "kind": "documentation"
+    },
+    {
+      "path": "/Users/chi/Desktop/幻境残卷/场景/战斗预览/bg_battle_ancient_forest_day_battle_preview.png",
+      "file": "场景/资产清单.txt",
+      "line": 20,
+      "module": "misc",
+      "kind": "documentation"
+    },
+    {
+      "path": "/Users/chi/Desktop/幻境残卷/场景/战斗预览/bg_battle_cave_cold_battle_preview.png",
+      "file": "场景/资产清单.txt",
+      "line": 30,
+      "module": "misc",
+      "kind": "documentation"
+    },
+    {
+      "path": "/Users/chi/Desktop/幻境残卷/场景/战斗预览/bg_battle_dungeon_corridor_torch_battle_preview.png",
+      "file": "场景/资产清单.txt",
+      "line": 33,
+      "module": "misc",
+      "kind": "documentation"
+    },
+    {
+      "path": "/Users/chi/Desktop/幻境残卷/场景/战斗预览/bg_battle_mountain_plain_day_battle_preview.png",
+      "file": "场景/资产清单.txt",
+      "line": 12,
+      "module": "misc",
+      "kind": "documentation"
+    },
+    {
+      "path": "/Users/chi/Desktop/幻境残卷/场景/战斗预览/bg_battle_stone_ruins_day_battle_preview.png",
+      "file": "场景/资产清单.txt",
+      "line": 36,
+      "module": "misc",
+      "kind": "documentation"
+    },
+    {
+      "path": "/Users/chi/Desktop/幻境残卷/场景/战斗预览/bg_battle_temple_hall_grand_battle_preview.png",
+      "file": "场景/资产清单.txt",
+      "line": 49,
+      "module": "misc",
+      "kind": "documentation"
+    },
+    {
+      "path": "/Users/chi/Desktop/幻境残卷/场景/战斗预览/bg_battle_temple_inner_light_battle_preview.png",
+      "file": "场景/资产清单.txt",
+      "line": 41,
+      "module": "misc",
+      "kind": "documentation"
+    },
+    {
+      "path": "/Users/chi/Desktop/幻境残卷/场景/战斗预览/bg_battle_wasteland_dusk_battle_preview.png",
+      "file": "场景/资产清单.txt",
+      "line": 25,
+      "module": "misc",
+      "kind": "documentation"
+    },
+    {
+      "path": "/Users/chi/Desktop/幻境残卷/场景/战斗预览/bg_event_town_distant_day_battle_preview.png",
+      "file": "场景/资产清单.txt",
+      "line": 44,
+      "module": "misc",
+      "kind": "documentation"
+    },
+    {
+      "path": "/Users/chi/Desktop/幻境残卷/场景/色板参考/scene_palette_overview.png",
+      "file": "场景/资产清单.txt",
+      "line": 54,
+      "module": "misc",
+      "kind": "documentation"
+    },
+    {
+      "path": "/Users/chi/Desktop/幻境残卷/场景/色调变体/bg_battle_ancient_forest_night.png",
+      "file": "场景/资产清单.txt",
+      "line": 23,
+      "module": "misc",
+      "kind": "documentation"
+    },
+    {
+      "path": "/Users/chi/Desktop/幻境残卷/场景/色调变体/bg_battle_ancient_forest_sunset.png",
+      "file": "场景/资产清单.txt",
+      "line": 22,
+      "module": "misc",
+      "kind": "documentation"
+    },
+    {
+      "path": "/Users/chi/Desktop/幻境残卷/场景/色调变体/bg_battle_mountain_plain_cloudy.png",
+      "file": "场景/资产清单.txt",
+      "line": 16,
+      "module": "misc",
+      "kind": "documentation"
+    },
+    {
+      "path": "/Users/chi/Desktop/幻境残卷/场景/色调变体/bg_battle_mountain_plain_fog.png",
+      "file": "场景/资产清单.txt",
+      "line": 18,
+      "module": "misc",
+      "kind": "documentation"
+    },
+    {
+      "path": "/Users/chi/Desktop/幻境残卷/场景/色调变体/bg_battle_mountain_plain_night.png",
+      "file": "场景/资产清单.txt",
+      "line": 15,
+      "module": "misc",
+      "kind": "documentation"
+    },
+    {
+      "path": "/Users/chi/Desktop/幻境残卷/场景/色调变体/bg_battle_mountain_plain_rain.png",
+      "file": "场景/资产清单.txt",
+      "line": 17,
+      "module": "misc",
+      "kind": "documentation"
+    },
+    {
+      "path": "/Users/chi/Desktop/幻境残卷/场景/色调变体/bg_battle_mountain_plain_sunset.png",
+      "file": "场景/资产清单.txt",
+      "line": 14,
+      "module": "misc",
+      "kind": "documentation"
+    },
+    {
+      "path": "/Users/chi/Desktop/幻境残卷/场景/色调变体/bg_battle_stone_ruins_night.png",
+      "file": "场景/资产清单.txt",
+      "line": 39,
+      "module": "misc",
+      "kind": "documentation"
+    },
+    {
+      "path": "/Users/chi/Desktop/幻境残卷/场景/色调变体/bg_battle_stone_ruins_sunset.png",
+      "file": "场景/资产清单.txt",
+      "line": 38,
+      "module": "misc",
+      "kind": "documentation"
+    },
+    {
+      "path": "/Users/chi/Desktop/幻境残卷/场景/色调变体/bg_battle_wasteland_day.png",
+      "file": "场景/资产清单.txt",
+      "line": 27,
+      "module": "misc",
+      "kind": "documentation"
+    },
+    {
+      "path": "/Users/chi/Desktop/幻境残卷/场景/色调变体/bg_battle_wasteland_night.png",
+      "file": "场景/资产清单.txt",
+      "line": 28,
+      "module": "misc",
+      "kind": "documentation"
+    },
+    {
+      "path": "/Users/chi/Desktop/幻境残卷/场景/色调变体/bg_event_town_distant_night.png",
+      "file": "场景/资产清单.txt",
+      "line": 47,
+      "module": "misc",
+      "kind": "documentation"
+    },
+    {
+      "path": "/Users/chi/Desktop/幻境残卷/场景/色调变体/bg_event_town_distant_sunset.png",
+      "file": "场景/资产清单.txt",
+      "line": 46,
+      "module": "misc",
+      "kind": "documentation"
+    },
+    {
       "path": "UI/教堂彩窗赛璐璐/战斗HUD/五段能量表_空槽_v2.png",
       "file": "demo更改需求文档.txt",
       "line": 450,
@@ -27512,41 +27638,6 @@
         ".png",
         ".webp"
       ]
-    },
-    {
-      "basePath": "场景/色调变体/bg_battle_ancient_forest_sunset",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "场景/色调变体/bg_battle_mountain_plain_night",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "场景/色调变体/bg_battle_mountain_plain_rain",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "场景/色调变体/bg_battle_stone_ruins_night",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "场景/色调变体/bg_battle_stone_ruins_sunset",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
     }
   ],
   "identicalContentGroups": [
@@ -27623,7 +27714,7 @@
       "sha256": "223d5dad541c9e21cd90cb6497c851961fbb2ac570c4d1d419c99b67e73ffded",
       "paths": [
         "assets/scenes/battle/stone_ruins_day_v1.png",
-        "场景/源图/bg_battle_stone_ruins_day_source.png"
+        "assets/source/scenes/battle/stone_ruins_day_v1_source.png"
       ]
     },
     {
@@ -27708,8 +27799,8 @@
     {
       "sha256": "5c17af2391e086dddf49a05703e04bb7e839ecae6f00a298f935eeec8de3a727",
       "paths": [
-        "assets/source/scenes/event/town_distant_day_v1_source.png",
-        "场景/源图/bg_event_town_distant_day_source.png"
+        "assets/archive/unused/2026-06-05/scenes_main/duplicate_sources/town_distant_day_v1_source.png",
+        "assets/source/scenes/event/town_distant_day_v1_source.png"
       ]
     },
     {
@@ -27724,14 +27815,14 @@
       "sha256": "6d9cecc7bedf2dbaafbace23528965518c4ef64efd6ee09253f470814b861486",
       "paths": [
         "assets/scenes/battle/cave_cold_v1.png",
-        "场景/源图/bg_battle_cave_cold_source.png"
+        "assets/source/scenes/battle/cave_cold_v1_source.png"
       ]
     },
     {
       "sha256": "6f2d8a8a0a884357d4fb2d23b2261d13bfc71eab3faae624472a42a9adbff6a5",
       "paths": [
-        "assets/source/scenes/battle/dungeon_corridor_torch_v1_source.png",
-        "场景/源图/bg_battle_dungeon_corridor_torch_source.png"
+        "assets/archive/unused/2026-06-05/scenes_main/duplicate_sources/dungeon_corridor_torch_v1_source.png",
+        "assets/source/scenes/battle/dungeon_corridor_torch_v1_source.png"
       ]
     },
     {
@@ -27780,7 +27871,7 @@
       "sha256": "81bfee3250aec4449bd0bf232262a524e0e450ef6dcfe6dc29b4a7d8dec0de77",
       "paths": [
         "assets/scenes/battle/wasteland_dusk_v1.png",
-        "场景/源图/bg_battle_wasteland_dusk_source.png"
+        "assets/source/scenes/battle/wasteland_dusk_v1_source.png"
       ]
     },
     {
@@ -27895,7 +27986,7 @@
       "sha256": "b63f68c3d9e89e37eb9275ba0d5284fe320562c41c7b467f32639a0690c14552",
       "paths": [
         "assets/scenes/battle/temple_hall_grand_v1.png",
-        "场景/源图/bg_battle_temple_hall_grand_source.png"
+        "assets/source/scenes/battle/temple_hall_grand_v1_source.png"
       ]
     },
     {
@@ -27972,22 +28063,22 @@
     {
       "sha256": "e0a5d80da192423821927f21530bbcf684d62dcf3c8c8b09067c6181c9333df0",
       "paths": [
-        "assets/source/scenes/battle/temple_inner_light_v1_source.png",
-        "场景/源图/bg_battle_temple_inner_light_source.png"
+        "assets/archive/unused/2026-06-05/scenes_main/duplicate_sources/temple_inner_light_v1_source.png",
+        "assets/source/scenes/battle/temple_inner_light_v1_source.png"
       ]
     },
     {
       "sha256": "e0c067a6247d20c76e8f92e15f387018eec4b2cc85525dd5ce3e2849e5612ef3",
       "paths": [
         "assets/scenes/battle/mountain_plain_day_v1.png",
-        "场景/源图/bg_battle_mountain_plain_day_source.png"
+        "assets/source/scenes/battle/mountain_plain_day_v1_source.png"
       ]
     },
     {
       "sha256": "e122084cfb4eae131b92c37d63c5ec3f246f1d3b85059e95df96f4ac9d11fd60",
       "paths": [
         "assets/scenes/battle/ancient_forest_day_v1.png",
-        "场景/源图/bg_battle_ancient_forest_day_source.png"
+        "assets/source/scenes/battle/ancient_forest_day_v1_source.png"
       ]
     },
     {
