@@ -21,161 +21,64 @@
     "assetCount": 29,
     "statusCounts": {
       "active": 5,
-      "candidate": 2,
-      "documented": 4,
-      "source": 14,
-      "unreferenced": 4
+      "candidate": 4,
+      "documented": 11,
+      "source": 9
     },
     "actionCounts": {
-      "already_migrated": 22,
-      "defer_untracked_review": 7
+      "already_migrated": 29
     },
     "trackedCounts": {
-      "untracked": 29
+      "tracked": 22,
+      "untracked": 7
     },
     "duplicateExtensionGroupCount": 0
   },
   "entries": [
     {
-      "sourcePath": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_archer_source_v2.png",
-      "suggestedPath": "assets/source/ui/role_select/role_arch/role_arch_archer_source_v2.png",
-      "action": "defer_untracked_review",
-      "status": "source",
-      "tracked": false,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path"
-      ],
-      "sha256": "6ff0844034d7e27e0ae2dcdc5156072d4a0bb02b4e4f2899242d134a60a4877a",
-      "derivedFrom": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_archer_source_v2.png",
-      "visualGroup": "visual_6ff0844034",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; deferred to candidate/source/archive review batch"
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_archer_v2.png",
-      "suggestedPath": "assets/candidates/ui/role_select/role_arch/role_arch_archer_v2.png",
-      "action": "defer_untracked_review",
-      "status": "unreferenced",
-      "tracked": false,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "222c55d7496feea495fa0853e20f027bf8d0bbae50a17f8eb959e65b9c223f27",
-      "derivedFrom": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_archer_v2.png",
-      "visualGroup": "visual_222c55d749",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; deferred to candidate/source/archive review batch"
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_mage_source_v2.png",
-      "suggestedPath": "assets/source/ui/role_select/role_arch/role_arch_mage_source_v2.png",
-      "action": "defer_untracked_review",
-      "status": "source",
-      "tracked": false,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path"
-      ],
-      "sha256": "a1408f8ccd7330055075ea6e7dadc9d9513dce6b33cb3b04360f8b1dcc328347",
-      "derivedFrom": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_mage_source_v2.png",
-      "visualGroup": "visual_a1408f8ccd",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; deferred to candidate/source/archive review batch"
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_mage_v2.png",
-      "suggestedPath": "assets/candidates/ui/role_select/role_arch/role_arch_mage_v2.png",
-      "action": "defer_untracked_review",
-      "status": "unreferenced",
-      "tracked": false,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced",
-        "identical_content"
-      ],
-      "sha256": "e96a0862e8eb5abf5f4273c4d2066daa797b8304169c4a04a8ee680df98588a2",
-      "derivedFrom": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_mage_v2.png",
-      "visualGroup": "visual_e96a0862e8",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; deferred to candidate/source/archive review batch"
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_mage_v2_no_despill.png",
-      "suggestedPath": "assets/candidates/ui/role_select/role_arch/role_arch_mage_v2_no_despill.png",
-      "action": "defer_untracked_review",
-      "status": "unreferenced",
-      "tracked": false,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced",
-        "identical_content"
-      ],
-      "sha256": "e96a0862e8eb5abf5f4273c4d2066daa797b8304169c4a04a8ee680df98588a2",
-      "derivedFrom": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_mage_v2_no_despill.png",
-      "visualGroup": "visual_e96a0862e8",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; deferred to candidate/source/archive review batch"
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_warrior_source_v2.png",
-      "suggestedPath": "assets/source/ui/role_select/role_arch/role_arch_warrior_source_v2.png",
-      "action": "defer_untracked_review",
-      "status": "source",
-      "tracked": false,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path"
-      ],
-      "sha256": "5271625d50a6ef1060adc247f0a637fe10afe2ae69b8c5110d5725524082a301",
-      "derivedFrom": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_warrior_source_v2.png",
-      "visualGroup": "visual_5271625d50",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; deferred to candidate/source/archive review batch"
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_warrior_v2.png",
-      "suggestedPath": "assets/candidates/ui/role_select/role_arch/role_arch_warrior_v2.png",
-      "action": "defer_untracked_review",
-      "status": "unreferenced",
-      "tracked": false,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced",
-        "identical_content"
-      ],
-      "sha256": "235d768f6678788a3952ce09ae675cdc1ee62b126e0546bce17ee2b4b427ab9c",
-      "derivedFrom": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_warrior_v2.png",
-      "visualGroup": "visual_235d768f66",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; deferred to candidate/source/archive review batch"
-    },
-    {
       "sourcePath": "assets/candidates/ui/role_select/buttons/secondary_button_teal_gold_v1.png",
       "suggestedPath": "assets/candidates/ui/role_select/buttons/secondary_button_teal_gold_v1.png",
       "action": "already_migrated",
-      "status": "candidate",
-      "tracked": false,
-      "references": [],
-      "referenceModules": [],
-      "risks": [],
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/README.md",
+          "line": 48,
+          "module": "misc",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
       "sha256": "982814ed75fa7d74fef0b5cae5da40cb3f0f7f980156729d543a0c615330ca45",
       "derivedFrom": "assets/candidates/ui/role_select/buttons/secondary_button_teal_gold_v1.png",
       "visualGroup": "visual_982814ed75",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; candidate asset; keep outside formal runtime directory"
+      "notes": "review before migration"
     },
     {
       "sourcePath": "assets/candidates/ui/role_select/frames/role_card_frame_normal_v1.png",
       "suggestedPath": "assets/candidates/ui/role_select/frames/role_card_frame_normal_v1.png",
       "action": "already_migrated",
       "status": "documented",
-      "tracked": false,
+      "tracked": true,
       "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/README.md",
+          "line": 41,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "UI/教堂彩窗赛璐璐/角色选择/README.md",
+          "line": 8,
+          "module": "characters",
+          "kind": "documentation"
+        },
         {
           "file": "demo更改需求文档.txt",
           "line": 377,
@@ -184,23 +87,37 @@
         }
       ],
       "referenceModules": [
+        "characters",
         "misc"
       ],
       "risks": [
-        "unreferenced"
+        "unreferenced",
+        "multi_module_reference"
       ],
       "sha256": "2679f6aabfffbe24e82720019ce876f73eebc9b212c106d04e45ae8bf535f1a0",
       "derivedFrom": "assets/candidates/ui/role_select/frames/role_card_frame_normal_v1.png",
       "visualGroup": "visual_2679f6aabf",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+      "notes": "review before migration"
     },
     {
       "sourcePath": "assets/candidates/ui/role_select/frames/role_card_frame_selected_v1.png",
       "suggestedPath": "assets/candidates/ui/role_select/frames/role_card_frame_selected_v1.png",
       "action": "already_migrated",
       "status": "documented",
-      "tracked": false,
+      "tracked": true,
       "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/README.md",
+          "line": 42,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "UI/教堂彩窗赛璐璐/角色选择/README.md",
+          "line": 10,
+          "module": "characters",
+          "kind": "documentation"
+        },
         {
           "file": "demo更改需求文档.txt",
           "line": 378,
@@ -209,28 +126,103 @@
         }
       ],
       "referenceModules": [
+        "characters",
         "misc"
       ],
       "risks": [
-        "unreferenced"
+        "unreferenced",
+        "multi_module_reference"
       ],
       "sha256": "23dbdae760a448ff55bf2f3a292525748a7326a1a984118b7415ca52490762b9",
       "derivedFrom": "assets/candidates/ui/role_select/frames/role_card_frame_selected_v1.png",
       "visualGroup": "visual_23dbdae760",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+      "notes": "review before migration"
     },
     {
       "sourcePath": "assets/candidates/ui/role_select/review/role_select_concept_v1.png",
       "suggestedPath": "assets/candidates/ui/role_select/review/role_select_concept_v1.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/角色选择/README.md",
+          "line": 5,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "224e2b8d8f49a0ca4c6dd9512181c66b3bf6be9a15547789e3932bf7f73661b0",
+      "derivedFrom": "assets/candidates/ui/role_select/review/role_select_concept_v1.png",
+      "visualGroup": "visual_224e2b8d8f",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/candidates/ui/role_select/role_arch/role_arch_archer_v2.png",
+      "suggestedPath": "assets/candidates/ui/role_select/role_arch/role_arch_archer_v2.png",
       "action": "already_migrated",
       "status": "candidate",
       "tracked": false,
       "references": [],
       "referenceModules": [],
       "risks": [],
-      "sha256": "224e2b8d8f49a0ca4c6dd9512181c66b3bf6be9a15547789e3932bf7f73661b0",
-      "derivedFrom": "assets/candidates/ui/role_select/review/role_select_concept_v1.png",
-      "visualGroup": "visual_224e2b8d8f",
+      "sha256": "222c55d7496feea495fa0853e20f027bf8d0bbae50a17f8eb959e65b9c223f27",
+      "derivedFrom": "assets/candidates/ui/role_select/role_arch/role_arch_archer_v2.png",
+      "visualGroup": "visual_222c55d749",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; candidate asset; keep outside formal runtime directory"
+    },
+    {
+      "sourcePath": "assets/candidates/ui/role_select/role_arch/role_arch_mage_v2.png",
+      "suggestedPath": "assets/candidates/ui/role_select/role_arch/role_arch_mage_v2.png",
+      "action": "already_migrated",
+      "status": "candidate",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "identical_content"
+      ],
+      "sha256": "e96a0862e8eb5abf5f4273c4d2066daa797b8304169c4a04a8ee680df98588a2",
+      "derivedFrom": "assets/candidates/ui/role_select/role_arch/role_arch_mage_v2.png",
+      "visualGroup": "visual_e96a0862e8",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; candidate asset; keep outside formal runtime directory"
+    },
+    {
+      "sourcePath": "assets/candidates/ui/role_select/role_arch/role_arch_mage_v2_no_despill.png",
+      "suggestedPath": "assets/candidates/ui/role_select/role_arch/role_arch_mage_v2_no_despill.png",
+      "action": "already_migrated",
+      "status": "candidate",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "identical_content"
+      ],
+      "sha256": "e96a0862e8eb5abf5f4273c4d2066daa797b8304169c4a04a8ee680df98588a2",
+      "derivedFrom": "assets/candidates/ui/role_select/role_arch/role_arch_mage_v2_no_despill.png",
+      "visualGroup": "visual_e96a0862e8",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted; candidate asset; keep outside formal runtime directory"
+    },
+    {
+      "sourcePath": "assets/candidates/ui/role_select/role_arch/role_arch_warrior_v2.png",
+      "suggestedPath": "assets/candidates/ui/role_select/role_arch/role_arch_warrior_v2.png",
+      "action": "already_migrated",
+      "status": "candidate",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "identical_content"
+      ],
+      "sha256": "235d768f6678788a3952ce09ae675cdc1ee62b126e0546bce17ee2b4b427ab9c",
+      "derivedFrom": "assets/candidates/ui/role_select/role_arch/role_arch_warrior_v2.png",
+      "visualGroup": "visual_235d768f66",
       "notes": "untracked file; do not include in migration commit unless intentionally accepted; candidate asset; keep outside formal runtime directory"
     },
     {
@@ -238,35 +230,46 @@
       "suggestedPath": "assets/source/ui/role_select/buttons/back_button_teal_gold_v1_original_source.png",
       "action": "already_migrated",
       "status": "source",
-      "tracked": false,
+      "tracked": true,
       "references": [],
       "referenceModules": [],
       "risks": [],
       "sha256": "212029ae22dac88a40d1ee856f883233bf640e8f49794c52e57f2099fc443790",
       "derivedFrom": "assets/source/ui/role_select/buttons/back_button_teal_gold_v1_original_source.png",
       "visualGroup": "visual_212029ae22",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+      "notes": "review before migration"
     },
     {
       "sourcePath": "assets/source/ui/role_select/buttons/back_button_teal_gold_v1_source.png",
       "suggestedPath": "assets/source/ui/role_select/buttons/back_button_teal_gold_v1_source.png",
       "action": "already_migrated",
-      "status": "source",
-      "tracked": false,
-      "references": [],
-      "referenceModules": [],
-      "risks": [],
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/README.md",
+          "line": 49,
+          "module": "misc",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
       "sha256": "49facd4a8dcb1c19bae8299ff66a95af54b56bc69a95ed6ff61f0c531a4e3c2f",
       "derivedFrom": "assets/source/ui/role_select/buttons/back_button_teal_gold_v1_source.png",
       "visualGroup": "visual_49facd4a8d",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+      "notes": "review before migration"
     },
     {
       "sourcePath": "assets/source/ui/role_select/buttons/confirm_button_purple_gold_v1_original_source.png",
       "suggestedPath": "assets/source/ui/role_select/buttons/confirm_button_purple_gold_v1_original_source.png",
       "action": "already_migrated",
       "status": "source",
-      "tracked": false,
+      "tracked": true,
       "references": [],
       "referenceModules": [],
       "risks": [
@@ -275,113 +278,169 @@
       "sha256": "81e2d97fd809c177d9a4a36d57bf57fa782ec48fb22835c2bc2048443e4a1432",
       "derivedFrom": "assets/source/ui/role_select/buttons/confirm_button_purple_gold_v1_original_source.png",
       "visualGroup": "visual_81e2d97fd8",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+      "notes": "review before migration"
     },
     {
       "sourcePath": "assets/source/ui/role_select/buttons/confirm_button_purple_gold_v1_source.png",
       "suggestedPath": "assets/source/ui/role_select/buttons/confirm_button_purple_gold_v1_source.png",
       "action": "already_migrated",
-      "status": "source",
-      "tracked": false,
-      "references": [],
-      "referenceModules": [],
-      "risks": [],
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/README.md",
+          "line": 47,
+          "module": "misc",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
       "sha256": "a5b0b4f9b925c2ab61ae601122937046d1ee585e776537526323a3502f1ae287",
       "derivedFrom": "assets/source/ui/role_select/buttons/confirm_button_purple_gold_v1_source.png",
       "visualGroup": "visual_a5b0b4f9b9",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+      "notes": "review before migration"
     },
     {
       "sourcePath": "assets/source/ui/role_select/buttons/main_button_blue_gold_v1_original_source.png",
       "suggestedPath": "assets/source/ui/role_select/buttons/main_button_blue_gold_v1_original_source.png",
       "action": "already_migrated",
       "status": "source",
-      "tracked": false,
+      "tracked": true,
       "references": [],
       "referenceModules": [],
       "risks": [],
       "sha256": "e9d13683566de9b1868dfb1b4edc52e89662ba6876d7d7fbf4d525c729a78e5c",
       "derivedFrom": "assets/source/ui/role_select/buttons/main_button_blue_gold_v1_original_source.png",
       "visualGroup": "visual_e9d1368356",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+      "notes": "review before migration"
     },
     {
       "sourcePath": "assets/source/ui/role_select/buttons/main_button_blue_gold_v1_source.png",
       "suggestedPath": "assets/source/ui/role_select/buttons/main_button_blue_gold_v1_source.png",
       "action": "already_migrated",
-      "status": "source",
-      "tracked": false,
-      "references": [],
-      "referenceModules": [],
-      "risks": [],
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/README.md",
+          "line": 46,
+          "module": "misc",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
       "sha256": "61d0da9fec72e17b0faafe00a3188456a9b25e2189576ecda7e3c1b20be2da10",
       "derivedFrom": "assets/source/ui/role_select/buttons/main_button_blue_gold_v1_source.png",
       "visualGroup": "visual_61d0da9fec",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+      "notes": "review before migration"
     },
     {
       "sourcePath": "assets/source/ui/role_select/buttons/secondary_button_teal_gold_v1_source.png",
       "suggestedPath": "assets/source/ui/role_select/buttons/secondary_button_teal_gold_v1_source.png",
       "action": "already_migrated",
       "status": "source",
-      "tracked": false,
+      "tracked": true,
       "references": [],
       "referenceModules": [],
       "risks": [],
       "sha256": "20e14fe55f740974346c73baf27003607d4306cc1931bd17ad0d33edda1fd3d0",
       "derivedFrom": "assets/source/ui/role_select/buttons/secondary_button_teal_gold_v1_source.png",
       "visualGroup": "visual_20e14fe55f",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+      "notes": "review before migration"
     },
     {
       "sourcePath": "assets/source/ui/role_select/frames/role_card_frame_normal_v1_source.png",
       "suggestedPath": "assets/source/ui/role_select/frames/role_card_frame_normal_v1_source.png",
       "action": "already_migrated",
-      "status": "source",
-      "tracked": false,
-      "references": [],
-      "referenceModules": [],
-      "risks": [],
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/角色选择/README.md",
+          "line": 19,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
       "sha256": "429118a68e6538d0debb86a305fc67ce3951fe5bcf896d9fae4ec10ee136a2d7",
       "derivedFrom": "assets/source/ui/role_select/frames/role_card_frame_normal_v1_source.png",
       "visualGroup": "visual_429118a68e",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+      "notes": "review before migration"
     },
     {
       "sourcePath": "assets/source/ui/role_select/frames/role_card_frame_selected_v1_source.png",
       "suggestedPath": "assets/source/ui/role_select/frames/role_card_frame_selected_v1_source.png",
       "action": "already_migrated",
-      "status": "source",
-      "tracked": false,
-      "references": [],
-      "referenceModules": [],
-      "risks": [],
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/角色选择/README.md",
+          "line": 20,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
       "sha256": "aca0c4f69f49a1dc45ce72a9a6e6a848e1902d4c2f874b81e1f18ef143d37072",
       "derivedFrom": "assets/source/ui/role_select/frames/role_card_frame_selected_v1_source.png",
       "visualGroup": "visual_aca0c4f69f",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+      "notes": "review before migration"
     },
     {
       "sourcePath": "assets/source/ui/role_select/panels/role_desc_panel_v1_original_source.png",
       "suggestedPath": "assets/source/ui/role_select/panels/role_desc_panel_v1_original_source.png",
       "action": "already_migrated",
       "status": "source",
-      "tracked": false,
+      "tracked": true,
       "references": [],
       "referenceModules": [],
       "risks": [],
       "sha256": "e1674d1c8d9df235fcd38cf9dd7565fa7e56b66ac81f271a4567a8b42482a550",
       "derivedFrom": "assets/source/ui/role_select/panels/role_desc_panel_v1_original_source.png",
       "visualGroup": "visual_e1674d1c8d",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+      "notes": "review before migration"
     },
     {
       "sourcePath": "assets/source/ui/role_select/panels/role_desc_panel_v1_source.png",
       "suggestedPath": "assets/source/ui/role_select/panels/role_desc_panel_v1_source.png",
       "action": "already_migrated",
       "status": "documented",
-      "tracked": false,
+      "tracked": true,
       "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/README.md",
+          "line": 54,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "UI/教堂彩窗赛璐璐/角色选择/README.md",
+          "line": 14,
+          "module": "characters",
+          "kind": "documentation"
+        },
         {
           "file": "demo更改需求文档.txt",
           "line": 380,
@@ -390,14 +449,58 @@
         }
       ],
       "referenceModules": [
+        "characters",
         "misc"
       ],
       "risks": [
-        "unreferenced"
+        "unreferenced",
+        "multi_module_reference"
       ],
       "sha256": "d0e8b1bff14bda4ec2d753bde874d565f4ba1a8b0f8cda9edace85daf7975384",
       "derivedFrom": "assets/source/ui/role_select/panels/role_desc_panel_v1_source.png",
       "visualGroup": "visual_d0e8b1bff1",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/ui/role_select/role_arch/role_arch_archer_source_v2.png",
+      "suggestedPath": "assets/source/ui/role_select/role_arch/role_arch_archer_source_v2.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "6ff0844034d7e27e0ae2dcdc5156072d4a0bb02b4e4f2899242d134a60a4877a",
+      "derivedFrom": "assets/source/ui/role_select/role_arch/role_arch_archer_source_v2.png",
+      "visualGroup": "visual_6ff0844034",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
+      "sourcePath": "assets/source/ui/role_select/role_arch/role_arch_mage_source_v2.png",
+      "suggestedPath": "assets/source/ui/role_select/role_arch/role_arch_mage_source_v2.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "a1408f8ccd7330055075ea6e7dadc9d9513dce6b33cb3b04360f8b1dcc328347",
+      "derivedFrom": "assets/source/ui/role_select/role_arch/role_arch_mage_source_v2.png",
+      "visualGroup": "visual_a1408f8ccd",
+      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+    },
+    {
+      "sourcePath": "assets/source/ui/role_select/role_arch/role_arch_warrior_source_v2.png",
+      "suggestedPath": "assets/source/ui/role_select/role_arch/role_arch_warrior_source_v2.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": false,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "5271625d50a6ef1060adc247f0a637fe10afe2ae69b8c5110d5725524082a301",
+      "derivedFrom": "assets/source/ui/role_select/role_arch/role_arch_warrior_source_v2.png",
+      "visualGroup": "visual_5271625d50",
       "notes": "untracked file; do not include in migration commit unless intentionally accepted"
     },
     {
@@ -405,22 +508,34 @@
       "suggestedPath": "assets/source/ui/role_select/tags/tag_plate_blue_gold_v1_original_source.png",
       "action": "already_migrated",
       "status": "source",
-      "tracked": false,
+      "tracked": true,
       "references": [],
       "referenceModules": [],
       "risks": [],
       "sha256": "34d92856c21f093434dafba2906d51791c4dd02c1e463c4ed1d265058a5b8baf",
       "derivedFrom": "assets/source/ui/role_select/tags/tag_plate_blue_gold_v1_original_source.png",
       "visualGroup": "visual_34d92856c2",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+      "notes": "review before migration"
     },
     {
       "sourcePath": "assets/source/ui/role_select/tags/tag_plate_blue_gold_v1_source.png",
       "suggestedPath": "assets/source/ui/role_select/tags/tag_plate_blue_gold_v1_source.png",
       "action": "already_migrated",
       "status": "documented",
-      "tracked": false,
+      "tracked": true,
       "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/README.md",
+          "line": 53,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "UI/教堂彩窗赛璐璐/角色选择/README.md",
+          "line": 12,
+          "module": "characters",
+          "kind": "documentation"
+        },
         {
           "file": "demo更改需求文档.txt",
           "line": 379,
@@ -429,22 +544,24 @@
         }
       ],
       "referenceModules": [
+        "characters",
         "misc"
       ],
       "risks": [
-        "unreferenced"
+        "unreferenced",
+        "multi_module_reference"
       ],
       "sha256": "2867ab4fbde4dce722f369b33f72453b78c2edb3ae597ec6528831305726fac3",
       "derivedFrom": "assets/source/ui/role_select/tags/tag_plate_blue_gold_v1_source.png",
       "visualGroup": "visual_2867ab4fbd",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted"
+      "notes": "review before migration"
     },
     {
       "sourcePath": "assets/ui/role_select/buttons/back_button_teal_gold_v1.webp",
       "suggestedPath": "assets/ui/role_select/buttons/back_button_teal_gold_v1.webp",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
@@ -460,14 +577,14 @@
       "sha256": "25a35c68af2613d6ede45191877e8f378847cc73a6d6df9abf942a9432169268",
       "derivedFrom": "assets/ui/role_select/buttons/back_button_teal_gold_v1.webp",
       "visualGroup": "visual_25a35c68af",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/ui/role_select/buttons/confirm_button_purple_gold_v1.webp",
       "suggestedPath": "assets/ui/role_select/buttons/confirm_button_purple_gold_v1.webp",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
@@ -483,14 +600,14 @@
       "sha256": "bb2e3ea99a2ddd8c025b16d084f8266ba90787e81e50034933b771f886677891",
       "derivedFrom": "assets/ui/role_select/buttons/confirm_button_purple_gold_v1.webp",
       "visualGroup": "visual_bb2e3ea99a",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/ui/role_select/buttons/main_button_blue_gold_v1.webp",
       "suggestedPath": "assets/ui/role_select/buttons/main_button_blue_gold_v1.webp",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
@@ -506,14 +623,14 @@
       "sha256": "826ff26498425fcf64cce6ab57301896e5a90e99c4d9625644a3827fe0509edc",
       "derivedFrom": "assets/ui/role_select/buttons/main_button_blue_gold_v1.webp",
       "visualGroup": "visual_826ff26498",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/ui/role_select/panels/role_desc_panel_v1.webp",
       "suggestedPath": "assets/ui/role_select/panels/role_desc_panel_v1.webp",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
@@ -529,14 +646,14 @@
       "sha256": "a059d6cc1287f2b5c98fed7990b1e8fac76353d4b2899afdea52b16a5e455646",
       "derivedFrom": "assets/ui/role_select/panels/role_desc_panel_v1.webp",
       "visualGroup": "visual_a059d6cc12",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     },
     {
       "sourcePath": "assets/ui/role_select/tags/tag_plate_blue_gold_v1.webp",
       "suggestedPath": "assets/ui/role_select/tags/tag_plate_blue_gold_v1.webp",
       "action": "already_migrated",
       "status": "active",
-      "tracked": false,
+      "tracked": true,
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
@@ -552,7 +669,7 @@
       "sha256": "8948d63c1a046ba77abae3db42901d3d46919e1a5f2e4432b744e867fa182d77",
       "derivedFrom": "assets/ui/role_select/tags/tag_plate_blue_gold_v1.webp",
       "visualGroup": "visual_8948d63c1a",
-      "notes": "untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced"
+      "notes": "runtime/config referenced"
     }
   ],
   "duplicateExtensionGroups": []

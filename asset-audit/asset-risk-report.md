@@ -17,19 +17,19 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 ## Status Counts
 
 - active: 481
-- candidate: 106
+- candidate: 110
 - documented: 61
 - legacy: 50
 - source: 255
-- unreferenced: 277
+- unreferenced: 273
 
 ## Risk Counts
 
 - identical_content: 181
 - long_component: 82
 - multi_module_reference: 63
-- non_ascii_path: 353
-- unreferenced: 338
+- non_ascii_path: 346
+- unreferenced: 334
 
 ## Longest Paths
 

@@ -30,18 +30,18 @@
     "missingRuntimeReferenceCount": 44,
     "statusCounts": {
       "active": 481,
-      "candidate": 106,
+      "candidate": 110,
       "documented": 61,
       "legacy": 50,
       "source": 255,
-      "unreferenced": 277
+      "unreferenced": 273
     },
     "riskCounts": {
       "identical_content": 181,
       "long_component": 82,
       "multi_module_reference": 63,
-      "non_ascii_path": 353,
-      "unreferenced": 338
+      "non_ascii_path": 346,
+      "unreferenced": 334
     },
     "referenceModuleCounts": {
       "cards": 178,
@@ -1179,134 +1179,6 @@
         "unreferenced"
       ],
       "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_archer_source_v2.png",
-      "extension": ".png",
-      "bytes": 1803629,
-      "sha256": "6ff0844034d7e27e0ae2dcdc5156072d4a0bb02b4e4f2899242d134a60a4877a",
-      "status": "source",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 58,
-      "maxComponentLength": 30,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_archer_v2.png",
-      "extension": ".png",
-      "bytes": 1260558,
-      "sha256": "222c55d7496feea495fa0853e20f027bf8d0bbae50a17f8eb959e65b9c223f27",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 51,
-      "maxComponentLength": 23,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_mage_source_v2.png",
-      "extension": ".png",
-      "bytes": 1849094,
-      "sha256": "a1408f8ccd7330055075ea6e7dadc9d9513dce6b33cb3b04360f8b1dcc328347",
-      "status": "source",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 56,
-      "maxComponentLength": 28,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_mage_v2.png",
-      "extension": ".png",
-      "bytes": 1398434,
-      "sha256": "e96a0862e8eb5abf5f4273c4d2066daa797b8304169c4a04a8ee680df98588a2",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 49,
-      "maxComponentLength": 21,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced",
-        "identical_content"
-      ],
-      "identicalContentGroup": [
-        "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_mage_v2.png",
-        "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_mage_v2_no_despill.png"
-      ]
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_mage_v2_no_despill.png",
-      "extension": ".png",
-      "bytes": 1398434,
-      "sha256": "e96a0862e8eb5abf5f4273c4d2066daa797b8304169c4a04a8ee680df98588a2",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 60,
-      "maxComponentLength": 32,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced",
-        "identical_content"
-      ],
-      "identicalContentGroup": [
-        "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_mage_v2.png",
-        "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_mage_v2_no_despill.png"
-      ]
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_warrior_source_v2.png",
-      "extension": ".png",
-      "bytes": 1995950,
-      "sha256": "5271625d50a6ef1060adc247f0a637fe10afe2ae69b8c5110d5725524082a301",
-      "status": "source",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 59,
-      "maxComponentLength": 31,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_warrior_v2.png",
-      "extension": ".png",
-      "bytes": 1511527,
-      "sha256": "235d768f6678788a3952ce09ae675cdc1ee62b126e0546bce17ee2b4b427ab9c",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 52,
-      "maxComponentLength": 24,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced",
-        "identical_content"
-      ],
-      "identicalContentGroup": [
-        "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_warrior_v2.png",
-        "assets/source/characters/warrior/role_select_frame_v1_source.png"
-      ]
     },
     {
       "path": "_preview_新角色一三_带背景卡图.png",
@@ -3813,6 +3685,77 @@
         "unreferenced"
       ],
       "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/role_select/role_arch/role_arch_archer_v2.png",
+      "extension": ".png",
+      "bytes": 1260558,
+      "sha256": "222c55d7496feea495fa0853e20f027bf8d0bbae50a17f8eb959e65b9c223f27",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 66,
+      "maxComponentLength": 23,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/role_select/role_arch/role_arch_mage_v2.png",
+      "extension": ".png",
+      "bytes": 1398434,
+      "sha256": "e96a0862e8eb5abf5f4273c4d2066daa797b8304169c4a04a8ee680df98588a2",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 64,
+      "maxComponentLength": 21,
+      "containsNonAscii": false,
+      "risks": [
+        "identical_content"
+      ],
+      "identicalContentGroup": [
+        "assets/candidates/ui/role_select/role_arch/role_arch_mage_v2.png",
+        "assets/candidates/ui/role_select/role_arch/role_arch_mage_v2_no_despill.png"
+      ]
+    },
+    {
+      "path": "assets/candidates/ui/role_select/role_arch/role_arch_mage_v2_no_despill.png",
+      "extension": ".png",
+      "bytes": 1398434,
+      "sha256": "e96a0862e8eb5abf5f4273c4d2066daa797b8304169c4a04a8ee680df98588a2",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 75,
+      "maxComponentLength": 32,
+      "containsNonAscii": false,
+      "risks": [
+        "identical_content"
+      ],
+      "identicalContentGroup": [
+        "assets/candidates/ui/role_select/role_arch/role_arch_mage_v2.png",
+        "assets/candidates/ui/role_select/role_arch/role_arch_mage_v2_no_despill.png"
+      ]
+    },
+    {
+      "path": "assets/candidates/ui/role_select/role_arch/role_arch_warrior_v2.png",
+      "extension": ".png",
+      "bytes": 1511527,
+      "sha256": "235d768f6678788a3952ce09ae675cdc1ee62b126e0546bce17ee2b4b427ab9c",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 67,
+      "maxComponentLength": 24,
+      "containsNonAscii": false,
+      "risks": [
+        "identical_content"
+      ],
+      "identicalContentGroup": [
+        "assets/candidates/ui/role_select/role_arch/role_arch_warrior_v2.png",
+        "assets/source/characters/warrior/role_select_frame_v1_source.png"
+      ]
     },
     {
       "path": "assets/cards/art/archer/archer_aim_art_v1.webp",
@@ -14537,7 +14480,7 @@
         "identical_content"
       ],
       "identicalContentGroup": [
-        "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_warrior_v2.png",
+        "assets/candidates/ui/role_select/role_arch/role_arch_warrior_v2.png",
         "assets/source/characters/warrior/role_select_frame_v1_source.png"
       ]
     },
@@ -18161,6 +18104,48 @@
         "unreferenced",
         "multi_module_reference"
       ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/role_select/role_arch/role_arch_archer_source_v2.png",
+      "extension": ".png",
+      "bytes": 1803629,
+      "sha256": "6ff0844034d7e27e0ae2dcdc5156072d4a0bb02b4e4f2899242d134a60a4877a",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 69,
+      "maxComponentLength": 30,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/role_select/role_arch/role_arch_mage_source_v2.png",
+      "extension": ".png",
+      "bytes": 1849094,
+      "sha256": "a1408f8ccd7330055075ea6e7dadc9d9513dce6b33cb3b04360f8b1dcc328347",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 67,
+      "maxComponentLength": 28,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/role_select/role_arch/role_arch_warrior_source_v2.png",
+      "extension": ".png",
+      "bytes": 1995950,
+      "sha256": "5271625d50a6ef1060adc247f0a637fe10afe2ae69b8c5110d5725524082a301",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 70,
+      "maxComponentLength": 31,
+      "containsNonAscii": false,
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -27868,7 +27853,7 @@
     {
       "sha256": "235d768f6678788a3952ce09ae675cdc1ee62b126e0546bce17ee2b4b427ab9c",
       "paths": [
-        "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_warrior_v2.png",
+        "assets/candidates/ui/role_select/role_arch/role_arch_warrior_v2.png",
         "assets/source/characters/warrior/role_select_frame_v1_source.png"
       ]
     },
@@ -28241,8 +28226,8 @@
     {
       "sha256": "e96a0862e8eb5abf5f4273c4d2066daa797b8304169c4a04a8ee680df98588a2",
       "paths": [
-        "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_mage_v2.png",
-        "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_mage_v2_no_despill.png"
+        "assets/candidates/ui/role_select/role_arch/role_arch_mage_v2.png",
+        "assets/candidates/ui/role_select/role_arch/role_arch_mage_v2_no_despill.png"
       ]
     },
     {
