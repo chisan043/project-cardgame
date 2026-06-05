@@ -28,7 +28,7 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - identical_content: 181
 - long_component: 82
 - multi_module_reference: 63
-- non_ascii_path: 346
+- non_ascii_path: 344
 - unreferenced: 334
 
 ## Longest Paths
@@ -51,8 +51,6 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 
 ## Non-ASCII Path Examples
 
-- `UI/主菜单/main_menu_key_art_candidate_v1.png`
-- `UI/主菜单/main_menu_key_art_candidate_v2.png`
 - `UI/教堂彩窗赛璐璐/图标样式/状态徽章底板_v1.png`
 - `UI/教堂彩窗赛璐璐/图标样式/状态徽章底板_v1_source.png`
 - `UI/教堂彩窗赛璐璐/战斗HUD/战斗HUD_整体概念板_v1.png`
@@ -63,6 +61,8 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_draw_pile_clean_v1.png`
 - `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_draw_pile_v1.png`
 - `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_end_turn_button_v1.png`
+- `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_enemy_intent_panel_v1.png`
+- `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_enemy_panel_v1.png`
 
 ## Unreferenced Examples
 

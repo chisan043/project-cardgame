@@ -5,7 +5,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 ## Scope
 
 - Source prefix: `UI/主菜单/`
-- Include prefixes: `assets/ui/menu/`, `assets/source/ui/menu/`
+- Include prefixes: `assets/ui/menu/`, `assets/source/ui/menu/`, `assets/candidates/ui/menu/`
 - Target runtime directory: `assets/ui/menu`
 - Assets in scope: 4
 - Duplicate extension groups: 0
@@ -29,7 +29,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 
 ## Proposed Entries
 
-### `UI/主菜单/main_menu_key_art_candidate_v1.png`
+### `assets/candidates/ui/menu/main_menu_key_art_candidate_v1.png`
 
 - Suggested path: `assets/candidates/ui/menu/main_menu_key_art_candidate_v1.png`
 - Action: `copy_as_candidate`
@@ -38,7 +38,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - References: none
 - Notes: untracked file; do not include in migration commit unless intentionally accepted; candidate asset; keep outside formal runtime directory
 
-### `UI/主菜单/main_menu_key_art_candidate_v2.png`
+### `assets/candidates/ui/menu/main_menu_key_art_candidate_v2.png`
 
 - Suggested path: `assets/candidates/ui/menu/main_menu_key_art_candidate_v2.png`
 - Action: `copy_as_candidate`

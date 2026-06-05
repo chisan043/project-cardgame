@@ -40,7 +40,7 @@
       "identical_content": 181,
       "long_component": 82,
       "multi_module_reference": 63,
-      "non_ascii_path": 346,
+      "non_ascii_path": 344,
       "unreferenced": 334
     },
     "referenceModuleCounts": {
@@ -56,38 +56,6 @@
     "identicalContentGroupCount": 61
   },
   "assets": [
-    {
-      "path": "UI/主菜单/main_menu_key_art_candidate_v1.png",
-      "extension": ".png",
-      "bytes": 2738696,
-      "sha256": "d7df4354f52dcd36c3e724b4027d2453a5a3a70cc19815211b3aae6005a4690e",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 41,
-      "maxComponentLength": 34,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/主菜单/main_menu_key_art_candidate_v2.png",
-      "extension": ".png",
-      "bytes": 2696578,
-      "sha256": "8d302187b576a283eb1389d56de52cf93972f3d06af81d686c0873c355d4c9cf",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 41,
-      "maxComponentLength": 34,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
     {
       "path": "UI/教堂彩窗赛璐璐/图标样式/状态徽章底板_v1.png",
       "extension": ".png",
@@ -3554,6 +3522,34 @@
       ],
       "pathLength": 78,
       "maxComponentLength": 35,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/menu/main_menu_key_art_candidate_v1.png",
+      "extension": ".png",
+      "bytes": 2738696,
+      "sha256": "d7df4354f52dcd36c3e724b4027d2453a5a3a70cc19815211b3aae6005a4690e",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 60,
+      "maxComponentLength": 34,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/menu/main_menu_key_art_candidate_v2.png",
+      "extension": ".png",
+      "bytes": 2696578,
+      "sha256": "8d302187b576a283eb1389d56de52cf93972f3d06af81d686c0873c355d4c9cf",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 60,
+      "maxComponentLength": 34,
       "containsNonAscii": false,
       "risks": [],
       "identicalContentGroup": []

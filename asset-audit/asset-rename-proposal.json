@@ -8491,34 +8491,6 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "UI/主菜单/main_menu_key_art_candidate_v1.png",
-      "suggestedPath": "assets/ui/menu/main_menu_key_art_candidate_v1.png",
-      "suggestedDirectory": "assets/ui/menu",
-      "status": "candidate",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/主菜单/main_menu_key_art_candidate_v1.png",
-      "visualGroup": "visual_d7df4354f5",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/主菜单/main_menu_key_art_candidate_v2.png",
-      "suggestedPath": "assets/ui/menu/main_menu_key_art_candidate_v2.png",
-      "suggestedDirectory": "assets/ui/menu",
-      "status": "candidate",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/主菜单/main_menu_key_art_candidate_v2.png",
-      "visualGroup": "visual_8d302187b5",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
       "sourcePath": "UI/教堂彩窗赛璐璐/图标样式/状态徽章底板_v1.png",
       "suggestedPath": "assets/ui/review/review_72a5d188c3.png",
       "suggestedDirectory": "assets/ui/review",
