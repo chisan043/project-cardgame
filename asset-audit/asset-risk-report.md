@@ -28,7 +28,7 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - identical_content: 181
 - long_component: 81
 - multi_module_reference: 63
-- non_ascii_path: 39
+- non_ascii_path: 35
 - unreferenced: 83
 
 ## Longest Paths
@@ -51,10 +51,6 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 
 ## Non-ASCII Path Examples
 
-- `_preview_新角色一三_带背景卡图.png`
-- `_preview_新角色三.png`
-- `_preview_角色二.png`
-- `头像/头像裁切预览.png`
 - `怪物/contact_latest15.png`
 - `怪物/contact_sheet.png`
 - `怪物/contact_sheet_36.png`
@@ -63,6 +59,10 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - `怪物/怪物纵览.png`
 - `怪物/战斗立绘_总览.png`
 - `旧美术资产/角色一/角色一_三视图_线稿版.png`
+- `旧美术资产/角色一/角色一_三视图_配色版.png`
+- `旧美术资产/角色一/角色一_卡面插画_圣剑突击.png`
+- `旧美术资产/角色一/角色一_卡面插画_遗迹立誓.png`
+- `旧美术资产/角色一/角色一_我方背面_受击.png`
 
 ## Unreferenced Examples
 

@@ -40,7 +40,7 @@
       "identical_content": 181,
       "long_component": 81,
       "multi_module_reference": 63,
-      "non_ascii_path": 39,
+      "non_ascii_path": 35,
       "unreferenced": 83
     },
     "referenceModuleCounts": {
@@ -56,54 +56,6 @@
     "identicalContentGroupCount": 61
   },
   "assets": [
-    {
-      "path": "_preview_新角色一三_带背景卡图.png",
-      "extension": ".png",
-      "bytes": 992163,
-      "sha256": "bb304cc1238b86c9f7de8a86d0d5e14da32201b5cc1b3346f16a49780f01800f",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 24,
-      "maxComponentLength": 24,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "_preview_新角色三.png",
-      "extension": ".png",
-      "bytes": 816728,
-      "sha256": "beb6958a4e11ff761ac414d32238a721890c059662f17aac5b4aa9ed6f14343d",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 17,
-      "maxComponentLength": 17,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "_preview_角色二.png",
-      "extension": ".png",
-      "bytes": 404027,
-      "sha256": "315a00ed50a902f7e7f1aca2c362732e1b368a88718de65235fe986b7f6a82dd",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 16,
-      "maxComponentLength": 16,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
     {
       "path": "assets/archive/unused/2026-06-05/cards_visuals/art/archer/archer_crosswind_guard_art_v1_source.png",
       "extension": ".png",
@@ -4660,6 +4612,62 @@
       "referenceModules": [],
       "pathLength": 57,
       "maxComponentLength": 26,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/characters/review/archer_preview_v1.png",
+      "extension": ".png",
+      "bytes": 816728,
+      "sha256": "beb6958a4e11ff761ac414d32238a721890c059662f17aac5b4aa9ed6f14343d",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 57,
+      "maxComponentLength": 21,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/characters/review/avatar_crop_preview_v1.png",
+      "extension": ".png",
+      "bytes": 550636,
+      "sha256": "f1bb7419363326dd5b379820167b0ebd436d58ebe25b47e05aa6e42077311334",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 62,
+      "maxComponentLength": 26,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/characters/review/mage_preview_v1.png",
+      "extension": ".png",
+      "bytes": 404027,
+      "sha256": "315a00ed50a902f7e7f1aca2c362732e1b368a88718de65235fe986b7f6a82dd",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 55,
+      "maxComponentLength": 19,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/characters/review/warrior_archer_background_preview_v1.png",
+      "extension": ".png",
+      "bytes": 992163,
+      "sha256": "bb304cc1238b86c9f7de8a86d0d5e14da32201b5cc1b3346f16a49780f01800f",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 76,
+      "maxComponentLength": 40,
       "containsNonAscii": false,
       "risks": [],
       "identicalContentGroup": []
@@ -24521,22 +24529,6 @@
         "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_asset_v1.png",
         "tmp_hud_group2_assets/player_hp_bar_long_fill_gray_base_asset_v1.png"
       ]
-    },
-    {
-      "path": "头像/头像裁切预览.png",
-      "extension": ".png",
-      "bytes": 550636,
-      "sha256": "f1bb7419363326dd5b379820167b0ebd436d58ebe25b47e05aa6e42077311334",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 13,
-      "maxComponentLength": 10,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
     },
     {
       "path": "怪物/contact_latest15.png",

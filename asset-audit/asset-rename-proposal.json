@@ -2562,48 +2562,6 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "_preview_新角色一三_带背景卡图.png",
-      "suggestedPath": "assets/review/review_bb304cc123.png",
-      "suggestedDirectory": "assets/review",
-      "status": "candidate",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "_preview_新角色一三_带背景卡图.png",
-      "visualGroup": "visual_bb304cc123",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "_preview_新角色三.png",
-      "suggestedPath": "assets/review/review_beb6958a4e.png",
-      "suggestedDirectory": "assets/review",
-      "status": "candidate",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "_preview_新角色三.png",
-      "visualGroup": "visual_beb6958a4e",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "_preview_角色二.png",
-      "suggestedPath": "assets/review/review_315a00ed50.png",
-      "suggestedDirectory": "assets/review",
-      "status": "candidate",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "_preview_角色二.png",
-      "visualGroup": "visual_315a00ed50",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
       "sourcePath": "assets/archive/unused/2026-06-05/ui_hud/assembly_cache/player_energy_tray_asset_v1_no_circles_transparent.png",
       "suggestedPath": "assets/review/player_energy_tray_asset_v1_no_circles_transparent.png",
       "suggestedDirectory": "assets/review",
@@ -3801,20 +3759,6 @@
       ],
       "derivedFrom": "tmp_hud_group2_assets/player_hp_bar_long_fill_gray_base_asset_v1.png",
       "visualGroup": "visual_033684e88e",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "头像/头像裁切预览.png",
-      "suggestedPath": "assets/review/review_f1bb741936.png",
-      "suggestedDirectory": "assets/review",
-      "status": "candidate",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "头像/头像裁切预览.png",
-      "visualGroup": "visual_f1bb741936",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
