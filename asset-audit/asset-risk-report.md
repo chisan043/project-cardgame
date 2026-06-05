@@ -7,21 +7,21 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - Assets scanned: 1206
 - Text files scanned for references: 41
 - Referenced assets: 389
-- Active runtime/config assets: 378
+- Active runtime/config assets: 418
 - Unreferenced assets: 817
-- Missing asset-like references: 275
-- Missing runtime/config references: 42
-- Duplicate extension groups: 262
+- Missing asset-like references: 277
+- Missing runtime/config references: 44
+- Duplicate extension groups: 222
 - Identical content groups: 45
 
 ## Status Counts
 
-- active: 378
+- active: 418
 - candidate: 100
 - documented: 11
 - legacy: 48
-- source: 53
-- unreferenced: 616
+- source: 93
+- unreferenced: 536
 
 ## Risk Counts
 
@@ -29,8 +29,8 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - long_component: 79
 - long_path: 11
 - multi_module_reference: 56
-- non_ascii_path: 1171
-- unreferenced: 627
+- non_ascii_path: 1091
+- unreferenced: 547
 
 ## Longest Paths
 
@@ -108,7 +108,9 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - `UI/教堂彩窗赛璐璐/战斗HUD/通用条框_v1.png` in `demo更改需求文档.txt:447`
 - `_asset_v1.png` in `UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/README.md:10`
 - `_asset_v1.webp` in `幻境残卷demo_v0.99.html:3872`
+- `_battle_v1.webp` in `幻境残卷demo_v0.99.html:4425`
 - `_clean_v1.png` in `UI/教堂彩窗赛璐璐/战斗HUD/README.md:132`
+- `_portrait_v1.webp` in `幻境残卷demo_v0.99.html:4430`
 - `assets/bg/battle/ancient_forest.jpg` in `demo更改需求文档.txt:509`
 - `assets/bg/battle/ruins_hall.jpg` in `demo更改需求文档.txt:514`
 - `assets/characters/enemies/slime/front_attack.png` in `demo更改需求文档.txt:478`
@@ -125,8 +127,6 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - `avatar_circle_gray_base_asset_v1.png` in `hud_layout_editor.html:2219`
 - `battle_hud_exile_pile_v1.png` in `UI/教堂彩窗赛璐璐/战斗HUD/README.md:131`
 - `bg_battle_ancient_forest_day.jpg` in `demo更改需求文档.txt:780`
-- `bg_battle_ruins_hall_dusk.jpg` in `demo更改需求文档.txt:781`
-- `bg_map_starpath_01.jpg` in `demo更改需求文档.txt:782`
 
 ## First Migration Candidates
 

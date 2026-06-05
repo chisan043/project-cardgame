@@ -185,6 +185,10 @@ def infer_asset_module(asset_path: Path, references: list[dict]) -> str:
         return "assets/characters/portrait"
     if path.startswith("怪物/战斗立绘/"):
         return "assets/enemies/battle"
+    if path.startswith("assets/enemies/"):
+        return str(Path(path).parent)
+    if path.startswith("assets/source/enemies/"):
+        return str(Path(path).parent)
     if path.startswith("NPC/源图/"):
         return "assets/source/npc"
     if path.startswith("NPC/"):
@@ -284,6 +288,13 @@ def classify_status(asset_path: Path, references: list[dict]) -> str:
     runtime_references = [ref for ref in references if ref["kind"] in {"runtime", "config"}]
     if runtime_references:
         return "active"
+    if (
+        path.startswith(("assets/enemies/battle/", "assets/enemies/portraits/"))
+        and asset_path.suffix.lower() == ".webp"
+    ):
+        return "active"
+    if path.startswith("assets/source/enemies/"):
+        return "source"
     if references and all(ref["kind"] == "documentation" for ref in references):
         return "documented"
     if references and all(ref["kind"] == "tool" for ref in references):

@@ -19,1820 +19,1138 @@
   "summary": {
     "assetCount": 80,
     "statusCounts": {
-      "active_dynamic": 40,
+      "active": 40,
       "source": 40
     },
     "actionCounts": {
-      "move_as_source": 40,
-      "move_then_rewrite_dynamic_refs": 40
+      "already_migrated": 80
     },
     "trackedCounts": {
       "tracked": 80
     },
-    "duplicateExtensionGroupCount": 40
+    "duplicateExtensionGroupCount": 0
   },
   "entries": [
     {
-      "sourcePath": "头像/怪物/【深渊主宰】.png",
-      "suggestedPath": "assets/source/enemies/portraits/abyss_overlord_portrait_v1_source.png",
-      "action": "move_as_source",
-      "status": "source",
+      "sourcePath": "assets/enemies/battle/abyss_overlord_battle_v1.webp",
+      "suggestedPath": "assets/enemies/battle/abyss_overlord_battle_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
       "tracked": true,
       "references": [],
       "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "dfa7e15b9b64f0ff9de873cfd4c5e757d36880b1714c28089b1b0d936d0557ad",
-      "derivedFrom": "头像/怪物/【深渊主宰】.png",
-      "visualGroup": "visual_dfa7e15b9b",
-      "notes": "review before migration"
+      "risks": [],
+      "sha256": "011e22f354d0e7ec65ef1494494d18f41e85a67ae72d83c66179dc4c145fa730",
+      "derivedFrom": "assets/enemies/battle/abyss_overlord_battle_v1.webp",
+      "visualGroup": "visual_011e22f354",
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
     },
     {
-      "sourcePath": "头像/怪物/【深渊主宰】.webp",
+      "sourcePath": "assets/enemies/battle/ancient_spider_battle_v1.webp",
+      "suggestedPath": "assets/enemies/battle/ancient_spider_battle_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "4f45562550e8786b31deed93f76ac36585f034807d822bc268c5675458aa82f5",
+      "derivedFrom": "assets/enemies/battle/ancient_spider_battle_v1.webp",
+      "visualGroup": "visual_4f45562550",
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
+    },
+    {
+      "sourcePath": "assets/enemies/battle/angry_boar_battle_v1.webp",
+      "suggestedPath": "assets/enemies/battle/angry_boar_battle_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "404affa59aecc35944b8cf2da49586824f49551d0c3fc933b5530dec09ce3503",
+      "derivedFrom": "assets/enemies/battle/angry_boar_battle_v1.webp",
+      "visualGroup": "visual_404affa59a",
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
+    },
+    {
+      "sourcePath": "assets/enemies/battle/blood_bat_battle_v1.webp",
+      "suggestedPath": "assets/enemies/battle/blood_bat_battle_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "bec20f5a59b5fbb5e013ea841bd02302aefe2481740730d24fe79dfdae8affb6",
+      "derivedFrom": "assets/enemies/battle/blood_bat_battle_v1.webp",
+      "visualGroup": "visual_bec20f5a59",
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
+    },
+    {
+      "sourcePath": "assets/enemies/battle/bone_soldier_battle_v1.webp",
+      "suggestedPath": "assets/enemies/battle/bone_soldier_battle_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "14775b0aa685dabb97ce4b4f703ae3e04689d7458c291914dbf2be8c9dfada4e",
+      "derivedFrom": "assets/enemies/battle/bone_soldier_battle_v1.webp",
+      "visualGroup": "visual_14775b0aa6",
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
+    },
+    {
+      "sourcePath": "assets/enemies/battle/boss_oni_shura_battle_v1.webp",
+      "suggestedPath": "assets/enemies/battle/boss_oni_shura_battle_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "79b829ed4d2de21e4fe2ffecc30fd0f5710796925bf325aff509079a3a3a9389",
+      "derivedFrom": "assets/enemies/battle/boss_oni_shura_battle_v1.webp",
+      "visualGroup": "visual_79b829ed4d",
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
+    },
+    {
+      "sourcePath": "assets/enemies/battle/crimson_blood_witch_battle_v1.webp",
+      "suggestedPath": "assets/enemies/battle/crimson_blood_witch_battle_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "5693399a1534656d96af0bafb0148f7250e4f56faef5ff43bdea733f487afb8c",
+      "derivedFrom": "assets/enemies/battle/crimson_blood_witch_battle_v1.webp",
+      "visualGroup": "visual_5693399a15",
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
+    },
+    {
+      "sourcePath": "assets/enemies/battle/elite_minotaur_battle_v1.webp",
+      "suggestedPath": "assets/enemies/battle/elite_minotaur_battle_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "e43d98b56f7fd9e8c560e7a88d9c4bedd7311c450a31144b4191fb5bc8fc638c",
+      "derivedFrom": "assets/enemies/battle/elite_minotaur_battle_v1.webp",
+      "visualGroup": "visual_e43d98b56f",
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
+    },
+    {
+      "sourcePath": "assets/enemies/battle/fallen_swordsman_battle_v1.webp",
+      "suggestedPath": "assets/enemies/battle/fallen_swordsman_battle_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "b106647b85c8cab7ab7bc68cdeb5fd30c3bc54ea119aa770f5607d97d4a9da8a",
+      "derivedFrom": "assets/enemies/battle/fallen_swordsman_battle_v1.webp",
+      "visualGroup": "visual_b106647b85",
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
+    },
+    {
+      "sourcePath": "assets/enemies/battle/greedy_thief_battle_v1.webp",
+      "suggestedPath": "assets/enemies/battle/greedy_thief_battle_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "569dd19085f9be8f7df3089145a069c351d5559711c9b7f57aa7cd932f972a28",
+      "derivedFrom": "assets/enemies/battle/greedy_thief_battle_v1.webp",
+      "visualGroup": "visual_569dd19085",
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
+    },
+    {
+      "sourcePath": "assets/enemies/battle/iron_crab_battle_v1.webp",
+      "suggestedPath": "assets/enemies/battle/iron_crab_battle_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "b3d5e3ee96a0afe72a57e5abbc1d74c07813eedacae4b0b6859ea21284c0ec97",
+      "derivedFrom": "assets/enemies/battle/iron_crab_battle_v1.webp",
+      "visualGroup": "visual_b3d5e3ee96",
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
+    },
+    {
+      "sourcePath": "assets/enemies/battle/lost_fox_battle_v1.webp",
+      "suggestedPath": "assets/enemies/battle/lost_fox_battle_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "199e481808c41ef52be85f34d3282a494555958ae0753b4a0a59503f53a48521",
+      "derivedFrom": "assets/enemies/battle/lost_fox_battle_v1.webp",
+      "visualGroup": "visual_199e481808",
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
+    },
+    {
+      "sourcePath": "assets/enemies/battle/nether_mage_battle_v1.webp",
+      "suggestedPath": "assets/enemies/battle/nether_mage_battle_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "202b100f21848a94a6c5ee7406f672ae6607c1fd48dbefa2467c0c6bc3e1674d",
+      "derivedFrom": "assets/enemies/battle/nether_mage_battle_v1.webp",
+      "visualGroup": "visual_202b100f21",
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
+    },
+    {
+      "sourcePath": "assets/enemies/battle/shadow_assassin_battle_v1.webp",
+      "suggestedPath": "assets/enemies/battle/shadow_assassin_battle_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "c14e1cc15ef203abaaa2f90c98bce08455c20b7bee0df30532352173ddefb439",
+      "derivedFrom": "assets/enemies/battle/shadow_assassin_battle_v1.webp",
+      "visualGroup": "visual_c14e1cc15e",
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
+    },
+    {
+      "sourcePath": "assets/enemies/battle/sick_slime_battle_v1.webp",
+      "suggestedPath": "assets/enemies/battle/sick_slime_battle_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "f64565b6a83dcfe006869c46d699cf96fa99feb5dc4e6c0739948a3b7b5017c6",
+      "derivedFrom": "assets/enemies/battle/sick_slime_battle_v1.webp",
+      "visualGroup": "visual_f64565b6a8",
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
+    },
+    {
+      "sourcePath": "assets/enemies/battle/stitched_brute_battle_v1.webp",
+      "suggestedPath": "assets/enemies/battle/stitched_brute_battle_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "ba5cda5b7f8cd6865b7b7b1c9debf34c8e58a1642bea9b52920ce0e3c927935e",
+      "derivedFrom": "assets/enemies/battle/stitched_brute_battle_v1.webp",
+      "visualGroup": "visual_ba5cda5b7f",
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
+    },
+    {
+      "sourcePath": "assets/enemies/battle/stone_golem_battle_v1.webp",
+      "suggestedPath": "assets/enemies/battle/stone_golem_battle_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "4d06c02ecf5cf423beccc352f010f38ffa6b5d2c88130c54829d7aa32f290bdc",
+      "derivedFrom": "assets/enemies/battle/stone_golem_battle_v1.webp",
+      "visualGroup": "visual_4d06c02ecf",
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
+    },
+    {
+      "sourcePath": "assets/enemies/battle/undead_bone_dragon_battle_v1.webp",
+      "suggestedPath": "assets/enemies/battle/undead_bone_dragon_battle_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "b085389bc845bf3eb72ede5442b9f57abcfb022df9876f9a1128bde0e5efc885",
+      "derivedFrom": "assets/enemies/battle/undead_bone_dragon_battle_v1.webp",
+      "visualGroup": "visual_b085389bc8",
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
+    },
+    {
+      "sourcePath": "assets/enemies/battle/venom_toad_battle_v1.webp",
+      "suggestedPath": "assets/enemies/battle/venom_toad_battle_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "9d685e92b19a748f86f7ed8b54ce8c569c903997c32e734007676d9aa9b771c6",
+      "derivedFrom": "assets/enemies/battle/venom_toad_battle_v1.webp",
+      "visualGroup": "visual_9d685e92b1",
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
+    },
+    {
+      "sourcePath": "assets/enemies/battle/wild_wolf_battle_v1.webp",
+      "suggestedPath": "assets/enemies/battle/wild_wolf_battle_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "adca8e3bca5c60e76756a8bff4e2d0ce0e53e981bb6146b31747027967bd4ce0",
+      "derivedFrom": "assets/enemies/battle/wild_wolf_battle_v1.webp",
+      "visualGroup": "visual_adca8e3bca",
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
+    },
+    {
+      "sourcePath": "assets/enemies/portraits/abyss_overlord_portrait_v1.webp",
       "suggestedPath": "assets/enemies/portraits/abyss_overlord_portrait_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
+      "action": "already_migrated",
+      "status": "active",
       "tracked": true,
       "references": [],
       "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
+      "risks": [],
       "sha256": "cfeadee57afa4edd071489af92fc99f693695664614ef8c264454c8d0451d06d",
-      "derivedFrom": "头像/怪物/【深渊主宰】.webp",
+      "derivedFrom": "assets/enemies/portraits/abyss_overlord_portrait_v1.webp",
       "visualGroup": "visual_cfeadee57a",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
     },
     {
-      "sourcePath": "头像/怪物/【精英】不死骨龙.png",
-      "suggestedPath": "assets/source/enemies/portraits/undead_bone_dragon_portrait_v1_source.png",
-      "action": "move_as_source",
-      "status": "source",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "54401399f5c251287d9d3ebe5d2123117b08f04a56487608ff3eafb8dc554e7e",
-      "derivedFrom": "头像/怪物/【精英】不死骨龙.png",
-      "visualGroup": "visual_54401399f5",
-      "notes": "review before migration"
-    },
-    {
-      "sourcePath": "头像/怪物/【精英】不死骨龙.webp",
-      "suggestedPath": "assets/enemies/portraits/undead_bone_dragon_portrait_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "63728823be5afb19bfe49a8f4f709f3fd62965b452e814327f90640fcca4ada5",
-      "derivedFrom": "头像/怪物/【精英】不死骨龙.webp",
-      "visualGroup": "visual_63728823be",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
-    },
-    {
-      "sourcePath": "头像/怪物/【精英】狂暴牛头人.png",
-      "suggestedPath": "assets/source/enemies/portraits/elite_minotaur_portrait_v1_source.png",
-      "action": "move_as_source",
-      "status": "source",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "953c598f9b2d04457e97a976ae84a9947559ca0dfb2aa7c6758c0af897c80782",
-      "derivedFrom": "头像/怪物/【精英】狂暴牛头人.png",
-      "visualGroup": "visual_953c598f9b",
-      "notes": "review before migration"
-    },
-    {
-      "sourcePath": "头像/怪物/【精英】狂暴牛头人.webp",
-      "suggestedPath": "assets/enemies/portraits/elite_minotaur_portrait_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "f9f15860b35711d4c686f9baa48a24c0ce1b554b9e0cd635a8d3ceef5cd4cfb6",
-      "derivedFrom": "头像/怪物/【精英】狂暴牛头人.webp",
-      "visualGroup": "visual_f9f15860b3",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
-    },
-    {
-      "sourcePath": "头像/怪物/【精英】猩红血巫.png",
-      "suggestedPath": "assets/source/enemies/portraits/crimson_blood_witch_portrait_v1_source.png",
-      "action": "move_as_source",
-      "status": "source",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "d69091fa5c440b2518ca24b94d8bfde6830a5c1079e991694bfe842cd2d2f9f0",
-      "derivedFrom": "头像/怪物/【精英】猩红血巫.png",
-      "visualGroup": "visual_d69091fa5c",
-      "notes": "review before migration"
-    },
-    {
-      "sourcePath": "头像/怪物/【精英】猩红血巫.webp",
-      "suggestedPath": "assets/enemies/portraits/crimson_blood_witch_portrait_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "0187629069f77943579fa2be3a41c3916c372fe20f58f42bde946443c0830c3c",
-      "derivedFrom": "头像/怪物/【精英】猩红血巫.webp",
-      "visualGroup": "visual_0187629069",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
-    },
-    {
-      "sourcePath": "头像/怪物/【首领】鬼面修罗.png",
-      "suggestedPath": "assets/source/enemies/portraits/boss_oni_shura_portrait_v1_source.png",
-      "action": "move_as_source",
-      "status": "source",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "5424fb7b103a6d6ff59cccd9118d1a1132a5d23e6ade14c9849ddccb1fd1a2bb",
-      "derivedFrom": "头像/怪物/【首领】鬼面修罗.png",
-      "visualGroup": "visual_5424fb7b10",
-      "notes": "review before migration"
-    },
-    {
-      "sourcePath": "头像/怪物/【首领】鬼面修罗.webp",
-      "suggestedPath": "assets/enemies/portraits/boss_oni_shura_portrait_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "5f7195ffb965e5b653ed7a21d8726cc6273b38150b17b303f92a229ace4e68d5",
-      "derivedFrom": "头像/怪物/【首领】鬼面修罗.webp",
-      "visualGroup": "visual_5f7195ffb9",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
-    },
-    {
-      "sourcePath": "头像/怪物/剧毒蟾蜍.png",
-      "suggestedPath": "assets/source/enemies/portraits/venom_toad_portrait_v1_source.png",
-      "action": "move_as_source",
-      "status": "source",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "8dbdc865f5252f36e144757c3c08cb7070b8503061700586553d885eecde4b8b",
-      "derivedFrom": "头像/怪物/剧毒蟾蜍.png",
-      "visualGroup": "visual_8dbdc865f5",
-      "notes": "review before migration"
-    },
-    {
-      "sourcePath": "头像/怪物/剧毒蟾蜍.webp",
-      "suggestedPath": "assets/enemies/portraits/venom_toad_portrait_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "9c4ccdc218689cb065ad74832931b3d4e705cbfbb659d59babec2ea29851de85",
-      "derivedFrom": "头像/怪物/剧毒蟾蜍.webp",
-      "visualGroup": "visual_9c4ccdc218",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
-    },
-    {
-      "sourcePath": "头像/怪物/千载魔蛛.png",
-      "suggestedPath": "assets/source/enemies/portraits/ancient_spider_portrait_v1_source.png",
-      "action": "move_as_source",
-      "status": "source",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "9731975254f32239ec665d3a0e6edcd13fb0428314484c7490f2a058ddfad2bb",
-      "derivedFrom": "头像/怪物/千载魔蛛.png",
-      "visualGroup": "visual_9731975254",
-      "notes": "review before migration"
-    },
-    {
-      "sourcePath": "头像/怪物/千载魔蛛.webp",
+      "sourcePath": "assets/enemies/portraits/ancient_spider_portrait_v1.webp",
       "suggestedPath": "assets/enemies/portraits/ancient_spider_portrait_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
+      "action": "already_migrated",
+      "status": "active",
       "tracked": true,
       "references": [],
       "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
+      "risks": [],
       "sha256": "280f671cf2a01df00e6300b6c36da1075802a6cd37f52090800d0b74d7b1d221",
-      "derivedFrom": "头像/怪物/千载魔蛛.webp",
+      "derivedFrom": "assets/enemies/portraits/ancient_spider_portrait_v1.webp",
       "visualGroup": "visual_280f671cf2",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
     },
     {
-      "sourcePath": "头像/怪物/嗜血蝙蝠.png",
-      "suggestedPath": "assets/source/enemies/portraits/blood_bat_portrait_v1_source.png",
-      "action": "move_as_source",
-      "status": "source",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "e156834ee1e5f57174c4f33665cb1c9bfaab2cb3e9ee87285bb16204330a8269",
-      "derivedFrom": "头像/怪物/嗜血蝙蝠.png",
-      "visualGroup": "visual_e156834ee1",
-      "notes": "review before migration"
-    },
-    {
-      "sourcePath": "头像/怪物/嗜血蝙蝠.webp",
-      "suggestedPath": "assets/enemies/portraits/blood_bat_portrait_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "337e99f5b7f29ae36708f30f0d0c7fa362460ae68e4b0f819681c4f847de25b7",
-      "derivedFrom": "头像/怪物/嗜血蝙蝠.webp",
-      "visualGroup": "visual_337e99f5b7",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
-    },
-    {
-      "sourcePath": "头像/怪物/堕落剑客.png",
-      "suggestedPath": "assets/source/enemies/portraits/fallen_swordsman_portrait_v1_source.png",
-      "action": "move_as_source",
-      "status": "source",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "a90c7f60d93cf0bc45af6f3a1cf9333c78b86d5c70e583da6121ea5b221593dc",
-      "derivedFrom": "头像/怪物/堕落剑客.png",
-      "visualGroup": "visual_a90c7f60d9",
-      "notes": "review before migration"
-    },
-    {
-      "sourcePath": "头像/怪物/堕落剑客.webp",
-      "suggestedPath": "assets/enemies/portraits/fallen_swordsman_portrait_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "60af5ea2a37ec11f44922d66c4575f906d0b2de5beb6528cec9adbb85b857460",
-      "derivedFrom": "头像/怪物/堕落剑客.webp",
-      "visualGroup": "visual_60af5ea2a3",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
-    },
-    {
-      "sourcePath": "头像/怪物/巨力石魔.png",
-      "suggestedPath": "assets/source/enemies/portraits/stone_golem_portrait_v1_source.png",
-      "action": "move_as_source",
-      "status": "source",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "fed78ac7108d6ee8d971af143ac4c6c17435f11cf8f0dd45abf3a70f1e5ac30c",
-      "derivedFrom": "头像/怪物/巨力石魔.png",
-      "visualGroup": "visual_fed78ac710",
-      "notes": "review before migration"
-    },
-    {
-      "sourcePath": "头像/怪物/巨力石魔.webp",
-      "suggestedPath": "assets/enemies/portraits/stone_golem_portrait_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "dd51e45790135713be2e5d53b9e6939fa9a022a3bc0d975416850dcb392060fa",
-      "derivedFrom": "头像/怪物/巨力石魔.webp",
-      "visualGroup": "visual_dd51e45790",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
-    },
-    {
-      "sourcePath": "头像/怪物/幽冥法师.png",
-      "suggestedPath": "assets/source/enemies/portraits/nether_mage_portrait_v1_source.png",
-      "action": "move_as_source",
-      "status": "source",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "f9081bf4d12e89606b152a3ccec40d51504125bcdf4fd013afe4164c9d54a794",
-      "derivedFrom": "头像/怪物/幽冥法师.png",
-      "visualGroup": "visual_f9081bf4d1",
-      "notes": "review before migration"
-    },
-    {
-      "sourcePath": "头像/怪物/幽冥法师.webp",
-      "suggestedPath": "assets/enemies/portraits/nether_mage_portrait_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "07f69c52f2d777c75c70ab607a0d0a7e035ddf5e716732d1eed292e77aefe288",
-      "derivedFrom": "头像/怪物/幽冥法师.webp",
-      "visualGroup": "visual_07f69c52f2",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
-    },
-    {
-      "sourcePath": "头像/怪物/暴躁野猪.png",
-      "suggestedPath": "assets/source/enemies/portraits/angry_boar_portrait_v1_source.png",
-      "action": "move_as_source",
-      "status": "source",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "ee1a4787d032d9be6518b693b8021546668d7f2958c9a8b7ae9f1d79ba13154f",
-      "derivedFrom": "头像/怪物/暴躁野猪.png",
-      "visualGroup": "visual_ee1a4787d0",
-      "notes": "review before migration"
-    },
-    {
-      "sourcePath": "头像/怪物/暴躁野猪.webp",
+      "sourcePath": "assets/enemies/portraits/angry_boar_portrait_v1.webp",
       "suggestedPath": "assets/enemies/portraits/angry_boar_portrait_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
+      "action": "already_migrated",
+      "status": "active",
       "tracked": true,
       "references": [],
       "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
+      "risks": [],
       "sha256": "1ea65eff92768b9a94ce8e3c9c98c491c39fd55fecf1b560c942792ed6fdeb86",
-      "derivedFrom": "头像/怪物/暴躁野猪.webp",
+      "derivedFrom": "assets/enemies/portraits/angry_boar_portrait_v1.webp",
       "visualGroup": "visual_1ea65eff92",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
     },
     {
-      "sourcePath": "头像/怪物/枯骨煞兵.png",
-      "suggestedPath": "assets/source/enemies/portraits/bone_soldier_portrait_v1_source.png",
-      "action": "move_as_source",
-      "status": "source",
+      "sourcePath": "assets/enemies/portraits/blood_bat_portrait_v1.webp",
+      "suggestedPath": "assets/enemies/portraits/blood_bat_portrait_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
       "tracked": true,
       "references": [],
       "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "64c528f68a089b783b6cbfc876d9cfb666ed8ec7b15c8d35b637b02a2ff83060",
-      "derivedFrom": "头像/怪物/枯骨煞兵.png",
-      "visualGroup": "visual_64c528f68a",
-      "notes": "review before migration"
+      "risks": [],
+      "sha256": "337e99f5b7f29ae36708f30f0d0c7fa362460ae68e4b0f819681c4f847de25b7",
+      "derivedFrom": "assets/enemies/portraits/blood_bat_portrait_v1.webp",
+      "visualGroup": "visual_337e99f5b7",
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
     },
     {
-      "sourcePath": "头像/怪物/枯骨煞兵.webp",
+      "sourcePath": "assets/enemies/portraits/bone_soldier_portrait_v1.webp",
       "suggestedPath": "assets/enemies/portraits/bone_soldier_portrait_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
+      "action": "already_migrated",
+      "status": "active",
       "tracked": true,
       "references": [],
       "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
+      "risks": [],
       "sha256": "7127220389e6b3172ba67e542a3a5f508bf2117cdbd1baa287d5f481629904a8",
-      "derivedFrom": "头像/怪物/枯骨煞兵.webp",
+      "derivedFrom": "assets/enemies/portraits/bone_soldier_portrait_v1.webp",
       "visualGroup": "visual_7127220389",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
     },
     {
-      "sourcePath": "头像/怪物/病弱史莱姆.png",
-      "suggestedPath": "assets/source/enemies/portraits/sick_slime_portrait_v1_source.png",
-      "action": "move_as_source",
-      "status": "source",
+      "sourcePath": "assets/enemies/portraits/boss_oni_shura_portrait_v1.webp",
+      "suggestedPath": "assets/enemies/portraits/boss_oni_shura_portrait_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
       "tracked": true,
       "references": [],
       "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "89d072603622ab59ca15455942914953b2bdc7314ef9fbfc422d239cae481ee6",
-      "derivedFrom": "头像/怪物/病弱史莱姆.png",
-      "visualGroup": "visual_89d0726036",
-      "notes": "review before migration"
+      "risks": [],
+      "sha256": "5f7195ffb965e5b653ed7a21d8726cc6273b38150b17b303f92a229ace4e68d5",
+      "derivedFrom": "assets/enemies/portraits/boss_oni_shura_portrait_v1.webp",
+      "visualGroup": "visual_5f7195ffb9",
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
     },
     {
-      "sourcePath": "头像/怪物/病弱史莱姆.webp",
-      "suggestedPath": "assets/enemies/portraits/sick_slime_portrait_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
+      "sourcePath": "assets/enemies/portraits/crimson_blood_witch_portrait_v1.webp",
+      "suggestedPath": "assets/enemies/portraits/crimson_blood_witch_portrait_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
       "tracked": true,
       "references": [],
       "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "0642165c3dd6713a9509498efa0963e426d0d10929c40529154b83551e456b5e",
-      "derivedFrom": "头像/怪物/病弱史莱姆.webp",
-      "visualGroup": "visual_0642165c3d",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
+      "risks": [],
+      "sha256": "0187629069f77943579fa2be3a41c3916c372fe20f58f42bde946443c0830c3c",
+      "derivedFrom": "assets/enemies/portraits/crimson_blood_witch_portrait_v1.webp",
+      "visualGroup": "visual_0187629069",
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
     },
     {
-      "sourcePath": "头像/怪物/缝合巨怪.png",
-      "suggestedPath": "assets/source/enemies/portraits/stitched_brute_portrait_v1_source.png",
-      "action": "move_as_source",
-      "status": "source",
+      "sourcePath": "assets/enemies/portraits/elite_minotaur_portrait_v1.webp",
+      "suggestedPath": "assets/enemies/portraits/elite_minotaur_portrait_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
       "tracked": true,
       "references": [],
       "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "7fd013bd4b6d09229fde7f42e28bcd7108d49585c70bceb5d4ad1e94416d425f",
-      "derivedFrom": "头像/怪物/缝合巨怪.png",
-      "visualGroup": "visual_7fd013bd4b",
-      "notes": "review before migration"
+      "risks": [],
+      "sha256": "f9f15860b35711d4c686f9baa48a24c0ce1b554b9e0cd635a8d3ceef5cd4cfb6",
+      "derivedFrom": "assets/enemies/portraits/elite_minotaur_portrait_v1.webp",
+      "visualGroup": "visual_f9f15860b3",
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
     },
     {
-      "sourcePath": "头像/怪物/缝合巨怪.webp",
-      "suggestedPath": "assets/enemies/portraits/stitched_brute_portrait_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
+      "sourcePath": "assets/enemies/portraits/fallen_swordsman_portrait_v1.webp",
+      "suggestedPath": "assets/enemies/portraits/fallen_swordsman_portrait_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
       "tracked": true,
       "references": [],
       "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "770278b52e72f3690dd75ab836096a3ce25173b57cb619b845158a01b9b83ee7",
-      "derivedFrom": "头像/怪物/缝合巨怪.webp",
-      "visualGroup": "visual_770278b52e",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
+      "risks": [],
+      "sha256": "60af5ea2a37ec11f44922d66c4575f906d0b2de5beb6528cec9adbb85b857460",
+      "derivedFrom": "assets/enemies/portraits/fallen_swordsman_portrait_v1.webp",
+      "visualGroup": "visual_60af5ea2a3",
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
     },
     {
-      "sourcePath": "头像/怪物/荒野煞狼.png",
-      "suggestedPath": "assets/source/enemies/portraits/wild_wolf_portrait_v1_source.png",
-      "action": "move_as_source",
-      "status": "source",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "931acba317de3bdad6c748884a0569816167d73af5d8b34516856288abc4b20c",
-      "derivedFrom": "头像/怪物/荒野煞狼.png",
-      "visualGroup": "visual_931acba317",
-      "notes": "review before migration"
-    },
-    {
-      "sourcePath": "头像/怪物/荒野煞狼.webp",
-      "suggestedPath": "assets/enemies/portraits/wild_wolf_portrait_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "ba3582e252884167942339e2f58d9c8371e88e80da783c31d468a0b043772070",
-      "derivedFrom": "头像/怪物/荒野煞狼.webp",
-      "visualGroup": "visual_ba3582e252",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
-    },
-    {
-      "sourcePath": "头像/怪物/贪婪盗贼.png",
-      "suggestedPath": "assets/source/enemies/portraits/greedy_thief_portrait_v1_source.png",
-      "action": "move_as_source",
-      "status": "source",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "845b8428f497081c06be4bb72e4ec7f338bd7be6995b0d8449e847d3e0653fc8",
-      "derivedFrom": "头像/怪物/贪婪盗贼.png",
-      "visualGroup": "visual_845b8428f4",
-      "notes": "review before migration"
-    },
-    {
-      "sourcePath": "头像/怪物/贪婪盗贼.webp",
+      "sourcePath": "assets/enemies/portraits/greedy_thief_portrait_v1.webp",
       "suggestedPath": "assets/enemies/portraits/greedy_thief_portrait_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
+      "action": "already_migrated",
+      "status": "active",
       "tracked": true,
       "references": [],
       "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
+      "risks": [],
       "sha256": "a2a380b18eeb4da9b916f72cde4be3f92122116770da23084e2ec38e8628a308",
-      "derivedFrom": "头像/怪物/贪婪盗贼.webp",
+      "derivedFrom": "assets/enemies/portraits/greedy_thief_portrait_v1.webp",
       "visualGroup": "visual_a2a380b18e",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
     },
     {
-      "sourcePath": "头像/怪物/迷途妖狐.png",
-      "suggestedPath": "assets/source/enemies/portraits/lost_fox_portrait_v1_source.png",
-      "action": "move_as_source",
-      "status": "source",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "6c2430729644934a4571374150607cc36172a6556cc08e2f7170a0ddf20e879f",
-      "derivedFrom": "头像/怪物/迷途妖狐.png",
-      "visualGroup": "visual_6c24307296",
-      "notes": "review before migration"
-    },
-    {
-      "sourcePath": "头像/怪物/迷途妖狐.webp",
-      "suggestedPath": "assets/enemies/portraits/lost_fox_portrait_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "5d173ac9d3193bbdaa340f6cb3d13b3a13180f1059450a4bbbcb21a5e3215cd7",
-      "derivedFrom": "头像/怪物/迷途妖狐.webp",
-      "visualGroup": "visual_5d173ac9d3",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
-    },
-    {
-      "sourcePath": "头像/怪物/铁甲巨蟹.png",
-      "suggestedPath": "assets/source/enemies/portraits/iron_crab_portrait_v1_source.png",
-      "action": "move_as_source",
-      "status": "source",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "af139bbda53f8eb04d46d616fe22da01e2d1ab8ca10a483b094095669cf84227",
-      "derivedFrom": "头像/怪物/铁甲巨蟹.png",
-      "visualGroup": "visual_af139bbda5",
-      "notes": "review before migration"
-    },
-    {
-      "sourcePath": "头像/怪物/铁甲巨蟹.webp",
+      "sourcePath": "assets/enemies/portraits/iron_crab_portrait_v1.webp",
       "suggestedPath": "assets/enemies/portraits/iron_crab_portrait_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
+      "action": "already_migrated",
+      "status": "active",
       "tracked": true,
       "references": [],
       "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
+      "risks": [],
       "sha256": "116eca5213c5851260c94ef9882243bcde0cab81d1e65bdfbf634605ad4c6ded",
-      "derivedFrom": "头像/怪物/铁甲巨蟹.webp",
+      "derivedFrom": "assets/enemies/portraits/iron_crab_portrait_v1.webp",
       "visualGroup": "visual_116eca5213",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
     },
     {
-      "sourcePath": "头像/怪物/魅影刺客.png",
-      "suggestedPath": "assets/source/enemies/portraits/shadow_assassin_portrait_v1_source.png",
-      "action": "move_as_source",
-      "status": "source",
+      "sourcePath": "assets/enemies/portraits/lost_fox_portrait_v1.webp",
+      "suggestedPath": "assets/enemies/portraits/lost_fox_portrait_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
       "tracked": true,
       "references": [],
       "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "c2a6d3266eb12a101c1842929523d100d6c853cb8177ae0f19ca8de3e5e5d694",
-      "derivedFrom": "头像/怪物/魅影刺客.png",
-      "visualGroup": "visual_c2a6d3266e",
-      "notes": "review before migration"
+      "risks": [],
+      "sha256": "5d173ac9d3193bbdaa340f6cb3d13b3a13180f1059450a4bbbcb21a5e3215cd7",
+      "derivedFrom": "assets/enemies/portraits/lost_fox_portrait_v1.webp",
+      "visualGroup": "visual_5d173ac9d3",
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
     },
     {
-      "sourcePath": "头像/怪物/魅影刺客.webp",
+      "sourcePath": "assets/enemies/portraits/nether_mage_portrait_v1.webp",
+      "suggestedPath": "assets/enemies/portraits/nether_mage_portrait_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "07f69c52f2d777c75c70ab607a0d0a7e035ddf5e716732d1eed292e77aefe288",
+      "derivedFrom": "assets/enemies/portraits/nether_mage_portrait_v1.webp",
+      "visualGroup": "visual_07f69c52f2",
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
+    },
+    {
+      "sourcePath": "assets/enemies/portraits/shadow_assassin_portrait_v1.webp",
       "suggestedPath": "assets/enemies/portraits/shadow_assassin_portrait_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
+      "action": "already_migrated",
+      "status": "active",
       "tracked": true,
       "references": [],
       "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
+      "risks": [],
       "sha256": "f0545c10d2380904cedb58cccaeed51b62f33625c9e7fb4cc106d184fd1af585",
-      "derivedFrom": "头像/怪物/魅影刺客.webp",
+      "derivedFrom": "assets/enemies/portraits/shadow_assassin_portrait_v1.webp",
       "visualGroup": "visual_f0545c10d2",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
     },
     {
-      "sourcePath": "怪物/战斗立绘/【深渊主宰】.png",
+      "sourcePath": "assets/enemies/portraits/sick_slime_portrait_v1.webp",
+      "suggestedPath": "assets/enemies/portraits/sick_slime_portrait_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "0642165c3dd6713a9509498efa0963e426d0d10929c40529154b83551e456b5e",
+      "derivedFrom": "assets/enemies/portraits/sick_slime_portrait_v1.webp",
+      "visualGroup": "visual_0642165c3d",
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
+    },
+    {
+      "sourcePath": "assets/enemies/portraits/stitched_brute_portrait_v1.webp",
+      "suggestedPath": "assets/enemies/portraits/stitched_brute_portrait_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "770278b52e72f3690dd75ab836096a3ce25173b57cb619b845158a01b9b83ee7",
+      "derivedFrom": "assets/enemies/portraits/stitched_brute_portrait_v1.webp",
+      "visualGroup": "visual_770278b52e",
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
+    },
+    {
+      "sourcePath": "assets/enemies/portraits/stone_golem_portrait_v1.webp",
+      "suggestedPath": "assets/enemies/portraits/stone_golem_portrait_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "dd51e45790135713be2e5d53b9e6939fa9a022a3bc0d975416850dcb392060fa",
+      "derivedFrom": "assets/enemies/portraits/stone_golem_portrait_v1.webp",
+      "visualGroup": "visual_dd51e45790",
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
+    },
+    {
+      "sourcePath": "assets/enemies/portraits/undead_bone_dragon_portrait_v1.webp",
+      "suggestedPath": "assets/enemies/portraits/undead_bone_dragon_portrait_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "63728823be5afb19bfe49a8f4f709f3fd62965b452e814327f90640fcca4ada5",
+      "derivedFrom": "assets/enemies/portraits/undead_bone_dragon_portrait_v1.webp",
+      "visualGroup": "visual_63728823be",
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
+    },
+    {
+      "sourcePath": "assets/enemies/portraits/venom_toad_portrait_v1.webp",
+      "suggestedPath": "assets/enemies/portraits/venom_toad_portrait_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "9c4ccdc218689cb065ad74832931b3d4e705cbfbb659d59babec2ea29851de85",
+      "derivedFrom": "assets/enemies/portraits/venom_toad_portrait_v1.webp",
+      "visualGroup": "visual_9c4ccdc218",
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
+    },
+    {
+      "sourcePath": "assets/enemies/portraits/wild_wolf_portrait_v1.webp",
+      "suggestedPath": "assets/enemies/portraits/wild_wolf_portrait_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "ba3582e252884167942339e2f58d9c8371e88e80da783c31d468a0b043772070",
+      "derivedFrom": "assets/enemies/portraits/wild_wolf_portrait_v1.webp",
+      "visualGroup": "visual_ba3582e252",
+      "notes": "dynamic runtime asset inferred from enemy data and demo path helpers"
+    },
+    {
+      "sourcePath": "assets/source/enemies/battle/abyss_overlord_battle_v1_source.png",
       "suggestedPath": "assets/source/enemies/battle/abyss_overlord_battle_v1_source.png",
-      "action": "move_as_source",
+      "action": "already_migrated",
       "status": "source",
       "tracked": true,
       "references": [],
       "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
+      "risks": [],
       "sha256": "5f099fa63d52325fba8403b751812227e88ddbd1dc5a57e1a349cc3f221786c9",
-      "derivedFrom": "怪物/战斗立绘/【深渊主宰】.png",
+      "derivedFrom": "assets/source/enemies/battle/abyss_overlord_battle_v1_source.png",
       "visualGroup": "visual_5f099fa63d",
       "notes": "review before migration"
     },
     {
-      "sourcePath": "怪物/战斗立绘/【深渊主宰】.webp",
-      "suggestedPath": "assets/enemies/battle/abyss_overlord_battle_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "011e22f354d0e7ec65ef1494494d18f41e85a67ae72d83c66179dc4c145fa730",
-      "derivedFrom": "怪物/战斗立绘/【深渊主宰】.webp",
-      "visualGroup": "visual_011e22f354",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
-    },
-    {
-      "sourcePath": "怪物/战斗立绘/【精英】不死骨龙.png",
-      "suggestedPath": "assets/source/enemies/battle/undead_bone_dragon_battle_v1_source.png",
-      "action": "move_as_source",
-      "status": "source",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "aa70c4b48f3bd95d856c153c11d6e80c251f03766ccb6e16fce9eca604fd6607",
-      "derivedFrom": "怪物/战斗立绘/【精英】不死骨龙.png",
-      "visualGroup": "visual_aa70c4b48f",
-      "notes": "review before migration"
-    },
-    {
-      "sourcePath": "怪物/战斗立绘/【精英】不死骨龙.webp",
-      "suggestedPath": "assets/enemies/battle/undead_bone_dragon_battle_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "b085389bc845bf3eb72ede5442b9f57abcfb022df9876f9a1128bde0e5efc885",
-      "derivedFrom": "怪物/战斗立绘/【精英】不死骨龙.webp",
-      "visualGroup": "visual_b085389bc8",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
-    },
-    {
-      "sourcePath": "怪物/战斗立绘/【精英】狂暴牛头人.png",
-      "suggestedPath": "assets/source/enemies/battle/elite_minotaur_battle_v1_source.png",
-      "action": "move_as_source",
-      "status": "source",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "5ac233f5d47f869ce87cac8a37a56fe3d0e0bdf323280418c896283f7e249ad5",
-      "derivedFrom": "怪物/战斗立绘/【精英】狂暴牛头人.png",
-      "visualGroup": "visual_5ac233f5d4",
-      "notes": "review before migration"
-    },
-    {
-      "sourcePath": "怪物/战斗立绘/【精英】狂暴牛头人.webp",
-      "suggestedPath": "assets/enemies/battle/elite_minotaur_battle_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "e43d98b56f7fd9e8c560e7a88d9c4bedd7311c450a31144b4191fb5bc8fc638c",
-      "derivedFrom": "怪物/战斗立绘/【精英】狂暴牛头人.webp",
-      "visualGroup": "visual_e43d98b56f",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
-    },
-    {
-      "sourcePath": "怪物/战斗立绘/【精英】猩红血巫.png",
-      "suggestedPath": "assets/source/enemies/battle/crimson_blood_witch_battle_v1_source.png",
-      "action": "move_as_source",
-      "status": "source",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "592cc2ae62be2718795141741b9023131253b48408fbca8374da3f347a3c1745",
-      "derivedFrom": "怪物/战斗立绘/【精英】猩红血巫.png",
-      "visualGroup": "visual_592cc2ae62",
-      "notes": "review before migration"
-    },
-    {
-      "sourcePath": "怪物/战斗立绘/【精英】猩红血巫.webp",
-      "suggestedPath": "assets/enemies/battle/crimson_blood_witch_battle_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "5693399a1534656d96af0bafb0148f7250e4f56faef5ff43bdea733f487afb8c",
-      "derivedFrom": "怪物/战斗立绘/【精英】猩红血巫.webp",
-      "visualGroup": "visual_5693399a15",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
-    },
-    {
-      "sourcePath": "怪物/战斗立绘/【首领】鬼面修罗.png",
-      "suggestedPath": "assets/source/enemies/battle/boss_oni_shura_battle_v1_source.png",
-      "action": "move_as_source",
-      "status": "source",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "b2e4c6a0d2b4f5a96e352cb98a82c3adca64a7b6d6ce172b99fa04770a3c12d3",
-      "derivedFrom": "怪物/战斗立绘/【首领】鬼面修罗.png",
-      "visualGroup": "visual_b2e4c6a0d2",
-      "notes": "review before migration"
-    },
-    {
-      "sourcePath": "怪物/战斗立绘/【首领】鬼面修罗.webp",
-      "suggestedPath": "assets/enemies/battle/boss_oni_shura_battle_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "79b829ed4d2de21e4fe2ffecc30fd0f5710796925bf325aff509079a3a3a9389",
-      "derivedFrom": "怪物/战斗立绘/【首领】鬼面修罗.webp",
-      "visualGroup": "visual_79b829ed4d",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
-    },
-    {
-      "sourcePath": "怪物/战斗立绘/剧毒蟾蜍.png",
-      "suggestedPath": "assets/source/enemies/battle/venom_toad_battle_v1_source.png",
-      "action": "move_as_source",
-      "status": "source",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "ee0036038de58d21e4b5b06013cdb829e823494ebedbc06a6681ff19feae9e5c",
-      "derivedFrom": "怪物/战斗立绘/剧毒蟾蜍.png",
-      "visualGroup": "visual_ee0036038d",
-      "notes": "review before migration"
-    },
-    {
-      "sourcePath": "怪物/战斗立绘/剧毒蟾蜍.webp",
-      "suggestedPath": "assets/enemies/battle/venom_toad_battle_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "9d685e92b19a748f86f7ed8b54ce8c569c903997c32e734007676d9aa9b771c6",
-      "derivedFrom": "怪物/战斗立绘/剧毒蟾蜍.webp",
-      "visualGroup": "visual_9d685e92b1",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
-    },
-    {
-      "sourcePath": "怪物/战斗立绘/千载魔蛛.png",
+      "sourcePath": "assets/source/enemies/battle/ancient_spider_battle_v1_source.png",
       "suggestedPath": "assets/source/enemies/battle/ancient_spider_battle_v1_source.png",
-      "action": "move_as_source",
+      "action": "already_migrated",
       "status": "source",
       "tracked": true,
       "references": [],
       "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
+      "risks": [],
       "sha256": "ab578cdacbdc9b55955d697529b014ef1f4ed00778cb298a546ce6ca3560497f",
-      "derivedFrom": "怪物/战斗立绘/千载魔蛛.png",
+      "derivedFrom": "assets/source/enemies/battle/ancient_spider_battle_v1_source.png",
       "visualGroup": "visual_ab578cdacb",
       "notes": "review before migration"
     },
     {
-      "sourcePath": "怪物/战斗立绘/千载魔蛛.webp",
-      "suggestedPath": "assets/enemies/battle/ancient_spider_battle_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "4f45562550e8786b31deed93f76ac36585f034807d822bc268c5675458aa82f5",
-      "derivedFrom": "怪物/战斗立绘/千载魔蛛.webp",
-      "visualGroup": "visual_4f45562550",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
-    },
-    {
-      "sourcePath": "怪物/战斗立绘/嗜血蝙蝠.png",
-      "suggestedPath": "assets/source/enemies/battle/blood_bat_battle_v1_source.png",
-      "action": "move_as_source",
-      "status": "source",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "f9390b2b2dec208dae9bacd0b4977bdb54dd365bc43d142edffb088fefe774fa",
-      "derivedFrom": "怪物/战斗立绘/嗜血蝙蝠.png",
-      "visualGroup": "visual_f9390b2b2d",
-      "notes": "review before migration"
-    },
-    {
-      "sourcePath": "怪物/战斗立绘/嗜血蝙蝠.webp",
-      "suggestedPath": "assets/enemies/battle/blood_bat_battle_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "bec20f5a59b5fbb5e013ea841bd02302aefe2481740730d24fe79dfdae8affb6",
-      "derivedFrom": "怪物/战斗立绘/嗜血蝙蝠.webp",
-      "visualGroup": "visual_bec20f5a59",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
-    },
-    {
-      "sourcePath": "怪物/战斗立绘/堕落剑客.png",
-      "suggestedPath": "assets/source/enemies/battle/fallen_swordsman_battle_v1_source.png",
-      "action": "move_as_source",
-      "status": "source",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "04cd7ac020ebbcd5fe3e4207a35a487bcadcc3cf6374ef1420710a0e8110f7bd",
-      "derivedFrom": "怪物/战斗立绘/堕落剑客.png",
-      "visualGroup": "visual_04cd7ac020",
-      "notes": "review before migration"
-    },
-    {
-      "sourcePath": "怪物/战斗立绘/堕落剑客.webp",
-      "suggestedPath": "assets/enemies/battle/fallen_swordsman_battle_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "b106647b85c8cab7ab7bc68cdeb5fd30c3bc54ea119aa770f5607d97d4a9da8a",
-      "derivedFrom": "怪物/战斗立绘/堕落剑客.webp",
-      "visualGroup": "visual_b106647b85",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
-    },
-    {
-      "sourcePath": "怪物/战斗立绘/巨力石魔.png",
-      "suggestedPath": "assets/source/enemies/battle/stone_golem_battle_v1_source.png",
-      "action": "move_as_source",
-      "status": "source",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "913c93aa47f7bc90047eb4b5e86af3579e5cd59f04d9e09a054274ced61799d8",
-      "derivedFrom": "怪物/战斗立绘/巨力石魔.png",
-      "visualGroup": "visual_913c93aa47",
-      "notes": "review before migration"
-    },
-    {
-      "sourcePath": "怪物/战斗立绘/巨力石魔.webp",
-      "suggestedPath": "assets/enemies/battle/stone_golem_battle_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "4d06c02ecf5cf423beccc352f010f38ffa6b5d2c88130c54829d7aa32f290bdc",
-      "derivedFrom": "怪物/战斗立绘/巨力石魔.webp",
-      "visualGroup": "visual_4d06c02ecf",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
-    },
-    {
-      "sourcePath": "怪物/战斗立绘/幽冥法师.png",
-      "suggestedPath": "assets/source/enemies/battle/nether_mage_battle_v1_source.png",
-      "action": "move_as_source",
-      "status": "source",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "0584909e90699f60309f4838625949edebd2bbafc3450d7c3509570e24a4c01a",
-      "derivedFrom": "怪物/战斗立绘/幽冥法师.png",
-      "visualGroup": "visual_0584909e90",
-      "notes": "review before migration"
-    },
-    {
-      "sourcePath": "怪物/战斗立绘/幽冥法师.webp",
-      "suggestedPath": "assets/enemies/battle/nether_mage_battle_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "202b100f21848a94a6c5ee7406f672ae6607c1fd48dbefa2467c0c6bc3e1674d",
-      "derivedFrom": "怪物/战斗立绘/幽冥法师.webp",
-      "visualGroup": "visual_202b100f21",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
-    },
-    {
-      "sourcePath": "怪物/战斗立绘/暴躁野猪.png",
+      "sourcePath": "assets/source/enemies/battle/angry_boar_battle_v1_source.png",
       "suggestedPath": "assets/source/enemies/battle/angry_boar_battle_v1_source.png",
-      "action": "move_as_source",
+      "action": "already_migrated",
       "status": "source",
       "tracked": true,
       "references": [],
       "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
+      "risks": [],
       "sha256": "6720dae2b4717272ca9d1404e63058d1277e4552020c5646338b4c450a714f45",
-      "derivedFrom": "怪物/战斗立绘/暴躁野猪.png",
+      "derivedFrom": "assets/source/enemies/battle/angry_boar_battle_v1_source.png",
       "visualGroup": "visual_6720dae2b4",
       "notes": "review before migration"
     },
     {
-      "sourcePath": "怪物/战斗立绘/暴躁野猪.webp",
-      "suggestedPath": "assets/enemies/battle/angry_boar_battle_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "404affa59aecc35944b8cf2da49586824f49551d0c3fc933b5530dec09ce3503",
-      "derivedFrom": "怪物/战斗立绘/暴躁野猪.webp",
-      "visualGroup": "visual_404affa59a",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
-    },
-    {
-      "sourcePath": "怪物/战斗立绘/枯骨煞兵.png",
-      "suggestedPath": "assets/source/enemies/battle/bone_soldier_battle_v1_source.png",
-      "action": "move_as_source",
+      "sourcePath": "assets/source/enemies/battle/blood_bat_battle_v1_source.png",
+      "suggestedPath": "assets/source/enemies/battle/blood_bat_battle_v1_source.png",
+      "action": "already_migrated",
       "status": "source",
       "tracked": true,
       "references": [],
       "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
+      "risks": [],
+      "sha256": "f9390b2b2dec208dae9bacd0b4977bdb54dd365bc43d142edffb088fefe774fa",
+      "derivedFrom": "assets/source/enemies/battle/blood_bat_battle_v1_source.png",
+      "visualGroup": "visual_f9390b2b2d",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/enemies/battle/bone_soldier_battle_v1_source.png",
+      "suggestedPath": "assets/source/enemies/battle/bone_soldier_battle_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
       "sha256": "e5d6c66a92511189cd8acbdab3108291b0bb95a91184a5940b219ccc21768260",
-      "derivedFrom": "怪物/战斗立绘/枯骨煞兵.png",
+      "derivedFrom": "assets/source/enemies/battle/bone_soldier_battle_v1_source.png",
       "visualGroup": "visual_e5d6c66a92",
       "notes": "review before migration"
     },
     {
-      "sourcePath": "怪物/战斗立绘/枯骨煞兵.webp",
-      "suggestedPath": "assets/enemies/battle/bone_soldier_battle_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "14775b0aa685dabb97ce4b4f703ae3e04689d7458c291914dbf2be8c9dfada4e",
-      "derivedFrom": "怪物/战斗立绘/枯骨煞兵.webp",
-      "visualGroup": "visual_14775b0aa6",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
-    },
-    {
-      "sourcePath": "怪物/战斗立绘/病弱史莱姆.png",
-      "suggestedPath": "assets/source/enemies/battle/sick_slime_battle_v1_source.png",
-      "action": "move_as_source",
+      "sourcePath": "assets/source/enemies/battle/boss_oni_shura_battle_v1_source.png",
+      "suggestedPath": "assets/source/enemies/battle/boss_oni_shura_battle_v1_source.png",
+      "action": "already_migrated",
       "status": "source",
       "tracked": true,
       "references": [],
       "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "0b357a7f4e8a70855ceb5c3bae983d213916d4e72a60cc408b9b06315c3110a5",
-      "derivedFrom": "怪物/战斗立绘/病弱史莱姆.png",
-      "visualGroup": "visual_0b357a7f4e",
+      "risks": [],
+      "sha256": "b2e4c6a0d2b4f5a96e352cb98a82c3adca64a7b6d6ce172b99fa04770a3c12d3",
+      "derivedFrom": "assets/source/enemies/battle/boss_oni_shura_battle_v1_source.png",
+      "visualGroup": "visual_b2e4c6a0d2",
       "notes": "review before migration"
     },
     {
-      "sourcePath": "怪物/战斗立绘/病弱史莱姆.webp",
-      "suggestedPath": "assets/enemies/battle/sick_slime_battle_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "f64565b6a83dcfe006869c46d699cf96fa99feb5dc4e6c0739948a3b7b5017c6",
-      "derivedFrom": "怪物/战斗立绘/病弱史莱姆.webp",
-      "visualGroup": "visual_f64565b6a8",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
-    },
-    {
-      "sourcePath": "怪物/战斗立绘/缝合巨怪.png",
-      "suggestedPath": "assets/source/enemies/battle/stitched_brute_battle_v1_source.png",
-      "action": "move_as_source",
+      "sourcePath": "assets/source/enemies/battle/crimson_blood_witch_battle_v1_source.png",
+      "suggestedPath": "assets/source/enemies/battle/crimson_blood_witch_battle_v1_source.png",
+      "action": "already_migrated",
       "status": "source",
       "tracked": true,
       "references": [],
       "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "8f6c47b2f1e4f893352f91df3649a812cd76eb5a2b87a6ba41d8ea84346b9e5e",
-      "derivedFrom": "怪物/战斗立绘/缝合巨怪.png",
-      "visualGroup": "visual_8f6c47b2f1",
+      "risks": [],
+      "sha256": "592cc2ae62be2718795141741b9023131253b48408fbca8374da3f347a3c1745",
+      "derivedFrom": "assets/source/enemies/battle/crimson_blood_witch_battle_v1_source.png",
+      "visualGroup": "visual_592cc2ae62",
       "notes": "review before migration"
     },
     {
-      "sourcePath": "怪物/战斗立绘/缝合巨怪.webp",
-      "suggestedPath": "assets/enemies/battle/stitched_brute_battle_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "ba5cda5b7f8cd6865b7b7b1c9debf34c8e58a1642bea9b52920ce0e3c927935e",
-      "derivedFrom": "怪物/战斗立绘/缝合巨怪.webp",
-      "visualGroup": "visual_ba5cda5b7f",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
-    },
-    {
-      "sourcePath": "怪物/战斗立绘/荒野煞狼.png",
-      "suggestedPath": "assets/source/enemies/battle/wild_wolf_battle_v1_source.png",
-      "action": "move_as_source",
+      "sourcePath": "assets/source/enemies/battle/elite_minotaur_battle_v1_source.png",
+      "suggestedPath": "assets/source/enemies/battle/elite_minotaur_battle_v1_source.png",
+      "action": "already_migrated",
       "status": "source",
       "tracked": true,
       "references": [],
       "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "c4fd55838a3e12f84e43e967a6eb1b3a02866c66bd83ee4b9207b58dd98cf398",
-      "derivedFrom": "怪物/战斗立绘/荒野煞狼.png",
-      "visualGroup": "visual_c4fd55838a",
+      "risks": [],
+      "sha256": "5ac233f5d47f869ce87cac8a37a56fe3d0e0bdf323280418c896283f7e249ad5",
+      "derivedFrom": "assets/source/enemies/battle/elite_minotaur_battle_v1_source.png",
+      "visualGroup": "visual_5ac233f5d4",
       "notes": "review before migration"
     },
     {
-      "sourcePath": "怪物/战斗立绘/荒野煞狼.webp",
-      "suggestedPath": "assets/enemies/battle/wild_wolf_battle_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
+      "sourcePath": "assets/source/enemies/battle/fallen_swordsman_battle_v1_source.png",
+      "suggestedPath": "assets/source/enemies/battle/fallen_swordsman_battle_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
       "tracked": true,
       "references": [],
       "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "adca8e3bca5c60e76756a8bff4e2d0ce0e53e981bb6146b31747027967bd4ce0",
-      "derivedFrom": "怪物/战斗立绘/荒野煞狼.webp",
-      "visualGroup": "visual_adca8e3bca",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
+      "risks": [],
+      "sha256": "04cd7ac020ebbcd5fe3e4207a35a487bcadcc3cf6374ef1420710a0e8110f7bd",
+      "derivedFrom": "assets/source/enemies/battle/fallen_swordsman_battle_v1_source.png",
+      "visualGroup": "visual_04cd7ac020",
+      "notes": "review before migration"
     },
     {
-      "sourcePath": "怪物/战斗立绘/贪婪盗贼.png",
+      "sourcePath": "assets/source/enemies/battle/greedy_thief_battle_v1_source.png",
       "suggestedPath": "assets/source/enemies/battle/greedy_thief_battle_v1_source.png",
-      "action": "move_as_source",
+      "action": "already_migrated",
       "status": "source",
       "tracked": true,
       "references": [],
       "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
+      "risks": [],
       "sha256": "e30bd24943dd8644d427202408a6a5e73b7b45c2483b48a62e5967f74afa28bc",
-      "derivedFrom": "怪物/战斗立绘/贪婪盗贼.png",
+      "derivedFrom": "assets/source/enemies/battle/greedy_thief_battle_v1_source.png",
       "visualGroup": "visual_e30bd24943",
       "notes": "review before migration"
     },
     {
-      "sourcePath": "怪物/战斗立绘/贪婪盗贼.webp",
-      "suggestedPath": "assets/enemies/battle/greedy_thief_battle_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "569dd19085f9be8f7df3089145a069c351d5559711c9b7f57aa7cd932f972a28",
-      "derivedFrom": "怪物/战斗立绘/贪婪盗贼.webp",
-      "visualGroup": "visual_569dd19085",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
-    },
-    {
-      "sourcePath": "怪物/战斗立绘/迷途妖狐.png",
-      "suggestedPath": "assets/source/enemies/battle/lost_fox_battle_v1_source.png",
-      "action": "move_as_source",
-      "status": "source",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "642ceda3a9739692b246d4ad209eef81213a5b1e1534e4d6aec419eaf554d31d",
-      "derivedFrom": "怪物/战斗立绘/迷途妖狐.png",
-      "visualGroup": "visual_642ceda3a9",
-      "notes": "review before migration"
-    },
-    {
-      "sourcePath": "怪物/战斗立绘/迷途妖狐.webp",
-      "suggestedPath": "assets/enemies/battle/lost_fox_battle_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "199e481808c41ef52be85f34d3282a494555958ae0753b4a0a59503f53a48521",
-      "derivedFrom": "怪物/战斗立绘/迷途妖狐.webp",
-      "visualGroup": "visual_199e481808",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
-    },
-    {
-      "sourcePath": "怪物/战斗立绘/铁甲巨蟹.png",
+      "sourcePath": "assets/source/enemies/battle/iron_crab_battle_v1_source.png",
       "suggestedPath": "assets/source/enemies/battle/iron_crab_battle_v1_source.png",
-      "action": "move_as_source",
+      "action": "already_migrated",
       "status": "source",
       "tracked": true,
       "references": [],
       "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
+      "risks": [],
       "sha256": "367c3f773b568a77c0023ade52d68061b8529a537e09863af380a6cce2138603",
-      "derivedFrom": "怪物/战斗立绘/铁甲巨蟹.png",
+      "derivedFrom": "assets/source/enemies/battle/iron_crab_battle_v1_source.png",
       "visualGroup": "visual_367c3f773b",
       "notes": "review before migration"
     },
     {
-      "sourcePath": "怪物/战斗立绘/铁甲巨蟹.webp",
-      "suggestedPath": "assets/enemies/battle/iron_crab_battle_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
-      "tracked": true,
-      "references": [],
-      "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "b3d5e3ee96a0afe72a57e5abbc1d74c07813eedacae4b0b6859ea21284c0ec97",
-      "derivedFrom": "怪物/战斗立绘/铁甲巨蟹.webp",
-      "visualGroup": "visual_b3d5e3ee96",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
-    },
-    {
-      "sourcePath": "怪物/战斗立绘/魅影刺客.png",
-      "suggestedPath": "assets/source/enemies/battle/shadow_assassin_battle_v1_source.png",
-      "action": "move_as_source",
+      "sourcePath": "assets/source/enemies/battle/lost_fox_battle_v1_source.png",
+      "suggestedPath": "assets/source/enemies/battle/lost_fox_battle_v1_source.png",
+      "action": "already_migrated",
       "status": "source",
       "tracked": true,
       "references": [],
       "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
+      "risks": [],
+      "sha256": "642ceda3a9739692b246d4ad209eef81213a5b1e1534e4d6aec419eaf554d31d",
+      "derivedFrom": "assets/source/enemies/battle/lost_fox_battle_v1_source.png",
+      "visualGroup": "visual_642ceda3a9",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/enemies/battle/nether_mage_battle_v1_source.png",
+      "suggestedPath": "assets/source/enemies/battle/nether_mage_battle_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "0584909e90699f60309f4838625949edebd2bbafc3450d7c3509570e24a4c01a",
+      "derivedFrom": "assets/source/enemies/battle/nether_mage_battle_v1_source.png",
+      "visualGroup": "visual_0584909e90",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/enemies/battle/shadow_assassin_battle_v1_source.png",
+      "suggestedPath": "assets/source/enemies/battle/shadow_assassin_battle_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
       "sha256": "65722d6de97321d28b5c1431cfb238a4a9ca703f20597678a435660b546d5d66",
-      "derivedFrom": "怪物/战斗立绘/魅影刺客.png",
+      "derivedFrom": "assets/source/enemies/battle/shadow_assassin_battle_v1_source.png",
       "visualGroup": "visual_65722d6de9",
       "notes": "review before migration"
     },
     {
-      "sourcePath": "怪物/战斗立绘/魅影刺客.webp",
-      "suggestedPath": "assets/enemies/battle/shadow_assassin_battle_v1.webp",
-      "action": "move_then_rewrite_dynamic_refs",
-      "status": "active_dynamic",
+      "sourcePath": "assets/source/enemies/battle/sick_slime_battle_v1_source.png",
+      "suggestedPath": "assets/source/enemies/battle/sick_slime_battle_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
       "tracked": true,
       "references": [],
       "referenceModules": [],
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "sha256": "c14e1cc15ef203abaaa2f90c98bce08455c20b7bee0df30532352173ddefb439",
-      "derivedFrom": "怪物/战斗立绘/魅影刺客.webp",
-      "visualGroup": "visual_c14e1cc15e",
-      "notes": "dynamic runtime reference from src/data/enemies.js and demo path helpers"
+      "risks": [],
+      "sha256": "0b357a7f4e8a70855ceb5c3bae983d213916d4e72a60cc408b9b06315c3110a5",
+      "derivedFrom": "assets/source/enemies/battle/sick_slime_battle_v1_source.png",
+      "visualGroup": "visual_0b357a7f4e",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/enemies/battle/stitched_brute_battle_v1_source.png",
+      "suggestedPath": "assets/source/enemies/battle/stitched_brute_battle_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "8f6c47b2f1e4f893352f91df3649a812cd76eb5a2b87a6ba41d8ea84346b9e5e",
+      "derivedFrom": "assets/source/enemies/battle/stitched_brute_battle_v1_source.png",
+      "visualGroup": "visual_8f6c47b2f1",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/enemies/battle/stone_golem_battle_v1_source.png",
+      "suggestedPath": "assets/source/enemies/battle/stone_golem_battle_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "913c93aa47f7bc90047eb4b5e86af3579e5cd59f04d9e09a054274ced61799d8",
+      "derivedFrom": "assets/source/enemies/battle/stone_golem_battle_v1_source.png",
+      "visualGroup": "visual_913c93aa47",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/enemies/battle/undead_bone_dragon_battle_v1_source.png",
+      "suggestedPath": "assets/source/enemies/battle/undead_bone_dragon_battle_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "aa70c4b48f3bd95d856c153c11d6e80c251f03766ccb6e16fce9eca604fd6607",
+      "derivedFrom": "assets/source/enemies/battle/undead_bone_dragon_battle_v1_source.png",
+      "visualGroup": "visual_aa70c4b48f",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/enemies/battle/venom_toad_battle_v1_source.png",
+      "suggestedPath": "assets/source/enemies/battle/venom_toad_battle_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "ee0036038de58d21e4b5b06013cdb829e823494ebedbc06a6681ff19feae9e5c",
+      "derivedFrom": "assets/source/enemies/battle/venom_toad_battle_v1_source.png",
+      "visualGroup": "visual_ee0036038d",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/enemies/battle/wild_wolf_battle_v1_source.png",
+      "suggestedPath": "assets/source/enemies/battle/wild_wolf_battle_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "c4fd55838a3e12f84e43e967a6eb1b3a02866c66bd83ee4b9207b58dd98cf398",
+      "derivedFrom": "assets/source/enemies/battle/wild_wolf_battle_v1_source.png",
+      "visualGroup": "visual_c4fd55838a",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/enemies/portraits/abyss_overlord_portrait_v1_source.png",
+      "suggestedPath": "assets/source/enemies/portraits/abyss_overlord_portrait_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "dfa7e15b9b64f0ff9de873cfd4c5e757d36880b1714c28089b1b0d936d0557ad",
+      "derivedFrom": "assets/source/enemies/portraits/abyss_overlord_portrait_v1_source.png",
+      "visualGroup": "visual_dfa7e15b9b",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/enemies/portraits/ancient_spider_portrait_v1_source.png",
+      "suggestedPath": "assets/source/enemies/portraits/ancient_spider_portrait_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "9731975254f32239ec665d3a0e6edcd13fb0428314484c7490f2a058ddfad2bb",
+      "derivedFrom": "assets/source/enemies/portraits/ancient_spider_portrait_v1_source.png",
+      "visualGroup": "visual_9731975254",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/enemies/portraits/angry_boar_portrait_v1_source.png",
+      "suggestedPath": "assets/source/enemies/portraits/angry_boar_portrait_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "ee1a4787d032d9be6518b693b8021546668d7f2958c9a8b7ae9f1d79ba13154f",
+      "derivedFrom": "assets/source/enemies/portraits/angry_boar_portrait_v1_source.png",
+      "visualGroup": "visual_ee1a4787d0",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/enemies/portraits/blood_bat_portrait_v1_source.png",
+      "suggestedPath": "assets/source/enemies/portraits/blood_bat_portrait_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "e156834ee1e5f57174c4f33665cb1c9bfaab2cb3e9ee87285bb16204330a8269",
+      "derivedFrom": "assets/source/enemies/portraits/blood_bat_portrait_v1_source.png",
+      "visualGroup": "visual_e156834ee1",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/enemies/portraits/bone_soldier_portrait_v1_source.png",
+      "suggestedPath": "assets/source/enemies/portraits/bone_soldier_portrait_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "64c528f68a089b783b6cbfc876d9cfb666ed8ec7b15c8d35b637b02a2ff83060",
+      "derivedFrom": "assets/source/enemies/portraits/bone_soldier_portrait_v1_source.png",
+      "visualGroup": "visual_64c528f68a",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/enemies/portraits/boss_oni_shura_portrait_v1_source.png",
+      "suggestedPath": "assets/source/enemies/portraits/boss_oni_shura_portrait_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "5424fb7b103a6d6ff59cccd9118d1a1132a5d23e6ade14c9849ddccb1fd1a2bb",
+      "derivedFrom": "assets/source/enemies/portraits/boss_oni_shura_portrait_v1_source.png",
+      "visualGroup": "visual_5424fb7b10",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/enemies/portraits/crimson_blood_witch_portrait_v1_source.png",
+      "suggestedPath": "assets/source/enemies/portraits/crimson_blood_witch_portrait_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "d69091fa5c440b2518ca24b94d8bfde6830a5c1079e991694bfe842cd2d2f9f0",
+      "derivedFrom": "assets/source/enemies/portraits/crimson_blood_witch_portrait_v1_source.png",
+      "visualGroup": "visual_d69091fa5c",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/enemies/portraits/elite_minotaur_portrait_v1_source.png",
+      "suggestedPath": "assets/source/enemies/portraits/elite_minotaur_portrait_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "953c598f9b2d04457e97a976ae84a9947559ca0dfb2aa7c6758c0af897c80782",
+      "derivedFrom": "assets/source/enemies/portraits/elite_minotaur_portrait_v1_source.png",
+      "visualGroup": "visual_953c598f9b",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/enemies/portraits/fallen_swordsman_portrait_v1_source.png",
+      "suggestedPath": "assets/source/enemies/portraits/fallen_swordsman_portrait_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "a90c7f60d93cf0bc45af6f3a1cf9333c78b86d5c70e583da6121ea5b221593dc",
+      "derivedFrom": "assets/source/enemies/portraits/fallen_swordsman_portrait_v1_source.png",
+      "visualGroup": "visual_a90c7f60d9",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/enemies/portraits/greedy_thief_portrait_v1_source.png",
+      "suggestedPath": "assets/source/enemies/portraits/greedy_thief_portrait_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "845b8428f497081c06be4bb72e4ec7f338bd7be6995b0d8449e847d3e0653fc8",
+      "derivedFrom": "assets/source/enemies/portraits/greedy_thief_portrait_v1_source.png",
+      "visualGroup": "visual_845b8428f4",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/enemies/portraits/iron_crab_portrait_v1_source.png",
+      "suggestedPath": "assets/source/enemies/portraits/iron_crab_portrait_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "af139bbda53f8eb04d46d616fe22da01e2d1ab8ca10a483b094095669cf84227",
+      "derivedFrom": "assets/source/enemies/portraits/iron_crab_portrait_v1_source.png",
+      "visualGroup": "visual_af139bbda5",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/enemies/portraits/lost_fox_portrait_v1_source.png",
+      "suggestedPath": "assets/source/enemies/portraits/lost_fox_portrait_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "6c2430729644934a4571374150607cc36172a6556cc08e2f7170a0ddf20e879f",
+      "derivedFrom": "assets/source/enemies/portraits/lost_fox_portrait_v1_source.png",
+      "visualGroup": "visual_6c24307296",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/enemies/portraits/nether_mage_portrait_v1_source.png",
+      "suggestedPath": "assets/source/enemies/portraits/nether_mage_portrait_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "f9081bf4d12e89606b152a3ccec40d51504125bcdf4fd013afe4164c9d54a794",
+      "derivedFrom": "assets/source/enemies/portraits/nether_mage_portrait_v1_source.png",
+      "visualGroup": "visual_f9081bf4d1",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/enemies/portraits/shadow_assassin_portrait_v1_source.png",
+      "suggestedPath": "assets/source/enemies/portraits/shadow_assassin_portrait_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "c2a6d3266eb12a101c1842929523d100d6c853cb8177ae0f19ca8de3e5e5d694",
+      "derivedFrom": "assets/source/enemies/portraits/shadow_assassin_portrait_v1_source.png",
+      "visualGroup": "visual_c2a6d3266e",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/enemies/portraits/sick_slime_portrait_v1_source.png",
+      "suggestedPath": "assets/source/enemies/portraits/sick_slime_portrait_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "89d072603622ab59ca15455942914953b2bdc7314ef9fbfc422d239cae481ee6",
+      "derivedFrom": "assets/source/enemies/portraits/sick_slime_portrait_v1_source.png",
+      "visualGroup": "visual_89d0726036",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/enemies/portraits/stitched_brute_portrait_v1_source.png",
+      "suggestedPath": "assets/source/enemies/portraits/stitched_brute_portrait_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "7fd013bd4b6d09229fde7f42e28bcd7108d49585c70bceb5d4ad1e94416d425f",
+      "derivedFrom": "assets/source/enemies/portraits/stitched_brute_portrait_v1_source.png",
+      "visualGroup": "visual_7fd013bd4b",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/enemies/portraits/stone_golem_portrait_v1_source.png",
+      "suggestedPath": "assets/source/enemies/portraits/stone_golem_portrait_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "fed78ac7108d6ee8d971af143ac4c6c17435f11cf8f0dd45abf3a70f1e5ac30c",
+      "derivedFrom": "assets/source/enemies/portraits/stone_golem_portrait_v1_source.png",
+      "visualGroup": "visual_fed78ac710",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/enemies/portraits/undead_bone_dragon_portrait_v1_source.png",
+      "suggestedPath": "assets/source/enemies/portraits/undead_bone_dragon_portrait_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "54401399f5c251287d9d3ebe5d2123117b08f04a56487608ff3eafb8dc554e7e",
+      "derivedFrom": "assets/source/enemies/portraits/undead_bone_dragon_portrait_v1_source.png",
+      "visualGroup": "visual_54401399f5",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/enemies/portraits/venom_toad_portrait_v1_source.png",
+      "suggestedPath": "assets/source/enemies/portraits/venom_toad_portrait_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "8dbdc865f5252f36e144757c3c08cb7070b8503061700586553d885eecde4b8b",
+      "derivedFrom": "assets/source/enemies/portraits/venom_toad_portrait_v1_source.png",
+      "visualGroup": "visual_8dbdc865f5",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/enemies/portraits/wild_wolf_portrait_v1_source.png",
+      "suggestedPath": "assets/source/enemies/portraits/wild_wolf_portrait_v1_source.png",
+      "action": "already_migrated",
+      "status": "source",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [],
+      "sha256": "931acba317de3bdad6c748884a0569816167d73af5d8b34516856288abc4b20c",
+      "derivedFrom": "assets/source/enemies/portraits/wild_wolf_portrait_v1_source.png",
+      "visualGroup": "visual_931acba317",
+      "notes": "review before migration"
     }
   ],
-  "duplicateExtensionGroups": [
-    {
-      "basePath": "头像/怪物/【深渊主宰】",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "头像/怪物/【深渊主宰】.png",
-        "头像/怪物/【深渊主宰】.webp"
-      ]
-    },
-    {
-      "basePath": "头像/怪物/【精英】不死骨龙",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "头像/怪物/【精英】不死骨龙.png",
-        "头像/怪物/【精英】不死骨龙.webp"
-      ]
-    },
-    {
-      "basePath": "头像/怪物/【精英】狂暴牛头人",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "头像/怪物/【精英】狂暴牛头人.png",
-        "头像/怪物/【精英】狂暴牛头人.webp"
-      ]
-    },
-    {
-      "basePath": "头像/怪物/【精英】猩红血巫",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "头像/怪物/【精英】猩红血巫.png",
-        "头像/怪物/【精英】猩红血巫.webp"
-      ]
-    },
-    {
-      "basePath": "头像/怪物/【首领】鬼面修罗",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "头像/怪物/【首领】鬼面修罗.png",
-        "头像/怪物/【首领】鬼面修罗.webp"
-      ]
-    },
-    {
-      "basePath": "头像/怪物/剧毒蟾蜍",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "头像/怪物/剧毒蟾蜍.png",
-        "头像/怪物/剧毒蟾蜍.webp"
-      ]
-    },
-    {
-      "basePath": "头像/怪物/千载魔蛛",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "头像/怪物/千载魔蛛.png",
-        "头像/怪物/千载魔蛛.webp"
-      ]
-    },
-    {
-      "basePath": "头像/怪物/嗜血蝙蝠",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "头像/怪物/嗜血蝙蝠.png",
-        "头像/怪物/嗜血蝙蝠.webp"
-      ]
-    },
-    {
-      "basePath": "头像/怪物/堕落剑客",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "头像/怪物/堕落剑客.png",
-        "头像/怪物/堕落剑客.webp"
-      ]
-    },
-    {
-      "basePath": "头像/怪物/巨力石魔",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "头像/怪物/巨力石魔.png",
-        "头像/怪物/巨力石魔.webp"
-      ]
-    },
-    {
-      "basePath": "头像/怪物/幽冥法师",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "头像/怪物/幽冥法师.png",
-        "头像/怪物/幽冥法师.webp"
-      ]
-    },
-    {
-      "basePath": "头像/怪物/暴躁野猪",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "头像/怪物/暴躁野猪.png",
-        "头像/怪物/暴躁野猪.webp"
-      ]
-    },
-    {
-      "basePath": "头像/怪物/枯骨煞兵",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "头像/怪物/枯骨煞兵.png",
-        "头像/怪物/枯骨煞兵.webp"
-      ]
-    },
-    {
-      "basePath": "头像/怪物/病弱史莱姆",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "头像/怪物/病弱史莱姆.png",
-        "头像/怪物/病弱史莱姆.webp"
-      ]
-    },
-    {
-      "basePath": "头像/怪物/缝合巨怪",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "头像/怪物/缝合巨怪.png",
-        "头像/怪物/缝合巨怪.webp"
-      ]
-    },
-    {
-      "basePath": "头像/怪物/荒野煞狼",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "头像/怪物/荒野煞狼.png",
-        "头像/怪物/荒野煞狼.webp"
-      ]
-    },
-    {
-      "basePath": "头像/怪物/贪婪盗贼",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "头像/怪物/贪婪盗贼.png",
-        "头像/怪物/贪婪盗贼.webp"
-      ]
-    },
-    {
-      "basePath": "头像/怪物/迷途妖狐",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "头像/怪物/迷途妖狐.png",
-        "头像/怪物/迷途妖狐.webp"
-      ]
-    },
-    {
-      "basePath": "头像/怪物/铁甲巨蟹",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "头像/怪物/铁甲巨蟹.png",
-        "头像/怪物/铁甲巨蟹.webp"
-      ]
-    },
-    {
-      "basePath": "头像/怪物/魅影刺客",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "头像/怪物/魅影刺客.png",
-        "头像/怪物/魅影刺客.webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/【深渊主宰】",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "怪物/战斗立绘/【深渊主宰】.png",
-        "怪物/战斗立绘/【深渊主宰】.webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/【精英】不死骨龙",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "怪物/战斗立绘/【精英】不死骨龙.png",
-        "怪物/战斗立绘/【精英】不死骨龙.webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/【精英】狂暴牛头人",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "怪物/战斗立绘/【精英】狂暴牛头人.png",
-        "怪物/战斗立绘/【精英】狂暴牛头人.webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/【精英】猩红血巫",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "怪物/战斗立绘/【精英】猩红血巫.png",
-        "怪物/战斗立绘/【精英】猩红血巫.webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/【首领】鬼面修罗",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "怪物/战斗立绘/【首领】鬼面修罗.png",
-        "怪物/战斗立绘/【首领】鬼面修罗.webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/剧毒蟾蜍",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "怪物/战斗立绘/剧毒蟾蜍.png",
-        "怪物/战斗立绘/剧毒蟾蜍.webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/千载魔蛛",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "怪物/战斗立绘/千载魔蛛.png",
-        "怪物/战斗立绘/千载魔蛛.webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/嗜血蝙蝠",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "怪物/战斗立绘/嗜血蝙蝠.png",
-        "怪物/战斗立绘/嗜血蝙蝠.webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/堕落剑客",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "怪物/战斗立绘/堕落剑客.png",
-        "怪物/战斗立绘/堕落剑客.webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/巨力石魔",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "怪物/战斗立绘/巨力石魔.png",
-        "怪物/战斗立绘/巨力石魔.webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/幽冥法师",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "怪物/战斗立绘/幽冥法师.png",
-        "怪物/战斗立绘/幽冥法师.webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/暴躁野猪",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "怪物/战斗立绘/暴躁野猪.png",
-        "怪物/战斗立绘/暴躁野猪.webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/枯骨煞兵",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "怪物/战斗立绘/枯骨煞兵.png",
-        "怪物/战斗立绘/枯骨煞兵.webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/病弱史莱姆",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "怪物/战斗立绘/病弱史莱姆.png",
-        "怪物/战斗立绘/病弱史莱姆.webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/缝合巨怪",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "怪物/战斗立绘/缝合巨怪.png",
-        "怪物/战斗立绘/缝合巨怪.webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/荒野煞狼",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "怪物/战斗立绘/荒野煞狼.png",
-        "怪物/战斗立绘/荒野煞狼.webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/贪婪盗贼",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "怪物/战斗立绘/贪婪盗贼.png",
-        "怪物/战斗立绘/贪婪盗贼.webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/迷途妖狐",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "怪物/战斗立绘/迷途妖狐.png",
-        "怪物/战斗立绘/迷途妖狐.webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/铁甲巨蟹",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "怪物/战斗立绘/铁甲巨蟹.png",
-        "怪物/战斗立绘/铁甲巨蟹.webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/魅影刺客",
-      "extensions": [
-        ".png",
-        ".webp"
-      ],
-      "paths": [
-        "怪物/战斗立绘/魅影刺客.png",
-        "怪物/战斗立绘/魅影刺客.webp"
-      ]
-    }
-  ]
+  "duplicateExtensionGroups": []
 }

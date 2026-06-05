@@ -24,25 +24,25 @@
     "assetCount": 1206,
     "textFileCount": 41,
     "referencedAssetCount": 389,
-    "activeAssetCount": 378,
+    "activeAssetCount": 418,
     "unreferencedAssetCount": 817,
-    "missingReferenceCount": 275,
-    "missingRuntimeReferenceCount": 42,
+    "missingReferenceCount": 277,
+    "missingRuntimeReferenceCount": 44,
     "statusCounts": {
-      "active": 378,
+      "active": 418,
       "candidate": 100,
       "documented": 11,
       "legacy": 48,
-      "source": 53,
-      "unreferenced": 616
+      "source": 93,
+      "unreferenced": 536
     },
     "riskCounts": {
       "identical_content": 141,
       "long_component": 79,
       "long_path": 11,
       "multi_module_reference": 56,
-      "non_ascii_path": 1171,
-      "unreferenced": 627
+      "non_ascii_path": 1091,
+      "unreferenced": 547
     },
     "referenceModuleCounts": {
       "cards": 178,
@@ -53,7 +53,7 @@
       "relics": 45,
       "ui.hud": 67
     },
-    "duplicateExtensionGroupCount": 262,
+    "duplicateExtensionGroupCount": 222,
     "identicalContentGroupCount": 45
   },
   "assets": [
@@ -2051,7 +2051,7 @@
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4735,
+          "line": 4762,
           "module": "demo",
           "kind": "runtime"
         }
@@ -2109,7 +2109,7 @@
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4780,
+          "line": 4807,
           "module": "demo",
           "kind": "runtime"
         }
@@ -2205,13 +2205,13 @@
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4723,
+          "line": 4750,
           "module": "demo",
           "kind": "runtime"
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4762,
+          "line": 4789,
           "module": "demo",
           "kind": "runtime"
         }
@@ -2269,13 +2269,13 @@
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4741,
+          "line": 4768,
           "module": "demo",
           "kind": "runtime"
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4768,
+          "line": 4795,
           "module": "demo",
           "kind": "runtime"
         }
@@ -2333,7 +2333,7 @@
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4729,
+          "line": 4756,
           "module": "demo",
           "kind": "runtime"
         }
@@ -2423,13 +2423,13 @@
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4747,
+          "line": 4774,
           "module": "demo",
           "kind": "runtime"
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4753,
+          "line": 4780,
           "module": "demo",
           "kind": "runtime"
         }
@@ -2487,7 +2487,7 @@
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4774,
+          "line": 4801,
           "module": "demo",
           "kind": "runtime"
         }
@@ -7578,6 +7578,566 @@
       "identicalContentGroup": []
     },
     {
+      "path": "assets/enemies/battle/abyss_overlord_battle_v1.webp",
+      "extension": ".webp",
+      "bytes": 401780,
+      "sha256": "011e22f354d0e7ec65ef1494494d18f41e85a67ae72d83c66179dc4c145fa730",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 51,
+      "maxComponentLength": 29,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/enemies/battle/ancient_spider_battle_v1.webp",
+      "extension": ".webp",
+      "bytes": 236326,
+      "sha256": "4f45562550e8786b31deed93f76ac36585f034807d822bc268c5675458aa82f5",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 51,
+      "maxComponentLength": 29,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/enemies/battle/angry_boar_battle_v1.webp",
+      "extension": ".webp",
+      "bytes": 170052,
+      "sha256": "404affa59aecc35944b8cf2da49586824f49551d0c3fc933b5530dec09ce3503",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 47,
+      "maxComponentLength": 25,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/enemies/battle/blood_bat_battle_v1.webp",
+      "extension": ".webp",
+      "bytes": 102590,
+      "sha256": "bec20f5a59b5fbb5e013ea841bd02302aefe2481740730d24fe79dfdae8affb6",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 46,
+      "maxComponentLength": 24,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/enemies/battle/bone_soldier_battle_v1.webp",
+      "extension": ".webp",
+      "bytes": 136774,
+      "sha256": "14775b0aa685dabb97ce4b4f703ae3e04689d7458c291914dbf2be8c9dfada4e",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 49,
+      "maxComponentLength": 27,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/enemies/battle/boss_oni_shura_battle_v1.webp",
+      "extension": ".webp",
+      "bytes": 219328,
+      "sha256": "79b829ed4d2de21e4fe2ffecc30fd0f5710796925bf325aff509079a3a3a9389",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 51,
+      "maxComponentLength": 29,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/enemies/battle/crimson_blood_witch_battle_v1.webp",
+      "extension": ".webp",
+      "bytes": 203668,
+      "sha256": "5693399a1534656d96af0bafb0148f7250e4f56faef5ff43bdea733f487afb8c",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 56,
+      "maxComponentLength": 34,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/enemies/battle/elite_minotaur_battle_v1.webp",
+      "extension": ".webp",
+      "bytes": 158722,
+      "sha256": "e43d98b56f7fd9e8c560e7a88d9c4bedd7311c450a31144b4191fb5bc8fc638c",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 51,
+      "maxComponentLength": 29,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/enemies/battle/fallen_swordsman_battle_v1.webp",
+      "extension": ".webp",
+      "bytes": 190226,
+      "sha256": "b106647b85c8cab7ab7bc68cdeb5fd30c3bc54ea119aa770f5607d97d4a9da8a",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 53,
+      "maxComponentLength": 31,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/enemies/battle/greedy_thief_battle_v1.webp",
+      "extension": ".webp",
+      "bytes": 98024,
+      "sha256": "569dd19085f9be8f7df3089145a069c351d5559711c9b7f57aa7cd932f972a28",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 49,
+      "maxComponentLength": 27,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/enemies/battle/iron_crab_battle_v1.webp",
+      "extension": ".webp",
+      "bytes": 206228,
+      "sha256": "b3d5e3ee96a0afe72a57e5abbc1d74c07813eedacae4b0b6859ea21284c0ec97",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 46,
+      "maxComponentLength": 24,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/enemies/battle/lost_fox_battle_v1.webp",
+      "extension": ".webp",
+      "bytes": 190864,
+      "sha256": "199e481808c41ef52be85f34d3282a494555958ae0753b4a0a59503f53a48521",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 45,
+      "maxComponentLength": 23,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/enemies/battle/nether_mage_battle_v1.webp",
+      "extension": ".webp",
+      "bytes": 253944,
+      "sha256": "202b100f21848a94a6c5ee7406f672ae6607c1fd48dbefa2467c0c6bc3e1674d",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 48,
+      "maxComponentLength": 26,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/enemies/battle/shadow_assassin_battle_v1.webp",
+      "extension": ".webp",
+      "bytes": 130308,
+      "sha256": "c14e1cc15ef203abaaa2f90c98bce08455c20b7bee0df30532352173ddefb439",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 52,
+      "maxComponentLength": 30,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/enemies/battle/sick_slime_battle_v1.webp",
+      "extension": ".webp",
+      "bytes": 120670,
+      "sha256": "f64565b6a83dcfe006869c46d699cf96fa99feb5dc4e6c0739948a3b7b5017c6",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 47,
+      "maxComponentLength": 25,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/enemies/battle/stitched_brute_battle_v1.webp",
+      "extension": ".webp",
+      "bytes": 240944,
+      "sha256": "ba5cda5b7f8cd6865b7b7b1c9debf34c8e58a1642bea9b52920ce0e3c927935e",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 51,
+      "maxComponentLength": 29,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/enemies/battle/stone_golem_battle_v1.webp",
+      "extension": ".webp",
+      "bytes": 246278,
+      "sha256": "4d06c02ecf5cf423beccc352f010f38ffa6b5d2c88130c54829d7aa32f290bdc",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 48,
+      "maxComponentLength": 26,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/enemies/battle/undead_bone_dragon_battle_v1.webp",
+      "extension": ".webp",
+      "bytes": 204976,
+      "sha256": "b085389bc845bf3eb72ede5442b9f57abcfb022df9876f9a1128bde0e5efc885",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 55,
+      "maxComponentLength": 33,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/enemies/battle/venom_toad_battle_v1.webp",
+      "extension": ".webp",
+      "bytes": 181494,
+      "sha256": "9d685e92b19a748f86f7ed8b54ce8c569c903997c32e734007676d9aa9b771c6",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 47,
+      "maxComponentLength": 25,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/enemies/battle/wild_wolf_battle_v1.webp",
+      "extension": ".webp",
+      "bytes": 104906,
+      "sha256": "adca8e3bca5c60e76756a8bff4e2d0ce0e53e981bb6146b31747027967bd4ce0",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 46,
+      "maxComponentLength": 24,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/enemies/portraits/abyss_overlord_portrait_v1.webp",
+      "extension": ".webp",
+      "bytes": 86700,
+      "sha256": "cfeadee57afa4edd071489af92fc99f693695664614ef8c264454c8d0451d06d",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 56,
+      "maxComponentLength": 31,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/enemies/portraits/ancient_spider_portrait_v1.webp",
+      "extension": ".webp",
+      "bytes": 37022,
+      "sha256": "280f671cf2a01df00e6300b6c36da1075802a6cd37f52090800d0b74d7b1d221",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 56,
+      "maxComponentLength": 31,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/enemies/portraits/angry_boar_portrait_v1.webp",
+      "extension": ".webp",
+      "bytes": 36972,
+      "sha256": "1ea65eff92768b9a94ce8e3c9c98c491c39fd55fecf1b560c942792ed6fdeb86",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 52,
+      "maxComponentLength": 27,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/enemies/portraits/blood_bat_portrait_v1.webp",
+      "extension": ".webp",
+      "bytes": 20668,
+      "sha256": "337e99f5b7f29ae36708f30f0d0c7fa362460ae68e4b0f819681c4f847de25b7",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 51,
+      "maxComponentLength": 26,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/enemies/portraits/bone_soldier_portrait_v1.webp",
+      "extension": ".webp",
+      "bytes": 39822,
+      "sha256": "7127220389e6b3172ba67e542a3a5f508bf2117cdbd1baa287d5f481629904a8",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 54,
+      "maxComponentLength": 29,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/enemies/portraits/boss_oni_shura_portrait_v1.webp",
+      "extension": ".webp",
+      "bytes": 40276,
+      "sha256": "5f7195ffb965e5b653ed7a21d8726cc6273b38150b17b303f92a229ace4e68d5",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 56,
+      "maxComponentLength": 31,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/enemies/portraits/crimson_blood_witch_portrait_v1.webp",
+      "extension": ".webp",
+      "bytes": 45842,
+      "sha256": "0187629069f77943579fa2be3a41c3916c372fe20f58f42bde946443c0830c3c",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 61,
+      "maxComponentLength": 36,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/enemies/portraits/elite_minotaur_portrait_v1.webp",
+      "extension": ".webp",
+      "bytes": 35514,
+      "sha256": "f9f15860b35711d4c686f9baa48a24c0ce1b554b9e0cd635a8d3ceef5cd4cfb6",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 56,
+      "maxComponentLength": 31,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/enemies/portraits/fallen_swordsman_portrait_v1.webp",
+      "extension": ".webp",
+      "bytes": 48204,
+      "sha256": "60af5ea2a37ec11f44922d66c4575f906d0b2de5beb6528cec9adbb85b857460",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 58,
+      "maxComponentLength": 33,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/enemies/portraits/greedy_thief_portrait_v1.webp",
+      "extension": ".webp",
+      "bytes": 21248,
+      "sha256": "a2a380b18eeb4da9b916f72cde4be3f92122116770da23084e2ec38e8628a308",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 54,
+      "maxComponentLength": 29,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/enemies/portraits/iron_crab_portrait_v1.webp",
+      "extension": ".webp",
+      "bytes": 41774,
+      "sha256": "116eca5213c5851260c94ef9882243bcde0cab81d1e65bdfbf634605ad4c6ded",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 51,
+      "maxComponentLength": 26,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/enemies/portraits/lost_fox_portrait_v1.webp",
+      "extension": ".webp",
+      "bytes": 36192,
+      "sha256": "5d173ac9d3193bbdaa340f6cb3d13b3a13180f1059450a4bbbcb21a5e3215cd7",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 50,
+      "maxComponentLength": 25,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/enemies/portraits/nether_mage_portrait_v1.webp",
+      "extension": ".webp",
+      "bytes": 58642,
+      "sha256": "07f69c52f2d777c75c70ab607a0d0a7e035ddf5e716732d1eed292e77aefe288",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 53,
+      "maxComponentLength": 28,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/enemies/portraits/shadow_assassin_portrait_v1.webp",
+      "extension": ".webp",
+      "bytes": 29250,
+      "sha256": "f0545c10d2380904cedb58cccaeed51b62f33625c9e7fb4cc106d184fd1af585",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 57,
+      "maxComponentLength": 32,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/enemies/portraits/sick_slime_portrait_v1.webp",
+      "extension": ".webp",
+      "bytes": 34164,
+      "sha256": "0642165c3dd6713a9509498efa0963e426d0d10929c40529154b83551e456b5e",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 52,
+      "maxComponentLength": 27,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/enemies/portraits/stitched_brute_portrait_v1.webp",
+      "extension": ".webp",
+      "bytes": 53514,
+      "sha256": "770278b52e72f3690dd75ab836096a3ce25173b57cb619b845158a01b9b83ee7",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 56,
+      "maxComponentLength": 31,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/enemies/portraits/stone_golem_portrait_v1.webp",
+      "extension": ".webp",
+      "bytes": 52798,
+      "sha256": "dd51e45790135713be2e5d53b9e6939fa9a022a3bc0d975416850dcb392060fa",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 53,
+      "maxComponentLength": 28,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/enemies/portraits/undead_bone_dragon_portrait_v1.webp",
+      "extension": ".webp",
+      "bytes": 58244,
+      "sha256": "63728823be5afb19bfe49a8f4f709f3fd62965b452e814327f90640fcca4ada5",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 60,
+      "maxComponentLength": 35,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/enemies/portraits/venom_toad_portrait_v1.webp",
+      "extension": ".webp",
+      "bytes": 42696,
+      "sha256": "9c4ccdc218689cb065ad74832931b3d4e705cbfbb659d59babec2ea29851de85",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 52,
+      "maxComponentLength": 27,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/enemies/portraits/wild_wolf_portrait_v1.webp",
+      "extension": ".webp",
+      "bytes": 24542,
+      "sha256": "ba3582e252884167942339e2f58d9c8371e88e80da783c31d468a0b043772070",
+      "status": "active",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 51,
+      "maxComponentLength": 26,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
       "path": "assets/npc/campfire_elder_portrait_v1.webp",
       "extension": ".webp",
       "bytes": 86528,
@@ -7758,25 +8318,25 @@
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4407,
-          "module": "demo",
-          "kind": "runtime"
-        },
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 4411,
-          "module": "demo",
-          "kind": "runtime"
-        },
-        {
-          "file": "幻境残卷demo_v0.99.html",
           "line": 4434,
           "module": "demo",
           "kind": "runtime"
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4736,
+          "line": 4438,
+          "module": "demo",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 4461,
+          "module": "demo",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 4763,
           "module": "demo",
           "kind": "runtime"
         }
@@ -7830,19 +8390,19 @@
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4412,
+          "line": 4439,
           "module": "demo",
           "kind": "runtime"
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4413,
+          "line": 4440,
           "module": "demo",
           "kind": "runtime"
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4781,
+          "line": 4808,
           "module": "demo",
           "kind": "runtime"
         }
@@ -7871,13 +8431,13 @@
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4415,
+          "line": 4442,
           "module": "demo",
           "kind": "runtime"
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4421,
+          "line": 4448,
           "module": "demo",
           "kind": "runtime"
         }
@@ -7928,19 +8488,19 @@
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4410,
+          "line": 4437,
           "module": "demo",
           "kind": "runtime"
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4724,
+          "line": 4751,
           "module": "demo",
           "kind": "runtime"
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4763,
+          "line": 4790,
           "module": "demo",
           "kind": "runtime"
         }
@@ -7997,19 +8557,19 @@
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4416,
-          "module": "demo",
-          "kind": "runtime"
-        },
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 4742,
+          "line": 4443,
           "module": "demo",
           "kind": "runtime"
         },
         {
           "file": "幻境残卷demo_v0.99.html",
           "line": 4769,
+          "module": "demo",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 4796,
           "module": "demo",
           "kind": "runtime"
         }
@@ -8066,31 +8626,31 @@
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4423,
+          "line": 4450,
           "module": "demo",
           "kind": "runtime"
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4424,
+          "line": 4451,
           "module": "demo",
           "kind": "runtime"
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4425,
+          "line": 4452,
           "module": "demo",
           "kind": "runtime"
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4730,
+          "line": 4757,
           "module": "demo",
           "kind": "runtime"
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4748,
+          "line": 4775,
           "module": "demo",
           "kind": "runtime"
         }
@@ -8113,13 +8673,13 @@
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4418,
+          "line": 4445,
           "module": "demo",
           "kind": "runtime"
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4426,
+          "line": 4453,
           "module": "demo",
           "kind": "runtime"
         }
@@ -8170,19 +8730,19 @@
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4419,
+          "line": 4446,
           "module": "demo",
           "kind": "runtime"
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4422,
+          "line": 4449,
           "module": "demo",
           "kind": "runtime"
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4775,
+          "line": 4802,
           "module": "demo",
           "kind": "runtime"
         }
@@ -8211,7 +8771,7 @@
         },
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4754,
+          "line": 4781,
           "module": "demo",
           "kind": "runtime"
         }
@@ -8221,6 +8781,566 @@
       ],
       "pathLength": 44,
       "maxComponentLength": 24,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/battle/abyss_overlord_battle_v1_source.png",
+      "extension": ".png",
+      "bytes": 2163839,
+      "sha256": "5f099fa63d52325fba8403b751812227e88ddbd1dc5a57e1a349cc3f221786c9",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 64,
+      "maxComponentLength": 35,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/battle/ancient_spider_battle_v1_source.png",
+      "extension": ".png",
+      "bytes": 1834549,
+      "sha256": "ab578cdacbdc9b55955d697529b014ef1f4ed00778cb298a546ce6ca3560497f",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 64,
+      "maxComponentLength": 35,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/battle/angry_boar_battle_v1_source.png",
+      "extension": ".png",
+      "bytes": 1873947,
+      "sha256": "6720dae2b4717272ca9d1404e63058d1277e4552020c5646338b4c450a714f45",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 60,
+      "maxComponentLength": 31,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/battle/blood_bat_battle_v1_source.png",
+      "extension": ".png",
+      "bytes": 1165739,
+      "sha256": "f9390b2b2dec208dae9bacd0b4977bdb54dd365bc43d142edffb088fefe774fa",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 59,
+      "maxComponentLength": 30,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/battle/bone_soldier_battle_v1_source.png",
+      "extension": ".png",
+      "bytes": 1340862,
+      "sha256": "e5d6c66a92511189cd8acbdab3108291b0bb95a91184a5940b219ccc21768260",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 62,
+      "maxComponentLength": 33,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/battle/boss_oni_shura_battle_v1_source.png",
+      "extension": ".png",
+      "bytes": 1935231,
+      "sha256": "b2e4c6a0d2b4f5a96e352cb98a82c3adca64a7b6d6ce172b99fa04770a3c12d3",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 64,
+      "maxComponentLength": 35,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/battle/crimson_blood_witch_battle_v1_source.png",
+      "extension": ".png",
+      "bytes": 1912705,
+      "sha256": "592cc2ae62be2718795141741b9023131253b48408fbca8374da3f347a3c1745",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 69,
+      "maxComponentLength": 40,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/battle/elite_minotaur_battle_v1_source.png",
+      "extension": ".png",
+      "bytes": 1752782,
+      "sha256": "5ac233f5d47f869ce87cac8a37a56fe3d0e0bdf323280418c896283f7e249ad5",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 64,
+      "maxComponentLength": 35,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/battle/fallen_swordsman_battle_v1_source.png",
+      "extension": ".png",
+      "bytes": 1936108,
+      "sha256": "04cd7ac020ebbcd5fe3e4207a35a487bcadcc3cf6374ef1420710a0e8110f7bd",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 66,
+      "maxComponentLength": 37,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/battle/greedy_thief_battle_v1_source.png",
+      "extension": ".png",
+      "bytes": 1386440,
+      "sha256": "e30bd24943dd8644d427202408a6a5e73b7b45c2483b48a62e5967f74afa28bc",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 62,
+      "maxComponentLength": 33,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/battle/iron_crab_battle_v1_source.png",
+      "extension": ".png",
+      "bytes": 1918969,
+      "sha256": "367c3f773b568a77c0023ade52d68061b8529a537e09863af380a6cce2138603",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 59,
+      "maxComponentLength": 30,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/battle/lost_fox_battle_v1_source.png",
+      "extension": ".png",
+      "bytes": 1909254,
+      "sha256": "642ceda3a9739692b246d4ad209eef81213a5b1e1534e4d6aec419eaf554d31d",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 58,
+      "maxComponentLength": 29,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/battle/nether_mage_battle_v1_source.png",
+      "extension": ".png",
+      "bytes": 1769508,
+      "sha256": "0584909e90699f60309f4838625949edebd2bbafc3450d7c3509570e24a4c01a",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 61,
+      "maxComponentLength": 32,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/battle/shadow_assassin_battle_v1_source.png",
+      "extension": ".png",
+      "bytes": 1693010,
+      "sha256": "65722d6de97321d28b5c1431cfb238a4a9ca703f20597678a435660b546d5d66",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 65,
+      "maxComponentLength": 36,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/battle/sick_slime_battle_v1_source.png",
+      "extension": ".png",
+      "bytes": 1482914,
+      "sha256": "0b357a7f4e8a70855ceb5c3bae983d213916d4e72a60cc408b9b06315c3110a5",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 60,
+      "maxComponentLength": 31,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/battle/stitched_brute_battle_v1_source.png",
+      "extension": ".png",
+      "bytes": 2122629,
+      "sha256": "8f6c47b2f1e4f893352f91df3649a812cd76eb5a2b87a6ba41d8ea84346b9e5e",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 64,
+      "maxComponentLength": 35,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/battle/stone_golem_battle_v1_source.png",
+      "extension": ".png",
+      "bytes": 2288828,
+      "sha256": "913c93aa47f7bc90047eb4b5e86af3579e5cd59f04d9e09a054274ced61799d8",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 61,
+      "maxComponentLength": 32,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/battle/undead_bone_dragon_battle_v1_source.png",
+      "extension": ".png",
+      "bytes": 1630361,
+      "sha256": "aa70c4b48f3bd95d856c153c11d6e80c251f03766ccb6e16fce9eca604fd6607",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 68,
+      "maxComponentLength": 39,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/battle/venom_toad_battle_v1_source.png",
+      "extension": ".png",
+      "bytes": 1895079,
+      "sha256": "ee0036038de58d21e4b5b06013cdb829e823494ebedbc06a6681ff19feae9e5c",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 60,
+      "maxComponentLength": 31,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/battle/wild_wolf_battle_v1_source.png",
+      "extension": ".png",
+      "bytes": 1293336,
+      "sha256": "c4fd55838a3e12f84e43e967a6eb1b3a02866c66bd83ee4b9207b58dd98cf398",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 59,
+      "maxComponentLength": 30,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/portraits/abyss_overlord_portrait_v1_source.png",
+      "extension": ".png",
+      "bytes": 403713,
+      "sha256": "dfa7e15b9b64f0ff9de873cfd4c5e757d36880b1714c28089b1b0d936d0557ad",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 69,
+      "maxComponentLength": 37,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/portraits/ancient_spider_portrait_v1_source.png",
+      "extension": ".png",
+      "bytes": 258328,
+      "sha256": "9731975254f32239ec665d3a0e6edcd13fb0428314484c7490f2a058ddfad2bb",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 69,
+      "maxComponentLength": 37,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/portraits/angry_boar_portrait_v1_source.png",
+      "extension": ".png",
+      "bytes": 327215,
+      "sha256": "ee1a4787d032d9be6518b693b8021546668d7f2958c9a8b7ae9f1d79ba13154f",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 65,
+      "maxComponentLength": 33,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/portraits/blood_bat_portrait_v1_source.png",
+      "extension": ".png",
+      "bytes": 183264,
+      "sha256": "e156834ee1e5f57174c4f33665cb1c9bfaab2cb3e9ee87285bb16204330a8269",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 64,
+      "maxComponentLength": 32,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/portraits/bone_soldier_portrait_v1_source.png",
+      "extension": ".png",
+      "bytes": 293947,
+      "sha256": "64c528f68a089b783b6cbfc876d9cfb666ed8ec7b15c8d35b637b02a2ff83060",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 67,
+      "maxComponentLength": 35,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/portraits/boss_oni_shura_portrait_v1_source.png",
+      "extension": ".png",
+      "bytes": 261207,
+      "sha256": "5424fb7b103a6d6ff59cccd9118d1a1132a5d23e6ade14c9849ddccb1fd1a2bb",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 69,
+      "maxComponentLength": 37,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/portraits/crimson_blood_witch_portrait_v1_source.png",
+      "extension": ".png",
+      "bytes": 278248,
+      "sha256": "d69091fa5c440b2518ca24b94d8bfde6830a5c1079e991694bfe842cd2d2f9f0",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 74,
+      "maxComponentLength": 42,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/portraits/elite_minotaur_portrait_v1_source.png",
+      "extension": ".png",
+      "bytes": 280426,
+      "sha256": "953c598f9b2d04457e97a976ae84a9947559ca0dfb2aa7c6758c0af897c80782",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 69,
+      "maxComponentLength": 37,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/portraits/fallen_swordsman_portrait_v1_source.png",
+      "extension": ".png",
+      "bytes": 313899,
+      "sha256": "a90c7f60d93cf0bc45af6f3a1cf9333c78b86d5c70e583da6121ea5b221593dc",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 71,
+      "maxComponentLength": 39,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/portraits/greedy_thief_portrait_v1_source.png",
+      "extension": ".png",
+      "bytes": 246699,
+      "sha256": "845b8428f497081c06be4bb72e4ec7f338bd7be6995b0d8449e847d3e0653fc8",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 67,
+      "maxComponentLength": 35,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/portraits/iron_crab_portrait_v1_source.png",
+      "extension": ".png",
+      "bytes": 261846,
+      "sha256": "af139bbda53f8eb04d46d616fe22da01e2d1ab8ca10a483b094095669cf84227",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 64,
+      "maxComponentLength": 32,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/portraits/lost_fox_portrait_v1_source.png",
+      "extension": ".png",
+      "bytes": 341319,
+      "sha256": "6c2430729644934a4571374150607cc36172a6556cc08e2f7170a0ddf20e879f",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 63,
+      "maxComponentLength": 31,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/portraits/nether_mage_portrait_v1_source.png",
+      "extension": ".png",
+      "bytes": 270578,
+      "sha256": "f9081bf4d12e89606b152a3ccec40d51504125bcdf4fd013afe4164c9d54a794",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 66,
+      "maxComponentLength": 34,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/portraits/shadow_assassin_portrait_v1_source.png",
+      "extension": ".png",
+      "bytes": 291385,
+      "sha256": "c2a6d3266eb12a101c1842929523d100d6c853cb8177ae0f19ca8de3e5e5d694",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 70,
+      "maxComponentLength": 38,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/portraits/sick_slime_portrait_v1_source.png",
+      "extension": ".png",
+      "bytes": 302960,
+      "sha256": "89d072603622ab59ca15455942914953b2bdc7314ef9fbfc422d239cae481ee6",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 65,
+      "maxComponentLength": 33,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/portraits/stitched_brute_portrait_v1_source.png",
+      "extension": ".png",
+      "bytes": 373835,
+      "sha256": "7fd013bd4b6d09229fde7f42e28bcd7108d49585c70bceb5d4ad1e94416d425f",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 69,
+      "maxComponentLength": 37,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/portraits/stone_golem_portrait_v1_source.png",
+      "extension": ".png",
+      "bytes": 348204,
+      "sha256": "fed78ac7108d6ee8d971af143ac4c6c17435f11cf8f0dd45abf3a70f1e5ac30c",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 66,
+      "maxComponentLength": 34,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/portraits/undead_bone_dragon_portrait_v1_source.png",
+      "extension": ".png",
+      "bytes": 282841,
+      "sha256": "54401399f5c251287d9d3ebe5d2123117b08f04a56487608ff3eafb8dc554e7e",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 73,
+      "maxComponentLength": 41,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/portraits/venom_toad_portrait_v1_source.png",
+      "extension": ".png",
+      "bytes": 352577,
+      "sha256": "8dbdc865f5252f36e144757c3c08cb7070b8503061700586553d885eecde4b8b",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 65,
+      "maxComponentLength": 33,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/enemies/portraits/wild_wolf_portrait_v1_source.png",
+      "extension": ".png",
+      "bytes": 264394,
+      "sha256": "931acba317de3bdad6c748884a0569816167d73af5d8b34516856288abc4b20c",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 64,
+      "maxComponentLength": 32,
       "containsNonAscii": false,
       "risks": [],
       "identicalContentGroup": []
@@ -16562,7 +17682,7 @@
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4408,
+          "line": 4435,
           "module": "demo",
           "kind": "runtime"
         }
@@ -16638,7 +17758,7 @@
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4409,
+          "line": 4436,
           "module": "demo",
           "kind": "runtime"
         }
@@ -16680,7 +17800,7 @@
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4414,
+          "line": 4441,
           "module": "demo",
           "kind": "runtime"
         }
@@ -16739,7 +17859,7 @@
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4420,
+          "line": 4447,
           "module": "demo",
           "kind": "runtime"
         }
@@ -16781,7 +17901,7 @@
       "references": [
         {
           "file": "幻境残卷demo_v0.99.html",
-          "line": 4417,
+          "line": 4444,
           "module": "demo",
           "kind": "runtime"
         }
@@ -16878,686 +17998,6 @@
       "containsNonAscii": true,
       "risks": [
         "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/【深渊主宰】.png",
-      "extension": ".png",
-      "bytes": 403713,
-      "sha256": "dfa7e15b9b64f0ff9de873cfd4c5e757d36880b1714c28089b1b0d936d0557ad",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 16,
-      "maxComponentLength": 10,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/【深渊主宰】.webp",
-      "extension": ".webp",
-      "bytes": 86700,
-      "sha256": "cfeadee57afa4edd071489af92fc99f693695664614ef8c264454c8d0451d06d",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 17,
-      "maxComponentLength": 11,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/【精英】不死骨龙.png",
-      "extension": ".png",
-      "bytes": 282841,
-      "sha256": "54401399f5c251287d9d3ebe5d2123117b08f04a56487608ff3eafb8dc554e7e",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 18,
-      "maxComponentLength": 12,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/【精英】不死骨龙.webp",
-      "extension": ".webp",
-      "bytes": 58244,
-      "sha256": "63728823be5afb19bfe49a8f4f709f3fd62965b452e814327f90640fcca4ada5",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 19,
-      "maxComponentLength": 13,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/【精英】狂暴牛头人.png",
-      "extension": ".png",
-      "bytes": 280426,
-      "sha256": "953c598f9b2d04457e97a976ae84a9947559ca0dfb2aa7c6758c0af897c80782",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 19,
-      "maxComponentLength": 13,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/【精英】狂暴牛头人.webp",
-      "extension": ".webp",
-      "bytes": 35514,
-      "sha256": "f9f15860b35711d4c686f9baa48a24c0ce1b554b9e0cd635a8d3ceef5cd4cfb6",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 20,
-      "maxComponentLength": 14,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/【精英】猩红血巫.png",
-      "extension": ".png",
-      "bytes": 278248,
-      "sha256": "d69091fa5c440b2518ca24b94d8bfde6830a5c1079e991694bfe842cd2d2f9f0",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 18,
-      "maxComponentLength": 12,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/【精英】猩红血巫.webp",
-      "extension": ".webp",
-      "bytes": 45842,
-      "sha256": "0187629069f77943579fa2be3a41c3916c372fe20f58f42bde946443c0830c3c",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 19,
-      "maxComponentLength": 13,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/【首领】鬼面修罗.png",
-      "extension": ".png",
-      "bytes": 261207,
-      "sha256": "5424fb7b103a6d6ff59cccd9118d1a1132a5d23e6ade14c9849ddccb1fd1a2bb",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 18,
-      "maxComponentLength": 12,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/【首领】鬼面修罗.webp",
-      "extension": ".webp",
-      "bytes": 40276,
-      "sha256": "5f7195ffb965e5b653ed7a21d8726cc6273b38150b17b303f92a229ace4e68d5",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 19,
-      "maxComponentLength": 13,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/剧毒蟾蜍.png",
-      "extension": ".png",
-      "bytes": 352577,
-      "sha256": "8dbdc865f5252f36e144757c3c08cb7070b8503061700586553d885eecde4b8b",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 14,
-      "maxComponentLength": 8,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/剧毒蟾蜍.webp",
-      "extension": ".webp",
-      "bytes": 42696,
-      "sha256": "9c4ccdc218689cb065ad74832931b3d4e705cbfbb659d59babec2ea29851de85",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 15,
-      "maxComponentLength": 9,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/千载魔蛛.png",
-      "extension": ".png",
-      "bytes": 258328,
-      "sha256": "9731975254f32239ec665d3a0e6edcd13fb0428314484c7490f2a058ddfad2bb",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 14,
-      "maxComponentLength": 8,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/千载魔蛛.webp",
-      "extension": ".webp",
-      "bytes": 37022,
-      "sha256": "280f671cf2a01df00e6300b6c36da1075802a6cd37f52090800d0b74d7b1d221",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 15,
-      "maxComponentLength": 9,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/嗜血蝙蝠.png",
-      "extension": ".png",
-      "bytes": 183264,
-      "sha256": "e156834ee1e5f57174c4f33665cb1c9bfaab2cb3e9ee87285bb16204330a8269",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 14,
-      "maxComponentLength": 8,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/嗜血蝙蝠.webp",
-      "extension": ".webp",
-      "bytes": 20668,
-      "sha256": "337e99f5b7f29ae36708f30f0d0c7fa362460ae68e4b0f819681c4f847de25b7",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 15,
-      "maxComponentLength": 9,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/堕落剑客.png",
-      "extension": ".png",
-      "bytes": 313899,
-      "sha256": "a90c7f60d93cf0bc45af6f3a1cf9333c78b86d5c70e583da6121ea5b221593dc",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 14,
-      "maxComponentLength": 8,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/堕落剑客.webp",
-      "extension": ".webp",
-      "bytes": 48204,
-      "sha256": "60af5ea2a37ec11f44922d66c4575f906d0b2de5beb6528cec9adbb85b857460",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 15,
-      "maxComponentLength": 9,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/巨力石魔.png",
-      "extension": ".png",
-      "bytes": 348204,
-      "sha256": "fed78ac7108d6ee8d971af143ac4c6c17435f11cf8f0dd45abf3a70f1e5ac30c",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 14,
-      "maxComponentLength": 8,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/巨力石魔.webp",
-      "extension": ".webp",
-      "bytes": 52798,
-      "sha256": "dd51e45790135713be2e5d53b9e6939fa9a022a3bc0d975416850dcb392060fa",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 15,
-      "maxComponentLength": 9,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/幽冥法师.png",
-      "extension": ".png",
-      "bytes": 270578,
-      "sha256": "f9081bf4d12e89606b152a3ccec40d51504125bcdf4fd013afe4164c9d54a794",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 14,
-      "maxComponentLength": 8,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/幽冥法师.webp",
-      "extension": ".webp",
-      "bytes": 58642,
-      "sha256": "07f69c52f2d777c75c70ab607a0d0a7e035ddf5e716732d1eed292e77aefe288",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 15,
-      "maxComponentLength": 9,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/暴躁野猪.png",
-      "extension": ".png",
-      "bytes": 327215,
-      "sha256": "ee1a4787d032d9be6518b693b8021546668d7f2958c9a8b7ae9f1d79ba13154f",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 14,
-      "maxComponentLength": 8,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/暴躁野猪.webp",
-      "extension": ".webp",
-      "bytes": 36972,
-      "sha256": "1ea65eff92768b9a94ce8e3c9c98c491c39fd55fecf1b560c942792ed6fdeb86",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 15,
-      "maxComponentLength": 9,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/枯骨煞兵.png",
-      "extension": ".png",
-      "bytes": 293947,
-      "sha256": "64c528f68a089b783b6cbfc876d9cfb666ed8ec7b15c8d35b637b02a2ff83060",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 14,
-      "maxComponentLength": 8,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/枯骨煞兵.webp",
-      "extension": ".webp",
-      "bytes": 39822,
-      "sha256": "7127220389e6b3172ba67e542a3a5f508bf2117cdbd1baa287d5f481629904a8",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 15,
-      "maxComponentLength": 9,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/病弱史莱姆.png",
-      "extension": ".png",
-      "bytes": 302960,
-      "sha256": "89d072603622ab59ca15455942914953b2bdc7314ef9fbfc422d239cae481ee6",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 15,
-      "maxComponentLength": 9,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/病弱史莱姆.webp",
-      "extension": ".webp",
-      "bytes": 34164,
-      "sha256": "0642165c3dd6713a9509498efa0963e426d0d10929c40529154b83551e456b5e",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 16,
-      "maxComponentLength": 10,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/缝合巨怪.png",
-      "extension": ".png",
-      "bytes": 373835,
-      "sha256": "7fd013bd4b6d09229fde7f42e28bcd7108d49585c70bceb5d4ad1e94416d425f",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 14,
-      "maxComponentLength": 8,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/缝合巨怪.webp",
-      "extension": ".webp",
-      "bytes": 53514,
-      "sha256": "770278b52e72f3690dd75ab836096a3ce25173b57cb619b845158a01b9b83ee7",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 15,
-      "maxComponentLength": 9,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/荒野煞狼.png",
-      "extension": ".png",
-      "bytes": 264394,
-      "sha256": "931acba317de3bdad6c748884a0569816167d73af5d8b34516856288abc4b20c",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 14,
-      "maxComponentLength": 8,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/荒野煞狼.webp",
-      "extension": ".webp",
-      "bytes": 24542,
-      "sha256": "ba3582e252884167942339e2f58d9c8371e88e80da783c31d468a0b043772070",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 15,
-      "maxComponentLength": 9,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/贪婪盗贼.png",
-      "extension": ".png",
-      "bytes": 246699,
-      "sha256": "845b8428f497081c06be4bb72e4ec7f338bd7be6995b0d8449e847d3e0653fc8",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 14,
-      "maxComponentLength": 8,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/贪婪盗贼.webp",
-      "extension": ".webp",
-      "bytes": 21248,
-      "sha256": "a2a380b18eeb4da9b916f72cde4be3f92122116770da23084e2ec38e8628a308",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 15,
-      "maxComponentLength": 9,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/迷途妖狐.png",
-      "extension": ".png",
-      "bytes": 341319,
-      "sha256": "6c2430729644934a4571374150607cc36172a6556cc08e2f7170a0ddf20e879f",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 14,
-      "maxComponentLength": 8,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/迷途妖狐.webp",
-      "extension": ".webp",
-      "bytes": 36192,
-      "sha256": "5d173ac9d3193bbdaa340f6cb3d13b3a13180f1059450a4bbbcb21a5e3215cd7",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 15,
-      "maxComponentLength": 9,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/铁甲巨蟹.png",
-      "extension": ".png",
-      "bytes": 261846,
-      "sha256": "af139bbda53f8eb04d46d616fe22da01e2d1ab8ca10a483b094095669cf84227",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 14,
-      "maxComponentLength": 8,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/铁甲巨蟹.webp",
-      "extension": ".webp",
-      "bytes": 41774,
-      "sha256": "116eca5213c5851260c94ef9882243bcde0cab81d1e65bdfbf634605ad4c6ded",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 15,
-      "maxComponentLength": 9,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/魅影刺客.png",
-      "extension": ".png",
-      "bytes": 291385,
-      "sha256": "c2a6d3266eb12a101c1842929523d100d6c853cb8177ae0f19ca8de3e5e5d694",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 14,
-      "maxComponentLength": 8,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/怪物/魅影刺客.webp",
-      "extension": ".webp",
-      "bytes": 29250,
-      "sha256": "f0545c10d2380904cedb58cccaeed51b62f33625c9e7fb4cc106d184fd1af585",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 15,
-      "maxComponentLength": 9,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
       ],
       "identicalContentGroup": []
     },
@@ -20295,686 +20735,6 @@
       "referenceModules": [],
       "pathLength": 11,
       "maxComponentLength": 8,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/【深渊主宰】.png",
-      "extension": ".png",
-      "bytes": 2163839,
-      "sha256": "5f099fa63d52325fba8403b751812227e88ddbd1dc5a57e1a349cc3f221786c9",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 18,
-      "maxComponentLength": 10,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/【深渊主宰】.webp",
-      "extension": ".webp",
-      "bytes": 401780,
-      "sha256": "011e22f354d0e7ec65ef1494494d18f41e85a67ae72d83c66179dc4c145fa730",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 19,
-      "maxComponentLength": 11,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/【精英】不死骨龙.png",
-      "extension": ".png",
-      "bytes": 1630361,
-      "sha256": "aa70c4b48f3bd95d856c153c11d6e80c251f03766ccb6e16fce9eca604fd6607",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 20,
-      "maxComponentLength": 12,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/【精英】不死骨龙.webp",
-      "extension": ".webp",
-      "bytes": 204976,
-      "sha256": "b085389bc845bf3eb72ede5442b9f57abcfb022df9876f9a1128bde0e5efc885",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 21,
-      "maxComponentLength": 13,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/【精英】狂暴牛头人.png",
-      "extension": ".png",
-      "bytes": 1752782,
-      "sha256": "5ac233f5d47f869ce87cac8a37a56fe3d0e0bdf323280418c896283f7e249ad5",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 21,
-      "maxComponentLength": 13,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/【精英】狂暴牛头人.webp",
-      "extension": ".webp",
-      "bytes": 158722,
-      "sha256": "e43d98b56f7fd9e8c560e7a88d9c4bedd7311c450a31144b4191fb5bc8fc638c",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 22,
-      "maxComponentLength": 14,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/【精英】猩红血巫.png",
-      "extension": ".png",
-      "bytes": 1912705,
-      "sha256": "592cc2ae62be2718795141741b9023131253b48408fbca8374da3f347a3c1745",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 20,
-      "maxComponentLength": 12,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/【精英】猩红血巫.webp",
-      "extension": ".webp",
-      "bytes": 203668,
-      "sha256": "5693399a1534656d96af0bafb0148f7250e4f56faef5ff43bdea733f487afb8c",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 21,
-      "maxComponentLength": 13,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/【首领】鬼面修罗.png",
-      "extension": ".png",
-      "bytes": 1935231,
-      "sha256": "b2e4c6a0d2b4f5a96e352cb98a82c3adca64a7b6d6ce172b99fa04770a3c12d3",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 20,
-      "maxComponentLength": 12,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/【首领】鬼面修罗.webp",
-      "extension": ".webp",
-      "bytes": 219328,
-      "sha256": "79b829ed4d2de21e4fe2ffecc30fd0f5710796925bf325aff509079a3a3a9389",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 21,
-      "maxComponentLength": 13,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/剧毒蟾蜍.png",
-      "extension": ".png",
-      "bytes": 1895079,
-      "sha256": "ee0036038de58d21e4b5b06013cdb829e823494ebedbc06a6681ff19feae9e5c",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 16,
-      "maxComponentLength": 8,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/剧毒蟾蜍.webp",
-      "extension": ".webp",
-      "bytes": 181494,
-      "sha256": "9d685e92b19a748f86f7ed8b54ce8c569c903997c32e734007676d9aa9b771c6",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 17,
-      "maxComponentLength": 9,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/千载魔蛛.png",
-      "extension": ".png",
-      "bytes": 1834549,
-      "sha256": "ab578cdacbdc9b55955d697529b014ef1f4ed00778cb298a546ce6ca3560497f",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 16,
-      "maxComponentLength": 8,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/千载魔蛛.webp",
-      "extension": ".webp",
-      "bytes": 236326,
-      "sha256": "4f45562550e8786b31deed93f76ac36585f034807d822bc268c5675458aa82f5",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 17,
-      "maxComponentLength": 9,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/嗜血蝙蝠.png",
-      "extension": ".png",
-      "bytes": 1165739,
-      "sha256": "f9390b2b2dec208dae9bacd0b4977bdb54dd365bc43d142edffb088fefe774fa",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 16,
-      "maxComponentLength": 8,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/嗜血蝙蝠.webp",
-      "extension": ".webp",
-      "bytes": 102590,
-      "sha256": "bec20f5a59b5fbb5e013ea841bd02302aefe2481740730d24fe79dfdae8affb6",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 17,
-      "maxComponentLength": 9,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/堕落剑客.png",
-      "extension": ".png",
-      "bytes": 1936108,
-      "sha256": "04cd7ac020ebbcd5fe3e4207a35a487bcadcc3cf6374ef1420710a0e8110f7bd",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 16,
-      "maxComponentLength": 8,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/堕落剑客.webp",
-      "extension": ".webp",
-      "bytes": 190226,
-      "sha256": "b106647b85c8cab7ab7bc68cdeb5fd30c3bc54ea119aa770f5607d97d4a9da8a",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 17,
-      "maxComponentLength": 9,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/巨力石魔.png",
-      "extension": ".png",
-      "bytes": 2288828,
-      "sha256": "913c93aa47f7bc90047eb4b5e86af3579e5cd59f04d9e09a054274ced61799d8",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 16,
-      "maxComponentLength": 8,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/巨力石魔.webp",
-      "extension": ".webp",
-      "bytes": 246278,
-      "sha256": "4d06c02ecf5cf423beccc352f010f38ffa6b5d2c88130c54829d7aa32f290bdc",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 17,
-      "maxComponentLength": 9,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/幽冥法师.png",
-      "extension": ".png",
-      "bytes": 1769508,
-      "sha256": "0584909e90699f60309f4838625949edebd2bbafc3450d7c3509570e24a4c01a",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 16,
-      "maxComponentLength": 8,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/幽冥法师.webp",
-      "extension": ".webp",
-      "bytes": 253944,
-      "sha256": "202b100f21848a94a6c5ee7406f672ae6607c1fd48dbefa2467c0c6bc3e1674d",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 17,
-      "maxComponentLength": 9,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/暴躁野猪.png",
-      "extension": ".png",
-      "bytes": 1873947,
-      "sha256": "6720dae2b4717272ca9d1404e63058d1277e4552020c5646338b4c450a714f45",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 16,
-      "maxComponentLength": 8,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/暴躁野猪.webp",
-      "extension": ".webp",
-      "bytes": 170052,
-      "sha256": "404affa59aecc35944b8cf2da49586824f49551d0c3fc933b5530dec09ce3503",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 17,
-      "maxComponentLength": 9,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/枯骨煞兵.png",
-      "extension": ".png",
-      "bytes": 1340862,
-      "sha256": "e5d6c66a92511189cd8acbdab3108291b0bb95a91184a5940b219ccc21768260",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 16,
-      "maxComponentLength": 8,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/枯骨煞兵.webp",
-      "extension": ".webp",
-      "bytes": 136774,
-      "sha256": "14775b0aa685dabb97ce4b4f703ae3e04689d7458c291914dbf2be8c9dfada4e",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 17,
-      "maxComponentLength": 9,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/病弱史莱姆.png",
-      "extension": ".png",
-      "bytes": 1482914,
-      "sha256": "0b357a7f4e8a70855ceb5c3bae983d213916d4e72a60cc408b9b06315c3110a5",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 17,
-      "maxComponentLength": 9,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/病弱史莱姆.webp",
-      "extension": ".webp",
-      "bytes": 120670,
-      "sha256": "f64565b6a83dcfe006869c46d699cf96fa99feb5dc4e6c0739948a3b7b5017c6",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 18,
-      "maxComponentLength": 10,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/缝合巨怪.png",
-      "extension": ".png",
-      "bytes": 2122629,
-      "sha256": "8f6c47b2f1e4f893352f91df3649a812cd76eb5a2b87a6ba41d8ea84346b9e5e",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 16,
-      "maxComponentLength": 8,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/缝合巨怪.webp",
-      "extension": ".webp",
-      "bytes": 240944,
-      "sha256": "ba5cda5b7f8cd6865b7b7b1c9debf34c8e58a1642bea9b52920ce0e3c927935e",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 17,
-      "maxComponentLength": 9,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/荒野煞狼.png",
-      "extension": ".png",
-      "bytes": 1293336,
-      "sha256": "c4fd55838a3e12f84e43e967a6eb1b3a02866c66bd83ee4b9207b58dd98cf398",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 16,
-      "maxComponentLength": 8,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/荒野煞狼.webp",
-      "extension": ".webp",
-      "bytes": 104906,
-      "sha256": "adca8e3bca5c60e76756a8bff4e2d0ce0e53e981bb6146b31747027967bd4ce0",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 17,
-      "maxComponentLength": 9,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/贪婪盗贼.png",
-      "extension": ".png",
-      "bytes": 1386440,
-      "sha256": "e30bd24943dd8644d427202408a6a5e73b7b45c2483b48a62e5967f74afa28bc",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 16,
-      "maxComponentLength": 8,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/贪婪盗贼.webp",
-      "extension": ".webp",
-      "bytes": 98024,
-      "sha256": "569dd19085f9be8f7df3089145a069c351d5559711c9b7f57aa7cd932f972a28",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 17,
-      "maxComponentLength": 9,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/迷途妖狐.png",
-      "extension": ".png",
-      "bytes": 1909254,
-      "sha256": "642ceda3a9739692b246d4ad209eef81213a5b1e1534e4d6aec419eaf554d31d",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 16,
-      "maxComponentLength": 8,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/迷途妖狐.webp",
-      "extension": ".webp",
-      "bytes": 190864,
-      "sha256": "199e481808c41ef52be85f34d3282a494555958ae0753b4a0a59503f53a48521",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 17,
-      "maxComponentLength": 9,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/铁甲巨蟹.png",
-      "extension": ".png",
-      "bytes": 1918969,
-      "sha256": "367c3f773b568a77c0023ade52d68061b8529a537e09863af380a6cce2138603",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 16,
-      "maxComponentLength": 8,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/铁甲巨蟹.webp",
-      "extension": ".webp",
-      "bytes": 206228,
-      "sha256": "b3d5e3ee96a0afe72a57e5abbc1d74c07813eedacae4b0b6859ea21284c0ec97",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 17,
-      "maxComponentLength": 9,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/魅影刺客.png",
-      "extension": ".png",
-      "bytes": 1693010,
-      "sha256": "65722d6de97321d28b5c1431cfb238a4a9ca703f20597678a435660b546d5d66",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 16,
-      "maxComponentLength": 8,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "怪物/战斗立绘/魅影刺客.webp",
-      "extension": ".webp",
-      "bytes": 130308,
-      "sha256": "c14e1cc15ef203abaaa2f90c98bce08455c20b7bee0df30532352173ddefb439",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 17,
-      "maxComponentLength": 9,
       "containsNonAscii": true,
       "risks": [
         "non_ascii_path",
@@ -26538,11 +26298,25 @@
       "kind": "runtime"
     },
     {
+      "path": "_battle_v1.webp",
+      "file": "幻境残卷demo_v0.99.html",
+      "line": 4425,
+      "module": "demo",
+      "kind": "runtime"
+    },
+    {
       "path": "_clean_v1.png",
       "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
       "line": 132,
       "module": "ui.hud",
       "kind": "documentation"
+    },
+    {
+      "path": "_portrait_v1.webp",
+      "file": "幻境残卷demo_v0.99.html",
+      "line": 4430,
+      "module": "demo",
+      "kind": "runtime"
     },
     {
       "path": "assets/bg/battle/ancient_forest.jpg",
@@ -29382,146 +29156,6 @@
       ]
     },
     {
-      "basePath": "头像/怪物/【深渊主宰】",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "头像/怪物/【精英】不死骨龙",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "头像/怪物/【精英】狂暴牛头人",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "头像/怪物/【精英】猩红血巫",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "头像/怪物/【首领】鬼面修罗",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "头像/怪物/剧毒蟾蜍",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "头像/怪物/千载魔蛛",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "头像/怪物/嗜血蝙蝠",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "头像/怪物/堕落剑客",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "头像/怪物/巨力石魔",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "头像/怪物/幽冥法师",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "头像/怪物/暴躁野猪",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "头像/怪物/枯骨煞兵",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "头像/怪物/病弱史莱姆",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "头像/怪物/缝合巨怪",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "头像/怪物/荒野煞狼",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "头像/怪物/贪婪盗贼",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "头像/怪物/迷途妖狐",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "头像/怪物/铁甲巨蟹",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "头像/怪物/魅影刺客",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
       "basePath": "头像/角色/hero_archer",
       "extensions": [
         ".png",
@@ -29537,146 +29171,6 @@
     },
     {
       "basePath": "头像/角色/hero_warrior",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/【深渊主宰】",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/【精英】不死骨龙",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/【精英】狂暴牛头人",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/【精英】猩红血巫",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/【首领】鬼面修罗",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/剧毒蟾蜍",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/千载魔蛛",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/嗜血蝙蝠",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/堕落剑客",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/巨力石魔",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/幽冥法师",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/暴躁野猪",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/枯骨煞兵",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/病弱史莱姆",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/缝合巨怪",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/荒野煞狼",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/贪婪盗贼",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/迷途妖狐",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/铁甲巨蟹",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "怪物/战斗立绘/魅影刺客",
       "extensions": [
         ".png",
         ".webp"

@@ -4391,16 +4391,43 @@
         if (nameplate) nameplate.innerText = character.name;
     }
 
-    function getEnemyVisualPath(enemy) {
+    const ENEMY_ASSET_SLUGS = {
+        '病弱史莱姆': 'sick_slime',
+        '枯骨煞兵': 'bone_soldier',
+        '贪婪盗贼': 'greedy_thief',
+        '嗜血蝙蝠': 'blood_bat',
+        '迷途妖狐': 'lost_fox',
+        '荒野煞狼': 'wild_wolf',
+        '千载魔蛛': 'ancient_spider',
+        '剧毒蟾蜍': 'venom_toad',
+        '暴躁野猪': 'angry_boar',
+        '铁甲巨蟹': 'iron_crab',
+        '堕落剑客': 'fallen_swordsman',
+        '幽冥法师': 'nether_mage',
+        '巨力石魔': 'stone_golem',
+        '魅影刺客': 'shadow_assassin',
+        '缝合巨怪': 'stitched_brute',
+        '【精英】狂暴牛头人': 'elite_minotaur',
+        '【精英】猩红血巫': 'crimson_blood_witch',
+        '【精英】不死骨龙': 'undead_bone_dragon',
+        '【首领】鬼面修罗': 'boss_oni_shura',
+        '【深渊主宰】': 'abyss_overlord'
+    };
+
+    function getEnemyAssetSlug(enemy) {
         if (!enemy || !enemy.name) return null;
         const cleanName = enemy.name.replace(/·.*?(?=】)/, '').replace(/·暴走/g, '');
-        return `怪物/战斗立绘/${cleanName}.webp`;
+        return ENEMY_ASSET_SLUGS[cleanName] || null;
+    }
+
+    function getEnemyVisualPath(enemy) {
+        const slug = getEnemyAssetSlug(enemy);
+        return slug ? `assets/enemies/battle/${slug}_battle_v1.webp` : null;
     }
 
     function getEnemyAvatarPath(enemy) {
-        if (!enemy || !enemy.name) return null;
-        const cleanName = enemy.name.replace(/·.*?(?=】)/, '').replace(/·暴走/g, '');
-        return `头像/怪物/${cleanName}.webp`;
+        const slug = getEnemyAssetSlug(enemy);
+        return slug ? `assets/enemies/portraits/${slug}_portrait_v1.webp` : null;
     }
 
     const BATTLE_BACKGROUND_BY_ENEMY = {

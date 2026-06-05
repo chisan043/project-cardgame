@@ -32,8 +32,8 @@ IMAGE_LITERAL_RE = re.compile(r"(?P<path>[^'\"()<>`\\]+?\.(?:png|jpg|jpeg|webp))
 IMAGE_EXT_RE = re.compile(r"\.(png|jpg|jpeg)$", re.IGNORECASE)
 
 DYNAMIC_IMAGE_GLOBS = [
-    "怪物/战斗立绘/*.png",
-    "头像/怪物/*.png",
+    "assets/source/enemies/battle/*.png",
+    "assets/source/enemies/portraits/*.png",
     "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_*_asset_v1.png",
     "遗物/图标/*.png",
 ]
@@ -44,6 +44,11 @@ def normalize_path(raw: str) -> str:
 
 
 def webp_path_for(asset_path: Path) -> Path:
+    path = asset_path.as_posix()
+    if path.startswith("assets/source/enemies/battle/") and path.endswith("_battle_v1_source.png"):
+        return Path(path.replace("assets/source/enemies/battle/", "assets/enemies/battle/").replace("_battle_v1_source.png", "_battle_v1.webp"))
+    if path.startswith("assets/source/enemies/portraits/") and path.endswith("_portrait_v1_source.png"):
+        return Path(path.replace("assets/source/enemies/portraits/", "assets/enemies/portraits/").replace("_portrait_v1_source.png", "_portrait_v1.webp"))
     return asset_path.with_suffix(".webp")
 
 

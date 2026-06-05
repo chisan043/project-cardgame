@@ -5,7 +5,7 @@ from PIL import Image, ImageDraw, ImageOps
 
 ROOT = Path(__file__).resolve().parents[1]
 ROLE_OUT = ROOT / "头像" / "角色"
-ENEMY_OUT = ROOT / "头像" / "怪物"
+ENEMY_OUT = ROOT / "assets/source/enemies/portraits"
 
 ROLE_SOURCES = {
     "hero_warrior": ROOT / "新角色一/角色一_角色选择_立绘.png",
@@ -66,19 +66,19 @@ def crop_avatar(src, dest, cx_ratio=0.5, cy_ratio=0.25, size_ratio=1.1, side_mod
 
 
 def monster_profile(name):
-    if "迷途妖狐" in name:
+    if "lost_fox" in name:
         return (0.42, 0.41, 0.46, "width")
-    if "蝙蝠" in name:
+    if "blood_bat" in name:
         return (0.5, 0.32, 1.34, "mixed")
-    if "巨蟹" in name:
+    if "iron_crab" in name:
         return (0.5, 0.28, 1.28, "mixed")
-    if "蟾蜍" in name or "史莱姆" in name:
+    if "venom_toad" in name or "sick_slime" in name:
         return (0.5, 0.36, 1.18, "mixed")
-    if "蜘蛛" in name:
+    if "ancient_spider" in name:
         return (0.5, 0.30, 1.2, "mixed")
-    if "深渊主宰" in name:
+    if "abyss_overlord" in name:
         return (0.5, 0.34, 1.16, "mixed")
-    if "骨龙" in name:
+    if "undead_bone_dragon" in name:
         return (0.5, 0.28, 1.24, "mixed")
     return (0.5, 0.24, 1.12, "mixed")
 
@@ -106,8 +106,9 @@ def main():
     for role_id, source in ROLE_SOURCES.items():
         generated.append(crop_avatar(source, ROLE_OUT / f"{role_id}.png", *ROLE_PROFILES[role_id]))
 
-    for source in sorted((ROOT / "怪物/战斗立绘").glob("*.png")):
-        generated.append(crop_avatar(source, ENEMY_OUT / source.name, *monster_profile(source.stem)))
+    for source in sorted((ROOT / "assets/source/enemies/battle").glob("*_battle_v1_source.png")):
+        portrait_name = source.name.replace("_battle_v1_source.png", "_portrait_v1_source.png")
+        generated.append(crop_avatar(source, ENEMY_OUT / portrait_name, *monster_profile(source.stem)))
 
     write_preview(generated)
     print(f"generated {len(generated)} avatar assets")

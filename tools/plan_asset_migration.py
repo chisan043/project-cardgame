@@ -272,7 +272,13 @@ def notes_for(asset: dict, is_tracked: bool, action: str) -> str:
     notes = []
     if not is_tracked:
         notes.append("untracked file; do not include in migration commit unless intentionally accepted")
-    if asset["status"] == "active":
+    if (
+        asset["status"] == "active"
+        and not asset["references"]
+        and asset["path"].startswith(("assets/enemies/battle/", "assets/enemies/portraits/"))
+    ):
+        notes.append("dynamic runtime asset inferred from enemy data and demo path helpers")
+    elif asset["status"] == "active":
         notes.append("runtime/config referenced")
     if asset["status"] == "candidate":
         notes.append("candidate asset; keep outside formal runtime directory")
