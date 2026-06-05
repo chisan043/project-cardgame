@@ -19,17 +19,17 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - active: 481
 - candidate: 129
 - documented: 61
-- legacy: 101
+- legacy: 248
 - source: 287
-- unreferenced: 171
+- unreferenced: 24
 
 ## Risk Counts
 
 - identical_content: 181
 - long_component: 81
 - multi_module_reference: 63
-- non_ascii_path: 219
-- unreferenced: 232
+- non_ascii_path: 72
+- unreferenced: 85
 
 ## Longest Paths
 
@@ -62,7 +62,7 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - `怪物/contact_sheet.png`
 - `怪物/contact_sheet_36.png`
 - `怪物/contact_sheet_60.png`
-- `怪物/动作关键帧/【深渊主宰】/attack_hit_front.png`
+- `怪物/动作关键帧_总览.png`
 
 ## Unreferenced Examples
 

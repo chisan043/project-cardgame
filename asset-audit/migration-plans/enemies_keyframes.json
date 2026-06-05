@@ -1,0 +1,2668 @@
+{
+  "generatedBy": "manual keyframe archive plan from asset-audit/asset-usage-report.json",
+  "proposalType": "asset_migration_plan",
+  "moduleSlug": "enemies_keyframes",
+  "sourcePrefix": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/",
+  "targetDirectory": "assets/archive/unused/2026-06-05/enemies_keyframes",
+  "strategy": [
+    "Archive unreferenced monster animation keyframes with manifest; do not delete.",
+    "Do not touch formal enemy portraits or battle sprites."
+  ],
+  "summary": {
+    "assetCount": 147,
+    "actionCounts": {
+      "already_archived": 147
+    },
+    "statusCounts": {
+      "archived": 147
+    }
+  },
+  "entries": [
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/abyss_overlord/attack_hit_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/abyss_overlord/attack_hit_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "8e4af98b0895c302909a6cf334f1835c2a40ba2f7d7d2c5cfb5e13d6ec63201f",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u6df1\u6e0a\u4e3b\u5bb0\u3011/attack_hit_front.png",
+      "visualGroup": "visual_8e4af98b08",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u6df1\u6e0a\u4e3b\u5bb0\u3011/attack_hit_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/abyss_overlord/attack_start_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/abyss_overlord/attack_start_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "8f60adf8a2e80443dc65de0c487589b747d61ef5d8c066e1074fd156ad201000",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u6df1\u6e0a\u4e3b\u5bb0\u3011/attack_start_front.png",
+      "visualGroup": "visual_8f60adf8a2",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u6df1\u6e0a\u4e3b\u5bb0\u3011/attack_start_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/abyss_overlord/defeat_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/abyss_overlord/defeat_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "648a60b7fb66c09415d2edbbf547894772fa71887ec91a722f2a3fdbc8233cdf",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u6df1\u6e0a\u4e3b\u5bb0\u3011/defeat_front.png",
+      "visualGroup": "visual_648a60b7fb",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u6df1\u6e0a\u4e3b\u5bb0\u3011/defeat_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/abyss_overlord/enrage_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/abyss_overlord/enrage_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "31e4bbff1b7f3f90e28c65b252981d9326d5d9eff8d696a4945167d7fad85579",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u6df1\u6e0a\u4e3b\u5bb0\u3011/enrage_front.png",
+      "visualGroup": "visual_31e4bbff1b",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u6df1\u6e0a\u4e3b\u5bb0\u3011/enrage_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/abyss_overlord/hurt_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/abyss_overlord/hurt_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "a3501198ee4d86a7ec87bbb332c7f334b0eb8c2fe099c2e32c05f9105d2f9bed",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u6df1\u6e0a\u4e3b\u5bb0\u3011/hurt_front.png",
+      "visualGroup": "visual_a3501198ee",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u6df1\u6e0a\u4e3b\u5bb0\u3011/hurt_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/abyss_overlord/idle_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/abyss_overlord/idle_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "1a0491d9f8efbc6aa2d0ed9b003c28c908c349ae7bdbde5da185fbbfa22d4802",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u6df1\u6e0a\u4e3b\u5bb0\u3011/idle_front.png",
+      "visualGroup": "visual_1a0491d9f8",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u6df1\u6e0a\u4e3b\u5bb0\u3011/idle_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/abyss_overlord/skill1_cast_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/abyss_overlord/skill1_cast_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "0b132f8f6f300a42a1db5d6e65e7cc1648fadb0604ab9d3b080a11173b3648bf",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u6df1\u6e0a\u4e3b\u5bb0\u3011/skill1_cast_front.png",
+      "visualGroup": "visual_0b132f8f6f",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u6df1\u6e0a\u4e3b\u5bb0\u3011/skill1_cast_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/abyss_overlord/skill1_start_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/abyss_overlord/skill1_start_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "2a2784b01297b31505b7282690e13a3640466a5a6b4a31f9c5ec92e855b2feab",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u6df1\u6e0a\u4e3b\u5bb0\u3011/skill1_start_front.png",
+      "visualGroup": "visual_2a2784b012",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u6df1\u6e0a\u4e3b\u5bb0\u3011/skill1_start_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/abyss_overlord/skill2_cast_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/abyss_overlord/skill2_cast_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "7ff20a5a141973b63fab4429fd7cb6c821a6a9484262ae403ccf12a59c606cd1",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u6df1\u6e0a\u4e3b\u5bb0\u3011/skill2_cast_front.png",
+      "visualGroup": "visual_7ff20a5a14",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u6df1\u6e0a\u4e3b\u5bb0\u3011/skill2_cast_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/abyss_overlord/skill2_start_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/abyss_overlord/skill2_start_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "695528664f5fdaf34d326a998ccd2a813f9a785bf8f9f7ee47cb7293eafbad28",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u6df1\u6e0a\u4e3b\u5bb0\u3011/skill2_start_front.png",
+      "visualGroup": "visual_695528664f",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u6df1\u6e0a\u4e3b\u5bb0\u3011/skill2_start_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/undead_bone_dragon/attack_hit_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/undead_bone_dragon/attack_hit_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "962c313f7b12a0949c2ba937653f004bd0e4832daed3aecd13dc9dd66205155e",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u4e0d\u6b7b\u9aa8\u9f99/attack_hit_front.png",
+      "visualGroup": "visual_962c313f7b",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u4e0d\u6b7b\u9aa8\u9f99/attack_hit_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/undead_bone_dragon/attack_start_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/undead_bone_dragon/attack_start_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "72cec069fa6fa6aac0e01616d3265f4bdbcec90d9a7d2629778ae90cfc1b7286",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u4e0d\u6b7b\u9aa8\u9f99/attack_start_front.png",
+      "visualGroup": "visual_72cec069fa",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u4e0d\u6b7b\u9aa8\u9f99/attack_start_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/undead_bone_dragon/defeat_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/undead_bone_dragon/defeat_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "43438afe2507bec2a2bc7be1d1e69f066f1ac203a1db11701c20e45b485ee3af",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u4e0d\u6b7b\u9aa8\u9f99/defeat_front.png",
+      "visualGroup": "visual_43438afe25",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u4e0d\u6b7b\u9aa8\u9f99/defeat_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/undead_bone_dragon/enrage_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/undead_bone_dragon/enrage_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "038de040fd86c314be63ea9faf20db0fa88f83839c613bcabf1ad57ac0ea0378",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u4e0d\u6b7b\u9aa8\u9f99/enrage_front.png",
+      "visualGroup": "visual_038de040fd",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u4e0d\u6b7b\u9aa8\u9f99/enrage_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/undead_bone_dragon/hurt_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/undead_bone_dragon/hurt_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "28a0057bcc82fbc3d8beba23ead61e19a27677c1178f4270bd7f2d240bc9f82d",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u4e0d\u6b7b\u9aa8\u9f99/hurt_front.png",
+      "visualGroup": "visual_28a0057bcc",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u4e0d\u6b7b\u9aa8\u9f99/hurt_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/undead_bone_dragon/hurt_heavy_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/undead_bone_dragon/hurt_heavy_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "6306b0e6562ba9c7230140a8dc476bf3836dd06503004494115ad9596a5b40d0",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u4e0d\u6b7b\u9aa8\u9f99/hurt_heavy_front.png",
+      "visualGroup": "visual_6306b0e656",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u4e0d\u6b7b\u9aa8\u9f99/hurt_heavy_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/undead_bone_dragon/idle_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/undead_bone_dragon/idle_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "7d7c317774d8cc31e7c019c90499b128aa1cc4e0408d4bb7b8ce5873ecbcbab4",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u4e0d\u6b7b\u9aa8\u9f99/idle_front.png",
+      "visualGroup": "visual_7d7c317774",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u4e0d\u6b7b\u9aa8\u9f99/idle_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/undead_bone_dragon/skill_cast_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/undead_bone_dragon/skill_cast_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "7340c4b25463bfdf19c6fc8c4b0f229b8673c6a6b27d6e94e76e9502b05117c8",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u4e0d\u6b7b\u9aa8\u9f99/skill_cast_front.png",
+      "visualGroup": "visual_7340c4b254",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u4e0d\u6b7b\u9aa8\u9f99/skill_cast_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/undead_bone_dragon/skill_start_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/undead_bone_dragon/skill_start_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "407c964f9eb81279d711cd0884e90cec98c6b500dd5738eee20b6a3a874c32ee",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u4e0d\u6b7b\u9aa8\u9f99/skill_start_front.png",
+      "visualGroup": "visual_407c964f9e",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u4e0d\u6b7b\u9aa8\u9f99/skill_start_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/elite_minotaur/attack_hit_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/elite_minotaur/attack_hit_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "b260ca0330f04d259aef66b3a8c2d0dba35f3017711bbd160ee64b44a6ac7831",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u72c2\u66b4\u725b\u5934\u4eba/attack_hit_front.png",
+      "visualGroup": "visual_b260ca0330",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u72c2\u66b4\u725b\u5934\u4eba/attack_hit_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/elite_minotaur/attack_start_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/elite_minotaur/attack_start_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "848f436224ec92c8321feb18f2e3020264aa2287260d150e3069b873afcb3766",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u72c2\u66b4\u725b\u5934\u4eba/attack_start_front.png",
+      "visualGroup": "visual_848f436224",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u72c2\u66b4\u725b\u5934\u4eba/attack_start_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/elite_minotaur/defeat_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/elite_minotaur/defeat_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "f2032ceea5157584d7385034d8317af603dac45ff070109d0e795c65319fd102",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u72c2\u66b4\u725b\u5934\u4eba/defeat_front.png",
+      "visualGroup": "visual_f2032ceea5",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u72c2\u66b4\u725b\u5934\u4eba/defeat_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/elite_minotaur/enrage_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/elite_minotaur/enrage_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "fbb43b4ea8b03989702b42b4f298b369b8a150d189e4fcc39de400790582e178",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u72c2\u66b4\u725b\u5934\u4eba/enrage_front.png",
+      "visualGroup": "visual_fbb43b4ea8",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u72c2\u66b4\u725b\u5934\u4eba/enrage_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/elite_minotaur/hurt_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/elite_minotaur/hurt_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "2e9ce9c9ee2e42172272d44c78a6392cc835af11d753e3871e22cbfcf522594f",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u72c2\u66b4\u725b\u5934\u4eba/hurt_front.png",
+      "visualGroup": "visual_2e9ce9c9ee",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u72c2\u66b4\u725b\u5934\u4eba/hurt_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/elite_minotaur/hurt_heavy_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/elite_minotaur/hurt_heavy_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "e80aad09563e4f4bc703003dac86c0bfeb78081b8f11e27ee94f008dec01aa27",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u72c2\u66b4\u725b\u5934\u4eba/hurt_heavy_front.png",
+      "visualGroup": "visual_e80aad0956",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u72c2\u66b4\u725b\u5934\u4eba/hurt_heavy_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/elite_minotaur/idle_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/elite_minotaur/idle_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "9cc625381335c4ee2c44820468e6e5c9496074a0b5c5129b458d522099c40bf2",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u72c2\u66b4\u725b\u5934\u4eba/idle_front.png",
+      "visualGroup": "visual_9cc6253813",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u72c2\u66b4\u725b\u5934\u4eba/idle_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/elite_minotaur/skill_cast_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/elite_minotaur/skill_cast_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "b5609213dcdbc3c4eac0f2f825f6f1dbfba5e0e3b1679a9b6978d282ae609e1f",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u72c2\u66b4\u725b\u5934\u4eba/skill_cast_front.png",
+      "visualGroup": "visual_b5609213dc",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u72c2\u66b4\u725b\u5934\u4eba/skill_cast_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/elite_minotaur/skill_start_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/elite_minotaur/skill_start_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "269263627f63eb5d6adeffaa8497e864dcd3e1fe132499c5f69583b0108fdcb6",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u72c2\u66b4\u725b\u5934\u4eba/skill_start_front.png",
+      "visualGroup": "visual_269263627f",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u72c2\u66b4\u725b\u5934\u4eba/skill_start_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/crimson_blood_witch/attack_hit_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/crimson_blood_witch/attack_hit_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "53545a364af3025baea1c986fd4ccbe31bda1f632b3eae2339b92f23fb8ff3cb",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u7329\u7ea2\u8840\u5deb/attack_hit_front.png",
+      "visualGroup": "visual_53545a364a",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u7329\u7ea2\u8840\u5deb/attack_hit_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/crimson_blood_witch/attack_start_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/crimson_blood_witch/attack_start_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "76223abda1456a126db5a899fa1a270aeb9bddc75379bfd338058339fa649384",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u7329\u7ea2\u8840\u5deb/attack_start_front.png",
+      "visualGroup": "visual_76223abda1",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u7329\u7ea2\u8840\u5deb/attack_start_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/crimson_blood_witch/defeat_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/crimson_blood_witch/defeat_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "cc4e4784468c0b3cd53f50f717158b182c77eb5aec51fec477e4bbea1b5a9472",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u7329\u7ea2\u8840\u5deb/defeat_front.png",
+      "visualGroup": "visual_cc4e478446",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u7329\u7ea2\u8840\u5deb/defeat_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/crimson_blood_witch/enrage_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/crimson_blood_witch/enrage_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "04d1ce826da6f00289fe06b1a7a189dcfb26749482829789e20a0b7beea816a9",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u7329\u7ea2\u8840\u5deb/enrage_front.png",
+      "visualGroup": "visual_04d1ce826d",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u7329\u7ea2\u8840\u5deb/enrage_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/crimson_blood_witch/hurt_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/crimson_blood_witch/hurt_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "b98bbbdd0920ad063089b1e53344db60bb84302aa9d2ae4e224245985258ef47",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u7329\u7ea2\u8840\u5deb/hurt_front.png",
+      "visualGroup": "visual_b98bbbdd09",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u7329\u7ea2\u8840\u5deb/hurt_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/crimson_blood_witch/hurt_heavy_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/crimson_blood_witch/hurt_heavy_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "8d7dc229f8e78a96308d7c5c0d41a6aad7f7684404930a7d893a5541a51e1e3a",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u7329\u7ea2\u8840\u5deb/hurt_heavy_front.png",
+      "visualGroup": "visual_8d7dc229f8",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u7329\u7ea2\u8840\u5deb/hurt_heavy_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/crimson_blood_witch/idle_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/crimson_blood_witch/idle_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "13f4db598c3f3c0b82fd7d3e221c780bf72ea0dbcc4bbaaf685f959fa5bb2fe1",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u7329\u7ea2\u8840\u5deb/idle_front.png",
+      "visualGroup": "visual_13f4db598c",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u7329\u7ea2\u8840\u5deb/idle_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/crimson_blood_witch/skill_cast_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/crimson_blood_witch/skill_cast_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "9f5691af13d047692da3f77e6d7ad40cef3865b24a9045f39153e29946822db2",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u7329\u7ea2\u8840\u5deb/skill_cast_front.png",
+      "visualGroup": "visual_9f5691af13",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u7329\u7ea2\u8840\u5deb/skill_cast_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/crimson_blood_witch/skill_start_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/crimson_blood_witch/skill_start_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "607325f6374bfc333906ff32189351d42e455b9a2d2c11171109275c41ef18e9",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u7329\u7ea2\u8840\u5deb/skill_start_front.png",
+      "visualGroup": "visual_607325f637",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u7cbe\u82f1\u3011\u7329\u7ea2\u8840\u5deb/skill_start_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/boss_oni_shura/attack_hit_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/boss_oni_shura/attack_hit_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "92922e9b65ea780982536203fb4d1c11af3dc5803e0b13b0c79fb89b8c87bfc9",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u9996\u9886\u3011\u9b3c\u9762\u4fee\u7f57/attack_hit_front.png",
+      "visualGroup": "visual_92922e9b65",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u9996\u9886\u3011\u9b3c\u9762\u4fee\u7f57/attack_hit_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/boss_oni_shura/attack_start_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/boss_oni_shura/attack_start_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "4eb1513f31c38e638921389711faa4e91c8e99219c702edbcb709c77f3f81dfd",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u9996\u9886\u3011\u9b3c\u9762\u4fee\u7f57/attack_start_front.png",
+      "visualGroup": "visual_4eb1513f31",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u9996\u9886\u3011\u9b3c\u9762\u4fee\u7f57/attack_start_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/boss_oni_shura/defeat_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/boss_oni_shura/defeat_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "0e22b1642f5734a101f9336d85fa705072d6206fe8f89c061aa96df44b5ccc10",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u9996\u9886\u3011\u9b3c\u9762\u4fee\u7f57/defeat_front.png",
+      "visualGroup": "visual_0e22b1642f",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u9996\u9886\u3011\u9b3c\u9762\u4fee\u7f57/defeat_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/boss_oni_shura/enrage_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/boss_oni_shura/enrage_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "5739c8e902107e88338b128e69fe97166e3484d5ed73d816ea95b4fbf3b7a06d",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u9996\u9886\u3011\u9b3c\u9762\u4fee\u7f57/enrage_front.png",
+      "visualGroup": "visual_5739c8e902",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u9996\u9886\u3011\u9b3c\u9762\u4fee\u7f57/enrage_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/boss_oni_shura/hurt_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/boss_oni_shura/hurt_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "4765c1fc12e16a8d60412a659df5a3ad3e4eb1bfd9f18c1afdc837c3c4f0ef41",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u9996\u9886\u3011\u9b3c\u9762\u4fee\u7f57/hurt_front.png",
+      "visualGroup": "visual_4765c1fc12",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u9996\u9886\u3011\u9b3c\u9762\u4fee\u7f57/hurt_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/boss_oni_shura/idle_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/boss_oni_shura/idle_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "29c85852031bec62cd67e121b2556eaabc7e1eedd24f07457de8904be92f6528",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u9996\u9886\u3011\u9b3c\u9762\u4fee\u7f57/idle_front.png",
+      "visualGroup": "visual_29c8585203",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u9996\u9886\u3011\u9b3c\u9762\u4fee\u7f57/idle_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/boss_oni_shura/skill1_cast_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/boss_oni_shura/skill1_cast_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "8ea8b6e5a091f4eccb5394caa9bf121f67d9780718e683618793ddb910410524",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u9996\u9886\u3011\u9b3c\u9762\u4fee\u7f57/skill1_cast_front.png",
+      "visualGroup": "visual_8ea8b6e5a0",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u9996\u9886\u3011\u9b3c\u9762\u4fee\u7f57/skill1_cast_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/boss_oni_shura/skill1_start_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/boss_oni_shura/skill1_start_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "e7b9ef71ed1aaf8a2c6cc3d3c743babe95981611a5778341b5d505abcb387493",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u9996\u9886\u3011\u9b3c\u9762\u4fee\u7f57/skill1_start_front.png",
+      "visualGroup": "visual_e7b9ef71ed",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u9996\u9886\u3011\u9b3c\u9762\u4fee\u7f57/skill1_start_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/boss_oni_shura/skill2_cast_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/boss_oni_shura/skill2_cast_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "12555c8734e3080945fc6dab39f815ecc5343d3d1a4f84ed94102ebd13d845e1",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u9996\u9886\u3011\u9b3c\u9762\u4fee\u7f57/skill2_cast_front.png",
+      "visualGroup": "visual_12555c8734",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u9996\u9886\u3011\u9b3c\u9762\u4fee\u7f57/skill2_cast_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/boss_oni_shura/skill2_start_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/boss_oni_shura/skill2_start_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "a6f037b01047836063fa34e898d26e1b7497a349e0ed8eebc74f42511b0f1a0f",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u9996\u9886\u3011\u9b3c\u9762\u4fee\u7f57/skill2_start_front.png",
+      "visualGroup": "visual_a6f037b010",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u3010\u9996\u9886\u3011\u9b3c\u9762\u4fee\u7f57/skill2_start_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/venom_toad/attack_hit_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/venom_toad/attack_hit_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "cb81d8c175eeaceceeb435fef12980e23ed8074a85be92da90745b4c145731d0",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5267\u6bd2\u87fe\u870d/attack_hit_front.png",
+      "visualGroup": "visual_cb81d8c175",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5267\u6bd2\u87fe\u870d/attack_hit_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/venom_toad/attack_start_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/venom_toad/attack_start_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "64ab272bb09c0090019976ad2a686db9700bb43f9a39c245ec78096ad6dfe980",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5267\u6bd2\u87fe\u870d/attack_start_front.png",
+      "visualGroup": "visual_64ab272bb0",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5267\u6bd2\u87fe\u870d/attack_start_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/venom_toad/defeat_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/venom_toad/defeat_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "72540d55a4fa195b7f6123b0b14a1f29db03b6e4b9ac19a341637ca70b7592e1",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5267\u6bd2\u87fe\u870d/defeat_front.png",
+      "visualGroup": "visual_72540d55a4",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5267\u6bd2\u87fe\u870d/defeat_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/venom_toad/hurt_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/venom_toad/hurt_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "764e520af01ae328187bd6942508d98e7c1ad021daa97cada9c0b88d0eb072b6",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5267\u6bd2\u87fe\u870d/hurt_front.png",
+      "visualGroup": "visual_764e520af0",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5267\u6bd2\u87fe\u870d/hurt_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/venom_toad/idle_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/venom_toad/idle_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "e7b338aca2bd3680efe701652628d2f71f29ab38563bc120b1a2cd12b837e9f3",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5267\u6bd2\u87fe\u870d/idle_front.png",
+      "visualGroup": "visual_e7b338aca2",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5267\u6bd2\u87fe\u870d/idle_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/venom_toad/skill_cast_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/venom_toad/skill_cast_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "cd65b8fd700dc19511ea07ca06e6db40168898a3241a49b439bcf02bf36d6579",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5267\u6bd2\u87fe\u870d/skill_cast_front.png",
+      "visualGroup": "visual_cd65b8fd70",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5267\u6bd2\u87fe\u870d/skill_cast_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/ancient_spider/attack_hit_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/ancient_spider/attack_hit_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "04a9e7ef8c162e651543ac787bdb62a418ad96a363d318cc878b56feadc918d3",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5343\u8f7d\u9b54\u86db/attack_hit_front.png",
+      "visualGroup": "visual_04a9e7ef8c",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5343\u8f7d\u9b54\u86db/attack_hit_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/ancient_spider/attack_start_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/ancient_spider/attack_start_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "71f4032ad0272dc427029b9ed97a0bf72a4d4100feb60c05d681f48312497f87",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5343\u8f7d\u9b54\u86db/attack_start_front.png",
+      "visualGroup": "visual_71f4032ad0",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5343\u8f7d\u9b54\u86db/attack_start_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/ancient_spider/defeat_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/ancient_spider/defeat_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "bb548d12bb610f24dcd93c2ba44330b88bf92e8d0cf9a379731e0d531472d014",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5343\u8f7d\u9b54\u86db/defeat_front.png",
+      "visualGroup": "visual_bb548d12bb",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5343\u8f7d\u9b54\u86db/defeat_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/ancient_spider/hurt_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/ancient_spider/hurt_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "9ed2ce509457c0e619b43f265a0e3a568af25c56cbeca82c13fdd7297553d514",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5343\u8f7d\u9b54\u86db/hurt_front.png",
+      "visualGroup": "visual_9ed2ce5094",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5343\u8f7d\u9b54\u86db/hurt_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/ancient_spider/idle_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/ancient_spider/idle_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "903f477c452a1c9cfc55276ff60386274ab6e4cbdd3916265e683803de00b5a1",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5343\u8f7d\u9b54\u86db/idle_front.png",
+      "visualGroup": "visual_903f477c45",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5343\u8f7d\u9b54\u86db/idle_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/ancient_spider/skill_cast_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/ancient_spider/skill_cast_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "eda4fd7a563e70cf1c686d082f2afac72b57680b94bbb08e11261eb8910ac613",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5343\u8f7d\u9b54\u86db/skill_cast_front.png",
+      "visualGroup": "visual_eda4fd7a56",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5343\u8f7d\u9b54\u86db/skill_cast_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/blood_bat/attack_hit_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/blood_bat/attack_hit_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "5873065ef8837257d21ad39544566f89bc7f6456ce5b4091b2d73da03d9f0132",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u55dc\u8840\u8759\u8760/attack_hit_front.png",
+      "visualGroup": "visual_5873065ef8",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u55dc\u8840\u8759\u8760/attack_hit_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/blood_bat/attack_start_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/blood_bat/attack_start_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "6a8adf50f16396a185303264e56502530eebce15149ca8a349422bce2e013e9c",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u55dc\u8840\u8759\u8760/attack_start_front.png",
+      "visualGroup": "visual_6a8adf50f1",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u55dc\u8840\u8759\u8760/attack_start_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/blood_bat/defeat_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/blood_bat/defeat_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "50ce2a0f538e26d100038d82ea640b11ed7a2828aa1639ea33909a211b22553e",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u55dc\u8840\u8759\u8760/defeat_front.png",
+      "visualGroup": "visual_50ce2a0f53",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u55dc\u8840\u8759\u8760/defeat_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/blood_bat/hurt_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/blood_bat/hurt_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "2722d5af1d1b62420d60d0aab704d131f399e77f7d6d3110dc15c9baae183593",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u55dc\u8840\u8759\u8760/hurt_front.png",
+      "visualGroup": "visual_2722d5af1d",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u55dc\u8840\u8759\u8760/hurt_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/blood_bat/idle_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/blood_bat/idle_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "a1dfe55bbf8a3c38b9a9dea2f0520c84f19a197d8092847b390cb2a5b1ae09ed",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u55dc\u8840\u8759\u8760/idle_front.png",
+      "visualGroup": "visual_a1dfe55bbf",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u55dc\u8840\u8759\u8760/idle_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/blood_bat/skill_cast_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/blood_bat/skill_cast_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "ff6875be3e28c4ffbfaf6393a16d1ffccb5f790eca8e5ab6761a70412cac9bd0",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u55dc\u8840\u8759\u8760/skill_cast_front.png",
+      "visualGroup": "visual_ff6875be3e",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u55dc\u8840\u8759\u8760/skill_cast_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/fallen_swordsman/attack_hit_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/fallen_swordsman/attack_hit_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "77a1d4ce63a7e145733568141fa4957aed53df915a6261171c8fd4baf2cb2ecd",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5815\u843d\u5251\u5ba2/attack_hit_front.png",
+      "visualGroup": "visual_77a1d4ce63",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5815\u843d\u5251\u5ba2/attack_hit_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/fallen_swordsman/attack_start_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/fallen_swordsman/attack_start_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "31cd175dbf24c96d2cdc543d6b890021993e8e6ba1fff8e9e9c83335c687c7bc",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5815\u843d\u5251\u5ba2/attack_start_front.png",
+      "visualGroup": "visual_31cd175dbf",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5815\u843d\u5251\u5ba2/attack_start_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/fallen_swordsman/defeat_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/fallen_swordsman/defeat_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "926dcee1bfccf430bbbe8613047d0e2a9edecf8d32b66f7aeffc40db35ae645c",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5815\u843d\u5251\u5ba2/defeat_front.png",
+      "visualGroup": "visual_926dcee1bf",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5815\u843d\u5251\u5ba2/defeat_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/fallen_swordsman/hurt_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/fallen_swordsman/hurt_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "d36fd5702f4b1876aa6f820d3803b639587c3941bb481ccbaae155db292eb2ad",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5815\u843d\u5251\u5ba2/hurt_front.png",
+      "visualGroup": "visual_d36fd5702f",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5815\u843d\u5251\u5ba2/hurt_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/fallen_swordsman/hurt_heavy_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/fallen_swordsman/hurt_heavy_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "571c45d8b349d3c601c6c5c0a61e5ce7c9e01aa2e22dac9880c63615afdeabe0",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5815\u843d\u5251\u5ba2/hurt_heavy_front.png",
+      "visualGroup": "visual_571c45d8b3",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5815\u843d\u5251\u5ba2/hurt_heavy_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/fallen_swordsman/idle_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/fallen_swordsman/idle_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "19c75da5ac6ef687aa5529c35bef3e0cc0ef55d422be7ab72dae1088e996ed5a",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5815\u843d\u5251\u5ba2/idle_front.png",
+      "visualGroup": "visual_19c75da5ac",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5815\u843d\u5251\u5ba2/idle_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/fallen_swordsman/skill_cast_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/fallen_swordsman/skill_cast_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "fdf9a191f32c142c33d7e96db9f43a9176ea2052c1acae97ae2992280f02d3a1",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5815\u843d\u5251\u5ba2/skill_cast_front.png",
+      "visualGroup": "visual_fdf9a191f3",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5815\u843d\u5251\u5ba2/skill_cast_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/fallen_swordsman/skill_start_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/fallen_swordsman/skill_start_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "ff36505b9eb5eb2f6fc4e8499176c92d7d5e9f3e42abcfccf9aad07a8fa30fa5",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5815\u843d\u5251\u5ba2/skill_start_front.png",
+      "visualGroup": "visual_ff36505b9e",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5815\u843d\u5251\u5ba2/skill_start_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/stone_golem/attack_hit_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/stone_golem/attack_hit_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "67d66c73162e05b7bc6f8e666d7396eaca38f65fe6956af9db4f48927933ccb7",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5de8\u529b\u77f3\u9b54/attack_hit_front.png",
+      "visualGroup": "visual_67d66c7316",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5de8\u529b\u77f3\u9b54/attack_hit_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/stone_golem/attack_start_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/stone_golem/attack_start_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "f15c4b6185fb9051ad1df9754b4214998a46f70d1dde51f116a67b9c696066ab",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5de8\u529b\u77f3\u9b54/attack_start_front.png",
+      "visualGroup": "visual_f15c4b6185",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5de8\u529b\u77f3\u9b54/attack_start_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/stone_golem/defeat_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/stone_golem/defeat_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "e1a26100f91d5bafcd278f8c95607e32cc224d91e9a98df2d0a293291ed3cf17",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5de8\u529b\u77f3\u9b54/defeat_front.png",
+      "visualGroup": "visual_e1a26100f9",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5de8\u529b\u77f3\u9b54/defeat_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/stone_golem/hurt_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/stone_golem/hurt_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "d1487615d222f9ce0bb604fe063b77d81ebfae730202ab0eb8346fd5a207f656",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5de8\u529b\u77f3\u9b54/hurt_front.png",
+      "visualGroup": "visual_d1487615d2",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5de8\u529b\u77f3\u9b54/hurt_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/stone_golem/hurt_heavy_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/stone_golem/hurt_heavy_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "8a35cd6da65cdafb22c618c63c99891c4c1429a63914358f5dec96da7c978473",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5de8\u529b\u77f3\u9b54/hurt_heavy_front.png",
+      "visualGroup": "visual_8a35cd6da6",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5de8\u529b\u77f3\u9b54/hurt_heavy_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/stone_golem/idle_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/stone_golem/idle_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "9f85339fb52c9f707bca4e61aaef13998a8f5c648f51869a9ba9d4fe86e5c6c3",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5de8\u529b\u77f3\u9b54/idle_front.png",
+      "visualGroup": "visual_9f85339fb5",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5de8\u529b\u77f3\u9b54/idle_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/stone_golem/skill_cast_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/stone_golem/skill_cast_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "37c8217215bd69ceef96d84aa0268d40aef0b8f1f664ba1b93a49103460b0af4",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5de8\u529b\u77f3\u9b54/skill_cast_front.png",
+      "visualGroup": "visual_37c8217215",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5de8\u529b\u77f3\u9b54/skill_cast_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/stone_golem/skill_start_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/stone_golem/skill_start_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "79f5b06dacb7f62b53d6531c958e9dd0168a4efee9dbb72bbd3e85deb412b415",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5de8\u529b\u77f3\u9b54/skill_start_front.png",
+      "visualGroup": "visual_79f5b06dac",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5de8\u529b\u77f3\u9b54/skill_start_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/nether_mage/attack_hit_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/nether_mage/attack_hit_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "ed3d554e2c3f14d75e1ba44b96e91233109a583a3da1698f2e66e18b3df84009",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5e7d\u51a5\u6cd5\u5e08/attack_hit_front.png",
+      "visualGroup": "visual_ed3d554e2c",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5e7d\u51a5\u6cd5\u5e08/attack_hit_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/nether_mage/attack_start_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/nether_mage/attack_start_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "083fd073f618c862824a3f3d484236c8e9014e32b602da8bb45dbb82db751906",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5e7d\u51a5\u6cd5\u5e08/attack_start_front.png",
+      "visualGroup": "visual_083fd073f6",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5e7d\u51a5\u6cd5\u5e08/attack_start_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/nether_mage/defeat_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/nether_mage/defeat_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "7584af0414ac4222ce0fa9dfb244fa58aedd4be35c3d65d59d8c84b9325b7237",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5e7d\u51a5\u6cd5\u5e08/defeat_front.png",
+      "visualGroup": "visual_7584af0414",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5e7d\u51a5\u6cd5\u5e08/defeat_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/nether_mage/hurt_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/nether_mage/hurt_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "896abbf4d27cf6d488cdb7254da5ca2e4fac7952d23a634a39275623959f1813",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5e7d\u51a5\u6cd5\u5e08/hurt_front.png",
+      "visualGroup": "visual_896abbf4d2",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5e7d\u51a5\u6cd5\u5e08/hurt_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/nether_mage/hurt_heavy_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/nether_mage/hurt_heavy_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "b6544869c0c82ab6775868e3765618dfe68a9cafda2a913e489c5a3669a487cb",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5e7d\u51a5\u6cd5\u5e08/hurt_heavy_front.png",
+      "visualGroup": "visual_b6544869c0",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5e7d\u51a5\u6cd5\u5e08/hurt_heavy_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/nether_mage/idle_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/nether_mage/idle_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "59f39ad696477d3bfa5ea0457c27a55c9c6704e9fc68b1162da30d469f230ad5",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5e7d\u51a5\u6cd5\u5e08/idle_front.png",
+      "visualGroup": "visual_59f39ad696",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5e7d\u51a5\u6cd5\u5e08/idle_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/nether_mage/skill_cast_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/nether_mage/skill_cast_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "e1193221031ef7af57b7fa0184c73455ee6c0e73a797e25f2894e4eb40badf8d",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5e7d\u51a5\u6cd5\u5e08/skill_cast_front.png",
+      "visualGroup": "visual_e119322103",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5e7d\u51a5\u6cd5\u5e08/skill_cast_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/nether_mage/skill_start_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/nether_mage/skill_start_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "16ff4565530f0184ed5e135534d4a858e72a6e5c3ee6cf19138880eb8e68945b",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5e7d\u51a5\u6cd5\u5e08/skill_start_front.png",
+      "visualGroup": "visual_16ff456553",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u5e7d\u51a5\u6cd5\u5e08/skill_start_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/angry_boar/attack_hit_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/angry_boar/attack_hit_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "251f2de9556fb087a1cd20d29c56e5aa6d3b0f746aece71c3bfb010dbe7e7841",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u66b4\u8e81\u91ce\u732a/attack_hit_front.png",
+      "visualGroup": "visual_251f2de955",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u66b4\u8e81\u91ce\u732a/attack_hit_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/angry_boar/attack_start_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/angry_boar/attack_start_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "76dcacc99dc659c1a58860139a8abc30d5b679b446f49c018b1d68df51a17565",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u66b4\u8e81\u91ce\u732a/attack_start_front.png",
+      "visualGroup": "visual_76dcacc99d",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u66b4\u8e81\u91ce\u732a/attack_start_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/angry_boar/defeat_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/angry_boar/defeat_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "62d3f676aac7108e4b48f8ddd6711930f89246e105e8a2f6adf38ba7bd29b524",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u66b4\u8e81\u91ce\u732a/defeat_front.png",
+      "visualGroup": "visual_62d3f676aa",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u66b4\u8e81\u91ce\u732a/defeat_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/angry_boar/hurt_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/angry_boar/hurt_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "44d1c2f80396aac2c1aaa9c13e74d79c95bf5a9a958abe3c56c542814c2e77bd",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u66b4\u8e81\u91ce\u732a/hurt_front.png",
+      "visualGroup": "visual_44d1c2f803",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u66b4\u8e81\u91ce\u732a/hurt_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/angry_boar/idle_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/angry_boar/idle_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "436bf8c188a7b76f5e1a88a8dcbd4ee6d9f4b59b6d1546b0a183bd23aa69db37",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u66b4\u8e81\u91ce\u732a/idle_front.png",
+      "visualGroup": "visual_436bf8c188",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u66b4\u8e81\u91ce\u732a/idle_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/angry_boar/skill_cast_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/angry_boar/skill_cast_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "471993e4bddd7c50a4cc3eb3c713fc187f85e629513efbc48c1a04d1f5d88f68",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u66b4\u8e81\u91ce\u732a/skill_cast_front.png",
+      "visualGroup": "visual_471993e4bd",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u66b4\u8e81\u91ce\u732a/skill_cast_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/bone_soldier/attack_hit_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/bone_soldier/attack_hit_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "21b602697f600366c4c9e7481e5fde439932ab068d6512fa0a1c5055abd319a6",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u67af\u9aa8\u715e\u5175/attack_hit_front.png",
+      "visualGroup": "visual_21b602697f",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u67af\u9aa8\u715e\u5175/attack_hit_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/bone_soldier/attack_start_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/bone_soldier/attack_start_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "fbddf13459635c2a5b48a05a9e5a3c8f00e02f390a8f7407a3d03558c296fd49",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u67af\u9aa8\u715e\u5175/attack_start_front.png",
+      "visualGroup": "visual_fbddf13459",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u67af\u9aa8\u715e\u5175/attack_start_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/bone_soldier/defeat_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/bone_soldier/defeat_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "0f916abaa2c5650f0a3b8676bbe81268cb7df41e1b0c6b3e0946ef8917d2eadb",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u67af\u9aa8\u715e\u5175/defeat_front.png",
+      "visualGroup": "visual_0f916abaa2",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u67af\u9aa8\u715e\u5175/defeat_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/bone_soldier/hurt_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/bone_soldier/hurt_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "84ef4bbed3e0fee54d70aa3b1f0d519d104f9394b7f9c8408c23bc96380960bd",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u67af\u9aa8\u715e\u5175/hurt_front.png",
+      "visualGroup": "visual_84ef4bbed3",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u67af\u9aa8\u715e\u5175/hurt_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/bone_soldier/idle_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/bone_soldier/idle_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "4f4693c0227a7428cb2358263fe9ee5461564754abe34c0b05a8cf6bbb113982",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u67af\u9aa8\u715e\u5175/idle_front.png",
+      "visualGroup": "visual_4f4693c022",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u67af\u9aa8\u715e\u5175/idle_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/bone_soldier/skill_cast_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/bone_soldier/skill_cast_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "500fa476c6470f25ec29c5a9a8fa6f7fe70ba05508e152a8e1c7bdfb9b18f148",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u67af\u9aa8\u715e\u5175/skill_cast_front.png",
+      "visualGroup": "visual_500fa476c6",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u67af\u9aa8\u715e\u5175/skill_cast_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/sick_slime/attack_hit_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/sick_slime/attack_hit_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "2b865ca58ba308730841878ff266c9126be0286e7007ced9b5d68f8e532ef042",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u75c5\u5f31\u53f2\u83b1\u59c6/attack_hit_front.png",
+      "visualGroup": "visual_2b865ca58b",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u75c5\u5f31\u53f2\u83b1\u59c6/attack_hit_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/sick_slime/attack_start_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/sick_slime/attack_start_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "f231a7d0f18846a9d10e136ad77c0716a03370d3c8a973f779ac64ef891f35dd",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u75c5\u5f31\u53f2\u83b1\u59c6/attack_start_front.png",
+      "visualGroup": "visual_f231a7d0f1",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u75c5\u5f31\u53f2\u83b1\u59c6/attack_start_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/sick_slime/defeat_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/sick_slime/defeat_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "19b4c59b93caee78da3369c8ebe16c3dc5aa18f6c8e8a500aae2dcab8fe5e0f4",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u75c5\u5f31\u53f2\u83b1\u59c6/defeat_front.png",
+      "visualGroup": "visual_19b4c59b93",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u75c5\u5f31\u53f2\u83b1\u59c6/defeat_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/sick_slime/hurt_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/sick_slime/hurt_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "e3191224d934485d89feec7798200e69df3cd125d28496336cd6d31e3c7167fe",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u75c5\u5f31\u53f2\u83b1\u59c6/hurt_front.png",
+      "visualGroup": "visual_e3191224d9",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u75c5\u5f31\u53f2\u83b1\u59c6/hurt_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/sick_slime/idle_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/sick_slime/idle_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "f98cd39ee2a3f8eae9f126596cbe83c93a1e6f5bcafa1d4adf50a30de6464178",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u75c5\u5f31\u53f2\u83b1\u59c6/idle_front.png",
+      "visualGroup": "visual_f98cd39ee2",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u75c5\u5f31\u53f2\u83b1\u59c6/idle_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/sick_slime/skill_cast_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/sick_slime/skill_cast_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "1ca12e4e5aa0f534468072a950fb5f15a3d736974dbcac44905e36f92c1a76ca",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u75c5\u5f31\u53f2\u83b1\u59c6/skill_cast_front.png",
+      "visualGroup": "visual_1ca12e4e5a",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u75c5\u5f31\u53f2\u83b1\u59c6/skill_cast_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/stitched_brute/attack_hit_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/stitched_brute/attack_hit_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "32a0fc8d73a647760871778669121450b7abc0359c43f4147caf3b7779e962f9",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u7f1d\u5408\u5de8\u602a/attack_hit_front.png",
+      "visualGroup": "visual_32a0fc8d73",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u7f1d\u5408\u5de8\u602a/attack_hit_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/stitched_brute/attack_start_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/stitched_brute/attack_start_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "583776d009b79896da563e88a4456a15054908b35f539d92effaec3a652192f5",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u7f1d\u5408\u5de8\u602a/attack_start_front.png",
+      "visualGroup": "visual_583776d009",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u7f1d\u5408\u5de8\u602a/attack_start_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/stitched_brute/defeat_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/stitched_brute/defeat_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "6e6210a726918bebafc5ba44d13f803280be9d26d1bb683f445ff3284ebe1df5",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u7f1d\u5408\u5de8\u602a/defeat_front.png",
+      "visualGroup": "visual_6e6210a726",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u7f1d\u5408\u5de8\u602a/defeat_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/stitched_brute/hurt_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/stitched_brute/hurt_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "a1c70f7b2d84581e9fdc365cdb73b3952aec23864fefbe13085d1a39dbe26ec3",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u7f1d\u5408\u5de8\u602a/hurt_front.png",
+      "visualGroup": "visual_a1c70f7b2d",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u7f1d\u5408\u5de8\u602a/hurt_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/stitched_brute/hurt_heavy_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/stitched_brute/hurt_heavy_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "41053dc3e9720cddf97779842e802d3f76aa129984934d8c276d17b4c62813f2",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u7f1d\u5408\u5de8\u602a/hurt_heavy_front.png",
+      "visualGroup": "visual_41053dc3e9",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u7f1d\u5408\u5de8\u602a/hurt_heavy_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/stitched_brute/idle_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/stitched_brute/idle_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "b5c9fe3a032c9ab34c5577884eeaf6625724da72172b78596387e0478cf94a72",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u7f1d\u5408\u5de8\u602a/idle_front.png",
+      "visualGroup": "visual_b5c9fe3a03",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u7f1d\u5408\u5de8\u602a/idle_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/stitched_brute/skill_cast_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/stitched_brute/skill_cast_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "413819f821706b47b7cebed8e7481b9a8b0a5741060f4a99ba73ffcb293a9e0d",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u7f1d\u5408\u5de8\u602a/skill_cast_front.png",
+      "visualGroup": "visual_413819f821",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u7f1d\u5408\u5de8\u602a/skill_cast_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/stitched_brute/skill_start_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/stitched_brute/skill_start_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "469ddb880daf8e64706beb7bc94c0f5c2087839dd205549dbcc744082fcedaa7",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u7f1d\u5408\u5de8\u602a/skill_start_front.png",
+      "visualGroup": "visual_469ddb880d",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u7f1d\u5408\u5de8\u602a/skill_start_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/wild_wolf/attack_hit_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/wild_wolf/attack_hit_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "bed78a837d2959b6af8b21943baf4ce4b7eb10e251e18462f21a3a7d01067dbb",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u8352\u91ce\u715e\u72fc/attack_hit_front.png",
+      "visualGroup": "visual_bed78a837d",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u8352\u91ce\u715e\u72fc/attack_hit_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/wild_wolf/attack_start_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/wild_wolf/attack_start_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "2dec42c28c057dcdc040f00aec33aedd5e57c2082b9c5d4332329bb1cca3903e",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u8352\u91ce\u715e\u72fc/attack_start_front.png",
+      "visualGroup": "visual_2dec42c28c",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u8352\u91ce\u715e\u72fc/attack_start_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/wild_wolf/defeat_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/wild_wolf/defeat_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "5e601a1fb0581bf7c6b01d67666e04bd7856cb4c7338332c66e9ef7dcdac69e5",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u8352\u91ce\u715e\u72fc/defeat_front.png",
+      "visualGroup": "visual_5e601a1fb0",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u8352\u91ce\u715e\u72fc/defeat_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/wild_wolf/hurt_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/wild_wolf/hurt_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "503b387cc59c68640fc2b10ba3fc845c69c7393ea55808ae701d84bef036ff63",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u8352\u91ce\u715e\u72fc/hurt_front.png",
+      "visualGroup": "visual_503b387cc5",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u8352\u91ce\u715e\u72fc/hurt_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/wild_wolf/idle_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/wild_wolf/idle_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "61fda8af5675724a7d7bb1228c4f9824a96c11b0f7d79920c5b79bf1c44cb045",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u8352\u91ce\u715e\u72fc/idle_front.png",
+      "visualGroup": "visual_61fda8af56",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u8352\u91ce\u715e\u72fc/idle_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/wild_wolf/skill_cast_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/wild_wolf/skill_cast_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "dbb05b91b048b98a4f083fef7690d7794a8a5c45e16e813a5ce0bf5d6e7c4046",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u8352\u91ce\u715e\u72fc/skill_cast_front.png",
+      "visualGroup": "visual_dbb05b91b0",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u8352\u91ce\u715e\u72fc/skill_cast_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/greedy_thief/attack_hit_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/greedy_thief/attack_hit_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "6e98a018d7a5b3d1d847ead80431a83b1edd633eed01b67033c52aaa2c575dcd",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u8d2a\u5a6a\u76d7\u8d3c/attack_hit_front.png",
+      "visualGroup": "visual_6e98a018d7",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u8d2a\u5a6a\u76d7\u8d3c/attack_hit_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/greedy_thief/attack_start_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/greedy_thief/attack_start_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "213eac0451344eb9f56d8d44b3bb7b06fc46e966749aa6bedcc066bfcc714685",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u8d2a\u5a6a\u76d7\u8d3c/attack_start_front.png",
+      "visualGroup": "visual_213eac0451",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u8d2a\u5a6a\u76d7\u8d3c/attack_start_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/greedy_thief/defeat_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/greedy_thief/defeat_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "da7e3adb56fd7d47d3407144a37fbef741e9fadf60452ba406720664d5baf49c",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u8d2a\u5a6a\u76d7\u8d3c/defeat_front.png",
+      "visualGroup": "visual_da7e3adb56",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u8d2a\u5a6a\u76d7\u8d3c/defeat_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/greedy_thief/hurt_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/greedy_thief/hurt_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "b1c0a3cc34753e538fefff5acb5af35f3e347daa666ddf49190f02d2c51cc7a8",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u8d2a\u5a6a\u76d7\u8d3c/hurt_front.png",
+      "visualGroup": "visual_b1c0a3cc34",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u8d2a\u5a6a\u76d7\u8d3c/hurt_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/greedy_thief/idle_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/greedy_thief/idle_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "e000e7d0de12ee572e9d32a92df1c870970826bbccda70281e99b6d6b2112cb0",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u8d2a\u5a6a\u76d7\u8d3c/idle_front.png",
+      "visualGroup": "visual_e000e7d0de",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u8d2a\u5a6a\u76d7\u8d3c/idle_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/greedy_thief/skill_cast_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/greedy_thief/skill_cast_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "2d2c3646c12aaed2392c38f634bfd13b80181f29c81f33027d92971b08f5799c",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u8d2a\u5a6a\u76d7\u8d3c/skill_cast_front.png",
+      "visualGroup": "visual_2d2c3646c1",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u8d2a\u5a6a\u76d7\u8d3c/skill_cast_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/lost_fox/attack_hit_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/lost_fox/attack_hit_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "e58f037522715cd14ec8c98a9a46bed6a7377717f3d7b62a33bed95066ac7bd9",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u8ff7\u9014\u5996\u72d0/attack_hit_front.png",
+      "visualGroup": "visual_e58f037522",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u8ff7\u9014\u5996\u72d0/attack_hit_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/lost_fox/attack_start_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/lost_fox/attack_start_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "d6bfa374ce377ed209f57649ceccd865e26491021940323b9f116e1ad66757f2",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u8ff7\u9014\u5996\u72d0/attack_start_front.png",
+      "visualGroup": "visual_d6bfa374ce",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u8ff7\u9014\u5996\u72d0/attack_start_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/lost_fox/defeat_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/lost_fox/defeat_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "8fec8b22e894bf7ec25ad483780f4dd8753271b282de73148f8f697c5e9c4b4a",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u8ff7\u9014\u5996\u72d0/defeat_front.png",
+      "visualGroup": "visual_8fec8b22e8",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u8ff7\u9014\u5996\u72d0/defeat_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/lost_fox/hurt_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/lost_fox/hurt_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "b0ed94f6ee37e68be359d294585b25b21fa7eb60bf3c73c082a1a61f7cfc01f4",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u8ff7\u9014\u5996\u72d0/hurt_front.png",
+      "visualGroup": "visual_b0ed94f6ee",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u8ff7\u9014\u5996\u72d0/hurt_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/lost_fox/idle_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/lost_fox/idle_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "750cbff3ff86b920acf239873d2b478bd34385962412714cf7f6fbe3598a4f06",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u8ff7\u9014\u5996\u72d0/idle_front.png",
+      "visualGroup": "visual_750cbff3ff",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u8ff7\u9014\u5996\u72d0/idle_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/lost_fox/skill_cast_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/lost_fox/skill_cast_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "17558cb438ecf8736e3609d1dd0c7ea653ee57314924ac97408721b4ddf92be6",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u8ff7\u9014\u5996\u72d0/skill_cast_front.png",
+      "visualGroup": "visual_17558cb438",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u8ff7\u9014\u5996\u72d0/skill_cast_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/iron_crab/attack_hit_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/iron_crab/attack_hit_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "bb9d90db3e94ad6bfa795fc585567a7f7cc2e38a68a417d32832ccf8ccebff58",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u94c1\u7532\u5de8\u87f9/attack_hit_front.png",
+      "visualGroup": "visual_bb9d90db3e",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u94c1\u7532\u5de8\u87f9/attack_hit_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/iron_crab/attack_start_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/iron_crab/attack_start_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "1fe63e501064ef7d55d45ac90b487acf34785ae4621dd4df74e297407d4d1cc7",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u94c1\u7532\u5de8\u87f9/attack_start_front.png",
+      "visualGroup": "visual_1fe63e5010",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u94c1\u7532\u5de8\u87f9/attack_start_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/iron_crab/defeat_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/iron_crab/defeat_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "66f278b694e31815bf9d1f30cff9a70a564dd2afbf1ea6c8c4e710b2df46b7a1",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u94c1\u7532\u5de8\u87f9/defeat_front.png",
+      "visualGroup": "visual_66f278b694",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u94c1\u7532\u5de8\u87f9/defeat_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/iron_crab/hurt_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/iron_crab/hurt_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "598229b01e4f021ebfcc36840240c172c2d47163616807fc30e884509666c88c",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u94c1\u7532\u5de8\u87f9/hurt_front.png",
+      "visualGroup": "visual_598229b01e",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u94c1\u7532\u5de8\u87f9/hurt_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/iron_crab/idle_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/iron_crab/idle_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "8d32ec2ec83aba265adfa0b7180b3132fee939431bf0449c20656bbf7fcb4e33",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u94c1\u7532\u5de8\u87f9/idle_front.png",
+      "visualGroup": "visual_8d32ec2ec8",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u94c1\u7532\u5de8\u87f9/idle_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/iron_crab/skill_cast_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/iron_crab/skill_cast_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "0d1270fa307552dd0a2622392a7cde8a0a6d123dbbb544a4e7ff5996f924db61",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u94c1\u7532\u5de8\u87f9/skill_cast_front.png",
+      "visualGroup": "visual_0d1270fa30",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u94c1\u7532\u5de8\u87f9/skill_cast_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/shadow_assassin/attack_hit_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/shadow_assassin/attack_hit_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "45267dda3ebb0718ff58c0a2dfe488f10559c2c509bd0d5ab7c779a66f1c0682",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u9b45\u5f71\u523a\u5ba2/attack_hit_front.png",
+      "visualGroup": "visual_45267dda3e",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u9b45\u5f71\u523a\u5ba2/attack_hit_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/shadow_assassin/attack_start_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/shadow_assassin/attack_start_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "2cbcaf2bea7a491f7b8a23063c9356f2990f7fd96a5fed8bd7a67bb907837581",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u9b45\u5f71\u523a\u5ba2/attack_start_front.png",
+      "visualGroup": "visual_2cbcaf2bea",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u9b45\u5f71\u523a\u5ba2/attack_start_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/shadow_assassin/defeat_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/shadow_assassin/defeat_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "260067f747a2a58f1eec763ff84ed13fc08187a11ca166a6eb9e51ff58bcdaea",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u9b45\u5f71\u523a\u5ba2/defeat_front.png",
+      "visualGroup": "visual_260067f747",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u9b45\u5f71\u523a\u5ba2/defeat_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/shadow_assassin/hurt_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/shadow_assassin/hurt_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "7ef04ee7166a1581fa82286ee1bcad6c0f4d7bcd69e5a12154b4225a07c46ff2",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u9b45\u5f71\u523a\u5ba2/hurt_front.png",
+      "visualGroup": "visual_7ef04ee716",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u9b45\u5f71\u523a\u5ba2/hurt_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/shadow_assassin/hurt_heavy_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/shadow_assassin/hurt_heavy_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "0917860961fda0576c9dee343604fcd3b75cce00a7c580ea8b83709c53e65536",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u9b45\u5f71\u523a\u5ba2/hurt_heavy_front.png",
+      "visualGroup": "visual_0917860961",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u9b45\u5f71\u523a\u5ba2/hurt_heavy_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/shadow_assassin/idle_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/shadow_assassin/idle_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "e3d202a38ca6fb1365f6a18b4125d44c1627a7c8e538227bb5e927992a8198e5",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u9b45\u5f71\u523a\u5ba2/idle_front.png",
+      "visualGroup": "visual_e3d202a38c",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u9b45\u5f71\u523a\u5ba2/idle_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/shadow_assassin/skill_cast_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/shadow_assassin/skill_cast_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "af7ec46dee118595b1d70455b01e1702c83b55f07d34f16b1c5a0b45cf7b88c1",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u9b45\u5f71\u523a\u5ba2/skill_cast_front.png",
+      "visualGroup": "visual_af7ec46dee",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u9b45\u5f71\u523a\u5ba2/skill_cast_front.png"
+    },
+    {
+      "sourcePath": "assets/archive/unused/2026-06-05/enemies_keyframes/shadow_assassin/skill_start_front.png",
+      "suggestedPath": "assets/archive/unused/2026-06-05/enemies_keyframes/shadow_assassin/skill_start_front.png",
+      "action": "already_archived",
+      "status": "archived",
+      "tracked": true,
+      "references": [],
+      "referenceModules": [],
+      "risks": [
+        "non_ascii_path",
+        "unreferenced"
+      ],
+      "sha256": "7e41e71edf940b906fec1989239413b3872c65903ebbcad851c35e083e5cd72c",
+      "derivedFrom": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u9b45\u5f71\u523a\u5ba2/skill_start_front.png",
+      "visualGroup": "visual_7e41e71edf",
+      "notes": "archived to unused manifest; originalSourcePath records previous location",
+      "originalSourcePath": "\u602a\u7269/\u52a8\u4f5c\u5173\u952e\u5e27/\u9b45\u5f71\u523a\u5ba2/skill_start_front.png"
+    }
+  ]
+}
