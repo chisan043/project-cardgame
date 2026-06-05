@@ -33,16 +33,15 @@
       "candidate": 106,
       "documented": 54,
       "legacy": 48,
-      "source": 253,
-      "unreferenced": 288
+      "source": 257,
+      "unreferenced": 284
     },
     "riskCounts": {
       "identical_content": 181,
-      "long_component": 79,
-      "long_path": 11,
+      "long_component": 81,
       "multi_module_reference": 59,
-      "non_ascii_path": 491,
-      "unreferenced": 342
+      "non_ascii_path": 377,
+      "unreferenced": 338
     },
     "referenceModuleCounts": {
       "cards": 178,
@@ -53,7 +52,7 @@
       "relics": 45,
       "ui.hud": 67
     },
-    "duplicateExtensionGroupCount": 66,
+    "duplicateExtensionGroupCount": 46,
     "identicalContentGroupCount": 61
   },
   "assets": [
@@ -123,481 +122,6 @@
       "identicalContentGroup": []
     },
     {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/map_ui_fullscreen_imagegen_v1.png",
-      "extension": ".png",
-      "bytes": 3139889,
-      "sha256": "f442879cce6e0dc4c3d0bd2c4a01c763bfc4154f5c1ddb4647b654b218a8e128",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
-          "line": 2,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 61,
-      "maxComponentLength": 33,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/backgrounds/map_center_landscape_crop_v1.png",
-      "extension": ".png",
-      "bytes": 1727755,
-      "sha256": "f595336a26d4dc1416ab1f4514a054bc3badf75f7573731a174d8b6c023dea18",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
-          "line": 28,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 80,
-      "maxComponentLength": 32,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/backgrounds/map_center_painted_area_v1.png",
-      "extension": ".png",
-      "bytes": 1914050,
-      "sha256": "2c1379ffa0f8f6b483a27ddbf9c783cd7b23bf856630264b8850858bc2e3b1f9",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
-          "line": 17,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 78,
-      "maxComponentLength": 30,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/buttons/map_enter_button_v1.png",
-      "extension": ".png",
-      "bytes": 43700,
-      "sha256": "ce5faf7a7bc52d2e449f50c142ddf034405db410bf48bea4f48f1f5109b3cd90",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
-          "line": 94,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 67,
-      "maxComponentLength": 23,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/frames/map_main_frame_v1.png",
-      "extension": ".png",
-      "bytes": 2485378,
-      "sha256": "227f983798dd712737ec5e99dd1d758a1cf1a6cce820c95be333a331ccf9c651",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
-          "line": 105,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 64,
-      "maxComponentLength": 21,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/fullscreen/map_ui_fullscreen_imagegen_v1.png",
-      "extension": ".png",
-      "bytes": 3552194,
-      "sha256": "a3de5fdbea07526b6f1889c9838670255cf23e5a50e16886251382c8c4d216c3",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
-          "line": 6,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 80,
-      "maxComponentLength": 33,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/map_imagegen_sliced_overview_v1.png",
-      "extension": ".png",
-      "bytes": 1237034,
-      "sha256": "ff4d16e8b9294b243ba1c192b454311be5c397f03a8f10fdd75a8bb64affd79e",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
-          "line": 186,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 71,
-      "maxComponentLength": 35,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/nodes/map_node_battle_imagegen_v1.png",
-      "extension": ".png",
-      "bytes": 23118,
-      "sha256": "4aa3ecba7e27e8b649f831ede36fcfca1b293c9d8a8f118802e34594e252d766",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
-          "line": 116,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 73,
-      "maxComponentLength": 31,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/nodes/map_node_boss_imagegen_v1.png",
-      "extension": ".png",
-      "bytes": 23228,
-      "sha256": "3983d4ca00d03433a802da5a8dc2235bfd04f95ecdf45d06a4fc044cb658e36c",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
-          "line": 176,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 71,
-      "maxComponentLength": 29,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/nodes/map_node_elite_imagegen_v1.png",
-      "extension": ".png",
-      "bytes": 21428,
-      "sha256": "80aca98958bee0910a90c4827afdf597b6acf24c32f07c3f7aa469a5a5ecb257",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
-          "line": 126,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 72,
-      "maxComponentLength": 30,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/nodes/map_node_event_imagegen_v1.png",
-      "extension": ".png",
-      "bytes": 22032,
-      "sha256": "5e93353203d686b7f7e54ae0858e8de51bc620a08f41adce22a3434273f4833a",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
-          "line": 156,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 72,
-      "maxComponentLength": 30,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/nodes/map_node_portal_imagegen_v1.png",
-      "extension": ".png",
-      "bytes": 22088,
-      "sha256": "be00365d575744d5808420d95c73c034471a5c26102f48f48b3cac40c5c1b9c8",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
-          "line": 166,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 73,
-      "maxComponentLength": 31,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/nodes/map_node_rest_imagegen_v1.png",
-      "extension": ".png",
-      "bytes": 21975,
-      "sha256": "158120d7c309bd2098e05b8b01cdb8b9edc1ea6625cb1129e53d490a0f954595",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
-          "line": 146,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 71,
-      "maxComponentLength": 29,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/nodes/map_node_shop_imagegen_v1.png",
-      "extension": ".png",
-      "bytes": 22089,
-      "sha256": "eca1ab505bdb0282f3366440abbf383131d9e9bea9b0a818fec6093f0042bb51",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
-          "line": 136,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 71,
-      "maxComponentLength": 29,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/panels/map_left_legend_panel_v1.png",
-      "extension": ".png",
-      "bytes": 289823,
-      "sha256": "2380b9a8837ed18fb072038f6f128216e9da48256db73da7af5dc125a9f6ac57",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
-          "line": 39,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 71,
-      "maxComponentLength": 28,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/panels/map_right_church_window_v1.png",
-      "extension": ".png",
-      "bytes": 368346,
-      "sha256": "b7caa88903fc59fee5f375e5d63191a81759f514f88a809a547efcbc1da4e377",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
-          "line": 61,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 73,
-      "maxComponentLength": 30,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/panels/map_right_detail_panel_v1.png",
-      "extension": ".png",
-      "bytes": 696579,
-      "sha256": "799d4e272105cd07b17d49b441de3572cce841dd5731f3307118c15ac1e4e137",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
-          "line": 50,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 72,
-      "maxComponentLength": 29,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/panels/map_right_text_area_v1.png",
-      "extension": ".png",
-      "bytes": 229776,
-      "sha256": "859c134235d4137fb31732953f00143c5c10e042863fa9113da796b4b33cef91",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
-          "line": 72,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 69,
-      "maxComponentLength": 26,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/panels/map_top_region_banner_v1.png",
-      "extension": ".png",
-      "bytes": 167529,
-      "sha256": "d089c452f345b17618f65f7d3f79540e8cac40089e3a4c5402b8a18b7c6631d9",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
-          "line": 83,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 71,
-      "maxComponentLength": 28,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
       "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_center_clean_background_imagegen_v1.png",
       "extension": ".png",
       "bytes": 1822219,
@@ -615,23 +139,6 @@
       "identicalContentGroup": []
     },
     {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_center_clean_background_preview_930x790_v1.png",
-      "extension": ".png",
-      "bytes": 1967660,
-      "sha256": "0279bf11e6ad3d822edac4ba19d36d23ad1154fc317b48bb8ebcaf4d3c9c3781",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 99,
-      "maxComponentLength": 50,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
       "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_center_parchment_background_imagegen_v1.png",
       "extension": ".png",
       "bytes": 1637354,
@@ -645,2372 +152,6 @@
       "risks": [
         "non_ascii_path",
         "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_parchment_fullscreen_background_imagegen_v1.png",
-      "extension": ".png",
-      "bytes": 3289821,
-      "sha256": "ff237466f0fd1d6acec0d605b75d05bbb763f8242f7792a5a977e05a09c039e4",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 100,
-      "maxComponentLength": 51,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component",
-        "unreferenced",
-        "identical_content"
-      ],
-      "identicalContentGroup": [
-        "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_parchment_fullscreen_background_imagegen_v1.png",
-        "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/source/map_parchment_background_imagegen_source_v1.png"
-      ]
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_parchment_fullscreen_background_imagegen_v1.webp",
-      "extension": ".webp",
-      "bytes": 347212,
-      "sha256": "2cc92339f752fc62e51a334bdd60746b10147ca701fe453edd24f1287aecb22a",
-      "status": "active",
-      "references": [
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 49,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo"
-      ],
-      "pathLength": 101,
-      "maxComponentLength": 52,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/source/map_center_clean_background_imagegen_source_v1.png",
-      "extension": ".png",
-      "bytes": 3560455,
-      "sha256": "68bf923ec850650a317b7c5a8e919d7d1b0f05dacb9ebccc15c4688eaf1e3b45",
-      "status": "source",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 106,
-      "maxComponentLength": 50,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/source/map_parchment_background_imagegen_source_v1.png",
-      "extension": ".png",
-      "bytes": 3289821,
-      "sha256": "ff237466f0fd1d6acec0d605b75d05bbb763f8242f7792a5a977e05a09c039e4",
-      "status": "source",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 103,
-      "maxComponentLength": 47,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "identical_content"
-      ],
-      "identicalContentGroup": [
-        "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_parchment_fullscreen_background_imagegen_v1.png",
-        "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/source/map_parchment_background_imagegen_source_v1.png"
-      ]
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/buttons/map_detail_panel_button_imagegen_transparent_v1.png",
-      "extension": ".png",
-      "bytes": 46487,
-      "sha256": "c7cde9a34a3e5c91379f5bd869c099f011352bebe0047b65de06ab8e37530628",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 96,
-      "maxComponentLength": 51,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/buttons/map_detail_panel_button_imagegen_transparent_v1.webp",
-      "extension": ".webp",
-      "bytes": 5814,
-      "sha256": "b9bcc1010407c532b298eccce4ca96854ff9b1e4a2fac5f5f38c7290e11e3272",
-      "status": "active",
-      "references": [
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 56,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo"
-      ],
-      "pathLength": 97,
-      "maxComponentLength": 52,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/buttons/map_enter_button_imagegen_transparent_v1.png",
-      "extension": ".png",
-      "bytes": 68355,
-      "sha256": "b4b5a5e8bd2b6181a7518ca4937136f5ad07884e564350aee54808d974832b26",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
-          "line": 21,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
-          "line": 92,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 89,
-      "maxComponentLength": 44,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/frames/map_main_frame_overlay_imagegen_transparent_v1.png",
-      "extension": ".png",
-      "bytes": 107286,
-      "sha256": "9d362ec0d94663beb115a301eac4940cefa92916c85180b13620fb868db65410",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
-          "line": 22,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
-          "line": 109,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 94,
-      "maxComponentLength": 50,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_battle_imagegen_transparent_v1.png",
-      "extension": ".png",
-      "bytes": 53884,
-      "sha256": "76b3aae280fda6cfd11403aa1be6a8df52bedcea3b149bf53be4269afacfc50c",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
-          "line": 23,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
-          "line": 126,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 86,
-      "maxComponentLength": 43,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_battle_imagegen_transparent_v1.webp",
-      "extension": ".webp",
-      "bytes": 8478,
-      "sha256": "1fb7eb2a52ff0d9a674dd7507025d007aa1b5ea27634b66cc9d48dbb0bac57c9",
-      "status": "active",
-      "references": [
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 57,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo"
-      ],
-      "pathLength": 87,
-      "maxComponentLength": 44,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_boss_imagegen_transparent_v1.png",
-      "extension": ".png",
-      "bytes": 53642,
-      "sha256": "76e19f0ad04250b06a65e3f343c7ea69e34b4cde1607dfe63fd106e7b522c653",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
-          "line": 29,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
-          "line": 228,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 84,
-      "maxComponentLength": 41,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_boss_imagegen_transparent_v1.webp",
-      "extension": ".webp",
-      "bytes": 8292,
-      "sha256": "35bdc7ac5336f70a1c7e3be4e77860e4e2d9117007a7b6114b999b7291d75ca5",
-      "status": "active",
-      "references": [
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 59,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo"
-      ],
-      "pathLength": 85,
-      "maxComponentLength": 42,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_elite_imagegen_transparent_v1.png",
-      "extension": ".png",
-      "bytes": 49594,
-      "sha256": "1af051e22b9be464ee975ba7ab82f242d0261269f857f3696fdddb870eeb8c63",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
-          "line": 24,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
-          "line": 143,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 85,
-      "maxComponentLength": 42,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_elite_imagegen_transparent_v1.webp",
-      "extension": ".webp",
-      "bytes": 8042,
-      "sha256": "70783e33ad0da0aaacf562c2bc643df476034928ab28dc34402292b04db069b3",
-      "status": "active",
-      "references": [
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 58,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo"
-      ],
-      "pathLength": 86,
-      "maxComponentLength": 43,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_event_imagegen_transparent_v1.png",
-      "extension": ".png",
-      "bytes": 52072,
-      "sha256": "1bb363fdbd965d29c6832320601dba41579872370babd0a8386ef8b2bbe97c78",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
-          "line": 27,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
-          "line": 194,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 85,
-      "maxComponentLength": 42,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_event_imagegen_transparent_v1.webp",
-      "extension": ".webp",
-      "bytes": 8236,
-      "sha256": "7b6ac5626e4ddf2dbb3056069dddd5019b589007024f975439f9d6e3f122eab7",
-      "status": "active",
-      "references": [
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 60,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo"
-      ],
-      "pathLength": 86,
-      "maxComponentLength": 43,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_portal_imagegen_transparent_v1.png",
-      "extension": ".png",
-      "bytes": 51241,
-      "sha256": "9399b0a4b165daf34a474d133f87d6cf0d5ffc22a20abb5cfd26b1e86eff790c",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
-          "line": 28,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
-          "line": 211,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 86,
-      "maxComponentLength": 43,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_rest_imagegen_transparent_v1.png",
-      "extension": ".png",
-      "bytes": 55756,
-      "sha256": "a3a6eff5c40b7baaab50da9e9d3df16963d0f0fadea836304c2b6a76231f8822",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
-          "line": 26,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
-          "line": 177,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 84,
-      "maxComponentLength": 41,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_rest_imagegen_transparent_v1.webp",
-      "extension": ".webp",
-      "bytes": 12082,
-      "sha256": "781e2fdf37392fe9f1bb6290d121e4ba86f85fe82532f43af8a7981ef008e9ae",
-      "status": "active",
-      "references": [
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 61,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo"
-      ],
-      "pathLength": 85,
-      "maxComponentLength": 42,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_shop_imagegen_transparent_v1.png",
-      "extension": ".png",
-      "bytes": 54425,
-      "sha256": "5d5466742ef2d60293ac4f8f14dc5d88e6c1cc6806136b3213dd3b238e6d8919",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
-          "line": 25,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
-          "line": 160,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 84,
-      "maxComponentLength": 41,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_shop_imagegen_transparent_v1.webp",
-      "extension": ".webp",
-      "bytes": 8866,
-      "sha256": "43033b16fa9353ceef849a4bba063dc7a21ea05c3419eb810b23b2985f3a8ea6",
-      "status": "active",
-      "references": [
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 62,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo"
-      ],
-      "pathLength": 85,
-      "maxComponentLength": 42,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/overview/overview_map_ui_imagegen_transparent_assets_v1.png",
-      "extension": ".png",
-      "bytes": 608316,
-      "sha256": "d4f0839dc1ec379c09e0e8dbbeaf817805cb743adcec5b320a336e66ac8fc555",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
-          "line": 30,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
-          "line": 245,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 96,
-      "maxComponentLength": 50,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_church_preview_frame_imagegen_transparent_v1.png",
-      "extension": ".png",
-      "bytes": 296511,
-      "sha256": "07bf134b559955d520841960d7756ba43174b535ea95393f5e70a0019b03f759",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
-          "line": 18,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
-          "line": 41,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 96,
-      "maxComponentLength": 52,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_church_preview_frame_imagegen_transparent_v1.webp",
-      "extension": ".webp",
-      "bytes": 43112,
-      "sha256": "fdb894eb612590f2e1d86945317b782d75bb23cf34a03fe105099d6b1ede6f6e",
-      "status": "active",
-      "references": [
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 53,
-          "module": "demo",
-          "kind": "runtime"
-        },
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 1723,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo"
-      ],
-      "pathLength": 97,
-      "maxComponentLength": 53,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_detail_panel_imagegen_transparent_v1.png",
-      "extension": ".png",
-      "bytes": 233754,
-      "sha256": "6930c6a167ccc3358a71091419602deab71bcd458ed2da02f36049a071b77218",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
-          "line": 20,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
-          "line": 75,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 88,
-      "maxComponentLength": 44,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_detail_panel_no_button_imagegen_transparent_v1.png",
-      "extension": ".png",
-      "bytes": 211194,
-      "sha256": "2e4a14bfc99e65a820b04e517006d0333abde62d0787f6025c9c882580b0cb2d",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 98,
-      "maxComponentLength": 54,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_detail_panel_no_button_imagegen_transparent_v1.webp",
-      "extension": ".webp",
-      "bytes": 9798,
-      "sha256": "8b15729286b39d612438073ccf0add34ff34bf1fa3e26a3160b2ea4673fd19d1",
-      "status": "active",
-      "references": [
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 55,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo"
-      ],
-      "pathLength": 99,
-      "maxComponentLength": 55,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_location_text_panel_imagegen_transparent_v1.png",
-      "extension": ".png",
-      "bytes": 142450,
-      "sha256": "12113764bc39dac5d53c453bb0ad41f235b3ef2613084e1289d1f95697ed83f8",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
-          "line": 19,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
-          "line": 58,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 95,
-      "maxComponentLength": 51,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_region_banner_imagegen_transparent_v1.png",
-      "extension": ".png",
-      "bytes": 177656,
-      "sha256": "09655773d0a847904d68c9c6eec772bc1ba8b43003f0caf325eb0bd25e6045f3",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
-          "line": 16,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
-          "line": 7,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 89,
-      "maxComponentLength": 45,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_region_banner_imagegen_transparent_v1.webp",
-      "extension": ".webp",
-      "bytes": 20118,
-      "sha256": "89880282fbbdf663eb4a5c4aba643b284b896c034672484eea0092e8d8547eb3",
-      "status": "active",
-      "references": [
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 51,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo"
-      ],
-      "pathLength": 90,
-      "maxComponentLength": 46,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_right_preview_detail_group_frame_imagegen_transparent_v1.png",
-      "extension": ".png",
-      "bytes": 264773,
-      "sha256": "49f1a295c3d51fffd37b9a3403ca5f3028f6d643de7d0df504537818e161e1c5",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 108,
-      "maxComponentLength": 64,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_right_preview_detail_group_frame_imagegen_transparent_v2.png",
-      "extension": ".png",
-      "bytes": 351502,
-      "sha256": "7ff15d7631c9a5e2ce6e6891d386bee3c9115e90a7deed67720be1443cfb5074",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 108,
-      "maxComponentLength": 64,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_right_preview_detail_group_frame_transparent_v1.png",
-      "extension": ".png",
-      "bytes": 9257,
-      "sha256": "3256f8cb04b9c1e657bf5661212786b9a104cf7ce8688d1590308794257b7b74",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 99,
-      "maxComponentLength": 55,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_right_simple_outer_wrapper_frame_imagegen_transparent_v1.png",
-      "extension": ".png",
-      "bytes": 281376,
-      "sha256": "421e1c2e05c4b6bc17948bb1acc5bd5740e5f84cd745512f01d42d260b787a2a",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 108,
-      "maxComponentLength": 64,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_right_simple_outer_wrapper_frame_imagegen_transparent_v1.webp",
-      "extension": ".webp",
-      "bytes": 50268,
-      "sha256": "c7baa713cb76800753b3b119d81fb53782a276679c5ecc4b9ec1dc9b2e0d8d26",
-      "status": "active",
-      "references": [
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 52,
-          "module": "demo",
-          "kind": "runtime"
-        },
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 1731,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo"
-      ],
-      "pathLength": 109,
-      "maxComponentLength": 65,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_side_legend_panel_imagegen_transparent_v1.png",
-      "extension": ".png",
-      "bytes": 241556,
-      "sha256": "1b7792721eb5b0a2d285bac7fb515c979f1359f2ba3efbdc5855a91093076107",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
-          "line": 17,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
-          "line": 24,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 93,
-      "maxComponentLength": 49,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_side_legend_panel_imagegen_transparent_v1.webp",
-      "extension": ".webp",
-      "bytes": 14530,
-      "sha256": "c765c41b41b239590b72984218bd7da75e99ca732fadea303abe739bce9c269c",
-      "status": "active",
-      "references": [
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 50,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo"
-      ],
-      "pathLength": 94,
-      "maxComponentLength": 50,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/source/map_right_preview_detail_group_frame_imagegen_chromakey_v1.png",
-      "extension": ".png",
-      "bytes": 1570840,
-      "sha256": "965a2399d8f5e3b182f209de84bb9d0c374a32ebed38bcda5402afcdf461d4d4",
-      "status": "source",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 113,
-      "maxComponentLength": 62,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/source/map_right_preview_detail_group_frame_imagegen_chromakey_v2.png",
-      "extension": ".png",
-      "bytes": 1534663,
-      "sha256": "a6a51685aeae65812eeac6cca9b44d972e4e644975898ecf784f17439ed05f2f",
-      "status": "source",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 113,
-      "maxComponentLength": 62,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/source/map_right_preview_detail_group_frame_imagegen_chromakey_v3.png",
-      "extension": ".png",
-      "bytes": 1511941,
-      "sha256": "ade9523b2580db5009543bf99ea5e85dde9ffd54ff75ba9ae8eda5c9ad7a1d18",
-      "status": "source",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 113,
-      "maxComponentLength": 62,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/source/map_right_preview_detail_group_frame_imagegen_transparent_full_v1.png",
-      "extension": ".png",
-      "bytes": 982906,
-      "sha256": "ba4254a988f3cfbe791ef2b61b78109aca11e119a4383322217549bb3895ab38",
-      "status": "source",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 120,
-      "maxComponentLength": 69,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/source/map_right_preview_detail_group_frame_imagegen_transparent_full_v2.png",
-      "extension": ".png",
-      "bytes": 961193,
-      "sha256": "febee5f8d216dd56905091ea1e4b658c3a53dc07ae34bffda6231ad6cb9070db",
-      "status": "source",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 120,
-      "maxComponentLength": 69,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/source/map_right_preview_detail_group_frame_imagegen_transparent_full_v3.png",
-      "extension": ".png",
-      "bytes": 934502,
-      "sha256": "c1de95abeff25e0d7c375d6bc5bc2fc90051a8ee86da67bda07ebd48ded8b482",
-      "status": "source",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 120,
-      "maxComponentLength": 69,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/source/map_right_simple_outer_wrapper_frame_imagegen_chromakey_v1.png",
-      "extension": ".png",
-      "bytes": 1480364,
-      "sha256": "b8a6a1ec0e1f10d0ae9dff600f5b34a4b30cd5775273153396b2ba577e9475d7",
-      "status": "source",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 113,
-      "maxComponentLength": 62,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/source/map_right_simple_outer_wrapper_frame_imagegen_transparent_full_v1.png",
-      "extension": ".png",
-      "bytes": 839699,
-      "sha256": "aca9be1805a6db9f73a8126c4c5ce5425c881c24e6f4a97d21771f5a86261e1f",
-      "status": "source",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 120,
-      "maxComponentLength": 69,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/preview/map_demo_adapted_screenshot_v1.png",
-      "extension": ".png",
-      "bytes": 179277,
-      "sha256": "3ce882be1d19d2668cdbcdf39f145174bd64a38cefb5ef32e255f2653238bd90",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 79,
-      "maxComponentLength": 34,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/preview/map_demo_adapted_screenshot_v2.png",
-      "extension": ".png",
-      "bytes": 179690,
-      "sha256": "58257e26012d92cdabfb304347dfd556af795fc7f2b0b83a7f00cb09c200d353",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 79,
-      "maxComponentLength": 34,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/preview/map_demo_adapted_screenshot_v3.png",
-      "extension": ".png",
-      "bytes": 187786,
-      "sha256": "03ade8e1baa2c8df137ca1635b8d10f939be5e5b48090343469ccd9eadd49487",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 79,
-      "maxComponentLength": 34,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/preview/map_ui_assembled_preview_v1.png",
-      "extension": ".png",
-      "bytes": 2410771,
-      "sha256": "2bb5996b5b186b3681bfd90cbeee53fe7aa71cd5431c89b6fb41273c77e6e5a9",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 76,
-      "maxComponentLength": 31,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/preview/map_ui_assembled_preview_v2.png",
-      "extension": ".png",
-      "bytes": 1862049,
-      "sha256": "7cd178ab8876bad613619fd96a390883b3afbc8d37022cb52a3a874452ec64ff",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 76,
-      "maxComponentLength": 31,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/preview/map_ui_assembled_preview_v3_clean_map_background.png",
-      "extension": ".png",
-      "bytes": 2490337,
-      "sha256": "dc8d90f92f299224d4430408b0d844a440b1bf8d143da7ad2896430ffe390d36",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 97,
-      "maxComponentLength": 52,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/preview/map_ui_assembled_preview_v4_parchment.png",
-      "extension": ".png",
-      "bytes": 3115746,
-      "sha256": "bb8f41e18db3fe423a4e5af8369efa936885dcb872b7416149113e1c204efaa8",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 86,
-      "maxComponentLength": 41,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/preview/map_ui_assembled_preview_v5_parchment_simplified.png",
-      "extension": ".png",
-      "bytes": 3139743,
-      "sha256": "48a3c8efd54b731498093bcbcb9f0f1962aa4ab970a6fab2ee3c9b87b429603c",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 97,
-      "maxComponentLength": 52,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/preview/map_ui_assembled_preview_v6_right_group_frame.png",
-      "extension": ".png",
-      "bytes": 3124142,
-      "sha256": "6078ab0e610f1050b9cfd06a643e946554a87a34682684756c37647aa3738248",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 94,
-      "maxComponentLength": 49,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/preview/map_ui_assembled_preview_v7_imagegen_right_group_frame.png",
-      "extension": ".png",
-      "bytes": 3166022,
-      "sha256": "2158fdbb2aa2ddc99329dde9fb1fe9d2962aeb1d45506c4e4731117e66715752",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 103,
-      "maxComponentLength": 58,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/preview/map_ui_assembled_preview_v8_detail_wrapped_frame.png",
-      "extension": ".png",
-      "bytes": 3159509,
-      "sha256": "2a135e6c1495680fcd834c1adee512382a1e6ef868bacab0321465929ae550d4",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 97,
-      "maxComponentLength": 52,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/preview/map_ui_assembled_preview_v9_simple_outer_wrapper.png",
-      "extension": ".png",
-      "bytes": 3163560,
-      "sha256": "e992d7e10b0338b3c92dcdb75fce6483abc298b0d8ea3f5b0b94c8080f0889e8",
-      "status": "candidate",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 97,
-      "maxComponentLength": 52,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/source/map_ui_imagegen_component_sheet_chromakey_v1.png",
-      "extension": ".png",
-      "bytes": 2159439,
-      "sha256": "4ff03a1a019c48f4c60b99f667c43150d651b5feca1ecf1cfa9ac031fd3533dc",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
-          "line": 2,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 92,
-      "maxComponentLength": 48,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/source/map_ui_imagegen_component_sheet_transparent_v1.png",
-      "extension": ".png",
-      "bytes": 1728812,
-      "sha256": "03dbcbc44d16f96e4a22cc74c1329a7e103d1ef649f8bf946eb7c2c93a3b5b40",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
-          "line": 3,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 94,
-      "maxComponentLength": 50,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_v1.png",
-      "extension": ".png",
-      "bytes": 319762,
-      "sha256": "82fede4f533a5b2ca225d7b872fb337148c6c33a19909ed20cc0d5c5e3907713",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
-          "line": 10,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 56,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 114,
-      "maxComponentLength": 61,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_v1.webp",
-      "extension": ".webp",
-      "bytes": 51894,
-      "sha256": "c8266cbef055fde9516d8d49570e39d9fb961be6cba38bb3d24e859f64bbbb51",
-      "status": "active",
-      "references": [
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 4762,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo"
-      ],
-      "pathLength": 115,
-      "maxComponentLength": 62,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_cold_cave_imagegen_transparent_v1.png",
-      "extension": ".png",
-      "bytes": 306372,
-      "sha256": "4862a4627d34959e94f94c3b414c876ef7c77b8911b9814f1542a16d0fe021b8",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
-          "line": 11,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 73,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 109,
-      "maxComponentLength": 56,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_cold_cave_imagegen_transparent_v1.webp",
-      "extension": ".webp",
-      "bytes": 45672,
-      "sha256": "b61d4a51a601977a0bf370c29fd901eb4884d6a88b191611ae641418a664b7ff",
-      "status": "active",
-      "references": [
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 4807,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo"
-      ],
-      "pathLength": 110,
-      "maxComponentLength": 57,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_dungeon_corridor_imagegen_transparent_v1.png",
-      "extension": ".png",
-      "bytes": 280717,
-      "sha256": "d92f5d5ac7890f235cffbdb08dd0fd9d04c2aac765e907a8ae2ad286e7eeed05",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
-          "line": 13,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 107,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 116,
-      "maxComponentLength": 63,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_v1.png",
-      "extension": ".png",
-      "bytes": 307010,
-      "sha256": "9600636dfdf22d77b0ffbef9e482f61905527dc5caf68a33c8e5402d783f7f52",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
-          "line": 8,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 22,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 114,
-      "maxComponentLength": 61,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_v1.webp",
-      "extension": ".webp",
-      "bytes": 47762,
-      "sha256": "9ca5aae00eab138041114f21e4e13ac0fb4270e249179d4dca5ad463329ed639",
-      "status": "active",
-      "references": [
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 54,
-          "module": "demo",
-          "kind": "runtime"
-        },
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 4750,
-          "module": "demo",
-          "kind": "runtime"
-        },
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 4789,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo"
-      ],
-      "pathLength": 115,
-      "maxComponentLength": 62,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_v1.png",
-      "extension": ".png",
-      "bytes": 313229,
-      "sha256": "908dc1b0425bb43210a943b71daa9741b28d8ae1335dcd442197d35ee0d258e5",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
-          "line": 9,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 39,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 111,
-      "maxComponentLength": 58,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_v1.webp",
-      "extension": ".webp",
-      "bytes": 48694,
-      "sha256": "7c7814fc1e4563cd4592ce1ac2e4e2ec41ca3146f4c950fc5678b12b131947da",
-      "status": "active",
-      "references": [
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 4768,
-          "module": "demo",
-          "kind": "runtime"
-        },
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 4795,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo"
-      ],
-      "pathLength": 112,
-      "maxComponentLength": 59,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_temple_hall_imagegen_transparent_v1.png",
-      "extension": ".png",
-      "bytes": 304818,
-      "sha256": "4c39a82edd16e7ece161302f9f2f8ea376e5f9bef6b95c1b865f67580b873f7c",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
-          "line": 14,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 124,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 111,
-      "maxComponentLength": 58,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_temple_hall_imagegen_transparent_v1.webp",
-      "extension": ".webp",
-      "bytes": 44460,
-      "sha256": "c9da038d62c3e904be60be04b94643feea1237f135140aceb4e4af22d2e8514b",
-      "status": "active",
-      "references": [
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 4756,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo"
-      ],
-      "pathLength": 112,
-      "maxComponentLength": 59,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_temple_inner_light_imagegen_transparent_v1.png",
-      "extension": ".png",
-      "bytes": 295788,
-      "sha256": "99a3925c061c0ea0a2d6216f6a08f08bf854a854f41179b8ff349f6693defe97",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
-          "line": 15,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 141,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 118,
-      "maxComponentLength": 65,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_town_castle_imagegen_transparent_v1.png",
-      "extension": ".png",
-      "bytes": 314962,
-      "sha256": "ec1b2a84554944fd83bd8123ea81fca4d7e77f16541b52a42716d7512484e60c",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
-          "line": 7,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 5,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 111,
-      "maxComponentLength": 58,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_town_castle_imagegen_transparent_v1.webp",
-      "extension": ".webp",
-      "bytes": 51232,
-      "sha256": "bed47bc5e0282906eec0eb02f89e2b87b69e7ddc08ef8dcbee26730b402a0fbf",
-      "status": "active",
-      "references": [
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 4774,
-          "module": "demo",
-          "kind": "runtime"
-        },
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 4780,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo"
-      ],
-      "pathLength": 112,
-      "maxComponentLength": 59,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_v1.png",
-      "extension": ".png",
-      "bytes": 297976,
-      "sha256": "4854e7d588cfca351f8aa0539c8984a750bd0ebfcb4888e72e0c75e4954cacd3",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
-          "line": 12,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 90,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 114,
-      "maxComponentLength": 61,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_v1.webp",
-      "extension": ".webp",
-      "bytes": 58976,
-      "sha256": "d66e9d2079c1d3493db47cc1990f1f2a0891d8bff9aa5448fe681b86870b1fe5",
-      "status": "active",
-      "references": [
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 4801,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo"
-      ],
-      "pathLength": 115,
-      "maxComponentLength": 62,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/overview_map_stained_windows_imagegen_v1.png",
-      "extension": ".png",
-      "bytes": 1442200,
-      "sha256": "acf9bd04143e1411c52858312fd63ab0e62a8eb341591afee0e9a3c3a2cfa7da",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
-          "line": 17,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 158,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 97,
-      "maxComponentLength": 44,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_ancient_forest_imagegen_chromakey_v1.png",
-      "extension": ".png",
-      "bytes": 2849605,
-      "sha256": "57a18395d792f0074a3638c49c7c70dd761b83876b244713ead06473c9c14271",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 57,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 119,
-      "maxComponentLength": 59,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_ancient_forest_imagegen_transparent_full_v1.png",
-      "extension": ".png",
-      "bytes": 2831602,
-      "sha256": "c868cf595eef50d250a8e6068fb429150c84adc6e05a568ec7e60800f398eabf",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 58,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 126,
-      "maxComponentLength": 66,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_cold_cave_imagegen_chromakey_v1.png",
-      "extension": ".png",
-      "bytes": 2793158,
-      "sha256": "52f929f5b25efe0db7b673249da0861254be906192af273ca2ee50a654ccacc3",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 74,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 114,
-      "maxComponentLength": 54,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_cold_cave_imagegen_transparent_full_v1.png",
-      "extension": ".png",
-      "bytes": 2816800,
-      "sha256": "9272a9f25508f6eab0349320275b012222394f14a420aefbba30bf896d962853",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 75,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 121,
-      "maxComponentLength": 61,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_dungeon_corridor_imagegen_chromakey_v1.png",
-      "extension": ".png",
-      "bytes": 2754760,
-      "sha256": "862c8951d063c0dcbb7fe39be084ce83b8c5b27ce1551f023773712558045556",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 108,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 121,
-      "maxComponentLength": 61,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_dungeon_corridor_imagegen_transparent_full_v1.png",
-      "extension": ".png",
-      "bytes": 2779444,
-      "sha256": "fa4affc8b80b7c96bfe837285c5f8b335d98b5f9b09c54ddcf43598a80ab1e4b",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 109,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 128,
-      "maxComponentLength": 68,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_mountain_plain_imagegen_chromakey_v1.png",
-      "extension": ".png",
-      "bytes": 3008560,
-      "sha256": "be35d82a8991655aee6fa6cc9b2d0c28d591af65c8d4891d100a88caaf5ee823",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 23,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 119,
-      "maxComponentLength": 59,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_mountain_plain_imagegen_transparent_full_v1.png",
-      "extension": ".png",
-      "bytes": 3060951,
-      "sha256": "ba8b1664b2d2ea4a28f1401f44c195e4032f69c5445f6b1a4a51831e3dce1dc4",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 24,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 126,
-      "maxComponentLength": 66,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_stone_ruins_imagegen_chromakey_v1.png",
-      "extension": ".png",
-      "bytes": 2871093,
-      "sha256": "2d8eeb8f65c751e60cb723a8b747076805b5eab2dc49710396682a8be430485a",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 40,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 116,
-      "maxComponentLength": 56,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_stone_ruins_imagegen_transparent_full_v1.png",
-      "extension": ".png",
-      "bytes": 2862040,
-      "sha256": "878ed2fc423ca4bd17177bcd0087717357c92ed5d94028cb5d35929bd42b33ad",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 41,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 123,
-      "maxComponentLength": 63,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_temple_hall_imagegen_chromakey_v1.png",
-      "extension": ".png",
-      "bytes": 2850332,
-      "sha256": "256aca86c21a76aa2d0c14498ea571b3fb221556d4e72ebd602c26ab960eddaf",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 125,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 116,
-      "maxComponentLength": 56,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_temple_hall_imagegen_transparent_full_v1.png",
-      "extension": ".png",
-      "bytes": 2920409,
-      "sha256": "59106078034ff44349b0ac8cb08ca25363050d0d5838977914266c1088e5974a",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 126,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 123,
-      "maxComponentLength": 63,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_temple_inner_light_imagegen_chromakey_v1.png",
-      "extension": ".png",
-      "bytes": 2717976,
-      "sha256": "5ff30b63a591f565b3450633346cbfbe62443100b32c7db9e082e4e97f00ace0",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 142,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 123,
-      "maxComponentLength": 63,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_temple_inner_light_imagegen_transparent_full_v1.png",
-      "extension": ".png",
-      "bytes": 2729272,
-      "sha256": "c5bf76fa348291511e564279d25a2b13cdd1834be4893ff3338159762ca4fca6",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 143,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 130,
-      "maxComponentLength": 70,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_town_castle_imagegen_chromakey_v1.png",
-      "extension": ".png",
-      "bytes": 2930519,
-      "sha256": "71e1d682b7b162105e3bb4eeadb56653a97d4e537479f956d04dcf053060902a",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 6,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 116,
-      "maxComponentLength": 56,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_town_castle_imagegen_transparent_full_v1.png",
-      "extension": ".png",
-      "bytes": 2937917,
-      "sha256": "af5ca0ad32b87165f0a831af2ceb0cb060a1eb011e27b33cd52089acdefb7794",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 7,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 123,
-      "maxComponentLength": 63,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_wasteland_dusk_imagegen_chromakey_v1.png",
-      "extension": ".png",
-      "bytes": 2887689,
-      "sha256": "b1c8522d1ea8e4db2ef353c26bf3325d796b0f42f331be2b2771a6c0e097dd16",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 91,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 119,
-      "maxComponentLength": 59,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_wasteland_dusk_imagegen_transparent_full_v1.png",
-      "extension": ".png",
-      "bytes": 2949996,
-      "sha256": "9bdc2dca0c875ae2f49d4c812d5f5601e98808e05ba81cf86ae5e6cff6b83097",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 92,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
-      "pathLength": 126,
-      "maxComponentLength": 66,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "long_path",
-        "long_component"
       ],
       "identicalContentGroup": []
     },
@@ -5555,6 +2696,1440 @@
       "referenceModules": [],
       "pathLength": 82,
       "maxComponentLength": 42,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/backgrounds/map_center_landscape_crop_v1.png",
+      "extension": ".png",
+      "bytes": 1727755,
+      "sha256": "f595336a26d4dc1416ab1f4514a054bc3badf75f7573731a174d8b6c023dea18",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
+          "line": 28,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 69,
+      "maxComponentLength": 32,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/backgrounds/map_center_painted_area_v1.png",
+      "extension": ".png",
+      "bytes": 1914050,
+      "sha256": "2c1379ffa0f8f6b483a27ddbf9c783cd7b23bf856630264b8850858bc2e3b1f9",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
+          "line": 17,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 67,
+      "maxComponentLength": 30,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/buttons/map_enter_button_v1.png",
+      "extension": ".png",
+      "bytes": 43700,
+      "sha256": "ce5faf7a7bc52d2e449f50c142ddf034405db410bf48bea4f48f1f5109b3cd90",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
+          "line": 94,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 56,
+      "maxComponentLength": 23,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/frames/map_main_frame_v1.png",
+      "extension": ".png",
+      "bytes": 2485378,
+      "sha256": "227f983798dd712737ec5e99dd1d758a1cf1a6cce820c95be333a331ccf9c651",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
+          "line": 105,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 53,
+      "maxComponentLength": 21,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/fullscreen/map_ui_fullscreen_imagegen_v1.png",
+      "extension": ".png",
+      "bytes": 3552194,
+      "sha256": "a3de5fdbea07526b6f1889c9838670255cf23e5a50e16886251382c8c4d216c3",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
+          "line": 6,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 69,
+      "maxComponentLength": 33,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/nodes/map_node_battle_imagegen_v1.png",
+      "extension": ".png",
+      "bytes": 23118,
+      "sha256": "4aa3ecba7e27e8b649f831ede36fcfca1b293c9d8a8f118802e34594e252d766",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
+          "line": 116,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 62,
+      "maxComponentLength": 31,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/nodes/map_node_boss_imagegen_v1.png",
+      "extension": ".png",
+      "bytes": 23228,
+      "sha256": "3983d4ca00d03433a802da5a8dc2235bfd04f95ecdf45d06a4fc044cb658e36c",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
+          "line": 176,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 60,
+      "maxComponentLength": 29,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/nodes/map_node_elite_imagegen_v1.png",
+      "extension": ".png",
+      "bytes": 21428,
+      "sha256": "80aca98958bee0910a90c4827afdf597b6acf24c32f07c3f7aa469a5a5ecb257",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
+          "line": 126,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 61,
+      "maxComponentLength": 30,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/nodes/map_node_event_imagegen_v1.png",
+      "extension": ".png",
+      "bytes": 22032,
+      "sha256": "5e93353203d686b7f7e54ae0858e8de51bc620a08f41adce22a3434273f4833a",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
+          "line": 156,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 61,
+      "maxComponentLength": 30,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/nodes/map_node_portal_imagegen_v1.png",
+      "extension": ".png",
+      "bytes": 22088,
+      "sha256": "be00365d575744d5808420d95c73c034471a5c26102f48f48b3cac40c5c1b9c8",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
+          "line": 166,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 62,
+      "maxComponentLength": 31,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/nodes/map_node_rest_imagegen_v1.png",
+      "extension": ".png",
+      "bytes": 21975,
+      "sha256": "158120d7c309bd2098e05b8b01cdb8b9edc1ea6625cb1129e53d490a0f954595",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
+          "line": 146,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 60,
+      "maxComponentLength": 29,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/nodes/map_node_shop_imagegen_v1.png",
+      "extension": ".png",
+      "bytes": 22089,
+      "sha256": "eca1ab505bdb0282f3366440abbf383131d9e9bea9b0a818fec6093f0042bb51",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
+          "line": 136,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 60,
+      "maxComponentLength": 29,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/overview/overview_map_ui_imagegen_transparent_assets_v1.png",
+      "extension": ".png",
+      "bytes": 608316,
+      "sha256": "d4f0839dc1ec379c09e0e8dbbeaf817805cb743adcec5b320a336e66ac8fc555",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
+          "line": 30,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
+          "line": 245,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 84,
+      "maxComponentLength": 50,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/panels/map_left_legend_panel_v1.png",
+      "extension": ".png",
+      "bytes": 289823,
+      "sha256": "2380b9a8837ed18fb072038f6f128216e9da48256db73da7af5dc125a9f6ac57",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
+          "line": 39,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 60,
+      "maxComponentLength": 28,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/panels/map_right_church_window_v1.png",
+      "extension": ".png",
+      "bytes": 368346,
+      "sha256": "b7caa88903fc59fee5f375e5d63191a81759f514f88a809a547efcbc1da4e377",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
+          "line": 61,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 62,
+      "maxComponentLength": 30,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/panels/map_right_detail_panel_v1.png",
+      "extension": ".png",
+      "bytes": 696579,
+      "sha256": "799d4e272105cd07b17d49b441de3572cce841dd5731f3307118c15ac1e4e137",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
+          "line": 50,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 61,
+      "maxComponentLength": 29,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/panels/map_right_text_area_v1.png",
+      "extension": ".png",
+      "bytes": 229776,
+      "sha256": "859c134235d4137fb31732953f00143c5c10e042863fa9113da796b4b33cef91",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
+          "line": 72,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 58,
+      "maxComponentLength": 26,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/panels/map_top_region_banner_v1.png",
+      "extension": ".png",
+      "bytes": 167529,
+      "sha256": "d089c452f345b17618f65f7d3f79540e8cac40089e3a4c5402b8a18b7c6631d9",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
+          "line": 83,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 60,
+      "maxComponentLength": 28,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/preview/map_demo_adapted_screenshot_v1.png",
+      "extension": ".png",
+      "bytes": 179277,
+      "sha256": "3ce882be1d19d2668cdbcdf39f145174bd64a38cefb5ef32e255f2653238bd90",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 67,
+      "maxComponentLength": 34,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/preview/map_demo_adapted_screenshot_v2.png",
+      "extension": ".png",
+      "bytes": 179690,
+      "sha256": "58257e26012d92cdabfb304347dfd556af795fc7f2b0b83a7f00cb09c200d353",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 67,
+      "maxComponentLength": 34,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/preview/map_demo_adapted_screenshot_v3.png",
+      "extension": ".png",
+      "bytes": 187786,
+      "sha256": "03ade8e1baa2c8df137ca1635b8d10f939be5e5b48090343469ccd9eadd49487",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 67,
+      "maxComponentLength": 34,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v1.png",
+      "extension": ".png",
+      "bytes": 2410771,
+      "sha256": "2bb5996b5b186b3681bfd90cbeee53fe7aa71cd5431c89b6fb41273c77e6e5a9",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 64,
+      "maxComponentLength": 31,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v2.png",
+      "extension": ".png",
+      "bytes": 1862049,
+      "sha256": "7cd178ab8876bad613619fd96a390883b3afbc8d37022cb52a3a874452ec64ff",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 64,
+      "maxComponentLength": 31,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v3_clean_map_background.png",
+      "extension": ".png",
+      "bytes": 2490337,
+      "sha256": "dc8d90f92f299224d4430408b0d844a440b1bf8d143da7ad2896430ffe390d36",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 85,
+      "maxComponentLength": 52,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v4_parchment.png",
+      "extension": ".png",
+      "bytes": 3115746,
+      "sha256": "bb8f41e18db3fe423a4e5af8369efa936885dcb872b7416149113e1c204efaa8",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 74,
+      "maxComponentLength": 41,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v5_parchment_simplified.png",
+      "extension": ".png",
+      "bytes": 3139743,
+      "sha256": "48a3c8efd54b731498093bcbcb9f0f1962aa4ab970a6fab2ee3c9b87b429603c",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 85,
+      "maxComponentLength": 52,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v6_right_group_frame.png",
+      "extension": ".png",
+      "bytes": 3124142,
+      "sha256": "6078ab0e610f1050b9cfd06a643e946554a87a34682684756c37647aa3738248",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 82,
+      "maxComponentLength": 49,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v7_imagegen_right_group_frame.png",
+      "extension": ".png",
+      "bytes": 3166022,
+      "sha256": "2158fdbb2aa2ddc99329dde9fb1fe9d2962aeb1d45506c4e4731117e66715752",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 91,
+      "maxComponentLength": 58,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v8_detail_wrapped_frame.png",
+      "extension": ".png",
+      "bytes": 3159509,
+      "sha256": "2a135e6c1495680fcd834c1adee512382a1e6ef868bacab0321465929ae550d4",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 85,
+      "maxComponentLength": 52,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v9_simple_outer_wrapper.png",
+      "extension": ".png",
+      "bytes": 3163560,
+      "sha256": "e992d7e10b0338b3c92dcdb75fce6483abc298b0d8ea3f5b0b94c8080f0889e8",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 85,
+      "maxComponentLength": 52,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/review/map_center_clean_background_preview_930x790_v1.png",
+      "extension": ".png",
+      "bytes": 1967660,
+      "sha256": "0279bf11e6ad3d822edac4ba19d36d23ad1154fc317b48bb8ebcaf4d3c9c3781",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 82,
+      "maxComponentLength": 50,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/review/map_church_preview_frame_imagegen_transparent_v1.png",
+      "extension": ".png",
+      "bytes": 296511,
+      "sha256": "07bf134b559955d520841960d7756ba43174b535ea95393f5e70a0019b03f759",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
+          "line": 18,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
+          "line": 41,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 84,
+      "maxComponentLength": 52,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/review/map_detail_panel_imagegen_transparent_v1.png",
+      "extension": ".png",
+      "bytes": 233754,
+      "sha256": "6930c6a167ccc3358a71091419602deab71bcd458ed2da02f36049a071b77218",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
+          "line": 20,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
+          "line": 75,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 76,
+      "maxComponentLength": 44,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/review/map_enter_button_imagegen_transparent_v1.png",
+      "extension": ".png",
+      "bytes": 68355,
+      "sha256": "b4b5a5e8bd2b6181a7518ca4937136f5ad07884e564350aee54808d974832b26",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
+          "line": 21,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
+          "line": 92,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 76,
+      "maxComponentLength": 44,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/review/map_location_text_panel_imagegen_transparent_v1.png",
+      "extension": ".png",
+      "bytes": 142450,
+      "sha256": "12113764bc39dac5d53c453bb0ad41f235b3ef2613084e1289d1f95697ed83f8",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
+          "line": 19,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
+          "line": 58,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 83,
+      "maxComponentLength": 51,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/review/map_main_frame_overlay_imagegen_transparent_v1.png",
+      "extension": ".png",
+      "bytes": 107286,
+      "sha256": "9d362ec0d94663beb115a301eac4940cefa92916c85180b13620fb868db65410",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
+          "line": 22,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
+          "line": 109,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 82,
+      "maxComponentLength": 50,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/review/map_node_battle_imagegen_transparent_v1.png",
+      "extension": ".png",
+      "bytes": 53884,
+      "sha256": "76b3aae280fda6cfd11403aa1be6a8df52bedcea3b149bf53be4269afacfc50c",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
+          "line": 23,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
+          "line": 126,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 75,
+      "maxComponentLength": 43,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/review/map_node_boss_imagegen_transparent_v1.png",
+      "extension": ".png",
+      "bytes": 53642,
+      "sha256": "76e19f0ad04250b06a65e3f343c7ea69e34b4cde1607dfe63fd106e7b522c653",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
+          "line": 29,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
+          "line": 228,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 73,
+      "maxComponentLength": 41,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/review/map_node_elite_imagegen_transparent_v1.png",
+      "extension": ".png",
+      "bytes": 49594,
+      "sha256": "1af051e22b9be464ee975ba7ab82f242d0261269f857f3696fdddb870eeb8c63",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
+          "line": 24,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
+          "line": 143,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 74,
+      "maxComponentLength": 42,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/review/map_node_event_imagegen_transparent_v1.png",
+      "extension": ".png",
+      "bytes": 52072,
+      "sha256": "1bb363fdbd965d29c6832320601dba41579872370babd0a8386ef8b2bbe97c78",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
+          "line": 27,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
+          "line": 194,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 74,
+      "maxComponentLength": 42,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/review/map_node_portal_imagegen_transparent_v1.png",
+      "extension": ".png",
+      "bytes": 51241,
+      "sha256": "9399b0a4b165daf34a474d133f87d6cf0d5ffc22a20abb5cfd26b1e86eff790c",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
+          "line": 28,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
+          "line": 211,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 75,
+      "maxComponentLength": 43,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/review/map_node_rest_imagegen_transparent_v1.png",
+      "extension": ".png",
+      "bytes": 55756,
+      "sha256": "a3a6eff5c40b7baaab50da9e9d3df16963d0f0fadea836304c2b6a76231f8822",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
+          "line": 26,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
+          "line": 177,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 73,
+      "maxComponentLength": 41,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/review/map_node_shop_imagegen_transparent_v1.png",
+      "extension": ".png",
+      "bytes": 54425,
+      "sha256": "5d5466742ef2d60293ac4f8f14dc5d88e6c1cc6806136b3213dd3b238e6d8919",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
+          "line": 25,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
+          "line": 160,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 73,
+      "maxComponentLength": 41,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/review/map_region_banner_imagegen_transparent_v1.png",
+      "extension": ".png",
+      "bytes": 177656,
+      "sha256": "09655773d0a847904d68c9c6eec772bc1ba8b43003f0caf325eb0bd25e6045f3",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
+          "line": 16,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
+          "line": 7,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 77,
+      "maxComponentLength": 45,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/review/map_right_preview_detail_group_frame_imagegen_transparent_v1.png",
+      "extension": ".png",
+      "bytes": 264773,
+      "sha256": "49f1a295c3d51fffd37b9a3403ca5f3028f6d643de7d0df504537818e161e1c5",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 96,
+      "maxComponentLength": 64,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/review/map_right_preview_detail_group_frame_imagegen_transparent_v2.png",
+      "extension": ".png",
+      "bytes": 351502,
+      "sha256": "7ff15d7631c9a5e2ce6e6891d386bee3c9115e90a7deed67720be1443cfb5074",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 96,
+      "maxComponentLength": 64,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/review/map_right_preview_detail_group_frame_transparent_v1.png",
+      "extension": ".png",
+      "bytes": 9257,
+      "sha256": "3256f8cb04b9c1e657bf5661212786b9a104cf7ce8688d1590308794257b7b74",
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 87,
+      "maxComponentLength": 55,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/review/map_side_legend_panel_imagegen_transparent_v1.png",
+      "extension": ".png",
+      "bytes": 241556,
+      "sha256": "1b7792721eb5b0a2d285bac7fb515c979f1359f2ba3efbdc5855a91093076107",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
+          "line": 17,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
+          "line": 24,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 81,
+      "maxComponentLength": 49,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/review/map_stained_window_ancient_forest_imagegen_transparent_v1.png",
+      "extension": ".png",
+      "bytes": 319762,
+      "sha256": "82fede4f533a5b2ca225d7b872fb337148c6c33a19909ed20cc0d5c5e3907713",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
+          "line": 10,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
+          "line": 56,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 93,
+      "maxComponentLength": 61,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/review/map_stained_window_cold_cave_imagegen_transparent_v1.png",
+      "extension": ".png",
+      "bytes": 306372,
+      "sha256": "4862a4627d34959e94f94c3b414c876ef7c77b8911b9814f1542a16d0fe021b8",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
+          "line": 11,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
+          "line": 73,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 88,
+      "maxComponentLength": 56,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/review/map_stained_window_dungeon_corridor_imagegen_transparent_v1.png",
+      "extension": ".png",
+      "bytes": 280717,
+      "sha256": "d92f5d5ac7890f235cffbdb08dd0fd9d04c2aac765e907a8ae2ad286e7eeed05",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
+          "line": 13,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
+          "line": 107,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 95,
+      "maxComponentLength": 63,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/review/map_stained_window_mountain_plain_imagegen_transparent_v1.png",
+      "extension": ".png",
+      "bytes": 307010,
+      "sha256": "9600636dfdf22d77b0ffbef9e482f61905527dc5caf68a33c8e5402d783f7f52",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
+          "line": 8,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
+          "line": 22,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 93,
+      "maxComponentLength": 61,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/review/map_stained_window_stone_ruins_imagegen_transparent_v1.png",
+      "extension": ".png",
+      "bytes": 313229,
+      "sha256": "908dc1b0425bb43210a943b71daa9741b28d8ae1335dcd442197d35ee0d258e5",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
+          "line": 9,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
+          "line": 39,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 90,
+      "maxComponentLength": 58,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/review/map_stained_window_temple_hall_imagegen_transparent_v1.png",
+      "extension": ".png",
+      "bytes": 304818,
+      "sha256": "4c39a82edd16e7ece161302f9f2f8ea376e5f9bef6b95c1b865f67580b873f7c",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
+          "line": 14,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
+          "line": 124,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 90,
+      "maxComponentLength": 58,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/review/map_stained_window_temple_inner_light_imagegen_transparent_v1.png",
+      "extension": ".png",
+      "bytes": 295788,
+      "sha256": "99a3925c061c0ea0a2d6216f6a08f08bf854a854f41179b8ff349f6693defe97",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
+          "line": 15,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
+          "line": 141,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 97,
+      "maxComponentLength": 65,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/review/map_stained_window_town_castle_imagegen_transparent_v1.png",
+      "extension": ".png",
+      "bytes": 314962,
+      "sha256": "ec1b2a84554944fd83bd8123ea81fca4d7e77f16541b52a42716d7512484e60c",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
+          "line": 7,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
+          "line": 5,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 90,
+      "maxComponentLength": 58,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/review/map_stained_window_wasteland_dusk_imagegen_transparent_v1.png",
+      "extension": ".png",
+      "bytes": 297976,
+      "sha256": "4854e7d588cfca351f8aa0539c8984a750bd0ebfcb4888e72e0c75e4954cacd3",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
+          "line": 12,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
+          "line": 90,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 93,
+      "maxComponentLength": 61,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/review/map_ui_fullscreen_imagegen_v1.png",
+      "extension": ".png",
+      "bytes": 3139889,
+      "sha256": "f442879cce6e0dc4c3d0bd2c4a01c763bfc4154f5c1ddb4647b654b218a8e128",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
+          "line": 2,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 65,
+      "maxComponentLength": 33,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/review/overview_map_stained_windows_imagegen_v1.png",
+      "extension": ".png",
+      "bytes": 1442200,
+      "sha256": "acf9bd04143e1411c52858312fd63ab0e62a8eb341591afee0e9a3c3a2cfa7da",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
+          "line": 17,
+          "module": "misc",
+          "kind": "documentation"
+        },
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
+          "line": 158,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 76,
+      "maxComponentLength": 44,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/candidates/ui/map/sliced_candidates/map_imagegen_sliced_overview_v1.png",
+      "extension": ".png",
+      "bytes": 1237034,
+      "sha256": "ff4d16e8b9294b243ba1c192b454311be5c397f03a8f10fdd75a8bb64affd79e",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
+          "line": 186,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 78,
+      "maxComponentLength": 35,
       "containsNonAscii": false,
       "risks": [],
       "identicalContentGroup": []
@@ -18927,6 +17502,738 @@
       "identicalContentGroup": []
     },
     {
+      "path": "assets/source/ui/map/backgrounds/map_center_clean_background_imagegen_source_v1_source.png",
+      "extension": ".png",
+      "bytes": 3560455,
+      "sha256": "68bf923ec850650a317b7c5a8e919d7d1b0f05dacb9ebccc15c4688eaf1e3b45",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 90,
+      "maxComponentLength": 57,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/map/backgrounds/map_parchment_background_imagegen_source_v1_source.png",
+      "extension": ".png",
+      "bytes": 3289821,
+      "sha256": "ff237466f0fd1d6acec0d605b75d05bbb763f8242f7792a5a977e05a09c039e4",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 87,
+      "maxComponentLength": 54,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component",
+        "identical_content"
+      ],
+      "identicalContentGroup": [
+        "assets/source/ui/map/backgrounds/map_parchment_background_imagegen_source_v1_source.png",
+        "assets/source/ui/map/backgrounds/map_parchment_fullscreen_background_imagegen_v1_source.png"
+      ]
+    },
+    {
+      "path": "assets/source/ui/map/backgrounds/map_parchment_fullscreen_background_imagegen_v1_source.png",
+      "extension": ".png",
+      "bytes": 3289821,
+      "sha256": "ff237466f0fd1d6acec0d605b75d05bbb763f8242f7792a5a977e05a09c039e4",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 91,
+      "maxComponentLength": 58,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component",
+        "identical_content"
+      ],
+      "identicalContentGroup": [
+        "assets/source/ui/map/backgrounds/map_parchment_background_imagegen_source_v1_source.png",
+        "assets/source/ui/map/backgrounds/map_parchment_fullscreen_background_imagegen_v1_source.png"
+      ]
+    },
+    {
+      "path": "assets/source/ui/map/buttons/map_detail_panel_button_imagegen_transparent_v1_source.png",
+      "extension": ".png",
+      "bytes": 46487,
+      "sha256": "c7cde9a34a3e5c91379f5bd869c099f011352bebe0047b65de06ab8e37530628",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 87,
+      "maxComponentLength": 58,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/map/panels/map_detail_panel_no_button_imagegen_transparent_v1_source.png",
+      "extension": ".png",
+      "bytes": 211194,
+      "sha256": "2e4a14bfc99e65a820b04e517006d0333abde62d0787f6025c9c882580b0cb2d",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 89,
+      "maxComponentLength": 61,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_chromakey_v1_source.png",
+      "extension": ".png",
+      "bytes": 1570840,
+      "sha256": "965a2399d8f5e3b182f209de84bb9d0c374a32ebed38bcda5402afcdf461d4d4",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 97,
+      "maxComponentLength": 69,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_chromakey_v2_source.png",
+      "extension": ".png",
+      "bytes": 1534663,
+      "sha256": "a6a51685aeae65812eeac6cca9b44d972e4e644975898ecf784f17439ed05f2f",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 97,
+      "maxComponentLength": 69,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_chromakey_v3_source.png",
+      "extension": ".png",
+      "bytes": 1511941,
+      "sha256": "ade9523b2580db5009543bf99ea5e85dde9ffd54ff75ba9ae8eda5c9ad7a1d18",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 97,
+      "maxComponentLength": 69,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_transparent_full_v1_source.png",
+      "extension": ".png",
+      "bytes": 982906,
+      "sha256": "ba4254a988f3cfbe791ef2b61b78109aca11e119a4383322217549bb3895ab38",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 104,
+      "maxComponentLength": 76,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_transparent_full_v2_source.png",
+      "extension": ".png",
+      "bytes": 961193,
+      "sha256": "febee5f8d216dd56905091ea1e4b658c3a53dc07ae34bffda6231ad6cb9070db",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 104,
+      "maxComponentLength": 76,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_transparent_full_v3_source.png",
+      "extension": ".png",
+      "bytes": 934502,
+      "sha256": "c1de95abeff25e0d7c375d6bc5bc2fc90051a8ee86da67bda07ebd48ded8b482",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 104,
+      "maxComponentLength": 76,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/map/panels/map_right_simple_outer_wrapper_frame_imagegen_chromakey_v1_source.png",
+      "extension": ".png",
+      "bytes": 1480364,
+      "sha256": "b8a6a1ec0e1f10d0ae9dff600f5b34a4b30cd5775273153396b2ba577e9475d7",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 97,
+      "maxComponentLength": 69,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/map/panels/map_right_simple_outer_wrapper_frame_imagegen_transparent_full_v1_source.png",
+      "extension": ".png",
+      "bytes": 839699,
+      "sha256": "aca9be1805a6db9f73a8126c4c5ce5425c881c24e6f4a97d21771f5a86261e1f",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 104,
+      "maxComponentLength": 76,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/map/panels/map_right_simple_outer_wrapper_frame_imagegen_transparent_v1_source.png",
+      "extension": ".png",
+      "bytes": 281376,
+      "sha256": "421e1c2e05c4b6bc17948bb1acc5bd5740e5f84cd745512f01d42d260b787a2a",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 99,
+      "maxComponentLength": 71,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/map/review/map_ui_imagegen_component_sheet_chromakey_v1_source.png",
+      "extension": ".png",
+      "bytes": 2159439,
+      "sha256": "4ff03a1a019c48f4c60b99f667c43150d651b5feca1ecf1cfa9ac031fd3533dc",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
+          "line": 2,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 83,
+      "maxComponentLength": 55,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/map/review/map_ui_imagegen_component_sheet_transparent_v1_source.png",
+      "extension": ".png",
+      "bytes": 1728812,
+      "sha256": "03dbcbc44d16f96e4a22cc74c1329a7e103d1ef649f8bf946eb7c2c93a3b5b40",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
+          "line": 3,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 85,
+      "maxComponentLength": 57,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/map/stained_windows/map_stained_window_ancient_forest_imagegen_chromakey_v1_source.png",
+      "extension": ".png",
+      "bytes": 2849605,
+      "sha256": "57a18395d792f0074a3638c49c7c70dd761b83876b244713ead06473c9c14271",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
+          "line": 57,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 103,
+      "maxComponentLength": 66,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/map/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_full_v1_source.png",
+      "extension": ".png",
+      "bytes": 2831602,
+      "sha256": "c868cf595eef50d250a8e6068fb429150c84adc6e05a568ec7e60800f398eabf",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
+          "line": 58,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 110,
+      "maxComponentLength": 73,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/map/stained_windows/map_stained_window_cold_cave_imagegen_chromakey_v1_source.png",
+      "extension": ".png",
+      "bytes": 2793158,
+      "sha256": "52f929f5b25efe0db7b673249da0861254be906192af273ca2ee50a654ccacc3",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
+          "line": 74,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 98,
+      "maxComponentLength": 61,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/map/stained_windows/map_stained_window_cold_cave_imagegen_transparent_full_v1_source.png",
+      "extension": ".png",
+      "bytes": 2816800,
+      "sha256": "9272a9f25508f6eab0349320275b012222394f14a420aefbba30bf896d962853",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
+          "line": 75,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 105,
+      "maxComponentLength": 68,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/map/stained_windows/map_stained_window_dungeon_corridor_imagegen_chromakey_v1_source.png",
+      "extension": ".png",
+      "bytes": 2754760,
+      "sha256": "862c8951d063c0dcbb7fe39be084ce83b8c5b27ce1551f023773712558045556",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
+          "line": 108,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 105,
+      "maxComponentLength": 68,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/map/stained_windows/map_stained_window_dungeon_corridor_imagegen_transparent_full_v1_source.png",
+      "extension": ".png",
+      "bytes": 2779444,
+      "sha256": "fa4affc8b80b7c96bfe837285c5f8b335d98b5f9b09c54ddcf43598a80ab1e4b",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
+          "line": 109,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 112,
+      "maxComponentLength": 75,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/map/stained_windows/map_stained_window_mountain_plain_imagegen_chromakey_v1_source.png",
+      "extension": ".png",
+      "bytes": 3008560,
+      "sha256": "be35d82a8991655aee6fa6cc9b2d0c28d591af65c8d4891d100a88caaf5ee823",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
+          "line": 23,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 103,
+      "maxComponentLength": 66,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/map/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_full_v1_source.png",
+      "extension": ".png",
+      "bytes": 3060951,
+      "sha256": "ba8b1664b2d2ea4a28f1401f44c195e4032f69c5445f6b1a4a51831e3dce1dc4",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
+          "line": 24,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 110,
+      "maxComponentLength": 73,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/map/stained_windows/map_stained_window_stone_ruins_imagegen_chromakey_v1_source.png",
+      "extension": ".png",
+      "bytes": 2871093,
+      "sha256": "2d8eeb8f65c751e60cb723a8b747076805b5eab2dc49710396682a8be430485a",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
+          "line": 40,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 100,
+      "maxComponentLength": 63,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/map/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_full_v1_source.png",
+      "extension": ".png",
+      "bytes": 2862040,
+      "sha256": "878ed2fc423ca4bd17177bcd0087717357c92ed5d94028cb5d35929bd42b33ad",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
+          "line": 41,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 107,
+      "maxComponentLength": 70,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/map/stained_windows/map_stained_window_temple_hall_imagegen_chromakey_v1_source.png",
+      "extension": ".png",
+      "bytes": 2850332,
+      "sha256": "256aca86c21a76aa2d0c14498ea571b3fb221556d4e72ebd602c26ab960eddaf",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
+          "line": 125,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 100,
+      "maxComponentLength": 63,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/map/stained_windows/map_stained_window_temple_hall_imagegen_transparent_full_v1_source.png",
+      "extension": ".png",
+      "bytes": 2920409,
+      "sha256": "59106078034ff44349b0ac8cb08ca25363050d0d5838977914266c1088e5974a",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
+          "line": 126,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 107,
+      "maxComponentLength": 70,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/map/stained_windows/map_stained_window_temple_inner_light_imagegen_chromakey_v1_source.png",
+      "extension": ".png",
+      "bytes": 2717976,
+      "sha256": "5ff30b63a591f565b3450633346cbfbe62443100b32c7db9e082e4e97f00ace0",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
+          "line": 142,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 107,
+      "maxComponentLength": 70,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/map/stained_windows/map_stained_window_temple_inner_light_imagegen_transparent_full_v1_source.png",
+      "extension": ".png",
+      "bytes": 2729272,
+      "sha256": "c5bf76fa348291511e564279d25a2b13cdd1834be4893ff3338159762ca4fca6",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
+          "line": 143,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 114,
+      "maxComponentLength": 77,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/map/stained_windows/map_stained_window_town_castle_imagegen_chromakey_v1_source.png",
+      "extension": ".png",
+      "bytes": 2930519,
+      "sha256": "71e1d682b7b162105e3bb4eeadb56653a97d4e537479f956d04dcf053060902a",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
+          "line": 6,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 100,
+      "maxComponentLength": 63,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/map/stained_windows/map_stained_window_town_castle_imagegen_transparent_full_v1_source.png",
+      "extension": ".png",
+      "bytes": 2937917,
+      "sha256": "af5ca0ad32b87165f0a831af2ceb0cb060a1eb011e27b33cd52089acdefb7794",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
+          "line": 7,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 107,
+      "maxComponentLength": 70,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/map/stained_windows/map_stained_window_wasteland_dusk_imagegen_chromakey_v1_source.png",
+      "extension": ".png",
+      "bytes": 2887689,
+      "sha256": "b1c8522d1ea8e4db2ef353c26bf3325d796b0f42f331be2b2771a6c0e097dd16",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
+          "line": 91,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 103,
+      "maxComponentLength": 66,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/ui/map/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_full_v1_source.png",
+      "extension": ".png",
+      "bytes": 2949996,
+      "sha256": "9bdc2dca0c875ae2f49d4c812d5f5601e98808e05ba81cf86ae5e6cff6b83097",
+      "status": "active",
+      "references": [
+        {
+          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
+          "line": 92,
+          "module": "misc",
+          "kind": "config"
+        }
+      ],
+      "referenceModules": [
+        "misc"
+      ],
+      "pathLength": 110,
+      "maxComponentLength": 73,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
       "path": "assets/source/ui/menu/main_menu_key_art_v1_source.png",
       "extension": ".png",
       "bytes": 2680109,
@@ -21234,6 +20541,528 @@
       "containsNonAscii": false,
       "risks": [
         "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/map/backgrounds/map_parchment_fullscreen_background_imagegen_v1.webp",
+      "extension": ".webp",
+      "bytes": 347212,
+      "sha256": "2cc92339f752fc62e51a334bdd60746b10147ca701fe453edd24f1287aecb22a",
+      "status": "active",
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 49,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "pathLength": 78,
+      "maxComponentLength": 52,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/map/buttons/map_detail_panel_button_imagegen_transparent_v1.webp",
+      "extension": ".webp",
+      "bytes": 5814,
+      "sha256": "b9bcc1010407c532b298eccce4ca96854ff9b1e4a2fac5f5f38c7290e11e3272",
+      "status": "active",
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 56,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "pathLength": 74,
+      "maxComponentLength": 52,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/map/nodes/map_node_battle_imagegen_transparent_v1.webp",
+      "extension": ".webp",
+      "bytes": 8478,
+      "sha256": "1fb7eb2a52ff0d9a674dd7507025d007aa1b5ea27634b66cc9d48dbb0bac57c9",
+      "status": "active",
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 57,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "pathLength": 64,
+      "maxComponentLength": 44,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/map/nodes/map_node_boss_imagegen_transparent_v1.webp",
+      "extension": ".webp",
+      "bytes": 8292,
+      "sha256": "35bdc7ac5336f70a1c7e3be4e77860e4e2d9117007a7b6114b999b7291d75ca5",
+      "status": "active",
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 59,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "pathLength": 62,
+      "maxComponentLength": 42,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/map/nodes/map_node_elite_imagegen_transparent_v1.webp",
+      "extension": ".webp",
+      "bytes": 8042,
+      "sha256": "70783e33ad0da0aaacf562c2bc643df476034928ab28dc34402292b04db069b3",
+      "status": "active",
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 58,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "pathLength": 63,
+      "maxComponentLength": 43,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/map/nodes/map_node_event_imagegen_transparent_v1.webp",
+      "extension": ".webp",
+      "bytes": 8236,
+      "sha256": "7b6ac5626e4ddf2dbb3056069dddd5019b589007024f975439f9d6e3f122eab7",
+      "status": "active",
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 60,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "pathLength": 63,
+      "maxComponentLength": 43,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/map/nodes/map_node_rest_imagegen_transparent_v1.webp",
+      "extension": ".webp",
+      "bytes": 12082,
+      "sha256": "781e2fdf37392fe9f1bb6290d121e4ba86f85fe82532f43af8a7981ef008e9ae",
+      "status": "active",
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 61,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "pathLength": 62,
+      "maxComponentLength": 42,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/map/nodes/map_node_shop_imagegen_transparent_v1.webp",
+      "extension": ".webp",
+      "bytes": 8866,
+      "sha256": "43033b16fa9353ceef849a4bba063dc7a21ea05c3419eb810b23b2985f3a8ea6",
+      "status": "active",
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 62,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "pathLength": 62,
+      "maxComponentLength": 42,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/map/panels/map_church_preview_frame_imagegen_transparent_v1.webp",
+      "extension": ".webp",
+      "bytes": 43112,
+      "sha256": "fdb894eb612590f2e1d86945317b782d75bb23cf34a03fe105099d6b1ede6f6e",
+      "status": "active",
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 53,
+          "module": "demo",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 1723,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "pathLength": 74,
+      "maxComponentLength": 53,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/map/panels/map_detail_panel_no_button_imagegen_transparent_v1.webp",
+      "extension": ".webp",
+      "bytes": 9798,
+      "sha256": "8b15729286b39d612438073ccf0add34ff34bf1fa3e26a3160b2ea4673fd19d1",
+      "status": "active",
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 55,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "pathLength": 76,
+      "maxComponentLength": 55,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/map/panels/map_region_banner_imagegen_transparent_v1.webp",
+      "extension": ".webp",
+      "bytes": 20118,
+      "sha256": "89880282fbbdf663eb4a5c4aba643b284b896c034672484eea0092e8d8547eb3",
+      "status": "active",
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 51,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "pathLength": 67,
+      "maxComponentLength": 46,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/map/panels/map_right_simple_outer_wrapper_frame_imagegen_transparent_v1.webp",
+      "extension": ".webp",
+      "bytes": 50268,
+      "sha256": "c7baa713cb76800753b3b119d81fb53782a276679c5ecc4b9ec1dc9b2e0d8d26",
+      "status": "active",
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 52,
+          "module": "demo",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 1731,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "pathLength": 86,
+      "maxComponentLength": 65,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/map/panels/map_side_legend_panel_imagegen_transparent_v1.webp",
+      "extension": ".webp",
+      "bytes": 14530,
+      "sha256": "c765c41b41b239590b72984218bd7da75e99ca732fadea303abe739bce9c269c",
+      "status": "active",
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 50,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "pathLength": 71,
+      "maxComponentLength": 50,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/map/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_v1.webp",
+      "extension": ".webp",
+      "bytes": 51894,
+      "sha256": "c8266cbef055fde9516d8d49570e39d9fb961be6cba38bb3d24e859f64bbbb51",
+      "status": "active",
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 4762,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "pathLength": 92,
+      "maxComponentLength": 62,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/map/stained_windows/map_stained_window_cold_cave_imagegen_transparent_v1.webp",
+      "extension": ".webp",
+      "bytes": 45672,
+      "sha256": "b61d4a51a601977a0bf370c29fd901eb4884d6a88b191611ae641418a664b7ff",
+      "status": "active",
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 4807,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "pathLength": 87,
+      "maxComponentLength": 57,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/map/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_v1.webp",
+      "extension": ".webp",
+      "bytes": 47762,
+      "sha256": "9ca5aae00eab138041114f21e4e13ac0fb4270e249179d4dca5ad463329ed639",
+      "status": "active",
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 54,
+          "module": "demo",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 4750,
+          "module": "demo",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 4789,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "pathLength": 92,
+      "maxComponentLength": 62,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/map/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_v1.webp",
+      "extension": ".webp",
+      "bytes": 48694,
+      "sha256": "7c7814fc1e4563cd4592ce1ac2e4e2ec41ca3146f4c950fc5678b12b131947da",
+      "status": "active",
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 4768,
+          "module": "demo",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 4795,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "pathLength": 89,
+      "maxComponentLength": 59,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/map/stained_windows/map_stained_window_temple_hall_imagegen_transparent_v1.webp",
+      "extension": ".webp",
+      "bytes": 44460,
+      "sha256": "c9da038d62c3e904be60be04b94643feea1237f135140aceb4e4af22d2e8514b",
+      "status": "active",
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 4756,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "pathLength": 89,
+      "maxComponentLength": 59,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/map/stained_windows/map_stained_window_town_castle_imagegen_transparent_v1.webp",
+      "extension": ".webp",
+      "bytes": 51232,
+      "sha256": "bed47bc5e0282906eec0eb02f89e2b87b69e7ddc08ef8dcbee26730b402a0fbf",
+      "status": "active",
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 4774,
+          "module": "demo",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 4780,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "pathLength": 89,
+      "maxComponentLength": 59,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/ui/map/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_v1.webp",
+      "extension": ".webp",
+      "bytes": 58976,
+      "sha256": "d66e9d2079c1d3493db47cc1990f1f2a0891d8bff9aa5448fe681b86870b1fe5",
+      "status": "active",
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 4801,
+          "module": "demo",
+          "kind": "runtime"
+        }
+      ],
+      "referenceModules": [
+        "demo"
+      ],
+      "pathLength": 92,
+      "maxComponentLength": 62,
+      "containsNonAscii": false,
+      "risks": [
+        "long_component"
       ],
       "identicalContentGroup": []
     },
@@ -27693,146 +27522,6 @@
   ],
   "duplicateExtensionGroups": [
     {
-      "basePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_parchment_fullscreen_background_imagegen_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/buttons/map_detail_panel_button_imagegen_transparent_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_battle_imagegen_transparent_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_boss_imagegen_transparent_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_elite_imagegen_transparent_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_event_imagegen_transparent_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_rest_imagegen_transparent_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_shop_imagegen_transparent_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_church_preview_frame_imagegen_transparent_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_detail_panel_no_button_imagegen_transparent_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_region_banner_imagegen_transparent_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_right_simple_outer_wrapper_frame_imagegen_transparent_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_side_legend_panel_imagegen_transparent_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_cold_cave_imagegen_transparent_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_temple_hall_imagegen_transparent_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_town_castle_imagegen_transparent_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
       "basePath": "UI/教堂彩窗赛璐璐/按钮/主按钮_蓝金_v1",
       "extensions": [
         ".png",
@@ -28638,8 +28327,8 @@
     {
       "sha256": "ff237466f0fd1d6acec0d605b75d05bbb763f8242f7792a5a977e05a09c039e4",
       "paths": [
-        "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_parchment_fullscreen_background_imagegen_v1.png",
-        "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/source/map_parchment_background_imagegen_source_v1.png"
+        "assets/source/ui/map/backgrounds/map_parchment_background_imagegen_source_v1_source.png",
+        "assets/source/ui/map/backgrounds/map_parchment_fullscreen_background_imagegen_v1_source.png"
       ]
     }
   ]

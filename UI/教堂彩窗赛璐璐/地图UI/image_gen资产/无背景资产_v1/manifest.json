@@ -1,10 +1,10 @@
 {
-  "source_chromakey": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/source/map_ui_imagegen_component_sheet_chromakey_v1.png",
-  "source_transparent": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/source/map_ui_imagegen_component_sheet_transparent_v1.png",
+  "source_chromakey": "assets/source/ui/map/review/map_ui_imagegen_component_sheet_chromakey_v1_source.png",
+  "source_transparent": "assets/source/ui/map/review/map_ui_imagegen_component_sheet_transparent_v1_source.png",
   "generated_with": "built-in image_gen on flat #00ff00 chroma-key background, then local chroma-key removal",
   "assets": [
     {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_region_banner_imagegen_transparent_v1.png",
+      "path": "assets/candidates/ui/map/review/map_region_banner_imagegen_transparent_v1.png",
       "category": "panels",
       "size": [
         732,
@@ -21,7 +21,7 @@
       "alpha_transparent_ratio": 0.3679
     },
     {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_side_legend_panel_imagegen_transparent_v1.png",
+      "path": "assets/candidates/ui/map/review/map_side_legend_panel_imagegen_transparent_v1.png",
       "category": "panels",
       "size": [
         283,
@@ -38,7 +38,7 @@
       "alpha_transparent_ratio": 0.1366
     },
     {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_church_preview_frame_imagegen_transparent_v1.png",
+      "path": "assets/candidates/ui/map/review/map_church_preview_frame_imagegen_transparent_v1.png",
       "category": "panels",
       "size": [
         340,
@@ -55,7 +55,7 @@
       "alpha_transparent_ratio": 0.2493
     },
     {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_location_text_panel_imagegen_transparent_v1.png",
+      "path": "assets/candidates/ui/map/review/map_location_text_panel_imagegen_transparent_v1.png",
       "category": "panels",
       "size": [
         620,
@@ -72,7 +72,7 @@
       "alpha_transparent_ratio": 0.1913
     },
     {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_detail_panel_imagegen_transparent_v1.png",
+      "path": "assets/candidates/ui/map/review/map_detail_panel_imagegen_transparent_v1.png",
       "category": "panels",
       "size": [
         371,
@@ -89,7 +89,7 @@
       "alpha_transparent_ratio": 0.0972
     },
     {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/buttons/map_enter_button_imagegen_transparent_v1.png",
+      "path": "assets/candidates/ui/map/review/map_enter_button_imagegen_transparent_v1.png",
       "category": "buttons",
       "size": [
         400,
@@ -106,7 +106,7 @@
       "alpha_transparent_ratio": 0.2772
     },
     {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/frames/map_main_frame_overlay_imagegen_transparent_v1.png",
+      "path": "assets/candidates/ui/map/review/map_main_frame_overlay_imagegen_transparent_v1.png",
       "category": "frames",
       "size": [
         967,
@@ -123,7 +123,7 @@
       "alpha_transparent_ratio": 0.8659
     },
     {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_battle_imagegen_transparent_v1.png",
+      "path": "assets/candidates/ui/map/review/map_node_battle_imagegen_transparent_v1.png",
       "category": "nodes",
       "size": [
         181,
@@ -140,7 +140,7 @@
       "alpha_transparent_ratio": 0.4802
     },
     {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_elite_imagegen_transparent_v1.png",
+      "path": "assets/candidates/ui/map/review/map_node_elite_imagegen_transparent_v1.png",
       "category": "nodes",
       "size": [
         178,
@@ -157,7 +157,7 @@
       "alpha_transparent_ratio": 0.4891
     },
     {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_shop_imagegen_transparent_v1.png",
+      "path": "assets/candidates/ui/map/review/map_node_shop_imagegen_transparent_v1.png",
       "category": "nodes",
       "size": [
         178,
@@ -174,7 +174,7 @@
       "alpha_transparent_ratio": 0.4578
     },
     {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_rest_imagegen_transparent_v1.png",
+      "path": "assets/candidates/ui/map/review/map_node_rest_imagegen_transparent_v1.png",
       "category": "nodes",
       "size": [
         175,
@@ -191,7 +191,7 @@
       "alpha_transparent_ratio": 0.4516
     },
     {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_event_imagegen_transparent_v1.png",
+      "path": "assets/candidates/ui/map/review/map_node_event_imagegen_transparent_v1.png",
       "category": "nodes",
       "size": [
         183,
@@ -208,7 +208,7 @@
       "alpha_transparent_ratio": 0.4883
     },
     {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_portal_imagegen_transparent_v1.png",
+      "path": "assets/candidates/ui/map/review/map_node_portal_imagegen_transparent_v1.png",
       "category": "nodes",
       "size": [
         181,
@@ -225,7 +225,7 @@
       "alpha_transparent_ratio": 0.4808
     },
     {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_boss_imagegen_transparent_v1.png",
+      "path": "assets/candidates/ui/map/review/map_node_boss_imagegen_transparent_v1.png",
       "category": "nodes",
       "size": [
         178,
@@ -242,7 +242,7 @@
       "alpha_transparent_ratio": 0.4743
     },
     {
-      "path": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/overview/overview_map_ui_imagegen_transparent_assets_v1.png",
+      "path": "assets/candidates/ui/map/overview/overview_map_ui_imagegen_transparent_assets_v1.png",
       "category": "overview",
       "size": [
         1600,

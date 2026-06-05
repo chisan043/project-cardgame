@@ -35,141 +35,141 @@
       "status": "cached"
     },
     {
-      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_parchment_fullscreen_background_imagegen_v1.png",
-      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_parchment_fullscreen_background_imagegen_v1.webp",
+      "source": "assets/source/ui/map/backgrounds/map_parchment_fullscreen_background_imagegen_v1_source.png",
+      "webp": "assets/ui/map/backgrounds/map_parchment_fullscreen_background_imagegen_v1.webp",
       "sourceBytes": 3289821,
       "webpBytes": 347212,
       "status": "cached"
     },
     {
-      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/buttons/map_detail_panel_button_imagegen_transparent_v1.png",
-      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/buttons/map_detail_panel_button_imagegen_transparent_v1.webp",
+      "source": "assets/source/ui/map/buttons/map_detail_panel_button_imagegen_transparent_v1_source.png",
+      "webp": "assets/ui/map/buttons/map_detail_panel_button_imagegen_transparent_v1.webp",
       "sourceBytes": 46487,
       "webpBytes": 5814,
       "status": "cached"
     },
     {
-      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_battle_imagegen_transparent_v1.png",
-      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_battle_imagegen_transparent_v1.webp",
+      "source": "assets/candidates/ui/map/review/map_node_battle_imagegen_transparent_v1.png",
+      "webp": "assets/ui/map/nodes/map_node_battle_imagegen_transparent_v1.webp",
       "sourceBytes": 53884,
       "webpBytes": 8478,
       "status": "cached"
     },
     {
-      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_boss_imagegen_transparent_v1.png",
-      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_boss_imagegen_transparent_v1.webp",
+      "source": "assets/candidates/ui/map/review/map_node_boss_imagegen_transparent_v1.png",
+      "webp": "assets/ui/map/nodes/map_node_boss_imagegen_transparent_v1.webp",
       "sourceBytes": 53642,
       "webpBytes": 8292,
       "status": "cached"
     },
     {
-      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_elite_imagegen_transparent_v1.png",
-      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_elite_imagegen_transparent_v1.webp",
+      "source": "assets/candidates/ui/map/review/map_node_elite_imagegen_transparent_v1.png",
+      "webp": "assets/ui/map/nodes/map_node_elite_imagegen_transparent_v1.webp",
       "sourceBytes": 49594,
       "webpBytes": 8042,
       "status": "cached"
     },
     {
-      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_event_imagegen_transparent_v1.png",
-      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_event_imagegen_transparent_v1.webp",
+      "source": "assets/candidates/ui/map/review/map_node_event_imagegen_transparent_v1.png",
+      "webp": "assets/ui/map/nodes/map_node_event_imagegen_transparent_v1.webp",
       "sourceBytes": 52072,
       "webpBytes": 8236,
       "status": "cached"
     },
     {
-      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_rest_imagegen_transparent_v1.png",
-      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_rest_imagegen_transparent_v1.webp",
+      "source": "assets/candidates/ui/map/review/map_node_rest_imagegen_transparent_v1.png",
+      "webp": "assets/ui/map/nodes/map_node_rest_imagegen_transparent_v1.webp",
       "sourceBytes": 55756,
       "webpBytes": 12082,
       "status": "cached"
     },
     {
-      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_shop_imagegen_transparent_v1.png",
-      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_shop_imagegen_transparent_v1.webp",
+      "source": "assets/candidates/ui/map/review/map_node_shop_imagegen_transparent_v1.png",
+      "webp": "assets/ui/map/nodes/map_node_shop_imagegen_transparent_v1.webp",
       "sourceBytes": 54425,
       "webpBytes": 8866,
       "status": "cached"
     },
     {
-      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_church_preview_frame_imagegen_transparent_v1.png",
-      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_church_preview_frame_imagegen_transparent_v1.webp",
+      "source": "assets/candidates/ui/map/review/map_church_preview_frame_imagegen_transparent_v1.png",
+      "webp": "assets/ui/map/panels/map_church_preview_frame_imagegen_transparent_v1.webp",
       "sourceBytes": 296511,
       "webpBytes": 43112,
       "status": "cached"
     },
     {
-      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_detail_panel_no_button_imagegen_transparent_v1.png",
-      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_detail_panel_no_button_imagegen_transparent_v1.webp",
+      "source": "assets/source/ui/map/panels/map_detail_panel_no_button_imagegen_transparent_v1_source.png",
+      "webp": "assets/ui/map/panels/map_detail_panel_no_button_imagegen_transparent_v1.webp",
       "sourceBytes": 211194,
       "webpBytes": 9798,
       "status": "cached"
     },
     {
-      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_region_banner_imagegen_transparent_v1.png",
-      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_region_banner_imagegen_transparent_v1.webp",
+      "source": "assets/candidates/ui/map/review/map_region_banner_imagegen_transparent_v1.png",
+      "webp": "assets/ui/map/panels/map_region_banner_imagegen_transparent_v1.webp",
       "sourceBytes": 177656,
       "webpBytes": 20118,
       "status": "cached"
     },
     {
-      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_right_simple_outer_wrapper_frame_imagegen_transparent_v1.png",
-      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_right_simple_outer_wrapper_frame_imagegen_transparent_v1.webp",
+      "source": "assets/source/ui/map/panels/map_right_simple_outer_wrapper_frame_imagegen_transparent_v1_source.png",
+      "webp": "assets/ui/map/panels/map_right_simple_outer_wrapper_frame_imagegen_transparent_v1.webp",
       "sourceBytes": 281376,
       "webpBytes": 50268,
       "status": "cached"
     },
     {
-      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_side_legend_panel_imagegen_transparent_v1.png",
-      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_side_legend_panel_imagegen_transparent_v1.webp",
+      "source": "assets/candidates/ui/map/review/map_side_legend_panel_imagegen_transparent_v1.png",
+      "webp": "assets/ui/map/panels/map_side_legend_panel_imagegen_transparent_v1.webp",
       "sourceBytes": 241556,
       "webpBytes": 14530,
       "status": "cached"
     },
     {
-      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_v1.png",
-      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_v1.webp",
+      "source": "assets/candidates/ui/map/review/map_stained_window_ancient_forest_imagegen_transparent_v1.png",
+      "webp": "assets/ui/map/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_v1.webp",
       "sourceBytes": 319762,
       "webpBytes": 51894,
       "status": "cached"
     },
     {
-      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_cold_cave_imagegen_transparent_v1.png",
-      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_cold_cave_imagegen_transparent_v1.webp",
+      "source": "assets/candidates/ui/map/review/map_stained_window_cold_cave_imagegen_transparent_v1.png",
+      "webp": "assets/ui/map/stained_windows/map_stained_window_cold_cave_imagegen_transparent_v1.webp",
       "sourceBytes": 306372,
       "webpBytes": 45672,
       "status": "cached"
     },
     {
-      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_v1.png",
-      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_v1.webp",
+      "source": "assets/candidates/ui/map/review/map_stained_window_mountain_plain_imagegen_transparent_v1.png",
+      "webp": "assets/ui/map/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_v1.webp",
       "sourceBytes": 307010,
       "webpBytes": 47762,
       "status": "cached"
     },
     {
-      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_v1.png",
-      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_v1.webp",
+      "source": "assets/candidates/ui/map/review/map_stained_window_stone_ruins_imagegen_transparent_v1.png",
+      "webp": "assets/ui/map/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_v1.webp",
       "sourceBytes": 313229,
       "webpBytes": 48694,
       "status": "cached"
     },
     {
-      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_temple_hall_imagegen_transparent_v1.png",
-      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_temple_hall_imagegen_transparent_v1.webp",
+      "source": "assets/candidates/ui/map/review/map_stained_window_temple_hall_imagegen_transparent_v1.png",
+      "webp": "assets/ui/map/stained_windows/map_stained_window_temple_hall_imagegen_transparent_v1.webp",
       "sourceBytes": 304818,
       "webpBytes": 44460,
       "status": "cached"
     },
     {
-      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_town_castle_imagegen_transparent_v1.png",
-      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_town_castle_imagegen_transparent_v1.webp",
+      "source": "assets/candidates/ui/map/review/map_stained_window_town_castle_imagegen_transparent_v1.png",
+      "webp": "assets/ui/map/stained_windows/map_stained_window_town_castle_imagegen_transparent_v1.webp",
       "sourceBytes": 314962,
       "webpBytes": 51232,
       "status": "cached"
     },
     {
-      "source": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_v1.png",
-      "webp": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_v1.webp",
+      "source": "assets/candidates/ui/map/review/map_stained_window_wasteland_dusk_imagegen_transparent_v1.png",
+      "webp": "assets/ui/map/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_v1.webp",
       "sourceBytes": 297976,
       "webpBytes": 58976,
       "status": "cached"

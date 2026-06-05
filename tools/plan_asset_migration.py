@@ -139,6 +139,62 @@ def hud_suggestion(source_path: str, status: str) -> tuple[str, str]:
     return f"assets/archive/review/ui_hud/{category}/{stem}{suffix}", "defer_archive_review"
 
 
+MAP_CATEGORY_MARKERS = (
+    ("/backgrounds/", "backgrounds"),
+    ("/buttons/", "buttons"),
+    ("/nodes/", "nodes"),
+    ("/panels/", "panels"),
+    ("/frames/", "frames"),
+    ("/stained_windows/", "stained_windows"),
+    ("/fullscreen/", "fullscreen"),
+    ("/overview/", "overview"),
+    ("/preview/", "preview"),
+    ("可用切图_v1", "sliced_candidates"),
+)
+
+
+def has_runtime_reference(asset: dict) -> bool:
+    return any(ref.get("kind") == "runtime" for ref in asset["references"])
+
+
+def map_category(source_path: str) -> str:
+    for marker, category in MAP_CATEGORY_MARKERS:
+        if marker in source_path:
+            return category
+    return "review"
+
+
+def map_suggestion_for_asset(asset: dict, runtime_stems: set[str] | None = None) -> tuple[str, str]:
+    source_path = asset["path"]
+    path = Path(source_path)
+    suffix = path.suffix.lower()
+    stem = normalize_slug(path.stem)
+    category = map_category(source_path)
+    runtime_stems = runtime_stems or set()
+
+    if source_path.startswith(("assets/ui/map/", "assets/source/ui/map/", "assets/candidates/ui/map/")):
+        return source_path, "already_migrated"
+
+    if has_runtime_reference(asset):
+        return f"assets/ui/map/{category}/{stem}{suffix}", "move_then_rewrite_runtime_refs"
+
+    if "/source/" in source_path:
+        source_stem = stem if stem.endswith("_source") else f"{stem}_source"
+        return f"assets/source/ui/map/{category}/{source_stem}{suffix}", "move_as_source"
+
+    if suffix == ".png" and as_posix(path.with_suffix("")) in runtime_stems:
+        source_stem = stem if stem.endswith("_source") else f"{stem}_source"
+        return f"assets/source/ui/map/{category}/{source_stem}{suffix}", "move_as_source"
+
+    if any(marker in source_path for marker in ("可用切图_v1", "/preview/", "/overview/")):
+        return f"assets/candidates/ui/map/{category}/{stem}{suffix}", "move_as_candidate"
+
+    if asset["status"] == "unreferenced":
+        return f"assets/archive/review/ui_map/{category}/{stem}{suffix}", "defer_archive_review"
+
+    return f"assets/candidates/ui/map/review/{stem}{suffix}", "review_before_candidate"
+
+
 def scene_main_suggestion(source_path: str, status: str) -> tuple[str, str]:
     path = Path(source_path)
     suffix = path.suffix.lower()
@@ -572,6 +628,17 @@ def suggested_path(source_path: str, status: str, target_dir: str, module_slug: 
     return default_suggestion(source_path, status, target_dir, module_slug)
 
 
+def suggested_path_for_asset(
+    asset: dict,
+    target_dir: str,
+    module_slug: str,
+    runtime_stems: set[str] | None = None,
+) -> tuple[str, str]:
+    if module_slug == "ui_map":
+        return map_suggestion_for_asset(asset, runtime_stems)
+    return suggested_path(asset["path"], asset["status"], target_dir, module_slug)
+
+
 def load_assets(usage_report: Path, prefixes: list[str], module_slug: str) -> list[dict]:
     data = json.loads((ROOT / usage_report).read_text(encoding="utf-8"))
     assets = [
@@ -649,9 +716,14 @@ def build_plan(prefix: str, include_prefixes: list[str], target_dir: str, module
 
     by_stem: dict[str, list[dict]] = defaultdict(list)
     entries = []
+    map_runtime_stems = {
+        as_posix(Path(asset["path"]).with_suffix(""))
+        for asset in assets
+        if module_slug == "ui_map" and has_runtime_reference(asset)
+    }
     for asset in assets:
         source_path = asset["path"]
-        target_path, action = suggested_path(source_path, asset["status"], target_dir, module_slug)
+        target_path, action = suggested_path_for_asset(asset, target_dir, module_slug, map_runtime_stems)
         is_tracked = source_path in tracked
         if (
             module_slug == "cards_visuals"
@@ -740,6 +812,10 @@ def effective_status(audit_status: str, action: str) -> str:
         return audit_status
     if action == "defer_archive_review":
         return audit_status
+    if action in ("move_as_candidate", "copy_as_candidate", "review_before_candidate"):
+        return "candidate"
+    if action in ("move_as_source", "copy_as_source"):
+        return "source"
     if action == "move_as_source" and audit_status == "unreferenced":
         return "source"
     return audit_status
@@ -752,7 +828,7 @@ def notes_for(asset: dict, is_tracked: bool, action: str) -> str:
     if action == "defer_untracked_review":
         notes.append("deferred to candidate/source/archive review batch")
     if action == "defer_archive_review":
-        notes.append("unreferenced HUD asset; defer to archive manifest batch")
+        notes.append("unreferenced asset; defer to archive manifest batch")
     if action == "already_migrated_dynamic":
         notes.append("dynamic runtime HUD asset inferred from status icon template")
     if (
@@ -763,6 +839,8 @@ def notes_for(asset: dict, is_tracked: bool, action: str) -> str:
         notes.append("dynamic runtime asset inferred from enemy data and demo path helpers")
     elif asset["status"] == "active":
         notes.append("runtime/config referenced")
+    if action == "move_then_rewrite_runtime_refs" and asset["path"].startswith("UI/教堂彩窗赛璐璐/地图UI/"):
+        notes.append("map runtime reference from demo CSS, HTML, or preview data")
     if asset["status"] == "candidate":
         notes.append("candidate asset; keep outside formal runtime directory")
     if action == "copy_as_source":

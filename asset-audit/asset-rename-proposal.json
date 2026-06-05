@@ -1444,6 +1444,214 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
+      "sourcePath": "assets/ui/map/backgrounds/map_parchment_fullscreen_background_imagegen_v1.webp",
+      "suggestedPath": "assets/demo/review/map_parchment_fullscreen_background_imagegen_v1.webp",
+      "suggestedDirectory": "assets/demo/review",
+      "status": "active",
+      "referenceModules": [
+        "demo"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/ui/map/backgrounds/map_parchment_fullscreen_background_imagegen_v1.webp",
+      "visualGroup": "visual_2cc92339f7",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/map/buttons/map_detail_panel_button_imagegen_transparent_v1.webp",
+      "suggestedPath": "assets/demo/review/map_detail_panel_button_imagegen_transparent_v1.webp",
+      "suggestedDirectory": "assets/demo/review",
+      "status": "active",
+      "referenceModules": [
+        "demo"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/ui/map/buttons/map_detail_panel_button_imagegen_transparent_v1.webp",
+      "visualGroup": "visual_b9bcc10104",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/map/panels/map_church_preview_frame_imagegen_transparent_v1.webp",
+      "suggestedPath": "assets/demo/review/map_church_preview_frame_imagegen_transparent_v1.webp",
+      "suggestedDirectory": "assets/demo/review",
+      "status": "active",
+      "referenceModules": [
+        "demo"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/ui/map/panels/map_church_preview_frame_imagegen_transparent_v1.webp",
+      "visualGroup": "visual_fdb894eb61",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/map/panels/map_detail_panel_no_button_imagegen_transparent_v1.webp",
+      "suggestedPath": "assets/demo/review/map_detail_panel_no_button_imagegen_transparent_v1.webp",
+      "suggestedDirectory": "assets/demo/review",
+      "status": "active",
+      "referenceModules": [
+        "demo"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/ui/map/panels/map_detail_panel_no_button_imagegen_transparent_v1.webp",
+      "visualGroup": "visual_8b15729286",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/map/panels/map_right_simple_outer_wrapper_frame_imagegen_transparent_v1.webp",
+      "suggestedPath": "assets/demo/review/map_right_simple_outer_wrapper_frame_imagegen_transparent_v1.webp",
+      "suggestedDirectory": "assets/demo/review",
+      "status": "active",
+      "referenceModules": [
+        "demo"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/ui/map/panels/map_right_simple_outer_wrapper_frame_imagegen_transparent_v1.webp",
+      "visualGroup": "visual_c7baa713cb",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/map/panels/map_side_legend_panel_imagegen_transparent_v1.webp",
+      "suggestedPath": "assets/demo/review/map_side_legend_panel_imagegen_transparent_v1.webp",
+      "suggestedDirectory": "assets/demo/review",
+      "status": "active",
+      "referenceModules": [
+        "demo"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/ui/map/panels/map_side_legend_panel_imagegen_transparent_v1.webp",
+      "visualGroup": "visual_c765c41b41",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/map/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_v1.webp",
+      "suggestedPath": "assets/demo/review/map_stained_window_ancient_forest_imagegen_transparent_v1.webp",
+      "suggestedDirectory": "assets/demo/review",
+      "status": "active",
+      "referenceModules": [
+        "demo"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/ui/map/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_v1.webp",
+      "visualGroup": "visual_c8266cbef0",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/map/stained_windows/map_stained_window_cold_cave_imagegen_transparent_v1.webp",
+      "suggestedPath": "assets/demo/review/map_stained_window_cold_cave_imagegen_transparent_v1.webp",
+      "suggestedDirectory": "assets/demo/review",
+      "status": "active",
+      "referenceModules": [
+        "demo"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/ui/map/stained_windows/map_stained_window_cold_cave_imagegen_transparent_v1.webp",
+      "visualGroup": "visual_b61d4a51a6",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/map/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_v1.webp",
+      "suggestedPath": "assets/demo/review/map_stained_window_mountain_plain_imagegen_transparent_v1.webp",
+      "suggestedDirectory": "assets/demo/review",
+      "status": "active",
+      "referenceModules": [
+        "demo"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/ui/map/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_v1.webp",
+      "visualGroup": "visual_9ca5aae00e",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/map/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_v1.webp",
+      "suggestedPath": "assets/demo/review/map_stained_window_stone_ruins_imagegen_transparent_v1.webp",
+      "suggestedDirectory": "assets/demo/review",
+      "status": "active",
+      "referenceModules": [
+        "demo"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/ui/map/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_v1.webp",
+      "visualGroup": "visual_7c7814fc1e",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/map/stained_windows/map_stained_window_temple_hall_imagegen_transparent_v1.webp",
+      "suggestedPath": "assets/demo/review/map_stained_window_temple_hall_imagegen_transparent_v1.webp",
+      "suggestedDirectory": "assets/demo/review",
+      "status": "active",
+      "referenceModules": [
+        "demo"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/ui/map/stained_windows/map_stained_window_temple_hall_imagegen_transparent_v1.webp",
+      "visualGroup": "visual_c9da038d62",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/map/stained_windows/map_stained_window_town_castle_imagegen_transparent_v1.webp",
+      "suggestedPath": "assets/demo/review/map_stained_window_town_castle_imagegen_transparent_v1.webp",
+      "suggestedDirectory": "assets/demo/review",
+      "status": "active",
+      "referenceModules": [
+        "demo"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/ui/map/stained_windows/map_stained_window_town_castle_imagegen_transparent_v1.webp",
+      "visualGroup": "visual_bed47bc5e0",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/map/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_v1.webp",
+      "suggestedPath": "assets/demo/review/map_stained_window_wasteland_dusk_imagegen_transparent_v1.webp",
+      "suggestedDirectory": "assets/demo/review",
+      "status": "active",
+      "referenceModules": [
+        "demo"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/ui/map/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_v1.webp",
+      "visualGroup": "visual_d66e9d2079",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
       "sourcePath": "怪物/动作关键帧_总览.png",
       "suggestedPath": "assets/enemies/review/review_4ca957ae69.png",
       "suggestedDirectory": "assets/enemies/review",
@@ -2249,6 +2457,230 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
+      "sourcePath": "assets/candidates/ui/map/overview/overview_map_ui_imagegen_transparent_assets_v1.png",
+      "suggestedPath": "assets/misc/review/overview_map_ui_imagegen_transparent_assets_v1.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "active",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/candidates/ui/map/overview/overview_map_ui_imagegen_transparent_assets_v1.png",
+      "visualGroup": "visual_d4f0839dc1",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/candidates/ui/map/review/map_church_preview_frame_imagegen_transparent_v1.png",
+      "suggestedPath": "assets/misc/review/map_church_preview_frame_imagegen_transparent_v1.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "active",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/candidates/ui/map/review/map_church_preview_frame_imagegen_transparent_v1.png",
+      "visualGroup": "visual_07bf134b55",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/candidates/ui/map/review/map_location_text_panel_imagegen_transparent_v1.png",
+      "suggestedPath": "assets/misc/review/map_location_text_panel_imagegen_transparent_v1.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "active",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/candidates/ui/map/review/map_location_text_panel_imagegen_transparent_v1.png",
+      "visualGroup": "visual_12113764bc",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/candidates/ui/map/review/map_main_frame_overlay_imagegen_transparent_v1.png",
+      "suggestedPath": "assets/misc/review/map_main_frame_overlay_imagegen_transparent_v1.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "active",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/candidates/ui/map/review/map_main_frame_overlay_imagegen_transparent_v1.png",
+      "visualGroup": "visual_9d362ec0d9",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/candidates/ui/map/review/map_side_legend_panel_imagegen_transparent_v1.png",
+      "suggestedPath": "assets/misc/review/map_side_legend_panel_imagegen_transparent_v1.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "active",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/candidates/ui/map/review/map_side_legend_panel_imagegen_transparent_v1.png",
+      "visualGroup": "visual_1b7792721e",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/candidates/ui/map/review/map_stained_window_ancient_forest_imagegen_transparent_v1.png",
+      "suggestedPath": "assets/misc/review/map_stained_window_ancient_forest_imagegen_transparent_v1.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "active",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/candidates/ui/map/review/map_stained_window_ancient_forest_imagegen_transparent_v1.png",
+      "visualGroup": "visual_82fede4f53",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/candidates/ui/map/review/map_stained_window_cold_cave_imagegen_transparent_v1.png",
+      "suggestedPath": "assets/misc/review/map_stained_window_cold_cave_imagegen_transparent_v1.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "active",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/candidates/ui/map/review/map_stained_window_cold_cave_imagegen_transparent_v1.png",
+      "visualGroup": "visual_4862a4627d",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/candidates/ui/map/review/map_stained_window_dungeon_corridor_imagegen_transparent_v1.png",
+      "suggestedPath": "assets/misc/review/map_stained_window_dungeon_corridor_imagegen_transparent_v1.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "active",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/candidates/ui/map/review/map_stained_window_dungeon_corridor_imagegen_transparent_v1.png",
+      "visualGroup": "visual_d92f5d5ac7",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/candidates/ui/map/review/map_stained_window_mountain_plain_imagegen_transparent_v1.png",
+      "suggestedPath": "assets/misc/review/map_stained_window_mountain_plain_imagegen_transparent_v1.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "active",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/candidates/ui/map/review/map_stained_window_mountain_plain_imagegen_transparent_v1.png",
+      "visualGroup": "visual_9600636dfd",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/candidates/ui/map/review/map_stained_window_stone_ruins_imagegen_transparent_v1.png",
+      "suggestedPath": "assets/misc/review/map_stained_window_stone_ruins_imagegen_transparent_v1.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "active",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/candidates/ui/map/review/map_stained_window_stone_ruins_imagegen_transparent_v1.png",
+      "visualGroup": "visual_908dc1b042",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/candidates/ui/map/review/map_stained_window_temple_hall_imagegen_transparent_v1.png",
+      "suggestedPath": "assets/misc/review/map_stained_window_temple_hall_imagegen_transparent_v1.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "active",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/candidates/ui/map/review/map_stained_window_temple_hall_imagegen_transparent_v1.png",
+      "visualGroup": "visual_4c39a82edd",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/candidates/ui/map/review/map_stained_window_temple_inner_light_imagegen_transparent_v1.png",
+      "suggestedPath": "assets/misc/review/map_stained_window_temple_inner_light_imagegen_transparent_v1.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "active",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/candidates/ui/map/review/map_stained_window_temple_inner_light_imagegen_transparent_v1.png",
+      "visualGroup": "visual_99a3925c06",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/candidates/ui/map/review/map_stained_window_town_castle_imagegen_transparent_v1.png",
+      "suggestedPath": "assets/misc/review/map_stained_window_town_castle_imagegen_transparent_v1.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "active",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/candidates/ui/map/review/map_stained_window_town_castle_imagegen_transparent_v1.png",
+      "visualGroup": "visual_ec1b2a8455",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/candidates/ui/map/review/map_stained_window_wasteland_dusk_imagegen_transparent_v1.png",
+      "suggestedPath": "assets/misc/review/map_stained_window_wasteland_dusk_imagegen_transparent_v1.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "active",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/candidates/ui/map/review/map_stained_window_wasteland_dusk_imagegen_transparent_v1.png",
+      "visualGroup": "visual_4854e7d588",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
       "sourcePath": "assets/source/npc/campfire_elder_alpha_fullres_v1_source.png",
       "suggestedPath": "assets/misc/review/campfire_elder_alpha_fullres_v1_source.png",
       "suggestedDirectory": "assets/misc/review",
@@ -2345,6 +2777,326 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
+      "sourcePath": "assets/source/ui/map/review/map_ui_imagegen_component_sheet_chromakey_v1_source.png",
+      "suggestedPath": "assets/misc/review/map_ui_imagegen_component_sheet_chromakey_v1_source.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "active",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/review/map_ui_imagegen_component_sheet_chromakey_v1_source.png",
+      "visualGroup": "visual_4ff03a1a01",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/review/map_ui_imagegen_component_sheet_transparent_v1_source.png",
+      "suggestedPath": "assets/misc/review/map_ui_imagegen_component_sheet_transparent_v1_source.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "active",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/review/map_ui_imagegen_component_sheet_transparent_v1_source.png",
+      "visualGroup": "visual_03dbcbc44d",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_ancient_forest_imagegen_chromakey_v1_source.png",
+      "suggestedPath": "assets/misc/review/map_stained_window_ancient_forest_imagegen_chromakey_v1_source.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "active",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_ancient_forest_imagegen_chromakey_v1_source.png",
+      "visualGroup": "visual_57a18395d7",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_full_v1_source.png",
+      "suggestedPath": "assets/misc/review/map_stained_window_ancient_forest_imagegen_transparent_full_v1_source.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "active",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_full_v1_source.png",
+      "visualGroup": "visual_c868cf595e",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_cold_cave_imagegen_chromakey_v1_source.png",
+      "suggestedPath": "assets/misc/review/map_stained_window_cold_cave_imagegen_chromakey_v1_source.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "active",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_cold_cave_imagegen_chromakey_v1_source.png",
+      "visualGroup": "visual_52f929f5b2",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_cold_cave_imagegen_transparent_full_v1_source.png",
+      "suggestedPath": "assets/misc/review/map_stained_window_cold_cave_imagegen_transparent_full_v1_source.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "active",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_cold_cave_imagegen_transparent_full_v1_source.png",
+      "visualGroup": "visual_9272a9f255",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_dungeon_corridor_imagegen_chromakey_v1_source.png",
+      "suggestedPath": "assets/misc/review/map_stained_window_dungeon_corridor_imagegen_chromakey_v1_source.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "active",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_dungeon_corridor_imagegen_chromakey_v1_source.png",
+      "visualGroup": "visual_862c8951d0",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_dungeon_corridor_imagegen_transparent_full_v1_source.png",
+      "suggestedPath": "assets/misc/review/map_stained_window_dungeon_corridor_imagegen_transparent_full_v1_source.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "active",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_dungeon_corridor_imagegen_transparent_full_v1_source.png",
+      "visualGroup": "visual_fa4affc8b8",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_mountain_plain_imagegen_chromakey_v1_source.png",
+      "suggestedPath": "assets/misc/review/map_stained_window_mountain_plain_imagegen_chromakey_v1_source.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "active",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_mountain_plain_imagegen_chromakey_v1_source.png",
+      "visualGroup": "visual_be35d82a89",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_full_v1_source.png",
+      "suggestedPath": "assets/misc/review/map_stained_window_mountain_plain_imagegen_transparent_full_v1_source.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "active",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_full_v1_source.png",
+      "visualGroup": "visual_ba8b1664b2",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_stone_ruins_imagegen_chromakey_v1_source.png",
+      "suggestedPath": "assets/misc/review/map_stained_window_stone_ruins_imagegen_chromakey_v1_source.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "active",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_stone_ruins_imagegen_chromakey_v1_source.png",
+      "visualGroup": "visual_2d8eeb8f65",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_full_v1_source.png",
+      "suggestedPath": "assets/misc/review/map_stained_window_stone_ruins_imagegen_transparent_full_v1_source.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "active",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_full_v1_source.png",
+      "visualGroup": "visual_878ed2fc42",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_temple_hall_imagegen_chromakey_v1_source.png",
+      "suggestedPath": "assets/misc/review/map_stained_window_temple_hall_imagegen_chromakey_v1_source.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "active",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_temple_hall_imagegen_chromakey_v1_source.png",
+      "visualGroup": "visual_256aca86c2",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_temple_hall_imagegen_transparent_full_v1_source.png",
+      "suggestedPath": "assets/misc/review/map_stained_window_temple_hall_imagegen_transparent_full_v1_source.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "active",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_temple_hall_imagegen_transparent_full_v1_source.png",
+      "visualGroup": "visual_5910607803",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_temple_inner_light_imagegen_chromakey_v1_source.png",
+      "suggestedPath": "assets/misc/review/map_stained_window_temple_inner_light_imagegen_chromakey_v1_source.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "active",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_temple_inner_light_imagegen_chromakey_v1_source.png",
+      "visualGroup": "visual_5ff30b63a5",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_temple_inner_light_imagegen_transparent_full_v1_source.png",
+      "suggestedPath": "assets/misc/review/map_stained_window_temple_inner_light_imagegen_transparent_full_v1_source.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "active",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_temple_inner_light_imagegen_transparent_full_v1_source.png",
+      "visualGroup": "visual_c5bf76fa34",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_town_castle_imagegen_chromakey_v1_source.png",
+      "suggestedPath": "assets/misc/review/map_stained_window_town_castle_imagegen_chromakey_v1_source.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "active",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_town_castle_imagegen_chromakey_v1_source.png",
+      "visualGroup": "visual_71e1d682b7",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_town_castle_imagegen_transparent_full_v1_source.png",
+      "suggestedPath": "assets/misc/review/map_stained_window_town_castle_imagegen_transparent_full_v1_source.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "active",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_town_castle_imagegen_transparent_full_v1_source.png",
+      "visualGroup": "visual_af5ca0ad32",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_wasteland_dusk_imagegen_chromakey_v1_source.png",
+      "suggestedPath": "assets/misc/review/map_stained_window_wasteland_dusk_imagegen_chromakey_v1_source.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "active",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_wasteland_dusk_imagegen_chromakey_v1_source.png",
+      "visualGroup": "visual_b1c8522d1e",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_full_v1_source.png",
+      "suggestedPath": "assets/misc/review/map_stained_window_wasteland_dusk_imagegen_transparent_full_v1_source.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "active",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_full_v1_source.png",
+      "visualGroup": "visual_9bdc2dca0c",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
       "sourcePath": "_preview_新角色一三_带背景卡图.png",
       "suggestedPath": "assets/review/review_bb304cc123.png",
       "suggestedDirectory": "assets/review",
@@ -2384,6 +3136,146 @@
       ],
       "derivedFrom": "_preview_角色二.png",
       "visualGroup": "visual_315a00ed50",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v3_clean_map_background.png",
+      "suggestedPath": "assets/review/map_ui_assembled_preview_v3_clean_map_background.png",
+      "suggestedDirectory": "assets/review",
+      "status": "candidate",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v3_clean_map_background.png",
+      "visualGroup": "visual_dc8d90f92f",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v5_parchment_simplified.png",
+      "suggestedPath": "assets/review/map_ui_assembled_preview_v5_parchment_simplified.png",
+      "suggestedDirectory": "assets/review",
+      "status": "candidate",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v5_parchment_simplified.png",
+      "visualGroup": "visual_48a3c8efd5",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v6_right_group_frame.png",
+      "suggestedPath": "assets/review/map_ui_assembled_preview_v6_right_group_frame.png",
+      "suggestedDirectory": "assets/review",
+      "status": "candidate",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v6_right_group_frame.png",
+      "visualGroup": "visual_6078ab0e61",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v7_imagegen_right_group_frame.png",
+      "suggestedPath": "assets/review/map_ui_assembled_preview_v7_imagegen_right_group_frame.png",
+      "suggestedDirectory": "assets/review",
+      "status": "candidate",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v7_imagegen_right_group_frame.png",
+      "visualGroup": "visual_2158fdbb2a",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v8_detail_wrapped_frame.png",
+      "suggestedPath": "assets/review/map_ui_assembled_preview_v8_detail_wrapped_frame.png",
+      "suggestedDirectory": "assets/review",
+      "status": "candidate",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v8_detail_wrapped_frame.png",
+      "visualGroup": "visual_2a135e6c14",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v9_simple_outer_wrapper.png",
+      "suggestedPath": "assets/review/map_ui_assembled_preview_v9_simple_outer_wrapper.png",
+      "suggestedDirectory": "assets/review",
+      "status": "candidate",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/candidates/ui/map/preview/map_ui_assembled_preview_v9_simple_outer_wrapper.png",
+      "visualGroup": "visual_e992d7e10b",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/candidates/ui/map/review/map_center_clean_background_preview_930x790_v1.png",
+      "suggestedPath": "assets/review/map_center_clean_background_preview_930x790_v1.png",
+      "suggestedDirectory": "assets/review",
+      "status": "candidate",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/candidates/ui/map/review/map_center_clean_background_preview_930x790_v1.png",
+      "visualGroup": "visual_0279bf11e6",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/candidates/ui/map/review/map_right_preview_detail_group_frame_imagegen_transparent_v1.png",
+      "suggestedPath": "assets/review/map_right_preview_detail_group_frame_imagegen_transparent_v1.png",
+      "suggestedDirectory": "assets/review",
+      "status": "candidate",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/candidates/ui/map/review/map_right_preview_detail_group_frame_imagegen_transparent_v1.png",
+      "visualGroup": "visual_49f1a295c3",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/candidates/ui/map/review/map_right_preview_detail_group_frame_imagegen_transparent_v2.png",
+      "suggestedPath": "assets/review/map_right_preview_detail_group_frame_imagegen_transparent_v2.png",
+      "suggestedDirectory": "assets/review",
+      "status": "candidate",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/candidates/ui/map/review/map_right_preview_detail_group_frame_imagegen_transparent_v2.png",
+      "visualGroup": "visual_7ff15d7631",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/candidates/ui/map/review/map_right_preview_detail_group_frame_transparent_v1.png",
+      "suggestedPath": "assets/review/map_right_preview_detail_group_frame_transparent_v1.png",
+      "suggestedDirectory": "assets/review",
+      "status": "candidate",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/candidates/ui/map/review/map_right_preview_detail_group_frame_transparent_v1.png",
+      "visualGroup": "visual_3256f8cb04",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -2554,6 +3446,204 @@
       ],
       "derivedFrom": "assets/scenes/battle/ancient_forest_day_v1.webp",
       "visualGroup": "visual_a6f0d83d7d",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/backgrounds/map_center_clean_background_imagegen_source_v1_source.png",
+      "suggestedPath": "assets/review/map_center_clean_background_imagegen_source_v1_source.png",
+      "suggestedDirectory": "assets/review",
+      "status": "source",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/backgrounds/map_center_clean_background_imagegen_source_v1_source.png",
+      "visualGroup": "visual_68bf923ec8",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/backgrounds/map_parchment_background_imagegen_source_v1_source.png",
+      "suggestedPath": "assets/review/map_parchment_background_imagegen_source_v1_source.png",
+      "suggestedDirectory": "assets/review",
+      "status": "source",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component",
+        "identical_content"
+      ],
+      "derivedFrom": "assets/source/ui/map/backgrounds/map_parchment_background_imagegen_source_v1_source.png",
+      "visualGroup": "visual_ff237466f0",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/backgrounds/map_parchment_fullscreen_background_imagegen_v1_source.png",
+      "suggestedPath": "assets/review/map_parchment_fullscreen_background_imagegen_v1_source.png",
+      "suggestedDirectory": "assets/review",
+      "status": "source",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component",
+        "identical_content"
+      ],
+      "derivedFrom": "assets/source/ui/map/backgrounds/map_parchment_fullscreen_background_imagegen_v1_source.png",
+      "visualGroup": "visual_ff237466f0",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/buttons/map_detail_panel_button_imagegen_transparent_v1_source.png",
+      "suggestedPath": "assets/review/map_detail_panel_button_imagegen_transparent_v1_source.png",
+      "suggestedDirectory": "assets/review",
+      "status": "source",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/buttons/map_detail_panel_button_imagegen_transparent_v1_source.png",
+      "visualGroup": "visual_c7cde9a34a",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/panels/map_detail_panel_no_button_imagegen_transparent_v1_source.png",
+      "suggestedPath": "assets/review/map_detail_panel_no_button_imagegen_transparent_v1_source.png",
+      "suggestedDirectory": "assets/review",
+      "status": "source",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/panels/map_detail_panel_no_button_imagegen_transparent_v1_source.png",
+      "visualGroup": "visual_2e4a14bfc9",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_chromakey_v1_source.png",
+      "suggestedPath": "assets/review/map_right_preview_detail_group_frame_imagegen_chromakey_v1_source.png",
+      "suggestedDirectory": "assets/review",
+      "status": "source",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_chromakey_v1_source.png",
+      "visualGroup": "visual_965a2399d8",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_chromakey_v2_source.png",
+      "suggestedPath": "assets/review/map_right_preview_detail_group_frame_imagegen_chromakey_v2_source.png",
+      "suggestedDirectory": "assets/review",
+      "status": "source",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_chromakey_v2_source.png",
+      "visualGroup": "visual_a6a51685ae",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_chromakey_v3_source.png",
+      "suggestedPath": "assets/review/map_right_preview_detail_group_frame_imagegen_chromakey_v3_source.png",
+      "suggestedDirectory": "assets/review",
+      "status": "source",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_chromakey_v3_source.png",
+      "visualGroup": "visual_ade9523b25",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_transparent_full_v1_source.png",
+      "suggestedPath": "assets/review/map_right_preview_detail_group_frame_imagegen_transparent_full_v1_source.png",
+      "suggestedDirectory": "assets/review",
+      "status": "source",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_transparent_full_v1_source.png",
+      "visualGroup": "visual_ba4254a988",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_transparent_full_v2_source.png",
+      "suggestedPath": "assets/review/map_right_preview_detail_group_frame_imagegen_transparent_full_v2_source.png",
+      "suggestedDirectory": "assets/review",
+      "status": "source",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_transparent_full_v2_source.png",
+      "visualGroup": "visual_febee5f8d2",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_transparent_full_v3_source.png",
+      "suggestedPath": "assets/review/map_right_preview_detail_group_frame_imagegen_transparent_full_v3_source.png",
+      "suggestedDirectory": "assets/review",
+      "status": "source",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_transparent_full_v3_source.png",
+      "visualGroup": "visual_c1de95abef",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/panels/map_right_simple_outer_wrapper_frame_imagegen_chromakey_v1_source.png",
+      "suggestedPath": "assets/review/map_right_simple_outer_wrapper_frame_imagegen_chromakey_v1_source.png",
+      "suggestedDirectory": "assets/review",
+      "status": "source",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/panels/map_right_simple_outer_wrapper_frame_imagegen_chromakey_v1_source.png",
+      "visualGroup": "visual_b8a6a1ec0e",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/panels/map_right_simple_outer_wrapper_frame_imagegen_transparent_full_v1_source.png",
+      "suggestedPath": "assets/review/map_right_simple_outer_wrapper_frame_imagegen_transparent_full_v1_source.png",
+      "suggestedDirectory": "assets/review",
+      "status": "source",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/panels/map_right_simple_outer_wrapper_frame_imagegen_transparent_full_v1_source.png",
+      "visualGroup": "visual_aca9be1805",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/panels/map_right_simple_outer_wrapper_frame_imagegen_transparent_v1_source.png",
+      "suggestedPath": "assets/review/map_right_simple_outer_wrapper_frame_imagegen_transparent_v1_source.png",
+      "suggestedDirectory": "assets/review",
+      "status": "source",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/panels/map_right_simple_outer_wrapper_frame_imagegen_transparent_v1_source.png",
+      "visualGroup": "visual_421e1c2e05",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -7536,310 +8626,6 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/map_ui_fullscreen_imagegen_v1.png",
-      "suggestedPath": "assets/ui/review/map_ui_fullscreen_imagegen_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/map_ui_fullscreen_imagegen_v1.png",
-      "visualGroup": "visual_f442879cce",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/backgrounds/map_center_landscape_crop_v1.png",
-      "suggestedPath": "assets/ui/review/map_center_landscape_crop_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/backgrounds/map_center_landscape_crop_v1.png",
-      "visualGroup": "visual_f595336a26",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/backgrounds/map_center_painted_area_v1.png",
-      "suggestedPath": "assets/ui/review/map_center_painted_area_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/backgrounds/map_center_painted_area_v1.png",
-      "visualGroup": "visual_2c1379ffa0",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/buttons/map_enter_button_v1.png",
-      "suggestedPath": "assets/ui/review/map_enter_button_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/buttons/map_enter_button_v1.png",
-      "visualGroup": "visual_ce5faf7a7b",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/frames/map_main_frame_v1.png",
-      "suggestedPath": "assets/ui/review/map_main_frame_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/frames/map_main_frame_v1.png",
-      "visualGroup": "visual_227f983798",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/fullscreen/map_ui_fullscreen_imagegen_v1.png",
-      "suggestedPath": "assets/ui/review/map_ui_fullscreen_imagegen_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/fullscreen/map_ui_fullscreen_imagegen_v1.png",
-      "visualGroup": "visual_a3de5fdbea",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/map_imagegen_sliced_overview_v1.png",
-      "suggestedPath": "assets/ui/review/map_imagegen_sliced_overview_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/map_imagegen_sliced_overview_v1.png",
-      "visualGroup": "visual_ff4d16e8b9",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/nodes/map_node_battle_imagegen_v1.png",
-      "suggestedPath": "assets/ui/review/map_node_battle_imagegen_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/nodes/map_node_battle_imagegen_v1.png",
-      "visualGroup": "visual_4aa3ecba7e",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/nodes/map_node_boss_imagegen_v1.png",
-      "suggestedPath": "assets/ui/review/map_node_boss_imagegen_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/nodes/map_node_boss_imagegen_v1.png",
-      "visualGroup": "visual_3983d4ca00",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/nodes/map_node_elite_imagegen_v1.png",
-      "suggestedPath": "assets/ui/review/map_node_elite_imagegen_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/nodes/map_node_elite_imagegen_v1.png",
-      "visualGroup": "visual_80aca98958",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/nodes/map_node_event_imagegen_v1.png",
-      "suggestedPath": "assets/ui/review/map_node_event_imagegen_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/nodes/map_node_event_imagegen_v1.png",
-      "visualGroup": "visual_5e93353203",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/nodes/map_node_portal_imagegen_v1.png",
-      "suggestedPath": "assets/ui/review/map_node_portal_imagegen_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/nodes/map_node_portal_imagegen_v1.png",
-      "visualGroup": "visual_be00365d57",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/nodes/map_node_rest_imagegen_v1.png",
-      "suggestedPath": "assets/ui/review/map_node_rest_imagegen_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/nodes/map_node_rest_imagegen_v1.png",
-      "visualGroup": "visual_158120d7c3",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/nodes/map_node_shop_imagegen_v1.png",
-      "suggestedPath": "assets/ui/review/map_node_shop_imagegen_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/nodes/map_node_shop_imagegen_v1.png",
-      "visualGroup": "visual_eca1ab505b",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/panels/map_left_legend_panel_v1.png",
-      "suggestedPath": "assets/ui/review/map_left_legend_panel_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/panels/map_left_legend_panel_v1.png",
-      "visualGroup": "visual_2380b9a883",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/panels/map_right_church_window_v1.png",
-      "suggestedPath": "assets/ui/review/map_right_church_window_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/panels/map_right_church_window_v1.png",
-      "visualGroup": "visual_b7caa88903",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/panels/map_right_detail_panel_v1.png",
-      "suggestedPath": "assets/ui/review/map_right_detail_panel_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/panels/map_right_detail_panel_v1.png",
-      "visualGroup": "visual_799d4e2721",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/panels/map_right_text_area_v1.png",
-      "suggestedPath": "assets/ui/review/map_right_text_area_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/panels/map_right_text_area_v1.png",
-      "visualGroup": "visual_859c134235",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/panels/map_top_region_banner_v1.png",
-      "suggestedPath": "assets/ui/review/map_top_region_banner_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/panels/map_top_region_banner_v1.png",
-      "visualGroup": "visual_d089c452f3",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
       "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_center_clean_background_imagegen_v1.png",
       "suggestedPath": "assets/ui/review/map_center_clean_background_imagegen_v1.png",
       "suggestedDirectory": "assets/ui/review",
@@ -7855,21 +8641,6 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_center_clean_background_preview_930x790_v1.png",
-      "suggestedPath": "assets/ui/review/map_center_clean_background_preview_930x790_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "candidate",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_center_clean_background_preview_930x790_v1.png",
-      "visualGroup": "visual_0279bf11e6",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
       "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_center_parchment_background_imagegen_v1.png",
       "suggestedPath": "assets/ui/review/map_center_parchment_background_imagegen_v1.png",
       "suggestedDirectory": "assets/ui/review",
@@ -7882,1537 +8653,6 @@
       ],
       "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_center_parchment_background_imagegen_v1.png",
       "visualGroup": "visual_41551bb894",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_parchment_fullscreen_background_imagegen_v1.png",
-      "suggestedPath": "assets/ui/review/map_parchment_fullscreen_background_imagegen_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component",
-        "unreferenced",
-        "identical_content"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_parchment_fullscreen_background_imagegen_v1.png",
-      "visualGroup": "visual_ff237466f0",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_parchment_fullscreen_background_imagegen_v1.webp",
-      "suggestedPath": "assets/ui/review/map_parchment_fullscreen_background_imagegen_v1.webp",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "demo"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_parchment_fullscreen_background_imagegen_v1.webp",
-      "visualGroup": "visual_2cc92339f7",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/source/map_center_clean_background_imagegen_source_v1.png",
-      "suggestedPath": "assets/ui/review/map_center_clean_background_imagegen_source_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "source",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/source/map_center_clean_background_imagegen_source_v1.png",
-      "visualGroup": "visual_68bf923ec8",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/source/map_parchment_background_imagegen_source_v1.png",
-      "suggestedPath": "assets/ui/review/map_parchment_background_imagegen_source_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "source",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "identical_content"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/source/map_parchment_background_imagegen_source_v1.png",
-      "visualGroup": "visual_ff237466f0",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/buttons/map_detail_panel_button_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/ui/review/map_detail_panel_button_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/buttons/map_detail_panel_button_imagegen_transparent_v1.png",
-      "visualGroup": "visual_c7cde9a34a",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/buttons/map_detail_panel_button_imagegen_transparent_v1.webp",
-      "suggestedPath": "assets/ui/review/map_detail_panel_button_imagegen_transparent_v1.webp",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "demo"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/buttons/map_detail_panel_button_imagegen_transparent_v1.webp",
-      "visualGroup": "visual_b9bcc10104",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/buttons/map_enter_button_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/ui/review/map_enter_button_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/buttons/map_enter_button_imagegen_transparent_v1.png",
-      "visualGroup": "visual_b4b5a5e8bd",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/frames/map_main_frame_overlay_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/ui/review/map_main_frame_overlay_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/frames/map_main_frame_overlay_imagegen_transparent_v1.png",
-      "visualGroup": "visual_9d362ec0d9",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_battle_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/ui/review/map_node_battle_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_battle_imagegen_transparent_v1.png",
-      "visualGroup": "visual_76b3aae280",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_battle_imagegen_transparent_v1.webp",
-      "suggestedPath": "assets/ui/review/map_node_battle_imagegen_transparent_v1.webp",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "demo"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_battle_imagegen_transparent_v1.webp",
-      "visualGroup": "visual_1fb7eb2a52",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_boss_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/ui/review/map_node_boss_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_boss_imagegen_transparent_v1.png",
-      "visualGroup": "visual_76e19f0ad0",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_boss_imagegen_transparent_v1.webp",
-      "suggestedPath": "assets/ui/review/map_node_boss_imagegen_transparent_v1.webp",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "demo"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_boss_imagegen_transparent_v1.webp",
-      "visualGroup": "visual_35bdc7ac53",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_elite_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/ui/review/map_node_elite_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_elite_imagegen_transparent_v1.png",
-      "visualGroup": "visual_1af051e22b",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_elite_imagegen_transparent_v1.webp",
-      "suggestedPath": "assets/ui/review/map_node_elite_imagegen_transparent_v1.webp",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "demo"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_elite_imagegen_transparent_v1.webp",
-      "visualGroup": "visual_70783e33ad",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_event_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/ui/review/map_node_event_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_event_imagegen_transparent_v1.png",
-      "visualGroup": "visual_1bb363fdbd",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_event_imagegen_transparent_v1.webp",
-      "suggestedPath": "assets/ui/review/map_node_event_imagegen_transparent_v1.webp",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "demo"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_event_imagegen_transparent_v1.webp",
-      "visualGroup": "visual_7b6ac5626e",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_portal_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/ui/review/map_node_portal_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_portal_imagegen_transparent_v1.png",
-      "visualGroup": "visual_9399b0a4b1",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_rest_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/ui/review/map_node_rest_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_rest_imagegen_transparent_v1.png",
-      "visualGroup": "visual_a3a6eff5c4",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_rest_imagegen_transparent_v1.webp",
-      "suggestedPath": "assets/ui/review/map_node_rest_imagegen_transparent_v1.webp",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "demo"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_rest_imagegen_transparent_v1.webp",
-      "visualGroup": "visual_781e2fdf37",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_shop_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/ui/review/map_node_shop_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_shop_imagegen_transparent_v1.png",
-      "visualGroup": "visual_5d5466742e",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_shop_imagegen_transparent_v1.webp",
-      "suggestedPath": "assets/ui/review/map_node_shop_imagegen_transparent_v1.webp",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "demo"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/nodes/map_node_shop_imagegen_transparent_v1.webp",
-      "visualGroup": "visual_43033b16fa",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/overview/overview_map_ui_imagegen_transparent_assets_v1.png",
-      "suggestedPath": "assets/ui/review/overview_map_ui_imagegen_transparent_assets_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/overview/overview_map_ui_imagegen_transparent_assets_v1.png",
-      "visualGroup": "visual_d4f0839dc1",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_church_preview_frame_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/ui/review/map_church_preview_frame_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_church_preview_frame_imagegen_transparent_v1.png",
-      "visualGroup": "visual_07bf134b55",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_church_preview_frame_imagegen_transparent_v1.webp",
-      "suggestedPath": "assets/ui/review/map_church_preview_frame_imagegen_transparent_v1.webp",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "demo"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_church_preview_frame_imagegen_transparent_v1.webp",
-      "visualGroup": "visual_fdb894eb61",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_detail_panel_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/ui/review/map_detail_panel_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_detail_panel_imagegen_transparent_v1.png",
-      "visualGroup": "visual_6930c6a167",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_detail_panel_no_button_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/ui/review/map_detail_panel_no_button_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_detail_panel_no_button_imagegen_transparent_v1.png",
-      "visualGroup": "visual_2e4a14bfc9",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_detail_panel_no_button_imagegen_transparent_v1.webp",
-      "suggestedPath": "assets/ui/review/map_detail_panel_no_button_imagegen_transparent_v1.webp",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "demo"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_detail_panel_no_button_imagegen_transparent_v1.webp",
-      "visualGroup": "visual_8b15729286",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_location_text_panel_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/ui/review/map_location_text_panel_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_location_text_panel_imagegen_transparent_v1.png",
-      "visualGroup": "visual_12113764bc",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_region_banner_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/ui/review/map_region_banner_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_region_banner_imagegen_transparent_v1.png",
-      "visualGroup": "visual_09655773d0",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_region_banner_imagegen_transparent_v1.webp",
-      "suggestedPath": "assets/ui/review/map_region_banner_imagegen_transparent_v1.webp",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "demo"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_region_banner_imagegen_transparent_v1.webp",
-      "visualGroup": "visual_89880282fb",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_right_preview_detail_group_frame_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/ui/review/map_right_preview_detail_group_frame_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "candidate",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_right_preview_detail_group_frame_imagegen_transparent_v1.png",
-      "visualGroup": "visual_49f1a295c3",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_right_preview_detail_group_frame_imagegen_transparent_v2.png",
-      "suggestedPath": "assets/ui/review/map_right_preview_detail_group_frame_imagegen_transparent_v2.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "candidate",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_right_preview_detail_group_frame_imagegen_transparent_v2.png",
-      "visualGroup": "visual_7ff15d7631",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_right_preview_detail_group_frame_transparent_v1.png",
-      "suggestedPath": "assets/ui/review/map_right_preview_detail_group_frame_transparent_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "candidate",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_right_preview_detail_group_frame_transparent_v1.png",
-      "visualGroup": "visual_3256f8cb04",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_right_simple_outer_wrapper_frame_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/ui/review/map_right_simple_outer_wrapper_frame_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_right_simple_outer_wrapper_frame_imagegen_transparent_v1.png",
-      "visualGroup": "visual_421e1c2e05",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_right_simple_outer_wrapper_frame_imagegen_transparent_v1.webp",
-      "suggestedPath": "assets/ui/review/map_right_simple_outer_wrapper_frame_imagegen_transparent_v1.webp",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "demo"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_right_simple_outer_wrapper_frame_imagegen_transparent_v1.webp",
-      "visualGroup": "visual_c7baa713cb",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_side_legend_panel_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/ui/review/map_side_legend_panel_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_side_legend_panel_imagegen_transparent_v1.png",
-      "visualGroup": "visual_1b7792721e",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_side_legend_panel_imagegen_transparent_v1.webp",
-      "suggestedPath": "assets/ui/review/map_side_legend_panel_imagegen_transparent_v1.webp",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "demo"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_side_legend_panel_imagegen_transparent_v1.webp",
-      "visualGroup": "visual_c765c41b41",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/source/map_right_preview_detail_group_frame_imagegen_chromakey_v1.png",
-      "suggestedPath": "assets/ui/review/map_right_preview_detail_group_frame_imagegen_chromakey_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "source",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/source/map_right_preview_detail_group_frame_imagegen_chromakey_v1.png",
-      "visualGroup": "visual_965a2399d8",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/source/map_right_preview_detail_group_frame_imagegen_chromakey_v2.png",
-      "suggestedPath": "assets/ui/review/map_right_preview_detail_group_frame_imagegen_chromakey_v2.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "source",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/source/map_right_preview_detail_group_frame_imagegen_chromakey_v2.png",
-      "visualGroup": "visual_a6a51685ae",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/source/map_right_preview_detail_group_frame_imagegen_chromakey_v3.png",
-      "suggestedPath": "assets/ui/review/map_right_preview_detail_group_frame_imagegen_chromakey_v3.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "source",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/source/map_right_preview_detail_group_frame_imagegen_chromakey_v3.png",
-      "visualGroup": "visual_ade9523b25",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/source/map_right_preview_detail_group_frame_imagegen_transparent_full_v1.png",
-      "suggestedPath": "assets/ui/review/map_right_preview_detail_group_frame_imagegen_transparent_full_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "source",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/source/map_right_preview_detail_group_frame_imagegen_transparent_full_v1.png",
-      "visualGroup": "visual_ba4254a988",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/source/map_right_preview_detail_group_frame_imagegen_transparent_full_v2.png",
-      "suggestedPath": "assets/ui/review/map_right_preview_detail_group_frame_imagegen_transparent_full_v2.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "source",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/source/map_right_preview_detail_group_frame_imagegen_transparent_full_v2.png",
-      "visualGroup": "visual_febee5f8d2",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/source/map_right_preview_detail_group_frame_imagegen_transparent_full_v3.png",
-      "suggestedPath": "assets/ui/review/map_right_preview_detail_group_frame_imagegen_transparent_full_v3.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "source",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/source/map_right_preview_detail_group_frame_imagegen_transparent_full_v3.png",
-      "visualGroup": "visual_c1de95abef",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/source/map_right_simple_outer_wrapper_frame_imagegen_chromakey_v1.png",
-      "suggestedPath": "assets/ui/review/map_right_simple_outer_wrapper_frame_imagegen_chromakey_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "source",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/source/map_right_simple_outer_wrapper_frame_imagegen_chromakey_v1.png",
-      "visualGroup": "visual_b8a6a1ec0e",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/source/map_right_simple_outer_wrapper_frame_imagegen_transparent_full_v1.png",
-      "suggestedPath": "assets/ui/review/map_right_simple_outer_wrapper_frame_imagegen_transparent_full_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "source",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/source/map_right_simple_outer_wrapper_frame_imagegen_transparent_full_v1.png",
-      "visualGroup": "visual_aca9be1805",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/preview/map_demo_adapted_screenshot_v1.png",
-      "suggestedPath": "assets/ui/review/map_demo_adapted_screenshot_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "candidate",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/preview/map_demo_adapted_screenshot_v1.png",
-      "visualGroup": "visual_3ce882be1d",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/preview/map_demo_adapted_screenshot_v2.png",
-      "suggestedPath": "assets/ui/review/map_demo_adapted_screenshot_v2.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "candidate",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/preview/map_demo_adapted_screenshot_v2.png",
-      "visualGroup": "visual_58257e2601",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/preview/map_demo_adapted_screenshot_v3.png",
-      "suggestedPath": "assets/ui/review/map_demo_adapted_screenshot_v3.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "candidate",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/preview/map_demo_adapted_screenshot_v3.png",
-      "visualGroup": "visual_03ade8e1ba",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/preview/map_ui_assembled_preview_v1.png",
-      "suggestedPath": "assets/ui/review/map_ui_assembled_preview_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "candidate",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/preview/map_ui_assembled_preview_v1.png",
-      "visualGroup": "visual_2bb5996b5b",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/preview/map_ui_assembled_preview_v2.png",
-      "suggestedPath": "assets/ui/review/map_ui_assembled_preview_v2.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "candidate",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/preview/map_ui_assembled_preview_v2.png",
-      "visualGroup": "visual_7cd178ab88",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/preview/map_ui_assembled_preview_v3_clean_map_background.png",
-      "suggestedPath": "assets/ui/review/map_ui_assembled_preview_v3_clean_map_background.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "candidate",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/preview/map_ui_assembled_preview_v3_clean_map_background.png",
-      "visualGroup": "visual_dc8d90f92f",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/preview/map_ui_assembled_preview_v4_parchment.png",
-      "suggestedPath": "assets/ui/review/map_ui_assembled_preview_v4_parchment.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "candidate",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/preview/map_ui_assembled_preview_v4_parchment.png",
-      "visualGroup": "visual_bb8f41e18d",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/preview/map_ui_assembled_preview_v5_parchment_simplified.png",
-      "suggestedPath": "assets/ui/review/map_ui_assembled_preview_v5_parchment_simplified.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "candidate",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/preview/map_ui_assembled_preview_v5_parchment_simplified.png",
-      "visualGroup": "visual_48a3c8efd5",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/preview/map_ui_assembled_preview_v6_right_group_frame.png",
-      "suggestedPath": "assets/ui/review/map_ui_assembled_preview_v6_right_group_frame.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "candidate",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/preview/map_ui_assembled_preview_v6_right_group_frame.png",
-      "visualGroup": "visual_6078ab0e61",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/preview/map_ui_assembled_preview_v7_imagegen_right_group_frame.png",
-      "suggestedPath": "assets/ui/review/map_ui_assembled_preview_v7_imagegen_right_group_frame.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "candidate",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/preview/map_ui_assembled_preview_v7_imagegen_right_group_frame.png",
-      "visualGroup": "visual_2158fdbb2a",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/preview/map_ui_assembled_preview_v8_detail_wrapped_frame.png",
-      "suggestedPath": "assets/ui/review/map_ui_assembled_preview_v8_detail_wrapped_frame.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "candidate",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/preview/map_ui_assembled_preview_v8_detail_wrapped_frame.png",
-      "visualGroup": "visual_2a135e6c14",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/preview/map_ui_assembled_preview_v9_simple_outer_wrapper.png",
-      "suggestedPath": "assets/ui/review/map_ui_assembled_preview_v9_simple_outer_wrapper.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "candidate",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/preview/map_ui_assembled_preview_v9_simple_outer_wrapper.png",
-      "visualGroup": "visual_e992d7e10b",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/source/map_ui_imagegen_component_sheet_chromakey_v1.png",
-      "suggestedPath": "assets/ui/review/map_ui_imagegen_component_sheet_chromakey_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/source/map_ui_imagegen_component_sheet_chromakey_v1.png",
-      "visualGroup": "visual_4ff03a1a01",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/source/map_ui_imagegen_component_sheet_transparent_v1.png",
-      "suggestedPath": "assets/ui/review/map_ui_imagegen_component_sheet_transparent_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/source/map_ui_imagegen_component_sheet_transparent_v1.png",
-      "visualGroup": "visual_03dbcbc44d",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/ui/review/map_stained_window_ancient_forest_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_v1.png",
-      "visualGroup": "visual_82fede4f53",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_v1.webp",
-      "suggestedPath": "assets/ui/review/map_stained_window_ancient_forest_imagegen_transparent_v1.webp",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "demo"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_v1.webp",
-      "visualGroup": "visual_c8266cbef0",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_cold_cave_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/ui/review/map_stained_window_cold_cave_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_cold_cave_imagegen_transparent_v1.png",
-      "visualGroup": "visual_4862a4627d",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_cold_cave_imagegen_transparent_v1.webp",
-      "suggestedPath": "assets/ui/review/map_stained_window_cold_cave_imagegen_transparent_v1.webp",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "demo"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_cold_cave_imagegen_transparent_v1.webp",
-      "visualGroup": "visual_b61d4a51a6",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_dungeon_corridor_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/ui/review/map_stained_window_dungeon_corridor_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_dungeon_corridor_imagegen_transparent_v1.png",
-      "visualGroup": "visual_d92f5d5ac7",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/ui/review/map_stained_window_mountain_plain_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_v1.png",
-      "visualGroup": "visual_9600636dfd",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_v1.webp",
-      "suggestedPath": "assets/ui/review/map_stained_window_mountain_plain_imagegen_transparent_v1.webp",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "demo"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_v1.webp",
-      "visualGroup": "visual_9ca5aae00e",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/ui/review/map_stained_window_stone_ruins_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_v1.png",
-      "visualGroup": "visual_908dc1b042",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_v1.webp",
-      "suggestedPath": "assets/ui/review/map_stained_window_stone_ruins_imagegen_transparent_v1.webp",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "demo"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_v1.webp",
-      "visualGroup": "visual_7c7814fc1e",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_temple_hall_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/ui/review/map_stained_window_temple_hall_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_temple_hall_imagegen_transparent_v1.png",
-      "visualGroup": "visual_4c39a82edd",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_temple_hall_imagegen_transparent_v1.webp",
-      "suggestedPath": "assets/ui/review/map_stained_window_temple_hall_imagegen_transparent_v1.webp",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "demo"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_temple_hall_imagegen_transparent_v1.webp",
-      "visualGroup": "visual_c9da038d62",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_temple_inner_light_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/ui/review/map_stained_window_temple_inner_light_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_temple_inner_light_imagegen_transparent_v1.png",
-      "visualGroup": "visual_99a3925c06",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_town_castle_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/ui/review/map_stained_window_town_castle_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_town_castle_imagegen_transparent_v1.png",
-      "visualGroup": "visual_ec1b2a8455",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_town_castle_imagegen_transparent_v1.webp",
-      "suggestedPath": "assets/ui/review/map_stained_window_town_castle_imagegen_transparent_v1.webp",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "demo"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_town_castle_imagegen_transparent_v1.webp",
-      "visualGroup": "visual_bed47bc5e0",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/ui/review/map_stained_window_wasteland_dusk_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_v1.png",
-      "visualGroup": "visual_4854e7d588",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_v1.webp",
-      "suggestedPath": "assets/ui/review/map_stained_window_wasteland_dusk_imagegen_transparent_v1.webp",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "demo"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_v1.webp",
-      "visualGroup": "visual_d66e9d2079",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/overview_map_stained_windows_imagegen_v1.png",
-      "suggestedPath": "assets/ui/review/overview_map_stained_windows_imagegen_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/overview_map_stained_windows_imagegen_v1.png",
-      "visualGroup": "visual_acf9bd0414",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_ancient_forest_imagegen_chromakey_v1.png",
-      "suggestedPath": "assets/ui/review/map_stained_window_ancient_forest_imagegen_chromakey_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_ancient_forest_imagegen_chromakey_v1.png",
-      "visualGroup": "visual_57a18395d7",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_ancient_forest_imagegen_transparent_full_v1.png",
-      "suggestedPath": "assets/ui/review/map_stained_window_ancient_forest_imagegen_transparent_full_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_ancient_forest_imagegen_transparent_full_v1.png",
-      "visualGroup": "visual_c868cf595e",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_cold_cave_imagegen_chromakey_v1.png",
-      "suggestedPath": "assets/ui/review/map_stained_window_cold_cave_imagegen_chromakey_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_cold_cave_imagegen_chromakey_v1.png",
-      "visualGroup": "visual_52f929f5b2",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_cold_cave_imagegen_transparent_full_v1.png",
-      "suggestedPath": "assets/ui/review/map_stained_window_cold_cave_imagegen_transparent_full_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_cold_cave_imagegen_transparent_full_v1.png",
-      "visualGroup": "visual_9272a9f255",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_dungeon_corridor_imagegen_chromakey_v1.png",
-      "suggestedPath": "assets/ui/review/map_stained_window_dungeon_corridor_imagegen_chromakey_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_dungeon_corridor_imagegen_chromakey_v1.png",
-      "visualGroup": "visual_862c8951d0",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_dungeon_corridor_imagegen_transparent_full_v1.png",
-      "suggestedPath": "assets/ui/review/map_stained_window_dungeon_corridor_imagegen_transparent_full_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_dungeon_corridor_imagegen_transparent_full_v1.png",
-      "visualGroup": "visual_fa4affc8b8",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_mountain_plain_imagegen_chromakey_v1.png",
-      "suggestedPath": "assets/ui/review/map_stained_window_mountain_plain_imagegen_chromakey_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_mountain_plain_imagegen_chromakey_v1.png",
-      "visualGroup": "visual_be35d82a89",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_mountain_plain_imagegen_transparent_full_v1.png",
-      "suggestedPath": "assets/ui/review/map_stained_window_mountain_plain_imagegen_transparent_full_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_mountain_plain_imagegen_transparent_full_v1.png",
-      "visualGroup": "visual_ba8b1664b2",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_stone_ruins_imagegen_chromakey_v1.png",
-      "suggestedPath": "assets/ui/review/map_stained_window_stone_ruins_imagegen_chromakey_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_stone_ruins_imagegen_chromakey_v1.png",
-      "visualGroup": "visual_2d8eeb8f65",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_stone_ruins_imagegen_transparent_full_v1.png",
-      "suggestedPath": "assets/ui/review/map_stained_window_stone_ruins_imagegen_transparent_full_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_stone_ruins_imagegen_transparent_full_v1.png",
-      "visualGroup": "visual_878ed2fc42",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_temple_hall_imagegen_chromakey_v1.png",
-      "suggestedPath": "assets/ui/review/map_stained_window_temple_hall_imagegen_chromakey_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_temple_hall_imagegen_chromakey_v1.png",
-      "visualGroup": "visual_256aca86c2",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_temple_hall_imagegen_transparent_full_v1.png",
-      "suggestedPath": "assets/ui/review/map_stained_window_temple_hall_imagegen_transparent_full_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_temple_hall_imagegen_transparent_full_v1.png",
-      "visualGroup": "visual_5910607803",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_temple_inner_light_imagegen_chromakey_v1.png",
-      "suggestedPath": "assets/ui/review/map_stained_window_temple_inner_light_imagegen_chromakey_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_temple_inner_light_imagegen_chromakey_v1.png",
-      "visualGroup": "visual_5ff30b63a5",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_temple_inner_light_imagegen_transparent_full_v1.png",
-      "suggestedPath": "assets/ui/review/map_stained_window_temple_inner_light_imagegen_transparent_full_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_temple_inner_light_imagegen_transparent_full_v1.png",
-      "visualGroup": "visual_c5bf76fa34",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_town_castle_imagegen_chromakey_v1.png",
-      "suggestedPath": "assets/ui/review/map_stained_window_town_castle_imagegen_chromakey_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_town_castle_imagegen_chromakey_v1.png",
-      "visualGroup": "visual_71e1d682b7",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_town_castle_imagegen_transparent_full_v1.png",
-      "suggestedPath": "assets/ui/review/map_stained_window_town_castle_imagegen_transparent_full_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_town_castle_imagegen_transparent_full_v1.png",
-      "visualGroup": "visual_af5ca0ad32",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_wasteland_dusk_imagegen_chromakey_v1.png",
-      "suggestedPath": "assets/ui/review/map_stained_window_wasteland_dusk_imagegen_chromakey_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_wasteland_dusk_imagegen_chromakey_v1.png",
-      "visualGroup": "visual_b1c8522d1e",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_wasteland_dusk_imagegen_transparent_full_v1.png",
-      "suggestedPath": "assets/ui/review/map_stained_window_wasteland_dusk_imagegen_transparent_full_v1.png",
-      "suggestedDirectory": "assets/ui/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "long_path",
-        "long_component"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_wasteland_dusk_imagegen_transparent_full_v1.png",
-      "visualGroup": "visual_9bdc2dca0c",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {

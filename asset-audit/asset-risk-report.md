@@ -11,7 +11,7 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - Unreferenced assets: 798
 - Missing asset-like references: 231
 - Missing runtime/config references: 44
-- Duplicate extension groups: 66
+- Duplicate extension groups: 46
 - Identical content groups: 61
 
 ## Status Counts
@@ -20,35 +20,34 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - candidate: 106
 - documented: 54
 - legacy: 48
-- source: 253
-- unreferenced: 288
+- source: 257
+- unreferenced: 284
 
 ## Risk Counts
 
 - identical_content: 181
-- long_component: 79
-- long_path: 11
+- long_component: 81
 - multi_module_reference: 59
-- non_ascii_path: 491
-- unreferenced: 342
+- non_ascii_path: 377
+- unreferenced: 338
 
 ## Longest Paths
 
-- 130 chars: `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_temple_inner_light_imagegen_transparent_full_v1.png`
-- 128 chars: `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_dungeon_corridor_imagegen_transparent_full_v1.png`
-- 126 chars: `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_ancient_forest_imagegen_transparent_full_v1.png`
-- 126 chars: `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_mountain_plain_imagegen_transparent_full_v1.png`
-- 126 chars: `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_wasteland_dusk_imagegen_transparent_full_v1.png`
-- 123 chars: `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_stone_ruins_imagegen_transparent_full_v1.png`
-- 123 chars: `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_temple_hall_imagegen_transparent_full_v1.png`
-- 123 chars: `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_temple_inner_light_imagegen_chromakey_v1.png`
-- 123 chars: `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_town_castle_imagegen_transparent_full_v1.png`
-- 121 chars: `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_cold_cave_imagegen_transparent_full_v1.png`
-- 121 chars: `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/source/map_stained_window_dungeon_corridor_imagegen_chromakey_v1.png`
-- 120 chars: `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/source/map_right_preview_detail_group_frame_imagegen_transparent_full_v1.png`
-- 120 chars: `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/source/map_right_preview_detail_group_frame_imagegen_transparent_full_v2.png`
-- 120 chars: `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/source/map_right_preview_detail_group_frame_imagegen_transparent_full_v3.png`
-- 120 chars: `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/source/map_right_simple_outer_wrapper_frame_imagegen_transparent_full_v1.png`
+- 114 chars: `assets/source/ui/map/stained_windows/map_stained_window_temple_inner_light_imagegen_transparent_full_v1_source.png`
+- 112 chars: `assets/source/ui/map/stained_windows/map_stained_window_dungeon_corridor_imagegen_transparent_full_v1_source.png`
+- 110 chars: `assets/source/ui/map/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_full_v1_source.png`
+- 110 chars: `assets/source/ui/map/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_full_v1_source.png`
+- 110 chars: `assets/source/ui/map/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_full_v1_source.png`
+- 107 chars: `assets/source/ui/map/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_full_v1_source.png`
+- 107 chars: `assets/source/ui/map/stained_windows/map_stained_window_temple_hall_imagegen_transparent_full_v1_source.png`
+- 107 chars: `assets/source/ui/map/stained_windows/map_stained_window_temple_inner_light_imagegen_chromakey_v1_source.png`
+- 107 chars: `assets/source/ui/map/stained_windows/map_stained_window_town_castle_imagegen_transparent_full_v1_source.png`
+- 105 chars: `assets/source/ui/map/stained_windows/map_stained_window_cold_cave_imagegen_transparent_full_v1_source.png`
+- 105 chars: `assets/source/ui/map/stained_windows/map_stained_window_dungeon_corridor_imagegen_chromakey_v1_source.png`
+- 104 chars: `assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_transparent_full_v1_source.png`
+- 104 chars: `assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_transparent_full_v2_source.png`
+- 104 chars: `assets/source/ui/map/panels/map_right_preview_detail_group_frame_imagegen_transparent_full_v3_source.png`
+- 104 chars: `assets/source/ui/map/panels/map_right_simple_outer_wrapper_frame_imagegen_transparent_full_v1_source.png`
 
 ## Non-ASCII Path Examples
 
@@ -56,29 +55,29 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - `UI/主菜单/main_menu_key_art_candidate_v2.png`
 - `UI/教堂彩窗赛璐璐/图标样式/状态徽章底板_v1.png`
 - `UI/教堂彩窗赛璐璐/图标样式/状态徽章底板_v1_source.png`
-- `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/map_ui_fullscreen_imagegen_v1.png`
-- `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/backgrounds/map_center_landscape_crop_v1.png`
-- `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/backgrounds/map_center_painted_area_v1.png`
-- `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/buttons/map_enter_button_v1.png`
-- `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/frames/map_main_frame_v1.png`
-- `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/fullscreen/map_ui_fullscreen_imagegen_v1.png`
-- `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/map_imagegen_sliced_overview_v1.png`
-- `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/nodes/map_node_battle_imagegen_v1.png`
+- `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_center_clean_background_imagegen_v1.png`
+- `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_center_parchment_background_imagegen_v1.png`
+- `UI/教堂彩窗赛璐璐/战斗HUD/战斗HUD_整体概念板_v1.png`
+- `UI/教堂彩窗赛璐璐/战斗HUD/战斗HUD_整体概念板_v2.png`
+- `UI/教堂彩窗赛璐璐/战斗HUD/战斗HUD_牌堆家族图_v1.png`
+- `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_discard_pile_clean_v1.png`
+- `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_discard_pile_v1.png`
+- `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_draw_pile_clean_v1.png`
 
 ## Unreferenced Examples
 
 - `UI/教堂彩窗赛璐璐/图标样式/状态徽章底板_v1.png`
 - `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_center_clean_background_imagegen_v1.png`
 - `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_center_parchment_background_imagegen_v1.png`
-- `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/backgrounds/map_parchment_fullscreen_background_imagegen_v1.png`
-- `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/buttons/map_detail_panel_button_imagegen_transparent_v1.png`
-- `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_detail_panel_no_button_imagegen_transparent_v1.png`
-- `UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/panels/map_right_simple_outer_wrapper_frame_imagegen_transparent_v1.png`
 - `UI/教堂彩窗赛璐璐/战斗HUD/战斗HUD_整体概念板_v1.png`
 - `UI/教堂彩窗赛璐璐/战斗HUD/战斗HUD_整体概念板_v2.png`
 - `UI/教堂彩窗赛璐璐/战斗HUD/战斗HUD_牌堆家族图_v1.png`
 - `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_discard_pile_clean_v1.png`
 - `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_discard_pile_v1.png`
+- `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_draw_pile_clean_v1.png`
+- `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_draw_pile_v1.png`
+- `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_end_turn_button_v1.png`
+- `UI/教堂彩窗赛璐璐/战斗HUD/拆分/battle_hud_enemy_intent_panel_v1.png`
 
 ## Multi-Module Reference Examples
 
@@ -130,13 +129,15 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 
 ## First Migration Candidates
 
-- `assets/ui/review`: 87 active risky assets
+- `assets/misc/review`: 34 active risky assets
 - `assets/review`: 28 active risky assets
+- `assets/demo/review`: 13 active risky assets
 - `assets/cards/art/mage`: 11 active risky assets
 - `assets/cards/art/warrior`: 11 active risky assets
 - `assets/cards/art/archer`: 9 active risky assets
 - `assets/scenes/battle/variants`: 5 active risky assets
 - `assets/ui/hud/review`: 5 active risky assets
+- `assets/ui/review`: 3 active risky assets
 - `assets/ui/character_select`: 2 active risky assets
 
 ## Notes
