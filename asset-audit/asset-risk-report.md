@@ -7,21 +7,21 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - Assets scanned: 1230
 - Text files scanned for references: 41
 - Referenced assets: 432
-- Active runtime/config assets: 473
+- Active runtime/config assets: 481
 - Unreferenced assets: 798
 - Missing asset-like references: 232
 - Missing runtime/config references: 45
-- Duplicate extension groups: 145
+- Duplicate extension groups: 82
 - Identical content groups: 61
 
 ## Status Counts
 
-- active: 473
-- candidate: 102
+- active: 481
+- candidate: 106
 - documented: 54
 - legacy: 48
-- source: 164
-- unreferenced: 389
+- source: 237
+- unreferenced: 304
 
 ## Risk Counts
 
@@ -29,8 +29,8 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - long_component: 79
 - long_path: 11
 - multi_module_reference: 59
-- non_ascii_path: 904
-- unreferenced: 443
+- non_ascii_path: 589
+- unreferenced: 358
 
 ## Longest Paths
 
@@ -130,14 +130,13 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 
 ## First Migration Candidates
 
-- `assets/cards/review`: 172 active risky assets
 - `assets/ui/review`: 87 active risky assets
 - `assets/ui/hud`: 61 active risky assets
+- `assets/cards/art/mage`: 11 active risky assets
+- `assets/cards/art/warrior`: 11 active risky assets
 - `assets/review`: 10 active risky assets
+- `assets/cards/art/archer`: 9 active risky assets
 - `assets/scenes/battle/variants`: 5 active risky assets
-- `assets/characters/archer`: 2 active risky assets
-- `assets/characters/mage`: 2 active risky assets
-- `assets/characters/warrior`: 2 active risky assets
 - `assets/ui/character_select`: 2 active risky assets
 
 ## Notes

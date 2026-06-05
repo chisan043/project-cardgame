@@ -36,6 +36,8 @@ DYNAMIC_IMAGE_GLOBS = [
     "assets/source/enemies/portraits/*.png",
     "assets/source/relics/icons/*.png",
     "assets/source/relics/masters/*.png",
+    "assets/source/cards/art/*/*_art_v1_source.png",
+    "assets/source/cards/frames/*_frame_v1_source.png",
     "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/status_*_asset_v1.png",
 ]
 
@@ -54,6 +56,10 @@ def webp_path_for(asset_path: Path) -> Path:
         return Path(path.replace("assets/source/relics/icons/", "assets/relics/icons/").replace("_icon_v1_source.png", "_icon_v1.webp"))
     if path.startswith("assets/source/relics/masters/") and path.endswith("_master_v1_source.png"):
         return Path(path.replace("assets/source/relics/masters/", "assets/relics/masters/").replace("_master_v1_source.png", "_master_v1.webp"))
+    if path.startswith("assets/source/cards/art/") and path.endswith("_art_v1_source.png"):
+        return Path(path.replace("assets/source/cards/art/", "assets/cards/art/").replace("_art_v1_source.png", "_art_v1.webp"))
+    if path.startswith("assets/source/cards/frames/") and path.endswith("_frame_v1_source.png"):
+        return Path(path.replace("assets/source/cards/frames/", "assets/cards/frames/").replace("_frame_v1_source.png", "_frame_v1.webp"))
     return asset_path.with_suffix(".webp")
 
 

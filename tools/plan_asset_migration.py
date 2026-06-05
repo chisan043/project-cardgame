@@ -234,6 +234,175 @@ def character_suggestion(source_path: str, status: str) -> tuple[str, str]:
     return f"assets/characters/review/{normalize_slug(Path(source_path).stem)}{Path(source_path).suffix.lower()}", "review"
 
 
+CARD_ROLE_SLUGS = {
+    "勇者战士": "warrior",
+    "角色一": "warrior",
+    "萝莉魔导士": "mage",
+    "角色二": "mage",
+    "精灵弓箭手": "archer",
+    "角色三": "archer",
+    "中立法则": "neutral",
+    "通用卡牌": "neutral",
+}
+
+CARD_FRAME_SLUGS = {
+    "圣剑彩窗框": "warrior",
+    "秘法彩窗框": "mage",
+    "森灵彩窗框": "archer",
+    "中立彩窗框": "neutral",
+    "圣剑金红框": "warrior_legacy",
+    "秘法紫金框": "mage_legacy",
+    "森灵翠金框": "archer_legacy",
+}
+
+CARD_ART_NAME_SLUGS = {
+    "终誓裁断": ("warrior", "warrior_final_judgement"),
+    "厄毒爆发": ("neutral", "neutral_poison_burst"),
+}
+
+
+def strip_card_suffixes(value: str) -> str:
+    for suffix in (
+        "_无插画预览",
+        "_纹章预览",
+        "_套框预览",
+        "_安全区版",
+        "_无背景",
+        "母版",
+    ):
+        if value.endswith(suffix):
+            value = value[: -len(suffix)]
+    return value
+
+
+def split_role_and_card(stem: str, parent: str = "") -> tuple[str | None, str]:
+    clean = strip_card_suffixes(stem)
+    parts = clean.split("_")
+    if len(parts) >= 2 and parts[0] in CARD_ROLE_SLUGS:
+        return CARD_ROLE_SLUGS[parts[0]], parts[-1]
+    if parent in CARD_ROLE_SLUGS:
+        return CARD_ROLE_SLUGS[parent], clean
+    return None, clean
+
+
+def card_data() -> tuple[dict[str, str], dict[str, str]]:
+    text = (ROOT / "src/data/cards.js").read_text(encoding="utf-8")
+    pool_by_name = {}
+    for pool_id, name in re.findall(r"poolId: '([^']+)'.*?name: '([^']+)'", text):
+        pool_by_name.setdefault(name, pool_id)
+
+    registry_match = re.search(r"const CARD_ART_REGISTRY = \{(.*?)\n\};", text, re.S)
+    path_to_name = {}
+    if registry_match:
+        for name, asset_path in re.findall(r"'([^']+)': '([^']+)'", registry_match.group(1)):
+            path_to_name.setdefault(asset_path, name)
+    return pool_by_name, path_to_name
+
+
+def card_theme_from_pool_id(pool_id: str | None, fallback_theme: str | None) -> str:
+    if pool_id:
+        for theme in ("warrior", "mage", "archer", "neutral"):
+            if pool_id.startswith(f"{theme}_"):
+                return theme
+    return fallback_theme or "review"
+
+
+def ascii_card_slug(value: str, source_path: str) -> str:
+    slug = normalize_slug(value)
+    if slug == "asset" and any(ord(char) > 127 for char in value):
+        slug = f"review_{file_sha256(ROOT / source_path)[:10]}"
+    return slug
+
+
+def card_art_slug(source_path: str) -> tuple[str, str]:
+    pool_by_name, path_to_name = card_data()
+    path = Path(source_path)
+    fallback_theme, fallback_name = split_role_and_card(path.stem, path.parent.name)
+    source_counterpart = str(path.with_suffix(".webp"))
+    card_name = path_to_name.get(source_path) or path_to_name.get(source_counterpart) or fallback_name
+    card_name = strip_card_suffixes(card_name)
+    if card_name in CARD_ART_NAME_SLUGS:
+        return CARD_ART_NAME_SLUGS[card_name]
+    pool_id = pool_by_name.get(card_name)
+    theme = card_theme_from_pool_id(pool_id, fallback_theme)
+    slug = pool_id or ascii_card_slug(card_name, source_path)
+    return theme, slug
+
+
+def card_preview_slug(source_path: str) -> tuple[str, str]:
+    pool_by_name, _ = card_data()
+    path = Path(source_path)
+    theme, card_name = split_role_and_card(path.stem, path.parent.name)
+    pool_id = pool_by_name.get(card_name)
+    return card_theme_from_pool_id(pool_id, theme), pool_id or ascii_card_slug(card_name, source_path)
+
+
+def card_frame_slug(source_path: str) -> str:
+    stem = Path(source_path).stem
+    stem = stem.removesuffix("_安全区模板")
+    return CARD_FRAME_SLUGS.get(stem, normalize_slug(stem))
+
+
+def card_suggestion(source_path: str, status: str) -> tuple[str, str]:
+    path = Path(source_path)
+    suffix = path.suffix.lower()
+    stem = path.stem
+
+    if source_path.startswith((
+        "assets/cards/",
+        "assets/source/cards/",
+        "assets/candidates/cards/",
+    )):
+        return source_path, "already_migrated"
+
+    if source_path.startswith("卡牌设计/教堂彩窗赛璐璐/卡框UI/"):
+        frame_slug = card_frame_slug(source_path)
+        if suffix == ".webp" and status == "active" and "legacy" not in frame_slug:
+            return f"assets/cards/frames/{frame_slug}_frame_v1.webp", "move_then_rewrite_runtime_refs"
+        if stem.endswith("_安全区模板"):
+            return f"assets/source/cards/frames/{frame_slug}_frame_safe_area_v1_source{suffix}", "move_as_source"
+        return f"assets/source/cards/frames/{frame_slug}_frame_v1_source{suffix}", "move_as_source"
+
+    if (
+        source_path.startswith("卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/")
+        or source_path.startswith("卡牌设计/教堂彩窗赛璐璐/imagegen流派原画_")
+        or re.match(r"^(新角色一|角色二|新角色三)/.*_卡面插画_", source_path)
+    ):
+        theme, slug = card_art_slug(source_path)
+        if status == "active":
+            return f"assets/cards/art/{theme}/{slug}_art_v1{suffix}", "move_then_rewrite_runtime_refs"
+        source_suffix = "_transparent_v1_source" if "无背景" in stem else "_art_v1_source"
+        return f"assets/source/cards/art/{theme}/{slug}{source_suffix}{suffix}", "move_as_source"
+
+    if source_path.startswith("卡牌设计/教堂彩窗赛璐璐/无插画卡预览/"):
+        theme, slug = card_preview_slug(source_path)
+        return f"assets/candidates/cards/no_art_previews/{theme}/{slug}_no_art_preview_v1{suffix}", "move_as_candidate"
+
+    if source_path.startswith("卡牌设计/教堂彩窗赛璐璐/纹章卡预览/"):
+        theme, slug = card_preview_slug(source_path)
+        return f"assets/candidates/cards/emblem_previews/{theme}/{slug}_emblem_preview_v1{suffix}", "move_as_candidate"
+
+    if source_path.startswith("卡牌设计/教堂彩窗赛璐璐/套框预览/"):
+        theme, slug = card_preview_slug(source_path)
+        return f"assets/candidates/cards/framed_previews/{theme}/{slug}_framed_preview_v1{suffix}", "move_as_candidate"
+
+    if source_path.startswith("卡牌设计/教堂彩窗赛璐璐/文案安全区/"):
+        theme, slug = card_preview_slug(source_path)
+        return f"assets/source/cards/text_safe_area/{theme}/{slug}_safe_area_v1_source{suffix}", "move_as_source"
+
+    if source_path.startswith("卡牌设计/教堂彩窗赛璐璐/"):
+        overview_names = {
+            "全卡池设计总览": "full_pool_design_overview",
+            "卡牌设计总览": "card_design_overview",
+            "无插画卡设计总览": "no_art_design_overview",
+            "纹章卡设计总览": "emblem_design_overview",
+        }
+        slug = overview_names.get(stem) or ascii_card_slug(stem, source_path)
+        return f"assets/candidates/cards/review/{slug}{suffix}", "move_as_candidate"
+
+    return f"assets/archive/review/cards/{normalize_slug(stem)}{suffix}", "review_before_archive"
+
+
 def relic_data() -> tuple[set[str], dict[str, str]]:
     text = (ROOT / "src/data/relics.js").read_text(encoding="utf-8")
     formal_match = re.search(r"FORMAL_RELIC_ICON_IDS = new Set\(\[(.*?)\]\);", text, re.S)
@@ -318,6 +487,8 @@ def suggested_path(source_path: str, status: str, target_dir: str, module_slug: 
         return character_suggestion(source_path, status)
     if module_slug == "relics_visuals":
         return relic_suggestion(source_path, status)
+    if module_slug == "cards_visuals":
+        return card_suggestion(source_path, status)
     return default_suggestion(source_path, status, target_dir, module_slug)
 
 
@@ -401,8 +572,15 @@ def build_plan(prefix: str, include_prefixes: list[str], target_dir: str, module
     for asset in assets:
         source_path = asset["path"]
         target_path, action = suggested_path(source_path, asset["status"], target_dir, module_slug)
-        status = effective_status(asset["status"], action)
         is_tracked = source_path in tracked
+        if (
+            module_slug == "cards_visuals"
+            and action != "already_migrated"
+            and not is_tracked
+            and asset["status"] != "active"
+        ):
+            action = "defer_untracked_review"
+        status = effective_status(asset["status"], action)
         stem_key = as_posix(Path(source_path).with_suffix(""))
         by_stem[stem_key].append(asset)
         entries.append(
@@ -474,6 +652,8 @@ def effective_status(audit_status: str, action: str) -> str:
         return "active_dynamic"
     if action == "copy_from_master_source":
         return "source"
+    if action == "defer_untracked_review":
+        return audit_status
     if action == "move_as_source" and audit_status == "unreferenced":
         return "source"
     return audit_status
@@ -483,6 +663,8 @@ def notes_for(asset: dict, is_tracked: bool, action: str) -> str:
     notes = []
     if not is_tracked:
         notes.append("untracked file; do not include in migration commit unless intentionally accepted")
+    if action == "defer_untracked_review":
+        notes.append("deferred to candidate/source/archive review batch")
     if (
         asset["status"] == "active"
         and not asset["references"]

@@ -190,6 +190,20 @@ def infer_asset_module(asset_path: Path, references: list[dict]) -> str:
         return "assets/relics/icons"
     if path.startswith("遗物/母版/"):
         return "assets/relics/masters"
+    if path.startswith("assets/cards/"):
+        return str(Path(path).parent)
+    if path.startswith("assets/source/cards/"):
+        return str(Path(path).parent)
+    if path.startswith("assets/candidates/cards/"):
+        return str(Path(path).parent)
+    if path.startswith("卡牌设计/教堂彩窗赛璐璐/卡框UI/"):
+        return "assets/cards/frames"
+    if path.startswith("卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/"):
+        return "assets/cards/art"
+    if path.startswith("卡牌设计/教堂彩窗赛璐璐/imagegen流派原画_"):
+        return "assets/cards/art"
+    if path.startswith("卡牌设计/教堂彩窗赛璐璐/"):
+        return "assets/candidates/cards"
     if path.startswith("场景/主场景/"):
         return "assets/scenes/battle"
     if path.startswith("场景/色调变体/"):
@@ -326,6 +340,12 @@ def classify_status(asset_path: Path, references: list[dict]) -> str:
         return "documented"
     if references and all(ref["kind"] == "tool" for ref in references):
         return "tool_reference"
+    if path.startswith("assets/source/cards/"):
+        return "source"
+    if path.startswith("assets/candidates/cards/"):
+        return "candidate"
+    if path.startswith("assets/cards/"):
+        return "active"
     if any(token in path for token in ("源图", "母版")) or "source" in lowered or "master" in lowered:
         return "source"
     if any(token in path for token in ("candidate", "候选", "预览", "preview", "contact_sheet")):

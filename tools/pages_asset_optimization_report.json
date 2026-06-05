@@ -553,400 +553,400 @@
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡框UI/中立彩窗框.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡框UI/中立彩窗框.webp",
+      "source": "assets/source/cards/frames/neutral_frame_v1_source.png",
+      "webp": "assets/cards/frames/neutral_frame_v1.webp",
       "sourceBytes": 42327,
       "webpBytes": 24996,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡框UI/圣剑彩窗框.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡框UI/圣剑彩窗框.webp",
+      "source": "assets/source/cards/frames/warrior_frame_v1_source.png",
+      "webp": "assets/cards/frames/warrior_frame_v1.webp",
       "sourceBytes": 43630,
       "webpBytes": 25660,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡框UI/森灵彩窗框.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡框UI/森灵彩窗框.webp",
+      "source": "assets/source/cards/frames/archer_frame_v1_source.png",
+      "webp": "assets/cards/frames/archer_frame_v1.webp",
       "sourceBytes": 41501,
       "webpBytes": 24066,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡框UI/秘法彩窗框.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡框UI/秘法彩窗框.webp",
+      "source": "assets/source/cards/frames/mage_frame_v1_source.png",
+      "webp": "assets/cards/frames/mage_frame_v1.webp",
       "sourceBytes": 43146,
       "webpBytes": 23666,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/中立法则_古誓护印.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/中立法则_古誓护印.webp",
+      "source": "assets/source/cards/art/neutral/neutral_guard_art_v1_source.png",
+      "webp": "assets/cards/art/neutral/neutral_guard_art_v1.webp",
       "sourceBytes": 3443141,
       "webpBytes": 326044,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/中立法则_回音残卷.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/中立法则_回音残卷.webp",
+      "source": "assets/source/cards/art/neutral/neutral_echo_art_v1_source.png",
+      "webp": "assets/cards/art/neutral/neutral_echo_art_v1.webp",
       "sourceBytes": 3440604,
       "webpBytes": 338798,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/中立法则_圣像微光.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/中立法则_圣像微光.webp",
+      "source": "assets/source/cards/art/neutral/neutral_bless_art_v1_source.png",
+      "webp": "assets/cards/art/neutral/neutral_bless_art_v1.webp",
       "sourceBytes": 3326073,
       "webpBytes": 294704,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/中立法则_星轨换手.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/中立法则_星轨换手.webp",
+      "source": "assets/source/cards/art/neutral/neutral_cycle_art_v1_source.png",
+      "webp": "assets/cards/art/neutral/neutral_cycle_art_v1.webp",
       "sourceBytes": 3181129,
       "webpBytes": 254084,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/中立法则_碎星短刃.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/中立法则_碎星短刃.webp",
+      "source": "assets/source/cards/art/neutral/neutral_spark_art_v1_source.png",
+      "webp": "assets/cards/art/neutral/neutral_spark_art_v1.webp",
       "sourceBytes": 3154141,
       "webpBytes": 254488,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_圣剑解放.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_圣剑解放.webp",
+      "source": "assets/source/cards/art/warrior/warrior_release_art_v1_source.png",
+      "webp": "assets/cards/art/warrior/warrior_release_art_v1.webp",
       "sourceBytes": 3322066,
       "webpBytes": 308292,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_圣堂守势.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_圣堂守势.webp",
+      "source": "assets/source/cards/art/warrior/warrior_guard_art_v1_source.png",
+      "webp": "assets/cards/art/warrior/warrior_guard_art_v1.webp",
       "sourceBytes": 3166493,
       "webpBytes": 274728,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_战旗压阵.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_战旗压阵.webp",
+      "source": "assets/source/cards/art/warrior/warrior_banner_guard_art_v1_source.png",
+      "webp": "assets/cards/art/warrior/warrior_banner_guard_art_v1.webp",
       "sourceBytes": 2992115,
       "webpBytes": 276400,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_棘甲冲锋.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_棘甲冲锋.webp",
+      "source": "assets/source/cards/art/warrior/warrior_thorn_charge_art_v1_source.png",
+      "webp": "assets/cards/art/warrior/warrior_thorn_charge_art_v1.webp",
       "sourceBytes": 3072956,
       "webpBytes": 282344,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_狂誓裂斩.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_狂誓裂斩.webp",
+      "source": "assets/source/cards/art/warrior/warrior_frenzy_cleave_art_v1_source.png",
+      "webp": "assets/cards/art/warrior/warrior_frenzy_cleave_art_v1.webp",
       "sourceBytes": 3360568,
       "webpBytes": 348052,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_王冠反斩.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_王冠反斩.webp",
+      "source": "assets/source/cards/art/warrior/warrior_crown_riposte_art_v1_source.png",
+      "webp": "assets/cards/art/warrior/warrior_crown_riposte_art_v1.webp",
       "sourceBytes": 3349229,
       "webpBytes": 313804,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_盾墙反身.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_盾墙反身.webp",
+      "source": "assets/source/cards/art/warrior/warrior_wall_art_v1_source.png",
+      "webp": "assets/cards/art/warrior/warrior_wall_art_v1.webp",
       "sourceBytes": 3050533,
       "webpBytes": 225492,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_破晓格挡.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_破晓格挡.webp",
+      "source": "assets/source/cards/art/warrior/warrior_dawn_guard_art_v1_source.png",
+      "webp": "assets/cards/art/warrior/warrior_dawn_guard_art_v1.webp",
       "sourceBytes": 3246768,
       "webpBytes": 295340,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_终誓裁断.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_终誓裁断.webp",
+      "source": "assets/source/cards/art/warrior/warrior_final_judgement_art_v1_source.png",
+      "webp": "assets/cards/art/warrior/warrior_final_judgement_art_v1.webp",
       "sourceBytes": 3048974,
       "webpBytes": 280816,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_血祭壁垒.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_血祭壁垒.webp",
+      "source": "assets/source/cards/art/warrior/warrior_blood_wall_art_v1_source.png",
+      "webp": "assets/cards/art/warrior/warrior_blood_wall_art_v1.webp",
       "sourceBytes": 3094969,
       "webpBytes": 290112,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_血誓斩.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_血誓斩.webp",
+      "source": "assets/source/cards/art/warrior/warrior_blood_vow_slash_art_v1_source.png",
+      "webp": "assets/cards/art/warrior/warrior_blood_vow_slash_art_v1.webp",
       "sourceBytes": 2768444,
       "webpBytes": 200556,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_裂光一闪.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_裂光一闪.webp",
+      "source": "assets/source/cards/art/warrior/warrior_flash_art_v1_source.png",
+      "webp": "assets/cards/art/warrior/warrior_flash_art_v1.webp",
       "sourceBytes": 3276309,
       "webpBytes": 294852,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_誓约留锋.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_誓约留锋.webp",
+      "source": "assets/source/cards/art/warrior/warrior_oath_retainer_art_v1_source.png",
+      "webp": "assets/cards/art/warrior/warrior_oath_retainer_art_v1.webp",
       "sourceBytes": 3007662,
       "webpBytes": 255642,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_誓约追击.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_誓约追击.webp",
+      "source": "assets/source/cards/art/warrior/warrior_follow_art_v1_source.png",
+      "webp": "assets/cards/art/warrior/warrior_follow_art_v1.webp",
       "sourceBytes": 3073823,
       "webpBytes": 233536,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_铁壁圣痕.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_铁壁圣痕.webp",
+      "source": "assets/source/cards/art/warrior/warrior_scar_art_v1_source.png",
+      "webp": "assets/cards/art/warrior/warrior_scar_art_v1.webp",
       "sourceBytes": 3402113,
       "webpBytes": 335334,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_魂誓换锋.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/勇者战士_魂誓换锋.webp",
+      "source": "assets/source/cards/art/warrior/warrior_soul_oath_art_v1_source.png",
+      "webp": "assets/cards/art/warrior/warrior_soul_oath_art_v1.webp",
       "sourceBytes": 3090508,
       "webpBytes": 293388,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_回环箭雨.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_回环箭雨.webp",
+      "source": "assets/source/cards/art/archer/archer_rain_art_v1_source.png",
+      "webp": "assets/cards/art/archer/archer_rain_art_v1.webp",
       "sourceBytes": 3354073,
       "webpBytes": 339560,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_回风藏箭.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_回风藏箭.webp",
+      "source": "assets/source/cards/art/archer/archer_hidden_arrow_art_v1_source.png",
+      "webp": "assets/cards/art/archer/archer_hidden_arrow_art_v1.webp",
       "sourceBytes": 2976700,
       "webpBytes": 250552,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_拾羽连步.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_拾羽连步.webp",
+      "source": "assets/source/cards/art/archer/archer_pick_feather_art_v1_source.png",
+      "webp": "assets/cards/art/archer/archer_pick_feather_art_v1.webp",
       "sourceBytes": 3049553,
       "webpBytes": 289628,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_林风整备.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_林风整备.webp",
+      "source": "assets/source/cards/art/archer/archer_ready_art_v1_source.png",
+      "webp": "assets/cards/art/archer/archer_ready_art_v1.webp",
       "sourceBytes": 2994697,
       "webpBytes": 219918,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_林魂招矢.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_林魂招矢.webp",
+      "source": "assets/source/cards/art/archer/archer_soul_return_art_v1_source.png",
+      "webp": "assets/cards/art/archer/archer_soul_return_art_v1.webp",
       "sourceBytes": 3141115,
       "webpBytes": 313500,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_森冠齐射.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_森冠齐射.webp",
+      "source": "assets/source/cards/art/archer/archer_grove_art_v1_source.png",
+      "webp": "assets/cards/art/archer/archer_grove_art_v1.webp",
       "sourceBytes": 3282968,
       "webpBytes": 311992,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_森息伏击.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_森息伏击.webp",
+      "source": "assets/source/cards/art/archer/archer_ambush_art_v1_source.png",
+      "webp": "assets/cards/art/archer/archer_ambush_art_v1.webp",
       "sourceBytes": 3216657,
       "webpBytes": 288000,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_狩影穿枝.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_狩影穿枝.webp",
+      "source": "assets/source/cards/art/archer/archer_shadow_art_v1_source.png",
+      "webp": "assets/cards/art/archer/archer_shadow_art_v1.webp",
       "sourceBytes": 3183450,
       "webpBytes": 274546,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_猎手翻步.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_猎手翻步.webp",
+      "source": "assets/source/cards/art/archer/archer_step_art_v1_source.png",
+      "webp": "assets/cards/art/archer/archer_step_art_v1.webp",
       "sourceBytes": 2877787,
       "webpBytes": 202504,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_翠毒连矢.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_翠毒连矢.webp",
+      "source": "assets/source/cards/art/archer/archer_venom_flurry_art_v1_source.png",
+      "webp": "assets/cards/art/archer/archer_venom_flurry_art_v1.webp",
       "sourceBytes": 2909649,
       "webpBytes": 251806,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_赤痕放血.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_赤痕放血.webp",
+      "source": "assets/source/cards/art/archer/archer_blood_release_art_v1_source.png",
+      "webp": "assets/cards/art/archer/archer_blood_release_art_v1.webp",
       "sourceBytes": 3041351,
       "webpBytes": 290748,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_轮枝归射.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_轮枝归射.webp",
+      "source": "assets/source/cards/art/archer/archer_cycle_branch_art_v1_source.png",
+      "webp": "assets/cards/art/archer/archer_cycle_branch_art_v1.webp",
       "sourceBytes": 3406145,
       "webpBytes": 322072,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_逐影放矢.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_逐影放矢.webp",
+      "source": "assets/source/cards/art/archer/archer_exile_shot_art_v1_source.png",
+      "webp": "assets/cards/art/archer/archer_exile_shot_art_v1.webp",
       "sourceBytes": 2785955,
       "webpBytes": 223690,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_逐风绝矢.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_逐风绝矢.webp",
+      "source": "assets/source/cards/art/archer/archer_exile_storm_art_v1_source.png",
+      "webp": "assets/cards/art/archer/archer_exile_storm_art_v1.webp",
       "sourceBytes": 3125052,
       "webpBytes": 300708,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_风羽换位.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_风羽换位.webp",
+      "source": "assets/source/cards/art/archer/archer_shift_art_v1_source.png",
+      "webp": "assets/cards/art/archer/archer_shift_art_v1.webp",
       "sourceBytes": 3311071,
       "webpBytes": 371434,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_鹰眼贯枝.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/精灵弓箭手_鹰眼贯枝.webp",
+      "source": "assets/source/cards/art/archer/archer_hawkeye_art_v1_source.png",
+      "webp": "assets/cards/art/archer/archer_hawkeye_art_v1.webp",
       "sourceBytes": 3520605,
       "webpBytes": 366792,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_余烬点燃.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_余烬点燃.webp",
+      "source": "assets/source/cards/art/mage/mage_ember_art_v1_source.png",
+      "webp": "assets/cards/art/mage/mage_ember_art_v1.webp",
       "sourceBytes": 3226502,
       "webpBytes": 291368,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_咒回星环.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_咒回星环.webp",
+      "source": "assets/source/cards/art/mage/mage_curse_echo_art_v1_source.png",
+      "webp": "assets/cards/art/mage/mage_curse_echo_art_v1.webp",
       "sourceBytes": 3108438,
       "webpBytes": 288682,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_回声护幕.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_回声护幕.webp",
+      "source": "assets/source/cards/art/mage/mage_echo_veil_art_v1_source.png",
+      "webp": "assets/cards/art/mage/mage_echo_veil_art_v1.webp",
       "sourceBytes": 3182455,
       "webpBytes": 306634,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_星屑预兆.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_星屑预兆.webp",
+      "source": "assets/source/cards/art/mage/mage_omen_art_v1_source.png",
+      "webp": "assets/cards/art/mage/mage_omen_art_v1.webp",
       "sourceBytes": 3279193,
       "webpBytes": 299228,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_星火连祷.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_星火连祷.webp",
+      "source": "assets/source/cards/art/mage/mage_cascade_art_v1_source.png",
+      "webp": "assets/cards/art/mage/mage_cascade_art_v1.webp",
       "sourceBytes": 3389590,
       "webpBytes": 345936,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_星环复写.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_星环复写.webp",
+      "source": "assets/source/cards/art/mage/mage_star_copy_art_v1_source.png",
+      "webp": "assets/cards/art/mage/mage_star_copy_art_v1.webp",
       "sourceBytes": 3092792,
       "webpBytes": 282134,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_星缚咒印.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_星缚咒印.webp",
+      "source": "assets/source/cards/art/mage/mage_stasis_hex_art_v1_source.png",
+      "webp": "assets/cards/art/mage/mage_stasis_hex_art_v1.webp",
       "sourceBytes": 3278073,
       "webpBytes": 320502,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_法环回流.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_法环回流.webp",
+      "source": "assets/source/cards/art/mage/mage_loop_art_v1_source.png",
+      "webp": "assets/cards/art/mage/mage_loop_art_v1.webp",
       "sourceBytes": 3330217,
       "webpBytes": 306568,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_燃魂导流.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_燃魂导流.webp",
+      "source": "assets/source/cards/art/mage/mage_ember_flow_art_v1_source.png",
+      "webp": "assets/cards/art/mage/mage_ember_flow_art_v1.webp",
       "sourceBytes": 3149192,
       "webpBytes": 310020,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_紫焰刻印.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_紫焰刻印.webp",
+      "source": "assets/source/cards/art/mage/mage_arcane_mark_art_v1_source.png",
+      "webp": "assets/cards/art/mage/mage_arcane_mark_art_v1.webp",
       "sourceBytes": 2988169,
       "webpBytes": 266568,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_紫焰火花.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_紫焰火花.webp",
+      "source": "assets/source/cards/art/mage/mage_spark_art_v1_source.png",
+      "webp": "assets/cards/art/mage/mage_spark_art_v1.webp",
       "sourceBytes": 3065414,
       "webpBytes": 233532,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_虚弱星尘.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_虚弱星尘.webp",
+      "source": "assets/source/cards/art/mage/mage_void_dust_art_v1_source.png",
+      "webp": "assets/cards/art/mage/mage_void_dust_art_v1.webp",
       "sourceBytes": 2937672,
       "webpBytes": 230436,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_虚空导引.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_虚空导引.webp",
+      "source": "assets/source/cards/art/mage/mage_void_art_v1_source.png",
+      "webp": "assets/cards/art/mage/mage_void_art_v1.webp",
       "sourceBytes": 3212700,
       "webpBytes": 277146,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_裂星禁术.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_裂星禁术.webp",
+      "source": "assets/source/cards/art/mage/mage_exile_nova_art_v1_source.png",
+      "webp": "assets/cards/art/mage/mage_exile_nova_art_v1.webp",
       "sourceBytes": 3176819,
       "webpBytes": 301240,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_裂界紫雷.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_裂界紫雷.webp",
+      "source": "assets/source/cards/art/mage/mage_thunder_art_v1_source.png",
+      "webp": "assets/cards/art/mage/mage_thunder_art_v1.webp",
       "sourceBytes": 3308905,
       "webpBytes": 305014,
       "status": "cached"
     },
     {
-      "source": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_魔流庇护.png",
-      "webp": "卡牌设计/教堂彩窗赛璐璐/卡面插画_无框/萝莉魔导士_魔流庇护.webp",
+      "source": "assets/source/cards/art/mage/mage_barrier_art_v1_source.png",
+      "webp": "assets/cards/art/mage/mage_barrier_art_v1.webp",
       "sourceBytes": 3144501,
       "webpBytes": 242986,
       "status": "cached"
@@ -1351,15 +1351,15 @@
       "status": "cached"
     },
     {
-      "source": "新角色一/角色一_卡面插画_圣剑突击.png",
-      "webp": "新角色一/角色一_卡面插画_圣剑突击.webp",
+      "source": "assets/source/cards/art/warrior/warrior_charge_art_v1_source.png",
+      "webp": "assets/cards/art/warrior/warrior_charge_art_v1.webp",
       "sourceBytes": 3122584,
       "webpBytes": 258122,
       "status": "cached"
     },
     {
-      "source": "新角色一/角色一_卡面插画_遗迹立誓.png",
-      "webp": "新角色一/角色一_卡面插画_遗迹立誓.webp",
+      "source": "assets/source/cards/art/warrior/warrior_oath_art_v1_source.png",
+      "webp": "assets/cards/art/warrior/warrior_oath_art_v1.webp",
       "sourceBytes": 2970444,
       "webpBytes": 235922,
       "status": "cached"
@@ -1379,15 +1379,15 @@
       "status": "cached"
     },
     {
-      "source": "新角色三/角色三_卡面插画_拉弓瞄准.png",
-      "webp": "新角色三/角色三_卡面插画_拉弓瞄准.webp",
+      "source": "assets/source/cards/art/archer/archer_aim_art_v1_source.png",
+      "webp": "assets/cards/art/archer/archer_aim_art_v1.webp",
       "sourceBytes": 3007124,
       "webpBytes": 227718,
       "status": "cached"
     },
     {
-      "source": "新角色三/角色三_卡面插画_疾风连射.png",
-      "webp": "新角色三/角色三_卡面插画_疾风连射.webp",
+      "source": "assets/source/cards/art/archer/archer_barrage_art_v1_source.png",
+      "webp": "assets/cards/art/archer/archer_barrage_art_v1.webp",
       "sourceBytes": 3043828,
       "webpBytes": 248284,
       "status": "cached"
@@ -1407,15 +1407,15 @@
       "status": "cached"
     },
     {
-      "source": "角色二/角色二_卡面插画_紫焰爆裂.png",
-      "webp": "角色二/角色二_卡面插画_紫焰爆裂.webp",
+      "source": "assets/source/cards/art/mage/mage_flame_art_v1_source.png",
+      "webp": "assets/cards/art/mage/mage_flame_art_v1.webp",
       "sourceBytes": 2694754,
       "webpBytes": 190874,
       "status": "cached"
     },
     {
-      "source": "角色二/角色二_卡面插画_遗迹咏唱.png",
-      "webp": "角色二/角色二_卡面插画_遗迹咏唱.webp",
+      "source": "assets/source/cards/art/mage/mage_chant_art_v1_source.png",
+      "webp": "assets/cards/art/mage/mage_chant_art_v1.webp",
       "sourceBytes": 3227721,
       "webpBytes": 278934,
       "status": "cached"
