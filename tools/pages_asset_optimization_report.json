@@ -518,22 +518,22 @@
       "status": "cached"
     },
     {
-      "source": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_archer_uniform_v1.png",
-      "webp": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_archer_uniform_v1.webp",
+      "source": "assets/source/characters/archer/role_select_frame_v1_source.png",
+      "webp": "assets/characters/archer/role_select_frame_v1.webp",
       "sourceBytes": 1492523,
       "webpBytes": 167302,
       "status": "cached"
     },
     {
-      "source": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_mage_uniform_v1.png",
-      "webp": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_mage_uniform_v1.webp",
+      "source": "assets/source/characters/mage/role_select_frame_v1_source.png",
+      "webp": "assets/characters/mage/role_select_frame_v1.webp",
       "sourceBytes": 1495370,
       "webpBytes": 162754,
       "status": "cached"
     },
     {
-      "source": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_warrior_uniform_v1.png",
-      "webp": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_warrior_uniform_v1.webp",
+      "source": "assets/source/characters/warrior/role_select_frame_v1_source.png",
+      "webp": "assets/characters/warrior/role_select_frame_v1.webp",
       "sourceBytes": 1511527,
       "webpBytes": 166476,
       "status": "cached"
@@ -1190,22 +1190,22 @@
       "status": "cached"
     },
     {
-      "source": "头像/角色/hero_archer.png",
-      "webp": "头像/角色/hero_archer.webp",
+      "source": "assets/source/characters/archer/avatar_portrait_v1_source.png",
+      "webp": "assets/characters/archer/avatar_portrait_v1.webp",
       "sourceBytes": 165112,
       "webpBytes": 25622,
       "status": "cached"
     },
     {
-      "source": "头像/角色/hero_mage.png",
-      "webp": "头像/角色/hero_mage.webp",
+      "source": "assets/source/characters/mage/avatar_portrait_v1_source.png",
+      "webp": "assets/characters/mage/avatar_portrait_v1.webp",
       "sourceBytes": 242751,
       "webpBytes": 30156,
       "status": "cached"
     },
     {
-      "source": "头像/角色/hero_warrior.png",
-      "webp": "头像/角色/hero_warrior.webp",
+      "source": "assets/source/characters/warrior/avatar_portrait_v1_source.png",
+      "webp": "assets/characters/warrior/avatar_portrait_v1.webp",
       "sourceBytes": 195533,
       "webpBytes": 27810,
       "status": "cached"
@@ -1365,15 +1365,15 @@
       "status": "cached"
     },
     {
-      "source": "新角色一/角色一_我方背面_待机.png",
-      "webp": "新角色一/角色一_我方背面_待机.webp",
+      "source": "assets/source/characters/warrior/battle_back/idle_v1_source.png",
+      "webp": "assets/characters/warrior/battle_back_idle_v1.webp",
       "sourceBytes": 1183203,
       "webpBytes": 93332,
       "status": "cached"
     },
     {
-      "source": "新角色一/角色一_角色选择_立绘.png",
-      "webp": "新角色一/角色一_角色选择_立绘.webp",
+      "source": "assets/source/characters/warrior/select_portrait_v1_source.png",
+      "webp": "assets/characters/warrior/select_portrait_v1.webp",
       "sourceBytes": 584492,
       "webpBytes": 67006,
       "status": "cached"
@@ -1393,15 +1393,15 @@
       "status": "cached"
     },
     {
-      "source": "新角色三/角色三_我方背面_待机.png",
-      "webp": "新角色三/角色三_我方背面_待机.webp",
+      "source": "assets/source/characters/archer/battle_back/idle_v1_source.png",
+      "webp": "assets/characters/archer/battle_back_idle_v1.webp",
       "sourceBytes": 877527,
       "webpBytes": 111686,
       "status": "cached"
     },
     {
-      "source": "新角色三/角色三_角色选择_立绘.png",
-      "webp": "新角色三/角色三_角色选择_立绘.webp",
+      "source": "assets/source/characters/archer/select_portrait_v1_source.png",
+      "webp": "assets/characters/archer/select_portrait_v1.webp",
       "sourceBytes": 429418,
       "webpBytes": 64824,
       "status": "cached"
@@ -1421,15 +1421,15 @@
       "status": "cached"
     },
     {
-      "source": "角色二/角色二_我方背面_待机.png",
-      "webp": "角色二/角色二_我方背面_待机.webp",
+      "source": "assets/source/characters/mage/battle_back/idle_v1_source.png",
+      "webp": "assets/characters/mage/battle_back_idle_v1.webp",
       "sourceBytes": 988055,
       "webpBytes": 82226,
       "status": "cached"
     },
     {
-      "source": "角色二/角色二_角色选择_立绘.png",
-      "webp": "角色二/角色二_角色选择_立绘.webp",
+      "source": "assets/source/characters/mage/select_portrait_v1_source.png",
+      "webp": "assets/characters/mage/select_portrait_v1.webp",
       "sourceBytes": 627974,
       "webpBytes": 81936,
       "status": "cached"

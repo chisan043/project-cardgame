@@ -23,37 +23,37 @@
   "summary": {
     "assetCount": 1206,
     "textFileCount": 41,
-    "referencedAssetCount": 389,
+    "referencedAssetCount": 432,
     "activeAssetCount": 418,
-    "unreferencedAssetCount": 817,
-    "missingReferenceCount": 277,
+    "unreferencedAssetCount": 774,
+    "missingReferenceCount": 243,
     "missingRuntimeReferenceCount": 44,
     "statusCounts": {
       "active": 418,
       "candidate": 100,
-      "documented": 11,
+      "documented": 54,
       "legacy": 48,
       "source": 93,
-      "unreferenced": 536
+      "unreferenced": 493
     },
     "riskCounts": {
       "identical_content": 141,
       "long_component": 79,
       "long_path": 11,
-      "multi_module_reference": 56,
-      "non_ascii_path": 1091,
+      "multi_module_reference": 59,
+      "non_ascii_path": 1036,
       "unreferenced": 547
     },
     "referenceModuleCounts": {
       "cards": 178,
-      "characters": 9,
+      "characters": 55,
       "demo": 68,
       "enemies": 1,
       "misc": 77,
       "relics": 45,
       "ui.hud": 67
     },
-    "duplicateExtensionGroupCount": 222,
+    "duplicateExtensionGroupCount": 210,
     "identicalContentGroupCount": 45
   },
   "assets": [
@@ -7053,48 +7053,6 @@
       "identicalContentGroup": []
     },
     {
-      "path": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_archer_uniform_v1.png",
-      "extension": ".png",
-      "bytes": 1492523,
-      "sha256": "8d722ef5aa1d26e07b6a177bef6d32f44b945622b1cd7be23b570d1d18a65cec",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 59,
-      "maxComponentLength": 31,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_archer_uniform_v1.webp",
-      "extension": ".webp",
-      "bytes": 167302,
-      "sha256": "e6088552f23c213d9172231f303a68428854df70bd4ae29c67878b015b054334",
-      "status": "active",
-      "references": [
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 73,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo"
-      ],
-      "pathLength": 60,
-      "maxComponentLength": 32,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
       "path": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_archer_v2.png",
       "extension": ".png",
       "bytes": 1260558,
@@ -7121,48 +7079,6 @@
       "referenceModules": [],
       "pathLength": 56,
       "maxComponentLength": 28,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_mage_uniform_v1.png",
-      "extension": ".png",
-      "bytes": 1495370,
-      "sha256": "d8eab0ffd88de4122f8c4d761ac6686cb1424eeb2d680d6e12eaacfad2eb4872",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 57,
-      "maxComponentLength": 29,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_mage_uniform_v1.webp",
-      "extension": ".webp",
-      "bytes": 162754,
-      "sha256": "8d9ce99abad53d8e3e05d2b74aba6c8e295f354858fe1a96f9649c5314567072",
-      "status": "active",
-      "references": [
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 72,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo"
-      ],
-      "pathLength": 58,
-      "maxComponentLength": 30,
       "containsNonAscii": true,
       "risks": [
         "non_ascii_path"
@@ -7228,52 +7144,6 @@
       "identicalContentGroup": []
     },
     {
-      "path": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_warrior_uniform_v1.png",
-      "extension": ".png",
-      "bytes": 1511527,
-      "sha256": "235d768f6678788a3952ce09ae675cdc1ee62b126e0546bce17ee2b4b427ab9c",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 60,
-      "maxComponentLength": 32,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced",
-        "identical_content"
-      ],
-      "identicalContentGroup": [
-        "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_warrior_uniform_v1.png",
-        "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_warrior_v2.png"
-      ]
-    },
-    {
-      "path": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_warrior_uniform_v1.webp",
-      "extension": ".webp",
-      "bytes": 166476,
-      "sha256": "6ba5afc2687aaa7253a09f96372cb18934900c95217f970af9df424462c6dcfb",
-      "status": "active",
-      "references": [
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 71,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "demo"
-      ],
-      "pathLength": 61,
-      "maxComponentLength": 33,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
       "path": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_warrior_v2.png",
       "extension": ".png",
       "bytes": 1511527,
@@ -7290,8 +7160,8 @@
         "identical_content"
       ],
       "identicalContentGroup": [
-        "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_warrior_uniform_v1.png",
-        "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_warrior_v2.png"
+        "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_warrior_v2.png",
+        "assets/source/characters/warrior/role_select_frame_v1_source.png"
       ]
     },
     {
@@ -7575,6 +7445,390 @@
       "risks": [
         "non_ascii_path"
       ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/characters/archer/avatar_portrait_v1.webp",
+      "extension": ".webp",
+      "bytes": 25622,
+      "sha256": "53d0e63f868c3cb455413eb8605cd79ad3ac15f78e29aaa5230a14452d85f4c9",
+      "status": "active",
+      "references": [
+        {
+          "file": "src/data/characters.js",
+          "line": 56,
+          "module": "characters",
+          "kind": "runtime"
+        },
+        {
+          "file": "新角色三/资产清单.txt",
+          "line": 9,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 48,
+      "maxComponentLength": 23,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/characters/archer/battle_back_idle_v1.webp",
+      "extension": ".webp",
+      "bytes": 111686,
+      "sha256": "c9dba0152b8a4542f02b157a80f31fafb61b36173cbe8e824862c83f07db4677",
+      "status": "active",
+      "references": [
+        {
+          "file": "src/data/characters.js",
+          "line": 57,
+          "module": "characters",
+          "kind": "runtime"
+        },
+        {
+          "file": "新角色三/资产清单.txt",
+          "line": 11,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 49,
+      "maxComponentLength": 24,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/characters/archer/role_select_frame_v1.webp",
+      "extension": ".webp",
+      "bytes": 167302,
+      "sha256": "e6088552f23c213d9172231f303a68428854df70bd4ae29c67878b015b054334",
+      "status": "active",
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 73,
+          "module": "demo",
+          "kind": "runtime"
+        },
+        {
+          "file": "新角色三/资产清单.txt",
+          "line": 12,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters",
+        "demo"
+      ],
+      "pathLength": 50,
+      "maxComponentLength": 25,
+      "containsNonAscii": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/characters/archer/select_portrait_v1.webp",
+      "extension": ".webp",
+      "bytes": 64824,
+      "sha256": "8773787f05ad87ab8a71127f5b0c5246a4b86f9e8ef50c498e4e9bf53654bd16",
+      "status": "active",
+      "references": [
+        {
+          "file": "src/data/characters.js",
+          "line": 55,
+          "module": "characters",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 1547,
+          "module": "demo",
+          "kind": "runtime"
+        },
+        {
+          "file": "新角色三/资产清单.txt",
+          "line": 10,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters",
+        "demo"
+      ],
+      "pathLength": 48,
+      "maxComponentLength": 23,
+      "containsNonAscii": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/characters/mage/avatar_portrait_v1.webp",
+      "extension": ".webp",
+      "bytes": 30156,
+      "sha256": "04a26d4da6d46fdbb27c2e7bbc2865c9082d7fd49e5ee4478129b264f4e10702",
+      "status": "active",
+      "references": [
+        {
+          "file": "src/data/characters.js",
+          "line": 37,
+          "module": "characters",
+          "kind": "runtime"
+        },
+        {
+          "file": "角色二/资产清单.txt",
+          "line": 9,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 46,
+      "maxComponentLength": 23,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/characters/mage/battle_back_idle_v1.webp",
+      "extension": ".webp",
+      "bytes": 82226,
+      "sha256": "00dbadc005bef5458a89f64f2e77d5920552c380e708fe3603c91aea200f9c79",
+      "status": "active",
+      "references": [
+        {
+          "file": "src/data/characters.js",
+          "line": 38,
+          "module": "characters",
+          "kind": "runtime"
+        },
+        {
+          "file": "角色二/资产清单.txt",
+          "line": 11,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 47,
+      "maxComponentLength": 24,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/characters/mage/role_select_frame_v1.webp",
+      "extension": ".webp",
+      "bytes": 162754,
+      "sha256": "8d9ce99abad53d8e3e05d2b74aba6c8e295f354858fe1a96f9649c5314567072",
+      "status": "active",
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 72,
+          "module": "demo",
+          "kind": "runtime"
+        },
+        {
+          "file": "角色二/资产清单.txt",
+          "line": 12,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters",
+        "demo"
+      ],
+      "pathLength": 48,
+      "maxComponentLength": 25,
+      "containsNonAscii": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/characters/mage/select_portrait_v1.webp",
+      "extension": ".webp",
+      "bytes": 81936,
+      "sha256": "1fc0b47191f8d0e7e0ae7dadd785b6e204dfbdf80db8346d6bdf3f6506319365",
+      "status": "active",
+      "references": [
+        {
+          "file": "src/data/characters.js",
+          "line": 36,
+          "module": "characters",
+          "kind": "runtime"
+        },
+        {
+          "file": "角色二/资产清单.txt",
+          "line": 10,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 46,
+      "maxComponentLength": 23,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/characters/warrior/avatar_portrait_v1.webp",
+      "extension": ".webp",
+      "bytes": 27810,
+      "sha256": "dd0c44f16de5f860d199cab73aacec3c6194cba54ebff712eea48e063fb39854",
+      "status": "active",
+      "references": [
+        {
+          "file": "src/data/characters.js",
+          "line": 18,
+          "module": "characters",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 4216,
+          "module": "demo",
+          "kind": "runtime"
+        },
+        {
+          "file": "新角色一/资产清单.txt",
+          "line": 9,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters",
+        "demo"
+      ],
+      "pathLength": 49,
+      "maxComponentLength": 23,
+      "containsNonAscii": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/characters/warrior/battle_back_idle_v1.webp",
+      "extension": ".webp",
+      "bytes": 93332,
+      "sha256": "6e283abab2218ba5b19a2c6c63ab4475046ec427002bd5a089b1adc95eaf633f",
+      "status": "active",
+      "references": [
+        {
+          "file": "src/data/characters.js",
+          "line": 19,
+          "module": "characters",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 1754,
+          "module": "demo",
+          "kind": "runtime"
+        },
+        {
+          "file": "新角色一/资产清单.txt",
+          "line": 11,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters",
+        "demo"
+      ],
+      "pathLength": 50,
+      "maxComponentLength": 24,
+      "containsNonAscii": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/characters/warrior/role_select_frame_v1.webp",
+      "extension": ".webp",
+      "bytes": 166476,
+      "sha256": "6ba5afc2687aaa7253a09f96372cb18934900c95217f970af9df424462c6dcfb",
+      "status": "active",
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 71,
+          "module": "demo",
+          "kind": "runtime"
+        },
+        {
+          "file": "新角色一/资产清单.txt",
+          "line": 12,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters",
+        "demo"
+      ],
+      "pathLength": 51,
+      "maxComponentLength": 25,
+      "containsNonAscii": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/characters/warrior/select_portrait_v1.webp",
+      "extension": ".webp",
+      "bytes": 67006,
+      "sha256": "ab27a556ffa7fa26ed093d0a838788a51c70e807a8dfda6abcc73cf3c8785554",
+      "status": "active",
+      "references": [
+        {
+          "file": "src/data/characters.js",
+          "line": 17,
+          "module": "characters",
+          "kind": "runtime"
+        },
+        {
+          "file": "新角色一/资产清单.txt",
+          "line": 10,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 49,
+      "maxComponentLength": 23,
+      "containsNonAscii": false,
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -8783,6 +9037,1085 @@
       "maxComponentLength": 24,
       "containsNonAscii": false,
       "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/archer/avatar_portrait_v1_source.png",
+      "extension": ".png",
+      "bytes": 165112,
+      "sha256": "ff4c45432c9adaa4e6c8e9f7cd6b1dc25b37b57972cc470a81f4394c023a2f9a",
+      "status": "documented",
+      "references": [
+        {
+          "file": "新角色三/资产清单.txt",
+          "line": 13,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 61,
+      "maxComponentLength": 29,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/archer/battle_back/attack_start_v1_source.png",
+      "extension": ".png",
+      "bytes": 916867,
+      "sha256": "50d62a6e91bad1992cdac6a9ac887d90acdf20321b4e8f23cc1b4c33285d8470",
+      "status": "documented",
+      "references": [
+        {
+          "file": "新角色三/资产清单.txt",
+          "line": 16,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 70,
+      "maxComponentLength": 26,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/archer/battle_back/hurt_v1_source.png",
+      "extension": ".png",
+      "bytes": 1051298,
+      "sha256": "a11e2a9d8993d27ef378a6fcf2e260027c1dd4f9b5ab44ee91723a10847aadb1",
+      "status": "documented",
+      "references": [
+        {
+          "file": "新角色三/资产清单.txt",
+          "line": 18,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 62,
+      "maxComponentLength": 18,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/archer/battle_back/idle_v1_source.png",
+      "extension": ".png",
+      "bytes": 877527,
+      "sha256": "22fca0ff955c09fc041c52f5dc0fbac89a4a28bd399fe186ad2749db7e63bf4e",
+      "status": "documented",
+      "references": [
+        {
+          "file": "新角色三/资产清单.txt",
+          "line": 15,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 62,
+      "maxComponentLength": 18,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/archer/battle_back/skill_cast_v1_source.png",
+      "extension": ".png",
+      "bytes": 858459,
+      "sha256": "e836ba281107b92870e3ade9f832708bd2f601fbb894e64e2afdaf3f364ffaa2",
+      "status": "documented",
+      "references": [
+        {
+          "file": "新角色三/资产清单.txt",
+          "line": 17,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 68,
+      "maxComponentLength": 24,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/archer/battle_front/attack_start_v1_source.png",
+      "extension": ".png",
+      "bytes": 1211828,
+      "sha256": "a8675186c4b0d8dc8c2a69484e4d1f8773444fc6eb20b811c9a38df9f0396852",
+      "status": "documented",
+      "references": [
+        {
+          "file": "新角色三/资产清单.txt",
+          "line": 20,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 71,
+      "maxComponentLength": 26,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/archer/battle_front/hurt_v1_source.png",
+      "extension": ".png",
+      "bytes": 1387954,
+      "sha256": "2939c6b4de266165a8748fd3f22ebcd2267610a83ab3df188ac11b071ee77075",
+      "status": "documented",
+      "references": [
+        {
+          "file": "新角色三/资产清单.txt",
+          "line": 22,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 63,
+      "maxComponentLength": 18,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/archer/battle_front/idle_v1_source.png",
+      "extension": ".png",
+      "bytes": 1353492,
+      "sha256": "a1be7c3d87b431be080214ea162ecd991ed148bb1b1e6c062716ba183e5506f4",
+      "status": "documented",
+      "references": [
+        {
+          "file": "新角色三/资产清单.txt",
+          "line": 19,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 63,
+      "maxComponentLength": 18,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/archer/battle_front/skill_cast_v1_source.png",
+      "extension": ".png",
+      "bytes": 1256601,
+      "sha256": "c1a98ea0fd1d6b47fa0f6b7c7d63ba4feb73d28ad2558dd271b9bef3d267a1ff",
+      "status": "documented",
+      "references": [
+        {
+          "file": "新角色三/资产清单.txt",
+          "line": 21,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 69,
+      "maxComponentLength": 24,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/archer/design/turnaround_color_v1_source.png",
+      "extension": ".png",
+      "bytes": 1106258,
+      "sha256": "65bf339c307730a01f16ed065727eeb82bdb8a623ad5e537b2af6b39288c1ee8",
+      "status": "documented",
+      "references": [
+        {
+          "file": "新角色三/资产清单.txt",
+          "line": 24,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 69,
+      "maxComponentLength": 30,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/archer/design/turnaround_line_v1_source.png",
+      "extension": ".png",
+      "bytes": 992488,
+      "sha256": "6ff593501e52ed23b3aa939aa832e3a49d6a21f60acd9a200798d83ce48c0476",
+      "status": "documented",
+      "references": [
+        {
+          "file": "新角色三/资产清单.txt",
+          "line": 23,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 68,
+      "maxComponentLength": 29,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/archer/design/weapon_bow_v1_source.png",
+      "extension": ".png",
+      "bytes": 715676,
+      "sha256": "959c3b02e4eb7c053bcb72ccc64039a11550cd6683d60e9c30b8a0174d7ea986",
+      "status": "documented",
+      "references": [
+        {
+          "file": "新角色三/资产清单.txt",
+          "line": 25,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 63,
+      "maxComponentLength": 24,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/archer/role_select_frame_v1_source.png",
+      "extension": ".png",
+      "bytes": 1492523,
+      "sha256": "8d722ef5aa1d26e07b6a177bef6d32f44b945622b1cd7be23b570d1d18a65cec",
+      "status": "documented",
+      "references": [
+        {
+          "file": "新角色三/资产清单.txt",
+          "line": 26,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 63,
+      "maxComponentLength": 31,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/archer/select_portrait_v1_source.png",
+      "extension": ".png",
+      "bytes": 429418,
+      "sha256": "f8b82d08333170566fb32a57675d76d11934e4bd1668d37580244880a5a3cdd0",
+      "status": "documented",
+      "references": [
+        {
+          "file": "新角色三/资产清单.txt",
+          "line": 14,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 61,
+      "maxComponentLength": 29,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/mage/avatar_portrait_v1_source.png",
+      "extension": ".png",
+      "bytes": 242751,
+      "sha256": "397f63851151ce3aeecbf37a517a7b3db73d661b407d20be4d842b2bebea0ccf",
+      "status": "documented",
+      "references": [
+        {
+          "file": "角色二/资产清单.txt",
+          "line": 13,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 59,
+      "maxComponentLength": 29,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/mage/battle_back/attack_start_v1_source.png",
+      "extension": ".png",
+      "bytes": 1328839,
+      "sha256": "eb54aab113599002f3221efdb6264b0de841561998fcf3aca05a8897a73a9859",
+      "status": "documented",
+      "references": [
+        {
+          "file": "角色二/资产清单.txt",
+          "line": 16,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 68,
+      "maxComponentLength": 26,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/mage/battle_back/hurt_v1_source.png",
+      "extension": ".png",
+      "bytes": 1380558,
+      "sha256": "95a484dcce6229b30bf9f057c986a20b4f0dfa2023e29820371cb0584ec0df1e",
+      "status": "documented",
+      "references": [
+        {
+          "file": "角色二/资产清单.txt",
+          "line": 18,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 60,
+      "maxComponentLength": 18,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/mage/battle_back/idle_v1_source.png",
+      "extension": ".png",
+      "bytes": 988055,
+      "sha256": "387f2ada249605f1db9f258e738e1f4497385a253ccb6988667304407ef3df09",
+      "status": "documented",
+      "references": [
+        {
+          "file": "角色二/资产清单.txt",
+          "line": 15,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 60,
+      "maxComponentLength": 18,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/mage/battle_back/skill_cast_v1_source.png",
+      "extension": ".png",
+      "bytes": 1267193,
+      "sha256": "b3602623d788901cb3cc6e461f5b713f7da789dfc8552c58795c55680097e1bf",
+      "status": "documented",
+      "references": [
+        {
+          "file": "角色二/资产清单.txt",
+          "line": 17,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 66,
+      "maxComponentLength": 24,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/mage/battle_front/attack_start_v1_source.png",
+      "extension": ".png",
+      "bytes": 1310527,
+      "sha256": "146944fc2d0a4e2e8612012019237caa2a580a111e468f75da5bf167f90ca830",
+      "status": "documented",
+      "references": [
+        {
+          "file": "角色二/资产清单.txt",
+          "line": 20,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 69,
+      "maxComponentLength": 26,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/mage/battle_front/hurt_v1_source.png",
+      "extension": ".png",
+      "bytes": 1409650,
+      "sha256": "7026bce35f9cdb36927fc3f4cedfc66e9ad0dd8fc374867857775504507efcdf",
+      "status": "documented",
+      "references": [
+        {
+          "file": "角色二/资产清单.txt",
+          "line": 22,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 61,
+      "maxComponentLength": 18,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/mage/battle_front/idle_v1_source.png",
+      "extension": ".png",
+      "bytes": 1246958,
+      "sha256": "1cbb52c54152d36c5a42763ddf6353fea213aaeca0ce2ee028fdbc1c3689fe16",
+      "status": "documented",
+      "references": [
+        {
+          "file": "角色二/资产清单.txt",
+          "line": 19,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 61,
+      "maxComponentLength": 18,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/mage/battle_front/skill_cast_v1_source.png",
+      "extension": ".png",
+      "bytes": 1571881,
+      "sha256": "034b0c4395255471504eb085c89f467d8cac5afac873e3fb88eacda45d74719b",
+      "status": "documented",
+      "references": [
+        {
+          "file": "角色二/资产清单.txt",
+          "line": 21,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 67,
+      "maxComponentLength": 24,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/mage/design/select_stained_glass_v1_source.png",
+      "extension": ".png",
+      "bytes": 1077162,
+      "sha256": "4fe17e7ac99591b23ed7ca0c943e877c895765358844b603cef7eafee37b1867",
+      "status": "documented",
+      "references": [
+        {
+          "file": "角色二/资产清单.txt",
+          "line": 26,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 71,
+      "maxComponentLength": 34,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/mage/design/turnaround_color_v1_source.png",
+      "extension": ".png",
+      "bytes": 2848944,
+      "sha256": "ea58c24efb58aa3d7cb76520cd8aa55ec37e2e206ba92f310ea9b3c5cb2dd7c7",
+      "status": "documented",
+      "references": [
+        {
+          "file": "角色二/资产清单.txt",
+          "line": 24,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 67,
+      "maxComponentLength": 30,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/mage/design/turnaround_line_v1_source.png",
+      "extension": ".png",
+      "bytes": 1961656,
+      "sha256": "1c968031b6294abf14a67c94b6f375d991f9b68794ef94cb765e98b57a6349ce",
+      "status": "documented",
+      "references": [
+        {
+          "file": "角色二/资产清单.txt",
+          "line": 23,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 66,
+      "maxComponentLength": 29,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/mage/design/weapon_staff_v1_source.png",
+      "extension": ".png",
+      "bytes": 1868498,
+      "sha256": "9e17bb182346579d2847ced2952593cb2e2b98be11c082d790b98983c495174b",
+      "status": "documented",
+      "references": [
+        {
+          "file": "角色二/资产清单.txt",
+          "line": 25,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 63,
+      "maxComponentLength": 26,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/mage/role_select_frame_v1_source.png",
+      "extension": ".png",
+      "bytes": 1495370,
+      "sha256": "d8eab0ffd88de4122f8c4d761ac6686cb1424eeb2d680d6e12eaacfad2eb4872",
+      "status": "documented",
+      "references": [
+        {
+          "file": "角色二/资产清单.txt",
+          "line": 27,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 61,
+      "maxComponentLength": 31,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/mage/select_portrait_v1_source.png",
+      "extension": ".png",
+      "bytes": 627974,
+      "sha256": "4ac63e7e6f18dbfd8df51c29b2e48ec1a16ac419c6a01016ab699bc0fd4ffcf1",
+      "status": "documented",
+      "references": [
+        {
+          "file": "角色二/资产清单.txt",
+          "line": 14,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 59,
+      "maxComponentLength": 29,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/warrior/avatar_portrait_v1_source.png",
+      "extension": ".png",
+      "bytes": 195533,
+      "sha256": "48a7e1eae4bcae4c068609b426a9ac74e26d0f45f1bd09570a2be864f2668f15",
+      "status": "documented",
+      "references": [
+        {
+          "file": "新角色一/资产清单.txt",
+          "line": 13,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 62,
+      "maxComponentLength": 29,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/warrior/battle_back/attack_start_v1_source.png",
+      "extension": ".png",
+      "bytes": 1719851,
+      "sha256": "d5da77dba8a94f86e16e908006333cdb89c47507698b1b07930220371a19f59e",
+      "status": "documented",
+      "references": [
+        {
+          "file": "新角色一/资产清单.txt",
+          "line": 16,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 71,
+      "maxComponentLength": 26,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/warrior/battle_back/hurt_v1_source.png",
+      "extension": ".png",
+      "bytes": 1750612,
+      "sha256": "e214da08d6b40274ce835d359c66fcea498b1f4d158b79eb1bb6f03e4c72238a",
+      "status": "documented",
+      "references": [
+        {
+          "file": "新角色一/资产清单.txt",
+          "line": 18,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 63,
+      "maxComponentLength": 18,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/warrior/battle_back/idle_v1_source.png",
+      "extension": ".png",
+      "bytes": 1183203,
+      "sha256": "3ae708c5c7452dbc0515b6a09646b5db97b73522fe5c90cb3eb0a4bc3c4219fb",
+      "status": "documented",
+      "references": [
+        {
+          "file": "新角色一/资产清单.txt",
+          "line": 15,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 63,
+      "maxComponentLength": 18,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/warrior/battle_back/skill_cast_v1_source.png",
+      "extension": ".png",
+      "bytes": 1887940,
+      "sha256": "72e0ef6c8f26e8cef30c8a0a9ffaa2ca07781cd26c5b3624f9c36eb287a02d6d",
+      "status": "documented",
+      "references": [
+        {
+          "file": "新角色一/资产清单.txt",
+          "line": 17,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 69,
+      "maxComponentLength": 24,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/warrior/battle_front/attack_start_v1_source.png",
+      "extension": ".png",
+      "bytes": 2148937,
+      "sha256": "f20135a345c535c2c6864ee694783e392e927db8ed1c390fd6cde6d18a7b761a",
+      "status": "documented",
+      "references": [
+        {
+          "file": "新角色一/资产清单.txt",
+          "line": 20,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 72,
+      "maxComponentLength": 26,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/warrior/battle_front/hurt_v1_source.png",
+      "extension": ".png",
+      "bytes": 2151583,
+      "sha256": "19896b104b253d8477177f6b443053a3c34d80156931f338026bf5274b24ebda",
+      "status": "documented",
+      "references": [
+        {
+          "file": "新角色一/资产清单.txt",
+          "line": 22,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 64,
+      "maxComponentLength": 18,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/warrior/battle_front/idle_v1_source.png",
+      "extension": ".png",
+      "bytes": 1967448,
+      "sha256": "ddee9674804d3f7b03d9b309a8b313ddb2411fbd7ee4d7007a343045b8d23d87",
+      "status": "documented",
+      "references": [
+        {
+          "file": "新角色一/资产清单.txt",
+          "line": 19,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 64,
+      "maxComponentLength": 18,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/warrior/battle_front/skill_cast_v1_source.png",
+      "extension": ".png",
+      "bytes": 2078663,
+      "sha256": "288b861c39e5a485dd5a0574f3a8cc052e6f4d3d7be5f80c3eb53a99d7cf2005",
+      "status": "documented",
+      "references": [
+        {
+          "file": "新角色一/资产清单.txt",
+          "line": 21,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 70,
+      "maxComponentLength": 24,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/warrior/design/turnaround_color_v1_source.png",
+      "extension": ".png",
+      "bytes": 1616456,
+      "sha256": "b6fcbb69db0ac5d334627b4fe4b27491f9ee5129a55e92c4bc314af2d5413eb7",
+      "status": "documented",
+      "references": [
+        {
+          "file": "新角色一/资产清单.txt",
+          "line": 24,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 70,
+      "maxComponentLength": 30,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/warrior/design/turnaround_line_v1_source.png",
+      "extension": ".png",
+      "bytes": 1276482,
+      "sha256": "47426d09d1bc0b5f85531e603ce6bac54c8ed6f42d47fc8fdabf53bc1ec3d768",
+      "status": "documented",
+      "references": [
+        {
+          "file": "新角色一/资产清单.txt",
+          "line": 23,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 69,
+      "maxComponentLength": 29,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/warrior/design/weapon_sword_v1_source.png",
+      "extension": ".png",
+      "bytes": 706734,
+      "sha256": "f08d2ffccca5e33703a8adf1dd4a549de270ebfd13b6e4a09ff57da8502025fe",
+      "status": "documented",
+      "references": [
+        {
+          "file": "新角色一/资产清单.txt",
+          "line": 25,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 66,
+      "maxComponentLength": 26,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/source/characters/warrior/role_select_frame_v1_source.png",
+      "extension": ".png",
+      "bytes": 1511527,
+      "sha256": "235d768f6678788a3952ce09ae675cdc1ee62b126e0546bce17ee2b4b427ab9c",
+      "status": "documented",
+      "references": [
+        {
+          "file": "新角色一/资产清单.txt",
+          "line": 26,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 64,
+      "maxComponentLength": 31,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced",
+        "identical_content"
+      ],
+      "identicalContentGroup": [
+        "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_warrior_v2.png",
+        "assets/source/characters/warrior/role_select_frame_v1_source.png"
+      ]
+    },
+    {
+      "path": "assets/source/characters/warrior/select_portrait_v1_source.png",
+      "extension": ".png",
+      "bytes": 584492,
+      "sha256": "a27049107763fae6468d97ff82a7a418cfb19f77e1600e2421eab2874a3cd1de",
+      "status": "documented",
+      "references": [
+        {
+          "file": "新角色一/资产清单.txt",
+          "line": 14,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "pathLength": 62,
+      "maxComponentLength": 29,
+      "containsNonAscii": false,
+      "risks": [
+        "unreferenced"
+      ],
       "identicalContentGroup": []
     },
     {
@@ -18002,140 +19335,6 @@
       "identicalContentGroup": []
     },
     {
-      "path": "头像/角色/hero_archer.png",
-      "extension": ".png",
-      "bytes": 165112,
-      "sha256": "ff4c45432c9adaa4e6c8e9f7cd6b1dc25b37b57972cc470a81f4394c023a2f9a",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 21,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/角色/hero_archer.webp",
-      "extension": ".webp",
-      "bytes": 25622,
-      "sha256": "53d0e63f868c3cb455413eb8605cd79ad3ac15f78e29aaa5230a14452d85f4c9",
-      "status": "active",
-      "references": [
-        {
-          "file": "src/data/characters.js",
-          "line": 56,
-          "module": "characters",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
-      "pathLength": 22,
-      "maxComponentLength": 16,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/角色/hero_mage.png",
-      "extension": ".png",
-      "bytes": 242751,
-      "sha256": "397f63851151ce3aeecbf37a517a7b3db73d661b407d20be4d842b2bebea0ccf",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 19,
-      "maxComponentLength": 13,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/角色/hero_mage.webp",
-      "extension": ".webp",
-      "bytes": 30156,
-      "sha256": "04a26d4da6d46fdbb27c2e7bbc2865c9082d7fd49e5ee4478129b264f4e10702",
-      "status": "active",
-      "references": [
-        {
-          "file": "src/data/characters.js",
-          "line": 37,
-          "module": "characters",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
-      "pathLength": 20,
-      "maxComponentLength": 14,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/角色/hero_warrior.png",
-      "extension": ".png",
-      "bytes": 195533,
-      "sha256": "48a7e1eae4bcae4c068609b426a9ac74e26d0f45f1bd09570a2be864f2668f15",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 22,
-      "maxComponentLength": 16,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "头像/角色/hero_warrior.webp",
-      "extension": ".webp",
-      "bytes": 27810,
-      "sha256": "dd0c44f16de5f860d199cab73aacec3c6194cba54ebff712eea48e063fb39854",
-      "status": "active",
-      "references": [
-        {
-          "file": "src/data/characters.js",
-          "line": 18,
-          "module": "characters",
-          "kind": "runtime"
-        },
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 4216,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "characters",
-        "demo"
-      ],
-      "pathLength": 23,
-      "maxComponentLength": 17,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
-      ],
-      "identicalContentGroup": []
-    },
-    {
       "path": "怪物/contact_latest15.png",
       "extension": ".png",
       "bytes": 602810,
@@ -20760,40 +21959,6 @@
       "identicalContentGroup": []
     },
     {
-      "path": "新角色一/角色一_三视图_线稿版.png",
-      "extension": ".png",
-      "bytes": 1276482,
-      "sha256": "47426d09d1bc0b5f85531e603ce6bac54c8ed6f42d47fc8fdabf53bc1ec3d768",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 20,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "新角色一/角色一_三视图_配色版.png",
-      "extension": ".png",
-      "bytes": 1616456,
-      "sha256": "b6fcbb69db0ac5d334627b4fe4b27491f9ee5129a55e92c4bc314af2d5413eb7",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 20,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
       "path": "新角色一/角色一_卡面插画_圣剑突击.png",
       "extension": ".png",
       "bytes": 3122584,
@@ -20904,268 +22069,6 @@
       "referenceModules": [],
       "pathLength": 26,
       "maxComponentLength": 21,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "新角色一/角色一_我方背面_受击.png",
-      "extension": ".png",
-      "bytes": 1750612,
-      "sha256": "e214da08d6b40274ce835d359c66fcea498b1f4d158b79eb1bb6f03e4c72238a",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 20,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "新角色一/角色一_我方背面_待机.png",
-      "extension": ".png",
-      "bytes": 1183203,
-      "sha256": "3ae708c5c7452dbc0515b6a09646b5db97b73522fe5c90cb3eb0a4bc3c4219fb",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 20,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "新角色一/角色一_我方背面_待机.webp",
-      "extension": ".webp",
-      "bytes": 93332,
-      "sha256": "6e283abab2218ba5b19a2c6c63ab4475046ec427002bd5a089b1adc95eaf633f",
-      "status": "active",
-      "references": [
-        {
-          "file": "src/data/characters.js",
-          "line": 19,
-          "module": "characters",
-          "kind": "runtime"
-        },
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 1754,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "characters",
-        "demo"
-      ],
-      "pathLength": 21,
-      "maxComponentLength": 16,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "新角色一/角色一_我方背面_技能释放.png",
-      "extension": ".png",
-      "bytes": 1887940,
-      "sha256": "72e0ef6c8f26e8cef30c8a0a9ffaa2ca07781cd26c5b3624f9c36eb287a02d6d",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 22,
-      "maxComponentLength": 17,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "新角色一/角色一_我方背面_攻击起手.png",
-      "extension": ".png",
-      "bytes": 1719851,
-      "sha256": "d5da77dba8a94f86e16e908006333cdb89c47507698b1b07930220371a19f59e",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 22,
-      "maxComponentLength": 17,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "新角色一/角色一_敌方正面_受击.png",
-      "extension": ".png",
-      "bytes": 2151583,
-      "sha256": "19896b104b253d8477177f6b443053a3c34d80156931f338026bf5274b24ebda",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 20,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "新角色一/角色一_敌方正面_待机.png",
-      "extension": ".png",
-      "bytes": 1967448,
-      "sha256": "ddee9674804d3f7b03d9b309a8b313ddb2411fbd7ee4d7007a343045b8d23d87",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 20,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "新角色一/角色一_敌方正面_技能释放.png",
-      "extension": ".png",
-      "bytes": 2078663,
-      "sha256": "288b861c39e5a485dd5a0574f3a8cc052e6f4d3d7be5f80c3eb53a99d7cf2005",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 22,
-      "maxComponentLength": 17,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "新角色一/角色一_敌方正面_攻击起手.png",
-      "extension": ".png",
-      "bytes": 2148937,
-      "sha256": "f20135a345c535c2c6864ee694783e392e927db8ed1c390fd6cde6d18a7b761a",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 22,
-      "maxComponentLength": 17,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "新角色一/角色一_武器设定_圣剑.png",
-      "extension": ".png",
-      "bytes": 706734,
-      "sha256": "f08d2ffccca5e33703a8adf1dd4a549de270ebfd13b6e4a09ff57da8502025fe",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 20,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "新角色一/角色一_角色选择_立绘.png",
-      "extension": ".png",
-      "bytes": 584492,
-      "sha256": "a27049107763fae6468d97ff82a7a418cfb19f77e1600e2421eab2874a3cd1de",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 20,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "新角色一/角色一_角色选择_立绘.webp",
-      "extension": ".webp",
-      "bytes": 67006,
-      "sha256": "ab27a556ffa7fa26ed093d0a838788a51c70e807a8dfda6abcc73cf3c8785554",
-      "status": "active",
-      "references": [
-        {
-          "file": "src/data/characters.js",
-          "line": 17,
-          "module": "characters",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
-      "pathLength": 21,
-      "maxComponentLength": 16,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "新角色三/角色三_三视图_线稿版.png",
-      "extension": ".png",
-      "bytes": 992488,
-      "sha256": "6ff593501e52ed23b3aa939aa832e3a49d6a21f60acd9a200798d83ce48c0476",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 20,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "新角色三/角色三_三视图_配色版.png",
-      "extension": ".png",
-      "bytes": 1106258,
-      "sha256": "65bf339c307730a01f16ed065727eeb82bdb8a623ad5e537b2af6b39288c1ee8",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 20,
-      "maxComponentLength": 15,
       "containsNonAscii": true,
       "risks": [
         "non_ascii_path",
@@ -21308,234 +22211,6 @@
       "risks": [
         "non_ascii_path",
         "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "新角色三/角色三_我方背面_受击.png",
-      "extension": ".png",
-      "bytes": 1051298,
-      "sha256": "a11e2a9d8993d27ef378a6fcf2e260027c1dd4f9b5ab44ee91723a10847aadb1",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 20,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "新角色三/角色三_我方背面_待机.png",
-      "extension": ".png",
-      "bytes": 877527,
-      "sha256": "22fca0ff955c09fc041c52f5dc0fbac89a4a28bd399fe186ad2749db7e63bf4e",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 20,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "新角色三/角色三_我方背面_待机.webp",
-      "extension": ".webp",
-      "bytes": 111686,
-      "sha256": "c9dba0152b8a4542f02b157a80f31fafb61b36173cbe8e824862c83f07db4677",
-      "status": "active",
-      "references": [
-        {
-          "file": "src/data/characters.js",
-          "line": 57,
-          "module": "characters",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
-      "pathLength": 21,
-      "maxComponentLength": 16,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "新角色三/角色三_我方背面_技能释放.png",
-      "extension": ".png",
-      "bytes": 858459,
-      "sha256": "e836ba281107b92870e3ade9f832708bd2f601fbb894e64e2afdaf3f364ffaa2",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 22,
-      "maxComponentLength": 17,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "新角色三/角色三_我方背面_攻击起手.png",
-      "extension": ".png",
-      "bytes": 916867,
-      "sha256": "50d62a6e91bad1992cdac6a9ac887d90acdf20321b4e8f23cc1b4c33285d8470",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 22,
-      "maxComponentLength": 17,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "新角色三/角色三_敌方正面_受击.png",
-      "extension": ".png",
-      "bytes": 1387954,
-      "sha256": "2939c6b4de266165a8748fd3f22ebcd2267610a83ab3df188ac11b071ee77075",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 20,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "新角色三/角色三_敌方正面_待机.png",
-      "extension": ".png",
-      "bytes": 1353492,
-      "sha256": "a1be7c3d87b431be080214ea162ecd991ed148bb1b1e6c062716ba183e5506f4",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 20,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "新角色三/角色三_敌方正面_技能释放.png",
-      "extension": ".png",
-      "bytes": 1256601,
-      "sha256": "c1a98ea0fd1d6b47fa0f6b7c7d63ba4feb73d28ad2558dd271b9bef3d267a1ff",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 22,
-      "maxComponentLength": 17,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "新角色三/角色三_敌方正面_攻击起手.png",
-      "extension": ".png",
-      "bytes": 1211828,
-      "sha256": "a8675186c4b0d8dc8c2a69484e4d1f8773444fc6eb20b811c9a38df9f0396852",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 22,
-      "maxComponentLength": 17,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "新角色三/角色三_武器设定_长弓.png",
-      "extension": ".png",
-      "bytes": 715676,
-      "sha256": "959c3b02e4eb7c053bcb72ccc64039a11550cd6683d60e9c30b8a0174d7ea986",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 20,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "新角色三/角色三_角色选择_立绘.png",
-      "extension": ".png",
-      "bytes": 429418,
-      "sha256": "f8b82d08333170566fb32a57675d76d11934e4bd1668d37580244880a5a3cdd0",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 20,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "新角色三/角色三_角色选择_立绘.webp",
-      "extension": ".webp",
-      "bytes": 64824,
-      "sha256": "8773787f05ad87ab8a71127f5b0c5246a4b86f9e8ef50c498e4e9bf53654bd16",
-      "status": "active",
-      "references": [
-        {
-          "file": "src/data/characters.js",
-          "line": 55,
-          "module": "characters",
-          "kind": "runtime"
-        },
-        {
-          "file": "幻境残卷demo_v0.99.html",
-          "line": 1547,
-          "module": "demo",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "characters",
-        "demo"
-      ],
-      "pathLength": 21,
-      "maxComponentLength": 16,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
       ],
       "identicalContentGroup": []
     },
@@ -22484,40 +23159,6 @@
       "identicalContentGroup": []
     },
     {
-      "path": "角色二/角色二_三视图_线稿版.png",
-      "extension": ".png",
-      "bytes": 1961656,
-      "sha256": "1c968031b6294abf14a67c94b6f375d991f9b68794ef94cb765e98b57a6349ce",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 19,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "角色二/角色二_三视图_配色版.png",
-      "extension": ".png",
-      "bytes": 2848944,
-      "sha256": "ea58c24efb58aa3d7cb76520cd8aa55ec37e2e206ba92f310ea9b3c5cb2dd7c7",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 19,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
       "path": "角色二/角色二_卡面插画_紫焰爆裂.png",
       "extension": ".png",
       "bytes": 2694754,
@@ -22654,243 +23295,6 @@
       "risks": [
         "non_ascii_path",
         "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "角色二/角色二_我方背面_受击.png",
-      "extension": ".png",
-      "bytes": 1380558,
-      "sha256": "95a484dcce6229b30bf9f057c986a20b4f0dfa2023e29820371cb0584ec0df1e",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 19,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "角色二/角色二_我方背面_待机.png",
-      "extension": ".png",
-      "bytes": 988055,
-      "sha256": "387f2ada249605f1db9f258e738e1f4497385a253ccb6988667304407ef3df09",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 19,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "角色二/角色二_我方背面_待机.webp",
-      "extension": ".webp",
-      "bytes": 82226,
-      "sha256": "00dbadc005bef5458a89f64f2e77d5920552c380e708fe3603c91aea200f9c79",
-      "status": "active",
-      "references": [
-        {
-          "file": "src/data/characters.js",
-          "line": 38,
-          "module": "characters",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
-      "pathLength": 20,
-      "maxComponentLength": 16,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "角色二/角色二_我方背面_技能释放.png",
-      "extension": ".png",
-      "bytes": 1267193,
-      "sha256": "b3602623d788901cb3cc6e461f5b713f7da789dfc8552c58795c55680097e1bf",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 21,
-      "maxComponentLength": 17,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "角色二/角色二_我方背面_攻击起手.png",
-      "extension": ".png",
-      "bytes": 1328839,
-      "sha256": "eb54aab113599002f3221efdb6264b0de841561998fcf3aca05a8897a73a9859",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 21,
-      "maxComponentLength": 17,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "角色二/角色二_敌方正面_受击.png",
-      "extension": ".png",
-      "bytes": 1409650,
-      "sha256": "7026bce35f9cdb36927fc3f4cedfc66e9ad0dd8fc374867857775504507efcdf",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 19,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "角色二/角色二_敌方正面_待机.png",
-      "extension": ".png",
-      "bytes": 1246958,
-      "sha256": "1cbb52c54152d36c5a42763ddf6353fea213aaeca0ce2ee028fdbc1c3689fe16",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 19,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "角色二/角色二_敌方正面_技能释放.png",
-      "extension": ".png",
-      "bytes": 1571881,
-      "sha256": "034b0c4395255471504eb085c89f467d8cac5afac873e3fb88eacda45d74719b",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 21,
-      "maxComponentLength": 17,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "角色二/角色二_敌方正面_攻击起手.png",
-      "extension": ".png",
-      "bytes": 1310527,
-      "sha256": "146944fc2d0a4e2e8612012019237caa2a580a111e468f75da5bf167f90ca830",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 21,
-      "maxComponentLength": 17,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "角色二/角色二_武器设定_法杖.png",
-      "extension": ".png",
-      "bytes": 1868498,
-      "sha256": "9e17bb182346579d2847ced2952593cb2e2b98be11c082d790b98983c495174b",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 19,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "角色二/角色二_角色选择_彩窗立绘.png",
-      "extension": ".png",
-      "bytes": 1077162,
-      "sha256": "4fe17e7ac99591b23ed7ca0c943e877c895765358844b603cef7eafee37b1867",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 21,
-      "maxComponentLength": 17,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "角色二/角色二_角色选择_立绘.png",
-      "extension": ".png",
-      "bytes": 627974,
-      "sha256": "4ac63e7e6f18dbfd8df51c29b2e48ec1a16ac419c6a01016ab699bc0fd4ffcf1",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 19,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "角色二/角色二_角色选择_立绘.webp",
-      "extension": ".webp",
-      "bytes": 81936,
-      "sha256": "1fc0b47191f8d0e7e0ae7dadd785b6e204dfbdf80db8346d6bdf3f6506319365",
-      "status": "active",
-      "references": [
-        {
-          "file": "src/data/characters.js",
-          "line": 36,
-          "module": "characters",
-          "kind": "runtime"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
-      "pathLength": 20,
-      "maxComponentLength": 16,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path"
       ],
       "identicalContentGroup": []
     },
@@ -27538,22 +27942,8 @@
     },
     {
       "path": "角色一_三视图_线稿版.png",
-      "file": "新角色一/资产清单.txt",
-      "line": 8,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色一_三视图_线稿版.png",
       "file": "旧美术资产/角色一/资产清单.txt",
       "line": 8,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色一_三视图_配色版.png",
-      "file": "新角色一/资产清单.txt",
-      "line": 7,
       "module": "characters",
       "kind": "documentation"
     },
@@ -27567,14 +27957,7 @@
     {
       "path": "角色一_卡面插画_圣剑突击.png",
       "file": "新角色一/资产清单.txt",
-      "line": 19,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色一_卡面插画_圣剑突击.png",
-      "file": "新角色一/资产清单.txt",
-      "line": 26,
+      "line": 29,
       "module": "characters",
       "kind": "documentation"
     },
@@ -27582,27 +27965,27 @@
       "path": "角色一_卡面插画_圣剑突击.png",
       "file": "旧美术资产/角色一/资产清单.txt",
       "line": 18,
+      "module": "characters",
+      "kind": "documentation"
+    },
+    {
+      "path": "角色一_卡面插画_圣剑突击.webp",
+      "file": "新角色一/资产清单.txt",
+      "line": 30,
       "module": "characters",
       "kind": "documentation"
     },
     {
       "path": "角色一_卡面插画_圣剑突击_无背景.png",
       "file": "新角色一/资产清单.txt",
-      "line": 21,
+      "line": 31,
       "module": "characters",
       "kind": "documentation"
     },
     {
       "path": "角色一_卡面插画_遗迹立誓.png",
       "file": "新角色一/资产清单.txt",
-      "line": 20,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色一_卡面插画_遗迹立誓.png",
-      "file": "新角色一/资产清单.txt",
-      "line": 26,
+      "line": 32,
       "module": "characters",
       "kind": "documentation"
     },
@@ -27610,20 +27993,20 @@
       "path": "角色一_卡面插画_遗迹立誓.png",
       "file": "旧美术资产/角色一/资产清单.txt",
       "line": 19,
+      "module": "characters",
+      "kind": "documentation"
+    },
+    {
+      "path": "角色一_卡面插画_遗迹立誓.webp",
+      "file": "新角色一/资产清单.txt",
+      "line": 33,
       "module": "characters",
       "kind": "documentation"
     },
     {
       "path": "角色一_卡面插画_遗迹立誓_无背景.png",
       "file": "新角色一/资产清单.txt",
-      "line": 22,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色一_我方背面_受击.png",
-      "file": "新角色一/资产清单.txt",
-      "line": 13,
+      "line": 34,
       "module": "characters",
       "kind": "documentation"
     },
@@ -27636,22 +28019,8 @@
     },
     {
       "path": "角色一_我方背面_待机.png",
-      "file": "新角色一/资产清单.txt",
-      "line": 10,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色一_我方背面_待机.png",
       "file": "旧美术资产/角色一/资产清单.txt",
       "line": 10,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色一_我方背面_技能释放.png",
-      "file": "新角色一/资产清单.txt",
-      "line": 12,
       "module": "characters",
       "kind": "documentation"
     },
@@ -27664,22 +28033,8 @@
     },
     {
       "path": "角色一_我方背面_攻击起手.png",
-      "file": "新角色一/资产清单.txt",
-      "line": 11,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色一_我方背面_攻击起手.png",
       "file": "旧美术资产/角色一/资产清单.txt",
       "line": 11,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色一_敌方正面_受击.png",
-      "file": "新角色一/资产清单.txt",
-      "line": 17,
       "module": "characters",
       "kind": "documentation"
     },
@@ -27692,22 +28047,8 @@
     },
     {
       "path": "角色一_敌方正面_待机.png",
-      "file": "新角色一/资产清单.txt",
-      "line": 14,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色一_敌方正面_待机.png",
       "file": "旧美术资产/角色一/资产清单.txt",
       "line": 14,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色一_敌方正面_技能释放.png",
-      "file": "新角色一/资产清单.txt",
-      "line": 16,
       "module": "characters",
       "kind": "documentation"
     },
@@ -27720,13 +28061,6 @@
     },
     {
       "path": "角色一_敌方正面_攻击起手.png",
-      "file": "新角色一/资产清单.txt",
-      "line": 15,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色一_敌方正面_攻击起手.png",
       "file": "旧美术资产/角色一/资产清单.txt",
       "line": 15,
       "module": "characters",
@@ -27734,29 +28068,8 @@
     },
     {
       "path": "角色一_武器设定_圣剑.png",
-      "file": "新角色一/资产清单.txt",
-      "line": 9,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色一_武器设定_圣剑.png",
       "file": "旧美术资产/角色一/资产清单.txt",
       "line": 9,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色一_角色选择_立绘.png",
-      "file": "新角色一/资产清单.txt",
-      "line": 18,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色三_三视图_线稿版.png",
-      "file": "新角色三/资产清单.txt",
-      "line": 19,
       "module": "characters",
       "kind": "documentation"
     },
@@ -27769,22 +28082,8 @@
     },
     {
       "path": "角色三_三视图_配色版.png",
-      "file": "新角色三/资产清单.txt",
-      "line": 18,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色三_三视图_配色版.png",
       "file": "旧美术资产/角色三/资产清单.txt",
       "line": 7,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色三_卡面插画_拉弓瞄准.png",
-      "file": "新角色三/资产清单.txt",
-      "line": 15,
       "module": "characters",
       "kind": "documentation"
     },
@@ -27803,7 +28102,21 @@
       "kind": "documentation"
     },
     {
+      "path": "角色三_卡面插画_拉弓瞄准.webp",
+      "file": "新角色三/资产清单.txt",
+      "line": 30,
+      "module": "characters",
+      "kind": "documentation"
+    },
+    {
       "path": "角色三_卡面插画_拉弓瞄准_无背景.png",
+      "file": "新角色三/资产清单.txt",
+      "line": 31,
+      "module": "characters",
+      "kind": "documentation"
+    },
+    {
+      "path": "角色三_卡面插画_疾风连射.png",
       "file": "新角色三/资产清单.txt",
       "line": 32,
       "module": "characters",
@@ -27811,36 +28124,22 @@
     },
     {
       "path": "角色三_卡面插画_疾风连射.png",
-      "file": "新角色三/资产清单.txt",
-      "line": 15,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色三_卡面插画_疾风连射.png",
-      "file": "新角色三/资产清单.txt",
-      "line": 30,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色三_卡面插画_疾风连射.png",
       "file": "旧美术资产/角色三/资产清单.txt",
       "line": 19,
       "module": "characters",
       "kind": "documentation"
     },
     {
-      "path": "角色三_卡面插画_疾风连射_无背景.png",
+      "path": "角色三_卡面插画_疾风连射.webp",
       "file": "新角色三/资产清单.txt",
       "line": 33,
       "module": "characters",
       "kind": "documentation"
     },
     {
-      "path": "角色三_我方背面_受击.png",
+      "path": "角色三_卡面插画_疾风连射_无背景.png",
       "file": "新角色三/资产清单.txt",
-      "line": 24,
+      "line": 34,
       "module": "characters",
       "kind": "documentation"
     },
@@ -27853,22 +28152,8 @@
     },
     {
       "path": "角色三_我方背面_待机.png",
-      "file": "新角色三/资产清单.txt",
-      "line": 21,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色三_我方背面_待机.png",
       "file": "旧美术资产/角色三/资产清单.txt",
       "line": 10,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色三_我方背面_技能释放.png",
-      "file": "新角色三/资产清单.txt",
-      "line": 23,
       "module": "characters",
       "kind": "documentation"
     },
@@ -27881,22 +28166,8 @@
     },
     {
       "path": "角色三_我方背面_攻击起手.png",
-      "file": "新角色三/资产清单.txt",
-      "line": 22,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色三_我方背面_攻击起手.png",
       "file": "旧美术资产/角色三/资产清单.txt",
       "line": 11,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色三_敌方正面_受击.png",
-      "file": "新角色三/资产清单.txt",
-      "line": 28,
       "module": "characters",
       "kind": "documentation"
     },
@@ -27909,22 +28180,8 @@
     },
     {
       "path": "角色三_敌方正面_待机.png",
-      "file": "新角色三/资产清单.txt",
-      "line": 25,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色三_敌方正面_待机.png",
       "file": "旧美术资产/角色三/资产清单.txt",
       "line": 14,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色三_敌方正面_技能释放.png",
-      "file": "新角色三/资产清单.txt",
-      "line": 27,
       "module": "characters",
       "kind": "documentation"
     },
@@ -27937,13 +28194,6 @@
     },
     {
       "path": "角色三_敌方正面_攻击起手.png",
-      "file": "新角色三/资产清单.txt",
-      "line": 26,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色三_敌方正面_攻击起手.png",
       "file": "旧美术资产/角色三/资产清单.txt",
       "line": 15,
       "module": "characters",
@@ -27951,134 +28201,50 @@
     },
     {
       "path": "角色三_武器设定_长弓.png",
-      "file": "新角色三/资产清单.txt",
-      "line": 20,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色三_武器设定_长弓.png",
       "file": "旧美术资产/角色三/资产清单.txt",
       "line": 9,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色三_角色选择_立绘.png",
-      "file": "新角色三/资产清单.txt",
-      "line": 31,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色二_三视图_线稿版.png",
-      "file": "角色二/资产清单.txt",
-      "line": 8,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色二_三视图_配色版.png",
-      "file": "角色二/资产清单.txt",
-      "line": 7,
       "module": "characters",
       "kind": "documentation"
     },
     {
       "path": "角色二_卡面插画_紫焰爆裂.png",
       "file": "角色二/资产清单.txt",
-      "line": 18,
+      "line": 30,
+      "module": "characters",
+      "kind": "documentation"
+    },
+    {
+      "path": "角色二_卡面插画_紫焰爆裂.webp",
+      "file": "角色二/资产清单.txt",
+      "line": 31,
       "module": "characters",
       "kind": "documentation"
     },
     {
       "path": "角色二_卡面插画_紫焰爆裂_无背景.png",
       "file": "角色二/资产清单.txt",
-      "line": 20,
+      "line": 32,
       "module": "characters",
       "kind": "documentation"
     },
     {
       "path": "角色二_卡面插画_遗迹咏唱.png",
       "file": "角色二/资产清单.txt",
-      "line": 19,
+      "line": 33,
+      "module": "characters",
+      "kind": "documentation"
+    },
+    {
+      "path": "角色二_卡面插画_遗迹咏唱.webp",
+      "file": "角色二/资产清单.txt",
+      "line": 34,
       "module": "characters",
       "kind": "documentation"
     },
     {
       "path": "角色二_卡面插画_遗迹咏唱_无背景.png",
       "file": "角色二/资产清单.txt",
-      "line": 21,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色二_我方背面_受击.png",
-      "file": "角色二/资产清单.txt",
-      "line": 13,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色二_我方背面_待机.png",
-      "file": "角色二/资产清单.txt",
-      "line": 10,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色二_我方背面_技能释放.png",
-      "file": "角色二/资产清单.txt",
-      "line": 12,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色二_我方背面_攻击起手.png",
-      "file": "角色二/资产清单.txt",
-      "line": 11,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色二_敌方正面_受击.png",
-      "file": "角色二/资产清单.txt",
-      "line": 17,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色二_敌方正面_待机.png",
-      "file": "角色二/资产清单.txt",
-      "line": 14,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色二_敌方正面_技能释放.png",
-      "file": "角色二/资产清单.txt",
-      "line": 16,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色二_敌方正面_攻击起手.png",
-      "file": "角色二/资产清单.txt",
-      "line": 15,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色二_武器设定_法杖.png",
-      "file": "角色二/资产清单.txt",
-      "line": 9,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色二_角色选择_立绘.png",
-      "file": "角色二/资产清单.txt",
-      "line": 22,
+      "line": 35,
       "module": "characters",
       "kind": "documentation"
     },
@@ -28645,27 +28811,6 @@
       ]
     },
     {
-      "basePath": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_archer_uniform_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_mage_uniform_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_warrior_uniform_v1",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
       "basePath": "UI/教堂彩窗赛璐璐/角色选择/特性标签底板_蓝金_v1",
       "extensions": [
         ".png",
@@ -29156,27 +29301,6 @@
       ]
     },
     {
-      "basePath": "头像/角色/hero_archer",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "头像/角色/hero_mage",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "头像/角色/hero_warrior",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
       "basePath": "新角色一/角色一_卡面插画_圣剑突击",
       "extensions": [
         ".png",
@@ -29185,20 +29309,6 @@
     },
     {
       "basePath": "新角色一/角色一_卡面插画_遗迹立誓",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "新角色一/角色一_我方背面_待机",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "新角色一/角色一_角色选择_立绘",
       "extensions": [
         ".png",
         ".webp"
@@ -29219,20 +29329,6 @@
       ]
     },
     {
-      "basePath": "新角色三/角色三_我方背面_待机",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "新角色三/角色三_角色选择_立绘",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
       "basePath": "角色二/角色二_卡面插画_紫焰爆裂",
       "extensions": [
         ".png",
@@ -29241,20 +29337,6 @@
     },
     {
       "basePath": "角色二/角色二_卡面插画_遗迹咏唱",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "角色二/角色二_我方背面_待机",
-      "extensions": [
-        ".png",
-        ".webp"
-      ]
-    },
-    {
-      "basePath": "角色二/角色二_角色选择_立绘",
       "extensions": [
         ".png",
         ".webp"
@@ -29758,8 +29840,8 @@
     {
       "sha256": "235d768f6678788a3952ce09ae675cdc1ee62b126e0546bce17ee2b4b427ab9c",
       "paths": [
-        "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_warrior_uniform_v1.png",
-        "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_warrior_v2.png"
+        "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_warrior_v2.png",
+        "assets/source/characters/warrior/role_select_frame_v1_source.png"
       ]
     },
     {

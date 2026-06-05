@@ -68,9 +68,9 @@
             --asset-role-select-bg: url('assets/scenes/battle/temple_hall_grand_v1.webp');
             --asset-role-desc-panel: url('UI/教堂彩窗赛璐璐/角色选择/角色描述面板_v1.webp');
             --asset-role-tag-plate: url('UI/教堂彩窗赛璐璐/角色选择/特性标签底板_蓝金_v1.webp');
-            --asset-role-frame-warrior-v2: url('UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_warrior_uniform_v1.webp');
-            --asset-role-frame-mage-v2: url('UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_mage_uniform_v1.webp');
-            --asset-role-frame-archer-v2: url('UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_archer_uniform_v1.webp');
+            --asset-role-frame-warrior-v2: url('assets/characters/warrior/role_select_frame_v1.webp');
+            --asset-role-frame-mage-v2: url('assets/characters/mage/role_select_frame_v1.webp');
+            --asset-role-frame-archer-v2: url('assets/characters/archer/role_select_frame_v1.webp');
             --asset-role-button-main: url('UI/教堂彩窗赛璐璐/按钮/主按钮_蓝金_v1.webp');
             --asset-role-button-confirm: url('UI/教堂彩窗赛璐璐/按钮/确认按钮_紫金_v1.webp');
             --asset-role-button-back: url('UI/教堂彩窗赛璐璐/按钮/返回按钮_青金_v1.webp');
@@ -1544,7 +1544,7 @@
         .shop-scene, .event-scene, .rest-scene { width: 1120px; padding: 0; overflow: hidden; text-align: left; max-width: calc(100vw - 64px); background: linear-gradient(180deg, rgba(8,12,18,0.98), rgba(5,6,10,0.99)); }
         .shop-scene, .rest-scene { max-height: calc(100vh - 64px); }
         .scene-banner { min-height: 176px; padding: 34px 46px 28px 286px; border-bottom: 1px solid rgba(222,190,111,0.46); background: linear-gradient(90deg, rgba(8,12,20,0.98) 0%, rgba(24,56,90,0.82) 42%, rgba(9,13,20,0.72)), url('assets/scenes/battle/ancient_forest_day_v1.webp'); background-size: cover; background-position: center 28%; color: #fff7dc; position: relative; box-shadow: inset 0 -34px 36px rgba(0,0,0,0.62); }
-        .scene-banner::before { content:""; position:absolute; left:34px; bottom:0; width:216px; height:168px; background: url('新角色三/角色三_角色选择_立绘.webp') 50% 18% / cover no-repeat; filter: drop-shadow(0 15px 12px rgba(0,0,0,0.58)); z-index:1; }
+        .scene-banner::before { content:""; position:absolute; left:34px; bottom:0; width:216px; height:168px; background: url('assets/characters/archer/select_portrait_v1.webp') 50% 18% / cover no-repeat; filter: drop-shadow(0 15px 12px rgba(0,0,0,0.58)); z-index:1; }
         .scene-banner::after { content:""; position:absolute; left:286px; right:44px; bottom:18px; height:2px; background: linear-gradient(90deg, rgba(241,196,15,0.72), transparent); pointer-events:none; }
         .event-scene .scene-banner { background-image: linear-gradient(90deg, rgba(12,16,31,0.98), rgba(42,62,106,0.86) 48%, rgba(174,133,64,0.46)), url('assets/scenes/battle/stone_ruins_day_v1.webp'); background-position: center 32%; }
         .event-scene .scene-banner::before { background-image: var(--asset-npc-encounter-angel); background-position: 50% 0%; }
@@ -1751,7 +1751,7 @@
         </div>
         <div class="battle-side-player">
             <div class="player-ground-shadow"></div>
-            <div class="player-avatar-frame"><img id="player-avatar-img" src="新角色一/角色一_我方背面_待机.webp" alt="主角"></div>
+            <div class="player-avatar-frame"><img id="player-avatar-img" src="assets/characters/warrior/battle_back_idle_v1.webp" alt="主角"></div>
             <div id="player-nameplate" class="player-nameplate">勇者战士</div>
         </div>
         <div class="combat-stage">
@@ -4213,7 +4213,7 @@
             portrait.style.width = `${Math.max(1, Math.round((portraitRect.width || 82) - 24))}px`;
             portrait.style.height = `${Math.max(1, Math.round((portraitRect.height || 86) - 24))}px`;
             portrait.style.zIndex = String(Math.round((Number(portraitFrameItem.z) || 21) * 10 - 1));
-            portrait.innerHTML = `<img id="player-hud-portrait-img" src="${withAvatarVersion('头像/角色/hero_warrior.webp')}" alt="玩家头像">`;
+            portrait.innerHTML = `<img id="player-hud-portrait-img" src="${withAvatarVersion('assets/characters/warrior/avatar_portrait_v1.webp')}" alt="玩家头像">`;
             root.appendChild(portrait);
         }
         ensureBattleHudOverlayLayers();

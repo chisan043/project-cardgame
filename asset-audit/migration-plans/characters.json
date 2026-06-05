@@ -1,0 +1,1499 @@
+{
+  "generatedBy": "tools/plan_asset_migration.py",
+  "proposalType": "review_only",
+  "moduleSlug": "characters",
+  "sourcePrefix": "头像/角色/",
+  "includePrefixes": [
+    "新角色一/",
+    "角色二/",
+    "新角色三/",
+    "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/",
+    "assets/characters/",
+    "assets/source/characters/"
+  ],
+  "targetDirectory": "assets/characters",
+  "strategy": [
+    "Review this plan before executing any filesystem migration.",
+    "Copy active runtime assets into the owning module first.",
+    "Rewrite references only after copied assets exist.",
+    "Keep source and candidate assets separate from formal runtime assets.",
+    "Do not archive unreferenced assets until active migration validation passes."
+  ],
+  "summary": {
+    "assetCount": 55,
+    "statusCounts": {
+      "active": 12,
+      "documented": 43
+    },
+    "actionCounts": {
+      "already_migrated": 55
+    },
+    "trackedCounts": {
+      "tracked": 55
+    },
+    "duplicateExtensionGroupCount": 0
+  },
+  "entries": [
+    {
+      "sourcePath": "assets/characters/archer/avatar_portrait_v1.webp",
+      "suggestedPath": "assets/characters/archer/avatar_portrait_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [
+        {
+          "file": "src/data/characters.js",
+          "line": 56,
+          "module": "characters",
+          "kind": "runtime"
+        },
+        {
+          "file": "新角色三/资产清单.txt",
+          "line": 9,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [],
+      "sha256": "53d0e63f868c3cb455413eb8605cd79ad3ac15f78e29aaa5230a14452d85f4c9",
+      "derivedFrom": "assets/characters/archer/avatar_portrait_v1.webp",
+      "visualGroup": "visual_53d0e63f86",
+      "notes": "runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/characters/archer/battle_back_idle_v1.webp",
+      "suggestedPath": "assets/characters/archer/battle_back_idle_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [
+        {
+          "file": "src/data/characters.js",
+          "line": 57,
+          "module": "characters",
+          "kind": "runtime"
+        },
+        {
+          "file": "新角色三/资产清单.txt",
+          "line": 11,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [],
+      "sha256": "c9dba0152b8a4542f02b157a80f31fafb61b36173cbe8e824862c83f07db4677",
+      "derivedFrom": "assets/characters/archer/battle_back_idle_v1.webp",
+      "visualGroup": "visual_c9dba0152b",
+      "notes": "runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/characters/archer/role_select_frame_v1.webp",
+      "suggestedPath": "assets/characters/archer/role_select_frame_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 73,
+          "module": "demo",
+          "kind": "runtime"
+        },
+        {
+          "file": "新角色三/资产清单.txt",
+          "line": 12,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters",
+        "demo"
+      ],
+      "risks": [
+        "multi_module_reference"
+      ],
+      "sha256": "e6088552f23c213d9172231f303a68428854df70bd4ae29c67878b015b054334",
+      "derivedFrom": "assets/characters/archer/role_select_frame_v1.webp",
+      "visualGroup": "visual_e6088552f2",
+      "notes": "runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/characters/archer/select_portrait_v1.webp",
+      "suggestedPath": "assets/characters/archer/select_portrait_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [
+        {
+          "file": "src/data/characters.js",
+          "line": 55,
+          "module": "characters",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 1547,
+          "module": "demo",
+          "kind": "runtime"
+        },
+        {
+          "file": "新角色三/资产清单.txt",
+          "line": 10,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters",
+        "demo"
+      ],
+      "risks": [
+        "multi_module_reference"
+      ],
+      "sha256": "8773787f05ad87ab8a71127f5b0c5246a4b86f9e8ef50c498e4e9bf53654bd16",
+      "derivedFrom": "assets/characters/archer/select_portrait_v1.webp",
+      "visualGroup": "visual_8773787f05",
+      "notes": "runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/characters/mage/avatar_portrait_v1.webp",
+      "suggestedPath": "assets/characters/mage/avatar_portrait_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [
+        {
+          "file": "src/data/characters.js",
+          "line": 37,
+          "module": "characters",
+          "kind": "runtime"
+        },
+        {
+          "file": "角色二/资产清单.txt",
+          "line": 9,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [],
+      "sha256": "04a26d4da6d46fdbb27c2e7bbc2865c9082d7fd49e5ee4478129b264f4e10702",
+      "derivedFrom": "assets/characters/mage/avatar_portrait_v1.webp",
+      "visualGroup": "visual_04a26d4da6",
+      "notes": "runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/characters/mage/battle_back_idle_v1.webp",
+      "suggestedPath": "assets/characters/mage/battle_back_idle_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [
+        {
+          "file": "src/data/characters.js",
+          "line": 38,
+          "module": "characters",
+          "kind": "runtime"
+        },
+        {
+          "file": "角色二/资产清单.txt",
+          "line": 11,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [],
+      "sha256": "00dbadc005bef5458a89f64f2e77d5920552c380e708fe3603c91aea200f9c79",
+      "derivedFrom": "assets/characters/mage/battle_back_idle_v1.webp",
+      "visualGroup": "visual_00dbadc005",
+      "notes": "runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/characters/mage/role_select_frame_v1.webp",
+      "suggestedPath": "assets/characters/mage/role_select_frame_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 72,
+          "module": "demo",
+          "kind": "runtime"
+        },
+        {
+          "file": "角色二/资产清单.txt",
+          "line": 12,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters",
+        "demo"
+      ],
+      "risks": [
+        "multi_module_reference"
+      ],
+      "sha256": "8d9ce99abad53d8e3e05d2b74aba6c8e295f354858fe1a96f9649c5314567072",
+      "derivedFrom": "assets/characters/mage/role_select_frame_v1.webp",
+      "visualGroup": "visual_8d9ce99aba",
+      "notes": "runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/characters/mage/select_portrait_v1.webp",
+      "suggestedPath": "assets/characters/mage/select_portrait_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [
+        {
+          "file": "src/data/characters.js",
+          "line": 36,
+          "module": "characters",
+          "kind": "runtime"
+        },
+        {
+          "file": "角色二/资产清单.txt",
+          "line": 10,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [],
+      "sha256": "1fc0b47191f8d0e7e0ae7dadd785b6e204dfbdf80db8346d6bdf3f6506319365",
+      "derivedFrom": "assets/characters/mage/select_portrait_v1.webp",
+      "visualGroup": "visual_1fc0b47191",
+      "notes": "runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/characters/warrior/avatar_portrait_v1.webp",
+      "suggestedPath": "assets/characters/warrior/avatar_portrait_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [
+        {
+          "file": "src/data/characters.js",
+          "line": 18,
+          "module": "characters",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 4216,
+          "module": "demo",
+          "kind": "runtime"
+        },
+        {
+          "file": "新角色一/资产清单.txt",
+          "line": 9,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters",
+        "demo"
+      ],
+      "risks": [
+        "multi_module_reference"
+      ],
+      "sha256": "dd0c44f16de5f860d199cab73aacec3c6194cba54ebff712eea48e063fb39854",
+      "derivedFrom": "assets/characters/warrior/avatar_portrait_v1.webp",
+      "visualGroup": "visual_dd0c44f16d",
+      "notes": "runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/characters/warrior/battle_back_idle_v1.webp",
+      "suggestedPath": "assets/characters/warrior/battle_back_idle_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [
+        {
+          "file": "src/data/characters.js",
+          "line": 19,
+          "module": "characters",
+          "kind": "runtime"
+        },
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 1754,
+          "module": "demo",
+          "kind": "runtime"
+        },
+        {
+          "file": "新角色一/资产清单.txt",
+          "line": 11,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters",
+        "demo"
+      ],
+      "risks": [
+        "multi_module_reference"
+      ],
+      "sha256": "6e283abab2218ba5b19a2c6c63ab4475046ec427002bd5a089b1adc95eaf633f",
+      "derivedFrom": "assets/characters/warrior/battle_back_idle_v1.webp",
+      "visualGroup": "visual_6e283abab2",
+      "notes": "runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/characters/warrior/role_select_frame_v1.webp",
+      "suggestedPath": "assets/characters/warrior/role_select_frame_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [
+        {
+          "file": "幻境残卷demo_v0.99.html",
+          "line": 71,
+          "module": "demo",
+          "kind": "runtime"
+        },
+        {
+          "file": "新角色一/资产清单.txt",
+          "line": 12,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters",
+        "demo"
+      ],
+      "risks": [
+        "multi_module_reference"
+      ],
+      "sha256": "6ba5afc2687aaa7253a09f96372cb18934900c95217f970af9df424462c6dcfb",
+      "derivedFrom": "assets/characters/warrior/role_select_frame_v1.webp",
+      "visualGroup": "visual_6ba5afc268",
+      "notes": "runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/characters/warrior/select_portrait_v1.webp",
+      "suggestedPath": "assets/characters/warrior/select_portrait_v1.webp",
+      "action": "already_migrated",
+      "status": "active",
+      "tracked": true,
+      "references": [
+        {
+          "file": "src/data/characters.js",
+          "line": 17,
+          "module": "characters",
+          "kind": "runtime"
+        },
+        {
+          "file": "新角色一/资产清单.txt",
+          "line": 10,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [],
+      "sha256": "ab27a556ffa7fa26ed093d0a838788a51c70e807a8dfda6abcc73cf3c8785554",
+      "derivedFrom": "assets/characters/warrior/select_portrait_v1.webp",
+      "visualGroup": "visual_ab27a556ff",
+      "notes": "runtime/config referenced"
+    },
+    {
+      "sourcePath": "assets/source/characters/archer/avatar_portrait_v1_source.png",
+      "suggestedPath": "assets/source/characters/archer/avatar_portrait_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "新角色三/资产清单.txt",
+          "line": 13,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "ff4c45432c9adaa4e6c8e9f7cd6b1dc25b37b57972cc470a81f4394c023a2f9a",
+      "derivedFrom": "assets/source/characters/archer/avatar_portrait_v1_source.png",
+      "visualGroup": "visual_ff4c45432c",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/archer/battle_back/attack_start_v1_source.png",
+      "suggestedPath": "assets/source/characters/archer/battle_back/attack_start_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "新角色三/资产清单.txt",
+          "line": 16,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "50d62a6e91bad1992cdac6a9ac887d90acdf20321b4e8f23cc1b4c33285d8470",
+      "derivedFrom": "assets/source/characters/archer/battle_back/attack_start_v1_source.png",
+      "visualGroup": "visual_50d62a6e91",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/archer/battle_back/hurt_v1_source.png",
+      "suggestedPath": "assets/source/characters/archer/battle_back/hurt_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "新角色三/资产清单.txt",
+          "line": 18,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "a11e2a9d8993d27ef378a6fcf2e260027c1dd4f9b5ab44ee91723a10847aadb1",
+      "derivedFrom": "assets/source/characters/archer/battle_back/hurt_v1_source.png",
+      "visualGroup": "visual_a11e2a9d89",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/archer/battle_back/idle_v1_source.png",
+      "suggestedPath": "assets/source/characters/archer/battle_back/idle_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "新角色三/资产清单.txt",
+          "line": 15,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "22fca0ff955c09fc041c52f5dc0fbac89a4a28bd399fe186ad2749db7e63bf4e",
+      "derivedFrom": "assets/source/characters/archer/battle_back/idle_v1_source.png",
+      "visualGroup": "visual_22fca0ff95",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/archer/battle_back/skill_cast_v1_source.png",
+      "suggestedPath": "assets/source/characters/archer/battle_back/skill_cast_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "新角色三/资产清单.txt",
+          "line": 17,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "e836ba281107b92870e3ade9f832708bd2f601fbb894e64e2afdaf3f364ffaa2",
+      "derivedFrom": "assets/source/characters/archer/battle_back/skill_cast_v1_source.png",
+      "visualGroup": "visual_e836ba2811",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/archer/battle_front/attack_start_v1_source.png",
+      "suggestedPath": "assets/source/characters/archer/battle_front/attack_start_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "新角色三/资产清单.txt",
+          "line": 20,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "a8675186c4b0d8dc8c2a69484e4d1f8773444fc6eb20b811c9a38df9f0396852",
+      "derivedFrom": "assets/source/characters/archer/battle_front/attack_start_v1_source.png",
+      "visualGroup": "visual_a8675186c4",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/archer/battle_front/hurt_v1_source.png",
+      "suggestedPath": "assets/source/characters/archer/battle_front/hurt_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "新角色三/资产清单.txt",
+          "line": 22,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "2939c6b4de266165a8748fd3f22ebcd2267610a83ab3df188ac11b071ee77075",
+      "derivedFrom": "assets/source/characters/archer/battle_front/hurt_v1_source.png",
+      "visualGroup": "visual_2939c6b4de",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/archer/battle_front/idle_v1_source.png",
+      "suggestedPath": "assets/source/characters/archer/battle_front/idle_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "新角色三/资产清单.txt",
+          "line": 19,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "a1be7c3d87b431be080214ea162ecd991ed148bb1b1e6c062716ba183e5506f4",
+      "derivedFrom": "assets/source/characters/archer/battle_front/idle_v1_source.png",
+      "visualGroup": "visual_a1be7c3d87",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/archer/battle_front/skill_cast_v1_source.png",
+      "suggestedPath": "assets/source/characters/archer/battle_front/skill_cast_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "新角色三/资产清单.txt",
+          "line": 21,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "c1a98ea0fd1d6b47fa0f6b7c7d63ba4feb73d28ad2558dd271b9bef3d267a1ff",
+      "derivedFrom": "assets/source/characters/archer/battle_front/skill_cast_v1_source.png",
+      "visualGroup": "visual_c1a98ea0fd",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/archer/design/turnaround_color_v1_source.png",
+      "suggestedPath": "assets/source/characters/archer/design/turnaround_color_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "新角色三/资产清单.txt",
+          "line": 24,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "65bf339c307730a01f16ed065727eeb82bdb8a623ad5e537b2af6b39288c1ee8",
+      "derivedFrom": "assets/source/characters/archer/design/turnaround_color_v1_source.png",
+      "visualGroup": "visual_65bf339c30",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/archer/design/turnaround_line_v1_source.png",
+      "suggestedPath": "assets/source/characters/archer/design/turnaround_line_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "新角色三/资产清单.txt",
+          "line": 23,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "6ff593501e52ed23b3aa939aa832e3a49d6a21f60acd9a200798d83ce48c0476",
+      "derivedFrom": "assets/source/characters/archer/design/turnaround_line_v1_source.png",
+      "visualGroup": "visual_6ff593501e",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/archer/design/weapon_bow_v1_source.png",
+      "suggestedPath": "assets/source/characters/archer/design/weapon_bow_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "新角色三/资产清单.txt",
+          "line": 25,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "959c3b02e4eb7c053bcb72ccc64039a11550cd6683d60e9c30b8a0174d7ea986",
+      "derivedFrom": "assets/source/characters/archer/design/weapon_bow_v1_source.png",
+      "visualGroup": "visual_959c3b02e4",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/archer/role_select_frame_v1_source.png",
+      "suggestedPath": "assets/source/characters/archer/role_select_frame_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "新角色三/资产清单.txt",
+          "line": 26,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "8d722ef5aa1d26e07b6a177bef6d32f44b945622b1cd7be23b570d1d18a65cec",
+      "derivedFrom": "assets/source/characters/archer/role_select_frame_v1_source.png",
+      "visualGroup": "visual_8d722ef5aa",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/archer/select_portrait_v1_source.png",
+      "suggestedPath": "assets/source/characters/archer/select_portrait_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "新角色三/资产清单.txt",
+          "line": 14,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "f8b82d08333170566fb32a57675d76d11934e4bd1668d37580244880a5a3cdd0",
+      "derivedFrom": "assets/source/characters/archer/select_portrait_v1_source.png",
+      "visualGroup": "visual_f8b82d0833",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/mage/avatar_portrait_v1_source.png",
+      "suggestedPath": "assets/source/characters/mage/avatar_portrait_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "角色二/资产清单.txt",
+          "line": 13,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "397f63851151ce3aeecbf37a517a7b3db73d661b407d20be4d842b2bebea0ccf",
+      "derivedFrom": "assets/source/characters/mage/avatar_portrait_v1_source.png",
+      "visualGroup": "visual_397f638511",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/mage/battle_back/attack_start_v1_source.png",
+      "suggestedPath": "assets/source/characters/mage/battle_back/attack_start_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "角色二/资产清单.txt",
+          "line": 16,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "eb54aab113599002f3221efdb6264b0de841561998fcf3aca05a8897a73a9859",
+      "derivedFrom": "assets/source/characters/mage/battle_back/attack_start_v1_source.png",
+      "visualGroup": "visual_eb54aab113",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/mage/battle_back/hurt_v1_source.png",
+      "suggestedPath": "assets/source/characters/mage/battle_back/hurt_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "角色二/资产清单.txt",
+          "line": 18,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "95a484dcce6229b30bf9f057c986a20b4f0dfa2023e29820371cb0584ec0df1e",
+      "derivedFrom": "assets/source/characters/mage/battle_back/hurt_v1_source.png",
+      "visualGroup": "visual_95a484dcce",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/mage/battle_back/idle_v1_source.png",
+      "suggestedPath": "assets/source/characters/mage/battle_back/idle_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "角色二/资产清单.txt",
+          "line": 15,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "387f2ada249605f1db9f258e738e1f4497385a253ccb6988667304407ef3df09",
+      "derivedFrom": "assets/source/characters/mage/battle_back/idle_v1_source.png",
+      "visualGroup": "visual_387f2ada24",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/mage/battle_back/skill_cast_v1_source.png",
+      "suggestedPath": "assets/source/characters/mage/battle_back/skill_cast_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "角色二/资产清单.txt",
+          "line": 17,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "b3602623d788901cb3cc6e461f5b713f7da789dfc8552c58795c55680097e1bf",
+      "derivedFrom": "assets/source/characters/mage/battle_back/skill_cast_v1_source.png",
+      "visualGroup": "visual_b3602623d7",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/mage/battle_front/attack_start_v1_source.png",
+      "suggestedPath": "assets/source/characters/mage/battle_front/attack_start_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "角色二/资产清单.txt",
+          "line": 20,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "146944fc2d0a4e2e8612012019237caa2a580a111e468f75da5bf167f90ca830",
+      "derivedFrom": "assets/source/characters/mage/battle_front/attack_start_v1_source.png",
+      "visualGroup": "visual_146944fc2d",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/mage/battle_front/hurt_v1_source.png",
+      "suggestedPath": "assets/source/characters/mage/battle_front/hurt_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "角色二/资产清单.txt",
+          "line": 22,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "7026bce35f9cdb36927fc3f4cedfc66e9ad0dd8fc374867857775504507efcdf",
+      "derivedFrom": "assets/source/characters/mage/battle_front/hurt_v1_source.png",
+      "visualGroup": "visual_7026bce35f",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/mage/battle_front/idle_v1_source.png",
+      "suggestedPath": "assets/source/characters/mage/battle_front/idle_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "角色二/资产清单.txt",
+          "line": 19,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "1cbb52c54152d36c5a42763ddf6353fea213aaeca0ce2ee028fdbc1c3689fe16",
+      "derivedFrom": "assets/source/characters/mage/battle_front/idle_v1_source.png",
+      "visualGroup": "visual_1cbb52c541",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/mage/battle_front/skill_cast_v1_source.png",
+      "suggestedPath": "assets/source/characters/mage/battle_front/skill_cast_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "角色二/资产清单.txt",
+          "line": 21,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "034b0c4395255471504eb085c89f467d8cac5afac873e3fb88eacda45d74719b",
+      "derivedFrom": "assets/source/characters/mage/battle_front/skill_cast_v1_source.png",
+      "visualGroup": "visual_034b0c4395",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/mage/design/select_stained_glass_v1_source.png",
+      "suggestedPath": "assets/source/characters/mage/design/select_stained_glass_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "角色二/资产清单.txt",
+          "line": 26,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "4fe17e7ac99591b23ed7ca0c943e877c895765358844b603cef7eafee37b1867",
+      "derivedFrom": "assets/source/characters/mage/design/select_stained_glass_v1_source.png",
+      "visualGroup": "visual_4fe17e7ac9",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/mage/design/turnaround_color_v1_source.png",
+      "suggestedPath": "assets/source/characters/mage/design/turnaround_color_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "角色二/资产清单.txt",
+          "line": 24,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "ea58c24efb58aa3d7cb76520cd8aa55ec37e2e206ba92f310ea9b3c5cb2dd7c7",
+      "derivedFrom": "assets/source/characters/mage/design/turnaround_color_v1_source.png",
+      "visualGroup": "visual_ea58c24efb",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/mage/design/turnaround_line_v1_source.png",
+      "suggestedPath": "assets/source/characters/mage/design/turnaround_line_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "角色二/资产清单.txt",
+          "line": 23,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "1c968031b6294abf14a67c94b6f375d991f9b68794ef94cb765e98b57a6349ce",
+      "derivedFrom": "assets/source/characters/mage/design/turnaround_line_v1_source.png",
+      "visualGroup": "visual_1c968031b6",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/mage/design/weapon_staff_v1_source.png",
+      "suggestedPath": "assets/source/characters/mage/design/weapon_staff_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "角色二/资产清单.txt",
+          "line": 25,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "9e17bb182346579d2847ced2952593cb2e2b98be11c082d790b98983c495174b",
+      "derivedFrom": "assets/source/characters/mage/design/weapon_staff_v1_source.png",
+      "visualGroup": "visual_9e17bb1823",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/mage/role_select_frame_v1_source.png",
+      "suggestedPath": "assets/source/characters/mage/role_select_frame_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "角色二/资产清单.txt",
+          "line": 27,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "d8eab0ffd88de4122f8c4d761ac6686cb1424eeb2d680d6e12eaacfad2eb4872",
+      "derivedFrom": "assets/source/characters/mage/role_select_frame_v1_source.png",
+      "visualGroup": "visual_d8eab0ffd8",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/mage/select_portrait_v1_source.png",
+      "suggestedPath": "assets/source/characters/mage/select_portrait_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "角色二/资产清单.txt",
+          "line": 14,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "4ac63e7e6f18dbfd8df51c29b2e48ec1a16ac419c6a01016ab699bc0fd4ffcf1",
+      "derivedFrom": "assets/source/characters/mage/select_portrait_v1_source.png",
+      "visualGroup": "visual_4ac63e7e6f",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/warrior/avatar_portrait_v1_source.png",
+      "suggestedPath": "assets/source/characters/warrior/avatar_portrait_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "新角色一/资产清单.txt",
+          "line": 13,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "48a7e1eae4bcae4c068609b426a9ac74e26d0f45f1bd09570a2be864f2668f15",
+      "derivedFrom": "assets/source/characters/warrior/avatar_portrait_v1_source.png",
+      "visualGroup": "visual_48a7e1eae4",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/warrior/battle_back/attack_start_v1_source.png",
+      "suggestedPath": "assets/source/characters/warrior/battle_back/attack_start_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "新角色一/资产清单.txt",
+          "line": 16,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "d5da77dba8a94f86e16e908006333cdb89c47507698b1b07930220371a19f59e",
+      "derivedFrom": "assets/source/characters/warrior/battle_back/attack_start_v1_source.png",
+      "visualGroup": "visual_d5da77dba8",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/warrior/battle_back/hurt_v1_source.png",
+      "suggestedPath": "assets/source/characters/warrior/battle_back/hurt_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "新角色一/资产清单.txt",
+          "line": 18,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "e214da08d6b40274ce835d359c66fcea498b1f4d158b79eb1bb6f03e4c72238a",
+      "derivedFrom": "assets/source/characters/warrior/battle_back/hurt_v1_source.png",
+      "visualGroup": "visual_e214da08d6",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/warrior/battle_back/idle_v1_source.png",
+      "suggestedPath": "assets/source/characters/warrior/battle_back/idle_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "新角色一/资产清单.txt",
+          "line": 15,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "3ae708c5c7452dbc0515b6a09646b5db97b73522fe5c90cb3eb0a4bc3c4219fb",
+      "derivedFrom": "assets/source/characters/warrior/battle_back/idle_v1_source.png",
+      "visualGroup": "visual_3ae708c5c7",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/warrior/battle_back/skill_cast_v1_source.png",
+      "suggestedPath": "assets/source/characters/warrior/battle_back/skill_cast_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "新角色一/资产清单.txt",
+          "line": 17,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "72e0ef6c8f26e8cef30c8a0a9ffaa2ca07781cd26c5b3624f9c36eb287a02d6d",
+      "derivedFrom": "assets/source/characters/warrior/battle_back/skill_cast_v1_source.png",
+      "visualGroup": "visual_72e0ef6c8f",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/warrior/battle_front/attack_start_v1_source.png",
+      "suggestedPath": "assets/source/characters/warrior/battle_front/attack_start_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "新角色一/资产清单.txt",
+          "line": 20,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "f20135a345c535c2c6864ee694783e392e927db8ed1c390fd6cde6d18a7b761a",
+      "derivedFrom": "assets/source/characters/warrior/battle_front/attack_start_v1_source.png",
+      "visualGroup": "visual_f20135a345",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/warrior/battle_front/hurt_v1_source.png",
+      "suggestedPath": "assets/source/characters/warrior/battle_front/hurt_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "新角色一/资产清单.txt",
+          "line": 22,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "19896b104b253d8477177f6b443053a3c34d80156931f338026bf5274b24ebda",
+      "derivedFrom": "assets/source/characters/warrior/battle_front/hurt_v1_source.png",
+      "visualGroup": "visual_19896b104b",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/warrior/battle_front/idle_v1_source.png",
+      "suggestedPath": "assets/source/characters/warrior/battle_front/idle_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "新角色一/资产清单.txt",
+          "line": 19,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "ddee9674804d3f7b03d9b309a8b313ddb2411fbd7ee4d7007a343045b8d23d87",
+      "derivedFrom": "assets/source/characters/warrior/battle_front/idle_v1_source.png",
+      "visualGroup": "visual_ddee967480",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/warrior/battle_front/skill_cast_v1_source.png",
+      "suggestedPath": "assets/source/characters/warrior/battle_front/skill_cast_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "新角色一/资产清单.txt",
+          "line": 21,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "288b861c39e5a485dd5a0574f3a8cc052e6f4d3d7be5f80c3eb53a99d7cf2005",
+      "derivedFrom": "assets/source/characters/warrior/battle_front/skill_cast_v1_source.png",
+      "visualGroup": "visual_288b861c39",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/warrior/design/turnaround_color_v1_source.png",
+      "suggestedPath": "assets/source/characters/warrior/design/turnaround_color_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "新角色一/资产清单.txt",
+          "line": 24,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "b6fcbb69db0ac5d334627b4fe4b27491f9ee5129a55e92c4bc314af2d5413eb7",
+      "derivedFrom": "assets/source/characters/warrior/design/turnaround_color_v1_source.png",
+      "visualGroup": "visual_b6fcbb69db",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/warrior/design/turnaround_line_v1_source.png",
+      "suggestedPath": "assets/source/characters/warrior/design/turnaround_line_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "新角色一/资产清单.txt",
+          "line": 23,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "47426d09d1bc0b5f85531e603ce6bac54c8ed6f42d47fc8fdabf53bc1ec3d768",
+      "derivedFrom": "assets/source/characters/warrior/design/turnaround_line_v1_source.png",
+      "visualGroup": "visual_47426d09d1",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/warrior/design/weapon_sword_v1_source.png",
+      "suggestedPath": "assets/source/characters/warrior/design/weapon_sword_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "新角色一/资产清单.txt",
+          "line": 25,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "f08d2ffccca5e33703a8adf1dd4a549de270ebfd13b6e4a09ff57da8502025fe",
+      "derivedFrom": "assets/source/characters/warrior/design/weapon_sword_v1_source.png",
+      "visualGroup": "visual_f08d2ffccc",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/warrior/role_select_frame_v1_source.png",
+      "suggestedPath": "assets/source/characters/warrior/role_select_frame_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "新角色一/资产清单.txt",
+          "line": 26,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced",
+        "identical_content"
+      ],
+      "sha256": "235d768f6678788a3952ce09ae675cdc1ee62b126e0546bce17ee2b4b427ab9c",
+      "derivedFrom": "assets/source/characters/warrior/role_select_frame_v1_source.png",
+      "visualGroup": "visual_235d768f66",
+      "notes": "review before migration"
+    },
+    {
+      "sourcePath": "assets/source/characters/warrior/select_portrait_v1_source.png",
+      "suggestedPath": "assets/source/characters/warrior/select_portrait_v1_source.png",
+      "action": "already_migrated",
+      "status": "documented",
+      "tracked": true,
+      "references": [
+        {
+          "file": "新角色一/资产清单.txt",
+          "line": 14,
+          "module": "characters",
+          "kind": "documentation"
+        }
+      ],
+      "referenceModules": [
+        "characters"
+      ],
+      "risks": [
+        "unreferenced"
+      ],
+      "sha256": "a27049107763fae6468d97ff82a7a418cfb19f77e1600e2421eab2874a3cd1de",
+      "derivedFrom": "assets/source/characters/warrior/select_portrait_v1_source.png",
+      "visualGroup": "visual_a270491077",
+      "notes": "review before migration"
+    }
+  ],
+  "duplicateExtensionGroups": []
+}

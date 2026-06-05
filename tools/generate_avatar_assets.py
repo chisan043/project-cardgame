@@ -4,13 +4,18 @@ from PIL import Image, ImageDraw, ImageOps
 
 
 ROOT = Path(__file__).resolve().parents[1]
-ROLE_OUT = ROOT / "头像" / "角色"
 ENEMY_OUT = ROOT / "assets/source/enemies/portraits"
 
 ROLE_SOURCES = {
-    "hero_warrior": ROOT / "新角色一/角色一_角色选择_立绘.png",
-    "hero_mage": ROOT / "角色二/角色二_角色选择_立绘.png",
-    "hero_archer": ROOT / "新角色三/角色三_角色选择_立绘.png",
+    "hero_warrior": ROOT / "assets/source/characters/warrior/select_portrait_v1_source.png",
+    "hero_mage": ROOT / "assets/source/characters/mage/select_portrait_v1_source.png",
+    "hero_archer": ROOT / "assets/source/characters/archer/select_portrait_v1_source.png",
+}
+
+ROLE_OUTPUTS = {
+    "hero_warrior": ROOT / "assets/source/characters/warrior/avatar_portrait_v1_source.png",
+    "hero_mage": ROOT / "assets/source/characters/mage/avatar_portrait_v1_source.png",
+    "hero_archer": ROOT / "assets/source/characters/archer/avatar_portrait_v1_source.png",
 }
 
 ROLE_PROFILES = {
@@ -98,13 +103,15 @@ def write_preview(files):
         bg.alpha_composite(image)
         sheet.paste(bg.convert("RGB"), (x, y))
         draw.text((x, y + thumb + 4), file_path.stem[:10], fill=(230, 220, 190))
-    sheet.save(ROOT / "头像" / "头像裁切预览.png")
+    preview_path = ROOT / "assets/candidates/characters/avatar_crop_preview.png"
+    preview_path.parent.mkdir(parents=True, exist_ok=True)
+    sheet.save(preview_path)
 
 
 def main():
     generated = []
     for role_id, source in ROLE_SOURCES.items():
-        generated.append(crop_avatar(source, ROLE_OUT / f"{role_id}.png", *ROLE_PROFILES[role_id]))
+        generated.append(crop_avatar(source, ROLE_OUTPUTS[role_id], *ROLE_PROFILES[role_id]))
 
     for source in sorted((ROOT / "assets/source/enemies/battle").glob("*_battle_v1_source.png")):
         portrait_name = source.name.replace("_battle_v1_source.png", "_portrait_v1_source.png")

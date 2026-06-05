@@ -152,6 +152,79 @@ def enemy_suggestion(source_path: str, status: str) -> tuple[str, str]:
     return f"assets/enemies/review/{slug}{suffix}", "review"
 
 
+CHARACTER_PATH_MAP = {
+    "头像/角色/hero_warrior.webp": ("assets/characters/warrior/avatar_portrait_v1.webp", "move_then_rewrite_runtime_refs"),
+    "头像/角色/hero_warrior.png": ("assets/source/characters/warrior/avatar_portrait_v1_source.png", "move_as_source"),
+    "头像/角色/hero_mage.webp": ("assets/characters/mage/avatar_portrait_v1.webp", "move_then_rewrite_runtime_refs"),
+    "头像/角色/hero_mage.png": ("assets/source/characters/mage/avatar_portrait_v1_source.png", "move_as_source"),
+    "头像/角色/hero_archer.webp": ("assets/characters/archer/avatar_portrait_v1.webp", "move_then_rewrite_runtime_refs"),
+    "头像/角色/hero_archer.png": ("assets/source/characters/archer/avatar_portrait_v1_source.png", "move_as_source"),
+    "新角色一/角色一_角色选择_立绘.webp": ("assets/characters/warrior/select_portrait_v1.webp", "move_then_rewrite_runtime_refs"),
+    "新角色一/角色一_角色选择_立绘.png": ("assets/source/characters/warrior/select_portrait_v1_source.png", "move_as_source"),
+    "新角色一/角色一_我方背面_待机.webp": ("assets/characters/warrior/battle_back_idle_v1.webp", "move_then_rewrite_runtime_refs"),
+    "新角色一/角色一_我方背面_待机.png": ("assets/source/characters/warrior/battle_back/idle_v1_source.png", "move_as_source"),
+    "新角色一/角色一_我方背面_攻击起手.png": ("assets/source/characters/warrior/battle_back/attack_start_v1_source.png", "move_as_source"),
+    "新角色一/角色一_我方背面_技能释放.png": ("assets/source/characters/warrior/battle_back/skill_cast_v1_source.png", "move_as_source"),
+    "新角色一/角色一_我方背面_受击.png": ("assets/source/characters/warrior/battle_back/hurt_v1_source.png", "move_as_source"),
+    "新角色一/角色一_敌方正面_待机.png": ("assets/source/characters/warrior/battle_front/idle_v1_source.png", "move_as_source"),
+    "新角色一/角色一_敌方正面_攻击起手.png": ("assets/source/characters/warrior/battle_front/attack_start_v1_source.png", "move_as_source"),
+    "新角色一/角色一_敌方正面_技能释放.png": ("assets/source/characters/warrior/battle_front/skill_cast_v1_source.png", "move_as_source"),
+    "新角色一/角色一_敌方正面_受击.png": ("assets/source/characters/warrior/battle_front/hurt_v1_source.png", "move_as_source"),
+    "新角色一/角色一_三视图_线稿版.png": ("assets/source/characters/warrior/design/turnaround_line_v1_source.png", "move_as_source"),
+    "新角色一/角色一_三视图_配色版.png": ("assets/source/characters/warrior/design/turnaround_color_v1_source.png", "move_as_source"),
+    "新角色一/角色一_武器设定_圣剑.png": ("assets/source/characters/warrior/design/weapon_sword_v1_source.png", "move_as_source"),
+    "角色二/角色二_角色选择_立绘.webp": ("assets/characters/mage/select_portrait_v1.webp", "move_then_rewrite_runtime_refs"),
+    "角色二/角色二_角色选择_立绘.png": ("assets/source/characters/mage/select_portrait_v1_source.png", "move_as_source"),
+    "角色二/角色二_角色选择_彩窗立绘.png": ("assets/source/characters/mage/design/select_stained_glass_v1_source.png", "move_as_source"),
+    "角色二/角色二_我方背面_待机.webp": ("assets/characters/mage/battle_back_idle_v1.webp", "move_then_rewrite_runtime_refs"),
+    "角色二/角色二_我方背面_待机.png": ("assets/source/characters/mage/battle_back/idle_v1_source.png", "move_as_source"),
+    "角色二/角色二_我方背面_攻击起手.png": ("assets/source/characters/mage/battle_back/attack_start_v1_source.png", "move_as_source"),
+    "角色二/角色二_我方背面_技能释放.png": ("assets/source/characters/mage/battle_back/skill_cast_v1_source.png", "move_as_source"),
+    "角色二/角色二_我方背面_受击.png": ("assets/source/characters/mage/battle_back/hurt_v1_source.png", "move_as_source"),
+    "角色二/角色二_敌方正面_待机.png": ("assets/source/characters/mage/battle_front/idle_v1_source.png", "move_as_source"),
+    "角色二/角色二_敌方正面_攻击起手.png": ("assets/source/characters/mage/battle_front/attack_start_v1_source.png", "move_as_source"),
+    "角色二/角色二_敌方正面_技能释放.png": ("assets/source/characters/mage/battle_front/skill_cast_v1_source.png", "move_as_source"),
+    "角色二/角色二_敌方正面_受击.png": ("assets/source/characters/mage/battle_front/hurt_v1_source.png", "move_as_source"),
+    "角色二/角色二_三视图_线稿版.png": ("assets/source/characters/mage/design/turnaround_line_v1_source.png", "move_as_source"),
+    "角色二/角色二_三视图_配色版.png": ("assets/source/characters/mage/design/turnaround_color_v1_source.png", "move_as_source"),
+    "角色二/角色二_武器设定_法杖.png": ("assets/source/characters/mage/design/weapon_staff_v1_source.png", "move_as_source"),
+    "新角色三/角色三_角色选择_立绘.webp": ("assets/characters/archer/select_portrait_v1.webp", "move_then_rewrite_runtime_refs"),
+    "新角色三/角色三_角色选择_立绘.png": ("assets/source/characters/archer/select_portrait_v1_source.png", "move_as_source"),
+    "新角色三/角色三_我方背面_待机.webp": ("assets/characters/archer/battle_back_idle_v1.webp", "move_then_rewrite_runtime_refs"),
+    "新角色三/角色三_我方背面_待机.png": ("assets/source/characters/archer/battle_back/idle_v1_source.png", "move_as_source"),
+    "新角色三/角色三_我方背面_攻击起手.png": ("assets/source/characters/archer/battle_back/attack_start_v1_source.png", "move_as_source"),
+    "新角色三/角色三_我方背面_技能释放.png": ("assets/source/characters/archer/battle_back/skill_cast_v1_source.png", "move_as_source"),
+    "新角色三/角色三_我方背面_受击.png": ("assets/source/characters/archer/battle_back/hurt_v1_source.png", "move_as_source"),
+    "新角色三/角色三_敌方正面_待机.png": ("assets/source/characters/archer/battle_front/idle_v1_source.png", "move_as_source"),
+    "新角色三/角色三_敌方正面_攻击起手.png": ("assets/source/characters/archer/battle_front/attack_start_v1_source.png", "move_as_source"),
+    "新角色三/角色三_敌方正面_技能释放.png": ("assets/source/characters/archer/battle_front/skill_cast_v1_source.png", "move_as_source"),
+    "新角色三/角色三_敌方正面_受击.png": ("assets/source/characters/archer/battle_front/hurt_v1_source.png", "move_as_source"),
+    "新角色三/角色三_三视图_线稿版.png": ("assets/source/characters/archer/design/turnaround_line_v1_source.png", "move_as_source"),
+    "新角色三/角色三_三视图_配色版.png": ("assets/source/characters/archer/design/turnaround_color_v1_source.png", "move_as_source"),
+    "新角色三/角色三_武器设定_长弓.png": ("assets/source/characters/archer/design/weapon_bow_v1_source.png", "move_as_source"),
+    "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_warrior_uniform_v1.webp": ("assets/characters/warrior/role_select_frame_v1.webp", "move_then_rewrite_runtime_refs"),
+    "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_warrior_uniform_v1.png": ("assets/source/characters/warrior/role_select_frame_v1_source.png", "move_as_source"),
+    "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_mage_uniform_v1.webp": ("assets/characters/mage/role_select_frame_v1.webp", "move_then_rewrite_runtime_refs"),
+    "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_mage_uniform_v1.png": ("assets/source/characters/mage/role_select_frame_v1_source.png", "move_as_source"),
+    "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_archer_uniform_v1.webp": ("assets/characters/archer/role_select_frame_v1.webp", "move_then_rewrite_runtime_refs"),
+    "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_archer_uniform_v1.png": ("assets/source/characters/archer/role_select_frame_v1_source.png", "move_as_source"),
+}
+
+
+def is_character_asset(source_path: str) -> bool:
+    if source_path.startswith(("assets/characters/", "assets/source/characters/")):
+        return True
+    return source_path in CHARACTER_PATH_MAP
+
+
+def character_suggestion(source_path: str, status: str) -> tuple[str, str]:
+    if source_path.startswith(("assets/characters/", "assets/source/characters/")):
+        return source_path, "already_migrated"
+    if source_path in CHARACTER_PATH_MAP:
+        return CHARACTER_PATH_MAP[source_path]
+    return f"assets/characters/review/{normalize_slug(Path(source_path).stem)}{Path(source_path).suffix.lower()}", "review"
+
+
 def default_suggestion(source_path: str, status: str, target_dir: str, module_slug: str) -> tuple[str, str]:
     path = Path(source_path)
     filename = f"{normalize_slug(path.stem)}{path.suffix.lower()}"
@@ -175,21 +248,26 @@ def suggested_path(source_path: str, status: str, target_dir: str, module_slug: 
         return npc_suggestion(source_path, status)
     if module_slug == "enemies_visuals":
         return enemy_suggestion(source_path, status)
+    if module_slug == "characters":
+        return character_suggestion(source_path, status)
     return default_suggestion(source_path, status, target_dir, module_slug)
 
 
-def load_assets(usage_report: Path, prefixes: list[str]) -> list[dict]:
+def load_assets(usage_report: Path, prefixes: list[str], module_slug: str) -> list[dict]:
     data = json.loads((ROOT / usage_report).read_text(encoding="utf-8"))
-    return [
+    assets = [
         asset
         for asset in data["assets"]
         if any(asset["path"].startswith(prefix) for prefix in prefixes)
     ]
+    if module_slug == "characters":
+        return [asset for asset in assets if is_character_asset(asset["path"])]
+    return assets
 
 
 def build_plan(prefix: str, include_prefixes: list[str], target_dir: str, module_slug: str, usage_report: Path) -> dict:
     prefixes = [prefix, *include_prefixes]
-    assets = load_assets(usage_report, prefixes)
+    assets = load_assets(usage_report, prefixes, module_slug)
     tracked = git_tracked_paths()
 
     by_stem: dict[str, list[dict]] = defaultdict(list)

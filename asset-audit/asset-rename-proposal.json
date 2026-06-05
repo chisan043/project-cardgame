@@ -4861,36 +4861,6 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "新角色三/角色三_三视图_线稿版.png",
-      "suggestedPath": "assets/characters/archer/review_6ff593501e.png",
-      "suggestedDirectory": "assets/characters/archer",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "新角色三/角色三_三视图_线稿版.png",
-      "visualGroup": "visual_6ff593501e",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "新角色三/角色三_三视图_配色版.png",
-      "suggestedPath": "assets/characters/archer/review_65bf339c30.png",
-      "suggestedDirectory": "assets/characters/archer",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "新角色三/角色三_三视图_配色版.png",
-      "visualGroup": "visual_65bf339c30",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
       "sourcePath": "新角色三/角色三_卡面插画_拉弓瞄准.png",
       "suggestedPath": "assets/characters/archer/review_007b464834.png",
       "suggestedDirectory": "assets/characters/archer",
@@ -4982,187 +4952,6 @@
       ],
       "derivedFrom": "新角色三/角色三_卡面插画_疾风连射_无背景.png",
       "visualGroup": "visual_4b3ded5f7b",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "新角色三/角色三_我方背面_受击.png",
-      "suggestedPath": "assets/characters/archer/review_a11e2a9d89.png",
-      "suggestedDirectory": "assets/characters/archer",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "新角色三/角色三_我方背面_受击.png",
-      "visualGroup": "visual_a11e2a9d89",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "新角色三/角色三_我方背面_待机.png",
-      "suggestedPath": "assets/characters/archer/review_22fca0ff95.png",
-      "suggestedDirectory": "assets/characters/archer",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "新角色三/角色三_我方背面_待机.png",
-      "visualGroup": "visual_22fca0ff95",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "新角色三/角色三_我方背面_待机.webp",
-      "suggestedPath": "assets/characters/archer/review_c9dba0152b.webp",
-      "suggestedDirectory": "assets/characters/archer",
-      "status": "active",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "新角色三/角色三_我方背面_待机.webp",
-      "visualGroup": "visual_c9dba0152b",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "新角色三/角色三_我方背面_技能释放.png",
-      "suggestedPath": "assets/characters/archer/review_e836ba2811.png",
-      "suggestedDirectory": "assets/characters/archer",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "新角色三/角色三_我方背面_技能释放.png",
-      "visualGroup": "visual_e836ba2811",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "新角色三/角色三_我方背面_攻击起手.png",
-      "suggestedPath": "assets/characters/archer/review_50d62a6e91.png",
-      "suggestedDirectory": "assets/characters/archer",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "新角色三/角色三_我方背面_攻击起手.png",
-      "visualGroup": "visual_50d62a6e91",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "新角色三/角色三_敌方正面_受击.png",
-      "suggestedPath": "assets/characters/archer/review_2939c6b4de.png",
-      "suggestedDirectory": "assets/characters/archer",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "新角色三/角色三_敌方正面_受击.png",
-      "visualGroup": "visual_2939c6b4de",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "新角色三/角色三_敌方正面_待机.png",
-      "suggestedPath": "assets/characters/archer/review_a1be7c3d87.png",
-      "suggestedDirectory": "assets/characters/archer",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "新角色三/角色三_敌方正面_待机.png",
-      "visualGroup": "visual_a1be7c3d87",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "新角色三/角色三_敌方正面_技能释放.png",
-      "suggestedPath": "assets/characters/archer/review_c1a98ea0fd.png",
-      "suggestedDirectory": "assets/characters/archer",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "新角色三/角色三_敌方正面_技能释放.png",
-      "visualGroup": "visual_c1a98ea0fd",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "新角色三/角色三_敌方正面_攻击起手.png",
-      "suggestedPath": "assets/characters/archer/review_a8675186c4.png",
-      "suggestedDirectory": "assets/characters/archer",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "新角色三/角色三_敌方正面_攻击起手.png",
-      "visualGroup": "visual_a8675186c4",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "新角色三/角色三_武器设定_长弓.png",
-      "suggestedPath": "assets/characters/archer/review_959c3b02e4.png",
-      "suggestedDirectory": "assets/characters/archer",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "新角色三/角色三_武器设定_长弓.png",
-      "visualGroup": "visual_959c3b02e4",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "角色二/角色二_三视图_线稿版.png",
-      "suggestedPath": "assets/characters/mage/review_1c968031b6.png",
-      "suggestedDirectory": "assets/characters/mage",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "角色二/角色二_三视图_线稿版.png",
-      "visualGroup": "visual_1c968031b6",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "角色二/角色二_三视图_配色版.png",
-      "suggestedPath": "assets/characters/mage/review_ea58c24efb.png",
-      "suggestedDirectory": "assets/characters/mage",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "角色二/角色二_三视图_配色版.png",
-      "visualGroup": "visual_ea58c24efb",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -5262,279 +5051,692 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "角色二/角色二_我方背面_受击.png",
-      "suggestedPath": "assets/characters/mage/review_95a484dcce.png",
-      "suggestedDirectory": "assets/characters/mage",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "角色二/角色二_我方背面_受击.png",
-      "visualGroup": "visual_95a484dcce",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "角色二/角色二_我方背面_待机.png",
-      "suggestedPath": "assets/characters/mage/review_387f2ada24.png",
-      "suggestedDirectory": "assets/characters/mage",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "角色二/角色二_我方背面_待机.png",
-      "visualGroup": "visual_387f2ada24",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "角色二/角色二_我方背面_待机.webp",
-      "suggestedPath": "assets/characters/mage/review_00dbadc005.webp",
-      "suggestedDirectory": "assets/characters/mage",
-      "status": "active",
+      "sourcePath": "assets/source/characters/archer/avatar_portrait_v1_source.png",
+      "suggestedPath": "assets/characters/review/avatar_portrait_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
       "referenceModules": [
         "characters"
       ],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "角色二/角色二_我方背面_待机.webp",
-      "visualGroup": "visual_00dbadc005",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "角色二/角色二_我方背面_技能释放.png",
-      "suggestedPath": "assets/characters/mage/review_b3602623d7.png",
-      "suggestedDirectory": "assets/characters/mage",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "角色二/角色二_我方背面_技能释放.png",
-      "visualGroup": "visual_b3602623d7",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "角色二/角色二_我方背面_攻击起手.png",
-      "suggestedPath": "assets/characters/mage/review_eb54aab113.png",
-      "suggestedDirectory": "assets/characters/mage",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "角色二/角色二_我方背面_攻击起手.png",
-      "visualGroup": "visual_eb54aab113",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "角色二/角色二_敌方正面_受击.png",
-      "suggestedPath": "assets/characters/mage/review_7026bce35f.png",
-      "suggestedDirectory": "assets/characters/mage",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "角色二/角色二_敌方正面_受击.png",
-      "visualGroup": "visual_7026bce35f",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "角色二/角色二_敌方正面_待机.png",
-      "suggestedPath": "assets/characters/mage/review_1cbb52c541.png",
-      "suggestedDirectory": "assets/characters/mage",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "角色二/角色二_敌方正面_待机.png",
-      "visualGroup": "visual_1cbb52c541",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "角色二/角色二_敌方正面_技能释放.png",
-      "suggestedPath": "assets/characters/mage/review_034b0c4395.png",
-      "suggestedDirectory": "assets/characters/mage",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "角色二/角色二_敌方正面_技能释放.png",
-      "visualGroup": "visual_034b0c4395",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "角色二/角色二_敌方正面_攻击起手.png",
-      "suggestedPath": "assets/characters/mage/review_146944fc2d.png",
-      "suggestedDirectory": "assets/characters/mage",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "角色二/角色二_敌方正面_攻击起手.png",
-      "visualGroup": "visual_146944fc2d",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "角色二/角色二_武器设定_法杖.png",
-      "suggestedPath": "assets/characters/mage/review_9e17bb1823.png",
-      "suggestedDirectory": "assets/characters/mage",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "角色二/角色二_武器设定_法杖.png",
-      "visualGroup": "visual_9e17bb1823",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "头像/角色/hero_archer.png",
-      "suggestedPath": "assets/characters/portrait/hero_archer.png",
-      "suggestedDirectory": "assets/characters/portrait",
-      "status": "unreferenced",
-      "referenceModules": [],
       "requiresHumanNameReview": false,
       "risks": [
-        "non_ascii_path",
         "unreferenced"
       ],
-      "derivedFrom": "头像/角色/hero_archer.png",
+      "derivedFrom": "assets/source/characters/archer/avatar_portrait_v1_source.png",
       "visualGroup": "visual_ff4c45432c",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "头像/角色/hero_archer.webp",
-      "suggestedPath": "assets/characters/portrait/hero_archer.webp",
-      "suggestedDirectory": "assets/characters/portrait",
-      "status": "active",
+      "sourcePath": "assets/source/characters/archer/battle_back/attack_start_v1_source.png",
+      "suggestedPath": "assets/characters/review/attack_start_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
       "referenceModules": [
         "characters"
       ],
       "requiresHumanNameReview": false,
       "risks": [
-        "non_ascii_path"
+        "unreferenced"
       ],
-      "derivedFrom": "头像/角色/hero_archer.webp",
-      "visualGroup": "visual_53d0e63f86",
+      "derivedFrom": "assets/source/characters/archer/battle_back/attack_start_v1_source.png",
+      "visualGroup": "visual_50d62a6e91",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "头像/角色/hero_mage.png",
-      "suggestedPath": "assets/characters/portrait/hero_mage.png",
-      "suggestedDirectory": "assets/characters/portrait",
-      "status": "unreferenced",
-      "referenceModules": [],
+      "sourcePath": "assets/source/characters/archer/battle_back/hurt_v1_source.png",
+      "suggestedPath": "assets/characters/review/hurt_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
       "requiresHumanNameReview": false,
       "risks": [
-        "non_ascii_path",
         "unreferenced"
       ],
-      "derivedFrom": "头像/角色/hero_mage.png",
+      "derivedFrom": "assets/source/characters/archer/battle_back/hurt_v1_source.png",
+      "visualGroup": "visual_a11e2a9d89",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/characters/archer/battle_back/idle_v1_source.png",
+      "suggestedPath": "assets/characters/review/idle_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/characters/archer/battle_back/idle_v1_source.png",
+      "visualGroup": "visual_22fca0ff95",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/characters/archer/battle_back/skill_cast_v1_source.png",
+      "suggestedPath": "assets/characters/review/skill_cast_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/characters/archer/battle_back/skill_cast_v1_source.png",
+      "visualGroup": "visual_e836ba2811",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/characters/archer/battle_front/attack_start_v1_source.png",
+      "suggestedPath": "assets/characters/review/attack_start_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/characters/archer/battle_front/attack_start_v1_source.png",
+      "visualGroup": "visual_a8675186c4",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/characters/archer/battle_front/hurt_v1_source.png",
+      "suggestedPath": "assets/characters/review/hurt_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/characters/archer/battle_front/hurt_v1_source.png",
+      "visualGroup": "visual_2939c6b4de",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/characters/archer/battle_front/idle_v1_source.png",
+      "suggestedPath": "assets/characters/review/idle_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/characters/archer/battle_front/idle_v1_source.png",
+      "visualGroup": "visual_a1be7c3d87",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/characters/archer/battle_front/skill_cast_v1_source.png",
+      "suggestedPath": "assets/characters/review/skill_cast_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/characters/archer/battle_front/skill_cast_v1_source.png",
+      "visualGroup": "visual_c1a98ea0fd",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/characters/archer/design/turnaround_color_v1_source.png",
+      "suggestedPath": "assets/characters/review/turnaround_color_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/characters/archer/design/turnaround_color_v1_source.png",
+      "visualGroup": "visual_65bf339c30",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/characters/archer/design/turnaround_line_v1_source.png",
+      "suggestedPath": "assets/characters/review/turnaround_line_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/characters/archer/design/turnaround_line_v1_source.png",
+      "visualGroup": "visual_6ff593501e",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/characters/archer/design/weapon_bow_v1_source.png",
+      "suggestedPath": "assets/characters/review/weapon_bow_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/characters/archer/design/weapon_bow_v1_source.png",
+      "visualGroup": "visual_959c3b02e4",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/characters/archer/role_select_frame_v1_source.png",
+      "suggestedPath": "assets/characters/review/role_select_frame_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/characters/archer/role_select_frame_v1_source.png",
+      "visualGroup": "visual_8d722ef5aa",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/characters/archer/select_portrait_v1_source.png",
+      "suggestedPath": "assets/characters/review/select_portrait_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/characters/archer/select_portrait_v1_source.png",
+      "visualGroup": "visual_f8b82d0833",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/characters/mage/avatar_portrait_v1_source.png",
+      "suggestedPath": "assets/characters/review/avatar_portrait_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/characters/mage/avatar_portrait_v1_source.png",
       "visualGroup": "visual_397f638511",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "头像/角色/hero_mage.webp",
-      "suggestedPath": "assets/characters/portrait/hero_mage.webp",
-      "suggestedDirectory": "assets/characters/portrait",
-      "status": "active",
+      "sourcePath": "assets/source/characters/mage/battle_back/attack_start_v1_source.png",
+      "suggestedPath": "assets/characters/review/attack_start_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
       "referenceModules": [
         "characters"
       ],
       "requiresHumanNameReview": false,
       "risks": [
-        "non_ascii_path"
+        "unreferenced"
       ],
-      "derivedFrom": "头像/角色/hero_mage.webp",
-      "visualGroup": "visual_04a26d4da6",
+      "derivedFrom": "assets/source/characters/mage/battle_back/attack_start_v1_source.png",
+      "visualGroup": "visual_eb54aab113",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "头像/角色/hero_warrior.png",
-      "suggestedPath": "assets/characters/portrait/hero_warrior.png",
-      "suggestedDirectory": "assets/characters/portrait",
-      "status": "unreferenced",
-      "referenceModules": [],
+      "sourcePath": "assets/source/characters/mage/battle_back/hurt_v1_source.png",
+      "suggestedPath": "assets/characters/review/hurt_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
       "requiresHumanNameReview": false,
       "risks": [
-        "non_ascii_path",
         "unreferenced"
       ],
-      "derivedFrom": "头像/角色/hero_warrior.png",
+      "derivedFrom": "assets/source/characters/mage/battle_back/hurt_v1_source.png",
+      "visualGroup": "visual_95a484dcce",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/characters/mage/battle_back/idle_v1_source.png",
+      "suggestedPath": "assets/characters/review/idle_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/characters/mage/battle_back/idle_v1_source.png",
+      "visualGroup": "visual_387f2ada24",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/characters/mage/battle_back/skill_cast_v1_source.png",
+      "suggestedPath": "assets/characters/review/skill_cast_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/characters/mage/battle_back/skill_cast_v1_source.png",
+      "visualGroup": "visual_b3602623d7",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/characters/mage/battle_front/attack_start_v1_source.png",
+      "suggestedPath": "assets/characters/review/attack_start_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/characters/mage/battle_front/attack_start_v1_source.png",
+      "visualGroup": "visual_146944fc2d",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/characters/mage/battle_front/hurt_v1_source.png",
+      "suggestedPath": "assets/characters/review/hurt_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/characters/mage/battle_front/hurt_v1_source.png",
+      "visualGroup": "visual_7026bce35f",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/characters/mage/battle_front/idle_v1_source.png",
+      "suggestedPath": "assets/characters/review/idle_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/characters/mage/battle_front/idle_v1_source.png",
+      "visualGroup": "visual_1cbb52c541",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/characters/mage/battle_front/skill_cast_v1_source.png",
+      "suggestedPath": "assets/characters/review/skill_cast_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/characters/mage/battle_front/skill_cast_v1_source.png",
+      "visualGroup": "visual_034b0c4395",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/characters/mage/design/select_stained_glass_v1_source.png",
+      "suggestedPath": "assets/characters/review/select_stained_glass_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/characters/mage/design/select_stained_glass_v1_source.png",
+      "visualGroup": "visual_4fe17e7ac9",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/characters/mage/design/turnaround_color_v1_source.png",
+      "suggestedPath": "assets/characters/review/turnaround_color_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/characters/mage/design/turnaround_color_v1_source.png",
+      "visualGroup": "visual_ea58c24efb",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/characters/mage/design/turnaround_line_v1_source.png",
+      "suggestedPath": "assets/characters/review/turnaround_line_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/characters/mage/design/turnaround_line_v1_source.png",
+      "visualGroup": "visual_1c968031b6",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/characters/mage/design/weapon_staff_v1_source.png",
+      "suggestedPath": "assets/characters/review/weapon_staff_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/characters/mage/design/weapon_staff_v1_source.png",
+      "visualGroup": "visual_9e17bb1823",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/characters/mage/role_select_frame_v1_source.png",
+      "suggestedPath": "assets/characters/review/role_select_frame_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/characters/mage/role_select_frame_v1_source.png",
+      "visualGroup": "visual_d8eab0ffd8",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/characters/mage/select_portrait_v1_source.png",
+      "suggestedPath": "assets/characters/review/select_portrait_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/characters/mage/select_portrait_v1_source.png",
+      "visualGroup": "visual_4ac63e7e6f",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/characters/warrior/avatar_portrait_v1_source.png",
+      "suggestedPath": "assets/characters/review/avatar_portrait_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/characters/warrior/avatar_portrait_v1_source.png",
       "visualGroup": "visual_48a7e1eae4",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "头像/角色/hero_warrior.webp",
-      "suggestedPath": "assets/characters/portrait/hero_warrior.webp",
-      "suggestedDirectory": "assets/characters/portrait",
-      "status": "active",
+      "sourcePath": "assets/source/characters/warrior/battle_back/attack_start_v1_source.png",
+      "suggestedPath": "assets/characters/review/attack_start_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
       "referenceModules": [
-        "characters",
-        "demo"
+        "characters"
       ],
       "requiresHumanNameReview": false,
       "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
+        "unreferenced"
       ],
-      "derivedFrom": "头像/角色/hero_warrior.webp",
-      "visualGroup": "visual_dd0c44f16d",
+      "derivedFrom": "assets/source/characters/warrior/battle_back/attack_start_v1_source.png",
+      "visualGroup": "visual_d5da77dba8",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "新角色一/角色一_三视图_线稿版.png",
-      "suggestedPath": "assets/characters/warrior/review_47426d09d1.png",
-      "suggestedDirectory": "assets/characters/warrior",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
+      "sourcePath": "assets/source/characters/warrior/battle_back/hurt_v1_source.png",
+      "suggestedPath": "assets/characters/review/hurt_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
       "risks": [
-        "non_ascii_path",
         "unreferenced"
       ],
-      "derivedFrom": "新角色一/角色一_三视图_线稿版.png",
+      "derivedFrom": "assets/source/characters/warrior/battle_back/hurt_v1_source.png",
+      "visualGroup": "visual_e214da08d6",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/characters/warrior/battle_back/idle_v1_source.png",
+      "suggestedPath": "assets/characters/review/idle_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/characters/warrior/battle_back/idle_v1_source.png",
+      "visualGroup": "visual_3ae708c5c7",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/characters/warrior/battle_back/skill_cast_v1_source.png",
+      "suggestedPath": "assets/characters/review/skill_cast_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/characters/warrior/battle_back/skill_cast_v1_source.png",
+      "visualGroup": "visual_72e0ef6c8f",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/characters/warrior/battle_front/attack_start_v1_source.png",
+      "suggestedPath": "assets/characters/review/attack_start_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/characters/warrior/battle_front/attack_start_v1_source.png",
+      "visualGroup": "visual_f20135a345",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/characters/warrior/battle_front/hurt_v1_source.png",
+      "suggestedPath": "assets/characters/review/hurt_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/characters/warrior/battle_front/hurt_v1_source.png",
+      "visualGroup": "visual_19896b104b",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/characters/warrior/battle_front/idle_v1_source.png",
+      "suggestedPath": "assets/characters/review/idle_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/characters/warrior/battle_front/idle_v1_source.png",
+      "visualGroup": "visual_ddee967480",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/characters/warrior/battle_front/skill_cast_v1_source.png",
+      "suggestedPath": "assets/characters/review/skill_cast_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/characters/warrior/battle_front/skill_cast_v1_source.png",
+      "visualGroup": "visual_288b861c39",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/characters/warrior/design/turnaround_color_v1_source.png",
+      "suggestedPath": "assets/characters/review/turnaround_color_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/characters/warrior/design/turnaround_color_v1_source.png",
+      "visualGroup": "visual_b6fcbb69db",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/characters/warrior/design/turnaround_line_v1_source.png",
+      "suggestedPath": "assets/characters/review/turnaround_line_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/characters/warrior/design/turnaround_line_v1_source.png",
       "visualGroup": "visual_47426d09d1",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "新角色一/角色一_三视图_配色版.png",
-      "suggestedPath": "assets/characters/warrior/review_b6fcbb69db.png",
-      "suggestedDirectory": "assets/characters/warrior",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
+      "sourcePath": "assets/source/characters/warrior/design/weapon_sword_v1_source.png",
+      "suggestedPath": "assets/characters/review/weapon_sword_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
       "risks": [
-        "non_ascii_path",
         "unreferenced"
       ],
-      "derivedFrom": "新角色一/角色一_三视图_配色版.png",
-      "visualGroup": "visual_b6fcbb69db",
+      "derivedFrom": "assets/source/characters/warrior/design/weapon_sword_v1_source.png",
+      "visualGroup": "visual_f08d2ffccc",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/characters/warrior/role_select_frame_v1_source.png",
+      "suggestedPath": "assets/characters/review/role_select_frame_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced",
+        "identical_content"
+      ],
+      "derivedFrom": "assets/source/characters/warrior/role_select_frame_v1_source.png",
+      "visualGroup": "visual_235d768f66",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/characters/warrior/select_portrait_v1_source.png",
+      "suggestedPath": "assets/characters/review/select_portrait_v1_source.png",
+      "suggestedDirectory": "assets/characters/review",
+      "status": "documented",
+      "referenceModules": [
+        "characters"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/characters/warrior/select_portrait_v1_source.png",
+      "visualGroup": "visual_a270491077",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -5627,159 +5829,6 @@
       ],
       "derivedFrom": "新角色一/角色一_卡面插画_遗迹立誓_无背景.png",
       "visualGroup": "visual_486ad94472",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "新角色一/角色一_我方背面_受击.png",
-      "suggestedPath": "assets/characters/warrior/review_e214da08d6.png",
-      "suggestedDirectory": "assets/characters/warrior",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "新角色一/角色一_我方背面_受击.png",
-      "visualGroup": "visual_e214da08d6",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "新角色一/角色一_我方背面_待机.png",
-      "suggestedPath": "assets/characters/warrior/review_3ae708c5c7.png",
-      "suggestedDirectory": "assets/characters/warrior",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "新角色一/角色一_我方背面_待机.png",
-      "visualGroup": "visual_3ae708c5c7",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "新角色一/角色一_我方背面_待机.webp",
-      "suggestedPath": "assets/characters/warrior/review_6e283abab2.webp",
-      "suggestedDirectory": "assets/characters/warrior",
-      "status": "active",
-      "referenceModules": [
-        "characters",
-        "demo"
-      ],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
-      ],
-      "derivedFrom": "新角色一/角色一_我方背面_待机.webp",
-      "visualGroup": "visual_6e283abab2",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "新角色一/角色一_我方背面_技能释放.png",
-      "suggestedPath": "assets/characters/warrior/review_72e0ef6c8f.png",
-      "suggestedDirectory": "assets/characters/warrior",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "新角色一/角色一_我方背面_技能释放.png",
-      "visualGroup": "visual_72e0ef6c8f",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "新角色一/角色一_我方背面_攻击起手.png",
-      "suggestedPath": "assets/characters/warrior/review_d5da77dba8.png",
-      "suggestedDirectory": "assets/characters/warrior",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "新角色一/角色一_我方背面_攻击起手.png",
-      "visualGroup": "visual_d5da77dba8",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "新角色一/角色一_敌方正面_受击.png",
-      "suggestedPath": "assets/characters/warrior/review_19896b104b.png",
-      "suggestedDirectory": "assets/characters/warrior",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "新角色一/角色一_敌方正面_受击.png",
-      "visualGroup": "visual_19896b104b",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "新角色一/角色一_敌方正面_待机.png",
-      "suggestedPath": "assets/characters/warrior/review_ddee967480.png",
-      "suggestedDirectory": "assets/characters/warrior",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "新角色一/角色一_敌方正面_待机.png",
-      "visualGroup": "visual_ddee967480",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "新角色一/角色一_敌方正面_技能释放.png",
-      "suggestedPath": "assets/characters/warrior/review_288b861c39.png",
-      "suggestedDirectory": "assets/characters/warrior",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "新角色一/角色一_敌方正面_技能释放.png",
-      "visualGroup": "visual_288b861c39",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "新角色一/角色一_敌方正面_攻击起手.png",
-      "suggestedPath": "assets/characters/warrior/review_f20135a345.png",
-      "suggestedDirectory": "assets/characters/warrior",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "新角色一/角色一_敌方正面_攻击起手.png",
-      "visualGroup": "visual_f20135a345",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "新角色一/角色一_武器设定_圣剑.png",
-      "suggestedPath": "assets/characters/warrior/review_f08d2ffccc.png",
-      "suggestedDirectory": "assets/characters/warrior",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "新角色一/角色一_武器设定_圣剑.png",
-      "visualGroup": "visual_f08d2ffccc",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -8773,6 +8822,108 @@
       ],
       "derivedFrom": "_preview_角色二.png",
       "visualGroup": "visual_315a00ed50",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/characters/archer/role_select_frame_v1.webp",
+      "suggestedPath": "assets/review/role_select_frame_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "demo"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/characters/archer/role_select_frame_v1.webp",
+      "visualGroup": "visual_e6088552f2",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/characters/archer/select_portrait_v1.webp",
+      "suggestedPath": "assets/review/select_portrait_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "demo"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/characters/archer/select_portrait_v1.webp",
+      "visualGroup": "visual_8773787f05",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/characters/mage/role_select_frame_v1.webp",
+      "suggestedPath": "assets/review/role_select_frame_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "demo"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/characters/mage/role_select_frame_v1.webp",
+      "visualGroup": "visual_8d9ce99aba",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/characters/warrior/avatar_portrait_v1.webp",
+      "suggestedPath": "assets/review/avatar_portrait_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "demo"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/characters/warrior/avatar_portrait_v1.webp",
+      "visualGroup": "visual_dd0c44f16d",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/characters/warrior/battle_back_idle_v1.webp",
+      "suggestedPath": "assets/review/battle_back_idle_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "demo"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/characters/warrior/battle_back_idle_v1.webp",
+      "visualGroup": "visual_6e283abab2",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/characters/warrior/role_select_frame_v1.webp",
+      "suggestedPath": "assets/review/role_select_frame_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "demo"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/characters/warrior/role_select_frame_v1.webp",
+      "visualGroup": "visual_6ba5afc268",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -11987,37 +12138,6 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_archer_uniform_v1.png",
-      "suggestedPath": "assets/ui/character_select/role_arch_archer_uniform_v1.png",
-      "suggestedDirectory": "assets/ui/character_select",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_archer_uniform_v1.png",
-      "visualGroup": "visual_8d722ef5aa",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_archer_uniform_v1.webp",
-      "suggestedPath": "assets/ui/character_select/role_arch_archer_uniform_v1.webp",
-      "suggestedDirectory": "assets/ui/character_select",
-      "status": "active",
-      "referenceModules": [
-        "demo"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_archer_uniform_v1.webp",
-      "visualGroup": "visual_e6088552f2",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
       "sourcePath": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_archer_v2.png",
       "suggestedPath": "assets/ui/character_select/role_arch_archer_v2.png",
       "suggestedDirectory": "assets/ui/character_select",
@@ -12044,37 +12164,6 @@
       ],
       "derivedFrom": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_mage_source_v2.png",
       "visualGroup": "visual_a1408f8ccd",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_mage_uniform_v1.png",
-      "suggestedPath": "assets/ui/character_select/role_arch_mage_uniform_v1.png",
-      "suggestedDirectory": "assets/ui/character_select",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_mage_uniform_v1.png",
-      "visualGroup": "visual_d8eab0ffd8",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_mage_uniform_v1.webp",
-      "suggestedPath": "assets/ui/character_select/role_arch_mage_uniform_v1.webp",
-      "suggestedDirectory": "assets/ui/character_select",
-      "status": "active",
-      "referenceModules": [
-        "demo"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_mage_uniform_v1.webp",
-      "visualGroup": "visual_8d9ce99aba",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -12121,38 +12210,6 @@
       ],
       "derivedFrom": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_warrior_source_v2.png",
       "visualGroup": "visual_5271625d50",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_warrior_uniform_v1.png",
-      "suggestedPath": "assets/ui/character_select/role_arch_warrior_uniform_v1.png",
-      "suggestedDirectory": "assets/ui/character_select",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced",
-        "identical_content"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_warrior_uniform_v1.png",
-      "visualGroup": "visual_235d768f66",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_warrior_uniform_v1.webp",
-      "suggestedPath": "assets/ui/character_select/role_arch_warrior_uniform_v1.webp",
-      "suggestedDirectory": "assets/ui/character_select",
-      "status": "active",
-      "referenceModules": [
-        "demo"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "UI/教堂彩窗赛璐璐/角色选择/imagegen_v2/role_arch_warrior_uniform_v1.webp",
-      "visualGroup": "visual_6ba5afc268",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -12343,70 +12400,6 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "新角色一/角色一_角色选择_立绘.png",
-      "suggestedPath": "assets/ui/character_select/review_a270491077.png",
-      "suggestedDirectory": "assets/ui/character_select",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "新角色一/角色一_角色选择_立绘.png",
-      "visualGroup": "visual_a270491077",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "新角色一/角色一_角色选择_立绘.webp",
-      "suggestedPath": "assets/ui/character_select/review_ab27a556ff.webp",
-      "suggestedDirectory": "assets/ui/character_select",
-      "status": "active",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "新角色一/角色一_角色选择_立绘.webp",
-      "visualGroup": "visual_ab27a556ff",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "新角色三/角色三_角色选择_立绘.png",
-      "suggestedPath": "assets/ui/character_select/review_f8b82d0833.png",
-      "suggestedDirectory": "assets/ui/character_select",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "新角色三/角色三_角色选择_立绘.png",
-      "visualGroup": "visual_f8b82d0833",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "新角色三/角色三_角色选择_立绘.webp",
-      "suggestedPath": "assets/ui/character_select/review_8773787f05.webp",
-      "suggestedDirectory": "assets/ui/character_select",
-      "status": "active",
-      "referenceModules": [
-        "characters",
-        "demo"
-      ],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "multi_module_reference"
-      ],
-      "derivedFrom": "新角色三/角色三_角色选择_立绘.webp",
-      "visualGroup": "visual_8773787f05",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
       "sourcePath": "旧美术资产/角色一/角色一_角色选择_彩窗立绘.png",
       "suggestedPath": "assets/ui/character_select/review_cc99d0267b.png",
       "suggestedDirectory": "assets/ui/character_select",
@@ -12432,52 +12425,6 @@
       ],
       "derivedFrom": "旧美术资产/角色三/角色三_角色选择_彩窗立绘.png",
       "visualGroup": "visual_1b06502ef7",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "角色二/角色二_角色选择_彩窗立绘.png",
-      "suggestedPath": "assets/ui/character_select/review_4fe17e7ac9.png",
-      "suggestedDirectory": "assets/ui/character_select",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "角色二/角色二_角色选择_彩窗立绘.png",
-      "visualGroup": "visual_4fe17e7ac9",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "角色二/角色二_角色选择_立绘.png",
-      "suggestedPath": "assets/ui/character_select/review_4ac63e7e6f.png",
-      "suggestedDirectory": "assets/ui/character_select",
-      "status": "unreferenced",
-      "referenceModules": [],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "derivedFrom": "角色二/角色二_角色选择_立绘.png",
-      "visualGroup": "visual_4ac63e7e6f",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "角色二/角色二_角色选择_立绘.webp",
-      "suggestedPath": "assets/ui/character_select/review_1fc0b47191.webp",
-      "suggestedDirectory": "assets/ui/character_select",
-      "status": "active",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": true,
-      "risks": [
-        "non_ascii_path"
-      ],
-      "derivedFrom": "角色二/角色二_角色选择_立绘.webp",
-      "visualGroup": "visual_1fc0b47191",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
