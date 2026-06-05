@@ -20,16 +20,16 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - candidate: 110
 - documented: 61
 - legacy: 50
-- source: 255
-- unreferenced: 273
+- source: 270
+- unreferenced: 258
 
 ## Risk Counts
 
 - identical_content: 181
 - long_component: 82
 - multi_module_reference: 63
-- non_ascii_path: 344
-- unreferenced: 334
+- non_ascii_path: 329
+- unreferenced: 319
 
 ## Longest Paths
 

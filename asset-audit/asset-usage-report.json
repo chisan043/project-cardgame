@@ -33,15 +33,15 @@
       "candidate": 110,
       "documented": 61,
       "legacy": 50,
-      "source": 255,
-      "unreferenced": 273
+      "source": 270,
+      "unreferenced": 258
     },
     "riskCounts": {
       "identical_content": 181,
       "long_component": 82,
       "multi_module_reference": 63,
-      "non_ascii_path": 344,
-      "unreferenced": 334
+      "non_ascii_path": 329,
+      "unreferenced": 319
     },
     "referenceModuleCounts": {
       "cards": 178,
@@ -1194,6 +1194,216 @@
       "risks": [
         "non_ascii_path"
       ],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/cards_visuals/art/archer/archer_crosswind_guard_art_v1_source.png",
+      "extension": ".png",
+      "bytes": 2928425,
+      "sha256": "aebfe17668223847041635eed2c794ef546eb393cff575eef9c7089e9b9a0307",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 98,
+      "maxComponentLength": 40,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/cards_visuals/art/archer/archer_deadbranch_shuffle_art_v1_source.png",
+      "extension": ".png",
+      "bytes": 2996095,
+      "sha256": "1cd154b93f599236faed61fc332c44e44f7c9f237b0b37fe67949ad3ad0dc773",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 101,
+      "maxComponentLength": 43,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/cards_visuals/art/archer/archer_ember_feather_art_v1_source.png",
+      "extension": ".png",
+      "bytes": 2988458,
+      "sha256": "f7119576b60d53ef28312996b0ef2c9d79de2fdcb299ea3d5829f9f14e84a56b",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 96,
+      "maxComponentLength": 38,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/cards_visuals/art/archer/archer_forest_specimen_art_v1_source.png",
+      "extension": ".png",
+      "bytes": 2935751,
+      "sha256": "b4e092d3ae9a0a9fb34db1f4795210e4b59df41f2f4fda718f9ebafba89b14aa",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 98,
+      "maxComponentLength": 40,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/cards_visuals/art/archer/archer_leaf_reload_art_v1_source.png",
+      "extension": ".png",
+      "bytes": 2979268,
+      "sha256": "c16b1ed820baf5a1fc6b46a94889146ad550e5ee9cabb44f59580db149d74a5d",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 94,
+      "maxComponentLength": 36,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/cards_visuals/art/archer/archer_lost_arrow_mark_art_v1_source.png",
+      "extension": ".png",
+      "bytes": 2937249,
+      "sha256": "1d1b839f8e4d71b34eccf834d2ad77a2f9c0ad0452ac8a67746cc5d97a819b7b",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 98,
+      "maxComponentLength": 40,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/cards_visuals/art/archer/archer_lostroad_cache_art_v1_source.png",
+      "extension": ".png",
+      "bytes": 2642871,
+      "sha256": "b5c5631455873a06d2bfc7e2f4fa7313d35b13c4ba90199299768a46abd70906",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 97,
+      "maxComponentLength": 39,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/cards_visuals/art/archer/archer_shadow_box_art_v1_source.png",
+      "extension": ".png",
+      "bytes": 2646940,
+      "sha256": "4a8927e6b35cc868b6487da741fff593ec1b78772d8fa7f1c9bd59089d216a81",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 93,
+      "maxComponentLength": 35,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/cards_visuals/art/archer/archer_shadow_line_art_v1_source.png",
+      "extension": ".png",
+      "bytes": 2674408,
+      "sha256": "24a498076cf7616f4980bcf4a29ec94f1ac8c782df5ebe0d8bf98daf701fa6f3",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 94,
+      "maxComponentLength": 36,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/cards_visuals/art/archer/archer_sky_skim_art_v1_source.png",
+      "extension": ".png",
+      "bytes": 2782552,
+      "sha256": "8c12d1643ac078f25d0c6558e3064241d98f79ba36a47bdb3d3df1af7df7db0c",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 91,
+      "maxComponentLength": 33,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/cards_visuals/art/archer/archer_wind_count_art_v1_source.png",
+      "extension": ".png",
+      "bytes": 2782325,
+      "sha256": "1b624ac5c3db177a598f542f82bcdff77d86cd221063dc528e31c326357764b2",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 93,
+      "maxComponentLength": 35,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/cards_visuals/art/mage/mage_decay_wire_art_v1_source.png",
+      "extension": ".png",
+      "bytes": 2699665,
+      "sha256": "1eef46091b0e88c59852078f7753730fb41b70d6499f66ef47a98d795144ddb3",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 89,
+      "maxComponentLength": 33,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/cards_visuals/art/mage/mage_frost_hex_art_v1_source.png",
+      "extension": ".png",
+      "bytes": 2730146,
+      "sha256": "772ecadb5d875131e6ce1d911e3fb042940b2323ff79e643d760ca7a56d8f80c",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 88,
+      "maxComponentLength": 32,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/cards_visuals/art/neutral/neutral_return_scroll_art_v1_source.png",
+      "extension": ".png",
+      "bytes": 2396788,
+      "sha256": "dd68ac558af2a862ea0357db1202c01b48e9596a159690233594ecf59c92804c",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 98,
+      "maxComponentLength": 39,
+      "containsNonAscii": false,
+      "risks": [],
+      "identicalContentGroup": []
+    },
+    {
+      "path": "assets/archive/unused/2026-06-05/cards_visuals/art/warrior/warrior_crimson_pause_art_v1_source.png",
+      "extension": ".png",
+      "bytes": 2489392,
+      "sha256": "aaaf796083056652c41fc6b619e60960ca39c8bfab50ad529cd28c632a98e46c",
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
+      "pathLength": 98,
+      "maxComponentLength": 39,
+      "containsNonAscii": false,
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -21216,261 +21426,6 @@
         "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_asset_v1.png",
         "tmp_hud_group2_assets/player_hp_bar_long_fill_gray_base_asset_v1.png"
       ]
-    },
-    {
-      "path": "卡牌设计/教堂彩窗赛璐璐/imagegen流派原画_v1/勇者战士/猩红喘息.png",
-      "extension": ".png",
-      "bytes": 2489392,
-      "sha256": "aaaf796083056652c41fc6b619e60960ca39c8bfab50ad529cd28c632a98e46c",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 42,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "卡牌设计/教堂彩窗赛璐璐/imagegen流派原画_v1/精灵弓箭手/侧风护步.png",
-      "extension": ".png",
-      "bytes": 2928425,
-      "sha256": "aebfe17668223847041635eed2c794ef546eb393cff575eef9c7089e9b9a0307",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 43,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "卡牌设计/教堂彩窗赛璐璐/imagegen流派原画_v1/精灵弓箭手/叶片换弦.png",
-      "extension": ".png",
-      "bytes": 2979268,
-      "sha256": "c16b1ed820baf5a1fc6b46a94889146ad550e5ee9cabb44f59580db149d74a5d",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 43,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "卡牌设计/教堂彩窗赛璐璐/imagegen流派原画_v1/精灵弓箭手/失路箭袋.png",
-      "extension": ".png",
-      "bytes": 2642871,
-      "sha256": "b5c5631455873a06d2bfc7e2f4fa7313d35b13c4ba90199299768a46abd70906",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 43,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "卡牌设计/教堂彩窗赛璐璐/imagegen流派原画_v1/精灵弓箭手/归林标本.png",
-      "extension": ".png",
-      "bytes": 2935751,
-      "sha256": "b4e092d3ae9a0a9fb34db1f4795210e4b59df41f2f4fda718f9ebafba89b14aa",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 43,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "卡牌设计/教堂彩窗赛璐璐/imagegen流派原画_v1/精灵弓箭手/影匣齐射.png",
-      "extension": ".png",
-      "bytes": 2646940,
-      "sha256": "4a8927e6b35cc868b6487da741fff593ec1b78772d8fa7f1c9bd59089d216a81",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 43,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "卡牌设计/教堂彩窗赛璐璐/imagegen流派原画_v1/精灵弓箭手/影羽切线.png",
-      "extension": ".png",
-      "bytes": 2674408,
-      "sha256": "24a498076cf7616f4980bcf4a29ec94f1ac8c782df5ebe0d8bf98daf701fa6f3",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 43,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "卡牌设计/教堂彩窗赛璐璐/imagegen流派原画_v1/精灵弓箭手/掠空轻矢.png",
-      "extension": ".png",
-      "bytes": 2782552,
-      "sha256": "8c12d1643ac078f25d0c6558e3064241d98f79ba36a47bdb3d3df1af7df7db0c",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 43,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "卡牌设计/教堂彩窗赛璐璐/imagegen流派原画_v1/精灵弓箭手/数风定距.png",
-      "extension": ".png",
-      "bytes": 2782325,
-      "sha256": "1b624ac5c3db177a598f542f82bcdff77d86cd221063dc528e31c326357764b2",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 43,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "卡牌设计/教堂彩窗赛璐璐/imagegen流派原画_v1/精灵弓箭手/残枝洗牌.png",
-      "extension": ".png",
-      "bytes": 2996095,
-      "sha256": "1cd154b93f599236faed61fc332c44e44f7c9f237b0b37fe67949ad3ad0dc773",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 43,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "卡牌设计/教堂彩窗赛璐璐/imagegen流派原画_v1/精灵弓箭手/燎羽连射.png",
-      "extension": ".png",
-      "bytes": 2988458,
-      "sha256": "f7119576b60d53ef28312996b0ef2c9d79de2fdcb299ea3d5829f9f14e84a56b",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 43,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "卡牌设计/教堂彩窗赛璐璐/imagegen流派原画_v1/精灵弓箭手/遗箭定位.png",
-      "extension": ".png",
-      "bytes": 2937249,
-      "sha256": "1d1b839f8e4d71b34eccf834d2ad77a2f9c0ad0452ac8a67746cc5d97a819b7b",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 43,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "卡牌设计/教堂彩窗赛璐璐/imagegen流派原画_v1/萝莉魔导士/腐辉导线.png",
-      "extension": ".png",
-      "bytes": 2699665,
-      "sha256": "1eef46091b0e88c59852078f7753730fb41b70d6499f66ef47a98d795144ddb3",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 43,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "卡牌设计/教堂彩窗赛璐璐/imagegen流派原画_v1/萝莉魔导士/霜咒压迫.png",
-      "extension": ".png",
-      "bytes": 2730146,
-      "sha256": "772ecadb5d875131e6ce1d911e3fb042940b2323ff79e643d760ca7a56d8f80c",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 43,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
-    },
-    {
-      "path": "卡牌设计/教堂彩窗赛璐璐/imagegen流派原画_v1/通用卡牌/归页残卷.png",
-      "extension": ".png",
-      "bytes": 2396788,
-      "sha256": "dd68ac558af2a862ea0357db1202c01b48e9596a159690233594ecf59c92804c",
-      "status": "unreferenced",
-      "references": [],
-      "referenceModules": [],
-      "pathLength": 42,
-      "maxComponentLength": 15,
-      "containsNonAscii": true,
-      "risks": [
-        "non_ascii_path",
-        "unreferenced"
-      ],
-      "identicalContentGroup": []
     },
     {
       "path": "场景/分层导视/bg_battle_ancient_forest_day_layer_guide.png",
