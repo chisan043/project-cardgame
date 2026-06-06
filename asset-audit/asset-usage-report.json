@@ -22,32 +22,31 @@
   },
   "summary": {
     "assetCount": 1230,
-    "textFileCount": 41,
-    "referencedAssetCount": 439,
-    "activeAssetCount": 481,
-    "unreferencedAssetCount": 791,
-    "missingReferenceCount": 250,
-    "missingRuntimeReferenceCount": 44,
+    "textFileCount": 20,
+    "referencedAssetCount": 324,
+    "activeAssetCount": 417,
+    "unreferencedAssetCount": 906,
+    "missingReferenceCount": 67,
+    "missingRuntimeReferenceCount": 28,
     "statusCounts": {
-      "active": 481,
-      "candidate": 133,
-      "documented": 61,
+      "active": 417,
+      "candidate": 180,
+      "documented": 10,
       "legacy": 242,
-      "source": 294,
+      "source": 362,
       "unreferenced": 19
     },
     "riskCounts": {
       "identical_content": 181,
       "long_component": 81,
-      "multi_module_reference": 63,
-      "unreferenced": 80
+      "multi_module_reference": 56,
+      "unreferenced": 29
     },
     "referenceModuleCounts": {
       "cards": 178,
-      "characters": 62,
+      "characters": 9,
       "demo": 68,
-      "enemies": 1,
-      "misc": 81,
+      "misc": 13,
       "relics": 45,
       "ui.hud": 67
     },
@@ -5148,24 +5147,13 @@
       "extension": ".png",
       "bytes": 14533890,
       "sha256": "4ca957ae69311d7a5706a1aa8c845836e9f664c322dcbacd93d56d3938c49d6c",
-      "status": "documented",
-      "references": [
-        {
-          "file": "怪物/动作关键帧_README.md",
-          "line": 8,
-          "module": "enemies",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "enemies"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 64,
       "maxComponentLength": 31,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -5425,18 +5413,9 @@
       "extension": ".png",
       "bytes": 1727755,
       "sha256": "f595336a26d4dc1416ab1f4514a054bc3badf75f7573731a174d8b6c023dea18",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
-          "line": 28,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 69,
       "maxComponentLength": 32,
       "containsNonAscii": false,
@@ -5448,18 +5427,9 @@
       "extension": ".png",
       "bytes": 1914050,
       "sha256": "2c1379ffa0f8f6b483a27ddbf9c783cd7b23bf856630264b8850858bc2e3b1f9",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
-          "line": 17,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 67,
       "maxComponentLength": 30,
       "containsNonAscii": false,
@@ -5471,18 +5441,9 @@
       "extension": ".png",
       "bytes": 43700,
       "sha256": "ce5faf7a7bc52d2e449f50c142ddf034405db410bf48bea4f48f1f5109b3cd90",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
-          "line": 94,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 56,
       "maxComponentLength": 23,
       "containsNonAscii": false,
@@ -5494,18 +5455,9 @@
       "extension": ".png",
       "bytes": 2485378,
       "sha256": "227f983798dd712737ec5e99dd1d758a1cf1a6cce820c95be333a331ccf9c651",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
-          "line": 105,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 53,
       "maxComponentLength": 21,
       "containsNonAscii": false,
@@ -5517,18 +5469,9 @@
       "extension": ".png",
       "bytes": 3552194,
       "sha256": "a3de5fdbea07526b6f1889c9838670255cf23e5a50e16886251382c8c4d216c3",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
-          "line": 6,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 69,
       "maxComponentLength": 33,
       "containsNonAscii": false,
@@ -5540,18 +5483,9 @@
       "extension": ".png",
       "bytes": 23118,
       "sha256": "4aa3ecba7e27e8b649f831ede36fcfca1b293c9d8a8f118802e34594e252d766",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
-          "line": 116,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 62,
       "maxComponentLength": 31,
       "containsNonAscii": false,
@@ -5563,18 +5497,9 @@
       "extension": ".png",
       "bytes": 23228,
       "sha256": "3983d4ca00d03433a802da5a8dc2235bfd04f95ecdf45d06a4fc044cb658e36c",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
-          "line": 176,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 60,
       "maxComponentLength": 29,
       "containsNonAscii": false,
@@ -5586,18 +5511,9 @@
       "extension": ".png",
       "bytes": 21428,
       "sha256": "80aca98958bee0910a90c4827afdf597b6acf24c32f07c3f7aa469a5a5ecb257",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
-          "line": 126,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 61,
       "maxComponentLength": 30,
       "containsNonAscii": false,
@@ -5609,18 +5525,9 @@
       "extension": ".png",
       "bytes": 22032,
       "sha256": "5e93353203d686b7f7e54ae0858e8de51bc620a08f41adce22a3434273f4833a",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
-          "line": 156,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 61,
       "maxComponentLength": 30,
       "containsNonAscii": false,
@@ -5632,18 +5539,9 @@
       "extension": ".png",
       "bytes": 22088,
       "sha256": "be00365d575744d5808420d95c73c034471a5c26102f48f48b3cac40c5c1b9c8",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
-          "line": 166,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 62,
       "maxComponentLength": 31,
       "containsNonAscii": false,
@@ -5655,18 +5553,9 @@
       "extension": ".png",
       "bytes": 21975,
       "sha256": "158120d7c309bd2098e05b8b01cdb8b9edc1ea6625cb1129e53d490a0f954595",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
-          "line": 146,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 60,
       "maxComponentLength": 29,
       "containsNonAscii": false,
@@ -5678,18 +5567,9 @@
       "extension": ".png",
       "bytes": 22089,
       "sha256": "eca1ab505bdb0282f3366440abbf383131d9e9bea9b0a818fec6093f0042bb51",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
-          "line": 136,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 60,
       "maxComponentLength": 29,
       "containsNonAscii": false,
@@ -5701,24 +5581,9 @@
       "extension": ".png",
       "bytes": 608316,
       "sha256": "d4f0839dc1ec379c09e0e8dbbeaf817805cb743adcec5b320a336e66ac8fc555",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
-          "line": 30,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
-          "line": 245,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 84,
       "maxComponentLength": 50,
       "containsNonAscii": false,
@@ -5732,18 +5597,9 @@
       "extension": ".png",
       "bytes": 289823,
       "sha256": "2380b9a8837ed18fb072038f6f128216e9da48256db73da7af5dc125a9f6ac57",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
-          "line": 39,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 60,
       "maxComponentLength": 28,
       "containsNonAscii": false,
@@ -5755,18 +5611,9 @@
       "extension": ".png",
       "bytes": 368346,
       "sha256": "b7caa88903fc59fee5f375e5d63191a81759f514f88a809a547efcbc1da4e377",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
-          "line": 61,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 62,
       "maxComponentLength": 30,
       "containsNonAscii": false,
@@ -5778,18 +5625,9 @@
       "extension": ".png",
       "bytes": 696579,
       "sha256": "799d4e272105cd07b17d49b441de3572cce841dd5731f3307118c15ac1e4e137",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
-          "line": 50,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 61,
       "maxComponentLength": 29,
       "containsNonAscii": false,
@@ -5801,18 +5639,9 @@
       "extension": ".png",
       "bytes": 229776,
       "sha256": "859c134235d4137fb31732953f00143c5c10e042863fa9113da796b4b33cef91",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
-          "line": 72,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 58,
       "maxComponentLength": 26,
       "containsNonAscii": false,
@@ -5824,18 +5653,9 @@
       "extension": ".png",
       "bytes": 167529,
       "sha256": "d089c452f345b17618f65f7d3f79540e8cac40089e3a4c5402b8a18b7c6631d9",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
-          "line": 83,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 60,
       "maxComponentLength": 28,
       "containsNonAscii": false,
@@ -6043,24 +5863,9 @@
       "extension": ".png",
       "bytes": 296511,
       "sha256": "07bf134b559955d520841960d7756ba43174b535ea95393f5e70a0019b03f759",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
-          "line": 18,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
-          "line": 41,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 84,
       "maxComponentLength": 52,
       "containsNonAscii": false,
@@ -6074,24 +5879,9 @@
       "extension": ".png",
       "bytes": 233754,
       "sha256": "6930c6a167ccc3358a71091419602deab71bcd458ed2da02f36049a071b77218",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
-          "line": 20,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
-          "line": 75,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 76,
       "maxComponentLength": 44,
       "containsNonAscii": false,
@@ -6103,24 +5893,9 @@
       "extension": ".png",
       "bytes": 68355,
       "sha256": "b4b5a5e8bd2b6181a7518ca4937136f5ad07884e564350aee54808d974832b26",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
-          "line": 21,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
-          "line": 92,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 76,
       "maxComponentLength": 44,
       "containsNonAscii": false,
@@ -6132,24 +5907,9 @@
       "extension": ".png",
       "bytes": 142450,
       "sha256": "12113764bc39dac5d53c453bb0ad41f235b3ef2613084e1289d1f95697ed83f8",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
-          "line": 19,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
-          "line": 58,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 83,
       "maxComponentLength": 51,
       "containsNonAscii": false,
@@ -6163,24 +5923,9 @@
       "extension": ".png",
       "bytes": 107286,
       "sha256": "9d362ec0d94663beb115a301eac4940cefa92916c85180b13620fb868db65410",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
-          "line": 22,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
-          "line": 109,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 82,
       "maxComponentLength": 50,
       "containsNonAscii": false,
@@ -6194,24 +5939,9 @@
       "extension": ".png",
       "bytes": 53884,
       "sha256": "76b3aae280fda6cfd11403aa1be6a8df52bedcea3b149bf53be4269afacfc50c",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
-          "line": 23,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
-          "line": 126,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 75,
       "maxComponentLength": 43,
       "containsNonAscii": false,
@@ -6223,24 +5953,9 @@
       "extension": ".png",
       "bytes": 53642,
       "sha256": "76e19f0ad04250b06a65e3f343c7ea69e34b4cde1607dfe63fd106e7b522c653",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
-          "line": 29,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
-          "line": 228,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 73,
       "maxComponentLength": 41,
       "containsNonAscii": false,
@@ -6252,24 +5967,9 @@
       "extension": ".png",
       "bytes": 49594,
       "sha256": "1af051e22b9be464ee975ba7ab82f242d0261269f857f3696fdddb870eeb8c63",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
-          "line": 24,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
-          "line": 143,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 74,
       "maxComponentLength": 42,
       "containsNonAscii": false,
@@ -6281,24 +5981,9 @@
       "extension": ".png",
       "bytes": 52072,
       "sha256": "1bb363fdbd965d29c6832320601dba41579872370babd0a8386ef8b2bbe97c78",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
-          "line": 27,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
-          "line": 194,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 74,
       "maxComponentLength": 42,
       "containsNonAscii": false,
@@ -6310,24 +5995,9 @@
       "extension": ".png",
       "bytes": 51241,
       "sha256": "9399b0a4b165daf34a474d133f87d6cf0d5ffc22a20abb5cfd26b1e86eff790c",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
-          "line": 28,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
-          "line": 211,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 75,
       "maxComponentLength": 43,
       "containsNonAscii": false,
@@ -6339,24 +6009,9 @@
       "extension": ".png",
       "bytes": 55756,
       "sha256": "a3a6eff5c40b7baaab50da9e9d3df16963d0f0fadea836304c2b6a76231f8822",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
-          "line": 26,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
-          "line": 177,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 73,
       "maxComponentLength": 41,
       "containsNonAscii": false,
@@ -6368,24 +6023,9 @@
       "extension": ".png",
       "bytes": 54425,
       "sha256": "5d5466742ef2d60293ac4f8f14dc5d88e6c1cc6806136b3213dd3b238e6d8919",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
-          "line": 25,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
-          "line": 160,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 73,
       "maxComponentLength": 41,
       "containsNonAscii": false,
@@ -6397,24 +6037,9 @@
       "extension": ".png",
       "bytes": 177656,
       "sha256": "09655773d0a847904d68c9c6eec772bc1ba8b43003f0caf325eb0bd25e6045f3",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
-          "line": 16,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
-          "line": 7,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 77,
       "maxComponentLength": 45,
       "containsNonAscii": false,
@@ -6474,24 +6099,9 @@
       "extension": ".png",
       "bytes": 241556,
       "sha256": "1b7792721eb5b0a2d285bac7fb515c979f1359f2ba3efbdc5855a91093076107",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/README.md",
-          "line": 17,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
-          "line": 24,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 81,
       "maxComponentLength": 49,
       "containsNonAscii": false,
@@ -6505,24 +6115,9 @@
       "extension": ".png",
       "bytes": 319762,
       "sha256": "82fede4f533a5b2ca225d7b872fb337148c6c33a19909ed20cc0d5c5e3907713",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
-          "line": 10,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 56,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 93,
       "maxComponentLength": 61,
       "containsNonAscii": false,
@@ -6536,24 +6131,9 @@
       "extension": ".png",
       "bytes": 306372,
       "sha256": "4862a4627d34959e94f94c3b414c876ef7c77b8911b9814f1542a16d0fe021b8",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
-          "line": 11,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 73,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 88,
       "maxComponentLength": 56,
       "containsNonAscii": false,
@@ -6567,24 +6147,9 @@
       "extension": ".png",
       "bytes": 280717,
       "sha256": "d92f5d5ac7890f235cffbdb08dd0fd9d04c2aac765e907a8ae2ad286e7eeed05",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
-          "line": 13,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 107,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 95,
       "maxComponentLength": 63,
       "containsNonAscii": false,
@@ -6598,24 +6163,9 @@
       "extension": ".png",
       "bytes": 307010,
       "sha256": "9600636dfdf22d77b0ffbef9e482f61905527dc5caf68a33c8e5402d783f7f52",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
-          "line": 8,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 22,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 93,
       "maxComponentLength": 61,
       "containsNonAscii": false,
@@ -6629,24 +6179,9 @@
       "extension": ".png",
       "bytes": 313229,
       "sha256": "908dc1b0425bb43210a943b71daa9741b28d8ae1335dcd442197d35ee0d258e5",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
-          "line": 9,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 39,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 90,
       "maxComponentLength": 58,
       "containsNonAscii": false,
@@ -6660,24 +6195,9 @@
       "extension": ".png",
       "bytes": 304818,
       "sha256": "4c39a82edd16e7ece161302f9f2f8ea376e5f9bef6b95c1b865f67580b873f7c",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
-          "line": 14,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 124,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 90,
       "maxComponentLength": 58,
       "containsNonAscii": false,
@@ -6691,24 +6211,9 @@
       "extension": ".png",
       "bytes": 295788,
       "sha256": "99a3925c061c0ea0a2d6216f6a08f08bf854a854f41179b8ff349f6693defe97",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
-          "line": 15,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 141,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 97,
       "maxComponentLength": 65,
       "containsNonAscii": false,
@@ -6722,24 +6227,9 @@
       "extension": ".png",
       "bytes": 314962,
       "sha256": "ec1b2a84554944fd83bd8123ea81fca4d7e77f16541b52a42716d7512484e60c",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
-          "line": 7,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 5,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 90,
       "maxComponentLength": 58,
       "containsNonAscii": false,
@@ -6753,24 +6243,9 @@
       "extension": ".png",
       "bytes": 297976,
       "sha256": "4854e7d588cfca351f8aa0539c8984a750bd0ebfcb4888e72e0c75e4954cacd3",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
-          "line": 12,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 90,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 93,
       "maxComponentLength": 61,
       "containsNonAscii": false,
@@ -6784,18 +6259,9 @@
       "extension": ".png",
       "bytes": 3139889,
       "sha256": "f442879cce6e0dc4c3d0bd2c4a01c763bfc4154f5c1ddb4647b654b218a8e128",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
-          "line": 2,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 65,
       "maxComponentLength": 33,
       "containsNonAscii": false,
@@ -6807,24 +6273,9 @@
       "extension": ".png",
       "bytes": 1442200,
       "sha256": "acf9bd04143e1411c52858312fd63ab0e62a8eb341591afee0e9a3c3a2cfa7da",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/README.md",
-          "line": 17,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 158,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 76,
       "maxComponentLength": 44,
       "containsNonAscii": false,
@@ -6836,18 +6287,9 @@
       "extension": ".png",
       "bytes": 1237034,
       "sha256": "ff4d16e8b9294b243ba1c192b454311be5c397f03a8f10fdd75a8bb64affd79e",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/manifest.json",
-          "line": 186,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 78,
       "maxComponentLength": 35,
       "containsNonAscii": false,
@@ -6887,24 +6329,13 @@
       "extension": ".png",
       "bytes": 1407069,
       "sha256": "982814ed75fa7d74fef0b5cae5da40cb3f0f7f980156729d543a0c615330ca45",
-      "status": "documented",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/README.md",
-          "line": 48,
-          "module": "misc",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 74,
       "maxComponentLength": 33,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -6915,18 +6346,6 @@
       "status": "documented",
       "references": [
         {
-          "file": "UI/教堂彩窗赛璐璐/README.md",
-          "line": 41,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/角色选择/README.md",
-          "line": 8,
-          "module": "characters",
-          "kind": "documentation"
-        },
-        {
           "file": "demo更改需求文档.txt",
           "line": 377,
           "module": "misc",
@@ -6934,15 +6353,13 @@
         }
       ],
       "referenceModules": [
-        "characters",
         "misc"
       ],
       "pathLength": 69,
       "maxComponentLength": 29,
       "containsNonAscii": false,
       "risks": [
-        "unreferenced",
-        "multi_module_reference"
+        "unreferenced"
       ],
       "identicalContentGroup": []
     },
@@ -6954,18 +6371,6 @@
       "status": "documented",
       "references": [
         {
-          "file": "UI/教堂彩窗赛璐璐/README.md",
-          "line": 42,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/角色选择/README.md",
-          "line": 10,
-          "module": "characters",
-          "kind": "documentation"
-        },
-        {
           "file": "demo更改需求文档.txt",
           "line": 378,
           "module": "misc",
@@ -6973,15 +6378,13 @@
         }
       ],
       "referenceModules": [
-        "characters",
         "misc"
       ],
       "pathLength": 71,
       "maxComponentLength": 31,
       "containsNonAscii": false,
       "risks": [
-        "unreferenced",
-        "multi_module_reference"
+        "unreferenced"
       ],
       "identicalContentGroup": []
     },
@@ -6990,24 +6393,13 @@
       "extension": ".png",
       "bytes": 2785840,
       "sha256": "224e2b8d8f49a0ca4c6dd9512181c66b3bf6be9a15547789e3932bf7f73661b0",
-      "status": "documented",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/角色选择/README.md",
-          "line": 5,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "candidate",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 66,
       "maxComponentLength": 26,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -12006,12 +11398,6 @@
           "line": 56,
           "module": "characters",
           "kind": "runtime"
-        },
-        {
-          "file": "新角色三/资产清单.txt",
-          "line": 9,
-          "module": "characters",
-          "kind": "documentation"
         }
       ],
       "referenceModules": [
@@ -12035,12 +11421,6 @@
           "line": 57,
           "module": "characters",
           "kind": "runtime"
-        },
-        {
-          "file": "新角色三/资产清单.txt",
-          "line": 11,
-          "module": "characters",
-          "kind": "documentation"
         }
       ],
       "referenceModules": [
@@ -12064,24 +11444,15 @@
           "line": 73,
           "module": "demo",
           "kind": "runtime"
-        },
-        {
-          "file": "新角色三/资产清单.txt",
-          "line": 12,
-          "module": "characters",
-          "kind": "documentation"
         }
       ],
       "referenceModules": [
-        "characters",
         "demo"
       ],
       "pathLength": 50,
       "maxComponentLength": 25,
       "containsNonAscii": false,
-      "risks": [
-        "multi_module_reference"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -12102,12 +11473,6 @@
           "line": 1547,
           "module": "demo",
           "kind": "runtime"
-        },
-        {
-          "file": "新角色三/资产清单.txt",
-          "line": 10,
-          "module": "characters",
-          "kind": "documentation"
         }
       ],
       "referenceModules": [
@@ -12134,12 +11499,6 @@
           "line": 37,
           "module": "characters",
           "kind": "runtime"
-        },
-        {
-          "file": "角色二/资产清单.txt",
-          "line": 9,
-          "module": "characters",
-          "kind": "documentation"
         }
       ],
       "referenceModules": [
@@ -12163,12 +11522,6 @@
           "line": 38,
           "module": "characters",
           "kind": "runtime"
-        },
-        {
-          "file": "角色二/资产清单.txt",
-          "line": 11,
-          "module": "characters",
-          "kind": "documentation"
         }
       ],
       "referenceModules": [
@@ -12192,24 +11545,15 @@
           "line": 72,
           "module": "demo",
           "kind": "runtime"
-        },
-        {
-          "file": "角色二/资产清单.txt",
-          "line": 12,
-          "module": "characters",
-          "kind": "documentation"
         }
       ],
       "referenceModules": [
-        "characters",
         "demo"
       ],
       "pathLength": 48,
       "maxComponentLength": 25,
       "containsNonAscii": false,
-      "risks": [
-        "multi_module_reference"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -12224,12 +11568,6 @@
           "line": 36,
           "module": "characters",
           "kind": "runtime"
-        },
-        {
-          "file": "角色二/资产清单.txt",
-          "line": 10,
-          "module": "characters",
-          "kind": "documentation"
         }
       ],
       "referenceModules": [
@@ -12259,12 +11597,6 @@
           "line": 4216,
           "module": "demo",
           "kind": "runtime"
-        },
-        {
-          "file": "新角色一/资产清单.txt",
-          "line": 9,
-          "module": "characters",
-          "kind": "documentation"
         }
       ],
       "referenceModules": [
@@ -12297,12 +11629,6 @@
           "line": 1754,
           "module": "demo",
           "kind": "runtime"
-        },
-        {
-          "file": "新角色一/资产清单.txt",
-          "line": 11,
-          "module": "characters",
-          "kind": "documentation"
         }
       ],
       "referenceModules": [
@@ -12329,24 +11655,15 @@
           "line": 71,
           "module": "demo",
           "kind": "runtime"
-        },
-        {
-          "file": "新角色一/资产清单.txt",
-          "line": 12,
-          "module": "characters",
-          "kind": "documentation"
         }
       ],
       "referenceModules": [
-        "characters",
         "demo"
       ],
       "pathLength": 51,
       "maxComponentLength": 25,
       "containsNonAscii": false,
-      "risks": [
-        "multi_module_reference"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -12361,12 +11678,6 @@
           "line": 17,
           "module": "characters",
           "kind": "runtime"
-        },
-        {
-          "file": "新角色一/资产清单.txt",
-          "line": 10,
-          "module": "characters",
-          "kind": "documentation"
         }
       ],
       "referenceModules": [
@@ -16874,24 +16185,13 @@
       "extension": ".png",
       "bytes": 165112,
       "sha256": "ff4c45432c9adaa4e6c8e9f7cd6b1dc25b37b57972cc470a81f4394c023a2f9a",
-      "status": "documented",
-      "references": [
-        {
-          "file": "新角色三/资产清单.txt",
-          "line": 13,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 61,
       "maxComponentLength": 29,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -16899,24 +16199,13 @@
       "extension": ".png",
       "bytes": 916867,
       "sha256": "50d62a6e91bad1992cdac6a9ac887d90acdf20321b4e8f23cc1b4c33285d8470",
-      "status": "documented",
-      "references": [
-        {
-          "file": "新角色三/资产清单.txt",
-          "line": 16,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 70,
       "maxComponentLength": 26,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -16924,24 +16213,13 @@
       "extension": ".png",
       "bytes": 1051298,
       "sha256": "a11e2a9d8993d27ef378a6fcf2e260027c1dd4f9b5ab44ee91723a10847aadb1",
-      "status": "documented",
-      "references": [
-        {
-          "file": "新角色三/资产清单.txt",
-          "line": 18,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 62,
       "maxComponentLength": 18,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -16949,24 +16227,13 @@
       "extension": ".png",
       "bytes": 877527,
       "sha256": "22fca0ff955c09fc041c52f5dc0fbac89a4a28bd399fe186ad2749db7e63bf4e",
-      "status": "documented",
-      "references": [
-        {
-          "file": "新角色三/资产清单.txt",
-          "line": 15,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 62,
       "maxComponentLength": 18,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -16974,24 +16241,13 @@
       "extension": ".png",
       "bytes": 858459,
       "sha256": "e836ba281107b92870e3ade9f832708bd2f601fbb894e64e2afdaf3f364ffaa2",
-      "status": "documented",
-      "references": [
-        {
-          "file": "新角色三/资产清单.txt",
-          "line": 17,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 68,
       "maxComponentLength": 24,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -16999,24 +16255,13 @@
       "extension": ".png",
       "bytes": 1211828,
       "sha256": "a8675186c4b0d8dc8c2a69484e4d1f8773444fc6eb20b811c9a38df9f0396852",
-      "status": "documented",
-      "references": [
-        {
-          "file": "新角色三/资产清单.txt",
-          "line": 20,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 71,
       "maxComponentLength": 26,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -17024,24 +16269,13 @@
       "extension": ".png",
       "bytes": 1387954,
       "sha256": "2939c6b4de266165a8748fd3f22ebcd2267610a83ab3df188ac11b071ee77075",
-      "status": "documented",
-      "references": [
-        {
-          "file": "新角色三/资产清单.txt",
-          "line": 22,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 63,
       "maxComponentLength": 18,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -17049,24 +16283,13 @@
       "extension": ".png",
       "bytes": 1353492,
       "sha256": "a1be7c3d87b431be080214ea162ecd991ed148bb1b1e6c062716ba183e5506f4",
-      "status": "documented",
-      "references": [
-        {
-          "file": "新角色三/资产清单.txt",
-          "line": 19,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 63,
       "maxComponentLength": 18,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -17074,24 +16297,13 @@
       "extension": ".png",
       "bytes": 1256601,
       "sha256": "c1a98ea0fd1d6b47fa0f6b7c7d63ba4feb73d28ad2558dd271b9bef3d267a1ff",
-      "status": "documented",
-      "references": [
-        {
-          "file": "新角色三/资产清单.txt",
-          "line": 21,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 69,
       "maxComponentLength": 24,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -17099,24 +16311,13 @@
       "extension": ".png",
       "bytes": 1106258,
       "sha256": "65bf339c307730a01f16ed065727eeb82bdb8a623ad5e537b2af6b39288c1ee8",
-      "status": "documented",
-      "references": [
-        {
-          "file": "新角色三/资产清单.txt",
-          "line": 24,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 69,
       "maxComponentLength": 30,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -17124,24 +16325,13 @@
       "extension": ".png",
       "bytes": 992488,
       "sha256": "6ff593501e52ed23b3aa939aa832e3a49d6a21f60acd9a200798d83ce48c0476",
-      "status": "documented",
-      "references": [
-        {
-          "file": "新角色三/资产清单.txt",
-          "line": 23,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 68,
       "maxComponentLength": 29,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -17149,24 +16339,13 @@
       "extension": ".png",
       "bytes": 715676,
       "sha256": "959c3b02e4eb7c053bcb72ccc64039a11550cd6683d60e9c30b8a0174d7ea986",
-      "status": "documented",
-      "references": [
-        {
-          "file": "新角色三/资产清单.txt",
-          "line": 25,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 63,
       "maxComponentLength": 24,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -17174,24 +16353,13 @@
       "extension": ".png",
       "bytes": 1492523,
       "sha256": "8d722ef5aa1d26e07b6a177bef6d32f44b945622b1cd7be23b570d1d18a65cec",
-      "status": "documented",
-      "references": [
-        {
-          "file": "新角色三/资产清单.txt",
-          "line": 26,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 63,
       "maxComponentLength": 31,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -17199,24 +16367,13 @@
       "extension": ".png",
       "bytes": 429418,
       "sha256": "f8b82d08333170566fb32a57675d76d11934e4bd1668d37580244880a5a3cdd0",
-      "status": "documented",
-      "references": [
-        {
-          "file": "新角色三/资产清单.txt",
-          "line": 14,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 61,
       "maxComponentLength": 29,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -17224,24 +16381,13 @@
       "extension": ".png",
       "bytes": 242751,
       "sha256": "397f63851151ce3aeecbf37a517a7b3db73d661b407d20be4d842b2bebea0ccf",
-      "status": "documented",
-      "references": [
-        {
-          "file": "角色二/资产清单.txt",
-          "line": 13,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 59,
       "maxComponentLength": 29,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -17249,24 +16395,13 @@
       "extension": ".png",
       "bytes": 1328839,
       "sha256": "eb54aab113599002f3221efdb6264b0de841561998fcf3aca05a8897a73a9859",
-      "status": "documented",
-      "references": [
-        {
-          "file": "角色二/资产清单.txt",
-          "line": 16,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 68,
       "maxComponentLength": 26,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -17274,24 +16409,13 @@
       "extension": ".png",
       "bytes": 1380558,
       "sha256": "95a484dcce6229b30bf9f057c986a20b4f0dfa2023e29820371cb0584ec0df1e",
-      "status": "documented",
-      "references": [
-        {
-          "file": "角色二/资产清单.txt",
-          "line": 18,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 60,
       "maxComponentLength": 18,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -17299,24 +16423,13 @@
       "extension": ".png",
       "bytes": 988055,
       "sha256": "387f2ada249605f1db9f258e738e1f4497385a253ccb6988667304407ef3df09",
-      "status": "documented",
-      "references": [
-        {
-          "file": "角色二/资产清单.txt",
-          "line": 15,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 60,
       "maxComponentLength": 18,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -17324,24 +16437,13 @@
       "extension": ".png",
       "bytes": 1267193,
       "sha256": "b3602623d788901cb3cc6e461f5b713f7da789dfc8552c58795c55680097e1bf",
-      "status": "documented",
-      "references": [
-        {
-          "file": "角色二/资产清单.txt",
-          "line": 17,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 66,
       "maxComponentLength": 24,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -17349,24 +16451,13 @@
       "extension": ".png",
       "bytes": 1310527,
       "sha256": "146944fc2d0a4e2e8612012019237caa2a580a111e468f75da5bf167f90ca830",
-      "status": "documented",
-      "references": [
-        {
-          "file": "角色二/资产清单.txt",
-          "line": 20,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 69,
       "maxComponentLength": 26,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -17374,24 +16465,13 @@
       "extension": ".png",
       "bytes": 1409650,
       "sha256": "7026bce35f9cdb36927fc3f4cedfc66e9ad0dd8fc374867857775504507efcdf",
-      "status": "documented",
-      "references": [
-        {
-          "file": "角色二/资产清单.txt",
-          "line": 22,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 61,
       "maxComponentLength": 18,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -17399,24 +16479,13 @@
       "extension": ".png",
       "bytes": 1246958,
       "sha256": "1cbb52c54152d36c5a42763ddf6353fea213aaeca0ce2ee028fdbc1c3689fe16",
-      "status": "documented",
-      "references": [
-        {
-          "file": "角色二/资产清单.txt",
-          "line": 19,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 61,
       "maxComponentLength": 18,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -17424,24 +16493,13 @@
       "extension": ".png",
       "bytes": 1571881,
       "sha256": "034b0c4395255471504eb085c89f467d8cac5afac873e3fb88eacda45d74719b",
-      "status": "documented",
-      "references": [
-        {
-          "file": "角色二/资产清单.txt",
-          "line": 21,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 67,
       "maxComponentLength": 24,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -17449,24 +16507,13 @@
       "extension": ".png",
       "bytes": 1077162,
       "sha256": "4fe17e7ac99591b23ed7ca0c943e877c895765358844b603cef7eafee37b1867",
-      "status": "documented",
-      "references": [
-        {
-          "file": "角色二/资产清单.txt",
-          "line": 26,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 71,
       "maxComponentLength": 34,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -17474,24 +16521,13 @@
       "extension": ".png",
       "bytes": 2848944,
       "sha256": "ea58c24efb58aa3d7cb76520cd8aa55ec37e2e206ba92f310ea9b3c5cb2dd7c7",
-      "status": "documented",
-      "references": [
-        {
-          "file": "角色二/资产清单.txt",
-          "line": 24,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 67,
       "maxComponentLength": 30,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -17499,24 +16535,13 @@
       "extension": ".png",
       "bytes": 1961656,
       "sha256": "1c968031b6294abf14a67c94b6f375d991f9b68794ef94cb765e98b57a6349ce",
-      "status": "documented",
-      "references": [
-        {
-          "file": "角色二/资产清单.txt",
-          "line": 23,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 66,
       "maxComponentLength": 29,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -17524,24 +16549,13 @@
       "extension": ".png",
       "bytes": 1868498,
       "sha256": "9e17bb182346579d2847ced2952593cb2e2b98be11c082d790b98983c495174b",
-      "status": "documented",
-      "references": [
-        {
-          "file": "角色二/资产清单.txt",
-          "line": 25,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 63,
       "maxComponentLength": 26,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -17549,24 +16563,13 @@
       "extension": ".png",
       "bytes": 1495370,
       "sha256": "d8eab0ffd88de4122f8c4d761ac6686cb1424eeb2d680d6e12eaacfad2eb4872",
-      "status": "documented",
-      "references": [
-        {
-          "file": "角色二/资产清单.txt",
-          "line": 27,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 61,
       "maxComponentLength": 31,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -17574,24 +16577,13 @@
       "extension": ".png",
       "bytes": 627974,
       "sha256": "4ac63e7e6f18dbfd8df51c29b2e48ec1a16ac419c6a01016ab699bc0fd4ffcf1",
-      "status": "documented",
-      "references": [
-        {
-          "file": "角色二/资产清单.txt",
-          "line": 14,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 59,
       "maxComponentLength": 29,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -17599,24 +16591,13 @@
       "extension": ".png",
       "bytes": 195533,
       "sha256": "48a7e1eae4bcae4c068609b426a9ac74e26d0f45f1bd09570a2be864f2668f15",
-      "status": "documented",
-      "references": [
-        {
-          "file": "新角色一/资产清单.txt",
-          "line": 13,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 62,
       "maxComponentLength": 29,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -17624,24 +16605,13 @@
       "extension": ".png",
       "bytes": 1719851,
       "sha256": "d5da77dba8a94f86e16e908006333cdb89c47507698b1b07930220371a19f59e",
-      "status": "documented",
-      "references": [
-        {
-          "file": "新角色一/资产清单.txt",
-          "line": 16,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 71,
       "maxComponentLength": 26,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -17649,24 +16619,13 @@
       "extension": ".png",
       "bytes": 1750612,
       "sha256": "e214da08d6b40274ce835d359c66fcea498b1f4d158b79eb1bb6f03e4c72238a",
-      "status": "documented",
-      "references": [
-        {
-          "file": "新角色一/资产清单.txt",
-          "line": 18,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 63,
       "maxComponentLength": 18,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -17674,24 +16633,13 @@
       "extension": ".png",
       "bytes": 1183203,
       "sha256": "3ae708c5c7452dbc0515b6a09646b5db97b73522fe5c90cb3eb0a4bc3c4219fb",
-      "status": "documented",
-      "references": [
-        {
-          "file": "新角色一/资产清单.txt",
-          "line": 15,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 63,
       "maxComponentLength": 18,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -17699,24 +16647,13 @@
       "extension": ".png",
       "bytes": 1887940,
       "sha256": "72e0ef6c8f26e8cef30c8a0a9ffaa2ca07781cd26c5b3624f9c36eb287a02d6d",
-      "status": "documented",
-      "references": [
-        {
-          "file": "新角色一/资产清单.txt",
-          "line": 17,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 69,
       "maxComponentLength": 24,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -17724,24 +16661,13 @@
       "extension": ".png",
       "bytes": 2148937,
       "sha256": "f20135a345c535c2c6864ee694783e392e927db8ed1c390fd6cde6d18a7b761a",
-      "status": "documented",
-      "references": [
-        {
-          "file": "新角色一/资产清单.txt",
-          "line": 20,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 72,
       "maxComponentLength": 26,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -17749,24 +16675,13 @@
       "extension": ".png",
       "bytes": 2151583,
       "sha256": "19896b104b253d8477177f6b443053a3c34d80156931f338026bf5274b24ebda",
-      "status": "documented",
-      "references": [
-        {
-          "file": "新角色一/资产清单.txt",
-          "line": 22,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 64,
       "maxComponentLength": 18,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -17774,24 +16689,13 @@
       "extension": ".png",
       "bytes": 1967448,
       "sha256": "ddee9674804d3f7b03d9b309a8b313ddb2411fbd7ee4d7007a343045b8d23d87",
-      "status": "documented",
-      "references": [
-        {
-          "file": "新角色一/资产清单.txt",
-          "line": 19,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 64,
       "maxComponentLength": 18,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -17799,24 +16703,13 @@
       "extension": ".png",
       "bytes": 2078663,
       "sha256": "288b861c39e5a485dd5a0574f3a8cc052e6f4d3d7be5f80c3eb53a99d7cf2005",
-      "status": "documented",
-      "references": [
-        {
-          "file": "新角色一/资产清单.txt",
-          "line": 21,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 70,
       "maxComponentLength": 24,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -17824,24 +16717,13 @@
       "extension": ".png",
       "bytes": 1616456,
       "sha256": "b6fcbb69db0ac5d334627b4fe4b27491f9ee5129a55e92c4bc314af2d5413eb7",
-      "status": "documented",
-      "references": [
-        {
-          "file": "新角色一/资产清单.txt",
-          "line": 24,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 70,
       "maxComponentLength": 30,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -17849,24 +16731,13 @@
       "extension": ".png",
       "bytes": 1276482,
       "sha256": "47426d09d1bc0b5f85531e603ce6bac54c8ed6f42d47fc8fdabf53bc1ec3d768",
-      "status": "documented",
-      "references": [
-        {
-          "file": "新角色一/资产清单.txt",
-          "line": 23,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 69,
       "maxComponentLength": 29,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -17874,24 +16745,13 @@
       "extension": ".png",
       "bytes": 706734,
       "sha256": "f08d2ffccca5e33703a8adf1dd4a549de270ebfd13b6e4a09ff57da8502025fe",
-      "status": "documented",
-      "references": [
-        {
-          "file": "新角色一/资产清单.txt",
-          "line": 25,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 66,
       "maxComponentLength": 26,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -17899,23 +16759,13 @@
       "extension": ".png",
       "bytes": 1511527,
       "sha256": "235d768f6678788a3952ce09ae675cdc1ee62b126e0546bce17ee2b4b427ab9c",
-      "status": "documented",
-      "references": [
-        {
-          "file": "新角色一/资产清单.txt",
-          "line": 26,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 64,
       "maxComponentLength": 31,
       "containsNonAscii": false,
       "risks": [
-        "unreferenced",
         "identical_content"
       ],
       "identicalContentGroup": [
@@ -17928,24 +16778,13 @@
       "extension": ".png",
       "bytes": 584492,
       "sha256": "a27049107763fae6468d97ff82a7a418cfb19f77e1600e2421eab2874a3cd1de",
-      "status": "documented",
-      "references": [
-        {
-          "file": "新角色一/资产清单.txt",
-          "line": 14,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 62,
       "maxComponentLength": 29,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -21180,18 +20019,9 @@
       "extension": ".png",
       "bytes": 2159439,
       "sha256": "4ff03a1a019c48f4c60b99f667c43150d651b5feca1ecf1cfa9ac031fd3533dc",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
-          "line": 2,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 83,
       "maxComponentLength": 55,
       "containsNonAscii": false,
@@ -21205,18 +20035,9 @@
       "extension": ".png",
       "bytes": 1728812,
       "sha256": "03dbcbc44d16f96e4a22cc74c1329a7e103d1ef649f8bf946eb7c2c93a3b5b40",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/manifest.json",
-          "line": 3,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 85,
       "maxComponentLength": 57,
       "containsNonAscii": false,
@@ -21230,18 +20051,9 @@
       "extension": ".png",
       "bytes": 2849605,
       "sha256": "57a18395d792f0074a3638c49c7c70dd761b83876b244713ead06473c9c14271",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 57,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 103,
       "maxComponentLength": 66,
       "containsNonAscii": false,
@@ -21255,18 +20067,9 @@
       "extension": ".png",
       "bytes": 2831602,
       "sha256": "c868cf595eef50d250a8e6068fb429150c84adc6e05a568ec7e60800f398eabf",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 58,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 110,
       "maxComponentLength": 73,
       "containsNonAscii": false,
@@ -21280,18 +20083,9 @@
       "extension": ".png",
       "bytes": 2793158,
       "sha256": "52f929f5b25efe0db7b673249da0861254be906192af273ca2ee50a654ccacc3",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 74,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 98,
       "maxComponentLength": 61,
       "containsNonAscii": false,
@@ -21305,18 +20099,9 @@
       "extension": ".png",
       "bytes": 2816800,
       "sha256": "9272a9f25508f6eab0349320275b012222394f14a420aefbba30bf896d962853",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 75,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 105,
       "maxComponentLength": 68,
       "containsNonAscii": false,
@@ -21330,18 +20115,9 @@
       "extension": ".png",
       "bytes": 2754760,
       "sha256": "862c8951d063c0dcbb7fe39be084ce83b8c5b27ce1551f023773712558045556",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 108,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 105,
       "maxComponentLength": 68,
       "containsNonAscii": false,
@@ -21355,18 +20131,9 @@
       "extension": ".png",
       "bytes": 2779444,
       "sha256": "fa4affc8b80b7c96bfe837285c5f8b335d98b5f9b09c54ddcf43598a80ab1e4b",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 109,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 112,
       "maxComponentLength": 75,
       "containsNonAscii": false,
@@ -21380,18 +20147,9 @@
       "extension": ".png",
       "bytes": 3008560,
       "sha256": "be35d82a8991655aee6fa6cc9b2d0c28d591af65c8d4891d100a88caaf5ee823",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 23,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 103,
       "maxComponentLength": 66,
       "containsNonAscii": false,
@@ -21405,18 +20163,9 @@
       "extension": ".png",
       "bytes": 3060951,
       "sha256": "ba8b1664b2d2ea4a28f1401f44c195e4032f69c5445f6b1a4a51831e3dce1dc4",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 24,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 110,
       "maxComponentLength": 73,
       "containsNonAscii": false,
@@ -21430,18 +20179,9 @@
       "extension": ".png",
       "bytes": 2871093,
       "sha256": "2d8eeb8f65c751e60cb723a8b747076805b5eab2dc49710396682a8be430485a",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 40,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 100,
       "maxComponentLength": 63,
       "containsNonAscii": false,
@@ -21455,18 +20195,9 @@
       "extension": ".png",
       "bytes": 2862040,
       "sha256": "878ed2fc423ca4bd17177bcd0087717357c92ed5d94028cb5d35929bd42b33ad",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 41,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 107,
       "maxComponentLength": 70,
       "containsNonAscii": false,
@@ -21480,18 +20211,9 @@
       "extension": ".png",
       "bytes": 2850332,
       "sha256": "256aca86c21a76aa2d0c14498ea571b3fb221556d4e72ebd602c26ab960eddaf",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 125,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 100,
       "maxComponentLength": 63,
       "containsNonAscii": false,
@@ -21505,18 +20227,9 @@
       "extension": ".png",
       "bytes": 2920409,
       "sha256": "59106078034ff44349b0ac8cb08ca25363050d0d5838977914266c1088e5974a",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 126,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 107,
       "maxComponentLength": 70,
       "containsNonAscii": false,
@@ -21530,18 +20243,9 @@
       "extension": ".png",
       "bytes": 2717976,
       "sha256": "5ff30b63a591f565b3450633346cbfbe62443100b32c7db9e082e4e97f00ace0",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 142,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 107,
       "maxComponentLength": 70,
       "containsNonAscii": false,
@@ -21555,18 +20259,9 @@
       "extension": ".png",
       "bytes": 2729272,
       "sha256": "c5bf76fa348291511e564279d25a2b13cdd1834be4893ff3338159762ca4fca6",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 143,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 114,
       "maxComponentLength": 77,
       "containsNonAscii": false,
@@ -21580,18 +20275,9 @@
       "extension": ".png",
       "bytes": 2930519,
       "sha256": "71e1d682b7b162105e3bb4eeadb56653a97d4e537479f956d04dcf053060902a",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 6,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 100,
       "maxComponentLength": 63,
       "containsNonAscii": false,
@@ -21605,18 +20291,9 @@
       "extension": ".png",
       "bytes": 2937917,
       "sha256": "af5ca0ad32b87165f0a831af2ceb0cb060a1eb011e27b33cd52089acdefb7794",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 7,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 107,
       "maxComponentLength": 70,
       "containsNonAscii": false,
@@ -21630,18 +20307,9 @@
       "extension": ".png",
       "bytes": 2887689,
       "sha256": "b1c8522d1ea8e4db2ef353c26bf3325d796b0f42f331be2b2771a6c0e097dd16",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 91,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 103,
       "maxComponentLength": 66,
       "containsNonAscii": false,
@@ -21655,18 +20323,9 @@
       "extension": ".png",
       "bytes": 2949996,
       "sha256": "9bdc2dca0c875ae2f49d4c812d5f5601e98808e05ba81cf86ae5e6cff6b83097",
-      "status": "active",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/无背景资产_v1/stained_windows/manifest.json",
-          "line": 92,
-          "module": "misc",
-          "kind": "config"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 110,
       "maxComponentLength": 73,
       "containsNonAscii": false,
@@ -21708,24 +20367,13 @@
       "extension": ".png",
       "bytes": 1286541,
       "sha256": "49facd4a8dcb1c19bae8299ff66a95af54b56bc69a95ed6ff61f0c531a4e3c2f",
-      "status": "documented",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/README.md",
-          "line": 49,
-          "module": "misc",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 72,
       "maxComponentLength": 35,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -21749,24 +20397,13 @@
       "extension": ".png",
       "bytes": 1328111,
       "sha256": "a5b0b4f9b925c2ab61ae601122937046d1ee585e776537526323a3502f1ae287",
-      "status": "documented",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/README.md",
-          "line": 47,
-          "module": "misc",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 77,
       "maxComponentLength": 40,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -21788,24 +20425,13 @@
       "extension": ".png",
       "bytes": 1349649,
       "sha256": "61d0da9fec72e17b0faafe00a3188456a9b25e2189576ecda7e3c1b20be2da10",
-      "status": "documented",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/README.md",
-          "line": 46,
-          "module": "misc",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "misc"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 72,
       "maxComponentLength": 35,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -21827,24 +20453,13 @@
       "extension": ".png",
       "bytes": 1882663,
       "sha256": "429118a68e6538d0debb86a305fc67ce3951fe5bcf896d9fae4ec10ee136a2d7",
-      "status": "documented",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/角色选择/README.md",
-          "line": 19,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 72,
       "maxComponentLength": 36,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -21852,24 +20467,13 @@
       "extension": ".png",
       "bytes": 1783264,
       "sha256": "aca0c4f69f49a1dc45ce72a9a6e6a848e1902d4c2f874b81e1f18ef143d37072",
-      "status": "documented",
-      "references": [
-        {
-          "file": "UI/教堂彩窗赛璐璐/角色选择/README.md",
-          "line": 20,
-          "module": "characters",
-          "kind": "documentation"
-        }
-      ],
-      "referenceModules": [
-        "characters"
-      ],
+      "status": "source",
+      "references": [],
+      "referenceModules": [],
       "pathLength": 74,
       "maxComponentLength": 38,
       "containsNonAscii": false,
-      "risks": [
-        "unreferenced"
-      ],
+      "risks": [],
       "identicalContentGroup": []
     },
     {
@@ -21894,18 +20498,6 @@
       "status": "documented",
       "references": [
         {
-          "file": "UI/教堂彩窗赛璐璐/README.md",
-          "line": 54,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/角色选择/README.md",
-          "line": 14,
-          "module": "characters",
-          "kind": "documentation"
-        },
-        {
           "file": "demo更改需求文档.txt",
           "line": 380,
           "module": "misc",
@@ -21913,15 +20505,13 @@
         }
       ],
       "referenceModules": [
-        "characters",
         "misc"
       ],
       "pathLength": 65,
       "maxComponentLength": 29,
       "containsNonAscii": false,
       "risks": [
-        "unreferenced",
-        "multi_module_reference"
+        "unreferenced"
       ],
       "identicalContentGroup": []
     },
@@ -21989,18 +20579,6 @@
       "status": "documented",
       "references": [
         {
-          "file": "UI/教堂彩窗赛璐璐/README.md",
-          "line": 53,
-          "module": "misc",
-          "kind": "documentation"
-        },
-        {
-          "file": "UI/教堂彩窗赛璐璐/角色选择/README.md",
-          "line": 12,
-          "module": "characters",
-          "kind": "documentation"
-        },
-        {
           "file": "demo更改需求文档.txt",
           "line": 379,
           "module": "misc",
@@ -22008,15 +20586,13 @@
         }
       ],
       "referenceModules": [
-        "characters",
         "misc"
       ],
       "pathLength": 67,
       "maxComponentLength": 33,
       "containsNonAscii": false,
       "risks": [
-        "unreferenced",
-        "multi_module_reference"
+        "unreferenced"
       ],
       "identicalContentGroup": []
     },
@@ -25043,265 +23619,6 @@
   ],
   "missingReferences": [
     {
-      "path": "../assets/candidates/enemies/review/enemy_battle_overview_v1.png",
-      "file": "怪物/README.md",
-      "line": 9,
-      "module": "enemies",
-      "kind": "documentation"
-    },
-    {
-      "path": "../概念图/02_教堂彩窗_赛璐璐融合方向图.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 6,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "/Users/chi/Desktop/幻境残卷/场景/分层导视/bg_battle_ancient_forest_day_layer_guide.png",
-      "file": "场景/资产清单.txt",
-      "line": 21,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "/Users/chi/Desktop/幻境残卷/场景/分层导视/bg_battle_cave_cold_layer_guide.png",
-      "file": "场景/资产清单.txt",
-      "line": 31,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "/Users/chi/Desktop/幻境残卷/场景/分层导视/bg_battle_dungeon_corridor_torch_layer_guide.png",
-      "file": "场景/资产清单.txt",
-      "line": 34,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "/Users/chi/Desktop/幻境残卷/场景/分层导视/bg_battle_mountain_plain_day_layer_guide.png",
-      "file": "场景/资产清单.txt",
-      "line": 13,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "/Users/chi/Desktop/幻境残卷/场景/分层导视/bg_battle_stone_ruins_day_layer_guide.png",
-      "file": "场景/资产清单.txt",
-      "line": 37,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "/Users/chi/Desktop/幻境残卷/场景/分层导视/bg_battle_temple_hall_grand_layer_guide.png",
-      "file": "场景/资产清单.txt",
-      "line": 50,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "/Users/chi/Desktop/幻境残卷/场景/分层导视/bg_battle_temple_inner_light_layer_guide.png",
-      "file": "场景/资产清单.txt",
-      "line": 42,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "/Users/chi/Desktop/幻境残卷/场景/分层导视/bg_battle_wasteland_dusk_layer_guide.png",
-      "file": "场景/资产清单.txt",
-      "line": 26,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "/Users/chi/Desktop/幻境残卷/场景/分层导视/bg_event_town_distant_day_layer_guide.png",
-      "file": "场景/资产清单.txt",
-      "line": 45,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "/Users/chi/Desktop/幻境残卷/场景/分层导视/bg_mountain_plain_far.png",
-      "file": "场景/资产清单.txt",
-      "line": 51,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "/Users/chi/Desktop/幻境残卷/场景/分层导视/bg_mountain_plain_front.png",
-      "file": "场景/资产清单.txt",
-      "line": 53,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "/Users/chi/Desktop/幻境残卷/场景/分层导视/bg_mountain_plain_mid.png",
-      "file": "场景/资产清单.txt",
-      "line": 52,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "/Users/chi/Desktop/幻境残卷/场景/战斗预览/bg_battle_ancient_forest_day_battle_preview.png",
-      "file": "场景/资产清单.txt",
-      "line": 20,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "/Users/chi/Desktop/幻境残卷/场景/战斗预览/bg_battle_cave_cold_battle_preview.png",
-      "file": "场景/资产清单.txt",
-      "line": 30,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "/Users/chi/Desktop/幻境残卷/场景/战斗预览/bg_battle_dungeon_corridor_torch_battle_preview.png",
-      "file": "场景/资产清单.txt",
-      "line": 33,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "/Users/chi/Desktop/幻境残卷/场景/战斗预览/bg_battle_mountain_plain_day_battle_preview.png",
-      "file": "场景/资产清单.txt",
-      "line": 12,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "/Users/chi/Desktop/幻境残卷/场景/战斗预览/bg_battle_stone_ruins_day_battle_preview.png",
-      "file": "场景/资产清单.txt",
-      "line": 36,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "/Users/chi/Desktop/幻境残卷/场景/战斗预览/bg_battle_temple_hall_grand_battle_preview.png",
-      "file": "场景/资产清单.txt",
-      "line": 49,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "/Users/chi/Desktop/幻境残卷/场景/战斗预览/bg_battle_temple_inner_light_battle_preview.png",
-      "file": "场景/资产清单.txt",
-      "line": 41,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "/Users/chi/Desktop/幻境残卷/场景/战斗预览/bg_battle_wasteland_dusk_battle_preview.png",
-      "file": "场景/资产清单.txt",
-      "line": 25,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "/Users/chi/Desktop/幻境残卷/场景/战斗预览/bg_event_town_distant_day_battle_preview.png",
-      "file": "场景/资产清单.txt",
-      "line": 44,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "/Users/chi/Desktop/幻境残卷/场景/色板参考/scene_palette_overview.png",
-      "file": "场景/资产清单.txt",
-      "line": 54,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "/Users/chi/Desktop/幻境残卷/场景/色调变体/bg_battle_ancient_forest_night.png",
-      "file": "场景/资产清单.txt",
-      "line": 23,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "/Users/chi/Desktop/幻境残卷/场景/色调变体/bg_battle_ancient_forest_sunset.png",
-      "file": "场景/资产清单.txt",
-      "line": 22,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "/Users/chi/Desktop/幻境残卷/场景/色调变体/bg_battle_mountain_plain_cloudy.png",
-      "file": "场景/资产清单.txt",
-      "line": 16,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "/Users/chi/Desktop/幻境残卷/场景/色调变体/bg_battle_mountain_plain_fog.png",
-      "file": "场景/资产清单.txt",
-      "line": 18,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "/Users/chi/Desktop/幻境残卷/场景/色调变体/bg_battle_mountain_plain_night.png",
-      "file": "场景/资产清单.txt",
-      "line": 15,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "/Users/chi/Desktop/幻境残卷/场景/色调变体/bg_battle_mountain_plain_rain.png",
-      "file": "场景/资产清单.txt",
-      "line": 17,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "/Users/chi/Desktop/幻境残卷/场景/色调变体/bg_battle_mountain_plain_sunset.png",
-      "file": "场景/资产清单.txt",
-      "line": 14,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "/Users/chi/Desktop/幻境残卷/场景/色调变体/bg_battle_stone_ruins_night.png",
-      "file": "场景/资产清单.txt",
-      "line": 39,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "/Users/chi/Desktop/幻境残卷/场景/色调变体/bg_battle_stone_ruins_sunset.png",
-      "file": "场景/资产清单.txt",
-      "line": 38,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "/Users/chi/Desktop/幻境残卷/场景/色调变体/bg_battle_wasteland_day.png",
-      "file": "场景/资产清单.txt",
-      "line": 27,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "/Users/chi/Desktop/幻境残卷/场景/色调变体/bg_battle_wasteland_night.png",
-      "file": "场景/资产清单.txt",
-      "line": 28,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "/Users/chi/Desktop/幻境残卷/场景/色调变体/bg_event_town_distant_night.png",
-      "file": "场景/资产清单.txt",
-      "line": 47,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "/Users/chi/Desktop/幻境残卷/场景/色调变体/bg_event_town_distant_sunset.png",
-      "file": "场景/资产清单.txt",
-      "line": 46,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
       "path": "UI/教堂彩窗赛璐璐/战斗HUD/五段能量表_空槽_v2.png",
       "file": "demo更改需求文档.txt",
       "line": 450,
@@ -25351,13 +23668,6 @@
       "kind": "documentation"
     },
     {
-      "path": "_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/README.md",
-      "line": 10,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
       "path": "_asset_v1.webp",
       "file": "幻境残卷demo_v0.99.html",
       "line": 3872,
@@ -25370,13 +23680,6 @@
       "line": 4425,
       "module": "demo",
       "kind": "runtime"
-    },
-    {
-      "path": "_clean_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 132,
-      "module": "ui.hud",
-      "kind": "documentation"
     },
     {
       "path": "_icon_v1.webp",
@@ -25505,13 +23808,6 @@
       "kind": "runtime"
     },
     {
-      "path": "battle_hud_exile_pile_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 131,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
       "path": "bg_battle_ancient_forest_day.jpg",
       "file": "demo更改需求文档.txt",
       "line": 780,
@@ -25585,13 +23881,6 @@
       "path": "mage_back_skill.png",
       "file": "demo更改需求文档.txt",
       "line": 773,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "map_ui_fullscreen_imagegen_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/地图UI/image_gen资产/可用切图_v1/README.md",
-      "line": 3,
       "module": "misc",
       "kind": "documentation"
     },
@@ -25673,13 +23962,6 @@
       "kind": "runtime"
     },
     {
-      "path": "role3_scene_bg_forest_ruins.png",
-      "file": "旧美术资产/角色三/资产清单.txt",
-      "line": 24,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
       "path": "slime_front_attack.png",
       "file": "demo更改需求文档.txt",
       "line": 776,
@@ -25692,125 +23974,6 @@
       "line": 775,
       "module": "misc",
       "kind": "documentation"
-    },
-    {
-      "path": "status_armor_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/manifest.json",
-      "line": 15,
-      "module": "ui.hud",
-      "kind": "config"
-    },
-    {
-      "path": "status_bleed_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/manifest.json",
-      "line": 135,
-      "module": "ui.hud",
-      "kind": "config"
-    },
-    {
-      "path": "status_blood_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/manifest.json",
-      "line": 75,
-      "module": "ui.hud",
-      "kind": "config"
-    },
-    {
-      "path": "status_burn_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/manifest.json",
-      "line": 147,
-      "module": "ui.hud",
-      "kind": "config"
-    },
-    {
-      "path": "status_charge_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/manifest.json",
-      "line": 51,
-      "module": "ui.hud",
-      "kind": "config"
-    },
-    {
-      "path": "status_counter_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/manifest.json",
-      "line": 111,
-      "module": "ui.hud",
-      "kind": "config"
-    },
-    {
-      "path": "status_curse_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/manifest.json",
-      "line": 171,
-      "module": "ui.hud",
-      "kind": "config"
-    },
-    {
-      "path": "status_echo_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/manifest.json",
-      "line": 63,
-      "module": "ui.hud",
-      "kind": "config"
-    },
-    {
-      "path": "status_enchant_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/manifest.json",
-      "line": 87,
-      "module": "ui.hud",
-      "kind": "config"
-    },
-    {
-      "path": "status_guard_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/manifest.json",
-      "line": 99,
-      "module": "ui.hud",
-      "kind": "config"
-    },
-    {
-      "path": "status_icon_overview_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/README.md",
-      "line": 17,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "status_poison_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/manifest.json",
-      "line": 123,
-      "module": "ui.hud",
-      "kind": "config"
-    },
-    {
-      "path": "status_str_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/manifest.json",
-      "line": 39,
-      "module": "ui.hud",
-      "kind": "config"
-    },
-    {
-      "path": "status_stun_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/manifest.json",
-      "line": 159,
-      "module": "ui.hud",
-      "kind": "config"
-    },
-    {
-      "path": "status_thorns_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/manifest.json",
-      "line": 27,
-      "module": "ui.hud",
-      "kind": "config"
-    },
-    {
-      "path": "status_vuln_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/manifest.json",
-      "line": 183,
-      "module": "ui.hud",
-      "kind": "config"
-    },
-    {
-      "path": "status_weak_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/正式资产/子模块/状态栏/状态图标/manifest.json",
-      "line": 195,
-      "module": "ui.hud",
-      "kind": "config"
     },
     {
       "path": "turn_counter_inner_dial_asset_v1.png",
@@ -25869,559 +24032,6 @@
       "kind": "documentation"
     },
     {
-      "path": "卡牌设计总览.png",
-      "file": "旧美术资产/卡牌设计/说明/交付说明.md",
-      "line": 16,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "图标样式/状态徽章底板_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/README.md",
-      "line": 63,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "战斗HUD_整体概念板_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 5,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "战斗HUD_整体概念板_v2.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 8,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "战斗HUD_牌堆家族图_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 10,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "拆分/battle_hud_discard_pile_clean_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 40,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "拆分/battle_hud_discard_pile_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 30,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "拆分/battle_hud_draw_pile_clean_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 39,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "拆分/battle_hud_draw_pile_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 28,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "拆分/battle_hud_end_turn_button_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 24,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "拆分/battle_hud_enemy_intent_panel_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 25,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "拆分/battle_hud_enemy_panel_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 22,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "拆分/battle_hud_enemy_status_bar_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 27,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "拆分/battle_hud_energy_gems_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 31,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "拆分/battle_hud_exile_pile_clean_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 41,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "拆分/battle_hud_exile_pile_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 38,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "拆分/battle_hud_hand_fan_area_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 29,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "拆分/battle_hud_icon_set_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 32,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "拆分/battle_hud_material_swatches_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 33,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "拆分/battle_hud_player_panel_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 21,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "拆分/battle_hud_player_status_bar_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 26,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "拆分/battle_hud_turn_counter_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 23,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "拆分/battle_hud_typography_sample_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 34,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "概念图/01_教堂彩窗方向图.png",
-      "file": "UI/教堂彩窗赛璐璐/README.md",
-      "line": 11,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "概念图/02_教堂彩窗_赛璐璐融合方向图.png",
-      "file": "UI/教堂彩窗赛璐璐/README.md",
-      "line": 13,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/battle_hud_enemy_panel_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 46,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/battle_hud_player_panel_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 45,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/中轴控件/end_turn_button_gem_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 71,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/中轴控件/end_turn_button_shell_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 70,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/中轴控件/turn_counter_inner_dial_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 69,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/中轴控件/turn_counter_outer_frame_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 68,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/图标徽记/icon_attack_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 96,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/图标徽记/icon_curse_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 100,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/图标徽记/icon_defense_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 97,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/图标徽记/icon_energy_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 101,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/图标徽记/icon_heal_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 99,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/图标徽记/icon_skill_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 98,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/手牌承托/hand_fan_center_crest_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 106,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/手牌承托/hand_fan_endcap_left_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 107,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/手牌承托/hand_fan_endcap_right_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 108,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/手牌承托/hand_fan_tray_shell_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 105,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/敌方意图面板/enemy_intent_attack_medallion_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 76,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/敌方意图面板/enemy_intent_aux_socket_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 78,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/敌方意图面板/enemy_intent_panel_shell_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 75,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/敌方意图面板/enemy_intent_value_lane_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 77,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/敌方面板/enemy_armor_bar_shell_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 63,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/敌方面板/enemy_hp_bar_shell_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 62,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/敌方面板/enemy_nameplate_shell_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 61,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/敌方面板/enemy_portrait_frame_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 60,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/敌方面板/enemy_status_crest_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 64,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/数值文字承载/count_plate_small_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 124,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/数值文字承载/diamond_crest_accent_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 125,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/数值文字承载/number_medallion_round_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 123,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/数值文字承载/title_banner_long_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 121,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/数值文字承载/title_plate_dark_short_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 122,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/材质边框/frame_master_border_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 112,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/材质边框/glass_blue_panel_tile_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 113,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/材质边框/glass_green_panel_tile_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 115,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/材质边框/glass_purple_panel_tile_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 114,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/材质边框/glass_red_panel_tile_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 116,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/材质边框/parchment_panel_tile_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 117,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/牌堆/discard_pile_stack_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 90,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/牌堆/draw_pile_stack_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 89,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/牌堆/exile_pile_stack_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 91,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/牌堆/pile_count_plate_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 92,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/状态栏/enemy_status_bar_shell_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 83,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/状态栏/player_status_bar_shell_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 82,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/状态栏/status_socket_empty_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 84,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/状态栏/status_socket_highlight_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 85,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/玩家面板/player_armor_bar_shell_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 53,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/玩家面板/player_energy_gem_off_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 56,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/玩家面板/player_energy_gem_on_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 55,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/玩家面板/player_energy_tray_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 54,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/玩家面板/player_hp_bar_shell_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 52,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/玩家面板/player_nameplate_shell_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 51,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "正式资产/子模块/玩家面板/player_portrait_frame_asset_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/战斗HUD/README.md",
-      "line": 50,
-      "module": "ui.hud",
-      "kind": "documentation"
-    },
-    {
-      "path": "特性标签底板_蓝金_v1_source.png",
-      "file": "UI/教堂彩窗赛璐璐/角色选择/README.md",
-      "line": 21,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "状态徽章底板_v1.png",
-      "file": "UI/教堂彩窗赛璐璐/图标样式/README.md",
-      "line": 5,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
-      "path": "状态徽章底板_v1_source.png",
-      "file": "UI/教堂彩窗赛璐璐/图标样式/README.md",
-      "line": 9,
-      "module": "misc",
-      "kind": "documentation"
-    },
-    {
       "path": "玩家面板/avatar_circle_gray_base_asset_v1.png",
       "file": "hud-group-final.json",
       "line": 219,
@@ -26476,321 +24086,6 @@
       "line": 9,
       "module": "ui.hud",
       "kind": "runtime"
-    },
-    {
-      "path": "角色一_三视图_线稿版.png",
-      "file": "旧美术资产/角色一/资产清单.txt",
-      "line": 8,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色一_三视图_配色版.png",
-      "file": "旧美术资产/角色一/资产清单.txt",
-      "line": 7,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色一_卡面插画_圣剑突击.png",
-      "file": "新角色一/资产清单.txt",
-      "line": 29,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色一_卡面插画_圣剑突击.png",
-      "file": "旧美术资产/角色一/资产清单.txt",
-      "line": 18,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色一_卡面插画_圣剑突击.webp",
-      "file": "新角色一/资产清单.txt",
-      "line": 30,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色一_卡面插画_圣剑突击_无背景.png",
-      "file": "新角色一/资产清单.txt",
-      "line": 31,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色一_卡面插画_遗迹立誓.png",
-      "file": "新角色一/资产清单.txt",
-      "line": 32,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色一_卡面插画_遗迹立誓.png",
-      "file": "旧美术资产/角色一/资产清单.txt",
-      "line": 19,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色一_卡面插画_遗迹立誓.webp",
-      "file": "新角色一/资产清单.txt",
-      "line": 33,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色一_卡面插画_遗迹立誓_无背景.png",
-      "file": "新角色一/资产清单.txt",
-      "line": 34,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色一_我方背面_受击.png",
-      "file": "旧美术资产/角色一/资产清单.txt",
-      "line": 13,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色一_我方背面_待机.png",
-      "file": "旧美术资产/角色一/资产清单.txt",
-      "line": 10,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色一_我方背面_技能释放.png",
-      "file": "旧美术资产/角色一/资产清单.txt",
-      "line": 12,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色一_我方背面_攻击起手.png",
-      "file": "旧美术资产/角色一/资产清单.txt",
-      "line": 11,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色一_敌方正面_受击.png",
-      "file": "旧美术资产/角色一/资产清单.txt",
-      "line": 17,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色一_敌方正面_待机.png",
-      "file": "旧美术资产/角色一/资产清单.txt",
-      "line": 14,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色一_敌方正面_技能释放.png",
-      "file": "旧美术资产/角色一/资产清单.txt",
-      "line": 16,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色一_敌方正面_攻击起手.png",
-      "file": "旧美术资产/角色一/资产清单.txt",
-      "line": 15,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色一_武器设定_圣剑.png",
-      "file": "旧美术资产/角色一/资产清单.txt",
-      "line": 9,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色三_三视图_线稿版.png",
-      "file": "旧美术资产/角色三/资产清单.txt",
-      "line": 8,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色三_三视图_配色版.png",
-      "file": "旧美术资产/角色三/资产清单.txt",
-      "line": 7,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色三_卡面插画_拉弓瞄准.png",
-      "file": "新角色三/资产清单.txt",
-      "line": 29,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色三_卡面插画_拉弓瞄准.png",
-      "file": "旧美术资产/角色三/资产清单.txt",
-      "line": 18,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色三_卡面插画_拉弓瞄准.webp",
-      "file": "新角色三/资产清单.txt",
-      "line": 30,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色三_卡面插画_拉弓瞄准_无背景.png",
-      "file": "新角色三/资产清单.txt",
-      "line": 31,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色三_卡面插画_疾风连射.png",
-      "file": "新角色三/资产清单.txt",
-      "line": 32,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色三_卡面插画_疾风连射.png",
-      "file": "旧美术资产/角色三/资产清单.txt",
-      "line": 19,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色三_卡面插画_疾风连射.webp",
-      "file": "新角色三/资产清单.txt",
-      "line": 33,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色三_卡面插画_疾风连射_无背景.png",
-      "file": "新角色三/资产清单.txt",
-      "line": 34,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色三_我方背面_受击.png",
-      "file": "旧美术资产/角色三/资产清单.txt",
-      "line": 13,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色三_我方背面_待机.png",
-      "file": "旧美术资产/角色三/资产清单.txt",
-      "line": 10,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色三_我方背面_技能释放.png",
-      "file": "旧美术资产/角色三/资产清单.txt",
-      "line": 12,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色三_我方背面_攻击起手.png",
-      "file": "旧美术资产/角色三/资产清单.txt",
-      "line": 11,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色三_敌方正面_受击.png",
-      "file": "旧美术资产/角色三/资产清单.txt",
-      "line": 17,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色三_敌方正面_待机.png",
-      "file": "旧美术资产/角色三/资产清单.txt",
-      "line": 14,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色三_敌方正面_技能释放.png",
-      "file": "旧美术资产/角色三/资产清单.txt",
-      "line": 16,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色三_敌方正面_攻击起手.png",
-      "file": "旧美术资产/角色三/资产清单.txt",
-      "line": 15,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色三_武器设定_长弓.png",
-      "file": "旧美术资产/角色三/资产清单.txt",
-      "line": 9,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色二_卡面插画_紫焰爆裂.png",
-      "file": "角色二/资产清单.txt",
-      "line": 30,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色二_卡面插画_紫焰爆裂.webp",
-      "file": "角色二/资产清单.txt",
-      "line": 31,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色二_卡面插画_紫焰爆裂_无背景.png",
-      "file": "角色二/资产清单.txt",
-      "line": 32,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色二_卡面插画_遗迹咏唱.png",
-      "file": "角色二/资产清单.txt",
-      "line": 33,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色二_卡面插画_遗迹咏唱.webp",
-      "file": "角色二/资产清单.txt",
-      "line": 34,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色二_卡面插画_遗迹咏唱_无背景.png",
-      "file": "角色二/资产清单.txt",
-      "line": 35,
-      "module": "characters",
-      "kind": "documentation"
-    },
-    {
-      "path": "角色描述面板_v1_source.png",
-      "file": "UI/教堂彩窗赛璐璐/角色选择/README.md",
-      "line": 22,
-      "module": "characters",
-      "kind": "documentation"
     }
   ],
   "duplicateExtensionGroups": [

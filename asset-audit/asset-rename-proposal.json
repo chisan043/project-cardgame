@@ -530,743 +530,6 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "assets/candidates/ui/role_select/review/role_select_concept_v1.png",
-      "suggestedPath": "assets/characters/review/role_select_concept_v1.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/candidates/ui/role_select/review/role_select_concept_v1.png",
-      "visualGroup": "visual_224e2b8d8f",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/archer/avatar_portrait_v1_source.png",
-      "suggestedPath": "assets/characters/review/avatar_portrait_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/archer/avatar_portrait_v1_source.png",
-      "visualGroup": "visual_ff4c45432c",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/archer/battle_back/attack_start_v1_source.png",
-      "suggestedPath": "assets/characters/review/attack_start_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/archer/battle_back/attack_start_v1_source.png",
-      "visualGroup": "visual_50d62a6e91",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/archer/battle_back/hurt_v1_source.png",
-      "suggestedPath": "assets/characters/review/hurt_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/archer/battle_back/hurt_v1_source.png",
-      "visualGroup": "visual_a11e2a9d89",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/archer/battle_back/idle_v1_source.png",
-      "suggestedPath": "assets/characters/review/idle_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/archer/battle_back/idle_v1_source.png",
-      "visualGroup": "visual_22fca0ff95",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/archer/battle_back/skill_cast_v1_source.png",
-      "suggestedPath": "assets/characters/review/skill_cast_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/archer/battle_back/skill_cast_v1_source.png",
-      "visualGroup": "visual_e836ba2811",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/archer/battle_front/attack_start_v1_source.png",
-      "suggestedPath": "assets/characters/review/attack_start_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/archer/battle_front/attack_start_v1_source.png",
-      "visualGroup": "visual_a8675186c4",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/archer/battle_front/hurt_v1_source.png",
-      "suggestedPath": "assets/characters/review/hurt_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/archer/battle_front/hurt_v1_source.png",
-      "visualGroup": "visual_2939c6b4de",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/archer/battle_front/idle_v1_source.png",
-      "suggestedPath": "assets/characters/review/idle_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/archer/battle_front/idle_v1_source.png",
-      "visualGroup": "visual_a1be7c3d87",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/archer/battle_front/skill_cast_v1_source.png",
-      "suggestedPath": "assets/characters/review/skill_cast_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/archer/battle_front/skill_cast_v1_source.png",
-      "visualGroup": "visual_c1a98ea0fd",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/archer/design/turnaround_color_v1_source.png",
-      "suggestedPath": "assets/characters/review/turnaround_color_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/archer/design/turnaround_color_v1_source.png",
-      "visualGroup": "visual_65bf339c30",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/archer/design/turnaround_line_v1_source.png",
-      "suggestedPath": "assets/characters/review/turnaround_line_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/archer/design/turnaround_line_v1_source.png",
-      "visualGroup": "visual_6ff593501e",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/archer/design/weapon_bow_v1_source.png",
-      "suggestedPath": "assets/characters/review/weapon_bow_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/archer/design/weapon_bow_v1_source.png",
-      "visualGroup": "visual_959c3b02e4",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/archer/role_select_frame_v1_source.png",
-      "suggestedPath": "assets/characters/review/role_select_frame_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/archer/role_select_frame_v1_source.png",
-      "visualGroup": "visual_8d722ef5aa",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/archer/select_portrait_v1_source.png",
-      "suggestedPath": "assets/characters/review/select_portrait_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/archer/select_portrait_v1_source.png",
-      "visualGroup": "visual_f8b82d0833",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/mage/avatar_portrait_v1_source.png",
-      "suggestedPath": "assets/characters/review/avatar_portrait_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/mage/avatar_portrait_v1_source.png",
-      "visualGroup": "visual_397f638511",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/mage/battle_back/attack_start_v1_source.png",
-      "suggestedPath": "assets/characters/review/attack_start_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/mage/battle_back/attack_start_v1_source.png",
-      "visualGroup": "visual_eb54aab113",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/mage/battle_back/hurt_v1_source.png",
-      "suggestedPath": "assets/characters/review/hurt_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/mage/battle_back/hurt_v1_source.png",
-      "visualGroup": "visual_95a484dcce",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/mage/battle_back/idle_v1_source.png",
-      "suggestedPath": "assets/characters/review/idle_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/mage/battle_back/idle_v1_source.png",
-      "visualGroup": "visual_387f2ada24",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/mage/battle_back/skill_cast_v1_source.png",
-      "suggestedPath": "assets/characters/review/skill_cast_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/mage/battle_back/skill_cast_v1_source.png",
-      "visualGroup": "visual_b3602623d7",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/mage/battle_front/attack_start_v1_source.png",
-      "suggestedPath": "assets/characters/review/attack_start_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/mage/battle_front/attack_start_v1_source.png",
-      "visualGroup": "visual_146944fc2d",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/mage/battle_front/hurt_v1_source.png",
-      "suggestedPath": "assets/characters/review/hurt_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/mage/battle_front/hurt_v1_source.png",
-      "visualGroup": "visual_7026bce35f",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/mage/battle_front/idle_v1_source.png",
-      "suggestedPath": "assets/characters/review/idle_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/mage/battle_front/idle_v1_source.png",
-      "visualGroup": "visual_1cbb52c541",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/mage/battle_front/skill_cast_v1_source.png",
-      "suggestedPath": "assets/characters/review/skill_cast_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/mage/battle_front/skill_cast_v1_source.png",
-      "visualGroup": "visual_034b0c4395",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/mage/design/select_stained_glass_v1_source.png",
-      "suggestedPath": "assets/characters/review/select_stained_glass_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/mage/design/select_stained_glass_v1_source.png",
-      "visualGroup": "visual_4fe17e7ac9",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/mage/design/turnaround_color_v1_source.png",
-      "suggestedPath": "assets/characters/review/turnaround_color_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/mage/design/turnaround_color_v1_source.png",
-      "visualGroup": "visual_ea58c24efb",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/mage/design/turnaround_line_v1_source.png",
-      "suggestedPath": "assets/characters/review/turnaround_line_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/mage/design/turnaround_line_v1_source.png",
-      "visualGroup": "visual_1c968031b6",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/mage/design/weapon_staff_v1_source.png",
-      "suggestedPath": "assets/characters/review/weapon_staff_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/mage/design/weapon_staff_v1_source.png",
-      "visualGroup": "visual_9e17bb1823",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/mage/role_select_frame_v1_source.png",
-      "suggestedPath": "assets/characters/review/role_select_frame_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/mage/role_select_frame_v1_source.png",
-      "visualGroup": "visual_d8eab0ffd8",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/mage/select_portrait_v1_source.png",
-      "suggestedPath": "assets/characters/review/select_portrait_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/mage/select_portrait_v1_source.png",
-      "visualGroup": "visual_4ac63e7e6f",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/warrior/avatar_portrait_v1_source.png",
-      "suggestedPath": "assets/characters/review/avatar_portrait_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/warrior/avatar_portrait_v1_source.png",
-      "visualGroup": "visual_48a7e1eae4",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/warrior/battle_back/attack_start_v1_source.png",
-      "suggestedPath": "assets/characters/review/attack_start_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/warrior/battle_back/attack_start_v1_source.png",
-      "visualGroup": "visual_d5da77dba8",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/warrior/battle_back/hurt_v1_source.png",
-      "suggestedPath": "assets/characters/review/hurt_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/warrior/battle_back/hurt_v1_source.png",
-      "visualGroup": "visual_e214da08d6",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/warrior/battle_back/idle_v1_source.png",
-      "suggestedPath": "assets/characters/review/idle_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/warrior/battle_back/idle_v1_source.png",
-      "visualGroup": "visual_3ae708c5c7",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/warrior/battle_back/skill_cast_v1_source.png",
-      "suggestedPath": "assets/characters/review/skill_cast_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/warrior/battle_back/skill_cast_v1_source.png",
-      "visualGroup": "visual_72e0ef6c8f",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/warrior/battle_front/attack_start_v1_source.png",
-      "suggestedPath": "assets/characters/review/attack_start_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/warrior/battle_front/attack_start_v1_source.png",
-      "visualGroup": "visual_f20135a345",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/warrior/battle_front/hurt_v1_source.png",
-      "suggestedPath": "assets/characters/review/hurt_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/warrior/battle_front/hurt_v1_source.png",
-      "visualGroup": "visual_19896b104b",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/warrior/battle_front/idle_v1_source.png",
-      "suggestedPath": "assets/characters/review/idle_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/warrior/battle_front/idle_v1_source.png",
-      "visualGroup": "visual_ddee967480",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/warrior/battle_front/skill_cast_v1_source.png",
-      "suggestedPath": "assets/characters/review/skill_cast_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/warrior/battle_front/skill_cast_v1_source.png",
-      "visualGroup": "visual_288b861c39",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/warrior/design/turnaround_color_v1_source.png",
-      "suggestedPath": "assets/characters/review/turnaround_color_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/warrior/design/turnaround_color_v1_source.png",
-      "visualGroup": "visual_b6fcbb69db",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/warrior/design/turnaround_line_v1_source.png",
-      "suggestedPath": "assets/characters/review/turnaround_line_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/warrior/design/turnaround_line_v1_source.png",
-      "visualGroup": "visual_47426d09d1",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/warrior/design/weapon_sword_v1_source.png",
-      "suggestedPath": "assets/characters/review/weapon_sword_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/warrior/design/weapon_sword_v1_source.png",
-      "visualGroup": "visual_f08d2ffccc",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/warrior/role_select_frame_v1_source.png",
-      "suggestedPath": "assets/characters/review/role_select_frame_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced",
-        "identical_content"
-      ],
-      "derivedFrom": "assets/source/characters/warrior/role_select_frame_v1_source.png",
-      "visualGroup": "visual_235d768f66",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/characters/warrior/select_portrait_v1_source.png",
-      "suggestedPath": "assets/characters/review/select_portrait_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/characters/warrior/select_portrait_v1_source.png",
-      "visualGroup": "visual_a270491077",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/ui/role_select/frames/role_card_frame_normal_v1_source.png",
-      "suggestedPath": "assets/characters/review/role_card_frame_normal_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/ui/role_select/frames/role_card_frame_normal_v1_source.png",
-      "visualGroup": "visual_429118a68e",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/ui/role_select/frames/role_card_frame_selected_v1_source.png",
-      "suggestedPath": "assets/characters/review/role_card_frame_selected_v1_source.png",
-      "suggestedDirectory": "assets/characters/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/ui/role_select/frames/role_card_frame_selected_v1_source.png",
-      "visualGroup": "visual_aca0c4f69f",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
       "sourcePath": "assets/ui/map/backgrounds/map_parchment_fullscreen_background_imagegen_v1.webp",
       "suggestedPath": "assets/demo/review/map_parchment_fullscreen_background_imagegen_v1.webp",
       "suggestedDirectory": "assets/demo/review",
@@ -1475,248 +738,8 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "assets/candidates/enemies/review/enemy_keyframes_overview_v1.png",
-      "suggestedPath": "assets/enemies/review/enemy_keyframes_overview_v1.png",
-      "suggestedDirectory": "assets/enemies/review",
-      "status": "documented",
-      "referenceModules": [
-        "enemies"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/candidates/enemies/review/enemy_keyframes_overview_v1.png",
-      "visualGroup": "visual_4ca957ae69",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/candidates/ui/map/overview/overview_map_ui_imagegen_transparent_assets_v1.png",
-      "suggestedPath": "assets/misc/review/overview_map_ui_imagegen_transparent_assets_v1.png",
-      "suggestedDirectory": "assets/misc/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "long_component"
-      ],
-      "derivedFrom": "assets/candidates/ui/map/overview/overview_map_ui_imagegen_transparent_assets_v1.png",
-      "visualGroup": "visual_d4f0839dc1",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/candidates/ui/map/review/map_church_preview_frame_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/misc/review/map_church_preview_frame_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/misc/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "long_component"
-      ],
-      "derivedFrom": "assets/candidates/ui/map/review/map_church_preview_frame_imagegen_transparent_v1.png",
-      "visualGroup": "visual_07bf134b55",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/candidates/ui/map/review/map_location_text_panel_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/misc/review/map_location_text_panel_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/misc/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "long_component"
-      ],
-      "derivedFrom": "assets/candidates/ui/map/review/map_location_text_panel_imagegen_transparent_v1.png",
-      "visualGroup": "visual_12113764bc",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/candidates/ui/map/review/map_main_frame_overlay_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/misc/review/map_main_frame_overlay_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/misc/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "long_component"
-      ],
-      "derivedFrom": "assets/candidates/ui/map/review/map_main_frame_overlay_imagegen_transparent_v1.png",
-      "visualGroup": "visual_9d362ec0d9",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/candidates/ui/map/review/map_side_legend_panel_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/misc/review/map_side_legend_panel_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/misc/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "long_component"
-      ],
-      "derivedFrom": "assets/candidates/ui/map/review/map_side_legend_panel_imagegen_transparent_v1.png",
-      "visualGroup": "visual_1b7792721e",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/candidates/ui/map/review/map_stained_window_ancient_forest_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/misc/review/map_stained_window_ancient_forest_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/misc/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "long_component"
-      ],
-      "derivedFrom": "assets/candidates/ui/map/review/map_stained_window_ancient_forest_imagegen_transparent_v1.png",
-      "visualGroup": "visual_82fede4f53",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/candidates/ui/map/review/map_stained_window_cold_cave_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/misc/review/map_stained_window_cold_cave_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/misc/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "long_component"
-      ],
-      "derivedFrom": "assets/candidates/ui/map/review/map_stained_window_cold_cave_imagegen_transparent_v1.png",
-      "visualGroup": "visual_4862a4627d",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/candidates/ui/map/review/map_stained_window_dungeon_corridor_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/misc/review/map_stained_window_dungeon_corridor_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/misc/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "long_component"
-      ],
-      "derivedFrom": "assets/candidates/ui/map/review/map_stained_window_dungeon_corridor_imagegen_transparent_v1.png",
-      "visualGroup": "visual_d92f5d5ac7",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/candidates/ui/map/review/map_stained_window_mountain_plain_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/misc/review/map_stained_window_mountain_plain_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/misc/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "long_component"
-      ],
-      "derivedFrom": "assets/candidates/ui/map/review/map_stained_window_mountain_plain_imagegen_transparent_v1.png",
-      "visualGroup": "visual_9600636dfd",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/candidates/ui/map/review/map_stained_window_stone_ruins_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/misc/review/map_stained_window_stone_ruins_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/misc/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "long_component"
-      ],
-      "derivedFrom": "assets/candidates/ui/map/review/map_stained_window_stone_ruins_imagegen_transparent_v1.png",
-      "visualGroup": "visual_908dc1b042",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/candidates/ui/map/review/map_stained_window_temple_hall_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/misc/review/map_stained_window_temple_hall_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/misc/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "long_component"
-      ],
-      "derivedFrom": "assets/candidates/ui/map/review/map_stained_window_temple_hall_imagegen_transparent_v1.png",
-      "visualGroup": "visual_4c39a82edd",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/candidates/ui/map/review/map_stained_window_temple_inner_light_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/misc/review/map_stained_window_temple_inner_light_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/misc/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "long_component"
-      ],
-      "derivedFrom": "assets/candidates/ui/map/review/map_stained_window_temple_inner_light_imagegen_transparent_v1.png",
-      "visualGroup": "visual_99a3925c06",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/candidates/ui/map/review/map_stained_window_town_castle_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/misc/review/map_stained_window_town_castle_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/misc/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "long_component"
-      ],
-      "derivedFrom": "assets/candidates/ui/map/review/map_stained_window_town_castle_imagegen_transparent_v1.png",
-      "visualGroup": "visual_ec1b2a8455",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/candidates/ui/map/review/map_stained_window_wasteland_dusk_imagegen_transparent_v1.png",
-      "suggestedPath": "assets/misc/review/map_stained_window_wasteland_dusk_imagegen_transparent_v1.png",
-      "suggestedDirectory": "assets/misc/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "long_component"
-      ],
-      "derivedFrom": "assets/candidates/ui/map/review/map_stained_window_wasteland_dusk_imagegen_transparent_v1.png",
-      "visualGroup": "visual_4854e7d588",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/candidates/ui/role_select/buttons/secondary_button_teal_gold_v1.png",
-      "suggestedPath": "assets/misc/review/secondary_button_teal_gold_v1.png",
+      "sourcePath": "assets/candidates/ui/role_select/frames/role_card_frame_normal_v1.png",
+      "suggestedPath": "assets/misc/review/role_card_frame_normal_v1.png",
       "suggestedDirectory": "assets/misc/review",
       "status": "documented",
       "referenceModules": [
@@ -1726,8 +749,24 @@
       "risks": [
         "unreferenced"
       ],
-      "derivedFrom": "assets/candidates/ui/role_select/buttons/secondary_button_teal_gold_v1.png",
-      "visualGroup": "visual_982814ed75",
+      "derivedFrom": "assets/candidates/ui/role_select/frames/role_card_frame_normal_v1.png",
+      "visualGroup": "visual_2679f6aabf",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/candidates/ui/role_select/frames/role_card_frame_selected_v1.png",
+      "suggestedPath": "assets/misc/review/role_card_frame_selected_v1.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "documented",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/candidates/ui/role_select/frames/role_card_frame_selected_v1.png",
+      "visualGroup": "visual_23dbdae760",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -1827,328 +866,8 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "assets/source/ui/map/review/map_ui_imagegen_component_sheet_chromakey_v1_source.png",
-      "suggestedPath": "assets/misc/review/map_ui_imagegen_component_sheet_chromakey_v1_source.png",
-      "suggestedDirectory": "assets/misc/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "long_component"
-      ],
-      "derivedFrom": "assets/source/ui/map/review/map_ui_imagegen_component_sheet_chromakey_v1_source.png",
-      "visualGroup": "visual_4ff03a1a01",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/ui/map/review/map_ui_imagegen_component_sheet_transparent_v1_source.png",
-      "suggestedPath": "assets/misc/review/map_ui_imagegen_component_sheet_transparent_v1_source.png",
-      "suggestedDirectory": "assets/misc/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "long_component"
-      ],
-      "derivedFrom": "assets/source/ui/map/review/map_ui_imagegen_component_sheet_transparent_v1_source.png",
-      "visualGroup": "visual_03dbcbc44d",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_ancient_forest_imagegen_chromakey_v1_source.png",
-      "suggestedPath": "assets/misc/review/map_stained_window_ancient_forest_imagegen_chromakey_v1_source.png",
-      "suggestedDirectory": "assets/misc/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "long_component"
-      ],
-      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_ancient_forest_imagegen_chromakey_v1_source.png",
-      "visualGroup": "visual_57a18395d7",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_full_v1_source.png",
-      "suggestedPath": "assets/misc/review/map_stained_window_ancient_forest_imagegen_transparent_full_v1_source.png",
-      "suggestedDirectory": "assets/misc/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "long_component"
-      ],
-      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_full_v1_source.png",
-      "visualGroup": "visual_c868cf595e",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_cold_cave_imagegen_chromakey_v1_source.png",
-      "suggestedPath": "assets/misc/review/map_stained_window_cold_cave_imagegen_chromakey_v1_source.png",
-      "suggestedDirectory": "assets/misc/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "long_component"
-      ],
-      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_cold_cave_imagegen_chromakey_v1_source.png",
-      "visualGroup": "visual_52f929f5b2",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_cold_cave_imagegen_transparent_full_v1_source.png",
-      "suggestedPath": "assets/misc/review/map_stained_window_cold_cave_imagegen_transparent_full_v1_source.png",
-      "suggestedDirectory": "assets/misc/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "long_component"
-      ],
-      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_cold_cave_imagegen_transparent_full_v1_source.png",
-      "visualGroup": "visual_9272a9f255",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_dungeon_corridor_imagegen_chromakey_v1_source.png",
-      "suggestedPath": "assets/misc/review/map_stained_window_dungeon_corridor_imagegen_chromakey_v1_source.png",
-      "suggestedDirectory": "assets/misc/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "long_component"
-      ],
-      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_dungeon_corridor_imagegen_chromakey_v1_source.png",
-      "visualGroup": "visual_862c8951d0",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_dungeon_corridor_imagegen_transparent_full_v1_source.png",
-      "suggestedPath": "assets/misc/review/map_stained_window_dungeon_corridor_imagegen_transparent_full_v1_source.png",
-      "suggestedDirectory": "assets/misc/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "long_component"
-      ],
-      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_dungeon_corridor_imagegen_transparent_full_v1_source.png",
-      "visualGroup": "visual_fa4affc8b8",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_mountain_plain_imagegen_chromakey_v1_source.png",
-      "suggestedPath": "assets/misc/review/map_stained_window_mountain_plain_imagegen_chromakey_v1_source.png",
-      "suggestedDirectory": "assets/misc/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "long_component"
-      ],
-      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_mountain_plain_imagegen_chromakey_v1_source.png",
-      "visualGroup": "visual_be35d82a89",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_full_v1_source.png",
-      "suggestedPath": "assets/misc/review/map_stained_window_mountain_plain_imagegen_transparent_full_v1_source.png",
-      "suggestedDirectory": "assets/misc/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "long_component"
-      ],
-      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_full_v1_source.png",
-      "visualGroup": "visual_ba8b1664b2",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_stone_ruins_imagegen_chromakey_v1_source.png",
-      "suggestedPath": "assets/misc/review/map_stained_window_stone_ruins_imagegen_chromakey_v1_source.png",
-      "suggestedDirectory": "assets/misc/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "long_component"
-      ],
-      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_stone_ruins_imagegen_chromakey_v1_source.png",
-      "visualGroup": "visual_2d8eeb8f65",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_full_v1_source.png",
-      "suggestedPath": "assets/misc/review/map_stained_window_stone_ruins_imagegen_transparent_full_v1_source.png",
-      "suggestedDirectory": "assets/misc/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "long_component"
-      ],
-      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_full_v1_source.png",
-      "visualGroup": "visual_878ed2fc42",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_temple_hall_imagegen_chromakey_v1_source.png",
-      "suggestedPath": "assets/misc/review/map_stained_window_temple_hall_imagegen_chromakey_v1_source.png",
-      "suggestedDirectory": "assets/misc/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "long_component"
-      ],
-      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_temple_hall_imagegen_chromakey_v1_source.png",
-      "visualGroup": "visual_256aca86c2",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_temple_hall_imagegen_transparent_full_v1_source.png",
-      "suggestedPath": "assets/misc/review/map_stained_window_temple_hall_imagegen_transparent_full_v1_source.png",
-      "suggestedDirectory": "assets/misc/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "long_component"
-      ],
-      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_temple_hall_imagegen_transparent_full_v1_source.png",
-      "visualGroup": "visual_5910607803",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_temple_inner_light_imagegen_chromakey_v1_source.png",
-      "suggestedPath": "assets/misc/review/map_stained_window_temple_inner_light_imagegen_chromakey_v1_source.png",
-      "suggestedDirectory": "assets/misc/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "long_component"
-      ],
-      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_temple_inner_light_imagegen_chromakey_v1_source.png",
-      "visualGroup": "visual_5ff30b63a5",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_temple_inner_light_imagegen_transparent_full_v1_source.png",
-      "suggestedPath": "assets/misc/review/map_stained_window_temple_inner_light_imagegen_transparent_full_v1_source.png",
-      "suggestedDirectory": "assets/misc/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "long_component"
-      ],
-      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_temple_inner_light_imagegen_transparent_full_v1_source.png",
-      "visualGroup": "visual_c5bf76fa34",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_town_castle_imagegen_chromakey_v1_source.png",
-      "suggestedPath": "assets/misc/review/map_stained_window_town_castle_imagegen_chromakey_v1_source.png",
-      "suggestedDirectory": "assets/misc/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "long_component"
-      ],
-      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_town_castle_imagegen_chromakey_v1_source.png",
-      "visualGroup": "visual_71e1d682b7",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_town_castle_imagegen_transparent_full_v1_source.png",
-      "suggestedPath": "assets/misc/review/map_stained_window_town_castle_imagegen_transparent_full_v1_source.png",
-      "suggestedDirectory": "assets/misc/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "long_component"
-      ],
-      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_town_castle_imagegen_transparent_full_v1_source.png",
-      "visualGroup": "visual_af5ca0ad32",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_wasteland_dusk_imagegen_chromakey_v1_source.png",
-      "suggestedPath": "assets/misc/review/map_stained_window_wasteland_dusk_imagegen_chromakey_v1_source.png",
-      "suggestedDirectory": "assets/misc/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "long_component"
-      ],
-      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_wasteland_dusk_imagegen_chromakey_v1_source.png",
-      "visualGroup": "visual_b1c8522d1e",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_full_v1_source.png",
-      "suggestedPath": "assets/misc/review/map_stained_window_wasteland_dusk_imagegen_transparent_full_v1_source.png",
-      "suggestedDirectory": "assets/misc/review",
-      "status": "active",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "long_component"
-      ],
-      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_full_v1_source.png",
-      "visualGroup": "visual_9bdc2dca0c",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/ui/role_select/buttons/back_button_teal_gold_v1_source.png",
-      "suggestedPath": "assets/misc/review/back_button_teal_gold_v1_source.png",
+      "sourcePath": "assets/source/ui/role_select/panels/role_desc_panel_v1_source.png",
+      "suggestedPath": "assets/misc/review/role_desc_panel_v1_source.png",
       "suggestedDirectory": "assets/misc/review",
       "status": "documented",
       "referenceModules": [
@@ -2158,13 +877,13 @@
       "risks": [
         "unreferenced"
       ],
-      "derivedFrom": "assets/source/ui/role_select/buttons/back_button_teal_gold_v1_source.png",
-      "visualGroup": "visual_49facd4a8d",
+      "derivedFrom": "assets/source/ui/role_select/panels/role_desc_panel_v1_source.png",
+      "visualGroup": "visual_d0e8b1bff1",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "assets/source/ui/role_select/buttons/confirm_button_purple_gold_v1_source.png",
-      "suggestedPath": "assets/misc/review/confirm_button_purple_gold_v1_source.png",
+      "sourcePath": "assets/source/ui/role_select/tags/tag_plate_blue_gold_v1_source.png",
+      "suggestedPath": "assets/misc/review/tag_plate_blue_gold_v1_source.png",
       "suggestedDirectory": "assets/misc/review",
       "status": "documented",
       "referenceModules": [
@@ -2174,24 +893,8 @@
       "risks": [
         "unreferenced"
       ],
-      "derivedFrom": "assets/source/ui/role_select/buttons/confirm_button_purple_gold_v1_source.png",
-      "visualGroup": "visual_a5b0b4f9b9",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/ui/role_select/buttons/main_button_blue_gold_v1_source.png",
-      "suggestedPath": "assets/misc/review/main_button_blue_gold_v1_source.png",
-      "suggestedDirectory": "assets/misc/review",
-      "status": "documented",
-      "referenceModules": [
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced"
-      ],
-      "derivedFrom": "assets/source/ui/role_select/buttons/main_button_blue_gold_v1_source.png",
-      "visualGroup": "visual_61d0da9fec",
+      "derivedFrom": "assets/source/ui/role_select/tags/tag_plate_blue_gold_v1_source.png",
+      "visualGroup": "visual_2867ab4fbd",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -2221,6 +924,20 @@
       ],
       "derivedFrom": "assets/archive/unused/2026-06-05/ui_hud/player_panel/player_hp_bar_long_fill_damage_trail_asset_v1.png",
       "visualGroup": "visual_f06f0070dc",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/candidates/ui/map/overview/overview_map_ui_imagegen_transparent_assets_v1.png",
+      "suggestedPath": "assets/review/overview_map_ui_imagegen_transparent_assets_v1.png",
+      "suggestedDirectory": "assets/review",
+      "status": "candidate",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/candidates/ui/map/overview/overview_map_ui_imagegen_transparent_assets_v1.png",
+      "visualGroup": "visual_d4f0839dc1",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -2322,6 +1039,48 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
+      "sourcePath": "assets/candidates/ui/map/review/map_church_preview_frame_imagegen_transparent_v1.png",
+      "suggestedPath": "assets/review/map_church_preview_frame_imagegen_transparent_v1.png",
+      "suggestedDirectory": "assets/review",
+      "status": "candidate",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/candidates/ui/map/review/map_church_preview_frame_imagegen_transparent_v1.png",
+      "visualGroup": "visual_07bf134b55",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/candidates/ui/map/review/map_location_text_panel_imagegen_transparent_v1.png",
+      "suggestedPath": "assets/review/map_location_text_panel_imagegen_transparent_v1.png",
+      "suggestedDirectory": "assets/review",
+      "status": "candidate",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/candidates/ui/map/review/map_location_text_panel_imagegen_transparent_v1.png",
+      "visualGroup": "visual_12113764bc",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/candidates/ui/map/review/map_main_frame_overlay_imagegen_transparent_v1.png",
+      "suggestedPath": "assets/review/map_main_frame_overlay_imagegen_transparent_v1.png",
+      "suggestedDirectory": "assets/review",
+      "status": "candidate",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/candidates/ui/map/review/map_main_frame_overlay_imagegen_transparent_v1.png",
+      "visualGroup": "visual_9d362ec0d9",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
       "sourcePath": "assets/candidates/ui/map/review/map_right_preview_detail_group_frame_imagegen_transparent_v1.png",
       "suggestedPath": "assets/review/map_right_preview_detail_group_frame_imagegen_transparent_v1.png",
       "suggestedDirectory": "assets/review",
@@ -2364,56 +1123,143 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "assets/candidates/ui/role_select/frames/role_card_frame_normal_v1.png",
-      "suggestedPath": "assets/review/role_card_frame_normal_v1.png",
+      "sourcePath": "assets/candidates/ui/map/review/map_side_legend_panel_imagegen_transparent_v1.png",
+      "suggestedPath": "assets/review/map_side_legend_panel_imagegen_transparent_v1.png",
       "suggestedDirectory": "assets/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters",
-        "misc"
-      ],
+      "status": "candidate",
+      "referenceModules": [],
       "requiresHumanNameReview": false,
       "risks": [
-        "unreferenced",
-        "multi_module_reference"
+        "long_component"
       ],
-      "derivedFrom": "assets/candidates/ui/role_select/frames/role_card_frame_normal_v1.png",
-      "visualGroup": "visual_2679f6aabf",
+      "derivedFrom": "assets/candidates/ui/map/review/map_side_legend_panel_imagegen_transparent_v1.png",
+      "visualGroup": "visual_1b7792721e",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "assets/candidates/ui/role_select/frames/role_card_frame_selected_v1.png",
-      "suggestedPath": "assets/review/role_card_frame_selected_v1.png",
+      "sourcePath": "assets/candidates/ui/map/review/map_stained_window_ancient_forest_imagegen_transparent_v1.png",
+      "suggestedPath": "assets/review/map_stained_window_ancient_forest_imagegen_transparent_v1.png",
       "suggestedDirectory": "assets/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters",
-        "misc"
-      ],
+      "status": "candidate",
+      "referenceModules": [],
       "requiresHumanNameReview": false,
       "risks": [
-        "unreferenced",
-        "multi_module_reference"
+        "long_component"
       ],
-      "derivedFrom": "assets/candidates/ui/role_select/frames/role_card_frame_selected_v1.png",
-      "visualGroup": "visual_23dbdae760",
+      "derivedFrom": "assets/candidates/ui/map/review/map_stained_window_ancient_forest_imagegen_transparent_v1.png",
+      "visualGroup": "visual_82fede4f53",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "assets/characters/archer/role_select_frame_v1.webp",
-      "suggestedPath": "assets/review/role_select_frame_v1.webp",
+      "sourcePath": "assets/candidates/ui/map/review/map_stained_window_cold_cave_imagegen_transparent_v1.png",
+      "suggestedPath": "assets/review/map_stained_window_cold_cave_imagegen_transparent_v1.png",
       "suggestedDirectory": "assets/review",
-      "status": "active",
-      "referenceModules": [
-        "characters",
-        "demo"
-      ],
+      "status": "candidate",
+      "referenceModules": [],
       "requiresHumanNameReview": false,
       "risks": [
-        "multi_module_reference"
+        "long_component"
       ],
-      "derivedFrom": "assets/characters/archer/role_select_frame_v1.webp",
-      "visualGroup": "visual_e6088552f2",
+      "derivedFrom": "assets/candidates/ui/map/review/map_stained_window_cold_cave_imagegen_transparent_v1.png",
+      "visualGroup": "visual_4862a4627d",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/candidates/ui/map/review/map_stained_window_dungeon_corridor_imagegen_transparent_v1.png",
+      "suggestedPath": "assets/review/map_stained_window_dungeon_corridor_imagegen_transparent_v1.png",
+      "suggestedDirectory": "assets/review",
+      "status": "candidate",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/candidates/ui/map/review/map_stained_window_dungeon_corridor_imagegen_transparent_v1.png",
+      "visualGroup": "visual_d92f5d5ac7",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/candidates/ui/map/review/map_stained_window_mountain_plain_imagegen_transparent_v1.png",
+      "suggestedPath": "assets/review/map_stained_window_mountain_plain_imagegen_transparent_v1.png",
+      "suggestedDirectory": "assets/review",
+      "status": "candidate",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/candidates/ui/map/review/map_stained_window_mountain_plain_imagegen_transparent_v1.png",
+      "visualGroup": "visual_9600636dfd",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/candidates/ui/map/review/map_stained_window_stone_ruins_imagegen_transparent_v1.png",
+      "suggestedPath": "assets/review/map_stained_window_stone_ruins_imagegen_transparent_v1.png",
+      "suggestedDirectory": "assets/review",
+      "status": "candidate",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/candidates/ui/map/review/map_stained_window_stone_ruins_imagegen_transparent_v1.png",
+      "visualGroup": "visual_908dc1b042",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/candidates/ui/map/review/map_stained_window_temple_hall_imagegen_transparent_v1.png",
+      "suggestedPath": "assets/review/map_stained_window_temple_hall_imagegen_transparent_v1.png",
+      "suggestedDirectory": "assets/review",
+      "status": "candidate",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/candidates/ui/map/review/map_stained_window_temple_hall_imagegen_transparent_v1.png",
+      "visualGroup": "visual_4c39a82edd",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/candidates/ui/map/review/map_stained_window_temple_inner_light_imagegen_transparent_v1.png",
+      "suggestedPath": "assets/review/map_stained_window_temple_inner_light_imagegen_transparent_v1.png",
+      "suggestedDirectory": "assets/review",
+      "status": "candidate",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/candidates/ui/map/review/map_stained_window_temple_inner_light_imagegen_transparent_v1.png",
+      "visualGroup": "visual_99a3925c06",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/candidates/ui/map/review/map_stained_window_town_castle_imagegen_transparent_v1.png",
+      "suggestedPath": "assets/review/map_stained_window_town_castle_imagegen_transparent_v1.png",
+      "suggestedDirectory": "assets/review",
+      "status": "candidate",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/candidates/ui/map/review/map_stained_window_town_castle_imagegen_transparent_v1.png",
+      "visualGroup": "visual_ec1b2a8455",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/candidates/ui/map/review/map_stained_window_wasteland_dusk_imagegen_transparent_v1.png",
+      "suggestedPath": "assets/review/map_stained_window_wasteland_dusk_imagegen_transparent_v1.png",
+      "suggestedDirectory": "assets/review",
+      "status": "candidate",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/candidates/ui/map/review/map_stained_window_wasteland_dusk_imagegen_transparent_v1.png",
+      "visualGroup": "visual_4854e7d588",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -2431,23 +1277,6 @@
       ],
       "derivedFrom": "assets/characters/archer/select_portrait_v1.webp",
       "visualGroup": "visual_8773787f05",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/characters/mage/role_select_frame_v1.webp",
-      "suggestedPath": "assets/review/role_select_frame_v1.webp",
-      "suggestedDirectory": "assets/review",
-      "status": "active",
-      "referenceModules": [
-        "characters",
-        "demo"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "multi_module_reference"
-      ],
-      "derivedFrom": "assets/characters/mage/role_select_frame_v1.webp",
-      "visualGroup": "visual_8d9ce99aba",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -2482,23 +1311,6 @@
       ],
       "derivedFrom": "assets/characters/warrior/battle_back_idle_v1.webp",
       "visualGroup": "visual_6e283abab2",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/characters/warrior/role_select_frame_v1.webp",
-      "suggestedPath": "assets/review/role_select_frame_v1.webp",
-      "suggestedDirectory": "assets/review",
-      "status": "active",
-      "referenceModules": [
-        "characters",
-        "demo"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "multi_module_reference"
-      ],
-      "derivedFrom": "assets/characters/warrior/role_select_frame_v1.webp",
-      "visualGroup": "visual_6ba5afc268",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -2768,6 +1580,286 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
+      "sourcePath": "assets/source/ui/map/review/map_ui_imagegen_component_sheet_chromakey_v1_source.png",
+      "suggestedPath": "assets/review/map_ui_imagegen_component_sheet_chromakey_v1_source.png",
+      "suggestedDirectory": "assets/review",
+      "status": "source",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/review/map_ui_imagegen_component_sheet_chromakey_v1_source.png",
+      "visualGroup": "visual_4ff03a1a01",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/review/map_ui_imagegen_component_sheet_transparent_v1_source.png",
+      "suggestedPath": "assets/review/map_ui_imagegen_component_sheet_transparent_v1_source.png",
+      "suggestedDirectory": "assets/review",
+      "status": "source",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/review/map_ui_imagegen_component_sheet_transparent_v1_source.png",
+      "visualGroup": "visual_03dbcbc44d",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_ancient_forest_imagegen_chromakey_v1_source.png",
+      "suggestedPath": "assets/review/map_stained_window_ancient_forest_imagegen_chromakey_v1_source.png",
+      "suggestedDirectory": "assets/review",
+      "status": "source",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_ancient_forest_imagegen_chromakey_v1_source.png",
+      "visualGroup": "visual_57a18395d7",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_full_v1_source.png",
+      "suggestedPath": "assets/review/map_stained_window_ancient_forest_imagegen_transparent_full_v1_source.png",
+      "suggestedDirectory": "assets/review",
+      "status": "source",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_full_v1_source.png",
+      "visualGroup": "visual_c868cf595e",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_cold_cave_imagegen_chromakey_v1_source.png",
+      "suggestedPath": "assets/review/map_stained_window_cold_cave_imagegen_chromakey_v1_source.png",
+      "suggestedDirectory": "assets/review",
+      "status": "source",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_cold_cave_imagegen_chromakey_v1_source.png",
+      "visualGroup": "visual_52f929f5b2",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_cold_cave_imagegen_transparent_full_v1_source.png",
+      "suggestedPath": "assets/review/map_stained_window_cold_cave_imagegen_transparent_full_v1_source.png",
+      "suggestedDirectory": "assets/review",
+      "status": "source",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_cold_cave_imagegen_transparent_full_v1_source.png",
+      "visualGroup": "visual_9272a9f255",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_dungeon_corridor_imagegen_chromakey_v1_source.png",
+      "suggestedPath": "assets/review/map_stained_window_dungeon_corridor_imagegen_chromakey_v1_source.png",
+      "suggestedDirectory": "assets/review",
+      "status": "source",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_dungeon_corridor_imagegen_chromakey_v1_source.png",
+      "visualGroup": "visual_862c8951d0",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_dungeon_corridor_imagegen_transparent_full_v1_source.png",
+      "suggestedPath": "assets/review/map_stained_window_dungeon_corridor_imagegen_transparent_full_v1_source.png",
+      "suggestedDirectory": "assets/review",
+      "status": "source",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_dungeon_corridor_imagegen_transparent_full_v1_source.png",
+      "visualGroup": "visual_fa4affc8b8",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_mountain_plain_imagegen_chromakey_v1_source.png",
+      "suggestedPath": "assets/review/map_stained_window_mountain_plain_imagegen_chromakey_v1_source.png",
+      "suggestedDirectory": "assets/review",
+      "status": "source",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_mountain_plain_imagegen_chromakey_v1_source.png",
+      "visualGroup": "visual_be35d82a89",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_full_v1_source.png",
+      "suggestedPath": "assets/review/map_stained_window_mountain_plain_imagegen_transparent_full_v1_source.png",
+      "suggestedDirectory": "assets/review",
+      "status": "source",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_full_v1_source.png",
+      "visualGroup": "visual_ba8b1664b2",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_stone_ruins_imagegen_chromakey_v1_source.png",
+      "suggestedPath": "assets/review/map_stained_window_stone_ruins_imagegen_chromakey_v1_source.png",
+      "suggestedDirectory": "assets/review",
+      "status": "source",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_stone_ruins_imagegen_chromakey_v1_source.png",
+      "visualGroup": "visual_2d8eeb8f65",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_full_v1_source.png",
+      "suggestedPath": "assets/review/map_stained_window_stone_ruins_imagegen_transparent_full_v1_source.png",
+      "suggestedDirectory": "assets/review",
+      "status": "source",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_full_v1_source.png",
+      "visualGroup": "visual_878ed2fc42",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_temple_hall_imagegen_chromakey_v1_source.png",
+      "suggestedPath": "assets/review/map_stained_window_temple_hall_imagegen_chromakey_v1_source.png",
+      "suggestedDirectory": "assets/review",
+      "status": "source",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_temple_hall_imagegen_chromakey_v1_source.png",
+      "visualGroup": "visual_256aca86c2",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_temple_hall_imagegen_transparent_full_v1_source.png",
+      "suggestedPath": "assets/review/map_stained_window_temple_hall_imagegen_transparent_full_v1_source.png",
+      "suggestedDirectory": "assets/review",
+      "status": "source",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_temple_hall_imagegen_transparent_full_v1_source.png",
+      "visualGroup": "visual_5910607803",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_temple_inner_light_imagegen_chromakey_v1_source.png",
+      "suggestedPath": "assets/review/map_stained_window_temple_inner_light_imagegen_chromakey_v1_source.png",
+      "suggestedDirectory": "assets/review",
+      "status": "source",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_temple_inner_light_imagegen_chromakey_v1_source.png",
+      "visualGroup": "visual_5ff30b63a5",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_temple_inner_light_imagegen_transparent_full_v1_source.png",
+      "suggestedPath": "assets/review/map_stained_window_temple_inner_light_imagegen_transparent_full_v1_source.png",
+      "suggestedDirectory": "assets/review",
+      "status": "source",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_temple_inner_light_imagegen_transparent_full_v1_source.png",
+      "visualGroup": "visual_c5bf76fa34",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_town_castle_imagegen_chromakey_v1_source.png",
+      "suggestedPath": "assets/review/map_stained_window_town_castle_imagegen_chromakey_v1_source.png",
+      "suggestedDirectory": "assets/review",
+      "status": "source",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_town_castle_imagegen_chromakey_v1_source.png",
+      "visualGroup": "visual_71e1d682b7",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_town_castle_imagegen_transparent_full_v1_source.png",
+      "suggestedPath": "assets/review/map_stained_window_town_castle_imagegen_transparent_full_v1_source.png",
+      "suggestedDirectory": "assets/review",
+      "status": "source",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_town_castle_imagegen_transparent_full_v1_source.png",
+      "visualGroup": "visual_af5ca0ad32",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_wasteland_dusk_imagegen_chromakey_v1_source.png",
+      "suggestedPath": "assets/review/map_stained_window_wasteland_dusk_imagegen_chromakey_v1_source.png",
+      "suggestedDirectory": "assets/review",
+      "status": "source",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_wasteland_dusk_imagegen_chromakey_v1_source.png",
+      "visualGroup": "visual_b1c8522d1e",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_full_v1_source.png",
+      "suggestedPath": "assets/review/map_stained_window_wasteland_dusk_imagegen_transparent_full_v1_source.png",
+      "suggestedDirectory": "assets/review",
+      "status": "source",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component"
+      ],
+      "derivedFrom": "assets/source/ui/map/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_full_v1_source.png",
+      "visualGroup": "visual_9bdc2dca0c",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
       "sourcePath": "assets/source/ui/role_select/buttons/confirm_button_purple_gold_v1_original_source.png",
       "suggestedPath": "assets/review/confirm_button_purple_gold_v1_original_source.png",
       "suggestedDirectory": "assets/review",
@@ -2779,42 +1871,6 @@
       ],
       "derivedFrom": "assets/source/ui/role_select/buttons/confirm_button_purple_gold_v1_original_source.png",
       "visualGroup": "visual_81e2d97fd8",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/ui/role_select/panels/role_desc_panel_v1_source.png",
-      "suggestedPath": "assets/review/role_desc_panel_v1_source.png",
-      "suggestedDirectory": "assets/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters",
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced",
-        "multi_module_reference"
-      ],
-      "derivedFrom": "assets/source/ui/role_select/panels/role_desc_panel_v1_source.png",
-      "visualGroup": "visual_d0e8b1bff1",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/ui/role_select/tags/tag_plate_blue_gold_v1_source.png",
-      "suggestedPath": "assets/review/tag_plate_blue_gold_v1_source.png",
-      "suggestedDirectory": "assets/review",
-      "status": "documented",
-      "referenceModules": [
-        "characters",
-        "misc"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "unreferenced",
-        "multi_module_reference"
-      ],
-      "derivedFrom": "assets/source/ui/role_select/tags/tag_plate_blue_gold_v1_source.png",
-      "visualGroup": "visual_2867ab4fbd",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
