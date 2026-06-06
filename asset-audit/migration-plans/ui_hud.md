@@ -233,7 +233,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: hud-layout-data.js:58 (runtime), hud-runtime.js:387 (runtime), 幻境残卷demo_v0.99.html:33 (runtime)
+- References: hud-layout-data.js:58 (runtime), hud-runtime.js:387 (runtime), questers_demo_v0.99.html:33 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/hud/center_controls/turn_counter_inner_dial_asset_v1.png`
@@ -251,7 +251,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: hud-layout-data.js:100 (runtime), hud-runtime.js:388 (runtime), 幻境残卷demo_v0.99.html:34 (runtime), 幻境残卷demo_v0.99.html:3296 (runtime)
+- References: hud-layout-data.js:100 (runtime), hud-runtime.js:388 (runtime), questers_demo_v0.99.html:34 (runtime), questers_demo_v0.99.html:3296 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/hud/enemy_intent/enemy_intent_panel_shell_asset_v1.png`
@@ -269,7 +269,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: hud-layout-data.js:1144 (runtime), hud-runtime.js:384 (runtime), 幻境残卷demo_v0.99.html:32 (runtime)
+- References: hud-layout-data.js:1144 (runtime), hud-runtime.js:384 (runtime), questers_demo_v0.99.html:32 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/hud/enemy_panel/battle_hud_enemy_panel_asset_v1.png`
@@ -287,7 +287,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: hud-runtime.js:378 (runtime), 幻境残卷demo_v0.99.html:31 (runtime)
+- References: hud-runtime.js:378 (runtime), questers_demo_v0.99.html:31 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/hud/enemy_panel/enemy_armor_bar_shell_asset_v1.png`
@@ -377,7 +377,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: hud-layout-data.js:16 (runtime), hud-runtime.js:386 (runtime), 幻境残卷demo_v0.99.html:35 (runtime)
+- References: hud-layout-data.js:16 (runtime), hud-runtime.js:386 (runtime), questers_demo_v0.99.html:35 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/hud/piles/discard_pile_stack_asset_v1.png`
@@ -395,7 +395,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: hud-layout-data.js:184 (runtime), hud-runtime.js:390 (runtime), 幻境残卷demo_v0.99.html:46 (runtime)
+- References: hud-layout-data.js:184 (runtime), hud-runtime.js:390 (runtime), questers_demo_v0.99.html:46 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/hud/piles/draw_pile_stack_asset_v1.png`
@@ -413,7 +413,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: hud-layout-data.js:142 (runtime), hud-runtime.js:389 (runtime), 幻境残卷demo_v0.99.html:45 (runtime)
+- References: hud-layout-data.js:142 (runtime), hud-runtime.js:389 (runtime), questers_demo_v0.99.html:45 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/hud/piles/exile_pile_stack_asset_v1.png`
@@ -431,7 +431,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: hud-layout-data.js:226 (runtime), hud-runtime.js:391 (runtime), 幻境残卷demo_v0.99.html:47 (runtime)
+- References: hud-layout-data.js:226 (runtime), hud-runtime.js:391 (runtime), questers_demo_v0.99.html:47 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/hud/piles/pile_count_plate_asset_v1_transparent.png`
@@ -449,7 +449,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: hud-layout-data.js:935 (runtime), hud-layout-data.js:977 (runtime), hud-layout-data.js:1019 (runtime), hud-runtime.js:392 (runtime), hud-runtime.js:393 (runtime), hud-runtime.js:394 (runtime), 幻境残卷demo_v0.99.html:48 (runtime)
+- References: hud-layout-data.js:935 (runtime), hud-layout-data.js:977 (runtime), hud-layout-data.js:1019 (runtime), hud-runtime.js:392 (runtime), hud-runtime.js:393 (runtime), hud-runtime.js:394 (runtime), questers_demo_v0.99.html:48 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/hud/player_panel/avatar_circle_gray_base_asset_v1.png`
@@ -494,7 +494,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: hud-runtime.js:374 (runtime), 幻境残卷demo_v0.99.html:39 (runtime)
+- References: hud-runtime.js:374 (runtime), questers_demo_v0.99.html:39 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/hud/player_panel/player_energy_gem_off_asset_v1.png`
@@ -512,7 +512,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:42 (runtime)
+- References: questers_demo_v0.99.html:42 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/hud/player_panel/player_energy_gem_on_asset_v1.png`
@@ -530,7 +530,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: hud-layout-data.js:434 (runtime), hud-layout-data.js:476 (runtime), hud-layout-data.js:518 (runtime), hud-layout-data.js:560 (runtime), hud-layout-data.js:602 (runtime), hud-layout-data.js:1585 (runtime), hud-layout-data.js:1600 (runtime), hud-layout-data.js:1615 (runtime), hud-layout-data.js:1630 (runtime), hud-layout-data.js:1645 (runtime), hud-runtime.js:397 (runtime), 幻境残卷demo_v0.99.html:41 (runtime)
+- References: hud-layout-data.js:434 (runtime), hud-layout-data.js:476 (runtime), hud-layout-data.js:518 (runtime), hud-layout-data.js:560 (runtime), hud-layout-data.js:602 (runtime), hud-layout-data.js:1585 (runtime), hud-layout-data.js:1600 (runtime), hud-layout-data.js:1615 (runtime), hud-layout-data.js:1630 (runtime), hud-layout-data.js:1645 (runtime), hud-runtime.js:397 (runtime), questers_demo_v0.99.html:41 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/hud/player_panel/player_energy_tray_asset_v1.png`
@@ -548,7 +548,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: hud-runtime.js:375 (runtime), 幻境残卷demo_v0.99.html:40 (runtime)
+- References: hud-runtime.js:375 (runtime), questers_demo_v0.99.html:40 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/hud/player_panel/player_energy_tray_asset_v1_no_circles_transparent.png`
@@ -566,7 +566,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: hud-layout-data.js:351 (runtime), hud-layout-data.js:1555 (runtime), 幻境残卷demo_v0.99.html:3222 (runtime)
+- References: hud-layout-data.js:351 (runtime), hud-layout-data.js:1555 (runtime), questers_demo_v0.99.html:3222 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/hud/player_panel/player_hp_bar_empty_frame_editor_asset_v1.png`
@@ -692,7 +692,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: hud-runtime.js:373 (runtime), 幻境残卷demo_v0.99.html:38 (runtime)
+- References: hud-runtime.js:373 (runtime), questers_demo_v0.99.html:38 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/hud/player_panel/player_nameplate_shell_asset_v1.png`
@@ -710,7 +710,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: hud-layout-data.js:309 (runtime), hud-layout-data.js:1540 (runtime), hud-runtime.js:372 (runtime), 幻境残卷demo_v0.99.html:37 (runtime)
+- References: hud-layout-data.js:309 (runtime), hud-layout-data.js:1540 (runtime), hud-runtime.js:372 (runtime), questers_demo_v0.99.html:37 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/hud/player_panel/player_portrait_frame_asset_v1.png`
@@ -728,7 +728,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: hud-layout-data.js:893 (runtime), hud-layout-data.js:1750 (runtime), hud-runtime.js:371 (runtime), 幻境残卷demo_v0.99.html:36 (runtime)
+- References: hud-layout-data.js:893 (runtime), hud-layout-data.js:1750 (runtime), hud-runtime.js:371 (runtime), questers_demo_v0.99.html:36 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/hud/status_bar/enemy_status_bar_shell_asset_v1.png`
@@ -746,7 +746,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: hud-runtime.js:383 (runtime), 幻境残卷demo_v0.99.html:44 (runtime)
+- References: hud-runtime.js:383 (runtime), questers_demo_v0.99.html:44 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/hud/status_bar/player_status_bar_shell_asset_v1.png`
@@ -764,7 +764,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: hud-layout-data.js:392 (runtime), hud-layout-data.js:1186 (runtime), hud-layout-data.js:1570 (runtime), hud-runtime.js:376 (runtime), 幻境残卷demo_v0.99.html:43 (runtime)
+- References: hud-layout-data.js:392 (runtime), hud-layout-data.js:1186 (runtime), hud-layout-data.js:1570 (runtime), hud-runtime.js:376 (runtime), questers_demo_v0.99.html:43 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/hud/status_icons/status_armor_asset_v1.webp`

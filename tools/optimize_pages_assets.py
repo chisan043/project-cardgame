@@ -19,7 +19,7 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[1]
 
 TEXT_TARGETS = [
-    Path("幻境残卷demo_v0.99.html"),
+    Path("questers_demo_v0.99.html"),
     Path("hud-runtime.js"),
     Path("hud-layout-data.js"),
     Path("src/data/cards.js"),

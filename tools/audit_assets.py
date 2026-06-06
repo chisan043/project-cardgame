@@ -149,7 +149,7 @@ FORMAL_RELIC_ICON_IDS = relic_formal_icon_ids()
 def infer_reference_context(text_path: Path) -> tuple[str, str]:
     path = as_posix(text_path)
     if path in {
-        "幻境残卷demo_v0.99.html",
+        "questers_demo_v0.99.html",
         "hud-runtime.js",
         "hud-layout-data.js",
         "hud_layout_editor.html",

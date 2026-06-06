@@ -82,7 +82,7 @@
       "tracked": true,
       "references": [
         {
-          "file": "幻境残卷demo_v0.99.html",
+          "file": "questers_demo_v0.99.html",
           "line": 67,
           "module": "demo",
           "kind": "runtime"

@@ -60,7 +60,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:67 (runtime)
+- References: questers_demo_v0.99.html:67 (runtime)
 - Notes: runtime/config referenced
 
 ## Duplicate Extension Groups

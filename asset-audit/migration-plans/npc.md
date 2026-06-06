@@ -33,7 +33,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: NPC/资产清单.txt:8 (documentation), NPC/资产清单.txt:21 (documentation), 幻境残卷demo_v0.99.html:65 (runtime)
+- References: NPC/资产清单.txt:8 (documentation), NPC/资产清单.txt:21 (documentation), questers_demo_v0.99.html:65 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/npc/encounter_angel_portrait_v1.webp`
@@ -42,7 +42,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: NPC/资产清单.txt:9 (documentation), NPC/资产清单.txt:22 (documentation), 幻境残卷demo_v0.99.html:66 (runtime)
+- References: NPC/资产清单.txt:9 (documentation), NPC/资产清单.txt:22 (documentation), questers_demo_v0.99.html:66 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/npc/shopkeeper_portrait_v1.webp`
@@ -51,7 +51,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: NPC/资产清单.txt:7 (documentation), NPC/资产清单.txt:20 (documentation), 幻境残卷demo_v0.99.html:64 (runtime)
+- References: NPC/资产清单.txt:7 (documentation), NPC/资产清单.txt:20 (documentation), questers_demo_v0.99.html:64 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/source/npc/campfire_elder_alpha_fullres_v1_source.png`

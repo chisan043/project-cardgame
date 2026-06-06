@@ -1,6 +1,6 @@
 # Gameplay Data
 
-This directory holds side-effect-free data extracted from `幻境残卷demo_v0.99.html`.
+This directory holds side-effect-free data extracted from `questers_demo_v0.99.html`.
 
 Load order in the demo:
 

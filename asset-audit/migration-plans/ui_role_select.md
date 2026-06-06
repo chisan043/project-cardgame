@@ -251,7 +251,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:76 (runtime)
+- References: questers_demo_v0.99.html:76 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/role_select/buttons/confirm_button_purple_gold_v1.webp`
@@ -260,7 +260,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:75 (runtime)
+- References: questers_demo_v0.99.html:75 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/role_select/buttons/main_button_blue_gold_v1.webp`
@@ -269,7 +269,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:74 (runtime)
+- References: questers_demo_v0.99.html:74 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/role_select/panels/role_desc_panel_v1.webp`
@@ -278,7 +278,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:69 (runtime)
+- References: questers_demo_v0.99.html:69 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/role_select/tags/tag_plate_blue_gold_v1.webp`
@@ -287,7 +287,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:70 (runtime)
+- References: questers_demo_v0.99.html:70 (runtime)
 - Notes: runtime/config referenced
 
 ## Duplicate Extension Groups

@@ -879,7 +879,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:49 (runtime)
+- References: questers_demo_v0.99.html:49 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/map/buttons/map_detail_panel_button_imagegen_transparent_v1.webp`
@@ -888,7 +888,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:56 (runtime)
+- References: questers_demo_v0.99.html:56 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/map/nodes/map_node_battle_imagegen_transparent_v1.webp`
@@ -897,7 +897,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:57 (runtime)
+- References: questers_demo_v0.99.html:57 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/map/nodes/map_node_boss_imagegen_transparent_v1.webp`
@@ -906,7 +906,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:59 (runtime)
+- References: questers_demo_v0.99.html:59 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/map/nodes/map_node_elite_imagegen_transparent_v1.webp`
@@ -915,7 +915,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:58 (runtime)
+- References: questers_demo_v0.99.html:58 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/map/nodes/map_node_event_imagegen_transparent_v1.webp`
@@ -924,7 +924,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:60 (runtime)
+- References: questers_demo_v0.99.html:60 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/map/nodes/map_node_rest_imagegen_transparent_v1.webp`
@@ -933,7 +933,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:61 (runtime)
+- References: questers_demo_v0.99.html:61 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/map/nodes/map_node_shop_imagegen_transparent_v1.webp`
@@ -942,7 +942,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:62 (runtime)
+- References: questers_demo_v0.99.html:62 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/map/panels/map_church_preview_frame_imagegen_transparent_v1.webp`
@@ -951,7 +951,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:53 (runtime), 幻境残卷demo_v0.99.html:1723 (runtime)
+- References: questers_demo_v0.99.html:53 (runtime), questers_demo_v0.99.html:1723 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/map/panels/map_detail_panel_no_button_imagegen_transparent_v1.webp`
@@ -960,7 +960,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:55 (runtime)
+- References: questers_demo_v0.99.html:55 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/map/panels/map_region_banner_imagegen_transparent_v1.webp`
@@ -969,7 +969,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:51 (runtime)
+- References: questers_demo_v0.99.html:51 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/map/panels/map_right_simple_outer_wrapper_frame_imagegen_transparent_v1.webp`
@@ -978,7 +978,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:52 (runtime), 幻境残卷demo_v0.99.html:1731 (runtime)
+- References: questers_demo_v0.99.html:52 (runtime), questers_demo_v0.99.html:1731 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/map/panels/map_side_legend_panel_imagegen_transparent_v1.webp`
@@ -987,7 +987,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:50 (runtime)
+- References: questers_demo_v0.99.html:50 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/map/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_v1.webp`
@@ -996,7 +996,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:4762 (runtime)
+- References: questers_demo_v0.99.html:4762 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/map/stained_windows/map_stained_window_cold_cave_imagegen_transparent_v1.webp`
@@ -1005,7 +1005,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:4807 (runtime)
+- References: questers_demo_v0.99.html:4807 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/map/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_v1.webp`
@@ -1014,7 +1014,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:54 (runtime), 幻境残卷demo_v0.99.html:4750 (runtime), 幻境残卷demo_v0.99.html:4789 (runtime)
+- References: questers_demo_v0.99.html:54 (runtime), questers_demo_v0.99.html:4750 (runtime), questers_demo_v0.99.html:4789 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/map/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_v1.webp`
@@ -1023,7 +1023,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:4768 (runtime), 幻境残卷demo_v0.99.html:4795 (runtime)
+- References: questers_demo_v0.99.html:4768 (runtime), questers_demo_v0.99.html:4795 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/map/stained_windows/map_stained_window_temple_hall_imagegen_transparent_v1.webp`
@@ -1032,7 +1032,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:4756 (runtime)
+- References: questers_demo_v0.99.html:4756 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/map/stained_windows/map_stained_window_town_castle_imagegen_transparent_v1.webp`
@@ -1041,7 +1041,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:4774 (runtime), 幻境残卷demo_v0.99.html:4780 (runtime)
+- References: questers_demo_v0.99.html:4774 (runtime), questers_demo_v0.99.html:4780 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/ui/map/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_v1.webp`
@@ -1050,7 +1050,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:4801 (runtime)
+- References: questers_demo_v0.99.html:4801 (runtime)
 - Notes: runtime/config referenced
 
 ## Duplicate Extension Groups

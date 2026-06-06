@@ -90,12 +90,12 @@ This is a read-only audit. No source asset was moved, renamed, or archived.
 - `UI/教堂彩窗赛璐璐/战斗HUD/敌方铭牌_v1.png` in `demo更改需求文档.txt:446`
 - `UI/教堂彩窗赛璐璐/战斗HUD/生命条填充_v2.png` in `demo更改需求文档.txt:448`
 - `UI/教堂彩窗赛璐璐/战斗HUD/通用条框_v1.png` in `demo更改需求文档.txt:447`
-- `_asset_v1.webp` in `幻境残卷demo_v0.99.html:3883`
-- `_battle_v1.webp` in `幻境残卷demo_v0.99.html:4436`
+- `_asset_v1.webp` in `questers_demo_v0.99.html:3883`
+- `_battle_v1.webp` in `questers_demo_v0.99.html:4436`
 - `_icon_v1.webp` in `assets/relics/README.md:9`
-- `_icon_v1.webp` in `幻境残卷demo_v0.99.html:3130`
+- `_icon_v1.webp` in `questers_demo_v0.99.html:3130`
 - `_master_v1.webp` in `assets/relics/README.md:14`
-- `_portrait_v1.webp` in `幻境残卷demo_v0.99.html:4441`
+- `_portrait_v1.webp` in `questers_demo_v0.99.html:4441`
 - `assets/bg/battle/ancient_forest.jpg` in `demo更改需求文档.txt:509`
 - `assets/bg/battle/ruins_hall.jpg` in `demo更改需求文档.txt:514`
 - `assets/characters/enemies/slime/front_attack.png` in `demo更改需求文档.txt:478`

@@ -50,7 +50,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:73 (runtime), 新角色三/资产清单.txt:12 (documentation)
+- References: questers_demo_v0.99.html:73 (runtime), 新角色三/资产清单.txt:12 (documentation)
 - Notes: runtime/config referenced
 
 ### `assets/characters/archer/select_portrait_v1.webp`
@@ -59,7 +59,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: src/data/characters.js:55 (runtime), 幻境残卷demo_v0.99.html:1547 (runtime), 新角色三/资产清单.txt:10 (documentation)
+- References: src/data/characters.js:55 (runtime), questers_demo_v0.99.html:1547 (runtime), 新角色三/资产清单.txt:10 (documentation)
 - Notes: runtime/config referenced
 
 ### `assets/characters/mage/avatar_portrait_v1.webp`
@@ -86,7 +86,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:72 (runtime), 角色二/资产清单.txt:12 (documentation)
+- References: questers_demo_v0.99.html:72 (runtime), 角色二/资产清单.txt:12 (documentation)
 - Notes: runtime/config referenced
 
 ### `assets/characters/mage/select_portrait_v1.webp`
@@ -104,7 +104,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: src/data/characters.js:18 (runtime), 幻境残卷demo_v0.99.html:4216 (runtime), 新角色一/资产清单.txt:9 (documentation)
+- References: src/data/characters.js:18 (runtime), questers_demo_v0.99.html:4216 (runtime), 新角色一/资产清单.txt:9 (documentation)
 - Notes: runtime/config referenced
 
 ### `assets/characters/warrior/battle_back_idle_v1.webp`
@@ -113,7 +113,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: src/data/characters.js:19 (runtime), 幻境残卷demo_v0.99.html:1754 (runtime), 新角色一/资产清单.txt:11 (documentation)
+- References: src/data/characters.js:19 (runtime), questers_demo_v0.99.html:1754 (runtime), 新角色一/资产清单.txt:11 (documentation)
 - Notes: runtime/config referenced
 
 ### `assets/characters/warrior/role_select_frame_v1.webp`
@@ -122,7 +122,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:71 (runtime), 新角色一/资产清单.txt:12 (documentation)
+- References: questers_demo_v0.99.html:71 (runtime), 新角色一/资产清单.txt:12 (documentation)
 - Notes: runtime/config referenced
 
 ### `assets/characters/warrior/select_portrait_v1.webp`

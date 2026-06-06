@@ -42,7 +42,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: hud-layout-data.js:2 (runtime), hud-runtime.js:406 (runtime), 幻境残卷demo_v0.99.html:30 (runtime), 幻境残卷demo_v0.99.html:1546 (runtime), 幻境残卷demo_v0.99.html:4434 (runtime), 幻境残卷demo_v0.99.html:4438 (runtime), 幻境残卷demo_v0.99.html:4461 (runtime), 幻境残卷demo_v0.99.html:4763 (runtime)
+- References: hud-layout-data.js:2 (runtime), hud-runtime.js:406 (runtime), questers_demo_v0.99.html:30 (runtime), questers_demo_v0.99.html:1546 (runtime), questers_demo_v0.99.html:4434 (runtime), questers_demo_v0.99.html:4438 (runtime), questers_demo_v0.99.html:4461 (runtime), questers_demo_v0.99.html:4763 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/scenes/battle/ancient_forest_sunset_v1.webp`
@@ -51,7 +51,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `False`
-- References: 幻境残卷demo_v0.99.html:4435 (runtime)
+- References: questers_demo_v0.99.html:4435 (runtime)
 - Notes: untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced
 
 ### `assets/scenes/battle/cave_cold_v1.png`
@@ -69,7 +69,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:4439 (runtime), 幻境残卷demo_v0.99.html:4440 (runtime), 幻境残卷demo_v0.99.html:4808 (runtime)
+- References: questers_demo_v0.99.html:4439 (runtime), questers_demo_v0.99.html:4440 (runtime), questers_demo_v0.99.html:4808 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/scenes/battle/dungeon_corridor_torch_v1.webp`
@@ -78,7 +78,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:1553 (runtime), 幻境残卷demo_v0.99.html:4442 (runtime), 幻境残卷demo_v0.99.html:4448 (runtime)
+- References: questers_demo_v0.99.html:1553 (runtime), questers_demo_v0.99.html:4442 (runtime), questers_demo_v0.99.html:4448 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/scenes/battle/mountain_plain_day_v1.png`
@@ -96,7 +96,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:4437 (runtime), 幻境残卷demo_v0.99.html:4751 (runtime), 幻境残卷demo_v0.99.html:4790 (runtime)
+- References: questers_demo_v0.99.html:4437 (runtime), questers_demo_v0.99.html:4751 (runtime), questers_demo_v0.99.html:4790 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/scenes/battle/mountain_plain_night_v1.webp`
@@ -105,7 +105,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `False`
-- References: 幻境残卷demo_v0.99.html:4436 (runtime)
+- References: questers_demo_v0.99.html:4436 (runtime)
 - Notes: untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced
 
 ### `assets/scenes/battle/mountain_plain_rain_v1.webp`
@@ -114,7 +114,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `False`
-- References: 幻境残卷demo_v0.99.html:4441 (runtime)
+- References: questers_demo_v0.99.html:4441 (runtime)
 - Notes: untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced
 
 ### `assets/scenes/battle/stone_ruins_day_v1.png`
@@ -132,7 +132,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:1549 (runtime), 幻境残卷demo_v0.99.html:4443 (runtime), 幻境残卷demo_v0.99.html:4769 (runtime), 幻境残卷demo_v0.99.html:4796 (runtime)
+- References: questers_demo_v0.99.html:1549 (runtime), questers_demo_v0.99.html:4443 (runtime), questers_demo_v0.99.html:4769 (runtime), questers_demo_v0.99.html:4796 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/scenes/battle/stone_ruins_night_v1.webp`
@@ -141,7 +141,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `False`
-- References: 幻境残卷demo_v0.99.html:4447 (runtime)
+- References: questers_demo_v0.99.html:4447 (runtime)
 - Notes: untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced
 
 ### `assets/scenes/battle/stone_ruins_sunset_v1.webp`
@@ -150,7 +150,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `False`
-- References: 幻境残卷demo_v0.99.html:4444 (runtime)
+- References: questers_demo_v0.99.html:4444 (runtime)
 - Notes: untracked file; do not include in migration commit unless intentionally accepted; runtime/config referenced
 
 ### `assets/scenes/battle/temple_hall_grand_v1.png`
@@ -168,7 +168,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:68 (runtime), 幻境残卷demo_v0.99.html:4450 (runtime), 幻境残卷demo_v0.99.html:4451 (runtime), 幻境残卷demo_v0.99.html:4452 (runtime), 幻境残卷demo_v0.99.html:4757 (runtime), 幻境残卷demo_v0.99.html:4775 (runtime)
+- References: questers_demo_v0.99.html:68 (runtime), questers_demo_v0.99.html:4450 (runtime), questers_demo_v0.99.html:4451 (runtime), questers_demo_v0.99.html:4452 (runtime), questers_demo_v0.99.html:4757 (runtime), questers_demo_v0.99.html:4775 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/scenes/battle/temple_inner_light_v1.webp`
@@ -177,7 +177,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:4445 (runtime), 幻境残卷demo_v0.99.html:4453 (runtime)
+- References: questers_demo_v0.99.html:4445 (runtime), questers_demo_v0.99.html:4453 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/scenes/battle/wasteland_dusk_v1.png`
@@ -195,7 +195,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:4446 (runtime), 幻境残卷demo_v0.99.html:4449 (runtime), 幻境残卷demo_v0.99.html:4802 (runtime)
+- References: questers_demo_v0.99.html:4446 (runtime), questers_demo_v0.99.html:4449 (runtime), questers_demo_v0.99.html:4802 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/scenes/event/town_distant_day_v1.webp`
@@ -204,7 +204,7 @@ This is a review-only plan. No source asset was moved, renamed, copied, or archi
 - Action: `already_migrated`
 - Status: `active`
 - Tracked: `True`
-- References: 幻境残卷demo_v0.99.html:1551 (runtime), 幻境残卷demo_v0.99.html:4781 (runtime)
+- References: questers_demo_v0.99.html:1551 (runtime), questers_demo_v0.99.html:4781 (runtime)
 - Notes: runtime/config referenced
 
 ### `assets/source/scenes/battle/ancient_forest_day_v1_source.png`
