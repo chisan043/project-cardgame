@@ -1950,8 +1950,8 @@
 
 <script src="hud-runtime.js?v=20260518-forced-default-hud1"></script>
 <script src="hud-layout-data.js?v=20260518-forced-default-hud1"></script>
-<script src="src/data/relics.js?v=20260602-effect-text"></script>
-<script src="src/data/cards.js?v=20260604-flow-card-art"></script>
+<script src="src/data/relics.js?v=20260606-keyword-balance"></script>
+<script src="src/data/cards.js?v=20260606-keyword-balance"></script>
 <script src="src/data/enemies.js?v=20260605-enemy-ai"></script>
 <script src="src/data/characters.js?v=20260525-data-split1"></script>
 <script>
@@ -2054,18 +2054,26 @@
         const tagSet = new Set();
         (entity.tags || []).forEach(tag => tagSet.add(tag));
         inferTagsFromEffectText(entity.desc || '').forEach(tag => tagSet.add(tag));
-        return Object.keys(TAGS).filter(tag => tagSet.has(tag));
+        const normalized = new Set(normalizeTagConflicts(Array.from(tagSet)));
+        return Object.keys(TAGS).filter(tag => normalized.has(tag));
     }
 
     function getCardBottomTagList(card = {}) {
         if (card.isSpecial || !Array.isArray(card.tags) || card.tags.length === 0) return getDisplayTags(card);
-        const tagSet = new Set(card.tags);
+        const tagSet = new Set(normalizeTagConflicts(card.tags));
         return Object.keys(TAGS).filter(tag => tagSet.has(tag));
     }
 
     function getWindGain(card) {
         const base = parseInt(card?.val) || (card?.rarity === '史诗' ? 8 : 5);
         return Math.min(3, Math.max(1, Math.ceil(base / 4)));
+    }
+
+    function getSidestepGain(card) {
+        const explicit = Number(card?.sidestepVal);
+        if (Number.isFinite(explicit) && explicit > 0) return Math.min(3, Math.floor(explicit));
+        if (card?.type === '能力') return Math.min(3, Math.max(1, parseInt(card?.val) || 1));
+        return 1;
     }
 
     function grantRoleSynergy(card, isEcho, targets = null) {
@@ -2793,23 +2801,25 @@
         }
         
         let d = "";
-        const tags = card.tags || [];
-        const secondaryTags = tags.filter(x => x !== '蓄力');
+        const tags = normalizeTagConflicts(card.tags || []);
+        const secondaryTags = tags.filter(x => x !== '蓄力' && x !== '错身');
         
         if (card.type === '攻击') {
             d += `造成 <span class="card-desc-value">${card.val}</span> 点伤害。`;
             if (secondaryTags.length) d += `<br>附带 ${renderTagNames(secondaryTags)}。`;
             if (tags.includes('蓄力')) d += `<br>获得 <span class="card-desc-value">${getWindGain(card)}</span> 层风势。`;
+            if (tags.includes('错身')) d += `<br>获得 <span class="card-desc-value">${getSidestepGain(card)}</span> 层错身。`;
         } 
         else if (card.type === '防御') {
             d += `获得 <span class="card-desc-value">${card.val}</span> 点护盾。`;
             if (secondaryTags.length) d += `<br>附带 ${renderTagNames(secondaryTags)}。`;
             if (tags.includes('蓄力')) d += `<br>获得 <span class="card-desc-value">${getWindGain(card)}</span> 层风势。`;
+            if (tags.includes('错身')) d += `<br>获得 <span class="card-desc-value">${getSidestepGain(card)}</span> 层错身。`;
         } 
         else if (card.type === '能力') {
             const lines = [];
             if (tags.includes('蓄力')) lines.push(`获得 <span class="card-desc-value">${getWindGain(card)}</span> 层风势。`);
-            if (tags.includes('错身')) lines.push(`获得 <span class="card-desc-value">${parseInt(card.val) || 1}</span> 层错身。`);
+            if (tags.includes('错身')) lines.push(`获得 <span class="card-desc-value">${getSidestepGain(card)}</span> 层错身。`);
             if (tags.includes('咏唱')) lines.push(`积累 <span class="card-desc-value">1</span> 层咏唱。`);
             const otherTags = tags.filter(x => x !== '蓄力' && x !== '错身' && x !== '咏唱');
             if (otherTags.length) lines.push(`触发 ${renderTagNames(otherTags)}。`);
@@ -2904,7 +2914,7 @@
             cost,
             icon,
             val,
-            tags: [...tags],
+            tags: normalizeTagConflicts(tags),
             rarity,
             isStarter: true,
             up: false
@@ -2938,7 +2948,7 @@
                 createStarterCard({ name: '青牙试射', type: '攻击', cost: 0, icon: '☠️', val: 3, tags: ['剧毒', '销毁'], rarity: '普通' }),
                 createStarterCard({ name: '赤露布陷', type: '能力', cost: 1, icon: '🩸', val: 0, tags: ['出血', '虚弱'], rarity: '普通' }),
                 createStarterCard({ name: '空弦藏牌', type: '能力', cost: 0, icon: '🏹', val: 0, tags: ['放逐', '抽牌'], rarity: '普通' }),
-                createStarterCard({ name: '飞叶封存', type: '能力', cost: 1, icon: '🍂', val: 1, tags: ['错身', '放逐', '保留'], rarity: '普通' })
+                createStarterCard({ name: '飞叶封存', type: '能力', cost: 1, icon: '🍂', val: 1, tags: ['错身', '保留'], rarity: '普通' })
             ];
         }
         return [
@@ -5776,7 +5786,7 @@
                 triggerVFX('p-atk');
                 const chantSpent = state.p_chant;
                 applySpecialCardDamage(card, 20 + state.p_battle_dmg + chantSpent * 6, true);
-                state.p_chant = 0;
+                state.p_chant = hasRelic('r_burst_lens') ? Math.ceil(chantSpent / 2) : 0;
                 showFloatText(`咏唱爆裂 ${chantSpent}`, "var(--purple)", getCenter('enemy-avatar'));
             }
             else if (card.specialId === 'm_curse_gravity') {
@@ -5812,10 +5822,13 @@
             }
             else if (card.specialId === 'a_wind_dance') {
                 const hadWind = state.p_aim > 0;
-                state.p_aim = Math.min(6, state.p_aim + 4 + (hasRelic('r_wind_quiver') ? 1 : 0));
+                const windGain = 4 + (hasRelic('r_wind_quiver') ? 1 : 0);
+                const sidestepGain = 1 + (hasRelic('r_wind_quiver') ? 1 : 0);
+                state.p_aim = Math.min(6, state.p_aim + windGain);
+                state.p_sidestep = Math.min(3, (state.p_sidestep || 0) + sidestepGain);
                 state.mp += hasRelic('r_pass_energy') ? 2 : 1;
                 if (hadWind) state.p_reduce_dmg += 6;
-                showFloatText("风势 +4", "var(--nature)", getCenter('ui-hp'));
+                showFloatText(`风势 +${windGain} / 错身 +${sidestepGain}`, "var(--nature)", getCenter('ui-hp'));
                 await drawCards(1);
             }
             else if (card.specialId === 'a_gale_verdict') {
@@ -5900,7 +5913,11 @@
             showFloatText(`庇护 +${pVal}`, "var(--water)", getCenter('ui-hp'));
         }
         if (card.tags && card.tags.includes('错身')) {
-            let sidestepVal = parseInt(card.val) || 1;
+            let sidestepVal = getSidestepGain(card) + (hasRelic('r_wind_quiver') ? 1 : 0);
+            if (hasRelic('r_tailwind_spool') && !state.r_tailwind_spool_used) {
+                sidestepVal += 1;
+                state.r_tailwind_spool_used = true;
+            }
             state.p_sidestep = Math.min(3, (state.p_sidestep || 0) + sidestepVal);
             showFloatText(`错身 +${sidestepVal}`, "var(--nature)", getCenter('ui-hp'));
         }

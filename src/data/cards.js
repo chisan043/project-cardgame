@@ -357,7 +357,7 @@ const BUILD_DIRECTIONS = {
         calamity: { name: '灾厄术士', desc: '堆叠多种负面状态，通过状态数量和持续压制获胜。', triggerTags: ['诅咒', '虚弱', '易伤', '燃烧', '剧毒', '出血', '眩晕'] }
     },
     hero_archer: {
-        gale: { name: '疾风连射', desc: '风势、蓄力、自然与连射组成当前弓手默认节奏。', triggerTags: ['连射', '蓄力', '自然', '保留', '多段'] },
+        gale: { name: '疾风连射', desc: '风势、蓄力、自然、错身与连射组成当前弓手默认节奏。', triggerTags: ['连射', '蓄力', '自然', '错身', '保留', '多段'] },
         venom: { name: '猎毒陷袭', desc: '用剧毒、出血和放血形成延迟爆发。', triggerTags: ['剧毒', '出血', '放血', '虚弱'] },
         exile: { name: '放逐游侠', desc: '管理放逐、墓地和回收区，让牌在不同牌区循环。', triggerTags: ['放逐', '轮回', '拾遗', '招魂', '销毁'] }
     }
@@ -560,9 +560,9 @@ const BUILD_EXPANSION_CARDS = {
         { poolId: 'archer_deadbranch_shuffle', name: '残枝洗牌', type: '能力', cost: 1, icon: '🧭', val: 0, tags: ['轮回', '抽牌'], buildTags: ['exile'], rarity: '稀有', frameTheme: 'archer', desc: '触发[轮回]并[抽牌]。' },
         { poolId: 'archer_shadow_line', name: '影羽切线', type: '攻击', cost: 1, icon: '🗡️', val: 8, tags: ['放逐', '穿甲'], buildTags: ['exile'], rarity: '普通', frameTheme: 'archer', desc: '造成 8 点[穿甲]伤害并[放逐]。' },
         { poolId: 'archer_lost_arrow_mark', name: '遗箭定位', type: '能力', cost: 1, icon: '📍', val: 0, tags: ['拾遗', '放逐'], buildTags: ['exile'], rarity: '稀有', frameTheme: 'archer', desc: '触发[拾遗]后自身[放逐]。' },
-        { poolId: 'archer_leaf_store', name: '飞叶封存', type: '防御', cost: 1, icon: '🍂', val: 7, tags: ['放逐', '保留'], buildTags: ['exile'], rarity: '普通', frameTheme: 'archer', desc: '获得 7 点护盾，附带[放逐]与[保留]。' },
+        { poolId: 'archer_leaf_store', name: '飞叶封存', type: '防御', cost: 1, icon: '🍂', val: 7, tags: ['错身', '保留'], buildTags: ['gale'], rarity: '普通', frameTheme: 'archer', desc: '获得 7 点护盾，获得 1 层[错身]并[保留]。' },
         { poolId: 'archer_nest_track', name: '回巢轨迹', type: '攻击', cost: 2, icon: '🧭', val: 10, tags: ['轮回', '穿甲'], buildTags: ['exile'], rarity: '稀有', frameTheme: 'archer', desc: '造成 10 点[穿甲]伤害并触发[轮回]。' },
-        { poolId: 'archer_empty_valley_knife', name: '空谷飞刀', type: '攻击', cost: 0, icon: '🗡️', val: 4, tags: ['放逐', '销毁'], buildTags: ['exile'], rarity: '普通', frameTheme: 'archer', desc: '造成 4 点伤害后[放逐]并[销毁]。' },
+        { poolId: 'archer_empty_valley_knife', name: '空谷飞刀', type: '攻击', cost: 0, icon: '🗡️', val: 4, tags: ['销毁'], buildTags: ['exile'], rarity: '普通', frameTheme: 'archer', desc: '造成 4 点伤害后[销毁]。作为放逐游侠的低费压缩件。' },
         { poolId: 'archer_old_arrow_dream', name: '旧箭入梦', type: '能力', cost: 1, icon: '💤', val: 0, tags: ['招魂', '抽牌'], buildTags: ['exile'], rarity: '稀有', frameTheme: 'archer', desc: '触发[招魂]并[抽牌]。' },
         { poolId: 'archer_leaf_search', name: '叶脉检索', type: '能力', cost: 1, icon: '🔎', val: 0, tags: ['拾遗', '充能'], buildTags: ['exile'], rarity: '稀有', frameTheme: 'archer', desc: '触发[拾遗]并[充能]。' },
         { poolId: 'archer_rearguard', name: '游侠断后', type: '攻击', cost: 2, icon: '🏹', val: 11, tags: ['放逐', '重击'], buildTags: ['exile'], rarity: '史诗', frameTheme: 'archer', desc: '造成 11 点伤害，附带[重击]后[放逐]。' },
@@ -572,7 +572,7 @@ const BUILD_EXPANSION_CARDS = {
         { poolId: 'archer_leaf_reload', name: '叶片换弦', type: '能力', cost: 1, icon: '🍃', val: 0, tags: ['自然', '抽牌'], buildTags: ['gale'], rarity: '普通', frameTheme: 'archer', desc: '触发[自然]并[抽牌]。' },
         { poolId: 'archer_sky_skim', name: '掠空轻矢', type: '攻击', cost: 0, icon: '🪶', val: 3, tags: ['连射', '销毁'], buildTags: ['gale'], rarity: '普通', frameTheme: 'archer', desc: '造成 3 点伤害，触发[连射]后[销毁]。' },
         { poolId: 'archer_crosswind_guard', name: '侧风护步', type: '防御', cost: 1, icon: '🥾', val: 7, tags: ['自然', '保留'], buildTags: ['gale'], rarity: '稀有', frameTheme: 'archer', desc: '获得 7 点护盾，触发[自然]并[保留]。' },
-        { poolId: 'archer_lostroad_cache', name: '失路箭袋', type: '能力', cost: 1, icon: '📦', val: 0, tags: ['放逐', '保留'], buildTags: ['exile'], rarity: '普通', frameTheme: 'archer', desc: '自身[放逐]并[保留]。' }
+        { poolId: 'archer_lostroad_cache', name: '失路箭袋', type: '能力', cost: 1, icon: '📦', val: 0, tags: ['放逐', '抽牌'], buildTags: ['exile'], rarity: '普通', frameTheme: 'archer', desc: '自身[放逐]并[抽牌]。' }
     ],
     neutral: [
         { poolId: 'neutral_blank_pact', name: '空白契约', type: '能力', cost: 0, icon: '📄', val: 0, tags: ['抽牌', '销毁'], rarity: '普通', desc: '免费[抽牌]后[销毁]，用于压缩牌组和寻找职业核心。' },
