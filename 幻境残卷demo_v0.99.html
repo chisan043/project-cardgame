@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>幻境残卷 v0.99</title>
+    <title>讨魔旅人 Questers v0.99</title>
     <style>
         /* ================= 视觉规范 & 动态背景 ================= */
         :root {
@@ -130,6 +130,7 @@
             transform: translateX(-50%);
             margin: 0;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             z-index: 2;
@@ -143,6 +144,15 @@
             text-shadow: none; position: relative; white-space: nowrap; line-height: 1.05;
         }
         .game-title::after { content: ""; position: absolute; top: 52%; left: -5%; width: 110%; height: 3px; background: rgba(2, 2, 3, 0.9); transform: rotate(-4deg); box-shadow: 0 0 10px rgba(0,0,0,1), inset 0 0 5px var(--crimson); }
+        .game-subtitle {
+            margin-top: 4px;
+            font-size: 18px;
+            letter-spacing: 8px;
+            color: #e7cf8f;
+            text-transform: uppercase;
+            font-family: "Trajan Pro", "Times New Roman", serif;
+            text-shadow: 0 3px 8px rgba(0,0,0,0.9), 0 0 12px rgba(199,162,88,0.42);
+        }
 
         .menu-btn-group { position: absolute; left: clamp(20px, 7.2%, 92px); bottom: 8.2%; display: flex; flex-direction: column; gap: 18px; width: clamp(220px, 34vw, 330px); z-index: 2;}
         .menu-btn { padding: 17px 18px; background: linear-gradient(90deg, rgba(5, 6, 10, 0.94), rgba(22, 16, 12, 0.9) 52%, rgba(5, 6, 10, 0.94)); border: 1px solid rgba(199,162,88,0.52); border-left: 4px solid var(--gold-dark); border-right: 4px solid var(--gold-dark); color: #e6d6ad; font-size: 20px; letter-spacing: 8px; cursor: pointer; transition: 0.4s; position: relative; overflow: hidden; font-family: "STKaiti", serif; box-shadow: 0 10px 22px rgba(0,0,0,0.6), inset 0 0 0 1px rgba(255,255,255,0.04);}
@@ -1694,21 +1704,22 @@
     <div id="scene-main-menu" class="scene active">
         <div class="title-container">
             <div class="game-title-glow"></div>
-            <div class="game-title">幻境残卷</div>
+            <div class="game-title">讨魔旅人</div>
+            <div class="game-subtitle">QUESTERS</div>
         </div>
         <div class="menu-btn-group">
-            <button class="menu-btn" onclick="startGame()">踏 入 幻 境</button>
-            <button class="menu-btn" id="btn-continue-run" onclick="loadSavedRun()" style="display:none;">继 续 残 卷</button>
+            <button class="menu-btn" onclick="startGame()">踏 上 旅 途</button>
+            <button class="menu-btn" id="btn-continue-run" onclick="loadSavedRun()" style="display:none;">继 续 远 征</button>
             <button class="menu-btn" onclick="openInitDeck()">初 始 牌 组</button>
-            <button class="menu-btn" onclick="openLibrary()">残 卷 图 鉴</button>
+            <button class="menu-btn" onclick="openLibrary()">旅 人 图 鉴</button>
         </div>
     </div>
 
     <div id="scene-map" class="scene">
         <div class="map-region-banner">银风丘陵</div>
         <div class="map-title-card">
-            <h2>幻境星图</h2>
-            <p>选择下一处幻境。金色路线可前进，红色路线记录已踏过的命运。</p>
+            <h2>远征地图</h2>
+            <p>选择下一段旅途。金色路线可前进，红色路线记录已踏过的命运。</p>
             <div class="map-legend">
                 <span class="legend-pill"><span class="legend-node-icon node-battle"></span>战斗</span>
                 <span class="legend-pill"><span class="legend-node-icon node-elite"></span>精英</span>
@@ -1725,7 +1736,7 @@
             <div class="map-detail-stack">
                 <div class="map-detail-panel-art"></div>
                 <h3 id="map-detail-title" class="map-detail-title">雾岭小径</h3>
-                <p id="map-detail-desc" class="map-detail-desc">山风掠过旧路，下一处幻境正在微光里显形。</p>
+                <p id="map-detail-desc" class="map-detail-desc">山风掠过旧路，下一段远征正在微光里显形。</p>
                 <button class="map-detail-enter" type="button" onclick="enterMapPreviewNode()">进入</button>
             </div>
             <img class="map-right-wrapper-art" src="assets/ui/map/panels/map_right_simple_outer_wrapper_frame_imagegen_transparent_v1.webp" alt="">
@@ -1804,7 +1815,7 @@
             <div id="role-select-grid" class="role-select-grid"></div>
             <div class="role-select-footer">
                 <button class="btn-gorgeous btn-back" onclick="closeOverlay('overlay-role-select')">返 回 主 界</button>
-                <span>愿命运指引你，穿越幻境，寻回失落的真相。</span>
+                <span>愿命运指引你，踏上旅途，直至魔王城的阴影尽头。</span>
             </div>
         </div>
     </div>
@@ -1832,7 +1843,7 @@
 <div class="overlay" id="overlay-library">
     <div class="event-box" style="width: 1100px;">
         <button class="btn-close" onclick="closeOverlay('overlay-library')">×</button>
-        <h2 style="color:var(--gold); margin-top:0;">残卷图鉴</h2>
+        <h2 style="color:var(--gold); margin-top:0;">旅人图鉴</h2>
         <div class="lib-tabs">
             <button class="lib-tab-btn" id="btn-tab-cards" onclick="renderLibTab('cards')">职业卡牌 (卡池)</button>
             <button class="lib-tab-btn" id="btn-tab-legend" onclick="renderLibTab('legend')">传说神话 (机制卡)</button>
@@ -4335,7 +4346,7 @@
             renderMap();
             updateTopBar();
             showScene('scene-map');
-            showFloatText("残卷续读", "var(--gold)", {x: window.innerWidth / 2, y: window.innerHeight / 2});
+            showFloatText("远征续行", "var(--gold)", {x: window.innerWidth / 2, y: window.innerHeight / 2});
         } catch (error) {
             clearRunSave();
             alert("存档已损坏，已清除。");
@@ -4758,7 +4769,7 @@
         },
         rest: {
             title: '静息营火',
-            desc: '短暂的火光能修整伤势，也能让一页残卷变得更锋利。',
+            desc: '短暂的火光能修整伤势，也能让讨魔的锋刃重新明亮。',
             image: 'assets/ui/map/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_v1.webp',
             battleBg: 'assets/scenes/battle/ancient_forest_day_v1.webp'
         },
@@ -4989,7 +5000,7 @@
 
     function advanceMap() {
         state.floor++; state.isNodeClickLocked = false;
-        if(state.floor >= 20) { clearRunSave(); alert("恭喜你，穿越层层试炼，夺回了残卷！"); showScene('scene-main-menu'); setTopBarVisible(false); }
+        if(state.floor >= 20) { clearRunSave(); alert("恭喜你，穿越层层试炼，打败了魔王！"); showScene('scene-main-menu'); setTopBarVisible(false); }
         else { showScene('scene-map'); setTimeout(()=>renderMap(), 50); updateTopBar(); saveRun(); }
     }
 
@@ -6170,7 +6181,7 @@
         if(state.p_burn > 0) { let burnDmg = Math.max(1, Math.ceil(state.maxHp * 0.05 * state.p_burn)); state.hp -= burnDmg; state.p_burn--; showFloatText(`燃烧 -${burnDmg}`, "var(--fire)", getCenter('ui-hp')); }
         if(state.p_curse > 0) state.p_curse--;
         
-        if(state.hp <= 0) { alert("旅者倒在幻境深处，探索结束。"); showScene('scene-main-menu'); setTopBarVisible(false); return; }
+        if(state.hp <= 0) { alert("旅者倒在讨魔旅途深处，探索结束。"); showScene('scene-main-menu'); setTopBarVisible(false); return; }
 
         if(state.p_vuln > 0) state.p_vuln--; if(state.p_weak > 0) state.p_weak--; state.p_dmg_buff = 0; state.p_next_dmg = 0; state.p_reduce_dmg = 0;
 
@@ -6331,7 +6342,7 @@
             addBattleActionLog('enemy', `敌方使用 ${move.name}`, describeEnemyMoveResult(move, enemyMoveSnapshot));
         }
         
-        if(state.hp <= 0) { alert("旅者倒在幻境深处，探索结束。"); showScene('scene-main-menu'); setTopBarVisible(false); return; }
+        if(state.hp <= 0) { alert("旅者倒在讨魔旅途深处，探索结束。"); showScene('scene-main-menu'); setTopBarVisible(false); return; }
         if(!hasRelic('r_yin_yang') && !hasRelic('r_perma_curse')) { if(state.enemy.vuln > 0) state.enemy.vuln--; if(state.enemy.weak > 0) state.enemy.weak--; } else if (hasRelic('r_yin_yang')) { state.enemy.vuln = Math.ceil(state.enemy.vuln / 2); state.enemy.weak = Math.ceil(state.enemy.weak / 2); }
         
         setTimeout(async () => { 

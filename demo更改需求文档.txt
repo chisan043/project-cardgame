@@ -1,4 +1,4 @@
-幻境残卷
+讨魔旅人 Questers
 
 代码更改需求文档 v1.2
 
@@ -277,7 +277,7 @@ const state = {
   },
   player: {
     characterId: "hero_warrior",
-    name: "残卷旅人",
+    name: "讨魔旅人",
     hp: 80,
     maxHp: 80,
     mp: 5,
