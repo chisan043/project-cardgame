@@ -52,7 +52,7 @@ const CARD_ART_REGISTRY = {
     '誓约留锋': 'assets/cards/art/warrior/warrior_oath_retainer_art_v1.webp',
     '魂誓换锋': 'assets/cards/art/warrior/warrior_soul_oath_art_v1.webp',
     '狂誓裂斩': 'assets/cards/art/warrior/warrior_frenzy_cleave_art_v1.webp',
-    '终誓裁断': 'assets/cards/art/warrior/warrior_final_judgement_art_v1.webp',
+    '终誓处刑': 'assets/cards/art/warrior/warrior_final_judgement_art_v1.webp',
     '紫焰火花': 'assets/cards/art/mage/mage_spark_art_v1.webp',
     '魔流庇护': 'assets/cards/art/mage/mage_barrier_art_v1.webp',
     '虚空导引': 'assets/cards/art/mage/mage_void_art_v1.webp',
@@ -235,7 +235,7 @@ const CARD_FRAME_ASSETS = {
 };
 
 const CARD_FRAME_THEME_BY_NAME = {
-    '圣剑突击': 'warrior', '遗迹立誓': 'warrior', '盾墙反身': 'warrior', '誓约追击': 'warrior', '圣堂守势': 'warrior', '圣剑解放': 'warrior', '破晓格挡': 'warrior', '裂光一闪': 'warrior', '王冠反斩': 'warrior', '铁壁圣痕': 'warrior', '血誓斩': 'warrior', '棘甲冲锋': 'warrior', '誓旗护阵': 'warrior', '血祭壁垒': 'warrior', '誓约留锋': 'warrior', '魂誓换锋': 'warrior', '狂誓裂斩': 'warrior', '终誓裁断': 'warrior', '基础斩击': 'warrior', '基础防御': 'warrior',
+    '圣剑突击': 'warrior', '遗迹立誓': 'warrior', '盾墙反身': 'warrior', '誓约追击': 'warrior', '圣堂守势': 'warrior', '圣剑解放': 'warrior', '破晓格挡': 'warrior', '裂光一闪': 'warrior', '王冠反斩': 'warrior', '铁壁圣痕': 'warrior', '血誓斩': 'warrior', '棘甲冲锋': 'warrior', '誓旗护阵': 'warrior', '血祭壁垒': 'warrior', '誓约留锋': 'warrior', '魂誓换锋': 'warrior', '狂誓裂斩': 'warrior', '终誓处刑': 'warrior', '基础斩击': 'warrior', '基础防御': 'warrior',
     '紫焰爆裂': 'mage', '遗迹咏唱': 'mage', '紫焰火花': 'mage', '魔流庇护': 'mage', '虚空导引': 'mage', '星火连祷': 'mage', '星屑预兆': 'mage', '余烬点燃': 'mage', '法环回流': 'mage', '裂界紫雷': 'mage', '星环复写': 'mage', '燃魂导流': 'mage', '回声护幕': 'mage', '虚弱星尘': 'mage', '紫焰刻印': 'mage', '星缚咒印': 'mage', '咒回星环': 'mage', '裂星禁术': 'mage', '基础法弹': 'mage', '秘仪预兆': 'mage', '秘仪屏障': 'mage',
     '拉弓瞄准': 'archer', '疾风连射': 'archer', '林风整备': 'archer', '猎手翻步': 'archer', '狩影穿枝': 'archer', '森冠齐射': 'archer', '森息伏击': 'archer', '风羽换位': 'archer', '鹰眼贯枝': 'archer', '回环箭雨': 'archer', '回风藏箭': 'archer', '逐影放矢': 'archer', '轮枝归射': 'archer', '拾羽连步': 'archer', '翠毒连矢': 'archer', '林魂招矢': 'archer', '赤痕放血': 'archer', '逐风绝矢': 'archer', '基础射击': 'archer', '林地回避': 'archer',
     '古誓护印': 'neutral', '星轨流转': 'neutral', '碎星短刃': 'neutral', '圣像微光': 'neutral', '回音残卷': 'neutral', '飞刀': 'neutral', '厄运印记': 'neutral',
@@ -258,6 +258,8 @@ const NEUTRAL_CARD_POOL = [
     { poolId: 'neutral_soul_flame', name: '魂火祭文', type: '能力', cost: 1, icon: '🔥', val: 0, tags: ['充能', '抽牌'], rarity: '稀有', desc: '回复能量并[抽牌]。适合把手牌资源转成职业启动。' },
     { poolId: 'neutral_frenzy_edge', name: '狂锋断章', type: '攻击', cost: 1, icon: '⚔️', val: 6, tags: ['狂热', '连击'], rarity: '稀有', desc: '丢弃 1 张牌获得[狂热]，随后造成 6 点伤害；若本回合已出牌则触发[连击]。' },
     { poolId: 'neutral_bloodlet_rite', name: '断脉残页', type: '能力', cost: 1, icon: '🩸', val: 0, tags: ['放血', '抽牌'], rarity: '稀有', desc: '引爆敌方已有[出血]层数，然后[抽牌]。没有出血时只作为过牌。' },
+    { poolId: 'neutral_poison_burst', name: '厄毒爆发', type: '攻击', cost: 2, icon: '☠️', val: 11, tags: ['剧毒', '易伤'], rarity: '稀有', desc: '造成 11 点伤害，施加[剧毒]与[易伤]。毒系引爆的通用组件。' },
+
     { poolId: 'neutral_sealed_thunder', name: '封雷断页', type: '攻击', cost: 2, icon: '🌩️', val: 13, tags: ['眩晕', '放逐'], rarity: '史诗', desc: '造成 13 点伤害，施加[眩晕]后[放逐]。一次性控制牌，放逐威能会额外提高伤害。' }
 ];
 
