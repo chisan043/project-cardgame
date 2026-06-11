@@ -1951,7 +1951,7 @@
 <script src="hud-runtime.js?v=20260518-forced-default-hud1"></script>
 <script src="hud-layout-data.js?v=20260518-forced-default-hud1"></script>
 <script src="src/data/relics.js?v=20260606-keyword-balance"></script>
-<script src="src/data/cards.js?v=20260606-keyword-balance"></script>
+<script src="src/data/cards.js?v=20260611-cost-efficiency"></script>
 <script src="src/data/enemies.js?v=20260605-enemy-ai"></script>
 <script src="src/data/characters.js?v=20260525-data-split1"></script>
 <script>
@@ -1971,17 +1971,17 @@
 
     const TAGS = {
         '重置': '选择任意张手牌丢弃，并抽取等量的牌。',
-        '血祭': '失去 5 点生命，本场战斗所有伤害 +{val}。未升级为 +8，升级后为 +12。',
+        '血祭': '失去 5 点生命，本场战斗所有伤害 +{val}。未升级为 +4，升级后为 +6。',
         '狂热': '选择并丢弃 1 张手牌，本回合所有伤害 +{val}。数值为卡牌数值 +3；升级后为卡牌数值 +4。',
-        '附魔': '选择并丢弃 1 张手牌，你下一次攻击额外造成 {val} 点伤害并抽 1 张牌。基础为 (卡牌数值+3)×2，升级后为 (卡牌数值+5)×2。',
+        '附魔': '选择并丢弃 1 张手牌，你下一次攻击额外造成 {val} 点伤害并抽 1 张牌。基础为卡牌数值+2，升级后为卡牌数值+4。',
         '庇护': '本回合受到的伤害减少 {val} 点。',
         '反击': '进入反击姿态：受到下一次敌方主体攻击时，招架本次伤害的 50%，并按招架值反击。反击姿态不可叠加。', '招魂': '从放逐区选择 1 张牌回到手牌。', '轮回': '从放逐区选择 1 张牌洗入抽牌堆。',
         '拾遗': '从墓地选择 1 张牌回到手牌。', '复刻': '复制上一张打出的牌的效果。', '吸血': '造成伤害时，回复等同于伤害一半的生命（史诗卡为全额回复）。',
         '保留': '打出后，下回合将回到手牌中。如果不打出则正常丢弃。', '回响': '打出后，此牌的效果会立即再次触发一次。', '放逐': '使用后移至放逐区，本局战斗不可再用。',
-        '抽牌': '额外抽取 1 张牌。', '剧毒': '施加 3 层剧毒(每回合造成伤害并衰减)。', '出血': '施加 3 层出血(每回合受层数一半的伤害并衰减)。',
+        '抽牌': '额外抽取 {val} 张牌。', '剧毒': '施加 3 层剧毒(每回合造成伤害并衰减)。', '出血': '施加 3 层出血(每回合受层数一半的伤害并衰减)。',
         '燃烧': '施加 2 层燃烧(每层每回合造成最大生命 5% 的伤害并衰减)。', '眩晕': '施加 1 层眩晕(跳过下一次行动回合)。', '诅咒': '施加 2 层诅咒(无法恢复生命并随回合衰减)。',
         '放血': '引爆敌方的出血状态，每层造成 3 点伤害，随后清空。', '重击': '基础数值伤害翻倍。', '穿甲': '无视敌方护甲，直接扣除生命。',
-        '圣剑': '战士专属攻击词条：额外造成当前护盾 50% 的伤害，反击姿态再 +4；拥有圣剑誓印时护盾比例提高到 75%。', '咏唱': '法师专属：积累 1 层咏唱，之后的爆发牌会消耗咏唱造成额外伤害。',
+        '圣剑': '战士专属攻击词条：额外造成当前护盾 50% 的伤害，反击姿态再 +4；拥有圣剑誓印时护盾比例提高到 75%。', '咏唱': '法师专属：积累 {val} 层咏唱，之后的爆发牌会消耗咏唱造成额外伤害。',
         '爆发': '法师专属：攻击会消耗所有咏唱层数，每层追加 7 点伤害；没有咏唱时仍追加 4 点伤害。',
         '蓄力': '弓箭手专属：获得风势。打出攻击牌时消耗 1 层风势，追加一次轻灵追射并获得少量庇护。',
         '自然': '弓箭手专属：回复 1 点能量；若已有风势，额外抽 1 张牌并获得少量庇护。',
@@ -1990,7 +1990,7 @@
         '连击': '若本回合已打出过其他牌，此牌数值增加50%。', '多段': '效果触发 2 次。', '易伤': '给予目标 2 层易伤(每层使受到的伤害增加5%)。',
         '虚弱': '给予目标 2 层虚弱(造成的伤害减少25%)。', '充能': '回复 1 点能量。', 
         '荆棘': '获得 8 层荆棘(被攻击时反弹等于荆棘层数的伤害，战士会根据护盾额外获得荆棘)。',
-        '治愈': '回复等同于 [耗能×8] 的生命（史诗卡为 [耗能×10]）。',
+        '治愈': '回复 {val} 点生命。',
         '销毁': '打出后彻底消失，不进入放逐区或墓地。'
     };
 
@@ -2074,6 +2074,49 @@
         if (Number.isFinite(explicit) && explicit > 0) return Math.min(3, Math.floor(explicit));
         if (card?.type === '能力') return Math.min(3, Math.max(1, parseInt(card?.val) || 1));
         return 1;
+    }
+
+    function getCostPowerMultiplier(card) {
+        const cost = Math.max(0, Number(card?.cost) || 0);
+        if (cost >= 3) return 1.7;
+        if (cost === 2) return 1.35;
+        return 1;
+    }
+
+    function getScaledCardValue(card) {
+        const base = Math.max(0, Number(card?.val) || 0);
+        return Math.round(base * getCostPowerMultiplier(card));
+    }
+
+    function getAbilityPotency(card) {
+        const cost = Math.max(0, Number(card?.cost) || 0);
+        const costBonus = Math.max(0, cost - 1);
+        return 2 + costBonus + (card?.up ? 1 : 0);
+    }
+
+    function getCardDrawCount(card) {
+        const cost = Math.max(0, Number(card?.cost) || 0);
+        const echoBonus = card?.tags?.includes('回响') ? 1 : 0;
+        return 1 + Math.max(0, cost - 1) + echoBonus + (card?.up ? 1 : 0);
+    }
+
+    function getCardHealValue(card) {
+        const cost = Math.max(0, Number(card?.cost) || 0);
+        const basePerCost = card?.rarity === '史诗' ? 10 : 8;
+        return Math.round(cost * basePerCost * getCostPowerMultiplier(card));
+    }
+
+    function getCardChantGain(card) {
+        const rarityBase = card?.rarity === '史诗' ? 2 : 1;
+        const costBonus = Math.max(0, (Number(card?.cost) || 0) - 1);
+        return rarityBase + costBonus + (card?.up ? 1 : 0);
+    }
+
+    function getProtectionValue(card) {
+        const explicit = Number(card?.protectVal);
+        if (Number.isFinite(explicit) && explicit > 0) return Math.floor(explicit);
+        const base = getScaledCardValue(card) || (card?.up ? 10 : 6);
+        return card?.type === '防御' ? Math.max(3, Math.ceil(base / 2)) : base;
     }
 
     function grantRoleSynergy(card, isEcho, targets = null) {
@@ -2669,7 +2712,6 @@
         if (card.rarity === '传说' || card.up) return false;
         const oldVal = Number(card.val) || 0;
         const oldCost = Number(card.cost) || 0;
-        if (card.type === '能力' && oldCost > 0) card.cost = Math.max(0, oldCost - 1);
         if (oldVal > 0) {
             card.val = oldVal * 2;
             if (card.tags && card.tags.includes('放逐') && card.type !== '能力') card.val += 2;
@@ -2705,7 +2747,7 @@
     }
 
     function getEnchantBonus(card, includeRelics = true) {
-        let bonus = Math.max(6, ((parseInt(card?.val) || 4) + (card?.up ? 5 : 3)) * 2);
+        let bonus = Math.max(4, (parseInt(card?.val) || 4) + (card?.up ? 4 : 2));
         if (includeRelics && hasRelic('r_enchant_crys')) bonus *= 2;
         return bonus;
     }
@@ -2734,18 +2776,24 @@
         let tagsHtml = '';
         getCardBottomTagList(card).forEach(t => {
             if(TAGS[t]) {
-                let displayVal = card.val; if (t === '充能') displayVal = 1;
-                if (!card.isSpecial && t === '治愈') displayVal = card.up ? card.cost * 10 : card.cost * 8;
-                if (!card.isSpecial && t === '血祭') displayVal = card.up ? 12 : 8;
+                let displayVal = getScaledCardValue(card); if (t === '充能') displayVal = 1;
+                if (!card.isSpecial && t === '抽牌') displayVal = getCardDrawCount(card);
+                if (!card.isSpecial && t === '咏唱') displayVal = getCardChantGain(card);
+                if (!card.isSpecial && t === '庇护') displayVal = getProtectionValue(card);
+                if (!card.isSpecial && t === '治愈') displayVal = getCardHealValue(card);
+                if (!card.isSpecial && t === '血祭') displayVal = card.up ? 6 : 4;
                 if (!card.isSpecial && t === '狂热') displayVal = getFrenzyBonus(card);
                 if (!card.isSpecial && t === '附魔') displayVal = getEnchantBonus(card, false);
                 let tooltip = TAGS[t].replace(/\{val\}/g, displayVal || 'X');
                 
                 if (card.type === '能力') {
-                    if (t === '剧毒') tooltip = tooltip.replace('3 层', '6 层');
-                    if (t === '出血') tooltip = tooltip.replace('3 层', '6 层');
-                    if (t === '易伤') tooltip = tooltip.replace('2 层', '4 层');
-                    if (t === '虚弱') tooltip = tooltip.replace('2 层', '4 层');
+                    const potency = getAbilityPotency(card);
+                    if (t === '剧毒') tooltip = tooltip.replace('3 层', `${3 * potency} 层`);
+                    if (t === '出血') tooltip = tooltip.replace('3 层', `${3 * potency} 层`);
+                    if (t === '燃烧') tooltip = tooltip.replace('2 层', `${2 * potency} 层`);
+                    if (t === '诅咒') tooltip = tooltip.replace('2 层', `${2 * potency} 层`);
+                    if (t === '易伤') tooltip = tooltip.replace('2 层', `${2 * potency} 层`);
+                    if (t === '虚弱') tooltip = tooltip.replace('2 层', `${2 * potency} 层`);
                 }
 
                 tagsHtml += `<span class="keyword-tag">${getTagDisplayName(t)}<span class="keyword-tooltip">${formatKeywords(tooltip)}</span></span>`;
@@ -2805,13 +2853,13 @@
         const secondaryTags = tags.filter(x => x !== '蓄力' && x !== '错身');
         
         if (card.type === '攻击') {
-            d += `造成 <span class="card-desc-value">${card.val}</span> 点伤害。`;
+            d += `造成 <span class="card-desc-value">${getScaledCardValue(card)}</span> 点伤害。`;
             if (secondaryTags.length) d += `<br>附带 ${renderTagNames(secondaryTags)}。`;
             if (tags.includes('蓄力')) d += `<br>获得 <span class="card-desc-value">${getWindGain(card)}</span> 层风势。`;
             if (tags.includes('错身')) d += `<br>获得 <span class="card-desc-value">${getSidestepGain(card)}</span> 层错身。`;
         } 
         else if (card.type === '防御') {
-            d += `获得 <span class="card-desc-value">${card.val}</span> 点护盾。`;
+            d += `获得 <span class="card-desc-value">${getScaledCardValue(card)}</span> 点护盾。`;
             if (secondaryTags.length) d += `<br>附带 ${renderTagNames(secondaryTags)}。`;
             if (tags.includes('蓄力')) d += `<br>获得 <span class="card-desc-value">${getWindGain(card)}</span> 层风势。`;
             if (tags.includes('错身')) d += `<br>获得 <span class="card-desc-value">${getSidestepGain(card)}</span> 层错身。`;
@@ -2820,7 +2868,7 @@
             const lines = [];
             if (tags.includes('蓄力')) lines.push(`获得 <span class="card-desc-value">${getWindGain(card)}</span> 层风势。`);
             if (tags.includes('错身')) lines.push(`获得 <span class="card-desc-value">${getSidestepGain(card)}</span> 层错身。`);
-            if (tags.includes('咏唱')) lines.push(`积累 <span class="card-desc-value">1</span> 层咏唱。`);
+            if (tags.includes('咏唱')) lines.push(`积累 <span class="card-desc-value">${getCardChantGain(card)}</span> 层咏唱。`);
             const otherTags = tags.filter(x => x !== '蓄力' && x !== '错身' && x !== '咏唱');
             if (otherTags.length) lines.push(`触发 ${renderTagNames(otherTags)}。`);
             d = lines.join('<br>');
@@ -5624,17 +5672,19 @@
         if(!card.isJunk) state.turn_first_card = false;
 
         for(let i=0; i<runCount; i++) {
-            await executeCardTags(card, false, targets);
+            await executeCardTags(card, i > 0, targets);
+            if (state.hp <= 0) return;
             if(card.tags && card.tags.includes('回响')) {
                 showFloatText("回响", "var(--gold)", getCenter('enemy-avatar')); await new Promise(r => setTimeout(r, 300)); 
                 await executeCardTags(card, true, targets); 
+                if (state.hp <= 0) return;
                 if(hasRelic('r_echo_archive_pin') && !state.r_echo_archive_pin_used) {
                     state.r_echo_archive_pin_used = true;
                     state.mp += 1;
                     showFloatText("书签回能 +1", "var(--purple)", getCenter('ui-mp'));
                 }
                 let extraEcho = hasRelic('r_echo_mirror_relic') ? 1 : 0;
-                for(let e=0; e<extraEcho; e++) { await new Promise(r => setTimeout(r, 300)); showFloatText("魔镜回响", "var(--purple)", getCenter('enemy-avatar')); await executeCardTags(card, true, targets); }
+                for(let e=0; e<extraEcho; e++) { await new Promise(r => setTimeout(r, 300)); showFloatText("魔镜回响", "var(--purple)", getCenter('enemy-avatar')); await executeCardTags(card, true, targets); if (state.hp <= 0) return; }
                 if(hasRelic('r_echo')) { state.mp++; showFloatText("沙漏回能", "var(--gold)", getCenter('ui-mp')); }
                 if(hasRelic('r_brutal')) { state.enemy.bleed += 2; showFloatText(`暴虐出血 +2`, "var(--crimson)", getCenter('enemy-avatar')); }
                 updateBattleUI(); 
@@ -5895,17 +5945,17 @@
 
         // ====== 原有普通词条标签逻辑 ======
         if (card.tags && card.tags.includes('血祭')) {
-            let dmgBonus = card.up ? 12 : 8;
+            let dmgBonus = card.up ? 6 : 4;
             if (hasRelic('r_scarlet_whet')) dmgBonus += 3;
             state.hp -= 5;
             state.p_battle_dmg += dmgBonus;
             showFloatText(`血祭 扣5血 / +${dmgBonus}攻`, "var(--crimson)", getCenter('ui-hp'));
             if (hasRelic('r_blood_suture')) healPlayer(2);
-            if(state.hp <= 0) { winBattle(); return; }
+            if(state.hp <= 0) { loseRun("旅者被血誓吞噬，探索结束。"); return; }
         }
 
         if (card.tags && card.tags.includes('庇护')) {
-            let pVal = parseInt(card.val) || (card.up ? 10 : 6);
+            let pVal = getProtectionValue(card);
             if (hasRelic('r_protect_armor')) pVal += 5;
             pVal = applyLowHpGuardBoost(pVal, '守誓庇护');
             state.p_reduce_dmg += pVal;
@@ -5985,7 +6035,7 @@
             }
         }
         if (card.tags && card.tags.includes('咏唱') && !isEcho) {
-            let chantGain = card.rarity === '史诗' ? 2 : 1;
+            let chantGain = getCardChantGain(card);
             if (hasRelic('r_energy_crys')) chantGain += 1;
             if (hasRelic('r_chant_reservoir') && !state.r_chant_reservoir_used) {
                 chantGain += 1;
@@ -6017,7 +6067,7 @@
         }
 
         // 核心修复：强制数值转换，防止变成 undefined 或字符串导致 NaN
-        let val = parseInt(card.val) || 0;
+        let val = getScaledCardValue(card);
         
         if(card.tags && card.tags.includes('重击')) { val *= hasRelic('r_heavy_badge') ? 2.5 : 2; }
         if(card.tags && card.tags.includes('连击') && cardsPlayedThisTurn > 1 && !isEcho) {
@@ -6110,10 +6160,10 @@
             updateBattleUI(); 
         }
         
-        let debuffMult = (card.type === '能力') ? 2 : 1;
+        let debuffMult = (card.type === '能力') ? getAbilityPotency(card) : 1;
 
         if(card.tags && card.tags.includes('治愈')) {
-            let healVal = card.up ? card.cost * 10 : card.cost * 8;
+            let healVal = getCardHealValue(card);
             if(hasRelic('r_heal_relic')) healVal += 3;
             const beforeHp = state.hp;
             healPlayer(healVal);
@@ -6156,7 +6206,7 @@
         if(statusApplied && hasRelic('r_status_prism')) { state.p_chant = Math.min(12, state.p_chant + 1); showFloatText("棱镜咏唱 +1", "var(--purple)", getCenter('ui-hp')); }
         if(card.tags && card.tags.includes('充能')) { let eAmt = 1; if(hasRelic('r_energy_crys')) eAmt += 1; state.mp += eAmt; showFloatText(`充能 +${eAmt}`, "var(--gold)", getCenter('ui-mp')); }
         if(card.tags && card.tags.includes('荆棘')) { let tVal = 8; if(hasRelic('r_thorn_shield_new')) tVal *= 2; state.player.thorns += tVal; showFloatText(`获得荆棘 +${tVal}`, "var(--nature)", getCenter('ui-hp')); updateTopBar(); }
-        if(card.tags && card.tags.includes('抽牌') && !isEcho) { let drawCount = card.tags.includes('回响') ? 2 : 1; if(hasRelic('r_luck_box')) drawCount += 1; await drawCards(drawCount); }
+        if(card.tags && card.tags.includes('抽牌') && !isEcho) { let drawCount = getCardDrawCount(card); if(hasRelic('r_luck_box')) drawCount += 1; await drawCards(drawCount); }
         if(hasRelic('r_status_ledger') && getEnemyDebuffTypeCount() >= 4 && card.type === '能力' && !state.r_status_ledger_used && !isEcho) { state.r_status_ledger_used = true; await drawCards(1); }
         if(hasRelic('r_double_quill') && card.type === '能力' && cardsPlayedThisTurn === 2 && !isEcho) { await drawCards(1); showFloatText("双墨抽牌", "var(--purple)", getCenter('ui-deck-count')); }
         grantRoleSynergy(card, isEcho, targets);
@@ -6200,7 +6250,7 @@
         
         if(state.hp <= 0) { alert("旅者倒在讨魔旅途深处，探索结束。"); showScene('scene-main-menu'); setTopBarVisible(false); return; }
 
-        if(state.p_vuln > 0) state.p_vuln--; if(state.p_weak > 0) state.p_weak--; state.p_dmg_buff = 0; state.p_next_dmg = 0; state.p_reduce_dmg = 0;
+        if(state.p_vuln > 0) state.p_vuln--; if(state.p_weak > 0) state.p_weak--; state.p_dmg_buff = 0; state.p_next_dmg = 0;
 
         state.hand.forEach(c => { c.sealed = false; let el = document.querySelector(`[data-inst-id="${c.instId}"]`); if(el && !c.tags.includes('销毁')) animateCardToPile(el, 'discard'); if(!c.tags.includes('销毁')) state.discardPile.push(c); }); 
         state.playedRetainPile.forEach(c => { if(hasRelic('r_ethereal')) c.cost = Math.max(0, c.cost - 1); });
@@ -6250,6 +6300,7 @@
             minionWrapper?.classList.add('enemy-minion-attack');
             setTimeout(() => minionWrapper?.classList.remove('enemy-minion-attack'), 420);
             let mDmg = state.enemy.minion.atk;
+            if (state.p_reduce_dmg > 0) { let r = Math.min(mDmg, state.p_reduce_dmg); mDmg -= r; state.p_reduce_dmg -= r; showFloatText(`减免抵抗 -${r}`, "var(--water)", getCenter('ui-hp')); }
             if(state.armor > 0) { let b = Math.min(state.armor, mDmg); state.armor -= b; mDmg -= b; }
             if(mDmg > 0) mDmg = preventFirstProtectedDamage(mDmg);
             if(mDmg > 0) { state.hp -= mDmg; showFloatText(`分身攻击 -${mDmg}`, "var(--crimson)", getCenter('ui-hp')); }
@@ -6365,6 +6416,7 @@
         setTimeout(async () => { 
             const character = getCurrentCharacter();
             state.mp = getCharacterBaseEnergy(character); 
+            state.p_reduce_dmg = 0;
             if (!sidestepTriggeredThisTurn && state.p_sidestep > 0) {
                 const sidestepDraw = Math.min(2, state.p_sidestep);
                 state.p_sidestep = 0;
@@ -6408,6 +6460,13 @@
             
             state.isEnemyTurn = false; refreshRuntimeHudBindings();
         }, 300);
+    }
+
+    function loseRun(message = "旅者倒在讨魔旅途深处，探索结束。") {
+        state.isEnemyTurn = false;
+        alert(message);
+        showScene('scene-main-menu');
+        setTopBarVisible(false);
     }
 
     function winBattle() { 
