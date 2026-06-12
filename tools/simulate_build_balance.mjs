@@ -29,7 +29,7 @@ function loadGameData() {
 }
 
 function parseArgs(argv) {
-    const result = { runs: 2000, seed: 20260612, output: '', mode: 'baseline' };
+    const result = { runs: 2000, seed: 20260612, output: '', mode: 'pure' };
     for (let i = 0; i < argv.length; i++) {
         if (argv[i] === '--runs') result.runs = Number(argv[++i]);
         else if (argv[i] === '--seed') result.seed = Number(argv[++i]);
@@ -37,7 +37,8 @@ function parseArgs(argv) {
         else if (argv[i] === '--mode') result.mode = argv[++i];
     }
     if (!Number.isFinite(result.runs) || result.runs < 100) throw new Error('--runs must be at least 100');
-    if (!['baseline', 'mature'].includes(result.mode)) throw new Error('--mode must be baseline or mature');
+    if (result.mode === 'baseline') result.mode = 'pure';
+    if (!['pure', 'mid', 'mature'].includes(result.mode)) throw new Error('--mode must be pure, mid or mature');
     return result;
 }
 
@@ -131,6 +132,18 @@ const MATURE_LOADOUTS = {
     }
 };
 
+const MIDGAME_RELICS = {
+    oathblade: 'r_sword_oath',
+    execution: 'r_pierce_amulet',
+    bloodoath: 'r_blood_suture',
+    chant: 'r_sac_jade',
+    mirror: 'r_echo_archive_pin',
+    calamity: 'r_plague_glass',
+    gale: 'r_wind_quiver',
+    venom: 'r_poison_fang',
+    exile: 'r_exile_cache'
+};
+
 function cardBuildTags(data, card) {
     return card.buildTags || data.CARD_BUILD_TAGS_BY_ID[card.poolId || card.id] || [];
 }
@@ -141,8 +154,19 @@ function getBuildPool(data, roleId, buildId) {
         .filter(card => !card.isSpecial);
 }
 
-function getLoadout(data, roleId, buildId, mode) {
-    if (mode !== 'mature') return { core: null, coreCard: null, relics: [] };
+function getLoadout(data, roleId, buildId, mode, override = null) {
+    if (override) {
+        const coreCard = override.core
+            ? data.SPECIAL_EPIC_POOLS[roleId].find(card => card.id === override.core)
+            : null;
+        return { core: override.core || null, coreCard, relics: [...(override.relics || [])] };
+    }
+    if (mode === 'pure' || mode === 'baseline') return { core: null, coreCard: null, relics: [] };
+    if (mode === 'mid') {
+        const relicId = MIDGAME_RELICS[buildId];
+        if (!relicId || !data.RELIC_POOL.some(relic => relic.id === relicId)) throw new Error(`Missing midgame relic for ${buildId}`);
+        return { core: null, coreCard: null, relics: [relicId] };
+    }
     const loadout = MATURE_LOADOUTS[buildId];
     if (!loadout) throw new Error(`Missing mature loadout for ${buildId}`);
     const coreCard = data.SPECIAL_EPIC_POOLS[roleId].find(card => card.id === loadout.core);
@@ -225,6 +249,9 @@ function createBattle(data, rng, roleId, deck, hp, checkpoint, loadout) {
         drawPile: shuffle(rng, deck.map(clone)), discard: [], exhaust: [], destroyed: [], hand: [], retained: [],
         lastCard: null, cardsPlayed: 0, enemy, encounterName: enemy.name, turns: 0,
         damageTaken: 0, healing: 0, relics: new Set(loadout?.relics || []),
+        totalDamageDealt: 0, energyWasted: 0, lastDamageCause: null, lastEnemyDamageSource: null,
+        cardOpportunities: {}, cardPlays: {}, cardMeta: {},
+        playStyle: { attacks: 0, defenses: 0, abilities: 0, setup: 0, burst: 0, sustain: 0, control: 0, cycle: 0 },
         protectArmorUsed: false, chantReservoirUsed: false, tailwindSpoolUsed: false,
         echoArchivePinUsed: false, statusLedgerUsed: false, abilityCardsPlayed: 0,
         knifeSequence: 0
@@ -242,27 +269,62 @@ function enemyDebuffCount(state) {
         .filter(key => state.enemy[key] > 0).length;
 }
 
+function cardMetricKey(card) {
+    return card.poolId || card.specialId || card.id || card.name;
+}
+
+function recordCardOpportunity(state, card) {
+    const key = cardMetricKey(card);
+    state.cardOpportunities[key] = (state.cardOpportunities[key] || 0) + 1;
+    state.cardMeta[key] ||= { name: card.name, cost: card.cost || 0, type: card.type, tags: [...(card.tags || [])] };
+}
+
+function recordCardPlay(state, card) {
+    const key = cardMetricKey(card);
+    state.cardPlays[key] = (state.cardPlays[key] || 0) + 1;
+    state.cardMeta[key] ||= { name: card.name, cost: card.cost || 0, type: card.type, tags: [...(card.tags || [])] };
+    if (card.type === '攻击') state.playStyle.attacks++;
+    else if (card.type === '防御') state.playStyle.defenses++;
+    else state.playStyle.abilities++;
+    const tags = card.tags || [];
+    if (tags.some(tag => ['咏唱', '蓄力', '血祭', '自然'].includes(tag))) state.playStyle.setup++;
+    if (tags.some(tag => ['爆发', '重击', '穿甲', '追击', '放血', '圣剑'].includes(tag))) state.playStyle.burst++;
+    if (tags.some(tag => ['庇护', '反击', '错身', '吸血', '荆棘', '治愈', '保留'].includes(tag))) state.playStyle.sustain++;
+    if (tags.some(tag => ['剧毒', '出血', '燃烧', '眩晕', '诅咒', '易伤', '虚弱'].includes(tag))) state.playStyle.control++;
+    if (tags.some(tag => ['抽牌', '充能', '重置', '回响', '复刻', '回收', '放逐', '销毁'].includes(tag))) state.playStyle.cycle++;
+}
+
 function addKnives(state, count) {
     for (let i = 0; i < count; i++) {
-        state.hand.push({
+        const knife = {
             name: '归风飞刀', type: '攻击', cost: 0, val: 4, tags: ['销毁'], rarity: '普通',
             isKnife: true, simId: `knife:${state.knifeSequence++}`
-        });
+        };
+        state.hand.push(knife);
+        recordCardOpportunity(state, knife);
     }
 }
 
 function returnFromExhaust(state, destination) {
     if (!state.exhaust.length) return false;
     const card = state.exhaust.splice(Math.floor(state.rng() * state.exhaust.length), 1)[0];
-    if (destination === 'hand') state.hand.push(card);
+    if (destination === 'hand') {
+        state.hand.push(card);
+        recordCardOpportunity(state, card);
+    }
     else state.drawPile.push(card);
-    if (hasRelic(state, 'r_return_knife')) addKnives(state, 1);
+    if (hasRelic(state, 'r_return_knife')) {
+        addKnives(state, 1);
+        state.protection += 1;
+    }
     return true;
 }
 
 function returnFromDiscard(state) {
     if (!state.discard.length) return false;
-    state.hand.push(state.discard.splice(Math.floor(state.rng() * state.discard.length), 1)[0]);
+    const card = state.discard.splice(Math.floor(state.rng() * state.discard.length), 1)[0];
+    state.hand.push(card);
+    recordCardOpportunity(state, card);
     return true;
 }
 
@@ -297,7 +359,9 @@ function draw(state, count) {
             state.drawPile = shuffle(state.rng, state.discard);
             state.discard = [];
         }
-        state.hand.push(state.drawPile.pop());
+        const card = state.drawPile.pop();
+        state.hand.push(card);
+        recordCardOpportunity(state, card);
     }
 }
 
@@ -308,7 +372,7 @@ function heal(state, amount) {
     state.healing += actual;
 }
 
-function hitEnemy(state, amount, pierce = false) {
+function hitEnemy(state, amount, pierce = false, source = '卡牌伤害') {
     let damage = Math.max(0, Math.floor(amount));
     if (state.enemy.vuln > 0) damage = Math.floor(damage * (1 + state.enemy.vuln * 0.05));
     if (state.weak > 0) damage = Math.floor(damage * 0.75);
@@ -324,11 +388,13 @@ function hitEnemy(state, amount, pierce = false) {
         damage -= blocked;
     }
     state.enemy.hp -= damage;
-    if (state.enemy.thorns > 0) takeDamage(state, state.enemy.thorns);
+    state.totalDamageDealt += damage;
+    if (damage > 0) state.lastEnemyDamageSource = source;
+    if (state.enemy.thorns > 0) takeDamage(state, state.enemy.thorns, '敌方荆棘');
     return damage;
 }
 
-function takeDamage(state, amount) {
+function takeDamage(state, amount, cause = '敌方攻击') {
     let damage = Math.max(0, Math.floor(amount));
     if (state.protection > 0) {
         const reduced = Math.min(damage, state.protection);
@@ -344,7 +410,7 @@ function takeDamage(state, amount) {
         const parry = Math.ceil(damage * 0.5);
         damage -= parry;
         state.counter = 0;
-        hitEnemy(state, parry);
+        hitEnemy(state, parry, false, '反击');
     }
     const blocked = Math.min(damage, state.armor);
     state.armor -= blocked;
@@ -356,8 +422,13 @@ function takeDamage(state, amount) {
     if (damage > 0) {
         state.hp -= damage;
         state.damageTaken += damage;
+        state.lastDamageCause = cause;
     }
-    if (amount > 0 && state.thorns > 0) state.enemy.hp -= state.thorns;
+    if (amount > 0 && state.thorns > 0) {
+        state.enemy.hp -= state.thorns;
+        state.totalDamageDealt += state.thorns;
+        state.lastEnemyDamageSource = '荆棘';
+    }
     return damage;
 }
 
@@ -368,14 +439,14 @@ function estimateCard(state, card, incoming) {
     if (card.isSpecial) {
         const synergyCards = state.hand.filter(held => held !== card && (held.tags || []).some(tag => tags.includes(tag))).length;
         const specialScores = {
-            w_oath_fortress: Math.min(incoming + 12, 25),
-            w_last_verdict: 26 + state.enemy.vuln * 5 + synergyCards * 5,
-            a_syn_blood: state.hp > 18 ? 18 + synergyCards * 10 : 3,
-            m_forbidden_comet: 20 + state.chant * 7,
+            w_oath_fortress: Math.min(incoming + 10, 22),
+            w_last_verdict: 54 + state.enemy.vuln * 8 + synergyCards * 10,
+            a_syn_blood: state.hp > 18 ? 44 + synergyCards * 17 + state.enemy.bleed * 5 : 10,
+            m_forbidden_comet: 48 + state.chant * 17,
             m_echo_archive: state.lastCard ? 22 : 8,
-            m_status_supernova: 10 + enemyDebuffCount(state) * 10,
-            a_gale_verdict: 14 + Math.min(3, state.aim) * 8,
-            s_poison: (state.enemy.poison + state.enemy.bleed) * 3 + 4,
+            m_status_supernova: 36 + enemyDebuffCount(state) * 13,
+            a_gale_verdict: 26 + Math.min(3, state.aim) * 17,
+            s_poison: (state.enemy.poison + state.enemy.bleed) * 3 + 40,
             s_exhaust: state.exhaust.length * 8 + (state.exhaust.length ? 16 : 0)
         };
         score += specialScores[card.specialId] || 0;
@@ -446,7 +517,7 @@ function discardPlayedCard(state, card) {
     if ((card.tags || []).includes('销毁')) state.destroyed.push(card);
     else if ((card.tags || []).includes('放逐')) {
         state.exhaust.push(card);
-        if (hasRelic(state, 'r_exhaust_dmg')) state.battleDamage += 2;
+        if (hasRelic(state, 'r_exhaust_dmg')) state.battleDamage += 1;
     }
     else if ((card.tags || []).includes('保留') || state.data.hasDirectCardEffect(card, 'retain')) state.retained.push(card);
     else state.discard.push(card);
@@ -455,50 +526,65 @@ function discardPlayedCard(state, card) {
 function executeSpecialCard(state, card) {
     const specialId = card.specialId || card.id;
     if (specialId === 'w_oath_fortress') {
-        state.armor += 12;
-        state.protection += 5 + (hasRelic(state, 'r_protect_armor') ? 3 : 0);
+        state.armor += 10;
+        state.protection += 4 + (hasRelic(state, 'r_protect_armor') ? 3 : 0);
         if (state.hp < state.maxHp / 2) state.counter = 1;
     } else if (specialId === 'w_last_verdict') {
         const executionHand = state.hand.filter(held => (held.tags || []).some(tag => ['连击', '穿甲'].includes(tag))).length;
-        hitEnemy(state, 20 + state.battleDamage + state.enemy.vuln * 5 + executionHand * 7, true);
+        const bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.15) : 0;
+        hitEnemy(state, 44 + state.battleDamage + state.enemy.vuln * 8 + executionHand * 12 + bossBonus, true);
+        state.protection += Math.min(28, 12 + executionHand * 4);
     } else if (specialId === 'a_syn_blood') {
         const bloodHand = state.hand.filter(held => (held.tags || []).some(tag => ['血祭', '吸血', '出血', '放血'].includes(tag))).length;
         state.hp = Math.max(1, state.hp - bloodHand * 2);
-        const dealt = hitEnemy(state, 6 + bloodHand * 12 + state.battleDamage);
-        state.armor += Math.min(18, bloodHand * 3);
+        const bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.21) : 0;
+        const dealt = hitEnemy(state, 32 + bloodHand * 20 + state.enemy.bleed * 8 + state.battleDamage + bossBonus);
         let healing = Math.floor(dealt / 2);
         if (hasRelic(state, 'r_lifedebt_scale') && state.hp <= state.maxHp / 2) healing = Math.floor(healing * 1.5);
         heal(state, healing);
     } else if (specialId === 'm_forbidden_comet') {
         const chantSpent = state.chant;
-        hitEnemy(state, 20 + state.battleDamage + chantSpent * 6, true);
-        state.protection += Math.min(18, chantSpent * 3);
+        const bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.2) : 0;
+        hitEnemy(state, 48 + state.battleDamage + chantSpent * 16 + bossBonus, true);
+        state.protection += Math.min(24, chantSpent * 4);
         state.chant = hasRelic(state, 'r_burst_lens') ? Math.ceil(chantSpent / 2) : 0;
     } else if (specialId === 'm_echo_archive') {
         const lastSpecialId = state.lastCard?.specialId || state.lastCard?.id;
-        if (state.lastCard && !state.lastCard.isJunk && lastSpecialId !== 'm_echo_archive') executeCard(state, state.lastCard, true);
+        if (state.lastCard && !state.lastCard.isJunk && lastSpecialId !== 'm_echo_archive') {
+            executeCard(state, state.lastCard, true);
+            const bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.04) : 0;
+            if (bossBonus > 0) hitEnemy(state, bossBonus, true, '镜像余波');
+            state.protection += 3;
+            draw(state, 1);
+        }
         else {
             state.chant = Math.min(12, state.chant + 2);
-            draw(state, 1);
+            draw(state, 2);
         }
     } else if (specialId === 'm_status_supernova') {
         const debuffs = enemyDebuffCount(state);
-        hitEnemy(state, 8 + state.battleDamage + debuffs * 5);
-        state.enemy.burn += Math.min(2, Math.max(1, debuffs));
+        hitEnemy(state, 36 + state.battleDamage + debuffs * 9);
+        state.protection += Math.min(20, debuffs * 4);
+        state.enemy.burn += Math.min(3, Math.max(1, debuffs));
     } else if (specialId === 'a_gale_verdict') {
         const shots = Math.min(3, state.aim);
         state.aim -= shots;
-        hitEnemy(state, 12 + state.battleDamage + shots * 7, true);
+        const bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.03) : 0;
+        hitEnemy(state, 22 + state.battleDamage + shots * 15 + bossBonus, true);
         state.protection += shots * 3;
+        state.sidestep = Math.min(3, state.sidestep + 1);
     } else if (specialId === 's_poison') {
         const layers = state.enemy.poison + state.enemy.bleed;
-        hitEnemy(state, layers * 3);
+        hitEnemy(state, 36 + layers * 3);
         state.protection += Math.min(12, layers);
     } else if (specialId === 's_exhaust') {
         const returned = state.exhaust.length + 1;
-        if (hasRelic(state, 'r_exhaust_dmg')) state.battleDamage += 2;
-        hitEnemy(state, returned * 8);
+        if (hasRelic(state, 'r_exhaust_dmg')) state.battleDamage += 1;
+        const bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.16) : 0;
+        hitEnemy(state, bossBonus + returned * 21);
         state.armor += Math.min(18, returned * 3);
+        state.protection += Math.min(18, returned * 3);
+        state.sidestep = Math.min(3, state.sidestep + 1);
         if (hasRelic(state, 'r_return_knife')) addKnives(state, returned);
         card.returnedBySpecial = true;
         state.drawPile = shuffle(state.rng, state.drawPile.concat(state.exhaust, [card]));
@@ -528,6 +614,7 @@ function executeCard(state, card, echo = false) {
         if (hasRelic(state, 'r_tailwind_spool') && !state.tailwindSpoolUsed) {
             gain++;
             state.tailwindSpoolUsed = true;
+            state.protection += 3;
         }
         state.sidestep = Math.min(3, state.sidestep + gain);
     }
@@ -536,16 +623,19 @@ function executeCard(state, card, echo = false) {
         if (hasRelic(state, 'r_chant_reservoir') && !state.chantReservoirUsed) {
             gain++;
             state.chantReservoirUsed = true;
+            draw(state, 1);
         }
         state.chant = Math.min(12, state.chant + gain);
         state.armor += 4;
         if (hasRelic(state, 'r_sac_jade')) state.energy++;
+        if (hasRelic(state, 'r_sac_jade')) state.protection += 3;
     }
     if (tags.includes('蓄力') && !echo) {
         let gain = state.data.getWindGain(card) + (hasRelic(state, 'r_wind_quiver') ? 1 : 0);
         if (hasRelic(state, 'r_tailwind_spool') && !state.tailwindSpoolUsed) {
             gain++;
             state.tailwindSpoolUsed = true;
+            state.protection += 3;
         }
         state.aim = Math.min(6, state.aim + gain);
     }
@@ -561,6 +651,7 @@ function executeCard(state, card, echo = false) {
     if ((tags.includes('抽牌') || state.data.hasDirectCardEffect(card, 'draw')) && !echo) draw(state, state.data.getCardDrawCount(card));
     if (tags.includes('荆棘')) state.thorns += hasRelic(state, 'r_thorn_shield_new') ? 16 : 8;
     const statusBonus = hasRelic(state, 'r_plague_glass') && card.type === '能力' && enemyDebuffCount(state) > 0 ? 1 : 0;
+    if (statusBonus > 0 && !echo) state.protection += 4;
     if (tags.includes('剧毒')) state.enemy.poison += 3 * (card.type === '能力' ? state.data.getAbilityPotency(card) : 1) + statusBonus + (hasRelic(state, 'r_poison_fang') ? 1 : 0);
     if (tags.includes('出血')) state.enemy.bleed += 3 * (card.type === '能力' ? state.data.getAbilityPotency(card) : 1) + statusBonus + (hasRelic(state, 'r_poison_fang') ? 1 : 0);
     if (tags.includes('燃烧')) state.enemy.burn += (card.type === '能力' ? state.data.getAbilityPotency(card) : 1) + statusBonus;
@@ -609,7 +700,10 @@ function executeCard(state, card, echo = false) {
         const pierce = tags.includes('穿甲');
         if (pierce && hasRelic(state, 'r_pierce_amulet')) damage = Math.floor(damage * 1.25);
         const dealt = hitEnemy(state, damage, pierce);
-        if (pierce && tags.includes('重击') && state.enemy.vuln > 0 && hasRelic(state, 'r_execute_scabbard')) hitEnemy(state, 8, true);
+        if (pierce && tags.includes('重击') && state.enemy.vuln > 0 && hasRelic(state, 'r_execute_scabbard')) {
+            hitEnemy(state, 18, true);
+            state.protection += 10;
+        }
         if (tags.includes('吸血')) {
             let healing = card.rarity === '史诗' ? dealt : Math.floor(dealt / 2);
             if (hasRelic(state, 'r_lifedebt_scale') && state.hp <= state.maxHp / 2) healing = Math.floor(healing * 1.5);
@@ -642,6 +736,7 @@ function playPlayerTurn(state, move) {
     state.echoArchivePinUsed = false;
     state.statusLedgerUsed = false;
     state.hand.push(...state.retained);
+    state.retained.forEach(card => recordCardOpportunity(state, card));
     state.retained = [];
     draw(state, state.character.openingHand);
     let safety = 0;
@@ -654,6 +749,7 @@ function playPlayerTurn(state, move) {
         const card = ranked[0].card;
         state.hand.splice(state.hand.indexOf(card), 1);
         state.energy -= card.cost || 0;
+        recordCardPlay(state, card);
         let specialWindRun = 0;
         if (card.isSpecial && card.type === '攻击' && state.aim > 0) {
             state.aim--;
@@ -671,6 +767,7 @@ function playPlayerTurn(state, move) {
             if (hasRelic(state, 'r_echo_archive_pin') && !state.echoArchivePinUsed) {
                 state.echoArchivePinUsed = true;
                 state.energy++;
+                state.protection += 6;
             }
             if (hasRelic(state, 'r_echo_mirror_relic')) executeCard(state, card, true);
         }
@@ -681,14 +778,15 @@ function playPlayerTurn(state, move) {
         if (!(card.tags || []).includes('复刻')) state.lastCard = card;
         state.cardsPlayed++;
     }
-    state.discard.push(...state.hand.filter(card => !(card.tags || []).includes('保留')));
-    state.retained.push(...state.hand.filter(card => (card.tags || []).includes('保留')));
+    state.energyWasted += Math.max(0, state.energy);
+    state.discard.push(...state.hand.filter(card => !(card.tags || []).includes('保留') && !state.data.hasDirectCardEffect(card, 'retain')));
+    state.retained.push(...state.hand.filter(card => (card.tags || []).includes('保留') || state.data.hasDirectCardEffect(card, 'retain')));
     state.hand = [];
 }
 
 function applyEnemyMove(state, move) {
     const enemy = state.enemy;
-    if (enemy.minion?.hp > 0) takeDamage(state, enemy.minion.atk);
+    if (enemy.minion?.hp > 0) takeDamage(state, enemy.minion.atk, '召唤物攻击');
     if (enemy.stun > 0) {
         enemy.stun--;
         return;
@@ -701,7 +799,7 @@ function applyEnemyMove(state, move) {
             enemy.charged = false;
         }
         for (let i = 0; i < (move.times || 1); i++) {
-            const dealt = takeDamage(state, damage);
+            const dealt = takeDamage(state, damage, '首领主体攻击');
             if (move.type === 'attack_lifesteal' && enemy.curse <= 0) enemy.hp = Math.min(enemy.maxHp, enemy.hp + Math.floor(dealt / 2));
             if (state.hp <= 0 || enemy.hp <= 0) break;
         }
@@ -722,7 +820,7 @@ function applyEnemyMove(state, move) {
         else if (key === 'bleed') state.bleed += move.val;
         else if (key === 'burn') state.burn += move.val;
         else if (key === 'curse') state.curse += move.val;
-        else if (key === 'stun') takeDamage(state, 3 * move.val);
+        else if (key === 'stun') takeDamage(state, 3 * move.val, '眩晕伤害');
     }
 }
 
@@ -730,27 +828,35 @@ function endRound(state) {
     const enemy = state.enemy;
     if (enemy.poison > 0) {
         enemy.hp -= enemy.poison;
+        state.totalDamageDealt += enemy.poison;
+        state.lastEnemyDamageSource = '剧毒';
         if (hasRelic(state, 'r_corrupt_cup')) heal(state, 2);
         enemy.poison--;
     }
     if (enemy.bleed > 0) {
-        enemy.hp -= Math.ceil(enemy.bleed / 2);
+        const bleedDamage = Math.ceil(enemy.bleed / 2);
+        enemy.hp -= bleedDamage;
+        state.totalDamageDealt += bleedDamage;
+        state.lastEnemyDamageSource = '出血';
         enemy.bleed--;
     }
     if (enemy.burn > 0) {
-        enemy.hp -= Math.max(1, Math.ceil(enemy.maxHp * 0.03 * enemy.burn));
+        const burnDamage = Math.max(1, Math.ceil(enemy.maxHp * 0.03 * enemy.burn));
+        enemy.hp -= burnDamage;
+        state.totalDamageDealt += burnDamage;
+        state.lastEnemyDamageSource = '燃烧';
         enemy.burn--;
     }
     if (state.poison > 0) {
-        takeDamage(state, state.poison);
+        takeDamage(state, state.poison, '剧毒伤害');
         state.poison--;
     }
     if (state.bleed > 0) {
-        takeDamage(state, Math.ceil(state.bleed / 2));
+        takeDamage(state, Math.ceil(state.bleed / 2), '出血伤害');
         state.bleed--;
     }
     if (state.burn > 0) {
-        takeDamage(state, Math.max(1, Math.ceil(state.maxHp * 0.03 * state.burn)));
+        takeDamage(state, Math.max(1, Math.ceil(state.maxHp * 0.03 * state.burn)), '燃烧伤害');
         state.burn--;
     }
     if (enemy.vuln > 0) enemy.vuln--;
@@ -787,31 +893,80 @@ function resolveEnemyDeath(state) {
     return true;
 }
 
+function battleResult(state, win, deathCause = null) {
+    return {
+        win,
+        hp: Math.max(0, state.hp),
+        turns: state.turns,
+        enemy: state.encounterName,
+        damageTaken: state.damageTaken,
+        damageDealt: state.totalDamageDealt,
+        healing: state.healing,
+        energyWasted: state.energyWasted,
+        deathCause: win ? null : (deathCause || state.lastDamageCause || '回合上限'),
+        victoryCause: win ? (state.lastEnemyDamageSource || '卡牌伤害') : null,
+        cardOpportunities: state.cardOpportunities,
+        cardPlays: state.cardPlays,
+        cardMeta: state.cardMeta,
+        playStyle: state.playStyle
+    };
+}
+
 function simulateBattle(data, rng, roleId, deck, hp, checkpoint, loadout) {
     const state = createBattle(data, rng, roleId, deck, hp, checkpoint, loadout);
     while (state.turns++ < 30 && state.hp > 0) {
         const moveIndex = chooseMove(state);
         const move = state.enemy.moves[moveIndex];
         playPlayerTurn(state, move);
-        if (resolveEnemyDeath(state)) return { win: true, hp: state.hp, turns: state.turns, enemy: state.encounterName, damageTaken: state.damageTaken };
+        if (resolveEnemyDeath(state)) return battleResult(state, true);
         if (state.hp <= 0) break;
         applyEnemyMove(state, move);
-        if (resolveEnemyDeath(state)) return { win: true, hp: state.hp, turns: state.turns, enemy: state.encounterName, damageTaken: state.damageTaken };
+        if (resolveEnemyDeath(state)) return battleResult(state, true);
         if (state.hp <= 0) break;
         endRound(state);
-        if (resolveEnemyDeath(state)) return { win: true, hp: state.hp, turns: state.turns, enemy: state.encounterName, damageTaken: state.damageTaken };
+        if (resolveEnemyDeath(state)) return battleResult(state, true);
         state.enemy.lastMove = moveIndex;
         state.enemy.turn++;
     }
-    return { win: false, hp: Math.max(0, state.hp), turns: state.turns, enemy: state.encounterName, damageTaken: state.damageTaken };
+    return battleResult(state, false, state.hp > 0 ? '回合上限' : null);
+}
+
+function addCounter(target, key, amount = 1) {
+    target[key] = (target[key] || 0) + amount;
+}
+
+function mergeCounters(target, source) {
+    for (const [key, value] of Object.entries(source || {})) addCounter(target, key, value);
+}
+
+function summarizeCardUsage(plays, opportunities, metadata, runs) {
+    return Object.keys(metadata).map(key => ({
+        id: key,
+        ...metadata[key],
+        plays: plays[key] || 0,
+        opportunities: opportunities[key] || 0,
+        playsPerBattle: (plays[key] || 0) / runs,
+        usageRate: (plays[key] || 0) / Math.max(1, opportunities[key] || 0)
+    })).sort((left, right) => right.plays - left.plays || right.usageRate - left.usageRate);
 }
 
 function simulateCheckpoint(data, roleId, buildId, checkpoint, runs, seed, mode, options = {}) {
     let wins = 0;
     let turns = 0;
     let hpLeft = 0;
+    let hpLeftOnWin = 0;
+    let damageTaken = 0;
+    let damageDealt = 0;
+    let healing = 0;
+    let energyWasted = 0;
     const enemies = {};
-    const loadout = getLoadout(data, roleId, buildId, mode);
+    const deathCauses = {};
+    const victoryCauses = {};
+    const cardPlays = {};
+    const cardOpportunities = {};
+    const cardMeta = {};
+    const playStyle = {};
+    const loadout = getLoadout(data, roleId, buildId, mode, options.loadoutOverride);
     for (let i = 0; i < runs; i++) {
         const rng = createRng(seed + i * 7919);
         const deckSize = checkpoint.id === 'early' ? [5, 5] : checkpoint.id === 'mid' ? [7, 4] : [10, 3];
@@ -821,6 +976,17 @@ function simulateCheckpoint(data, roleId, buildId, checkpoint, runs, seed, mode,
         wins += result.win ? 1 : 0;
         turns += result.turns;
         hpLeft += result.hp;
+        hpLeftOnWin += result.win ? result.hp : 0;
+        damageTaken += result.damageTaken;
+        damageDealt += result.damageDealt;
+        healing += result.healing;
+        energyWasted += result.energyWasted;
+        if (result.deathCause) addCounter(deathCauses, result.deathCause);
+        if (result.victoryCause) addCounter(victoryCauses, result.victoryCause);
+        mergeCounters(cardPlays, result.cardPlays);
+        mergeCounters(cardOpportunities, result.cardOpportunities);
+        Object.assign(cardMeta, result.cardMeta);
+        mergeCounters(playStyle, result.playStyle);
         enemies[result.enemy] ||= { games: 0, wins: 0 };
         enemies[result.enemy].games++;
         enemies[result.enemy].wins += result.win ? 1 : 0;
@@ -829,6 +995,16 @@ function simulateCheckpoint(data, roleId, buildId, checkpoint, runs, seed, mode,
         winRate: wins / runs,
         averageTurns: turns / runs,
         averageHpLeft: hpLeft / runs,
+        averageHpLeftOnWin: hpLeftOnWin / Math.max(1, wins),
+        averageDamageTaken: damageTaken / runs,
+        averageDamageDealt: damageDealt / runs,
+        averageHealing: healing / runs,
+        averageEnergyWasted: energyWasted / runs,
+        energyWastedPerTurn: energyWasted / Math.max(1, turns),
+        deathCauses,
+        victoryCauses,
+        cardUsage: summarizeCardUsage(cardPlays, cardOpportunities, cardMeta, runs),
+        playStyle: Object.fromEntries(Object.entries(playStyle).map(([key, value]) => [key, value / runs])),
         enemies
     };
 }
@@ -837,7 +1013,7 @@ function simulateExpedition(data, roleId, buildId, runs, seed, mode, options = {
     let clears = 0;
     let reached = Array(CHECKPOINTS.length).fill(0);
     let deaths = {};
-    const loadout = getLoadout(data, roleId, buildId, mode);
+    const loadout = getLoadout(data, roleId, buildId, mode, options.loadoutOverride);
     for (let i = 0; i < runs; i++) {
         const rng = createRng(seed + i * 104729);
         let deck = makeDeck(data, rng, roleId, buildId, 4, 6, loadout, options.disabledTags);
@@ -895,7 +1071,11 @@ function run() {
     }
     const report = {
         generatedAt: new Date().toISOString(),
-        model: args.mode === 'mature' ? 'mature build with epic core and relics v2' : 'card-build baseline v1',
+        model: args.mode === 'mature'
+            ? 'mature build with epic core and three relics v3'
+            : args.mode === 'mid'
+                ? 'midgame build with one relic and no epic core v1'
+                : 'pure card build v2',
         mode: args.mode,
         runsPerBuildAndCheckpoint: args.runs,
         seed: args.seed,
@@ -921,10 +1101,12 @@ if (isDirectRun) run();
 export {
     CHECKPOINTS,
     FOUNDATION,
+    MIDGAME_RELICS,
     MATURE_LOADOUTS,
     getBuildPool,
     getLoadout,
     loadGameData,
+    simulateBattle,
     simulateCheckpoint,
     simulateExpedition
 };

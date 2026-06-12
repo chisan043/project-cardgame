@@ -116,24 +116,42 @@ function applyCardTagBudget(card) {
     if (!card) return card;
     const original = normalizeTagConflicts(card.tags || []);
     card.recycleModes = [...(card.recycleModes || CARD_RECYCLE_MODES[getCardDataId(card)] || [])];
+    card.directEffects = { ...(card.directEffects || {}) };
+
+    const semanticTags = original.filter(tag => !DIRECT_EFFECT_TAGS[tag] && tag !== '销毁');
+    const keywordCandidates = [];
+    let keptDirectTag = false;
+    for (const tag of original) {
+        const directKey = DIRECT_EFFECT_TAGS[tag];
+        if (!directKey) {
+            keywordCandidates.push(tag);
+            continue;
+        }
+        if (semanticTags.length === 0 && !keptDirectTag) {
+            keywordCandidates.push(tag);
+            keptDirectTag = true;
+        } else {
+            card.directEffects[directKey] = true;
+        }
+    }
+
     let cap = card.rarity === '史诗' || card.isSpecial ? 2 : 1;
     if (card.rarity === '稀有' && (Number(card.cost) || 0) >= 2) cap = 2;
-    if (original.includes('回收') || original.includes('销毁')) cap = 2;
+    if (keywordCandidates.includes('回收') || keywordCandidates.includes('销毁')) cap = 2;
 
     const result = [];
     let highImpactCount = 0;
-    for (const tag of original) {
+    for (const tag of keywordCandidates) {
         if (result.length >= cap) break;
         const isHighImpact = HIGH_IMPACT_TAGS.has(tag) && tag !== '回收';
         if (!card.isSpecial && (Number(card.cost) || 0) <= 1 && card.rarity !== '史诗' && isHighImpact && highImpactCount >= 1) continue;
         result.push(tag);
         if (isHighImpact) highImpactCount++;
     }
-    if (original.includes('销毁') && !result.includes('销毁') && result.length < cap) result.push('销毁');
-    if (original.includes('销毁') && !result.includes('销毁') && result.length === cap) result[result.length - 1] = '销毁';
+    if (keywordCandidates.includes('销毁') && !result.includes('销毁') && result.length < cap) result.push('销毁');
+    if (keywordCandidates.includes('销毁') && !result.includes('销毁') && result.length === cap) result[result.length - 1] = '销毁';
 
     card.tags = normalizeTagConflicts(result);
-    card.directEffects = { ...(card.directEffects || {}) };
     for (const tag of original) {
         if (card.tags.includes(tag)) continue;
         const directKey = DIRECT_EFFECT_TAGS[tag];
