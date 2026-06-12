@@ -18,7 +18,7 @@ const CHARACTERS = {
         avatarPortrait: 'assets/characters/warrior/avatar_portrait_v1.webp',
         battleBack: 'assets/characters/warrior/battle_back_idle_v1.webp',
         accentClass: '',
-        starterHint: '基础攻防维持生存，反击、易伤与吸血各留一个方向信号；首场战斗后再决定真正的成长路线。'
+        starterHint: '护盾是战士的基础生存手段；开局通过核心遗物确定圣剑反击、处刑连斩或血誓狂战路线。'
     },
     hero_mage: {
         id: 'hero_mage',
@@ -37,7 +37,7 @@ const CHARACTERS = {
         avatarPortrait: 'assets/characters/mage/avatar_portrait_v1.webp',
         battleBack: 'assets/characters/mage/battle_back_idle_v1.webp',
         accentClass: 'featured',
-        starterHint: '基础法弹输出，愈流回补生命；咏唱、复刻与剧毒各留一个方向信号，首战后再选择成长路线。'
+        starterHint: '治愈是法师的基础生存手段；开局通过核心遗物确定星火咏唱、镜像回路或灾厄术士路线。'
     },
     hero_archer: {
         id: 'hero_archer',
@@ -56,6 +56,6 @@ const CHARACTERS = {
         avatarPortrait: 'assets/characters/archer/avatar_portrait_v1.webp',
         battleBack: 'assets/characters/archer/battle_back_idle_v1.webp',
         accentClass: '',
-        starterHint: '基础射击输出，错身卸力并转化风势；蓄力、剧毒与放逐各留一个方向信号，首战后再选择成长路线。'
+        starterHint: '基础射击输出，闪避可完全躲开一段主体攻击；开局通过核心遗物确定疾风、猎毒或放逐路线。'
     }
 };

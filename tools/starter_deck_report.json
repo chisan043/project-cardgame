@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-12T16:56:24.004Z",
+  "generatedAt": "2026-06-12T17:27:04.986Z",
   "generatedDate": "2026-06-13",
-  "model": "starter deck forced encounter and build-bias simulation v2",
+  "model": "starter deck, dodge and core-relic selection simulation v3",
   "runsPerEnemy": 1000,
   "seed": 20260612,
   "results": [
@@ -100,7 +100,27 @@
             "fallback": 21
           }
         },
-        "neutralInitialRelics": 10,
+        "coreChoices": [
+          {
+            "id": "r_oathblade_beacon",
+            "buildTag": "oathblade",
+            "exists": true
+          },
+          {
+            "id": "r_execution_warrant",
+            "buildTag": "execution",
+            "exists": true
+          },
+          {
+            "id": "r_bloodoath_contract",
+            "buildTag": "bloodoath",
+            "exists": true
+          }
+        ],
+        "executionTransform": {
+          "sourcePoolId": "starter_warrior_guard",
+          "convertedCopies": 3
+        },
         "passed": true
       },
       "checkpoints": {
@@ -1453,7 +1473,24 @@
             "fallback": 21
           }
         },
-        "neutralInitialRelics": 9,
+        "coreChoices": [
+          {
+            "id": "r_chant_astrolabe",
+            "buildTag": "chant",
+            "exists": true
+          },
+          {
+            "id": "r_mirror_catalog",
+            "buildTag": "mirror",
+            "exists": true
+          },
+          {
+            "id": "r_calamity_orb",
+            "buildTag": "calamity",
+            "exists": true
+          }
+        ],
+        "executionTransform": null,
         "passed": true
       },
       "checkpoints": {
@@ -2705,7 +2742,7 @@
       "cards": [
         {
           "name": "基础射击",
-          "copies": 3,
+          "copies": 4,
           "cost": 1,
           "type": "攻击",
           "tags": [],
@@ -2713,11 +2750,11 @@
         },
         {
           "name": "林地回避",
-          "copies": 3,
+          "copies": 1,
           "cost": 1,
           "type": "能力",
           "tags": [
-            "错身"
+            "闪避"
           ],
           "directEffects": {}
         },
@@ -2755,7 +2792,7 @@
         },
         {
           "name": "整束箭袋",
-          "copies": 1,
+          "copies": 2,
           "cost": 1,
           "type": "能力",
           "tags": [],
@@ -2791,7 +2828,24 @@
             "fallback": 23
           }
         },
-        "neutralInitialRelics": 10,
+        "coreChoices": [
+          {
+            "id": "r_gale_weatherwane",
+            "buildTag": "gale",
+            "exists": true
+          },
+          {
+            "id": "r_venom_seedcase",
+            "buildTag": "venom",
+            "exists": true
+          },
+          {
+            "id": "r_exile_roadsign",
+            "buildTag": "exile",
+            "exists": true
+          }
+        ],
+        "executionTransform": null,
         "passed": true
       },
       "checkpoints": {
@@ -2802,8 +2856,8 @@
               "games": 1000,
               "winRate": 1,
               "averageTurns": 2,
-              "averageHpLeft": 77.99,
-              "energyWastedPerTurn": 0.7435,
+              "averageHpLeft": 78,
+              "energyWastedPerTurn": 1.094,
               "cardUsage": [
                 {
                   "id": "starter_archer_focus",
@@ -2811,9 +2865,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
-                  "plays": 268,
-                  "opportunities": 1636,
-                  "usageRate": 0.16381418092909536
+                  "plays": 476,
+                  "opportunities": 2802,
+                  "usageRate": 0.16987865810135616
                 },
                 {
                   "id": "starter_archer_step",
@@ -2821,11 +2875,11 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [
-                    "错身"
+                    "闪避"
                   ],
-                  "plays": 1156,
-                  "opportunities": 4909,
-                  "usageRate": 0.23548584233041353
+                  "plays": 262,
+                  "opportunities": 1409,
+                  "usageRate": 0.18594748048261178
                 },
                 {
                   "id": "starter_archer_shot",
@@ -2833,9 +2887,9 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
-                  "plays": 2995,
-                  "opportunities": 4974,
-                  "usageRate": 0.6021310816244472
+                  "plays": 3431,
+                  "opportunities": 5701,
+                  "usageRate": 0.6018242413611647
                 },
                 {
                   "id": "starter_archer_aim",
@@ -2845,9 +2899,9 @@
                   "tags": [
                     "蓄力"
                   ],
-                  "plays": 1470,
-                  "opportunities": 1518,
-                  "usageRate": 0.9683794466403162
+                  "plays": 1272,
+                  "opportunities": 1362,
+                  "usageRate": 0.933920704845815
                 },
                 {
                   "id": "starter_archer_exile",
@@ -2857,9 +2911,9 @@
                   "tags": [
                     "放逐"
                   ],
-                  "plays": 995,
-                  "opportunities": 1022,
-                  "usageRate": 0.9735812133072407
+                  "plays": 978,
+                  "opportunities": 1035,
+                  "usageRate": 0.9449275362318841
                 },
                 {
                   "id": "starter_archer_venom",
@@ -2869,18 +2923,18 @@
                   "tags": [
                     "剧毒"
                   ],
-                  "plays": 1629,
-                  "opportunities": 1659,
-                  "usageRate": 0.9819168173598554
+                  "plays": 1393,
+                  "opportunities": 1439,
+                  "usageRate": 0.9680333564975677
                 }
               ]
             },
             "枯骨煞兵": {
               "games": 1000,
               "winRate": 1,
-              "averageTurns": 2.993,
-              "averageHpLeft": 72.064,
-              "energyWastedPerTurn": 0.7190110257266956,
+              "averageTurns": 2.907,
+              "averageHpLeft": 74.622,
+              "energyWastedPerTurn": 0.8613691090471276,
               "cardUsage": [
                 {
                   "id": "starter_archer_focus",
@@ -2888,9 +2942,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
-                  "plays": 377,
-                  "opportunities": 2390,
-                  "usageRate": 0.15774058577405858
+                  "plays": 772,
+                  "opportunities": 4188,
+                  "usageRate": 0.18433619866284623
                 },
                 {
                   "id": "starter_archer_step",
@@ -2898,11 +2952,11 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [
-                    "错身"
+                    "闪避"
                   ],
-                  "plays": 1459,
-                  "opportunities": 7226,
-                  "usageRate": 0.20190977027401052
+                  "plays": 564,
+                  "opportunities": 2075,
+                  "usageRate": 0.27180722891566267
                 },
                 {
                   "id": "starter_archer_shot",
@@ -2910,9 +2964,9 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
-                  "plays": 5430,
-                  "opportunities": 7326,
-                  "usageRate": 0.7411957411957412
+                  "plays": 5858,
+                  "opportunities": 8501,
+                  "usageRate": 0.6890954005411128
                 },
                 {
                   "id": "starter_archer_aim",
@@ -2922,9 +2976,21 @@
                   "tags": [
                     "蓄力"
                   ],
-                  "plays": 2127,
-                  "opportunities": 2287,
-                  "usageRate": 0.930039352864014
+                  "plays": 1770,
+                  "opportunities": 2027,
+                  "usageRate": 0.8732116428219043
+                },
+                {
+                  "id": "starter_archer_venom",
+                  "name": "青牙试射",
+                  "cost": 1,
+                  "type": "攻击",
+                  "tags": [
+                    "剧毒"
+                  ],
+                  "plays": 2067,
+                  "opportunities": 2162,
+                  "usageRate": 0.956059204440333
                 },
                 {
                   "id": "starter_archer_exile",
@@ -2935,29 +3001,17 @@
                     "放逐"
                   ],
                   "plays": 1000,
-                  "opportunities": 1029,
-                  "usageRate": 0.9718172983479106
-                },
-                {
-                  "id": "starter_archer_venom",
-                  "name": "青牙试射",
-                  "cost": 1,
-                  "type": "攻击",
-                  "tags": [
-                    "剧毒"
-                  ],
-                  "plays": 2420,
-                  "opportunities": 2452,
-                  "usageRate": 0.9869494290375204
+                  "opportunities": 1031,
+                  "usageRate": 0.9699321047526673
                 }
               ]
             },
             "贪婪盗贼": {
               "games": 1000,
               "winRate": 1,
-              "averageTurns": 2.072,
-              "averageHpLeft": 71.698,
-              "energyWastedPerTurn": 0.502895752895753,
+              "averageTurns": 2.016,
+              "averageHpLeft": 72.573,
+              "energyWastedPerTurn": 0.5218253968253969,
               "cardUsage": [
                 {
                   "id": "诅咒",
@@ -2966,20 +3020,8 @@
                   "type": "能力",
                   "tags": [],
                   "plays": 0,
-                  "opportunities": 9,
+                  "opportunities": 1,
                   "usageRate": 0
-                },
-                {
-                  "id": "starter_archer_step",
-                  "name": "林地回避",
-                  "cost": 1,
-                  "type": "能力",
-                  "tags": [
-                    "错身"
-                  ],
-                  "plays": 766,
-                  "opportunities": 4541,
-                  "usageRate": 0.16868531160537326
                 },
                 {
                   "id": "starter_archer_focus",
@@ -2987,9 +3029,21 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
-                  "plays": 719,
-                  "opportunities": 1475,
-                  "usageRate": 0.48745762711864404
+                  "plays": 325,
+                  "opportunities": 2784,
+                  "usageRate": 0.11673850574712644
+                },
+                {
+                  "id": "starter_archer_step",
+                  "name": "林地回避",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [
+                    "闪避"
+                  ],
+                  "plays": 603,
+                  "opportunities": 1393,
+                  "usageRate": 0.4328786791098349
                 },
                 {
                   "id": "starter_archer_shot",
@@ -2997,9 +3051,9 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
-                  "plays": 3961,
-                  "opportunities": 4645,
-                  "usageRate": 0.8527448869752422
+                  "plays": 4420,
+                  "opportunities": 5736,
+                  "usageRate": 0.7705718270571827
                 },
                 {
                   "id": "starter_archer_aim",
@@ -3009,21 +3063,9 @@
                   "tags": [
                     "蓄力"
                   ],
-                  "plays": 1403,
-                  "opportunities": 1486,
-                  "usageRate": 0.9441453566621804
-                },
-                {
-                  "id": "starter_archer_venom",
-                  "name": "青牙试射",
-                  "cost": 1,
-                  "type": "攻击",
-                  "tags": [
-                    "剧毒"
-                  ],
-                  "plays": 1473,
-                  "opportunities": 1552,
-                  "usageRate": 0.9490979381443299
+                  "plays": 1292,
+                  "opportunities": 1354,
+                  "usageRate": 0.9542097488921714
                 },
                 {
                   "id": "starter_archer_exile",
@@ -3034,17 +3076,29 @@
                     "放逐"
                   ],
                   "plays": 996,
-                  "opportunities": 1042,
-                  "usageRate": 0.9558541266794626
+                  "opportunities": 1021,
+                  "usageRate": 0.9755142017629774
+                },
+                {
+                  "id": "starter_archer_venom",
+                  "name": "青牙试射",
+                  "cost": 1,
+                  "type": "攻击",
+                  "tags": [
+                    "剧毒"
+                  ],
+                  "plays": 1392,
+                  "opportunities": 1424,
+                  "usageRate": 0.9775280898876404
                 }
               ]
             },
             "嗜血蝙蝠": {
               "games": 1000,
               "winRate": 1,
-              "averageTurns": 1.996,
-              "averageHpLeft": 77.863,
-              "energyWastedPerTurn": 0.9333667334669339,
+              "averageTurns": 1.955,
+              "averageHpLeft": 77.853,
+              "energyWastedPerTurn": 1.3268542199488491,
               "cardUsage": [
                 {
                   "id": "starter_archer_focus",
@@ -3052,9 +3106,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
-                  "plays": 273,
-                  "opportunities": 1626,
-                  "usageRate": 0.16789667896678967
+                  "plays": 467,
+                  "opportunities": 2701,
+                  "usageRate": 0.17289892632358386
                 },
                 {
                   "id": "starter_archer_step",
@@ -3062,11 +3116,11 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [
-                    "错身"
+                    "闪避"
                   ],
-                  "plays": 1116,
-                  "opportunities": 4974,
-                  "usageRate": 0.2243667068757539
+                  "plays": 242,
+                  "opportunities": 1388,
+                  "usageRate": 0.17435158501440923
                 },
                 {
                   "id": "starter_archer_shot",
@@ -3074,21 +3128,9 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
-                  "plays": 2638,
-                  "opportunities": 4928,
-                  "usageRate": 0.5353084415584416
-                },
-                {
-                  "id": "starter_archer_exile",
-                  "name": "逐影放矢",
-                  "cost": 1,
-                  "type": "攻击",
-                  "tags": [
-                    "放逐"
-                  ],
-                  "plays": 997,
-                  "opportunities": 1028,
-                  "usageRate": 0.9698443579766537
+                  "plays": 3013,
+                  "opportunities": 5510,
+                  "usageRate": 0.5468239564428312
                 },
                 {
                   "id": "starter_archer_aim",
@@ -3098,9 +3140,21 @@
                   "tags": [
                     "蓄力"
                   ],
-                  "plays": 1487,
-                  "opportunities": 1526,
-                  "usageRate": 0.9744429882044561
+                  "plays": 1126,
+                  "opportunities": 1293,
+                  "usageRate": 0.8708430007733952
+                },
+                {
+                  "id": "starter_archer_exile",
+                  "name": "逐影放矢",
+                  "cost": 1,
+                  "type": "攻击",
+                  "tags": [
+                    "放逐"
+                  ],
+                  "plays": 976,
+                  "opportunities": 1028,
+                  "usageRate": 0.9494163424124513
                 },
                 {
                   "id": "starter_archer_venom",
@@ -3110,18 +3164,18 @@
                   "tags": [
                     "剧毒"
                   ],
-                  "plays": 1606,
-                  "opportunities": 1642,
-                  "usageRate": 0.9780755176613886
+                  "plays": 1357,
+                  "opportunities": 1403,
+                  "usageRate": 0.9672131147540983
                 }
               ]
             },
             "迷途妖狐": {
               "games": 1000,
               "winRate": 1,
-              "averageTurns": 3,
-              "averageHpLeft": 69.22,
-              "energyWastedPerTurn": 0.8363333333333334,
+              "averageTurns": 2.867,
+              "averageHpLeft": 71.632,
+              "energyWastedPerTurn": 0.9096616672479945,
               "cardUsage": [
                 {
                   "id": "starter_archer_focus",
@@ -3129,9 +3183,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
-                  "plays": 332,
-                  "opportunities": 2416,
-                  "usageRate": 0.13741721854304637
+                  "plays": 772,
+                  "opportunities": 4041,
+                  "usageRate": 0.1910418213313536
                 },
                 {
                   "id": "starter_archer_step",
@@ -3139,11 +3193,11 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [
-                    "错身"
+                    "闪避"
                   ],
-                  "plays": 1519,
-                  "opportunities": 7274,
-                  "usageRate": 0.2088259554577949
+                  "plays": 439,
+                  "opportunities": 2021,
+                  "usageRate": 0.21721919841662543
                 },
                 {
                   "id": "starter_archer_shot",
@@ -3151,9 +3205,9 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
-                  "plays": 5127,
-                  "opportunities": 7346,
-                  "usageRate": 0.697930846719303
+                  "plays": 5789,
+                  "opportunities": 8447,
+                  "usageRate": 0.6853320705575944
                 },
                 {
                   "id": "starter_archer_aim",
@@ -3163,9 +3217,9 @@
                   "tags": [
                     "蓄力"
                   ],
-                  "plays": 2062,
-                  "opportunities": 2321,
-                  "usageRate": 0.8884101680310211
+                  "plays": 1682,
+                  "opportunities": 1991,
+                  "usageRate": 0.8448016072325465
                 },
                 {
                   "id": "starter_archer_exile",
@@ -3175,9 +3229,9 @@
                   "tags": [
                     "放逐"
                   ],
-                  "plays": 998,
-                  "opportunities": 1037,
-                  "usageRate": 0.9623915139826422
+                  "plays": 999,
+                  "opportunities": 1045,
+                  "usageRate": 0.9559808612440192
                 },
                 {
                   "id": "starter_archer_venom",
@@ -3187,9 +3241,9 @@
                   "tags": [
                     "剧毒"
                   ],
-                  "plays": 2434,
-                  "opportunities": 2463,
-                  "usageRate": 0.9882257409663012
+                  "plays": 2035,
+                  "opportunities": 2114,
+                  "usageRate": 0.9626300851466414
                 }
               ]
             }
@@ -3207,9 +3261,9 @@
             "荒野煞狼": {
               "games": 1000,
               "winRate": 1,
-              "averageTurns": 5.632,
-              "averageHpLeft": 41.985,
-              "energyWastedPerTurn": 0.2677556818181818,
+              "averageTurns": 5.494,
+              "averageHpLeft": 50.11,
+              "energyWastedPerTurn": 0.21641791044776118,
               "cardUsage": [
                 {
                   "id": "starter_archer_focus",
@@ -3217,9 +3271,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
-                  "plays": 1079,
-                  "opportunities": 4590,
-                  "usageRate": 0.23507625272331154
+                  "plays": 1413,
+                  "opportunities": 8097,
+                  "usageRate": 0.17450907743608743
                 },
                 {
                   "id": "starter_archer_step",
@@ -3227,11 +3281,11 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [
-                    "错身"
+                    "闪避"
                   ],
-                  "plays": 5430,
-                  "opportunities": 13891,
-                  "usageRate": 0.39090058311136705
+                  "plays": 2516,
+                  "opportunities": 4085,
+                  "usageRate": 0.6159118727050183
                 },
                 {
                   "id": "starter_archer_shot",
@@ -3239,9 +3293,9 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
-                  "plays": 10483,
-                  "opportunities": 14249,
-                  "usageRate": 0.7357007509298898
+                  "plays": 13744,
+                  "opportunities": 16697,
+                  "usageRate": 0.8231418817751692
                 },
                 {
                   "id": "starter_archer_aim",
@@ -3251,9 +3305,21 @@
                   "tags": [
                     "蓄力"
                   ],
-                  "plays": 4088,
-                  "opportunities": 4405,
-                  "usageRate": 0.9280363223609535
+                  "plays": 3624,
+                  "opportunities": 3951,
+                  "usageRate": 0.9172361427486713
+                },
+                {
+                  "id": "starter_archer_venom",
+                  "name": "青牙试射",
+                  "cost": 1,
+                  "type": "攻击",
+                  "tags": [
+                    "剧毒"
+                  ],
+                  "plays": 3984,
+                  "opportunities": 4135,
+                  "usageRate": 0.9634824667472793
                 },
                 {
                   "id": "starter_archer_exile",
@@ -3264,29 +3330,17 @@
                     "放逐"
                   ],
                   "plays": 1000,
-                  "opportunities": 1039,
-                  "usageRate": 0.9624639076034649
-                },
-                {
-                  "id": "starter_archer_venom",
-                  "name": "青牙试射",
-                  "cost": 1,
-                  "type": "攻击",
-                  "tags": [
-                    "剧毒"
-                  ],
-                  "plays": 4572,
-                  "opportunities": 4731,
-                  "usageRate": 0.9663918833227647
+                  "opportunities": 1036,
+                  "usageRate": 0.9652509652509652
                 }
               ]
             },
             "千载魔蛛": {
               "games": 1000,
-              "winRate": 1,
-              "averageTurns": 7.067,
-              "averageHpLeft": 34.657,
-              "energyWastedPerTurn": 0.25413895570963635,
+              "winRate": 0.99,
+              "averageTurns": 6.984,
+              "averageHpLeft": 42.074,
+              "energyWastedPerTurn": 0.18943298969072164,
               "cardUsage": [
                 {
                   "id": "诅咒",
@@ -3295,7 +3349,7 @@
                   "type": "能力",
                   "tags": [],
                   "plays": 0,
-                  "opportunities": 5685,
+                  "opportunities": 4846,
                   "usageRate": 0
                 },
                 {
@@ -3304,9 +3358,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
-                  "plays": 1922,
-                  "opportunities": 5266,
-                  "usageRate": 0.36498290922901633
+                  "plays": 3755,
+                  "opportunities": 9614,
+                  "usageRate": 0.39057624297898896
                 },
                 {
                   "id": "starter_archer_step",
@@ -3314,11 +3368,11 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [
-                    "错身"
+                    "闪避"
                   ],
-                  "plays": 6903,
-                  "opportunities": 16128,
-                  "usageRate": 0.42801339285714285
+                  "plays": 2452,
+                  "opportunities": 4886,
+                  "usageRate": 0.5018419975440033
                 },
                 {
                   "id": "starter_archer_shot",
@@ -3326,9 +3380,9 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
-                  "plays": 13561,
-                  "opportunities": 16500,
-                  "usageRate": 0.8218787878787879
+                  "plays": 17317,
+                  "opportunities": 19874,
+                  "usageRate": 0.8713394384623125
                 },
                 {
                   "id": "starter_archer_aim",
@@ -3338,9 +3392,9 @@
                   "tags": [
                     "蓄力"
                   ],
-                  "plays": 4914,
-                  "opportunities": 5198,
-                  "usageRate": 0.9453636013851482
+                  "plays": 4399,
+                  "opportunities": 4791,
+                  "usageRate": 0.918179920684617
                 },
                 {
                   "id": "starter_archer_venom",
@@ -3350,9 +3404,9 @@
                   "tags": [
                     "剧毒"
                   ],
-                  "plays": 5239,
-                  "opportunities": 5444,
-                  "usageRate": 0.9623438648052902
+                  "plays": 4674,
+                  "opportunities": 4989,
+                  "usageRate": 0.9368610944076969
                 },
                 {
                   "id": "starter_archer_exile",
@@ -3363,17 +3417,17 @@
                     "放逐"
                   ],
                   "plays": 1000,
-                  "opportunities": 1031,
-                  "usageRate": 0.9699321047526673
+                  "opportunities": 1058,
+                  "usageRate": 0.945179584120983
                 }
               ]
             },
             "剧毒蟾蜍": {
               "games": 1000,
-              "winRate": 0.953,
-              "averageTurns": 7.17,
-              "averageHpLeft": 21.573,
-              "energyWastedPerTurn": 0.16638772663877266,
+              "winRate": 0.947,
+              "averageTurns": 7.108,
+              "averageHpLeft": 33.904,
+              "energyWastedPerTurn": 0.16333708497467642,
               "cardUsage": [
                 {
                   "id": "诅咒",
@@ -3382,7 +3436,7 @@
                   "type": "能力",
                   "tags": [],
                   "plays": 0,
-                  "opportunities": 1744,
+                  "opportunities": 1445,
                   "usageRate": 0
                 },
                 {
@@ -3391,9 +3445,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
-                  "plays": 1463,
-                  "opportunities": 5812,
-                  "usageRate": 0.25172057811424636
+                  "plays": 2620,
+                  "opportunities": 10357,
+                  "usageRate": 0.25296900646905474
                 },
                 {
                   "id": "starter_archer_step",
@@ -3401,11 +3455,11 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [
-                    "错身"
+                    "闪避"
                   ],
-                  "plays": 7076,
-                  "opportunities": 17667,
-                  "usageRate": 0.40052074489160583
+                  "plays": 2752,
+                  "opportunities": 5254,
+                  "usageRate": 0.5237913970308337
                 },
                 {
                   "id": "starter_archer_shot",
@@ -3413,9 +3467,9 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
-                  "plays": 13937,
-                  "opportunities": 18104,
-                  "usageRate": 0.7698298718515245
+                  "plays": 18223,
+                  "opportunities": 21425,
+                  "usageRate": 0.8505484247374563
                 },
                 {
                   "id": "starter_archer_aim",
@@ -3425,9 +3479,9 @@
                   "tags": [
                     "蓄力"
                   ],
-                  "plays": 5333,
-                  "opportunities": 5629,
-                  "usageRate": 0.9474151714336472
+                  "plays": 4715,
+                  "opportunities": 5130,
+                  "usageRate": 0.919103313840156
                 },
                 {
                   "id": "starter_archer_venom",
@@ -3437,9 +3491,9 @@
                   "tags": [
                     "剧毒"
                   ],
-                  "plays": 5848,
-                  "opportunities": 6081,
-                  "usageRate": 0.9616839335635586
+                  "plays": 5069,
+                  "opportunities": 5327,
+                  "usageRate": 0.9515674863900883
                 },
                 {
                   "id": "starter_archer_exile",
@@ -3450,17 +3504,17 @@
                     "放逐"
                   ],
                   "plays": 1000,
-                  "opportunities": 1029,
-                  "usageRate": 0.9718172983479106
+                  "opportunities": 1045,
+                  "usageRate": 0.9569377990430622
                 }
               ]
             },
             "暴躁野猪": {
               "games": 1000,
-              "winRate": 0.027,
-              "averageTurns": 4.659,
-              "averageHpLeft": 0.313,
-              "energyWastedPerTurn": 0.030693281820133075,
+              "winRate": 0.37,
+              "averageTurns": 5.165,
+              "averageHpLeft": 9.772,
+              "energyWastedPerTurn": 0.08886737657308809,
               "cardUsage": [
                 {
                   "id": "starter_archer_focus",
@@ -3468,9 +3522,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
-                  "plays": 896,
-                  "opportunities": 3846,
-                  "usageRate": 0.2329693187727509
+                  "plays": 1442,
+                  "opportunities": 7643,
+                  "usageRate": 0.18866937066596887
                 },
                 {
                   "id": "starter_archer_step",
@@ -3478,11 +3532,11 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [
-                    "错身"
+                    "闪避"
                   ],
-                  "plays": 4641,
-                  "opportunities": 11606,
-                  "usageRate": 0.39987937273823887
+                  "plays": 2299,
+                  "opportunities": 3793,
+                  "usageRate": 0.6061165304508305
                 },
                 {
                   "id": "starter_archer_shot",
@@ -3490,9 +3544,21 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
-                  "plays": 9244,
-                  "opportunities": 11948,
-                  "usageRate": 0.7736859725477068
+                  "plays": 13407,
+                  "opportunities": 15731,
+                  "usageRate": 0.8522662259233361
+                },
+                {
+                  "id": "starter_archer_aim",
+                  "name": "拉弓瞄准",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [
+                    "蓄力"
+                  ],
+                  "plays": 3446,
+                  "opportunities": 3744,
+                  "usageRate": 0.9204059829059829
                 },
                 {
                   "id": "starter_archer_exile",
@@ -3503,8 +3569,8 @@
                     "放逐"
                   ],
                   "plays": 1000,
-                  "opportunities": 1039,
-                  "usageRate": 0.9624639076034649
+                  "opportunities": 1043,
+                  "usageRate": 0.9587727708533078
                 },
                 {
                   "id": "starter_archer_venom",
@@ -3514,30 +3580,18 @@
                   "tags": [
                     "剧毒"
                   ],
-                  "plays": 3842,
-                  "opportunities": 3971,
-                  "usageRate": 0.967514479979854
-                },
-                {
-                  "id": "starter_archer_aim",
-                  "name": "拉弓瞄准",
-                  "cost": 1,
-                  "type": "能力",
-                  "tags": [
-                    "蓄力"
-                  ],
-                  "plays": 3529,
-                  "opportunities": 3635,
-                  "usageRate": 0.9708390646492435
+                  "plays": 3772,
+                  "opportunities": 3924,
+                  "usageRate": 0.9612640163098879
                 }
               ]
             },
             "铁甲巨蟹": {
               "games": 1000,
-              "winRate": 0.606,
-              "averageTurns": 7.118,
-              "averageHpLeft": 13.471,
-              "energyWastedPerTurn": 0.1489182354593987,
+              "winRate": 0.689,
+              "averageTurns": 7.103,
+              "averageHpLeft": 21.12,
+              "energyWastedPerTurn": 0.15204843024074335,
               "cardUsage": [
                 {
                   "id": "starter_archer_focus",
@@ -3545,9 +3599,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
-                  "plays": 1302,
-                  "opportunities": 5999,
-                  "usageRate": 0.21703617269544925
+                  "plays": 2053,
+                  "opportunities": 10588,
+                  "usageRate": 0.193898753305629
                 },
                 {
                   "id": "starter_archer_step",
@@ -3555,11 +3609,11 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [
-                    "错身"
+                    "闪避"
                   ],
-                  "plays": 7013,
-                  "opportunities": 18148,
-                  "usageRate": 0.3864337668062596
+                  "plays": 2835,
+                  "opportunities": 5317,
+                  "usageRate": 0.5331954109460222
                 },
                 {
                   "id": "starter_archer_shot",
@@ -3567,9 +3621,9 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
-                  "plays": 13887,
-                  "opportunities": 18514,
-                  "usageRate": 0.7500810197688236
+                  "plays": 18485,
+                  "opportunities": 21802,
+                  "usageRate": 0.8478579946793872
                 },
                 {
                   "id": "starter_archer_aim",
@@ -3579,21 +3633,9 @@
                   "tags": [
                     "蓄力"
                   ],
-                  "plays": 5428,
-                  "opportunities": 5677,
-                  "usageRate": 0.9561388057072397
-                },
-                {
-                  "id": "starter_archer_venom",
-                  "name": "青牙试射",
-                  "cost": 1,
-                  "type": "攻击",
-                  "tags": [
-                    "剧毒"
-                  ],
-                  "plays": 5900,
-                  "opportunities": 6122,
-                  "usageRate": 0.9637373407383208
+                  "plays": 4788,
+                  "opportunities": 5195,
+                  "usageRate": 0.921655437921078
                 },
                 {
                   "id": "starter_archer_exile",
@@ -3604,14 +3646,26 @@
                     "放逐"
                   ],
                   "plays": 1000,
-                  "opportunities": 1030,
-                  "usageRate": 0.970873786407767
+                  "opportunities": 1059,
+                  "usageRate": 0.9442870632672332
+                },
+                {
+                  "id": "starter_archer_venom",
+                  "name": "青牙试射",
+                  "cost": 1,
+                  "type": "攻击",
+                  "tags": [
+                    "剧毒"
+                  ],
+                  "plays": 5274,
+                  "opportunities": 5498,
+                  "usageRate": 0.9592579119679884
                 }
               ]
             }
           },
           "aggregate": {
-            "winRate": 0.7172,
+            "winRate": 0.7992,
             "status": "达标",
             "lowestEnemy": "暴躁野猪",
             "highestEnemy": "荒野煞狼"
@@ -3622,10 +3676,10 @@
           "enemies": {
             "堕落剑客": {
               "games": 1000,
-              "winRate": 0,
-              "averageTurns": 4.876,
-              "averageHpLeft": 0,
-              "energyWastedPerTurn": 0.03383921246923708,
+              "winRate": 0.002,
+              "averageTurns": 5.014,
+              "averageHpLeft": 0.075,
+              "energyWastedPerTurn": 0.0017949740725967292,
               "cardUsage": [
                 {
                   "id": "starter_archer_focus",
@@ -3633,9 +3687,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
-                  "plays": 970,
-                  "opportunities": 4004,
-                  "usageRate": 0.24225774225774227
+                  "plays": 1666,
+                  "opportunities": 7487,
+                  "usageRate": 0.2225190329905169
                 },
                 {
                   "id": "starter_archer_step",
@@ -3643,11 +3697,11 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [
-                    "错身"
+                    "闪避"
                   ],
-                  "plays": 4864,
-                  "opportunities": 12237,
-                  "usageRate": 0.39748304322954975
+                  "plays": 2284,
+                  "opportunities": 3784,
+                  "usageRate": 0.6035940803382663
                 },
                 {
                   "id": "starter_archer_shot",
@@ -3655,9 +3709,9 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
-                  "plays": 9407,
-                  "opportunities": 12525,
-                  "usageRate": 0.751057884231537
+                  "plays": 12646,
+                  "opportunities": 15418,
+                  "usageRate": 0.820210143987547
                 },
                 {
                   "id": "starter_archer_aim",
@@ -3667,108 +3721,9 @@
                   "tags": [
                     "蓄力"
                   ],
-                  "plays": 3670,
-                  "opportunities": 3814,
-                  "usageRate": 0.9622443628736235
-                },
-                {
-                  "id": "starter_archer_exile",
-                  "name": "逐影放矢",
-                  "cost": 1,
-                  "type": "攻击",
-                  "tags": [
-                    "放逐"
-                  ],
-                  "plays": 999,
-                  "opportunities": 1035,
-                  "usageRate": 0.9652173913043478
-                },
-                {
-                  "id": "starter_archer_venom",
-                  "name": "青牙试射",
-                  "cost": 1,
-                  "type": "攻击",
-                  "tags": [
-                    "剧毒"
-                  ],
-                  "plays": 4086,
-                  "opportunities": 4228,
-                  "usageRate": 0.966414380321665
-                }
-              ]
-            },
-            "幽冥法师": {
-              "games": 1000,
-              "winRate": 0,
-              "averageTurns": 7.023,
-              "averageHpLeft": 0,
-              "energyWastedPerTurn": 0.09084436850348854,
-              "cardUsage": [
-                {
-                  "id": "诅咒",
-                  "name": "诅咒",
-                  "cost": 99,
-                  "type": "能力",
-                  "tags": [],
-                  "plays": 0,
-                  "opportunities": 3351,
-                  "usageRate": 0
-                },
-                {
-                  "id": "starter_archer_focus",
-                  "name": "整束箭袋",
-                  "cost": 1,
-                  "type": "能力",
-                  "tags": [],
-                  "plays": 1727,
-                  "opportunities": 5552,
-                  "usageRate": 0.31105907780979825
-                },
-                {
-                  "id": "starter_archer_step",
-                  "name": "林地回避",
-                  "cost": 1,
-                  "type": "能力",
-                  "tags": [
-                    "错身"
-                  ],
-                  "plays": 6980,
-                  "opportunities": 16919,
-                  "usageRate": 0.41255393344760327
-                },
-                {
-                  "id": "starter_archer_shot",
-                  "name": "基础射击",
-                  "cost": 1,
-                  "type": "攻击",
-                  "tags": [],
-                  "plays": 14073,
-                  "opportunities": 17448,
-                  "usageRate": 0.8065680880330124
-                },
-                {
-                  "id": "starter_archer_aim",
-                  "name": "拉弓瞄准",
-                  "cost": 1,
-                  "type": "能力",
-                  "tags": [
-                    "蓄力"
-                  ],
-                  "plays": 5164,
-                  "opportunities": 5357,
-                  "usageRate": 0.9639723725966026
-                },
-                {
-                  "id": "starter_archer_venom",
-                  "name": "青牙试射",
-                  "cost": 1,
-                  "type": "攻击",
-                  "tags": [
-                    "剧毒"
-                  ],
-                  "plays": 5533,
-                  "opportunities": 5730,
-                  "usageRate": 0.9656195462478185
+                  "plays": 3392,
+                  "opportunities": 3665,
+                  "usageRate": 0.9255115961800818
                 },
                 {
                   "id": "starter_archer_exile",
@@ -3779,17 +3734,116 @@
                     "放逐"
                   ],
                   "plays": 1000,
-                  "opportunities": 1034,
-                  "usageRate": 0.9671179883945842
+                  "opportunities": 1057,
+                  "usageRate": 0.9460737937559129
+                },
+                {
+                  "id": "starter_archer_venom",
+                  "name": "青牙试射",
+                  "cost": 1,
+                  "type": "攻击",
+                  "tags": [
+                    "剧毒"
+                  ],
+                  "plays": 3689,
+                  "opportunities": 3878,
+                  "usageRate": 0.9512635379061372
+                }
+              ]
+            },
+            "幽冥法师": {
+              "games": 1000,
+              "winRate": 0.015,
+              "averageTurns": 7.999,
+              "averageHpLeft": 0.209,
+              "energyWastedPerTurn": 0.05738217277159645,
+              "cardUsage": [
+                {
+                  "id": "诅咒",
+                  "name": "诅咒",
+                  "cost": 99,
+                  "type": "能力",
+                  "tags": [],
+                  "plays": 0,
+                  "opportunities": 4066,
+                  "usageRate": 0
+                },
+                {
+                  "id": "starter_archer_focus",
+                  "name": "整束箭袋",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [],
+                  "plays": 3829,
+                  "opportunities": 11276,
+                  "usageRate": 0.3395707697765165
+                },
+                {
+                  "id": "starter_archer_step",
+                  "name": "林地回避",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [
+                    "闪避"
+                  ],
+                  "plays": 3059,
+                  "opportunities": 5635,
+                  "usageRate": 0.5428571428571428
+                },
+                {
+                  "id": "starter_archer_shot",
+                  "name": "基础射击",
+                  "cost": 1,
+                  "type": "攻击",
+                  "tags": [],
+                  "plays": 20933,
+                  "opportunities": 23570,
+                  "usageRate": 0.8881204921510395
+                },
+                {
+                  "id": "starter_archer_aim",
+                  "name": "拉弓瞄准",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [
+                    "蓄力"
+                  ],
+                  "plays": 5201,
+                  "opportunities": 5608,
+                  "usageRate": 0.9274251069900142
+                },
+                {
+                  "id": "starter_archer_venom",
+                  "name": "青牙试射",
+                  "cost": 1,
+                  "type": "攻击",
+                  "tags": [
+                    "剧毒"
+                  ],
+                  "plays": 5514,
+                  "opportunities": 5819,
+                  "usageRate": 0.9475854957896546
+                },
+                {
+                  "id": "starter_archer_exile",
+                  "name": "逐影放矢",
+                  "cost": 1,
+                  "type": "攻击",
+                  "tags": [
+                    "放逐"
+                  ],
+                  "plays": 1000,
+                  "opportunities": 1050,
+                  "usageRate": 0.9523809523809523
                 }
               ]
             },
             "巨力石魔": {
               "games": 1000,
               "winRate": 0,
-              "averageTurns": 3.603,
+              "averageTurns": 5.488,
               "averageHpLeft": 0,
-              "energyWastedPerTurn": 0.02497918401332223,
+              "energyWastedPerTurn": 0,
               "cardUsage": [
                 {
                   "id": "starter_archer_focus",
@@ -3797,9 +3851,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
-                  "plays": 618,
-                  "opportunities": 2984,
-                  "usageRate": 0.20710455764075067
+                  "plays": 1652,
+                  "opportunities": 8145,
+                  "usageRate": 0.20282381829343155
                 },
                 {
                   "id": "starter_archer_step",
@@ -3807,11 +3861,11 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [
-                    "错身"
+                    "闪避"
                   ],
-                  "plays": 3591,
-                  "opportunities": 9080,
-                  "usageRate": 0.39548458149779736
+                  "plays": 2437,
+                  "opportunities": 4086,
+                  "usageRate": 0.59642682329907
                 },
                 {
                   "id": "starter_archer_shot",
@@ -3819,21 +3873,9 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
-                  "plays": 6969,
-                  "opportunities": 9234,
-                  "usageRate": 0.7547108512020793
-                },
-                {
-                  "id": "starter_archer_venom",
-                  "name": "青牙试射",
-                  "cost": 1,
-                  "type": "攻击",
-                  "tags": [
-                    "剧毒"
-                  ],
-                  "plays": 2960,
-                  "opportunities": 3061,
-                  "usageRate": 0.9670042469781117
+                  "plays": 14633,
+                  "opportunities": 16763,
+                  "usageRate": 0.87293443894291
                 },
                 {
                   "id": "starter_archer_aim",
@@ -3843,86 +3885,9 @@
                   "tags": [
                     "蓄力"
                   ],
-                  "plays": 2787,
-                  "opportunities": 2875,
-                  "usageRate": 0.969391304347826
-                },
-                {
-                  "id": "starter_archer_exile",
-                  "name": "逐影放矢",
-                  "cost": 1,
-                  "type": "攻击",
-                  "tags": [
-                    "放逐"
-                  ],
-                  "plays": 1000,
-                  "opportunities": 1029,
-                  "usageRate": 0.9718172983479106
-                }
-              ]
-            },
-            "魅影刺客": {
-              "games": 1000,
-              "winRate": 0,
-              "averageTurns": 4.844,
-              "averageHpLeft": 0,
-              "energyWastedPerTurn": 0.036127167630057806,
-              "cardUsage": [
-                {
-                  "id": "starter_archer_focus",
-                  "name": "整束箭袋",
-                  "cost": 1,
-                  "type": "能力",
-                  "tags": [],
-                  "plays": 1008,
-                  "opportunities": 3987,
-                  "usageRate": 0.2528216704288939
-                },
-                {
-                  "id": "starter_archer_step",
-                  "name": "林地回避",
-                  "cost": 1,
-                  "type": "能力",
-                  "tags": [
-                    "错身"
-                  ],
-                  "plays": 4830,
-                  "opportunities": 12105,
-                  "usageRate": 0.3990086741016109
-                },
-                {
-                  "id": "starter_archer_shot",
-                  "name": "基础射击",
-                  "cost": 1,
-                  "type": "攻击",
-                  "tags": [],
-                  "plays": 9376,
-                  "opportunities": 12494,
-                  "usageRate": 0.7504402113014247
-                },
-                {
-                  "id": "starter_archer_venom",
-                  "name": "青牙试射",
-                  "cost": 1,
-                  "type": "攻击",
-                  "tags": [
-                    "剧毒"
-                  ],
-                  "plays": 3941,
-                  "opportunities": 4150,
-                  "usageRate": 0.9496385542168675
-                },
-                {
-                  "id": "starter_archer_aim",
-                  "name": "拉弓瞄准",
-                  "cost": 1,
-                  "type": "能力",
-                  "tags": [
-                    "蓄力"
-                  ],
-                  "plays": 3666,
-                  "opportunities": 3821,
-                  "usageRate": 0.959434702957341
+                  "plays": 3691,
+                  "opportunities": 4024,
+                  "usageRate": 0.9172465208747514
                 },
                 {
                   "id": "starter_archer_exile",
@@ -3933,59 +3898,8 @@
                     "放逐"
                   ],
                   "plays": 999,
-                  "opportunities": 1035,
-                  "usageRate": 0.9652173913043478
-                }
-              ]
-            },
-            "缝合巨怪": {
-              "games": 1000,
-              "winRate": 0,
-              "averageTurns": 5.462,
-              "averageHpLeft": 0,
-              "energyWastedPerTurn": 0.09648480410106189,
-              "cardUsage": [
-                {
-                  "id": "诅咒",
-                  "name": "诅咒",
-                  "cost": 99,
-                  "type": "能力",
-                  "tags": [],
-                  "plays": 0,
-                  "opportunities": 2237,
-                  "usageRate": 0
-                },
-                {
-                  "id": "starter_archer_focus",
-                  "name": "整束箭袋",
-                  "cost": 1,
-                  "type": "能力",
-                  "tags": [],
-                  "plays": 1347,
-                  "opportunities": 4168,
-                  "usageRate": 0.32317658349328215
-                },
-                {
-                  "id": "starter_archer_step",
-                  "name": "林地回避",
-                  "cost": 1,
-                  "type": "能力",
-                  "tags": [
-                    "错身"
-                  ],
-                  "plays": 5348,
-                  "opportunities": 12728,
-                  "usageRate": 0.4201759899434318
-                },
-                {
-                  "id": "starter_archer_shot",
-                  "name": "基础射击",
-                  "cost": 1,
-                  "type": "攻击",
-                  "tags": [],
-                  "plays": 10593,
-                  "opportunities": 13087,
-                  "usageRate": 0.8094292045541377
+                  "opportunities": 1044,
+                  "usageRate": 0.9568965517241379
                 },
                 {
                   "id": "starter_archer_venom",
@@ -3995,9 +3909,62 @@
                   "tags": [
                     "剧毒"
                   ],
-                  "plays": 4181,
-                  "opportunities": 4350,
-                  "usageRate": 0.9611494252873564
+                  "plays": 4028,
+                  "opportunities": 4209,
+                  "usageRate": 0.9569969113803753
+                }
+              ]
+            },
+            "魅影刺客": {
+              "games": 1000,
+              "winRate": 0.08,
+              "averageTurns": 6.679,
+              "averageHpLeft": 1.581,
+              "energyWastedPerTurn": 0.019014822578230273,
+              "cardUsage": [
+                {
+                  "id": "starter_archer_focus",
+                  "name": "整束箭袋",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [],
+                  "plays": 2268,
+                  "opportunities": 10133,
+                  "usageRate": 0.22382315207737097
+                },
+                {
+                  "id": "starter_archer_step",
+                  "name": "林地回避",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [
+                    "闪避"
+                  ],
+                  "plays": 3189,
+                  "opportunities": 5089,
+                  "usageRate": 0.6266457064256239
+                },
+                {
+                  "id": "starter_archer_shot",
+                  "name": "基础射击",
+                  "cost": 1,
+                  "type": "攻击",
+                  "tags": [],
+                  "plays": 16344,
+                  "opportunities": 20986,
+                  "usageRate": 0.7788049175640903
+                },
+                {
+                  "id": "starter_archer_venom",
+                  "name": "青牙试射",
+                  "cost": 1,
+                  "type": "攻击",
+                  "tags": [
+                    "剧毒"
+                  ],
+                  "plays": 4754,
+                  "opportunities": 5221,
+                  "usageRate": 0.9105535338057843
                 },
                 {
                   "id": "starter_archer_aim",
@@ -4007,9 +3974,9 @@
                   "tags": [
                     "蓄力"
                   ],
-                  "plays": 3879,
-                  "opportunities": 4033,
-                  "usageRate": 0.9618150260352095
+                  "plays": 4576,
+                  "opportunities": 4944,
+                  "usageRate": 0.9255663430420712
                 },
                 {
                   "id": "starter_archer_exile",
@@ -4020,17 +3987,104 @@
                     "放逐"
                   ],
                   "plays": 1000,
-                  "opportunities": 1033,
-                  "usageRate": 0.968054211035818
+                  "opportunities": 1048,
+                  "usageRate": 0.9541984732824428
+                }
+              ]
+            },
+            "缝合巨怪": {
+              "games": 1000,
+              "winRate": 0.076,
+              "averageTurns": 9.115,
+              "averageHpLeft": 1.92,
+              "energyWastedPerTurn": 0.08370817334064728,
+              "cardUsage": [
+                {
+                  "id": "诅咒",
+                  "name": "诅咒",
+                  "cost": 99,
+                  "type": "能力",
+                  "tags": [],
+                  "plays": 0,
+                  "opportunities": 5706,
+                  "usageRate": 0
+                },
+                {
+                  "id": "starter_archer_focus",
+                  "name": "整束箭袋",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [],
+                  "plays": 4363,
+                  "opportunities": 12496,
+                  "usageRate": 0.34915172855313703
+                },
+                {
+                  "id": "starter_archer_step",
+                  "name": "林地回避",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [
+                    "闪避"
+                  ],
+                  "plays": 3819,
+                  "opportunities": 6187,
+                  "usageRate": 0.6172620009697753
+                },
+                {
+                  "id": "starter_archer_shot",
+                  "name": "基础射击",
+                  "cost": 1,
+                  "type": "攻击",
+                  "tags": [],
+                  "plays": 23122,
+                  "opportunities": 26075,
+                  "usageRate": 0.8867497603068073
+                },
+                {
+                  "id": "starter_archer_aim",
+                  "name": "拉弓瞄准",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [
+                    "蓄力"
+                  ],
+                  "plays": 5804,
+                  "opportunities": 6202,
+                  "usageRate": 0.9358271525314414
+                },
+                {
+                  "id": "starter_archer_venom",
+                  "name": "青牙试射",
+                  "cost": 1,
+                  "type": "攻击",
+                  "tags": [
+                    "剧毒"
+                  ],
+                  "plays": 6254,
+                  "opportunities": 6611,
+                  "usageRate": 0.9459990924217214
+                },
+                {
+                  "id": "starter_archer_exile",
+                  "name": "逐影放矢",
+                  "cost": 1,
+                  "type": "攻击",
+                  "tags": [
+                    "放逐"
+                  ],
+                  "plays": 1000,
+                  "opportunities": 1040,
+                  "usageRate": 0.9615384615384616
                 }
               ]
             }
           },
           "aggregate": {
-            "winRate": 0,
+            "winRate": 0.0346,
             "status": "达标",
-            "lowestEnemy": "堕落剑客",
-            "highestEnemy": "堕落剑客"
+            "lowestEnemy": "巨力石魔",
+            "highestEnemy": "魅影刺客"
           }
         }
       }

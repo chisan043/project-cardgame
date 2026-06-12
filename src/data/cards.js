@@ -339,7 +339,7 @@ const BUILD_DIRECTIONS = {
         calamity: { name: '灾厄术士', desc: '堆叠多种负面状态，通过状态数量和持续压制获胜。', triggerTags: ['诅咒', '虚弱', '易伤', '燃烧', '剧毒', '出血', '眩晕'] }
     },
     hero_archer: {
-        gale: { name: '疾风连射', desc: '风势、蓄力、自然、错身与追击组成当前弓手默认节奏。', triggerTags: ['追击', '蓄力', '自然', '错身', '保留'] },
+        gale: { name: '疾风连射', desc: '风势、蓄力、自然、闪避与追击组成当前弓手默认节奏。', triggerTags: ['追击', '蓄力', '自然', '闪避', '保留'] },
         venom: { name: '猎毒陷袭', desc: '用剧毒、出血和放血形成延迟爆发。', triggerTags: ['剧毒', '出血', '放血', '虚弱'] },
         exile: { name: '放逐游侠', desc: '管理放逐、墓地和回收区，让牌在不同牌区循环。', triggerTags: ['放逐', '回收', '销毁'] }
     }
@@ -537,12 +537,12 @@ const BUILD_EXPANSION_CARDS = {
         { poolId: 'archer_venom_blood_shift', name: '毒血换羽', type: '能力', cost: 1, icon: '🪶', val: 0, tags: ['放血', '充能'], buildTags: ['venom'], rarity: '稀有', frameTheme: 'archer', desc: '触发[放血]并[充能]。' },
         { poolId: 'archer_green_mist_end', name: '绿雾终幕', type: '攻击', cost: 2, icon: '☠️', val: 11, tags: ['剧毒', '放血'], buildTags: ['venom'], rarity: '史诗', frameTheme: 'archer', desc: '造成 11 点伤害，施加[剧毒]并触发[放血]。' },
         { poolId: 'archer_returning_feather', name: '折返羽刃', type: '攻击', cost: 1, icon: '🪶', val: 7, tags: ['放逐', '回收'], buildTags: ['exile'], rarity: '普通', frameTheme: 'archer', desc: '造成 7 点伤害后[放逐]，并触发[回收]。' },
-        { poolId: 'archer_empty_string', name: '空弦藏牌', type: '能力', cost: 0, icon: '🏹', val: 0, tags: ['放逐', '抽牌', '错身'], buildTags: ['exile'], rarity: '普通', frameTheme: 'archer', desc: '自身[放逐]并[抽牌]，同时获得[错身]。' },
+        { poolId: 'archer_empty_string', name: '空弦藏牌', type: '能力', cost: 0, icon: '🏹', val: 0, tags: ['放逐', '抽牌', '闪避'], buildTags: ['exile'], rarity: '普通', frameTheme: 'archer', desc: '自身[放逐]并[抽牌]，同时获得[闪避]。' },
         { poolId: 'archer_outerwood_recall', name: '林外回收', type: '能力', cost: 0, icon: '🏮', val: 0, tags: ['回收', '充能'], buildTags: ['exile'], rarity: '稀有', frameTheme: 'archer', desc: '触发[回收]并[充能]。' },
         { poolId: 'archer_deadbranch_shuffle', name: '残枝洗牌', type: '能力', cost: 1, icon: '🧭', val: 0, tags: ['回收', '抽牌'], buildTags: ['exile'], rarity: '稀有', frameTheme: 'archer', desc: '触发[回收]并[抽牌]。' },
         { poolId: 'archer_shadow_line', name: '影羽切线', type: '攻击', cost: 1, icon: '🗡️', val: 7, tags: ['放逐', '连击'], buildTags: ['exile'], rarity: '普通', frameTheme: 'archer', desc: '造成 7 点伤害；若本回合已出牌则触发[连击]，随后[放逐]。' },
-        { poolId: 'archer_lost_arrow_mark', name: '遗箭定位', type: '能力', cost: 2, icon: '📍', val: 1, tags: ['回收', '错身'], buildTags: ['exile'], rarity: '稀有', frameTheme: 'archer', desc: '从墓地取回 1 张牌，并获得 1 层[错身]。' },
-        { poolId: 'archer_leaf_store', name: '飞叶封存', type: '防御', cost: 1, icon: '🍂', val: 9, tags: ['错身', '保留'], buildTags: ['gale'], rarity: '普通', frameTheme: 'archer', desc: '获得 9 点护盾，获得 1 层[错身]并[保留]。' },
+        { poolId: 'archer_lost_arrow_mark', name: '遗箭定位', type: '能力', cost: 2, icon: '📍', val: 1, tags: ['回收', '闪避'], buildTags: ['exile'], rarity: '稀有', frameTheme: 'archer', desc: '从墓地取回 1 张牌，并获得 1 层[闪避]。' },
+        { poolId: 'archer_leaf_store', name: '飞叶封存', type: '防御', cost: 1, icon: '🍂', val: 9, tags: ['闪避', '保留'], buildTags: ['gale'], rarity: '普通', frameTheme: 'archer', desc: '获得 9 点护盾，获得 1 层[闪避]并[保留]。' },
         { poolId: 'archer_nest_track', name: '回巢轨迹', type: '攻击', cost: 2, icon: '🧭', val: 11, tags: ['回收', '穿甲'], buildTags: ['exile'], rarity: '稀有', frameTheme: 'archer', desc: '造成 11 点[穿甲]伤害并触发[回收]。' },
         { poolId: 'archer_empty_valley_knife', name: '空谷飞刀', type: '攻击', cost: 0, icon: '🗡️', val: 4, tags: ['销毁'], buildTags: ['exile'], rarity: '普通', frameTheme: 'archer', desc: '造成 4 点伤害后[销毁]。作为放逐游侠的低费压缩件。' },
         { poolId: 'archer_old_arrow_dream', name: '旧箭入梦', type: '能力', cost: 1, icon: '💤', val: 0, tags: ['回收', '抽牌'], buildTags: ['exile'], rarity: '稀有', frameTheme: 'archer', desc: '触发[回收]并[抽牌]。' },
@@ -600,12 +600,12 @@ const STARTER_DECKS = {
     starter_archer: {
         roleId: 'hero_archer',
         cards: [
-            { poolId: 'starter_archer_shot', name: '基础射击', type: '攻击', cost: 1, icon: '🏹', val: 6, tags: [], rarity: '普通', copies: 3, frameTheme: 'archer', desc: '造成 6 点伤害。' },
-            { poolId: 'starter_archer_step', name: '林地回避', type: '能力', cost: 1, icon: '🍃', val: 3, tags: ['错身'], buildNeutral: true, sidestepVal: 3, rarity: '普通', copies: 3, frameTheme: 'archer', desc: '获得 3 层[错身]，每层卸掉下一次主体攻击的 40% 伤害。' },
+            { poolId: 'starter_archer_shot', name: '基础射击', type: '攻击', cost: 1, icon: '🏹', val: 6, tags: [], rarity: '普通', copies: 4, frameTheme: 'archer', desc: '造成 6 点伤害。' },
+            { poolId: 'starter_archer_step', name: '林地回避', type: '能力', cost: 1, icon: '🍃', val: 1, tags: ['闪避'], buildNeutral: true, sidestepVal: 1, rarity: '普通', frameTheme: 'archer', desc: '获得 1 层[闪避]，完全躲开本轮敌方主体的下一段攻击。' },
             { poolId: 'starter_archer_aim', name: '拉弓瞄准', type: '能力', cost: 1, icon: '🎯', val: 4, tags: ['蓄力'], buildTags: ['gale'], directEffects: { draw: true }, rarity: '普通', frameTheme: 'archer', desc: '获得风势并抽 1 张牌。' },
             { poolId: 'starter_archer_venom', name: '青牙试射', type: '攻击', cost: 1, icon: '☠️', val: 4, tags: ['剧毒'], buildTags: ['venom'], rarity: '普通', frameTheme: 'archer', desc: '造成 4 点伤害并施加[剧毒]。' },
             { poolId: 'starter_archer_exile', name: '逐影放矢', type: '攻击', cost: 1, icon: '🏹', val: 7, tags: ['放逐'], buildTags: ['exile'], rarity: '普通', frameTheme: 'archer', desc: '造成 7 点伤害并[放逐]。' },
-            { poolId: 'starter_archer_focus', name: '整束箭袋', type: '能力', cost: 1, icon: '🪶', val: 0, tags: [], buildNeutral: true, directEffects: { draw: true }, rarity: '普通', frameTheme: 'archer', desc: '抽 1 张牌。' }
+            { poolId: 'starter_archer_focus', name: '整束箭袋', type: '能力', cost: 1, icon: '🪶', val: 0, tags: [], buildNeutral: true, directEffects: { draw: true }, rarity: '普通', copies: 2, frameTheme: 'archer', desc: '抽 1 张牌。' }
         ]
     }
 };
@@ -614,6 +614,18 @@ const STARTER_DIRECTION_REWARD_POOLS = {
     hero_warrior: ['oathblade', 'execution', 'bloodoath'],
     hero_mage: ['chant', 'mirror', 'calamity'],
     hero_archer: ['gale', 'venom', 'exile']
+};
+
+const STARTER_CORE_CARD_TRANSFORMS = {
+    r_execution_warrant: {
+        sourcePoolId: 'starter_warrior_guard',
+        card: {
+            name: '决绝斩', type: '攻击', cost: 1, icon: '⚔️', val: 9,
+            tags: ['连击'], buildTags: ['execution'], buildNeutral: false,
+            rarity: '普通', frameTheme: 'warrior',
+            desc: '造成 9 点伤害；若本回合已打出过其他牌，触发[连击]。'
+        }
+    }
 };
 
 Object.values(CHARACTER_CARD_POOLS).flat().forEach(applyCardTagBudget);

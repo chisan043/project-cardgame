@@ -136,10 +136,17 @@ function analyzeStarterBias(data, roleId, starter) {
         const fallback = classPool.filter(card => getCardBuildTags(data, roleId, card).includes(buildTag)).length;
         return [buildTag, { exact, fallback }];
     }));
-    const roleRelics = data.ROLE_RELIC_IDS[roleId];
-    const neutralInitialRelics = data.RELIC_POOL.filter(relic => (
-        roleRelics.has(relic.id) || data.COMMON_RELIC_IDS.has(relic.id)
-    ) && getRelicBuildTags(data, roleId, relic).length === 0).length;
+    const coreChoices = (data.STARTER_CORE_RELIC_IDS[roleId] || []).map(id => ({
+        id,
+        buildTag: data.RELIC_CARD_REWARD_BONUS_BY_ID[id] || null,
+        exists: data.RELIC_POOL.some(relic => relic.id === id)
+    }));
+    const executionTransform = roleId !== 'hero_warrior' ? null : {
+        sourcePoolId: data.STARTER_CORE_CARD_TRANSFORMS.r_execution_warrant?.sourcePoolId || null,
+        convertedCopies: starter.cards
+            .filter(card => card.poolId === data.STARTER_CORE_CARD_TRANSFORMS.r_execution_warrant?.sourcePoolId)
+            .reduce((sum, card) => sum + Math.max(1, Number(card.copies) || 1), 0)
+    };
     const signalValues = Object.values(buildSignals);
     const profileValues = Object.values(buildProfile);
     const signalSpread = Math.max(...signalValues) - Math.min(...signalValues);
@@ -147,14 +154,17 @@ function analyzeStarterBias(data, roleId, starter) {
     const passed = signalValues.every(value => value === 1)
         && profileSpread === 0
         && Object.values(directionRewardCoverage).every(value => value.exact > 0)
-        && neutralInitialRelics >= 3;
+        && coreChoices.length === 3
+        && coreChoices.every(choice => choice.exists && directions.includes(choice.buildTag))
+        && (!executionTransform || executionTransform.convertedCopies === 3);
     return {
         buildSignals,
         buildProfile,
         signalSpread,
         profileSpread,
         directionRewardCoverage,
-        neutralInitialRelics,
+        coreChoices,
+        executionTransform,
         passed
     };
 }
@@ -288,14 +298,15 @@ function renderMarkdown(report) {
         lines.push('');
     }
     lines.push('## 流派锁定检查', '');
-    lines.push('| 角色 | 初始信号 | 构筑分差 | 首次奖励精准候选 | 中立初始遗物 | 结果 |');
-    lines.push('| --- | --- | ---: | --- | ---: | --- |');
+    lines.push('| 角色 | 初始信号 | 构筑分差 | 核心遗物覆盖 | 首次奖励精准候选 | 结果 |');
+    lines.push('| --- | --- | ---: | --- | --- | --- |');
     for (const result of report.results) {
         const signals = Object.entries(result.bias.buildSignals).map(([tag, value]) => `${tag} ${value}`).join(' / ');
+        const cores = result.bias.coreChoices.map(choice => choice.buildTag || choice.id).join(' / ');
         const coverage = Object.entries(result.bias.directionRewardCoverage).map(([tag, value]) => `${tag} ${value.exact}`).join(' / ');
-        lines.push(`| ${result.role} | ${signals} | ${result.bias.profileSpread.toFixed(2)} | ${coverage} | ${result.bias.neutralInitialRelics} | ${result.bias.passed ? '通过' : '失败'} |`);
+        lines.push(`| ${result.role} | ${signals} | ${result.bias.profileSpread.toFixed(2)} | ${cores} | ${coverage} | ${result.bias.passed ? '通过' : '失败'} |`);
     }
-    lines.push('', '通过条件：职业基础生存机制不计入流派权重，每条构筑路线恰好 1 张初始种子牌，初始构筑分完全相等，首次奖励每条路线都有精准候选，且每个角色至少有 3 件中立初始遗物。', '');
+    lines.push('', '通过条件：职业基础生存机制不计入流派权重，三件开局核心遗物完整覆盖三条路线，每条路线都有精准奖励候选，处刑核心能转换三张初始护盾牌。', '');
     lines.push('## 初始卡使用率', '');
     for (const result of report.results) {
         const teachingEnemies = ['early', 'mid'].flatMap(id => Object.values(result.checkpoints[id].enemies));
@@ -327,7 +338,7 @@ function main() {
     const report = {
         generatedAt: generatedAt.toISOString(),
         generatedDate: localDate(generatedAt),
-        model: 'starter deck forced encounter and build-bias simulation v2',
+        model: 'starter deck, dodge and core-relic selection simulation v3',
         runsPerEnemy: args.runs,
         seed: args.seed,
         results

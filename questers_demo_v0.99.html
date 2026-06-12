@@ -1810,7 +1810,7 @@
         <div class="role-select-shell">
             <div class="role-select-header">
                 <h2 class="role-select-title">命途之选</h2>
-                <p class="role-select-subtitle">从三位旅者中选择本次探索的起点。选定角色后，将进入本命奇珍选择。</p>
+                <p class="role-select-subtitle">从三位旅者中选择本次探索的起点。选定角色后，将通过核心遗物确定流派。</p>
             </div>
             <div id="role-select-grid" class="role-select-grid"></div>
             <div class="role-select-footer">
@@ -1823,8 +1823,8 @@
 
 <div class="overlay" id="overlay-init-relic">
     <div class="event-box" style="width: 1000px;">
-        <h2 style="color:var(--gold); margin-top:0;">旧王的馈赠</h2>
-        <p style="color:#aaa;">远征启幕，请选择一件本命奇珍相伴，定下你此局牌组的方向。</p>
+        <h2 style="color:var(--gold); margin-top:0;">命途核心</h2>
+        <p style="color:#aaa;">请选择一件核心遗物。这将确定本次远征的流派，并影响后续卡牌奖励。</p>
         <div id="init-relic-content" style="display:flex; justify-content:center; gap:30px; margin:40px 0;"></div>
     </div>
 </div>
@@ -2127,7 +2127,18 @@
         return profile;
     }
 
+    function getSelectedCoreBuildTag() {
+        for (const relic of state.relics) {
+            if (!CORE_RELIC_IDS.has(relic.id)) continue;
+            const buildTag = RELIC_CARD_REWARD_BONUS_BY_ID[relic.id];
+            if (buildTag) return buildTag;
+        }
+        return null;
+    }
+
     function getPrimaryBuildTag(profile = getDeckBuildProfile()) {
+        const coreBuildTag = getSelectedCoreBuildTag();
+        if (coreBuildTag) return coreBuildTag;
         const ranked = Object.entries(profile).sort((a, b) => b[1] - a[1]);
         if (!ranked.length || ranked[0][1] <= MIN_PRIMARY_BUILD_PROFILE_SCORE) return null;
         return ranked[0][0];
@@ -2268,7 +2279,7 @@
         '易伤', '虚弱', '诅咒', '眩晕',
         '圣剑', '穿甲', '重击', '连击', '追击', '爆发',
         '咏唱', '回响', '复刻', '充能', '附魔',
-        '庇护', '错身', '治愈', '抽牌', '保留', '蓄力', '自然', '重置',
+        '庇护', '闪避', '治愈', '抽牌', '保留', '蓄力', '自然', '重置',
         '放逐', '回收', '销毁', '狂热'
     ];
 
@@ -2483,7 +2494,7 @@
     }
 
     function shouldOfferStarterDirectionChoice() {
-        return state.floor === 0 && state.deck.length > 0 && state.deck.every(card => card.isStarter);
+        return !getSelectedCoreBuildTag() && state.floor === 0 && state.deck.length > 0 && state.deck.every(card => card.isStarter);
     }
 
     function generateStarterDirectionChoices() {
@@ -2756,26 +2767,26 @@
         
         let d = "";
         const tags = normalizeTagConflicts(card.tags || []);
-        const secondaryTags = tags.filter(x => x !== '蓄力' && x !== '错身' && x !== '回收');
+        const secondaryTags = tags.filter(x => x !== '蓄力' && x !== '闪避' && x !== '回收');
         
         if (card.type === '攻击') {
             d += `造成 <span class="card-desc-value">${getScaledCardValue(card)}</span> 点伤害。`;
             if (secondaryTags.length) d += `<br>附带 ${renderTagNames(secondaryTags)}。`;
             if (tags.includes('蓄力')) d += `<br>获得 <span class="card-desc-value">${getWindGain(card)}</span> 层风势。`;
-            if (tags.includes('错身')) d += `<br>获得 <span class="card-desc-value">${getSidestepGain(card)}</span> 层错身。`;
+            if (tags.includes('闪避')) d += `<br>获得 <span class="card-desc-value">${getSidestepGain(card)}</span> 层闪避。`;
         } 
         else if (card.type === '防御') {
             d += `获得 <span class="card-desc-value">${getScaledCardValue(card)}</span> 点护盾。`;
             if (secondaryTags.length) d += `<br>附带 ${renderTagNames(secondaryTags)}。`;
             if (tags.includes('蓄力')) d += `<br>获得 <span class="card-desc-value">${getWindGain(card)}</span> 层风势。`;
-            if (tags.includes('错身')) d += `<br>获得 <span class="card-desc-value">${getSidestepGain(card)}</span> 层错身。`;
+            if (tags.includes('闪避')) d += `<br>获得 <span class="card-desc-value">${getSidestepGain(card)}</span> 层闪避。`;
         } 
         else if (card.type === '能力') {
             const lines = [];
             if (tags.includes('蓄力')) lines.push(`获得 <span class="card-desc-value">${getWindGain(card)}</span> 层风势。`);
-            if (tags.includes('错身')) lines.push(`获得 <span class="card-desc-value">${getSidestepGain(card)}</span> 层错身。`);
+            if (tags.includes('闪避')) lines.push(`获得 <span class="card-desc-value">${getSidestepGain(card)}</span> 层闪避。`);
             if (tags.includes('咏唱')) lines.push(`积累 <span class="card-desc-value">${getCardChantGain(card)}</span> 层咏唱。`);
-            const otherTags = tags.filter(x => x !== '蓄力' && x !== '错身' && x !== '咏唱' && x !== '回收');
+            const otherTags = tags.filter(x => x !== '蓄力' && x !== '闪避' && x !== '咏唱' && x !== '回收');
             if (otherTags.length) lines.push(`触发 ${renderTagNames(otherTags)}。`);
             d = lines.join('<br>');
         } 
@@ -3091,7 +3102,7 @@
     }
     function getCurrentRoleRelicPool(source) {
         const pool = getRelicsPreferredWithArt(source);
-        return pool.filter(isCurrentRoleRelic);
+        return pool.filter(relic => isCurrentRoleRelic(relic) && !CORE_RELIC_IDS.has(relic.id));
     }
     function getRelicBuildTags(relic, characterId = state.player?.characterId) {
         const explicit = (typeof RELIC_BUILD_TAGS_BY_ID !== 'undefined' && RELIC_BUILD_TAGS_BY_ID[relic?.id]) || [];
@@ -3808,7 +3819,7 @@
             }
             add('chant', '咏唱', '✦', state.p_chant, STATUS_DESC.chant, 'is-magic');
             add('aim', '风势', '🪶', state.p_aim, STATUS_DESC.aim, 'is-nature');
-            add('sidestep', '错身', '🍃', state.p_sidestep, '敌方主体下一次攻击时卸掉 40% 伤害并获得 1 层风势；若敌方没有主体攻击，回合转换时抽牌。', 'is-nature');
+            add('sidestep', '闪避', '🍃', state.p_sidestep, '每层可完全闪避本轮敌方主体的 1 段攻击。敌方行动结束后剩余层数消失。', 'is-nature');
         } else if (actor.charged) {
             entries.push({ id: 'charge', label: '蓄力', icon: '🔥', value: null, tooltip: STATUS_DESC.charge, tone: 'is-fire' });
         }
@@ -4513,23 +4524,33 @@
 
     function showInitRelicOverlay() {
         const container = document.getElementById('init-relic-content'); container.innerHTML = '';
-        let pool = shufflePool(getCurrentRoleRelicPool(RELIC_POOL).filter(relic => getRelicBuildTags(relic).length === 0)).slice(0, 3);
-        if (pool.length < 3) {
-            pool = shufflePool(RELIC_POOL.filter(relic => isCommonRelic(relic) && getRelicBuildTags(relic).length === 0)).slice(0, 3);
-        }
+        const coreIds = STARTER_CORE_RELIC_IDS[state.player.characterId] || [];
+        const pool = coreIds.map(id => RELIC_POOL.find(relic => relic.id === id)).filter(Boolean);
         pool.forEach(r => {
             const rw = document.createElement('div'); rw.className = 'relic-item-box'; rw.style.cursor = 'pointer';
             rw.innerHTML = `<div style="width:78px; height:78px; margin:0 auto 15px; filter:drop-shadow(0 0 10px var(--gold)); font-size:50px;">${renderRelicVisual(r)}</div><div style="color:white; font-weight:bold; font-size:18px;">${r.name}</div><div style="flex:1; color:#aaa; font-size:12px; margin:10px 0; line-height:1.5; text-align:left;">${formatKeywords(getDisplayRelicDesc(r))}</div>${getRelicBottomTags(r)}`;
             rw.onclick = () => {
                 state.relics.push(JSON.parse(JSON.stringify(r)));
+                applyStarterCoreRelic(r.id);
                 closeOverlay('overlay-init-relic');
                 generateMap(); renderMap(); updateTopBar(); setTopBarVisible(true); showScene('scene-map');
                 saveRun();
-                showFloatText("获得本命奇珍：" + r.name, "var(--gold)", {x: window.innerWidth/2, y: window.innerHeight/2});
+                showFloatText("命途已定：" + r.name, "var(--gold)", {x: window.innerWidth/2, y: window.innerHeight/2});
             };
             container.appendChild(rw);
         });
         showOverlay('overlay-init-relic');
+    }
+
+    function applyStarterCoreRelic(relicId) {
+        const transform = STARTER_CORE_CARD_TRANSFORMS[relicId];
+        if (!transform) return;
+        state.deck.forEach(card => {
+            if (card.poolId !== transform.sourcePoolId) return;
+            Object.assign(card, JSON.parse(JSON.stringify(transform.card)));
+            card.poolId = transform.sourcePoolId;
+            applyCardTagBudget(card);
+        });
     }
 
     function returnToMenu() {
@@ -4611,7 +4632,7 @@
         if(state.p_counter > 0) pStatus.innerHTML += `<div class="status-badge badge-str" style="background:rgba(241,196,15,0.9); color:black;">⚡ 招架准备<div class="status-tooltip">已进入反击姿态；受到下一次敌方主体攻击时招架本次伤害的 50% 并反伤。此状态不可叠加。</div></div>`;
         if(state.p_chant > 0) pStatus.innerHTML += `<div class="status-badge badge-str" style="background:rgba(142, 68, 173, 0.9);">✦ 咏唱: ${state.p_chant}<div class="status-tooltip">${STATUS_DESC['chant']}</div></div>`;
         if(state.p_aim > 0) pStatus.innerHTML += `<div class="status-badge badge-str" style="background:rgba(48,104,82,0.9);">🪶 风势: ${state.p_aim}<div class="status-tooltip">${STATUS_DESC['aim']}</div></div>`;
-        if(state.p_sidestep > 0) pStatus.innerHTML += `<div class="status-badge badge-str" style="background:rgba(48,104,82,0.9);">🍃 错身: ${state.p_sidestep}<div class="status-tooltip">敌方主体下一次攻击时卸掉 40% 伤害并获得 1 层风势；若敌方没有主体攻击，回合转换时抽牌。</div></div>`;
+        if(state.p_sidestep > 0) pStatus.innerHTML += `<div class="status-badge badge-str" style="background:rgba(48,104,82,0.9);">🍃 闪避: ${state.p_sidestep}<div class="status-tooltip">每层可完全闪避本轮敌方主体的 1 段攻击。敌方行动结束后剩余层数消失。</div></div>`;
 
         const rBar = document.getElementById('ui-relics-bar'); rBar.innerHTML = '';
         state.relics.forEach(r => { rBar.innerHTML += `<div class="relic-icon">${renderRelicVisual(r)}<div class="status-tooltip"><span style="color:var(--gold); font-weight:bold;">${r.name}</span><br>${getTooltipTextWithKeywords(getDisplayRelicDesc(r))}</div></div>`; });
@@ -5781,7 +5802,7 @@
                 state.p_sidestep = Math.min(3, (state.p_sidestep || 0) + sidestepGain);
                 state.mp += hasRelic('r_pass_energy') ? 2 : 1;
                 if (hadWind) state.p_reduce_dmg += 6;
-                showFloatText(`风势 +${windGain} / 错身 +${sidestepGain}`, "var(--nature)", getCenter('ui-hp'));
+                showFloatText(`风势 +${windGain} / 闪避 +${sidestepGain}`, "var(--nature)", getCenter('ui-hp'));
                 await drawCards(1);
             }
             else if (card.specialId === 'a_gale_verdict') {
@@ -5867,7 +5888,7 @@
             if (hasRelic('r_guardian_core')) state.armor += Math.floor(pVal / 2);
             showFloatText(`庇护 +${pVal}`, "var(--water)", getCenter('ui-hp'));
         }
-        if (card.tags && card.tags.includes('错身')) {
+        if (card.tags && card.tags.includes('闪避')) {
             let sidestepVal = getSidestepGain(card) + (hasRelic('r_wind_quiver') ? 1 : 0);
             if (hasRelic('r_tailwind_spool') && !state.r_tailwind_spool_used) {
                 sidestepVal += 1;
@@ -5875,7 +5896,7 @@
                 state.p_reduce_dmg += 3;
             }
             state.p_sidestep = Math.min(3, (state.p_sidestep || 0) + sidestepVal);
-            showFloatText(`错身 +${sidestepVal}`, "var(--nature)", getCenter('ui-hp'));
+            showFloatText(`闪避 +${sidestepVal}`, "var(--nature)", getCenter('ui-hp'));
         }
 
         let requireDiscard1 = ['狂热', '附魔'].filter(t => card.tags && card.tags.includes(t));
@@ -6221,8 +6242,6 @@
 
         let move = state.enemy.nextMove; let avatar = document.getElementById('enemy-avatar');
         let playerWasAttacked = false;
-        let sidestepTriggeredThisTurn = false;
-
         let enemySkippedByStun = false;
         if (state.enemy.stun > 0) {
             state.enemy.stun--;
@@ -6261,15 +6280,12 @@
                 triggerVFX('e-atk'); 
                 
                 let dmg = baseDmg;
-                if (state.p_reduce_dmg > 0) { let r = Math.min(dmg, state.p_reduce_dmg); dmg -= r; state.p_reduce_dmg -= r; showFloatText(`减免抵抗 -${r}`, "var(--water)", getCenter('ui-hp')); }
-                if (state.p_sidestep > 0 && dmg > 0) {
-                    const reduced = Math.max(1, Math.floor(dmg * 0.4));
-                    dmg -= reduced;
+                if (state.p_sidestep > 0) {
                     state.p_sidestep--;
-                    state.p_aim = Math.min(6, state.p_aim + 1 + (hasRelic('r_wind_quiver') ? 1 : 0));
-                    sidestepTriggeredThisTurn = true;
-                    showFloatText(`错身 -${reduced} / 风势 +1`, "var(--nature)", getCenter('ui-hp'));
+                    dmg = 0;
+                    showFloatText("闪避", "var(--nature)", getCenter('ui-hp'));
                 }
+                if (state.p_reduce_dmg > 0 && dmg > 0) { let r = Math.min(dmg, state.p_reduce_dmg); dmg -= r; state.p_reduce_dmg -= r; showFloatText(`减免抵抗 -${r}`, "var(--water)", getCenter('ui-hp')); }
                 
                 if (state.p_counter > 0 && dmg > 0) {
                     state.p_counter = 0;
@@ -6355,14 +6371,7 @@
             const character = getCurrentCharacter();
             state.mp = getCharacterBaseEnergy(character); 
             state.p_reduce_dmg = 0;
-            if (!sidestepTriggeredThisTurn && state.p_sidestep > 0) {
-                const sidestepDraw = Math.min(2, state.p_sidestep);
-                state.p_sidestep = 0;
-                showFloatText(`错身转机 抽${sidestepDraw}`, "var(--nature)", getCenter('ui-deck-count'));
-                await drawCards(sidestepDraw);
-            } else {
-                state.p_sidestep = 0;
-            }
+            state.p_sidestep = 0;
             if (hasRelic('r_chant_ink') && state.p_chant < 2) {
                 state.p_chant = 2;
                 showFloatText("恒咏墨瓶", "var(--purple)", getCenter('ui-hp'));
