@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-12T17:27:04.986Z",
+  "generatedAt": "2026-06-12T17:39:32.605Z",
   "generatedDate": "2026-06-13",
   "model": "starter deck, dodge and core-relic selection simulation v3",
   "runsPerEnemy": 1000,
@@ -117,12 +117,114 @@
             "exists": true
           }
         ],
-        "executionTransform": {
-          "sourcePoolId": "starter_warrior_guard",
-          "convertedCopies": 3
-        },
+        "coreTransforms": [
+          {
+            "id": "r_oathblade_beacon",
+            "sourcePoolId": "starter_warrior_guard",
+            "sourceCopies": 3,
+            "transformedBuildTags": [
+              "oathblade"
+            ]
+          },
+          {
+            "id": "r_execution_warrant",
+            "sourcePoolId": "starter_warrior_guard",
+            "sourceCopies": 3,
+            "transformedBuildTags": [
+              "execution"
+            ]
+          },
+          {
+            "id": "r_bloodoath_contract",
+            "sourcePoolId": "starter_warrior_guard",
+            "sourceCopies": 3,
+            "transformedBuildTags": [
+              "bloodoath"
+            ]
+          }
+        ],
         "passed": true
       },
+      "coreVariants": [
+        {
+          "relicId": "r_oathblade_beacon",
+          "relic": "圣誓航标",
+          "buildTag": "oathblade",
+          "transformedCard": "誓反架势",
+          "checkpoints": {
+            "early": {
+              "winRate": 1,
+              "status": "达标",
+              "lowestEnemy": "病弱史莱姆",
+              "highestEnemy": "病弱史莱姆"
+            },
+            "mid": {
+              "winRate": 0.922,
+              "status": "达标",
+              "lowestEnemy": "暴躁野猪",
+              "highestEnemy": "荒野煞狼"
+            },
+            "late": {
+              "winRate": 0.1398,
+              "status": "达标",
+              "lowestEnemy": "巨力石魔",
+              "highestEnemy": "缝合巨怪"
+            }
+          }
+        },
+        {
+          "relicId": "r_execution_warrant",
+          "relic": "处刑令状",
+          "buildTag": "execution",
+          "transformedCard": "决绝斩",
+          "checkpoints": {
+            "early": {
+              "winRate": 1,
+              "status": "达标",
+              "lowestEnemy": "病弱史莱姆",
+              "highestEnemy": "病弱史莱姆"
+            },
+            "mid": {
+              "winRate": 0.9476,
+              "status": "达标",
+              "lowestEnemy": "暴躁野猪",
+              "highestEnemy": "荒野煞狼"
+            },
+            "late": {
+              "winRate": 0.0704,
+              "status": "达标",
+              "lowestEnemy": "巨力石魔",
+              "highestEnemy": "魅影刺客"
+            }
+          }
+        },
+        {
+          "relicId": "r_bloodoath_contract",
+          "relic": "血誓招令",
+          "buildTag": "bloodoath",
+          "transformedCard": "血偿壁垒",
+          "checkpoints": {
+            "early": {
+              "winRate": 1,
+              "status": "达标",
+              "lowestEnemy": "病弱史莱姆",
+              "highestEnemy": "病弱史莱姆"
+            },
+            "mid": {
+              "winRate": 0.9276,
+              "status": "达标",
+              "lowestEnemy": "暴躁野猪",
+              "highestEnemy": "荒野煞狼"
+            },
+            "late": {
+              "winRate": 0.0192,
+              "status": "达标",
+              "lowestEnemy": "巨力石魔",
+              "highestEnemy": "魅影刺客"
+            }
+          }
+        }
+      ],
       "checkpoints": {
         "early": {
           "label": "前期普通",
@@ -1490,9 +1592,114 @@
             "exists": true
           }
         ],
-        "executionTransform": null,
+        "coreTransforms": [
+          {
+            "id": "r_chant_astrolabe",
+            "sourcePoolId": "starter_mage_omen",
+            "sourceCopies": 1,
+            "transformedBuildTags": [
+              "chant"
+            ]
+          },
+          {
+            "id": "r_mirror_catalog",
+            "sourcePoolId": "starter_mage_omen",
+            "sourceCopies": 1,
+            "transformedBuildTags": [
+              "mirror"
+            ]
+          },
+          {
+            "id": "r_calamity_orb",
+            "sourcePoolId": "starter_mage_omen",
+            "sourceCopies": 1,
+            "transformedBuildTags": [
+              "calamity"
+            ]
+          }
+        ],
         "passed": true
       },
+      "coreVariants": [
+        {
+          "relicId": "r_chant_astrolabe",
+          "relic": "咏星仪",
+          "buildTag": "chant",
+          "transformedCard": "星火预兆",
+          "checkpoints": {
+            "early": {
+              "winRate": 1,
+              "status": "达标",
+              "lowestEnemy": "病弱史莱姆",
+              "highestEnemy": "病弱史莱姆"
+            },
+            "mid": {
+              "winRate": 0.7918,
+              "status": "达标",
+              "lowestEnemy": "暴躁野猪",
+              "highestEnemy": "荒野煞狼"
+            },
+            "late": {
+              "winRate": 0.0034,
+              "status": "达标",
+              "lowestEnemy": "巨力石魔",
+              "highestEnemy": "魅影刺客"
+            }
+          }
+        },
+        {
+          "relicId": "r_mirror_catalog",
+          "relic": "镜像目录",
+          "buildTag": "mirror",
+          "transformedCard": "镜页预兆",
+          "checkpoints": {
+            "early": {
+              "winRate": 1,
+              "status": "达标",
+              "lowestEnemy": "病弱史莱姆",
+              "highestEnemy": "病弱史莱姆"
+            },
+            "mid": {
+              "winRate": 0.7886,
+              "status": "达标",
+              "lowestEnemy": "暴躁野猪",
+              "highestEnemy": "荒野煞狼"
+            },
+            "late": {
+              "winRate": 0.0054,
+              "status": "达标",
+              "lowestEnemy": "堕落剑客",
+              "highestEnemy": "魅影刺客"
+            }
+          }
+        },
+        {
+          "relicId": "r_calamity_orb",
+          "relic": "灾厄星核",
+          "buildTag": "calamity",
+          "transformedCard": "灾星预兆",
+          "checkpoints": {
+            "early": {
+              "winRate": 1,
+              "status": "达标",
+              "lowestEnemy": "病弱史莱姆",
+              "highestEnemy": "病弱史莱姆"
+            },
+            "mid": {
+              "winRate": 0.8484,
+              "status": "达标",
+              "lowestEnemy": "暴躁野猪",
+              "highestEnemy": "荒野煞狼"
+            },
+            "late": {
+              "winRate": 0.0318,
+              "status": "达标",
+              "lowestEnemy": "巨力石魔",
+              "highestEnemy": "魅影刺客"
+            }
+          }
+        }
+      ],
       "checkpoints": {
         "early": {
           "label": "前期普通",
@@ -2845,9 +3052,114 @@
             "exists": true
           }
         ],
-        "executionTransform": null,
+        "coreTransforms": [
+          {
+            "id": "r_gale_weatherwane",
+            "sourcePoolId": "starter_archer_aim",
+            "sourceCopies": 1,
+            "transformedBuildTags": [
+              "gale"
+            ]
+          },
+          {
+            "id": "r_venom_seedcase",
+            "sourcePoolId": "starter_archer_aim",
+            "sourceCopies": 1,
+            "transformedBuildTags": [
+              "venom"
+            ]
+          },
+          {
+            "id": "r_exile_roadsign",
+            "sourcePoolId": "starter_archer_aim",
+            "sourceCopies": 1,
+            "transformedBuildTags": [
+              "exile"
+            ]
+          }
+        ],
         "passed": true
       },
+      "coreVariants": [
+        {
+          "relicId": "r_gale_weatherwane",
+          "relic": "疾风风标",
+          "buildTag": "gale",
+          "transformedCard": "顺风瞄准",
+          "checkpoints": {
+            "early": {
+              "winRate": 1,
+              "status": "达标",
+              "lowestEnemy": "病弱史莱姆",
+              "highestEnemy": "病弱史莱姆"
+            },
+            "mid": {
+              "winRate": 0.8008,
+              "status": "达标",
+              "lowestEnemy": "暴躁野猪",
+              "highestEnemy": "荒野煞狼"
+            },
+            "late": {
+              "winRate": 0.0384,
+              "status": "达标",
+              "lowestEnemy": "巨力石魔",
+              "highestEnemy": "魅影刺客"
+            }
+          }
+        },
+        {
+          "relicId": "r_venom_seedcase",
+          "relic": "毒种匣",
+          "buildTag": "venom",
+          "transformedCard": "毒弦瞄准",
+          "checkpoints": {
+            "early": {
+              "winRate": 1,
+              "status": "达标",
+              "lowestEnemy": "病弱史莱姆",
+              "highestEnemy": "病弱史莱姆"
+            },
+            "mid": {
+              "winRate": 0.8634,
+              "status": "达标",
+              "lowestEnemy": "暴躁野猪",
+              "highestEnemy": "荒野煞狼"
+            },
+            "late": {
+              "winRate": 0.172,
+              "status": "达标",
+              "lowestEnemy": "巨力石魔",
+              "highestEnemy": "缝合巨怪"
+            }
+          }
+        },
+        {
+          "relicId": "r_exile_roadsign",
+          "relic": "流亡路标",
+          "buildTag": "exile",
+          "transformedCard": "空弦瞄准",
+          "checkpoints": {
+            "early": {
+              "winRate": 1,
+              "status": "达标",
+              "lowestEnemy": "病弱史莱姆",
+              "highestEnemy": "病弱史莱姆"
+            },
+            "mid": {
+              "winRate": 0.771,
+              "status": "达标",
+              "lowestEnemy": "暴躁野猪",
+              "highestEnemy": "荒野煞狼"
+            },
+            "late": {
+              "winRate": 0.0366,
+              "status": "达标",
+              "lowestEnemy": "巨力石魔",
+              "highestEnemy": "魅影刺客"
+            }
+          }
+        }
+      ],
       "checkpoints": {
         "early": {
           "label": "前期普通",

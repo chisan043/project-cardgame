@@ -214,9 +214,16 @@ function makeStarterDeck(data, rng, roleId, loadout = null, disabledTags = null)
 function applyStarterCoreTransform(data, deck, relicId) {
     const transform = data.STARTER_CORE_CARD_TRANSFORMS[relicId];
     if (!transform) return deck;
-    return deck.map(card => card.poolId === transform.sourcePoolId
-        ? { ...card, ...clone(transform.card), poolId: card.poolId }
-        : card);
+    return deck.map(card => {
+        if (card.poolId !== transform.sourcePoolId) return card;
+        return {
+            ...clone(transform.card),
+            poolId: card.poolId,
+            simId: card.simId,
+            isStarter: card.isStarter,
+            up: card.up
+        };
+    });
 }
 
 function upgradeRandomCard(rng, deck) {

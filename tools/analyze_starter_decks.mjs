@@ -5,6 +5,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
     CHECKPOINTS,
+    applyStarterCoreTransform,
     createRng,
     loadGameData,
     makeStarterDeck,
@@ -141,12 +142,23 @@ function analyzeStarterBias(data, roleId, starter) {
         buildTag: data.RELIC_CARD_REWARD_BONUS_BY_ID[id] || null,
         exists: data.RELIC_POOL.some(relic => relic.id === id)
     }));
-    const executionTransform = roleId !== 'hero_warrior' ? null : {
-        sourcePoolId: data.STARTER_CORE_CARD_TRANSFORMS.r_execution_warrant?.sourcePoolId || null,
-        convertedCopies: starter.cards
-            .filter(card => card.poolId === data.STARTER_CORE_CARD_TRANSFORMS.r_execution_warrant?.sourcePoolId)
-            .reduce((sum, card) => sum + Math.max(1, Number(card.copies) || 1), 0)
-    };
+    const expectedSourcePoolId = {
+        hero_warrior: 'starter_warrior_guard',
+        hero_mage: 'starter_mage_omen',
+        hero_archer: 'starter_archer_aim'
+    }[roleId];
+    const coreTransforms = coreChoices.map(choice => {
+        const transform = data.STARTER_CORE_CARD_TRANSFORMS[choice.id];
+        const sourceCopies = starter.cards
+            .filter(card => card.poolId === transform?.sourcePoolId)
+            .reduce((sum, card) => sum + Math.max(1, Number(card.copies) || 1), 0);
+        return {
+            id: choice.id,
+            sourcePoolId: transform?.sourcePoolId || null,
+            sourceCopies,
+            transformedBuildTags: transform?.card?.buildTags || []
+        };
+    });
     const signalValues = Object.values(buildSignals);
     const profileValues = Object.values(buildProfile);
     const signalSpread = Math.max(...signalValues) - Math.min(...signalValues);
@@ -156,7 +168,9 @@ function analyzeStarterBias(data, roleId, starter) {
         && Object.values(directionRewardCoverage).every(value => value.exact > 0)
         && coreChoices.length === 3
         && coreChoices.every(choice => choice.exists && directions.includes(choice.buildTag))
-        && (!executionTransform || executionTransform.convertedCopies === 3);
+        && coreTransforms.every(transform => transform.sourcePoolId === expectedSourcePoolId
+            && transform.sourceCopies > 0
+            && transform.transformedBuildTags.length === 1);
     return {
         buildSignals,
         buildProfile,
@@ -164,12 +178,12 @@ function analyzeStarterBias(data, roleId, starter) {
         profileSpread,
         directionRewardCoverage,
         coreChoices,
-        executionTransform,
+        coreTransforms,
         passed
     };
 }
 
-function runEncounter(data, roleId, checkpoint, enemyName, runs, seed) {
+function runEncounter(data, roleId, checkpoint, enemyName, runs, seed, coreRelicId = null) {
     let wins = 0;
     let turns = 0;
     let hp = 0;
@@ -179,7 +193,9 @@ function runEncounter(data, roleId, checkpoint, enemyName, runs, seed) {
     const meta = {};
     for (let index = 0; index < runs; index++) {
         const rng = createRng(seed + index * 7919);
-        const deck = makeStarterDeck(data, rng, roleId);
+        let deck = makeStarterDeck(data, rng, roleId);
+        if (coreRelicId) deck = applyStarterCoreTransform(data, deck, coreRelicId);
+        const coreRelic = coreRelicId ? data.RELIC_POOL.find(relic => relic.id === coreRelicId) : null;
         const result = simulateBattle(
             data,
             rng,
@@ -187,7 +203,7 @@ function runEncounter(data, roleId, checkpoint, enemyName, runs, seed) {
             deck,
             data.CHARACTERS[roleId].maxHp,
             checkpoint,
-            { core: null, coreCard: null, relics: [] },
+            { core: null, coreCard: null, relics: coreRelic ? [coreRelic] : [] },
             { enemyName }
         );
         wins += result.win ? 1 : 0;
@@ -206,6 +222,39 @@ function runEncounter(data, roleId, checkpoint, enemyName, runs, seed) {
         energyWastedPerTurn: energyWasted / Math.max(1, turns),
         cardUsage: summarizeUsage(meta, plays, opportunities)
     };
+}
+
+function runCoreVariants(data, roleId, args, roleIndex) {
+    return (data.STARTER_CORE_RELIC_IDS[roleId] || []).map((relicId, coreIndex) => {
+        const checkpoints = {};
+        for (let checkpointIndex = 0; checkpointIndex < TEST_CHECKPOINTS.length; checkpointIndex++) {
+            const checkpoint = TEST_CHECKPOINTS[checkpointIndex];
+            const enemies = {};
+            const pool = encounterPool(data, checkpoint);
+            for (let enemyIndex = 0; enemyIndex < pool.length; enemyIndex++) {
+                const enemy = pool[enemyIndex];
+                enemies[enemy.name] = runEncounter(
+                    data,
+                    roleId,
+                    checkpoint,
+                    enemy.name,
+                    args.runs,
+                    args.seed + roleIndex * 3000001 + coreIndex * 500009 + checkpointIndex * 100003 + enemyIndex * 1009,
+                    relicId
+                );
+            }
+            checkpoints[checkpoint.id] = aggregateCheckpoint(enemies, TARGETS[checkpoint.id]);
+        }
+        const relic = data.RELIC_POOL.find(entry => entry.id === relicId);
+        const transform = data.STARTER_CORE_CARD_TRANSFORMS[relicId];
+        return {
+            relicId,
+            relic: relic?.name || relicId,
+            buildTag: data.RELIC_CARD_REWARD_BONUS_BY_ID[relicId],
+            transformedCard: transform?.card?.name || '',
+            checkpoints
+        };
+    });
 }
 
 function aggregateCheckpoint(enemies, target) {
@@ -260,6 +309,7 @@ function runRole(data, roleId, args, roleIndex) {
             directEffects: card.directEffects || {}
         })),
         bias,
+        coreVariants: runCoreVariants(data, roleId, args, roleIndex),
         checkpoints
     };
 }
@@ -306,7 +356,16 @@ function renderMarkdown(report) {
         const coverage = Object.entries(result.bias.directionRewardCoverage).map(([tag, value]) => `${tag} ${value.exact}`).join(' / ');
         lines.push(`| ${result.role} | ${signals} | ${result.bias.profileSpread.toFixed(2)} | ${cores} | ${coverage} | ${result.bias.passed ? '通过' : '失败'} |`);
     }
-    lines.push('', '通过条件：职业基础生存机制不计入流派权重，三件开局核心遗物完整覆盖三条路线，每条路线都有精准奖励候选，处刑核心能转换三张初始护盾牌。', '');
+    lines.push('', '通过条件：职业基础生存机制不计入流派权重，三件开局核心遗物完整覆盖三条路线，且每件核心都会改造指定的职业基础牌：战士护盾牌、法师咏唱牌、弓手风势牌。', '');
+    lines.push('## 核心改造实测', '');
+    lines.push('| 角色 | 核心遗物 | 改造牌 | 前期 | 中期无奖励 | 后期无奖励 |');
+    lines.push('| --- | --- | --- | ---: | ---: | ---: |');
+    for (const result of report.results) {
+        for (const variant of result.coreVariants) {
+            lines.push(`| ${result.role} | ${variant.relic} | ${variant.transformedCard} | ${pct(variant.checkpoints.early.winRate)} | ${pct(variant.checkpoints.mid.winRate)} | ${pct(variant.checkpoints.late.winRate)} |`);
+        }
+    }
+    lines.push('');
     lines.push('## 初始卡使用率', '');
     for (const result of report.results) {
         const teachingEnemies = ['early', 'mid'].flatMap(id => Object.values(result.checkpoints[id].enemies));

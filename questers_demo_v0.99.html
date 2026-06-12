@@ -4547,8 +4547,9 @@
         if (!transform) return;
         state.deck.forEach(card => {
             if (card.poolId !== transform.sourcePoolId) return;
-            Object.assign(card, JSON.parse(JSON.stringify(transform.card)));
-            card.poolId = transform.sourcePoolId;
+            const identity = { id: card.id, instId: card.instId, isStarter: card.isStarter, up: card.up };
+            Object.keys(card).forEach(key => delete card[key]);
+            Object.assign(card, JSON.parse(JSON.stringify(transform.card)), identity, { poolId: transform.sourcePoolId });
             applyCardTagBudget(card);
         });
     }

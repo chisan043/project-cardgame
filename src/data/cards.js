@@ -38,6 +38,9 @@ const CARD_ART_REGISTRY = {
     '余烬点燃': 'assets/cards/art/mage/mage_ember_art_v1.webp',
     '法环回流': 'assets/cards/art/mage/mage_loop_art_v1.webp',
     '星页整理': 'assets/cards/art/mage/mage_loop_art_v1.webp',
+    '星火预兆': 'assets/cards/art/mage/mage_chant_art_v1.webp',
+    '镜页预兆': 'assets/cards/art/mage/mage_star_copy_art_v1.webp',
+    '灾星预兆': 'assets/cards/art/mage/mage_stasis_hex_art_v1.webp',
     '裂界紫雷': 'assets/cards/art/mage/mage_thunder_art_v1.webp',
     '星环复写': 'assets/cards/art/mage/mage_star_copy_art_v1.webp',
     '燃魂导流': 'assets/cards/art/mage/mage_ember_flow_art_v1.webp',
@@ -57,6 +60,9 @@ const CARD_ART_REGISTRY = {
     '回环箭雨': 'assets/cards/art/archer/archer_rain_art_v1.webp',
     '回风藏箭': 'assets/cards/art/archer/archer_hidden_arrow_art_v1.webp',
     '整束箭袋': 'assets/cards/art/archer/archer_ready_art_v1.webp',
+    '顺风瞄准': 'assets/cards/art/archer/archer_aim_art_v1.webp',
+    '毒弦瞄准': 'assets/cards/art/archer/archer_ambush_art_v1.webp',
+    '空弦瞄准': 'assets/cards/art/archer/archer_shadow_art_v1.webp',
     '逐影放矢': 'assets/cards/art/archer/archer_exile_shot_art_v1.webp',
     '轮枝归射': 'assets/cards/art/archer/archer_cycle_branch_art_v1.webp',
     '拾羽连步': 'assets/cards/art/archer/archer_pick_feather_art_v1.webp',
@@ -617,6 +623,15 @@ const STARTER_DIRECTION_REWARD_POOLS = {
 };
 
 const STARTER_CORE_CARD_TRANSFORMS = {
+    r_oathblade_beacon: {
+        sourcePoolId: 'starter_warrior_guard',
+        card: {
+            name: '誓反架势', type: '防御', cost: 1, icon: '🛡️', val: 2,
+            tags: ['反击'], buildTags: ['oathblade'], buildNeutral: false,
+            rarity: '普通', frameTheme: 'warrior',
+            desc: '获得 2 点护盾并进入[反击]姿态。'
+        }
+    },
     r_execution_warrant: {
         sourcePoolId: 'starter_warrior_guard',
         card: {
@@ -624,6 +639,69 @@ const STARTER_CORE_CARD_TRANSFORMS = {
             tags: ['连击'], buildTags: ['execution'], buildNeutral: false,
             rarity: '普通', frameTheme: 'warrior',
             desc: '造成 9 点伤害；若本回合已打出过其他牌，触发[连击]。'
+        }
+    },
+    r_bloodoath_contract: {
+        sourcePoolId: 'starter_warrior_guard',
+        card: {
+            name: '血偿壁垒', type: '防御', cost: 1, icon: '🩸', val: 5,
+            tags: ['出血'], buildTags: ['bloodoath'], buildNeutral: false,
+            rarity: '普通', frameTheme: 'warrior',
+            desc: '获得 5 点护盾并施加[出血]，为吸血与放血牌提供资源。'
+        }
+    },
+    r_chant_astrolabe: {
+        sourcePoolId: 'starter_mage_omen',
+        card: {
+            name: '星火预兆', type: '能力', cost: 1, icon: '🔮', val: 0,
+            tags: ['咏唱'], buildTags: ['chant'], buildNeutral: false,
+            directEffects: { draw: true }, rarity: '普通', frameTheme: 'mage',
+            desc: '积累[咏唱]并抽 1 张牌。'
+        }
+    },
+    r_mirror_catalog: {
+        sourcePoolId: 'starter_mage_omen',
+        card: {
+            name: '镜页预兆', type: '能力', cost: 1, icon: '🪞', val: 0,
+            tags: ['复刻'], buildTags: ['mirror'], buildNeutral: false,
+            directEffects: { draw: true }, rarity: '普通', frameTheme: 'mage',
+            desc: '[复刻]上一张牌的效果并抽 1 张牌。'
+        }
+    },
+    r_calamity_orb: {
+        sourcePoolId: 'starter_mage_omen',
+        card: {
+            name: '灾星预兆', type: '能力', cost: 1, icon: '🌑', val: 0,
+            tags: ['虚弱'], buildTags: ['calamity'], buildNeutral: false,
+            directEffects: { draw: true }, rarity: '普通', frameTheme: 'mage',
+            desc: '施加[虚弱]并抽 1 张牌。'
+        }
+    },
+    r_gale_weatherwane: {
+        sourcePoolId: 'starter_archer_aim',
+        card: {
+            name: '顺风瞄准', type: '能力', cost: 1, icon: '🎯', val: 4,
+            tags: ['蓄力'], buildTags: ['gale'], buildNeutral: false,
+            directEffects: { draw: true }, rarity: '普通', frameTheme: 'archer',
+            desc: '获得风势并抽 1 张牌。'
+        }
+    },
+    r_venom_seedcase: {
+        sourcePoolId: 'starter_archer_aim',
+        card: {
+            name: '毒弦瞄准', type: '能力', cost: 1, icon: '☠️', val: 0,
+            tags: ['剧毒'], buildTags: ['venom'], buildNeutral: false,
+            directEffects: { draw: true }, rarity: '普通', frameTheme: 'archer',
+            desc: '施加[剧毒]并抽 1 张牌。'
+        }
+    },
+    r_exile_roadsign: {
+        sourcePoolId: 'starter_archer_aim',
+        card: {
+            name: '空弦瞄准', type: '能力', cost: 0, icon: '🏹', val: 0,
+            tags: ['放逐'], buildTags: ['exile'], buildNeutral: false,
+            directEffects: { draw: true }, rarity: '普通', frameTheme: 'archer',
+            desc: '抽 1 张牌，随后此牌[放逐]。'
         }
     }
 };
