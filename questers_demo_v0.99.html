@@ -5674,9 +5674,9 @@
             }
             else if (card.specialId === 'w_oath_fortress') {
                 triggerVFX('p-def');
-                const armorGain = applyLowHpGuardBoost(10, '守誓护盾');
+                const armorGain = applyLowHpGuardBoost(9, '守誓护盾');
                 state.armor += armorGain;
-                let pVal = 4 + (hasRelic('r_protect_armor') ? 3 : 0);
+                let pVal = 3 + (hasRelic('r_protect_armor') ? 3 : 0);
                 pVal = applyLowHpGuardBoost(pVal, '守誓庇护');
                 state.p_reduce_dmg += pVal;
                 if (hasRelic('r_guardian_core')) state.armor += Math.floor(pVal / 2);
@@ -5717,9 +5717,9 @@
                 if (state.lastPlayedCard && !state.lastPlayedCard.isJunk) {
                     showFloatText("回声复写", "var(--purple)", getCenter('ui-hp'));
                     await executeCardTags(state.lastPlayedCard, true, null);
-                    let bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.04) : 0;
+                    let bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.02) : 0;
                     if (bossBonus > 0) applyDamageToEnemy(bossBonus, true);
-                    state.p_reduce_dmg += 3;
+                    state.p_reduce_dmg += 2;
                     await drawCards(1);
                 } else {
                     state.p_chant = Math.min(12, state.p_chant + 2);

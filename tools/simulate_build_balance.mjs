@@ -439,7 +439,7 @@ function estimateCard(state, card, incoming) {
     if (card.isSpecial) {
         const synergyCards = state.hand.filter(held => held !== card && (held.tags || []).some(tag => tags.includes(tag))).length;
         const specialScores = {
-            w_oath_fortress: Math.min(incoming + 10, 22),
+            w_oath_fortress: Math.min(incoming + 9, 20),
             w_last_verdict: 54 + state.enemy.vuln * 8 + synergyCards * 10,
             a_syn_blood: state.hp > 18 ? 44 + synergyCards * 17 + state.enemy.bleed * 5 : 10,
             m_forbidden_comet: 48 + state.chant * 17,
@@ -467,9 +467,13 @@ function estimateCard(state, card, incoming) {
     const hasDraw = tags.includes('抽牌') || state.data.hasDirectCardEffect(card, 'draw');
     const hasEnergy = tags.includes('充能') || state.data.hasDirectCardEffect(card, 'energy');
     if (card.type === '防御') score += Math.min(incoming + 8, value + (hasProtection ? state.data.getProtectionValue(card) : 0)) * (incoming > 0 ? 1.25 : 0.45);
+    else if (hasProtection) score += Math.min(incoming + 6, state.data.getProtectionValue(card)) * (incoming > 0 ? 1.15 : 0.5);
     if (hasHeal) score += Math.min(state.maxHp - state.hp, state.data.getCardHealValue(card)) * 1.15;
     if (hasDraw) score += state.data.getCardDrawCount(card) * 5;
     if (hasEnergy || tags.includes('自然')) score += 5;
+    if (tags.includes('反击')) score += incoming > 0 ? 10 : 4;
+    if (tags.includes('回响') && card.type !== '攻击') score += 4;
+    if (tags.includes('附魔')) score += 6;
     if (tags.includes('咏唱')) score += state.data.getCardChantGain(card) * 5;
     if (tags.includes('蓄力')) score += state.data.getWindGain(card) * 4;
     if (tags.includes('错身')) score += incoming > 0 ? 8 : 3;
@@ -480,6 +484,9 @@ function estimateCard(state, card, incoming) {
     if (tags.includes('出血')) score += 7;
     if (tags.includes('燃烧')) score += 8;
     if (tags.includes('诅咒')) score += 4;
+    if (tags.includes('放血')) score += state.enemy.bleed * 3;
+    if (tags.includes('回收')) score += state.exhaust.length > 0 || state.discard.length > 0 ? 8 : 1;
+    if (tags.includes('保留') || state.data.hasDirectCardEffect(card, 'retain')) score += 2;
     if (tags.includes('血祭')) score += state.hp > 20 ? 7 : -20;
     if (tags.includes('复刻') && state.lastCard) score += 10;
     if (tags.includes('重置') && state.hand.length >= 4) score += 6;
@@ -526,8 +533,8 @@ function discardPlayedCard(state, card) {
 function executeSpecialCard(state, card) {
     const specialId = card.specialId || card.id;
     if (specialId === 'w_oath_fortress') {
-        state.armor += 10;
-        state.protection += 4 + (hasRelic(state, 'r_protect_armor') ? 3 : 0);
+        state.armor += 9;
+        state.protection += 3 + (hasRelic(state, 'r_protect_armor') ? 3 : 0);
         if (state.hp < state.maxHp / 2) state.counter = 1;
     } else if (specialId === 'w_last_verdict') {
         const executionHand = state.hand.filter(held => (held.tags || []).some(tag => ['连击', '穿甲'].includes(tag))).length;
@@ -552,9 +559,9 @@ function executeSpecialCard(state, card) {
         const lastSpecialId = state.lastCard?.specialId || state.lastCard?.id;
         if (state.lastCard && !state.lastCard.isJunk && lastSpecialId !== 'm_echo_archive') {
             executeCard(state, state.lastCard, true);
-            const bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.04) : 0;
+            const bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.02) : 0;
             if (bossBonus > 0) hitEnemy(state, bossBonus, true, '镜像余波');
-            state.protection += 3;
+            state.protection += 2;
             draw(state, 1);
         }
         else {
