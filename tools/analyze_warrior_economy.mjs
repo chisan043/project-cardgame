@@ -91,8 +91,21 @@ function run() {
     assert(new Set(pool.map(card => card.poolId)).size === pool.length, '战士奖励池存在重复 poolId');
     assert(new Set(pool.map(card => card.name)).size === pool.length, '战士奖励池存在重复卡名');
     assert(pool.every(card => card.economyV1), '战士奖励池存在未迁移到 economyV1 的卡牌');
+    assert(pool.every(card => card.warriorEffect && Object.keys(card.warriorEffect).length > 0), '战士奖励池存在未接入专属效果结算的卡牌');
+    assert(starter.some(card => card.poolId === 'starter_warrior_brace' && card.warriorEffect?.ifEnemyAttacking), '初始牌组缺少读取敌人意图的迎击牌');
     for (const buildTag of data.STARTER_DIRECTION_REWARD_POOLS[ROLE_ID]) {
-        assert(pool.filter(card => (card.buildTags || []).includes(buildTag)).length === 10, `${buildTag} 方向应恰好有 10 张牌`);
+        const routeCards = pool.filter(card => (card.buildTags || []).includes(buildTag));
+        const stateReaders = routeCards.filter(card => {
+            const effect = card.warriorEffect || {};
+            return Object.keys(effect).some(key => key.startsWith('if'))
+                || effect.damageFromArmor
+                || effect.consumeArmorDamage
+                || effect.missingHpDamageRatio
+                || effect.exhaustOne
+                || effect.detonateBleed;
+        });
+        assert(routeCards.length === 10, `${buildTag} 方向应恰好有 10 张牌`);
+        assert(stateReaders.length >= 3, `${buildTag} 方向至少需要 3 张读取战斗状态的牌`);
     }
     assert(data.STARTER_CORE_RELIC_IDS[ROLE_ID].length === 0, '战士不应在开局强制选择核心遗物');
     assert(averageStarterHandCost >= 9 && averageStarterHandCost <= 12, '初始五张手牌费用不在 9 至 12 区间');

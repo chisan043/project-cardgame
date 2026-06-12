@@ -5,8 +5,8 @@ const CHARACTERS = {
         id: 'hero_warrior',
         name: '勇者战士',
         subtitle: '近战 / 格挡 / 取舍',
-        desc: '用五点能量在进攻、格挡和铺垫之间做选择，再从奖励牌中逐渐形成自己的战斗方式。',
-        tags: ['圣剑反击', '处刑连斩', '血誓狂战'],
+        desc: '观察敌人意图，用护盾反攻、易伤处决或卖血烧牌建立每回合的出牌路线。',
+        tags: ['格挡反攻', '破绽处决', '血誓烧牌'],
         maxHp: 90,
         baseEnergy: 5,
         openingHand: 5,
@@ -18,7 +18,7 @@ const CHARACTERS = {
         avatarPortrait: 'assets/characters/warrior/avatar_portrait_v1.webp',
         battleBack: 'assets/characters/warrior/battle_back_idle_v1.webp',
         accentClass: '',
-        starterHint: '四张基础斩击、四张基础防御、一张试探轻击与一张破势。用五点能量决定这一回合要进攻多少、防守多少。'
+        starterHint: '四张基础斩击、三张基础防御，以及迎击、试探轻击和破势。先看敌人意图，再决定五点能量如何分配。'
     },
     hero_mage: {
         id: 'hero_mage',

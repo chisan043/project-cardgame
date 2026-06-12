@@ -158,18 +158,23 @@ function analyzeStarterBias(data, roleId, starter) {
         hero_archer: 'starter_archer_aim'
     }[roleId];
     const survivalRule = {
-        hero_warrior: { poolId: 'starter_warrior_guard', copies: isWarriorEconomyV1 ? 4 : 3, type: '防御', tag: null, label: isWarriorEconomyV1 ? '4 张基础防御' : '3 张护盾牌' },
+        hero_warrior: { poolId: 'starter_warrior_guard', copies: isWarriorEconomyV1 ? 4 : 3, type: '防御', tag: null, label: isWarriorEconomyV1 ? '4 张防御牌（含迎击）' : '3 张护盾牌' },
         hero_mage: { poolId: 'starter_mage_heal', copies: 3, type: '能力', tag: '治愈', label: '3 张治愈牌' },
         hero_archer: { poolId: 'starter_archer_step', copies: 1, type: '能力', tag: '闪避', label: '1 张闪避牌' }
     }[roleId];
     const survivalCard = starter.cards.find(card => card.poolId === survivalRule.poolId);
+    const actualSurvivalCopies = roleId === 'hero_warrior' && isWarriorEconomyV1
+        ? starter.cards.filter(card => card.type === '防御').reduce((sum, card) => sum + Math.max(1, Number(card.copies) || 1), 0)
+        : Math.max(1, Number(survivalCard?.copies) || 1);
+    const hasWarriorBrace = starter.cards.some(card => card.poolId === 'starter_warrior_brace' && card.warriorEffect?.ifEnemyAttacking);
     const survivalIdentity = {
         ...survivalRule,
-        actualCopies: Math.max(1, Number(survivalCard?.copies) || 1),
+        actualCopies: actualSurvivalCopies,
         passed: !!survivalCard
             && survivalCard.type === survivalRule.type
             && (!survivalRule.tag || (survivalCard.tags || []).includes(survivalRule.tag))
-            && Math.max(1, Number(survivalCard.copies) || 1) === survivalRule.copies
+            && actualSurvivalCopies === survivalRule.copies
+            && (roleId !== 'hero_warrior' || !isWarriorEconomyV1 || hasWarriorBrace)
     };
     const coreTransforms = coreChoices.map(choice => {
         const transform = data.STARTER_CORE_CARD_TRANSFORMS[choice.id];
@@ -397,7 +402,7 @@ function renderMarkdown(report) {
         const coverage = Object.entries(result.bias.directionRewardCoverage).map(([tag, value]) => `${tag} ${value.exact}`).join(' / ');
         lines.push(`| ${result.role} | ${result.bias.survivalIdentity.label} | ${signals} | ${result.bias.profileSpread.toFixed(2)} | ${cores} | ${coverage} | ${result.bias.passed ? '通过' : '失败'} |`);
     }
-    lines.push('', '通过条件：战士经济版使用 10 张中立牌、4 张基础防御且不开局锁路线；法师与弓手继续检查生存基牌、三件开局核心遗物和三条奖励方向覆盖。', '');
+    lines.push('', '通过条件：战士经济版使用 10 张中立牌、4 张防御牌（其中迎击读取敌方意图）且不开局锁路线；法师与弓手继续检查生存基牌、三件开局核心遗物和三条奖励方向覆盖。', '');
     lines.push('## 核心改造实测', '');
     lines.push('| 角色 | 核心遗物 | 改造牌 | 前期 | 中期无奖励 | 后期无奖励 |');
     lines.push('| --- | --- | --- | ---: | ---: | ---: |');

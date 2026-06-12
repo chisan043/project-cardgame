@@ -282,6 +282,7 @@ function createBattle(data, rng, roleId, deck, hp, checkpoint, loadout, options 
         poison: 0, bleed: 0, burn: 0, curse: 0,
         drawPile: shuffle(rng, deck.map(clone)), discard: [], exhaust: [], destroyed: [], hand: [], retained: [],
         lastCard: null, cardsPlayed: 0, enemy, encounterName: enemy.name, turns: 0,
+        currentMove: null, warriorTurnHpLost: 0,
         damageTaken: 0, healing: 0, relics: new Set(loadout?.relics || []),
         totalDamageDealt: 0, energyWasted: 0, lastDamageCause: null, lastEnemyDamageSource: null,
         totalCardsPlayed: 0, totalCardsLeft: 0, totalHandCost: 0, handSamples: 0, handEmptyTurns: 0,
@@ -465,6 +466,88 @@ function takeDamage(state, amount, cause = '敌方攻击', { allowSidestep = fal
     return damage;
 }
 
+function mergeWarriorEffectForSim(baseEffect, addition) {
+    if (!addition) return baseEffect;
+    const merged = { ...baseEffect };
+    for (const [key, value] of Object.entries(addition)) {
+        if ((key === 'damage' || key === 'block') && merged[key] === 'val' && Number.isFinite(Number(value))) {
+            const bonusKey = key === 'damage' ? 'damageBonus' : 'blockBonus';
+            merged[bonusKey] = (Number(merged[bonusKey]) || 0) + Number(value);
+        } else if (Number.isFinite(Number(value)) && typeof value !== 'boolean') {
+            merged[key] = (Number(merged[key]) || 0) + Number(value);
+        } else {
+            merged[key] = value;
+        }
+    }
+    return merged;
+}
+
+function resolveWarriorEffectForSim(state, card, move = state.currentMove) {
+    let effect = { ...(card.warriorEffect || {}) };
+    const attacking = String(move?.type || '').includes('attack');
+    if (attacking) effect = mergeWarriorEffectForSim(effect, effect.ifEnemyAttacking);
+    if (!attacking) effect = mergeWarriorEffectForSim(effect, effect.ifEnemyNotAttacking);
+    if (state.enemy.vuln > 0) effect = mergeWarriorEffectForSim(effect, effect.ifEnemyVulnerable);
+    if (state.enemy.hp < state.enemy.maxHp / 2) effect = mergeWarriorEffectForSim(effect, effect.ifEnemyBelowHalf);
+    if (state.cardsPlayed > 0) effect = mergeWarriorEffectForSim(effect, effect.ifPlayedBefore);
+    if (state.warriorTurnHpLost > 0) effect = mergeWarriorEffectForSim(effect, effect.ifLostHpThisTurn);
+    return effect;
+}
+
+function executeWarriorEffectForSim(state, card, echo = false) {
+    const effect = resolveWarriorEffectForSim(state, card);
+    const base = state.data.getScaledCardValue(card);
+    if (effect.loseHp) {
+        const hpLoss = Math.min(Math.max(0, state.hp - 1), Math.max(0, Math.floor(effect.loseHp)));
+        state.hp -= hpLoss;
+        state.damageTaken += hpLoss;
+        state.warriorTurnHpLost += hpLoss;
+    }
+    if (effect.exhaustOne && state.hand.length > 0) {
+        const target = [...state.hand].sort((a, b) => (b.cost || 0) - (a.cost || 0))[0];
+        state.hand.splice(state.hand.indexOf(target), 1);
+        state.exhaust.push(target);
+    }
+    if (effect.battleDamage) state.battleDamage += Math.floor(effect.battleDamage);
+    if (effect.nextDamage) state.nextDamage += Math.floor(effect.nextDamage);
+
+    const armorSnapshot = state.armor;
+    let block = effect.block === 'val' ? base : Number(effect.block) || 0;
+    block += Number(effect.blockBonus) || 0;
+    state.armor += Math.max(0, Math.floor(block));
+
+    let damage = effect.damage === 'val' ? base : Number(effect.damage) || 0;
+    damage += Number(effect.damageBonus) || 0;
+    damage += Math.floor(armorSnapshot * (Number(effect.damageFromArmor) || 0));
+    if (effect.consumeArmorDamage) {
+        damage += Math.floor(armorSnapshot * Number(effect.consumeArmorDamage));
+        state.armor = 0;
+    }
+    damage += Math.floor((state.maxHp - state.hp) * (Number(effect.missingHpDamageRatio) || 0));
+    if (state.nextDamage > 0 && damage > 0) {
+        damage += state.nextDamage;
+        state.nextDamage = 0;
+    }
+    let dealt = 0;
+    for (let i = 0; i < Math.max(1, Number(effect.hits) || 1) && damage > 0; i++) {
+        dealt += hitEnemy(state, damage + state.battleDamage + state.turnDamage, !!effect.pierce);
+    }
+    if (effect.healRatio) heal(state, Math.floor(dealt * Number(effect.healRatio)));
+    state.enemy.vuln += Math.floor(Number(effect.vuln) || 0);
+    state.enemy.weak += Math.floor(Number(effect.weak) || 0);
+    state.enemy.bleed += Math.floor(Number(effect.bleed) || 0);
+    state.enemy.stun += Math.floor(Number(effect.stun) || 0);
+    if (effect.detonateBleed && state.enemy.bleed > 0) {
+        hitEnemy(state, state.enemy.bleed * 3, true);
+        state.enemy.bleed = 0;
+    }
+    if (effect.counter) state.counter = 1;
+    if (effect.thorns) state.thorns += Math.floor(effect.thorns) * (hasRelic(state, 'r_thorn_shield_new') ? 2 : 1);
+    if (effect.energy) state.energy += Math.floor(effect.energy);
+    if (effect.draw && !echo) draw(state, Math.floor(effect.draw));
+    applyRoleSynergy(state, card, echo, false, 0);
+}
+
 function estimateCard(state, card, incoming, move) {
     const tags = card.tags || [];
     const cost = Math.max(0.35, card.cost || 0);
@@ -483,6 +566,29 @@ function estimateCard(state, card, incoming, move) {
             s_exhaust: state.exhaust.length * 8 + (state.exhaust.length ? 16 : 0)
         };
         score += specialScores[card.specialId] || 0;
+    }
+    if (card.warriorEffect) {
+        const effect = resolveWarriorEffectForSim(state, card, move);
+        const base = state.data.getScaledCardValue(card);
+        let damage = effect.damage === 'val' ? base : Number(effect.damage) || 0;
+        damage += Number(effect.damageBonus) || 0;
+        damage += Math.floor(state.armor * (Number(effect.damageFromArmor) || 0));
+        damage += Math.floor(state.armor * (Number(effect.consumeArmorDamage) || 0));
+        damage += Math.floor((state.maxHp - state.hp) * (Number(effect.missingHpDamageRatio) || 0));
+        score += damage * Math.max(1, Number(effect.hits) || 1) * (effect.pierce ? 1.12 : 1);
+        let block = effect.block === 'val' ? base : Number(effect.block) || 0;
+        block += Number(effect.blockBonus) || 0;
+        score += Math.min(incoming + 8, block) * (incoming > 0 ? 1.25 : 0.45);
+        score += (Number(effect.draw) || 0) * 5 + (Number(effect.energy) || 0) * 5;
+        score += (Number(effect.vuln) || 0) * 3 + (Number(effect.weak) || 0) * (incoming > 0 ? 4 : 2);
+        score += (Number(effect.bleed) || 0) * 2 + (Number(effect.stun) || 0) * 13;
+        score += effect.counter ? (incoming > 0 ? 10 : 4) : 0;
+        score += (Number(effect.thorns) || 0) * 0.8;
+        score += effect.detonateBleed ? state.enemy.bleed * 3 : 0;
+        score += (Number(effect.battleDamage) || 0) * 5 + (Number(effect.nextDamage) || 0);
+        score += effect.exhaustOne && state.hand.length > 1 ? 5 : 0;
+        score -= (Number(effect.loseHp) || 0) * (state.hp < 20 ? 3 : 0.7);
+        return score / cost;
     }
     let value = state.data.getScaledCardValue(card);
     if (tags.includes('重击')) value *= hasRelic(state, 'r_heavy_badge') ? 2.5 : 2;
@@ -654,6 +760,10 @@ function executeSpecialCard(state, card) {
 function executeCard(state, card, echo = false) {
     const tags = card.tags || [];
     if (card.isSpecial && executeSpecialCard(state, card)) return;
+    if (card.warriorEffect) {
+        executeWarriorEffectForSim(state, card, echo);
+        return;
+    }
     let cycleReturned = false;
     let resetCount = 0;
     if (tags.includes('血祭')) {
@@ -801,6 +911,8 @@ function playPlayerTurn(state, move) {
     state.tailwindSpoolUsed = false;
     state.echoArchivePinUsed = false;
     state.statusLedgerUsed = false;
+    state.currentMove = move;
+    state.warriorTurnHpLost = 0;
     state.hand.push(...state.retained);
     state.retained.forEach(card => recordCardOpportunity(state, card));
     state.retained = [];
