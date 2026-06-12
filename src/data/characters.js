@@ -18,7 +18,7 @@ const CHARACTERS = {
         avatarPortrait: 'assets/characters/warrior/avatar_portrait_v1.webp',
         battleBack: 'assets/characters/warrior/battle_back_idle_v1.webp',
         accentClass: '',
-        starterHint: '先架盾与立誓，再用圣剑牌把护盾和反击姿态转成伤害。'
+        starterHint: '用护盾和一次性反击稳住开局，再用圣剑转化护盾；易伤与吸血分别引向处刑和血誓路线。'
     },
     hero_mage: {
         id: 'hero_mage',
@@ -37,7 +37,7 @@ const CHARACTERS = {
         avatarPortrait: 'assets/characters/mage/avatar_portrait_v1.webp',
         battleBack: 'assets/characters/mage/battle_back_idle_v1.webp',
         accentClass: 'featured',
-        starterHint: '用咏唱牌攒层数和手牌，再用紫焰爆裂、紫焰火花打爆发窗口。'
+        starterHint: '先用预兆与屏障积累咏唱，再用法弹或火花爆发；复刻、回响和剧毒分别留下后续构筑入口。'
     },
     hero_archer: {
         id: 'hero_archer',
@@ -56,6 +56,6 @@ const CHARACTERS = {
         avatarPortrait: 'assets/characters/archer/avatar_portrait_v1.webp',
         battleBack: 'assets/characters/archer/battle_back_idle_v1.webp',
         accentClass: '',
-        starterHint: '先用拉弓/林风积攒风势，再用连射和自然牌边走位边追射。'
+        starterHint: '用瞄准建立风势、错身化解攻击，再靠连射追击；逐影放矢与林魂招矢组成第一组放逐回收循环。'
     }
 };

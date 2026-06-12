@@ -18,7 +18,7 @@ function loadGameData() {
     const source = DATA_FILES.map(file => fs.readFileSync(path.join(ROOT, file), 'utf8')).join('\n');
     const context = vm.createContext({});
     vm.runInContext(`${source}\n;globalThis.__balanceData = {
-        TAGS, BUILD_DIRECTIONS, CARD_BUILD_TAGS_BY_ID, NEUTRAL_CARD_POOL,
+        TAGS, BUILD_DIRECTIONS, CARD_BUILD_TAGS_BY_ID, NEUTRAL_CARD_POOL, STARTER_DECKS,
         CHARACTER_CARD_POOLS, SPECIAL_EPIC_POOLS, RELIC_POOL, RELIC_BUILD_TAGS_BY_ID,
         ENEMIES, CHARACTERS, getScaledCardValue,
         getAbilityPotency, getCardDrawCount, getCardHealValue,
@@ -191,6 +191,18 @@ function makeDeck(data, rng, roleId, buildId, buildCards = 8, foundationCards = 
     for (let i = 0; i < foundationCards; i++) deck.push(cloneForSimulation(FOUNDATION[roleId][i % FOUNDATION[roleId].length], disabledTags));
     const choices = shuffle(rng, pool);
     for (let i = 0; i < buildCards; i++) deck.push(cloneForSimulation(choices[i % choices.length], disabledTags));
+    if (loadout?.coreCard) deck.push({ ...cloneForSimulation(loadout.coreCard, disabledTags), specialId: loadout.coreCard.id });
+    return shuffle(rng, deck).map((card, index) => ({ ...card, simId: `${index}:${card.poolId || card.name}` }));
+}
+
+function makeStarterDeck(data, rng, roleId, loadout = null, disabledTags = null) {
+    const starterDeckId = data.CHARACTERS[roleId]?.starterDeckId;
+    const starter = data.STARTER_DECKS[starterDeckId];
+    if (!starter) throw new Error(`Missing starter deck ${starterDeckId} for ${roleId}`);
+    const deck = starter.cards.flatMap(card => Array.from(
+        { length: Math.max(1, Number(card.copies) || 1) },
+        () => cloneForSimulation(card, disabledTags)
+    ));
     if (loadout?.coreCard) deck.push({ ...cloneForSimulation(loadout.coreCard, disabledTags), specialId: loadout.coreCard.id });
     return shuffle(rng, deck).map((card, index) => ({ ...card, simId: `${index}:${card.poolId || card.name}` }));
 }
@@ -1128,6 +1140,7 @@ export {
     getBuildPool,
     getLoadout,
     loadGameData,
+    makeStarterDeck,
     simulateBattle,
     simulateCheckpoint,
     simulateExpedition
