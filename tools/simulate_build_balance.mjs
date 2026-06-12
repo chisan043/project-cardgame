@@ -152,13 +152,21 @@ function getLoadout(data, roleId, buildId, mode) {
     return { ...loadout, coreCard };
 }
 
-function makeDeck(data, rng, roleId, buildId, buildCards = 8, foundationCards = 4, loadout = null) {
+function cloneForSimulation(card, disabledTags = null) {
+    const result = clone(card);
+    if (disabledTags?.size && result.tags && !result.isSpecial) {
+        result.tags = result.tags.filter(tag => !disabledTags.has(tag));
+    }
+    return result;
+}
+
+function makeDeck(data, rng, roleId, buildId, buildCards = 8, foundationCards = 4, loadout = null, disabledTags = null) {
     const pool = getBuildPool(data, roleId, buildId);
     const deck = [];
-    for (let i = 0; i < foundationCards; i++) deck.push(clone(FOUNDATION[roleId][i % FOUNDATION[roleId].length]));
+    for (let i = 0; i < foundationCards; i++) deck.push(cloneForSimulation(FOUNDATION[roleId][i % FOUNDATION[roleId].length], disabledTags));
     const choices = shuffle(rng, pool);
-    for (let i = 0; i < buildCards; i++) deck.push(clone(choices[i % choices.length]));
-    if (loadout?.coreCard) deck.push({ ...clone(loadout.coreCard), specialId: loadout.coreCard.id });
+    for (let i = 0; i < buildCards; i++) deck.push(cloneForSimulation(choices[i % choices.length], disabledTags));
+    if (loadout?.coreCard) deck.push({ ...cloneForSimulation(loadout.coreCard, disabledTags), specialId: loadout.coreCard.id });
     return shuffle(rng, deck).map((card, index) => ({ ...card, simId: `${index}:${card.poolId || card.name}` }));
 }
 
@@ -462,7 +470,8 @@ function executeSpecialCard(state, card) {
         state.protection += Math.min(18, chantSpent * 3);
         state.chant = hasRelic(state, 'r_burst_lens') ? Math.ceil(chantSpent / 2) : 0;
     } else if (specialId === 'm_echo_archive') {
-        if (state.lastCard && !state.lastCard.isJunk) executeCard(state, state.lastCard, true);
+        const lastSpecialId = state.lastCard?.specialId || state.lastCard?.id;
+        if (state.lastCard && !state.lastCard.isJunk && lastSpecialId !== 'm_echo_archive') executeCard(state, state.lastCard, true);
         else {
             state.chant = Math.min(12, state.chant + 2);
             draw(state, 1);
@@ -786,7 +795,7 @@ function simulateBattle(data, rng, roleId, deck, hp, checkpoint, loadout) {
     return { win: false, hp: Math.max(0, state.hp), turns: state.turns, enemy: state.encounterName, damageTaken: state.damageTaken };
 }
 
-function simulateCheckpoint(data, roleId, buildId, checkpoint, runs, seed, mode) {
+function simulateCheckpoint(data, roleId, buildId, checkpoint, runs, seed, mode, options = {}) {
     let wins = 0;
     let turns = 0;
     let hpLeft = 0;
@@ -795,7 +804,7 @@ function simulateCheckpoint(data, roleId, buildId, checkpoint, runs, seed, mode)
     for (let i = 0; i < runs; i++) {
         const rng = createRng(seed + i * 7919);
         const deckSize = checkpoint.id === 'early' ? [5, 5] : checkpoint.id === 'mid' ? [7, 4] : [10, 3];
-        const deck = makeDeck(data, rng, roleId, buildId, deckSize[0], deckSize[1], loadout);
+        const deck = makeDeck(data, rng, roleId, buildId, deckSize[0], deckSize[1], loadout, options.disabledTags);
         if (['late', 'elite', 'boss'].includes(checkpoint.id)) upgradeRandomCard(rng, deck);
         const result = simulateBattle(data, rng, roleId, deck, data.CHARACTERS[roleId].maxHp, checkpoint, loadout);
         wins += result.win ? 1 : 0;
@@ -813,14 +822,14 @@ function simulateCheckpoint(data, roleId, buildId, checkpoint, runs, seed, mode)
     };
 }
 
-function simulateExpedition(data, roleId, buildId, runs, seed, mode) {
+function simulateExpedition(data, roleId, buildId, runs, seed, mode, options = {}) {
     let clears = 0;
     let reached = Array(CHECKPOINTS.length).fill(0);
     let deaths = {};
     const loadout = getLoadout(data, roleId, buildId, mode);
     for (let i = 0; i < runs; i++) {
         const rng = createRng(seed + i * 104729);
-        let deck = makeDeck(data, rng, roleId, buildId, 4, 6, loadout);
+        let deck = makeDeck(data, rng, roleId, buildId, 4, 6, loadout, options.disabledTags);
         let hp = data.CHARACTERS[roleId].maxHp;
         let cleared = true;
         for (let c = 0; c < CHECKPOINTS.length; c++) {
@@ -895,4 +904,16 @@ function run() {
     }
 }
 
-run();
+const isDirectRun = process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
+if (isDirectRun) run();
+
+export {
+    CHECKPOINTS,
+    FOUNDATION,
+    MATURE_LOADOUTS,
+    getBuildPool,
+    getLoadout,
+    loadGameData,
+    simulateCheckpoint,
+    simulateExpedition
+};

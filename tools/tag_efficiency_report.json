@@ -1,0 +1,1951 @@
+{
+  "generatedAt": "2026-06-12T06:13:11.056Z",
+  "seed": 20260612,
+  "runsPerSample": 1000,
+  "modes": [
+    "baseline",
+    "mature"
+  ],
+  "ablationScope": "regular cards and foundation cards; epic core scripted effects are retained",
+  "checkpoints": [
+    {
+      "id": "late",
+      "label": "后期普通",
+      "floor": 14,
+      "type": "normal"
+    },
+    {
+      "id": "elite",
+      "label": "后期精英",
+      "floor": 15,
+      "type": "elite"
+    },
+    {
+      "id": "boss",
+      "label": "最终首领",
+      "floor": 19,
+      "type": "boss"
+    }
+  ],
+  "corpus": {
+    "totalTags": 38,
+    "totalCards": 263,
+    "averageTags": 2.0722433460076046,
+    "cardsWithAtLeastTwoTags": 250,
+    "cardsWithThreeTags": 32,
+    "countDistribution": {
+      "1": 13,
+      "2": 218,
+      "3": 32
+    },
+    "byRole": [
+      {
+        "roleId": "hero_warrior",
+        "role": "勇者战士",
+        "cards": 83,
+        "averageTags": 2.0602409638554215,
+        "cardsWithThreeTags": 9
+      },
+      {
+        "roleId": "hero_mage",
+        "role": "萝莉魔导士",
+        "cards": 76,
+        "averageTags": 2.1973684210526314,
+        "cardsWithThreeTags": 16
+      },
+      {
+        "roleId": "hero_archer",
+        "role": "精灵弓箭手",
+        "cards": 83,
+        "averageTags": 2.0481927710843375,
+        "cardsWithThreeTags": 7
+      },
+      {
+        "roleId": "neutral",
+        "role": "中立",
+        "cards": 21,
+        "averageTags": 1.7619047619047619,
+        "cardsWithThreeTags": 0
+      }
+    ]
+  },
+  "tags": [
+    {
+      "tag": "重置",
+      "group": "资源循环",
+      "modeled": true,
+      "cardCount": 9,
+      "prevalence": 0.034220532319391636,
+      "samples": 24,
+      "affectedBuilds": 8,
+      "meanWinRateImpact": 0.011708333333333334,
+      "meanWinRateImpactPp": 1.1708333333333334,
+      "meanHpImpact": 0.6511666666666663,
+      "meanTurnImpact": 0.05145833333333329,
+      "maxWinRateImpactPp": 4.900000000000001,
+      "minWinRateImpactPp": -0.5000000000000004
+    },
+    {
+      "tag": "血祭",
+      "group": "代价条件",
+      "modeled": true,
+      "cardCount": 13,
+      "prevalence": 0.049429657794676805,
+      "samples": 6,
+      "affectedBuilds": 2,
+      "meanWinRateImpact": 0.29033333333333333,
+      "meanWinRateImpactPp": 29.03333333333333,
+      "meanHpImpact": 23.637999999999995,
+      "meanTurnImpact": 0.15050000000000008,
+      "maxWinRateImpactPp": 59.20000000000001,
+      "minWinRateImpactPp": 0
+    },
+    {
+      "tag": "狂热",
+      "group": "代价条件",
+      "modeled": false,
+      "cardCount": 4,
+      "prevalence": 0.015209125475285171,
+      "samples": 12,
+      "affectedBuilds": 4,
+      "meanWinRateImpact": 0,
+      "meanWinRateImpactPp": 0,
+      "meanHpImpact": 0,
+      "meanTurnImpact": 0,
+      "maxWinRateImpactPp": 0,
+      "minWinRateImpactPp": 0
+    },
+    {
+      "tag": "附魔",
+      "group": "代价条件",
+      "modeled": false,
+      "cardCount": 3,
+      "prevalence": 0.011406844106463879,
+      "samples": 12,
+      "affectedBuilds": 4,
+      "meanWinRateImpact": 0,
+      "meanWinRateImpactPp": 0,
+      "meanHpImpact": 0,
+      "meanTurnImpact": 0,
+      "maxWinRateImpactPp": 0,
+      "minWinRateImpactPp": 0
+    },
+    {
+      "tag": "庇护",
+      "group": "防御恢复",
+      "modeled": true,
+      "cardCount": 21,
+      "prevalence": 0.07984790874524715,
+      "samples": 24,
+      "affectedBuilds": 8,
+      "meanWinRateImpact": 0.028500000000000008,
+      "meanWinRateImpactPp": 2.850000000000001,
+      "meanHpImpact": 2.870833333333333,
+      "meanTurnImpact": -0.26670833333333344,
+      "maxWinRateImpactPp": 13.8,
+      "minWinRateImpactPp": 0
+    },
+    {
+      "tag": "反击",
+      "group": "防御恢复",
+      "modeled": true,
+      "cardCount": 4,
+      "prevalence": 0.015209125475285171,
+      "samples": 6,
+      "affectedBuilds": 2,
+      "meanWinRateImpact": 0.008000000000000007,
+      "meanWinRateImpactPp": 0.8000000000000007,
+      "meanHpImpact": 0.6605000000000006,
+      "meanTurnImpact": -0.013666666666667085,
+      "maxWinRateImpactPp": 2.500000000000002,
+      "minWinRateImpactPp": 0
+    },
+    {
+      "tag": "招魂",
+      "group": "资源循环",
+      "modeled": true,
+      "cardCount": 4,
+      "prevalence": 0.015209125475285171,
+      "samples": 6,
+      "affectedBuilds": 2,
+      "meanWinRateImpact": 0.061666666666666675,
+      "meanWinRateImpactPp": 6.166666666666668,
+      "meanHpImpact": 3.494,
+      "meanTurnImpact": 0.05499999999999986,
+      "maxWinRateImpactPp": 18.4,
+      "minWinRateImpactPp": 0
+    },
+    {
+      "tag": "轮回",
+      "group": "资源循环",
+      "modeled": true,
+      "cardCount": 9,
+      "prevalence": 0.034220532319391636,
+      "samples": 6,
+      "affectedBuilds": 2,
+      "meanWinRateImpact": 0.05000000000000001,
+      "meanWinRateImpactPp": 5.000000000000001,
+      "meanHpImpact": 2.174166666666666,
+      "meanTurnImpact": -0.058833333333333515,
+      "maxWinRateImpactPp": 17.8,
+      "minWinRateImpactPp": 0
+    },
+    {
+      "tag": "拾遗",
+      "group": "资源循环",
+      "modeled": true,
+      "cardCount": 8,
+      "prevalence": 0.030418250950570342,
+      "samples": 12,
+      "affectedBuilds": 4,
+      "meanWinRateImpact": 0.017916666666666674,
+      "meanWinRateImpactPp": 1.7916666666666674,
+      "meanHpImpact": 1.1338333333333337,
+      "meanTurnImpact": -0.04416666666666665,
+      "maxWinRateImpactPp": 5.100000000000005,
+      "minWinRateImpactPp": 0
+    },
+    {
+      "tag": "复刻",
+      "group": "资源循环",
+      "modeled": true,
+      "cardCount": 13,
+      "prevalence": 0.049429657794676805,
+      "samples": 12,
+      "affectedBuilds": 4,
+      "meanWinRateImpact": 0.06475,
+      "meanWinRateImpactPp": 6.4750000000000005,
+      "meanHpImpact": 3.337166666666668,
+      "meanTurnImpact": 0.1025,
+      "maxWinRateImpactPp": 23.799999999999997,
+      "minWinRateImpactPp": 0
+    },
+    {
+      "tag": "吸血",
+      "group": "防御恢复",
+      "modeled": true,
+      "cardCount": 8,
+      "prevalence": 0.030418250950570342,
+      "samples": 6,
+      "affectedBuilds": 2,
+      "meanWinRateImpact": 0.11016666666666668,
+      "meanWinRateImpactPp": 11.016666666666667,
+      "meanHpImpact": 13.402333333333331,
+      "meanTurnImpact": -0.3918333333333332,
+      "maxWinRateImpactPp": 18.3,
+      "minWinRateImpactPp": 0
+    },
+    {
+      "tag": "保留",
+      "group": "资源循环",
+      "modeled": true,
+      "cardCount": 24,
+      "prevalence": 0.09125475285171103,
+      "samples": 30,
+      "affectedBuilds": 10,
+      "meanWinRateImpact": 0.05423333333333333,
+      "meanWinRateImpactPp": 5.423333333333333,
+      "meanHpImpact": 4.8057,
+      "meanTurnImpact": -0.2804000000000001,
+      "maxWinRateImpactPp": 18.300000000000004,
+      "minWinRateImpactPp": 0
+    },
+    {
+      "tag": "回响",
+      "group": "资源循环",
+      "modeled": true,
+      "cardCount": 21,
+      "prevalence": 0.07984790874524715,
+      "samples": 24,
+      "affectedBuilds": 8,
+      "meanWinRateImpact": 0.05625,
+      "meanWinRateImpactPp": 5.625,
+      "meanHpImpact": 2.7335,
+      "meanTurnImpact": 0.07650000000000001,
+      "maxWinRateImpactPp": 39.800000000000004,
+      "minWinRateImpactPp": -1.5000000000000013
+    },
+    {
+      "tag": "放逐",
+      "group": "代价条件",
+      "modeled": true,
+      "cardCount": 17,
+      "prevalence": 0.06463878326996197,
+      "samples": 12,
+      "affectedBuilds": 4,
+      "meanWinRateImpact": 0.16333333333333333,
+      "meanWinRateImpactPp": 16.333333333333332,
+      "meanHpImpact": 7.548833333333332,
+      "meanTurnImpact": -0.19750000000000004,
+      "maxWinRateImpactPp": 83.60000000000001,
+      "minWinRateImpactPp": 0
+    },
+    {
+      "tag": "抽牌",
+      "group": "资源循环",
+      "modeled": true,
+      "cardCount": 48,
+      "prevalence": 0.18250950570342206,
+      "samples": 54,
+      "affectedBuilds": 18,
+      "meanWinRateImpact": 0.032574074074074075,
+      "meanWinRateImpactPp": 3.2574074074074075,
+      "meanHpImpact": 2.1377592592592594,
+      "meanTurnImpact": -0.01716666666666675,
+      "maxWinRateImpactPp": 12.1,
+      "minWinRateImpactPp": -2.2999999999999963
+    },
+    {
+      "tag": "剧毒",
+      "group": "状态控制",
+      "modeled": true,
+      "cardCount": 20,
+      "prevalence": 0.07604562737642585,
+      "samples": 12,
+      "affectedBuilds": 4,
+      "meanWinRateImpact": 0.07708333333333334,
+      "meanWinRateImpactPp": 7.708333333333334,
+      "meanHpImpact": 3.697083333333333,
+      "meanTurnImpact": 0.6748333333333333,
+      "maxWinRateImpactPp": 26.900000000000002,
+      "minWinRateImpactPp": -1.8000000000000003
+    },
+    {
+      "tag": "出血",
+      "group": "状态控制",
+      "modeled": true,
+      "cardCount": 22,
+      "prevalence": 0.08365019011406843,
+      "samples": 18,
+      "affectedBuilds": 6,
+      "meanWinRateImpact": 0.026555555555555554,
+      "meanWinRateImpactPp": 2.6555555555555554,
+      "meanHpImpact": 1.1821666666666661,
+      "meanTurnImpact": 0.2826111111111112,
+      "maxWinRateImpactPp": 10.399999999999999,
+      "minWinRateImpactPp": -1.9000000000000017
+    },
+    {
+      "tag": "燃烧",
+      "group": "状态控制",
+      "modeled": true,
+      "cardCount": 10,
+      "prevalence": 0.03802281368821293,
+      "samples": 24,
+      "affectedBuilds": 8,
+      "meanWinRateImpact": 0.050625,
+      "meanWinRateImpactPp": 5.0625,
+      "meanHpImpact": 1.969875,
+      "meanTurnImpact": 0.34470833333333334,
+      "maxWinRateImpactPp": 16.799999999999997,
+      "minWinRateImpactPp": 0
+    },
+    {
+      "tag": "眩晕",
+      "group": "状态控制",
+      "modeled": true,
+      "cardCount": 9,
+      "prevalence": 0.034220532319391636,
+      "samples": 18,
+      "affectedBuilds": 6,
+      "meanWinRateImpact": 0.19938888888888892,
+      "meanWinRateImpactPp": 19.938888888888894,
+      "meanHpImpact": 11.926,
+      "meanTurnImpact": -1.3028888888888885,
+      "maxWinRateImpactPp": 39.599999999999994,
+      "minWinRateImpactPp": 0
+    },
+    {
+      "tag": "诅咒",
+      "group": "状态控制",
+      "modeled": true,
+      "cardCount": 10,
+      "prevalence": 0.03802281368821293,
+      "samples": 12,
+      "affectedBuilds": 4,
+      "meanWinRateImpact": 0.0004166666666666786,
+      "meanWinRateImpactPp": 0.041666666666667865,
+      "meanHpImpact": -0.1755833333333331,
+      "meanTurnImpact": 0.09366666666666668,
+      "maxWinRateImpactPp": 1.7000000000000015,
+      "minWinRateImpactPp": -1.2999999999999998
+    },
+    {
+      "tag": "放血",
+      "group": "伤害放大",
+      "modeled": true,
+      "cardCount": 16,
+      "prevalence": 0.060836501901140684,
+      "samples": 18,
+      "affectedBuilds": 6,
+      "meanWinRateImpact": 0.014777777777777786,
+      "meanWinRateImpactPp": 1.4777777777777785,
+      "meanHpImpact": 1.1632777777777774,
+      "meanTurnImpact": 0.04172222222222229,
+      "maxWinRateImpactPp": 7.700000000000006,
+      "minWinRateImpactPp": -0.19999999999999984
+    },
+    {
+      "tag": "重击",
+      "group": "伤害放大",
+      "modeled": true,
+      "cardCount": 15,
+      "prevalence": 0.057034220532319393,
+      "samples": 24,
+      "affectedBuilds": 8,
+      "meanWinRateImpact": 0.005375000000000005,
+      "meanWinRateImpactPp": 0.5375000000000005,
+      "meanHpImpact": -0.4225416666666666,
+      "meanTurnImpact": 0.3819166666666665,
+      "maxWinRateImpactPp": 11.799999999999999,
+      "minWinRateImpactPp": -4.999999999999999
+    },
+    {
+      "tag": "穿甲",
+      "group": "伤害放大",
+      "modeled": true,
+      "cardCount": 38,
+      "prevalence": 0.1444866920152091,
+      "samples": 48,
+      "affectedBuilds": 16,
+      "meanWinRateImpact": 0.0008124999999999997,
+      "meanWinRateImpactPp": 0.08124999999999998,
+      "meanHpImpact": -0.0012083333333332256,
+      "meanTurnImpact": 0.032916666666666615,
+      "maxWinRateImpactPp": 8.099999999999996,
+      "minWinRateImpactPp": -1.899999999999999
+    },
+    {
+      "tag": "圣剑",
+      "group": "伤害放大",
+      "modeled": true,
+      "cardCount": 10,
+      "prevalence": 0.03802281368821293,
+      "samples": 12,
+      "affectedBuilds": 4,
+      "meanWinRateImpact": 0.03175000000000001,
+      "meanWinRateImpactPp": 3.1750000000000007,
+      "meanHpImpact": -3.080416666666667,
+      "meanTurnImpact": 2.537333333333333,
+      "maxWinRateImpactPp": 14.700000000000003,
+      "minWinRateImpactPp": -1.5999999999999994
+    },
+    {
+      "tag": "咏唱",
+      "group": "职业引擎",
+      "modeled": true,
+      "cardCount": 18,
+      "prevalence": 0.06844106463878327,
+      "samples": 18,
+      "affectedBuilds": 6,
+      "meanWinRateImpact": 0.1431111111111111,
+      "meanWinRateImpactPp": 14.31111111111111,
+      "meanHpImpact": 7.510222222222222,
+      "meanTurnImpact": -0.41505555555555557,
+      "maxWinRateImpactPp": 64.8,
+      "minWinRateImpactPp": 0
+    },
+    {
+      "tag": "爆发",
+      "group": "伤害放大",
+      "modeled": true,
+      "cardCount": 12,
+      "prevalence": 0.045627376425855515,
+      "samples": 18,
+      "affectedBuilds": 6,
+      "meanWinRateImpact": 0.0795,
+      "meanWinRateImpactPp": 7.95,
+      "meanHpImpact": 3.331166666666667,
+      "meanTurnImpact": 0.552666666666667,
+      "maxWinRateImpactPp": 28.599999999999998,
+      "minWinRateImpactPp": -2.3999999999999995
+    },
+    {
+      "tag": "蓄力",
+      "group": "职业引擎",
+      "modeled": true,
+      "cardCount": 9,
+      "prevalence": 0.034220532319391636,
+      "samples": 6,
+      "affectedBuilds": 2,
+      "meanWinRateImpact": 0.032333333333333325,
+      "meanWinRateImpactPp": 3.2333333333333325,
+      "meanHpImpact": 1.7445000000000002,
+      "meanTurnImpact": 0.13949999999999996,
+      "maxWinRateImpactPp": 6.999999999999995,
+      "minWinRateImpactPp": 0
+    },
+    {
+      "tag": "自然",
+      "group": "职业引擎",
+      "modeled": true,
+      "cardCount": 14,
+      "prevalence": 0.053231939163498096,
+      "samples": 12,
+      "affectedBuilds": 4,
+      "meanWinRateImpact": 0.09150000000000003,
+      "meanWinRateImpactPp": 9.150000000000002,
+      "meanHpImpact": 5.521416666666666,
+      "meanTurnImpact": -0.14741666666666667,
+      "maxWinRateImpactPp": 30.5,
+      "minWinRateImpactPp": 0
+    },
+    {
+      "tag": "错身",
+      "group": "防御恢复",
+      "modeled": true,
+      "cardCount": 5,
+      "prevalence": 0.019011406844106463,
+      "samples": 18,
+      "affectedBuilds": 6,
+      "meanWinRateImpact": 0.06183333333333333,
+      "meanWinRateImpactPp": 6.183333333333333,
+      "meanHpImpact": 3.9917222222222213,
+      "meanTurnImpact": -0.5285555555555556,
+      "maxWinRateImpactPp": 12.8,
+      "minWinRateImpactPp": 0
+    },
+    {
+      "tag": "连射",
+      "group": "伤害放大",
+      "modeled": true,
+      "cardCount": 11,
+      "prevalence": 0.04182509505703422,
+      "samples": 6,
+      "affectedBuilds": 2,
+      "meanWinRateImpact": 0.0415,
+      "meanWinRateImpactPp": 4.15,
+      "meanHpImpact": -0.13150000000000064,
+      "meanTurnImpact": 1.3326666666666667,
+      "maxWinRateImpactPp": 13.3,
+      "minWinRateImpactPp": -1.7000000000000015
+    },
+    {
+      "tag": "连击",
+      "group": "伤害放大",
+      "modeled": true,
+      "cardCount": 13,
+      "prevalence": 0.049429657794676805,
+      "samples": 30,
+      "affectedBuilds": 10,
+      "meanWinRateImpact": 0.0003333333333333355,
+      "meanWinRateImpactPp": 0.03333333333333355,
+      "meanHpImpact": -0.07343333333333397,
+      "meanTurnImpact": 0.03353333333333321,
+      "maxWinRateImpactPp": 1.200000000000001,
+      "minWinRateImpactPp": -1.5000000000000013
+    },
+    {
+      "tag": "多段",
+      "group": "伤害放大",
+      "modeled": true,
+      "cardCount": 10,
+      "prevalence": 0.03802281368821293,
+      "samples": 18,
+      "affectedBuilds": 6,
+      "meanWinRateImpact": 0.020333333333333342,
+      "meanWinRateImpactPp": 2.033333333333334,
+      "meanHpImpact": 1.0749999999999997,
+      "meanTurnImpact": 0.14916666666666673,
+      "maxWinRateImpactPp": 11.899999999999999,
+      "minWinRateImpactPp": -1.200000000000001
+    },
+    {
+      "tag": "易伤",
+      "group": "状态控制",
+      "modeled": true,
+      "cardCount": 28,
+      "prevalence": 0.10646387832699619,
+      "samples": 42,
+      "affectedBuilds": 14,
+      "meanWinRateImpact": 0.028071428571428574,
+      "meanWinRateImpactPp": 2.8071428571428574,
+      "meanHpImpact": 1.3284047619047625,
+      "meanTurnImpact": 0.24309523809523803,
+      "maxWinRateImpactPp": 16.699999999999992,
+      "minWinRateImpactPp": -1.2999999999999998
+    },
+    {
+      "tag": "虚弱",
+      "group": "状态控制",
+      "modeled": true,
+      "cardCount": 16,
+      "prevalence": 0.060836501901140684,
+      "samples": 24,
+      "affectedBuilds": 8,
+      "meanWinRateImpact": 0.07325,
+      "meanWinRateImpactPp": 7.324999999999999,
+      "meanHpImpact": 4.132625000000001,
+      "meanTurnImpact": -0.5191666666666664,
+      "maxWinRateImpactPp": 17.500000000000004,
+      "minWinRateImpactPp": -0.30000000000000027
+    },
+    {
+      "tag": "充能",
+      "group": "资源循环",
+      "modeled": true,
+      "cardCount": 23,
+      "prevalence": 0.08745247148288973,
+      "samples": 48,
+      "affectedBuilds": 16,
+      "meanWinRateImpact": 0.03283333333333333,
+      "meanWinRateImpactPp": 3.283333333333333,
+      "meanHpImpact": 2.100083333333333,
+      "meanTurnImpact": -0.027479166666666704,
+      "maxWinRateImpactPp": 29.100000000000005,
+      "minWinRateImpactPp": -0.4999999999999998
+    },
+    {
+      "tag": "荆棘",
+      "group": "防御恢复",
+      "modeled": true,
+      "cardCount": 6,
+      "prevalence": 0.022813688212927757,
+      "samples": 6,
+      "affectedBuilds": 2,
+      "meanWinRateImpact": 0.08466666666666668,
+      "meanWinRateImpactPp": 8.466666666666669,
+      "meanHpImpact": 3.4741666666666657,
+      "meanTurnImpact": 1.474,
+      "maxWinRateImpactPp": 12.2,
+      "minWinRateImpactPp": 0
+    },
+    {
+      "tag": "治愈",
+      "group": "防御恢复",
+      "modeled": true,
+      "cardCount": 8,
+      "prevalence": 0.030418250950570342,
+      "samples": 30,
+      "affectedBuilds": 10,
+      "meanWinRateImpact": 0.02066666666666667,
+      "meanWinRateImpactPp": 2.066666666666667,
+      "meanHpImpact": 2.0805666666666665,
+      "meanTurnImpact": -0.11969999999999989,
+      "maxWinRateImpactPp": 5.000000000000004,
+      "minWinRateImpactPp": 0
+    },
+    {
+      "tag": "销毁",
+      "group": "代价条件",
+      "modeled": true,
+      "cardCount": 16,
+      "prevalence": 0.060836501901140684,
+      "samples": 42,
+      "affectedBuilds": 14,
+      "meanWinRateImpact": -0.0013571428571428597,
+      "meanWinRateImpactPp": -0.13571428571428598,
+      "meanHpImpact": 0.07166666666666656,
+      "meanTurnImpact": -0.06257142857142849,
+      "maxWinRateImpactPp": 2.1000000000000005,
+      "minWinRateImpactPp": -3.1000000000000028
+    }
+  ],
+  "cardRisks": [
+    {
+      "id": "archer_empty_string",
+      "name": "空弦藏牌",
+      "roleId": "hero_archer",
+      "role": "精灵弓箭手",
+      "source": "cardPool",
+      "type": "能力",
+      "cost": 0,
+      "rarity": "普通",
+      "tags": [
+        "放逐",
+        "抽牌",
+        "错身"
+      ],
+      "highPowerTags": [
+        "放逐",
+        "错身"
+      ],
+      "mediumPowerTags": [
+        "抽牌"
+      ],
+      "riskScore": 8
+    },
+    {
+      "id": "mage_ember_flow",
+      "name": "燃魂导流",
+      "roleId": "hero_mage",
+      "role": "萝莉魔导士",
+      "source": "cardPool",
+      "type": "攻击",
+      "cost": 1,
+      "rarity": "稀有",
+      "tags": [
+        "爆发",
+        "燃烧",
+        "充能"
+      ],
+      "highPowerTags": [
+        "爆发",
+        "燃烧"
+      ],
+      "mediumPowerTags": [
+        "充能"
+      ],
+      "riskScore": 8
+    },
+    {
+      "id": "a_wind_dance",
+      "name": "踏风连步",
+      "roleId": "hero_archer",
+      "role": "精灵弓箭手",
+      "source": "epicCore",
+      "type": "能力",
+      "cost": 1,
+      "rarity": "史诗",
+      "tags": [
+        "蓄力",
+        "自然",
+        "错身"
+      ],
+      "highPowerTags": [
+        "自然",
+        "错身"
+      ],
+      "mediumPowerTags": [
+        "蓄力"
+      ],
+      "riskScore": 8
+    },
+    {
+      "id": "a_gale_crosswind",
+      "name": "侧风判线",
+      "roleId": "hero_archer",
+      "role": "精灵弓箭手",
+      "source": "epicCore",
+      "type": "能力",
+      "cost": 1,
+      "rarity": "史诗",
+      "tags": [
+        "自然",
+        "错身",
+        "易伤"
+      ],
+      "highPowerTags": [
+        "自然",
+        "错身"
+      ],
+      "mediumPowerTags": [
+        "易伤"
+      ],
+      "riskScore": 8
+    },
+    {
+      "id": "mage_cascade",
+      "name": "星火连祷",
+      "roleId": "hero_mage",
+      "role": "萝莉魔导士",
+      "source": "cardPool",
+      "type": "能力",
+      "cost": 2,
+      "rarity": "史诗",
+      "tags": [
+        "咏唱",
+        "复刻",
+        "充能"
+      ],
+      "highPowerTags": [
+        "咏唱",
+        "复刻"
+      ],
+      "mediumPowerTags": [
+        "充能"
+      ],
+      "riskScore": 8
+    },
+    {
+      "id": "mage_second_hand",
+      "name": "第二指针",
+      "roleId": "hero_mage",
+      "role": "萝莉魔导士",
+      "source": "cardPool",
+      "type": "能力",
+      "cost": 2,
+      "rarity": "史诗",
+      "tags": [
+        "回响",
+        "庇护",
+        "保留"
+      ],
+      "highPowerTags": [
+        "回响",
+        "保留"
+      ],
+      "mediumPowerTags": [
+        "庇护"
+      ],
+      "riskScore": 8
+    },
+    {
+      "id": "a_syn_magic",
+      "name": "森罗雷仪",
+      "roleId": "hero_mage",
+      "role": "萝莉魔导士",
+      "source": "epicCore",
+      "type": "能力",
+      "cost": 3,
+      "rarity": "史诗",
+      "tags": [
+        "回响",
+        "复刻",
+        "充能"
+      ],
+      "highPowerTags": [
+        "回响",
+        "复刻"
+      ],
+      "mediumPowerTags": [
+        "充能"
+      ],
+      "riskScore": 8
+    },
+    {
+      "id": "warrior_blood_wall",
+      "name": "血祭壁垒",
+      "roleId": "hero_warrior",
+      "role": "勇者战士",
+      "source": "cardPool",
+      "type": "能力",
+      "cost": 1,
+      "rarity": "稀有",
+      "tags": [
+        "血祭",
+        "抽牌",
+        "庇护"
+      ],
+      "highPowerTags": [
+        "血祭"
+      ],
+      "mediumPowerTags": [
+        "抽牌",
+        "庇护"
+      ],
+      "riskScore": 7
+    },
+    {
+      "id": "mage_loop",
+      "name": "法环回流",
+      "roleId": "hero_mage",
+      "role": "萝莉魔导士",
+      "source": "cardPool",
+      "type": "能力",
+      "cost": 1,
+      "rarity": "稀有",
+      "tags": [
+        "咏唱",
+        "充能",
+        "抽牌"
+      ],
+      "highPowerTags": [
+        "咏唱"
+      ],
+      "mediumPowerTags": [
+        "充能",
+        "抽牌"
+      ],
+      "riskScore": 7
+    },
+    {
+      "id": "mage_star_precharge",
+      "name": "星核预充",
+      "roleId": "hero_mage",
+      "role": "萝莉魔导士",
+      "source": "cardPool",
+      "type": "能力",
+      "cost": 1,
+      "rarity": "普通",
+      "tags": [
+        "咏唱",
+        "充能",
+        "庇护"
+      ],
+      "highPowerTags": [
+        "咏唱"
+      ],
+      "mediumPowerTags": [
+        "充能",
+        "庇护"
+      ],
+      "riskScore": 7
+    },
+    {
+      "id": "m_ember_orbit",
+      "name": "余烬星轨",
+      "roleId": "hero_mage",
+      "role": "萝莉魔导士",
+      "source": "epicCore",
+      "type": "能力",
+      "cost": 1,
+      "rarity": "史诗",
+      "tags": [
+        "燃烧",
+        "易伤",
+        "抽牌"
+      ],
+      "highPowerTags": [
+        "燃烧"
+      ],
+      "mediumPowerTags": [
+        "易伤",
+        "抽牌"
+      ],
+      "riskScore": 7
+    },
+    {
+      "id": "a_gale_updraft",
+      "name": "上升气流",
+      "roleId": "hero_archer",
+      "role": "精灵弓箭手",
+      "source": "epicCore",
+      "type": "能力",
+      "cost": 1,
+      "rarity": "史诗",
+      "tags": [
+        "蓄力",
+        "错身",
+        "抽牌"
+      ],
+      "highPowerTags": [
+        "错身"
+      ],
+      "mediumPowerTags": [
+        "蓄力",
+        "抽牌"
+      ],
+      "riskScore": 7
+    },
+    {
+      "id": "warrior_oath",
+      "name": "遗迹立誓",
+      "roleId": "hero_warrior",
+      "role": "勇者战士",
+      "source": "cardPool",
+      "type": "能力",
+      "cost": 2,
+      "rarity": "稀有",
+      "tags": [
+        "庇护",
+        "抽牌",
+        "保留"
+      ],
+      "highPowerTags": [
+        "保留"
+      ],
+      "mediumPowerTags": [
+        "庇护",
+        "抽牌"
+      ],
+      "riskScore": 7
+    },
+    {
+      "id": "mage_chant",
+      "name": "遗迹咏唱",
+      "roleId": "hero_mage",
+      "role": "萝莉魔导士",
+      "source": "cardPool",
+      "type": "能力",
+      "cost": 2,
+      "rarity": "稀有",
+      "tags": [
+        "咏唱",
+        "充能",
+        "抽牌"
+      ],
+      "highPowerTags": [
+        "咏唱"
+      ],
+      "mediumPowerTags": [
+        "充能",
+        "抽牌"
+      ],
+      "riskScore": 7
+    },
+    {
+      "id": "mage_stasis_hex",
+      "name": "星缚咒印",
+      "roleId": "hero_mage",
+      "role": "萝莉魔导士",
+      "source": "cardPool",
+      "type": "能力",
+      "cost": 2,
+      "rarity": "史诗",
+      "tags": [
+        "眩晕",
+        "诅咒",
+        "咏唱"
+      ],
+      "highPowerTags": [
+        "眩晕",
+        "咏唱"
+      ],
+      "mediumPowerTags": [],
+      "riskScore": 7
+    },
+    {
+      "id": "mage_solar_refill",
+      "name": "恒星回填",
+      "roleId": "hero_mage",
+      "role": "萝莉魔导士",
+      "source": "cardPool",
+      "type": "能力",
+      "cost": 2,
+      "rarity": "史诗",
+      "tags": [
+        "咏唱",
+        "抽牌",
+        "庇护"
+      ],
+      "highPowerTags": [
+        "咏唱"
+      ],
+      "mediumPowerTags": [
+        "抽牌",
+        "庇护"
+      ],
+      "riskScore": 7
+    },
+    {
+      "id": "a_syn_blood",
+      "name": "血海誓斩",
+      "roleId": "hero_warrior",
+      "role": "勇者战士",
+      "source": "epicCore",
+      "type": "攻击",
+      "cost": 2,
+      "rarity": "史诗",
+      "tags": [
+        "吸血",
+        "血祭",
+        "放血"
+      ],
+      "highPowerTags": [
+        "吸血",
+        "血祭"
+      ],
+      "mediumPowerTags": [],
+      "riskScore": 7
+    },
+    {
+      "id": "mage_thunder",
+      "name": "裂界紫雷",
+      "roleId": "hero_mage",
+      "role": "萝莉魔导士",
+      "source": "cardPool",
+      "type": "攻击",
+      "cost": 3,
+      "rarity": "史诗",
+      "tags": [
+        "爆发",
+        "穿甲",
+        "回响"
+      ],
+      "highPowerTags": [
+        "爆发",
+        "回响"
+      ],
+      "mediumPowerTags": [],
+      "riskScore": 7
+    },
+    {
+      "id": "warrior_blood_drive",
+      "name": "血誓推进",
+      "roleId": "hero_warrior",
+      "role": "勇者战士",
+      "source": "cardPool",
+      "type": "能力",
+      "cost": 1,
+      "rarity": "稀有",
+      "tags": [
+        "血祭",
+        "抽牌",
+        "狂热"
+      ],
+      "highPowerTags": [
+        "血祭"
+      ],
+      "mediumPowerTags": [
+        "抽牌"
+      ],
+      "riskScore": 6
+    },
+    {
+      "id": "warrior_soul_oath",
+      "name": "魂誓换锋",
+      "roleId": "hero_warrior",
+      "role": "勇者战士",
+      "source": "cardPool",
+      "type": "能力",
+      "cost": 2,
+      "rarity": "稀有",
+      "tags": [
+        "充能",
+        "抽牌",
+        "庇护"
+      ],
+      "highPowerTags": [],
+      "mediumPowerTags": [
+        "充能",
+        "抽牌",
+        "庇护"
+      ],
+      "riskScore": 6
+    },
+    {
+      "id": "mage_exile_nova",
+      "name": "裂星禁术",
+      "roleId": "hero_mage",
+      "role": "萝莉魔导士",
+      "source": "cardPool",
+      "type": "攻击",
+      "cost": 2,
+      "rarity": "史诗",
+      "tags": [
+        "爆发",
+        "穿甲",
+        "放逐"
+      ],
+      "highPowerTags": [
+        "爆发",
+        "放逐"
+      ],
+      "mediumPowerTags": [],
+      "riskScore": 6
+    },
+    {
+      "id": "m_forbidden_comet",
+      "name": "裂星禁术",
+      "roleId": "hero_mage",
+      "role": "萝莉魔导士",
+      "source": "epicCore",
+      "type": "攻击",
+      "cost": 2,
+      "rarity": "史诗",
+      "tags": [
+        "爆发",
+        "穿甲",
+        "放逐"
+      ],
+      "highPowerTags": [
+        "爆发",
+        "放逐"
+      ],
+      "mediumPowerTags": [],
+      "riskScore": 6
+    },
+    {
+      "id": "m_curse_gravity",
+      "name": "咒星重力",
+      "roleId": "hero_mage",
+      "role": "萝莉魔导士",
+      "source": "epicCore",
+      "type": "能力",
+      "cost": 2,
+      "rarity": "史诗",
+      "tags": [
+        "诅咒",
+        "虚弱",
+        "抽牌"
+      ],
+      "highPowerTags": [
+        "虚弱"
+      ],
+      "mediumPowerTags": [
+        "抽牌"
+      ],
+      "riskScore": 6
+    },
+    {
+      "id": "s_pierce",
+      "name": "裂界紫雷",
+      "roleId": "hero_mage",
+      "role": "萝莉魔导士",
+      "source": "epicCore",
+      "type": "攻击",
+      "cost": 4,
+      "rarity": "史诗",
+      "tags": [
+        "爆发",
+        "穿甲",
+        "易伤"
+      ],
+      "highPowerTags": [
+        "爆发"
+      ],
+      "mediumPowerTags": [
+        "易伤"
+      ],
+      "riskScore": 6
+    },
+    {
+      "id": "warrior_red_return",
+      "name": "残红回锋",
+      "roleId": "hero_warrior",
+      "role": "勇者战士",
+      "source": "cardPool",
+      "type": "攻击",
+      "cost": 1,
+      "rarity": "普通",
+      "tags": [
+        "吸血",
+        "保留"
+      ],
+      "highPowerTags": [
+        "吸血",
+        "保留"
+      ],
+      "mediumPowerTags": [],
+      "riskScore": 6
+    },
+    {
+      "id": "warrior_oath_pressure",
+      "name": "誓血缚阵",
+      "roleId": "hero_warrior",
+      "role": "勇者战士",
+      "source": "cardPool",
+      "type": "能力",
+      "cost": 1,
+      "rarity": "稀有",
+      "tags": [
+        "血祭",
+        "虚弱"
+      ],
+      "highPowerTags": [
+        "血祭",
+        "虚弱"
+      ],
+      "mediumPowerTags": [],
+      "riskScore": 6
+    },
+    {
+      "id": "mage_spark",
+      "name": "紫焰火花",
+      "roleId": "hero_mage",
+      "role": "萝莉魔导士",
+      "source": "cardPool",
+      "type": "攻击",
+      "cost": 1,
+      "rarity": "普通",
+      "tags": [
+        "爆发",
+        "燃烧"
+      ],
+      "highPowerTags": [
+        "爆发",
+        "燃烧"
+      ],
+      "mediumPowerTags": [],
+      "riskScore": 6
+    },
+    {
+      "id": "mage_star_copy",
+      "name": "星环复写",
+      "roleId": "hero_mage",
+      "role": "萝莉魔导士",
+      "source": "cardPool",
+      "type": "能力",
+      "cost": 1,
+      "rarity": "稀有",
+      "tags": [
+        "复刻",
+        "咏唱"
+      ],
+      "highPowerTags": [
+        "复刻",
+        "咏唱"
+      ],
+      "mediumPowerTags": [],
+      "riskScore": 6
+    },
+    {
+      "id": "mage_venom_sigils",
+      "name": "毒星符阵",
+      "roleId": "hero_mage",
+      "role": "萝莉魔导士",
+      "source": "cardPool",
+      "type": "能力",
+      "cost": 1,
+      "rarity": "普通",
+      "tags": [
+        "剧毒",
+        "虚弱"
+      ],
+      "highPowerTags": [
+        "剧毒",
+        "虚弱"
+      ],
+      "mediumPowerTags": [],
+      "riskScore": 6
+    },
+    {
+      "id": "mage_star_ward",
+      "name": "残星护文",
+      "roleId": "hero_mage",
+      "role": "萝莉魔导士",
+      "source": "cardPool",
+      "type": "防御",
+      "cost": 1,
+      "rarity": "普通",
+      "tags": [
+        "咏唱",
+        "保留"
+      ],
+      "highPowerTags": [
+        "咏唱",
+        "保留"
+      ],
+      "mediumPowerTags": [],
+      "riskScore": 6
+    },
+    {
+      "id": "mage_twin_spark",
+      "name": "双生火花",
+      "roleId": "hero_mage",
+      "role": "萝莉魔导士",
+      "source": "cardPool",
+      "type": "攻击",
+      "cost": 1,
+      "rarity": "稀有",
+      "tags": [
+        "回响",
+        "燃烧"
+      ],
+      "highPowerTags": [
+        "回响",
+        "燃烧"
+      ],
+      "mediumPowerTags": [],
+      "riskScore": 6
+    },
+    {
+      "id": "mage_reflect_veil",
+      "name": "倒影护幕",
+      "roleId": "hero_mage",
+      "role": "萝莉魔导士",
+      "source": "cardPool",
+      "type": "防御",
+      "cost": 1,
+      "rarity": "普通",
+      "tags": [
+        "回响",
+        "保留"
+      ],
+      "highPowerTags": [
+        "回响",
+        "保留"
+      ],
+      "mediumPowerTags": [],
+      "riskScore": 6
+    },
+    {
+      "id": "mage_bad_omen_chain",
+      "name": "厄兆连珠",
+      "roleId": "hero_mage",
+      "role": "萝莉魔导士",
+      "source": "cardPool",
+      "type": "攻击",
+      "cost": 1,
+      "rarity": "稀有",
+      "tags": [
+        "燃烧",
+        "虚弱"
+      ],
+      "highPowerTags": [
+        "燃烧",
+        "虚弱"
+      ],
+      "mediumPowerTags": [],
+      "riskScore": 6
+    },
+    {
+      "id": "archer_step",
+      "name": "猎手翻步",
+      "roleId": "hero_archer",
+      "role": "精灵弓箭手",
+      "source": "cardPool",
+      "type": "能力",
+      "cost": 1,
+      "rarity": "普通",
+      "tags": [
+        "自然",
+        "保留"
+      ],
+      "highPowerTags": [
+        "自然",
+        "保留"
+      ],
+      "mediumPowerTags": [],
+      "riskScore": 6
+    },
+    {
+      "id": "archer_venom_flurry",
+      "name": "翠毒连矢",
+      "roleId": "hero_archer",
+      "role": "精灵弓箭手",
+      "source": "cardPool",
+      "type": "攻击",
+      "cost": 1,
+      "rarity": "普通",
+      "tags": [
+        "剧毒",
+        "虚弱"
+      ],
+      "highPowerTags": [
+        "剧毒",
+        "虚弱"
+      ],
+      "mediumPowerTags": [],
+      "riskScore": 6
+    },
+    {
+      "id": "archer_soul_return",
+      "name": "林魂招矢",
+      "roleId": "hero_archer",
+      "role": "精灵弓箭手",
+      "source": "cardPool",
+      "type": "能力",
+      "cost": 1,
+      "rarity": "稀有",
+      "tags": [
+        "招魂",
+        "自然"
+      ],
+      "highPowerTags": [
+        "招魂",
+        "自然"
+      ],
+      "mediumPowerTags": [],
+      "riskScore": 6
+    },
+    {
+      "id": "archer_rotten_net",
+      "name": "腐叶陷网",
+      "roleId": "hero_archer",
+      "role": "精灵弓箭手",
+      "source": "cardPool",
+      "type": "能力",
+      "cost": 1,
+      "rarity": "史诗",
+      "tags": [
+        "剧毒",
+        "眩晕"
+      ],
+      "highPowerTags": [
+        "剧毒",
+        "眩晕"
+      ],
+      "mediumPowerTags": [],
+      "riskScore": 6
+    },
+    {
+      "id": "archer_leaf_store",
+      "name": "飞叶封存",
+      "roleId": "hero_archer",
+      "role": "精灵弓箭手",
+      "source": "cardPool",
+      "type": "防御",
+      "cost": 1,
+      "rarity": "普通",
+      "tags": [
+        "错身",
+        "保留"
+      ],
+      "highPowerTags": [
+        "错身",
+        "保留"
+      ],
+      "mediumPowerTags": [],
+      "riskScore": 6
+    },
+    {
+      "id": "archer_crosswind_guard",
+      "name": "侧风护步",
+      "roleId": "hero_archer",
+      "role": "精灵弓箭手",
+      "source": "cardPool",
+      "type": "防御",
+      "cost": 1,
+      "rarity": "稀有",
+      "tags": [
+        "自然",
+        "保留"
+      ],
+      "highPowerTags": [
+        "自然",
+        "保留"
+      ],
+      "mediumPowerTags": [],
+      "riskScore": 6
+    },
+    {
+      "id": "m_echo_archive",
+      "name": "回声秘藏",
+      "roleId": "hero_mage",
+      "role": "萝莉魔导士",
+      "source": "epicCore",
+      "type": "能力",
+      "cost": 1,
+      "rarity": "史诗",
+      "tags": [
+        "回响",
+        "复刻"
+      ],
+      "highPowerTags": [
+        "回响",
+        "复刻"
+      ],
+      "mediumPowerTags": [],
+      "riskScore": 6
+    },
+    {
+      "id": "m_mirror_twinseal",
+      "name": "双镜印",
+      "roleId": "hero_mage",
+      "role": "萝莉魔导士",
+      "source": "epicCore",
+      "type": "能力",
+      "cost": 1,
+      "rarity": "史诗",
+      "tags": [
+        "回响",
+        "复刻"
+      ],
+      "highPowerTags": [
+        "回响",
+        "复刻"
+      ],
+      "mediumPowerTags": [],
+      "riskScore": 6
+    },
+    {
+      "id": "m_calamity_black_snow",
+      "name": "黑雪预兆",
+      "roleId": "hero_mage",
+      "role": "萝莉魔导士",
+      "source": "epicCore",
+      "type": "攻击",
+      "cost": 1,
+      "rarity": "史诗",
+      "tags": [
+        "虚弱",
+        "燃烧"
+      ],
+      "highPowerTags": [
+        "虚弱",
+        "燃烧"
+      ],
+      "mediumPowerTags": [],
+      "riskScore": 6
+    },
+    {
+      "id": "a_exile_recall",
+      "name": "归途双令",
+      "roleId": "hero_archer",
+      "role": "精灵弓箭手",
+      "source": "epicCore",
+      "type": "能力",
+      "cost": 1,
+      "rarity": "史诗",
+      "tags": [
+        "招魂",
+        "轮回"
+      ],
+      "highPowerTags": [
+        "招魂",
+        "轮回"
+      ],
+      "mediumPowerTags": [],
+      "riskScore": 6
+    },
+    {
+      "id": "mage_void",
+      "name": "虚空导引",
+      "roleId": "hero_mage",
+      "role": "萝莉魔导士",
+      "source": "cardPool",
+      "type": "能力",
+      "cost": 2,
+      "rarity": "稀有",
+      "tags": [
+        "咏唱",
+        "回响"
+      ],
+      "highPowerTags": [
+        "咏唱",
+        "回响"
+      ],
+      "mediumPowerTags": [],
+      "riskScore": 6
+    },
+    {
+      "id": "mage_mirror_array",
+      "name": "镜阵留声",
+      "roleId": "hero_mage",
+      "role": "萝莉魔导士",
+      "source": "cardPool",
+      "type": "能力",
+      "cost": 2,
+      "rarity": "稀有",
+      "tags": [
+        "复刻",
+        "保留"
+      ],
+      "highPowerTags": [
+        "复刻",
+        "保留"
+      ],
+      "mediumPowerTags": [],
+      "riskScore": 6
+    },
+    {
+      "id": "mage_mute_sand",
+      "name": "禁言星砂",
+      "roleId": "hero_mage",
+      "role": "萝莉魔导士",
+      "source": "cardPool",
+      "type": "能力",
+      "cost": 2,
+      "rarity": "史诗",
+      "tags": [
+        "眩晕",
+        "虚弱"
+      ],
+      "highPowerTags": [
+        "眩晕",
+        "虚弱"
+      ],
+      "mediumPowerTags": [],
+      "riskScore": 6
+    },
+    {
+      "id": "archer_forest_specimen",
+      "name": "归林标本",
+      "roleId": "hero_archer",
+      "role": "精灵弓箭手",
+      "source": "cardPool",
+      "type": "能力",
+      "cost": 2,
+      "rarity": "稀有",
+      "tags": [
+        "轮回",
+        "自然"
+      ],
+      "highPowerTags": [
+        "轮回",
+        "自然"
+      ],
+      "mediumPowerTags": [],
+      "riskScore": 6
+    },
+    {
+      "id": "a_syn_array",
+      "name": "王誓阵列",
+      "roleId": "hero_warrior",
+      "role": "勇者战士",
+      "source": "epicCore",
+      "type": "防御",
+      "cost": 2,
+      "rarity": "史诗",
+      "tags": [
+        "保留",
+        "荆棘"
+      ],
+      "highPowerTags": [
+        "保留",
+        "荆棘"
+      ],
+      "mediumPowerTags": [],
+      "riskScore": 6
+    },
+    {
+      "id": "m_status_supernova",
+      "name": "万象超新星",
+      "roleId": "hero_mage",
+      "role": "萝莉魔导士",
+      "source": "epicCore",
+      "type": "攻击",
+      "cost": 2,
+      "rarity": "史诗",
+      "tags": [
+        "爆发",
+        "燃烧"
+      ],
+      "highPowerTags": [
+        "爆发",
+        "燃烧"
+      ],
+      "mediumPowerTags": [],
+      "riskScore": 6
+    },
+    {
+      "id": "m_mirror_hallway",
+      "name": "折廊回声",
+      "roleId": "hero_mage",
+      "role": "萝莉魔导士",
+      "source": "epicCore",
+      "type": "能力",
+      "cost": 2,
+      "rarity": "史诗",
+      "tags": [
+        "回响",
+        "保留"
+      ],
+      "highPowerTags": [
+        "回响",
+        "保留"
+      ],
+      "mediumPowerTags": [],
+      "riskScore": 6
+    },
+    {
+      "id": "a_venom_cage",
+      "name": "腐藤囚笼",
+      "roleId": "hero_archer",
+      "role": "精灵弓箭手",
+      "source": "epicCore",
+      "type": "能力",
+      "cost": 2,
+      "rarity": "史诗",
+      "tags": [
+        "剧毒",
+        "眩晕"
+      ],
+      "highPowerTags": [
+        "剧毒",
+        "眩晕"
+      ],
+      "mediumPowerTags": [],
+      "riskScore": 6
+    },
+    {
+      "id": "m_blood_moon_rite",
+      "name": "血月仪轨",
+      "roleId": "hero_mage",
+      "role": "萝莉魔导士",
+      "source": "epicCore",
+      "type": "能力",
+      "cost": 1,
+      "rarity": "史诗",
+      "tags": [
+        "出血",
+        "放血",
+        "易伤"
+      ],
+      "highPowerTags": [],
+      "mediumPowerTags": [
+        "出血",
+        "易伤"
+      ],
+      "riskScore": 5
+    },
+    {
+      "id": "archer_grove",
+      "name": "森冠齐射",
+      "roleId": "hero_archer",
+      "role": "精灵弓箭手",
+      "source": "cardPool",
+      "type": "攻击",
+      "cost": 2,
+      "rarity": "史诗",
+      "tags": [
+        "连射",
+        "多段",
+        "穿甲"
+      ],
+      "highPowerTags": [],
+      "mediumPowerTags": [
+        "连射",
+        "多段"
+      ],
+      "riskScore": 5
+    },
+    {
+      "id": "archer_exile_storm",
+      "name": "逐风绝矢",
+      "roleId": "hero_archer",
+      "role": "精灵弓箭手",
+      "source": "cardPool",
+      "type": "攻击",
+      "cost": 2,
+      "rarity": "史诗",
+      "tags": [
+        "放逐",
+        "穿甲",
+        "多段"
+      ],
+      "highPowerTags": [
+        "放逐"
+      ],
+      "mediumPowerTags": [
+        "多段"
+      ],
+      "riskScore": 5
+    },
+    {
+      "id": "a_skyfall_shot",
+      "name": "坠星绝矢",
+      "roleId": "hero_archer",
+      "role": "精灵弓箭手",
+      "source": "epicCore",
+      "type": "攻击",
+      "cost": 2,
+      "rarity": "史诗",
+      "tags": [
+        "放逐",
+        "穿甲",
+        "多段"
+      ],
+      "highPowerTags": [
+        "放逐"
+      ],
+      "mediumPowerTags": [
+        "多段"
+      ],
+      "riskScore": 5
+    },
+    {
+      "id": "warrior_crown_riposte",
+      "name": "王冠反斩",
+      "roleId": "hero_warrior",
+      "role": "勇者战士",
+      "source": "cardPool",
+      "type": "能力",
+      "cost": 3,
+      "rarity": "史诗",
+      "tags": [
+        "反击",
+        "庇护",
+        "抽牌"
+      ],
+      "highPowerTags": [],
+      "mediumPowerTags": [
+        "庇护",
+        "抽牌"
+      ],
+      "riskScore": 5
+    },
+    {
+      "id": "warrior_devour_finish",
+      "name": "噬痕终击",
+      "roleId": "hero_warrior",
+      "role": "勇者战士",
+      "source": "cardPool",
+      "type": "攻击",
+      "cost": 3,
+      "rarity": "史诗",
+      "tags": [
+        "放血",
+        "吸血",
+        "穿甲"
+      ],
+      "highPowerTags": [
+        "吸血"
+      ],
+      "mediumPowerTags": [],
+      "riskScore": 5
+    },
+    {
+      "id": "archer_returning_feather",
+      "name": "折返羽刃",
+      "roleId": "hero_archer",
+      "role": "精灵弓箭手",
+      "source": "cardPool",
+      "type": "攻击",
+      "cost": 1,
+      "rarity": "普通",
+      "tags": [
+        "放逐",
+        "轮回"
+      ],
+      "highPowerTags": [
+        "放逐",
+        "轮回"
+      ],
+      "mediumPowerTags": [],
+      "riskScore": 5
+    },
+    {
+      "id": "neutral_sealed_thunder",
+      "name": "封雷断页",
+      "roleId": "neutral",
+      "role": "中立",
+      "source": "neutral",
+      "type": "攻击",
+      "cost": 2,
+      "rarity": "史诗",
+      "tags": [
+        "眩晕",
+        "放逐"
+      ],
+      "highPowerTags": [
+        "眩晕",
+        "放逐"
+      ],
+      "mediumPowerTags": [],
+      "riskScore": 5
+    },
+    {
+      "id": "s_exhaust",
+      "name": "风葬归矢",
+      "roleId": "hero_archer",
+      "role": "精灵弓箭手",
+      "source": "epicCore",
+      "type": "能力",
+      "cost": 3,
+      "rarity": "史诗",
+      "tags": [
+        "放逐",
+        "轮回"
+      ],
+      "highPowerTags": [
+        "放逐",
+        "轮回"
+      ],
+      "mediumPowerTags": [],
+      "riskScore": 5
+    },
+    {
+      "id": "warrior_verdict_feint",
+      "name": "裁决佯攻",
+      "roleId": "hero_warrior",
+      "role": "勇者战士",
+      "source": "cardPool",
+      "type": "攻击",
+      "cost": 0,
+      "rarity": "普通",
+      "tags": [
+        "连击",
+        "易伤",
+        "销毁"
+      ],
+      "highPowerTags": [],
+      "mediumPowerTags": [
+        "易伤"
+      ],
+      "riskScore": 4
+    },
+    {
+      "id": "warrior_release",
+      "name": "圣剑解放",
+      "roleId": "hero_warrior",
+      "role": "勇者战士",
+      "source": "cardPool",
+      "type": "攻击",
+      "cost": 3,
+      "rarity": "史诗",
+      "tags": [
+        "圣剑",
+        "穿甲",
+        "重击"
+      ],
+      "highPowerTags": [],
+      "mediumPowerTags": [
+        "圣剑"
+      ],
+      "riskScore": 4
+    }
+  ]
+}
