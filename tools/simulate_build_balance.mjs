@@ -7,6 +7,7 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DATA_FILES = [
+    'src/data/relics.js',
     'src/data/card-tags.js',
     'src/data/cards.js',
     'src/data/enemies.js',
@@ -18,7 +19,8 @@ function loadGameData() {
     const context = vm.createContext({});
     vm.runInContext(`${source}\n;globalThis.__balanceData = {
         TAGS, BUILD_DIRECTIONS, CARD_BUILD_TAGS_BY_ID, NEUTRAL_CARD_POOL,
-        CHARACTER_CARD_POOLS, ENEMIES, CHARACTERS, getScaledCardValue,
+        CHARACTER_CARD_POOLS, SPECIAL_EPIC_POOLS, RELIC_POOL, RELIC_BUILD_TAGS_BY_ID,
+        ENEMIES, CHARACTERS, getScaledCardValue,
         getAbilityPotency, getCardDrawCount, getCardHealValue,
         getCardChantGain, getProtectionValue, getWindGain, getSidestepGain
     };`, context);
@@ -26,13 +28,15 @@ function loadGameData() {
 }
 
 function parseArgs(argv) {
-    const result = { runs: 2000, seed: 20260612, output: '' };
+    const result = { runs: 2000, seed: 20260612, output: '', mode: 'baseline' };
     for (let i = 0; i < argv.length; i++) {
         if (argv[i] === '--runs') result.runs = Number(argv[++i]);
         else if (argv[i] === '--seed') result.seed = Number(argv[++i]);
         else if (argv[i] === '--output') result.output = argv[++i];
+        else if (argv[i] === '--mode') result.mode = argv[++i];
     }
     if (!Number.isFinite(result.runs) || result.runs < 100) throw new Error('--runs must be at least 100');
+    if (!['baseline', 'mature'].includes(result.mode)) throw new Error('--mode must be baseline or mature');
     return result;
 }
 
@@ -87,6 +91,45 @@ const CHECKPOINTS = [
     { id: 'boss', label: '最终首领', floor: 19, type: 'boss' }
 ];
 
+const MATURE_LOADOUTS = {
+    oathblade: {
+        core: 'w_oath_fortress',
+        relics: ['r_sword_oath', 'r_thorn_shield_new', 'r_protect_armor']
+    },
+    execution: {
+        core: 'w_last_verdict',
+        relics: ['r_pierce_amulet', 'r_heavy_badge', 'r_execute_scabbard']
+    },
+    bloodoath: {
+        core: 'a_syn_blood',
+        relics: ['r_blood_suture', 'r_lifedebt_scale', 'r_rupture_charm']
+    },
+    chant: {
+        core: 'm_forbidden_comet',
+        relics: ['r_sac_jade', 'r_burst_lens', 'r_chant_reservoir']
+    },
+    mirror: {
+        core: 'm_echo_archive',
+        relics: ['r_echo_mirror_relic', 'r_echo_archive_pin', 'r_double_quill']
+    },
+    calamity: {
+        core: 'm_status_supernova',
+        relics: ['r_plague_glass', 'r_hex_incense', 'r_status_ledger']
+    },
+    gale: {
+        core: 'a_gale_verdict',
+        relics: ['r_wind_quiver', 'r_tailwind_spool', 'r_multishot_fletching']
+    },
+    venom: {
+        core: 's_poison',
+        relics: ['r_poison_fang', 'r_bleed_knife', 'r_corrupt_cup']
+    },
+    exile: {
+        core: 's_exhaust',
+        relics: ['r_exile_cache', 'r_exhaust_dmg', 'r_return_knife']
+    }
+};
+
 function cardBuildTags(data, card) {
     return card.buildTags || data.CARD_BUILD_TAGS_BY_ID[card.poolId || card.id] || [];
 }
@@ -97,17 +140,30 @@ function getBuildPool(data, roleId, buildId) {
         .filter(card => !card.isSpecial);
 }
 
-function makeDeck(data, rng, roleId, buildId, buildCards = 8, foundationCards = 4) {
+function getLoadout(data, roleId, buildId, mode) {
+    if (mode !== 'mature') return { core: null, coreCard: null, relics: [] };
+    const loadout = MATURE_LOADOUTS[buildId];
+    if (!loadout) throw new Error(`Missing mature loadout for ${buildId}`);
+    const coreCard = data.SPECIAL_EPIC_POOLS[roleId].find(card => card.id === loadout.core);
+    if (!coreCard) throw new Error(`Missing special core ${loadout.core}`);
+    for (const relicId of loadout.relics) {
+        if (!data.RELIC_POOL.some(relic => relic.id === relicId)) throw new Error(`Missing relic ${relicId}`);
+    }
+    return { ...loadout, coreCard };
+}
+
+function makeDeck(data, rng, roleId, buildId, buildCards = 8, foundationCards = 4, loadout = null) {
     const pool = getBuildPool(data, roleId, buildId);
     const deck = [];
     for (let i = 0; i < foundationCards; i++) deck.push(clone(FOUNDATION[roleId][i % FOUNDATION[roleId].length]));
     const choices = shuffle(rng, pool);
     for (let i = 0; i < buildCards; i++) deck.push(clone(choices[i % choices.length]));
+    if (loadout?.coreCard) deck.push({ ...clone(loadout.coreCard), specialId: loadout.coreCard.id });
     return shuffle(rng, deck).map((card, index) => ({ ...card, simId: `${index}:${card.poolId || card.name}` }));
 }
 
 function upgradeRandomCard(rng, deck) {
-    const candidates = deck.filter(card => !card.up);
+    const candidates = deck.filter(card => !card.up && !card.isSpecial);
     if (!candidates.length) return;
     const card = pick(rng, candidates);
     card.up = true;
@@ -148,10 +204,10 @@ function createEnemy(data, rng, checkpoint) {
     return template;
 }
 
-function createBattle(data, rng, roleId, deck, hp, checkpoint) {
+function createBattle(data, rng, roleId, deck, hp, checkpoint, loadout) {
     const character = data.CHARACTERS[roleId];
     const enemy = createEnemy(data, rng, checkpoint);
-    return {
+    const state = {
         data, rng, roleId, character, maxHp: character.maxHp, hp,
         energy: character.baseEnergy, armor: roleId === 'hero_warrior' ? 5 : 0,
         thorns: 0, protection: 0, counter: 0, chant: 0, aim: 0, sidestep: 0,
@@ -159,8 +215,31 @@ function createBattle(data, rng, roleId, deck, hp, checkpoint) {
         poison: 0, bleed: 0, burn: 0, curse: 0,
         drawPile: shuffle(rng, deck.map(clone)), discard: [], exhaust: [], hand: [], retained: [],
         lastCard: null, cardsPlayed: 0, enemy, encounterName: enemy.name, turns: 0,
-        damageTaken: 0, healing: 0
+        damageTaken: 0, healing: 0, relics: new Set(loadout?.relics || []),
+        protectArmorUsed: false, chantReservoirUsed: false, tailwindSpoolUsed: false,
+        echoArchivePinUsed: false, statusLedgerUsed: false, abilityCardsPlayed: 0,
+        knifeSequence: 0
     };
+    if (hasRelic(state, 'r_thorn_shield_new')) state.counter = 1;
+    return state;
+}
+
+function hasRelic(state, relicId) {
+    return state.relics.has(relicId);
+}
+
+function enemyDebuffCount(state) {
+    return ['poison', 'bleed', 'burn', 'curse', 'vuln', 'weak', 'stun']
+        .filter(key => state.enemy[key] > 0).length;
+}
+
+function addKnives(state, count) {
+    for (let i = 0; i < count; i++) {
+        state.hand.push({
+            name: '归风飞刀', type: '攻击', cost: 0, val: 4, tags: ['销毁'], rarity: '普通',
+            isKnife: true, simId: `knife:${state.knifeSequence++}`
+        });
+    }
 }
 
 function draw(state, count) {
@@ -222,6 +301,10 @@ function takeDamage(state, amount) {
     const blocked = Math.min(damage, state.armor);
     state.armor -= blocked;
     damage -= blocked;
+    if (damage > 0 && hasRelic(state, 'r_protect_armor') && !state.protectArmorUsed) {
+        state.protectArmorUsed = true;
+        damage = 0;
+    }
     if (damage > 0) {
         state.hp -= damage;
         state.damageTaken += damage;
@@ -234,13 +317,28 @@ function estimateCard(state, card, incoming) {
     const tags = card.tags || [];
     const cost = Math.max(0.35, card.cost || 0);
     let score = 0;
+    if (card.isSpecial) {
+        const synergyCards = state.hand.filter(held => held !== card && (held.tags || []).some(tag => tags.includes(tag))).length;
+        const specialScores = {
+            w_oath_fortress: Math.min(incoming + 16, 31),
+            w_last_verdict: 24 + state.enemy.vuln * 4 + synergyCards * 4,
+            a_syn_blood: state.hp > 18 ? 18 + synergyCards * 10 : 3,
+            m_forbidden_comet: 20 + state.chant * 6,
+            m_echo_archive: state.lastCard ? 22 : 8,
+            m_status_supernova: 10 + enemyDebuffCount(state) * 10,
+            a_gale_verdict: 12 + Math.min(3, state.aim) * 6,
+            s_poison: (state.enemy.poison + state.enemy.bleed) * 2 + 4,
+            s_exhaust: state.exhaust.length * 15 + (state.exhaust.length ? 12 : 0)
+        };
+        score += specialScores[card.specialId] || 0;
+    }
     let value = state.data.getScaledCardValue(card);
-    if (tags.includes('重击')) value *= 2;
+    if (tags.includes('重击')) value *= hasRelic(state, 'r_heavy_badge') ? 2.5 : 2;
     if (tags.includes('连击') && state.cardsPlayed > 0) value *= 1.5;
     let repeats = 1 + (tags.includes('连射') ? 1 : 0) + (tags.includes('多段') ? 1 : 0) + (tags.includes('回响') ? 1 : 0);
     if (card.type === '攻击') {
         if (tags.includes('爆发')) value += state.chant ? state.chant * 7 : 4;
-        if (tags.includes('圣剑')) value += Math.floor(state.armor * 0.5) + state.counter * 4;
+        if (tags.includes('圣剑')) value += Math.floor(state.armor * (hasRelic(state, 'r_sword_oath') ? 0.75 : 0.5)) + state.counter * 4;
         score += value * repeats * (tags.includes('穿甲') ? 1.12 : 1);
         if (tags.includes('放血')) score += state.enemy.bleed * 3;
         if (tags.includes('吸血')) score += Math.min(state.maxHp - state.hp, value / 2) * 0.8;
@@ -289,23 +387,104 @@ function expectedIncoming(state, move) {
 }
 
 function discardPlayedCard(state, card) {
-    if ((card.tags || []).includes('销毁') || (card.tags || []).includes('放逐')) state.exhaust.push(card);
+    if (card.returnedBySpecial) {
+        delete card.returnedBySpecial;
+        return;
+    }
+    if ((card.tags || []).includes('销毁') || (card.tags || []).includes('放逐')) {
+        state.exhaust.push(card);
+        if (hasRelic(state, 'r_exhaust_dmg')) state.battleDamage += 2;
+    }
     else if ((card.tags || []).includes('保留')) state.retained.push(card);
     else state.discard.push(card);
 }
 
+function executeSpecialCard(state, card) {
+    const specialId = card.specialId || card.id;
+    if (specialId === 'w_oath_fortress') {
+        state.armor += 18;
+        state.protection += 8 + (hasRelic(state, 'r_protect_armor') ? 5 : 0);
+        if (state.hp < state.maxHp / 2) state.counter = 1;
+    } else if (specialId === 'w_last_verdict') {
+        const executionHand = state.hand.filter(held => (held.tags || []).some(tag => ['连击', '穿甲'].includes(tag))).length;
+        hitEnemy(state, 18 + state.battleDamage + state.enemy.vuln * 4 + executionHand * 6, true);
+    } else if (specialId === 'a_syn_blood') {
+        const bloodHand = state.hand.filter(held => (held.tags || []).some(tag => ['血祭', '吸血', '出血', '放血'].includes(tag))).length;
+        state.hp -= bloodHand * 2;
+        const dealt = hitEnemy(state, 6 + bloodHand * 15 + state.battleDamage);
+        let healing = Math.floor(dealt / 2);
+        if (hasRelic(state, 'r_lifedebt_scale') && state.hp <= state.maxHp / 2) healing = Math.floor(healing * 1.5);
+        heal(state, healing);
+    } else if (specialId === 'm_forbidden_comet') {
+        const chantSpent = state.chant;
+        hitEnemy(state, 20 + state.battleDamage + chantSpent * 6, true);
+        state.chant = hasRelic(state, 'r_burst_lens') ? Math.ceil(chantSpent / 2) : 0;
+    } else if (specialId === 'm_echo_archive') {
+        if (state.lastCard && !state.lastCard.isJunk) executeCard(state, state.lastCard, true);
+        else {
+            state.chant = Math.min(12, state.chant + 2);
+            draw(state, 1);
+        }
+    } else if (specialId === 'm_status_supernova') {
+        const debuffs = enemyDebuffCount(state);
+        hitEnemy(state, 8 + state.battleDamage + debuffs * 8);
+        state.enemy.burn += Math.max(1, debuffs);
+    } else if (specialId === 'a_gale_verdict') {
+        const shots = Math.min(3, state.aim);
+        state.aim -= shots;
+        hitEnemy(state, 8 + state.battleDamage + shots * 4, true);
+    } else if (specialId === 's_poison') {
+        hitEnemy(state, (state.enemy.poison + state.enemy.bleed) * 2);
+    } else if (specialId === 's_exhaust') {
+        const returned = state.exhaust.length + 1;
+        if (hasRelic(state, 'r_exhaust_dmg')) state.battleDamage += 2;
+        hitEnemy(state, returned * 15);
+        if (hasRelic(state, 'r_return_knife')) addKnives(state, returned * 2);
+        card.returnedBySpecial = true;
+        state.drawPile = shuffle(state.rng, state.drawPile.concat(state.exhaust, [card]));
+        state.exhaust = [];
+    } else {
+        return false;
+    }
+    return true;
+}
+
 function executeCard(state, card, echo = false) {
     const tags = card.tags || [];
+    if (card.isSpecial && executeSpecialCard(state, card)) return;
     if (tags.includes('血祭')) {
         state.hp -= 5;
         state.battleDamage += card.up ? 6 : 4;
+        if (hasRelic(state, 'r_blood_suture')) heal(state, 2);
         if (state.hp <= 0) return;
     }
-    if (tags.includes('庇护')) state.protection += state.data.getProtectionValue(card);
+    if (tags.includes('庇护')) state.protection += state.data.getProtectionValue(card) + (hasRelic(state, 'r_protect_armor') ? 5 : 0);
     if (tags.includes('反击')) state.counter = 1;
-    if (tags.includes('错身') && !echo) state.sidestep = Math.min(3, state.sidestep + state.data.getSidestepGain(card));
-    if (tags.includes('咏唱') && !echo) state.chant = Math.min(12, state.chant + state.data.getCardChantGain(card));
-    if (tags.includes('蓄力') && !echo) state.aim = Math.min(6, state.aim + state.data.getWindGain(card));
+    if (tags.includes('错身') && !echo) {
+        let gain = state.data.getSidestepGain(card) + (hasRelic(state, 'r_wind_quiver') ? 1 : 0);
+        if (hasRelic(state, 'r_tailwind_spool') && !state.tailwindSpoolUsed) {
+            gain++;
+            state.tailwindSpoolUsed = true;
+        }
+        state.sidestep = Math.min(3, state.sidestep + gain);
+    }
+    if (tags.includes('咏唱') && !echo) {
+        let gain = state.data.getCardChantGain(card);
+        if (hasRelic(state, 'r_chant_reservoir') && !state.chantReservoirUsed) {
+            gain++;
+            state.chantReservoirUsed = true;
+        }
+        state.chant = Math.min(12, state.chant + gain);
+        if (hasRelic(state, 'r_sac_jade')) state.energy++;
+    }
+    if (tags.includes('蓄力') && !echo) {
+        let gain = state.data.getWindGain(card) + (hasRelic(state, 'r_wind_quiver') ? 1 : 0);
+        if (hasRelic(state, 'r_tailwind_spool') && !state.tailwindSpoolUsed) {
+            gain++;
+            state.tailwindSpoolUsed = true;
+        }
+        state.aim = Math.min(6, state.aim + gain);
+    }
     if (tags.includes('自然') && !echo) {
         state.energy += 1;
         if (state.aim > 0) {
@@ -316,26 +495,30 @@ function executeCard(state, card, echo = false) {
     if (tags.includes('充能')) state.energy += 1;
     if (tags.includes('治愈')) heal(state, state.data.getCardHealValue(card));
     if (tags.includes('抽牌') && !echo) draw(state, state.data.getCardDrawCount(card));
-    if (tags.includes('荆棘')) state.thorns += 8;
-    if (tags.includes('剧毒')) state.enemy.poison += 3 * (card.type === '能力' ? state.data.getAbilityPotency(card) : 1);
-    if (tags.includes('出血')) state.enemy.bleed += 3 * (card.type === '能力' ? state.data.getAbilityPotency(card) : 1);
-    if (tags.includes('燃烧')) state.enemy.burn += 2 * (card.type === '能力' ? state.data.getAbilityPotency(card) : 1);
-    if (tags.includes('诅咒')) state.enemy.curse += 2 * (card.type === '能力' ? state.data.getAbilityPotency(card) : 1);
+    if (tags.includes('荆棘')) state.thorns += hasRelic(state, 'r_thorn_shield_new') ? 16 : 8;
+    const statusBonus = hasRelic(state, 'r_plague_glass') && card.type === '能力' ? Math.min(2, enemyDebuffCount(state)) : 0;
+    if (tags.includes('剧毒')) state.enemy.poison += 3 * (card.type === '能力' ? state.data.getAbilityPotency(card) : 1) + statusBonus + (hasRelic(state, 'r_poison_fang') ? 1 : 0);
+    if (tags.includes('出血')) state.enemy.bleed += 3 * (card.type === '能力' ? state.data.getAbilityPotency(card) : 1) + statusBonus + (hasRelic(state, 'r_poison_fang') ? 1 : 0);
+    if (tags.includes('燃烧')) state.enemy.burn += 2 * (card.type === '能力' ? state.data.getAbilityPotency(card) : 1) + statusBonus;
+    if (tags.includes('诅咒')) {
+        state.enemy.curse += 2 * (card.type === '能力' ? state.data.getAbilityPotency(card) : 1) + statusBonus;
+        if (hasRelic(state, 'r_hex_incense')) state.enemy.weak++;
+    }
     if (tags.includes('易伤')) state.enemy.vuln += 2 * (card.type === '能力' ? state.data.getAbilityPotency(card) : 1);
     if (tags.includes('虚弱')) state.enemy.weak += 2 * (card.type === '能力' ? state.data.getAbilityPotency(card) : 1);
     if (tags.includes('眩晕')) state.enemy.stun += 1;
     if (tags.includes('放血') && state.enemy.bleed > 0) {
-        hitEnemy(state, state.enemy.bleed * 3, true);
-        state.enemy.bleed = 0;
+        hitEnemy(state, state.enemy.bleed * (hasRelic(state, 'r_bleed_knife') ? 5 : 3), true);
+        state.enemy.bleed = hasRelic(state, 'r_rupture_charm') ? 2 : 0;
     }
     if (card.type === '防御') state.armor += state.data.getScaledCardValue(card);
     if (card.type === '攻击') {
         let value = state.data.getScaledCardValue(card);
-        if (tags.includes('重击')) value *= 2;
+        if (tags.includes('重击')) value *= hasRelic(state, 'r_heavy_badge') ? 2.5 : 2;
         if (tags.includes('连击') && state.cardsPlayed > 0 && !echo) value = Math.floor(value * 1.5);
         let damage = value + state.battleDamage + state.turnDamage;
-        if (tags.includes('放逐')) damage += Math.max(5, Math.floor(value * 0.5));
-        if (tags.includes('圣剑')) damage += Math.floor(state.armor * 0.5) + state.counter * 4;
+        if (tags.includes('放逐')) damage += Math.max(5, Math.floor(value * (hasRelic(state, 'r_exile_cache') ? 0.75 : 0.5)));
+        if (tags.includes('圣剑')) damage += Math.floor(state.armor * (hasRelic(state, 'r_sword_oath') ? 0.75 : 0.5)) + state.counter * 4;
         if (tags.includes('爆发')) {
             damage += state.chant > 0 ? state.chant * 7 : 4;
             state.chant = 0;
@@ -349,8 +532,16 @@ function executeCard(state, card, echo = false) {
             state.protection += 3;
             hitEnemy(state, Math.max(3, Math.ceil(value * 0.4)), tags.includes('穿甲'));
         }
-        const dealt = hitEnemy(state, damage, tags.includes('穿甲'));
-        if (tags.includes('吸血')) heal(state, card.rarity === '史诗' ? dealt : Math.floor(dealt / 2));
+        if (hasRelic(state, 'r_multishot_fletching') && tags.includes('多段')) damage += 2;
+        const pierce = tags.includes('穿甲');
+        if (pierce && hasRelic(state, 'r_pierce_amulet')) damage = Math.floor(damage * 1.25);
+        const dealt = hitEnemy(state, damage, pierce);
+        if (pierce && tags.includes('重击') && state.enemy.vuln > 0 && hasRelic(state, 'r_execute_scabbard')) hitEnemy(state, 8, true);
+        if (tags.includes('吸血')) {
+            let healing = card.rarity === '史诗' ? dealt : Math.floor(dealt / 2);
+            if (hasRelic(state, 'r_lifedebt_scale') && state.hp <= state.maxHp / 2) healing = Math.floor(healing * 1.5);
+            heal(state, healing);
+        }
     }
     if (tags.includes('复刻') && state.lastCard && !echo) executeCard(state, state.lastCard, true);
     if (tags.includes('重置') && !echo) {
@@ -359,13 +550,22 @@ function executeCard(state, card, echo = false) {
         state.hand = [];
         draw(state, count);
     }
+    if (hasRelic(state, 'r_status_ledger') && enemyDebuffCount(state) >= 4 && card.type === '能力' && !state.statusLedgerUsed && !echo) {
+        state.statusLedgerUsed = true;
+        draw(state, 1);
+    }
 }
 
 function playPlayerTurn(state, move) {
     state.energy = state.character.baseEnergy;
     state.cardsPlayed = 0;
+    state.abilityCardsPlayed = 0;
     state.turnDamage = 0;
     state.protection = 0;
+    state.chantReservoirUsed = false;
+    state.tailwindSpoolUsed = false;
+    state.echoArchivePinUsed = false;
+    state.statusLedgerUsed = false;
     state.hand.push(...state.retained);
     state.retained = [];
     draw(state, state.character.openingHand);
@@ -379,14 +579,31 @@ function playPlayerTurn(state, move) {
         const card = ranked[0].card;
         state.hand.splice(state.hand.indexOf(card), 1);
         state.energy -= card.cost || 0;
+        let specialWindRun = 0;
+        if (card.isSpecial && card.type === '攻击' && state.aim > 0) {
+            state.aim--;
+            state.protection += 3;
+            specialWindRun = 1;
+        }
+        if (card.type === '能力') {
+            state.abilityCardsPlayed++;
+            if (hasRelic(state, 'r_double_quill') && state.abilityCardsPlayed === 2) draw(state, 1);
+        }
         executeCard(state, card, false);
         if (state.hp <= 0 || state.enemy.hp <= 0) break;
-        if ((card.tags || []).includes('回响')) executeCard(state, card, true);
+        if ((card.tags || []).includes('回响')) {
+            executeCard(state, card, true);
+            if (hasRelic(state, 'r_echo_archive_pin') && !state.echoArchivePinUsed) {
+                state.echoArchivePinUsed = true;
+                state.energy++;
+            }
+            if (hasRelic(state, 'r_echo_mirror_relic')) executeCard(state, card, true);
+        }
         if (state.hp <= 0 || state.enemy.hp <= 0) break;
-        const extraRuns = ((card.tags || []).includes('连射') ? 1 : 0) + ((card.tags || []).includes('多段') ? 1 : 0);
+        const extraRuns = specialWindRun + ((card.tags || []).includes('连射') ? 1 : 0) + ((card.tags || []).includes('多段') ? 1 : 0);
         for (let i = 0; i < extraRuns && state.enemy.hp > 0; i++) executeCard(state, card, true);
         discardPlayedCard(state, card);
-        state.lastCard = card;
+        if (!(card.tags || []).includes('复刻')) state.lastCard = card;
         state.cardsPlayed++;
     }
     state.discard.push(...state.hand.filter(card => !(card.tags || []).includes('保留')));
@@ -438,6 +655,7 @@ function endRound(state) {
     const enemy = state.enemy;
     if (enemy.poison > 0) {
         enemy.hp -= enemy.poison;
+        if (hasRelic(state, 'r_corrupt_cup')) heal(state, 2);
         enemy.poison--;
     }
     if (enemy.bleed > 0) {
@@ -494,8 +712,8 @@ function resolveEnemyDeath(state) {
     return true;
 }
 
-function simulateBattle(data, rng, roleId, deck, hp, checkpoint) {
-    const state = createBattle(data, rng, roleId, deck, hp, checkpoint);
+function simulateBattle(data, rng, roleId, deck, hp, checkpoint, loadout) {
+    const state = createBattle(data, rng, roleId, deck, hp, checkpoint, loadout);
     while (state.turns++ < 30 && state.hp > 0) {
         const moveIndex = chooseMove(state);
         const move = state.enemy.moves[moveIndex];
@@ -513,17 +731,18 @@ function simulateBattle(data, rng, roleId, deck, hp, checkpoint) {
     return { win: false, hp: Math.max(0, state.hp), turns: state.turns, enemy: state.encounterName, damageTaken: state.damageTaken };
 }
 
-function simulateCheckpoint(data, roleId, buildId, checkpoint, runs, seed) {
+function simulateCheckpoint(data, roleId, buildId, checkpoint, runs, seed, mode) {
     let wins = 0;
     let turns = 0;
     let hpLeft = 0;
     const enemies = {};
+    const loadout = getLoadout(data, roleId, buildId, mode);
     for (let i = 0; i < runs; i++) {
         const rng = createRng(seed + i * 7919);
         const deckSize = checkpoint.id === 'early' ? [5, 5] : checkpoint.id === 'mid' ? [7, 4] : [10, 3];
-        const deck = makeDeck(data, rng, roleId, buildId, deckSize[0], deckSize[1]);
+        const deck = makeDeck(data, rng, roleId, buildId, deckSize[0], deckSize[1], loadout);
         if (['late', 'elite', 'boss'].includes(checkpoint.id)) upgradeRandomCard(rng, deck);
-        const result = simulateBattle(data, rng, roleId, deck, data.CHARACTERS[roleId].maxHp, checkpoint);
+        const result = simulateBattle(data, rng, roleId, deck, data.CHARACTERS[roleId].maxHp, checkpoint, loadout);
         wins += result.win ? 1 : 0;
         turns += result.turns;
         hpLeft += result.hp;
@@ -539,19 +758,20 @@ function simulateCheckpoint(data, roleId, buildId, checkpoint, runs, seed) {
     };
 }
 
-function simulateExpedition(data, roleId, buildId, runs, seed) {
+function simulateExpedition(data, roleId, buildId, runs, seed, mode) {
     let clears = 0;
     let reached = Array(CHECKPOINTS.length).fill(0);
     let deaths = {};
+    const loadout = getLoadout(data, roleId, buildId, mode);
     for (let i = 0; i < runs; i++) {
         const rng = createRng(seed + i * 104729);
-        let deck = makeDeck(data, rng, roleId, buildId, 4, 6);
+        let deck = makeDeck(data, rng, roleId, buildId, 4, 6, loadout);
         let hp = data.CHARACTERS[roleId].maxHp;
         let cleared = true;
         for (let c = 0; c < CHECKPOINTS.length; c++) {
             reached[c]++;
             const checkpoint = CHECKPOINTS[c];
-            const result = simulateBattle(data, rng, roleId, deck, hp, checkpoint);
+            const result = simulateBattle(data, rng, roleId, deck, hp, checkpoint, loadout);
             if (!result.win) {
                 deaths[checkpoint.id] = (deaths[checkpoint.id] || 0) + 1;
                 cleared = false;
@@ -578,18 +798,30 @@ function run() {
     let buildIndex = 0;
     for (const [roleId, builds] of Object.entries(data.BUILD_DIRECTIONS)) {
         for (const [buildId, build] of Object.entries(builds)) {
-            const entry = { roleId, role: data.CHARACTERS[roleId].name, buildId, build: build.name, checkpoints: {} };
+            const loadout = getLoadout(data, roleId, buildId, args.mode);
+            const entry = {
+                roleId, role: data.CHARACTERS[roleId].name, buildId, build: build.name,
+                loadout: {
+                    core: loadout.coreCard ? { id: loadout.coreCard.id, name: loadout.coreCard.name } : null,
+                    relics: loadout.relics.map(id => {
+                        const relic = data.RELIC_POOL.find(item => item.id === id);
+                        return { id, name: relic.name };
+                    })
+                },
+                checkpoints: {}
+            };
             for (let i = 0; i < CHECKPOINTS.length; i++) {
-                entry.checkpoints[CHECKPOINTS[i].id] = simulateCheckpoint(data, roleId, buildId, CHECKPOINTS[i], args.runs, args.seed + buildIndex * 1000003 + i * 10007);
+                entry.checkpoints[CHECKPOINTS[i].id] = simulateCheckpoint(data, roleId, buildId, CHECKPOINTS[i], args.runs, args.seed + buildIndex * 1000003 + i * 10007, args.mode);
             }
-            entry.expedition = simulateExpedition(data, roleId, buildId, args.runs, args.seed + buildIndex * 2000003);
+            entry.expedition = simulateExpedition(data, roleId, buildId, args.runs, args.seed + buildIndex * 2000003, args.mode);
             results.push(entry);
             buildIndex++;
         }
     }
     const report = {
         generatedAt: new Date().toISOString(),
-        model: 'card-build baseline v1',
+        model: args.mode === 'mature' ? 'mature build with epic core and relics v2' : 'card-build baseline v1',
+        mode: args.mode,
         runsPerBuildAndCheckpoint: args.runs,
         seed: args.seed,
         checkpoints: CHECKPOINTS,
@@ -597,7 +829,7 @@ function run() {
     };
     if (args.output) fs.writeFileSync(path.resolve(ROOT, args.output), `${JSON.stringify(report, null, 2)}\n`);
 
-    console.log(`Build balance simulation: ${args.runs} runs per checkpoint, seed ${args.seed}`);
+    console.log(`Build balance simulation (${args.mode}): ${args.runs} runs per checkpoint, seed ${args.seed}`);
     console.log('职业\t构筑\t前期\t中期\t后期\t精英\t首领\t远征通关');
     for (const entry of results) {
         console.log([
