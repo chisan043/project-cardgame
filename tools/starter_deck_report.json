@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-12T16:47:00.313Z",
+  "generatedAt": "2026-06-12T16:56:24.004Z",
   "generatedDate": "2026-06-13",
   "model": "starter deck forced encounter and build-bias simulation v2",
   "runsPerEnemy": 1000,
@@ -1374,11 +1374,13 @@
           "directEffects": {}
         },
         {
-          "name": "秘仪屏障",
+          "name": "基础愈流",
           "copies": 3,
           "cost": 1,
-          "type": "防御",
-          "tags": [],
+          "type": "能力",
+          "tags": [
+            "治愈"
+          ],
           "directEffects": {}
         },
         {
@@ -1461,10 +1463,22 @@
             "病弱史莱姆": {
               "games": 1000,
               "winRate": 1,
-              "averageTurns": 2.505,
-              "averageHpLeft": 72,
-              "energyWastedPerTurn": 0.7644710578842315,
+              "averageTurns": 2.362,
+              "averageHpLeft": 70.152,
+              "energyWastedPerTurn": 2.1088060965283657,
               "cardUsage": [
+                {
+                  "id": "starter_mage_heal",
+                  "name": "基础愈流",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [
+                    "治愈"
+                  ],
+                  "plays": 3,
+                  "opportunities": 4256,
+                  "usageRate": 0.0007048872180451127
+                },
                 {
                   "id": "starter_mage_omen",
                   "name": "秘仪预兆",
@@ -1473,19 +1487,9 @@
                   "tags": [
                     "咏唱"
                   ],
-                  "plays": 1070,
-                  "opportunities": 1502,
-                  "usageRate": 0.7123834886817576
-                },
-                {
-                  "id": "starter_mage_barrier",
-                  "name": "秘仪屏障",
-                  "cost": 1,
-                  "type": "防御",
-                  "tags": [],
-                  "plays": 3722,
-                  "opportunities": 4549,
-                  "usageRate": 0.8182018025939767
+                  "plays": 1116,
+                  "opportunities": 1433,
+                  "usageRate": 0.7787857641311933
                 },
                 {
                   "id": "starter_mage_focus",
@@ -1493,9 +1497,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
-                  "plays": 1208,
-                  "opportunities": 1452,
-                  "usageRate": 0.8319559228650137
+                  "plays": 1155,
+                  "opportunities": 1396,
+                  "usageRate": 0.8273638968481375
                 },
                 {
                   "id": "starter_mage_bolt",
@@ -1503,9 +1507,9 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
-                  "plays": 4281,
-                  "opportunities": 4715,
-                  "usageRate": 0.9079533404029693
+                  "plays": 4182,
+                  "opportunities": 4449,
+                  "usageRate": 0.9399865138233311
                 },
                 {
                   "id": "starter_mage_mist",
@@ -1515,9 +1519,9 @@
                   "tags": [
                     "剧毒"
                   ],
-                  "plays": 1469,
-                  "opportunities": 1515,
-                  "usageRate": 0.9696369636963696
+                  "plays": 1417,
+                  "opportunities": 1431,
+                  "usageRate": 0.9902166317260657
                 },
                 {
                   "id": "starter_mage_copy",
@@ -1527,8 +1531,8 @@
                   "tags": [
                     "复刻"
                   ],
-                  "plays": 1365,
-                  "opportunities": 1365,
+                  "plays": 1318,
+                  "opportunities": 1318,
                   "usageRate": 1
                 }
               ]
@@ -1536,10 +1540,32 @@
             "枯骨煞兵": {
               "games": 1000,
               "winRate": 1,
-              "averageTurns": 3.362,
-              "averageHpLeft": 72,
-              "energyWastedPerTurn": 0.6772754312908983,
+              "averageTurns": 3.273,
+              "averageHpLeft": 68.582,
+              "energyWastedPerTurn": 1.8713718301252673,
               "cardUsage": [
+                {
+                  "id": "starter_mage_heal",
+                  "name": "基础愈流",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [
+                    "治愈"
+                  ],
+                  "plays": 684,
+                  "opportunities": 5939,
+                  "usageRate": 0.11517090419262502
+                },
+                {
+                  "id": "starter_mage_focus",
+                  "name": "星页整理",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [],
+                  "plays": 1599,
+                  "opportunities": 1952,
+                  "usageRate": 0.8191598360655737
+                },
                 {
                   "id": "starter_mage_omen",
                   "name": "秘仪预兆",
@@ -1548,29 +1574,9 @@
                   "tags": [
                     "咏唱"
                   ],
-                  "plays": 1535,
-                  "opportunities": 2031,
-                  "usageRate": 0.7557853274249139
-                },
-                {
-                  "id": "starter_mage_focus",
-                  "name": "星页整理",
-                  "cost": 1,
-                  "type": "能力",
-                  "tags": [],
-                  "plays": 1633,
-                  "opportunities": 2011,
-                  "usageRate": 0.8120338140228742
-                },
-                {
-                  "id": "starter_mage_barrier",
-                  "name": "秘仪屏障",
-                  "cost": 1,
-                  "type": "防御",
-                  "tags": [],
-                  "plays": 5047,
-                  "opportunities": 6100,
-                  "usageRate": 0.8273770491803278
+                  "plays": 1638,
+                  "opportunities": 1982,
+                  "usageRate": 0.8264379414732593
                 },
                 {
                   "id": "starter_mage_bolt",
@@ -1578,9 +1584,9 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
-                  "plays": 5703,
-                  "opportunities": 6237,
-                  "usageRate": 0.9143819143819144
+                  "plays": 5663,
+                  "opportunities": 6071,
+                  "usageRate": 0.9327952561357272
                 },
                 {
                   "id": "starter_mage_mist",
@@ -1590,9 +1596,9 @@
                   "tags": [
                     "剧毒"
                   ],
-                  "plays": 1989,
-                  "opportunities": 2064,
-                  "usageRate": 0.9636627906976745
+                  "plays": 1987,
+                  "opportunities": 2020,
+                  "usageRate": 0.9836633663366336
                 },
                 {
                   "id": "starter_mage_copy",
@@ -1602,8 +1608,8 @@
                   "tags": [
                     "复刻"
                   ],
-                  "plays": 1988,
-                  "opportunities": 1988,
+                  "plays": 1942,
+                  "opportunities": 1942,
                   "usageRate": 1
                 }
               ]
@@ -1611,9 +1617,9 @@
             "贪婪盗贼": {
               "games": 1000,
               "winRate": 1,
-              "averageTurns": 3.089,
-              "averageHpLeft": 71.574,
-              "energyWastedPerTurn": 0.7646487536419553,
+              "averageTurns": 2.793,
+              "averageHpLeft": 67.168,
+              "energyWastedPerTurn": 1.602219835302542,
               "cardUsage": [
                 {
                   "id": "诅咒",
@@ -1622,8 +1628,20 @@
                   "type": "能力",
                   "tags": [],
                   "plays": 0,
-                  "opportunities": 70,
+                  "opportunities": 45,
                   "usageRate": 0
+                },
+                {
+                  "id": "starter_mage_heal",
+                  "name": "基础愈流",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [
+                    "治愈"
+                  ],
+                  "plays": 1576,
+                  "opportunities": 4996,
+                  "usageRate": 0.3154523618895116
                 },
                 {
                   "id": "starter_mage_omen",
@@ -1633,9 +1651,9 @@
                   "tags": [
                     "咏唱"
                   ],
-                  "plays": 1218,
-                  "opportunities": 1877,
-                  "usageRate": 0.648907831646244
+                  "plays": 1324,
+                  "opportunities": 1705,
+                  "usageRate": 0.7765395894428152
                 },
                 {
                   "id": "starter_mage_focus",
@@ -1643,19 +1661,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
-                  "plays": 1441,
-                  "opportunities": 1797,
-                  "usageRate": 0.80189204229271
-                },
-                {
-                  "id": "starter_mage_barrier",
-                  "name": "秘仪屏障",
-                  "cost": 1,
-                  "type": "防御",
-                  "tags": [],
-                  "plays": 4801,
-                  "opportunities": 5542,
-                  "usageRate": 0.8662937567665103
+                  "plays": 1346,
+                  "opportunities": 1665,
+                  "usageRate": 0.8084084084084084
                 },
                 {
                   "id": "starter_mage_bolt",
@@ -1663,9 +1671,9 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
-                  "plays": 5130,
-                  "opportunities": 5715,
-                  "usageRate": 0.8976377952755905
+                  "plays": 4804,
+                  "opportunities": 5205,
+                  "usageRate": 0.9229586935638809
                 },
                 {
                   "id": "starter_mage_mist",
@@ -1675,9 +1683,9 @@
                   "tags": [
                     "剧毒"
                   ],
-                  "plays": 1813,
-                  "opportunities": 1885,
-                  "usageRate": 0.9618037135278514
+                  "plays": 1665,
+                  "opportunities": 1695,
+                  "usageRate": 0.9823008849557522
                 },
                 {
                   "id": "starter_mage_copy",
@@ -1687,8 +1695,8 @@
                   "tags": [
                     "复刻"
                   ],
-                  "plays": 1769,
-                  "opportunities": 1769,
+                  "plays": 1568,
+                  "opportunities": 1568,
                   "usageRate": 1
                 }
               ]
@@ -1696,10 +1704,22 @@
             "嗜血蝙蝠": {
               "games": 1000,
               "winRate": 1,
-              "averageTurns": 2.318,
-              "averageHpLeft": 71.975,
-              "energyWastedPerTurn": 0.6824849007765315,
+              "averageTurns": 2.261,
+              "averageHpLeft": 68.981,
+              "energyWastedPerTurn": 2.0066342326404247,
               "cardUsage": [
+                {
+                  "id": "starter_mage_heal",
+                  "name": "基础愈流",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [
+                    "治愈"
+                  ],
+                  "plays": 266,
+                  "opportunities": 4094,
+                  "usageRate": 0.06497313141182218
+                },
                 {
                   "id": "starter_mage_omen",
                   "name": "秘仪预兆",
@@ -1708,9 +1728,9 @@
                   "tags": [
                     "咏唱"
                   ],
-                  "plays": 1026,
-                  "opportunities": 1426,
-                  "usageRate": 0.7194950911640954
+                  "plays": 1062,
+                  "opportunities": 1400,
+                  "usageRate": 0.7585714285714286
                 },
                 {
                   "id": "starter_mage_focus",
@@ -1718,19 +1738,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
-                  "plays": 1123,
-                  "opportunities": 1375,
-                  "usageRate": 0.8167272727272727
-                },
-                {
-                  "id": "starter_mage_barrier",
-                  "name": "秘仪屏障",
-                  "cost": 1,
-                  "type": "防御",
-                  "tags": [],
-                  "plays": 3523,
-                  "opportunities": 4205,
-                  "usageRate": 0.8378121284185494
+                  "plays": 1078,
+                  "opportunities": 1346,
+                  "usageRate": 0.8008915304606241
                 },
                 {
                   "id": "starter_mage_bolt",
@@ -1738,9 +1748,9 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
-                  "plays": 4007,
-                  "opportunities": 4338,
-                  "usageRate": 0.9236975564776395
+                  "plays": 3998,
+                  "opportunities": 4217,
+                  "usageRate": 0.9480673464548257
                 },
                 {
                   "id": "starter_mage_mist",
@@ -1750,9 +1760,9 @@
                   "tags": [
                     "剧毒"
                   ],
-                  "plays": 1327,
-                  "opportunities": 1369,
-                  "usageRate": 0.9693206720233747
+                  "plays": 1316,
+                  "opportunities": 1326,
+                  "usageRate": 0.9924585218702866
                 },
                 {
                   "id": "starter_mage_copy",
@@ -1762,8 +1772,8 @@
                   "tags": [
                     "复刻"
                   ],
-                  "plays": 1320,
-                  "opportunities": 1320,
+                  "plays": 1309,
+                  "opportunities": 1309,
                   "usageRate": 1
                 }
               ]
@@ -1771,10 +1781,22 @@
             "迷途妖狐": {
               "games": 1000,
               "winRate": 1,
-              "averageTurns": 3.418,
-              "averageHpLeft": 71.777,
-              "energyWastedPerTurn": 0.5550029256875366,
+              "averageTurns": 3.353,
+              "averageHpLeft": 68.296,
+              "energyWastedPerTurn": 1.374589919475097,
               "cardUsage": [
+                {
+                  "id": "starter_mage_heal",
+                  "name": "基础愈流",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [
+                    "治愈"
+                  ],
+                  "plays": 2009,
+                  "opportunities": 6156,
+                  "usageRate": 0.3263482781026641
+                },
                 {
                   "id": "starter_mage_omen",
                   "name": "秘仪预兆",
@@ -1783,19 +1805,9 @@
                   "tags": [
                     "咏唱"
                   ],
-                  "plays": 1610,
-                  "opportunities": 2074,
-                  "usageRate": 0.7762777242044359
-                },
-                {
-                  "id": "starter_mage_barrier",
-                  "name": "秘仪屏障",
-                  "cost": 1,
-                  "type": "防御",
-                  "tags": [],
-                  "plays": 5208,
-                  "opportunities": 6251,
-                  "usageRate": 0.8331466965285554
+                  "plays": 1740,
+                  "opportunities": 2028,
+                  "usageRate": 0.8579881656804734
                 },
                 {
                   "id": "starter_mage_focus",
@@ -1803,9 +1815,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
-                  "plays": 1717,
-                  "opportunities": 2005,
-                  "usageRate": 0.856359102244389
+                  "plays": 1694,
+                  "opportunities": 1960,
+                  "usageRate": 0.8642857142857143
                 },
                 {
                   "id": "starter_mage_bolt",
@@ -1813,9 +1825,9 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
-                  "plays": 5912,
-                  "opportunities": 6362,
-                  "usageRate": 0.9292675259352405
+                  "plays": 5969,
+                  "opportunities": 6263,
+                  "usageRate": 0.9530576401085742
                 },
                 {
                   "id": "starter_mage_mist",
@@ -1825,9 +1837,9 @@
                   "tags": [
                     "剧毒"
                   ],
-                  "plays": 2057,
-                  "opportunities": 2132,
-                  "usageRate": 0.9648217636022514
+                  "plays": 2042,
+                  "opportunities": 2079,
+                  "usageRate": 0.9822029822029822
                 },
                 {
                   "id": "starter_mage_copy",
@@ -1837,9 +1849,9 @@
                   "tags": [
                     "复刻"
                   ],
-                  "plays": 2018,
-                  "opportunities": 2025,
-                  "usageRate": 0.9965432098765432
+                  "plays": 1972,
+                  "opportunities": 1972,
+                  "usageRate": 1
                 }
               ]
             }
@@ -1857,10 +1869,22 @@
             "荒野煞狼": {
               "games": 1000,
               "winRate": 1,
-              "averageTurns": 6.033,
-              "averageHpLeft": 62.834,
-              "energyWastedPerTurn": 0.3553787502071938,
+              "averageTurns": 5.946,
+              "averageHpLeft": 48.879,
+              "energyWastedPerTurn": 0.926000672721157,
               "cardUsage": [
+                {
+                  "id": "starter_mage_heal",
+                  "name": "基础愈流",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [
+                    "治愈"
+                  ],
+                  "plays": 6095,
+                  "opportunities": 11051,
+                  "usageRate": 0.5515337978463487
+                },
                 {
                   "id": "starter_mage_omen",
                   "name": "秘仪预兆",
@@ -1869,19 +1893,9 @@
                   "tags": [
                     "咏唱"
                   ],
-                  "plays": 3011,
-                  "opportunities": 3723,
-                  "usageRate": 0.8087563792640344
-                },
-                {
-                  "id": "starter_mage_barrier",
-                  "name": "秘仪屏障",
-                  "cost": 1,
-                  "type": "防御",
-                  "tags": [],
-                  "plays": 9812,
-                  "opportunities": 11204,
-                  "usageRate": 0.8757586576222778
+                  "plays": 3064,
+                  "opportunities": 3689,
+                  "usageRate": 0.8305773922472215
                 },
                 {
                   "id": "starter_mage_focus",
@@ -1889,9 +1903,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
-                  "plays": 3365,
-                  "opportunities": 3576,
-                  "usageRate": 0.9409955257270693
+                  "plays": 3338,
+                  "opportunities": 3547,
+                  "usageRate": 0.9410769664505215
                 },
                 {
                   "id": "starter_mage_bolt",
@@ -1899,9 +1913,9 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
-                  "plays": 10677,
-                  "opportunities": 11267,
-                  "usageRate": 0.9476346853643384
+                  "plays": 10587,
+                  "opportunities": 11111,
+                  "usageRate": 0.952839528395284
                 },
                 {
                   "id": "starter_mage_mist",
@@ -1911,9 +1925,9 @@
                   "tags": [
                     "剧毒"
                   ],
-                  "plays": 3613,
-                  "opportunities": 3760,
-                  "usageRate": 0.9609042553191489
+                  "plays": 3542,
+                  "opportunities": 3670,
+                  "usageRate": 0.9651226158038148
                 },
                 {
                   "id": "starter_mage_copy",
@@ -1923,18 +1937,18 @@
                   "tags": [
                     "复刻"
                   ],
-                  "plays": 3576,
-                  "opportunities": 3576,
+                  "plays": 3544,
+                  "opportunities": 3544,
                   "usageRate": 1
                 }
               ]
             },
             "千载魔蛛": {
               "games": 1000,
-              "winRate": 1,
-              "averageTurns": 7.296,
-              "averageHpLeft": 62.35,
-              "energyWastedPerTurn": 0.7184758771929824,
+              "winRate": 0.999,
+              "averageTurns": 7.236,
+              "averageHpLeft": 47.332,
+              "energyWastedPerTurn": 1.2739082365948038,
               "cardUsage": [
                 {
                   "id": "诅咒",
@@ -1943,18 +1957,20 @@
                   "type": "能力",
                   "tags": [],
                   "plays": 0,
-                  "opportunities": 3552,
+                  "opportunities": 3460,
                   "usageRate": 0
                 },
                 {
-                  "id": "starter_mage_barrier",
-                  "name": "秘仪屏障",
+                  "id": "starter_mage_heal",
+                  "name": "基础愈流",
                   "cost": 1,
-                  "type": "防御",
-                  "tags": [],
-                  "plays": 11026,
-                  "opportunities": 11979,
-                  "usageRate": 0.9204441105267551
+                  "type": "能力",
+                  "tags": [
+                    "治愈"
+                  ],
+                  "plays": 7011,
+                  "opportunities": 12089,
+                  "usageRate": 0.5799487137066754
                 },
                 {
                   "id": "starter_mage_omen",
@@ -1964,9 +1980,9 @@
                   "tags": [
                     "咏唱"
                   ],
-                  "plays": 3637,
-                  "opportunities": 3919,
-                  "usageRate": 0.9280428680785915
+                  "plays": 3633,
+                  "opportunities": 3899,
+                  "usageRate": 0.9317773788150808
                 },
                 {
                   "id": "starter_mage_focus",
@@ -1974,9 +1990,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
-                  "plays": 3427,
-                  "opportunities": 3529,
-                  "usageRate": 0.9710966279399263
+                  "plays": 3387,
+                  "opportunities": 3525,
+                  "usageRate": 0.9608510638297872
                 },
                 {
                   "id": "starter_mage_bolt",
@@ -1984,9 +2000,9 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
-                  "plays": 12394,
-                  "opportunities": 12711,
-                  "usageRate": 0.975060970812682
+                  "plays": 12173,
+                  "opportunities": 12444,
+                  "usageRate": 0.9782224365155898
                 },
                 {
                   "id": "starter_mage_mist",
@@ -1996,9 +2012,9 @@
                   "tags": [
                     "剧毒"
                   ],
-                  "plays": 4140,
-                  "opportunities": 4204,
-                  "usageRate": 0.9847764034253093
+                  "plays": 4086,
+                  "opportunities": 4137,
+                  "usageRate": 0.9876722262509064
                 },
                 {
                   "id": "starter_mage_copy",
@@ -2008,18 +2024,18 @@
                   "tags": [
                     "复刻"
                   ],
-                  "plays": 3910,
-                  "opportunities": 3923,
-                  "usageRate": 0.9966862095335203
+                  "plays": 3908,
+                  "opportunities": 3921,
+                  "usageRate": 0.996684519255292
                 }
               ]
             },
             "剧毒蟾蜍": {
               "games": 1000,
-              "winRate": 0.988,
-              "averageTurns": 7.425,
-              "averageHpLeft": 48.7,
-              "energyWastedPerTurn": 0.40956228956228957,
+              "winRate": 0.907,
+              "averageTurns": 7.225,
+              "averageHpLeft": 34.961,
+              "energyWastedPerTurn": 0.8842906574394463,
               "cardUsage": [
                 {
                   "id": "诅咒",
@@ -2028,8 +2044,20 @@
                   "type": "能力",
                   "tags": [],
                   "plays": 0,
-                  "opportunities": 1026,
+                  "opportunities": 971,
                   "usageRate": 0
+                },
+                {
+                  "id": "starter_mage_heal",
+                  "name": "基础愈流",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [
+                    "治愈"
+                  ],
+                  "plays": 8196,
+                  "opportunities": 13052,
+                  "usageRate": 0.6279497395035244
                 },
                 {
                   "id": "starter_mage_omen",
@@ -2039,19 +2067,9 @@
                   "tags": [
                     "咏唱"
                   ],
-                  "plays": 3862,
-                  "opportunities": 4441,
-                  "usageRate": 0.8696239585678901
-                },
-                {
-                  "id": "starter_mage_barrier",
-                  "name": "秘仪屏障",
-                  "cost": 1,
-                  "type": "防御",
-                  "tags": [],
-                  "plays": 11817,
-                  "opportunities": 13344,
-                  "usageRate": 0.88556654676259
+                  "plays": 3733,
+                  "opportunities": 4336,
+                  "usageRate": 0.8609317343173432
                 },
                 {
                   "id": "starter_mage_bolt",
@@ -2059,9 +2077,9 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
-                  "plays": 13065,
-                  "opportunities": 13596,
-                  "usageRate": 0.9609443954104149
+                  "plays": 12664,
+                  "opportunities": 13198,
+                  "usageRate": 0.9595393241400212
                 },
                 {
                   "id": "starter_mage_focus",
@@ -2069,9 +2087,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
-                  "plays": 4038,
-                  "opportunities": 4200,
-                  "usageRate": 0.9614285714285714
+                  "plays": 3919,
+                  "opportunities": 4077,
+                  "usageRate": 0.9612460142261466
                 },
                 {
                   "id": "starter_mage_mist",
@@ -2081,9 +2099,9 @@
                   "tags": [
                     "剧毒"
                   ],
-                  "plays": 4426,
-                  "opportunities": 4554,
-                  "usageRate": 0.9718928414580589
+                  "plays": 4268,
+                  "opportunities": 4399,
+                  "usageRate": 0.9702205046601501
                 },
                 {
                   "id": "starter_mage_copy",
@@ -2093,19 +2111,31 @@
                   "tags": [
                     "复刻"
                   ],
-                  "plays": 4301,
-                  "opportunities": 4303,
-                  "usageRate": 0.9995352079944225
+                  "plays": 4175,
+                  "opportunities": 4181,
+                  "usageRate": 0.9985649366180339
                 }
               ]
             },
             "暴躁野猪": {
               "games": 1000,
-              "winRate": 0.078,
-              "averageTurns": 4.73,
-              "averageHpLeft": 1.183,
-              "energyWastedPerTurn": 0.20676532769556025,
+              "winRate": 0.004,
+              "averageTurns": 3.073,
+              "averageHpLeft": 0.127,
+              "energyWastedPerTurn": 1.2375528799219004,
               "cardUsage": [
+                {
+                  "id": "starter_mage_heal",
+                  "name": "基础愈流",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [
+                    "治愈"
+                  ],
+                  "plays": 1635,
+                  "opportunities": 5715,
+                  "usageRate": 0.28608923884514437
+                },
                 {
                   "id": "starter_mage_omen",
                   "name": "秘仪预兆",
@@ -2114,19 +2144,9 @@
                   "tags": [
                     "咏唱"
                   ],
-                  "plays": 2526,
-                  "opportunities": 2935,
-                  "usageRate": 0.8606473594548552
-                },
-                {
-                  "id": "starter_mage_barrier",
-                  "name": "秘仪屏障",
-                  "cost": 1,
-                  "type": "防御",
-                  "tags": [],
-                  "plays": 7825,
-                  "opportunities": 8801,
-                  "usageRate": 0.8891035109646631
+                  "plays": 1785,
+                  "opportunities": 1905,
+                  "usageRate": 0.937007874015748
                 },
                 {
                   "id": "starter_mage_bolt",
@@ -2134,9 +2154,9 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
-                  "plays": 8593,
-                  "opportunities": 8929,
-                  "usageRate": 0.9623698062493
+                  "plays": 5716,
+                  "opportunities": 5826,
+                  "usageRate": 0.9811191211809132
                 },
                 {
                   "id": "starter_mage_mist",
@@ -2146,9 +2166,9 @@
                   "tags": [
                     "剧毒"
                   ],
-                  "plays": 2854,
-                  "opportunities": 2957,
-                  "usageRate": 0.9651673993912749
+                  "plays": 1888,
+                  "opportunities": 1916,
+                  "usageRate": 0.9853862212943633
                 },
                 {
                   "id": "starter_mage_focus",
@@ -2156,9 +2176,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
-                  "plays": 2793,
-                  "opportunities": 2821,
-                  "usageRate": 0.9900744416873449
+                  "plays": 1803,
+                  "opportunities": 1806,
+                  "usageRate": 0.9983388704318937
                 },
                 {
                   "id": "starter_mage_copy",
@@ -2168,19 +2188,31 @@
                   "tags": [
                     "复刻"
                   ],
-                  "plays": 2811,
-                  "opportunities": 2811,
+                  "plays": 1808,
+                  "opportunities": 1808,
                   "usageRate": 1
                 }
               ]
             },
             "铁甲巨蟹": {
               "games": 1000,
-              "winRate": 0.994,
-              "averageTurns": 7.722,
-              "averageHpLeft": 57.795,
-              "energyWastedPerTurn": 0.2821807821807822,
+              "winRate": 0.957,
+              "averageTurns": 7.611,
+              "averageHpLeft": 41.904,
+              "energyWastedPerTurn": 0.8201287610038103,
               "cardUsage": [
+                {
+                  "id": "starter_mage_heal",
+                  "name": "基础愈流",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [
+                    "治愈"
+                  ],
+                  "plays": 8351,
+                  "opportunities": 14118,
+                  "usageRate": 0.5915143788071965
+                },
                 {
                   "id": "starter_mage_omen",
                   "name": "秘仪预兆",
@@ -2189,29 +2221,9 @@
                   "tags": [
                     "咏唱"
                   ],
-                  "plays": 4018,
-                  "opportunities": 4771,
-                  "usageRate": 0.8421714525256759
-                },
-                {
-                  "id": "starter_mage_barrier",
-                  "name": "秘仪屏障",
-                  "cost": 1,
-                  "type": "防御",
-                  "tags": [],
-                  "plays": 12507,
-                  "opportunities": 14307,
-                  "usageRate": 0.8741874606835814
-                },
-                {
-                  "id": "starter_mage_bolt",
-                  "name": "基础法弹",
-                  "cost": 1,
-                  "type": "攻击",
-                  "tags": [],
-                  "plays": 13951,
-                  "opportunities": 14548,
-                  "usageRate": 0.9589634313995051
+                  "plays": 3991,
+                  "opportunities": 4718,
+                  "usageRate": 0.8459092835947435
                 },
                 {
                   "id": "starter_mage_focus",
@@ -2219,9 +2231,19 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
-                  "plays": 4442,
-                  "opportunities": 4601,
-                  "usageRate": 0.9654422951532275
+                  "plays": 4327,
+                  "opportunities": 4522,
+                  "usageRate": 0.9568774878372401
+                },
+                {
+                  "id": "starter_mage_bolt",
+                  "name": "基础法弹",
+                  "cost": 1,
+                  "type": "攻击",
+                  "tags": [],
+                  "plays": 13684,
+                  "opportunities": 14289,
+                  "usageRate": 0.9576597382602001
                 },
                 {
                   "id": "starter_mage_mist",
@@ -2231,9 +2253,9 @@
                   "tags": [
                     "剧毒"
                   ],
-                  "plays": 4670,
-                  "opportunities": 4825,
-                  "usageRate": 0.9678756476683937
+                  "plays": 4570,
+                  "opportunities": 4735,
+                  "usageRate": 0.9651531151003168
                 },
                 {
                   "id": "starter_mage_copy",
@@ -2243,15 +2265,15 @@
                   "tags": [
                     "复刻"
                   ],
-                  "plays": 4565,
-                  "opportunities": 4565,
+                  "plays": 4501,
+                  "opportunities": 4501,
                   "usageRate": 1
                 }
               ]
             }
           },
           "aggregate": {
-            "winRate": 0.812,
+            "winRate": 0.7734,
             "status": "达标",
             "lowestEnemy": "暴躁野猪",
             "highestEnemy": "荒野煞狼"
@@ -2262,11 +2284,23 @@
           "enemies": {
             "堕落剑客": {
               "games": 1000,
-              "winRate": 0.002,
-              "averageTurns": 4.37,
-              "averageHpLeft": 0.023,
-              "energyWastedPerTurn": 0.21304347826086956,
+              "winRate": 0.001,
+              "averageTurns": 3.602,
+              "averageHpLeft": 0.005,
+              "energyWastedPerTurn": 1.0619100499722376,
               "cardUsage": [
+                {
+                  "id": "starter_mage_heal",
+                  "name": "基础愈流",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [
+                    "治愈"
+                  ],
+                  "plays": 2605,
+                  "opportunities": 6728,
+                  "usageRate": 0.3871878715814506
+                },
                 {
                   "id": "starter_mage_omen",
                   "name": "秘仪预兆",
@@ -2275,19 +2309,9 @@
                   "tags": [
                     "咏唱"
                   ],
-                  "plays": 2272,
-                  "opportunities": 2721,
-                  "usageRate": 0.8349871370819552
-                },
-                {
-                  "id": "starter_mage_barrier",
-                  "name": "秘仪屏障",
-                  "cost": 1,
-                  "type": "防御",
-                  "tags": [],
-                  "plays": 7157,
-                  "opportunities": 8162,
-                  "usageRate": 0.8768684146042637
+                  "plays": 2034,
+                  "opportunities": 2263,
+                  "usageRate": 0.898806893504198
                 },
                 {
                   "id": "starter_mage_bolt",
@@ -2295,9 +2319,9 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
-                  "plays": 7753,
-                  "opportunities": 8217,
-                  "usageRate": 0.9435317025678471
+                  "plays": 6498,
+                  "opportunities": 6767,
+                  "usageRate": 0.9602482636323334
                 },
                 {
                   "id": "starter_mage_mist",
@@ -2307,9 +2331,9 @@
                   "tags": [
                     "剧毒"
                   ],
-                  "plays": 2607,
-                  "opportunities": 2748,
-                  "usageRate": 0.9486899563318777
+                  "plays": 2185,
+                  "opportunities": 2254,
+                  "usageRate": 0.9693877551020408
                 },
                 {
                   "id": "starter_mage_focus",
@@ -2317,9 +2341,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
-                  "plays": 2489,
-                  "opportunities": 2587,
-                  "usageRate": 0.9621182837263239
+                  "plays": 2067,
+                  "opportunities": 2123,
+                  "usageRate": 0.9736222326895903
                 },
                 {
                   "id": "starter_mage_copy",
@@ -2329,18 +2353,18 @@
                   "tags": [
                     "复刻"
                   ],
-                  "plays": 2616,
-                  "opportunities": 2629,
-                  "usageRate": 0.99505515405097
+                  "plays": 2137,
+                  "opportunities": 2140,
+                  "usageRate": 0.9985981308411215
                 }
               ]
             },
             "幽冥法师": {
               "games": 1000,
-              "winRate": 0.02,
-              "averageTurns": 7.598,
-              "averageHpLeft": 0.286,
-              "energyWastedPerTurn": 0.5580415898920769,
+              "winRate": 0.002,
+              "averageTurns": 5.551,
+              "averageHpLeft": 0.033,
+              "energyWastedPerTurn": 1.02305890830481,
               "cardUsage": [
                 {
                   "id": "诅咒",
@@ -2349,8 +2373,20 @@
                   "type": "能力",
                   "tags": [],
                   "plays": 0,
-                  "opportunities": 2826,
+                  "opportunities": 1426,
                   "usageRate": 0
+                },
+                {
+                  "id": "starter_mage_heal",
+                  "name": "基础愈流",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [
+                    "治愈"
+                  ],
+                  "plays": 5623,
+                  "opportunities": 9887,
+                  "usageRate": 0.5687266107009205
                 },
                 {
                   "id": "starter_mage_omen",
@@ -2360,19 +2396,19 @@
                   "tags": [
                     "咏唱"
                   ],
-                  "plays": 3748,
-                  "opportunities": 4396,
-                  "usageRate": 0.8525932666060054
+                  "plays": 2933,
+                  "opportunities": 3255,
+                  "usageRate": 0.9010752688172043
                 },
                 {
-                  "id": "starter_mage_barrier",
-                  "name": "秘仪屏障",
+                  "id": "starter_mage_bolt",
+                  "name": "基础法弹",
                   "cost": 1,
-                  "type": "防御",
+                  "type": "攻击",
                   "tags": [],
-                  "plays": 12306,
-                  "opportunities": 13140,
-                  "usageRate": 0.9365296803652968
+                  "plays": 9633,
+                  "opportunities": 9915,
+                  "usageRate": 0.9715582450832073
                 },
                 {
                   "id": "starter_mage_mist",
@@ -2382,29 +2418,9 @@
                   "tags": [
                     "剧毒"
                   ],
-                  "plays": 4225,
-                  "opportunities": 4394,
-                  "usageRate": 0.9615384615384616
-                },
-                {
-                  "id": "starter_mage_bolt",
-                  "name": "基础法弹",
-                  "cost": 1,
-                  "type": "攻击",
-                  "tags": [],
-                  "plays": 12744,
-                  "opportunities": 13233,
-                  "usageRate": 0.9630469281342099
-                },
-                {
-                  "id": "starter_mage_focus",
-                  "name": "星页整理",
-                  "cost": 1,
-                  "type": "能力",
-                  "tags": [],
-                  "plays": 4173,
-                  "opportunities": 4174,
-                  "usageRate": 0.9997604216578821
+                  "plays": 3188,
+                  "opportunities": 3272,
+                  "usageRate": 0.9743276283618582
                 },
                 {
                   "id": "starter_mage_copy",
@@ -2414,8 +2430,18 @@
                   "tags": [
                     "复刻"
                   ],
-                  "plays": 4152,
-                  "opportunities": 4152,
+                  "plays": 3114,
+                  "opportunities": 3114,
+                  "usageRate": 1
+                },
+                {
+                  "id": "starter_mage_focus",
+                  "name": "星页整理",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [],
+                  "plays": 3136,
+                  "opportunities": 3136,
                   "usageRate": 1
                 }
               ]
@@ -2423,10 +2449,22 @@
             "巨力石魔": {
               "games": 1000,
               "winRate": 0,
-              "averageTurns": 3.528,
+              "averageTurns": 2.788,
               "averageHpLeft": 0,
-              "energyWastedPerTurn": 0.19104308390022676,
+              "energyWastedPerTurn": 1.362625538020086,
               "cardUsage": [
+                {
+                  "id": "starter_mage_heal",
+                  "name": "基础愈流",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [
+                    "治愈"
+                  ],
+                  "plays": 1106,
+                  "opportunities": 5240,
+                  "usageRate": 0.21106870229007635
+                },
                 {
                   "id": "starter_mage_omen",
                   "name": "秘仪预兆",
@@ -2435,19 +2473,9 @@
                   "tags": [
                     "咏唱"
                   ],
-                  "plays": 1925,
-                  "opportunities": 2202,
-                  "usageRate": 0.8742052679382379
-                },
-                {
-                  "id": "starter_mage_barrier",
-                  "name": "秘仪屏障",
-                  "cost": 1,
-                  "type": "防御",
-                  "tags": [],
-                  "plays": 5834,
-                  "opportunities": 6606,
-                  "usageRate": 0.8831365425370875
+                  "plays": 1655,
+                  "opportunities": 1743,
+                  "usageRate": 0.9495123350545037
                 },
                 {
                   "id": "starter_mage_mist",
@@ -2457,9 +2485,9 @@
                   "tags": [
                     "剧毒"
                   ],
-                  "plays": 2140,
-                  "opportunities": 2207,
-                  "usageRate": 0.9696420480289987
+                  "plays": 1727,
+                  "opportunities": 1756,
+                  "usageRate": 0.9834851936218679
                 },
                 {
                   "id": "starter_mage_bolt",
@@ -2467,9 +2495,9 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
-                  "plays": 6425,
-                  "opportunities": 6625,
-                  "usageRate": 0.969811320754717
+                  "plays": 5124,
+                  "opportunities": 5201,
+                  "usageRate": 0.9851951547779273
                 },
                 {
                   "id": "starter_mage_focus",
@@ -2477,8 +2505,8 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
-                  "plays": 2089,
-                  "opportunities": 2089,
+                  "plays": 1666,
+                  "opportunities": 1666,
                   "usageRate": 1
                 },
                 {
@@ -2489,19 +2517,31 @@
                   "tags": [
                     "复刻"
                   ],
-                  "plays": 2081,
-                  "opportunities": 2081,
+                  "plays": 1651,
+                  "opportunities": 1651,
                   "usageRate": 1
                 }
               ]
             },
             "魅影刺客": {
               "games": 1000,
-              "winRate": 0.005,
-              "averageTurns": 4.921,
-              "averageHpLeft": 0.062,
-              "energyWastedPerTurn": 0.21459053038000406,
+              "winRate": 0.004,
+              "averageTurns": 3.863,
+              "averageHpLeft": 0.067,
+              "energyWastedPerTurn": 1.0168263008024852,
               "cardUsage": [
+                {
+                  "id": "starter_mage_heal",
+                  "name": "基础愈流",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [
+                    "治愈"
+                  ],
+                  "plays": 2926,
+                  "opportunities": 7267,
+                  "usageRate": 0.4026420806385028
+                },
                 {
                   "id": "starter_mage_omen",
                   "name": "秘仪预兆",
@@ -2510,19 +2550,9 @@
                   "tags": [
                     "咏唱"
                   ],
-                  "plays": 2545,
-                  "opportunities": 3075,
-                  "usageRate": 0.8276422764227642
-                },
-                {
-                  "id": "starter_mage_barrier",
-                  "name": "秘仪屏障",
-                  "cost": 1,
-                  "type": "防御",
-                  "tags": [],
-                  "plays": 8030,
-                  "opportunities": 9261,
-                  "usageRate": 0.8670769895259691
+                  "plays": 2123,
+                  "opportunities": 2452,
+                  "usageRate": 0.8658238172920065
                 },
                 {
                   "id": "starter_mage_bolt",
@@ -2530,9 +2560,9 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
-                  "plays": 8513,
-                  "opportunities": 9257,
-                  "usageRate": 0.9196283893269958
+                  "plays": 6801,
+                  "opportunities": 7258,
+                  "usageRate": 0.93703499586663
                 },
                 {
                   "id": "starter_mage_mist",
@@ -2542,9 +2572,9 @@
                   "tags": [
                     "剧毒"
                   ],
-                  "plays": 2857,
-                  "opportunities": 3090,
-                  "usageRate": 0.9245954692556634
+                  "plays": 2270,
+                  "opportunities": 2408,
+                  "usageRate": 0.9426910299003323
                 },
                 {
                   "id": "starter_mage_focus",
@@ -2552,9 +2582,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
-                  "plays": 2811,
-                  "opportunities": 2966,
-                  "usageRate": 0.9477410654079569
+                  "plays": 2228,
+                  "opportunities": 2316,
+                  "usageRate": 0.9620034542314335
                 },
                 {
                   "id": "starter_mage_copy",
@@ -2564,18 +2594,18 @@
                   "tags": [
                     "复刻"
                   ],
-                  "plays": 2944,
-                  "opportunities": 2953,
-                  "usageRate": 0.9969522519471724
+                  "plays": 2310,
+                  "opportunities": 2314,
+                  "usageRate": 0.9982713915298185
                 }
               ]
             },
             "缝合巨怪": {
               "games": 1000,
               "winRate": 0,
-              "averageTurns": 5.689,
+              "averageTurns": 4.329,
               "averageHpLeft": 0,
-              "energyWastedPerTurn": 0.4983301107400246,
+              "energyWastedPerTurn": 1.06999306999307,
               "cardUsage": [
                 {
                   "id": "诅咒",
@@ -2584,8 +2614,20 @@
                   "type": "能力",
                   "tags": [],
                   "plays": 0,
-                  "opportunities": 1797,
+                  "opportunities": 1010,
                   "usageRate": 0
+                },
+                {
+                  "id": "starter_mage_heal",
+                  "name": "基础愈流",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [
+                    "治愈"
+                  ],
+                  "plays": 3832,
+                  "opportunities": 7570,
+                  "usageRate": 0.5062087186261559
                 },
                 {
                   "id": "starter_mage_omen",
@@ -2595,19 +2637,19 @@
                   "tags": [
                     "咏唱"
                   ],
-                  "plays": 2920,
-                  "opportunities": 3277,
-                  "usageRate": 0.8910588953310955
+                  "plays": 2362,
+                  "opportunities": 2552,
+                  "usageRate": 0.9255485893416928
                 },
                 {
-                  "id": "starter_mage_barrier",
-                  "name": "秘仪屏障",
+                  "id": "starter_mage_bolt",
+                  "name": "基础法弹",
                   "cost": 1,
-                  "type": "防御",
+                  "type": "攻击",
                   "tags": [],
-                  "plays": 8968,
-                  "opportunities": 9814,
-                  "usageRate": 0.9137966170776441
+                  "plays": 7585,
+                  "opportunities": 7747,
+                  "usageRate": 0.9790886794888344
                 },
                 {
                   "id": "starter_mage_mist",
@@ -2617,19 +2659,9 @@
                   "tags": [
                     "剧毒"
                   ],
-                  "plays": 3187,
-                  "opportunities": 3278,
-                  "usageRate": 0.9722391702257475
-                },
-                {
-                  "id": "starter_mage_bolt",
-                  "name": "基础法弹",
-                  "cost": 1,
-                  "type": "攻击",
-                  "tags": [],
-                  "plays": 9577,
-                  "opportunities": 9844,
-                  "usageRate": 0.9728768793173507
+                  "plays": 2501,
+                  "opportunities": 2551,
+                  "usageRate": 0.9803998431987456
                 },
                 {
                   "id": "starter_mage_focus",
@@ -2637,8 +2669,8 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
-                  "plays": 3067,
-                  "opportunities": 3067,
+                  "plays": 2441,
+                  "opportunities": 2441,
                   "usageRate": 1
                 },
                 {
@@ -2649,18 +2681,18 @@
                   "tags": [
                     "复刻"
                   ],
-                  "plays": 3058,
-                  "opportunities": 3058,
+                  "plays": 2363,
+                  "opportunities": 2363,
                   "usageRate": 1
                 }
               ]
             }
           },
           "aggregate": {
-            "winRate": 0.0054,
+            "winRate": 0.0014,
             "status": "达标",
             "lowestEnemy": "巨力石魔",
-            "highestEnemy": "幽冥法师"
+            "highestEnemy": "魅影刺客"
           }
         }
       }
@@ -2683,8 +2715,10 @@
           "name": "林地回避",
           "copies": 3,
           "cost": 1,
-          "type": "防御",
-          "tags": [],
+          "type": "能力",
+          "tags": [
+            "错身"
+          ],
           "directEffects": {}
         },
         {
@@ -2767,9 +2801,9 @@
             "病弱史莱姆": {
               "games": 1000,
               "winRate": 1,
-              "averageTurns": 2.09,
-              "averageHpLeft": 78,
-              "energyWastedPerTurn": 0.47129186602870815,
+              "averageTurns": 2,
+              "averageHpLeft": 77.99,
+              "energyWastedPerTurn": 0.7435,
               "cardUsage": [
                 {
                   "id": "starter_archer_focus",
@@ -2777,19 +2811,21 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
-                  "plays": 551,
-                  "opportunities": 1485,
-                  "usageRate": 0.37104377104377106
+                  "plays": 268,
+                  "opportunities": 1636,
+                  "usageRate": 0.16381418092909536
                 },
                 {
                   "id": "starter_archer_step",
                   "name": "林地回避",
                   "cost": 1,
-                  "type": "防御",
-                  "tags": [],
-                  "plays": 2051,
-                  "opportunities": 4418,
-                  "usageRate": 0.4642372114078769
+                  "type": "能力",
+                  "tags": [
+                    "错身"
+                  ],
+                  "plays": 1156,
+                  "opportunities": 4909,
+                  "usageRate": 0.23548584233041353
                 },
                 {
                   "id": "starter_archer_shot",
@@ -2797,21 +2833,9 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
-                  "plays": 3054,
-                  "opportunities": 4549,
-                  "usageRate": 0.6713563420531985
-                },
-                {
-                  "id": "starter_archer_exile",
-                  "name": "逐影放矢",
-                  "cost": 1,
-                  "type": "攻击",
-                  "tags": [
-                    "放逐"
-                  ],
-                  "plays": 990,
-                  "opportunities": 1043,
-                  "usageRate": 0.9491850431447747
+                  "plays": 2995,
+                  "opportunities": 4974,
+                  "usageRate": 0.6021310816244472
                 },
                 {
                   "id": "starter_archer_aim",
@@ -2821,9 +2845,21 @@
                   "tags": [
                     "蓄力"
                   ],
-                  "plays": 1323,
-                  "opportunities": 1383,
-                  "usageRate": 0.9566160520607375
+                  "plays": 1470,
+                  "opportunities": 1518,
+                  "usageRate": 0.9683794466403162
+                },
+                {
+                  "id": "starter_archer_exile",
+                  "name": "逐影放矢",
+                  "cost": 1,
+                  "type": "攻击",
+                  "tags": [
+                    "放逐"
+                  ],
+                  "plays": 995,
+                  "opportunities": 1022,
+                  "usageRate": 0.9735812133072407
                 },
                 {
                   "id": "starter_archer_venom",
@@ -2833,18 +2869,18 @@
                   "tags": [
                     "剧毒"
                   ],
-                  "plays": 1496,
-                  "opportunities": 1536,
-                  "usageRate": 0.9739583333333334
+                  "plays": 1629,
+                  "opportunities": 1659,
+                  "usageRate": 0.9819168173598554
                 }
               ]
             },
             "枯骨煞兵": {
               "games": 1000,
               "winRate": 1,
-              "averageTurns": 3.122,
-              "averageHpLeft": 77.94,
-              "energyWastedPerTurn": 0.36995515695067266,
+              "averageTurns": 2.993,
+              "averageHpLeft": 72.064,
+              "energyWastedPerTurn": 0.7190110257266956,
               "cardUsage": [
                 {
                   "id": "starter_archer_focus",
@@ -2852,19 +2888,21 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
-                  "plays": 707,
-                  "opportunities": 2263,
-                  "usageRate": 0.312417145382236
+                  "plays": 377,
+                  "opportunities": 2390,
+                  "usageRate": 0.15774058577405858
                 },
                 {
                   "id": "starter_archer_step",
                   "name": "林地回避",
                   "cost": 1,
-                  "type": "防御",
-                  "tags": [],
-                  "plays": 3624,
-                  "opportunities": 6765,
-                  "usageRate": 0.5356984478935698
+                  "type": "能力",
+                  "tags": [
+                    "错身"
+                  ],
+                  "plays": 1459,
+                  "opportunities": 7226,
+                  "usageRate": 0.20190977027401052
                 },
                 {
                   "id": "starter_archer_shot",
@@ -2872,21 +2910,9 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
-                  "plays": 4797,
-                  "opportunities": 6985,
-                  "usageRate": 0.6867573371510379
-                },
-                {
-                  "id": "starter_archer_exile",
-                  "name": "逐影放矢",
-                  "cost": 1,
-                  "type": "攻击",
-                  "tags": [
-                    "放逐"
-                  ],
-                  "plays": 997,
-                  "opportunities": 1039,
-                  "usageRate": 0.9595765158806545
+                  "plays": 5430,
+                  "opportunities": 7326,
+                  "usageRate": 0.7411957411957412
                 },
                 {
                   "id": "starter_archer_aim",
@@ -2896,9 +2922,21 @@
                   "tags": [
                     "蓄力"
                   ],
-                  "plays": 2059,
-                  "opportunities": 2126,
-                  "usageRate": 0.9684854186265287
+                  "plays": 2127,
+                  "opportunities": 2287,
+                  "usageRate": 0.930039352864014
+                },
+                {
+                  "id": "starter_archer_exile",
+                  "name": "逐影放矢",
+                  "cost": 1,
+                  "type": "攻击",
+                  "tags": [
+                    "放逐"
+                  ],
+                  "plays": 1000,
+                  "opportunities": 1029,
+                  "usageRate": 0.9718172983479106
                 },
                 {
                   "id": "starter_archer_venom",
@@ -2908,18 +2946,18 @@
                   "tags": [
                     "剧毒"
                   ],
-                  "plays": 2271,
-                  "opportunities": 2320,
-                  "usageRate": 0.9788793103448276
+                  "plays": 2420,
+                  "opportunities": 2452,
+                  "usageRate": 0.9869494290375204
                 }
               ]
             },
             "贪婪盗贼": {
               "games": 1000,
               "winRate": 1,
-              "averageTurns": 2.822,
-              "averageHpLeft": 77.916,
-              "energyWastedPerTurn": 0.44330262225372075,
+              "averageTurns": 2.072,
+              "averageHpLeft": 71.698,
+              "energyWastedPerTurn": 0.502895752895753,
               "cardUsage": [
                 {
                   "id": "诅咒",
@@ -2928,8 +2966,20 @@
                   "type": "能力",
                   "tags": [],
                   "plays": 0,
-                  "opportunities": 51,
+                  "opportunities": 9,
                   "usageRate": 0
+                },
+                {
+                  "id": "starter_archer_step",
+                  "name": "林地回避",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [
+                    "错身"
+                  ],
+                  "plays": 766,
+                  "opportunities": 4541,
+                  "usageRate": 0.16868531160537326
                 },
                 {
                   "id": "starter_archer_focus",
@@ -2937,9 +2987,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
-                  "plays": 212,
-                  "opportunities": 1951,
-                  "usageRate": 0.10866222450025628
+                  "plays": 719,
+                  "opportunities": 1475,
+                  "usageRate": 0.48745762711864404
                 },
                 {
                   "id": "starter_archer_shot",
@@ -2947,19 +2997,9 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
-                  "plays": 3278,
-                  "opportunities": 5995,
-                  "usageRate": 0.5467889908256881
-                },
-                {
-                  "id": "starter_archer_step",
-                  "name": "林地回避",
-                  "cost": 1,
-                  "type": "防御",
-                  "tags": [],
-                  "plays": 4549,
-                  "opportunities": 6006,
-                  "usageRate": 0.7574092574092575
+                  "plays": 3961,
+                  "opportunities": 4645,
+                  "usageRate": 0.8527448869752422
                 },
                 {
                   "id": "starter_archer_aim",
@@ -2969,9 +3009,21 @@
                   "tags": [
                     "蓄力"
                   ],
-                  "plays": 1825,
-                  "opportunities": 1911,
-                  "usageRate": 0.9549973835688121
+                  "plays": 1403,
+                  "opportunities": 1486,
+                  "usageRate": 0.9441453566621804
+                },
+                {
+                  "id": "starter_archer_venom",
+                  "name": "青牙试射",
+                  "cost": 1,
+                  "type": "攻击",
+                  "tags": [
+                    "剧毒"
+                  ],
+                  "plays": 1473,
+                  "opportunities": 1552,
+                  "usageRate": 0.9490979381443299
                 },
                 {
                   "id": "starter_archer_exile",
@@ -2984,27 +3036,15 @@
                   "plays": 996,
                   "opportunities": 1042,
                   "usageRate": 0.9558541266794626
-                },
-                {
-                  "id": "starter_archer_venom",
-                  "name": "青牙试射",
-                  "cost": 1,
-                  "type": "攻击",
-                  "tags": [
-                    "剧毒"
-                  ],
-                  "plays": 1999,
-                  "opportunities": 2013,
-                  "usageRate": 0.9930452061599603
                 }
               ]
             },
             "嗜血蝙蝠": {
               "games": 1000,
               "winRate": 1,
-              "averageTurns": 2.045,
-              "averageHpLeft": 77.953,
-              "energyWastedPerTurn": 0.6518337408312959,
+              "averageTurns": 1.996,
+              "averageHpLeft": 77.863,
+              "energyWastedPerTurn": 0.9333667334669339,
               "cardUsage": [
                 {
                   "id": "starter_archer_focus",
@@ -3012,19 +3052,21 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
-                  "plays": 566,
-                  "opportunities": 1433,
-                  "usageRate": 0.39497557571528263
+                  "plays": 273,
+                  "opportunities": 1626,
+                  "usageRate": 0.16789667896678967
                 },
                 {
                   "id": "starter_archer_step",
                   "name": "林地回避",
                   "cost": 1,
-                  "type": "防御",
-                  "tags": [],
-                  "plays": 1911,
-                  "opportunities": 4421,
-                  "usageRate": 0.43225514589459396
+                  "type": "能力",
+                  "tags": [
+                    "错身"
+                  ],
+                  "plays": 1116,
+                  "opportunities": 4974,
+                  "usageRate": 0.2243667068757539
                 },
                 {
                   "id": "starter_archer_shot",
@@ -3032,21 +3074,9 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
-                  "plays": 2736,
-                  "opportunities": 4412,
-                  "usageRate": 0.6201269265639165
-                },
-                {
-                  "id": "starter_archer_aim",
-                  "name": "拉弓瞄准",
-                  "cost": 1,
-                  "type": "能力",
-                  "tags": [
-                    "蓄力"
-                  ],
-                  "plays": 1273,
-                  "opportunities": 1348,
-                  "usageRate": 0.9443620178041543
+                  "plays": 2638,
+                  "opportunities": 4928,
+                  "usageRate": 0.5353084415584416
                 },
                 {
                   "id": "starter_archer_exile",
@@ -3056,9 +3086,21 @@
                   "tags": [
                     "放逐"
                   ],
-                  "plays": 990,
-                  "opportunities": 1035,
-                  "usageRate": 0.9565217391304348
+                  "plays": 997,
+                  "opportunities": 1028,
+                  "usageRate": 0.9698443579766537
+                },
+                {
+                  "id": "starter_archer_aim",
+                  "name": "拉弓瞄准",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [
+                    "蓄力"
+                  ],
+                  "plays": 1487,
+                  "opportunities": 1526,
+                  "usageRate": 0.9744429882044561
                 },
                 {
                   "id": "starter_archer_venom",
@@ -3068,18 +3110,18 @@
                   "tags": [
                     "剧毒"
                   ],
-                  "plays": 1416,
-                  "opportunities": 1460,
-                  "usageRate": 0.9698630136986301
+                  "plays": 1606,
+                  "opportunities": 1642,
+                  "usageRate": 0.9780755176613886
                 }
               ]
             },
             "迷途妖狐": {
               "games": 1000,
               "winRate": 1,
-              "averageTurns": 3.154,
-              "averageHpLeft": 76.808,
-              "energyWastedPerTurn": 0.3833227647431833,
+              "averageTurns": 3,
+              "averageHpLeft": 69.22,
+              "energyWastedPerTurn": 0.8363333333333334,
               "cardUsage": [
                 {
                   "id": "starter_archer_focus",
@@ -3087,19 +3129,21 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
-                  "plays": 783,
-                  "opportunities": 2280,
-                  "usageRate": 0.34342105263157896
+                  "plays": 332,
+                  "opportunities": 2416,
+                  "usageRate": 0.13741721854304637
                 },
                 {
                   "id": "starter_archer_step",
                   "name": "林地回避",
                   "cost": 1,
-                  "type": "防御",
-                  "tags": [],
-                  "plays": 3331,
-                  "opportunities": 6891,
-                  "usageRate": 0.4833841242199971
+                  "type": "能力",
+                  "tags": [
+                    "错身"
+                  ],
+                  "plays": 1519,
+                  "opportunities": 7274,
+                  "usageRate": 0.2088259554577949
                 },
                 {
                   "id": "starter_archer_shot",
@@ -3107,21 +3151,9 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
-                  "plays": 5043,
-                  "opportunities": 7074,
-                  "usageRate": 0.7128922815945716
-                },
-                {
-                  "id": "starter_archer_exile",
-                  "name": "逐影放矢",
-                  "cost": 1,
-                  "type": "攻击",
-                  "tags": [
-                    "放逐"
-                  ],
-                  "plays": 999,
-                  "opportunities": 1043,
-                  "usageRate": 0.9578139980824545
+                  "plays": 5127,
+                  "opportunities": 7346,
+                  "usageRate": 0.697930846719303
                 },
                 {
                   "id": "starter_archer_aim",
@@ -3131,9 +3163,21 @@
                   "tags": [
                     "蓄力"
                   ],
-                  "plays": 2106,
-                  "opportunities": 2193,
-                  "usageRate": 0.960328317373461
+                  "plays": 2062,
+                  "opportunities": 2321,
+                  "usageRate": 0.8884101680310211
+                },
+                {
+                  "id": "starter_archer_exile",
+                  "name": "逐影放矢",
+                  "cost": 1,
+                  "type": "攻击",
+                  "tags": [
+                    "放逐"
+                  ],
+                  "plays": 998,
+                  "opportunities": 1037,
+                  "usageRate": 0.9623915139826422
                 },
                 {
                   "id": "starter_archer_venom",
@@ -3143,9 +3187,9 @@
                   "tags": [
                     "剧毒"
                   ],
-                  "plays": 2281,
-                  "opportunities": 2340,
-                  "usageRate": 0.9747863247863248
+                  "plays": 2434,
+                  "opportunities": 2463,
+                  "usageRate": 0.9882257409663012
                 }
               ]
             }
@@ -3163,9 +3207,9 @@
             "荒野煞狼": {
               "games": 1000,
               "winRate": 1,
-              "averageTurns": 6.764,
-              "averageHpLeft": 56.335,
-              "energyWastedPerTurn": 0.15286812536960379,
+              "averageTurns": 5.632,
+              "averageHpLeft": 41.985,
+              "energyWastedPerTurn": 0.2677556818181818,
               "cardUsage": [
                 {
                   "id": "starter_archer_focus",
@@ -3173,19 +3217,21 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
-                  "plays": 1443,
-                  "opportunities": 4985,
-                  "usageRate": 0.28946840521564693
+                  "plays": 1079,
+                  "opportunities": 4590,
+                  "usageRate": 0.23507625272331154
                 },
                 {
                   "id": "starter_archer_step",
                   "name": "林地回避",
                   "cost": 1,
-                  "type": "防御",
-                  "tags": [],
-                  "plays": 9959,
-                  "opportunities": 15292,
-                  "usageRate": 0.6512555584619408
+                  "type": "能力",
+                  "tags": [
+                    "错身"
+                  ],
+                  "plays": 5430,
+                  "opportunities": 13891,
+                  "usageRate": 0.39090058311136705
                 },
                 {
                   "id": "starter_archer_shot",
@@ -3193,9 +3239,21 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
-                  "plays": 10674,
-                  "opportunities": 15467,
-                  "usageRate": 0.6901144371888537
+                  "plays": 10483,
+                  "opportunities": 14249,
+                  "usageRate": 0.7357007509298898
+                },
+                {
+                  "id": "starter_archer_aim",
+                  "name": "拉弓瞄准",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [
+                    "蓄力"
+                  ],
+                  "plays": 4088,
+                  "opportunities": 4405,
+                  "usageRate": 0.9280363223609535
                 },
                 {
                   "id": "starter_archer_exile",
@@ -3206,20 +3264,8 @@
                     "放逐"
                   ],
                   "plays": 1000,
-                  "opportunities": 1049,
-                  "usageRate": 0.9532888465204957
-                },
-                {
-                  "id": "starter_archer_aim",
-                  "name": "拉弓瞄准",
-                  "cost": 1,
-                  "type": "能力",
-                  "tags": [
-                    "蓄力"
-                  ],
-                  "plays": 4691,
-                  "opportunities": 4810,
-                  "usageRate": 0.9752598752598752
+                  "opportunities": 1039,
+                  "usageRate": 0.9624639076034649
                 },
                 {
                   "id": "starter_archer_venom",
@@ -3229,18 +3275,18 @@
                   "tags": [
                     "剧毒"
                   ],
-                  "plays": 5019,
-                  "opportunities": 5115,
-                  "usageRate": 0.9812316715542522
+                  "plays": 4572,
+                  "opportunities": 4731,
+                  "usageRate": 0.9663918833227647
                 }
               ]
             },
             "千载魔蛛": {
               "games": 1000,
               "winRate": 1,
-              "averageTurns": 8.39,
-              "averageHpLeft": 52.403,
-              "energyWastedPerTurn": 0.14219308700834327,
+              "averageTurns": 7.067,
+              "averageHpLeft": 34.657,
+              "energyWastedPerTurn": 0.25413895570963635,
               "cardUsage": [
                 {
                   "id": "诅咒",
@@ -3249,7 +3295,7 @@
                   "type": "能力",
                   "tags": [],
                   "plays": 0,
-                  "opportunities": 6246,
+                  "opportunities": 5685,
                   "usageRate": 0
                 },
                 {
@@ -3258,19 +3304,21 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
-                  "plays": 2962,
-                  "opportunities": 5555,
-                  "usageRate": 0.5332133213321332
+                  "plays": 1922,
+                  "opportunities": 5266,
+                  "usageRate": 0.36498290922901633
                 },
                 {
                   "id": "starter_archer_step",
                   "name": "林地回避",
                   "cost": 1,
-                  "type": "防御",
-                  "tags": [],
-                  "plays": 11190,
-                  "opportunities": 17197,
-                  "usageRate": 0.650694888643368
+                  "type": "能力",
+                  "tags": [
+                    "错身"
+                  ],
+                  "plays": 6903,
+                  "opportunities": 16128,
+                  "usageRate": 0.42801339285714285
                 },
                 {
                   "id": "starter_archer_shot",
@@ -3278,9 +3326,9 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
-                  "plays": 14712,
-                  "opportunities": 17297,
-                  "usageRate": 0.850552118864543
+                  "plays": 13561,
+                  "opportunities": 16500,
+                  "usageRate": 0.8218787878787879
                 },
                 {
                   "id": "starter_archer_aim",
@@ -3290,9 +3338,21 @@
                   "tags": [
                     "蓄力"
                   ],
-                  "plays": 5281,
-                  "opportunities": 5500,
-                  "usageRate": 0.9601818181818181
+                  "plays": 4914,
+                  "opportunities": 5198,
+                  "usageRate": 0.9453636013851482
+                },
+                {
+                  "id": "starter_archer_venom",
+                  "name": "青牙试射",
+                  "cost": 1,
+                  "type": "攻击",
+                  "tags": [
+                    "剧毒"
+                  ],
+                  "plays": 5239,
+                  "opportunities": 5444,
+                  "usageRate": 0.9623438648052902
                 },
                 {
                   "id": "starter_archer_exile",
@@ -3305,27 +3365,15 @@
                   "plays": 1000,
                   "opportunities": 1031,
                   "usageRate": 0.9699321047526673
-                },
-                {
-                  "id": "starter_archer_venom",
-                  "name": "青牙试射",
-                  "cost": 1,
-                  "type": "攻击",
-                  "tags": [
-                    "剧毒"
-                  ],
-                  "plays": 5612,
-                  "opportunities": 5757,
-                  "usageRate": 0.9748132708007643
                 }
               ]
             },
             "剧毒蟾蜍": {
               "games": 1000,
-              "winRate": 0.969,
-              "averageTurns": 8.421,
-              "averageHpLeft": 30.786,
-              "energyWastedPerTurn": 0.11756323477021731,
+              "winRate": 0.953,
+              "averageTurns": 7.17,
+              "averageHpLeft": 21.573,
+              "energyWastedPerTurn": 0.16638772663877266,
               "cardUsage": [
                 {
                   "id": "诅咒",
@@ -3334,7 +3382,7 @@
                   "type": "能力",
                   "tags": [],
                   "plays": 0,
-                  "opportunities": 2091,
+                  "opportunities": 1744,
                   "usageRate": 0
                 },
                 {
@@ -3343,19 +3391,21 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
-                  "plays": 2516,
-                  "opportunities": 6040,
-                  "usageRate": 0.4165562913907285
+                  "plays": 1463,
+                  "opportunities": 5812,
+                  "usageRate": 0.25172057811424636
                 },
                 {
                   "id": "starter_archer_step",
                   "name": "林地回避",
                   "cost": 1,
-                  "type": "防御",
-                  "tags": [],
-                  "plays": 11200,
-                  "opportunities": 18667,
-                  "usageRate": 0.5999892859056088
+                  "type": "能力",
+                  "tags": [
+                    "错身"
+                  ],
+                  "plays": 7076,
+                  "opportunities": 17667,
+                  "usageRate": 0.40052074489160583
                 },
                 {
                   "id": "starter_archer_shot",
@@ -3363,9 +3413,33 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
-                  "plays": 14550,
-                  "opportunities": 18833,
-                  "usageRate": 0.772580045664525
+                  "plays": 13937,
+                  "opportunities": 18104,
+                  "usageRate": 0.7698298718515245
+                },
+                {
+                  "id": "starter_archer_aim",
+                  "name": "拉弓瞄准",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [
+                    "蓄力"
+                  ],
+                  "plays": 5333,
+                  "opportunities": 5629,
+                  "usageRate": 0.9474151714336472
+                },
+                {
+                  "id": "starter_archer_venom",
+                  "name": "青牙试射",
+                  "cost": 1,
+                  "type": "攻击",
+                  "tags": [
+                    "剧毒"
+                  ],
+                  "plays": 5848,
+                  "opportunities": 6081,
+                  "usageRate": 0.9616839335635586
                 },
                 {
                   "id": "starter_archer_exile",
@@ -3376,41 +3450,17 @@
                     "放逐"
                   ],
                   "plays": 1000,
-                  "opportunities": 1053,
-                  "usageRate": 0.949667616334283
-                },
-                {
-                  "id": "starter_archer_venom",
-                  "name": "青牙试射",
-                  "cost": 1,
-                  "type": "攻击",
-                  "tags": [
-                    "剧毒"
-                  ],
-                  "plays": 6077,
-                  "opportunities": 6230,
-                  "usageRate": 0.9754414125200642
-                },
-                {
-                  "id": "starter_archer_aim",
-                  "name": "拉弓瞄准",
-                  "cost": 1,
-                  "type": "能力",
-                  "tags": [
-                    "蓄力"
-                  ],
-                  "plays": 5772,
-                  "opportunities": 5900,
-                  "usageRate": 0.9783050847457627
+                  "opportunities": 1029,
+                  "usageRate": 0.9718172983479106
                 }
               ]
             },
             "暴躁野猪": {
               "games": 1000,
-              "winRate": 0.005,
-              "averageTurns": 4.321,
-              "averageHpLeft": 0.051,
-              "energyWastedPerTurn": 0.0016199953714417959,
+              "winRate": 0.027,
+              "averageTurns": 4.659,
+              "averageHpLeft": 0.313,
+              "energyWastedPerTurn": 0.030693281820133075,
               "cardUsage": [
                 {
                   "id": "starter_archer_focus",
@@ -3418,19 +3468,21 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
-                  "plays": 1072,
-                  "opportunities": 3176,
-                  "usageRate": 0.33753148614609574
+                  "plays": 896,
+                  "opportunities": 3846,
+                  "usageRate": 0.2329693187727509
                 },
                 {
                   "id": "starter_archer_step",
                   "name": "林地回避",
                   "cost": 1,
-                  "type": "防御",
-                  "tags": [],
-                  "plays": 6196,
-                  "opportunities": 9694,
-                  "usageRate": 0.6391582422116773
+                  "type": "能力",
+                  "tags": [
+                    "错身"
+                  ],
+                  "plays": 4641,
+                  "opportunities": 11606,
+                  "usageRate": 0.39987937273823887
                 },
                 {
                   "id": "starter_archer_shot",
@@ -3438,9 +3490,9 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
-                  "plays": 7178,
-                  "opportunities": 9811,
-                  "usageRate": 0.7316277647538477
+                  "plays": 9244,
+                  "opportunities": 11948,
+                  "usageRate": 0.7736859725477068
                 },
                 {
                   "id": "starter_archer_exile",
@@ -3451,8 +3503,8 @@
                     "放逐"
                   ],
                   "plays": 1000,
-                  "opportunities": 1045,
-                  "usageRate": 0.9569377990430622
+                  "opportunities": 1039,
+                  "usageRate": 0.9624639076034649
                 },
                 {
                   "id": "starter_archer_venom",
@@ -3462,9 +3514,9 @@
                   "tags": [
                     "剧毒"
                   ],
-                  "plays": 3176,
-                  "opportunities": 3251,
-                  "usageRate": 0.9769301753306675
+                  "plays": 3842,
+                  "opportunities": 3971,
+                  "usageRate": 0.967514479979854
                 },
                 {
                   "id": "starter_archer_aim",
@@ -3474,18 +3526,18 @@
                   "tags": [
                     "蓄力"
                   ],
-                  "plays": 2976,
-                  "opportunities": 2997,
-                  "usageRate": 0.992992992992993
+                  "plays": 3529,
+                  "opportunities": 3635,
+                  "usageRate": 0.9708390646492435
                 }
               ]
             },
             "铁甲巨蟹": {
               "games": 1000,
-              "winRate": 0.706,
-              "averageTurns": 8.737,
-              "averageHpLeft": 25.066,
-              "energyWastedPerTurn": 0.1042691999542177,
+              "winRate": 0.606,
+              "averageTurns": 7.118,
+              "averageHpLeft": 13.471,
+              "energyWastedPerTurn": 0.1489182354593987,
               "cardUsage": [
                 {
                   "id": "starter_archer_focus",
@@ -3493,19 +3545,21 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
-                  "plays": 2397,
-                  "opportunities": 6543,
-                  "usageRate": 0.36634571297569923
+                  "plays": 1302,
+                  "opportunities": 5999,
+                  "usageRate": 0.21703617269544925
                 },
                 {
                   "id": "starter_archer_step",
                   "name": "林地回避",
                   "cost": 1,
-                  "type": "防御",
-                  "tags": [],
-                  "plays": 11675,
-                  "opportunities": 20064,
-                  "usageRate": 0.5818879585326954
+                  "type": "能力",
+                  "tags": [
+                    "错身"
+                  ],
+                  "plays": 7013,
+                  "opportunities": 18148,
+                  "usageRate": 0.3864337668062596
                 },
                 {
                   "id": "starter_archer_shot",
@@ -3513,9 +3567,33 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
-                  "plays": 14922,
-                  "opportunities": 20276,
-                  "usageRate": 0.7359439731702505
+                  "plays": 13887,
+                  "opportunities": 18514,
+                  "usageRate": 0.7500810197688236
+                },
+                {
+                  "id": "starter_archer_aim",
+                  "name": "拉弓瞄准",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [
+                    "蓄力"
+                  ],
+                  "plays": 5428,
+                  "opportunities": 5677,
+                  "usageRate": 0.9561388057072397
+                },
+                {
+                  "id": "starter_archer_venom",
+                  "name": "青牙试射",
+                  "cost": 1,
+                  "type": "攻击",
+                  "tags": [
+                    "剧毒"
+                  ],
+                  "plays": 5900,
+                  "opportunities": 6122,
+                  "usageRate": 0.9637373407383208
                 },
                 {
                   "id": "starter_archer_exile",
@@ -3526,38 +3604,14 @@
                     "放逐"
                   ],
                   "plays": 1000,
-                  "opportunities": 1058,
-                  "usageRate": 0.945179584120983
-                },
-                {
-                  "id": "starter_archer_venom",
-                  "name": "青牙试射",
-                  "cost": 1,
-                  "type": "攻击",
-                  "tags": [
-                    "剧毒"
-                  ],
-                  "plays": 6618,
-                  "opportunities": 6763,
-                  "usageRate": 0.978559810734881
-                },
-                {
-                  "id": "starter_archer_aim",
-                  "name": "拉弓瞄准",
-                  "cost": 1,
-                  "type": "能力",
-                  "tags": [
-                    "蓄力"
-                  ],
-                  "plays": 6162,
-                  "opportunities": 6277,
-                  "usageRate": 0.981679146088896
+                  "opportunities": 1030,
+                  "usageRate": 0.970873786407767
                 }
               ]
             }
           },
           "aggregate": {
-            "winRate": 0.736,
+            "winRate": 0.7172,
             "status": "达标",
             "lowestEnemy": "暴躁野猪",
             "highestEnemy": "荒野煞狼"
@@ -3569,9 +3623,9 @@
             "堕落剑客": {
               "games": 1000,
               "winRate": 0,
-              "averageTurns": 3.824,
+              "averageTurns": 4.876,
               "averageHpLeft": 0,
-              "energyWastedPerTurn": 0.0005230125523012552,
+              "energyWastedPerTurn": 0.03383921246923708,
               "cardUsage": [
                 {
                   "id": "starter_archer_focus",
@@ -3579,19 +3633,21 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
-                  "plays": 985,
-                  "opportunities": 2787,
-                  "usageRate": 0.3534266236096161
+                  "plays": 970,
+                  "opportunities": 4004,
+                  "usageRate": 0.24225774225774227
                 },
                 {
                   "id": "starter_archer_step",
                   "name": "林地回避",
                   "cost": 1,
-                  "type": "防御",
-                  "tags": [],
-                  "plays": 5297,
-                  "opportunities": 8601,
-                  "usageRate": 0.6158586210905709
+                  "type": "能力",
+                  "tags": [
+                    "错身"
+                  ],
+                  "plays": 4864,
+                  "opportunities": 12237,
+                  "usageRate": 0.39748304322954975
                 },
                 {
                   "id": "starter_archer_shot",
@@ -3599,33 +3655,9 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
-                  "plays": 6264,
-                  "opportunities": 8614,
-                  "usageRate": 0.7271882981193406
-                },
-                {
-                  "id": "starter_archer_exile",
-                  "name": "逐影放矢",
-                  "cost": 1,
-                  "type": "攻击",
-                  "tags": [
-                    "放逐"
-                  ],
-                  "plays": 997,
-                  "opportunities": 1037,
-                  "usageRate": 0.9614271938283511
-                },
-                {
-                  "id": "starter_archer_venom",
-                  "name": "青牙试射",
-                  "cost": 1,
-                  "type": "攻击",
-                  "tags": [
-                    "剧毒"
-                  ],
-                  "plays": 2839,
-                  "opportunities": 2906,
-                  "usageRate": 0.9769442532690984
+                  "plays": 9407,
+                  "opportunities": 12525,
+                  "usageRate": 0.751057884231537
                 },
                 {
                   "id": "starter_archer_aim",
@@ -3635,293 +3667,9 @@
                   "tags": [
                     "蓄力"
                   ],
-                  "plays": 2612,
-                  "opportunities": 2662,
-                  "usageRate": 0.9812171299774606
-                }
-              ]
-            },
-            "幽冥法师": {
-              "games": 1000,
-              "winRate": 0.001,
-              "averageTurns": 8.216,
-              "averageHpLeft": 0.016,
-              "energyWastedPerTurn": 0.07862706913339824,
-              "cardUsage": [
-                {
-                  "id": "诅咒",
-                  "name": "诅咒",
-                  "cost": 99,
-                  "type": "能力",
-                  "tags": [],
-                  "plays": 0,
-                  "opportunities": 4460,
-                  "usageRate": 0
-                },
-                {
-                  "id": "starter_archer_focus",
-                  "name": "整束箭袋",
-                  "cost": 1,
-                  "type": "能力",
-                  "tags": [],
-                  "plays": 1534,
-                  "opportunities": 5510,
-                  "usageRate": 0.27840290381125227
-                },
-                {
-                  "id": "starter_archer_shot",
-                  "name": "基础射击",
-                  "cost": 1,
-                  "type": "攻击",
-                  "tags": [],
-                  "plays": 12209,
-                  "opportunities": 17099,
-                  "usageRate": 0.7140183636469969
-                },
-                {
-                  "id": "starter_archer_step",
-                  "name": "林地回避",
-                  "cost": 1,
-                  "type": "防御",
-                  "tags": [],
-                  "plays": 14874,
-                  "opportunities": 16931,
-                  "usageRate": 0.8785068808694111
-                },
-                {
-                  "id": "starter_archer_exile",
-                  "name": "逐影放矢",
-                  "cost": 1,
-                  "type": "攻击",
-                  "tags": [
-                    "放逐"
-                  ],
-                  "plays": 1000,
-                  "opportunities": 1064,
-                  "usageRate": 0.9398496240601504
-                },
-                {
-                  "id": "starter_archer_venom",
-                  "name": "青牙试射",
-                  "cost": 1,
-                  "type": "攻击",
-                  "tags": [
-                    "剧毒"
-                  ],
-                  "plays": 5548,
-                  "opportunities": 5677,
-                  "usageRate": 0.9772767306676061
-                },
-                {
-                  "id": "starter_archer_aim",
-                  "name": "拉弓瞄准",
-                  "cost": 1,
-                  "type": "能力",
-                  "tags": [
-                    "蓄力"
-                  ],
-                  "plays": 5269,
-                  "opportunities": 5358,
-                  "usageRate": 0.9833893243747667
-                }
-              ]
-            },
-            "巨力石魔": {
-              "games": 1000,
-              "winRate": 0,
-              "averageTurns": 3.41,
-              "averageHpLeft": 0,
-              "energyWastedPerTurn": 0,
-              "cardUsage": [
-                {
-                  "id": "starter_archer_focus",
-                  "name": "整束箭袋",
-                  "cost": 1,
-                  "type": "能力",
-                  "tags": [],
-                  "plays": 912,
-                  "opportunities": 2460,
-                  "usageRate": 0.37073170731707317
-                },
-                {
-                  "id": "starter_archer_step",
-                  "name": "林地回避",
-                  "cost": 1,
-                  "type": "防御",
-                  "tags": [],
-                  "plays": 4516,
-                  "opportunities": 7565,
-                  "usageRate": 0.5969596827495043
-                },
-                {
-                  "id": "starter_archer_shot",
-                  "name": "基础射击",
-                  "cost": 1,
-                  "type": "攻击",
-                  "tags": [],
-                  "plays": 5774,
-                  "opportunities": 7702,
-                  "usageRate": 0.7496754089846793
-                },
-                {
-                  "id": "starter_archer_exile",
-                  "name": "逐影放矢",
-                  "cost": 1,
-                  "type": "攻击",
-                  "tags": [
-                    "放逐"
-                  ],
-                  "plays": 996,
-                  "opportunities": 1054,
-                  "usageRate": 0.9449715370018975
-                },
-                {
-                  "id": "starter_archer_venom",
-                  "name": "青牙试射",
-                  "cost": 1,
-                  "type": "攻击",
-                  "tags": [
-                    "剧毒"
-                  ],
-                  "plays": 2510,
-                  "opportunities": 2567,
-                  "usageRate": 0.9777950915465524
-                },
-                {
-                  "id": "starter_archer_aim",
-                  "name": "拉弓瞄准",
-                  "cost": 1,
-                  "type": "能力",
-                  "tags": [
-                    "蓄力"
-                  ],
-                  "plays": 2342,
-                  "opportunities": 2366,
-                  "usageRate": 0.9898562975486053
-                }
-              ]
-            },
-            "魅影刺客": {
-              "games": 1000,
-              "winRate": 0,
-              "averageTurns": 4.511,
-              "averageHpLeft": 0,
-              "energyWastedPerTurn": 0.006650410108623365,
-              "cardUsage": [
-                {
-                  "id": "starter_archer_focus",
-                  "name": "整束箭袋",
-                  "cost": 1,
-                  "type": "能力",
-                  "tags": [],
-                  "plays": 1154,
-                  "opportunities": 3284,
-                  "usageRate": 0.351400730816078
-                },
-                {
-                  "id": "starter_archer_step",
-                  "name": "林地回避",
-                  "cost": 1,
-                  "type": "防御",
-                  "tags": [],
-                  "plays": 6475,
-                  "opportunities": 10181,
-                  "usageRate": 0.6359886062272861
-                },
-                {
-                  "id": "starter_archer_shot",
-                  "name": "基础射击",
-                  "cost": 1,
-                  "type": "攻击",
-                  "tags": [],
-                  "plays": 7408,
-                  "opportunities": 10354,
-                  "usageRate": 0.7154722812439637
-                },
-                {
-                  "id": "starter_archer_exile",
-                  "name": "逐影放矢",
-                  "cost": 1,
-                  "type": "攻击",
-                  "tags": [
-                    "放逐"
-                  ],
-                  "plays": 998,
-                  "opportunities": 1046,
-                  "usageRate": 0.9541108986615678
-                },
-                {
-                  "id": "starter_archer_venom",
-                  "name": "青牙试射",
-                  "cost": 1,
-                  "type": "攻击",
-                  "tags": [
-                    "剧毒"
-                  ],
-                  "plays": 3256,
-                  "opportunities": 3404,
-                  "usageRate": 0.9565217391304348
-                },
-                {
-                  "id": "starter_archer_aim",
-                  "name": "拉弓瞄准",
-                  "cost": 1,
-                  "type": "能力",
-                  "tags": [
-                    "蓄力"
-                  ],
-                  "plays": 3057,
-                  "opportunities": 3135,
-                  "usageRate": 0.9751196172248804
-                }
-              ]
-            },
-            "缝合巨怪": {
-              "games": 1000,
-              "winRate": 0,
-              "averageTurns": 5.275,
-              "averageHpLeft": 0,
-              "energyWastedPerTurn": 0.032417061611374406,
-              "cardUsage": [
-                {
-                  "id": "诅咒",
-                  "name": "诅咒",
-                  "cost": 99,
-                  "type": "能力",
-                  "tags": [],
-                  "plays": 0,
-                  "opportunities": 1726,
-                  "usageRate": 0
-                },
-                {
-                  "id": "starter_archer_focus",
-                  "name": "整束箭袋",
-                  "cost": 1,
-                  "type": "能力",
-                  "tags": [],
-                  "plays": 1535,
-                  "opportunities": 3639,
-                  "usageRate": 0.4218191810937071
-                },
-                {
-                  "id": "starter_archer_step",
-                  "name": "林地回避",
-                  "cost": 1,
-                  "type": "防御",
-                  "tags": [],
-                  "plays": 7374,
-                  "opportunities": 11146,
-                  "usageRate": 0.661582630540104
-                },
-                {
-                  "id": "starter_archer_shot",
-                  "name": "基础射击",
-                  "cost": 1,
-                  "type": "攻击",
-                  "tags": [],
-                  "plays": 8796,
-                  "opportunities": 11352,
-                  "usageRate": 0.7748414376321353
+                  "plays": 3670,
+                  "opportunities": 3814,
+                  "usageRate": 0.9622443628736235
                 },
                 {
                   "id": "starter_archer_exile",
@@ -3932,8 +3680,8 @@
                     "放逐"
                   ],
                   "plays": 999,
-                  "opportunities": 1051,
-                  "usageRate": 0.950523311132255
+                  "opportunities": 1035,
+                  "usageRate": 0.9652173913043478
                 },
                 {
                   "id": "starter_archer_venom",
@@ -3943,9 +3691,60 @@
                   "tags": [
                     "剧毒"
                   ],
-                  "plays": 3689,
-                  "opportunities": 3793,
-                  "usageRate": 0.9725810703928289
+                  "plays": 4086,
+                  "opportunities": 4228,
+                  "usageRate": 0.966414380321665
+                }
+              ]
+            },
+            "幽冥法师": {
+              "games": 1000,
+              "winRate": 0,
+              "averageTurns": 7.023,
+              "averageHpLeft": 0,
+              "energyWastedPerTurn": 0.09084436850348854,
+              "cardUsage": [
+                {
+                  "id": "诅咒",
+                  "name": "诅咒",
+                  "cost": 99,
+                  "type": "能力",
+                  "tags": [],
+                  "plays": 0,
+                  "opportunities": 3351,
+                  "usageRate": 0
+                },
+                {
+                  "id": "starter_archer_focus",
+                  "name": "整束箭袋",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [],
+                  "plays": 1727,
+                  "opportunities": 5552,
+                  "usageRate": 0.31105907780979825
+                },
+                {
+                  "id": "starter_archer_step",
+                  "name": "林地回避",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [
+                    "错身"
+                  ],
+                  "plays": 6980,
+                  "opportunities": 16919,
+                  "usageRate": 0.41255393344760327
+                },
+                {
+                  "id": "starter_archer_shot",
+                  "name": "基础射击",
+                  "cost": 1,
+                  "type": "攻击",
+                  "tags": [],
+                  "plays": 14073,
+                  "opportunities": 17448,
+                  "usageRate": 0.8065680880330124
                 },
                 {
                   "id": "starter_archer_aim",
@@ -3955,18 +3754,283 @@
                   "tags": [
                     "蓄力"
                   ],
-                  "plays": 3461,
-                  "opportunities": 3519,
-                  "usageRate": 0.9835180448991191
+                  "plays": 5164,
+                  "opportunities": 5357,
+                  "usageRate": 0.9639723725966026
+                },
+                {
+                  "id": "starter_archer_venom",
+                  "name": "青牙试射",
+                  "cost": 1,
+                  "type": "攻击",
+                  "tags": [
+                    "剧毒"
+                  ],
+                  "plays": 5533,
+                  "opportunities": 5730,
+                  "usageRate": 0.9656195462478185
+                },
+                {
+                  "id": "starter_archer_exile",
+                  "name": "逐影放矢",
+                  "cost": 1,
+                  "type": "攻击",
+                  "tags": [
+                    "放逐"
+                  ],
+                  "plays": 1000,
+                  "opportunities": 1034,
+                  "usageRate": 0.9671179883945842
+                }
+              ]
+            },
+            "巨力石魔": {
+              "games": 1000,
+              "winRate": 0,
+              "averageTurns": 3.603,
+              "averageHpLeft": 0,
+              "energyWastedPerTurn": 0.02497918401332223,
+              "cardUsage": [
+                {
+                  "id": "starter_archer_focus",
+                  "name": "整束箭袋",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [],
+                  "plays": 618,
+                  "opportunities": 2984,
+                  "usageRate": 0.20710455764075067
+                },
+                {
+                  "id": "starter_archer_step",
+                  "name": "林地回避",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [
+                    "错身"
+                  ],
+                  "plays": 3591,
+                  "opportunities": 9080,
+                  "usageRate": 0.39548458149779736
+                },
+                {
+                  "id": "starter_archer_shot",
+                  "name": "基础射击",
+                  "cost": 1,
+                  "type": "攻击",
+                  "tags": [],
+                  "plays": 6969,
+                  "opportunities": 9234,
+                  "usageRate": 0.7547108512020793
+                },
+                {
+                  "id": "starter_archer_venom",
+                  "name": "青牙试射",
+                  "cost": 1,
+                  "type": "攻击",
+                  "tags": [
+                    "剧毒"
+                  ],
+                  "plays": 2960,
+                  "opportunities": 3061,
+                  "usageRate": 0.9670042469781117
+                },
+                {
+                  "id": "starter_archer_aim",
+                  "name": "拉弓瞄准",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [
+                    "蓄力"
+                  ],
+                  "plays": 2787,
+                  "opportunities": 2875,
+                  "usageRate": 0.969391304347826
+                },
+                {
+                  "id": "starter_archer_exile",
+                  "name": "逐影放矢",
+                  "cost": 1,
+                  "type": "攻击",
+                  "tags": [
+                    "放逐"
+                  ],
+                  "plays": 1000,
+                  "opportunities": 1029,
+                  "usageRate": 0.9718172983479106
+                }
+              ]
+            },
+            "魅影刺客": {
+              "games": 1000,
+              "winRate": 0,
+              "averageTurns": 4.844,
+              "averageHpLeft": 0,
+              "energyWastedPerTurn": 0.036127167630057806,
+              "cardUsage": [
+                {
+                  "id": "starter_archer_focus",
+                  "name": "整束箭袋",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [],
+                  "plays": 1008,
+                  "opportunities": 3987,
+                  "usageRate": 0.2528216704288939
+                },
+                {
+                  "id": "starter_archer_step",
+                  "name": "林地回避",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [
+                    "错身"
+                  ],
+                  "plays": 4830,
+                  "opportunities": 12105,
+                  "usageRate": 0.3990086741016109
+                },
+                {
+                  "id": "starter_archer_shot",
+                  "name": "基础射击",
+                  "cost": 1,
+                  "type": "攻击",
+                  "tags": [],
+                  "plays": 9376,
+                  "opportunities": 12494,
+                  "usageRate": 0.7504402113014247
+                },
+                {
+                  "id": "starter_archer_venom",
+                  "name": "青牙试射",
+                  "cost": 1,
+                  "type": "攻击",
+                  "tags": [
+                    "剧毒"
+                  ],
+                  "plays": 3941,
+                  "opportunities": 4150,
+                  "usageRate": 0.9496385542168675
+                },
+                {
+                  "id": "starter_archer_aim",
+                  "name": "拉弓瞄准",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [
+                    "蓄力"
+                  ],
+                  "plays": 3666,
+                  "opportunities": 3821,
+                  "usageRate": 0.959434702957341
+                },
+                {
+                  "id": "starter_archer_exile",
+                  "name": "逐影放矢",
+                  "cost": 1,
+                  "type": "攻击",
+                  "tags": [
+                    "放逐"
+                  ],
+                  "plays": 999,
+                  "opportunities": 1035,
+                  "usageRate": 0.9652173913043478
+                }
+              ]
+            },
+            "缝合巨怪": {
+              "games": 1000,
+              "winRate": 0,
+              "averageTurns": 5.462,
+              "averageHpLeft": 0,
+              "energyWastedPerTurn": 0.09648480410106189,
+              "cardUsage": [
+                {
+                  "id": "诅咒",
+                  "name": "诅咒",
+                  "cost": 99,
+                  "type": "能力",
+                  "tags": [],
+                  "plays": 0,
+                  "opportunities": 2237,
+                  "usageRate": 0
+                },
+                {
+                  "id": "starter_archer_focus",
+                  "name": "整束箭袋",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [],
+                  "plays": 1347,
+                  "opportunities": 4168,
+                  "usageRate": 0.32317658349328215
+                },
+                {
+                  "id": "starter_archer_step",
+                  "name": "林地回避",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [
+                    "错身"
+                  ],
+                  "plays": 5348,
+                  "opportunities": 12728,
+                  "usageRate": 0.4201759899434318
+                },
+                {
+                  "id": "starter_archer_shot",
+                  "name": "基础射击",
+                  "cost": 1,
+                  "type": "攻击",
+                  "tags": [],
+                  "plays": 10593,
+                  "opportunities": 13087,
+                  "usageRate": 0.8094292045541377
+                },
+                {
+                  "id": "starter_archer_venom",
+                  "name": "青牙试射",
+                  "cost": 1,
+                  "type": "攻击",
+                  "tags": [
+                    "剧毒"
+                  ],
+                  "plays": 4181,
+                  "opportunities": 4350,
+                  "usageRate": 0.9611494252873564
+                },
+                {
+                  "id": "starter_archer_aim",
+                  "name": "拉弓瞄准",
+                  "cost": 1,
+                  "type": "能力",
+                  "tags": [
+                    "蓄力"
+                  ],
+                  "plays": 3879,
+                  "opportunities": 4033,
+                  "usageRate": 0.9618150260352095
+                },
+                {
+                  "id": "starter_archer_exile",
+                  "name": "逐影放矢",
+                  "cost": 1,
+                  "type": "攻击",
+                  "tags": [
+                    "放逐"
+                  ],
+                  "plays": 1000,
+                  "opportunities": 1033,
+                  "usageRate": 0.968054211035818
                 }
               ]
             }
           },
           "aggregate": {
-            "winRate": 0.0002,
+            "winRate": 0,
             "status": "达标",
             "lowestEnemy": "堕落剑客",
-            "highestEnemy": "幽冥法师"
+            "highestEnemy": "堕落剑客"
           }
         }
       }

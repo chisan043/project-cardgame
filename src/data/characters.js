@@ -37,7 +37,7 @@ const CHARACTERS = {
         avatarPortrait: 'assets/characters/mage/avatar_portrait_v1.webp',
         battleBack: 'assets/characters/mage/battle_back_idle_v1.webp',
         accentClass: 'featured',
-        starterHint: '基础法弹与屏障维持攻防，咏唱、复刻与剧毒各留一个方向信号；首场战斗后再选择成长路线。'
+        starterHint: '基础法弹输出，愈流回补生命；咏唱、复刻与剧毒各留一个方向信号，首战后再选择成长路线。'
     },
     hero_archer: {
         id: 'hero_archer',
@@ -56,6 +56,6 @@ const CHARACTERS = {
         avatarPortrait: 'assets/characters/archer/avatar_portrait_v1.webp',
         battleBack: 'assets/characters/archer/battle_back_idle_v1.webp',
         accentClass: '',
-        starterHint: '基础射击与回避维持攻防，蓄力、剧毒与放逐各留一个方向信号；首场战斗后再选择成长路线。'
+        starterHint: '基础射击输出，错身卸力并转化风势；蓄力、剧毒与放逐各留一个方向信号，首战后再选择成长路线。'
     }
 };

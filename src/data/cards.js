@@ -590,7 +590,7 @@ const STARTER_DECKS = {
         roleId: 'hero_mage',
         cards: [
             { poolId: 'starter_mage_bolt', name: '基础法弹', type: '攻击', cost: 1, icon: '🪄', val: 7, tags: [], rarity: '普通', copies: 3, frameTheme: 'mage', desc: '造成 7 点伤害。' },
-            { poolId: 'starter_mage_barrier', name: '秘仪屏障', type: '防御', cost: 1, icon: '🛡️', val: 7, tags: [], rarity: '普通', copies: 3, frameTheme: 'mage', desc: '获得 7 点护盾。' },
+            { poolId: 'starter_mage_heal', name: '基础愈流', type: '能力', cost: 1, icon: '✚', val: 0, tags: ['治愈'], buildNeutral: true, rarity: '普通', copies: 3, frameTheme: 'mage', desc: '回复 8 点生命。' },
             { poolId: 'starter_mage_omen', name: '秘仪预兆', type: '能力', cost: 1, icon: '🔮', val: 0, tags: ['咏唱'], buildTags: ['chant'], rarity: '普通', frameTheme: 'mage', desc: '积累[咏唱]并获得职业自带的护盾。' },
             { poolId: 'starter_mage_copy', name: '镜页试抄', type: '能力', cost: 1, icon: '🪞', val: 0, tags: ['复刻'], buildTags: ['mirror'], directEffects: { draw: true }, rarity: '普通', frameTheme: 'mage', desc: '[复刻]上一张牌的效果并抽 1 张牌。' },
             { poolId: 'starter_mage_mist', name: '蚀星雾', type: '能力', cost: 1, icon: '☠️', val: 0, tags: ['剧毒'], buildTags: ['calamity'], rarity: '普通', frameTheme: 'mage', desc: '施加[剧毒]。' },
@@ -601,11 +601,11 @@ const STARTER_DECKS = {
         roleId: 'hero_archer',
         cards: [
             { poolId: 'starter_archer_shot', name: '基础射击', type: '攻击', cost: 1, icon: '🏹', val: 6, tags: [], rarity: '普通', copies: 3, frameTheme: 'archer', desc: '造成 6 点伤害。' },
-            { poolId: 'starter_archer_step', name: '林地回避', type: '防御', cost: 1, icon: '🍃', val: 7, tags: [], rarity: '普通', copies: 3, frameTheme: 'archer', desc: '获得 7 点护盾。' },
+            { poolId: 'starter_archer_step', name: '林地回避', type: '能力', cost: 1, icon: '🍃', val: 3, tags: ['错身'], buildNeutral: true, sidestepVal: 3, rarity: '普通', copies: 3, frameTheme: 'archer', desc: '获得 3 层[错身]，每层卸掉下一次主体攻击的 40% 伤害。' },
             { poolId: 'starter_archer_aim', name: '拉弓瞄准', type: '能力', cost: 1, icon: '🎯', val: 4, tags: ['蓄力'], buildTags: ['gale'], directEffects: { draw: true }, rarity: '普通', frameTheme: 'archer', desc: '获得风势并抽 1 张牌。' },
             { poolId: 'starter_archer_venom', name: '青牙试射', type: '攻击', cost: 1, icon: '☠️', val: 4, tags: ['剧毒'], buildTags: ['venom'], rarity: '普通', frameTheme: 'archer', desc: '造成 4 点伤害并施加[剧毒]。' },
             { poolId: 'starter_archer_exile', name: '逐影放矢', type: '攻击', cost: 1, icon: '🏹', val: 7, tags: ['放逐'], buildTags: ['exile'], rarity: '普通', frameTheme: 'archer', desc: '造成 7 点伤害并[放逐]。' },
-            { poolId: 'starter_archer_focus', name: '整束箭袋', type: '能力', cost: 1, icon: '🪶', val: 0, tags: [], directEffects: { draw: true }, rarity: '普通', frameTheme: 'archer', desc: '抽 1 张牌。' }
+            { poolId: 'starter_archer_focus', name: '整束箭袋', type: '能力', cost: 1, icon: '🪶', val: 0, tags: [], buildNeutral: true, directEffects: { draw: true }, rarity: '普通', frameTheme: 'archer', desc: '抽 1 张牌。' }
         ]
     }
 };

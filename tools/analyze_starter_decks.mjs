@@ -79,6 +79,7 @@ function summarizeUsage(meta, plays, opportunities) {
 }
 
 function getExplicitBuildTags(data, card) {
+    if (card.buildNeutral) return [];
     if (Array.isArray(card.buildTags) && card.buildTags.length) return card.buildTags;
     const keys = [card.poolId, card.specialId, card.id, card.name].filter(Boolean);
     for (const key of keys) {
@@ -88,6 +89,7 @@ function getExplicitBuildTags(data, card) {
 }
 
 function getCardBuildTags(data, roleId, card) {
+    if (card.buildNeutral) return [];
     const explicit = getExplicitBuildTags(data, card);
     const inferred = [];
     const tags = card.tags || [];
@@ -293,7 +295,7 @@ function renderMarkdown(report) {
         const coverage = Object.entries(result.bias.directionRewardCoverage).map(([tag, value]) => `${tag} ${value.exact}`).join(' / ');
         lines.push(`| ${result.role} | ${signals} | ${result.bias.profileSpread.toFixed(2)} | ${coverage} | ${result.bias.neutralInitialRelics} | ${result.bias.passed ? '通过' : '失败'} |`);
     }
-    lines.push('', '通过条件：每条构筑路线恰好 1 张初始种子牌，初始构筑分完全相等，首次奖励每条路线都有精准候选，且每个角色至少有 3 件中立初始遗物。', '');
+    lines.push('', '通过条件：职业基础生存机制不计入流派权重，每条构筑路线恰好 1 张初始种子牌，初始构筑分完全相等，首次奖励每条路线都有精准候选，且每个角色至少有 3 件中立初始遗物。', '');
     lines.push('## 初始卡使用率', '');
     for (const result of report.results) {
         const teachingEnemies = ['early', 'mid'].flatMap(id => Object.values(result.checkpoints[id].enemies));

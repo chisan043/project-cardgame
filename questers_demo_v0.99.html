@@ -2082,6 +2082,7 @@
 
     function getExplicitBuildTags(card) {
         if (!card) return [];
+        if (card.buildNeutral) return [];
         if (Array.isArray(card.buildTags) && card.buildTags.length) return card.buildTags;
         const keys = [card.poolId, card.specialId, card.id, card.name].filter(Boolean);
         for (const key of keys) {
@@ -2093,6 +2094,7 @@
     }
 
     function inferBuildTagsFromCard(card, characterId = state.player?.characterId) {
+        if (card?.buildNeutral) return [];
         const directions = getBuildDirectionsForCharacter(characterId);
         const tags = normalizeTagConflicts(card?.tags || extractTagsFromText(card?.desc || ''));
         const result = [];
@@ -2104,6 +2106,7 @@
     }
 
     function getCardBuildTags(card, characterId = state.player?.characterId) {
+        if (card?.buildNeutral) return [];
         const explicit = getExplicitBuildTags(card);
         const inferred = inferBuildTagsFromCard(card, characterId);
         return [...new Set([...explicit, ...inferred])];

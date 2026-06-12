@@ -83,7 +83,7 @@ const FOUNDATION = {
     ],
     hero_archer: [
         { name: '基础射击', type: '攻击', cost: 1, val: 6, tags: [], rarity: '普通' },
-        { name: '林地回避', type: '防御', cost: 1, val: 7, tags: [], rarity: '普通' }
+        { name: '林地回避', type: '能力', cost: 1, val: 3, tags: ['错身'], buildNeutral: true, sidestepVal: 3, rarity: '普通' }
     ]
 };
 
@@ -411,14 +411,14 @@ function hitEnemy(state, amount, pierce = false, source = '卡牌伤害') {
     return damage;
 }
 
-function takeDamage(state, amount, cause = '敌方攻击') {
+function takeDamage(state, amount, cause = '敌方攻击', { allowSidestep = false } = {}) {
     let damage = Math.max(0, Math.floor(amount));
     if (state.protection > 0) {
         const reduced = Math.min(damage, state.protection);
         state.protection -= reduced;
         damage -= reduced;
     }
-    if (state.sidestep > 0 && damage > 0) {
+    if (allowSidestep && state.sidestep > 0 && damage > 0) {
         damage -= Math.max(1, Math.floor(damage * 0.4));
         state.sidestep--;
         state.aim = Math.min(6, state.aim + 1);
@@ -449,7 +449,7 @@ function takeDamage(state, amount, cause = '敌方攻击') {
     return damage;
 }
 
-function estimateCard(state, card, incoming) {
+function estimateCard(state, card, incoming, move) {
     const tags = card.tags || [];
     const cost = Math.max(0.35, card.cost || 0);
     let score = 0;
@@ -497,7 +497,19 @@ function estimateCard(state, card, incoming) {
     }
     if (tags.includes('咏唱')) score += state.data.getCardChantGain(card) * 5;
     if (tags.includes('蓄力')) score += state.data.getWindGain(card) * 4;
-    if (tags.includes('错身')) score += incoming > 0 ? 8 : 3;
+    if (tags.includes('错身')) {
+        const availableLayers = Math.max(0, 3 - state.sidestep);
+        const gainedLayers = Math.min(availableLayers, state.data.getSidestepGain(card));
+        if (move?.type?.includes('attack')) {
+            let bodyDamage = move.val + state.enemy.str;
+            if (state.enemy.weak > 0) bodyDamage *= 0.75;
+            if (state.enemy.charged) bodyDamage *= 2;
+            const protectedHits = Math.min(gainedLayers, move.times || 1);
+            score += Math.max(1, Math.floor(bodyDamage * 0.4)) * protectedHits;
+        } else {
+            score += Math.min(2, gainedLayers) * 5;
+        }
+    }
     if (tags.includes('眩晕')) score += 13;
     if (tags.includes('虚弱')) score += incoming > 0 ? 8 : 4;
     if (tags.includes('易伤')) score += 7;
@@ -779,7 +791,7 @@ function playPlayerTurn(state, move) {
         const incoming = expectedIncoming(state, move);
         const playable = state.hand.filter(card => (card.cost || 0) <= state.energy);
         if (!playable.length) break;
-        const ranked = playable.map(card => ({ card, score: estimateCard(state, card, incoming) })).sort((a, b) => b.score - a.score);
+        const ranked = playable.map(card => ({ card, score: estimateCard(state, card, incoming, move) })).sort((a, b) => b.score - a.score);
         if (ranked[0].score < 1) break;
         const card = ranked[0].card;
         state.hand.splice(state.hand.indexOf(card), 1);
@@ -819,11 +831,18 @@ function playPlayerTurn(state, move) {
     state.hand = [];
 }
 
+function settleSidestep(state, triggered) {
+    if (!triggered && state.sidestep > 0) draw(state, Math.min(2, state.sidestep));
+    state.sidestep = 0;
+}
+
 function applyEnemyMove(state, move) {
     const enemy = state.enemy;
+    let sidestepTriggered = false;
     if (enemy.minion?.hp > 0) takeDamage(state, enemy.minion.atk, '召唤物攻击');
     if (enemy.stun > 0) {
         enemy.stun--;
+        settleSidestep(state, false);
         return;
     }
     if (move.type.includes('attack')) {
@@ -834,7 +853,9 @@ function applyEnemyMove(state, move) {
             enemy.charged = false;
         }
         for (let i = 0; i < (move.times || 1); i++) {
-            const dealt = takeDamage(state, damage, '首领主体攻击');
+            const sidestepBefore = state.sidestep;
+            const dealt = takeDamage(state, damage, '首领主体攻击', { allowSidestep: true });
+            if (state.sidestep < sidestepBefore) sidestepTriggered = true;
             if (move.type === 'attack_lifesteal' && enemy.curse <= 0) enemy.hp = Math.min(enemy.maxHp, enemy.hp + Math.floor(dealt / 2));
             if (state.hp <= 0 || enemy.hp <= 0) break;
         }
@@ -857,6 +878,7 @@ function applyEnemyMove(state, move) {
         else if (key === 'curse') state.curse += move.val;
         else if (key === 'stun') takeDamage(state, 3 * move.val, '眩晕伤害');
     }
+    settleSidestep(state, sidestepTriggered);
 }
 
 function endRound(state) {
