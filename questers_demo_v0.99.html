@@ -1950,9 +1950,9 @@
 
 <script src="hud-runtime.js?v=20260518-forced-default-hud1"></script>
 <script src="hud-layout-data.js?v=20260518-forced-default-hud1"></script>
-<script src="src/data/relics.js?v=20260612-balance-pass"></script>
-<script src="src/data/card-tags.js?v=20260612-balance-pass"></script>
-<script src="src/data/cards.js?v=20260612-balance-pass"></script>
+<script src="src/data/relics.js?v=20260612-tag-simplify"></script>
+<script src="src/data/card-tags.js?v=20260612-tag-simplify"></script>
+<script src="src/data/cards.js?v=20260612-tag-simplify"></script>
 <script src="src/data/enemies.js?v=20260605-enemy-ai"></script>
 <script src="src/data/characters.js?v=20260525-data-split1"></script>
 <script>
@@ -2057,7 +2057,7 @@
             if (tags.includes('保留')) windGain += 1;
             if (tags.includes('放逐')) windGain += 1;
             if (tags.includes('重置') && targets?.reset?.length) windGain += Math.min(2, targets.reset.length);
-            const cycledCard = (tags.includes('招魂') && targets?.zhaohun?.length) || (tags.includes('轮回') && targets?.lunhui?.length) || (tags.includes('拾遗') && targets?.shiyi?.length);
+            const cycledCard = tags.includes('回收') && targets?.recycleSelections?.some(selection => selection.cards?.length);
             if (cycledCard) {
                 windGain += 1;
                 state.p_reduce_dmg += 4;
@@ -2219,7 +2219,7 @@
         card.rarity = card.rarity || '普通';
         card.buildTags = getCardBuildTags(cardDef);
         card.up = !!card.up;
-        return card;
+        return applyCardTagBudget(card);
     }
 
     function getDirectCardArtPath(card) {
@@ -2245,6 +2245,7 @@
             Number(card.cost) || 0,
             Number(card.val) || 0,
             tags,
+            JSON.stringify(card.directEffects || {}),
             specialText
         ].join('|');
     }
@@ -2262,10 +2263,10 @@
     const CARD_NAME_TAG_PRIORITY = [
         '出血', '吸血', '放血', '血祭', '荆棘', '剧毒', '燃烧',
         '易伤', '虚弱', '诅咒', '眩晕',
-        '圣剑', '穿甲', '重击', '连击', '连射', '多段', '爆发',
+        '圣剑', '穿甲', '重击', '连击', '追击', '爆发',
         '咏唱', '回响', '复刻', '充能', '附魔',
         '庇护', '错身', '治愈', '抽牌', '保留', '蓄力', '自然', '重置',
-        '放逐', '轮回', '拾遗', '招魂', '销毁', '狂热'
+        '放逐', '回收', '销毁', '狂热'
     ];
 
     const CARD_NAME_VARIANT_WORD_BY_TAG = {
@@ -2284,8 +2285,7 @@
         '穿甲': '裂甲',
         '重击': '重锋',
         '连击': '连锋',
-        '连射': '疾射',
-        '多段': '骤射',
+        '追击': '疾射',
         '爆发': '爆焰',
         '咏唱': '咏星',
         '回响': '回音',
@@ -2300,9 +2300,7 @@
         '自然': '林息',
         '重置': '回流',
         '放逐': '逐影',
-        '轮回': '回环',
-        '拾遗': '拾羽',
-        '招魂': '魂引',
+        '回收': '归羽',
         '销毁': '碎尘',
         '狂热': '狂焰'
     };
@@ -2437,7 +2435,7 @@
     function cloneSpecialEpic(special) {
         const sTags = extractTagsFromText(special.desc);
         if (special.tags) special.tags.forEach(t => { if (!sTags.includes(t)) sTags.push(t); });
-        return { ...JSON.parse(JSON.stringify(special)), id: Math.random().toString(36).substr(2, 9), specialId: special.id, tags: normalizeTagConflicts(sTags), buildTags: getCardBuildTags(special), up: false };
+        return applyCardTagBudget({ ...JSON.parse(JSON.stringify(special)), id: Math.random().toString(36).substr(2, 9), specialId: special.id, tags: normalizeTagConflicts(sTags), buildTags: getCardBuildTags(special), up: false });
     }
 
     function generateRewardCard() {
@@ -2561,11 +2559,6 @@
             tags = pool.slice(0, numTags);
             if(tags.length === 0 && type === '能力') tags = ['重置']; 
             
-            // 【核心修复】：能力牌如果只有修饰性词条，强制再抽取一个实质性词条进行绑定
-            if (type === '能力' && tags.length === 1 && (tags.includes('放逐') || tags.includes('回响'))) {
-                let extraPool = pool.filter(t => t !== '放逐' && t !== '回响');
-                if (extraPool.length > 0) { tags.push(extraPool[0]); } else { tags.push('重置'); }
-            }
         }
 
         tags = normalizeTagConflicts(tags);
@@ -2584,7 +2577,7 @@
         } 
         else { let pre = type === '攻击' ? GEN_DICT.atkPre : GEN_DICT.defPre; let suf = type === '攻击' ? GEN_DICT.atkSuf : GEN_DICT.defSuf; name = forceBasic ? `基础${type}` : (pre[Math.floor(Math.random()*pre.length)] + suf[Math.floor(Math.random()*suf.length)]); icon = type === '攻击' ? ["🗡️","⚔️","🩸","⚡"][Math.floor(Math.random()*4)] : ["🛡️","⛩️","🔰","🏔️"][Math.floor(Math.random()*4)]; }
 
-        return { id: Math.random().toString(36).substr(2, 9), name: name, type: type, cost: cost, icon: icon, val: baseVal, tags: tags, rarity: rarity, up: (rarity === '史诗') };
+        return applyCardTagBudget({ id: Math.random().toString(36).substr(2, 9), name: name, type: type, cost: cost, icon: icon, val: baseVal, tags: tags, rarity: rarity, up: (rarity === '史诗') });
     }
     
     function upgradeCard(card) {
@@ -2729,7 +2722,7 @@
         
         let d = "";
         const tags = normalizeTagConflicts(card.tags || []);
-        const secondaryTags = tags.filter(x => x !== '蓄力' && x !== '错身');
+        const secondaryTags = tags.filter(x => x !== '蓄力' && x !== '错身' && x !== '回收');
         
         if (card.type === '攻击') {
             d += `造成 <span class="card-desc-value">${getScaledCardValue(card)}</span> 点伤害。`;
@@ -2748,10 +2741,22 @@
             if (tags.includes('蓄力')) lines.push(`获得 <span class="card-desc-value">${getWindGain(card)}</span> 层风势。`);
             if (tags.includes('错身')) lines.push(`获得 <span class="card-desc-value">${getSidestepGain(card)}</span> 层错身。`);
             if (tags.includes('咏唱')) lines.push(`积累 <span class="card-desc-value">${getCardChantGain(card)}</span> 层咏唱。`);
-            const otherTags = tags.filter(x => x !== '蓄力' && x !== '错身' && x !== '咏唱');
+            const otherTags = tags.filter(x => x !== '蓄力' && x !== '错身' && x !== '咏唱' && x !== '回收');
             if (otherTags.length) lines.push(`触发 ${renderTagNames(otherTags)}。`);
             d = lines.join('<br>');
         } 
+
+        if (tags.includes('回收')) {
+            const recycleText = getCardRecycleModes(card).map(getRecycleModeDescription).join('；');
+            if (recycleText) d += `${d ? '<br>' : ''}${recycleText}。`;
+        }
+        const directLines = [];
+        if (hasDirectCardEffect(card, 'draw')) directLines.push(`额外抽取 <span class="card-desc-value">${getCardDrawCount(card)}</span> 张牌。`);
+        if (hasDirectCardEffect(card, 'energy')) directLines.push('回复 <span class="card-desc-value">1</span> 点能量。');
+        if (hasDirectCardEffect(card, 'protection')) directLines.push(`获得 <span class="card-desc-value">${getProtectionValue(card)}</span> 点庇护。`);
+        if (hasDirectCardEffect(card, 'heal')) directLines.push(`回复 <span class="card-desc-value">${getCardHealValue(card)}</span> 点生命。`);
+        if (hasDirectCardEffect(card, 'retain')) directLines.push('打出后，下回合回到手牌。');
+        if (directLines.length) d += `${d ? '<br>' : ''}${directLines.join('<br>')}`;
         
         return d || '无直接效果。';
     }
@@ -2834,7 +2839,7 @@
     });
 
     function createStarterCard({ name, type, cost, icon, val, tags = [], rarity = '普通' }) {
-        return {
+        return applyCardTagBudget({
             id: Math.random().toString(36).substr(2, 9),
             name,
             type,
@@ -2845,7 +2850,7 @@
             rarity,
             isStarter: true,
             up: false
-        };
+        });
     }
 
     function buildStarterDeckForCharacter(characterId) {
@@ -2871,7 +2876,7 @@
                 createStarterCard({ name: '林地回避', type: '能力', cost: 1, icon: '🍃', val: 1, tags: ['错身'] }),
                 createStarterCard({ name: '林地回避', type: '能力', cost: 1, icon: '🍃', val: 1, tags: ['错身'] }),
                 createStarterCard({ name: '拉弓瞄准', type: '能力', cost: 1, icon: '🎯', val: 7, tags: ['蓄力'], rarity: '稀有' }),
-                createStarterCard({ name: '疾风连射', type: '攻击', cost: 1, icon: '💨', val: 5, tags: ['连射'], rarity: '稀有' }),
+                createStarterCard({ name: '疾风连射', type: '攻击', cost: 1, icon: '💨', val: 5, tags: ['追击'], rarity: '稀有' }),
                 createStarterCard({ name: '青牙试射', type: '攻击', cost: 0, icon: '☠️', val: 3, tags: ['剧毒', '销毁'], rarity: '普通' }),
                 createStarterCard({ name: '赤露布陷', type: '能力', cost: 1, icon: '🩸', val: 0, tags: ['出血', '虚弱'], rarity: '普通' }),
                 createStarterCard({ name: '空弦藏牌', type: '能力', cost: 0, icon: '🏹', val: 0, tags: ['放逐', '抽牌'], rarity: '普通' }),
@@ -4260,8 +4265,7 @@
             state.deck = (payload.deck || [])
                 .filter(card => !REMOVED_BATTLE_IMPRINT_SPECIAL_IDS.has(card.specialId || card.id))
                 .map(card => {
-                    if (card.tags) card.tags = normalizeTagConflicts(card.tags);
-                    return card;
+                    return applyCardTagBudget(card);
                 });
             state.relics = payload.relics || [];
             state.mapData = payload.mapData || [];
@@ -4490,7 +4494,7 @@
         playerHpLagRatio = null;
         if (playerHpLagTimer) clearTimeout(playerHpLagTimer);
         state.deck = JSON.parse(JSON.stringify(initialDeck));
-        state.deck.forEach(c => { c.id = Math.random().toString(36).substr(2, 9); if (c.tags) c.tags = normalizeTagConflicts(c.tags); });
+        state.deck.forEach(c => { c.id = Math.random().toString(36).substr(2, 9); applyCardTagBudget(c); });
         updateTopBar();
         closeOverlay('overlay-role-select');
         showInitRelicOverlay();
@@ -5290,7 +5294,7 @@
                     const tag = drawnCard.type === '攻击' ? '爆发' : '咏唱';
                     if (!drawnCard.tags.includes(tag)) drawnCard.tags.push(tag);
                 } else if (roleId === 'hero_archer') {
-                    const tag = drawnCard.type === '攻击' ? '连射' : '蓄力';
+                    const tag = drawnCard.type === '攻击' ? '追击' : '蓄力';
                     if (!drawnCard.tags.includes(tag)) drawnCard.tags.push(tag);
                 } else {
                     const tag = drawnCard.type === '攻击' ? '圣剑' : '保留';
@@ -5475,28 +5479,34 @@
             if (sel === null) return; 
             targets.reset = sel;
         }
-        if (card.tags && card.tags.includes('招魂')) {
-            let rCount = hasRelic('r_soul_lantern') ? 2 : 1;
-            if(state.exhaustPile.length > 0) {
-                let sel = await selectCardsAsync(state.exhaustPile, 1, rCount, "选择放逐的牌回到手牌", true);
-                if (sel === null) return;
-                targets.zhaohun = sel;
-            } else { targets.zhaohun = []; }
-        }
-        if (card.tags && card.tags.includes('轮回')) {
-            if(state.exhaustPile.length > 0) {
-                let sel = await selectCardsAsync(state.exhaustPile, 1, 1, "选择一张放逐的牌洗入抽牌堆", true);
-                if (sel === null) return;
-                targets.lunhui = sel;
-            } else { targets.lunhui = []; }
-        }
-        if (card.tags && card.tags.includes('拾遗')) {
-            let rCount = hasRelic('r_soul_lantern') ? 2 : 1;
-            if(state.discardPile.length > 0) {
-                let sel = await selectCardsAsync(state.discardPile, 1, rCount, "从墓地选择牌回到手牌", true);
-                if (sel === null) return;
-                targets.shiyi = sel;
-            } else { targets.shiyi = []; }
+        if (card.tags && card.tags.includes('回收')) {
+            targets.recycleSelections = [];
+            const selectedRecycleIds = new Set();
+            for (const mode of getCardRecycleModes(card)) {
+                if (mode === 'allExhaustToDraw') {
+                    targets.recycleSelections.push({ mode, cards: [...state.exhaustPile] });
+                    continue;
+                }
+                const sourcePile = mode === 'discardToHand' ? state.discardPile : state.exhaustPile;
+                const selectable = sourcePile.filter(candidate => !selectedRecycleIds.has(candidate.instId));
+                const returnsToHand = mode === 'exhaustToHand' || mode === 'discardToHand';
+                const maxCount = returnsToHand && hasRelic('r_soul_lantern') ? 2 : 1;
+                const prompt = mode === 'discardToHand'
+                    ? '从墓地选择牌回到手牌'
+                    : mode === 'exhaustToHand'
+                        ? '选择放逐的牌回到手牌'
+                        : '选择放逐的牌洗入抽牌堆';
+                let selected = [];
+                if (selectable.length > 0) {
+                    selected = await selectCardsAsync(selectable, 1, Math.min(maxCount, selectable.length), prompt, true);
+                    if (selected === null) return;
+                    selected.forEach(candidate => selectedRecycleIds.add(candidate.instId));
+                }
+                targets.recycleSelections.push({ mode, cards: selected });
+                if (mode === 'exhaustToHand') targets.zhaohun = selected;
+                else if (mode === 'exhaustToDraw') targets.lunhui = selected;
+                else if (mode === 'discardToHand') targets.shiyi = selected;
+            }
         }
 
         const finalIdx = state.hand.findIndex(c => c.instId == instId); 
@@ -5521,7 +5531,7 @@
             animateCardToPile(elDOM, 'exhaust');
             state.exhaustPile.push(card); 
             if(!card.isJunk) { showFloatText("放逐", "#888", getCenter('ui-hp')); onCardExhausted(card); }
-        } else if (card.tags && card.tags.includes('保留')) {
+        } else if ((card.tags && card.tags.includes('保留')) || hasDirectCardEffect(card, 'retain')) {
             animateCardToPile(elDOM, 'discard'); 
             state.playedRetainPile.push(card); 
         } else {
@@ -5531,7 +5541,7 @@
         
         renderHand(); 
         
-        let runCount = (card.tags && card.tags.includes('多段')) ? 2 : 1;
+        let runCount = 1;
         let windStepTriggered = false;
         if (card.type === '攻击' && !card.isJunk && state.p_aim > 0) {
             state.p_aim--;
@@ -5540,10 +5550,10 @@
             windStepTriggered = true;
             showFloatText("踏风追射 / 庇护 +3", "var(--nature)", getCenter('hand-area'));
         }
-        if (card.tags && card.tags.includes('连射')) {
+        if (card.tags && card.tags.includes('追击')) {
             runCount += 1;
             if (hasRelic('r_combo_ring')) runCount += 1;
-            showFloatText(windStepTriggered ? "踏风连射!" : "连射", "var(--nature)", getCenter('hand-area'));
+            showFloatText(windStepTriggered ? "踏风追击!" : "追击", "var(--nature)", getCenter('hand-area'));
         }
         if (state.p_echo_stack > 0 && card.rarity !== '传说' && !card.isJunk) { runCount += 2; state.p_echo_stack--; showFloatText(`回音触发`, "var(--purple)", getCenter('ui-hp')); }
         if (state.next_card_echo > 0 && !card.isJunk) { runCount += state.next_card_echo; state.next_card_echo = 0; showFloatText(`狂热回响!`, "var(--crimson)", getCenter('ui-hp')); }
@@ -5836,9 +5846,9 @@
             if (hasRelic('r_blood_suture')) healPlayer(2);
         }
 
-        if (card.tags && card.tags.includes('庇护')) {
+        if ((card.tags && card.tags.includes('庇护')) || hasDirectCardEffect(card, 'protection')) {
             let pVal = getProtectionValue(card);
-            if (hasRelic('r_protect_armor')) pVal += 3;
+            if (card.tags && card.tags.includes('庇护') && hasRelic('r_protect_armor')) pVal += 3;
             pVal = applyLowHpGuardBoost(pVal, '守誓庇护');
             state.p_reduce_dmg += pVal;
             if (hasRelic('r_guardian_core')) state.armor += Math.floor(pVal / 2);
@@ -5874,27 +5884,44 @@
             if(actuallyDiscarded > 0 && hasRelic('r_rewind_sand')) drawC++;
             if(drawC > 0) await drawCards(drawC); 
         }
-        if (card.tags && card.tags.includes('招魂') && targets && targets.zhaohun) { 
-            let broughtBack = false;
-            targets.zhaohun.forEach(c => { 
-                const eIdx = state.exhaustPile.findIndex(x => x.instId === c.instId);
-                if (eIdx !== -1) { state.exhaustPile.splice(eIdx, 1); if(hasRelic('r_soul_lantern') && !c.tags.includes('保留')) c.tags.push('保留'); state.hand.push(c); broughtBack = true; onCardReturnedFromExhaust(); }
-            }); 
-            if(broughtBack) renderHand(); 
-        }
-        if (card.tags && card.tags.includes('轮回') && targets && targets.lunhui) { 
-            for(let c of targets.lunhui) {
-                const eIdx = state.exhaustPile.findIndex(x => x.instId === c.instId);
-                if (eIdx !== -1) { state.exhaustPile.splice(eIdx, 1); state.battleDeck.push(c); state.battleDeck.sort(()=>0.5-Math.random()); showFloatText("洗入牌库", "white", getCenter('ui-deck-count')); onCardReturnedFromExhaust(); if (hasRelic('r_cycle_compass')) { showFloatText("罗盘共鸣!", "var(--purple)", getCenter('ui-hp')); await executeCardTags(c, true, null); } }
+        if (card.tags && card.tags.includes('回收') && targets?.recycleSelections) {
+            let handChanged = false;
+            for (const selection of targets.recycleSelections) {
+                for (const c of selection.cards || []) {
+                    if (selection.mode === 'discardToHand') {
+                        const index = state.discardPile.findIndex(item => item.instId === c.instId);
+                        if (index !== -1) {
+                            state.discardPile.splice(index, 1);
+                            if (hasRelic('r_soul_lantern') && !(c.tags || []).includes('保留')) c.tags.push('保留');
+                            state.hand.push(c);
+                            handChanged = true;
+                        }
+                    } else if (selection.mode === 'exhaustToHand') {
+                        const index = state.exhaustPile.findIndex(item => item.instId === c.instId);
+                        if (index !== -1) {
+                            state.exhaustPile.splice(index, 1);
+                            if (hasRelic('r_soul_lantern') && !(c.tags || []).includes('保留')) c.tags.push('保留');
+                            state.hand.push(c);
+                            handChanged = true;
+                            onCardReturnedFromExhaust();
+                        }
+                    } else if (selection.mode === 'exhaustToDraw') {
+                        const index = state.exhaustPile.findIndex(item => item.instId === c.instId);
+                        if (index !== -1) {
+                            state.exhaustPile.splice(index, 1);
+                            state.battleDeck.push(c);
+                            state.battleDeck.sort(() => 0.5 - Math.random());
+                            showFloatText("洗入牌库", "white", getCenter('ui-deck-count'));
+                            onCardReturnedFromExhaust();
+                            if (hasRelic('r_cycle_compass')) {
+                                showFloatText("罗盘共鸣!", "var(--purple)", getCenter('ui-hp'));
+                                await executeCardTags(c, true, null);
+                            }
+                        }
+                    }
+                }
             }
-        }
-        if (card.tags && card.tags.includes('拾遗') && targets && targets.shiyi) { 
-            let broughtBack = false;
-            targets.shiyi.forEach(c => { 
-                const dIdx = state.discardPile.findIndex(x => x.instId === c.instId);
-                if (dIdx !== -1) { state.discardPile.splice(dIdx, 1); if(hasRelic('r_soul_lantern') && !c.tags.includes('保留')) c.tags.push('保留'); state.hand.push(c); broughtBack = true; }
-            }); 
-            if(broughtBack) renderHand(); 
+            if (handChanged) renderHand();
         }
         if (card.tags && card.tags.includes('复刻')) { 
             if (state.lastPlayedCard) { 
@@ -6001,8 +6028,8 @@
                 state.p_next_dmg += 6;
                 showFloatText("密令 +6", "var(--gold)", getCenter('ui-hp'));
             }
-            if (hasRelic('r_multishot_fletching') && card.tags && card.tags.includes('多段')) finalDmg += 2;
-            let isPierce = (card.tags && card.tags.includes('穿甲')) || (hasRelic('r_pierce') && card.tags && (card.tags.includes('多段') || card.tags.includes('连射')));
+            if (hasRelic('r_multishot_fletching') && card.tags && card.tags.includes('追击')) finalDmg += 2;
+            let isPierce = (card.tags && card.tags.includes('穿甲')) || (hasRelic('r_pierce') && card.tags && card.tags.includes('追击'));
             if(isPierce && hasRelic('r_pierce_amulet')) finalDmg = Math.floor(finalDmg * 1.25);
             if(isPierce && hasRelic('r_flaw_lens') && state.enemy.vuln > 0) finalDmg = Math.floor(finalDmg * 1.15);
             if(isPierce && hasRelic('r_pierce_meter') && !state.r_pierce_meter_used && !isEcho) {
@@ -6048,7 +6075,7 @@
         
         let debuffMult = (card.type === '能力') ? getAbilityPotency(card) : 1;
 
-        if(card.tags && card.tags.includes('治愈')) {
+        if((card.tags && card.tags.includes('治愈')) || hasDirectCardEffect(card, 'heal')) {
             let healVal = getCardHealValue(card);
             if(hasRelic('r_heal_relic')) healVal += 3;
             const beforeHp = state.hp;
@@ -6090,9 +6117,9 @@
         if(card.tags && card.tags.includes('易伤')) { let vVal = 2 * debuffMult + statusLayerBonus; if(hasRelic('r_weak_mask')) vVal += 1; state.enemy.vuln += vVal; statusApplied = true; showFloatText("易伤", "var(--purple)", getCenter('enemy-avatar')); }
         if(card.tags && card.tags.includes('虚弱')) { let wVal = 2 * debuffMult + statusLayerBonus; if(hasRelic('r_weak_mask')) wVal += 1; state.enemy.weak += wVal; statusApplied = true; showFloatText("虚弱", "#bbb", getCenter('enemy-avatar')); }
         if(statusApplied && hasRelic('r_status_prism')) { state.p_chant = Math.min(12, state.p_chant + 1); showFloatText("棱镜咏唱 +1", "var(--purple)", getCenter('ui-hp')); }
-        if(card.tags && card.tags.includes('充能')) { let eAmt = 1; if(hasRelic('r_energy_crys')) eAmt += 1; state.mp += eAmt; showFloatText(`充能 +${eAmt}`, "var(--gold)", getCenter('ui-mp')); }
+        if((card.tags && card.tags.includes('充能')) || hasDirectCardEffect(card, 'energy')) { let eAmt = 1; if(card.tags && card.tags.includes('充能') && hasRelic('r_energy_crys')) eAmt += 1; state.mp += eAmt; showFloatText(`能量 +${eAmt}`, "var(--gold)", getCenter('ui-mp')); }
         if(card.tags && card.tags.includes('荆棘')) { let tVal = 8; if(hasRelic('r_thorn_shield_new')) tVal *= 2; state.player.thorns += tVal; showFloatText(`获得荆棘 +${tVal}`, "var(--nature)", getCenter('ui-hp')); updateTopBar(); }
-        if(card.tags && card.tags.includes('抽牌') && !isEcho) { let drawCount = getCardDrawCount(card); if(hasRelic('r_luck_box')) drawCount += 1; await drawCards(drawCount); }
+        if(((card.tags && card.tags.includes('抽牌')) || hasDirectCardEffect(card, 'draw')) && !isEcho) { let drawCount = getCardDrawCount(card); if(card.tags && card.tags.includes('抽牌') && hasRelic('r_luck_box')) drawCount += 1; await drawCards(drawCount); }
         if(hasRelic('r_status_ledger') && getEnemyDebuffTypeCount() >= 4 && card.type === '能力' && !state.r_status_ledger_used && !isEcho) { state.r_status_ledger_used = true; await drawCards(1); }
         if(hasRelic('r_double_quill') && card.type === '能力' && cardsPlayedThisTurn === 2 && !isEcho) { await drawCards(1); showFloatText("双墨抽牌", "var(--purple)", getCenter('ui-deck-count')); }
         grantRoleSynergy(card, isEcho, targets);

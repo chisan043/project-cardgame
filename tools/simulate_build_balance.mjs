@@ -22,7 +22,8 @@ function loadGameData() {
         CHARACTER_CARD_POOLS, SPECIAL_EPIC_POOLS, RELIC_POOL, RELIC_BUILD_TAGS_BY_ID,
         ENEMIES, CHARACTERS, getScaledCardValue,
         getAbilityPotency, getCardDrawCount, getCardHealValue,
-        getCardChantGain, getProtectionValue, getWindGain, getSidestepGain
+        getCardChantGain, getProtectionValue, getWindGain, getSidestepGain,
+        getCardRecycleModes, hasDirectCardEffect
     };`, context);
     return context.__balanceData;
 }
@@ -382,7 +383,7 @@ function estimateCard(state, card, incoming) {
     let value = state.data.getScaledCardValue(card);
     if (tags.includes('重击')) value *= hasRelic(state, 'r_heavy_badge') ? 2.5 : 2;
     if (tags.includes('连击') && state.cardsPlayed > 0) value *= 1.5;
-    let repeats = 1 + (tags.includes('连射') ? 1 : 0) + (tags.includes('多段') ? 1 : 0) + (tags.includes('回响') ? 1 : 0);
+    let repeats = 1 + (tags.includes('追击') ? 1 : 0) + (tags.includes('回响') ? 1 : 0);
     if (card.type === '攻击') {
         if (tags.includes('爆发')) value += state.chant ? state.chant * 7 : 4;
         if (tags.includes('圣剑')) value += Math.floor(state.armor * (hasRelic(state, 'r_sword_oath') ? 0.6 : 0.5)) + state.counter * 4;
@@ -390,10 +391,14 @@ function estimateCard(state, card, incoming) {
         if (tags.includes('放血')) score += state.enemy.bleed * 3;
         if (tags.includes('吸血')) score += Math.min(state.maxHp - state.hp, value / 2) * 0.8;
     }
-    if (card.type === '防御') score += Math.min(incoming + 8, value + (tags.includes('庇护') ? state.data.getProtectionValue(card) : 0)) * (incoming > 0 ? 1.25 : 0.45);
-    if (tags.includes('治愈')) score += Math.min(state.maxHp - state.hp, state.data.getCardHealValue(card)) * 1.15;
-    if (tags.includes('抽牌')) score += state.data.getCardDrawCount(card) * 5;
-    if (tags.includes('充能') || tags.includes('自然')) score += 5;
+    const hasProtection = tags.includes('庇护') || state.data.hasDirectCardEffect(card, 'protection');
+    const hasHeal = tags.includes('治愈') || state.data.hasDirectCardEffect(card, 'heal');
+    const hasDraw = tags.includes('抽牌') || state.data.hasDirectCardEffect(card, 'draw');
+    const hasEnergy = tags.includes('充能') || state.data.hasDirectCardEffect(card, 'energy');
+    if (card.type === '防御') score += Math.min(incoming + 8, value + (hasProtection ? state.data.getProtectionValue(card) : 0)) * (incoming > 0 ? 1.25 : 0.45);
+    if (hasHeal) score += Math.min(state.maxHp - state.hp, state.data.getCardHealValue(card)) * 1.15;
+    if (hasDraw) score += state.data.getCardDrawCount(card) * 5;
+    if (hasEnergy || tags.includes('自然')) score += 5;
     if (tags.includes('咏唱')) score += state.data.getCardChantGain(card) * 5;
     if (tags.includes('蓄力')) score += state.data.getWindGain(card) * 4;
     if (tags.includes('错身')) score += incoming > 0 ? 8 : 3;
@@ -443,7 +448,7 @@ function discardPlayedCard(state, card) {
         state.exhaust.push(card);
         if (hasRelic(state, 'r_exhaust_dmg')) state.battleDamage += 2;
     }
-    else if ((card.tags || []).includes('保留')) state.retained.push(card);
+    else if ((card.tags || []).includes('保留') || state.data.hasDirectCardEffect(card, 'retain')) state.retained.push(card);
     else state.discard.push(card);
 }
 
@@ -514,7 +519,9 @@ function executeCard(state, card, echo = false) {
         state.battleDamage += card.up ? 5 : 3;
         if (hasRelic(state, 'r_blood_suture')) heal(state, 2);
     }
-    if (tags.includes('庇护')) state.protection += state.data.getProtectionValue(card) + (hasRelic(state, 'r_protect_armor') ? 3 : 0);
+    if (tags.includes('庇护') || state.data.hasDirectCardEffect(card, 'protection')) {
+        state.protection += state.data.getProtectionValue(card) + (tags.includes('庇护') && hasRelic(state, 'r_protect_armor') ? 3 : 0);
+    }
     if (tags.includes('反击')) state.counter = 1;
     if (tags.includes('错身') && !echo) {
         let gain = state.data.getSidestepGain(card) + (hasRelic(state, 'r_wind_quiver') ? 1 : 0);
@@ -549,9 +556,9 @@ function executeCard(state, card, echo = false) {
             draw(state, 1);
         }
     }
-    if (tags.includes('充能')) state.energy += 1;
-    if (tags.includes('治愈')) heal(state, state.data.getCardHealValue(card));
-    if (tags.includes('抽牌') && !echo) draw(state, state.data.getCardDrawCount(card));
+    if (tags.includes('充能') || state.data.hasDirectCardEffect(card, 'energy')) state.energy += 1;
+    if (tags.includes('治愈') || state.data.hasDirectCardEffect(card, 'heal')) heal(state, state.data.getCardHealValue(card));
+    if ((tags.includes('抽牌') || state.data.hasDirectCardEffect(card, 'draw')) && !echo) draw(state, state.data.getCardDrawCount(card));
     if (tags.includes('荆棘')) state.thorns += hasRelic(state, 'r_thorn_shield_new') ? 16 : 8;
     const statusBonus = hasRelic(state, 'r_plague_glass') && card.type === '能力' && enemyDebuffCount(state) > 0 ? 1 : 0;
     if (tags.includes('剧毒')) state.enemy.poison += 3 * (card.type === '能力' ? state.data.getAbilityPotency(card) : 1) + statusBonus + (hasRelic(state, 'r_poison_fang') ? 1 : 0);
@@ -564,9 +571,13 @@ function executeCard(state, card, echo = false) {
     if (tags.includes('易伤')) state.enemy.vuln += 2 * (card.type === '能力' ? state.data.getAbilityPotency(card) : 1);
     if (tags.includes('虚弱')) state.enemy.weak += 2 * (card.type === '能力' ? state.data.getAbilityPotency(card) : 1);
     if (tags.includes('眩晕')) state.enemy.stun += 1;
-    if (tags.includes('招魂') && !echo) cycleReturned = returnFromExhaust(state, 'hand') || cycleReturned;
-    if (tags.includes('轮回') && !echo) cycleReturned = returnFromExhaust(state, 'draw') || cycleReturned;
-    if (tags.includes('拾遗') && !echo) cycleReturned = returnFromDiscard(state) || cycleReturned;
+    if (tags.includes('回收') && !echo) {
+        for (const mode of state.data.getCardRecycleModes(card)) {
+            if (mode === 'exhaustToHand') cycleReturned = returnFromExhaust(state, 'hand') || cycleReturned;
+            else if (mode === 'exhaustToDraw') cycleReturned = returnFromExhaust(state, 'draw') || cycleReturned;
+            else if (mode === 'discardToHand') cycleReturned = returnFromDiscard(state) || cycleReturned;
+        }
+    }
     if (tags.includes('放血') && state.enemy.bleed > 0) {
         hitEnemy(state, state.enemy.bleed * (hasRelic(state, 'r_bleed_knife') ? 5 : 3), true);
         state.enemy.bleed = hasRelic(state, 'r_rupture_charm') ? 2 : 0;
@@ -594,7 +605,7 @@ function executeCard(state, card, echo = false) {
             state.protection += 3;
             hitEnemy(state, Math.max(3, Math.ceil(value * 0.4)), tags.includes('穿甲'));
         }
-        if (hasRelic(state, 'r_multishot_fletching') && tags.includes('多段')) damage += 2;
+        if (hasRelic(state, 'r_multishot_fletching') && tags.includes('追击')) damage += 2;
         const pierce = tags.includes('穿甲');
         if (pierce && hasRelic(state, 'r_pierce_amulet')) damage = Math.floor(damage * 1.25);
         const dealt = hitEnemy(state, damage, pierce);
@@ -664,7 +675,7 @@ function playPlayerTurn(state, move) {
             if (hasRelic(state, 'r_echo_mirror_relic')) executeCard(state, card, true);
         }
         if (state.hp <= 0 || state.enemy.hp <= 0) break;
-        const extraRuns = specialWindRun + ((card.tags || []).includes('连射') ? 1 : 0) + ((card.tags || []).includes('多段') ? 1 : 0);
+        const extraRuns = specialWindRun + ((card.tags || []).includes('追击') ? 1 : 0);
         for (let i = 0; i < extraRuns && state.enemy.hp > 0; i++) executeCard(state, card, true);
         discardPlayedCard(state, card);
         if (!(card.tags || []).includes('复刻')) state.lastCard = card;

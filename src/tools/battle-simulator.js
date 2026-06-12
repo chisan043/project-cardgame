@@ -28,9 +28,9 @@ class BattleSimulator {
                 calamity: { name: '灾厄术士', focus: ['诅咒', '虚弱', '易伤'] }
             },
             archer: {
-                gale: { name: '疾风连射', focus: ['连射', '蓄力', '自然'] },
+                gale: { name: '疾风连射', focus: ['追击', '蓄力', '自然'] },
                 venom: { name: '猎毒陷袭', focus: ['剧毒', '出血', '放血'] },
-                exile: { name: '放逐游侠', focus: ['放逐', '轮回', '拾遗'] }
+                exile: { name: '放逐游侠', focus: ['放逐', '回收'] }
             }
         };
 
@@ -83,12 +83,12 @@ class BattleSimulator {
     getMockArcherCards() {
         return [
             { name: '拉弓瞄准', type: '能力', cost: 1, val: 9, tags: ['蓄力', '抽牌'], rarity: '稀有' },
-            { name: '疾风连射', type: '攻击', cost: 1, val: 5, tags: ['连射'], rarity: '稀有' },
+            { name: '疾风连射', type: '攻击', cost: 1, val: 5, tags: ['追击'], rarity: '稀有' },
             { name: '林风整备', type: '能力', cost: 1, val: 6, tags: ['自然', '蓄力'], rarity: '稀有' },
-            { name: '狩影穿枝', type: '攻击', cost: 2, val: 10, tags: ['连射', '穿甲'], rarity: '稀有' },
-            { name: '森冠齐射', type: '攻击', cost: 2, val: 7, tags: ['连射', '多段', '穿甲'], rarity: '史诗' },
+            { name: '狩影穿枝', type: '攻击', cost: 2, val: 10, tags: ['追击', '穿甲'], rarity: '稀有' },
+            { name: '森冠齐射', type: '攻击', cost: 2, val: 7, tags: ['追击', '穿甲'], rarity: '史诗' },
             { name: '鹰眼贯枝', type: '攻击', cost: 2, val: 12, tags: ['蓄力', '穿甲'], rarity: '稀有' },
-            { name: '基础射击', type: '攻击', cost: 1, val: 5, tags: ['连射'], rarity: '普通' },
+            { name: '基础射击', type: '攻击', cost: 1, val: 5, tags: ['追击'], rarity: '普通' },
             { name: '林地回避', type: '能力', cost: 1, val: 5, tags: ['自然'], rarity: '普通' }
         ];
     }

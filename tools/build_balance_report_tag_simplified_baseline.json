@@ -1,0 +1,1329 @@
+{
+  "generatedAt": "2026-06-12T06:41:56.339Z",
+  "model": "card-build baseline v1",
+  "mode": "baseline",
+  "runsPerBuildAndCheckpoint": 3000,
+  "seed": 20260612,
+  "checkpoints": [
+    {
+      "id": "early",
+      "label": "前期普通",
+      "floor": 3,
+      "type": "normal"
+    },
+    {
+      "id": "mid",
+      "label": "中期普通",
+      "floor": 8,
+      "type": "normal"
+    },
+    {
+      "id": "late",
+      "label": "后期普通",
+      "floor": 14,
+      "type": "normal"
+    },
+    {
+      "id": "elite",
+      "label": "后期精英",
+      "floor": 15,
+      "type": "elite"
+    },
+    {
+      "id": "boss",
+      "label": "最终首领",
+      "floor": 19,
+      "type": "boss"
+    }
+  ],
+  "results": [
+    {
+      "roleId": "hero_warrior",
+      "role": "勇者战士",
+      "buildId": "oathblade",
+      "build": "圣剑反击",
+      "loadout": {
+        "core": null,
+        "relics": []
+      },
+      "checkpoints": {
+        "early": {
+          "winRate": 1,
+          "averageTurns": 2.354,
+          "averageHpLeft": 89.922,
+          "enemies": {
+            "迷途妖狐": {
+              "games": 574,
+              "wins": 574
+            },
+            "病弱史莱姆": {
+              "games": 576,
+              "wins": 576
+            },
+            "枯骨煞兵": {
+              "games": 663,
+              "wins": 663
+            },
+            "嗜血蝙蝠": {
+              "games": 591,
+              "wins": 591
+            },
+            "贪婪盗贼": {
+              "games": 596,
+              "wins": 596
+            }
+          }
+        },
+        "mid": {
+          "winRate": 0.984,
+          "averageTurns": 4.899,
+          "averageHpLeft": 81.25433333333334,
+          "enemies": {
+            "荒野煞狼": {
+              "games": 566,
+              "wins": 566
+            },
+            "剧毒蟾蜍": {
+              "games": 583,
+              "wins": 583
+            },
+            "暴躁野猪": {
+              "games": 616,
+              "wins": 579
+            },
+            "铁甲巨蟹": {
+              "games": 625,
+              "wins": 616
+            },
+            "千载魔蛛": {
+              "games": 610,
+              "wins": 608
+            }
+          }
+        },
+        "late": {
+          "winRate": 0.743,
+          "averageTurns": 6.5713333333333335,
+          "averageHpLeft": 50.757666666666665,
+          "enemies": {
+            "缝合巨怪": {
+              "games": 607,
+              "wins": 554
+            },
+            "幽冥法师": {
+              "games": 593,
+              "wins": 581
+            },
+            "巨力石魔": {
+              "games": 596,
+              "wins": 78
+            },
+            "堕落剑客": {
+              "games": 588,
+              "wins": 459
+            },
+            "魅影刺客": {
+              "games": 616,
+              "wins": 557
+            }
+          }
+        },
+        "elite": {
+          "winRate": 0.344,
+          "averageTurns": 6.804333333333333,
+          "averageHpLeft": 24.763,
+          "enemies": {
+            "【精英】狂暴牛头人": {
+              "games": 990,
+              "wins": 34
+            },
+            "【精英】猩红血巫": {
+              "games": 1037,
+              "wins": 923
+            },
+            "【精英】不死骨龙": {
+              "games": 973,
+              "wins": 75
+            }
+          }
+        },
+        "boss": {
+          "winRate": 0.059,
+          "averageTurns": 6.050666666666666,
+          "averageHpLeft": 3.5446666666666666,
+          "enemies": {
+            "【首领】鬼面修罗": {
+              "games": 1495,
+              "wins": 20
+            },
+            "【深渊主宰】": {
+              "games": 1505,
+              "wins": 157
+            }
+          }
+        }
+      },
+      "expedition": {
+        "clearRate": 0.027333333333333334,
+        "reached": [
+          3000,
+          3000,
+          2895,
+          1723,
+          549
+        ],
+        "deaths": {
+          "late": 1172,
+          "mid": 105,
+          "boss": 467,
+          "elite": 1174
+        }
+      }
+    },
+    {
+      "roleId": "hero_warrior",
+      "role": "勇者战士",
+      "buildId": "execution",
+      "build": "处刑连斩",
+      "loadout": {
+        "core": null,
+        "relics": []
+      },
+      "checkpoints": {
+        "early": {
+          "winRate": 1,
+          "averageTurns": 1.835,
+          "averageHpLeft": 89.82233333333333,
+          "enemies": {
+            "嗜血蝙蝠": {
+              "games": 595,
+              "wins": 595
+            },
+            "病弱史莱姆": {
+              "games": 604,
+              "wins": 604
+            },
+            "迷途妖狐": {
+              "games": 570,
+              "wins": 570
+            },
+            "枯骨煞兵": {
+              "games": 586,
+              "wins": 586
+            },
+            "贪婪盗贼": {
+              "games": 645,
+              "wins": 645
+            }
+          }
+        },
+        "mid": {
+          "winRate": 0.9676666666666667,
+          "averageTurns": 4.339,
+          "averageHpLeft": 67.84433333333334,
+          "enemies": {
+            "千载魔蛛": {
+              "games": 616,
+              "wins": 616
+            },
+            "荒野煞狼": {
+              "games": 616,
+              "wins": 616
+            },
+            "暴躁野猪": {
+              "games": 580,
+              "wins": 483
+            },
+            "剧毒蟾蜍": {
+              "games": 584,
+              "wins": 584
+            },
+            "铁甲巨蟹": {
+              "games": 604,
+              "wins": 604
+            }
+          }
+        },
+        "late": {
+          "winRate": 0.4136666666666667,
+          "averageTurns": 5.448666666666667,
+          "averageHpLeft": 15.769333333333334,
+          "enemies": {
+            "幽冥法师": {
+              "games": 600,
+              "wins": 392
+            },
+            "魅影刺客": {
+              "games": 620,
+              "wins": 344
+            },
+            "缝合巨怪": {
+              "games": 566,
+              "wins": 204
+            },
+            "堕落剑客": {
+              "games": 603,
+              "wins": 252
+            },
+            "巨力石魔": {
+              "games": 611,
+              "wins": 49
+            }
+          }
+        },
+        "elite": {
+          "winRate": 0.04633333333333333,
+          "averageTurns": 5.42,
+          "averageHpLeft": 1.3013333333333332,
+          "enemies": {
+            "【精英】不死骨龙": {
+              "games": 970,
+              "wins": 11
+            },
+            "【精英】猩红血巫": {
+              "games": 988,
+              "wins": 103
+            },
+            "【精英】狂暴牛头人": {
+              "games": 1042,
+              "wins": 25
+            }
+          }
+        },
+        "boss": {
+          "winRate": 0.0006666666666666666,
+          "averageTurns": 4.230333333333333,
+          "averageHpLeft": 0.019333333333333334,
+          "enemies": {
+            "【首领】鬼面修罗": {
+              "games": 1508,
+              "wins": 1
+            },
+            "【深渊主宰】": {
+              "games": 1492,
+              "wins": 1
+            }
+          }
+        }
+      },
+      "expedition": {
+        "clearRate": 0,
+        "reached": [
+          3000,
+          3000,
+          2828,
+          704,
+          58
+        ],
+        "deaths": {
+          "late": 2124,
+          "elite": 646,
+          "boss": 58,
+          "mid": 172
+        }
+      }
+    },
+    {
+      "roleId": "hero_warrior",
+      "role": "勇者战士",
+      "buildId": "bloodoath",
+      "build": "血誓狂战",
+      "loadout": {
+        "core": null,
+        "relics": []
+      },
+      "checkpoints": {
+        "early": {
+          "winRate": 1,
+          "averageTurns": 2.0476666666666667,
+          "averageHpLeft": 87.46033333333334,
+          "enemies": {
+            "贪婪盗贼": {
+              "games": 606,
+              "wins": 606
+            },
+            "嗜血蝙蝠": {
+              "games": 585,
+              "wins": 585
+            },
+            "枯骨煞兵": {
+              "games": 598,
+              "wins": 598
+            },
+            "迷途妖狐": {
+              "games": 598,
+              "wins": 598
+            },
+            "病弱史莱姆": {
+              "games": 613,
+              "wins": 613
+            }
+          }
+        },
+        "mid": {
+          "winRate": 0.9856666666666667,
+          "averageTurns": 4.350333333333333,
+          "averageHpLeft": 76.928,
+          "enemies": {
+            "千载魔蛛": {
+              "games": 585,
+              "wins": 585
+            },
+            "剧毒蟾蜍": {
+              "games": 609,
+              "wins": 609
+            },
+            "荒野煞狼": {
+              "games": 602,
+              "wins": 602
+            },
+            "铁甲巨蟹": {
+              "games": 588,
+              "wins": 588
+            },
+            "暴躁野猪": {
+              "games": 616,
+              "wins": 573
+            }
+          }
+        },
+        "late": {
+          "winRate": 0.6273333333333333,
+          "averageTurns": 5.422666666666666,
+          "averageHpLeft": 38.3,
+          "enemies": {
+            "魅影刺客": {
+              "games": 572,
+              "wins": 437
+            },
+            "缝合巨怪": {
+              "games": 610,
+              "wins": 499
+            },
+            "巨力石魔": {
+              "games": 600,
+              "wins": 12
+            },
+            "堕落剑客": {
+              "games": 597,
+              "wins": 339
+            },
+            "幽冥法师": {
+              "games": 621,
+              "wins": 595
+            }
+          }
+        },
+        "elite": {
+          "winRate": 0.20566666666666666,
+          "averageTurns": 5.652666666666667,
+          "averageHpLeft": 14.050666666666666,
+          "enemies": {
+            "【精英】不死骨龙": {
+              "games": 998,
+              "wins": 11
+            },
+            "【精英】猩红血巫": {
+              "games": 998,
+              "wins": 602
+            },
+            "【精英】狂暴牛头人": {
+              "games": 1004,
+              "wins": 4
+            }
+          }
+        },
+        "boss": {
+          "winRate": 0,
+          "averageTurns": 3.508,
+          "averageHpLeft": 0,
+          "enemies": {
+            "【首领】鬼面修罗": {
+              "games": 1514,
+              "wins": 0
+            },
+            "【深渊主宰】": {
+              "games": 1486,
+              "wins": 0
+            }
+          }
+        }
+      },
+      "expedition": {
+        "clearRate": 0.0003333333333333333,
+        "reached": [
+          3000,
+          3000,
+          2905,
+          1342,
+          250
+        ],
+        "deaths": {
+          "late": 1563,
+          "elite": 1092,
+          "boss": 249,
+          "mid": 95
+        }
+      }
+    },
+    {
+      "roleId": "hero_mage",
+      "role": "萝莉魔导士",
+      "buildId": "chant",
+      "build": "星火咏唱",
+      "loadout": {
+        "core": null,
+        "relics": []
+      },
+      "checkpoints": {
+        "early": {
+          "winRate": 1,
+          "averageTurns": 1.6386666666666667,
+          "averageHpLeft": 71.64533333333334,
+          "enemies": {
+            "贪婪盗贼": {
+              "games": 588,
+              "wins": 588
+            },
+            "嗜血蝙蝠": {
+              "games": 586,
+              "wins": 586
+            },
+            "枯骨煞兵": {
+              "games": 640,
+              "wins": 640
+            },
+            "迷途妖狐": {
+              "games": 577,
+              "wins": 577
+            },
+            "病弱史莱姆": {
+              "games": 609,
+              "wins": 609
+            }
+          }
+        },
+        "mid": {
+          "winRate": 0.971,
+          "averageTurns": 3.9046666666666665,
+          "averageHpLeft": 60.05233333333333,
+          "enemies": {
+            "剧毒蟾蜍": {
+              "games": 551,
+              "wins": 551
+            },
+            "铁甲巨蟹": {
+              "games": 630,
+              "wins": 630
+            },
+            "荒野煞狼": {
+              "games": 610,
+              "wins": 610
+            },
+            "暴躁野猪": {
+              "games": 593,
+              "wins": 506
+            },
+            "千载魔蛛": {
+              "games": 616,
+              "wins": 616
+            }
+          }
+        },
+        "late": {
+          "winRate": 0.5766666666666667,
+          "averageTurns": 5.451333333333333,
+          "averageHpLeft": 26.962666666666667,
+          "enemies": {
+            "幽冥法师": {
+              "games": 621,
+              "wins": 571
+            },
+            "缝合巨怪": {
+              "games": 584,
+              "wins": 421
+            },
+            "巨力石魔": {
+              "games": 627,
+              "wins": 13
+            },
+            "魅影刺客": {
+              "games": 588,
+              "wins": 432
+            },
+            "堕落剑客": {
+              "games": 580,
+              "wins": 293
+            }
+          }
+        },
+        "elite": {
+          "winRate": 0.17433333333333334,
+          "averageTurns": 6.39,
+          "averageHpLeft": 10.483333333333333,
+          "enemies": {
+            "【精英】狂暴牛头人": {
+              "games": 963,
+              "wins": 2
+            },
+            "【精英】不死骨龙": {
+              "games": 1039,
+              "wins": 2
+            },
+            "【精英】猩红血巫": {
+              "games": 998,
+              "wins": 519
+            }
+          }
+        },
+        "boss": {
+          "winRate": 0,
+          "averageTurns": 3.550333333333333,
+          "averageHpLeft": 0,
+          "enemies": {
+            "【深渊主宰】": {
+              "games": 1512,
+              "wins": 0
+            },
+            "【首领】鬼面修罗": {
+              "games": 1488,
+              "wins": 0
+            }
+          }
+        }
+      },
+      "expedition": {
+        "clearRate": 0,
+        "reached": [
+          3000,
+          3000,
+          2797,
+          929,
+          195
+        ],
+        "deaths": {
+          "late": 1868,
+          "elite": 734,
+          "mid": 203,
+          "boss": 195
+        }
+      }
+    },
+    {
+      "roleId": "hero_mage",
+      "role": "萝莉魔导士",
+      "buildId": "mirror",
+      "build": "镜像回路",
+      "loadout": {
+        "core": null,
+        "relics": []
+      },
+      "checkpoints": {
+        "early": {
+          "winRate": 1,
+          "averageTurns": 1.6693333333333333,
+          "averageHpLeft": 70.48533333333333,
+          "enemies": {
+            "病弱史莱姆": {
+              "games": 580,
+              "wins": 580
+            },
+            "迷途妖狐": {
+              "games": 598,
+              "wins": 598
+            },
+            "枯骨煞兵": {
+              "games": 584,
+              "wins": 584
+            },
+            "嗜血蝙蝠": {
+              "games": 633,
+              "wins": 633
+            },
+            "贪婪盗贼": {
+              "games": 605,
+              "wins": 605
+            }
+          }
+        },
+        "mid": {
+          "winRate": 0.9223333333333333,
+          "averageTurns": 3.7276666666666665,
+          "averageHpLeft": 50.620666666666665,
+          "enemies": {
+            "暴躁野猪": {
+              "games": 601,
+              "wins": 381
+            },
+            "荒野煞狼": {
+              "games": 593,
+              "wins": 593
+            },
+            "剧毒蟾蜍": {
+              "games": 619,
+              "wins": 610
+            },
+            "千载魔蛛": {
+              "games": 624,
+              "wins": 623
+            },
+            "铁甲巨蟹": {
+              "games": 563,
+              "wins": 560
+            }
+          }
+        },
+        "late": {
+          "winRate": 0.326,
+          "averageTurns": 4.604333333333333,
+          "averageHpLeft": 12.481333333333334,
+          "enemies": {
+            "幽冥法师": {
+              "games": 591,
+              "wins": 382
+            },
+            "魅影刺客": {
+              "games": 592,
+              "wins": 257
+            },
+            "堕落剑客": {
+              "games": 633,
+              "wins": 159
+            },
+            "缝合巨怪": {
+              "games": 599,
+              "wins": 178
+            },
+            "巨力石魔": {
+              "games": 585,
+              "wins": 2
+            }
+          }
+        },
+        "elite": {
+          "winRate": 0.063,
+          "averageTurns": 4.594,
+          "averageHpLeft": 3.087,
+          "enemies": {
+            "【精英】猩红血巫": {
+              "games": 983,
+              "wins": 188
+            },
+            "【精英】不死骨龙": {
+              "games": 999,
+              "wins": 0
+            },
+            "【精英】狂暴牛头人": {
+              "games": 1018,
+              "wins": 1
+            }
+          }
+        },
+        "boss": {
+          "winRate": 0,
+          "averageTurns": 3.0183333333333335,
+          "averageHpLeft": 0.25233333333333335,
+          "enemies": {
+            "【首领】鬼面修罗": {
+              "games": 1490,
+              "wins": 0
+            },
+            "【深渊主宰】": {
+              "games": 1510,
+              "wins": 0
+            }
+          }
+        }
+      },
+      "expedition": {
+        "clearRate": 0,
+        "reached": [
+          3000,
+          3000,
+          2640,
+          485,
+          55
+        ],
+        "deaths": {
+          "late": 2155,
+          "mid": 360,
+          "elite": 430,
+          "boss": 55
+        }
+      }
+    },
+    {
+      "roleId": "hero_mage",
+      "role": "萝莉魔导士",
+      "buildId": "calamity",
+      "build": "灾厄术士",
+      "loadout": {
+        "core": null,
+        "relics": []
+      },
+      "checkpoints": {
+        "early": {
+          "winRate": 1,
+          "averageTurns": 1.927,
+          "averageHpLeft": 69.32566666666666,
+          "enemies": {
+            "迷途妖狐": {
+              "games": 624,
+              "wins": 624
+            },
+            "贪婪盗贼": {
+              "games": 605,
+              "wins": 605
+            },
+            "病弱史莱姆": {
+              "games": 580,
+              "wins": 580
+            },
+            "嗜血蝙蝠": {
+              "games": 610,
+              "wins": 610
+            },
+            "枯骨煞兵": {
+              "games": 581,
+              "wins": 581
+            }
+          }
+        },
+        "mid": {
+          "winRate": 0.9333333333333333,
+          "averageTurns": 4.550666666666666,
+          "averageHpLeft": 47.279333333333334,
+          "enemies": {
+            "暴躁野猪": {
+              "games": 597,
+              "wins": 410
+            },
+            "荒野煞狼": {
+              "games": 609,
+              "wins": 609
+            },
+            "铁甲巨蟹": {
+              "games": 562,
+              "wins": 562
+            },
+            "剧毒蟾蜍": {
+              "games": 605,
+              "wins": 594
+            },
+            "千载魔蛛": {
+              "games": 627,
+              "wins": 625
+            }
+          }
+        },
+        "late": {
+          "winRate": 0.31733333333333336,
+          "averageTurns": 5.48,
+          "averageHpLeft": 11.087,
+          "enemies": {
+            "巨力石魔": {
+              "games": 607,
+              "wins": 53
+            },
+            "魅影刺客": {
+              "games": 601,
+              "wins": 226
+            },
+            "幽冥法师": {
+              "games": 624,
+              "wins": 334
+            },
+            "堕落剑客": {
+              "games": 563,
+              "wins": 138
+            },
+            "缝合巨怪": {
+              "games": 605,
+              "wins": 201
+            }
+          }
+        },
+        "elite": {
+          "winRate": 0.06433333333333334,
+          "averageTurns": 5.4206666666666665,
+          "averageHpLeft": 2.2943333333333333,
+          "enemies": {
+            "【精英】不死骨龙": {
+              "games": 1015,
+              "wins": 34
+            },
+            "【精英】狂暴牛头人": {
+              "games": 957,
+              "wins": 36
+            },
+            "【精英】猩红血巫": {
+              "games": 1028,
+              "wins": 123
+            }
+          }
+        },
+        "boss": {
+          "winRate": 0.007666666666666666,
+          "averageTurns": 4.487,
+          "averageHpLeft": 0.372,
+          "enemies": {
+            "【深渊主宰】": {
+              "games": 1515,
+              "wins": 7
+            },
+            "【首领】鬼面修罗": {
+              "games": 1485,
+              "wins": 16
+            }
+          }
+        }
+      },
+      "expedition": {
+        "clearRate": 0,
+        "reached": [
+          3000,
+          3000,
+          2687,
+          657,
+          92
+        ],
+        "deaths": {
+          "late": 2030,
+          "mid": 313,
+          "elite": 565,
+          "boss": 92
+        }
+      }
+    },
+    {
+      "roleId": "hero_archer",
+      "role": "精灵弓箭手",
+      "buildId": "gale",
+      "build": "疾风连射",
+      "loadout": {
+        "core": null,
+        "relics": []
+      },
+      "checkpoints": {
+        "early": {
+          "winRate": 0.9986666666666667,
+          "averageTurns": 2.088,
+          "averageHpLeft": 77.08033333333333,
+          "enemies": {
+            "嗜血蝙蝠": {
+              "games": 573,
+              "wins": 573
+            },
+            "迷途妖狐": {
+              "games": 582,
+              "wins": 580
+            },
+            "贪婪盗贼": {
+              "games": 618,
+              "wins": 618
+            },
+            "枯骨煞兵": {
+              "games": 634,
+              "wins": 632
+            },
+            "病弱史莱姆": {
+              "games": 593,
+              "wins": 593
+            }
+          }
+        },
+        "mid": {
+          "winRate": 0.9646666666666667,
+          "averageTurns": 4.828,
+          "averageHpLeft": 60.06466666666667,
+          "enemies": {
+            "暴躁野猪": {
+              "games": 628,
+              "wins": 537
+            },
+            "千载魔蛛": {
+              "games": 594,
+              "wins": 593
+            },
+            "剧毒蟾蜍": {
+              "games": 554,
+              "wins": 553
+            },
+            "荒野煞狼": {
+              "games": 613,
+              "wins": 613
+            },
+            "铁甲巨蟹": {
+              "games": 611,
+              "wins": 598
+            }
+          }
+        },
+        "late": {
+          "winRate": 0.502,
+          "averageTurns": 6.526,
+          "averageHpLeft": 23.425333333333334,
+          "enemies": {
+            "魅影刺客": {
+              "games": 588,
+              "wins": 385
+            },
+            "缝合巨怪": {
+              "games": 638,
+              "wins": 399
+            },
+            "幽冥法师": {
+              "games": 628,
+              "wins": 506
+            },
+            "巨力石魔": {
+              "games": 564,
+              "wins": 13
+            },
+            "堕落剑客": {
+              "games": 582,
+              "wins": 203
+            }
+          }
+        },
+        "elite": {
+          "winRate": 0.11833333333333333,
+          "averageTurns": 7.326,
+          "averageHpLeft": 8.661,
+          "enemies": {
+            "【精英】狂暴牛头人": {
+              "games": 954,
+              "wins": 1
+            },
+            "【精英】猩红血巫": {
+              "games": 1031,
+              "wins": 354
+            },
+            "【精英】不死骨龙": {
+              "games": 1015,
+              "wins": 0
+            }
+          }
+        },
+        "boss": {
+          "winRate": 0,
+          "averageTurns": 4.356,
+          "averageHpLeft": 0.4693333333333333,
+          "enemies": {
+            "【首领】鬼面修罗": {
+              "games": 1464,
+              "wins": 0
+            },
+            "【深渊主宰】": {
+              "games": 1536,
+              "wins": 0
+            }
+          }
+        }
+      },
+      "expedition": {
+        "clearRate": 0,
+        "reached": [
+          3000,
+          2995,
+          2727,
+          691,
+          80
+        ],
+        "deaths": {
+          "late": 2036,
+          "elite": 611,
+          "mid": 268,
+          "boss": 80,
+          "early": 5
+        }
+      }
+    },
+    {
+      "roleId": "hero_archer",
+      "role": "精灵弓箭手",
+      "buildId": "venom",
+      "build": "猎毒陷袭",
+      "loadout": {
+        "core": null,
+        "relics": []
+      },
+      "checkpoints": {
+        "early": {
+          "winRate": 1,
+          "averageTurns": 1.9993333333333334,
+          "averageHpLeft": 75.63166666666666,
+          "enemies": {
+            "嗜血蝙蝠": {
+              "games": 596,
+              "wins": 596
+            },
+            "迷途妖狐": {
+              "games": 575,
+              "wins": 575
+            },
+            "枯骨煞兵": {
+              "games": 648,
+              "wins": 648
+            },
+            "病弱史莱姆": {
+              "games": 589,
+              "wins": 589
+            },
+            "贪婪盗贼": {
+              "games": 592,
+              "wins": 592
+            }
+          }
+        },
+        "mid": {
+          "winRate": 0.966,
+          "averageTurns": 4.042666666666666,
+          "averageHpLeft": 56.13433333333333,
+          "enemies": {
+            "铁甲巨蟹": {
+              "games": 591,
+              "wins": 590
+            },
+            "荒野煞狼": {
+              "games": 578,
+              "wins": 578
+            },
+            "千载魔蛛": {
+              "games": 604,
+              "wins": 604
+            },
+            "剧毒蟾蜍": {
+              "games": 633,
+              "wins": 632
+            },
+            "暴躁野猪": {
+              "games": 594,
+              "wins": 494
+            }
+          }
+        },
+        "late": {
+          "winRate": 0.5376666666666666,
+          "averageTurns": 5.198333333333333,
+          "averageHpLeft": 23.725666666666665,
+          "enemies": {
+            "堕落剑客": {
+              "games": 635,
+              "wins": 300
+            },
+            "魅影刺客": {
+              "games": 570,
+              "wins": 360
+            },
+            "巨力石魔": {
+              "games": 618,
+              "wins": 154
+            },
+            "缝合巨怪": {
+              "games": 607,
+              "wins": 365
+            },
+            "幽冥法师": {
+              "games": 570,
+              "wins": 434
+            }
+          }
+        },
+        "elite": {
+          "winRate": 0.19766666666666666,
+          "averageTurns": 5.440333333333333,
+          "averageHpLeft": 9.146666666666667,
+          "enemies": {
+            "【精英】不死骨龙": {
+              "games": 979,
+              "wins": 88
+            },
+            "【精英】狂暴牛头人": {
+              "games": 1007,
+              "wins": 140
+            },
+            "【精英】猩红血巫": {
+              "games": 1014,
+              "wins": 365
+            }
+          }
+        },
+        "boss": {
+          "winRate": 0.024,
+          "averageTurns": 4.559333333333333,
+          "averageHpLeft": 1.1886666666666668,
+          "enemies": {
+            "【深渊主宰】": {
+              "games": 1468,
+              "wins": 47
+            },
+            "【首领】鬼面修罗": {
+              "games": 1532,
+              "wins": 25
+            }
+          }
+        }
+      },
+      "expedition": {
+        "clearRate": 0.005666666666666667,
+        "reached": [
+          3000,
+          3000,
+          2797,
+          1141,
+          266
+        ],
+        "deaths": {
+          "late": 1656,
+          "boss": 249,
+          "elite": 875,
+          "mid": 203
+        }
+      }
+    },
+    {
+      "roleId": "hero_archer",
+      "role": "精灵弓箭手",
+      "buildId": "exile",
+      "build": "放逐游侠",
+      "loadout": {
+        "core": null,
+        "relics": []
+      },
+      "checkpoints": {
+        "early": {
+          "winRate": 1,
+          "averageTurns": 1.6366666666666667,
+          "averageHpLeft": 77.06866666666667,
+          "enemies": {
+            "贪婪盗贼": {
+              "games": 636,
+              "wins": 636
+            },
+            "枯骨煞兵": {
+              "games": 594,
+              "wins": 594
+            },
+            "迷途妖狐": {
+              "games": 574,
+              "wins": 574
+            },
+            "嗜血蝙蝠": {
+              "games": 573,
+              "wins": 573
+            },
+            "病弱史莱姆": {
+              "games": 623,
+              "wins": 623
+            }
+          }
+        },
+        "mid": {
+          "winRate": 0.974,
+          "averageTurns": 3.7023333333333333,
+          "averageHpLeft": 59.212666666666664,
+          "enemies": {
+            "铁甲巨蟹": {
+              "games": 598,
+              "wins": 584
+            },
+            "千载魔蛛": {
+              "games": 632,
+              "wins": 632
+            },
+            "荒野煞狼": {
+              "games": 579,
+              "wins": 578
+            },
+            "剧毒蟾蜍": {
+              "games": 609,
+              "wins": 606
+            },
+            "暴躁野猪": {
+              "games": 582,
+              "wins": 522
+            }
+          }
+        },
+        "late": {
+          "winRate": 0.575,
+          "averageTurns": 4.669333333333333,
+          "averageHpLeft": 20.219666666666665,
+          "enemies": {
+            "堕落剑客": {
+              "games": 628,
+              "wins": 298
+            },
+            "巨力石魔": {
+              "games": 583,
+              "wins": 15
+            },
+            "缝合巨怪": {
+              "games": 551,
+              "wins": 380
+            },
+            "幽冥法师": {
+              "games": 611,
+              "wins": 547
+            },
+            "魅影刺客": {
+              "games": 627,
+              "wins": 485
+            }
+          }
+        },
+        "elite": {
+          "winRate": 0.043666666666666666,
+          "averageTurns": 4.676333333333333,
+          "averageHpLeft": 1.0076666666666667,
+          "enemies": {
+            "【精英】猩红血巫": {
+              "games": 979,
+              "wins": 116
+            },
+            "【精英】不死骨龙": {
+              "games": 999,
+              "wins": 1
+            },
+            "【精英】狂暴牛头人": {
+              "games": 1022,
+              "wins": 14
+            }
+          }
+        },
+        "boss": {
+          "winRate": 0,
+          "averageTurns": 3.382,
+          "averageHpLeft": 0,
+          "enemies": {
+            "【首领】鬼面修罗": {
+              "games": 1527,
+              "wins": 0
+            },
+            "【深渊主宰】": {
+              "games": 1473,
+              "wins": 0
+            }
+          }
+        }
+      },
+      "expedition": {
+        "clearRate": 0,
+        "reached": [
+          3000,
+          3000,
+          2685,
+          447,
+          3
+        ],
+        "deaths": {
+          "late": 2238,
+          "elite": 444,
+          "mid": 315,
+          "boss": 3
+        }
+      }
+    }
+  ]
+}

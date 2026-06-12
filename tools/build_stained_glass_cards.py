@@ -175,7 +175,7 @@ CARDS = [
         card_type="攻击",
         cost=1,
         value=5,
-        tags=("连射",),
+        tags=("追击",),
         rarity="稀有",
     ),
 ]
@@ -203,12 +203,12 @@ EMBLEM_CARDS = [
     CardSpec("裂界紫雷", "萝莉魔导士", "mage", generated_art_path("萝莉魔导士", "裂界紫雷"), "攻击", 3, 16, ("爆发", "穿甲", "回响"), "史诗"),
     CardSpec("林风整备", "精灵弓箭手", "archer", generated_art_path("精灵弓箭手", "林风整备"), "能力", 1, 6, ("自然", "蓄力"), "稀有"),
     CardSpec("猎手翻步", "精灵弓箭手", "archer", generated_art_path("精灵弓箭手", "猎手翻步"), "能力", 1, 5, ("自然", "保留"), "普通"),
-    CardSpec("狩影穿枝", "精灵弓箭手", "archer", generated_art_path("精灵弓箭手", "狩影穿枝"), "攻击", 2, 10, ("连射", "穿甲"), "稀有"),
-    CardSpec("森冠齐射", "精灵弓箭手", "archer", generated_art_path("精灵弓箭手", "森冠齐射"), "攻击", 2, 7, ("连射", "多段", "穿甲"), "史诗"),
+    CardSpec("狩影穿枝", "精灵弓箭手", "archer", generated_art_path("精灵弓箭手", "狩影穿枝"), "攻击", 2, 10, ("追击", "穿甲"), "稀有"),
+    CardSpec("森冠齐射", "精灵弓箭手", "archer", generated_art_path("精灵弓箭手", "森冠齐射"), "攻击", 2, 7, ("追击", "穿甲"), "史诗"),
     CardSpec("森息伏击", "精灵弓箭手", "archer", generated_art_path("精灵弓箭手", "森息伏击"), "能力", 0, 4, ("蓄力", "销毁"), "普通"),
     CardSpec("风羽换位", "精灵弓箭手", "archer", generated_art_path("精灵弓箭手", "风羽换位"), "能力", 1, 0, ("自然", "重置", "抽牌"), "稀有"),
     CardSpec("鹰眼贯枝", "精灵弓箭手", "archer", generated_art_path("精灵弓箭手", "鹰眼贯枝"), "攻击", 2, 12, ("蓄力", "穿甲"), "稀有"),
-    CardSpec("回环箭雨", "精灵弓箭手", "archer", generated_art_path("精灵弓箭手", "回环箭雨"), "攻击", 2, 6, ("连射", "回响"), "史诗"),
+    CardSpec("回环箭雨", "精灵弓箭手", "archer", generated_art_path("精灵弓箭手", "回环箭雨"), "攻击", 2, 6, ("追击", "回响"), "史诗"),
     CardSpec("古誓护印", "中立法则", "neutral", generated_art_path("中立法则", "古誓护印"), "防御", 1, 8, ("保留",), "稀有"),
     CardSpec("星轨换手", "中立法则", "neutral", generated_art_path("中立法则", "星轨换手"), "能力", 1, 0, ("重置", "抽牌"), "稀有"),
     CardSpec("碎星短刃", "中立法则", "neutral", generated_art_path("中立法则", "碎星短刃"), "攻击", 0, 4, ("销毁",), "普通"),
@@ -585,7 +585,6 @@ def draw_tag_accents(draw: ImageDraw.ImageDraw, card: CardSpec, theme: Theme, wi
         "充能": (98, 190, 218),
         "抽牌": (216, 184, 110),
         "穿甲": (224, 204, 143),
-        "多段": (228, 188, 84),
         "易伤": (164, 86, 171),
         "虚弱": (118, 118, 140),
         "回响": (135, 103, 196),
@@ -597,7 +596,7 @@ def draw_tag_accents(draw: ImageDraw.ImageDraw, card: CardSpec, theme: Theme, wi
         "燃烧": (226, 116, 66),
         "蓄力": (79, 176, 119),
         "自然": (98, 190, 128),
-        "连射": (132, 205, 166),
+        "追击": (132, 205, 166),
     }
     x = 72
     y = height - 72

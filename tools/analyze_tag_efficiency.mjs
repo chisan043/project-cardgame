@@ -22,8 +22,8 @@ const ROLE_LABELS = {
     neutral: '中立'
 };
 const TAG_GROUPS = {
-    '伤害放大': new Set(['重击', '穿甲', '圣剑', '爆发', '连击', '多段', '连射', '放血']),
-    '资源循环': new Set(['抽牌', '充能', '重置', '保留', '回响', '复刻', '招魂', '轮回', '拾遗']),
+    '伤害放大': new Set(['重击', '穿甲', '圣剑', '爆发', '连击', '追击', '放血']),
+    '资源循环': new Set(['抽牌', '充能', '重置', '保留', '回响', '复刻', '回收']),
     '防御恢复': new Set(['庇护', '反击', '错身', '吸血', '荆棘', '治愈']),
     '状态控制': new Set(['剧毒', '出血', '燃烧', '眩晕', '诅咒', '易伤', '虚弱']),
     '职业引擎': new Set(['咏唱', '蓄力', '自然']),
@@ -102,6 +102,18 @@ function summarizeCorpus(data, cards) {
             cardsWithThreeTags: roleCards.filter(card => (card.tags?.length || 0) >= 3).length
         };
     });
+    const sourceLabels = { cardPool: '职业卡池', neutral: '中立卡池', epicCore: '史诗核心' };
+    const bySource = Object.entries(sourceLabels).map(([source, label]) => {
+        const sourceCards = cards.filter(card => card.source === source);
+        return {
+            source,
+            label,
+            cards: sourceCards.length,
+            averageTags: sourceCards.reduce((sum, card) => sum + (card.tags?.length || 0), 0) / sourceCards.length,
+            cardsWithAtLeastTwoTags: sourceCards.filter(card => (card.tags?.length || 0) >= 2).length,
+            cardsWithThreeTags: sourceCards.filter(card => (card.tags?.length || 0) >= 3).length
+        };
+    });
     return {
         totalTags: Object.keys(data.TAGS).length,
         totalCards: cards.length,
@@ -109,7 +121,9 @@ function summarizeCorpus(data, cards) {
         cardsWithAtLeastTwoTags: cards.filter(card => (card.tags?.length || 0) >= 2).length,
         cardsWithThreeTags: cards.filter(card => (card.tags?.length || 0) >= 3).length,
         countDistribution,
-        byRole
+        directEffectCards: cards.filter(card => card.directEffects && Object.keys(card.directEffects).length > 0).length,
+        byRole,
+        bySource
     };
 }
 
@@ -255,6 +269,12 @@ function markdownReport(report) {
         '|---|---:|---:|---:|',
         ...report.corpus.byRole.map(role => `| ${role.role} | ${role.cards} | ${role.averageTags.toFixed(2)} | ${role.cardsWithThreeTags} |`),
         '',
+        '| 卡牌来源 | 卡牌数 | 平均词条 | 双词条及以上 | 三词条卡 |',
+        '|---|---:|---:|---:|---:|',
+        ...report.corpus.bySource.map(source => `| ${source.label} | ${source.cards} | ${source.averageTags.toFixed(2)} | ${source.cardsWithAtLeastTwoTags} | ${source.cardsWithThreeTags} |`),
+        '',
+        `另有 ${report.corpus.directEffectCards} 张卡把抽牌、充能、庇护、保留或治愈降为正文直接效果，不再参与对应词条与遗物联动。`,
+        '',
         '## 逐词条剥离结果',
         '',
         '“胜率边际”表示移除该词条后，受影响构筑平均损失的胜率百分点。正数越高，表示词条越强；负数表示当前 AI 或构筑中该词条可能产生负收益。',
@@ -273,21 +293,21 @@ function markdownReport(report) {
         '',
         '## 结论',
         '',
-        `- 当前 ${pct(report.corpus.cardsWithAtLeastTwoTags / report.corpus.totalCards)} 的卡牌至少拥有两个词条，“双词条”已经成为默认模板，词条不再承担稀有或构筑识别作用。`,
-        `- 法师平均每张卡 ${report.corpus.byRole.find(role => role.roleId === 'hero_mage').averageTags.toFixed(2)} 个词条，且三词条卡最多，是认知负担最高的职业。`,
+        `- 当前 ${pct(report.corpus.cardsWithAtLeastTwoTags / report.corpus.totalCards)} 的卡牌至少拥有两个词条，但其中史诗核心平均 ${report.corpus.bySource.find(source => source.source === 'epicCore').averageTags.toFixed(2)} 个；职业卡池平均为 ${report.corpus.bySource.find(source => source.source === 'cardPool').averageTags.toFixed(2)} 个。核心卡承担更多构筑说明是可接受的，普通卡池仍应继续观察。`,
+        `- 所有卡牌均已压到 2 个词条以内，三词条卡为 ${report.corpus.cardsWithThreeTags} 张。`,
         `- 高风险清单中有 ${report.cardRisks.filter(card => card.cost <= 1).length} 张 0 至 1 费卡，说明低费卡同时承担启动、资源和防御的情况较多。`,
-        `- 低边际或负收益词条包括：${lowTags.map(tag => tag.tag).join('、') || '无'}。低边际不等于应直接删除：拾遗、放血、重置、连击更适合检查合并或改成正文；穿甲、反击、诅咒则应先检查敌人护甲、攻击频率和回复机制是否给了足够发挥空间。`,
+        `- 低边际或负收益词条包括：${lowTags.map(tag => tag.tag).join('、') || '无'}。低边际不等于应直接删除：放血、重置、连击更适合检查改成正文；穿甲、反击、诅咒则应先检查敌人护甲、攻击频率和回复机制是否给了足够发挥空间。`,
         `- 尚未纳入模拟器的词条包括：${unmodeledTags.map(tag => tag.tag).join('、') || '无'}。这些结果不能用于强弱判断，应先补齐行为模型。`,
         '',
         '## 建议标准',
         '',
         '- 普通卡默认 0 至 1 个词条，稀有卡默认 1 个，史诗卡默认不超过 2 个。',
-        '- 只有带明确代价的 0 费卡、史诗核心或构筑终结牌可以出现 3 个词条。',
+        '- 所有卡牌最多 2 个词条；史诗核心和构筑终结牌优先使用双词条。',
         '- 高边际词条应作为卡牌主效果。0 至 1 费卡原则上不能同时拥有两个高边际词条。',
-        '- 抽牌、充能、回响、复刻、多段、连射这类完整资源或倍率效果，应按主效果计价，不应视为免费附属词条。',
-        '- 招魂、轮回、拾遗可考虑合并为统一的“回收”体系，并在正文说明目标区域与返回位置。',
-        '- 连射、多段、回响共享重复执行逻辑，建议保留职业特色最强的两个名称，其余改为卡牌正文或统一底层关键词。',
-        '- 下一轮调整先处理高风险卡牌的词条数量，再重新测试数值；不要同时削词条和基础数值。',
+        '- 抽牌、充能、回响、复刻、追击这类完整资源或倍率效果，应按主效果计价，不应视为免费附属词条。',
+        '- 回收使用卡牌参数区分来源区域与返回位置，不再拆成多个近义词条。',
+        '- 追击仅用于攻击重复执行；回响保留给法师的全类型重复效果。',
+        '- 后续若继续削减高风险卡牌的词条，应先复测构筑胜率，再单独调整基础数值，避免同一轮同时双重削弱。',
         '',
         '完整数据：`tools/tag_efficiency_report.json`'
     ];
