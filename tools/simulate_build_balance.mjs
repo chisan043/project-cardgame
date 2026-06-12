@@ -368,7 +368,6 @@ function applyRoleSynergy(state, card, echo, cycleReturned, resetCount) {
     if (state.roleId === 'hero_warrior') {
         if (card.type === '防御' && tags.includes('保留')) state.armor += 3;
         if (tags.includes('庇护') && state.armor > 0) state.armor += 2;
-        if (tags.includes('血祭')) state.armor += 5;
         if (tags.includes('荆棘') && state.armor > 0) state.thorns += Math.min(8, Math.max(2, Math.ceil(state.armor / 8)));
     } else if (state.roleId === 'hero_mage') {
         if (tags.includes('回响') || tags.includes('复刻')) state.chant = Math.min(9, state.chant + 1);
@@ -595,7 +594,9 @@ function executeSpecialCard(state, card) {
         const dealt = hitEnemy(state, 32 + bloodHand * 20 + state.enemy.bleed * 8 + state.battleDamage + bossBonus);
         let healing = Math.floor(dealt / 2);
         if (hasRelic(state, 'r_lifedebt_scale') && state.hp <= state.maxHp / 2) healing = Math.floor(healing * 1.5);
+        const overheal = Math.max(0, healing - Math.max(0, state.maxHp - state.hp));
         heal(state, healing);
+        if (hasRelic(state, 'r_vamp_ring') && overheal > 0) state.battleDamage += Math.min(5, overheal);
     } else if (specialId === 'm_forbidden_comet') {
         const chantSpent = state.chant;
         const bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.2) : 0;
@@ -768,7 +769,9 @@ function executeCard(state, card, echo = false) {
         if (tags.includes('吸血')) {
             let healing = card.rarity === '史诗' ? dealt : Math.floor(dealt / 2);
             if (hasRelic(state, 'r_lifedebt_scale') && state.hp <= state.maxHp / 2) healing = Math.floor(healing * 1.5);
+            const overheal = Math.max(0, healing - Math.max(0, state.maxHp - state.hp));
             heal(state, healing);
+            if (hasRelic(state, 'r_vamp_ring') && overheal > 0) state.battleDamage += Math.min(5, overheal);
         }
     }
     if (tags.includes('复刻') && state.lastCard && !echo) executeCard(state, state.lastCard, true);

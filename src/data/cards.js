@@ -25,7 +25,7 @@ const CARD_ART_REGISTRY = {
     '血誓斩': 'assets/cards/art/warrior/warrior_blood_vow_slash_art_v1.webp',
     '棘甲冲锋': 'assets/cards/art/warrior/warrior_thorn_charge_art_v1.webp',
     '誓旗护阵': 'assets/cards/art/warrior/warrior_banner_guard_art_v1.webp',
-    '血祭壁垒': 'assets/cards/art/warrior/warrior_blood_wall_art_v1.webp',
+    '血痕引路': 'assets/cards/art/warrior/warrior_blood_wall_art_v1.webp',
     '誓约留锋': 'assets/cards/art/warrior/warrior_oath_retainer_art_v1.webp',
     '魂誓换锋': 'assets/cards/art/warrior/warrior_soul_oath_art_v1.webp',
     '狂誓裂斩': 'assets/cards/art/warrior/warrior_frenzy_cleave_art_v1.webp',
@@ -63,6 +63,7 @@ const CARD_ART_REGISTRY = {
     '顺风瞄准': 'assets/cards/art/archer/archer_aim_art_v1.webp',
     '毒弦瞄准': 'assets/cards/art/archer/archer_ambush_art_v1.webp',
     '空弦瞄准': 'assets/cards/art/archer/archer_shadow_art_v1.webp',
+    '血誓开锋': 'assets/cards/art/warrior/warrior_blood_vow_slash_art_v1.webp',
     '逐影放矢': 'assets/cards/art/archer/archer_exile_shot_art_v1.webp',
     '轮枝归射': 'assets/cards/art/archer/archer_cycle_branch_art_v1.webp',
     '拾羽连步': 'assets/cards/art/archer/archer_pick_feather_art_v1.webp',
@@ -96,7 +97,7 @@ const CARD_ART_REGISTRY = {
     '壁垒记录': 'assets/cards/art/warrior/warrior_bastion_ledger_art_v1.png',
     '裁决佯攻': 'assets/cards/art/warrior/warrior_verdict_feint_art_v1.png',
     '残红回锋': 'assets/cards/art/warrior/warrior_red_return_art_v1.png',
-    '偿血护步': 'assets/cards/art/warrior/warrior_blood_guard_step_art_v1.png',
+    '偿血追命': 'assets/cards/art/warrior/warrior_blood_guard_step_art_v1.png',
     '处刑步法': 'assets/cards/art/warrior/warrior_execute_step_art_v1.png',
     '穿心试探': 'assets/cards/art/warrior/warrior_heart_probe_art_v1.png',
     '断腕缴械': 'assets/cards/art/warrior/warrior_disarm_press_art_v1.png',
@@ -221,7 +222,7 @@ const CARD_FRAME_ASSETS = {
 };
 
 const CARD_FRAME_THEME_BY_NAME = {
-    '圣剑突击': 'warrior', '遗迹立誓': 'warrior', '盾墙反身': 'warrior', '誓约追击': 'warrior', '圣堂守势': 'warrior', '圣剑解放': 'warrior', '破晓格挡': 'warrior', '裂光一闪': 'warrior', '王冠反斩': 'warrior', '铁壁圣痕': 'warrior', '血誓斩': 'warrior', '棘甲冲锋': 'warrior', '誓旗护阵': 'warrior', '血祭壁垒': 'warrior', '誓约留锋': 'warrior', '魂誓换锋': 'warrior', '狂誓裂斩': 'warrior', '终誓处刑': 'warrior', '基础斩击': 'warrior', '基础防御': 'warrior',
+    '圣剑突击': 'warrior', '遗迹立誓': 'warrior', '盾墙反身': 'warrior', '誓约追击': 'warrior', '圣堂守势': 'warrior', '圣剑解放': 'warrior', '破晓格挡': 'warrior', '裂光一闪': 'warrior', '王冠反斩': 'warrior', '铁壁圣痕': 'warrior', '血誓斩': 'warrior', '棘甲冲锋': 'warrior', '誓旗护阵': 'warrior', '血痕引路': 'warrior', '血誓开锋': 'warrior', '偿血追命': 'warrior', '誓约留锋': 'warrior', '魂誓换锋': 'warrior', '狂誓裂斩': 'warrior', '终誓处刑': 'warrior', '基础斩击': 'warrior', '基础防御': 'warrior',
     '紫焰爆裂': 'mage', '遗迹咏唱': 'mage', '紫焰火花': 'mage', '魔流庇护': 'mage', '虚空导引': 'mage', '星火连祷': 'mage', '星屑预兆': 'mage', '余烬点燃': 'mage', '法环回流': 'mage', '裂界紫雷': 'mage', '星环复写': 'mage', '燃魂导流': 'mage', '回声护幕': 'mage', '虚弱星尘': 'mage', '紫焰刻印': 'mage', '星缚咒印': 'mage', '咒回星环': 'mage', '裂星禁术': 'mage', '基础法弹': 'mage', '基础愈流': 'mage', '秘仪预兆': 'mage', '秘仪屏障': 'mage',
     '拉弓瞄准': 'archer', '疾风连射': 'archer', '林风整备': 'archer', '猎手翻步': 'archer', '狩影穿枝': 'archer', '森冠齐射': 'archer', '森息伏击': 'archer', '风羽换位': 'archer', '鹰眼贯枝': 'archer', '回环箭雨': 'archer', '回风藏箭': 'archer', '逐影放矢': 'archer', '轮枝归射': 'archer', '拾羽连步': 'archer', '翠毒连矢': 'archer', '林魂招矢': 'archer', '赤痕放血': 'archer', '逐风绝矢': 'archer', '基础射击': 'archer', '林地回避': 'archer',
     '古誓护印': 'neutral', '星轨流转': 'neutral', '碎星短刃': 'neutral', '圣像微光': 'neutral', '回音残卷': 'neutral', '飞刀': 'neutral', '厄运印记': 'neutral',
@@ -238,7 +239,7 @@ const NEUTRAL_CARD_POOL = [
     { poolId: 'neutral_echo', name: '回音残卷', type: '能力', cost: 2, icon: '📜', val: 0, tags: ['回响', '抽牌'], rarity: '史诗' },
     { poolId: 'neutral_vow_guard', name: '巡誓护符', type: '防御', cost: 1, icon: '🔰', val: 7, tags: ['庇护', '保留'], rarity: '稀有', desc: '获得 7 点护盾。附带[庇护]与[保留]。战士可把它转成额外护盾，弓手可借保留获得风势。' },
     { poolId: 'neutral_mirror_spark', name: '镜火短章', type: '能力', cost: 1, icon: '🪞', val: 0, tags: ['回响', '充能'], rarity: '稀有', desc: '触发[回响]并[充能]。法师会因回响额外积累咏唱。' },
-    { poolId: 'neutral_blood_mark', name: '血契刻痕', type: '能力', cost: 1, icon: '🩸', val: 5, tags: ['血祭', '附魔'], rarity: '稀有', desc: '触发[血祭]与[附魔]。战士会把血祭转成额外护盾。' },
+    { poolId: 'neutral_blood_mark', name: '血契刻痕', type: '能力', cost: 1, icon: '🩸', val: 5, tags: ['血祭', '附魔'], rarity: '稀有', desc: '触发[血祭]与[附魔]。用生命换取本场成长和下一次攻击强化。' },
     { poolId: 'neutral_exile_blade', name: '流亡短刃', type: '攻击', cost: 1, icon: '🗡️', val: 9, tags: ['放逐', '穿甲'], rarity: '稀有', desc: '造成 9 点[穿甲]伤害并[放逐]。一次性强攻，弓手可借放逐获得风势。' },
     { poolId: 'neutral_return_scroll', name: '归页残卷', type: '能力', cost: 1, icon: '📖', val: 0, tags: ['回收', '抽牌'], rarity: '稀有', desc: '从墓地选择 1 张牌回到手牌，并[抽牌]。弓手会因回收牌获得风势。' },
     { poolId: 'neutral_soul_flame', name: '魂火祭文', type: '能力', cost: 1, icon: '🔥', val: 0, tags: ['充能', '抽牌'], rarity: '稀有', desc: '回复能量并[抽牌]。适合把手牌资源转成职业启动。' },
@@ -264,7 +265,7 @@ const CHARACTER_CARD_POOLS = {
         { poolId: 'warrior_blood_vow_slash', name: '血誓斩', type: '攻击', cost: 1, icon: '🩸', val: 7, tags: ['吸血', '连击'], buildTags: ['bloodoath'], rarity: '稀有', art: 'assets/cards/art/warrior/warrior_blood_vow_slash_art_v1.webp', desc: '造成 7 点伤害。附带[吸血]与[连击]，适合在卖血后用连续出牌把生命拉回来。' },
         { poolId: 'warrior_thorn_charge', name: '棘甲冲锋', type: '攻击', cost: 2, icon: '🌹', val: 10, tags: ['圣剑', '荆棘'], rarity: '稀有', art: 'assets/cards/art/warrior/warrior_thorn_charge_art_v1.webp', desc: '造成 10 点伤害。附带[圣剑]与[荆棘]，护盾越高越容易触发盾棘共鸣。' },
         { poolId: 'warrior_banner_guard', name: '誓旗护阵', type: '能力', cost: 1, icon: '🚩', val: 5, tags: ['庇护', '抽牌'], rarity: '稀有', art: 'assets/cards/art/warrior/warrior_banner_guard_art_v1.webp', desc: '触发[庇护]并[抽牌]。若已有护盾，战士联动会额外加固护盾。' },
-        { poolId: 'warrior_blood_wall', name: '血祭壁垒', type: '能力', cost: 1, icon: '🛡️', val: 5, tags: ['血祭', '抽牌', '庇护'], buildTags: ['bloodoath'], rarity: '稀有', art: 'assets/cards/art/warrior/warrior_blood_wall_art_v1.webp', desc: '触发[血祭]、[抽牌]与[庇护]。用生命换伤害和手牌，同时挡住下一次反扑。' },
+        { poolId: 'warrior_blood_wall', name: '血痕引路', type: '能力', cost: 1, icon: '🩸', val: 0, tags: ['出血', '抽牌'], buildTags: ['bloodoath'], rarity: '稀有', art: 'assets/cards/art/warrior/warrior_blood_wall_art_v1.webp', desc: '施加[出血]并[抽牌]。为后续吸血与放血寻找组件。' },
         { poolId: 'warrior_oath_retainer', name: '誓约留锋', type: '防御', cost: 1, icon: '🔰', val: 9, tags: ['保留', '充能'], rarity: '普通', art: 'assets/cards/art/warrior/warrior_oath_retainer_art_v1.webp', desc: '获得 9 点护盾。附带[保留]与[充能]，战士会因防御保留额外获得护盾。' },
         { poolId: 'warrior_soul_oath', name: '魂誓换锋', type: '能力', cost: 2, icon: '📖', val: 5, tags: ['充能', '抽牌', '庇护'], rarity: '稀有', art: 'assets/cards/art/warrior/warrior_soul_oath_art_v1.webp', desc: '触发[充能]、[抽牌]与[庇护]。把节奏转成护盾，为后续圣剑攻击铺垫。' },
         { poolId: 'warrior_bleed_edge', name: '誓血裂口', type: '攻击', cost: 1, icon: '🩸', val: 6, tags: ['出血', '连击'], buildTags: ['bloodoath'], rarity: '普通', art: 'assets/cards/art/warrior/warrior_blood_vow_slash_art_v1.webp', desc: '造成 6 点伤害并施加[出血]。若本回合已出牌，[连击]会把伤口撕得更深。' },
@@ -465,7 +466,7 @@ const BUILD_EXPANSION_CARDS = {
         { poolId: 'warrior_steel_pressure', name: '鸣钢压迫', type: '攻击', cost: 2, icon: '🔨', val: 10, tags: ['穿甲', '虚弱'], buildTags: ['execution'], rarity: '稀有', frameTheme: 'warrior', desc: '[穿甲]攻击并施加[虚弱]。适合在不能立刻斩杀时压低反击风险。' },
         { poolId: 'warrior_execute_step', name: '处刑步法', type: '能力', cost: 0, icon: '👣', val: 0, tags: ['抽牌', '销毁'], buildTags: ['execution'], rarity: '普通', frameTheme: 'warrior', desc: '[抽牌]后[销毁]。' },
         { poolId: 'warrior_vein_oath', name: '裂脉誓印', type: '能力', cost: 1, icon: '🩸', val: 5, tags: ['血祭', '出血'], buildTags: ['bloodoath'], rarity: '普通', frameTheme: 'warrior', desc: '用[血祭]换本场伤害，同时施加[出血]，把自伤转成敌人的伤口。' },
-        { poolId: 'warrior_blood_guard_step', name: '偿血护步', type: '防御', cost: 1, icon: '🛡️', val: 8, tags: ['血祭', '治愈'], buildTags: ['bloodoath'], rarity: '稀有', frameTheme: 'warrior', desc: '先付出生命获得攻势，再用 8 点护盾与[治愈]稳住血线。' },
+        { poolId: 'warrior_blood_guard_step', name: '偿血追命', type: '攻击', cost: 1, icon: '🩸', val: 5, tags: ['血祭', '治愈'], buildTags: ['bloodoath'], rarity: '稀有', frameTheme: 'warrior', desc: '以[血祭]换取成长并发动攻击，随后[治愈]稳住血线。' },
         { poolId: 'warrior_boiling_drive', name: '沸血突进', type: '攻击', cost: 1, icon: '🔥', val: 7, tags: ['血祭', '连击'], buildTags: ['bloodoath'], rarity: '稀有', frameTheme: 'warrior', desc: '以[血祭]提高后续伤害，若已出牌则用[连击]放大本次攻击。' },
         { poolId: 'warrior_red_return', name: '残红回锋', type: '攻击', cost: 1, icon: '💍', val: 5, tags: ['吸血', '保留'], buildTags: ['bloodoath'], rarity: '普通', frameTheme: 'warrior', desc: '造成 5 点伤害并[吸血]；打出后下回合回到手牌。' },
         { poolId: 'warrior_blood_tide', name: '血潮续斩', type: '攻击', cost: 2, icon: '🌊', val: 7, tags: ['放血', '重击'], buildTags: ['bloodoath'], rarity: '史诗', frameTheme: 'warrior', desc: '触发[放血]后接[重击]。敌人伤口越深，这张越像终结。' },
@@ -644,10 +645,10 @@ const STARTER_CORE_CARD_TRANSFORMS = {
     r_bloodoath_contract: {
         sourcePoolId: 'starter_warrior_guard',
         card: {
-            name: '血偿壁垒', type: '防御', cost: 1, icon: '🩸', val: 5,
+            name: '血誓开锋', type: '攻击', cost: 1, icon: '🩸', val: 5,
             tags: ['出血'], buildTags: ['bloodoath'], buildNeutral: false,
             rarity: '普通', frameTheme: 'warrior',
-            desc: '获得 5 点护盾并施加[出血]，为吸血与放血牌提供资源。'
+            desc: '造成 5 点伤害并施加[出血]，为吸血与放血制造伤口。'
         }
     },
     r_chant_astrolabe: {

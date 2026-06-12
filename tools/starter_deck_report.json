@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-12T17:39:32.605Z",
+  "generatedAt": "2026-06-12T17:56:13.728Z",
   "generatedDate": "2026-06-13",
-  "model": "starter deck, dodge and core-relic selection simulation v3",
+  "model": "starter deck, survival identity and core-relic selection simulation v4",
   "runsPerEnemy": 1000,
   "seed": 20260612,
   "results": [
@@ -100,6 +100,7 @@
             "fallback": 21
           }
         },
+        "bloodoathShieldViolations": [],
         "coreChoices": [
           {
             "id": "r_oathblade_beacon",
@@ -124,7 +125,8 @@
             "sourceCopies": 3,
             "transformedBuildTags": [
               "oathblade"
-            ]
+            ],
+            "shieldlessBloodoath": true
           },
           {
             "id": "r_execution_warrant",
@@ -132,7 +134,8 @@
             "sourceCopies": 3,
             "transformedBuildTags": [
               "execution"
-            ]
+            ],
+            "shieldlessBloodoath": true
           },
           {
             "id": "r_bloodoath_contract",
@@ -140,9 +143,19 @@
             "sourceCopies": 3,
             "transformedBuildTags": [
               "bloodoath"
-            ]
+            ],
+            "shieldlessBloodoath": true
           }
         ],
+        "survivalIdentity": {
+          "poolId": "starter_warrior_guard",
+          "copies": 3,
+          "type": "防御",
+          "tag": null,
+          "label": "3 张护盾牌",
+          "actualCopies": 3,
+          "passed": true
+        },
         "passed": true
       },
       "coreVariants": [
@@ -202,7 +215,7 @@
           "relicId": "r_bloodoath_contract",
           "relic": "血誓招令",
           "buildTag": "bloodoath",
-          "transformedCard": "血偿壁垒",
+          "transformedCard": "血誓开锋",
           "checkpoints": {
             "early": {
               "winRate": 1,
@@ -211,13 +224,13 @@
               "highestEnemy": "病弱史莱姆"
             },
             "mid": {
-              "winRate": 0.9276,
+              "winRate": 0.887,
               "status": "达标",
               "lowestEnemy": "暴躁野猪",
               "highestEnemy": "荒野煞狼"
             },
             "late": {
-              "winRate": 0.0192,
+              "winRate": 0.0106,
               "status": "达标",
               "lowestEnemy": "巨力石魔",
               "highestEnemy": "魅影刺客"
@@ -1575,6 +1588,7 @@
             "fallback": 21
           }
         },
+        "bloodoathShieldViolations": [],
         "coreChoices": [
           {
             "id": "r_chant_astrolabe",
@@ -1599,7 +1613,8 @@
             "sourceCopies": 1,
             "transformedBuildTags": [
               "chant"
-            ]
+            ],
+            "shieldlessBloodoath": true
           },
           {
             "id": "r_mirror_catalog",
@@ -1607,7 +1622,8 @@
             "sourceCopies": 1,
             "transformedBuildTags": [
               "mirror"
-            ]
+            ],
+            "shieldlessBloodoath": true
           },
           {
             "id": "r_calamity_orb",
@@ -1615,9 +1631,19 @@
             "sourceCopies": 1,
             "transformedBuildTags": [
               "calamity"
-            ]
+            ],
+            "shieldlessBloodoath": true
           }
         ],
+        "survivalIdentity": {
+          "poolId": "starter_mage_heal",
+          "copies": 3,
+          "type": "能力",
+          "tag": "治愈",
+          "label": "3 张治愈牌",
+          "actualCopies": 3,
+          "passed": true
+        },
         "passed": true
       },
       "coreVariants": [
@@ -3035,6 +3061,7 @@
             "fallback": 23
           }
         },
+        "bloodoathShieldViolations": [],
         "coreChoices": [
           {
             "id": "r_gale_weatherwane",
@@ -3059,7 +3086,8 @@
             "sourceCopies": 1,
             "transformedBuildTags": [
               "gale"
-            ]
+            ],
+            "shieldlessBloodoath": true
           },
           {
             "id": "r_venom_seedcase",
@@ -3067,7 +3095,8 @@
             "sourceCopies": 1,
             "transformedBuildTags": [
               "venom"
-            ]
+            ],
+            "shieldlessBloodoath": true
           },
           {
             "id": "r_exile_roadsign",
@@ -3075,9 +3104,19 @@
             "sourceCopies": 1,
             "transformedBuildTags": [
               "exile"
-            ]
+            ],
+            "shieldlessBloodoath": true
           }
         ],
+        "survivalIdentity": {
+          "poolId": "starter_archer_step",
+          "copies": 1,
+          "type": "能力",
+          "tag": "闪避",
+          "label": "1 张闪避牌",
+          "actualCopies": 1,
+          "passed": true
+        },
         "passed": true
       },
       "coreVariants": [

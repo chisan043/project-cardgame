@@ -2031,7 +2031,6 @@
             let armorGain = 0;
             if (card.type === '防御' && tags.includes('保留')) armorGain += 3;
             if (tags.includes('庇护') && state.armor > 0) armorGain += 2;
-            if (tags.includes('血祭')) armorGain += 5;
             if (armorGain > 0) {
                 state.armor += armorGain;
                 showFloatText(`战士联动 护盾 +${armorGain}`, "var(--water)", getCenter('ui-hp'));
@@ -5656,7 +5655,10 @@
                 let bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.2) : 0;
                 let dmg = parseInt(card.val) + (20 * synergyCount) + state.enemy.bleed * 8 + state.p_battle_dmg + bossBonus;
                 if(synergyCount > 0) { state.hp = Math.max(1, state.hp - 2 * synergyCount); showFloatText(`血祭 -${2*synergyCount}血`, "var(--crimson)", getCenter('ui-hp')); }
-                triggerVFX('p-atk'); const dealt = applySpecialCardDamage(card, dmg); healPlayer(Math.floor(dealt/2));
+                triggerVFX('p-atk'); const dealt = applySpecialCardDamage(card, dmg); const bloodHeal = Math.floor(dealt/2);
+                const bloodOverheal = Math.max(0, bloodHeal - Math.max(0, state.maxHp - state.hp));
+                healPlayer(bloodHeal);
+                if (hasRelic('r_vamp_ring') && bloodOverheal > 0) state.p_battle_dmg += Math.min(5, bloodOverheal);
                 showFloatText(`${card.name} 共鸣 ${synergyCount} 次`, "var(--crimson)", getCenter('enemy-avatar'));
             }
             else if (card.specialId === 'a_syn_magic') {
@@ -6098,7 +6100,13 @@
                 let baseHeal = card.up ? finalDmg : Math.floor(finalDmg/2); let hAmt = hasRelic('r_blood') ? state.enemy.bleed : baseHeal;
                 if(hasRelic('r_poison_leech') && state.enemy.poison > 0) hAmt *= 2;
                 if(hasRelic('r_lifedebt_scale') && state.hp <= Math.floor(state.maxHp / 2)) hAmt = Math.floor(hAmt * 1.5);
+                const bloodOverheal = Math.max(0, hAmt - Math.max(0, state.maxHp - state.hp));
                 healPlayer(hAmt);
+                if (hasRelic('r_vamp_ring') && bloodOverheal > 0) {
+                    const damageGain = Math.min(5, bloodOverheal);
+                    state.p_battle_dmg += damageGain;
+                    showFloatText(`血誓余势 +${damageGain}伤`, "var(--crimson)", getCenter('ui-hp'));
+                }
             }
         }
         

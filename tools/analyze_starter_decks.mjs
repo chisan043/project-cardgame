@@ -129,6 +129,13 @@ function analyzeStarterBias(data, roleId, starter) {
         }
     }
     const classPool = data.CHARACTER_CARD_POOLS[roleId] || [];
+    const bloodoathShieldViolations = roleId === 'hero_warrior'
+        ? classPool.filter(card => getCardBuildTags(data, roleId, card).includes('bloodoath') && (
+            card.type === '防御'
+            || (card.tags || []).includes('庇护')
+            || card.directEffects?.protection
+        )).map(card => card.name)
+        : [];
     const directionRewardCoverage = Object.fromEntries(directions.map(buildTag => {
         const exact = classPool.filter(card => {
             const tags = getCardBuildTags(data, roleId, card);
@@ -147,6 +154,20 @@ function analyzeStarterBias(data, roleId, starter) {
         hero_mage: 'starter_mage_omen',
         hero_archer: 'starter_archer_aim'
     }[roleId];
+    const survivalRule = {
+        hero_warrior: { poolId: 'starter_warrior_guard', copies: 3, type: '防御', tag: null, label: '3 张护盾牌' },
+        hero_mage: { poolId: 'starter_mage_heal', copies: 3, type: '能力', tag: '治愈', label: '3 张治愈牌' },
+        hero_archer: { poolId: 'starter_archer_step', copies: 1, type: '能力', tag: '闪避', label: '1 张闪避牌' }
+    }[roleId];
+    const survivalCard = starter.cards.find(card => card.poolId === survivalRule.poolId);
+    const survivalIdentity = {
+        ...survivalRule,
+        actualCopies: Math.max(1, Number(survivalCard?.copies) || 1),
+        passed: !!survivalCard
+            && survivalCard.type === survivalRule.type
+            && (!survivalRule.tag || (survivalCard.tags || []).includes(survivalRule.tag))
+            && Math.max(1, Number(survivalCard.copies) || 1) === survivalRule.copies
+    };
     const coreTransforms = coreChoices.map(choice => {
         const transform = data.STARTER_CORE_CARD_TRANSFORMS[choice.id];
         const sourceCopies = starter.cards
@@ -156,7 +177,12 @@ function analyzeStarterBias(data, roleId, starter) {
             id: choice.id,
             sourcePoolId: transform?.sourcePoolId || null,
             sourceCopies,
-            transformedBuildTags: transform?.card?.buildTags || []
+            transformedBuildTags: transform?.card?.buildTags || [],
+            shieldlessBloodoath: choice.buildTag !== 'bloodoath' || (
+                transform?.card?.type !== '防御'
+                && !(transform?.card?.tags || []).includes('庇护')
+                && !transform?.card?.directEffects?.protection
+            )
         };
     });
     const signalValues = Object.values(buildSignals);
@@ -168,17 +194,22 @@ function analyzeStarterBias(data, roleId, starter) {
         && Object.values(directionRewardCoverage).every(value => value.exact > 0)
         && coreChoices.length === 3
         && coreChoices.every(choice => choice.exists && directions.includes(choice.buildTag))
+        && survivalIdentity.passed
+        && bloodoathShieldViolations.length === 0
         && coreTransforms.every(transform => transform.sourcePoolId === expectedSourcePoolId
             && transform.sourceCopies > 0
-            && transform.transformedBuildTags.length === 1);
+            && transform.transformedBuildTags.length === 1
+            && transform.shieldlessBloodoath);
     return {
         buildSignals,
         buildProfile,
         signalSpread,
         profileSpread,
         directionRewardCoverage,
+        bloodoathShieldViolations,
         coreChoices,
         coreTransforms,
+        survivalIdentity,
         passed
     };
 }
@@ -348,15 +379,15 @@ function renderMarkdown(report) {
         lines.push('');
     }
     lines.push('## 流派锁定检查', '');
-    lines.push('| 角色 | 初始信号 | 构筑分差 | 核心遗物覆盖 | 首次奖励精准候选 | 结果 |');
-    lines.push('| --- | --- | ---: | --- | --- | --- |');
+    lines.push('| 角色 | 生存基牌 | 初始信号 | 构筑分差 | 核心遗物覆盖 | 首次奖励精准候选 | 结果 |');
+    lines.push('| --- | --- | --- | ---: | --- | --- | --- |');
     for (const result of report.results) {
         const signals = Object.entries(result.bias.buildSignals).map(([tag, value]) => `${tag} ${value}`).join(' / ');
         const cores = result.bias.coreChoices.map(choice => choice.buildTag || choice.id).join(' / ');
         const coverage = Object.entries(result.bias.directionRewardCoverage).map(([tag, value]) => `${tag} ${value.exact}`).join(' / ');
-        lines.push(`| ${result.role} | ${signals} | ${result.bias.profileSpread.toFixed(2)} | ${cores} | ${coverage} | ${result.bias.passed ? '通过' : '失败'} |`);
+        lines.push(`| ${result.role} | ${result.bias.survivalIdentity.label} | ${signals} | ${result.bias.profileSpread.toFixed(2)} | ${cores} | ${coverage} | ${result.bias.passed ? '通过' : '失败'} |`);
     }
-    lines.push('', '通过条件：职业基础生存机制不计入流派权重，三件开局核心遗物完整覆盖三条路线，且每件核心都会改造指定的职业基础牌：战士护盾牌、法师咏唱牌、弓手风势牌。', '');
+    lines.push('', '通过条件：战士、法师、弓手分别保留护盾、治愈、闪避生存基牌；三件开局核心遗物完整覆盖三条路线；核心分别改造战士护盾牌、法师咏唱牌、弓手风势牌；血誓改造后不得保留护盾或庇护。', '');
     lines.push('## 核心改造实测', '');
     lines.push('| 角色 | 核心遗物 | 改造牌 | 前期 | 中期无奖励 | 后期无奖励 |');
     lines.push('| --- | --- | --- | ---: | ---: | ---: |');
@@ -397,7 +428,7 @@ function main() {
     const report = {
         generatedAt: generatedAt.toISOString(),
         generatedDate: localDate(generatedAt),
-        model: 'starter deck, dodge and core-relic selection simulation v3',
+        model: 'starter deck, survival identity and core-relic selection simulation v4',
         runsPerEnemy: args.runs,
         seed: args.seed,
         results
