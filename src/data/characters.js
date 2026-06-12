@@ -18,7 +18,7 @@ const CHARACTERS = {
         avatarPortrait: 'assets/characters/warrior/avatar_portrait_v1.webp',
         battleBack: 'assets/characters/warrior/battle_back_idle_v1.webp',
         accentClass: '',
-        starterHint: '用护盾和一次性反击稳住开局，再用圣剑转化护盾；易伤与吸血分别引向处刑和血誓路线。'
+        starterHint: '基础攻防维持生存，反击、易伤与吸血各留一个方向信号；首场战斗后再决定真正的成长路线。'
     },
     hero_mage: {
         id: 'hero_mage',
@@ -37,7 +37,7 @@ const CHARACTERS = {
         avatarPortrait: 'assets/characters/mage/avatar_portrait_v1.webp',
         battleBack: 'assets/characters/mage/battle_back_idle_v1.webp',
         accentClass: 'featured',
-        starterHint: '先用预兆与屏障积累咏唱，再用法弹或火花爆发；复刻、回响和剧毒分别留下后续构筑入口。'
+        starterHint: '基础法弹与屏障维持攻防，咏唱、复刻与剧毒各留一个方向信号；首场战斗后再选择成长路线。'
     },
     hero_archer: {
         id: 'hero_archer',
@@ -56,6 +56,6 @@ const CHARACTERS = {
         avatarPortrait: 'assets/characters/archer/avatar_portrait_v1.webp',
         battleBack: 'assets/characters/archer/battle_back_idle_v1.webp',
         accentClass: '',
-        starterHint: '用瞄准建立风势、错身化解攻击，再靠连射追击；逐影放矢与林魂招矢组成第一组放逐回收循环。'
+        starterHint: '基础射击与回避维持攻防，蓄力、剧毒与放逐各留一个方向信号；首场战斗后再选择成长路线。'
     }
 };

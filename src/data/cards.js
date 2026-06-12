@@ -37,6 +37,7 @@ const CARD_ART_REGISTRY = {
     '星屑预兆': 'assets/cards/art/mage/mage_omen_art_v1.webp',
     '余烬点燃': 'assets/cards/art/mage/mage_ember_art_v1.webp',
     '法环回流': 'assets/cards/art/mage/mage_loop_art_v1.webp',
+    '星页整理': 'assets/cards/art/mage/mage_loop_art_v1.webp',
     '裂界紫雷': 'assets/cards/art/mage/mage_thunder_art_v1.webp',
     '星环复写': 'assets/cards/art/mage/mage_star_copy_art_v1.webp',
     '燃魂导流': 'assets/cards/art/mage/mage_ember_flow_art_v1.webp',
@@ -55,6 +56,7 @@ const CARD_ART_REGISTRY = {
     '鹰眼贯枝': 'assets/cards/art/archer/archer_hawkeye_art_v1.webp',
     '回环箭雨': 'assets/cards/art/archer/archer_rain_art_v1.webp',
     '回风藏箭': 'assets/cards/art/archer/archer_hidden_arrow_art_v1.webp',
+    '整束箭袋': 'assets/cards/art/archer/archer_ready_art_v1.webp',
     '逐影放矢': 'assets/cards/art/archer/archer_exile_shot_art_v1.webp',
     '轮枝归射': 'assets/cards/art/archer/archer_cycle_branch_art_v1.webp',
     '拾羽连步': 'assets/cards/art/archer/archer_pick_feather_art_v1.webp',
@@ -576,43 +578,42 @@ const STARTER_DECKS = {
     starter_warrior: {
         roleId: 'hero_warrior',
         cards: [
-            { poolId: 'starter_warrior_strike', name: '基础斩击', type: '攻击', cost: 1, icon: '⚔️', val: 8, tags: [], rarity: '普通', copies: 2, frameTheme: 'warrior', desc: '造成 8 点伤害。' },
-            { poolId: 'starter_warrior_guard', name: '基础防御', type: '防御', cost: 1, icon: '🛡️', val: 7, tags: [], rarity: '普通', copies: 2, frameTheme: 'warrior', desc: '获得 7 点护盾。' },
-            { poolId: 'starter_warrior_watch', name: '守誓待击', type: '能力', cost: 0, icon: '👁️', val: 0, tags: ['反击', '销毁'], rarity: '普通', frameTheme: 'warrior', desc: '免费进入[反击]姿态，使用后[销毁]。' },
-            { poolId: 'starter_warrior_oath_cut', name: '誓约追击', type: '攻击', cost: 1, icon: '🗡️', val: 7, tags: ['圣剑'], rarity: '普通', frameTheme: 'warrior', desc: '造成 7 点伤害。[圣剑]会把当前护盾转成额外伤害。' },
-            { poolId: 'starter_warrior_flaw', name: '破绽刻印', type: '能力', cost: 1, icon: '🎯', val: 0, tags: ['易伤'], directEffects: { draw: true }, rarity: '普通', frameTheme: 'warrior', desc: '施加[易伤]并抽 1 张牌，为处刑路线打开窗口。' },
-            { poolId: 'starter_warrior_lifebite', name: '回命斩', type: '攻击', cost: 1, icon: '🩸', val: 6, tags: ['吸血'], rarity: '普通', frameTheme: 'warrior', desc: '造成 6 点伤害并[吸血]，展示血誓路线的生命回收。' },
-            { poolId: 'starter_warrior_banner', name: '誓旗护阵', type: '能力', cost: 1, icon: '🚩', val: 4, tags: ['庇护'], directEffects: { draw: true }, rarity: '普通', frameTheme: 'warrior', desc: '获得 4 点[庇护]并抽 1 张牌，为圣剑攻击保留护盾。' },
+            { poolId: 'starter_warrior_strike', name: '基础斩击', type: '攻击', cost: 1, icon: '⚔️', val: 8, tags: [], rarity: '普通', copies: 3, frameTheme: 'warrior', desc: '造成 8 点伤害。' },
+            { poolId: 'starter_warrior_guard', name: '基础防御', type: '防御', cost: 1, icon: '🛡️', val: 7, tags: [], rarity: '普通', copies: 3, frameTheme: 'warrior', desc: '获得 7 点护盾。' },
+            { poolId: 'starter_warrior_watch', name: '守誓待击', type: '能力', cost: 0, icon: '👁️', val: 0, tags: ['反击', '销毁'], buildTags: ['oathblade'], rarity: '普通', frameTheme: 'warrior', desc: '免费进入[反击]姿态，使用后[销毁]。' },
+            { poolId: 'starter_warrior_flaw', name: '破绽刻印', type: '能力', cost: 1, icon: '🎯', val: 0, tags: ['易伤'], buildTags: ['execution'], directEffects: { draw: true }, rarity: '普通', frameTheme: 'warrior', desc: '施加[易伤]并抽 1 张牌。' },
+            { poolId: 'starter_warrior_lifebite', name: '回命斩', type: '攻击', cost: 1, icon: '🩸', val: 6, tags: ['吸血'], buildTags: ['bloodoath'], rarity: '普通', frameTheme: 'warrior', desc: '造成 6 点伤害并[吸血]。' },
             { poolId: 'starter_blank_contract', name: '空白契约', type: '能力', cost: 0, icon: '📄', val: 0, tags: ['销毁'], directEffects: { draw: true }, rarity: '普通', frameTheme: 'neutral', desc: '抽 1 张牌，随后[销毁]。' }
         ]
     },
     starter_mage: {
         roleId: 'hero_mage',
         cards: [
-            { poolId: 'starter_mage_bolt', name: '基础法弹', type: '攻击', cost: 1, icon: '🪄', val: 7, tags: ['爆发'], rarity: '普通', copies: 2, frameTheme: 'mage', desc: '造成 7 点伤害。[爆发]会消耗咏唱追加伤害。' },
-            { poolId: 'starter_mage_heal', name: '基础愈流', type: '能力', cost: 1, icon: '✚', val: 0, tags: ['治愈'], rarity: '普通', frameTheme: 'mage', desc: '回复生命。' },
-            { poolId: 'starter_mage_barrier', name: '秘仪屏障', type: '防御', cost: 1, icon: '🛡️', val: 7, tags: ['咏唱'], rarity: '普通', frameTheme: 'mage', desc: '获得 7 点护盾并积累[咏唱]。' },
-            { poolId: 'starter_mage_omen', name: '秘仪预兆', type: '能力', cost: 1, icon: '🔮', val: 0, tags: ['咏唱'], rarity: '普通', frameTheme: 'mage', desc: '积累[咏唱]并获得职业自带的护盾。' },
-            { poolId: 'starter_mage_spark', name: '紫焰火花', type: '攻击', cost: 1, icon: '🔥', val: 7, tags: ['爆发'], rarity: '普通', frameTheme: 'mage', desc: '造成 7 点伤害并用[爆发]收束咏唱。' },
-            { poolId: 'starter_mage_copy', name: '镜页试抄', type: '能力', cost: 1, icon: '🪞', val: 0, tags: ['复刻'], directEffects: { draw: true }, rarity: '普通', frameTheme: 'mage', desc: '[复刻]上一张牌的效果并抽 1 张牌。' },
-            { poolId: 'starter_mage_echo', name: '回声护幕', type: '能力', cost: 1, icon: '🛡️', val: 3, tags: ['回响'], directEffects: { protection: true }, rarity: '普通', frameTheme: 'mage', desc: '触发两次[回响]，每次获得 3 点庇护。' },
-            { poolId: 'starter_mage_mist', name: '蚀星雾', type: '能力', cost: 1, icon: '☠️', val: 0, tags: ['剧毒'], rarity: '普通', frameTheme: 'mage', desc: '施加[剧毒]，展示灾厄路线的持续伤害。' },
-            { poolId: 'starter_mage_marker', name: '灰烬路标', type: '能力', cost: 1, icon: '🔥', val: 0, tags: ['易伤'], directEffects: { draw: true }, rarity: '普通', frameTheme: 'mage', desc: '施加[易伤]并抽 1 张牌，为下一张爆发牌铺路。' }
+            { poolId: 'starter_mage_bolt', name: '基础法弹', type: '攻击', cost: 1, icon: '🪄', val: 7, tags: [], rarity: '普通', copies: 3, frameTheme: 'mage', desc: '造成 7 点伤害。' },
+            { poolId: 'starter_mage_barrier', name: '秘仪屏障', type: '防御', cost: 1, icon: '🛡️', val: 7, tags: [], rarity: '普通', copies: 3, frameTheme: 'mage', desc: '获得 7 点护盾。' },
+            { poolId: 'starter_mage_omen', name: '秘仪预兆', type: '能力', cost: 1, icon: '🔮', val: 0, tags: ['咏唱'], buildTags: ['chant'], rarity: '普通', frameTheme: 'mage', desc: '积累[咏唱]并获得职业自带的护盾。' },
+            { poolId: 'starter_mage_copy', name: '镜页试抄', type: '能力', cost: 1, icon: '🪞', val: 0, tags: ['复刻'], buildTags: ['mirror'], directEffects: { draw: true }, rarity: '普通', frameTheme: 'mage', desc: '[复刻]上一张牌的效果并抽 1 张牌。' },
+            { poolId: 'starter_mage_mist', name: '蚀星雾', type: '能力', cost: 1, icon: '☠️', val: 0, tags: ['剧毒'], buildTags: ['calamity'], rarity: '普通', frameTheme: 'mage', desc: '施加[剧毒]。' },
+            { poolId: 'starter_mage_focus', name: '星页整理', type: '能力', cost: 1, icon: '📄', val: 0, tags: [], directEffects: { draw: true }, rarity: '普通', frameTheme: 'mage', desc: '抽 1 张牌。' }
         ]
     },
     starter_archer: {
         roleId: 'hero_archer',
         cards: [
-            { poolId: 'starter_archer_shot', name: '基础射击', type: '攻击', cost: 1, icon: '🏹', val: 6, tags: [], rarity: '普通', copies: 2, frameTheme: 'archer', desc: '造成 6 点伤害。拥有风势时会追加一次追射。' },
-            { poolId: 'starter_archer_step', name: '林地回避', type: '能力', cost: 1, icon: '🍃', val: 1, tags: ['错身'], directEffects: { protection: true }, protectVal: 4, rarity: '普通', copies: 2, frameTheme: 'archer', desc: '获得 4 点庇护与 1 层[错身]，用于卸掉下一次敌方主体攻击。' },
-            { poolId: 'starter_archer_aim', name: '拉弓瞄准', type: '能力', cost: 1, icon: '🎯', val: 5, tags: ['蓄力'], directEffects: { draw: true }, rarity: '普通', frameTheme: 'archer', desc: '获得风势并抽 1 张牌。' },
-            { poolId: 'starter_archer_barrage', name: '疾风连射', type: '攻击', cost: 1, icon: '💨', val: 5, tags: ['追击'], rarity: '普通', frameTheme: 'archer', desc: '造成 5 点伤害并触发一次[追击]。' },
-            { poolId: 'starter_archer_ready', name: '林风整备', type: '能力', cost: 0, icon: '🪶', val: 0, tags: ['自然', '销毁'], rarity: '普通', frameTheme: 'archer', desc: '免费触发[自然]回复 1 点能量；已有风势时还会抽牌并获得庇护，随后[销毁]。' },
-            { poolId: 'starter_archer_venom', name: '青牙试射', type: '攻击', cost: 0, icon: '☠️', val: 3, tags: ['剧毒', '销毁'], rarity: '普通', frameTheme: 'archer', desc: '免费造成 3 点伤害并施加[剧毒]，随后[销毁]。' },
-            { poolId: 'starter_archer_exile', name: '逐影放矢', type: '攻击', cost: 1, icon: '🏹', val: 8, tags: ['放逐'], rarity: '普通', frameTheme: 'archer', desc: '造成 8 点伤害并[放逐]，作为回收路线的目标。' },
-            { poolId: 'starter_archer_return', name: '林魂招矢', type: '能力', cost: 1, icon: '🏮', val: 0, tags: ['回收'], recycleModes: ['exhaustToHand'], rarity: '普通', frameTheme: 'archer', desc: '从放逐区选择 1 张牌回到手牌。' }
+            { poolId: 'starter_archer_shot', name: '基础射击', type: '攻击', cost: 1, icon: '🏹', val: 6, tags: [], rarity: '普通', copies: 3, frameTheme: 'archer', desc: '造成 6 点伤害。' },
+            { poolId: 'starter_archer_step', name: '林地回避', type: '防御', cost: 1, icon: '🍃', val: 7, tags: [], rarity: '普通', copies: 3, frameTheme: 'archer', desc: '获得 7 点护盾。' },
+            { poolId: 'starter_archer_aim', name: '拉弓瞄准', type: '能力', cost: 1, icon: '🎯', val: 4, tags: ['蓄力'], buildTags: ['gale'], directEffects: { draw: true }, rarity: '普通', frameTheme: 'archer', desc: '获得风势并抽 1 张牌。' },
+            { poolId: 'starter_archer_venom', name: '青牙试射', type: '攻击', cost: 1, icon: '☠️', val: 4, tags: ['剧毒'], buildTags: ['venom'], rarity: '普通', frameTheme: 'archer', desc: '造成 4 点伤害并施加[剧毒]。' },
+            { poolId: 'starter_archer_exile', name: '逐影放矢', type: '攻击', cost: 1, icon: '🏹', val: 7, tags: ['放逐'], buildTags: ['exile'], rarity: '普通', frameTheme: 'archer', desc: '造成 7 点伤害并[放逐]。' },
+            { poolId: 'starter_archer_focus', name: '整束箭袋', type: '能力', cost: 1, icon: '🪶', val: 0, tags: [], directEffects: { draw: true }, rarity: '普通', frameTheme: 'archer', desc: '抽 1 张牌。' }
         ]
     }
+};
+
+const STARTER_DIRECTION_REWARD_POOLS = {
+    hero_warrior: ['oathblade', 'execution', 'bloodoath'],
+    hero_mage: ['chant', 'mirror', 'calamity'],
+    hero_archer: ['gale', 'venom', 'exile']
 };
 
 Object.values(CHARACTER_CARD_POOLS).flat().forEach(applyCardTagBudget);

@@ -2479,7 +2479,38 @@
         return card.specialId || card.poolId || card.name;
     }
 
-    function generateRewardChoices(count = 3) {
+    function shouldOfferStarterDirectionChoice() {
+        return state.floor === 0 && state.deck.length > 0 && state.deck.every(card => card.isStarter);
+    }
+
+    function generateStarterDirectionChoices() {
+        const buildTags = STARTER_DIRECTION_REWARD_POOLS[state.player.characterId] || [];
+        const classPool = getCharacterCardPool();
+        const used = new Set();
+        return buildTags.map(buildTag => {
+            let candidates = classPool.filter(card => {
+                const tags = getCardBuildTags(card);
+                return tags.length === 1 && tags[0] === buildTag && !used.has(getCardChoiceKey(card));
+            });
+            if (!candidates.length) {
+                candidates = classPool.filter(card => getCardBuildTags(card).includes(buildTag) && !used.has(getCardChoiceKey(card)));
+            }
+            const picked = rollWeighted(candidates, card => {
+                const cost = Math.max(1, Number(card.cost) || 0);
+                const value = getScaledCardValue(card) / cost;
+                return 1 + Math.min(3, value / 6) + (card.rarity === '史诗' ? 0.25 : 0);
+            });
+            if (!picked) return null;
+            used.add(getCardChoiceKey(picked));
+            return cloneCardDefinition(picked);
+        }).filter(Boolean);
+    }
+
+    function generateRewardChoices(count = 3, { allowStarterDirectionChoice = false } = {}) {
+        if (allowStarterDirectionChoice && shouldOfferStarterDirectionChoice()) {
+            const directionChoices = generateStarterDirectionChoices();
+            if (directionChoices.length === count) return directionChoices;
+        }
         const choices = [];
         const used = new Set();
         const partnerTag = getBloodPartnerTagNeeded();
@@ -4479,7 +4510,10 @@
 
     function showInitRelicOverlay() {
         const container = document.getElementById('init-relic-content'); container.innerHTML = '';
-        let pool = getRolePreferredRelics(RELIC_POOL).slice(0, 3);
+        let pool = shufflePool(getCurrentRoleRelicPool(RELIC_POOL).filter(relic => getRelicBuildTags(relic).length === 0)).slice(0, 3);
+        if (pool.length < 3) {
+            pool = shufflePool(RELIC_POOL.filter(relic => isCommonRelic(relic) && getRelicBuildTags(relic).length === 0)).slice(0, 3);
+        }
         pool.forEach(r => {
             const rw = document.createElement('div'); rw.className = 'relic-item-box'; rw.style.cursor = 'pointer';
             rw.innerHTML = `<div style="width:78px; height:78px; margin:0 auto 15px; filter:drop-shadow(0 0 10px var(--gold)); font-size:50px;">${renderRelicVisual(r)}</div><div style="color:white; font-weight:bold; font-size:18px;">${r.name}</div><div style="flex:1; color:#aaa; font-size:12px; margin:10px 0; line-height:1.5; text-align:left;">${formatKeywords(getDisplayRelicDesc(r))}</div>${getRelicBottomTags(r)}`;
@@ -6490,9 +6524,10 @@
     function showRewardOverlay() {
         const container = document.getElementById('reward-items'); container.innerHTML = '';
         const availableRelics = getRolePreferredRelics(RELIC_POOL.filter(r => !hasRelic(r.id)));
-        const showRelicReward = availableRelics.length > 0 && Math.random() < 0.2;
-        document.getElementById('reward-title').innerText = showRelicReward ? '奇珍战利品' : '卡牌战利品';
-        document.getElementById('reward-desc').innerText = showRelicReward ? '战斗余烬里浮出三件奇珍，请选择一件收入囊中。' : '战斗余烬仍在发光...请选择一张卡牌加入牌组。';
+        const starterDirectionChoice = shouldOfferStarterDirectionChoice();
+        const showRelicReward = !starterDirectionChoice && availableRelics.length > 0 && Math.random() < 0.2;
+        document.getElementById('reward-title').innerText = showRelicReward ? '奇珍战利品' : starterDirectionChoice ? '选择战斗方向' : '卡牌战利品';
+        document.getElementById('reward-desc').innerText = showRelicReward ? '战斗余烬里浮出三件奇珍，请选择一件收入囊中。' : starterDirectionChoice ? '三张牌分别通向不同构筑。选择一张，作为本次旅程的第一个成长方向。' : '战斗余烬仍在发光...请选择一张卡牌加入牌组。';
         document.getElementById('reward-skip-btn').innerText = `放弃机缘，换取金币 +${getBattleRewardSkipGold()}`;
         if (showRelicReward) {
             availableRelics.slice(0, 3).forEach(r => {
@@ -6502,7 +6537,7 @@
                 container.appendChild(el);
             });
         } else {
-            generateRewardChoices(3).forEach(card => {
+            generateRewardChoices(3, { allowStarterDirectionChoice: true }).forEach(card => {
                 const el = document.createElement('div');
                 el.innerHTML = generateCardHTML(card, true);
                 el.onclick = () => { state.deck.push(card); closeOverlay('overlay-reward'); advanceMap(); };

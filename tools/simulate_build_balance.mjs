@@ -19,7 +19,9 @@ function loadGameData() {
     const context = vm.createContext({});
     vm.runInContext(`${source}\n;globalThis.__balanceData = {
         TAGS, BUILD_DIRECTIONS, CARD_BUILD_TAGS_BY_ID, NEUTRAL_CARD_POOL, STARTER_DECKS,
+        STARTER_DIRECTION_REWARD_POOLS,
         CHARACTER_CARD_POOLS, SPECIAL_EPIC_POOLS, RELIC_POOL, RELIC_BUILD_TAGS_BY_ID,
+        COMMON_RELIC_IDS, ROLE_RELIC_IDS,
         ENEMIES, CHARACTERS, getScaledCardValue,
         getAbilityPotency, getCardDrawCount, getCardHealValue,
         getCardChantGain, getProtectionValue, getWindGain, getSidestepGain,
@@ -81,7 +83,7 @@ const FOUNDATION = {
     ],
     hero_archer: [
         { name: '基础射击', type: '攻击', cost: 1, val: 6, tags: [], rarity: '普通' },
-        { name: '林地回避', type: '能力', cost: 1, val: 1, tags: ['错身'], rarity: '普通' }
+        { name: '林地回避', type: '防御', cost: 1, val: 7, tags: [], rarity: '普通' }
     ]
 };
 

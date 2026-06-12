@@ -53,6 +53,15 @@ function pct(value) {
     return `${(value * 100).toFixed(1)}%`;
 }
 
+function localDate(date) {
+    return new Intl.DateTimeFormat('en-CA', {
+        timeZone: 'Asia/Shanghai',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit'
+    }).format(date);
+}
+
 function targetStatus(value, target) {
     if (value < target.min) return '偏低';
     if (value > target.max) return '偏高';
@@ -67,6 +76,85 @@ function summarizeUsage(meta, plays, opportunities) {
         opportunities: opportunities[id] || 0,
         usageRate: (plays[id] || 0) / Math.max(1, opportunities[id] || 0)
     })).sort((left, right) => left.usageRate - right.usageRate);
+}
+
+function getExplicitBuildTags(data, card) {
+    if (Array.isArray(card.buildTags) && card.buildTags.length) return card.buildTags;
+    const keys = [card.poolId, card.specialId, card.id, card.name].filter(Boolean);
+    for (const key of keys) {
+        if (data.CARD_BUILD_TAGS_BY_ID[key]) return data.CARD_BUILD_TAGS_BY_ID[key];
+    }
+    return [];
+}
+
+function getCardBuildTags(data, roleId, card) {
+    const explicit = getExplicitBuildTags(data, card);
+    const inferred = [];
+    const tags = card.tags || [];
+    for (const [buildTag, config] of Object.entries(data.BUILD_DIRECTIONS[roleId] || {})) {
+        if ((config.triggerTags || []).some(tag => tags.includes(tag))) inferred.push(buildTag);
+    }
+    return [...new Set([...explicit, ...inferred])];
+}
+
+function getRelicBuildTags(data, roleId, relic) {
+    const explicit = data.RELIC_BUILD_TAGS_BY_ID[relic.id] || [];
+    const text = `${relic.name || ''}${relic.desc || ''}`;
+    const inferred = [];
+    for (const [buildTag, config] of Object.entries(data.BUILD_DIRECTIONS[roleId] || {})) {
+        if ((config.triggerTags || []).some(tag => text.includes(`[${tag}]`) || text.includes(tag))) inferred.push(buildTag);
+    }
+    return [...new Set([...explicit, ...inferred])];
+}
+
+function analyzeStarterBias(data, roleId, starter) {
+    const directions = data.STARTER_DIRECTION_REWARD_POOLS[roleId] || [];
+    const buildSignals = Object.fromEntries(directions.map(tag => [tag, 0]));
+    const buildProfile = Object.fromEntries(directions.map(tag => [tag, 0]));
+    for (const card of starter.cards) {
+        const copies = Math.max(1, Number(card.copies) || 1);
+        const explicit = getExplicitBuildTags(data, card);
+        const allTags = getCardBuildTags(data, roleId, card);
+        for (const tag of allTags) {
+            if (buildSignals[tag] !== undefined) buildSignals[tag] += copies;
+        }
+        for (const tag of explicit) {
+            if (buildProfile[tag] !== undefined) buildProfile[tag] += copies * 0.5;
+        }
+        for (const tag of allTags) {
+            if (buildProfile[tag] !== undefined) buildProfile[tag] += copies * 0.25;
+        }
+    }
+    const classPool = data.CHARACTER_CARD_POOLS[roleId] || [];
+    const directionRewardCoverage = Object.fromEntries(directions.map(buildTag => {
+        const exact = classPool.filter(card => {
+            const tags = getCardBuildTags(data, roleId, card);
+            return tags.length === 1 && tags[0] === buildTag;
+        }).length;
+        const fallback = classPool.filter(card => getCardBuildTags(data, roleId, card).includes(buildTag)).length;
+        return [buildTag, { exact, fallback }];
+    }));
+    const roleRelics = data.ROLE_RELIC_IDS[roleId];
+    const neutralInitialRelics = data.RELIC_POOL.filter(relic => (
+        roleRelics.has(relic.id) || data.COMMON_RELIC_IDS.has(relic.id)
+    ) && getRelicBuildTags(data, roleId, relic).length === 0).length;
+    const signalValues = Object.values(buildSignals);
+    const profileValues = Object.values(buildProfile);
+    const signalSpread = Math.max(...signalValues) - Math.min(...signalValues);
+    const profileSpread = Math.max(...profileValues) - Math.min(...profileValues);
+    const passed = signalValues.every(value => value === 1)
+        && profileSpread === 0
+        && Object.values(directionRewardCoverage).every(value => value.exact > 0)
+        && neutralInitialRelics >= 3;
+    return {
+        buildSignals,
+        buildProfile,
+        signalSpread,
+        profileSpread,
+        directionRewardCoverage,
+        neutralInitialRelics,
+        passed
+    };
 }
 
 function runEncounter(data, roleId, checkpoint, enemyName, runs, seed) {
@@ -145,6 +233,7 @@ function runRole(data, roleId, args, roleIndex) {
     }
     const starterId = data.CHARACTERS[roleId].starterDeckId;
     const starter = data.STARTER_DECKS[starterId];
+    const bias = analyzeStarterBias(data, roleId, starter);
     return {
         roleId,
         role: data.CHARACTERS[roleId].name,
@@ -158,6 +247,7 @@ function runRole(data, roleId, args, roleIndex) {
             tags: card.tags || [],
             directEffects: card.directEffects || {}
         })),
+        bias,
         checkpoints
     };
 }
@@ -166,7 +256,7 @@ function renderMarkdown(report) {
     const lines = [
         '# 初始牌组测试报告',
         '',
-        `测试日期：${report.generatedAt.slice(0, 10)}`,
+        `测试日期：${report.generatedDate}`,
         '',
         `每个角色、节点、敌人样本量：${report.runsPerEnemy} 局；随机种子：\`${report.seed}\`。`,
         '',
@@ -195,6 +285,15 @@ function renderMarkdown(report) {
         }
         lines.push('');
     }
+    lines.push('## 流派锁定检查', '');
+    lines.push('| 角色 | 初始信号 | 构筑分差 | 首次奖励精准候选 | 中立初始遗物 | 结果 |');
+    lines.push('| --- | --- | ---: | --- | ---: | --- |');
+    for (const result of report.results) {
+        const signals = Object.entries(result.bias.buildSignals).map(([tag, value]) => `${tag} ${value}`).join(' / ');
+        const coverage = Object.entries(result.bias.directionRewardCoverage).map(([tag, value]) => `${tag} ${value.exact}`).join(' / ');
+        lines.push(`| ${result.role} | ${signals} | ${result.bias.profileSpread.toFixed(2)} | ${coverage} | ${result.bias.neutralInitialRelics} | ${result.bias.passed ? '通过' : '失败'} |`);
+    }
+    lines.push('', '通过条件：每条构筑路线恰好 1 张初始种子牌，初始构筑分完全相等，首次奖励每条路线都有精准候选，且每个角色至少有 3 件中立初始遗物。', '');
     lines.push('## 初始卡使用率', '');
     for (const result of report.results) {
         const teachingEnemies = ['early', 'mid'].flatMap(id => Object.values(result.checkpoints[id].enemies));
@@ -222,9 +321,11 @@ function main() {
     const args = parseArgs(process.argv.slice(2));
     const data = loadGameData();
     const results = Object.keys(data.CHARACTERS).map((roleId, roleIndex) => runRole(data, roleId, args, roleIndex));
+    const generatedAt = new Date();
     const report = {
-        generatedAt: new Date().toISOString(),
-        model: 'starter deck forced encounter simulation v1',
+        generatedAt: generatedAt.toISOString(),
+        generatedDate: localDate(generatedAt),
+        model: 'starter deck forced encounter and build-bias simulation v2',
         runsPerEnemy: args.runs,
         seed: args.seed,
         results
@@ -233,7 +334,7 @@ function main() {
     fs.writeFileSync(path.resolve(ROOT, args.markdown), renderMarkdown(report));
     console.log(`Starter deck simulation: ${args.runs} runs per role, checkpoint and enemy`);
     for (const result of results) {
-        console.log(`${result.role}\t前期 ${pct(result.checkpoints.early.aggregate.winRate)}\t中期 ${pct(result.checkpoints.mid.aggregate.winRate)}\t后期 ${pct(result.checkpoints.late.aggregate.winRate)}`);
+        console.log(`${result.role}\t前期 ${pct(result.checkpoints.early.aggregate.winRate)}\t中期 ${pct(result.checkpoints.mid.aggregate.winRate)}\t后期 ${pct(result.checkpoints.late.aggregate.winRate)}\t流派锁定 ${result.bias.passed ? '通过' : '失败'}`);
     }
 }
 
