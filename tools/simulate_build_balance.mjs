@@ -211,8 +211,11 @@ function encounterPool(data, checkpoint) {
     return data.ENEMIES.filter(enemy => enemy.tier === tier && !enemy.type);
 }
 
-function createEnemy(data, rng, checkpoint) {
-    const template = clone(pick(rng, encounterPool(data, checkpoint)));
+function createEnemy(data, rng, checkpoint, enemyName = null) {
+    const pool = encounterPool(data, checkpoint);
+    const selected = enemyName ? pool.find(enemy => enemy.name === enemyName) : pick(rng, pool);
+    if (!selected) throw new Error(`Enemy ${enemyName} is not available at checkpoint ${checkpoint.id}`);
+    const template = clone(selected);
     const scale = 1 + checkpoint.floor * 0.15;
     template.maxHp = Math.floor(template.baseHp * scale);
     template.hp = template.maxHp;
@@ -237,9 +240,9 @@ function createEnemy(data, rng, checkpoint) {
     return template;
 }
 
-function createBattle(data, rng, roleId, deck, hp, checkpoint, loadout) {
+function createBattle(data, rng, roleId, deck, hp, checkpoint, loadout, options = {}) {
     const character = data.CHARACTERS[roleId];
-    const enemy = createEnemy(data, rng, checkpoint);
+    const enemy = createEnemy(data, rng, checkpoint, options.enemyName);
     const state = {
         data, rng, roleId, character, maxHp: character.maxHp, hp,
         energy: character.baseEnergy, armor: roleId === 'hero_warrior' ? 5 : 0,
@@ -473,7 +476,11 @@ function estimateCard(state, card, incoming) {
     if (hasEnergy || tags.includes('自然')) score += 5;
     if (tags.includes('反击')) score += incoming > 0 ? 10 : 4;
     if (tags.includes('回响') && card.type !== '攻击') score += 4;
-    if (tags.includes('附魔')) score += 6;
+    if (tags.includes('附魔')) {
+        const baseEnchant = Math.max(4, (Number(card.val) || 4) + (card.up ? 4 : 2));
+        const sinkEnergy = Math.min(Number(card.energySink?.max) || 0, Math.max(0, state.energy - (card.cost || 0)));
+        score += baseEnchant + sinkEnergy * (Number(card.energySink?.enchantPerEnergy) || 0) * 0.8;
+    }
     if (tags.includes('咏唱')) score += state.data.getCardChantGain(card) * 5;
     if (tags.includes('蓄力')) score += state.data.getWindGain(card) * 4;
     if (tags.includes('错身')) score += incoming > 0 ? 8 : 3;
@@ -635,7 +642,14 @@ function executeCard(state, card, echo = false) {
         state.chant = Math.min(12, state.chant + gain);
         state.armor += 4;
         if (hasRelic(state, 'r_sac_jade')) state.energy++;
-        if (hasRelic(state, 'r_sac_jade')) state.protection += 3;
+        if (hasRelic(state, 'r_sac_jade')) state.protection += 2;
+    }
+    if (tags.includes('附魔')) {
+        const sinkEnergy = Math.min(Number(card.energySink?.max) || 0, Math.max(0, state.energy));
+        const baseEnchant = Math.max(4, (Number(card.val) || 4) + (card.up ? 4 : 2));
+        state.energy -= sinkEnergy;
+        state.nextDamage += baseEnchant + sinkEnergy * (Number(card.energySink?.enchantPerEnergy) || 0);
+        if (!echo) draw(state, 1);
     }
     if (tags.includes('蓄力') && !echo) {
         let gain = state.data.getWindGain(card) + (hasRelic(state, 'r_wind_quiver') ? 1 : 0);
@@ -919,8 +933,8 @@ function battleResult(state, win, deathCause = null) {
     };
 }
 
-function simulateBattle(data, rng, roleId, deck, hp, checkpoint, loadout) {
-    const state = createBattle(data, rng, roleId, deck, hp, checkpoint, loadout);
+function simulateBattle(data, rng, roleId, deck, hp, checkpoint, loadout, options = {}) {
+    const state = createBattle(data, rng, roleId, deck, hp, checkpoint, loadout, options);
     while (state.turns++ < 30 && state.hp > 0) {
         const moveIndex = chooseMove(state);
         const move = state.enemy.moves[moveIndex];
@@ -979,7 +993,7 @@ function simulateCheckpoint(data, roleId, buildId, checkpoint, runs, seed, mode,
         const deckSize = checkpoint.id === 'early' ? [5, 5] : checkpoint.id === 'mid' ? [7, 4] : [10, 3];
         const deck = makeDeck(data, rng, roleId, buildId, deckSize[0], deckSize[1], loadout, options.disabledTags);
         if (['late', 'elite', 'boss'].includes(checkpoint.id)) upgradeRandomCard(rng, deck);
-        const result = simulateBattle(data, rng, roleId, deck, data.CHARACTERS[roleId].maxHp, checkpoint, loadout);
+        const result = simulateBattle(data, rng, roleId, deck, data.CHARACTERS[roleId].maxHp, checkpoint, loadout, options);
         wins += result.win ? 1 : 0;
         turns += result.turns;
         hpLeft += result.hp;
@@ -1110,6 +1124,7 @@ export {
     FOUNDATION,
     MIDGAME_RELICS,
     MATURE_LOADOUTS,
+    createRng,
     getBuildPool,
     getLoadout,
     loadGameData,

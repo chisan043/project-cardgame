@@ -5700,7 +5700,7 @@
                 let chantGain = 3 + (hasRelic('r_energy_crys') ? 1 : 0);
                 state.p_chant = Math.min(12, state.p_chant + chantGain);
                 state.mp += hasRelic('r_sac_jade') ? 2 : 1;
-                if (hasRelic('r_sac_jade')) state.p_reduce_dmg += 3;
+                if (hasRelic('r_sac_jade')) state.p_reduce_dmg += 2;
                 showFloatText(`咏唱 +${chantGain}`, "var(--purple)", getCenter('ui-hp'));
                 if (getEnemyDebuffTypeCount() > 0) await drawCards(1);
             }
@@ -5888,7 +5888,14 @@
             if (actuallyDiscarded > 0) {
                 renderHand();
                 if (card.tags.includes('狂热')) { let fVal = getFrenzyBonus(card); state.p_dmg_buff += fVal; showFloatText(`狂热 +${fVal}`, "var(--crimson)", getCenter('ui-hp')); }
-                if (card.tags.includes('附魔')) { let eVal = getEnchantBonus(card); state.p_next_dmg += eVal; showFloatText(`附魔 +${eVal}`, "var(--crimson)", getCenter('ui-hp')); await drawCards(1); }
+                if (card.tags.includes('附魔')) {
+                    const sinkEnergy = Math.min(Number(card.energySink?.max) || 0, Math.max(0, state.mp));
+                    let eVal = getEnchantBonus(card) + sinkEnergy * (Number(card.energySink?.enchantPerEnergy) || 0);
+                    state.mp -= sinkEnergy;
+                    state.p_next_dmg += eVal;
+                    showFloatText(`附魔 +${eVal}${sinkEnergy ? `（耗能 ${sinkEnergy}）` : ''}`, "var(--crimson)", getCenter('ui-hp'));
+                    await drawCards(1);
+                }
             }
         }
         if (card.tags && card.tags.includes('重置') && targets && targets.reset) { 
@@ -5971,8 +5978,8 @@
             showFloatText(`咏唱 +${chantGain}`, "var(--purple)", getCenter('ui-hp'));
             if (hasRelic('r_sac_jade')) {
                 state.mp += 1;
-                state.p_reduce_dmg += 3;
-                showFloatText("咏唱回能 +1 / 庇护 +3", "var(--gold)", getCenter('ui-mp'));
+                state.p_reduce_dmg += 2;
+                showFloatText("咏唱回能 +1 / 庇护 +2", "var(--gold)", getCenter('ui-mp'));
             }
         }
         if (card.tags && card.tags.includes('蓄力') && !isEcho) {

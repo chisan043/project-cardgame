@@ -100,7 +100,7 @@ const REMOVED_BATTLE_IMPRINT_SPECIAL_IDS = new Set([
 const RELIC_POOL = [
     { id: 'r_bone_ring', name: '誓约骨环', icon: '🦴', desc: '战士/弓手：每丢弃 1 张非诅咒手牌，本场战斗所有伤害 +1；适合把弃牌转成血誓卖血、处刑连段或重置爆发。', price: 100 },
     { id: 'r_frenzy_veil', name: '疾影面纱', icon: '🎭', desc: '弓手：触发[重置]时额外[抽牌] 1 张；本战斗弃牌越多，[狂热]提供的伤害越高。', price: 130 },
-    { id: 'r_sac_jade', name: '咏唱玉坠', icon: '📿', desc: '法师：每次获得[咏唱]时，回复 1 点能量并获得 3 点庇护。', price: 150 },
+    { id: 'r_sac_jade', name: '咏唱玉坠', icon: '📿', desc: '法师：每次获得[咏唱]时，回复 1 点能量并获得 2 点庇护。', price: 150 },
     { id: 'r_enchant_crys', name: '紫焰棱晶', icon: '💎', desc: '法师：触发[附魔]时加成翻倍；[爆发]结算时额外追加紫焰伤害。', price: 140 },
     { id: 'r_poison_fang', name: '森蚀箭簇', icon: '🐍', desc: '弓手：施加[剧毒]或[出血]时额外 +1 层；敌方带有出血时受到的伤害提高。', price: 120 },
     { id: 'r_bleed_knife', name: '猎痕短刃', icon: '🔪', desc: '弓手：引爆[放血]时，每层额外造成 2 点伤害，并补 1 层[剧毒]。', price: 160 },
