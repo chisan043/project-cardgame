@@ -4,8 +4,8 @@ const CHARACTERS = {
     hero_warrior: {
         id: 'hero_warrior',
         name: '勇者战士',
-        subtitle: '近战 / 防御 / 圣剑',
-        desc: '稳定的护盾与反击路线，适合喜欢明确信号与稳步压制的对局体验。',
+        subtitle: '近战 / 格挡 / 取舍',
+        desc: '用五点能量在进攻、格挡和铺垫之间做选择，再从奖励牌中逐渐形成自己的战斗方式。',
         tags: ['圣剑反击', '处刑连斩', '血誓狂战'],
         maxHp: 90,
         baseEnergy: 5,
@@ -13,12 +13,12 @@ const CHARACTERS = {
         startingGold: 50,
         starterDeckId: 'starter_warrior',
         cardPoolId: 'pool_warrior',
-        passive: '更高生命上限。每场战斗开始获得 5 点护盾；圣剑攻击会借护盾与反击姿态追加伤害。',
+        passive: '更高生命上限。战士没有开局免费护盾，生存依赖你对敌方意图和手牌费用的判断。',
         portrait: 'assets/characters/warrior/select_portrait_v1.webp',
         avatarPortrait: 'assets/characters/warrior/avatar_portrait_v1.webp',
         battleBack: 'assets/characters/warrior/battle_back_idle_v1.webp',
         accentClass: '',
-        starterHint: '护盾是战士的基础生存手段；开局通过核心遗物确定圣剑反击、处刑连斩或血誓狂战路线。'
+        starterHint: '四张基础斩击、四张基础防御、一张试探轻击与一张破势。用五点能量决定这一回合要进攻多少、防守多少。'
     },
     hero_mage: {
         id: 'hero_mage',

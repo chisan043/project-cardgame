@@ -168,7 +168,7 @@ function hasDirectCardEffect(card, effect) {
 }
 
 const STATUS_DESC = {
-    armor: '<span style="color:white; font-weight:bold;">护盾</span><br>抵挡等量的伤害，回合结束时若未被打破则保留。',
+    armor: '<span style="color:white; font-weight:bold;">护盾</span><br>抵挡等量的伤害，下个玩家回合开始时清零。',
     poison: '<span style="color:var(--nature); font-weight:bold;">剧毒</span><br>回合结束时受到等量的伤害。触发后层数减少1层。',
     bleed: '<span style="color:var(--crimson); font-weight:bold;">出血</span><br>回合结束时受到层数一半的伤害(向上取整)。触发后层数减少1层。',
     burn: '<span style="color:var(--fire); font-weight:bold;">燃烧</span><br>每层每回合造成最大生命 3% 的伤害。触发后层数减少1层。',
@@ -236,6 +236,7 @@ function getCostPowerMultiplier(card) {
 }
 
 function getScaledCardValue(card) {
+    if (card?.economyV1) return Math.round(Math.max(0, Number(card?.val) || 0));
     return Math.round(Math.max(0, Number(card?.val) || 0) * getCostPowerMultiplier(card));
 }
 

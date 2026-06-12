@@ -1810,7 +1810,7 @@
         <div class="role-select-shell">
             <div class="role-select-header">
                 <h2 class="role-select-title">命途之选</h2>
-                <p class="role-select-subtitle">从三位旅者中选择本次探索的起点。选定角色后，将通过核心遗物确定流派。</p>
+                <p class="role-select-subtitle">从三位旅者中选择本次探索的起点。战士将直接出发，并在旅途中根据奖励形成构筑。</p>
             </div>
             <div id="role-select-grid" class="role-select-grid"></div>
             <div class="role-select-footer">
@@ -2402,7 +2402,7 @@
     function getCardDisplayName(card) {
         if (!card) return '';
         if (card.displayName) return card.displayName;
-        if (card.isSpecial || card.isJunk || card.isKnife) return card.name || '';
+        if (card.isStarter || card.isSpecial || card.isJunk || card.isKnife) return card.name || '';
         const signature = getCardEffectSignature(card);
         const exactName = CARD_EFFECT_NAME_BY_SIGNATURE.get(signature);
         if (exactName && (exactName.count > 1 || exactName.name !== card.name)) return exactName.name;
@@ -2493,6 +2493,7 @@
     }
 
     function shouldOfferStarterDirectionChoice() {
+        if (state.player.characterId === 'hero_warrior') return false;
         return !getSelectedCoreBuildTag() && state.floor === 0 && state.deck.length > 0 && state.deck.every(card => card.isStarter);
     }
 
@@ -4503,8 +4504,14 @@
         state.deck.forEach(c => { c.id = Math.random().toString(36).substr(2, 9); applyCardTagBudget(c); });
         updateTopBar();
         closeOverlay('overlay-role-select');
-        showInitRelicOverlay();
+        if ((STARTER_CORE_RELIC_IDS[characterId] || []).length > 0) showInitRelicOverlay();
+        else beginRunWithoutCoreRelic();
         showFloatText(`旅者已选：${getCurrentCharacter().name}`, "var(--gold)", {x: window.innerWidth / 2, y: window.innerHeight / 2});
+    }
+
+    function beginRunWithoutCoreRelic() {
+        generateMap(); renderMap(); updateTopBar(); setTopBarVisible(true); showScene('scene-map');
+        saveRun();
     }
 
     async function startGame() {
@@ -4615,7 +4622,7 @@
         let mapDeckEl = document.getElementById('ui-deck-total-map'); if(mapDeckEl) mapDeckEl.innerText = state.deck.length;
         
         const pStatus = document.getElementById('ui-player-status'); pStatus.innerHTML = '';
-        if(state.armor > 0) { pStatus.innerHTML += `<div class="status-badge badge-armor" style="background:rgba(41, 128, 185, 0.9); color:white; font-size:15px; padding: 4px 14px; border: 1px solid rgba(255,255,255,0.5); box-shadow: 0 0 10px rgba(41, 128, 185, 0.8);">🛡️ 护盾: ${state.armor}<div class="status-tooltip">抵挡等量的伤害。<br>回合结束时，若未打破则清零（除非有保留效果）。</div></div>`; }
+        if(state.armor > 0) { pStatus.innerHTML += `<div class="status-badge badge-armor" style="background:rgba(41, 128, 185, 0.9); color:white; font-size:15px; padding: 4px 14px; border: 1px solid rgba(255,255,255,0.5); box-shadow:0 0 10px rgba(41, 128, 185, 0.8);">🛡️ 护盾: ${state.armor}<div class="status-tooltip">抵挡等量的伤害。<br>下个玩家回合开始时清零。</div></div>`; }
         if(state.player.thorns > 0) pStatus.innerHTML += `<div class="status-badge badge-armor" style="background:rgba(39, 174, 96, 0.9); color:white;">🛡️ 荆棘: ${state.player.thorns}<div class="status-tooltip">${STATUS_DESC['thorns']}</div></div>`;
         if(state.p_poison > 0) pStatus.innerHTML += `<div class="status-badge badge-poison">☠️ 中毒: ${state.p_poison}<div class="status-tooltip">${STATUS_DESC['poison']}</div></div>`;
         if(state.p_bleed > 0) pStatus.innerHTML += `<div class="status-badge badge-bleed">🩸 流血: ${state.p_bleed}<div class="status-tooltip">${STATUS_DESC['bleed']}</div></div>`;
@@ -5036,7 +5043,6 @@
         
         const character = getCurrentCharacter();
         state.mp = getCharacterBaseEnergy(character);
-        if (character.id === 'hero_warrior') state.armor += 5;
         if(hasRelic('r_thorn_shield_new')) state.armor += 6;
         
         setEnemyIntent(); 
@@ -6385,7 +6391,7 @@
                 state.p_chant = 2;
                 showFloatText("恒咏墨瓶", "var(--purple)", getCenter('ui-hp'));
             }
-            if (playerWasAttacked) state.armor = 0;
+            state.armor = 0;
             cardsPlayedThisTurn = 0; state.turn_first_card = true;
             state.r_duel_glove_used = false;
             state.r_pierce_meter_used = false;

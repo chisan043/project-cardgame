@@ -464,9 +464,9 @@ const RELIC_CARD_REWARD_BONUS_BY_ID = {
 };
 
 const STARTER_CORE_RELIC_IDS = {
-    hero_warrior: ['r_oathblade_beacon', 'r_execution_warrant', 'r_bloodoath_contract'],
+    hero_warrior: [],
     hero_mage: ['r_chant_astrolabe', 'r_mirror_catalog', 'r_calamity_orb'],
     hero_archer: ['r_gale_weatherwane', 'r_venom_seedcase', 'r_exile_roadsign']
 };
 
-const CORE_RELIC_IDS = new Set(Object.values(STARTER_CORE_RELIC_IDS).flat());
+const CORE_RELIC_IDS = new Set(RELIC_POOL.filter(relic => relic.isCore).map(relic => relic.id));

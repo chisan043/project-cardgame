@@ -76,8 +76,8 @@ function clone(value) {
 
 const FOUNDATION = {
     hero_warrior: [
-        { name: '基础斩击', type: '攻击', cost: 1, val: 8, tags: [], rarity: '普通' },
-        { name: '基础防御', type: '防御', cost: 1, val: 7, tags: [], rarity: '普通' }
+        { name: '基础斩击', type: '攻击', cost: 2, val: 8, tags: [], rarity: '普通', economyV1: true },
+        { name: '基础防御', type: '防御', cost: 2, val: 7, tags: [], rarity: '普通', economyV1: true }
     ],
     hero_mage: [
         { name: '基础法弹', type: '攻击', cost: 1, val: 7, tags: ['爆发'], rarity: '普通' },
@@ -276,7 +276,7 @@ function createBattle(data, rng, roleId, deck, hp, checkpoint, loadout, options 
     const enemy = createEnemy(data, rng, checkpoint, options.enemyName);
     const state = {
         data, rng, roleId, character, maxHp: character.maxHp, hp,
-        energy: character.baseEnergy, armor: roleId === 'hero_warrior' ? 5 : 0,
+        energy: character.baseEnergy, armor: 0,
         thorns: 0, protection: 0, counter: 0, chant: 0, aim: 0, sidestep: 0,
         battleDamage: 0, turnDamage: 0, nextDamage: 0, weak: 0, vuln: 0,
         poison: 0, bleed: 0, burn: 0, curse: 0,
@@ -284,6 +284,7 @@ function createBattle(data, rng, roleId, deck, hp, checkpoint, loadout, options 
         lastCard: null, cardsPlayed: 0, enemy, encounterName: enemy.name, turns: 0,
         damageTaken: 0, healing: 0, relics: new Set(loadout?.relics || []),
         totalDamageDealt: 0, energyWasted: 0, lastDamageCause: null, lastEnemyDamageSource: null,
+        totalCardsPlayed: 0, totalCardsLeft: 0, totalHandCost: 0, handSamples: 0, handEmptyTurns: 0,
         cardOpportunities: {}, cardPlays: {}, cardMeta: {},
         playStyle: { attacks: 0, defenses: 0, abilities: 0, setup: 0, burst: 0, sustain: 0, control: 0, cycle: 0 },
         protectArmorUsed: false, chantReservoirUsed: false, tailwindSpoolUsed: false,
@@ -791,6 +792,7 @@ function executeCard(state, card, echo = false) {
 
 function playPlayerTurn(state, move) {
     state.energy = state.character.baseEnergy;
+    state.armor = 0;
     state.cardsPlayed = 0;
     state.abilityCardsPlayed = 0;
     state.turnDamage = 0;
@@ -803,6 +805,10 @@ function playPlayerTurn(state, move) {
     state.retained.forEach(card => recordCardOpportunity(state, card));
     state.retained = [];
     draw(state, state.character.openingHand);
+    state.totalHandCost += state.hand
+        .filter(card => !card.isJunk)
+        .reduce((sum, card) => sum + Math.max(0, Number(card.cost) || 0), 0);
+    state.handSamples++;
     let safety = 0;
     while (safety++ < 30 && state.enemy.hp > 0 && state.hp > 0) {
         const incoming = expectedIncoming(state, move);
@@ -814,6 +820,7 @@ function playPlayerTurn(state, move) {
         state.hand.splice(state.hand.indexOf(card), 1);
         state.energy -= card.cost || 0;
         recordCardPlay(state, card);
+        state.totalCardsPlayed++;
         let specialWindRun = 0;
         if (card.isSpecial && card.type === '攻击' && state.aim > 0) {
             state.aim--;
@@ -843,6 +850,8 @@ function playPlayerTurn(state, move) {
         state.cardsPlayed++;
     }
     state.energyWasted += Math.max(0, state.energy);
+    state.totalCardsLeft += state.hand.length;
+    if (state.hand.length === 0) state.handEmptyTurns++;
     state.discard.push(...state.hand.filter(card => !(card.tags || []).includes('保留') && !state.data.hasDirectCardEffect(card, 'retain')));
     state.retained.push(...state.hand.filter(card => (card.tags || []).includes('保留') || state.data.hasDirectCardEffect(card, 'retain')));
     state.hand = [];
@@ -969,6 +978,11 @@ function battleResult(state, win, deathCause = null) {
         damageDealt: state.totalDamageDealt,
         healing: state.healing,
         energyWasted: state.energyWasted,
+        cardsPlayed: state.totalCardsPlayed,
+        cardsLeft: state.totalCardsLeft,
+        handCost: state.totalHandCost,
+        handSamples: state.handSamples,
+        handEmptyTurns: state.handEmptyTurns,
         deathCause: win ? null : (deathCause || state.lastDamageCause || '回合上限'),
         victoryCause: win ? (state.lastEnemyDamageSource || '卡牌伤害') : null,
         cardOpportunities: state.cardOpportunities,
