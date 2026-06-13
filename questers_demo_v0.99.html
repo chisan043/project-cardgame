@@ -582,14 +582,43 @@
 
         .combat-stage { position: absolute; top: 112px; right: 220px; text-align: center; width: 640px; height: calc(100% - 190px); z-index: 10; pointer-events:none;}
         .battle-side-player { position: absolute; left: -70px; bottom: -252px; width: 500px; height: 690px; z-index: 12; pointer-events: none; }
-        .player-avatar-frame { position:absolute; left:0; bottom:0; width: 430px; height: 675px; overflow:visible; filter: drop-shadow(0 24px 20px rgba(0,0,0,0.55)); background: transparent; display:flex; align-items:flex-end; justify-content:center; }
-        .player-avatar-frame img { width:100%; height:100%; object-fit:contain; object-position:left bottom; border: 0; transform: scale(1.24); transform-origin:left bottom; }
+        .player-avatar-frame { position:absolute; left:0; bottom:0; width: 430px; height: 675px; overflow:visible; filter: drop-shadow(0 24px 20px rgba(0,0,0,0.55)); background: transparent; display:flex; align-items:flex-end; justify-content:center; animation: playerIdleBody 3.6s ease-in-out infinite; transform-origin:left bottom; will-change:transform; }
+        .player-avatar-frame img { --player-idle-scale:1.24; --player-idle-sway:0.35deg; --player-idle-return-sway:-0.15deg; --player-idle-inhale-x:1.006; --player-idle-inhale-y:0.994; width:100%; height:100%; object-fit:contain; object-position:left bottom; border: 0; transform:scale(var(--player-idle-scale)); transform-origin:left bottom; animation:playerIdleBreath 3.6s ease-in-out infinite; will-change:transform, filter; }
         .player-avatar-frame img.character-hero_warrior,
         .player-avatar-frame img.character-hero_archer { mix-blend-mode:multiply; filter:saturate(1.18) brightness(1.12) contrast(1.04); }
-        .player-avatar-frame img.character-hero_warrior { transform: scale(1.26); }
-        .player-avatar-frame img.character-hero_archer { transform: scale(1.26); }
-        .player-avatar-frame img.character-hero_mage { transform: scale(1.26); }
-        .player-ground-shadow { position:absolute; left:95px; bottom:28px; width: 245px; height: 34px; border-radius: 50%; background: radial-gradient(ellipse, rgba(0,0,0,0.36), transparent 70%); transform: skewX(-16deg); }
+        .player-avatar-frame img.character-hero_warrior { --player-idle-scale:1.26; --player-idle-sway:0.18deg; --player-idle-return-sway:-0.08deg; --player-idle-inhale-x:1.004; --player-idle-inhale-y:0.996; }
+        .player-avatar-frame img.character-hero_archer { --player-idle-scale:1.26; --player-idle-sway:0.48deg; --player-idle-return-sway:-0.22deg; --player-idle-inhale-x:1.008; --player-idle-inhale-y:0.992; }
+        .player-avatar-frame img.character-hero_mage { --player-idle-scale:1.26; --player-idle-sway:0.4deg; --player-idle-return-sway:-0.18deg; --player-idle-inhale-x:1.009; --player-idle-inhale-y:0.991; }
+        .battle-side-player:has(.character-hero_warrior) .player-avatar-frame,
+        .battle-side-player:has(.character-hero_warrior) .player-avatar-frame img,
+        .battle-side-player:has(.character-hero_warrior) .player-ground-shadow { animation-duration:3.8s; }
+        .battle-side-player:has(.character-hero_archer) .player-avatar-frame,
+        .battle-side-player:has(.character-hero_archer) .player-avatar-frame img,
+        .battle-side-player:has(.character-hero_archer) .player-ground-shadow { animation-duration:3.1s; }
+        .battle-side-player:has(.character-hero_mage) .player-avatar-frame,
+        .battle-side-player:has(.character-hero_mage) .player-avatar-frame img,
+        .battle-side-player:has(.character-hero_mage) .player-ground-shadow { animation-duration:4.2s; }
+        .player-ground-shadow { position:absolute; left:95px; bottom:28px; width: 245px; height: 34px; border-radius: 50%; background: radial-gradient(ellipse, rgba(0,0,0,0.36), transparent 70%); transform:skewX(-16deg); transform-origin:center; animation:playerIdleShadow 3.6s ease-in-out infinite; will-change:transform, opacity; }
+        @keyframes playerIdleBody {
+            0%, 100% { transform:translate3d(0, 0, 0); }
+            45% { transform:translate3d(1px, -5px, 0); }
+            70% { transform:translate3d(-1px, -3px, 0); }
+        }
+        @keyframes playerIdleBreath {
+            0%, 100% { transform:scale(var(--player-idle-scale)) rotate(0deg); }
+            45% { transform:scale(var(--player-idle-scale)) scale(var(--player-idle-inhale-x), var(--player-idle-inhale-y)) rotate(var(--player-idle-sway)); }
+            70% { transform:scale(var(--player-idle-scale)) scale(0.998, 1.002) rotate(var(--player-idle-return-sway)); }
+        }
+        @keyframes playerIdleShadow {
+            0%, 100% { transform:skewX(-16deg) scaleX(1); opacity:0.82; }
+            45% { transform:skewX(-16deg) scaleX(0.94); opacity:0.68; }
+            70% { transform:skewX(-16deg) scaleX(0.97); opacity:0.74; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .player-avatar-frame,
+            .player-avatar-frame img,
+            .player-ground-shadow { animation:none; }
+        }
         .player-nameplate { display:none; }
         .enemy-avatar-wrapper { display: flex; align-items:flex-end; justify-content:center; position: absolute; right: -40px; bottom: 28px; width: 760px; height: 570px; margin-top:0; z-index:4;}
         .enemy-avatar { width:100%; height:100%; display:flex; align-items:flex-end; justify-content:center; filter: drop-shadow(0 20px 20px rgba(0,0,0,0.66)) drop-shadow(0 0 24px rgba(83,35,112,0.25)); animation: floatAnim 4s infinite ease-in-out; transform-origin: center bottom; z-index:2; position:relative;}
