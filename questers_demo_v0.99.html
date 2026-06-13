@@ -596,7 +596,14 @@
         .battle-side-player:has(.character-hero_archer) .player-avatar-frame { --player-attack-distance:12px; }
         .battle-side-player:has(.character-hero_mage) .player-avatar-frame { --player-attack-distance:8px; }
         .player-avatar-frame.player-anim-attack { animation:playerAttackLunge var(--player-attack-duration, 0.58s) cubic-bezier(0.2, 0.82, 0.24, 1) both; }
-        .player-avatar-frame.player-anim-attack img { animation:none; }
+        .player-avatar-frame.player-anim-attack img {
+            animation:none;
+            transform:
+                translate3d(var(--player-attack-offset-x, 0px), var(--player-attack-offset-y, 0px), 0)
+                scale(var(--player-idle-scale))
+                scale(var(--player-attack-scale, 1));
+            transform-origin:center bottom;
+        }
         .player-ground-shadow { position:absolute; left:95px; bottom:28px; width: 245px; height: 34px; border-radius: 50%; background: radial-gradient(ellipse, rgba(0,0,0,0.36), transparent 70%); transform:skewX(-16deg); }
         @keyframes playerIdleBreath {
             0%, 100% { transform:scale(var(--player-idle-scale)); }
@@ -4372,6 +4379,9 @@
             avatar.dataset.idleSrc = character.battleBack;
             avatar.attackFrames = character.battleBackAttackFrames || [];
             avatar.attackImpactMs = character.battleBackAttackImpactMs || 240;
+            avatar.style.setProperty('--player-attack-scale', character.battleBackAttackScale || 1);
+            avatar.style.setProperty('--player-attack-offset-x', `${character.battleBackAttackOffset?.x || 0}px`);
+            avatar.style.setProperty('--player-attack-offset-y', `${character.battleBackAttackOffset?.y || 0}px`);
             avatar.alt = character.name;
             avatar.className = `character-${character.id}`;
             avatar.attackFrames.forEach(frame => {
