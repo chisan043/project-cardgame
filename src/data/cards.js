@@ -1,9 +1,4 @@
 // Extracted gameplay data. Keep this file free of DOM/runtime side effects.
-const GEN_DICT = {
-    atkPre: ["狂暴的", "嗜血的", "致命的", "沉重的", "迅捷的", "淬毒的", "破甲的", "雷霆", "连击"], atkSuf: ["斩击", "重锤", "刺杀", "飞刃", "猛击", "爆破", "双斩"],
-    defPre: ["坚固的", "不动的", "灵动的", "玄龟之", "守护的"], defSuf: ["屏障", "护体", "阵法", "铁壁", "御诀"]
-};
-
 const CARD_ART_REGISTRY = {
     // Full character card illustrations.
     '圣剑突击': 'assets/cards/art/warrior/warrior_charge_art_v1.webp',

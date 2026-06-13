@@ -2549,19 +2549,20 @@
         return applyCardTagBudget({ ...JSON.parse(JSON.stringify(special)), id: Math.random().toString(36).substr(2, 9), specialId: special.id, tags: normalizeTagConflicts(sTags), buildTags: getCardBuildTags(special), up: false });
     }
 
-    function generateRewardCard() {
+    function generateRewardCard(used = new Set()) {
         if (Math.random() < 0.12 + state.floor * 0.01) {
-            let epicPool = getWeightedSpecialEpicPool();
+            let epicPool = getWeightedSpecialEpicPool().filter(card => !used.has(getCardChoiceKey(card)));
             let special = epicPool[Math.floor(Math.random() * epicPool.length)];
-            return cloneSpecialEpic(special);
+            if (special) return cloneSpecialEpic(special);
         }
 
         const classPool = getCharacterCardPool();
         const allCards = [...classPool, ...NEUTRAL_CARD_POOL];
         const rarity = rollRewardRarity();
-        let candidates = allCards.filter(card => card.rarity === rarity);
-        if (!candidates.length) candidates = allCards.filter(card => card.rarity === '稀有');
-        if (!candidates.length) return generateProceduralCard();
+        let candidates = allCards.filter(card => card.rarity === rarity && !used.has(getCardChoiceKey(card)));
+        if (!candidates.length) candidates = allCards.filter(card => card.rarity === '稀有' && !used.has(getCardChoiceKey(card)));
+        if (!candidates.length) candidates = allCards.filter(card => !used.has(getCardChoiceKey(card)));
+        if (!candidates.length) return null;
         return cloneCardDefinition(candidates[Math.floor(Math.random() * candidates.length)]);
     }
 
@@ -2646,13 +2647,22 @@
         let guard = 0;
         while (choices.length < count && guard < 40) {
             guard++;
-            const card = generateRewardCard();
+            const card = generateRewardCard(used);
+            if (!card) break;
             const key = getCardChoiceKey(card);
             if (used.has(key)) continue;
             used.add(key);
             choices.push(card);
         }
-        while (choices.length < count) choices.push(generateProceduralCard());
+        const fixedFallbackPool = [...getCharacterCardPool(), ...NEUTRAL_CARD_POOL];
+        while (choices.length < count && fixedFallbackPool.length) {
+            const uniqueCandidates = fixedFallbackPool.filter(card => !used.has(getCardChoiceKey(card)));
+            const source = uniqueCandidates.length ? uniqueCandidates : fixedFallbackPool;
+            const picked = source[Math.floor(Math.random() * source.length)];
+            const card = cloneCardDefinition(picked);
+            used.add(getCardChoiceKey(card));
+            choices.push(card);
+        }
         return choices;
     }
 
@@ -2660,68 +2670,6 @@
         return String(value || '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
     }
 
-    function generateProceduralCard(forceBasic = false, basicType = null) {
-        let type = basicType;
-        if (!type) {
-            let rnd = Math.random();
-            const characterId = state.player.characterId;
-            if (characterId === 'hero_mage') type = rnd < 0.54 ? '攻击' : '能力';
-            else if (characterId === 'hero_archer') type = rnd < 0.56 ? '攻击' : '能力';
-            else if (rnd < 0.45) type = '攻击';
-            else if (rnd < 0.8) type = '防御';
-            else type = '能力';
-        }
-        let rarity = '稀有'; 
-        let numTags = 1; 
-        
-        if (forceBasic) {
-            if (type === '攻击' || type === '防御') { rarity = '普通'; numTags = 0; } 
-            else if (type === '能力') { rarity = '稀有'; numTags = 1; }
-        } else {
-            let rRoll = Math.random(); let epicChance = 0.30 + (state.floor * 0.02);
-            if(rRoll < epicChance) rarity = '史诗';
-        }
-
-        // 特殊史诗卡（流派与秘宝）掉落
-        if (!forceBasic && rarity === '史诗' && Math.random() < 0.35) {
-            let epicPool = getSpecialEpicPool();
-            let s = epicPool[Math.floor(Math.random() * epicPool.length)];
-            return cloneSpecialEpic(s);
-        }
-
-        let cost = (type === '能力') ? (Math.floor(Math.random() * 2) + 1) : (forceBasic ? 1 : Math.floor(Math.random() * 3));
-        let baseVal = (type === '能力') ? (Math.floor(Math.random() * 4) + 4) : (Math.floor(Math.random() * 3) + 7); 
-        
-        if (type !== '能力' && rarity !== '普通') { baseVal += 2; }
-        if (rarity === '史诗') { if (type === '能力') cost = Math.max(0, cost - 1); baseVal *= 2; }
-
-        let tags = [];
-        if (numTags > 0) {
-            let pool = getValidTags(type, cost, state.player.characterId).sort(() => 0.5 - Math.random());
-            tags = pool.slice(0, numTags);
-            if(tags.length === 0 && type === '能力') tags = ['重置']; 
-            
-        }
-
-        tags = normalizeTagConflicts(tags);
-
-        if (tags.includes('放逐') && type !== '能力') { baseVal += (rarity === '史诗' ? 10 : 6); }
-
-        let name = ""; let icon = "";
-        if (type === '能力') {
-            const roleNameParts = state.player.characterId === 'hero_mage'
-                ? [["秘仪", "星火", "遗迹", "紫焰", "虚空"], ["咏唱", "法印", "预兆", "回流"]]
-                : (state.player.characterId === 'hero_archer'
-                    ? [["林风", "森冠", "猎手", "疾风", "翠影"], ["整备", "瞄准", "步法", "调息"]]
-                    : [["玄妙", "虚空", "灵动", "上古", "太虚"], ["誓印", "战纹", "古誓", "号令"]]);
-            name = roleNameParts[0][Math.floor(Math.random()*roleNameParts[0].length)] + roleNameParts[1][Math.floor(Math.random()*roleNameParts[1].length)];
-            icon = ["✨","🌀","🍃","🔮","☯️"][Math.floor(Math.random()*5)];
-        } 
-        else { let pre = type === '攻击' ? GEN_DICT.atkPre : GEN_DICT.defPre; let suf = type === '攻击' ? GEN_DICT.atkSuf : GEN_DICT.defSuf; name = forceBasic ? `基础${type}` : (pre[Math.floor(Math.random()*pre.length)] + suf[Math.floor(Math.random()*suf.length)]); icon = type === '攻击' ? ["🗡️","⚔️","🩸","⚡"][Math.floor(Math.random()*4)] : ["🛡️","⛩️","🔰","🏔️"][Math.floor(Math.random()*4)]; }
-
-        return applyCardTagBudget({ id: Math.random().toString(36).substr(2, 9), name: name, type: type, cost: cost, icon: icon, val: baseVal, tags: tags, rarity: rarity, up: (rarity === '史诗') });
-    }
-    
     function upgradeCard(card) {
         if (card.rarity === '传说' || card.up) return false;
         const oldVal = Number(card.val) || 0;
