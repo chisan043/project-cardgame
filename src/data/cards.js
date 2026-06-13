@@ -252,38 +252,34 @@ const NEUTRAL_CARD_POOL = [
 
 const CHARACTER_CARD_POOLS = {
     hero_warrior: [
-        { poolId: 'warrior_dawn_guard', name: '迎击架势', type: '防御', cost: 2, icon: '🌅', val: 6, tags: [], buildTags: ['oathblade'], warriorEffect: { block: 'val', ifEnemyAttacking: { block: 5 } }, rarity: '普通', economyV1: true, frameTheme: 'warrior', desc: '获得 6 点护盾。若敌人正在攻击，额外获得 5 点。' },
-        { poolId: 'warrior_oath_watch', name: '守誓待击', type: '能力', cost: 1, icon: '👁️', val: 0, tags: ['反击'], buildTags: ['oathblade'], warriorEffect: { counter: true, ifEnemyNotAttacking: { draw: 1 } }, rarity: '普通', economyV1: true, frameTheme: 'warrior', desc: '进入[反击]姿态。若敌人没有攻击，抽 1 张牌。' },
-        { poolId: 'warrior_follow', name: '盾缘斩', type: '攻击', cost: 2, icon: '🗡️', val: 6, tags: [], buildTags: ['oathblade'], warriorEffect: { damage: 'val', damageFromArmor: 0.5 }, rarity: '普通', economyV1: true, frameTheme: 'warrior', desc: '造成 6 点伤害，当前每 2 点护盾额外造成 1 点伤害。' },
-        { poolId: 'warrior_banner_guard', name: '护卫步', type: '防御', cost: 2, icon: '🚩', val: 6, tags: ['抽牌'], buildTags: ['oathblade'], warriorEffect: { block: 'val', ifEnemyAttacking: { draw: 1 } }, rarity: '稀有', economyV1: true, frameTheme: 'warrior', desc: '获得 6 点护盾。若敌人正在攻击，抽 1 张牌。' },
-        { poolId: 'warrior_wall', name: '盾墙反身', type: '防御', cost: 3, icon: '🔰', val: 11, tags: ['反击'], buildTags: ['oathblade'], warriorEffect: { block: 'val', counter: true }, rarity: '稀有', economyV1: true, frameTheme: 'warrior', desc: '获得 11 点护盾并进入[反击]姿态。' },
-        { poolId: 'warrior_charge', name: '借盾冲锋', type: '攻击', cost: 2, icon: '✨', val: 7, tags: [], buildTags: ['oathblade'], warriorEffect: { damage: 'val', damageFromArmor: 0.75 }, rarity: '稀有', economyV1: true, frameTheme: 'warrior', desc: '造成 7 点伤害，并追加当前护盾 75% 的伤害。' },
-        { poolId: 'warrior_scar', name: '不动阵线', type: '防御', cost: 3, icon: '🛡️', val: 12, tags: ['保留'], buildTags: ['oathblade'], warriorEffect: { block: 'val' }, rarity: '稀有', economyV1: true, frameTheme: 'warrior', desc: '获得 12 点护盾。打出后，下回合回到手牌。' },
-        { poolId: 'warrior_guard', name: '棘甲固守', type: '防御', cost: 3, icon: '🛡️', val: 10, tags: ['荆棘'], buildTags: ['oathblade'], warriorEffect: { block: 'val', thorns: 8 }, rarity: '史诗', economyV1: true, frameTheme: 'warrior', desc: '获得 10 点护盾与 8 层[荆棘]。' },
-        { poolId: 'warrior_thorn_charge', name: '碎盾猛击', type: '攻击', cost: 3, icon: '🌹', val: 8, tags: ['穿甲'], buildTags: ['oathblade'], warriorEffect: { damage: 'val', consumeArmorDamage: 1, pierce: true }, rarity: '史诗', economyV1: true, frameTheme: 'warrior', desc: '消耗全部护盾，造成 8 点[穿甲]伤害；每消耗 1 点护盾，伤害 +1。' },
-        { poolId: 'warrior_release', name: '城墙倾倒', type: '防御', cost: 4, icon: '⚔️', val: 16, tags: ['反击'], buildTags: ['oathblade'], warriorEffect: { block: 'val', counter: true, ifEnemyAttacking: { draw: 1 } }, rarity: '史诗', economyV1: true, frameTheme: 'warrior', desc: '获得 16 点护盾并进入[反击]姿态。若敌人正在攻击，抽 1 张牌。' },
-
-        { poolId: 'warrior_flaw_mark', name: '破绽刻印', type: '攻击', cost: 3, icon: '🎯', val: 7, tags: ['易伤'], buildTags: ['execution'], warriorEffect: { damage: 'val', vuln: 3 }, rarity: '普通', economyV1: true, frameTheme: 'warrior', desc: '造成 7 点伤害，施加 3 层[易伤]。' },
-        { poolId: 'warrior_duel_cut', name: '趁隙斩', type: '攻击', cost: 2, icon: '🗡️', val: 8, tags: ['穿甲'], buildTags: ['execution'], warriorEffect: { damage: 'val', ifEnemyVulnerable: { damage: 5, pierce: true } }, rarity: '普通', economyV1: true, frameTheme: 'warrior', desc: '造成 8 点伤害。若敌人已有[易伤]，额外造成 5 点并改为[穿甲]。' },
-        { poolId: 'warrior_flash', name: '裂光二连', type: '攻击', cost: 2, icon: '⚡', val: 4, tags: ['连击'], buildTags: ['execution'], warriorEffect: { damage: 'val', hits: 2, ifPlayedBefore: { damage: 2 } }, rarity: '普通', economyV1: true, frameTheme: 'warrior', desc: '造成 2 次 4 点伤害。若本回合已打出其他牌，每段伤害 +2。' },
-        { poolId: 'warrior_pressure', name: '佯攻', type: '攻击', cost: 1, icon: '🔔', val: 3, tags: ['抽牌', '销毁'], buildTags: ['execution'], warriorEffect: { damage: 'val', draw: 1 }, rarity: '普通', economyV1: true, frameTheme: 'warrior', desc: '造成 3 点伤害，抽 1 张牌，然后[销毁]。' },
-        { poolId: 'warrior_break_form', name: '卸力换位', type: '防御', cost: 2, icon: '🔁', val: 6, tags: ['虚弱'], buildTags: ['execution'], warriorEffect: { block: 'val', ifEnemyAttacking: { weak: 2 } }, rarity: '稀有', economyV1: true, frameTheme: 'warrior', desc: '获得 6 点护盾。若敌人正在攻击，施加 2 层[虚弱]。' },
-        { poolId: 'warrior_execute_step', name: '处刑步法', type: '能力', cost: 1, icon: '🥾', val: 0, tags: ['抽牌'], buildTags: ['execution'], warriorEffect: { draw: 1, nextDamage: 5 }, rarity: '普通', economyV1: true, frameTheme: 'warrior', desc: '抽 1 张牌。本回合下一次攻击额外造成 5 点伤害。' },
-        { poolId: 'warrior_scaffold_cut', name: '断筋', type: '攻击', cost: 2, icon: '⛓️', val: 7, tags: ['虚弱'], buildTags: ['execution'], warriorEffect: { damage: 'val', weak: 2 }, rarity: '稀有', economyV1: true, frameTheme: 'warrior', desc: '造成 7 点伤害，施加 2 层[虚弱]。' },
-        { poolId: 'warrior_disarm_press', name: '断腕缴械', type: '防御', cost: 3, icon: '✋', val: 8, tags: ['眩晕', '销毁'], buildTags: ['execution'], warriorEffect: { block: 'val', stun: 1 }, rarity: '史诗', economyV1: true, frameTheme: 'warrior', desc: '获得 8 点护盾，施加 1 层[眩晕]，然后[销毁]。' },
-        { poolId: 'warrior_final_measure', name: '重斩窗口', type: '攻击', cost: 3, icon: '📏', val: 14, tags: [], buildTags: ['execution'], warriorEffect: { damage: 'val', ifEnemyVulnerable: { damage: 7 } }, rarity: '稀有', economyV1: true, frameTheme: 'warrior', desc: '造成 14 点伤害。若敌人已有[易伤]，额外造成 7 点。' },
-        { poolId: 'warrior_exile_judgement', name: '终誓处刑', type: '攻击', cost: 4, icon: '⚔️', val: 20, tags: ['穿甲'], buildTags: ['execution'], warriorEffect: { damage: 'val', pierce: true, ifEnemyBelowHalf: { damage: 12 } }, rarity: '史诗', economyV1: true, frameTheme: 'warrior', desc: '造成 20 点[穿甲]伤害。若敌人生命不足一半，额外造成 12 点。' },
-
-        { poolId: 'warrior_crimson_pause', name: '猩红喘息', type: '防御', cost: 2, icon: '🛡️', val: 7, tags: [], buildTags: ['bloodoath'], warriorEffect: { block: 'val', ifLostHpThisTurn: { draw: 1 } }, rarity: '普通', economyV1: true, frameTheme: 'warrior', desc: '获得 7 点护盾。若本回合失去过生命，抽 1 张牌。' },
-        { poolId: 'warrior_bleed_edge', name: '燃血斩', type: '攻击', cost: 2, icon: '🩸', val: 10, tags: [], buildTags: ['bloodoath'], warriorEffect: { loseHp: 2, damage: 'val' }, rarity: '普通', economyV1: true, frameTheme: 'warrior', desc: '失去 2 点生命，造成 10 点伤害。' },
-        { poolId: 'warrior_blood_vow_slash', name: '撕裂', type: '攻击', cost: 1, icon: '🩸', val: 3, tags: ['出血'], buildTags: ['bloodoath'], warriorEffect: { damage: 'val', bleed: 3 }, rarity: '普通', economyV1: true, frameTheme: 'warrior', desc: '造成 3 点伤害，施加 3 层[出血]。' },
-        { poolId: 'warrior_open_vein', name: '禁誓开脉', type: '能力', cost: 1, icon: '🩸', val: 0, tags: ['销毁'], buildTags: ['bloodoath'], warriorEffect: { loseHp: 3, energy: 2 }, rarity: '稀有', economyV1: true, frameTheme: 'warrior', desc: '失去 3 点生命，获得 2 点能量，然后[销毁]。' },
-        { poolId: 'warrior_blood_drive', name: '祭刀', type: '能力', cost: 2, icon: '🩸', val: 0, tags: ['抽牌'], buildTags: ['bloodoath'], warriorEffect: { exhaustOne: true, draw: 2 }, rarity: '稀有', economyV1: true, frameTheme: 'warrior', desc: '选择并[放逐] 1 张其他手牌，抽 2 张牌。' },
-        { poolId: 'warrior_blood_wall', name: '血痕壁垒', type: '防御', cost: 3, icon: '🩸', val: 9, tags: [], buildTags: ['bloodoath'], warriorEffect: { block: 'val', ifLostHpThisTurn: { battleDamage: 2 } }, rarity: '稀有', economyV1: true, frameTheme: 'warrior', desc: '获得 9 点护盾。若本回合失去过生命，本场战斗伤害 +2。' },
-        { poolId: 'warrior_bloodlet_cleave', name: '伤口引爆', type: '攻击', cost: 3, icon: '⚔️', val: 8, tags: ['放血'], buildTags: ['bloodoath'], warriorEffect: { damage: 'val', detonateBleed: true }, rarity: '稀有', economyV1: true, frameTheme: 'warrior', desc: '造成 8 点伤害，再引爆全部[出血]，每层造成 3 点[穿甲]伤害。' },
-        { poolId: 'warrior_lifebite', name: '回命斩', type: '攻击', cost: 2, icon: '🩸', val: 8, tags: ['吸血'], buildTags: ['bloodoath'], warriorEffect: { damage: 'val', healRatio: 0.5 }, rarity: '稀有', economyV1: true, frameTheme: 'warrior', desc: '造成 8 点伤害，回复实际伤害一半的生命。' },
-        { poolId: 'warrior_frenzy_cleave', name: '狂誓裂斩', type: '攻击', cost: 4, icon: '🔥', val: 18, tags: [], buildTags: ['bloodoath'], warriorEffect: { loseHp: 4, battleDamage: 2, damage: 'val' }, rarity: '史诗', economyV1: true, frameTheme: 'warrior', desc: '失去 4 点生命，本场战斗伤害 +2，再造成 18 点伤害。' },
-        { poolId: 'warrior_blood_debt', name: '血债清算', type: '攻击', cost: 3, icon: '🩸', val: 10, tags: ['穿甲'], buildTags: ['bloodoath'], warriorEffect: { damage: 'val', missingHpDamageRatio: 0.35, pierce: true }, rarity: '史诗', economyV1: true, frameTheme: 'warrior', desc: '造成 10 点[穿甲]伤害，并追加已损失生命 35% 的伤害。' }
+        { poolId: 'warrior_charge', name: '圣剑突击', type: '攻击', cost: 2, icon: '✨', val: 8, tags: ['圣剑', '重击'], rarity: '稀有' },
+        { poolId: 'warrior_oath', name: '遗迹立誓', type: '能力', cost: 1, icon: '📖', val: 4, tags: ['庇护', '抽牌', '保留'], rarity: '稀有', desc: '获得 4 点庇护并抽 1 张牌，打出后下回合回到手牌。' },
+        { poolId: 'warrior_wall', name: '盾墙反身', type: '防御', cost: 1, icon: '🔰', val: 8, tags: ['庇护'], rarity: '史诗' },
+        { poolId: 'warrior_follow', name: '誓约追击', type: '攻击', cost: 1, icon: '🗡️', val: 8, tags: ['圣剑', '连击'], rarity: '普通' },
+        { poolId: 'warrior_guard', name: '圣堂守势', type: '防御', cost: 2, icon: '🛡️', val: 10, tags: ['庇护', '荆棘'], rarity: '史诗' },
+        { poolId: 'warrior_release', name: '圣剑解放', type: '攻击', cost: 3, icon: '⚔️', val: 11, tags: ['圣剑', '穿甲', '重击'], rarity: '史诗' },
+        { poolId: 'warrior_dawn_guard', name: '破晓格挡', type: '防御', cost: 1, icon: '🌅', val: 8, tags: ['保留'], rarity: '普通' },
+        { poolId: 'warrior_flash', name: '裂光一闪', type: '攻击', cost: 1, icon: '⚡', val: 7, tags: ['圣剑', '穿甲'], rarity: '普通' },
+        { poolId: 'warrior_crown_riposte', name: '王冠反斩', type: '能力', cost: 3, icon: '👑', val: 10, tags: ['反击', '庇护', '抽牌'], rarity: '史诗', desc: '获得 17 点庇护，进入[反击]姿态并抽取 3 张牌。' },
+        { poolId: 'warrior_scar', name: '铁壁圣痕', type: '防御', cost: 2, icon: '🛡️', val: 13, tags: ['庇护', '保留'], rarity: '史诗' },
+        { poolId: 'warrior_blood_vow_slash', name: '血誓斩', type: '攻击', cost: 1, icon: '🩸', val: 7, tags: ['吸血', '连击'], buildTags: ['bloodoath'], rarity: '稀有', art: 'assets/cards/art/warrior/warrior_blood_vow_slash_art_v1.webp', desc: '造成 7 点伤害。附带[吸血]与[连击]，适合在卖血后用连续出牌把生命拉回来。' },
+        { poolId: 'warrior_thorn_charge', name: '棘甲冲锋', type: '攻击', cost: 2, icon: '🌹', val: 10, tags: ['圣剑', '荆棘'], rarity: '稀有', art: 'assets/cards/art/warrior/warrior_thorn_charge_art_v1.webp', desc: '造成 10 点伤害。附带[圣剑]与[荆棘]，护盾越高越容易触发盾棘共鸣。' },
+        { poolId: 'warrior_banner_guard', name: '誓旗护阵', type: '能力', cost: 1, icon: '🚩', val: 5, tags: ['庇护', '抽牌'], rarity: '稀有', art: 'assets/cards/art/warrior/warrior_banner_guard_art_v1.webp', desc: '触发[庇护]并[抽牌]。若已有护盾，战士联动会额外加固护盾。' },
+        { poolId: 'warrior_blood_wall', name: '血痕引路', type: '能力', cost: 1, icon: '🩸', val: 0, tags: ['出血', '抽牌'], buildTags: ['bloodoath'], rarity: '稀有', art: 'assets/cards/art/warrior/warrior_blood_wall_art_v1.webp', desc: '施加[出血]并[抽牌]。为后续吸血与放血寻找组件。' },
+        { poolId: 'warrior_oath_retainer', name: '誓约留锋', type: '防御', cost: 1, icon: '🔰', val: 9, tags: ['保留', '充能'], rarity: '普通', art: 'assets/cards/art/warrior/warrior_oath_retainer_art_v1.webp', desc: '获得 9 点护盾。附带[保留]与[充能]，战士会因防御保留额外获得护盾。' },
+        { poolId: 'warrior_soul_oath', name: '魂誓换锋', type: '能力', cost: 2, icon: '📖', val: 5, tags: ['充能', '抽牌', '庇护'], rarity: '稀有', art: 'assets/cards/art/warrior/warrior_soul_oath_art_v1.webp', desc: '触发[充能]、[抽牌]与[庇护]。把节奏转成护盾，为后续圣剑攻击铺垫。' },
+        { poolId: 'warrior_bleed_edge', name: '誓血裂口', type: '攻击', cost: 1, icon: '🩸', val: 6, tags: ['出血', '连击'], buildTags: ['bloodoath'], rarity: '普通', art: 'assets/cards/art/warrior/warrior_blood_vow_slash_art_v1.webp', desc: '造成 6 点伤害并施加[出血]。若本回合已出牌，[连击]会把伤口撕得更深。' },
+        { poolId: 'warrior_bloodlet_cleave', name: '断誓开锋', type: '攻击', cost: 1, icon: '⚔️', val: 7, tags: ['放血', '连击'], buildTags: ['bloodoath'], rarity: '稀有', art: 'assets/cards/art/warrior/warrior_blood_vow_slash_art_v1.webp', desc: '造成 7 点伤害并触发[放血]。适合接在出血牌之后完成短爆发。' },
+        { poolId: 'warrior_venom_scar', name: '破势剑痕', type: '攻击', cost: 1, icon: '☠️', val: 6, tags: ['易伤', '穿甲'], buildTags: ['execution'], rarity: '稀有', art: 'assets/cards/art/warrior/warrior_flash_art_v1.webp', desc: '造成 6 点[穿甲]伤害并施加[易伤]。为后续处刑攻击打开缺口。' },
+        { poolId: 'warrior_ember_oath', name: '烬锋破阵', type: '攻击', cost: 2, icon: '🔥', val: 9, tags: ['易伤', '狂热'], buildTags: ['execution'], rarity: '稀有', art: 'assets/cards/art/warrior/warrior_frenzy_cleave_art_v1.webp', desc: '造成 9 点伤害并施加[易伤]。附带[狂热]，可以丢弃多余手牌换取本回合攻势。' },
+        { poolId: 'warrior_frenzy_cleave', name: '狂誓裂斩', type: '攻击', cost: 2, icon: '🔥', val: 6, tags: ['狂热', '重击'], buildTags: ['bloodoath', 'execution'], rarity: '史诗', art: 'assets/cards/art/warrior/warrior_frenzy_cleave_art_v1.webp', desc: '丢弃 1 张手牌获得[狂热]，随后以[重击]打出高压斩击。' },
+        { poolId: 'warrior_exile_judgement', name: '终誓处刑', type: '攻击', cost: 2, icon: '⚔️', val: 12, tags: ['穿甲', '重击'], buildTags: ['execution'], rarity: '史诗', art: 'assets/cards/art/warrior/warrior_final_judgement_art_v1.webp', desc: '造成 12 点[穿甲]伤害，附带[重击]。不吃护盾收益，专注于直接斩杀。' },
+        { poolId: 'warrior_flaw_mark', name: '破绽刻印', type: '能力', cost: 1, icon: '🎯', val: 0, tags: ['易伤', '抽牌'], buildTags: ['execution'], rarity: '稀有', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_flash_art_v1.webp', desc: '施加[易伤]并[抽牌]。用低费标记为下一次穿甲或重击创造窗口。' },
+        { poolId: 'warrior_duel_cut', name: '断甲决斗', type: '攻击', cost: 1, icon: '🗡️', val: 8, tags: ['穿甲', '连击'], buildTags: ['execution'], rarity: '普通', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_flash_art_v1.webp', desc: '造成 8 点伤害。若本回合已打出过其他牌，[连击]会提高伤害，并且[穿甲]无视护甲。' },
+        { poolId: 'warrior_execute_window', name: '斩首窗口', type: '攻击', cost: 2, icon: '⚔️', val: 10, tags: ['易伤', '重击'], buildTags: ['execution'], rarity: '史诗', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_final_judgement_art_v1.webp', desc: '造成 10 点伤害并施加[易伤]。附带[重击]，适合作为处刑连斩的收束牌。' },
+        { poolId: 'warrior_blood_drive', name: '血誓推进', type: '能力', cost: 1, icon: '🩸', val: 5, tags: ['血祭', '抽牌', '狂热'], buildTags: ['bloodoath'], rarity: '稀有', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_blood_wall_art_v1.webp', desc: '触发[血祭]、[抽牌]与[狂热]。用生命换手牌和本回合伤害。' },
+        { poolId: 'warrior_lifebite', name: '回命斩', type: '攻击', cost: 1, icon: '🩸', val: 6, tags: ['吸血', '出血'], buildTags: ['bloodoath'], rarity: '普通', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_blood_vow_slash_art_v1.webp', desc: '造成 6 点伤害，附带[吸血]与[出血]。血线越危险，越需要这种回拉窗口。' },
+        { poolId: 'warrior_blood_debt', name: '血债清算', type: '攻击', cost: 2, icon: '🩸', val: 8, tags: ['放血', '吸血'], buildTags: ['bloodoath'], rarity: '史诗', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_blood_vow_slash_art_v1.webp', desc: '造成 8 点伤害并触发[放血]，随后[吸血]。适合在卖血后把风险收回来。' }
     ],
     hero_mage: [
         { poolId: 'mage_flame', name: '紫焰爆裂', type: '攻击', cost: 2, icon: '💥', val: 11, tags: ['爆发', '易伤'], rarity: '稀有' },
@@ -577,10 +573,6 @@ const BUILD_EXPANSION_CARDS = {
     ]
 };
 
-// The warrior pool is rebuilt above as a compact economy-v1 set. Keep the
-// legacy expansion definitions available for reference without adding them to rewards.
-BUILD_EXPANSION_CARDS.hero_warrior = [];
-
 Object.entries(BUILD_EXPANSION_CARDS).forEach(([characterId, cards]) => {
     if (characterId === 'neutral') {
         NEUTRAL_CARD_POOL.push(...cards);
@@ -593,11 +585,12 @@ const STARTER_DECKS = {
     starter_warrior: {
         roleId: 'hero_warrior',
         cards: [
-            { poolId: 'starter_warrior_strike', name: '基础斩击', type: '攻击', cost: 2, icon: '⚔️', val: 8, tags: [], buildNeutral: true, rarity: '普通', copies: 4, economyV1: true, frameTheme: 'warrior', desc: '造成 8 点伤害。' },
-            { poolId: 'starter_warrior_guard', name: '基础防御', type: '防御', cost: 2, icon: '🛡️', val: 7, tags: [], buildNeutral: true, rarity: '普通', copies: 3, economyV1: true, frameTheme: 'warrior', desc: '获得 7 点护盾。' },
-            { poolId: 'starter_warrior_brace', name: '迎击', type: '防御', cost: 2, icon: '🔰', val: 5, tags: [], buildNeutral: true, rarity: '普通', economyV1: true, frameTheme: 'warrior', warriorEffect: { block: 'val', ifEnemyAttacking: { block: 4 } }, desc: '获得 5 点护盾。若敌人正在攻击，额外获得 4 点。' },
-            { poolId: 'starter_warrior_light', name: '试探轻击', type: '攻击', cost: 1, icon: '🗡️', val: 3, tags: [], buildNeutral: true, rarity: '普通', economyV1: true, frameTheme: 'warrior', desc: '造成 3 点伤害。' },
-            { poolId: 'starter_warrior_flaw', name: '破势', type: '攻击', cost: 3, icon: '🎯', val: 6, tags: ['易伤'], buildNeutral: true, rarity: '普通', economyV1: true, frameTheme: 'warrior', desc: '造成 6 点伤害并施加[易伤]。' }
+            { poolId: 'starter_warrior_strike', name: '基础斩击', type: '攻击', cost: 1, icon: '⚔️', val: 8, tags: [], rarity: '普通', copies: 3, frameTheme: 'warrior', desc: '造成 8 点伤害。' },
+            { poolId: 'starter_warrior_guard', name: '基础防御', type: '防御', cost: 1, icon: '🛡️', val: 7, tags: [], rarity: '普通', copies: 3, frameTheme: 'warrior', desc: '获得 7 点护盾。' },
+            { poolId: 'starter_warrior_watch', name: '守誓待击', type: '能力', cost: 0, icon: '👁️', val: 0, tags: ['反击', '销毁'], buildTags: ['oathblade'], rarity: '普通', frameTheme: 'warrior', desc: '免费进入[反击]姿态，使用后[销毁]。' },
+            { poolId: 'starter_warrior_flaw', name: '破绽刻印', type: '能力', cost: 1, icon: '🎯', val: 0, tags: ['易伤'], buildTags: ['execution'], directEffects: { draw: true }, rarity: '普通', frameTheme: 'warrior', desc: '施加[易伤]并抽 1 张牌。' },
+            { poolId: 'starter_warrior_lifebite', name: '回命斩', type: '攻击', cost: 1, icon: '🩸', val: 6, tags: ['吸血'], buildTags: ['bloodoath'], rarity: '普通', frameTheme: 'warrior', desc: '造成 6 点伤害并[吸血]。' },
+            { poolId: 'starter_blank_contract', name: '空白契约', type: '能力', cost: 0, icon: '📄', val: 0, tags: ['销毁'], directEffects: { draw: true }, rarity: '普通', frameTheme: 'neutral', desc: '抽 1 张牌，随后[销毁]。' }
         ]
     },
     starter_mage: {

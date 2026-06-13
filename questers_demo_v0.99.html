@@ -1810,7 +1810,7 @@
         <div class="role-select-shell">
             <div class="role-select-header">
                 <h2 class="role-select-title">命途之选</h2>
-                <p class="role-select-subtitle">从三位旅者中选择本次探索的起点。战士将直接出发，并在旅途中根据奖励形成构筑。</p>
+                <p class="role-select-subtitle">从三位旅者中选择本次探索的起点。选定角色后，将通过核心遗物确定流派。</p>
             </div>
             <div id="role-select-grid" class="role-select-grid"></div>
             <div class="role-select-footer">
@@ -2259,7 +2259,6 @@
             Number(card.val) || 0,
             tags,
             JSON.stringify(card.directEffects || {}),
-            JSON.stringify(card.warriorEffect || {}),
             specialText
         ].join('|');
     }
@@ -2403,7 +2402,7 @@
     function getCardDisplayName(card) {
         if (!card) return '';
         if (card.displayName) return card.displayName;
-        if (card.isStarter || card.isSpecial || card.isJunk || card.isKnife || card.economyV1) return card.name || '';
+        if (card.isSpecial || card.isJunk || card.isKnife) return card.name || '';
         const signature = getCardEffectSignature(card);
         const exactName = CARD_EFFECT_NAME_BY_SIGNATURE.get(signature);
         if (exactName && (exactName.count > 1 || exactName.name !== card.name)) return exactName.name;
@@ -2494,7 +2493,6 @@
     }
 
     function shouldOfferStarterDirectionChoice() {
-        if (state.player.characterId === 'hero_warrior') return false;
         return !getSelectedCoreBuildTag() && state.floor === 0 && state.deck.length > 0 && state.deck.every(card => card.isStarter);
     }
 
@@ -2764,10 +2762,6 @@
             if (effectText) {
                 return `<span style="color:var(--gold); font-size:12px; text-align:left; display:block; line-height:1.5;">${formatKeywords(effectText)}</span>`;
             }
-        }
-        if (card.warriorEffect && card.desc) {
-            const effectText = String(card.desc).replace(/<br\s*\/?>/gi, '<br>');
-            return formatKeywords(effectText);
         }
         
         let d = "";
@@ -4509,14 +4503,8 @@
         state.deck.forEach(c => { c.id = Math.random().toString(36).substr(2, 9); applyCardTagBudget(c); });
         updateTopBar();
         closeOverlay('overlay-role-select');
-        if ((STARTER_CORE_RELIC_IDS[characterId] || []).length > 0) showInitRelicOverlay();
-        else beginRunWithoutCoreRelic();
+        showInitRelicOverlay();
         showFloatText(`旅者已选：${getCurrentCharacter().name}`, "var(--gold)", {x: window.innerWidth / 2, y: window.innerHeight / 2});
-    }
-
-    function beginRunWithoutCoreRelic() {
-        generateMap(); renderMap(); updateTopBar(); setTopBarVisible(true); showScene('scene-map');
-        saveRun();
     }
 
     async function startGame() {
@@ -4627,7 +4615,7 @@
         let mapDeckEl = document.getElementById('ui-deck-total-map'); if(mapDeckEl) mapDeckEl.innerText = state.deck.length;
         
         const pStatus = document.getElementById('ui-player-status'); pStatus.innerHTML = '';
-        if(state.armor > 0) { pStatus.innerHTML += `<div class="status-badge badge-armor" style="background:rgba(41, 128, 185, 0.9); color:white; font-size:15px; padding: 4px 14px; border: 1px solid rgba(255,255,255,0.5); box-shadow:0 0 10px rgba(41, 128, 185, 0.8);">🛡️ 护盾: ${state.armor}<div class="status-tooltip">抵挡等量的伤害。<br>下个玩家回合开始时清零。</div></div>`; }
+        if(state.armor > 0) { pStatus.innerHTML += `<div class="status-badge badge-armor" style="background:rgba(41, 128, 185, 0.9); color:white; font-size:15px; padding: 4px 14px; border: 1px solid rgba(255,255,255,0.5); box-shadow: 0 0 10px rgba(41, 128, 185, 0.8);">🛡️ 护盾: ${state.armor}<div class="status-tooltip">抵挡等量的伤害。<br>回合结束时，若未打破则清零（除非有保留效果）。</div></div>`; }
         if(state.player.thorns > 0) pStatus.innerHTML += `<div class="status-badge badge-armor" style="background:rgba(39, 174, 96, 0.9); color:white;">🛡️ 荆棘: ${state.player.thorns}<div class="status-tooltip">${STATUS_DESC['thorns']}</div></div>`;
         if(state.p_poison > 0) pStatus.innerHTML += `<div class="status-badge badge-poison">☠️ 中毒: ${state.p_poison}<div class="status-tooltip">${STATUS_DESC['poison']}</div></div>`;
         if(state.p_bleed > 0) pStatus.innerHTML += `<div class="status-badge badge-bleed">🩸 流血: ${state.p_bleed}<div class="status-tooltip">${STATUS_DESC['bleed']}</div></div>`;
@@ -5027,7 +5015,7 @@
         state.enemy.moves = state.enemy.moves.map(m => { let mScale = (m.type.includes('attack') || m.type === 'defend' || m.type === 'summon') ? scale : 1; return { ...m, val: Math.floor(m.val * mScale) }; });
 
         state.p_poison = 0; state.p_bleed = 0; state.p_burn = 0; state.p_stun = 0; state.p_curse = 0; state.p_vuln = 0; state.p_weak = 0; state.p_echo_stack = 0;
-        state.p_next_dmg = 0; state.p_reduce_dmg = 0; state.p_counter = 0; state.p_battle_dmg = 0; state.p_dmg_buff = 0; state.p_chant = 0; state.p_aim = 0; state.p_sidestep = 0; state.r_discard_count = 0; state.next_card_echo = 0; state.lastPlayedCard = null; state.turn_first_card = true; state.warriorTurnHpLost = 0; state.isEnemyTurn = false;
+        state.p_next_dmg = 0; state.p_reduce_dmg = 0; state.p_counter = 0; state.p_battle_dmg = 0; state.p_dmg_buff = 0; state.p_chant = 0; state.p_aim = 0; state.p_sidestep = 0; state.r_discard_count = 0; state.next_card_echo = 0; state.lastPlayedCard = null; state.turn_first_card = true; state.isEnemyTurn = false;
         state.r_counter_gate_used = false;
         state.r_protect_armor_used = false;
         state.r_bloodlet_hourglass_used = false;
@@ -5048,6 +5036,7 @@
         
         const character = getCurrentCharacter();
         state.mp = getCharacterBaseEnergy(character);
+        if (character.id === 'hero_warrior') state.armor += 5;
         if(hasRelic('r_thorn_shield_new')) state.armor += 6;
         
         setEnemyIntent(); 
@@ -5486,138 +5475,6 @@
         return false;
     }
 
-    function enemyIntentIsAttack() {
-        return String(state.enemy?.nextMove?.type || '').includes('attack');
-    }
-
-    function mergeWarriorEffect(baseEffect, addition) {
-        if (!addition) return baseEffect;
-        const merged = { ...baseEffect };
-        for (const [key, value] of Object.entries(addition)) {
-            if ((key === 'damage' || key === 'block') && merged[key] === 'val' && Number.isFinite(Number(value))) {
-                const bonusKey = key === 'damage' ? 'damageBonus' : 'blockBonus';
-                merged[bonusKey] = (Number(merged[bonusKey]) || 0) + Number(value);
-            } else if (Number.isFinite(Number(value)) && typeof value !== 'boolean') {
-                merged[key] = (Number(merged[key]) || 0) + Number(value);
-            } else {
-                merged[key] = value;
-            }
-        }
-        return merged;
-    }
-
-    function resolveWarriorEffect(card) {
-        let effect = { ...(card.warriorEffect || {}) };
-        const attacking = enemyIntentIsAttack();
-        if (attacking) effect = mergeWarriorEffect(effect, effect.ifEnemyAttacking);
-        if (!attacking) effect = mergeWarriorEffect(effect, effect.ifEnemyNotAttacking);
-        if ((state.enemy?.vuln || 0) > 0) effect = mergeWarriorEffect(effect, effect.ifEnemyVulnerable);
-        if ((state.enemy?.currentHp || 0) < (state.enemy?.maxHp || 1) / 2) effect = mergeWarriorEffect(effect, effect.ifEnemyBelowHalf);
-        if (cardsPlayedThisTurn > 1) effect = mergeWarriorEffect(effect, effect.ifPlayedBefore);
-        if ((state.warriorTurnHpLost || 0) > 0) effect = mergeWarriorEffect(effect, effect.ifLostHpThisTurn);
-        return effect;
-    }
-
-    function exhaustCardFromHand(card) {
-        const index = state.hand.findIndex(candidate => candidate.instId === card.instId);
-        if (index === -1) return false;
-        const elDOM = document.querySelector(`[data-inst-id="${card.instId}"]`);
-        state.hand.splice(index, 1);
-        state.exhaustPile.push(card);
-        if (elDOM) animateCardToPile(elDOM, 'exhaust');
-        if (!card.isJunk) onCardExhausted(card);
-        return true;
-    }
-
-    async function executeWarriorCardEffect(card, isEcho, targets = null) {
-        const effect = resolveWarriorEffect(card);
-        const baseValue = getScaledCardValue(card);
-
-        if (effect.loseHp) {
-            const hpLoss = Math.min(Math.max(0, state.hp - 1), Math.max(0, Math.floor(effect.loseHp)));
-            state.hp -= hpLoss;
-            state.warriorTurnHpLost = (state.warriorTurnHpLost || 0) + hpLoss;
-            if (hpLoss > 0) showFloatText(`失去生命 -${hpLoss}`, "var(--crimson)", getCenter('ui-hp'));
-        }
-
-        if (effect.exhaustOne && targets?.warriorExhaustOne?.length) {
-            const exhausted = targets.warriorExhaustOne.filter(exhaustCardFromHand);
-            if (exhausted.length > 0) {
-                showFloatText(`放逐 ${exhausted[0].name}`, "#aaa", getCenter('hand-area'));
-                renderHand();
-            }
-        }
-
-        if (effect.battleDamage) {
-            state.p_battle_dmg += Math.floor(effect.battleDamage);
-            showFloatText(`本场伤害 +${Math.floor(effect.battleDamage)}`, "var(--crimson)", getCenter('ui-hp'));
-        }
-        if (effect.nextDamage) {
-            state.p_next_dmg += Math.floor(effect.nextDamage);
-            showFloatText(`下次攻击 +${Math.floor(effect.nextDamage)}`, "var(--gold)", getCenter('ui-hp'));
-        }
-
-        const armorSnapshot = Math.max(0, state.armor || 0);
-        let blockValue = effect.block === 'val' ? baseValue : Number(effect.block) || 0;
-        blockValue += Number(effect.blockBonus) || 0;
-        if (blockValue > 0) {
-            if (hasRelic('r_shield')) blockValue += 4;
-            blockValue = applyLowHpGuardBoost(Math.floor(blockValue), '战士护盾');
-            state.armor += blockValue;
-            triggerVFX('p-def');
-            showFloatText(`盾 +${blockValue}`, "var(--water)", getCenter('ui-hp'));
-        }
-
-        let damageValue = effect.damage === 'val' ? baseValue : Number(effect.damage) || 0;
-        damageValue += Number(effect.damageBonus) || 0;
-        damageValue += Math.floor(armorSnapshot * (Number(effect.damageFromArmor) || 0));
-        if (effect.consumeArmorDamage) {
-            damageValue += Math.floor(armorSnapshot * Number(effect.consumeArmorDamage));
-            state.armor = 0;
-            showFloatText(`消耗护盾 ${armorSnapshot}`, "var(--gold)", getCenter('ui-hp'));
-        }
-        if (effect.missingHpDamageRatio) {
-            damageValue += Math.floor((state.maxHp - state.hp) * Number(effect.missingHpDamageRatio));
-        }
-
-        let totalDamage = 0;
-        const hits = Math.max(1, Math.floor(Number(effect.hits) || 1));
-        if (damageValue > 0) {
-            triggerVFX('p-atk');
-            for (let hit = 0; hit < hits; hit++) totalDamage += applySpecialCardDamage(card, damageValue, !!effect.pierce);
-        }
-
-        if (effect.healRatio && totalDamage > 0) healPlayer(Math.floor(totalDamage * Number(effect.healRatio)));
-        if (effect.vuln) { state.enemy.vuln += Math.floor(effect.vuln); showFloatText(`易伤 +${Math.floor(effect.vuln)}`, "var(--purple)", getCenter('enemy-avatar')); }
-        if (effect.weak) { state.enemy.weak += Math.floor(effect.weak); showFloatText(`虚弱 +${Math.floor(effect.weak)}`, "#bbb", getCenter('enemy-avatar')); }
-        if (effect.bleed) { state.enemy.bleed += Math.floor(effect.bleed); showFloatText(`出血 +${Math.floor(effect.bleed)}`, "var(--crimson)", getCenter('enemy-avatar')); }
-        if (effect.stun) { state.enemy.stun += Math.floor(effect.stun); showFloatText("眩晕", "var(--gold)", getCenter('enemy-avatar')); }
-        if (effect.detonateBleed && state.enemy.bleed > 0) {
-            const bleedDamage = state.enemy.bleed * 3;
-            applyDamageToEnemy(bleedDamage, true);
-            state.enemy.bleed = 0;
-            showFloatText(`引爆出血 -${bleedDamage}`, "var(--crimson)", getCenter('enemy-avatar'));
-        }
-        if (effect.counter) {
-            state.p_counter = 1;
-            if (hasRelic('r_counter_amulet')) state.p_reduce_dmg += 5;
-            showFloatText("招架准备", "var(--gold)", getCenter('ui-hp'));
-        }
-        if (effect.thorns) {
-            const thornGain = Math.floor(effect.thorns) * (hasRelic('r_thorn_shield_new') ? 2 : 1);
-            state.player.thorns += thornGain;
-            showFloatText(`荆棘 +${thornGain}`, "var(--nature)", getCenter('ui-hp'));
-        }
-        if (effect.energy) {
-            state.mp += Math.floor(effect.energy);
-            showFloatText(`能量 +${Math.floor(effect.energy)}`, "var(--gold)", getCenter('ui-mp'));
-        }
-        if (effect.draw && !isEcho) await drawCards(Math.floor(effect.draw));
-
-        grantRoleSynergy(card, isEcho, targets);
-        if (checkEnemyDeath()) winBattle(); else updateBattleUI();
-    }
-
     async function playCard(instId, elDOM) {
         if (state.isEnemyTurn) return;
         const idx = state.hand.findIndex(c => c.instId == instId); if(idx === -1) return;
@@ -5670,13 +5527,6 @@
                 else if (mode === 'exhaustToDraw') targets.lunhui = selected;
                 else if (mode === 'discardToHand') targets.shiyi = selected;
             }
-        }
-        if (card.warriorEffect?.exhaustOne) {
-            const selectableHand = state.hand.filter(c => c.instId !== instId && !c.sealed);
-            if (selectableHand.length < 1) { showFloatText("无牌可放逐", "var(--crimson)", getCenter('hand-area')); return; }
-            const selected = await selectCardsAsync(selectableHand, 1, 1, '选择 1 张其他手牌放逐', true);
-            if (selected === null) return;
-            targets.warriorExhaustOne = selected;
         }
 
         const finalIdx = state.hand.findIndex(c => c.instId == instId); 
@@ -5758,11 +5608,6 @@
 
     async function executeCardTags(card, isEcho, targets = null) {
         if (card.isJunk) return; 
-
-        if (card.warriorEffect) {
-            await executeWarriorCardEffect(card, isEcho, targets);
-            return;
-        }
 
         // ====== 特殊史诗核心卡 ======
         if (card.isSpecial) {
@@ -6540,8 +6385,8 @@
                 state.p_chant = 2;
                 showFloatText("恒咏墨瓶", "var(--purple)", getCenter('ui-hp'));
             }
-            state.armor = 0;
-            cardsPlayedThisTurn = 0; state.turn_first_card = true; state.warriorTurnHpLost = 0;
+            if (playerWasAttacked) state.armor = 0;
+            cardsPlayedThisTurn = 0; state.turn_first_card = true;
             state.r_duel_glove_used = false;
             state.r_pierce_meter_used = false;
             state.r_chant_reservoir_used = false;

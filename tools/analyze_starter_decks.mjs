@@ -111,9 +111,6 @@ function getRelicBuildTags(data, roleId, relic) {
 }
 
 function analyzeStarterBias(data, roleId, starter) {
-    const isWarriorEconomyV1 = roleId === 'hero_warrior'
-        && (data.STARTER_CORE_RELIC_IDS[roleId] || []).length === 0
-        && starter.cards.every(card => card.economyV1);
     const directions = data.STARTER_DIRECTION_REWARD_POOLS[roleId] || [];
     const buildSignals = Object.fromEntries(directions.map(tag => [tag, 0]));
     const buildProfile = Object.fromEntries(directions.map(tag => [tag, 0]));
@@ -132,7 +129,7 @@ function analyzeStarterBias(data, roleId, starter) {
         }
     }
     const classPool = data.CHARACTER_CARD_POOLS[roleId] || [];
-    const bloodoathShieldViolations = roleId === 'hero_warrior' && !isWarriorEconomyV1
+    const bloodoathShieldViolations = roleId === 'hero_warrior'
         ? classPool.filter(card => getCardBuildTags(data, roleId, card).includes('bloodoath') && (
             card.type === '防御'
             || (card.tags || []).includes('庇护')
@@ -158,23 +155,18 @@ function analyzeStarterBias(data, roleId, starter) {
         hero_archer: 'starter_archer_aim'
     }[roleId];
     const survivalRule = {
-        hero_warrior: { poolId: 'starter_warrior_guard', copies: isWarriorEconomyV1 ? 4 : 3, type: '防御', tag: null, label: isWarriorEconomyV1 ? '4 张防御牌（含迎击）' : '3 张护盾牌' },
+        hero_warrior: { poolId: 'starter_warrior_guard', copies: 3, type: '防御', tag: null, label: '3 张护盾牌' },
         hero_mage: { poolId: 'starter_mage_heal', copies: 3, type: '能力', tag: '治愈', label: '3 张治愈牌' },
         hero_archer: { poolId: 'starter_archer_step', copies: 1, type: '能力', tag: '闪避', label: '1 张闪避牌' }
     }[roleId];
     const survivalCard = starter.cards.find(card => card.poolId === survivalRule.poolId);
-    const actualSurvivalCopies = roleId === 'hero_warrior' && isWarriorEconomyV1
-        ? starter.cards.filter(card => card.type === '防御').reduce((sum, card) => sum + Math.max(1, Number(card.copies) || 1), 0)
-        : Math.max(1, Number(survivalCard?.copies) || 1);
-    const hasWarriorBrace = starter.cards.some(card => card.poolId === 'starter_warrior_brace' && card.warriorEffect?.ifEnemyAttacking);
     const survivalIdentity = {
         ...survivalRule,
-        actualCopies: actualSurvivalCopies,
+        actualCopies: Math.max(1, Number(survivalCard?.copies) || 1),
         passed: !!survivalCard
             && survivalCard.type === survivalRule.type
             && (!survivalRule.tag || (survivalCard.tags || []).includes(survivalRule.tag))
-            && actualSurvivalCopies === survivalRule.copies
-            && (roleId !== 'hero_warrior' || !isWarriorEconomyV1 || hasWarriorBrace)
+            && Math.max(1, Number(survivalCard.copies) || 1) === survivalRule.copies
     };
     const coreTransforms = coreChoices.map(choice => {
         const transform = data.STARTER_CORE_CARD_TRANSFORMS[choice.id];
@@ -197,7 +189,7 @@ function analyzeStarterBias(data, roleId, starter) {
     const profileValues = Object.values(buildProfile);
     const signalSpread = Math.max(...signalValues) - Math.min(...signalValues);
     const profileSpread = Math.max(...profileValues) - Math.min(...profileValues);
-    const legacyPassed = signalValues.every(value => value === 1)
+    const passed = signalValues.every(value => value === 1)
         && profileSpread === 0
         && Object.values(directionRewardCoverage).every(value => value.exact > 0)
         && coreChoices.length === 3
@@ -208,13 +200,6 @@ function analyzeStarterBias(data, roleId, starter) {
             && transform.sourceCopies > 0
             && transform.transformedBuildTags.length === 1
             && transform.shieldlessBloodoath);
-    const economyV1Passed = signalValues.every(value => value === 0)
-        && profileSpread === 0
-        && Object.values(directionRewardCoverage).every(value => value.exact > 0)
-        && coreChoices.length === 0
-        && survivalIdentity.passed
-        && starter.cards.reduce((sum, card) => sum + Math.max(1, Number(card.copies) || 1), 0) === 10;
-    const passed = isWarriorEconomyV1 ? economyV1Passed : legacyPassed;
     return {
         buildSignals,
         buildProfile,
@@ -402,7 +387,7 @@ function renderMarkdown(report) {
         const coverage = Object.entries(result.bias.directionRewardCoverage).map(([tag, value]) => `${tag} ${value.exact}`).join(' / ');
         lines.push(`| ${result.role} | ${result.bias.survivalIdentity.label} | ${signals} | ${result.bias.profileSpread.toFixed(2)} | ${cores} | ${coverage} | ${result.bias.passed ? '通过' : '失败'} |`);
     }
-    lines.push('', '通过条件：战士经济版使用 10 张中立牌、4 张防御牌（其中迎击读取敌方意图）且不开局锁路线；法师与弓手继续检查生存基牌、三件开局核心遗物和三条奖励方向覆盖。', '');
+    lines.push('', '通过条件：战士、法师、弓手分别保留护盾、治愈、闪避生存基牌；三件开局核心遗物完整覆盖三条路线；核心分别改造战士护盾牌、法师咏唱牌、弓手风势牌；血誓改造后不得保留护盾或庇护。', '');
     lines.push('## 核心改造实测', '');
     lines.push('| 角色 | 核心遗物 | 改造牌 | 前期 | 中期无奖励 | 后期无奖励 |');
     lines.push('| --- | --- | --- | ---: | ---: | ---: |');
