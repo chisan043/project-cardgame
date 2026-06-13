@@ -13,7 +13,7 @@ import json
 import re
 from pathlib import Path
 
-from PIL import Image
+from PIL import Image, ImageOps
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -33,6 +33,7 @@ IMAGE_EXT_RE = re.compile(r"\.(png|jpg|jpeg)$", re.IGNORECASE)
 
 DYNAMIC_IMAGE_GLOBS = [
     "assets/source/characters/*/battle_back/attack_start_v1_source.png",
+    "assets/source/characters/*/battle_back/skill_cast_v1_source.png",
     "assets/source/enemies/battle/*.png",
     "assets/source/enemies/portraits/*.png",
     "assets/source/relics/icons/*.png",
@@ -126,6 +127,11 @@ def convert_to_webp(source_rel: Path, quality: int, force: bool) -> dict | None:
         image.load()
         if image.mode not in ("RGB", "RGBA"):
             image = image.convert("RGBA" if "A" in image.getbands() else "RGB")
+        if source_rel.as_posix() in {
+            "assets/source/characters/mage/battle_back/attack_start_v1_source.png",
+            "assets/source/characters/mage/battle_back/skill_cast_v1_source.png",
+        }:
+            image = ImageOps.mirror(image)
         image.save(target, "WEBP", quality=quality, method=6)
 
     return {

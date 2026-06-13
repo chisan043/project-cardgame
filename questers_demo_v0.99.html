@@ -4370,13 +4370,13 @@
         if (avatar) {
             avatar.src = character.battleBack;
             avatar.dataset.idleSrc = character.battleBack;
-            avatar.dataset.attackSrc = character.battleBackAttack || character.battleBack;
+            avatar.attackFrames = character.battleBackAttackFrames || [];
             avatar.alt = character.name;
             avatar.className = `character-${character.id}`;
-            if (character.battleBackAttack) {
+            avatar.attackFrames.forEach(frame => {
                 const attackFramePreload = new Image();
-                attackFramePreload.src = character.battleBackAttack;
-            }
+                attackFramePreload.src = frame.src;
+            });
         }
         const hudPortrait = document.getElementById('player-hud-portrait-img');
         if (hudPortrait) {
@@ -5023,26 +5023,42 @@
         const avatar = document.getElementById('player-avatar-img');
         if (!avatarFrame || !avatar) return;
         const token = ++playerAttackAnimationToken;
+        const attackFrames = Array.isArray(avatar.attackFrames) ? avatar.attackFrames : [];
         avatarFrame.classList.remove('player-anim-attack');
         void avatarFrame.offsetWidth;
-        avatar.src = avatar.dataset.attackSrc || avatar.dataset.idleSrc || avatar.src;
         avatarFrame.classList.add('player-anim-attack');
+        let elapsed = attackFrames[0]?.duration || 0;
+        if (attackFrames[0]) avatar.src = attackFrames[0].src;
+        attackFrames.slice(1).forEach(frame => {
+            setTimeout(() => {
+                if (token === playerAttackAnimationToken) avatar.src = frame.src;
+            }, elapsed);
+            elapsed += frame.duration;
+        });
         setTimeout(() => {
-            if (token === playerAttackAnimationToken) avatar.src = avatar.dataset.idleSrc || avatar.src;
-        }, 340);
-        setTimeout(() => {
-            if (token === playerAttackAnimationToken) avatarFrame.classList.remove('player-anim-attack');
-        }, 500);
+            if (token !== playerAttackAnimationToken) return;
+            avatar.src = avatar.dataset.idleSrc || avatar.src;
+            avatarFrame.classList.remove('player-anim-attack');
+        }, Math.max(480, elapsed));
     }
 
     function triggerVFX(type) {
         const vfx = document.getElementById(`vfx-${type}`); const el = vfx.firstElementChild;
+        const vfxToken = (vfx.animationToken || 0) + 1;
+        vfx.animationToken = vfxToken;
         vfx.style.display = 'flex'; el.style.animation = 'none'; void el.offsetWidth;
-        if(type==='p-atk') { triggerPlayerAttackAnimation(); el.style.animation = 'pAtkAnim 0.3s ease-in forwards'; }
+        if(type==='p-atk') {
+            triggerPlayerAttackAnimation();
+            setTimeout(() => {
+                if (vfx.animationToken === vfxToken) el.style.animation = 'pAtkAnim 0.3s ease-in forwards';
+            }, 140);
+        }
         if(type==='p-def') el.style.animation = 'pDefAnim 0.4s ease-out forwards';
         if(type==='e-atk') { el.style.animation = 'eAtkAnim 0.3s ease-in forwards'; document.getElementById('game-app').classList.add('screen-shake'); setTimeout(()=>document.getElementById('game-app').classList.remove('screen-shake'), 400); }
         if(type==='e-def') el.style.animation = 'eDefAnim 0.4s ease-out forwards';
-        setTimeout(() => { vfx.style.display = 'none'; }, 400);
+        setTimeout(() => {
+            if (vfx.animationToken === vfxToken) vfx.style.display = 'none';
+        }, type === 'p-atk' ? 500 : 400);
     }
 
     let cardsPlayedThisTurn = 0;
