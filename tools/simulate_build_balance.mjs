@@ -20,7 +20,7 @@ function loadGameData() {
     vm.runInContext(`${source}\n;globalThis.__balanceData = {
         TAGS, BUILD_DIRECTIONS, CARD_BUILD_TAGS_BY_ID, NEUTRAL_CARD_POOL, STARTER_DECKS,
         CHARACTER_CARD_POOLS, SPECIAL_EPIC_POOLS, RELIC_POOL, RELIC_BUILD_TAGS_BY_ID,
-        COMMON_RELIC_IDS, ROLE_RELIC_IDS, RELIC_CARD_REWARD_BONUS_BY_ID,
+        COMMON_RELIC_IDS, ROLE_RELIC_IDS, STARTING_RELIC_BY_ROLE, STARTING_RELIC_IDS, RELIC_CARD_REWARD_BONUS_BY_ID,
         ENEMIES, CHARACTERS, getScaledCardValue,
         getAbilityPotency, getCardDrawCount, getCardHealValue,
         getCardChantGain, getProtectionValue, getWindGain, getSidestepGain,
@@ -265,6 +265,9 @@ function createEnemy(data, rng, checkpoint, enemyName = null) {
 function createBattle(data, rng, roleId, deck, hp, checkpoint, loadout, options = {}) {
     const character = data.CHARACTERS[roleId];
     const enemy = createEnemy(data, rng, checkpoint, options.enemyName);
+    const relicIds = [...(loadout?.relics || [])];
+    const startingRelicId = data.STARTING_RELIC_BY_ROLE[roleId];
+    if (startingRelicId && !relicIds.includes(startingRelicId)) relicIds.push(startingRelicId);
     const state = {
         data, rng, roleId, character, maxHp: character.maxHp, hp,
         energy: character.baseEnergy, armor: roleId === 'hero_warrior' ? 5 : 0,
@@ -274,14 +277,15 @@ function createBattle(data, rng, roleId, deck, hp, checkpoint, loadout, options 
         poison: 0, bleed: 0, burn: 0, curse: 0,
         drawPile: shuffle(rng, deck.map(clone)), discard: [], exhaust: [], destroyed: [], hand: [], retained: [],
         lastCard: null, cardsPlayed: 0, enemy, encounterName: enemy.name, turns: 0,
-        damageTaken: 0, healing: 0, relics: new Set(loadout?.relics || []),
+        damageTaken: 0, healing: 0, relics: new Set(relicIds),
         totalDamageDealt: 0, energyWasted: 0, lastDamageCause: null, lastEnemyDamageSource: null,
         cardOpportunities: {}, cardPlays: {}, cardMeta: {},
         playStyle: { attacks: 0, defenses: 0, abilities: 0, setup: 0, burst: 0, sustain: 0, control: 0, cycle: 0 },
         protectArmorUsed: false, chantReservoirUsed: false, tailwindSpoolUsed: false,
         echoArchivePinUsed: false, statusLedgerUsed: false, abilityCardsPlayed: 0,
         bloodDebtReductionUsed: false, bloodClearUsed: false, scarletWhetUsed: false, oathTransfusionUsed: false, lifedebtClearUsed: false,
-        knifeSequence: 0
+        knifeSequence: 0, signatureSetupUsed: false, signatureAttackReady: false,
+        warriorStartUsed: false, warriorStartReady: false, crownOath: false
     };
     if (hasRelic(state, 'r_thorn_shield_new')) state.armor += 6;
     return state;
@@ -485,6 +489,7 @@ function takeDamage(state, amount, cause = '敌方攻击', { allowSidestep = fal
         damage -= parry;
         state.counter = 0;
         hitEnemy(state, parry, false, '反击');
+        if (state.crownOath) state.armor += parry;
     }
     const blocked = Math.min(damage, state.armor);
     state.armor -= blocked;
@@ -656,7 +661,13 @@ function discardPlayedCard(state, card) {
 
 function executeSpecialCard(state, card) {
     const specialId = card.specialId || card.id;
-    if (specialId === 'w_oath_fortress') {
+    if (specialId === 'w_counter_crown') {
+        const swordRatio = hasRelic(state, 'r_sword_oath') ? 0.7 : 0.5;
+        const swordBonus = Math.floor(state.armor * swordRatio) + state.counter * 4;
+        hitEnemy(state, 16 + state.battleDamage + swordBonus);
+        state.counter = 1;
+        state.crownOath = true;
+    } else if (specialId === 'w_oath_fortress') {
         state.armor += 14;
         state.protection += 4 + (hasRelic(state, 'r_protect_armor') ? 3 : 0);
         state.counter = 1;
@@ -914,7 +925,7 @@ function executeCard(state, card, echo = false) {
 }
 
 function playPlayerTurn(state, move) {
-    state.energy = state.character.baseEnergy;
+    state.energy = state.character.baseEnergy + (state.warriorStartReady ? 1 : 0);
     state.cardsPlayed = 0;
     state.abilityCardsPlayed = 0;
     state.turnDamage = 0;
@@ -931,10 +942,13 @@ function playPlayerTurn(state, move) {
     state.scarletWhetUsed = false;
     state.oathTransfusionUsed = false;
     state.lifedebtClearUsed = false;
+    state.signatureSetupUsed = false;
+    state.signatureAttackReady = false;
     state.hand.push(...state.retained);
     state.retained.forEach(card => recordCardOpportunity(state, card));
     state.retained = [];
-    draw(state, state.character.openingHand);
+    draw(state, state.character.openingHand + (state.warriorStartReady ? 1 : 0));
+    state.warriorStartReady = false;
     let safety = 0;
     while (safety++ < 30 && state.enemy.hp > 0 && state.hp > 0) {
         const incoming = expectedIncoming(state, move);
@@ -956,7 +970,19 @@ function playPlayerTurn(state, move) {
             state.abilityCardsPlayed++;
             if (hasRelic(state, 'r_double_quill') && state.abilityCardsPlayed === 2) draw(state, 1);
         }
+        let archerSignatureAfterCard = false;
+        if (card.type === '能力' && !state.signatureSetupUsed && (state.roleId === 'hero_mage' || state.roleId === 'hero_archer')) {
+            state.signatureSetupUsed = true;
+            state.signatureAttackReady = true;
+        } else if (card.type === '攻击' && state.signatureAttackReady) {
+            state.signatureAttackReady = false;
+            if (hasRelic(state, 'r_start_mage')) state.chant = Math.min(12, state.chant + 1);
+            else if (hasRelic(state, 'r_start_archer')) archerSignatureAfterCard = true;
+        }
         executeCard(state, card, false);
+        if (archerSignatureAfterCard && state.enemy.hp > 0) {
+            state.aim = Math.min(6, state.aim + 1);
+        }
         if (state.hp <= 0 || state.enemy.hp <= 0) break;
         if ((card.tags || []).includes('回响')) {
             executeCard(state, card, true);
@@ -1000,6 +1026,10 @@ function applyEnemyMove(state, move) {
             const dealt = takeDamage(state, damage, '首领主体攻击', { allowSidestep: true });
             if (move.type === 'attack_lifesteal' && enemy.curse <= 0) enemy.hp = Math.min(enemy.maxHp, enemy.hp + Math.floor(dealt / 2));
             if (state.hp <= 0 || enemy.hp <= 0) break;
+        }
+        if (hasRelic(state, 'r_start_warrior') && !state.warriorStartUsed) {
+            state.warriorStartUsed = true;
+            state.warriorStartReady = true;
         }
     } else if (move.type === 'defend') enemy.armor += move.val;
     else if (move.type === 'buff') enemy.str += move.val;

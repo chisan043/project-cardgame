@@ -3029,6 +3029,12 @@
         return parts.length ? parts.join('，') : '完成行动';
     }
     function hasRelic(id) { return state.relics.some(r => r.id === id); }
+    function ensureStartingRelic(characterId = state.player?.characterId) {
+        const relicId = STARTING_RELIC_BY_ROLE[characterId];
+        if (!relicId || hasRelic(relicId)) return;
+        const relic = RELIC_POOL.find(item => item.id === relicId);
+        if (relic) state.relics.push({ ...relic });
+    }
     function applyLowHpGuardBoost(value, label = '守誓') {
         if (value <= 0 || !hasRelic('r_life_totem') || state.hp > Math.floor(state.maxHp / 2)) return value;
         const boosted = Math.ceil(value * 1.5);
@@ -3114,7 +3120,7 @@
     }
     function getCurrentRoleRelicPool(source) {
         const pool = getRelicsPreferredWithArt(source);
-        return pool.filter(relic => isCurrentRoleRelic(relic));
+        return pool.filter(relic => isCurrentRoleRelic(relic) && !STARTING_RELIC_IDS.has(relic.id));
     }
     function getRelicBuildTags(relic, characterId = state.player?.characterId) {
         const explicit = (typeof RELIC_BUILD_TAGS_BY_ID !== 'undefined' && RELIC_BUILD_TAGS_BY_ID[relic?.id]) || [];
@@ -4292,6 +4298,7 @@
             if (!state.mapData.length) generateMap();
             state.pathHistory = payload.pathHistory || [];
             state.player = payload.player || state.player;
+            ensureStartingRelic(state.player.characterId);
             state.currentNode = resolveSavedCurrentNode(payload.currentNodeId);
             state.currentShop = null;
             state.isNodeClickLocked = false;
@@ -4522,6 +4529,8 @@
     function selectCharacterAndStart(characterId) {
         setCurrentCharacter(characterId);
         applyCharacterRunStats(characterId);
+        state.relics = state.relics.filter(relic => !STARTING_RELIC_IDS.has(relic.id));
+        ensureStartingRelic(characterId);
         playerHpLagRatio = null;
         if (playerHpLagTimer) clearTimeout(playerHpLagTimer);
         state.deck = JSON.parse(JSON.stringify(initialDeck));
@@ -5148,6 +5157,9 @@
 
         state.p_poison = 0; state.p_bleed = 0; state.p_burn = 0; state.p_stun = 0; state.p_curse = 0; state.p_vuln = 0; state.p_weak = 0; state.p_echo_stack = 0;
         state.p_next_dmg = 0; state.p_reduce_dmg = 0; state.p_counter = 0; state.p_battle_dmg = 0; state.p_dmg_buff = 0; state.p_chant = 0; state.p_aim = 0; state.p_sidestep = 0; state.r_discard_count = 0; state.next_card_echo = 0; state.lastPlayedCard = null; state.turn_first_card = true; state.isEnemyTurn = false;
+        state.r_signature_setup_used = false; state.r_signature_attack_ready = false; state.r_signature_archer_pending = false;
+        state.r_warrior_start_used = false; state.r_warrior_start_ready = false;
+        state.p_crown_oath = false;
         state.p_blood_debt = 0; state.p_blood_debt_paid = 0; state.p_blood_debt_power = 1; state.p_blood_debt_settlement_mult = 1;
         state.r_counter_gate_used = false;
         state.r_protect_armor_used = false;
@@ -5777,6 +5789,13 @@
 
         for(let i=0; i<runCount; i++) {
             await executeCardTags(card, i > 0, targets);
+            if (i === 0 && state.r_signature_archer_pending) {
+                state.r_signature_archer_pending = false;
+                if (state.enemy.currentHp > 0) {
+                    state.p_aim = Math.min(6, state.p_aim + 1);
+                    showFloatText('逐风续势 +1', "var(--nature)", getCenter('ui-hp'));
+                }
+            }
             if (state.hp <= 0) return;
             if(card.tags && card.tags.includes('回响')) {
                 showFloatText("回响", "var(--gold)", getCenter('enemy-avatar')); await new Promise(r => setTimeout(r, 300)); 
@@ -5803,6 +5822,22 @@
 
     async function executeCardTags(card, isEcho, targets = null) {
         if (card.isJunk) return; 
+
+        if (!isEcho) {
+            const roleId = state.player?.characterId;
+            if ((roleId === 'hero_mage' || roleId === 'hero_archer') && card.type === '能力' && !state.r_signature_setup_used) {
+                state.r_signature_setup_used = true;
+                state.r_signature_attack_ready = true;
+            } else if (card.type === '攻击' && state.r_signature_attack_ready) {
+                state.r_signature_attack_ready = false;
+                if (roleId === 'hero_mage' && hasRelic('r_start_mage')) {
+                    state.p_chant = Math.min(9, state.p_chant + 1);
+                    showFloatText('余辉咏唱 +1', "var(--purple)", getCenter('ui-hp'));
+                } else if (roleId === 'hero_archer' && hasRelic('r_start_archer')) {
+                    state.r_signature_archer_pending = true;
+                }
+            }
+        }
 
         // ====== 特殊史诗核心卡 ======
         if (card.isSpecial) {
@@ -5866,12 +5901,12 @@
             }
             else if (card.specialId === 'w_counter_crown') {
                 triggerVFX('p-atk');
-                const wasCountering = state.p_counter > 0;
-                let dmg = 16 + state.p_battle_dmg + (wasCountering ? state.armor : 0);
+                let dmg = 16 + state.p_battle_dmg;
                 applySpecialCardDamage(card, dmg);
                 state.p_counter = 1;
+                state.p_crown_oath = true;
                 if(hasRelic('r_counter_amulet')) state.p_reduce_dmg += 5;
-                showFloatText(wasCountering ? "反击回锋" : "进入反击", "var(--gold)", getCenter('ui-hp'));
+                showFloatText("王冠誓约 / 进入反击", "var(--gold)", getCenter('ui-hp'));
             }
             else if (card.specialId === 'w_bastion_prayer') {
                 let pVal = 10 + (hasRelic('r_protect_armor') ? 3 : 0);
@@ -6552,6 +6587,10 @@
                     showFloatText("招架反击", "var(--gold)", getCenter('ui-hp'));
                     let b = Math.min(state.enemy.armor, counterDmg);
                     state.enemy.armor -= b; state.enemy.currentHp -= (counterDmg - b);
+                    if (state.p_crown_oath) {
+                        state.armor += counterDmg;
+                        showFloatText(`王冠护盾 +${counterDmg}`, "var(--water)", getCenter('ui-hp'));
+                    }
                     showFloatText(`反击 -${counterDmg}`, "var(--gold)", getCenter('enemy-avatar'));
                     if(checkEnemyDeath()) { winBattle(); return; }
                 }
@@ -6621,6 +6660,11 @@
         } else {
             addBattleActionLog('enemy', `敌方使用 ${move.name}`, describeEnemyMoveResult(move, enemyMoveSnapshot));
         }
+        if (!enemySkippedByStun && move.type.includes('attack') && hasRelic('r_start_warrior') && !state.r_warrior_start_used) {
+            state.r_warrior_start_used = true;
+            state.r_warrior_start_ready = true;
+            showFloatText('不屈战徽蓄势', "var(--gold)", getCenter('ui-hp'));
+        }
         
         if(state.hp <= 0) { alert("旅者倒在讨魔旅途深处，探索结束。"); showScene('scene-main-menu'); setTopBarVisible(false); return; }
         if(!hasRelic('r_yin_yang') && !hasRelic('r_perma_curse')) { if(state.enemy.vuln > 0) state.enemy.vuln--; if(state.enemy.weak > 0) state.enemy.weak--; } else if (hasRelic('r_yin_yang')) { state.enemy.vuln = Math.ceil(state.enemy.vuln / 2); state.enemy.weak = Math.ceil(state.enemy.weak / 2); }
@@ -6650,6 +6694,9 @@
             state.r_lifedebt_clear_used = false;
             state.r_status_ledger_used = false;
             state.r_echo_archive_pin_used = false;
+            state.r_signature_setup_used = false;
+            state.r_signature_attack_ready = false;
+            state.r_signature_archer_pending = false;
             if (state.player.thorns > 0) {
                 if (!hasRelic('r_pass_thorns')) {
                     state.player.thorns = Math.max(0, state.player.thorns - 1); 
@@ -6668,7 +6715,14 @@
                 return;
             }
             
-            await drawCards(getCharacterTurnDrawCount(character)); 
+            let turnDrawCount = getCharacterTurnDrawCount(character);
+            if (state.r_warrior_start_ready) {
+                state.r_warrior_start_ready = false;
+                state.mp += 1;
+                turnDrawCount += 1;
+                showFloatText('战徽反攻 +1能 / 抽牌 +1', "var(--gold)", getCenter('ui-mp'));
+            }
+            await drawCards(turnDrawCount);
             
             state.isEnemyTurn = false; refreshRuntimeHudBindings();
         }, 300);
@@ -6686,7 +6740,7 @@
         if (hasRelic('r_finisher_coin') && state.enemy.vuln > 0) state.gold += 10;
         if (hasRelic('r_warm_pendant')) state.hp = Math.min(state.maxHp, state.hp + 6);
         state.armor = 0; state.player.thorns = 0; state.p_poison = 0; state.p_bleed = 0; state.p_burn = 0; state.p_stun = 0; state.p_curse = 0; state.p_vuln = 0; state.p_weak = 0;
-        state.p_next_dmg = 0; state.p_reduce_dmg = 0; state.p_dmg_buff = 0; state.p_counter = 0; state.p_echo_stack = 0; state.p_battle_dmg = 0; state.p_chant = 0; state.p_aim = 0; state.p_sidestep = 0; state.p_buffs = {};
+        state.p_next_dmg = 0; state.p_reduce_dmg = 0; state.p_dmg_buff = 0; state.p_counter = 0; state.p_echo_stack = 0; state.p_battle_dmg = 0; state.p_chant = 0; state.p_aim = 0; state.p_sidestep = 0; state.p_crown_oath = false; state.p_buffs = {};
         
         state.deck.forEach(c => c.sealed = false);
         state.deck = state.deck.filter(c => !c.isJunk && !c.isKnife);
@@ -6800,7 +6854,7 @@
 
     function showRewardOverlay() {
         const container = document.getElementById('reward-items'); container.innerHTML = '';
-        const availableRelics = getRolePreferredRelics(RELIC_POOL.filter(r => !hasRelic(r.id)));
+        const availableRelics = getRolePreferredRelics(RELIC_POOL.filter(r => !hasRelic(r.id) && !STARTING_RELIC_IDS.has(r.id)));
         const showRelicReward = availableRelics.length > 0 && Math.random() < 0.2;
         document.getElementById('reward-title').innerText = showRelicReward ? '奇珍战利品' : '卡牌战利品';
         document.getElementById('reward-desc').innerText = showRelicReward ? '战斗余烬里浮出三件奇珍，请选择一件收入囊中。' : '战斗余烬仍在发光...请选择一张卡牌加入牌组。';
@@ -6838,7 +6892,7 @@
 
 
     function selectEventRelic() {
-        let available = RELIC_POOL.filter(r => !hasRelic(r.id));
+        let available = RELIC_POOL.filter(r => !hasRelic(r.id) && !STARTING_RELIC_IDS.has(r.id));
         available = getRelicsPreferredWithArt(available);
         if (available.length === 0) { document.getElementById('event-content').innerHTML = '<div style="font-size:60px;">💰</div>'; setEventActions([{ label: '离开', onClick: () => { state.gold += 50; updateTopBar(); closeOverlay('overlay-event'); advanceMap(); } }]); return; }
         let r = rollRolePreferredRelic(available); document.getElementById('event-title').innerText = "奇遇：失落的宝库"; document.getElementById('event-desc').innerText = "机关沉沉落下，宝匣中央浮起一件旧时代的秘宝。";
@@ -6880,7 +6934,7 @@
         } else { state.currentShop = { refreshCost: 10 }; }
         
         let cards = generateRewardChoices(3);
-        let availableRelics = RELIC_POOL.filter(r => !hasRelic(r.id));
+        let availableRelics = RELIC_POOL.filter(r => !hasRelic(r.id) && !STARTING_RELIC_IDS.has(r.id));
         availableRelics = getRolePreferredRelics(availableRelics);
         let relics = availableRelics.slice(0, 3).map(r => ({...r})); 
         

@@ -600,7 +600,7 @@ const STARTER_DECKS = {
             { poolId: 'starter_mage_omen', name: '秘仪预兆', type: '能力', cost: 1, icon: '🔮', val: 0, tags: ['咏唱'], buildTags: ['chant'], rarity: '普通', frameTheme: 'mage', desc: '积累[咏唱]并获得职业自带的护盾。' },
             { poolId: 'starter_mage_copy', name: '镜页试抄', type: '能力', cost: 1, icon: '🪞', val: 0, tags: ['复刻'], buildTags: ['mirror'], directEffects: { draw: true }, rarity: '普通', frameTheme: 'mage', desc: '[复刻]上一张牌的效果并抽 1 张牌。' },
             { poolId: 'starter_mage_mist', name: '蚀星雾', type: '能力', cost: 1, icon: '☠️', val: 0, tags: ['剧毒'], buildTags: ['calamity'], rarity: '普通', frameTheme: 'mage', desc: '施加[剧毒]。' },
-            { poolId: 'starter_mage_focus', name: '星页整理', type: '能力', cost: 1, icon: '📄', val: 0, tags: [], directEffects: { draw: true }, rarity: '普通', frameTheme: 'mage', desc: '抽 1 张牌。' }
+            { poolId: 'starter_mage_release', name: '星火释放', type: '攻击', cost: 1, icon: '✨', val: 5, tags: ['爆发'], buildNeutral: true, rarity: '普通', frameTheme: 'mage', desc: '造成 5 点伤害；[爆发]会消耗全部咏唱追加伤害。' }
         ]
     },
     starter_archer: {

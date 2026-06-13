@@ -13,7 +13,7 @@ const CHARACTERS = {
         startingGold: 50,
         starterDeckId: 'starter_warrior',
         cardPoolId: 'pool_warrior',
-        passive: '更高生命上限。每场战斗开始获得 5 点护盾；三条路线分别围绕圣剑反击、处刑窗口与血债清偿展开。',
+        passive: '初始遗物“不屈战徽”会把每场战斗第一次主体攻击转化为下回合额外能量与抽牌；更高生命上限，战斗开始获得 5 点护盾。',
         portrait: 'assets/characters/warrior/select_portrait_v1.webp',
         avatarPortrait: 'assets/characters/warrior/avatar_portrait_v1.webp',
         battleBack: 'assets/characters/warrior/battle_back_idle_v1.webp',
@@ -61,7 +61,7 @@ const CHARACTERS = {
         startingGold: 55,
         starterDeckId: 'starter_mage',
         cardPoolId: 'pool_mage',
-        passive: '基础能量 +1，初始金币略高，但生命上限较低；爆发牌会消耗咏唱造成追加伤害。',
+        passive: '初始遗物“余辉法印”让每回合第一次能力牌为下一张攻击补充咏唱；基础能量 +1，但生命上限较低。',
         portrait: 'assets/characters/mage/select_portrait_v1.webp',
         avatarPortrait: 'assets/characters/mage/avatar_portrait_v1.webp',
         battleBack: 'assets/characters/mage/battle_back_idle_v1.webp',
@@ -96,7 +96,7 @@ const CHARACTERS = {
             { src: 'assets/characters/mage/battle_back_hurt_06_v2.webp', duration: 90 }
         ],
         accentClass: 'featured',
-        starterHint: '治愈是法师的基础生存手段；咏唱、镜像与灾厄会随拿牌逐渐形成，也可以相互借力。'
+        starterHint: '治愈负责基础生存；秘仪预兆与星火释放构成完整的咏唱爆发闭环，镜像与灾厄仍保留开放信号。'
     },
     hero_archer: {
         id: 'hero_archer',
@@ -110,7 +110,7 @@ const CHARACTERS = {
         startingGold: 45,
         starterDeckId: 'starter_archer',
         cardPoolId: 'pool_archer',
-        passive: '每回合抽牌多 1 张；蓄力会转化为风势，攻击时消耗 1 层风势追加追射并获得庇护。',
+        passive: '初始遗物“逐风羽饰”让能力牌后的第一次攻击续上风势；每回合多抽 1 张牌。',
         portrait: 'assets/characters/archer/select_portrait_v1.webp',
         avatarPortrait: 'assets/characters/archer/avatar_portrait_v1.webp',
         battleBack: 'assets/characters/archer/battle_back_idle_v1.webp',

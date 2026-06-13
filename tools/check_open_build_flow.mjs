@@ -37,6 +37,13 @@ if (activeLegacyRelics.length) {
     throw new Error(`Legacy opening relics remain obtainable: ${activeLegacyRelics.map(relic => relic.id).join(', ')}`);
 }
 
+for (const roleId of Object.keys(data.CHARACTERS)) {
+    const relicId = data.STARTING_RELIC_BY_ROLE[roleId];
+    if (!relicId || !data.STARTING_RELIC_IDS.has(relicId)) throw new Error(`Missing fixed starting relic for ${roleId}`);
+    if (!data.RELIC_POOL.some(relic => relic.id === relicId)) throw new Error(`Starting relic is absent from relic data: ${relicId}`);
+    if (!data.ROLE_RELIC_IDS[roleId]?.has(relicId)) throw new Error(`Starting relic is not owned by ${roleId}: ${relicId}`);
+}
+
 function getCardBuildTags(roleId, card) {
     if (card.buildNeutral) return [];
     const explicit = card.buildTags || data.CARD_BUILD_TAGS_BY_ID[card.poolId || card.id] || [];

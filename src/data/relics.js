@@ -6,7 +6,7 @@ const SPECIAL_EPIC_POOLS = {
         { id: 'a_syn_sword', name: '裁决破军', roleId: 'hero_warrior', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_flash_art_v1.webp', type: '攻击', cost: 2, icon: '🗡️', val: 10, tags: ['穿甲', '易伤'], rarity: '史诗', isSpecial: true, desc: '造成 10 点[穿甲]伤害。<br>你手牌中每有一张带有[易伤]、[穿甲]、[连击]或[重击]的牌，额外造成 12 点伤害。' },
         { id: 'a_syn_array', name: '王誓阵列', roleId: 'hero_warrior', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_scar_art_v1.webp', type: '防御', cost: 2, icon: '⛩️', val: 10, tags: ['保留', '荆棘'], rarity: '史诗', isSpecial: true, desc: '获得 10 点护甲。<br>你手牌中每有一张带有[保留]或[荆棘]的牌，额外获得 8 点护甲与 3 层[荆棘]。' },
         { id: 'a_syn_blood', name: '血海誓斩', roleId: 'hero_warrior', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_blood_vow_slash_art_v1.webp', type: '攻击', cost: 2, icon: '🩸', val: 24, tags: ['血债', '吸血'], lifestealRatio: 1, bloodDebtSpendAll: true, bloodDebtSpendDamage: 7, bloodDebtClearHeal: 6, rarity: '史诗', isSpecial: true, desc: '造成 24 点穿甲伤害。消耗全部血债，每点额外造成 7 点伤害；以全部伤害[吸血]。若消耗了血债，额外回复 6 点生命。' },
-        { id: 'w_counter_crown', name: '王冠回锋', roleId: 'hero_warrior', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_crown_riposte_art_v1.webp', type: '攻击', cost: 3, icon: '👑', val: 16, tags: ['反击', '圣剑'], rarity: '史诗', isSpecial: true, desc: '造成 16 点伤害并进入[反击]姿态。若已处于反击姿态，额外造成等同护盾值的伤害。' },
+        { id: 'w_counter_crown', name: '王冠回锋', roleId: 'hero_warrior', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_crown_riposte_art_v1.webp', type: '攻击', cost: 3, icon: '👑', val: 16, tags: ['反击', '圣剑'], rarity: '史诗', isSpecial: true, desc: '造成 16 点伤害并进入[反击]姿态。本场战斗中，每次反击后获得等同本次招架值的护盾。' },
         { id: 'w_bastion_prayer', name: '圣壁祷言', roleId: 'hero_warrior', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_banner_guard_art_v1.webp', type: '能力', cost: 1, icon: '🚩', val: 10, tags: ['庇护', '抽牌'], rarity: '史诗', isSpecial: true, desc: '获得 10 点[庇护]，若当前拥有护盾，再获得等同庇护值的护盾并[抽牌]。' },
         { id: 'w_thorn_judgement', name: '荆冠审判', roleId: 'hero_warrior', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_thorn_charge_art_v1.webp', type: '攻击', cost: 2, icon: '🌹', val: 8, tags: ['圣剑', '荆棘'], rarity: '史诗', isSpecial: true, desc: '造成 8 点伤害。额外造成当前[荆棘]层数 3 倍的伤害，并获得 6 层[荆棘]。' },
         { id: 'w_oath_fortress', name: '誓约壁垒', roleId: 'hero_warrior', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_scar_art_v1.webp', type: '防御', cost: 3, icon: '🏰', val: 14, tags: ['反击', '保留'], rarity: '史诗', isSpecial: true, desc: '获得 14 点护盾与 4 点庇护并进入[反击]。打出后下回合回到手牌。' },
@@ -98,6 +98,9 @@ const REMOVED_BATTLE_IMPRINT_SPECIAL_IDS = new Set([
 ]);
 
 const RELIC_POOL = [
+    { id: 'r_start_warrior', name: '不屈战徽', icon: '🛡️', desc: '战士初始遗物：每场战斗第一次遭受敌方主体攻击后，下回合额外获得 1 点能量并抽 1 张牌。', price: 0 },
+    { id: 'r_start_mage', name: '余辉法印', icon: '🔯', desc: '法师初始遗物：每回合第一次打出能力牌后，下一张攻击牌结算前获得 1 层[咏唱]。', price: 0 },
+    { id: 'r_start_archer', name: '逐风羽饰', icon: '🪶', desc: '弓手初始遗物：每回合第一次打出能力牌后，下一张攻击牌结算时获得 1 层风势。', price: 0 },
     { id: 'r_bone_ring', name: '誓约骨环', icon: '🦴', desc: '战士/弓手：每丢弃 1 张非诅咒手牌，本场战斗所有伤害 +1；适合把弃牌转成血誓卖血、处刑连段或重置爆发。', price: 100 },
     { id: 'r_frenzy_veil', name: '疾影面纱', icon: '🎭', desc: '弓手：触发[重置]时额外[抽牌] 1 张；本战斗弃牌越多，[狂热]提供的伤害越高。', price: 130 },
     { id: 'r_sac_jade', name: '咏唱玉坠', icon: '📿', desc: '法师：每次获得[咏唱]时，回复 1 点能量并获得 2 点庇护。', price: 150 },
@@ -261,14 +264,22 @@ const COMMON_RELIC_IDS = new Set([
     'r_battle_whetstone', 'r_first_draw', 'r_warm_pendant', 'r_silver_purse',
     'r_copy_seal', 'r_reward_crown'
 ]);
+const STARTING_RELIC_BY_ROLE = {
+    hero_warrior: 'r_start_warrior',
+    hero_mage: 'r_start_mage',
+    hero_archer: 'r_start_archer'
+};
+const STARTING_RELIC_IDS = new Set(Object.values(STARTING_RELIC_BY_ROLE));
 const ROLE_RELIC_IDS = {
     hero_warrior: new Set([
+        'r_start_warrior',
         'r_bone_ring', 'r_thorn_shield_new', 'r_protect_armor', 'r_counter_amulet',
         'r_life_totem', 'r_pierce_amulet', 'r_heavy_badge', 'r_vamp_ring',
         'r_def_cost', 'r_blood', 'r_pass_thorns', 'r_overheal',
         'r_guardian_core', 'r_sword_oath', 'r_thorn_bloom', 'r_counter_gate'
     ]),
     hero_mage: new Set([
+        'r_start_mage',
         'r_sac_jade', 'r_enchant_crys', 'r_weak_mask', 'r_echo_mirror_relic',
         'r_energy_crys', 'r_heal_relic', 'r_luck_box', 'r_decay_seal',
         'r_yin_yang', 'r_omni_seal', 'r_skill_cost', 'r_brutal',
@@ -276,6 +287,7 @@ const ROLE_RELIC_IDS = {
         'r_status_prism', 'r_burst_lens', 'r_chant_ink'
     ]),
     hero_archer: new Set([
+        'r_start_archer',
         'r_bone_ring', 'r_frenzy_veil', 'r_poison_fang', 'r_bleed_knife',
         'r_corrupt_cup', 'r_soul_lantern', 'r_cycle_compass', 'r_exhaust_stone',
         'r_exhaust_dmg', 'r_exhaust_knife', 'r_return_poison', 'r_return_bleed',
