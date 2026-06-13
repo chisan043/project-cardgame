@@ -18,9 +18,14 @@ const CHARACTERS = {
         avatarPortrait: 'assets/characters/warrior/avatar_portrait_v1.webp',
         battleBack: 'assets/characters/warrior/battle_back_idle_v1.webp',
         battleBackAttackFrames: [
-            { src: 'assets/characters/warrior/battle_back_attack_start_v1.webp', duration: 150 },
-            { src: 'assets/characters/warrior/battle_back_skill_cast_v1.webp', duration: 190 }
+            { src: 'assets/characters/warrior/battle_back_attack_01_v2.webp', duration: 80 },
+            { src: 'assets/characters/warrior/battle_back_attack_02_v2.webp', duration: 90 },
+            { src: 'assets/characters/warrior/battle_back_attack_03_v2.webp', duration: 110 },
+            { src: 'assets/characters/warrior/battle_back_attack_04_v2.webp', duration: 80 },
+            { src: 'assets/characters/warrior/battle_back_attack_05_v2.webp', duration: 120 },
+            { src: 'assets/characters/warrior/battle_back_attack_06_v2.webp', duration: 100 }
         ],
+        battleBackAttackImpactMs: 360,
         accentClass: '',
         starterHint: '护盾是战士的基础生存手段；开局通过核心遗物确定圣剑反击、处刑连斩或血誓狂战路线。'
     },
@@ -41,9 +46,14 @@ const CHARACTERS = {
         avatarPortrait: 'assets/characters/mage/avatar_portrait_v1.webp',
         battleBack: 'assets/characters/mage/battle_back_idle_v1.webp',
         battleBackAttackFrames: [
-            { src: 'assets/characters/mage/battle_back_attack_start_v1.webp', duration: 150 },
-            { src: 'assets/characters/mage/battle_back_skill_cast_v1.webp', duration: 190 }
+            { src: 'assets/characters/mage/battle_back_attack_01_v2.webp', duration: 90 },
+            { src: 'assets/characters/mage/battle_back_attack_02_v2.webp', duration: 90 },
+            { src: 'assets/characters/mage/battle_back_attack_03_v2.webp', duration: 110 },
+            { src: 'assets/characters/mage/battle_back_attack_04_v2.webp', duration: 90 },
+            { src: 'assets/characters/mage/battle_back_attack_05_v2.webp', duration: 110 },
+            { src: 'assets/characters/mage/battle_back_attack_06_v2.webp', duration: 100 }
         ],
+        battleBackAttackImpactMs: 380,
         accentClass: 'featured',
         starterHint: '治愈是法师的基础生存手段；开局通过核心遗物确定星火咏唱、镜像回路或灾厄术士路线。'
     },
@@ -64,9 +74,14 @@ const CHARACTERS = {
         avatarPortrait: 'assets/characters/archer/avatar_portrait_v1.webp',
         battleBack: 'assets/characters/archer/battle_back_idle_v1.webp',
         battleBackAttackFrames: [
-            { src: 'assets/characters/archer/battle_back_attack_start_v1.webp', duration: 170 },
-            { src: 'assets/characters/archer/battle_back_skill_cast_v1.webp', duration: 150 }
+            { src: 'assets/characters/archer/battle_back_attack_01_v2.webp', duration: 80 },
+            { src: 'assets/characters/archer/battle_back_attack_02_v2.webp', duration: 90 },
+            { src: 'assets/characters/archer/battle_back_attack_03_v2.webp', duration: 110 },
+            { src: 'assets/characters/archer/battle_back_attack_04_v2.webp', duration: 100 },
+            { src: 'assets/characters/archer/battle_back_attack_05_v2.webp', duration: 80 },
+            { src: 'assets/characters/archer/battle_back_attack_06_v2.webp', duration: 100 }
         ],
+        battleBackAttackImpactMs: 380,
         accentClass: '',
         starterHint: '基础射击输出，闪避可完全躲开一段主体攻击；开局通过核心遗物确定疾风、猎毒或放逐路线。'
     }

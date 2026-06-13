@@ -595,7 +595,7 @@
         .battle-side-player:has(.character-hero_warrior) .player-avatar-frame { --player-attack-distance:18px; }
         .battle-side-player:has(.character-hero_archer) .player-avatar-frame { --player-attack-distance:12px; }
         .battle-side-player:has(.character-hero_mage) .player-avatar-frame { --player-attack-distance:8px; }
-        .player-avatar-frame.player-anim-attack { animation:playerAttackLunge 0.48s cubic-bezier(0.2, 0.82, 0.24, 1) both; }
+        .player-avatar-frame.player-anim-attack { animation:playerAttackLunge var(--player-attack-duration, 0.58s) cubic-bezier(0.2, 0.82, 0.24, 1) both; }
         .player-avatar-frame.player-anim-attack img { animation:none; }
         .player-ground-shadow { position:absolute; left:95px; bottom:28px; width: 245px; height: 34px; border-radius: 50%; background: radial-gradient(ellipse, rgba(0,0,0,0.36), transparent 70%); transform:skewX(-16deg); }
         @keyframes playerIdleBreath {
@@ -4371,6 +4371,7 @@
             avatar.src = character.battleBack;
             avatar.dataset.idleSrc = character.battleBack;
             avatar.attackFrames = character.battleBackAttackFrames || [];
+            avatar.attackImpactMs = character.battleBackAttackImpactMs || 240;
             avatar.alt = character.name;
             avatar.className = `character-${character.id}`;
             avatar.attackFrames.forEach(frame => {
@@ -5021,9 +5022,11 @@
     function triggerPlayerAttackAnimation() {
         const avatarFrame = document.querySelector('.player-avatar-frame');
         const avatar = document.getElementById('player-avatar-img');
-        if (!avatarFrame || !avatar) return;
+        if (!avatarFrame || !avatar) return { impactDelay: 140, duration: 480 };
         const token = ++playerAttackAnimationToken;
         const attackFrames = Array.isArray(avatar.attackFrames) ? avatar.attackFrames : [];
+        const totalDuration = Math.max(480, attackFrames.reduce((sum, frame) => sum + frame.duration, 0));
+        avatarFrame.style.setProperty('--player-attack-duration', `${totalDuration}ms`);
         avatarFrame.classList.remove('player-anim-attack');
         void avatarFrame.offsetWidth;
         avatarFrame.classList.add('player-anim-attack');
@@ -5039,7 +5042,11 @@
             if (token !== playerAttackAnimationToken) return;
             avatar.src = avatar.dataset.idleSrc || avatar.src;
             avatarFrame.classList.remove('player-anim-attack');
-        }, Math.max(480, elapsed));
+        }, totalDuration);
+        return {
+            impactDelay: Math.min(avatar.attackImpactMs || 140, totalDuration),
+            duration: totalDuration
+        };
     }
 
     function triggerVFX(type) {
@@ -5047,18 +5054,20 @@
         const vfxToken = (vfx.animationToken || 0) + 1;
         vfx.animationToken = vfxToken;
         vfx.style.display = 'flex'; el.style.animation = 'none'; void el.offsetWidth;
+        let visibleDuration = 400;
         if(type==='p-atk') {
-            triggerPlayerAttackAnimation();
+            const timing = triggerPlayerAttackAnimation();
+            visibleDuration = timing.duration + 120;
             setTimeout(() => {
                 if (vfx.animationToken === vfxToken) el.style.animation = 'pAtkAnim 0.3s ease-in forwards';
-            }, 140);
+            }, timing.impactDelay);
         }
         if(type==='p-def') el.style.animation = 'pDefAnim 0.4s ease-out forwards';
         if(type==='e-atk') { el.style.animation = 'eAtkAnim 0.3s ease-in forwards'; document.getElementById('game-app').classList.add('screen-shake'); setTimeout(()=>document.getElementById('game-app').classList.remove('screen-shake'), 400); }
         if(type==='e-def') el.style.animation = 'eDefAnim 0.4s ease-out forwards';
         setTimeout(() => {
             if (vfx.animationToken === vfxToken) vfx.style.display = 'none';
-        }, type === 'p-atk' ? 500 : 400);
+        }, visibleDuration);
     }
 
     let cardsPlayedThisTurn = 0;
