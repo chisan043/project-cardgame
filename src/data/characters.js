@@ -77,6 +77,7 @@ const CHARACTERS = {
         battleBackAttackOffset: { x: 56, y: 8 },
         battleBackAttackImpactMs: 380,
         battleAttackVfxType: 'mage',
+        battleAttackVfxOrigin: { x: 0.75, y: 0.48 },
         battleAttackVfxImpactFrame: 4,
         battleAttackVfxFrames: [
             { src: 'assets/vfx/player_attack/mage_magic_bolt_01_v1.webp', duration: 45 },
@@ -125,6 +126,7 @@ const CHARACTERS = {
         battleBackAttackOffset: { x: 56, y: -38 },
         battleBackAttackImpactMs: 380,
         battleAttackVfxType: 'archer',
+        battleAttackVfxOrigin: { x: 0.76, y: 0.46 },
         battleAttackVfxImpactFrame: 4,
         battleAttackVfxFrames: [
             { src: 'assets/vfx/player_attack/archer_arrow_01_v1.webp', duration: 40 },

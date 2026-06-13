@@ -2032,7 +2032,7 @@
 <script src="src/data/card-tags.js?v=20260612-tag-simplify"></script>
 <script src="src/data/cards.js?v=20260612-tag-simplify"></script>
 <script src="src/data/enemies.js?v=20260605-enemy-ai"></script>
-<script src="src/data/characters.js?v=20260613-attack-vfx"></script>
+<script src="src/data/characters.js?v=20260613-attack-vfx-origin"></script>
 <script>
     function createEmbers() {
         const layer = document.getElementById('particles-layer');
@@ -5140,10 +5140,10 @@
         }, totalDuration);
     }
 
-    function positionPlayerAttackVfx(vfx, image, type) {
-        const playerRect = document.querySelector('.player-avatar-frame')?.getBoundingClientRect();
+    function positionPlayerAttackVfx(vfx, image, character, type) {
+        const avatarRect = document.getElementById('player-avatar-img')?.getBoundingClientRect();
         const enemyRect = document.getElementById('enemy-avatar-wrapper')?.getBoundingClientRect();
-        if (!playerRect || !enemyRect) return;
+        if (!avatarRect || !enemyRect) return;
 
         const target = {
             x: enemyRect.left + enemyRect.width * 0.5,
@@ -5154,12 +5154,11 @@
             : type === 'mage'
                 ? { width: 300, height: 270 }
                 : { width: 360, height: 240 };
-        const start = type === 'warrior'
-            ? target
-            : {
-                x: playerRect.left + playerRect.width * (type === 'mage' ? 0.71 : 0.76),
-                y: playerRect.top + playerRect.height * (type === 'mage' ? 0.48 : 0.46)
-            };
+        const origin = character.battleAttackVfxOrigin || { x: 0.5, y: 0.5 };
+        const start = type === 'warrior' ? target : {
+            x: avatarRect.left + avatarRect.width * origin.x,
+            y: avatarRect.top + avatarRect.height * origin.y
+        };
 
         image.style.left = `${start.x - size.width / 2}px`;
         image.style.top = `${start.y - size.height / 2}px`;
@@ -5187,7 +5186,7 @@
 
         setTimeout(() => {
             if (vfx.animationToken !== vfxToken || effectToken !== playerAttackVfxToken) return;
-            positionPlayerAttackVfx(vfx, image, type);
+            positionPlayerAttackVfx(vfx, image, character, type);
             image.style.animation = 'none';
             image.src = frames[0].src;
             void image.offsetWidth;
