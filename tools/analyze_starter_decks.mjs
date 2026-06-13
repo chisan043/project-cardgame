@@ -5,7 +5,6 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
     CHECKPOINTS,
-    applyStarterCoreTransform,
     createRng,
     loadGameData,
     makeStarterDeck,
@@ -112,7 +111,7 @@ function getRelicBuildTags(data, roleId, relic) {
 }
 
 function analyzeStarterBias(data, roleId, starter) {
-    const directions = data.STARTER_DIRECTION_REWARD_POOLS[roleId] || [];
+    const directions = Object.keys(data.BUILD_DIRECTIONS[roleId] || {});
     const buildSignals = Object.fromEntries(directions.map(tag => [tag, 0]));
     const buildProfile = Object.fromEntries(directions.map(tag => [tag, 0]));
     for (const card of starter.cards) {
@@ -160,16 +159,20 @@ function analyzeStarterBias(data, roleId, starter) {
         const fallback = classPool.filter(card => getCardBuildTags(data, roleId, card).includes(buildTag)).length;
         return [buildTag, { exact, fallback }];
     }));
-    const coreChoices = (data.STARTER_CORE_RELIC_IDS[roleId] || []).map(id => ({
-        id,
-        buildTag: data.RELIC_CARD_REWARD_BONUS_BY_ID[id] || null,
-        exists: data.RELIC_POOL.some(relic => relic.id === id)
-    }));
-    const expectedSourcePoolId = {
-        hero_warrior: 'starter_warrior_guard',
-        hero_mage: 'starter_mage_omen',
-        hero_archer: 'starter_archer_aim'
-    }[roleId];
+    const bridgeCoverage = {};
+    for (let left = 0; left < directions.length; left++) {
+        for (let right = left + 1; right < directions.length; right++) {
+            const pair = [directions[left], directions[right]];
+            bridgeCoverage[pair.join('+')] = classPool.filter(card => {
+                const tags = getCardBuildTags(data, roleId, card);
+                return pair.every(tag => tags.includes(tag));
+            }).map(card => card.name);
+        }
+    }
+    const requiredBridgePairs = roleId === 'hero_warrior'
+        ? ['oathblade+execution', 'execution+bloodoath']
+        : [];
+    const bridgeCoveragePassed = requiredBridgePairs.every(pair => (bridgeCoverage[pair] || []).length > 0);
     const survivalRule = {
         hero_warrior: { poolId: 'starter_warrior_guard', copies: 3, type: '防御', tag: null, label: '3 张护盾牌' },
         hero_mage: { poolId: 'starter_mage_heal', copies: 3, type: '能力', tag: '治愈', label: '3 张治愈牌' },
@@ -184,23 +187,6 @@ function analyzeStarterBias(data, roleId, starter) {
             && (!survivalRule.tag || (survivalCard.tags || []).includes(survivalRule.tag))
             && Math.max(1, Number(survivalCard.copies) || 1) === survivalRule.copies
     };
-    const coreTransforms = coreChoices.map(choice => {
-        const transform = data.STARTER_CORE_CARD_TRANSFORMS[choice.id];
-        const sourceCopies = starter.cards
-            .filter(card => card.poolId === transform?.sourcePoolId)
-            .reduce((sum, card) => sum + Math.max(1, Number(card.copies) || 1), 0);
-        return {
-            id: choice.id,
-            sourcePoolId: transform?.sourcePoolId || null,
-            sourceCopies,
-            transformedBuildTags: transform?.card?.buildTags || [],
-            shieldlessBloodoath: choice.buildTag !== 'bloodoath' || (
-                transform?.card?.type !== '防御'
-                && !(transform?.card?.tags || []).includes('庇护')
-                && !transform?.card?.directEffects?.protection
-            )
-        };
-    });
     const signalValues = Object.values(buildSignals);
     const profileValues = Object.values(buildProfile);
     const signalSpread = Math.max(...signalValues) - Math.min(...signalValues);
@@ -208,15 +194,10 @@ function analyzeStarterBias(data, roleId, starter) {
     const passed = signalValues.every(value => value === 1)
         && profileSpread === 0
         && Object.values(directionRewardCoverage).every(value => value.exact > 0)
-        && coreChoices.length === 3
-        && coreChoices.every(choice => choice.exists && directions.includes(choice.buildTag))
         && survivalIdentity.passed
         && bloodoathShieldViolations.length === 0
         && bloodDebtCoveragePassed
-        && coreTransforms.every(transform => transform.sourcePoolId === expectedSourcePoolId
-            && transform.sourceCopies > 0
-            && transform.transformedBuildTags.length === 1
-            && transform.shieldlessBloodoath);
+        && bridgeCoveragePassed;
     return {
         buildSignals,
         buildProfile,
@@ -226,14 +207,15 @@ function analyzeStarterBias(data, roleId, starter) {
         bloodoathShieldViolations,
         bloodDebtRoleCoverage,
         bloodDebtCoveragePassed,
-        coreChoices,
-        coreTransforms,
+        bridgeCoverage,
+        requiredBridgePairs,
+        bridgeCoveragePassed,
         survivalIdentity,
         passed
     };
 }
 
-function runEncounter(data, roleId, checkpoint, enemyName, runs, seed, coreRelicId = null) {
+function runEncounter(data, roleId, checkpoint, enemyName, runs, seed) {
     let wins = 0;
     let turns = 0;
     let hp = 0;
@@ -243,9 +225,7 @@ function runEncounter(data, roleId, checkpoint, enemyName, runs, seed, coreRelic
     const meta = {};
     for (let index = 0; index < runs; index++) {
         const rng = createRng(seed + index * 7919);
-        let deck = makeStarterDeck(data, rng, roleId);
-        if (coreRelicId) deck = applyStarterCoreTransform(data, deck, coreRelicId);
-        const coreRelic = coreRelicId ? data.RELIC_POOL.find(relic => relic.id === coreRelicId) : null;
+        const deck = makeStarterDeck(data, rng, roleId);
         const result = simulateBattle(
             data,
             rng,
@@ -253,7 +233,7 @@ function runEncounter(data, roleId, checkpoint, enemyName, runs, seed, coreRelic
             deck,
             data.CHARACTERS[roleId].maxHp,
             checkpoint,
-            { core: null, coreCard: null, relics: coreRelic ? [coreRelic] : [] },
+            { core: null, coreCard: null, relics: [] },
             { enemyName }
         );
         wins += result.win ? 1 : 0;
@@ -272,39 +252,6 @@ function runEncounter(data, roleId, checkpoint, enemyName, runs, seed, coreRelic
         energyWastedPerTurn: energyWasted / Math.max(1, turns),
         cardUsage: summarizeUsage(meta, plays, opportunities)
     };
-}
-
-function runCoreVariants(data, roleId, args, roleIndex) {
-    return (data.STARTER_CORE_RELIC_IDS[roleId] || []).map((relicId, coreIndex) => {
-        const checkpoints = {};
-        for (let checkpointIndex = 0; checkpointIndex < TEST_CHECKPOINTS.length; checkpointIndex++) {
-            const checkpoint = TEST_CHECKPOINTS[checkpointIndex];
-            const enemies = {};
-            const pool = encounterPool(data, checkpoint);
-            for (let enemyIndex = 0; enemyIndex < pool.length; enemyIndex++) {
-                const enemy = pool[enemyIndex];
-                enemies[enemy.name] = runEncounter(
-                    data,
-                    roleId,
-                    checkpoint,
-                    enemy.name,
-                    args.runs,
-                    args.seed + roleIndex * 3000001 + coreIndex * 500009 + checkpointIndex * 100003 + enemyIndex * 1009,
-                    relicId
-                );
-            }
-            checkpoints[checkpoint.id] = aggregateCheckpoint(enemies, TARGETS[checkpoint.id]);
-        }
-        const relic = data.RELIC_POOL.find(entry => entry.id === relicId);
-        const transform = data.STARTER_CORE_CARD_TRANSFORMS[relicId];
-        return {
-            relicId,
-            relic: relic?.name || relicId,
-            buildTag: data.RELIC_CARD_REWARD_BONUS_BY_ID[relicId],
-            transformedCard: transform?.card?.name || '',
-            checkpoints
-        };
-    });
 }
 
 function aggregateCheckpoint(enemies, target) {
@@ -359,7 +306,6 @@ function runRole(data, roleId, args, roleIndex) {
             directEffects: card.directEffects || {}
         })),
         bias,
-        coreVariants: runCoreVariants(data, roleId, args, roleIndex),
         checkpoints
     };
 }
@@ -397,25 +343,19 @@ function renderMarkdown(report) {
         }
         lines.push('');
     }
-    lines.push('## 流派锁定检查', '');
-    lines.push('| 角色 | 生存基牌 | 初始信号 | 构筑分差 | 核心遗物覆盖 | 首次奖励精准候选 | 结果 |');
+    lines.push('## 开放构筑检查', '');
+    lines.push('| 角色 | 生存基牌 | 初始信号 | 构筑分差 | 单路线候选 | 桥接覆盖 | 结果 |');
     lines.push('| --- | --- | --- | ---: | --- | --- | --- |');
     for (const result of report.results) {
         const signals = Object.entries(result.bias.buildSignals).map(([tag, value]) => `${tag} ${value}`).join(' / ');
-        const cores = result.bias.coreChoices.map(choice => choice.buildTag || choice.id).join(' / ');
         const coverage = Object.entries(result.bias.directionRewardCoverage).map(([tag, value]) => `${tag} ${value.exact}`).join(' / ');
-        lines.push(`| ${result.role} | ${result.bias.survivalIdentity.label} | ${signals} | ${result.bias.profileSpread.toFixed(2)} | ${cores} | ${coverage} | ${result.bias.passed ? '通过' : '失败'} |`);
+        const bridges = Object.entries(result.bias.bridgeCoverage)
+            .filter(([, cards]) => cards.length)
+            .map(([pair, cards]) => `${pair} ${cards.length}`)
+            .join(' / ') || '无';
+        lines.push(`| ${result.role} | ${result.bias.survivalIdentity.label} | ${signals} | ${result.bias.profileSpread.toFixed(2)} | ${coverage} | ${bridges} | ${result.bias.passed ? '通过' : '失败'} |`);
     }
-    lines.push('', '通过条件：战士、法师、弓手分别保留护盾、治愈、闪避生存基牌；三件开局核心遗物完整覆盖三条路线；核心分别改造战士护盾牌、法师咏唱牌、弓手风势牌；血誓改造后不得保留护盾或庇护。', '');
-    lines.push('## 核心改造实测', '');
-    lines.push('| 角色 | 核心遗物 | 改造牌 | 前期 | 中期无奖励 | 后期无奖励 |');
-    lines.push('| --- | --- | --- | ---: | ---: | ---: |');
-    for (const result of report.results) {
-        for (const variant of result.coreVariants) {
-            lines.push(`| ${result.role} | ${variant.relic} | ${variant.transformedCard} | ${pct(variant.checkpoints.early.winRate)} | ${pct(variant.checkpoints.mid.winRate)} | ${pct(variant.checkpoints.late.winRate)} |`);
-        }
-    }
-    lines.push('');
+    lines.push('', '通过条件：三个角色保留各自的基础生存轴；起始牌组对三个方向保持均衡信号；每个方向都有独立牌可选；战士至少保留圣剑与处刑、处刑与血债两类桥接牌；血誓不得出现护盾或庇护。', '');
     lines.push('## 初始卡使用率', '');
     for (const result of report.results) {
         const teachingEnemies = ['early', 'mid'].flatMap(id => Object.values(result.checkpoints[id].enemies));
@@ -447,7 +387,7 @@ function main() {
     const report = {
         generatedAt: generatedAt.toISOString(),
         generatedDate: localDate(generatedAt),
-        model: 'starter deck, survival identity and core-relic selection simulation v4',
+        model: 'starter deck, survival identity and open-build simulation v5',
         runsPerEnemy: args.runs,
         seed: args.seed,
         results
@@ -456,7 +396,7 @@ function main() {
     fs.writeFileSync(path.resolve(ROOT, args.markdown), renderMarkdown(report));
     console.log(`Starter deck simulation: ${args.runs} runs per role, checkpoint and enemy`);
     for (const result of results) {
-        console.log(`${result.role}\t前期 ${pct(result.checkpoints.early.aggregate.winRate)}\t中期 ${pct(result.checkpoints.mid.aggregate.winRate)}\t后期 ${pct(result.checkpoints.late.aggregate.winRate)}\t流派锁定 ${result.bias.passed ? '通过' : '失败'}`);
+        console.log(`${result.role}\t前期 ${pct(result.checkpoints.early.aggregate.winRate)}\t中期 ${pct(result.checkpoints.mid.aggregate.winRate)}\t后期 ${pct(result.checkpoints.late.aggregate.winRate)}\t开放构筑 ${result.bias.passed ? '通过' : '失败'}`);
     }
 }
 

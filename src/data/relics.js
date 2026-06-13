@@ -350,8 +350,6 @@ const RELIC_BUILD_TAGS_BY_ID = {
 };
 
 const BUILD_EXPANSION_RELICS = [
-    { id: 'r_oathblade_beacon', name: '圣誓航标', icon: '🛡️', desc: '核心遗物：锁定[圣剑反击]路线，将初始护盾牌改造为同时进入[反击]的誓反架势。', price: 180, isCore: true },
-    { id: 'r_execution_warrant', name: '处刑令状', icon: '⚖️', desc: '核心遗物：锁定[处刑连斩]路线，将初始护盾牌转换为纯输出牌，卡牌奖励将优先出现处刑牌。', price: 180, isCore: true },
     { id: 'r_flaw_lens', name: '破绽透镜', icon: '🔍', desc: '战士：[穿甲]攻击命中带[易伤]的敌人时，伤害提高 15%。', price: 170 },
     { id: 'r_duel_glove', name: '决斗手甲', icon: '🥊', desc: '战士：每回合首次触发[连击]时额外[抽牌] 1 张。', price: 150 },
     { id: 'r_stun_chain', name: '缄默锁链', icon: '⛓️', desc: '战士：施加[眩晕]时，额外施加 1 层[易伤]。', price: 160 },
@@ -359,7 +357,6 @@ const BUILD_EXPANSION_RELICS = [
     { id: 'r_pierce_meter', name: '裂甲刻尺', icon: '📏', desc: '战士：每回合首次打出[穿甲]攻击时，获得 1 点能量。', price: 160 },
     { id: 'r_combo_warrant', name: '连斩密令', icon: '📜', desc: '战士：一回合内每打出第 2 张攻击牌，下一次伤害 +6。', price: 170 },
     { id: 'r_finisher_coin', name: '终斩金币', icon: '🪙', desc: '战士：击败敌人时若敌方带有[易伤]，战后额外获得 10 金币。', price: 150 },
-    { id: 'r_bloodoath_contract', name: '血誓招令', icon: '🩸', desc: '核心遗物：锁定[血誓狂战]路线，将初始护盾牌改造为血誓开锋。每回合首次完全清偿血债时，按本回合偿债量获得最多 4 点本场伤害。', price: 180, isCore: true },
     { id: 'r_blood_suture', name: '赤线缝针', icon: '🧵', desc: '战士：每回合首次获得血债时，少获得 2 点血债，并获得 4 点本回合伤害。', price: 160 },
     { id: 'r_vein_cup', name: '脉搏圣杯', icon: '🍷', desc: '战士：每次施加[出血]时，偿还 1 点血债。', price: 170 },
     { id: 'r_rupture_charm', name: '裂口护符', icon: '💔', desc: '战士：触发[放血]后，若清空了出血，额外施加 3 层[出血]并偿还 2 点血债。', price: 170 },
@@ -367,23 +364,17 @@ const BUILD_EXPANSION_RELICS = [
     { id: 'r_scarlet_whet', name: '猩红砥石', icon: '🪨', desc: '战士：每回合首次获得血债后，本回合所有伤害 +3。', price: 160 },
     { id: 'r_bloodlet_hourglass', name: '放血沙漏', icon: '⌛', desc: '战士：每场战斗首次触发[放血]后，额外[抽牌] 1 张。', price: 170 },
     { id: 'r_oath_transfusion', name: '誓血导管', icon: '🧪', desc: '战士：每回合首次完全清偿血债时，回复 1 点能量。', price: 180 },
-    { id: 'r_chant_astrolabe', name: '咏星仪', icon: '🔮', desc: '核心遗物：锁定[星火咏唱]路线，将初始咏唱牌改造为可以继续找牌的星火预兆。', price: 180, isCore: true },
     { id: 'r_chant_reservoir', name: '蓄咏水晶', icon: '💎', desc: '法师：每回合首次获得[咏唱]时，额外获得 1 层并抽 1 张牌。', price: 160 },
     { id: 'r_burst_censer', name: '聚爆香炉', icon: '🕯️', desc: '法师：[爆发]消耗至少 3 层咏唱时，额外施加 2 层[燃烧]。', price: 170 },
-    { id: 'r_mirror_catalog', name: '镜像目录', icon: '🪞', desc: '核心遗物：锁定[镜像回路]路线，将初始咏唱牌改造为[复刻]上一张牌的镜页预兆。', price: 180, isCore: true },
     { id: 'r_echo_archive_pin', name: '回声书签', icon: '🔖', desc: '法师：每回合首次触发[回响]时，获得 1 点能量与 6 点庇护。', price: 160 },
     { id: 'r_copy_lattice', name: '复写晶格', icon: '💠', desc: '法师：[复刻]没有目标时，改为[抽牌] 1 张并获得 1 层[咏唱]。', price: 170 },
     { id: 'r_rewind_sand', name: '倒带砂瓶', icon: '⌛', desc: '法师：触发[重置]并实际弃牌后，额外[抽牌] 1 张。', price: 160 },
     { id: 'r_double_quill', name: '双墨羽笔', icon: '🖋️', desc: '法师：每回合第二张能力牌额外[抽牌] 1 张。', price: 170 },
-    { id: 'r_calamity_orb', name: '灾厄星核', icon: '🌑', desc: '核心遗物：锁定[灾厄术士]路线，将初始咏唱牌改造为施加[虚弱]的灾星预兆。', price: 180, isCore: true },
     { id: 'r_hex_incense', name: '咒雾香', icon: '🕯️', desc: '法师：施加[诅咒]时，额外施加 1 层[虚弱]。', price: 160 },
     { id: 'r_plague_glass', name: '疫光玻片', icon: '🧫', desc: '法师：敌方已有负面状态时，能力牌状态层数 +1，并获得 4 点庇护。', price: 170 },
     { id: 'r_status_ledger', name: '异状账簿', icon: '📒', desc: '法师：敌方负面状态达到 4 种时，每回合首次能力牌额外[抽牌] 1 张。', price: 170 },
-    { id: 'r_gale_weatherwane', name: '疾风风标', icon: '🏹', desc: '核心遗物：锁定[疾风连射]路线，将初始风势牌改造为顺风瞄准，保留蓄力与找牌节奏。', price: 180, isCore: true },
     { id: 'r_tailwind_spool', name: '顺风线轴', icon: '🧵', desc: '弓手：每回合首次获得风势或[闪避]时，额外获得 1 层并获得 3 点庇护。', price: 160 },
     { id: 'r_multishot_fletching', name: '分羽箭尾', icon: '🪶', desc: '弓手：[追击]攻击额外造成 2 点伤害。', price: 170 },
-    { id: 'r_venom_seedcase', name: '毒种匣', icon: '☠️', desc: '核心遗物：锁定[猎毒陷袭]路线，将初始风势牌改造为施加[剧毒]的毒弦瞄准。', price: 180, isCore: true },
-    { id: 'r_exile_roadsign', name: '流亡路标', icon: '🗺️', desc: '核心遗物：锁定[放逐游侠]路线，将初始风势牌改造为免费抽牌后[放逐]的空弦瞄准。', price: 180, isCore: true },
     { id: 'r_gray_market_map', name: '灰市地图', icon: '🗺️', desc: '通用：卡牌奖励与商栈补货中，带职业构筑方向的卡牌权重提高。', price: 180 },
     { id: 'r_campfire_pouch', name: '营火锦囊', icon: '🎒', desc: '通用：放弃奖励时获得更多金币，适合慢慢寻找关键构筑件。', price: 170 }
 ];
@@ -391,32 +382,26 @@ const BUILD_EXPANSION_RELICS = [
 RELIC_POOL.push(...BUILD_EXPANSION_RELICS);
 
 [
-    'r_oathblade_beacon'
-].forEach(id => ROLE_RELIC_IDS.hero_warrior.add(id));
-[
-    'r_execution_warrant', 'r_flaw_lens', 'r_duel_glove', 'r_stun_chain',
+    'r_flaw_lens', 'r_duel_glove', 'r_stun_chain',
     'r_execute_scabbard', 'r_pierce_meter', 'r_combo_warrant', 'r_finisher_coin'
 ].forEach(id => ROLE_RELIC_IDS.hero_warrior.add(id));
 [
-    'r_bloodoath_contract', 'r_blood_suture', 'r_vein_cup', 'r_rupture_charm',
+    'r_blood_suture', 'r_vein_cup', 'r_rupture_charm',
     'r_lifedebt_scale', 'r_scarlet_whet', 'r_bloodlet_hourglass', 'r_oath_transfusion'
 ].forEach(id => ROLE_RELIC_IDS.hero_warrior.add(id));
 [
-    'r_chant_astrolabe', 'r_chant_reservoir', 'r_burst_censer',
-    'r_mirror_catalog', 'r_echo_archive_pin', 'r_copy_lattice', 'r_rewind_sand', 'r_double_quill',
-    'r_calamity_orb', 'r_hex_incense', 'r_plague_glass', 'r_status_ledger'
+    'r_chant_reservoir', 'r_burst_censer',
+    'r_echo_archive_pin', 'r_copy_lattice', 'r_rewind_sand', 'r_double_quill',
+    'r_hex_incense', 'r_plague_glass', 'r_status_ledger'
 ].forEach(id => ROLE_RELIC_IDS.hero_mage.add(id));
 [
-    'r_gale_weatherwane', 'r_tailwind_spool', 'r_multishot_fletching',
-    'r_venom_seedcase', 'r_exile_roadsign'
+    'r_tailwind_spool', 'r_multishot_fletching'
 ].forEach(id => ROLE_RELIC_IDS.hero_archer.add(id));
 [
     'r_gray_market_map', 'r_campfire_pouch'
 ].forEach(id => COMMON_RELIC_IDS.add(id));
 
 Object.assign(RELIC_BUILD_TAGS_BY_ID, {
-    r_oathblade_beacon: ['oathblade'],
-    r_execution_warrant: ['execution'],
     r_flaw_lens: ['execution'],
     r_duel_glove: ['execution'],
     r_stun_chain: ['execution'],
@@ -424,7 +409,6 @@ Object.assign(RELIC_BUILD_TAGS_BY_ID, {
     r_pierce_meter: ['execution'],
     r_combo_warrant: ['execution'],
     r_finisher_coin: ['execution'],
-    r_bloodoath_contract: ['bloodoath'],
     r_blood_suture: ['bloodoath'],
     r_vein_cup: ['bloodoath'],
     r_rupture_charm: ['bloodoath'],
@@ -432,26 +416,30 @@ Object.assign(RELIC_BUILD_TAGS_BY_ID, {
     r_scarlet_whet: ['bloodoath'],
     r_bloodlet_hourglass: ['bloodoath'],
     r_oath_transfusion: ['bloodoath'],
-    r_chant_astrolabe: ['chant'],
     r_chant_reservoir: ['chant'],
     r_burst_censer: ['chant'],
-    r_mirror_catalog: ['mirror'],
     r_echo_archive_pin: ['mirror'],
     r_copy_lattice: ['mirror'],
     r_rewind_sand: ['mirror'],
     r_double_quill: ['mirror'],
-    r_calamity_orb: ['calamity'],
     r_hex_incense: ['calamity'],
     r_plague_glass: ['calamity'],
     r_status_ledger: ['calamity'],
-    r_gale_weatherwane: ['gale'],
     r_tailwind_spool: ['gale'],
-    r_multishot_fletching: ['gale'],
-    r_venom_seedcase: ['venom'],
-    r_exile_roadsign: ['exile']
+    r_multishot_fletching: ['gale']
 });
 
 const RELIC_CARD_REWARD_BONUS_BY_ID = {
+    r_sword_oath: 'oathblade',
+    r_pierce_amulet: 'execution',
+    r_blood_suture: 'bloodoath',
+    r_sac_jade: 'chant',
+    r_echo_archive_pin: 'mirror',
+    r_plague_glass: 'calamity',
+    r_wind_quiver: 'gale',
+    r_poison_fang: 'venom',
+    r_exile_cache: 'exile',
+    // Legacy save compatibility for removed opening core relics.
     r_oathblade_beacon: 'oathblade',
     r_execution_warrant: 'execution',
     r_bloodoath_contract: 'bloodoath',
@@ -462,11 +450,3 @@ const RELIC_CARD_REWARD_BONUS_BY_ID = {
     r_venom_seedcase: 'venom',
     r_exile_roadsign: 'exile'
 };
-
-const STARTER_CORE_RELIC_IDS = {
-    hero_warrior: ['r_oathblade_beacon', 'r_execution_warrant', 'r_bloodoath_contract'],
-    hero_mage: ['r_chant_astrolabe', 'r_mirror_catalog', 'r_calamity_orb'],
-    hero_archer: ['r_gale_weatherwane', 'r_venom_seedcase', 'r_exile_roadsign']
-};
-
-const CORE_RELIC_IDS = new Set(Object.values(STARTER_CORE_RELIC_IDS).flat());

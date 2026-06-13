@@ -19,11 +19,8 @@ function loadGameData() {
     const context = vm.createContext({});
     vm.runInContext(`${source}\n;globalThis.__balanceData = {
         TAGS, BUILD_DIRECTIONS, CARD_BUILD_TAGS_BY_ID, NEUTRAL_CARD_POOL, STARTER_DECKS,
-        STARTER_DIRECTION_REWARD_POOLS,
-        STARTER_CORE_CARD_TRANSFORMS,
         CHARACTER_CARD_POOLS, SPECIAL_EPIC_POOLS, RELIC_POOL, RELIC_BUILD_TAGS_BY_ID,
-        COMMON_RELIC_IDS, ROLE_RELIC_IDS, STARTER_CORE_RELIC_IDS, CORE_RELIC_IDS,
-        RELIC_CARD_REWARD_BONUS_BY_ID,
+        COMMON_RELIC_IDS, ROLE_RELIC_IDS, RELIC_CARD_REWARD_BONUS_BY_ID,
         ENEMIES, CHARACTERS, getScaledCardValue,
         getAbilityPotency, getCardDrawCount, getCardHealValue,
         getCardChantGain, getProtectionValue, getWindGain, getSidestepGain,
@@ -218,21 +215,6 @@ function makeStarterDeck(data, rng, roleId, loadout = null, disabledTags = null)
     ));
     if (loadout?.coreCard) deck.push({ ...cloneForSimulation(loadout.coreCard, disabledTags), specialId: loadout.coreCard.id });
     return shuffle(rng, deck).map((card, index) => ({ ...card, simId: `${index}:${card.poolId || card.name}` }));
-}
-
-function applyStarterCoreTransform(data, deck, relicId) {
-    const transform = data.STARTER_CORE_CARD_TRANSFORMS[relicId];
-    if (!transform) return deck;
-    return deck.map(card => {
-        if (card.poolId !== transform.sourcePoolId) return card;
-        return {
-            ...clone(transform.card),
-            poolId: card.poolId,
-            simId: card.simId,
-            isStarter: card.isStarter,
-            up: card.up
-        };
-    });
 }
 
 function upgradeRandomCard(rng, deck) {
@@ -1325,7 +1307,6 @@ export {
     getLoadout,
     loadGameData,
     makeStarterDeck,
-    applyStarterCoreTransform,
     simulateBattle,
     simulateCheckpoint,
     simulateExpedition

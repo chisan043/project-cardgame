@@ -47,7 +47,7 @@ const CHARACTERS = {
             { src: 'assets/characters/warrior/battle_back_hurt_06_v2.webp', duration: 90 }
         ],
         accentClass: '',
-        starterHint: '开局通过核心遗物确定圣剑反击、处刑连斩或血债清偿路线；血债路线不依赖护盾。'
+        starterHint: '起始牌组同时提供圣剑、处刑与血债信号；后续拿牌可以强化、转向或混合，血债路线不依赖护盾。'
     },
     hero_mage: {
         id: 'hero_mage',
@@ -96,7 +96,7 @@ const CHARACTERS = {
             { src: 'assets/characters/mage/battle_back_hurt_06_v2.webp', duration: 90 }
         ],
         accentClass: 'featured',
-        starterHint: '治愈是法师的基础生存手段；开局通过核心遗物确定星火咏唱、镜像回路或灾厄术士路线。'
+        starterHint: '治愈是法师的基础生存手段；咏唱、镜像与灾厄会随拿牌逐渐形成，也可以相互借力。'
     },
     hero_archer: {
         id: 'hero_archer',
@@ -145,6 +145,6 @@ const CHARACTERS = {
             { src: 'assets/characters/archer/battle_back_hurt_06_v2.webp', duration: 90 }
         ],
         accentClass: '',
-        starterHint: '基础射击输出，闪避可完全躲开一段主体攻击；开局通过核心遗物确定疾风、猎毒或放逐路线。'
+        starterHint: '基础射击输出，闪避可完全躲开一段主体攻击；疾风、猎毒与放逐会随旅途中的选择逐渐形成。'
     }
 };

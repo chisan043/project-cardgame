@@ -472,7 +472,7 @@ const BUILD_EXPANSION_CARDS = {
         { poolId: 'warrior_open_vein', name: '禁誓开脉', type: '能力', cost: 0, icon: '🕯️', val: 0, tags: ['血债', '销毁'], bloodDebtGain: 5, directEffects: { energy: true }, buildTags: ['bloodoath'], rarity: '普通', frameTheme: 'warrior', desc: '获得 5 点[血债]并回复 1 点能量，随后[销毁]。' },
         { poolId: 'warrior_life_contract', name: '回生血契', type: '能力', cost: 1, icon: '📖', val: 0, tags: ['血债'], bloodDebtRepay: 6, bloodDebtWeak: 1, drawCount: 1, directEffects: { draw: true }, bloodDebtDrawOnRepay: 1, bloodDebtClearHeal: 4, buildTags: ['bloodoath'], rarity: '稀有', frameTheme: 'warrior', desc: '偿还至多 6 点血债，施加 1 层虚弱并抽 1 张牌；若实际偿债，再抽 1 张；完全清偿时回复 4 点生命。' },
         { poolId: 'warrior_debt_scar', name: '血债留痕', type: '攻击', cost: 1, icon: '🩸', val: 6, tags: ['出血', '保留'], bloodDebtDamageRatio: 0.5, buildTags: ['bloodoath'], rarity: '普通', frameTheme: 'warrior', desc: '造成 6 点伤害并追加当前血债 50% 的伤害，再施加[出血]；打出后回到手牌。' },
-        { poolId: 'warrior_oath_pressure', name: '誓血缚阵', type: '能力', cost: 1, icon: '🚩', val: 0, tags: ['血债'], bloodDebtGain: 3, bloodDebtWeak: 2, bloodDebtStun: 1, buildTags: ['bloodoath'], rarity: '稀有', frameTheme: 'warrior', desc: '获得 3 点[血债]，施加 2 层虚弱并眩晕敌人，用控制换取偿债时间。' },
+        { poolId: 'warrior_oath_pressure', name: '誓血缚阵', type: '能力', cost: 1, icon: '🚩', val: 0, tags: ['血债'], bloodDebtGain: 3, bloodDebtWeak: 2, bloodDebtStun: 1, buildTags: ['bloodoath', 'execution'], rarity: '稀有', frameTheme: 'warrior', desc: '获得 3 点[血债]，施加 2 层虚弱并眩晕敌人，用控制换取偿债时间。' },
         { poolId: 'warrior_martyr_cut', name: '殉誓斩', type: '攻击', cost: 0, icon: '🗡️', val: 5, tags: ['血债', '销毁'], bloodDebtGain: 3, bloodDebtDamageRatio: 1, buildTags: ['bloodoath'], rarity: '普通', frameTheme: 'warrior', desc: '获得 3 点[血债]，造成 5 点伤害并追加等同当前血债的伤害，随后[销毁]。' },
         { poolId: 'warrior_devour_finish', name: '噬痕终击', type: '攻击', cost: 3, icon: '🩸', val: 16, tags: ['放血', '吸血'], bloodDebtDamageRatio: 2, bloodDebtRepayFromBleed: 1, buildTags: ['bloodoath'], rarity: '史诗', frameTheme: 'warrior', desc: '造成 16 点伤害并追加当前血债两倍的伤害。触发[放血]后[吸血]，两次结算都可偿债。' },
         { poolId: 'warrior_oath_watch', name: '守誓待击', type: '能力', cost: 0, icon: '👁️', val: 0, tags: ['反击', '销毁'], buildTags: ['oathblade'], rarity: '普通', frameTheme: 'warrior', desc: '免费进入[反击]姿态，使用后[销毁]。' },
@@ -482,7 +482,7 @@ const BUILD_EXPANSION_CARDS = {
         { poolId: 'warrior_verdict_feint', name: '裁决佯攻', type: '攻击', cost: 0, icon: '⚖️', val: 3, tags: ['连击', '易伤', '销毁'], buildTags: ['execution'], rarity: '普通', frameTheme: 'warrior', desc: '免费造成 3 点伤害并施加[易伤]，随后[销毁]。' },
         { poolId: 'warrior_gap_finder', name: '破隙检定', type: '攻击', cost: 1, icon: '🔎', val: 5, tags: ['穿甲', '抽牌'], buildTags: ['execution'], rarity: '稀有', frameTheme: 'warrior', desc: '造成 5 点[穿甲]伤害并[抽牌]。' },
         { poolId: 'warrior_silent_lunge', name: '默步突刺', type: '攻击', cost: 1, icon: '🤫', val: 8, tags: ['穿甲', '眩晕'], buildTags: ['execution'], rarity: '稀有', frameTheme: 'warrior', desc: '[穿甲]攻击并[眩晕]，用一拍停顿换下一回合的斩杀空间。' },
-        { poolId: 'warrior_scaffold_cut', name: '刑架削锋', type: '攻击', cost: 2, icon: '⛓️', val: 10, tags: ['重击', '虚弱'], buildTags: ['execution'], rarity: '稀有', frameTheme: 'warrior', desc: '不依赖护盾，靠[重击]制造伤害，同时用[虚弱]压低失败后的风险。' },
+        { poolId: 'warrior_scaffold_cut', name: '刑架削锋', type: '攻击', cost: 2, icon: '⛓️', val: 10, tags: ['重击', '虚弱'], buildTags: ['execution', 'bloodoath'], rarity: '稀有', frameTheme: 'warrior', desc: '不依赖护盾，靠[重击]制造伤害，同时用[虚弱]压低失败后的风险。' },
         { poolId: 'warrior_final_measure', name: '终裁量尺', type: '攻击', cost: 2, icon: '📏', val: 11, tags: ['穿甲', '重击'], buildTags: ['execution'], rarity: '史诗', frameTheme: 'warrior', desc: '稳定的[穿甲][重击]收束牌，适合在易伤窗口已经打开后直接下判。' },
         { poolId: 'warrior_crimson_pause', name: '猩红喘息', type: '能力', cost: 1, icon: '🫀', val: 0, tags: ['血债', '保留'], bloodDebtRepay: 7, bloodDebtClearHeal: 8, buildTags: ['bloodoath'], rarity: '普通', frameTheme: 'warrior', desc: '偿还至多 7 点血债；完全清偿时回复 8 点生命。打出后下回合回到手牌。' }
     ],
@@ -613,96 +613,6 @@ const STARTER_DECKS = {
             { poolId: 'starter_archer_exile', name: '逐影放矢', type: '攻击', cost: 1, icon: '🏹', val: 7, tags: ['放逐'], buildTags: ['exile'], rarity: '普通', frameTheme: 'archer', desc: '造成 7 点伤害并[放逐]。' },
             { poolId: 'starter_archer_focus', name: '整束箭袋', type: '能力', cost: 1, icon: '🪶', val: 0, tags: [], buildNeutral: true, directEffects: { draw: true }, rarity: '普通', copies: 2, frameTheme: 'archer', desc: '抽 1 张牌。' }
         ]
-    }
-};
-
-const STARTER_DIRECTION_REWARD_POOLS = {
-    hero_warrior: ['oathblade', 'execution', 'bloodoath'],
-    hero_mage: ['chant', 'mirror', 'calamity'],
-    hero_archer: ['gale', 'venom', 'exile']
-};
-
-const STARTER_CORE_CARD_TRANSFORMS = {
-    r_oathblade_beacon: {
-        sourcePoolId: 'starter_warrior_guard',
-        card: {
-            name: '誓反架势', type: '防御', cost: 1, icon: '🛡️', val: 2,
-            tags: ['反击'], buildTags: ['oathblade'], buildNeutral: false,
-            rarity: '普通', frameTheme: 'warrior',
-            desc: '获得 2 点护盾并进入[反击]姿态。'
-        }
-    },
-    r_execution_warrant: {
-        sourcePoolId: 'starter_warrior_guard',
-        card: {
-            name: '决绝斩', type: '攻击', cost: 1, icon: '⚔️', val: 9,
-            tags: ['连击'], buildTags: ['execution'], buildNeutral: false,
-            rarity: '普通', frameTheme: 'warrior',
-            desc: '造成 9 点伤害；若本回合已打出过其他牌，触发[连击]。'
-        }
-    },
-    r_bloodoath_contract: {
-        sourcePoolId: 'starter_warrior_guard',
-        card: {
-            name: '血誓开锋', type: '攻击', cost: 1, icon: '🩸', val: 5,
-            tags: ['血债'], bloodDebtGain: 2, bloodDebtBleed: 3, buildTags: ['bloodoath'], buildNeutral: false,
-            rarity: '普通', frameTheme: 'warrior',
-            desc: '获得 2 点[血债]，造成 5 点伤害并施加 3 层出血。'
-        }
-    },
-    r_chant_astrolabe: {
-        sourcePoolId: 'starter_mage_omen',
-        card: {
-            name: '星火预兆', type: '能力', cost: 1, icon: '🔮', val: 0,
-            tags: ['咏唱'], buildTags: ['chant'], buildNeutral: false,
-            directEffects: { draw: true }, rarity: '普通', frameTheme: 'mage',
-            desc: '积累[咏唱]并抽 1 张牌。'
-        }
-    },
-    r_mirror_catalog: {
-        sourcePoolId: 'starter_mage_omen',
-        card: {
-            name: '镜页预兆', type: '能力', cost: 1, icon: '🪞', val: 0,
-            tags: ['复刻'], buildTags: ['mirror'], buildNeutral: false,
-            directEffects: { draw: true }, rarity: '普通', frameTheme: 'mage',
-            desc: '[复刻]上一张牌的效果并抽 1 张牌。'
-        }
-    },
-    r_calamity_orb: {
-        sourcePoolId: 'starter_mage_omen',
-        card: {
-            name: '灾星预兆', type: '能力', cost: 1, icon: '🌑', val: 0,
-            tags: ['虚弱'], buildTags: ['calamity'], buildNeutral: false,
-            directEffects: { draw: true }, rarity: '普通', frameTheme: 'mage',
-            desc: '施加[虚弱]并抽 1 张牌。'
-        }
-    },
-    r_gale_weatherwane: {
-        sourcePoolId: 'starter_archer_aim',
-        card: {
-            name: '顺风瞄准', type: '能力', cost: 1, icon: '🎯', val: 4,
-            tags: ['蓄力'], buildTags: ['gale'], buildNeutral: false,
-            directEffects: { draw: true }, rarity: '普通', frameTheme: 'archer',
-            desc: '获得风势并抽 1 张牌。'
-        }
-    },
-    r_venom_seedcase: {
-        sourcePoolId: 'starter_archer_aim',
-        card: {
-            name: '毒弦瞄准', type: '能力', cost: 1, icon: '☠️', val: 0,
-            tags: ['剧毒'], buildTags: ['venom'], buildNeutral: false,
-            directEffects: { draw: true }, rarity: '普通', frameTheme: 'archer',
-            desc: '施加[剧毒]并抽 1 张牌。'
-        }
-    },
-    r_exile_roadsign: {
-        sourcePoolId: 'starter_archer_aim',
-        card: {
-            name: '空弦瞄准', type: '能力', cost: 0, icon: '🏹', val: 0,
-            tags: ['放逐'], buildTags: ['exile'], buildNeutral: false,
-            directEffects: { draw: true }, rarity: '普通', frameTheme: 'archer',
-            desc: '抽 1 张牌，随后此牌[放逐]。'
-        }
     }
 };
 

@@ -42,8 +42,13 @@ function cardId(card) {
     return card.poolId || card.specialId || card.id || card.name;
 }
 
-function cardBuildTags(data, card) {
-    return card.buildTags || data.CARD_BUILD_TAGS_BY_ID[cardId(card)] || [];
+function cardBuildTags(data, roleId, card) {
+    if (card.buildNeutral) return [];
+    const explicit = card.buildTags || data.CARD_BUILD_TAGS_BY_ID[cardId(card)] || [];
+    const inferred = Object.entries(data.BUILD_DIRECTIONS[roleId] || {})
+        .filter(([, config]) => (card.tags || []).some(tag => (config.triggerTags || []).includes(tag)))
+        .map(([buildTag]) => buildTag);
+    return [...new Set([...explicit, ...inferred])];
 }
 
 function weightedPick(rng, items, weightOf) {
@@ -64,11 +69,11 @@ function rollRarity(rng, floor = 14) {
     return '普通';
 }
 
-function rewardWeight(data, card, primaryBuildTag, aligned) {
-    const tags = cardBuildTags(data, card);
+function rewardWeight(data, roleId, card, primaryBuildTag, aligned) {
+    const tags = cardBuildTags(data, roleId, card);
     if (!tags.length) return 1;
-    if (aligned && tags.includes(primaryBuildTag)) return 4;
-    return 1.35;
+    if (aligned && tags.includes(primaryBuildTag)) return 2;
+    return 1.15;
 }
 
 function rewardCandidatePool(data, roleId, buildId, mode, rarity, used, rng) {
@@ -76,15 +81,15 @@ function rewardCandidatePool(data, roleId, buildId, mode, rarity, used, rng) {
     let candidates = allCards.filter(card => !used.has(cardId(card)));
     if (rarity) candidates = candidates.filter(card => card.rarity === rarity);
     if (mode === 'aligned') {
-        candidates = candidates.filter(card => cardBuildTags(data, card).includes(buildId));
+        candidates = candidates.filter(card => cardBuildTags(data, roleId, card).includes(buildId));
     } else if (mode === 'pivot') {
         candidates = candidates.filter(card => {
-            const tags = cardBuildTags(data, card);
+            const tags = cardBuildTags(data, roleId, card);
             return tags.length && !tags.includes(buildId);
         });
     } else {
         candidates = candidates.filter(card => {
-            const tags = cardBuildTags(data, card);
+            const tags = cardBuildTags(data, roleId, card);
             return !tags.includes(buildId) || rng() < 0.35;
         });
     }
@@ -95,7 +100,7 @@ function generateChoice(data, rng, roleId, buildId, mode, used) {
     const rarity = rollRarity(rng);
     let candidates = rewardCandidatePool(data, roleId, buildId, mode, rarity, used, rng);
     if (!candidates.length) candidates = rewardCandidatePool(data, roleId, buildId, mode, null, used, rng);
-    return weightedPick(rng, candidates, card => rewardWeight(data, card, buildId, mode === 'aligned'));
+    return weightedPick(rng, candidates, card => rewardWeight(data, roleId, card, buildId, mode === 'aligned'));
 }
 
 function generateChoices(data, rng, roleId, buildId) {
@@ -110,9 +115,9 @@ function generateChoices(data, rng, roleId, buildId) {
     return result;
 }
 
-function cardDraftScore(data, card, build, deck, rng) {
+function cardDraftScore(data, roleId, card, build, deck, rng) {
     const tags = card.tags || [];
-    const buildTags = cardBuildTags(data, card);
+    const buildTags = cardBuildTags(data, roleId, card);
     const triggerHits = tags.filter(tag => build.triggerTags.includes(tag)).length;
     const scaledValue = data.getScaledCardValue(card);
     const cost = Number(card.cost) || 0;
@@ -148,9 +153,9 @@ function cardDraftScore(data, card, build, deck, rng) {
     return score + (rng() - 0.5) * 10;
 }
 
-function pickReward(data, rng, choices, build, deck) {
+function pickReward(data, rng, roleId, choices, build, deck) {
     return choices
-        .map(card => ({ card, score: cardDraftScore(data, card, build, deck, rng) }))
+        .map(card => ({ card, score: cardDraftScore(data, roleId, card, build, deck, rng) }))
         .sort((left, right) => right.score - left.score)[0]?.card || null;
 }
 
@@ -195,7 +200,7 @@ function summarizeCards(meta, offered, picked, included, plays, opportunities, d
 
 function runBuild(data, roleId, buildId, args) {
     const buildDefinition = data.BUILD_DIRECTIONS[roleId][buildId];
-    const build = { id: buildId, ...buildDefinition };
+    const build = { id: buildId, roleId, ...buildDefinition };
     const loadout = getLoadout(data, roleId, buildId, 'mature');
     const targets = encounterTargets(data);
     const offered = {};
@@ -218,7 +223,7 @@ function runBuild(data, roleId, buildId, args) {
                 const choices = generateChoices(data, rng, roleId, buildId);
                 for (const card of choices) {
                     const id = cardId(card);
-                    const buildTags = cardBuildTags(data, card);
+                    const buildTags = cardBuildTags(data, roleId, card);
                     meta[id] ||= {
                         name: card.name,
                         cost: card.cost,
@@ -232,7 +237,7 @@ function runBuild(data, roleId, buildId, args) {
                     };
                     addCounter(offered, id);
                 }
-                const selected = pickReward(data, rng, choices, build, deck);
+                const selected = pickReward(data, rng, roleId, choices, build, deck);
                 if (!selected) continue;
                 addCounter(picked, cardId(selected));
                 deck.push(clone(selected));

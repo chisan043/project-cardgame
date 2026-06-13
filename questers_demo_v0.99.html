@@ -1888,7 +1888,7 @@
         <div class="role-select-shell">
             <div class="role-select-header">
                 <h2 class="role-select-title">命途之选</h2>
-                <p class="role-select-subtitle">从三位旅者中选择本次探索的起点。选定角色后，将通过核心遗物确定流派。</p>
+                <p class="role-select-subtitle">从三位旅者中选择本次探索的起点。构筑方向将在拿牌与遗物选择中自然形成。</p>
             </div>
             <div id="role-select-grid" class="role-select-grid"></div>
             <div class="role-select-footer">
@@ -1896,14 +1896,6 @@
                 <span>愿命运指引你，踏上旅途，直至魔王城的阴影尽头。</span>
             </div>
         </div>
-    </div>
-</div>
-
-<div class="overlay" id="overlay-init-relic">
-    <div class="event-box" style="width: 1000px;">
-        <h2 style="color:var(--gold); margin-top:0;">命途核心</h2>
-        <p style="color:#aaa;">请选择一件核心遗物。这将确定本次远征的流派，并影响后续卡牌奖励。</p>
-        <div id="init-relic-content" style="display:flex; justify-content:center; gap:30px; margin:40px 0;"></div>
     </div>
 </div>
 
@@ -2191,6 +2183,7 @@
 
     const STARTER_BUILD_PROFILE_WEIGHT = 0.25;
     const MIN_PRIMARY_BUILD_PROFILE_SCORE = 1;
+    const MIN_PRIMARY_BUILD_PROFILE_LEAD = 0.75;
 
     function getDeckBuildProfile(characterId = state.player?.characterId) {
         const directions = getBuildDirectionsForCharacter(characterId);
@@ -2204,20 +2197,10 @@
         return profile;
     }
 
-    function getSelectedCoreBuildTag() {
-        for (const relic of state.relics) {
-            if (!CORE_RELIC_IDS.has(relic.id)) continue;
-            const buildTag = RELIC_CARD_REWARD_BONUS_BY_ID[relic.id];
-            if (buildTag) return buildTag;
-        }
-        return null;
-    }
-
     function getPrimaryBuildTag(profile = getDeckBuildProfile()) {
-        const coreBuildTag = getSelectedCoreBuildTag();
-        if (coreBuildTag) return coreBuildTag;
         const ranked = Object.entries(profile).sort((a, b) => b[1] - a[1]);
         if (!ranked.length || ranked[0][1] <= MIN_PRIMARY_BUILD_PROFILE_SCORE) return null;
+        if (ranked[1] && ranked[0][1] - ranked[1][1] < MIN_PRIMARY_BUILD_PROFILE_LEAD) return null;
         return ranked[0][0];
     }
 
@@ -2249,15 +2232,15 @@
         let multiplier = 1;
         if (hasRelic('r_gray_market_map') && tags.length) multiplier *= 1.25;
         if (!boostedTags.length || !tags.length) return multiplier;
-        return boostedTags.some(tag => tags.includes(tag)) ? multiplier * 2.25 : multiplier;
+        return boostedTags.some(tag => tags.includes(tag)) ? multiplier * 1.35 : multiplier;
     }
 
     function getCardBuildRewardWeight(card, primaryBuildTag) {
         const tags = getCardBuildTags(card);
         if (!tags.length) return 1;
         const boost = getBuildRewardBoostMultiplier(tags);
-        if (primaryBuildTag && tags.includes(primaryBuildTag)) return 4 * boost;
-        return 1.35 * boost;
+        if (primaryBuildTag && tags.includes(primaryBuildTag)) return 2 * boost;
+        return 1.15 * boost;
     }
 
     function getRewardCandidatePool({ mode = 'general', rarity = null, used = new Set(), primaryBuildTag = getPrimaryBuildTag() } = {}) {
@@ -2297,7 +2280,7 @@
         const weighted = [];
         source.forEach(card => {
             const tags = getCardBuildTags(card, characterId);
-            const weight = (tags.includes(primaryBuildTag) ? 4 : 1) * getBuildRewardBoostMultiplier(tags);
+            const weight = Math.max(1, Math.round((tags.includes(primaryBuildTag) ? 2 : 1) * getBuildRewardBoostMultiplier(tags)));
             for (let i = 0; i < weight; i++) weighted.push(card);
         });
         return weighted.length ? weighted : source;
@@ -2591,38 +2574,7 @@
         return card.specialId || card.poolId || card.name;
     }
 
-    function shouldOfferStarterDirectionChoice() {
-        return !getSelectedCoreBuildTag() && state.floor === 0 && state.deck.length > 0 && state.deck.every(card => card.isStarter);
-    }
-
-    function generateStarterDirectionChoices() {
-        const buildTags = STARTER_DIRECTION_REWARD_POOLS[state.player.characterId] || [];
-        const classPool = getCharacterCardPool();
-        const used = new Set();
-        return buildTags.map(buildTag => {
-            let candidates = classPool.filter(card => {
-                const tags = getCardBuildTags(card);
-                return tags.length === 1 && tags[0] === buildTag && !used.has(getCardChoiceKey(card));
-            });
-            if (!candidates.length) {
-                candidates = classPool.filter(card => getCardBuildTags(card).includes(buildTag) && !used.has(getCardChoiceKey(card)));
-            }
-            const picked = rollWeighted(candidates, card => {
-                const cost = Math.max(1, Number(card.cost) || 0);
-                const value = getScaledCardValue(card) / cost;
-                return 1 + Math.min(3, value / 6) + (card.rarity === '史诗' ? 0.25 : 0);
-            });
-            if (!picked) return null;
-            used.add(getCardChoiceKey(picked));
-            return cloneCardDefinition(picked);
-        }).filter(Boolean);
-    }
-
-    function generateRewardChoices(count = 3, { allowStarterDirectionChoice = false } = {}) {
-        if (allowStarterDirectionChoice && shouldOfferStarterDirectionChoice()) {
-            const directionChoices = generateStarterDirectionChoices();
-            if (directionChoices.length === count) return directionChoices;
-        }
+    function generateRewardChoices(count = 3) {
         const choices = [];
         const used = new Set();
         const partnerTag = getBloodPartnerTagNeeded();
@@ -2634,7 +2586,7 @@
             }
         }
         const primaryBuildTag = getPrimaryBuildTag();
-        const slotPlan = primaryBuildTag ? ['aligned', 'general', 'pivot'] : ['general', 'pivot', 'general'];
+        const slotPlan = primaryBuildTag ? ['aligned', 'general', 'pivot'] : ['general', 'general', 'general'];
         for (const mode of slotPlan) {
             if (choices.length >= count) break;
             const card = generateBuildRewardCard(mode, used, primaryBuildTag);
@@ -3162,7 +3114,7 @@
     }
     function getCurrentRoleRelicPool(source) {
         const pool = getRelicsPreferredWithArt(source);
-        return pool.filter(relic => isCurrentRoleRelic(relic) && !CORE_RELIC_IDS.has(relic.id));
+        return pool.filter(relic => isCurrentRoleRelic(relic));
     }
     function getRelicBuildTags(relic, characterId = state.player?.characterId) {
         const explicit = (typeof RELIC_BUILD_TAGS_BY_ID !== 'undefined' && RELIC_BUILD_TAGS_BY_ID[relic?.id]) || [];
@@ -3178,8 +3130,8 @@
     function getRelicBuildRewardWeight(relic, primaryBuildTag = getPrimaryBuildTag()) {
         const tags = getRelicBuildTags(relic);
         if (!tags.length) return 1;
-        if (primaryBuildTag && tags.includes(primaryBuildTag)) return 3.5;
-        return 1.25;
+        if (primaryBuildTag && tags.includes(primaryBuildTag)) return 2;
+        return 1.1;
     }
     function weightedShuffleRelics(pool) {
         const result = [];
@@ -4576,7 +4528,8 @@
         state.deck.forEach(c => { c.id = Math.random().toString(36).substr(2, 9); applyCardTagBudget(c); });
         updateTopBar();
         closeOverlay('overlay-role-select');
-        showInitRelicOverlay();
+        generateMap(); renderMap(); updateTopBar(); setTopBarVisible(true); showScene('scene-map');
+        saveRun();
         showFloatText(`旅者已选：${getCurrentCharacter().name}`, "var(--gold)", {x: window.innerWidth / 2, y: window.innerHeight / 2});
     }
 
@@ -4592,38 +4545,6 @@
         setTopBarVisible(false);
         updatePlayerPresentation();
         showRoleSelectOverlay();
-    }
-
-    function showInitRelicOverlay() {
-        const container = document.getElementById('init-relic-content'); container.innerHTML = '';
-        const coreIds = STARTER_CORE_RELIC_IDS[state.player.characterId] || [];
-        const pool = coreIds.map(id => RELIC_POOL.find(relic => relic.id === id)).filter(Boolean);
-        pool.forEach(r => {
-            const rw = document.createElement('div'); rw.className = 'relic-item-box'; rw.style.cursor = 'pointer';
-            rw.innerHTML = `<div style="width:78px; height:78px; margin:0 auto 15px; filter:drop-shadow(0 0 10px var(--gold)); font-size:50px;">${renderRelicVisual(r)}</div><div style="color:white; font-weight:bold; font-size:18px;">${r.name}</div><div style="flex:1; color:#aaa; font-size:12px; margin:10px 0; line-height:1.5; text-align:left;">${formatKeywords(getDisplayRelicDesc(r))}</div>${getRelicBottomTags(r)}`;
-            rw.onclick = () => {
-                state.relics.push(JSON.parse(JSON.stringify(r)));
-                applyStarterCoreRelic(r.id);
-                closeOverlay('overlay-init-relic');
-                generateMap(); renderMap(); updateTopBar(); setTopBarVisible(true); showScene('scene-map');
-                saveRun();
-                showFloatText("命途已定：" + r.name, "var(--gold)", {x: window.innerWidth/2, y: window.innerHeight/2});
-            };
-            container.appendChild(rw);
-        });
-        showOverlay('overlay-init-relic');
-    }
-
-    function applyStarterCoreRelic(relicId) {
-        const transform = STARTER_CORE_CARD_TRANSFORMS[relicId];
-        if (!transform) return;
-        state.deck.forEach(card => {
-            if (card.poolId !== transform.sourcePoolId) return;
-            const identity = { id: card.id, instId: card.instId, isStarter: card.isStarter, up: card.up };
-            Object.keys(card).forEach(key => delete card[key]);
-            Object.assign(card, JSON.parse(JSON.stringify(transform.card)), identity, { poolId: transform.sourcePoolId });
-            applyCardTagBudget(card);
-        });
     }
 
     function returnToMenu() {
@@ -6880,10 +6801,9 @@
     function showRewardOverlay() {
         const container = document.getElementById('reward-items'); container.innerHTML = '';
         const availableRelics = getRolePreferredRelics(RELIC_POOL.filter(r => !hasRelic(r.id)));
-        const starterDirectionChoice = shouldOfferStarterDirectionChoice();
-        const showRelicReward = !starterDirectionChoice && availableRelics.length > 0 && Math.random() < 0.2;
-        document.getElementById('reward-title').innerText = showRelicReward ? '奇珍战利品' : starterDirectionChoice ? '选择战斗方向' : '卡牌战利品';
-        document.getElementById('reward-desc').innerText = showRelicReward ? '战斗余烬里浮出三件奇珍，请选择一件收入囊中。' : starterDirectionChoice ? '三张牌分别通向不同构筑。选择一张，作为本次旅程的第一个成长方向。' : '战斗余烬仍在发光...请选择一张卡牌加入牌组。';
+        const showRelicReward = availableRelics.length > 0 && Math.random() < 0.2;
+        document.getElementById('reward-title').innerText = showRelicReward ? '奇珍战利品' : '卡牌战利品';
+        document.getElementById('reward-desc').innerText = showRelicReward ? '战斗余烬里浮出三件奇珍，请选择一件收入囊中。' : '战斗余烬仍在发光...请选择一张卡牌加入牌组。';
         document.getElementById('reward-skip-btn').innerText = `放弃机缘，换取金币 +${getBattleRewardSkipGold()}`;
         if (showRelicReward) {
             availableRelics.slice(0, 3).forEach(r => {
@@ -6893,7 +6813,7 @@
                 container.appendChild(el);
             });
         } else {
-            generateRewardChoices(3, { allowStarterDirectionChoice: true }).forEach(card => {
+            generateRewardChoices(3).forEach(card => {
                 const el = document.createElement('div');
                 el.innerHTML = generateCardHTML(card, true);
                 el.onclick = () => { state.deck.push(card); closeOverlay('overlay-reward'); advanceMap(); };
