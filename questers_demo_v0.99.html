@@ -604,6 +604,12 @@
                 scale(var(--player-attack-scale, 1));
             transform-origin:center bottom;
         }
+        .player-avatar-frame.player-anim-hurt { animation:playerHurtRecoil var(--player-hurt-duration, 0.51s) ease-out both; }
+        .player-avatar-frame.player-anim-hurt img {
+            animation:none;
+            transform:scale(var(--player-idle-scale));
+            transform-origin:left bottom;
+        }
         .player-ground-shadow { position:absolute; left:95px; bottom:28px; width: 245px; height: 34px; border-radius: 50%; background: radial-gradient(ellipse, rgba(0,0,0,0.36), transparent 70%); transform:skewX(-16deg); }
         @keyframes playerIdleBreath {
             0%, 100% { transform:scale(var(--player-idle-scale)); }
@@ -615,9 +621,16 @@
             44%, 62% { transform:translate3d(var(--player-attack-distance), -2px, 0); }
             82% { transform:translate3d(-1px, 0, 0); }
         }
+        @keyframes playerHurtRecoil {
+            0%, 100% { transform:translate3d(0, 0, 0); }
+            24% { transform:translate3d(-7px, 1px, 0); }
+            50% { transform:translate3d(-13px, 2px, 0); }
+            76% { transform:translate3d(-5px, 1px, 0); }
+        }
         @media (prefers-reduced-motion: reduce) {
             .player-avatar-frame img,
-            .player-avatar-frame.player-anim-attack { animation:none; }
+            .player-avatar-frame.player-anim-attack,
+            .player-avatar-frame.player-anim-hurt { animation:none; }
         }
         .player-nameplate { display:none; }
         .enemy-avatar-wrapper { display: flex; align-items:flex-end; justify-content:center; position: absolute; right: -40px; bottom: 28px; width: 760px; height: 570px; margin-top:0; z-index:4;}
@@ -4378,15 +4391,16 @@
             avatar.src = character.battleBack;
             avatar.dataset.idleSrc = character.battleBack;
             avatar.attackFrames = character.battleBackAttackFrames || [];
+            avatar.hurtFrames = character.battleBackHurtFrames || [];
             avatar.attackImpactMs = character.battleBackAttackImpactMs || 240;
             avatar.style.setProperty('--player-attack-scale', character.battleBackAttackScale || 1);
             avatar.style.setProperty('--player-attack-offset-x', `${character.battleBackAttackOffset?.x || 0}px`);
             avatar.style.setProperty('--player-attack-offset-y', `${character.battleBackAttackOffset?.y || 0}px`);
             avatar.alt = character.name;
             avatar.className = `character-${character.id}`;
-            avatar.attackFrames.forEach(frame => {
-                const attackFramePreload = new Image();
-                attackFramePreload.src = frame.src;
+            [...avatar.attackFrames, ...avatar.hurtFrames].forEach(frame => {
+                const animationFramePreload = new Image();
+                animationFramePreload.src = frame.src;
             });
         }
         const hudPortrait = document.getElementById('player-hud-portrait-img');
@@ -5029,15 +5043,18 @@
     }
 
     let playerAttackAnimationToken = 0;
+    let playerHurtAnimationToken = 0;
     function triggerPlayerAttackAnimation() {
         const avatarFrame = document.querySelector('.player-avatar-frame');
         const avatar = document.getElementById('player-avatar-img');
         if (!avatarFrame || !avatar) return { impactDelay: 140, duration: 480 };
+        playerHurtAnimationToken++;
         const token = ++playerAttackAnimationToken;
         const attackFrames = Array.isArray(avatar.attackFrames) ? avatar.attackFrames : [];
         const totalDuration = Math.max(480, attackFrames.reduce((sum, frame) => sum + frame.duration, 0));
         avatarFrame.style.setProperty('--player-attack-duration', `${totalDuration}ms`);
         avatarFrame.classList.remove('player-anim-attack');
+        avatarFrame.classList.remove('player-anim-hurt');
         void avatarFrame.offsetWidth;
         avatarFrame.classList.add('player-anim-attack');
         let elapsed = attackFrames[0]?.duration || 0;
@@ -5057,6 +5074,33 @@
             impactDelay: Math.min(avatar.attackImpactMs || 140, totalDuration),
             duration: totalDuration
         };
+    }
+
+    function triggerPlayerHurtAnimation() {
+        const avatarFrame = document.querySelector('.player-avatar-frame');
+        const avatar = document.getElementById('player-avatar-img');
+        if (!avatarFrame || !avatar) return;
+        playerAttackAnimationToken++;
+        const token = ++playerHurtAnimationToken;
+        const hurtFrames = Array.isArray(avatar.hurtFrames) ? avatar.hurtFrames : [];
+        const totalDuration = Math.max(360, hurtFrames.reduce((sum, frame) => sum + frame.duration, 0));
+        avatarFrame.style.setProperty('--player-hurt-duration', `${totalDuration}ms`);
+        avatarFrame.classList.remove('player-anim-attack', 'player-anim-hurt');
+        void avatarFrame.offsetWidth;
+        avatarFrame.classList.add('player-anim-hurt');
+        let elapsed = hurtFrames[0]?.duration || 0;
+        if (hurtFrames[0]) avatar.src = hurtFrames[0].src;
+        hurtFrames.slice(1).forEach(frame => {
+            setTimeout(() => {
+                if (token === playerHurtAnimationToken) avatar.src = frame.src;
+            }, elapsed);
+            elapsed += frame.duration;
+        });
+        setTimeout(() => {
+            if (token !== playerHurtAnimationToken) return;
+            avatar.src = avatar.dataset.idleSrc || avatar.src;
+            avatarFrame.classList.remove('player-anim-hurt');
+        }, totalDuration);
     }
 
     function triggerVFX(type) {
@@ -6359,7 +6403,7 @@
             if (state.p_reduce_dmg > 0) { let r = Math.min(mDmg, state.p_reduce_dmg); mDmg -= r; state.p_reduce_dmg -= r; showFloatText(`减免抵抗 -${r}`, "var(--water)", getCenter('ui-hp')); }
             if(state.armor > 0) { let b = Math.min(state.armor, mDmg); state.armor -= b; mDmg -= b; }
             if(mDmg > 0) mDmg = preventFirstProtectedDamage(mDmg);
-            if(mDmg > 0) { state.hp -= mDmg; showFloatText(`分身攻击 -${mDmg}`, "var(--crimson)", getCenter('ui-hp')); }
+            if(mDmg > 0) { state.hp -= mDmg; triggerPlayerHurtAnimation(); showFloatText(`分身攻击 -${mDmg}`, "var(--crimson)", getCenter('ui-hp')); }
             const minionDamage = Math.max(0, minionActionSnapshot.playerHp - state.hp);
             addBattleActionLog('enemy', '敌方分身攻击', minionDamage > 0 ? `造成 ${minionDamage} 点伤害` : '未造成生命伤害');
             await new Promise(r => setTimeout(r, 300));
@@ -6400,7 +6444,7 @@
                 if(state.armor > 0 && dmg > 0) { let b = Math.min(state.armor, dmg); state.armor -= b; dmg -= b; }
                 let actualDmg = dmg;
                 if(actualDmg > 0) actualDmg = preventFirstProtectedDamage(actualDmg);
-                if(actualDmg > 0) { state.hp -= actualDmg; showFloatText(`-${actualDmg}`, "var(--crimson)", getCenter('ui-hp')); }
+                if(actualDmg > 0) { state.hp -= actualDmg; triggerPlayerHurtAnimation(); showFloatText(`-${actualDmg}`, "var(--crimson)", getCenter('ui-hp')); }
                 
                 if(state.player.thorns > 0) { 
                     state.enemy.currentHp -= state.player.thorns; 

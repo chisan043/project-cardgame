@@ -28,6 +28,14 @@ const CHARACTERS = {
         battleBackAttackScale: 1.38,
         battleBackAttackOffset: { x: 56, y: 6 },
         battleBackAttackImpactMs: 360,
+        battleBackHurtFrames: [
+            { src: 'assets/characters/warrior/battle_back_hurt_01_v2.webp', duration: 60 },
+            { src: 'assets/characters/warrior/battle_back_hurt_02_v2.webp', duration: 70 },
+            { src: 'assets/characters/warrior/battle_back_hurt_03_v2.webp', duration: 80 },
+            { src: 'assets/characters/warrior/battle_back_hurt_04_v2.webp', duration: 110 },
+            { src: 'assets/characters/warrior/battle_back_hurt_05_v2.webp', duration: 100 },
+            { src: 'assets/characters/warrior/battle_back_hurt_06_v2.webp', duration: 90 }
+        ],
         accentClass: '',
         starterHint: '护盾是战士的基础生存手段；开局通过核心遗物确定圣剑反击、处刑连斩或血誓狂战路线。'
     },
@@ -58,6 +66,14 @@ const CHARACTERS = {
         battleBackAttackScale: 1.49,
         battleBackAttackOffset: { x: 56, y: 8 },
         battleBackAttackImpactMs: 380,
+        battleBackHurtFrames: [
+            { src: 'assets/characters/mage/battle_back_hurt_01_v2.webp', duration: 60 },
+            { src: 'assets/characters/mage/battle_back_hurt_02_v2.webp', duration: 70 },
+            { src: 'assets/characters/mage/battle_back_hurt_03_v2.webp', duration: 80 },
+            { src: 'assets/characters/mage/battle_back_hurt_04_v2.webp', duration: 110 },
+            { src: 'assets/characters/mage/battle_back_hurt_05_v2.webp', duration: 100 },
+            { src: 'assets/characters/mage/battle_back_hurt_06_v2.webp', duration: 90 }
+        ],
         accentClass: 'featured',
         starterHint: '治愈是法师的基础生存手段；开局通过核心遗物确定星火咏唱、镜像回路或灾厄术士路线。'
     },
@@ -88,6 +104,14 @@ const CHARACTERS = {
         battleBackAttackScale: 1.24,
         battleBackAttackOffset: { x: 56, y: -38 },
         battleBackAttackImpactMs: 380,
+        battleBackHurtFrames: [
+            { src: 'assets/characters/archer/battle_back_hurt_01_v2.webp', duration: 60 },
+            { src: 'assets/characters/archer/battle_back_hurt_02_v2.webp', duration: 70 },
+            { src: 'assets/characters/archer/battle_back_hurt_03_v2.webp', duration: 80 },
+            { src: 'assets/characters/archer/battle_back_hurt_04_v2.webp', duration: 110 },
+            { src: 'assets/characters/archer/battle_back_hurt_05_v2.webp', duration: 100 },
+            { src: 'assets/characters/archer/battle_back_hurt_06_v2.webp', duration: 90 }
+        ],
         accentClass: '',
         starterHint: '基础射击输出，闪避可完全躲开一段主体攻击；开局通过核心遗物确定疾风、猎毒或放逐路线。'
     }

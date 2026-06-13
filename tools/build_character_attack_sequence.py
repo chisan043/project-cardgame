@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build normalized character attack frames from a horizontal alpha strip."""
+"""Build normalized character animation frames from a horizontal alpha strip."""
 
 from __future__ import annotations
 
@@ -15,6 +15,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--source-out-dir", required=True, type=Path)
     parser.add_argument("--runtime-out-dir", required=True, type=Path)
     parser.add_argument("--runtime-prefix", required=True)
+    parser.add_argument(
+        "--anchor",
+        type=Path,
+        help="Optional shipped frame used to match content scale, center, and baseline.",
+    )
     parser.add_argument("--frames", type=int, default=6)
     parser.add_argument("--canvas-width", type=int, default=1024)
     parser.add_argument("--canvas-height", type=int, default=1536)
@@ -141,11 +146,28 @@ def main() -> None:
     strip = Image.open(args.input).convert("RGBA")
     crops = extract_frames(strip, args.frames, args.alpha_threshold)
 
-    available_width = args.canvas_width - args.padding_x * 2
-    available_height = args.canvas_height - args.padding_top - args.padding_bottom
     max_width = max(image.width for image in crops)
     max_height = max(image.height for image in crops)
-    scale = min(available_width / max_width, available_height / max_height)
+    available_width = args.canvas_width - args.padding_x * 2
+    if args.anchor:
+        anchor = Image.open(args.anchor).convert("RGBA")
+        if anchor.size != (args.canvas_width, args.canvas_height):
+            raise SystemExit(
+                f"Anchor must be {args.canvas_width}x{args.canvas_height}, got {anchor.size}."
+            )
+        anchor_bbox = content_bbox(anchor, args.alpha_threshold)
+        if anchor_bbox is None:
+            raise SystemExit("No visible content detected in anchor frame.")
+        anchor_height = anchor_bbox[3] - anchor_bbox[1]
+        target_center_x = (anchor_bbox[0] + anchor_bbox[2]) / 2
+        target_bottom = anchor_bbox[3]
+        reference_scale = anchor_height / crops[0].height
+        scale = reference_scale
+    else:
+        available_height = args.canvas_height - args.padding_top - args.padding_bottom
+        scale = min(available_width / max_width, available_height / max_height)
+        target_center_x = args.canvas_width / 2
+        target_bottom = args.canvas_height - args.padding_bottom
 
     args.source_out_dir.mkdir(parents=True, exist_ok=True)
     args.runtime_out_dir.mkdir(parents=True, exist_ok=True)
@@ -157,8 +179,8 @@ def main() -> None:
         frame = Image.new(
             "RGBA", (args.canvas_width, args.canvas_height), (0, 0, 0, 0)
         )
-        x = (args.canvas_width - width) // 2
-        y = args.canvas_height - args.padding_bottom - height
+        x = round(target_center_x - width / 2)
+        y = round(target_bottom - height)
         frame.alpha_composite(sprite, (x, y))
         normalized.append(frame)
 
