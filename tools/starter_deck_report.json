@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-12T17:56:13.728Z",
+  "generatedAt": "2026-06-13T14:23:04.597Z",
   "generatedDate": "2026-06-13",
   "model": "starter deck, survival identity and core-relic selection simulation v4",
   "runsPerEnemy": 1000,
@@ -88,19 +88,62 @@
         "profileSpread": 0,
         "directionRewardCoverage": {
           "oathblade": {
-            "exact": 19,
+            "exact": 20,
             "fallback": 27
           },
           "execution": {
             "exact": 13,
-            "fallback": 21
+            "fallback": 20
           },
           "bloodoath": {
-            "exact": 18,
-            "fallback": 21
+            "exact": 19,
+            "fallback": 19
           }
         },
         "bloodoathShieldViolations": [],
+        "bloodDebtRoleCoverage": {
+          "borrow": [
+            "血誓斩",
+            "血痕引路",
+            "誓血裂口",
+            "不赦血契",
+            "裂脉誓印",
+            "沸血突进",
+            "禁誓开脉",
+            "誓血缚阵",
+            "殉誓斩"
+          ],
+          "leverage": [
+            "血誓斩",
+            "断誓开锋",
+            "不赦血契",
+            "偿命追击",
+            "血债清算",
+            "偿血追命",
+            "沸血突进",
+            "残红回锋",
+            "血潮续斩",
+            "血债留痕",
+            "殉誓斩",
+            "噬痕终击"
+          ],
+          "repay": [
+            "断誓开锋",
+            "偿命追击",
+            "血债清算",
+            "偿血追命",
+            "残红回锋",
+            "血潮续斩",
+            "回生血契",
+            "噬痕终击",
+            "猩红喘息"
+          ],
+          "tension": [
+            "不赦血契",
+            "誓血缚阵"
+          ]
+        },
+        "bloodDebtCoveragePassed": true,
         "coreChoices": [
           {
             "id": "r_oathblade_beacon",
@@ -178,7 +221,7 @@
               "highestEnemy": "荒野煞狼"
             },
             "late": {
-              "winRate": 0.1398,
+              "winRate": 0.1522,
               "status": "达标",
               "lowestEnemy": "巨力石魔",
               "highestEnemy": "缝合巨怪"
@@ -198,13 +241,13 @@
               "highestEnemy": "病弱史莱姆"
             },
             "mid": {
-              "winRate": 0.9476,
+              "winRate": 0.9494,
               "status": "达标",
               "lowestEnemy": "暴躁野猪",
               "highestEnemy": "荒野煞狼"
             },
             "late": {
-              "winRate": 0.0704,
+              "winRate": 0.0766,
               "status": "达标",
               "lowestEnemy": "巨力石魔",
               "highestEnemy": "魅影刺客"
@@ -224,15 +267,15 @@
               "highestEnemy": "病弱史莱姆"
             },
             "mid": {
-              "winRate": 0.887,
+              "winRate": 0.848,
               "status": "达标",
               "lowestEnemy": "暴躁野猪",
               "highestEnemy": "荒野煞狼"
             },
             "late": {
-              "winRate": 0.0106,
+              "winRate": 0.0052,
               "status": "达标",
-              "lowestEnemy": "巨力石魔",
+              "lowestEnemy": "堕落剑客",
               "highestEnemy": "魅影刺客"
             }
           }
@@ -257,6 +300,7 @@
                   "tags": [
                     "吸血"
                   ],
+                  "directEffects": {},
                   "plays": 956,
                   "opportunities": 1636,
                   "usageRate": 0.5843520782396088
@@ -267,6 +311,7 @@
                   "cost": 1,
                   "type": "防御",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 4072,
                   "opportunities": 4795,
                   "usageRate": 0.8492179353493222
@@ -277,6 +322,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 4281,
                   "opportunities": 4894,
                   "usageRate": 0.8747445852063751
@@ -289,6 +335,9 @@
                   "tags": [
                     "易伤"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1476,
                   "opportunities": 1476,
                   "usageRate": 1
@@ -301,6 +350,9 @@
                   "tags": [
                     "销毁"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1000,
                   "opportunities": 1000,
                   "usageRate": 1
@@ -314,6 +366,7 @@
                     "反击",
                     "销毁"
                   ],
+                  "directEffects": {},
                   "plays": 1000,
                   "opportunities": 1000,
                   "usageRate": 1
@@ -335,6 +388,7 @@
                   "tags": [
                     "吸血"
                   ],
+                  "directEffects": {},
                   "plays": 1224,
                   "opportunities": 2257,
                   "usageRate": 0.5423128046078866
@@ -345,6 +399,7 @@
                   "cost": 1,
                   "type": "防御",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 5616,
                   "opportunities": 6755,
                   "usageRate": 0.8313841598815692
@@ -355,6 +410,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 6170,
                   "opportunities": 6913,
                   "usageRate": 0.8925213366121799
@@ -368,6 +424,7 @@
                     "反击",
                     "销毁"
                   ],
+                  "directEffects": {},
                   "plays": 1000,
                   "opportunities": 1000,
                   "usageRate": 1
@@ -380,6 +437,9 @@
                   "tags": [
                     "易伤"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 2123,
                   "opportunities": 2123,
                   "usageRate": 1
@@ -392,6 +452,9 @@
                   "tags": [
                     "销毁"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1000,
                   "opportunities": 1000,
                   "usageRate": 1
@@ -411,6 +474,7 @@
                   "cost": 99,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 0,
                   "opportunities": 84,
                   "usageRate": 0
@@ -423,6 +487,7 @@
                   "tags": [
                     "吸血"
                   ],
+                  "directEffects": {},
                   "plays": 992,
                   "opportunities": 1925,
                   "usageRate": 0.5153246753246753
@@ -433,6 +498,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 4949,
                   "opportunities": 5789,
                   "usageRate": 0.8548972188633616
@@ -443,6 +509,7 @@
                   "cost": 1,
                   "type": "防御",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 4937,
                   "opportunities": 5672,
                   "usageRate": 0.8704160789844851
@@ -455,6 +522,9 @@
                   "tags": [
                     "易伤"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1771,
                   "opportunities": 1771,
                   "usageRate": 1
@@ -468,6 +538,7 @@
                     "反击",
                     "销毁"
                   ],
+                  "directEffects": {},
                   "plays": 1000,
                   "opportunities": 1000,
                   "usageRate": 1
@@ -480,6 +551,9 @@
                   "tags": [
                     "销毁"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1000,
                   "opportunities": 1000,
                   "usageRate": 1
@@ -501,6 +575,7 @@
                   "tags": [
                     "吸血"
                   ],
+                  "directEffects": {},
                   "plays": 930,
                   "opportunities": 1536,
                   "usageRate": 0.60546875
@@ -511,6 +586,7 @@
                   "cost": 1,
                   "type": "防御",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 3845,
                   "opportunities": 4477,
                   "usageRate": 0.8588340406522225
@@ -521,6 +597,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 4072,
                   "opportunities": 4547,
                   "usageRate": 0.8955355179239058
@@ -534,6 +611,7 @@
                     "反击",
                     "销毁"
                   ],
+                  "directEffects": {},
                   "plays": 1000,
                   "opportunities": 1000,
                   "usageRate": 1
@@ -546,6 +624,9 @@
                   "tags": [
                     "销毁"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1000,
                   "opportunities": 1000,
                   "usageRate": 1
@@ -558,6 +639,9 @@
                   "tags": [
                     "易伤"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1369,
                   "opportunities": 1369,
                   "usageRate": 1
@@ -567,9 +651,9 @@
             "迷途妖狐": {
               "games": 1000,
               "winRate": 1,
-              "averageTurns": 3.406,
+              "averageTurns": 3.404,
               "averageHpLeft": 89.977,
-              "energyWastedPerTurn": 0.5684086905460951,
+              "energyWastedPerTurn": 0.5675675675675675,
               "cardUsage": [
                 {
                   "id": "starter_warrior_lifebite",
@@ -579,9 +663,10 @@
                   "tags": [
                     "吸血"
                   ],
+                  "directEffects": {},
                   "plays": 1349,
-                  "opportunities": 2323,
-                  "usageRate": 0.5807145931984503
+                  "opportunities": 2322,
+                  "usageRate": 0.5809646856158484
                 },
                 {
                   "id": "starter_warrior_guard",
@@ -589,9 +674,10 @@
                   "cost": 1,
                   "type": "防御",
                   "tags": [],
-                  "plays": 5482,
-                  "opportunities": 6805,
-                  "usageRate": 0.8055841293166789
+                  "directEffects": {},
+                  "plays": 5476,
+                  "opportunities": 6803,
+                  "usageRate": 0.8049389975011024
                 },
                 {
                   "id": "starter_warrior_strike",
@@ -599,9 +685,10 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
-                  "plays": 6116,
-                  "opportunities": 6929,
-                  "usageRate": 0.8826670515225862
+                  "directEffects": {},
+                  "plays": 6114,
+                  "opportunities": 6923,
+                  "usageRate": 0.8831431460349559
                 },
                 {
                   "id": "starter_blank_contract",
@@ -611,6 +698,9 @@
                   "tags": [
                     "销毁"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1000,
                   "opportunities": 1000,
                   "usageRate": 1
@@ -624,6 +714,7 @@
                     "反击",
                     "销毁"
                   ],
+                  "directEffects": {},
                   "plays": 1000,
                   "opportunities": 1000,
                   "usageRate": 1
@@ -636,8 +727,11 @@
                   "tags": [
                     "易伤"
                   ],
-                  "plays": 2109,
-                  "opportunities": 2109,
+                  "directEffects": {
+                    "draw": true
+                  },
+                  "plays": 2110,
+                  "opportunities": 2110,
                   "usageRate": 1
                 }
               ]
@@ -668,6 +762,7 @@
                   "tags": [
                     "吸血"
                   ],
+                  "directEffects": {},
                   "plays": 2682,
                   "opportunities": 4368,
                   "usageRate": 0.614010989010989
@@ -678,6 +773,7 @@
                   "cost": 1,
                   "type": "防御",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 11478,
                   "opportunities": 13073,
                   "usageRate": 0.8779928096075882
@@ -688,6 +784,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 11614,
                   "opportunities": 13124,
                   "usageRate": 0.8849436147516001
@@ -700,6 +797,9 @@
                   "tags": [
                     "销毁"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1000,
                   "opportunities": 1000,
                   "usageRate": 1
@@ -713,6 +813,7 @@
                     "反击",
                     "销毁"
                   ],
+                  "directEffects": {},
                   "plays": 1000,
                   "opportunities": 1000,
                   "usageRate": 1
@@ -725,6 +826,9 @@
                   "tags": [
                     "易伤"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 4092,
                   "opportunities": 4092,
                   "usageRate": 1
@@ -744,6 +848,7 @@
                   "cost": 99,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 0,
                   "opportunities": 5220,
                   "usageRate": 0
@@ -756,6 +861,7 @@
                   "tags": [
                     "吸血"
                   ],
+                  "directEffects": {},
                   "plays": 4220,
                   "opportunities": 4892,
                   "usageRate": 0.8626328699918234
@@ -766,6 +872,7 @@
                   "cost": 1,
                   "type": "防御",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 13388,
                   "opportunities": 14733,
                   "usageRate": 0.9087083418176882
@@ -776,6 +883,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 13958,
                   "opportunities": 14855,
                   "usageRate": 0.9396162908111747
@@ -788,6 +896,9 @@
                   "tags": [
                     "销毁"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1000,
                   "opportunities": 1000,
                   "usageRate": 1
@@ -800,6 +911,9 @@
                   "tags": [
                     "易伤"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 4724,
                   "opportunities": 4724,
                   "usageRate": 1
@@ -813,6 +927,7 @@
                     "反击",
                     "销毁"
                   ],
+                  "directEffects": {},
                   "plays": 1000,
                   "opportunities": 1000,
                   "usageRate": 1
@@ -832,6 +947,7 @@
                   "cost": 99,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 0,
                   "opportunities": 1648,
                   "usageRate": 0
@@ -844,6 +960,7 @@
                   "tags": [
                     "吸血"
                   ],
+                  "directEffects": {},
                   "plays": 4709,
                   "opportunities": 5509,
                   "usageRate": 0.8547830822290797
@@ -854,6 +971,7 @@
                   "cost": 1,
                   "type": "防御",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 14363,
                   "opportunities": 16489,
                   "usageRate": 0.8710655588574201
@@ -864,6 +982,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 14516,
                   "opportunities": 16539,
                   "usageRate": 0.8776830521796964
@@ -876,6 +995,9 @@
                   "tags": [
                     "销毁"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1000,
                   "opportunities": 1000,
                   "usageRate": 1
@@ -888,6 +1010,9 @@
                   "tags": [
                     "易伤"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 5128,
                   "opportunities": 5128,
                   "usageRate": 1
@@ -901,6 +1026,7 @@
                     "反击",
                     "销毁"
                   ],
+                  "directEffects": {},
                   "plays": 1000,
                   "opportunities": 1000,
                   "usageRate": 1
@@ -920,6 +1046,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 10871,
                   "opportunities": 13291,
                   "usageRate": 0.8179219020389737
@@ -930,6 +1057,7 @@
                   "cost": 1,
                   "type": "防御",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 11770,
                   "opportunities": 13206,
                   "usageRate": 0.8912615477813115
@@ -942,6 +1070,7 @@
                   "tags": [
                     "吸血"
                   ],
+                  "directEffects": {},
                   "plays": 3966,
                   "opportunities": 4413,
                   "usageRate": 0.8987083616587356
@@ -955,6 +1084,7 @@
                     "反击",
                     "销毁"
                   ],
+                  "directEffects": {},
                   "plays": 1000,
                   "opportunities": 1000,
                   "usageRate": 1
@@ -967,6 +1097,9 @@
                   "tags": [
                     "销毁"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1000,
                   "opportunities": 1000,
                   "usageRate": 1
@@ -979,6 +1112,9 @@
                   "tags": [
                     "易伤"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 4110,
                   "opportunities": 4110,
                   "usageRate": 1
@@ -1000,6 +1136,7 @@
                   "tags": [
                     "吸血"
                   ],
+                  "directEffects": {},
                   "plays": 4240,
                   "opportunities": 5938,
                   "usageRate": 0.7140451330414281
@@ -1010,6 +1147,7 @@
                   "cost": 1,
                   "type": "防御",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 14957,
                   "opportunities": 17676,
                   "usageRate": 0.8461756053405748
@@ -1020,6 +1158,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 15815,
                   "opportunities": 17821,
                   "usageRate": 0.8874361708097188
@@ -1032,6 +1171,9 @@
                   "tags": [
                     "易伤"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 5502,
                   "opportunities": 5502,
                   "usageRate": 1
@@ -1045,6 +1187,7 @@
                     "反击",
                     "销毁"
                   ],
+                  "directEffects": {},
                   "plays": 1000,
                   "opportunities": 1000,
                   "usageRate": 1
@@ -1057,6 +1200,9 @@
                   "tags": [
                     "销毁"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1000,
                   "opportunities": 1000,
                   "usageRate": 1
@@ -1077,9 +1223,9 @@
             "堕落剑客": {
               "games": 1000,
               "winRate": 0.002,
-              "averageTurns": 5.597,
+              "averageTurns": 5.592,
               "averageHpLeft": 0.03,
-              "energyWastedPerTurn": 0.14025370734321957,
+              "energyWastedPerTurn": 0.13948497854077252,
               "cardUsage": [
                 {
                   "id": "starter_warrior_strike",
@@ -1087,9 +1233,10 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
-                  "plays": 9851,
-                  "opportunities": 11652,
-                  "usageRate": 0.845434260212839
+                  "directEffects": {},
+                  "plays": 9840,
+                  "opportunities": 11648,
+                  "usageRate": 0.8447802197802198
                 },
                 {
                   "id": "starter_warrior_lifebite",
@@ -1099,9 +1246,10 @@
                   "tags": [
                     "吸血"
                   ],
-                  "plays": 3309,
-                  "opportunities": 3850,
-                  "usageRate": 0.8594805194805195
+                  "directEffects": {},
+                  "plays": 3294,
+                  "opportunities": 3847,
+                  "usageRate": 0.8562516246425786
                 },
                 {
                   "id": "starter_warrior_guard",
@@ -1109,9 +1257,10 @@
                   "cost": 1,
                   "type": "防御",
                   "tags": [],
-                  "plays": 10112,
-                  "opportunities": 11628,
-                  "usageRate": 0.869625042999656
+                  "directEffects": {},
+                  "plays": 10104,
+                  "opportunities": 11629,
+                  "usageRate": 0.8688623269412675
                 },
                 {
                   "id": "starter_warrior_flaw",
@@ -1121,9 +1270,12 @@
                   "tags": [
                     "易伤"
                   ],
-                  "plays": 3607,
-                  "opportunities": 3612,
-                  "usageRate": 0.9986157253599114
+                  "directEffects": {
+                    "draw": true
+                  },
+                  "plays": 3608,
+                  "opportunities": 3608,
+                  "usageRate": 1
                 },
                 {
                   "id": "starter_warrior_watch",
@@ -1134,6 +1286,7 @@
                     "反击",
                     "销毁"
                   ],
+                  "directEffects": {},
                   "plays": 1000,
                   "opportunities": 1000,
                   "usageRate": 1
@@ -1146,6 +1299,9 @@
                   "tags": [
                     "销毁"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1000,
                   "opportunities": 1000,
                   "usageRate": 1
@@ -1165,6 +1321,7 @@
                   "cost": 99,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 0,
                   "opportunities": 5471,
                   "usageRate": 0
@@ -1175,6 +1332,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 15840,
                   "opportunities": 18728,
                   "usageRate": 0.8457923964117898
@@ -1187,6 +1345,7 @@
                   "tags": [
                     "吸血"
                   ],
+                  "directEffects": {},
                   "plays": 5738,
                   "opportunities": 6255,
                   "usageRate": 0.9173461231015188
@@ -1197,6 +1356,7 @@
                   "cost": 1,
                   "type": "防御",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 18596,
                   "opportunities": 18811,
                   "usageRate": 0.9885705172505449
@@ -1209,6 +1369,9 @@
                   "tags": [
                     "销毁"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1000,
                   "opportunities": 1000,
                   "usageRate": 1
@@ -1221,6 +1384,9 @@
                   "tags": [
                     "易伤"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 5916,
                   "opportunities": 5916,
                   "usageRate": 1
@@ -1234,6 +1400,7 @@
                     "反击",
                     "销毁"
                   ],
+                  "directEffects": {},
                   "plays": 1000,
                   "opportunities": 1000,
                   "usageRate": 1
@@ -1253,6 +1420,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 8561,
                   "opportunities": 9785,
                   "usageRate": 0.8749105774144098
@@ -1265,6 +1433,7 @@
                   "tags": [
                     "吸血"
                   ],
+                  "directEffects": {},
                   "plays": 2868,
                   "opportunities": 3194,
                   "usageRate": 0.8979336255479023
@@ -1275,6 +1444,7 @@
                   "cost": 1,
                   "type": "防御",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 8824,
                   "opportunities": 9676,
                   "usageRate": 0.9119470855725507
@@ -1287,6 +1457,9 @@
                   "tags": [
                     "销毁"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1000,
                   "opportunities": 1000,
                   "usageRate": 1
@@ -1299,6 +1472,9 @@
                   "tags": [
                     "易伤"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 2980,
                   "opportunities": 2980,
                   "usageRate": 1
@@ -1312,6 +1488,7 @@
                     "反击",
                     "销毁"
                   ],
+                  "directEffects": {},
                   "plays": 1000,
                   "opportunities": 1000,
                   "usageRate": 1
@@ -1320,10 +1497,10 @@
             },
             "魅影刺客": {
               "games": 1000,
-              "winRate": 0.016,
-              "averageTurns": 6.382,
-              "averageHpLeft": 0.431,
-              "energyWastedPerTurn": 0.160294578502037,
+              "winRate": 0.019,
+              "averageTurns": 6.393,
+              "averageHpLeft": 0.518,
+              "energyWastedPerTurn": 0.15391834819333647,
               "cardUsage": [
                 {
                   "id": "starter_warrior_strike",
@@ -1331,9 +1508,10 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
-                  "plays": 11001,
-                  "opportunities": 13349,
-                  "usageRate": 0.8241066746572777
+                  "directEffects": {},
+                  "plays": 10939,
+                  "opportunities": 13441,
+                  "usageRate": 0.8138531359273864
                 },
                 {
                   "id": "starter_warrior_lifebite",
@@ -1343,9 +1521,10 @@
                   "tags": [
                     "吸血"
                   ],
-                  "plays": 3712,
-                  "opportunities": 4429,
-                  "usageRate": 0.8381124407315421
+                  "directEffects": {},
+                  "plays": 3704,
+                  "opportunities": 4456,
+                  "usageRate": 0.8312387791741472
                 },
                 {
                   "id": "starter_warrior_guard",
@@ -1353,9 +1532,10 @@
                   "cost": 1,
                   "type": "防御",
                   "tags": [],
-                  "plays": 11462,
-                  "opportunities": 13327,
-                  "usageRate": 0.8600585278007054
+                  "directEffects": {},
+                  "plays": 11463,
+                  "opportunities": 13422,
+                  "usageRate": 0.8540455967814037
                 },
                 {
                   "id": "starter_warrior_flaw",
@@ -1365,9 +1545,12 @@
                   "tags": [
                     "易伤"
                   ],
-                  "plays": 4097,
-                  "opportunities": 4138,
-                  "usageRate": 0.9900918318028032
+                  "directEffects": {
+                    "draw": true
+                  },
+                  "plays": 4151,
+                  "opportunities": 4151,
+                  "usageRate": 1
                 },
                 {
                   "id": "starter_blank_contract",
@@ -1377,6 +1560,9 @@
                   "tags": [
                     "销毁"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1000,
                   "opportunities": 1000,
                   "usageRate": 1
@@ -1390,6 +1576,7 @@
                     "反击",
                     "销毁"
                   ],
+                  "directEffects": {},
                   "plays": 1000,
                   "opportunities": 1000,
                   "usageRate": 1
@@ -1409,6 +1596,7 @@
                   "cost": 99,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 0,
                   "opportunities": 2893,
                   "usageRate": 0
@@ -1419,6 +1607,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 11831,
                   "opportunities": 13159,
                   "usageRate": 0.8990804772399118
@@ -1431,6 +1620,7 @@
                   "tags": [
                     "吸血"
                   ],
+                  "directEffects": {},
                   "plays": 4047,
                   "opportunities": 4415,
                   "usageRate": 0.9166477916194791
@@ -1441,6 +1631,7 @@
                   "cost": 1,
                   "type": "防御",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 12415,
                   "opportunities": 13263,
                   "usageRate": 0.9360627309055266
@@ -1453,6 +1644,9 @@
                   "tags": [
                     "易伤"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 4173,
                   "opportunities": 4173,
                   "usageRate": 1
@@ -1466,6 +1660,7 @@
                     "反击",
                     "销毁"
                   ],
+                  "directEffects": {},
                   "plays": 1000,
                   "opportunities": 1000,
                   "usageRate": 1
@@ -1478,6 +1673,9 @@
                   "tags": [
                     "销毁"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1000,
                   "opportunities": 1000,
                   "usageRate": 1
@@ -1486,7 +1684,7 @@
             }
           },
           "aggregate": {
-            "winRate": 0.0054,
+            "winRate": 0.006,
             "status": "达标",
             "lowestEnemy": "巨力石魔",
             "highestEnemy": "魅影刺客"
@@ -1589,6 +1787,8 @@
           }
         },
         "bloodoathShieldViolations": [],
+        "bloodDebtRoleCoverage": null,
+        "bloodDebtCoveragePassed": true,
         "coreChoices": [
           {
             "id": "r_chant_astrolabe",
@@ -1712,13 +1912,13 @@
               "highestEnemy": "病弱史莱姆"
             },
             "mid": {
-              "winRate": 0.8484,
+              "winRate": 0.8434,
               "status": "达标",
               "lowestEnemy": "暴躁野猪",
               "highestEnemy": "荒野煞狼"
             },
             "late": {
-              "winRate": 0.0318,
+              "winRate": 0.03,
               "status": "达标",
               "lowestEnemy": "巨力石魔",
               "highestEnemy": "魅影刺客"
@@ -1745,6 +1945,7 @@
                   "tags": [
                     "治愈"
                   ],
+                  "directEffects": {},
                   "plays": 3,
                   "opportunities": 4256,
                   "usageRate": 0.0007048872180451127
@@ -1757,6 +1958,7 @@
                   "tags": [
                     "咏唱"
                   ],
+                  "directEffects": {},
                   "plays": 1116,
                   "opportunities": 1433,
                   "usageRate": 0.7787857641311933
@@ -1767,6 +1969,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1155,
                   "opportunities": 1396,
                   "usageRate": 0.8273638968481375
@@ -1777,6 +1982,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 4182,
                   "opportunities": 4449,
                   "usageRate": 0.9399865138233311
@@ -1789,6 +1995,7 @@
                   "tags": [
                     "剧毒"
                   ],
+                  "directEffects": {},
                   "plays": 1417,
                   "opportunities": 1431,
                   "usageRate": 0.9902166317260657
@@ -1801,6 +2008,9 @@
                   "tags": [
                     "复刻"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1318,
                   "opportunities": 1318,
                   "usageRate": 1
@@ -1822,6 +2032,7 @@
                   "tags": [
                     "治愈"
                   ],
+                  "directEffects": {},
                   "plays": 684,
                   "opportunities": 5939,
                   "usageRate": 0.11517090419262502
@@ -1832,6 +2043,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1599,
                   "opportunities": 1952,
                   "usageRate": 0.8191598360655737
@@ -1844,6 +2058,7 @@
                   "tags": [
                     "咏唱"
                   ],
+                  "directEffects": {},
                   "plays": 1638,
                   "opportunities": 1982,
                   "usageRate": 0.8264379414732593
@@ -1854,6 +2069,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 5663,
                   "opportunities": 6071,
                   "usageRate": 0.9327952561357272
@@ -1866,6 +2082,7 @@
                   "tags": [
                     "剧毒"
                   ],
+                  "directEffects": {},
                   "plays": 1987,
                   "opportunities": 2020,
                   "usageRate": 0.9836633663366336
@@ -1878,6 +2095,9 @@
                   "tags": [
                     "复刻"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1942,
                   "opportunities": 1942,
                   "usageRate": 1
@@ -1897,6 +2117,7 @@
                   "cost": 99,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 0,
                   "opportunities": 45,
                   "usageRate": 0
@@ -1909,6 +2130,7 @@
                   "tags": [
                     "治愈"
                   ],
+                  "directEffects": {},
                   "plays": 1576,
                   "opportunities": 4996,
                   "usageRate": 0.3154523618895116
@@ -1921,6 +2143,7 @@
                   "tags": [
                     "咏唱"
                   ],
+                  "directEffects": {},
                   "plays": 1324,
                   "opportunities": 1705,
                   "usageRate": 0.7765395894428152
@@ -1931,6 +2154,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1346,
                   "opportunities": 1665,
                   "usageRate": 0.8084084084084084
@@ -1941,6 +2167,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 4804,
                   "opportunities": 5205,
                   "usageRate": 0.9229586935638809
@@ -1953,6 +2180,7 @@
                   "tags": [
                     "剧毒"
                   ],
+                  "directEffects": {},
                   "plays": 1665,
                   "opportunities": 1695,
                   "usageRate": 0.9823008849557522
@@ -1965,6 +2193,9 @@
                   "tags": [
                     "复刻"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1568,
                   "opportunities": 1568,
                   "usageRate": 1
@@ -1986,6 +2217,7 @@
                   "tags": [
                     "治愈"
                   ],
+                  "directEffects": {},
                   "plays": 266,
                   "opportunities": 4094,
                   "usageRate": 0.06497313141182218
@@ -1998,6 +2230,7 @@
                   "tags": [
                     "咏唱"
                   ],
+                  "directEffects": {},
                   "plays": 1062,
                   "opportunities": 1400,
                   "usageRate": 0.7585714285714286
@@ -2008,6 +2241,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1078,
                   "opportunities": 1346,
                   "usageRate": 0.8008915304606241
@@ -2018,6 +2254,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 3998,
                   "opportunities": 4217,
                   "usageRate": 0.9480673464548257
@@ -2030,6 +2267,7 @@
                   "tags": [
                     "剧毒"
                   ],
+                  "directEffects": {},
                   "plays": 1316,
                   "opportunities": 1326,
                   "usageRate": 0.9924585218702866
@@ -2042,6 +2280,9 @@
                   "tags": [
                     "复刻"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1309,
                   "opportunities": 1309,
                   "usageRate": 1
@@ -2063,6 +2304,7 @@
                   "tags": [
                     "治愈"
                   ],
+                  "directEffects": {},
                   "plays": 2009,
                   "opportunities": 6156,
                   "usageRate": 0.3263482781026641
@@ -2075,6 +2317,7 @@
                   "tags": [
                     "咏唱"
                   ],
+                  "directEffects": {},
                   "plays": 1740,
                   "opportunities": 2028,
                   "usageRate": 0.8579881656804734
@@ -2085,6 +2328,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1694,
                   "opportunities": 1960,
                   "usageRate": 0.8642857142857143
@@ -2095,6 +2341,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 5969,
                   "opportunities": 6263,
                   "usageRate": 0.9530576401085742
@@ -2107,6 +2354,7 @@
                   "tags": [
                     "剧毒"
                   ],
+                  "directEffects": {},
                   "plays": 2042,
                   "opportunities": 2079,
                   "usageRate": 0.9822029822029822
@@ -2119,6 +2367,9 @@
                   "tags": [
                     "复刻"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1972,
                   "opportunities": 1972,
                   "usageRate": 1
@@ -2151,6 +2402,7 @@
                   "tags": [
                     "治愈"
                   ],
+                  "directEffects": {},
                   "plays": 6095,
                   "opportunities": 11051,
                   "usageRate": 0.5515337978463487
@@ -2163,6 +2415,7 @@
                   "tags": [
                     "咏唱"
                   ],
+                  "directEffects": {},
                   "plays": 3064,
                   "opportunities": 3689,
                   "usageRate": 0.8305773922472215
@@ -2173,6 +2426,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 3338,
                   "opportunities": 3547,
                   "usageRate": 0.9410769664505215
@@ -2183,6 +2439,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 10587,
                   "opportunities": 11111,
                   "usageRate": 0.952839528395284
@@ -2195,6 +2452,7 @@
                   "tags": [
                     "剧毒"
                   ],
+                  "directEffects": {},
                   "plays": 3542,
                   "opportunities": 3670,
                   "usageRate": 0.9651226158038148
@@ -2207,6 +2465,9 @@
                   "tags": [
                     "复刻"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 3544,
                   "opportunities": 3544,
                   "usageRate": 1
@@ -2226,6 +2487,7 @@
                   "cost": 99,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 0,
                   "opportunities": 3460,
                   "usageRate": 0
@@ -2238,6 +2500,7 @@
                   "tags": [
                     "治愈"
                   ],
+                  "directEffects": {},
                   "plays": 7011,
                   "opportunities": 12089,
                   "usageRate": 0.5799487137066754
@@ -2250,6 +2513,7 @@
                   "tags": [
                     "咏唱"
                   ],
+                  "directEffects": {},
                   "plays": 3633,
                   "opportunities": 3899,
                   "usageRate": 0.9317773788150808
@@ -2260,6 +2524,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 3387,
                   "opportunities": 3525,
                   "usageRate": 0.9608510638297872
@@ -2270,6 +2537,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 12173,
                   "opportunities": 12444,
                   "usageRate": 0.9782224365155898
@@ -2282,6 +2550,7 @@
                   "tags": [
                     "剧毒"
                   ],
+                  "directEffects": {},
                   "plays": 4086,
                   "opportunities": 4137,
                   "usageRate": 0.9876722262509064
@@ -2294,6 +2563,9 @@
                   "tags": [
                     "复刻"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 3908,
                   "opportunities": 3921,
                   "usageRate": 0.996684519255292
@@ -2313,6 +2585,7 @@
                   "cost": 99,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 0,
                   "opportunities": 971,
                   "usageRate": 0
@@ -2325,6 +2598,7 @@
                   "tags": [
                     "治愈"
                   ],
+                  "directEffects": {},
                   "plays": 8196,
                   "opportunities": 13052,
                   "usageRate": 0.6279497395035244
@@ -2337,6 +2611,7 @@
                   "tags": [
                     "咏唱"
                   ],
+                  "directEffects": {},
                   "plays": 3733,
                   "opportunities": 4336,
                   "usageRate": 0.8609317343173432
@@ -2347,6 +2622,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 12664,
                   "opportunities": 13198,
                   "usageRate": 0.9595393241400212
@@ -2357,6 +2633,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 3919,
                   "opportunities": 4077,
                   "usageRate": 0.9612460142261466
@@ -2369,6 +2648,7 @@
                   "tags": [
                     "剧毒"
                   ],
+                  "directEffects": {},
                   "plays": 4268,
                   "opportunities": 4399,
                   "usageRate": 0.9702205046601501
@@ -2381,6 +2661,9 @@
                   "tags": [
                     "复刻"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 4175,
                   "opportunities": 4181,
                   "usageRate": 0.9985649366180339
@@ -2402,6 +2685,7 @@
                   "tags": [
                     "治愈"
                   ],
+                  "directEffects": {},
                   "plays": 1635,
                   "opportunities": 5715,
                   "usageRate": 0.28608923884514437
@@ -2414,6 +2698,7 @@
                   "tags": [
                     "咏唱"
                   ],
+                  "directEffects": {},
                   "plays": 1785,
                   "opportunities": 1905,
                   "usageRate": 0.937007874015748
@@ -2424,6 +2709,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 5716,
                   "opportunities": 5826,
                   "usageRate": 0.9811191211809132
@@ -2436,6 +2722,7 @@
                   "tags": [
                     "剧毒"
                   ],
+                  "directEffects": {},
                   "plays": 1888,
                   "opportunities": 1916,
                   "usageRate": 0.9853862212943633
@@ -2446,6 +2733,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1803,
                   "opportunities": 1806,
                   "usageRate": 0.9983388704318937
@@ -2458,6 +2748,9 @@
                   "tags": [
                     "复刻"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1808,
                   "opportunities": 1808,
                   "usageRate": 1
@@ -2479,6 +2772,7 @@
                   "tags": [
                     "治愈"
                   ],
+                  "directEffects": {},
                   "plays": 8351,
                   "opportunities": 14118,
                   "usageRate": 0.5915143788071965
@@ -2491,6 +2785,7 @@
                   "tags": [
                     "咏唱"
                   ],
+                  "directEffects": {},
                   "plays": 3991,
                   "opportunities": 4718,
                   "usageRate": 0.8459092835947435
@@ -2501,6 +2796,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 4327,
                   "opportunities": 4522,
                   "usageRate": 0.9568774878372401
@@ -2511,6 +2809,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 13684,
                   "opportunities": 14289,
                   "usageRate": 0.9576597382602001
@@ -2523,6 +2822,7 @@
                   "tags": [
                     "剧毒"
                   ],
+                  "directEffects": {},
                   "plays": 4570,
                   "opportunities": 4735,
                   "usageRate": 0.9651531151003168
@@ -2535,6 +2835,9 @@
                   "tags": [
                     "复刻"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 4501,
                   "opportunities": 4501,
                   "usageRate": 1
@@ -2567,6 +2870,7 @@
                   "tags": [
                     "治愈"
                   ],
+                  "directEffects": {},
                   "plays": 2605,
                   "opportunities": 6728,
                   "usageRate": 0.3871878715814506
@@ -2579,6 +2883,7 @@
                   "tags": [
                     "咏唱"
                   ],
+                  "directEffects": {},
                   "plays": 2034,
                   "opportunities": 2263,
                   "usageRate": 0.898806893504198
@@ -2589,6 +2894,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 6498,
                   "opportunities": 6767,
                   "usageRate": 0.9602482636323334
@@ -2601,6 +2907,7 @@
                   "tags": [
                     "剧毒"
                   ],
+                  "directEffects": {},
                   "plays": 2185,
                   "opportunities": 2254,
                   "usageRate": 0.9693877551020408
@@ -2611,6 +2918,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 2067,
                   "opportunities": 2123,
                   "usageRate": 0.9736222326895903
@@ -2623,6 +2933,9 @@
                   "tags": [
                     "复刻"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 2137,
                   "opportunities": 2140,
                   "usageRate": 0.9985981308411215
@@ -2642,6 +2955,7 @@
                   "cost": 99,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 0,
                   "opportunities": 1426,
                   "usageRate": 0
@@ -2654,6 +2968,7 @@
                   "tags": [
                     "治愈"
                   ],
+                  "directEffects": {},
                   "plays": 5623,
                   "opportunities": 9887,
                   "usageRate": 0.5687266107009205
@@ -2666,6 +2981,7 @@
                   "tags": [
                     "咏唱"
                   ],
+                  "directEffects": {},
                   "plays": 2933,
                   "opportunities": 3255,
                   "usageRate": 0.9010752688172043
@@ -2676,6 +2992,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 9633,
                   "opportunities": 9915,
                   "usageRate": 0.9715582450832073
@@ -2688,6 +3005,7 @@
                   "tags": [
                     "剧毒"
                   ],
+                  "directEffects": {},
                   "plays": 3188,
                   "opportunities": 3272,
                   "usageRate": 0.9743276283618582
@@ -2700,6 +3018,9 @@
                   "tags": [
                     "复刻"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 3114,
                   "opportunities": 3114,
                   "usageRate": 1
@@ -2710,6 +3031,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 3136,
                   "opportunities": 3136,
                   "usageRate": 1
@@ -2731,6 +3055,7 @@
                   "tags": [
                     "治愈"
                   ],
+                  "directEffects": {},
                   "plays": 1106,
                   "opportunities": 5240,
                   "usageRate": 0.21106870229007635
@@ -2743,6 +3068,7 @@
                   "tags": [
                     "咏唱"
                   ],
+                  "directEffects": {},
                   "plays": 1655,
                   "opportunities": 1743,
                   "usageRate": 0.9495123350545037
@@ -2755,6 +3081,7 @@
                   "tags": [
                     "剧毒"
                   ],
+                  "directEffects": {},
                   "plays": 1727,
                   "opportunities": 1756,
                   "usageRate": 0.9834851936218679
@@ -2765,6 +3092,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 5124,
                   "opportunities": 5201,
                   "usageRate": 0.9851951547779273
@@ -2775,6 +3103,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1666,
                   "opportunities": 1666,
                   "usageRate": 1
@@ -2787,6 +3118,9 @@
                   "tags": [
                     "复刻"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1651,
                   "opportunities": 1651,
                   "usageRate": 1
@@ -2808,6 +3142,7 @@
                   "tags": [
                     "治愈"
                   ],
+                  "directEffects": {},
                   "plays": 2926,
                   "opportunities": 7267,
                   "usageRate": 0.4026420806385028
@@ -2820,6 +3155,7 @@
                   "tags": [
                     "咏唱"
                   ],
+                  "directEffects": {},
                   "plays": 2123,
                   "opportunities": 2452,
                   "usageRate": 0.8658238172920065
@@ -2830,6 +3166,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 6801,
                   "opportunities": 7258,
                   "usageRate": 0.93703499586663
@@ -2842,6 +3179,7 @@
                   "tags": [
                     "剧毒"
                   ],
+                  "directEffects": {},
                   "plays": 2270,
                   "opportunities": 2408,
                   "usageRate": 0.9426910299003323
@@ -2852,6 +3190,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 2228,
                   "opportunities": 2316,
                   "usageRate": 0.9620034542314335
@@ -2864,6 +3205,9 @@
                   "tags": [
                     "复刻"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 2310,
                   "opportunities": 2314,
                   "usageRate": 0.9982713915298185
@@ -2883,6 +3227,7 @@
                   "cost": 99,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 0,
                   "opportunities": 1010,
                   "usageRate": 0
@@ -2895,6 +3240,7 @@
                   "tags": [
                     "治愈"
                   ],
+                  "directEffects": {},
                   "plays": 3832,
                   "opportunities": 7570,
                   "usageRate": 0.5062087186261559
@@ -2907,6 +3253,7 @@
                   "tags": [
                     "咏唱"
                   ],
+                  "directEffects": {},
                   "plays": 2362,
                   "opportunities": 2552,
                   "usageRate": 0.9255485893416928
@@ -2917,6 +3264,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 7585,
                   "opportunities": 7747,
                   "usageRate": 0.9790886794888344
@@ -2929,6 +3277,7 @@
                   "tags": [
                     "剧毒"
                   ],
+                  "directEffects": {},
                   "plays": 2501,
                   "opportunities": 2551,
                   "usageRate": 0.9803998431987456
@@ -2939,6 +3288,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 2441,
                   "opportunities": 2441,
                   "usageRate": 1
@@ -2951,6 +3303,9 @@
                   "tags": [
                     "复刻"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 2363,
                   "opportunities": 2363,
                   "usageRate": 1
@@ -3062,6 +3417,8 @@
           }
         },
         "bloodoathShieldViolations": [],
+        "bloodDebtRoleCoverage": null,
+        "bloodDebtCoveragePassed": true,
         "coreChoices": [
           {
             "id": "r_gale_weatherwane",
@@ -3216,6 +3573,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 476,
                   "opportunities": 2802,
                   "usageRate": 0.16987865810135616
@@ -3228,6 +3588,7 @@
                   "tags": [
                     "闪避"
                   ],
+                  "directEffects": {},
                   "plays": 262,
                   "opportunities": 1409,
                   "usageRate": 0.18594748048261178
@@ -3238,6 +3599,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 3431,
                   "opportunities": 5701,
                   "usageRate": 0.6018242413611647
@@ -3250,6 +3612,9 @@
                   "tags": [
                     "蓄力"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1272,
                   "opportunities": 1362,
                   "usageRate": 0.933920704845815
@@ -3262,6 +3627,7 @@
                   "tags": [
                     "放逐"
                   ],
+                  "directEffects": {},
                   "plays": 978,
                   "opportunities": 1035,
                   "usageRate": 0.9449275362318841
@@ -3274,6 +3640,7 @@
                   "tags": [
                     "剧毒"
                   ],
+                  "directEffects": {},
                   "plays": 1393,
                   "opportunities": 1439,
                   "usageRate": 0.9680333564975677
@@ -3293,6 +3660,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 772,
                   "opportunities": 4188,
                   "usageRate": 0.18433619866284623
@@ -3305,6 +3675,7 @@
                   "tags": [
                     "闪避"
                   ],
+                  "directEffects": {},
                   "plays": 564,
                   "opportunities": 2075,
                   "usageRate": 0.27180722891566267
@@ -3315,6 +3686,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 5858,
                   "opportunities": 8501,
                   "usageRate": 0.6890954005411128
@@ -3327,6 +3699,9 @@
                   "tags": [
                     "蓄力"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1770,
                   "opportunities": 2027,
                   "usageRate": 0.8732116428219043
@@ -3339,6 +3714,7 @@
                   "tags": [
                     "剧毒"
                   ],
+                  "directEffects": {},
                   "plays": 2067,
                   "opportunities": 2162,
                   "usageRate": 0.956059204440333
@@ -3351,6 +3727,7 @@
                   "tags": [
                     "放逐"
                   ],
+                  "directEffects": {},
                   "plays": 1000,
                   "opportunities": 1031,
                   "usageRate": 0.9699321047526673
@@ -3370,6 +3747,7 @@
                   "cost": 99,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 0,
                   "opportunities": 1,
                   "usageRate": 0
@@ -3380,6 +3758,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 325,
                   "opportunities": 2784,
                   "usageRate": 0.11673850574712644
@@ -3392,6 +3773,7 @@
                   "tags": [
                     "闪避"
                   ],
+                  "directEffects": {},
                   "plays": 603,
                   "opportunities": 1393,
                   "usageRate": 0.4328786791098349
@@ -3402,6 +3784,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 4420,
                   "opportunities": 5736,
                   "usageRate": 0.7705718270571827
@@ -3414,6 +3797,9 @@
                   "tags": [
                     "蓄力"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1292,
                   "opportunities": 1354,
                   "usageRate": 0.9542097488921714
@@ -3426,6 +3812,7 @@
                   "tags": [
                     "放逐"
                   ],
+                  "directEffects": {},
                   "plays": 996,
                   "opportunities": 1021,
                   "usageRate": 0.9755142017629774
@@ -3438,6 +3825,7 @@
                   "tags": [
                     "剧毒"
                   ],
+                  "directEffects": {},
                   "plays": 1392,
                   "opportunities": 1424,
                   "usageRate": 0.9775280898876404
@@ -3457,6 +3845,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 467,
                   "opportunities": 2701,
                   "usageRate": 0.17289892632358386
@@ -3469,6 +3860,7 @@
                   "tags": [
                     "闪避"
                   ],
+                  "directEffects": {},
                   "plays": 242,
                   "opportunities": 1388,
                   "usageRate": 0.17435158501440923
@@ -3479,6 +3871,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 3013,
                   "opportunities": 5510,
                   "usageRate": 0.5468239564428312
@@ -3491,6 +3884,9 @@
                   "tags": [
                     "蓄力"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1126,
                   "opportunities": 1293,
                   "usageRate": 0.8708430007733952
@@ -3503,6 +3899,7 @@
                   "tags": [
                     "放逐"
                   ],
+                  "directEffects": {},
                   "plays": 976,
                   "opportunities": 1028,
                   "usageRate": 0.9494163424124513
@@ -3515,6 +3912,7 @@
                   "tags": [
                     "剧毒"
                   ],
+                  "directEffects": {},
                   "plays": 1357,
                   "opportunities": 1403,
                   "usageRate": 0.9672131147540983
@@ -3534,6 +3932,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 772,
                   "opportunities": 4041,
                   "usageRate": 0.1910418213313536
@@ -3546,6 +3947,7 @@
                   "tags": [
                     "闪避"
                   ],
+                  "directEffects": {},
                   "plays": 439,
                   "opportunities": 2021,
                   "usageRate": 0.21721919841662543
@@ -3556,6 +3958,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 5789,
                   "opportunities": 8447,
                   "usageRate": 0.6853320705575944
@@ -3568,6 +3971,9 @@
                   "tags": [
                     "蓄力"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1682,
                   "opportunities": 1991,
                   "usageRate": 0.8448016072325465
@@ -3580,6 +3986,7 @@
                   "tags": [
                     "放逐"
                   ],
+                  "directEffects": {},
                   "plays": 999,
                   "opportunities": 1045,
                   "usageRate": 0.9559808612440192
@@ -3592,6 +3999,7 @@
                   "tags": [
                     "剧毒"
                   ],
+                  "directEffects": {},
                   "plays": 2035,
                   "opportunities": 2114,
                   "usageRate": 0.9626300851466414
@@ -3622,6 +4030,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1413,
                   "opportunities": 8097,
                   "usageRate": 0.17450907743608743
@@ -3634,6 +4045,7 @@
                   "tags": [
                     "闪避"
                   ],
+                  "directEffects": {},
                   "plays": 2516,
                   "opportunities": 4085,
                   "usageRate": 0.6159118727050183
@@ -3644,6 +4056,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 13744,
                   "opportunities": 16697,
                   "usageRate": 0.8231418817751692
@@ -3656,6 +4069,9 @@
                   "tags": [
                     "蓄力"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 3624,
                   "opportunities": 3951,
                   "usageRate": 0.9172361427486713
@@ -3668,6 +4084,7 @@
                   "tags": [
                     "剧毒"
                   ],
+                  "directEffects": {},
                   "plays": 3984,
                   "opportunities": 4135,
                   "usageRate": 0.9634824667472793
@@ -3680,6 +4097,7 @@
                   "tags": [
                     "放逐"
                   ],
+                  "directEffects": {},
                   "plays": 1000,
                   "opportunities": 1036,
                   "usageRate": 0.9652509652509652
@@ -3699,6 +4117,7 @@
                   "cost": 99,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 0,
                   "opportunities": 4846,
                   "usageRate": 0
@@ -3709,6 +4128,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 3755,
                   "opportunities": 9614,
                   "usageRate": 0.39057624297898896
@@ -3721,6 +4143,7 @@
                   "tags": [
                     "闪避"
                   ],
+                  "directEffects": {},
                   "plays": 2452,
                   "opportunities": 4886,
                   "usageRate": 0.5018419975440033
@@ -3731,6 +4154,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 17317,
                   "opportunities": 19874,
                   "usageRate": 0.8713394384623125
@@ -3743,6 +4167,9 @@
                   "tags": [
                     "蓄力"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 4399,
                   "opportunities": 4791,
                   "usageRate": 0.918179920684617
@@ -3755,6 +4182,7 @@
                   "tags": [
                     "剧毒"
                   ],
+                  "directEffects": {},
                   "plays": 4674,
                   "opportunities": 4989,
                   "usageRate": 0.9368610944076969
@@ -3767,6 +4195,7 @@
                   "tags": [
                     "放逐"
                   ],
+                  "directEffects": {},
                   "plays": 1000,
                   "opportunities": 1058,
                   "usageRate": 0.945179584120983
@@ -3786,6 +4215,7 @@
                   "cost": 99,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 0,
                   "opportunities": 1445,
                   "usageRate": 0
@@ -3796,6 +4226,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 2620,
                   "opportunities": 10357,
                   "usageRate": 0.25296900646905474
@@ -3808,6 +4241,7 @@
                   "tags": [
                     "闪避"
                   ],
+                  "directEffects": {},
                   "plays": 2752,
                   "opportunities": 5254,
                   "usageRate": 0.5237913970308337
@@ -3818,6 +4252,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 18223,
                   "opportunities": 21425,
                   "usageRate": 0.8505484247374563
@@ -3830,6 +4265,9 @@
                   "tags": [
                     "蓄力"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 4715,
                   "opportunities": 5130,
                   "usageRate": 0.919103313840156
@@ -3842,6 +4280,7 @@
                   "tags": [
                     "剧毒"
                   ],
+                  "directEffects": {},
                   "plays": 5069,
                   "opportunities": 5327,
                   "usageRate": 0.9515674863900883
@@ -3854,6 +4293,7 @@
                   "tags": [
                     "放逐"
                   ],
+                  "directEffects": {},
                   "plays": 1000,
                   "opportunities": 1045,
                   "usageRate": 0.9569377990430622
@@ -3873,6 +4313,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1442,
                   "opportunities": 7643,
                   "usageRate": 0.18866937066596887
@@ -3885,6 +4328,7 @@
                   "tags": [
                     "闪避"
                   ],
+                  "directEffects": {},
                   "plays": 2299,
                   "opportunities": 3793,
                   "usageRate": 0.6061165304508305
@@ -3895,6 +4339,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 13407,
                   "opportunities": 15731,
                   "usageRate": 0.8522662259233361
@@ -3907,6 +4352,9 @@
                   "tags": [
                     "蓄力"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 3446,
                   "opportunities": 3744,
                   "usageRate": 0.9204059829059829
@@ -3919,6 +4367,7 @@
                   "tags": [
                     "放逐"
                   ],
+                  "directEffects": {},
                   "plays": 1000,
                   "opportunities": 1043,
                   "usageRate": 0.9587727708533078
@@ -3931,6 +4380,7 @@
                   "tags": [
                     "剧毒"
                   ],
+                  "directEffects": {},
                   "plays": 3772,
                   "opportunities": 3924,
                   "usageRate": 0.9612640163098879
@@ -3950,6 +4400,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 2053,
                   "opportunities": 10588,
                   "usageRate": 0.193898753305629
@@ -3962,6 +4415,7 @@
                   "tags": [
                     "闪避"
                   ],
+                  "directEffects": {},
                   "plays": 2835,
                   "opportunities": 5317,
                   "usageRate": 0.5331954109460222
@@ -3972,6 +4426,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 18485,
                   "opportunities": 21802,
                   "usageRate": 0.8478579946793872
@@ -3984,6 +4439,9 @@
                   "tags": [
                     "蓄力"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 4788,
                   "opportunities": 5195,
                   "usageRate": 0.921655437921078
@@ -3996,6 +4454,7 @@
                   "tags": [
                     "放逐"
                   ],
+                  "directEffects": {},
                   "plays": 1000,
                   "opportunities": 1059,
                   "usageRate": 0.9442870632672332
@@ -4008,6 +4467,7 @@
                   "tags": [
                     "剧毒"
                   ],
+                  "directEffects": {},
                   "plays": 5274,
                   "opportunities": 5498,
                   "usageRate": 0.9592579119679884
@@ -4038,6 +4498,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1666,
                   "opportunities": 7487,
                   "usageRate": 0.2225190329905169
@@ -4050,6 +4513,7 @@
                   "tags": [
                     "闪避"
                   ],
+                  "directEffects": {},
                   "plays": 2284,
                   "opportunities": 3784,
                   "usageRate": 0.6035940803382663
@@ -4060,6 +4524,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 12646,
                   "opportunities": 15418,
                   "usageRate": 0.820210143987547
@@ -4072,6 +4537,9 @@
                   "tags": [
                     "蓄力"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 3392,
                   "opportunities": 3665,
                   "usageRate": 0.9255115961800818
@@ -4084,6 +4552,7 @@
                   "tags": [
                     "放逐"
                   ],
+                  "directEffects": {},
                   "plays": 1000,
                   "opportunities": 1057,
                   "usageRate": 0.9460737937559129
@@ -4096,6 +4565,7 @@
                   "tags": [
                     "剧毒"
                   ],
+                  "directEffects": {},
                   "plays": 3689,
                   "opportunities": 3878,
                   "usageRate": 0.9512635379061372
@@ -4115,6 +4585,7 @@
                   "cost": 99,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 0,
                   "opportunities": 4066,
                   "usageRate": 0
@@ -4125,6 +4596,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 3829,
                   "opportunities": 11276,
                   "usageRate": 0.3395707697765165
@@ -4137,6 +4611,7 @@
                   "tags": [
                     "闪避"
                   ],
+                  "directEffects": {},
                   "plays": 3059,
                   "opportunities": 5635,
                   "usageRate": 0.5428571428571428
@@ -4147,6 +4622,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 20933,
                   "opportunities": 23570,
                   "usageRate": 0.8881204921510395
@@ -4159,6 +4635,9 @@
                   "tags": [
                     "蓄力"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 5201,
                   "opportunities": 5608,
                   "usageRate": 0.9274251069900142
@@ -4171,6 +4650,7 @@
                   "tags": [
                     "剧毒"
                   ],
+                  "directEffects": {},
                   "plays": 5514,
                   "opportunities": 5819,
                   "usageRate": 0.9475854957896546
@@ -4183,6 +4663,7 @@
                   "tags": [
                     "放逐"
                   ],
+                  "directEffects": {},
                   "plays": 1000,
                   "opportunities": 1050,
                   "usageRate": 0.9523809523809523
@@ -4202,6 +4683,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 1652,
                   "opportunities": 8145,
                   "usageRate": 0.20282381829343155
@@ -4214,6 +4698,7 @@
                   "tags": [
                     "闪避"
                   ],
+                  "directEffects": {},
                   "plays": 2437,
                   "opportunities": 4086,
                   "usageRate": 0.59642682329907
@@ -4224,6 +4709,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 14633,
                   "opportunities": 16763,
                   "usageRate": 0.87293443894291
@@ -4236,6 +4722,9 @@
                   "tags": [
                     "蓄力"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 3691,
                   "opportunities": 4024,
                   "usageRate": 0.9172465208747514
@@ -4248,6 +4737,7 @@
                   "tags": [
                     "放逐"
                   ],
+                  "directEffects": {},
                   "plays": 999,
                   "opportunities": 1044,
                   "usageRate": 0.9568965517241379
@@ -4260,6 +4750,7 @@
                   "tags": [
                     "剧毒"
                   ],
+                  "directEffects": {},
                   "plays": 4028,
                   "opportunities": 4209,
                   "usageRate": 0.9569969113803753
@@ -4279,6 +4770,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 2268,
                   "opportunities": 10133,
                   "usageRate": 0.22382315207737097
@@ -4291,6 +4785,7 @@
                   "tags": [
                     "闪避"
                   ],
+                  "directEffects": {},
                   "plays": 3189,
                   "opportunities": 5089,
                   "usageRate": 0.6266457064256239
@@ -4301,6 +4796,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 16344,
                   "opportunities": 20986,
                   "usageRate": 0.7788049175640903
@@ -4313,6 +4809,7 @@
                   "tags": [
                     "剧毒"
                   ],
+                  "directEffects": {},
                   "plays": 4754,
                   "opportunities": 5221,
                   "usageRate": 0.9105535338057843
@@ -4325,6 +4822,9 @@
                   "tags": [
                     "蓄力"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 4576,
                   "opportunities": 4944,
                   "usageRate": 0.9255663430420712
@@ -4337,6 +4837,7 @@
                   "tags": [
                     "放逐"
                   ],
+                  "directEffects": {},
                   "plays": 1000,
                   "opportunities": 1048,
                   "usageRate": 0.9541984732824428
@@ -4356,6 +4857,7 @@
                   "cost": 99,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 0,
                   "opportunities": 5706,
                   "usageRate": 0
@@ -4366,6 +4868,9 @@
                   "cost": 1,
                   "type": "能力",
                   "tags": [],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 4363,
                   "opportunities": 12496,
                   "usageRate": 0.34915172855313703
@@ -4378,6 +4883,7 @@
                   "tags": [
                     "闪避"
                   ],
+                  "directEffects": {},
                   "plays": 3819,
                   "opportunities": 6187,
                   "usageRate": 0.6172620009697753
@@ -4388,6 +4894,7 @@
                   "cost": 1,
                   "type": "攻击",
                   "tags": [],
+                  "directEffects": {},
                   "plays": 23122,
                   "opportunities": 26075,
                   "usageRate": 0.8867497603068073
@@ -4400,6 +4907,9 @@
                   "tags": [
                     "蓄力"
                   ],
+                  "directEffects": {
+                    "draw": true
+                  },
                   "plays": 5804,
                   "opportunities": 6202,
                   "usageRate": 0.9358271525314414
@@ -4412,6 +4922,7 @@
                   "tags": [
                     "剧毒"
                   ],
+                  "directEffects": {},
                   "plays": 6254,
                   "opportunities": 6611,
                   "usageRate": 0.9459990924217214
@@ -4424,6 +4935,7 @@
                   "tags": [
                     "放逐"
                   ],
+                  "directEffects": {},
                   "plays": 1000,
                   "opportunities": 1040,
                   "usageRate": 0.9615384615384616

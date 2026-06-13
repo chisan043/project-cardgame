@@ -2341,6 +2341,17 @@
             Number(card.val) || 0,
             tags,
             JSON.stringify(card.directEffects || {}),
+            JSON.stringify({
+                bloodDebtGain: card.bloodDebtGain || 0,
+                bloodDebtDamageRatio: card.bloodDebtDamageRatio || 0,
+                bloodDebtRepay: card.bloodDebtRepay || 0,
+                bloodDebtRepayFromBleed: card.bloodDebtRepayFromBleed || 0,
+                bloodDebtBleed: card.bloodDebtBleed || 0,
+                bloodDebtWeak: card.bloodDebtWeak || 0,
+                bloodDebtStun: card.bloodDebtStun || 0,
+                bloodDebtClearDamage: card.bloodDebtClearDamage || 0,
+                bloodDebtClearHeal: card.bloodDebtClearHeal || 0
+            }),
             specialText
         ].join('|');
     }
@@ -2757,7 +2768,7 @@
 
     function getSwordBonus(card) {
         if (!card?.tags?.includes('圣剑')) return 0;
-        const swordRatio = hasRelic('r_sword_oath') ? 0.6 : 0.5;
+        const swordRatio = hasRelic('r_sword_oath') ? 0.7 : 0.5;
         return Math.floor((state.armor || 0) * swordRatio) + ((state.p_counter || 0) * 4);
     }
 
@@ -2853,7 +2864,7 @@
         
         let d = "";
         const tags = normalizeTagConflicts(card.tags || []);
-        const secondaryTags = tags.filter(x => x !== '蓄力' && x !== '闪避' && x !== '回收');
+        const secondaryTags = tags.filter(x => x !== '蓄力' && x !== '闪避' && x !== '回收' && x !== '血债');
         
         if (card.type === '攻击') {
             d += `造成 <span class="card-desc-value">${getScaledCardValue(card)}</span> 点伤害。`;
@@ -2872,7 +2883,7 @@
             if (tags.includes('蓄力')) lines.push(`获得 <span class="card-desc-value">${getWindGain(card)}</span> 层风势。`);
             if (tags.includes('闪避')) lines.push(`获得 <span class="card-desc-value">${getSidestepGain(card)}</span> 层闪避。`);
             if (tags.includes('咏唱')) lines.push(`积累 <span class="card-desc-value">${getCardChantGain(card)}</span> 层咏唱。`);
-            const otherTags = tags.filter(x => x !== '蓄力' && x !== '闪避' && x !== '咏唱' && x !== '回收');
+            const otherTags = tags.filter(x => x !== '蓄力' && x !== '闪避' && x !== '咏唱' && x !== '回收' && x !== '血债');
             if (otherTags.length) lines.push(`触发 ${renderTagNames(otherTags)}。`);
             d = lines.join('<br>');
         } 
@@ -2881,6 +2892,21 @@
             const recycleText = getCardRecycleModes(card).map(getRecycleModeDescription).join('；');
             if (recycleText) d += `${d ? '<br>' : ''}${recycleText}。`;
         }
+        const bloodDebtLines = [];
+        if (card.bloodDebtGain) bloodDebtLines.push(`获得 <span class="card-desc-value">${card.bloodDebtGain}</span> 点血债。`);
+        if (card.bloodDebtPowerGain) bloodDebtLines.push(`本回合血债伤害倍率提高 <span class="card-desc-value">${Math.round(card.bloodDebtPowerGain * 100)}%</span>。`);
+        if (card.bloodDebtSettlementMultiplier > 1) bloodDebtLines.push(`本回合未偿血债按 <span class="card-desc-value">${card.bloodDebtSettlementMultiplier}</span> 倍清算。`);
+        if (card.bloodDebtDamageRatio) bloodDebtLines.push(`追加当前血债 <span class="card-desc-value">${Math.round(card.bloodDebtDamageRatio * 100)}%</span> 的伤害。`);
+        if (card.bloodDebtRepay) bloodDebtLines.push(`偿还至多 <span class="card-desc-value">${card.bloodDebtRepay}</span> 点血债。`);
+        if (card.bloodDebtRepayFromBleed) bloodDebtLines.push(`按放血伤害的 <span class="card-desc-value">${Math.round(card.bloodDebtRepayFromBleed * 100)}%</span> 偿还血债。`);
+        if (card.bloodDebtSpendAll) bloodDebtLines.push(`消耗全部血债，每点追加 <span class="card-desc-value">${card.bloodDebtSpendDamage}</span> 点伤害。`);
+        if (card.bloodDebtClearDamage) bloodDebtLines.push(`完全清偿时追加 <span class="card-desc-value">${card.bloodDebtClearDamage}</span> 点伤害。`);
+        if (card.bloodDebtClearHeal) bloodDebtLines.push(`完全清偿时回复 <span class="card-desc-value">${card.bloodDebtClearHeal}</span> 点生命。`);
+        if (card.bloodDebtBleed) bloodDebtLines.push(`施加 <span class="card-desc-value">${card.bloodDebtBleed}</span> 层出血。`);
+        if (card.bloodDebtWeak) bloodDebtLines.push(`施加 <span class="card-desc-value">${card.bloodDebtWeak}</span> 层虚弱。`);
+        if (card.bloodDebtStun) bloodDebtLines.push('使敌人眩晕。');
+        if (card.bloodDebtDrawOnRepay) bloodDebtLines.push(`实际偿债后额外抽 <span class="card-desc-value">${card.bloodDebtDrawOnRepay}</span> 张牌。`);
+        if (bloodDebtLines.length) d += `${d ? '<br>' : ''}${bloodDebtLines.join('<br>')}`;
         const directLines = [];
         if (hasDirectCardEffect(card, 'draw')) directLines.push(`额外抽取 <span class="card-desc-value">${getCardDrawCount(card)}</span> 张牌。`);
         if (hasDirectCardEffect(card, 'energy')) directLines.push('回复 <span class="card-desc-value">1</span> 点能量。');
@@ -2943,7 +2969,7 @@
         deck: [], battleDeck: [], discardPile: [], exhaustPile: [], hand: [], relics: [], playedRetainPile: [], lastPlayedCard: null,
         enemy: { currentHp: 0, armor: 0, poison: 0, bleed: 0, burn: 0, stun: 0, curse: 0, vuln: 0, weak: 0, str: 0, nextMove: null, charged: false, minion: null, isPhase2: false, turnCount: 0, moveHistory: [] }, 
         mapData: [], currentNode: null, pathHistory: [], player: { thorns: 0, characterId: 'hero_warrior', name: '勇者战士' },
-        p_poison: 0, p_bleed: 0, p_burn: 0, p_stun: 0, p_curse: 0, p_vuln: 0, p_weak: 0, p_echo_stack: 0, p_next_dmg: 0, p_reduce_dmg: 0, p_counter: 0, p_battle_dmg: 0, p_dmg_buff: 0, p_chant: 0, p_aim: 0, p_sidestep: 0, r_discard_count: 0,
+        p_poison: 0, p_bleed: 0, p_burn: 0, p_stun: 0, p_curse: 0, p_vuln: 0, p_weak: 0, p_echo_stack: 0, p_next_dmg: 0, p_reduce_dmg: 0, p_counter: 0, p_battle_dmg: 0, p_dmg_buff: 0, p_chant: 0, p_aim: 0, p_sidestep: 0, p_blood_debt: 0, p_blood_debt_paid: 0, p_blood_debt_power: 1, p_blood_debt_settlement_mult: 1, r_discard_count: 0,
         isNodeClickLocked: false, next_card_echo: 0, turn_first_card: true, currentShop: null, isEnemyTurn: false, battleLog: []
     };
     let shopDeletePrice = 50;
@@ -3898,6 +3924,7 @@
             add('echo', '回音', '🌌', state.p_echo_stack, '接下来打出的卡牌会额外触发 2 次。', 'is-magic');
             add('blood', '血祭', '🔥', state.p_battle_dmg, `本场战斗内，攻击造成的伤害提高 ${state.p_battle_dmg} 点。`, 'is-fire');
             add('frenzy', '狂热', '🔥', state.p_dmg_buff, `本回合内，所有伤害额外提高 ${state.p_dmg_buff} 点。`, 'is-fire');
+            add('blood-debt', '血债', '🩸', state.p_blood_debt, '吸血与指定效果优先偿还；回合结束时，未偿血债会无视护盾结算为生命损失。', 'is-bleed');
             add('enchant', '附魔', '⚔️', state.p_next_dmg, `下一次攻击额外造成 ${state.p_next_dmg} 点伤害。`, 'is-power');
             add('guard', '减免', '✨', state.p_reduce_dmg, `下一次受到伤害时，减少 ${state.p_reduce_dmg} 点。`, 'is-defense');
             if (state.p_counter > 0) {
@@ -4725,6 +4752,7 @@
         if(state.p_echo_stack > 0) pStatus.innerHTML += `<div class="status-badge badge-str" style="background:rgba(142, 68, 173, 0.9);">🌌 回音: ${state.p_echo_stack}<div class="status-tooltip">接下来打出的卡牌会额外触发2次。</div></div>`;
         if(state.p_battle_dmg > 0) pStatus.innerHTML += `<div class="status-badge badge-str" style="background:#c0392b;">🔥 血祭: +${state.p_battle_dmg}<div class="status-tooltip">本场战斗内，攻击造成的伤害提高 ${state.p_battle_dmg} 点。</div></div>`;
         if(state.p_dmg_buff > 0) pStatus.innerHTML += `<div class="status-badge badge-str">🔥 狂热: +${state.p_dmg_buff}<div class="status-tooltip">本回合内，所有伤害额外提高 ${state.p_dmg_buff} 点。</div></div>`;
+        if(state.p_blood_debt > 0) pStatus.innerHTML += `<div class="status-badge badge-str" style="background:#6f1726;">🩸 血债: ${state.p_blood_debt}<div class="status-tooltip">吸血优先偿还血债；回合结束时，未偿血债转化为生命损失。</div></div>`;
         if(state.p_next_dmg > 0) pStatus.innerHTML += `<div class="status-badge badge-str">⚔️ 附魔: 下次+${state.p_next_dmg}<div class="status-tooltip">下一次攻击额外造成 ${state.p_next_dmg} 点伤害。</div></div>`;
         if(state.p_reduce_dmg > 0) pStatus.innerHTML += `<div class="status-badge badge-armor">✨ 减免: ${state.p_reduce_dmg}<div class="status-tooltip">下一次受到伤害时，减少 ${state.p_reduce_dmg} 点。</div></div>`;
         if(state.p_counter > 0) pStatus.innerHTML += `<div class="status-badge badge-str" style="background:rgba(241,196,15,0.9); color:black;">⚡ 招架准备<div class="status-tooltip">已进入反击姿态；受到下一次敌方主体攻击时招架本次伤害的 50% 并反伤。此状态不可叠加。</div></div>`;
@@ -5251,9 +5279,15 @@
 
         state.p_poison = 0; state.p_bleed = 0; state.p_burn = 0; state.p_stun = 0; state.p_curse = 0; state.p_vuln = 0; state.p_weak = 0; state.p_echo_stack = 0;
         state.p_next_dmg = 0; state.p_reduce_dmg = 0; state.p_counter = 0; state.p_battle_dmg = 0; state.p_dmg_buff = 0; state.p_chant = 0; state.p_aim = 0; state.p_sidestep = 0; state.r_discard_count = 0; state.next_card_echo = 0; state.lastPlayedCard = null; state.turn_first_card = true; state.isEnemyTurn = false;
+        state.p_blood_debt = 0; state.p_blood_debt_paid = 0; state.p_blood_debt_power = 1; state.p_blood_debt_settlement_mult = 1;
         state.r_counter_gate_used = false;
         state.r_protect_armor_used = false;
         state.r_bloodlet_hourglass_used = false;
+        state.r_blood_debt_reduction_used = false;
+        state.r_blood_clear_used = false;
+        state.r_scarlet_whet_used = false;
+        state.r_oath_transfusion_used = false;
+        state.r_lifedebt_clear_used = false;
         if (hasRelic('r_battle_whetstone')) state.p_battle_dmg += 2;
         
         state.playedRetainPile = []; 
@@ -5653,6 +5687,63 @@
         if(!dCard.isJunk) state.r_discard_count++;
     }
 
+    function addBloodDebt(amount, source = '血债') {
+        let gain = Math.max(0, Math.floor(Number(amount) || 0));
+        if (gain <= 0) return 0;
+        if (hasRelic('r_blood_suture') && !state.r_blood_debt_reduction_used) {
+            state.r_blood_debt_reduction_used = true;
+            gain = Math.max(0, gain - 2);
+            state.p_dmg_buff += 4;
+            showFloatText('赤线缝针 +4伤', 'var(--crimson)', getCenter('ui-hp'));
+        }
+        state.p_blood_debt = Math.min(40, (state.p_blood_debt || 0) + gain);
+        if (hasRelic('r_scarlet_whet') && !state.r_scarlet_whet_used) {
+            state.r_scarlet_whet_used = true;
+            state.p_dmg_buff += 3;
+            showFloatText('猩红砥石 +3伤', 'var(--crimson)', getCenter('ui-hp'));
+        }
+        if (gain > 0) showFloatText(`${source} +${gain}`, 'var(--crimson)', getCenter('ui-hp'));
+        return gain;
+    }
+
+    function repayBloodDebt(amount, source = '偿债') {
+        const before = Math.max(0, state.p_blood_debt || 0);
+        const paid = Math.min(before, Math.max(0, Math.floor(Number(amount) || 0)));
+        if (paid <= 0) return { paid: 0, cleared: false };
+        state.p_blood_debt = before - paid;
+        state.p_blood_debt_paid = (state.p_blood_debt_paid || 0) + paid;
+        showFloatText(`${source} -${paid}`, 'var(--nature)', getCenter('ui-hp'));
+        const cleared = before > 0 && state.p_blood_debt === 0;
+        if (cleared) {
+            if (hasRelic('r_bloodoath_contract') && !state.r_blood_clear_used) {
+                state.r_blood_clear_used = true;
+                const gain = Math.min(4, Math.max(1, Math.floor(state.p_blood_debt_paid / 3)));
+                state.p_battle_dmg += gain;
+                showFloatText(`血誓清偿 +${gain}伤`, 'var(--crimson)', getCenter('ui-hp'));
+            }
+            if (hasRelic('r_oath_transfusion') && !state.r_oath_transfusion_used) {
+                state.r_oath_transfusion_used = true;
+                state.mp += 1;
+                showFloatText('誓血导管 +1能', 'var(--gold)', getCenter('ui-mp'));
+            }
+            if (hasRelic('r_lifedebt_scale') && state.hp <= Math.floor(state.maxHp / 2) && !state.r_lifedebt_clear_used) {
+                state.r_lifedebt_clear_used = true;
+                healPlayer(6);
+            }
+        }
+        return { paid, cleared };
+    }
+
+    function settleBloodDebt() {
+        const debt = Math.max(0, state.p_blood_debt || 0);
+        if (debt <= 0) return;
+        const loss = Math.max(1, Math.ceil(debt * Math.max(1, state.p_blood_debt_settlement_mult || 1)));
+        const actualLoss = Math.min(Math.max(0, state.hp - 1), loss);
+        state.hp -= actualLoss;
+        state.p_blood_debt = 0;
+        showFloatText(`血债清算 -${actualLoss}`, 'var(--crimson)', getCenter('ui-hp'));
+    }
+
     function healPlayer(amount) {
         if (state.p_curse > 0) {
             showFloatText("诅咒阻断治疗", "var(--purple)", getCenter('ui-hp'));
@@ -5886,15 +5977,16 @@
                 updateTopBar();
             }
             else if (card.specialId === 'a_syn_blood') {
-                let synergyCount = state.hand.filter(c => c.tags && (c.tags.includes('血祭') || c.tags.includes('吸血') || c.tags.includes('出血') || c.tags.includes('放血'))).length;
-                let bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.2) : 0;
-                let dmg = parseInt(card.val) + (20 * synergyCount) + state.enemy.bleed * 8 + state.p_battle_dmg + bossBonus;
-                if(synergyCount > 0) { state.hp = Math.max(1, state.hp - 2 * synergyCount); showFloatText(`血祭 -${2*synergyCount}血`, "var(--crimson)", getCenter('ui-hp')); }
-                triggerVFX('p-atk'); const dealt = applySpecialCardDamage(card, dmg); const bloodHeal = Math.floor(dealt/2);
-                const bloodOverheal = Math.max(0, bloodHeal - Math.max(0, state.maxHp - state.hp));
-                healPlayer(bloodHeal);
+                const spentDebt = Math.max(0, state.p_blood_debt || 0);
+                if (spentDebt > 0) repayBloodDebt(spentDebt, '血海吞债');
+                const dmg = parseInt(card.val) + spentDebt * (card.bloodDebtSpendDamage || 5) + state.p_battle_dmg;
+                triggerVFX('p-atk'); const dealt = applySpecialCardDamage(card, dmg, true); let bloodHeal = Math.floor(dealt * (card.lifestealRatio || 0.5));
+                if(hasRelic('r_lifedebt_scale') && state.hp <= Math.floor(state.maxHp / 2)) bloodHeal = Math.floor(bloodHeal * 1.5);
+                const remainingHeal = Math.max(0, bloodHeal - repayBloodDebt(bloodHeal, '血海回偿').paid);
+                const bloodOverheal = Math.max(0, remainingHeal - Math.max(0, state.maxHp - state.hp));
+                healPlayer(remainingHeal + (spentDebt > 0 ? (card.bloodDebtClearHeal || 0) : 0));
                 if (hasRelic('r_vamp_ring') && bloodOverheal > 0) state.p_battle_dmg += Math.min(5, bloodOverheal);
-                showFloatText(`${card.name} 共鸣 ${synergyCount} 次`, "var(--crimson)", getCenter('enemy-avatar'));
+                showFloatText(`${card.name} 消耗 ${spentDebt} 血债`, "var(--crimson)", getCenter('enemy-avatar'));
             }
             else if (card.specialId === 'a_syn_magic') {
                 let synergyCount = state.hand.filter(c => c.tags && (c.tags.includes('回响') || c.tags.includes('复刻'))).length;
@@ -5932,17 +6024,14 @@
             }
             else if (card.specialId === 'w_oath_fortress') {
                 triggerVFX('p-def');
-                const armorGain = applyLowHpGuardBoost(9, '守誓护盾');
+                const armorGain = applyLowHpGuardBoost(18, '守誓护盾');
                 state.armor += armorGain;
-                let pVal = 3 + (hasRelic('r_protect_armor') ? 3 : 0);
+                let pVal = 6 + (hasRelic('r_protect_armor') ? 3 : 0);
                 pVal = applyLowHpGuardBoost(pVal, '守誓庇护');
                 state.p_reduce_dmg += pVal;
                 if (hasRelic('r_guardian_core')) state.armor += Math.floor(pVal / 2);
-                if (state.hp <= Math.floor(state.maxHp / 2)) {
-                    state.p_counter = 1;
-                    if(hasRelic('r_counter_amulet')) state.p_reduce_dmg += 5;
-                    showFloatText("低血反击", "var(--gold)", getCenter('ui-hp'));
-                }
+                state.p_counter = 1;
+                if(hasRelic('r_counter_amulet')) state.p_reduce_dmg += 5;
                 showFloatText(`护盾 +${armorGain} / 庇护 +${pVal}`, "var(--water)", getCenter('ui-hp'));
             }
             else if (card.specialId === 'w_last_verdict') {
@@ -6109,6 +6198,11 @@
         }
 
         // ====== 原有普通词条标签逻辑 ======
+        let debtClearedByCard = false;
+        let debtPaidByCard = 0;
+        if (!isEcho && card.bloodDebtGain) addBloodDebt(card.bloodDebtGain, card.name);
+        if (!isEcho && card.bloodDebtPowerGain) state.p_blood_debt_power += Number(card.bloodDebtPowerGain) || 0;
+        if (!isEcho && card.bloodDebtSettlementMultiplier) state.p_blood_debt_settlement_mult = Math.max(state.p_blood_debt_settlement_mult, Number(card.bloodDebtSettlementMultiplier) || 1);
         if (card.tags && card.tags.includes('血祭')) {
             let dmgBonus = card.up ? 5 : 3;
             if (hasRelic('r_scarlet_whet')) dmgBonus += 3;
@@ -6275,6 +6369,11 @@
             if(hasRelic('r_fast_foot') && cardsPlayedThisTurn === 1) { val = Math.floor(val * 1.5); showFloatText("迅影突袭!", "var(--gold)", getCenter('ui-hp')); }
 
             triggerVFX('p-atk'); let finalDmg = val + state.p_battle_dmg;
+            if (card.bloodDebtDamageRatio) {
+                const debtBonus = Math.floor((state.p_blood_debt || 0) * Number(card.bloodDebtDamageRatio) * (state.p_blood_debt_power || 1));
+                finalDmg += debtBonus;
+                if (debtBonus > 0) showFloatText(`血债威能 +${debtBonus}`, "var(--crimson)", getCenter('enemy-avatar'));
+            }
             if(card.tags && card.tags.includes('放逐')) {
                 const exileRatio = hasRelic('r_exile_cache') ? 0.75 : 0.5;
                 const exileBonus = Math.max(5, Math.floor(val * exileRatio));
@@ -6332,11 +6431,19 @@
             }
             
             if(card.tags && card.tags.includes('吸血')) { 
-                let baseHeal = card.up ? finalDmg : Math.floor(finalDmg/2); let hAmt = hasRelic('r_blood') ? state.enemy.bleed : baseHeal;
+                const lifestealRatio = Number.isFinite(Number(card.lifestealRatio)) ? Number(card.lifestealRatio) : (card.up ? 1 : 0.5);
+                let hAmt = Math.floor(finalDmg * lifestealRatio);
                 if(hasRelic('r_poison_leech') && state.enemy.poison > 0) hAmt *= 2;
                 if(hasRelic('r_lifedebt_scale') && state.hp <= Math.floor(state.maxHp / 2)) hAmt = Math.floor(hAmt * 1.5);
-                const bloodOverheal = Math.max(0, hAmt - Math.max(0, state.maxHp - state.hp));
-                healPlayer(hAmt);
+                if (hasRelic('r_blood') && state.enemy.bleed > 0) {
+                    const result = repayBloodDebt(state.enemy.bleed, '血滴石回偿');
+                    debtPaidByCard += result.paid; debtClearedByCard ||= result.cleared;
+                }
+                const result = repayBloodDebt(hAmt, '吸血偿债');
+                debtPaidByCard += result.paid; debtClearedByCard ||= result.cleared;
+                const remainingHeal = Math.max(0, hAmt - result.paid);
+                const bloodOverheal = Math.max(0, remainingHeal - Math.max(0, state.maxHp - state.hp));
+                healPlayer(remainingHeal);
                 if (hasRelic('r_vamp_ring') && bloodOverheal > 0) {
                     const damageGain = Math.min(5, bloodOverheal);
                     state.p_battle_dmg += damageGain;
@@ -6384,7 +6491,10 @@
             let bVal = 3 * debuffMult + statusLayerBonus;
             if(hasRelic('r_poison_fang')) bVal += 1;
             state.enemy.bleed += bVal;
-            if (hasRelic('r_vein_cup')) healPlayer(1);
+            if (hasRelic('r_vein_cup')) {
+                const result = repayBloodDebt(1, '刻脉杯回偿');
+                debtPaidByCard += result.paid; debtClearedByCard ||= result.cleared;
+            }
             statusApplied = true;
             showFloatText(`出血 +${bVal}`, "var(--crimson)", getCenter('enemy-avatar'));
         }
@@ -6394,9 +6504,19 @@
         
         if(card.tags && card.tags.includes('放血') && state.enemy.bleed > 0) { 
             let boomDmg = state.enemy.bleed * (hasRelic('r_bleed_knife') ? 5 : 3); applyDamageToEnemy(boomDmg, true); 
+            if (card.bloodDebtRepayFromBleed) {
+                const result = repayBloodDebt(Math.floor(boomDmg * Number(card.bloodDebtRepayFromBleed)), '放血偿债');
+                debtPaidByCard += result.paid; debtClearedByCard ||= result.cleared;
+            }
             if(hasRelic('r_bloodlet_draw')) await drawCards(1);
             if(hasRelic('r_bloodlet_hourglass') && !state.r_bloodlet_hourglass_used) { state.r_bloodlet_hourglass_used = true; await drawCards(1); }
-            if(hasRelic('r_execute') && state.enemy.vuln > 0) { showFloatText(`处决不断!`, "var(--gold)", getCenter('enemy-avatar')); } else { state.enemy.bleed = hasRelic('r_rupture_charm') ? 2 : 0; }
+            if(hasRelic('r_execute') && state.enemy.vuln > 0) { showFloatText(`处决不断!`, "var(--gold)", getCenter('enemy-avatar')); } else {
+                state.enemy.bleed = hasRelic('r_rupture_charm') ? 3 : 0;
+                if (hasRelic('r_rupture_charm')) {
+                    const result = repayBloodDebt(2, '裂口护符回偿');
+                    debtPaidByCard += result.paid; debtClearedByCard ||= result.cleared;
+                }
+            }
             showFloatText(`引爆出血`, "var(--crimson)", getCenter('enemy-avatar')); 
             if (hasRelic('r_bleed_return_exhaust')) {
                 let count = state.exhaustPile.length;
@@ -6406,6 +6526,29 @@
 
         if(card.tags && card.tags.includes('易伤')) { let vVal = 2 * debuffMult + statusLayerBonus; if(hasRelic('r_weak_mask')) vVal += 1; state.enemy.vuln += vVal; statusApplied = true; showFloatText("易伤", "var(--purple)", getCenter('enemy-avatar')); }
         if(card.tags && card.tags.includes('虚弱')) { let wVal = 2 * debuffMult + statusLayerBonus; if(hasRelic('r_weak_mask')) wVal += 1; state.enemy.weak += wVal; statusApplied = true; showFloatText("虚弱", "#bbb", getCenter('enemy-avatar')); }
+        if (card.bloodDebtBleed) {
+            state.enemy.bleed += Math.max(0, Math.floor(card.bloodDebtBleed));
+            if (hasRelic('r_vein_cup')) {
+                const result = repayBloodDebt(1, '刻脉杯回偿');
+                debtPaidByCard += result.paid; debtClearedByCard ||= result.cleared;
+            }
+            showFloatText(`誓血出血 +${card.bloodDebtBleed}`, "var(--crimson)", getCenter('enemy-avatar'));
+        }
+        if (card.bloodDebtWeak) {
+            state.enemy.weak += Math.max(0, Math.floor(card.bloodDebtWeak));
+            showFloatText(`血誓虚弱 +${card.bloodDebtWeak}`, "#bbb", getCenter('enemy-avatar'));
+        }
+        if (card.bloodDebtStun) {
+            state.enemy.stun += Math.max(0, Math.floor(card.bloodDebtStun));
+            showFloatText('血誓缚止', "var(--gold)", getCenter('enemy-avatar'));
+        }
+        if (card.bloodDebtRepay) {
+            const result = repayBloodDebt(card.bloodDebtRepay, card.name);
+            debtPaidByCard += result.paid; debtClearedByCard ||= result.cleared;
+        }
+        if (debtPaidByCard > 0 && card.bloodDebtDrawOnRepay && !isEcho) await drawCards(card.bloodDebtDrawOnRepay);
+        if (debtClearedByCard && card.bloodDebtClearDamage) applyDamageToEnemy(card.bloodDebtClearDamage, true);
+        if (debtClearedByCard && card.bloodDebtClearHeal) healPlayer(card.bloodDebtClearHeal);
         if(statusApplied && hasRelic('r_status_prism')) { state.p_chant = Math.min(12, state.p_chant + 1); showFloatText("棱镜咏唱 +1", "var(--purple)", getCenter('ui-hp')); }
         if((card.tags && card.tags.includes('充能')) || hasDirectCardEffect(card, 'energy')) { let eAmt = 1; if(card.tags && card.tags.includes('充能') && hasRelic('r_energy_crys')) eAmt += 1; state.mp += eAmt; showFloatText(`能量 +${eAmt}`, "var(--gold)", getCenter('ui-mp')); }
         if(card.tags && card.tags.includes('荆棘')) { let tVal = 8; if(hasRelic('r_thorn_shield_new')) tVal *= 2; state.player.thorns += tVal; showFloatText(`获得荆棘 +${tVal}`, "var(--nature)", getCenter('ui-hp')); updateTopBar(); }
@@ -6445,6 +6588,8 @@
             if(state.hp <= 0) { alert("意志被暗影吞没，探索结束。"); showScene('scene-main-menu'); setTopBarVisible(false); return; }
             await new Promise(r => setTimeout(r, 600));
         }
+
+        settleBloodDebt();
 
         if(state.p_poison > 0) { state.hp -= state.p_poison; state.p_poison--; showFloatText(`毒发 -${state.p_poison+1}`, "var(--nature)", getCenter('ui-hp')); }
         if(state.p_bleed > 0) { let bDmg = Math.ceil(state.p_bleed/2); state.hp -= bDmg; state.p_bleed--; showFloatText(`流血 -${bDmg}`, "var(--crimson)", getCenter('ui-hp')); }
@@ -6627,6 +6772,13 @@
             state.r_chant_reservoir_used = false;
             state.r_tailwind_spool_used = false;
             state.r_oath_transfusion_used = false;
+            state.p_blood_debt_paid = 0;
+            state.p_blood_debt_power = 1;
+            state.p_blood_debt_settlement_mult = 1;
+            state.r_blood_debt_reduction_used = false;
+            state.r_blood_clear_used = false;
+            state.r_scarlet_whet_used = false;
+            state.r_lifedebt_clear_used = false;
             state.r_status_ledger_used = false;
             state.r_echo_archive_pin_used = false;
             if (state.player.thorns > 0) {

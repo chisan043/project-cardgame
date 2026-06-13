@@ -132,6 +132,16 @@ function cardDraftScore(data, card, build, deck, rng) {
         score += data.getCardRecycleModes(card).length * 4 + Math.min(6, recyclableCards * 1.5);
     }
     if (card.energySink) score += 4;
+    if (card.bloodDebtGain) score += card.bloodDebtGain * 0.8;
+    if (card.bloodDebtDamageRatio) score += card.bloodDebtDamageRatio * 6;
+    if (card.bloodDebtRepay) score += card.bloodDebtRepay * 1.2;
+    if (card.bloodDebtRepayFromBleed) score += card.bloodDebtRepayFromBleed * 6;
+    if (card.bloodDebtBleed) score += card.bloodDebtBleed * 1.2;
+    if (card.bloodDebtWeak) score += card.bloodDebtWeak * 3;
+    if (card.bloodDebtStun) score += card.bloodDebtStun * 8;
+    if (card.bloodDebtClearDamage) score += card.bloodDebtClearDamage * 0.5;
+    if (card.bloodDebtClearHeal) score += card.bloodDebtClearHeal * 0.6;
+    if (card.bloodDebtDrawOnRepay) score += card.bloodDebtDrawOnRepay * 3;
     score += RARITY_BONUS[card.rarity] || 0;
     score -= sameCardCopies * 7;
     score -= Math.max(0, cost - 2) * 1.5;
@@ -214,6 +224,7 @@ function runBuild(data, roleId, buildId, args) {
                         cost: card.cost,
                         rarity: card.rarity,
                         tags: card.tags || [],
+                        directEffects: card.directEffects || {},
                         buildTags,
                         isPrimaryBuild: buildTags.includes(buildId),
                         isRelevant: buildTags.length === 0 || buildTags.includes(buildId),
@@ -334,11 +345,27 @@ function renderMarkdown(report) {
     const deadCards = report.results.flatMap(result => result.cards
         .filter(card => card.isPrimaryBuild && card.offers >= 30 && (card.choiceRate < 0.02 || (card.opportunities >= 50 && card.drawnUsageRate < 0.2)))
         .map(card => ({ role: result.role, build: result.build, ...card })));
+    const warriorChaff = report.results
+        .filter(result => result.roleId === 'hero_warrior')
+        .flatMap(result => result.cards
+            .filter(card => card.isPrimaryBuild && card.offers >= 30 && (
+                card.choiceRate < 0.08
+                || (card.opportunities >= 50 && !(card.tags || []).includes('保留') && !card.directEffects?.retain
+                    && card.choiceRate < 0.30 && card.drawnUsageRate < 0.20)
+            ))
+            .map(card => ({ role: result.role, build: result.build, ...card })));
     lines.push('## 需要继续处理', '');
     if (!deadCards.length) lines.push('- 没有出现所属构筑内选择率低于 2%，或抽到后使用率低于 20% 的卡牌。');
     else {
         for (const card of deadCards) {
             lines.push(`- ${card.role} / ${card.build}：${card.name}，选择率 ${pct(card.choiceRate)}，入牌率 ${pct(card.deckInclusionRate)}，抽到后使用率 ${pct(card.drawnUsageRate)}。`);
+        }
+    }
+    lines.push('', '## 战士鸡肋牌守卫', '');
+    if (!warriorChaff.length) lines.push('- 三个战士流派均未出现选择率低于 8%，或抽到后使用率低于 25% 的所属卡牌。');
+    else {
+        for (const card of warriorChaff) {
+            lines.push(`- ${card.build}：${card.name}，选择率 ${pct(card.choiceRate)}，抽到后使用率 ${pct(card.drawnUsageRate)}。`);
         }
     }
     lines.push('');
@@ -366,6 +393,17 @@ function main() {
     for (const result of results) {
         const lowest = result.cards.filter(card => card.isPrimaryBuild && card.offers >= 30).slice(0, 3);
         console.log(`${result.role}\t${result.build}\t${lowest.map(card => `${card.name} ${pct(card.choiceRate)}`).join(' / ')}`);
+    }
+    const warriorChaff = results
+        .filter(result => result.roleId === 'hero_warrior')
+        .flatMap(result => result.cards.filter(card => card.isPrimaryBuild && card.offers >= 30 && (
+            card.choiceRate < 0.08
+            || (card.opportunities >= 50 && !(card.tags || []).includes('保留') && !card.directEffects?.retain
+                && card.choiceRate < 0.30 && card.drawnUsageRate < 0.20)
+        )));
+    if (warriorChaff.length) {
+        console.error(`Warrior chaff guard failed: ${warriorChaff.map(card => card.name).join(', ')}`);
+        process.exitCode = 1;
     }
 }
 

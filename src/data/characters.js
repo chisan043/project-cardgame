@@ -4,8 +4,8 @@ const CHARACTERS = {
     hero_warrior: {
         id: 'hero_warrior',
         name: '勇者战士',
-        subtitle: '近战 / 防御 / 圣剑',
-        desc: '稳定的护盾与反击路线，适合喜欢明确信号与稳步压制的对局体验。',
+        subtitle: '圣剑 / 处刑 / 血债',
+        desc: '以护盾反击稳步铸剑，以穿甲连击制造处刑窗口，或借血债爆发并在回合结束前完成清偿。',
         tags: ['圣剑反击', '处刑连斩', '血誓狂战'],
         maxHp: 90,
         baseEnergy: 5,
@@ -13,7 +13,7 @@ const CHARACTERS = {
         startingGold: 50,
         starterDeckId: 'starter_warrior',
         cardPoolId: 'pool_warrior',
-        passive: '更高生命上限。每场战斗开始获得 5 点护盾；圣剑攻击会借护盾与反击姿态追加伤害。',
+        passive: '更高生命上限。每场战斗开始获得 5 点护盾；三条路线分别围绕圣剑反击、处刑窗口与血债清偿展开。',
         portrait: 'assets/characters/warrior/select_portrait_v1.webp',
         avatarPortrait: 'assets/characters/warrior/avatar_portrait_v1.webp',
         battleBack: 'assets/characters/warrior/battle_back_idle_v1.webp',
@@ -47,7 +47,7 @@ const CHARACTERS = {
             { src: 'assets/characters/warrior/battle_back_hurt_06_v2.webp', duration: 90 }
         ],
         accentClass: '',
-        starterHint: '护盾是战士的基础生存手段；开局通过核心遗物确定圣剑反击、处刑连斩或血誓狂战路线。'
+        starterHint: '开局通过核心遗物确定圣剑反击、处刑连斩或血债清偿路线；血债路线不依赖护盾。'
     },
     hero_mage: {
         id: 'hero_mage',

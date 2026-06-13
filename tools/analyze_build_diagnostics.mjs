@@ -191,7 +191,14 @@ function diagnoseBuild(entry) {
     if (elite.winRate < TARGETS.elite.min && elite.averageDamageTaken > 75) issues.push('精英生存不足');
     if (boss.energyWastedPerTurn > 0.35) issues.push('能量利用偏低');
     if (boss.averageTurns <= 4.5 && boss.winRate < TARGETS.boss.min) issues.push('启动前即被压垮');
-    const lowUsage = boss.cardUsage.filter(card => card.opportunities >= 50 && card.usageRate < 0.2 && !card.name.includes('诅咒')).slice(0, 3);
+    const foundationNames = new Set(['基础斩击', '基础防御', '基础法弹', '基础愈流', '基础射击', '林地回避']);
+    const lowUsage = boss.cardUsage.filter(card => card.opportunities >= 50
+        && card.usageRate < 0.2
+        && card.playsPerBattle < 0.2
+        && !card.name.includes('诅咒')
+        && !foundationNames.has(card.name)
+        && !(card.tags || []).includes('保留')
+        && !card.directEffects?.retain).slice(0, 3);
     if (lowUsage.length) issues.push(`低使用率卡：${lowUsage.map(card => card.name).join('、')}`);
     return issues.length ? issues : ['指标结构正常'];
 }

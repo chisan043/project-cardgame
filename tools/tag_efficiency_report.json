@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-12T12:03:31.970Z",
+  "generatedAt": "2026-06-13T14:23:06.264Z",
   "seed": 20260612,
-  "runsPerSample": 1000,
+  "runsPerSample": 200,
   "modes": [
     "baseline",
     "mature"
@@ -28,22 +28,22 @@
     }
   ],
   "corpus": {
-    "totalTags": 35,
+    "totalTags": 36,
     "totalCards": 263,
-    "averageTags": 1.4334600760456273,
-    "cardsWithAtLeastTwoTags": 114,
+    "averageTags": 1.4486692015209126,
+    "cardsWithAtLeastTwoTags": 118,
     "cardsWithThreeTags": 0,
     "countDistribution": {
-      "1": 149,
-      "2": 114
+      "1": 145,
+      "2": 118
     },
-    "directEffectCards": 93,
+    "directEffectCards": 91,
     "byRole": [
       {
         "roleId": "hero_warrior",
         "role": "勇者战士",
         "cards": 83,
-        "averageTags": 1.4337349397590362,
+        "averageTags": 1.4819277108433735,
         "cardsWithThreeTags": 0
       },
       {
@@ -73,8 +73,8 @@
         "source": "cardPool",
         "label": "职业卡池",
         "cards": 172,
-        "averageTags": 1.3662790697674418,
-        "cardsWithAtLeastTwoTags": 63,
+        "averageTags": 1.3895348837209303,
+        "cardsWithAtLeastTwoTags": 67,
         "cardsWithThreeTags": 0
       },
       {
@@ -104,26 +104,41 @@
       "prevalence": 0.026615969581749048,
       "samples": 18,
       "affectedBuilds": 6,
-      "meanWinRateImpact": 0.011500000000000002,
-      "meanWinRateImpactPp": 1.1500000000000001,
-      "meanHpImpact": 0.5817777777777784,
-      "meanTurnImpact": 0.04077777777777755,
-      "maxWinRateImpactPp": 4.700000000000005,
-      "minWinRateImpactPp": -0.8
+      "meanWinRateImpact": 0.015833333333333338,
+      "meanWinRateImpactPp": 1.583333333333334,
+      "meanHpImpact": 1.0144444444444438,
+      "meanTurnImpact": 0.009166666666666497,
+      "maxWinRateImpactPp": 8.999999999999996,
+      "minWinRateImpactPp": -1.0000000000000009
     },
     {
       "tag": "血祭",
       "group": "代价条件",
       "modeled": true,
-      "cardCount": 13,
-      "prevalence": 0.049429657794676805,
+      "cardCount": 1,
+      "prevalence": 0.0038022813688212928,
+      "samples": 0,
+      "affectedBuilds": 0,
+      "meanWinRateImpact": 0,
+      "meanWinRateImpactPp": 0,
+      "meanHpImpact": 0,
+      "meanTurnImpact": 0,
+      "maxWinRateImpactPp": 0,
+      "minWinRateImpactPp": 0
+    },
+    {
+      "tag": "血债",
+      "group": "代价条件",
+      "modeled": true,
+      "cardCount": 20,
+      "prevalence": 0.07604562737642585,
       "samples": 6,
       "affectedBuilds": 2,
-      "meanWinRateImpact": 0.24283333333333335,
-      "meanWinRateImpactPp": 24.283333333333335,
-      "meanHpImpact": 18.227833333333333,
-      "meanTurnImpact": 0.06483333333333337,
-      "maxWinRateImpactPp": 60.20000000000001,
+      "meanWinRateImpact": 0.4175,
+      "meanWinRateImpactPp": 41.75,
+      "meanHpImpact": 36.50833333333333,
+      "meanTurnImpact": -4.911666666666666,
+      "maxWinRateImpactPp": 72.5,
       "minWinRateImpactPp": 0
     },
     {
@@ -132,8 +147,8 @@
       "modeled": false,
       "cardCount": 3,
       "prevalence": 0.011406844106463879,
-      "samples": 12,
-      "affectedBuilds": 4,
+      "samples": 6,
+      "affectedBuilds": 2,
       "meanWinRateImpact": 0,
       "meanWinRateImpactPp": 0,
       "meanHpImpact": 0,
@@ -145,30 +160,30 @@
       "tag": "附魔",
       "group": "代价条件",
       "modeled": false,
-      "cardCount": 2,
-      "prevalence": 0.0076045627376425855,
-      "samples": 12,
-      "affectedBuilds": 4,
-      "meanWinRateImpact": -0.002999999999999994,
-      "meanWinRateImpactPp": -0.2999999999999994,
-      "meanHpImpact": -0.4350000000000002,
-      "meanTurnImpact": 0.05100000000000001,
-      "maxWinRateImpactPp": 0.3999999999999997,
-      "minWinRateImpactPp": -1.19999999999999
+      "cardCount": 3,
+      "prevalence": 0.011406844106463879,
+      "samples": 18,
+      "affectedBuilds": 6,
+      "meanWinRateImpact": -0.013055555555555555,
+      "meanWinRateImpactPp": -1.3055555555555554,
+      "meanHpImpact": -0.7311111111111107,
+      "meanTurnImpact": 0.11055555555555562,
+      "maxWinRateImpactPp": 3.0000000000000027,
+      "minWinRateImpactPp": -5.499999999999999
     },
     {
       "tag": "庇护",
       "group": "防御恢复",
       "modeled": true,
-      "cardCount": 10,
-      "prevalence": 0.03802281368821293,
+      "cardCount": 9,
+      "prevalence": 0.034220532319391636,
       "samples": 6,
       "affectedBuilds": 2,
-      "meanWinRateImpact": 0.04833333333333333,
-      "meanWinRateImpactPp": 4.833333333333333,
-      "meanHpImpact": 6.723499999999999,
-      "meanTurnImpact": -1.0100000000000002,
-      "maxWinRateImpactPp": 7.3,
+      "meanWinRateImpact": 0.06000000000000002,
+      "meanWinRateImpactPp": 6.000000000000002,
+      "meanHpImpact": 4.8466666666666685,
+      "meanTurnImpact": -0.9683333333333333,
+      "maxWinRateImpactPp": 10.000000000000009,
       "minWinRateImpactPp": 0
     },
     {
@@ -179,11 +194,11 @@
       "prevalence": 0.022813688212927757,
       "samples": 6,
       "affectedBuilds": 2,
-      "meanWinRateImpact": 0.04166666666666668,
-      "meanWinRateImpactPp": 4.166666666666668,
-      "meanHpImpact": 3.8800000000000003,
-      "meanTurnImpact": -0.33300000000000046,
-      "maxWinRateImpactPp": 10.399999999999999,
+      "meanWinRateImpact": 0.05000000000000001,
+      "meanWinRateImpactPp": 5.000000000000001,
+      "meanHpImpact": 2.6399999999999992,
+      "meanTurnImpact": -0.30833333333333357,
+      "maxWinRateImpactPp": 10.500000000000004,
       "minWinRateImpactPp": 0
     },
     {
@@ -194,12 +209,12 @@
       "prevalence": 0.06844106463878327,
       "samples": 12,
       "affectedBuilds": 4,
-      "meanWinRateImpact": 0.09999999999999998,
-      "meanWinRateImpactPp": 9.999999999999998,
-      "meanHpImpact": 5.9987499999999985,
-      "meanTurnImpact": -0.3186666666666666,
-      "maxWinRateImpactPp": 66.4,
-      "minWinRateImpactPp": 0
+      "meanWinRateImpact": 0.12916666666666665,
+      "meanWinRateImpactPp": 12.916666666666664,
+      "meanHpImpact": 9.315833333333332,
+      "meanTurnImpact": -0.4612499999999999,
+      "maxWinRateImpactPp": 70.5,
+      "minWinRateImpactPp": -4.0000000000000036
     },
     {
       "tag": "复刻",
@@ -209,26 +224,26 @@
       "prevalence": 0.049429657794676805,
       "samples": 12,
       "affectedBuilds": 4,
-      "meanWinRateImpact": 0.05341666666666667,
-      "meanWinRateImpactPp": 5.341666666666667,
-      "meanHpImpact": 2.8738333333333337,
-      "meanTurnImpact": 0.13099999999999998,
-      "maxWinRateImpactPp": 20.499999999999996,
+      "meanWinRateImpact": 0.05708333333333334,
+      "meanWinRateImpactPp": 5.708333333333334,
+      "meanHpImpact": 2.737083333333333,
+      "meanTurnImpact": 0.1666666666666666,
+      "maxWinRateImpactPp": 25,
       "minWinRateImpactPp": 0
     },
     {
       "tag": "吸血",
       "group": "防御恢复",
       "modeled": true,
-      "cardCount": 8,
-      "prevalence": 0.030418250950570342,
+      "cardCount": 7,
+      "prevalence": 0.026615969581749048,
       "samples": 6,
       "affectedBuilds": 2,
-      "meanWinRateImpact": 0.11733333333333333,
-      "meanWinRateImpactPp": 11.733333333333333,
-      "meanHpImpact": 11.783999999999999,
-      "meanTurnImpact": -0.3213333333333334,
-      "maxWinRateImpactPp": 26.900000000000002,
+      "meanWinRateImpact": 0.13999999999999999,
+      "meanWinRateImpactPp": 13.999999999999998,
+      "meanHpImpact": 19.54666666666667,
+      "meanTurnImpact": -1.6291666666666662,
+      "maxWinRateImpactPp": 31,
       "minWinRateImpactPp": 0
     },
     {
@@ -239,11 +254,11 @@
       "prevalence": 0.011406844106463879,
       "samples": 6,
       "affectedBuilds": 2,
-      "meanWinRateImpact": 0.04416666666666666,
-      "meanWinRateImpactPp": 4.416666666666666,
-      "meanHpImpact": 3.7063333333333333,
-      "meanTurnImpact": -0.0838333333333335,
-      "maxWinRateImpactPp": 6.2,
+      "meanWinRateImpact": 0.051666666666666694,
+      "meanWinRateImpactPp": 5.16666666666667,
+      "meanHpImpact": 3.5499999999999994,
+      "meanTurnImpact": -0.2391666666666669,
+      "maxWinRateImpactPp": 8.000000000000007,
       "minWinRateImpactPp": 0
     },
     {
@@ -254,12 +269,12 @@
       "prevalence": 0.07224334600760456,
       "samples": 18,
       "affectedBuilds": 6,
-      "meanWinRateImpact": 0.05472222222222222,
-      "meanWinRateImpactPp": 5.472222222222222,
-      "meanHpImpact": 3.295555555555556,
-      "meanTurnImpact": -0.10916666666666679,
-      "maxWinRateImpactPp": 29.5,
-      "minWinRateImpactPp": -0.6000000000000005
+      "meanWinRateImpact": 0.05638888888888887,
+      "meanWinRateImpactPp": 5.638888888888887,
+      "meanHpImpact": 3.155277777777778,
+      "meanTurnImpact": -0.08138888888888901,
+      "maxWinRateImpactPp": 33.5,
+      "minWinRateImpactPp": -1.9999999999999962
     },
     {
       "tag": "放逐",
@@ -269,12 +284,12 @@
       "prevalence": 0.060836501901140684,
       "samples": 12,
       "affectedBuilds": 4,
-      "meanWinRateImpact": 0.18141666666666667,
-      "meanWinRateImpactPp": 18.141666666666666,
-      "meanHpImpact": 9.556000000000001,
-      "meanTurnImpact": -0.3511666666666667,
-      "maxWinRateImpactPp": 83.80000000000001,
-      "minWinRateImpactPp": 0
+      "meanWinRateImpact": 0.23291666666666666,
+      "meanWinRateImpactPp": 23.291666666666664,
+      "meanHpImpact": 15.946666666666667,
+      "meanTurnImpact": -0.30749999999999983,
+      "maxWinRateImpactPp": 77,
+      "minWinRateImpactPp": -0.5000000000000004
     },
     {
       "tag": "抽牌",
@@ -284,11 +299,11 @@
       "prevalence": 0.0076045627376425855,
       "samples": 6,
       "affectedBuilds": 2,
-      "meanWinRateImpact": 0.014000000000000007,
-      "meanWinRateImpactPp": 1.4000000000000008,
-      "meanHpImpact": 0.7486666666666669,
-      "meanTurnImpact": -0.03366666666666651,
-      "maxWinRateImpactPp": 3.200000000000003,
+      "meanWinRateImpact": 0.02416666666666667,
+      "meanWinRateImpactPp": 2.416666666666667,
+      "meanHpImpact": 1.7449999999999999,
+      "meanTurnImpact": 0.01666666666666646,
+      "maxWinRateImpactPp": 4.5000000000000036,
       "minWinRateImpactPp": 0
     },
     {
@@ -299,27 +314,27 @@
       "prevalence": 0.07604562737642585,
       "samples": 12,
       "affectedBuilds": 4,
-      "meanWinRateImpact": 0.09941666666666665,
-      "meanWinRateImpactPp": 9.941666666666665,
-      "meanHpImpact": 5.286583333333334,
-      "meanTurnImpact": 0.6755833333333333,
-      "maxWinRateImpactPp": 27.200000000000003,
+      "meanWinRateImpact": 0.13625,
+      "meanWinRateImpactPp": 13.625000000000002,
+      "meanHpImpact": 7.342083333333332,
+      "meanTurnImpact": 0.80375,
+      "maxWinRateImpactPp": 35,
       "minWinRateImpactPp": 0
     },
     {
       "tag": "出血",
       "group": "状态控制",
       "modeled": true,
-      "cardCount": 21,
-      "prevalence": 0.07984790874524715,
+      "cardCount": 18,
+      "prevalence": 0.06844106463878327,
       "samples": 18,
       "affectedBuilds": 6,
-      "meanWinRateImpact": 0.017166666666666667,
-      "meanWinRateImpactPp": 1.7166666666666668,
-      "meanHpImpact": 0.5191666666666658,
-      "meanTurnImpact": 0.22411111111111115,
-      "maxWinRateImpactPp": 6.599999999999994,
-      "minWinRateImpactPp": -2.6999999999999997
+      "meanWinRateImpact": 0.0325,
+      "meanWinRateImpactPp": 3.25,
+      "meanHpImpact": 1.4661111111111103,
+      "meanTurnImpact": 0.1847222222222222,
+      "maxWinRateImpactPp": 11.5,
+      "minWinRateImpactPp": -1.0000000000000009
     },
     {
       "tag": "燃烧",
@@ -329,12 +344,12 @@
       "prevalence": 0.015209125475285171,
       "samples": 6,
       "affectedBuilds": 2,
-      "meanWinRateImpact": 0.0020000000000000018,
-      "meanWinRateImpactPp": 0.20000000000000018,
-      "meanHpImpact": -0.13950000000000048,
-      "meanTurnImpact": 0.1266666666666668,
-      "maxWinRateImpactPp": 0.9000000000000008,
-      "minWinRateImpactPp": -0.10000000000000009
+      "meanWinRateImpact": -0.0016666666666666705,
+      "meanWinRateImpactPp": -0.16666666666666705,
+      "meanHpImpact": 0.04666666666666771,
+      "meanTurnImpact": 0.10666666666666662,
+      "maxWinRateImpactPp": 2.4999999999999996,
+      "minWinRateImpactPp": -2.0000000000000004
     },
     {
       "tag": "眩晕",
@@ -344,11 +359,11 @@
       "prevalence": 0.030418250950570342,
       "samples": 18,
       "affectedBuilds": 6,
-      "meanWinRateImpact": 0.13583333333333333,
-      "meanWinRateImpactPp": 13.583333333333334,
-      "meanHpImpact": 7.7395000000000005,
-      "meanTurnImpact": -1.0151111111111113,
-      "maxWinRateImpactPp": 30.2,
+      "meanWinRateImpact": 0.14694444444444446,
+      "meanWinRateImpactPp": 14.694444444444446,
+      "meanHpImpact": 8.589166666666667,
+      "meanTurnImpact": -0.9983333333333333,
+      "maxWinRateImpactPp": 32.5,
       "minWinRateImpactPp": 0
     },
     {
@@ -359,57 +374,57 @@
       "prevalence": 0.026615969581749048,
       "samples": 12,
       "affectedBuilds": 4,
-      "meanWinRateImpact": 0.021,
-      "meanWinRateImpactPp": 2.1,
-      "meanHpImpact": 1.176666666666667,
-      "meanTurnImpact": -0.09016666666666688,
-      "maxWinRateImpactPp": 8.199999999999996,
-      "minWinRateImpactPp": -0.5000000000000004
+      "meanWinRateImpact": 0.0175,
+      "meanWinRateImpactPp": 1.7500000000000002,
+      "meanHpImpact": 1.1895833333333339,
+      "meanTurnImpact": -0.10250000000000004,
+      "maxWinRateImpactPp": 9.500000000000004,
+      "minWinRateImpactPp": -1.0000000000000009
     },
     {
       "tag": "放血",
+      "group": "伤害放大",
+      "modeled": true,
+      "cardCount": 14,
+      "prevalence": 0.053231939163498096,
+      "samples": 18,
+      "affectedBuilds": 6,
+      "meanWinRateImpact": 0.0011111111111111118,
+      "meanWinRateImpactPp": 0.11111111111111117,
+      "meanHpImpact": 0.3447222222222221,
+      "meanTurnImpact": -0.09472222222222208,
+      "maxWinRateImpactPp": 8.499999999999996,
+      "minWinRateImpactPp": -8.5
+    },
+    {
+      "tag": "重击",
       "group": "伤害放大",
       "modeled": true,
       "cardCount": 15,
       "prevalence": 0.057034220532319393,
       "samples": 18,
       "affectedBuilds": 6,
-      "meanWinRateImpact": 0.0039444444444444405,
-      "meanWinRateImpactPp": 0.39444444444444404,
-      "meanHpImpact": 0.20094444444444365,
-      "meanTurnImpact": 0.03200000000000003,
-      "maxWinRateImpactPp": 4.899999999999993,
-      "minWinRateImpactPp": -2.0000000000000004
-    },
-    {
-      "tag": "重击",
-      "group": "伤害放大",
-      "modeled": true,
-      "cardCount": 13,
-      "prevalence": 0.049429657794676805,
-      "samples": 24,
-      "affectedBuilds": 8,
-      "meanWinRateImpact": 0.01416666666666667,
-      "meanWinRateImpactPp": 1.416666666666667,
-      "meanHpImpact": 0.5542083333333332,
-      "meanTurnImpact": 0.1735833333333333,
-      "maxWinRateImpactPp": 14.800000000000002,
-      "minWinRateImpactPp": -2.1999999999999966
+      "meanWinRateImpact": 0.01333333333333334,
+      "meanWinRateImpactPp": 1.333333333333334,
+      "meanHpImpact": 0.2349999999999995,
+      "meanTurnImpact": 0.3041666666666668,
+      "maxWinRateImpactPp": 16.000000000000004,
+      "minWinRateImpactPp": -4.000000000000001
     },
     {
       "tag": "穿甲",
       "group": "伤害放大",
       "modeled": true,
-      "cardCount": 28,
-      "prevalence": 0.10646387832699619,
-      "samples": 42,
-      "affectedBuilds": 14,
-      "meanWinRateImpact": 0.0028333333333333322,
-      "meanWinRateImpactPp": 0.2833333333333332,
-      "meanHpImpact": 0.2123571428571426,
-      "meanTurnImpact": 0.03519047619047613,
-      "maxWinRateImpactPp": 12.8,
-      "minWinRateImpactPp": -2.100000000000002
+      "cardCount": 27,
+      "prevalence": 0.10266159695817491,
+      "samples": 36,
+      "affectedBuilds": 12,
+      "meanWinRateImpact": 0.003333333333333336,
+      "meanWinRateImpactPp": 0.3333333333333336,
+      "meanHpImpact": 0.21875000000000056,
+      "meanTurnImpact": 0.0472222222222222,
+      "maxWinRateImpactPp": 12.5,
+      "minWinRateImpactPp": -3.500000000000003
     },
     {
       "tag": "圣剑",
@@ -419,12 +434,12 @@
       "prevalence": 0.03802281368821293,
       "samples": 12,
       "affectedBuilds": 4,
-      "meanWinRateImpact": 0.06216666666666667,
-      "meanWinRateImpactPp": 6.216666666666667,
-      "meanHpImpact": -3.3465000000000007,
-      "meanTurnImpact": 3.690000000000001,
-      "maxWinRateImpactPp": 30.599999999999994,
-      "minWinRateImpactPp": -2.9000000000000004
+      "meanWinRateImpact": 0.03625000000000001,
+      "meanWinRateImpactPp": 3.6250000000000013,
+      "meanHpImpact": -5.527500000000001,
+      "meanTurnImpact": 3.1750000000000007,
+      "maxWinRateImpactPp": 25.500000000000007,
+      "minWinRateImpactPp": -5
     },
     {
       "tag": "咏唱",
@@ -434,11 +449,11 @@
       "prevalence": 0.060836501901140684,
       "samples": 12,
       "affectedBuilds": 4,
-      "meanWinRateImpact": 0.18725,
-      "meanWinRateImpactPp": 18.725,
-      "meanHpImpact": 10.6695,
-      "meanTurnImpact": -0.6984166666666667,
-      "maxWinRateImpactPp": 80.30000000000001,
+      "meanWinRateImpact": 0.18666666666666665,
+      "meanWinRateImpactPp": 18.666666666666664,
+      "meanHpImpact": 10.312499999999998,
+      "meanTurnImpact": -0.5879166666666666,
+      "maxWinRateImpactPp": 77.49999999999999,
       "minWinRateImpactPp": 0
     },
     {
@@ -449,12 +464,12 @@
       "prevalence": 0.045627376425855515,
       "samples": 18,
       "affectedBuilds": 6,
-      "meanWinRateImpact": 0.07677777777777778,
-      "meanWinRateImpactPp": 7.677777777777778,
-      "meanHpImpact": 1.5853888888888892,
-      "meanTurnImpact": 1.2399444444444443,
-      "maxWinRateImpactPp": 39.6,
-      "minWinRateImpactPp": -6.3
+      "meanWinRateImpact": 0.07194444444444442,
+      "meanWinRateImpactPp": 7.194444444444442,
+      "meanHpImpact": 1.4936111111111119,
+      "meanTurnImpact": 1.1188888888888888,
+      "maxWinRateImpactPp": 34.5,
+      "minWinRateImpactPp": -7.9999999999999964
     },
     {
       "tag": "蓄力",
@@ -464,11 +479,11 @@
       "prevalence": 0.030418250950570342,
       "samples": 6,
       "affectedBuilds": 2,
-      "meanWinRateImpact": 0.09133333333333334,
-      "meanWinRateImpactPp": 9.133333333333333,
-      "meanHpImpact": 6.010333333333333,
-      "meanTurnImpact": -0.06233333333333335,
-      "maxWinRateImpactPp": 17.700000000000003,
+      "meanWinRateImpact": 0.16916666666666666,
+      "meanWinRateImpactPp": 16.916666666666664,
+      "meanHpImpact": 12.143333333333336,
+      "meanTurnImpact": 0.6066666666666665,
+      "maxWinRateImpactPp": 40,
       "minWinRateImpactPp": 0
     },
     {
@@ -479,26 +494,26 @@
       "prevalence": 0.049429657794676805,
       "samples": 12,
       "affectedBuilds": 4,
-      "meanWinRateImpact": 0.084,
-      "meanWinRateImpactPp": 8.4,
-      "meanHpImpact": 5.717333333333333,
-      "meanTurnImpact": -0.2605833333333334,
-      "maxWinRateImpactPp": 17.400000000000006,
+      "meanWinRateImpact": 0.08625000000000001,
+      "meanWinRateImpactPp": 8.625,
+      "meanHpImpact": 8.042083333333332,
+      "meanTurnImpact": -0.38874999999999993,
+      "maxWinRateImpactPp": 15.500000000000004,
       "minWinRateImpactPp": 0
     },
     {
-      "tag": "错身",
+      "tag": "闪避",
       "group": "防御恢复",
       "modeled": true,
       "cardCount": 4,
       "prevalence": 0.015209125475285171,
       "samples": 18,
       "affectedBuilds": 6,
-      "meanWinRateImpact": 0.03372222222222224,
-      "meanWinRateImpactPp": 3.3722222222222236,
-      "meanHpImpact": 2.267,
-      "meanTurnImpact": -0.42427777777777786,
-      "maxWinRateImpactPp": 17.200000000000003,
+      "meanWinRateImpact": 0.2175,
+      "meanWinRateImpactPp": 21.75,
+      "meanHpImpact": 18.803888888888896,
+      "meanTurnImpact": -3.168611111111111,
+      "maxWinRateImpactPp": 57.00000000000001,
       "minWinRateImpactPp": 0
     },
     {
@@ -509,12 +524,12 @@
       "prevalence": 0.06463878326996197,
       "samples": 18,
       "affectedBuilds": 6,
-      "meanWinRateImpact": 0.034333333333333334,
-      "meanWinRateImpactPp": 3.4333333333333336,
-      "meanHpImpact": 1.0956111111111109,
-      "meanTurnImpact": 0.6808888888888891,
-      "maxWinRateImpactPp": 14.400000000000002,
-      "minWinRateImpactPp": -1.2999999999999998
+      "meanWinRateImpact": 0.02972222222222223,
+      "meanWinRateImpactPp": 2.9722222222222228,
+      "meanHpImpact": 0.15888888888888925,
+      "meanTurnImpact": 1.2366666666666672,
+      "maxWinRateImpactPp": 15.000000000000002,
+      "minWinRateImpactPp": -1.5000000000000013
     },
     {
       "tag": "连击",
@@ -524,12 +539,12 @@
       "prevalence": 0.015209125475285171,
       "samples": 6,
       "affectedBuilds": 2,
-      "meanWinRateImpact": 0.000833333333333334,
-      "meanWinRateImpactPp": 0.0833333333333334,
-      "meanHpImpact": 0.1225000000000005,
-      "meanTurnImpact": 0.009499999999999916,
-      "maxWinRateImpactPp": 0.7000000000000006,
-      "minWinRateImpactPp": -0.30000000000000027
+      "meanWinRateImpact": -0.006666666666666669,
+      "meanWinRateImpactPp": -0.6666666666666669,
+      "meanHpImpact": -0.088333333333333,
+      "meanTurnImpact": 0.03916666666666665,
+      "maxWinRateImpactPp": 1.0000000000000009,
+      "minWinRateImpactPp": -3.500000000000003
     },
     {
       "tag": "易伤",
@@ -539,27 +554,27 @@
       "prevalence": 0.07224334600760456,
       "samples": 30,
       "affectedBuilds": 10,
-      "meanWinRateImpact": 0.029899999999999996,
-      "meanWinRateImpactPp": 2.9899999999999998,
-      "meanHpImpact": 1.4172000000000002,
-      "meanTurnImpact": 0.19549999999999984,
-      "maxWinRateImpactPp": 22.3,
-      "minWinRateImpactPp": -1.4000000000000012
+      "meanWinRateImpact": 0.02766666666666667,
+      "meanWinRateImpactPp": 2.766666666666667,
+      "meanHpImpact": 1.661166666666667,
+      "meanTurnImpact": 0.2528333333333333,
+      "maxWinRateImpactPp": 28.000000000000004,
+      "minWinRateImpactPp": -3.500000000000003
     },
     {
       "tag": "虚弱",
       "group": "状态控制",
       "modeled": true,
-      "cardCount": 9,
-      "prevalence": 0.034220532319391636,
+      "cardCount": 10,
+      "prevalence": 0.03802281368821293,
       "samples": 18,
       "affectedBuilds": 6,
-      "meanWinRateImpact": 0.06894444444444445,
-      "meanWinRateImpactPp": 6.894444444444445,
-      "meanHpImpact": 3.3836666666666666,
-      "meanTurnImpact": -0.5383888888888888,
-      "maxWinRateImpactPp": 18.200000000000006,
-      "minWinRateImpactPp": 0
+      "meanWinRateImpact": 0.0788888888888889,
+      "meanWinRateImpactPp": 7.888888888888889,
+      "meanHpImpact": 4.229166666666668,
+      "meanTurnImpact": -0.5902777777777778,
+      "maxWinRateImpactPp": 22.5,
+      "minWinRateImpactPp": -0.5000000000000004
     },
     {
       "tag": "充能",
@@ -569,12 +584,12 @@
       "prevalence": 0.011406844106463879,
       "samples": 6,
       "affectedBuilds": 2,
-      "meanWinRateImpact": -0.0023333333333333344,
-      "meanWinRateImpactPp": -0.23333333333333345,
-      "meanHpImpact": 0.019999999999999574,
-      "meanTurnImpact": 0.02249999999999967,
-      "maxWinRateImpactPp": 0.20000000000000018,
-      "minWinRateImpactPp": -1.0000000000000009
+      "meanWinRateImpact": 0.012500000000000023,
+      "meanWinRateImpactPp": 1.2500000000000022,
+      "meanHpImpact": 0.664166666666666,
+      "meanTurnImpact": -0.020000000000000313,
+      "maxWinRateImpactPp": 3,
+      "minWinRateImpactPp": -0.49999999999998934
     },
     {
       "tag": "荆棘",
@@ -584,42 +599,42 @@
       "prevalence": 0.022813688212927757,
       "samples": 6,
       "affectedBuilds": 2,
-      "meanWinRateImpact": 0.07966666666666665,
-      "meanWinRateImpactPp": 7.966666666666665,
-      "meanHpImpact": 3.633666666666666,
-      "meanTurnImpact": 1.6405,
-      "maxWinRateImpactPp": 13.200000000000001,
+      "meanWinRateImpact": 0.10666666666666669,
+      "meanWinRateImpactPp": 10.666666666666668,
+      "meanHpImpact": 4.2375,
+      "meanTurnImpact": 1.195,
+      "maxWinRateImpactPp": 19.500000000000007,
       "minWinRateImpactPp": 0
     },
     {
       "tag": "治愈",
       "group": "防御恢复",
       "modeled": true,
-      "cardCount": 3,
-      "prevalence": 0.011406844106463879,
-      "samples": 24,
-      "affectedBuilds": 8,
-      "meanWinRateImpact": 0.011999999999999997,
-      "meanWinRateImpactPp": 1.1999999999999997,
-      "meanHpImpact": 1.343208333333333,
-      "meanTurnImpact": -0.12904166666666672,
-      "maxWinRateImpactPp": 3.4999999999999973,
-      "minWinRateImpactPp": -0.10000000000000009
+      "cardCount": 1,
+      "prevalence": 0.0038022813688212928,
+      "samples": 18,
+      "affectedBuilds": 6,
+      "meanWinRateImpact": 0.008888888888888892,
+      "meanWinRateImpactPp": 0.8888888888888893,
+      "meanHpImpact": 1.0361111111111112,
+      "meanTurnImpact": -0.09361111111111112,
+      "maxWinRateImpactPp": 3.0000000000000027,
+      "minWinRateImpactPp": -1.5000000000000013
     },
     {
       "tag": "销毁",
       "group": "代价条件",
       "modeled": true,
-      "cardCount": 17,
-      "prevalence": 0.06463878326996197,
+      "cardCount": 18,
+      "prevalence": 0.06844106463878327,
       "samples": 48,
       "affectedBuilds": 16,
-      "meanWinRateImpact": -0.004687499999999996,
-      "meanWinRateImpactPp": -0.4687499999999996,
-      "meanHpImpact": -0.2726250000000003,
-      "meanTurnImpact": -0.01495833333333337,
-      "maxWinRateImpactPp": 2.100000000000002,
-      "minWinRateImpactPp": -2.799999999999997
+      "meanWinRateImpact": 0.006145833333333334,
+      "meanWinRateImpactPp": 0.6145833333333334,
+      "meanHpImpact": 0.6695833333333336,
+      "meanTurnImpact": -0.20802083333333318,
+      "maxWinRateImpactPp": 7.499999999999996,
+      "minWinRateImpactPp": -3.9999999999999982
     }
   ],
   "cardRisks": [
@@ -764,41 +779,61 @@
       "riskScore": 6
     },
     {
-      "id": "warrior_thorn_charge",
-      "name": "棘甲冲锋",
-      "roleId": "hero_warrior",
-      "role": "勇者战士",
-      "source": "cardPool",
-      "type": "攻击",
-      "cost": 2,
-      "rarity": "稀有",
+      "id": "a_gale_updraft",
+      "name": "上升气流",
+      "roleId": "hero_archer",
+      "role": "精灵弓箭手",
+      "source": "epicCore",
+      "type": "能力",
+      "cost": 1,
+      "rarity": "史诗",
       "tags": [
-        "圣剑",
-        "荆棘"
+        "蓄力",
+        "闪避"
       ],
       "highPowerTags": [
-        "圣剑",
-        "荆棘"
+        "蓄力",
+        "闪避"
       ],
       "mediumPowerTags": [],
       "riskScore": 6
     },
     {
-      "id": "warrior_thorn_turn",
-      "name": "棘盾转锋",
+      "id": "a_gale_crosswind",
+      "name": "侧风判线",
+      "roleId": "hero_archer",
+      "role": "精灵弓箭手",
+      "source": "epicCore",
+      "type": "能力",
+      "cost": 1,
+      "rarity": "史诗",
+      "tags": [
+        "自然",
+        "闪避"
+      ],
+      "highPowerTags": [
+        "自然",
+        "闪避"
+      ],
+      "mediumPowerTags": [],
+      "riskScore": 6
+    },
+    {
+      "id": "warrior_blood_debt",
+      "name": "血债清算",
       "roleId": "hero_warrior",
       "role": "勇者战士",
       "source": "cardPool",
       "type": "攻击",
       "cost": 2,
-      "rarity": "稀有",
+      "rarity": "史诗",
       "tags": [
-        "圣剑",
-        "荆棘"
+        "血债",
+        "吸血"
       ],
       "highPowerTags": [
-        "圣剑",
-        "荆棘"
+        "血债",
+        "吸血"
       ],
       "mediumPowerTags": [],
       "riskScore": 6
@@ -864,6 +899,26 @@
       "riskScore": 6
     },
     {
+      "id": "archer_lost_arrow_mark",
+      "name": "遗箭定位",
+      "roleId": "hero_archer",
+      "role": "精灵弓箭手",
+      "source": "cardPool",
+      "type": "能力",
+      "cost": 2,
+      "rarity": "稀有",
+      "tags": [
+        "回收",
+        "闪避"
+      ],
+      "highPowerTags": [
+        "回收",
+        "闪避"
+      ],
+      "mediumPowerTags": [],
+      "riskScore": 6
+    },
+    {
       "id": "archer_forest_specimen",
       "name": "归林标本",
       "roleId": "hero_archer",
@@ -893,32 +948,12 @@
       "cost": 2,
       "rarity": "史诗",
       "tags": [
-        "吸血",
-        "血祭"
+        "血债",
+        "吸血"
       ],
       "highPowerTags": [
-        "吸血",
-        "血祭"
-      ],
-      "mediumPowerTags": [],
-      "riskScore": 6
-    },
-    {
-      "id": "w_thorn_judgement",
-      "name": "荆冠审判",
-      "roleId": "hero_warrior",
-      "role": "勇者战士",
-      "source": "epicCore",
-      "type": "攻击",
-      "cost": 2,
-      "rarity": "史诗",
-      "tags": [
-        "圣剑",
-        "荆棘"
-      ],
-      "highPowerTags": [
-        "圣剑",
-        "荆棘"
+        "血债",
+        "吸血"
       ],
       "mediumPowerTags": [],
       "riskScore": 6

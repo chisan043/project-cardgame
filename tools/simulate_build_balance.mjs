@@ -186,6 +186,15 @@ function cloneForSimulation(card, disabledTags = null) {
     if (disabledTags?.size && result.tags && !result.isSpecial) {
         result.tags = result.tags.filter(tag => !disabledTags.has(tag));
     }
+    if (disabledTags?.has('血债') && !result.isSpecial) {
+        for (const key of [
+            'bloodDebtGain', 'bloodDebtPowerGain', 'bloodDebtSettlementMultiplier',
+            'bloodDebtDamageRatio', 'bloodDebtRepay', 'bloodDebtRepayFromBleed',
+            'bloodDebtSpendAll', 'bloodDebtSpendDamage', 'bloodDebtClearDamage',
+            'bloodDebtClearHeal', 'bloodDebtDrawOnRepay', 'bloodDebtBleed',
+            'bloodDebtWeak', 'bloodDebtStun'
+        ]) delete result[key];
+    }
     return result;
 }
 
@@ -279,6 +288,7 @@ function createBattle(data, rng, roleId, deck, hp, checkpoint, loadout, options 
         energy: character.baseEnergy, armor: roleId === 'hero_warrior' ? 5 : 0,
         thorns: 0, protection: 0, counter: 0, chant: 0, aim: 0, sidestep: 0,
         battleDamage: 0, turnDamage: 0, nextDamage: 0, weak: 0, vuln: 0,
+        bloodDebt: 0, bloodDebtPaid: 0, bloodDebtPower: 1, bloodDebtSettlementMultiplier: 1,
         poison: 0, bleed: 0, burn: 0, curse: 0,
         drawPile: shuffle(rng, deck.map(clone)), discard: [], exhaust: [], destroyed: [], hand: [], retained: [],
         lastCard: null, cardsPlayed: 0, enemy, encounterName: enemy.name, turns: 0,
@@ -288,6 +298,7 @@ function createBattle(data, rng, roleId, deck, hp, checkpoint, loadout, options 
         playStyle: { attacks: 0, defenses: 0, abilities: 0, setup: 0, burst: 0, sustain: 0, control: 0, cycle: 0 },
         protectArmorUsed: false, chantReservoirUsed: false, tailwindSpoolUsed: false,
         echoArchivePinUsed: false, statusLedgerUsed: false, abilityCardsPlayed: 0,
+        bloodDebtReductionUsed: false, bloodClearUsed: false, scarletWhetUsed: false, oathTransfusionUsed: false, lifedebtClearUsed: false,
         knifeSequence: 0
     };
     if (hasRelic(state, 'r_thorn_shield_new')) state.armor += 6;
@@ -296,6 +307,55 @@ function createBattle(data, rng, roleId, deck, hp, checkpoint, loadout, options 
 
 function hasRelic(state, relicId) {
     return state.relics.has(relicId);
+}
+
+function addBloodDebt(state, amount) {
+    let gain = Math.max(0, Math.floor(Number(amount) || 0));
+    if (gain <= 0) return 0;
+    if (hasRelic(state, 'r_blood_suture') && !state.bloodDebtReductionUsed) {
+        state.bloodDebtReductionUsed = true;
+        gain = Math.max(0, gain - 2);
+        state.turnDamage += 4;
+    }
+    state.bloodDebt = Math.min(40, state.bloodDebt + gain);
+    if (hasRelic(state, 'r_scarlet_whet') && !state.scarletWhetUsed) {
+        state.scarletWhetUsed = true;
+        state.turnDamage += 3;
+    }
+    return gain;
+}
+
+function repayBloodDebt(state, amount) {
+    const before = state.bloodDebt;
+    const paid = Math.min(before, Math.max(0, Math.floor(Number(amount) || 0)));
+    if (paid <= 0) return { paid: 0, cleared: false };
+    state.bloodDebt -= paid;
+    state.bloodDebtPaid += paid;
+    const cleared = before > 0 && state.bloodDebt === 0;
+    if (cleared && hasRelic(state, 'r_bloodoath_contract') && !state.bloodClearUsed) {
+        state.bloodClearUsed = true;
+        state.battleDamage += Math.min(4, Math.max(1, Math.floor(state.bloodDebtPaid / 3)));
+    }
+    if (cleared && hasRelic(state, 'r_oath_transfusion') && !state.oathTransfusionUsed) {
+        state.oathTransfusionUsed = true;
+        state.energy++;
+    }
+    if (cleared && hasRelic(state, 'r_lifedebt_scale') && state.hp <= state.maxHp / 2 && !state.lifedebtClearUsed) {
+        state.lifedebtClearUsed = true;
+        heal(state, 6);
+    }
+    return { paid, cleared };
+}
+
+function settleBloodDebt(state) {
+    if (state.bloodDebt <= 0) return 0;
+    const loss = Math.max(1, Math.ceil(state.bloodDebt * Math.max(1, state.bloodDebtSettlementMultiplier)));
+    const actual = Math.min(Math.max(0, state.hp - 1), loss);
+    state.hp -= actual;
+    state.damageTaken += actual;
+    if (actual > 0) state.lastDamageCause = '血债清算';
+    state.bloodDebt = 0;
+    return actual;
 }
 
 function enemyDebuffCount(state) {
@@ -310,20 +370,20 @@ function cardMetricKey(card) {
 function recordCardOpportunity(state, card) {
     const key = cardMetricKey(card);
     state.cardOpportunities[key] = (state.cardOpportunities[key] || 0) + 1;
-    state.cardMeta[key] ||= { name: card.name, cost: card.cost || 0, type: card.type, tags: [...(card.tags || [])] };
+    state.cardMeta[key] ||= { name: card.name, cost: card.cost || 0, type: card.type, tags: [...(card.tags || [])], directEffects: { ...(card.directEffects || {}) } };
 }
 
 function recordCardPlay(state, card) {
     const key = cardMetricKey(card);
     state.cardPlays[key] = (state.cardPlays[key] || 0) + 1;
-    state.cardMeta[key] ||= { name: card.name, cost: card.cost || 0, type: card.type, tags: [...(card.tags || [])] };
+    state.cardMeta[key] ||= { name: card.name, cost: card.cost || 0, type: card.type, tags: [...(card.tags || [])], directEffects: { ...(card.directEffects || {}) } };
     if (card.type === '攻击') state.playStyle.attacks++;
     else if (card.type === '防御') state.playStyle.defenses++;
     else state.playStyle.abilities++;
     const tags = card.tags || [];
-    if (tags.some(tag => ['咏唱', '蓄力', '血祭', '自然'].includes(tag))) state.playStyle.setup++;
+    if (tags.some(tag => ['咏唱', '蓄力', '血祭', '血债', '自然'].includes(tag)) || card.bloodDebtGain) state.playStyle.setup++;
     if (tags.some(tag => ['爆发', '重击', '穿甲', '追击', '放血', '圣剑'].includes(tag))) state.playStyle.burst++;
-    if (tags.some(tag => ['庇护', '反击', '闪避', '吸血', '荆棘', '治愈', '保留'].includes(tag))) state.playStyle.sustain++;
+    if (tags.some(tag => ['庇护', '反击', '闪避', '吸血', '荆棘', '治愈', '保留'].includes(tag)) || card.bloodDebtRepay || card.bloodDebtRepayFromBleed) state.playStyle.sustain++;
     if (tags.some(tag => ['剧毒', '出血', '燃烧', '眩晕', '诅咒', '易伤', '虚弱'].includes(tag))) state.playStyle.control++;
     if (tags.some(tag => ['抽牌', '充能', '重置', '回响', '复刻', '回收', '放逐', '销毁'].includes(tag))) state.playStyle.cycle++;
 }
@@ -471,9 +531,11 @@ function estimateCard(state, card, incoming, move) {
     if (card.isSpecial) {
         const synergyCards = state.hand.filter(held => held !== card && (held.tags || []).some(tag => tags.includes(tag))).length;
         const specialScores = {
-            w_oath_fortress: Math.min(incoming + 9, 20),
+            w_oath_fortress: Math.min(incoming + 18, 32) + 8,
             w_last_verdict: 54 + state.enemy.vuln * 8 + synergyCards * 10,
-            a_syn_blood: state.hp > 18 ? 44 + synergyCards * 17 + state.enemy.bleed * 5 : 10,
+            a_syn_blood: state.bloodDebt > 0
+                ? 18 + state.bloodDebt * 6 + Math.min(state.maxHp - state.hp, 12)
+                : -16,
             m_forbidden_comet: 48 + state.chant * 17,
             m_echo_archive: state.lastCard ? 22 : 8,
             m_status_supernova: 36 + enemyDebuffCount(state) * 13,
@@ -489,10 +551,14 @@ function estimateCard(state, card, incoming, move) {
     let repeats = 1 + (tags.includes('追击') ? 1 : 0) + (tags.includes('回响') ? 1 : 0);
     if (card.type === '攻击') {
         if (tags.includes('爆发')) value += state.chant ? state.chant * 7 : 4;
-        if (tags.includes('圣剑')) value += Math.floor(state.armor * (hasRelic(state, 'r_sword_oath') ? 0.6 : 0.5)) + state.counter * 4;
+        if (tags.includes('圣剑')) value += Math.floor(state.armor * (hasRelic(state, 'r_sword_oath') ? 0.7 : 0.5)) + state.counter * 4;
+        if (card.bloodDebtDamageRatio) value += state.bloodDebt * Number(card.bloodDebtDamageRatio) * state.bloodDebtPower;
         score += value * repeats * (tags.includes('穿甲') ? 1.12 : 1);
         if (tags.includes('放血')) score += state.enemy.bleed * 3;
-        if (tags.includes('吸血')) score += Math.min(state.maxHp - state.hp, value / 2) * 0.8;
+        if (tags.includes('吸血')) {
+            const ratio = Number.isFinite(Number(card.lifestealRatio)) ? Number(card.lifestealRatio) : (card.rarity === '史诗' ? 1 : 0.5);
+            score += Math.min(state.maxHp - state.hp + state.bloodDebt, value * ratio) * 0.8;
+        }
     }
     const hasProtection = tags.includes('庇护') || state.data.hasDirectCardEffect(card, 'protection');
     const hasHeal = tags.includes('治愈') || state.data.hasDirectCardEffect(card, 'heal');
@@ -503,6 +569,30 @@ function estimateCard(state, card, incoming, move) {
     if (hasHeal) score += Math.min(state.maxHp - state.hp, state.data.getCardHealValue(card)) * 1.15;
     if (hasDraw) score += state.data.getCardDrawCount(card) * 5;
     if (hasEnergy || tags.includes('自然')) score += 5;
+    if (card.bloodDebtGain) {
+        const repaymentCapacity = state.hand.reduce((sum, held) => {
+            if (held === card) return sum;
+            if (held.bloodDebtSpendAll) return sum + 40;
+            let capacity = Number(held.bloodDebtRepay) || 0;
+            if ((held.tags || []).includes('吸血')) {
+                const ratio = Number.isFinite(Number(held.lifestealRatio)) ? Number(held.lifestealRatio) : (held.rarity === '史诗' ? 1 : 0.5);
+                capacity += Math.max(1, Math.floor((Number(held.val) || 0) * ratio));
+            }
+            if (held.bloodDebtRepayFromBleed) capacity += state.enemy.bleed * 3 * Number(held.bloodDebtRepayFromBleed);
+            return sum + capacity;
+        }, 0);
+        const projectedDebt = state.bloodDebt + Number(card.bloodDebtGain);
+        const unsafeDebt = Math.max(0, projectedDebt - repaymentCapacity - 3);
+        score += repaymentCapacity > 0 ? card.bloodDebtGain * 1.6 : card.bloodDebtGain * 0.25;
+        score -= unsafeDebt * 3 * Math.max(1, Number(card.bloodDebtSettlementMultiplier) || 1);
+        if (state.hp <= 12) score -= card.bloodDebtGain * 1.5;
+    }
+    if (card.bloodDebtRepay) score += Math.min(state.bloodDebt, card.bloodDebtRepay) * 2.2;
+    if (card.bloodDebtRepayFromBleed) score += Math.min(state.bloodDebt, state.enemy.bleed * 3 * card.bloodDebtRepayFromBleed) * 1.5;
+    if (card.bloodDebtClearDamage && state.bloodDebt > 0) score += card.bloodDebtClearDamage * 0.5;
+    if (card.bloodDebtBleed) score += card.bloodDebtBleed * 1.6;
+    if (card.bloodDebtWeak) score += incoming > 0 ? card.bloodDebtWeak * 4 : card.bloodDebtWeak * 2;
+    if (card.bloodDebtStun) score += 13 * card.bloodDebtStun;
     if (tags.includes('反击')) score += incoming > 0 ? 10 : 4;
     if (tags.includes('回响') && card.type !== '攻击') score += 4;
     if (tags.includes('附魔')) {
@@ -524,8 +614,14 @@ function estimateCard(state, card, incoming, move) {
         }
     }
     if (tags.includes('眩晕')) score += 13;
-    if (tags.includes('虚弱')) score += incoming > 0 ? 8 : 4;
-    if (tags.includes('易伤')) score += 7;
+    if (tags.includes('虚弱')) {
+        const potency = card.type === '能力' ? state.data.getAbilityPotency(card) : 1;
+        score += (incoming > 0 ? 8 : 4) + Math.max(0, potency - 1) * 2;
+    }
+    if (tags.includes('易伤')) {
+        const potency = card.type === '能力' ? state.data.getAbilityPotency(card) : 1;
+        score += 7 + Math.max(0, potency - 1) * 3;
+    }
     if (tags.includes('剧毒')) score += 8;
     if (tags.includes('出血')) score += 7;
     if (tags.includes('燃烧')) score += 8;
@@ -579,23 +675,24 @@ function discardPlayedCard(state, card) {
 function executeSpecialCard(state, card) {
     const specialId = card.specialId || card.id;
     if (specialId === 'w_oath_fortress') {
-        state.armor += 9;
-        state.protection += 3 + (hasRelic(state, 'r_protect_armor') ? 3 : 0);
-        if (state.hp < state.maxHp / 2) state.counter = 1;
+        state.armor += 18;
+        state.protection += 6 + (hasRelic(state, 'r_protect_armor') ? 3 : 0);
+        state.counter = 1;
     } else if (specialId === 'w_last_verdict') {
         const executionHand = state.hand.filter(held => (held.tags || []).some(tag => ['连击', '穿甲'].includes(tag))).length;
         const bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.15) : 0;
         hitEnemy(state, 44 + state.battleDamage + state.enemy.vuln * 8 + executionHand * 12 + bossBonus, true);
         state.protection += Math.min(28, 12 + executionHand * 4);
     } else if (specialId === 'a_syn_blood') {
-        const bloodHand = state.hand.filter(held => (held.tags || []).some(tag => ['血祭', '吸血', '出血', '放血'].includes(tag))).length;
-        state.hp = Math.max(1, state.hp - bloodHand * 2);
-        const bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.21) : 0;
-        const dealt = hitEnemy(state, 32 + bloodHand * 20 + state.enemy.bleed * 8 + state.battleDamage + bossBonus);
-        let healing = Math.floor(dealt / 2);
+        const spentDebt = state.bloodDebt;
+        if (spentDebt > 0) repayBloodDebt(state, spentDebt);
+        const dealt = hitEnemy(state, (Number(card.val) || 24) + spentDebt * (card.bloodDebtSpendDamage || 5) + state.battleDamage, true);
+        let healing = Math.floor(dealt * (card.lifestealRatio || 0.5));
         if (hasRelic(state, 'r_lifedebt_scale') && state.hp <= state.maxHp / 2) healing = Math.floor(healing * 1.5);
-        const overheal = Math.max(0, healing - Math.max(0, state.maxHp - state.hp));
-        heal(state, healing);
+        const repayment = repayBloodDebt(state, healing);
+        const remainingHeal = healing - repayment.paid;
+        const overheal = Math.max(0, remainingHeal - Math.max(0, state.maxHp - state.hp));
+        heal(state, remainingHeal + (spentDebt > 0 ? (card.bloodDebtClearHeal || 0) : 0));
         if (hasRelic(state, 'r_vamp_ring') && overheal > 0) state.battleDamage += Math.min(5, overheal);
     } else if (specialId === 'm_forbidden_comet') {
         const chantSpent = state.chant;
@@ -655,6 +752,11 @@ function executeCard(state, card, echo = false) {
     if (card.isSpecial && executeSpecialCard(state, card)) return;
     let cycleReturned = false;
     let resetCount = 0;
+    let debtClearedByCard = false;
+    let debtPaidByCard = 0;
+    if (!echo && card.bloodDebtGain) addBloodDebt(state, card.bloodDebtGain);
+    if (!echo && card.bloodDebtPowerGain) state.bloodDebtPower += Number(card.bloodDebtPowerGain) || 0;
+    if (!echo && card.bloodDebtSettlementMultiplier) state.bloodDebtSettlementMultiplier = Math.max(state.bloodDebtSettlementMultiplier, Number(card.bloodDebtSettlementMultiplier) || 1);
     if (tags.includes('血祭')) {
         state.hp = Math.max(1, state.hp - 4);
         state.battleDamage += card.up ? 5 : 3;
@@ -716,6 +818,14 @@ function executeCard(state, card, echo = false) {
     if (statusBonus > 0 && !echo) state.protection += 4;
     if (tags.includes('剧毒')) state.enemy.poison += 3 * (card.type === '能力' ? state.data.getAbilityPotency(card) : 1) + statusBonus + (hasRelic(state, 'r_poison_fang') ? 1 : 0);
     if (tags.includes('出血')) state.enemy.bleed += 3 * (card.type === '能力' ? state.data.getAbilityPotency(card) : 1) + statusBonus + (hasRelic(state, 'r_poison_fang') ? 1 : 0);
+    if (card.bloodDebtBleed) {
+        state.enemy.bleed += Math.max(0, Math.floor(card.bloodDebtBleed));
+        if (hasRelic(state, 'r_vein_cup')) {
+            const result = repayBloodDebt(state, 1);
+            debtPaidByCard += result.paid;
+            debtClearedByCard ||= result.cleared;
+        }
+    }
     if (tags.includes('燃烧')) state.enemy.burn += (card.type === '能力' ? state.data.getAbilityPotency(card) : 1) + statusBonus;
     if (tags.includes('诅咒')) {
         state.enemy.curse += 2 * (card.type === '能力' ? state.data.getAbilityPotency(card) : 1) + statusBonus;
@@ -723,6 +833,8 @@ function executeCard(state, card, echo = false) {
     }
     if (tags.includes('易伤')) state.enemy.vuln += 2 * (card.type === '能力' ? state.data.getAbilityPotency(card) : 1);
     if (tags.includes('虚弱')) state.enemy.weak += 2 * (card.type === '能力' ? state.data.getAbilityPotency(card) : 1);
+    if (card.bloodDebtWeak) state.enemy.weak += Math.max(0, Math.floor(card.bloodDebtWeak));
+    if (card.bloodDebtStun) state.enemy.stun += Math.max(0, Math.floor(card.bloodDebtStun));
     if (tags.includes('眩晕')) state.enemy.stun += 1;
     if (tags.includes('回收') && !echo) {
         for (const mode of state.data.getCardRecycleModes(card)) {
@@ -732,8 +844,19 @@ function executeCard(state, card, echo = false) {
         }
     }
     if (tags.includes('放血') && state.enemy.bleed > 0) {
-        hitEnemy(state, state.enemy.bleed * (hasRelic(state, 'r_bleed_knife') ? 5 : 3), true);
-        state.enemy.bleed = hasRelic(state, 'r_rupture_charm') ? 2 : 0;
+        const bloodletDamage = state.enemy.bleed * (hasRelic(state, 'r_bleed_knife') ? 5 : 3);
+        hitEnemy(state, bloodletDamage, true);
+        if (card.bloodDebtRepayFromBleed) {
+            const result = repayBloodDebt(state, Math.floor(bloodletDamage * Number(card.bloodDebtRepayFromBleed)));
+            debtPaidByCard += result.paid;
+            debtClearedByCard ||= result.cleared;
+        }
+        state.enemy.bleed = hasRelic(state, 'r_rupture_charm') ? 3 : 0;
+        if (hasRelic(state, 'r_rupture_charm')) {
+            const result = repayBloodDebt(state, 2);
+            debtPaidByCard += result.paid;
+            debtClearedByCard ||= result.cleared;
+        }
     }
     if (card.type === '防御') state.armor += state.data.getScaledCardValue(card);
     if (card.type === '攻击') {
@@ -741,8 +864,9 @@ function executeCard(state, card, echo = false) {
         if (tags.includes('重击')) value *= hasRelic(state, 'r_heavy_badge') ? 2.5 : 2;
         if (tags.includes('连击') && state.cardsPlayed > 0 && !echo) value = Math.floor(value * 1.5);
         let damage = value + state.battleDamage + state.turnDamage;
+        if (card.bloodDebtDamageRatio) damage += Math.floor(state.bloodDebt * Number(card.bloodDebtDamageRatio) * state.bloodDebtPower);
         if (tags.includes('放逐')) damage += Math.max(5, Math.floor(value * (hasRelic(state, 'r_exile_cache') ? 0.75 : 0.5)));
-        if (tags.includes('圣剑')) damage += Math.floor(state.armor * (hasRelic(state, 'r_sword_oath') ? 0.6 : 0.5)) + state.counter * 4;
+        if (tags.includes('圣剑')) damage += Math.floor(state.armor * (hasRelic(state, 'r_sword_oath') ? 0.7 : 0.5)) + state.counter * 4;
         if (tags.includes('爆发')) {
             const chantSpent = state.chant;
             damage += chantSpent > 0 ? chantSpent * 7 : 4;
@@ -767,13 +891,31 @@ function executeCard(state, card, echo = false) {
             state.protection += 10;
         }
         if (tags.includes('吸血')) {
-            let healing = card.rarity === '史诗' ? dealt : Math.floor(dealt / 2);
+            const lifestealRatio = Number.isFinite(Number(card.lifestealRatio)) ? Number(card.lifestealRatio) : (card.rarity === '史诗' ? 1 : 0.5);
+            let healing = Math.floor(dealt * lifestealRatio);
             if (hasRelic(state, 'r_lifedebt_scale') && state.hp <= state.maxHp / 2) healing = Math.floor(healing * 1.5);
-            const overheal = Math.max(0, healing - Math.max(0, state.maxHp - state.hp));
-            heal(state, healing);
+            if (hasRelic(state, 'r_blood') && state.enemy.bleed > 0) {
+                const bonus = repayBloodDebt(state, state.enemy.bleed);
+                debtPaidByCard += bonus.paid;
+                debtClearedByCard ||= bonus.cleared;
+            }
+            const result = repayBloodDebt(state, healing);
+            debtPaidByCard += result.paid;
+            debtClearedByCard ||= result.cleared;
+            const remainingHeal = healing - result.paid;
+            const overheal = Math.max(0, remainingHeal - Math.max(0, state.maxHp - state.hp));
+            heal(state, remainingHeal);
             if (hasRelic(state, 'r_vamp_ring') && overheal > 0) state.battleDamage += Math.min(5, overheal);
         }
     }
+    if (card.bloodDebtRepay) {
+        const result = repayBloodDebt(state, card.bloodDebtRepay);
+        debtPaidByCard += result.paid;
+        debtClearedByCard ||= result.cleared;
+    }
+    if (debtPaidByCard > 0 && card.bloodDebtDrawOnRepay && !echo) draw(state, card.bloodDebtDrawOnRepay);
+    if (debtClearedByCard && card.bloodDebtClearDamage) hitEnemy(state, card.bloodDebtClearDamage, true, '血债清偿');
+    if (debtClearedByCard && card.bloodDebtClearHeal) heal(state, card.bloodDebtClearHeal);
     if (tags.includes('复刻') && state.lastCard && !echo) executeCard(state, state.lastCard, true);
     if (tags.includes('重置') && !echo) {
         state.discard.push(...state.hand);
@@ -799,6 +941,14 @@ function playPlayerTurn(state, move) {
     state.tailwindSpoolUsed = false;
     state.echoArchivePinUsed = false;
     state.statusLedgerUsed = false;
+    state.bloodDebtPaid = 0;
+    state.bloodDebtPower = 1;
+    state.bloodDebtSettlementMultiplier = 1;
+    state.bloodDebtReductionUsed = false;
+    state.bloodClearUsed = false;
+    state.scarletWhetUsed = false;
+    state.oathTransfusionUsed = false;
+    state.lifedebtClearUsed = false;
     state.hand.push(...state.retained);
     state.retained.forEach(card => recordCardOpportunity(state, card));
     state.retained = [];
@@ -846,6 +996,7 @@ function playPlayerTurn(state, move) {
     state.discard.push(...state.hand.filter(card => !(card.tags || []).includes('保留') && !state.data.hasDirectCardEffect(card, 'retain')));
     state.retained.push(...state.hand.filter(card => (card.tags || []).includes('保留') || state.data.hasDirectCardEffect(card, 'retain')));
     state.hand = [];
+    settleBloodDebt(state);
 }
 
 function applyEnemyMove(state, move) {

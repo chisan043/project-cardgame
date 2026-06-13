@@ -102,6 +102,7 @@ function getCardBuildTags(data, roleId, card) {
 
 function getRelicBuildTags(data, roleId, relic) {
     const explicit = data.RELIC_BUILD_TAGS_BY_ID[relic.id] || [];
+    if (explicit.length) return explicit;
     const text = `${relic.name || ''}${relic.desc || ''}`;
     const inferred = [];
     for (const [buildTag, config] of Object.entries(data.BUILD_DIRECTIONS[roleId] || {})) {
@@ -130,12 +131,27 @@ function analyzeStarterBias(data, roleId, starter) {
     }
     const classPool = data.CHARACTER_CARD_POOLS[roleId] || [];
     const bloodoathShieldViolations = roleId === 'hero_warrior'
-        ? classPool.filter(card => getCardBuildTags(data, roleId, card).includes('bloodoath') && (
+        ? [
+            ...classPool.filter(card => getCardBuildTags(data, roleId, card).includes('bloodoath') && (
             card.type === '防御'
             || (card.tags || []).includes('庇护')
             || card.directEffects?.protection
-        )).map(card => card.name)
+            )).map(card => `卡牌：${card.name}`),
+            ...data.RELIC_POOL.filter(relic => getRelicBuildTags(data, roleId, relic).includes('bloodoath') && (
+                /(?:获得|转化为)[^。；]*(?:护盾|庇护)/.test(relic.desc || '') || relic.directEffects?.protection
+            )).map(relic => `遗物：${relic.name}`)
+        ]
         : [];
+    const bloodoathCards = roleId === 'hero_warrior'
+        ? classPool.filter(card => getCardBuildTags(data, roleId, card).includes('bloodoath'))
+        : [];
+    const bloodDebtRoleCoverage = roleId === 'hero_warrior' ? {
+        borrow: bloodoathCards.filter(card => card.bloodDebtGain > 0).map(card => card.name),
+        leverage: bloodoathCards.filter(card => card.bloodDebtDamageRatio > 0 || card.bloodDebtPowerGain > 0).map(card => card.name),
+        repay: bloodoathCards.filter(card => card.bloodDebtRepay > 0 || card.bloodDebtRepayFromBleed > 0 || (card.tags || []).includes('吸血')).map(card => card.name),
+        tension: bloodoathCards.filter(card => card.bloodDebtSettlementMultiplier > 1 || card.bloodDebtStun > 0).map(card => card.name)
+    } : null;
+    const bloodDebtCoveragePassed = !bloodDebtRoleCoverage || Object.values(bloodDebtRoleCoverage).every(cards => cards.length >= 2);
     const directionRewardCoverage = Object.fromEntries(directions.map(buildTag => {
         const exact = classPool.filter(card => {
             const tags = getCardBuildTags(data, roleId, card);
@@ -196,6 +212,7 @@ function analyzeStarterBias(data, roleId, starter) {
         && coreChoices.every(choice => choice.exists && directions.includes(choice.buildTag))
         && survivalIdentity.passed
         && bloodoathShieldViolations.length === 0
+        && bloodDebtCoveragePassed
         && coreTransforms.every(transform => transform.sourcePoolId === expectedSourcePoolId
             && transform.sourceCopies > 0
             && transform.transformedBuildTags.length === 1
@@ -207,6 +224,8 @@ function analyzeStarterBias(data, roleId, starter) {
         profileSpread,
         directionRewardCoverage,
         bloodoathShieldViolations,
+        bloodDebtRoleCoverage,
+        bloodDebtCoveragePassed,
         coreChoices,
         coreTransforms,
         survivalIdentity,
