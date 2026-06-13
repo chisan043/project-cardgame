@@ -695,8 +695,44 @@
         .status-badge:hover .status-tooltip, .relic-icon:hover .status-tooltip { visibility: visible; opacity: 1; z-index: 9999;}
 
         .vfx-layer { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 999; display: none; justify-content: center; align-items: center; overflow: hidden;}
-        .vfx-p-atk .slash { width: 0; height: 8px; background: white; box-shadow: 0 0 30px var(--water), 0 0 10px white; transform: rotate(-35deg); opacity: 0; border-radius: 50%;}
-        @keyframes pAtkAnim { 0% { width: 0; opacity: 1; transform: translate(-100px, 100px) rotate(-35deg); } 50% { width: 80vw; opacity: 1; transform: translate(0, 0) rotate(-35deg); } 100% { width: 80vw; opacity: 0; transform: translate(100px, -100px) rotate(-35deg); } }
+        .vfx-p-atk { position:fixed; display:none; align-items:initial; justify-content:initial; }
+        .player-attack-vfx-img {
+            position:absolute;
+            left:0;
+            top:0;
+            width:var(--player-vfx-width, 320px);
+            height:var(--player-vfx-height, 288px);
+            object-fit:contain;
+            opacity:0;
+            pointer-events:none;
+            mix-blend-mode:screen;
+            will-change:transform, opacity;
+        }
+        .vfx-p-atk.vfx-warrior .player-attack-vfx-img {
+            filter:drop-shadow(0 0 18px rgba(255,221,82,0.84));
+            animation:playerSlashVfx var(--player-vfx-duration, 390ms) ease-out both;
+        }
+        .vfx-p-atk.vfx-mage .player-attack-vfx-img {
+            filter:drop-shadow(0 0 22px rgba(181,91,255,0.88));
+            animation:playerProjectileVfx var(--player-vfx-duration, 385ms) linear both;
+        }
+        .vfx-p-atk.vfx-archer .player-attack-vfx-img {
+            filter:drop-shadow(0 0 16px rgba(218,241,112,0.74));
+            animation:playerProjectileVfx var(--player-vfx-duration, 340ms) linear both;
+        }
+        @keyframes playerSlashVfx {
+            0% { opacity:0; transform:scale(0.84); }
+            12% { opacity:1; }
+            68% { opacity:1; transform:scale(1.04); }
+            100% { opacity:0; transform:scale(1.08); }
+        }
+        @keyframes playerProjectileVfx {
+            0% { opacity:0; transform:translate3d(0, 0, 0) scale(0.82); }
+            10% { opacity:1; }
+            58% { opacity:1; transform:translate3d(var(--player-vfx-dx, 0px), var(--player-vfx-dy, 0px), 0) scale(1); }
+            82% { opacity:1; transform:translate3d(var(--player-vfx-dx, 0px), var(--player-vfx-dy, 0px), 0) scale(1.05); }
+            100% { opacity:0; transform:translate3d(var(--player-vfx-dx, 0px), var(--player-vfx-dy, 0px), 0) scale(1.05); }
+        }
         .vfx-p-def .shield-aura { width: 100px; height: 100px; border: 10px solid var(--water); border-radius: 50%; opacity: 0; position: absolute; bottom: 100px; box-shadow: 0 0 40px var(--water), inset 0 0 40px var(--water);}
         @keyframes pDefAnim { 0% { transform: scale(0.5); opacity: 0.8; } 100% { transform: scale(6); opacity: 0; border-width: 0px;} }
         .vfx-e-atk .slash { width: 0; height: 15px; background: white; box-shadow: 0 0 40px var(--crimson), 0 0 15px white; transform: rotate(45deg); opacity: 0; border-radius: 50%;}
@@ -1725,7 +1761,7 @@
 
 <div id="particles-layer"></div>
 
-<div id="vfx-p-atk" class="vfx-layer vfx-p-atk"><div class="slash"></div></div>
+<div id="vfx-p-atk" class="vfx-layer vfx-p-atk"><img id="player-attack-vfx-img" class="player-attack-vfx-img" alt=""></div>
 <div id="vfx-p-def" class="vfx-layer vfx-p-def"><div class="shield-aura"></div></div>
 <div id="vfx-e-atk" class="vfx-layer vfx-e-atk"><div class="slash"></div></div>
 <div id="vfx-e-def" class="vfx-layer vfx-e-def"><div class="shield-flash"></div></div>
@@ -1996,7 +2032,7 @@
 <script src="src/data/card-tags.js?v=20260612-tag-simplify"></script>
 <script src="src/data/cards.js?v=20260612-tag-simplify"></script>
 <script src="src/data/enemies.js?v=20260605-enemy-ai"></script>
-<script src="src/data/characters.js?v=20260525-data-split1"></script>
+<script src="src/data/characters.js?v=20260613-attack-vfx"></script>
 <script>
     function createEmbers() {
         const layer = document.getElementById('particles-layer');
@@ -4398,7 +4434,7 @@
             avatar.style.setProperty('--player-attack-offset-y', `${character.battleBackAttackOffset?.y || 0}px`);
             avatar.alt = character.name;
             avatar.className = `character-${character.id}`;
-            [...avatar.attackFrames, ...avatar.hurtFrames].forEach(frame => {
+            [...avatar.attackFrames, ...avatar.hurtFrames, ...(character.battleAttackVfxFrames || [])].forEach(frame => {
                 const animationFramePreload = new Image();
                 animationFramePreload.src = frame.src;
             });
@@ -5044,6 +5080,7 @@
 
     let playerAttackAnimationToken = 0;
     let playerHurtAnimationToken = 0;
+    let playerAttackVfxToken = 0;
     function triggerPlayerAttackAnimation() {
         const avatarFrame = document.querySelector('.player-avatar-frame');
         const avatar = document.getElementById('player-avatar-img');
@@ -5103,6 +5140,69 @@
         }, totalDuration);
     }
 
+    function positionPlayerAttackVfx(vfx, image, type) {
+        const playerRect = document.querySelector('.player-avatar-frame')?.getBoundingClientRect();
+        const enemyRect = document.getElementById('enemy-avatar-wrapper')?.getBoundingClientRect();
+        if (!playerRect || !enemyRect) return;
+
+        const target = {
+            x: enemyRect.left + enemyRect.width * 0.5,
+            y: enemyRect.top + enemyRect.height * 0.46
+        };
+        const size = type === 'warrior'
+            ? { width: 360, height: 468 }
+            : type === 'mage'
+                ? { width: 300, height: 270 }
+                : { width: 360, height: 240 };
+        const start = type === 'warrior'
+            ? target
+            : {
+                x: playerRect.left + playerRect.width * (type === 'mage' ? 0.71 : 0.76),
+                y: playerRect.top + playerRect.height * (type === 'mage' ? 0.48 : 0.46)
+            };
+
+        image.style.left = `${start.x - size.width / 2}px`;
+        image.style.top = `${start.y - size.height / 2}px`;
+        vfx.style.setProperty('--player-vfx-width', `${size.width}px`);
+        vfx.style.setProperty('--player-vfx-height', `${size.height}px`);
+        vfx.style.setProperty('--player-vfx-dx', `${target.x - start.x}px`);
+        vfx.style.setProperty('--player-vfx-dy', `${target.y - start.y}px`);
+    }
+
+    function triggerPlayerAttackVfx(vfx, timing, vfxToken) {
+        const character = getCurrentCharacter();
+        const image = document.getElementById('player-attack-vfx-img');
+        const frames = character.battleAttackVfxFrames || [];
+        if (!image || !frames.length) return 0;
+
+        const effectToken = ++playerAttackVfxToken;
+        const type = character.battleAttackVfxType || 'warrior';
+        const impactFrame = Math.min(character.battleAttackVfxImpactFrame || 0, frames.length - 1);
+        const impactLead = frames.slice(0, impactFrame).reduce((sum, frame) => sum + frame.duration, 0);
+        const startDelay = Math.max(0, timing.impactDelay - impactLead);
+        const totalDuration = frames.reduce((sum, frame) => sum + frame.duration, 0);
+        vfx.classList.remove('vfx-warrior', 'vfx-mage', 'vfx-archer');
+        vfx.classList.add(`vfx-${type}`);
+        vfx.style.setProperty('--player-vfx-duration', `${totalDuration}ms`);
+
+        setTimeout(() => {
+            if (vfx.animationToken !== vfxToken || effectToken !== playerAttackVfxToken) return;
+            positionPlayerAttackVfx(vfx, image, type);
+            image.style.animation = 'none';
+            image.src = frames[0].src;
+            void image.offsetWidth;
+            image.style.animation = '';
+            let elapsed = frames[0].duration;
+            frames.slice(1).forEach(frame => {
+                setTimeout(() => {
+                    if (vfx.animationToken === vfxToken && effectToken === playerAttackVfxToken) image.src = frame.src;
+                }, elapsed);
+                elapsed += frame.duration;
+            });
+        }, startDelay);
+        return startDelay + totalDuration;
+    }
+
     function triggerVFX(type) {
         const vfx = document.getElementById(`vfx-${type}`); const el = vfx.firstElementChild;
         const vfxToken = (vfx.animationToken || 0) + 1;
@@ -5111,16 +5211,18 @@
         let visibleDuration = 400;
         if(type==='p-atk') {
             const timing = triggerPlayerAttackAnimation();
-            visibleDuration = timing.duration + 120;
-            setTimeout(() => {
-                if (vfx.animationToken === vfxToken) el.style.animation = 'pAtkAnim 0.3s ease-in forwards';
-            }, timing.impactDelay);
+            const effectDuration = triggerPlayerAttackVfx(vfx, timing, vfxToken);
+            visibleDuration = Math.max(timing.duration + 120, effectDuration + 100);
         }
         if(type==='p-def') el.style.animation = 'pDefAnim 0.4s ease-out forwards';
         if(type==='e-atk') { el.style.animation = 'eAtkAnim 0.3s ease-in forwards'; document.getElementById('game-app').classList.add('screen-shake'); setTimeout(()=>document.getElementById('game-app').classList.remove('screen-shake'), 400); }
         if(type==='e-def') el.style.animation = 'eDefAnim 0.4s ease-out forwards';
         setTimeout(() => {
-            if (vfx.animationToken === vfxToken) vfx.style.display = 'none';
+            if (vfx.animationToken === vfxToken) {
+                vfx.style.display = 'none';
+                el.style.animation = 'none';
+                vfx.classList.remove('vfx-warrior', 'vfx-mage', 'vfx-archer');
+            }
         }, visibleDuration);
     }
 

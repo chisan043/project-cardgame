@@ -28,6 +28,16 @@ const CHARACTERS = {
         battleBackAttackScale: 1.38,
         battleBackAttackOffset: { x: 56, y: 6 },
         battleBackAttackImpactMs: 360,
+        battleAttackVfxType: 'warrior',
+        battleAttackVfxImpactFrame: 3,
+        battleAttackVfxFrames: [
+            { src: 'assets/vfx/player_attack/warrior_slash_01_v1.webp', duration: 50 },
+            { src: 'assets/vfx/player_attack/warrior_slash_02_v1.webp', duration: 50 },
+            { src: 'assets/vfx/player_attack/warrior_slash_03_v1.webp', duration: 60 },
+            { src: 'assets/vfx/player_attack/warrior_slash_04_v1.webp', duration: 70 },
+            { src: 'assets/vfx/player_attack/warrior_slash_05_v1.webp', duration: 70 },
+            { src: 'assets/vfx/player_attack/warrior_slash_06_v1.webp', duration: 90 }
+        ],
         battleBackHurtFrames: [
             { src: 'assets/characters/warrior/battle_back_hurt_01_v2.webp', duration: 60 },
             { src: 'assets/characters/warrior/battle_back_hurt_02_v2.webp', duration: 70 },
@@ -66,6 +76,16 @@ const CHARACTERS = {
         battleBackAttackScale: 1.49,
         battleBackAttackOffset: { x: 56, y: 8 },
         battleBackAttackImpactMs: 380,
+        battleAttackVfxType: 'mage',
+        battleAttackVfxImpactFrame: 4,
+        battleAttackVfxFrames: [
+            { src: 'assets/vfx/player_attack/mage_magic_bolt_01_v1.webp', duration: 45 },
+            { src: 'assets/vfx/player_attack/mage_magic_bolt_02_v1.webp', duration: 55 },
+            { src: 'assets/vfx/player_attack/mage_magic_bolt_03_v1.webp', duration: 60 },
+            { src: 'assets/vfx/player_attack/mage_magic_bolt_04_v1.webp', duration: 70 },
+            { src: 'assets/vfx/player_attack/mage_magic_bolt_05_v1.webp', duration: 75 },
+            { src: 'assets/vfx/player_attack/mage_magic_bolt_06_v1.webp', duration: 80 }
+        ],
         battleBackHurtFrames: [
             { src: 'assets/characters/mage/battle_back_hurt_01_v2.webp', duration: 60 },
             { src: 'assets/characters/mage/battle_back_hurt_02_v2.webp', duration: 70 },
@@ -104,6 +124,16 @@ const CHARACTERS = {
         battleBackAttackScale: 1.24,
         battleBackAttackOffset: { x: 56, y: -38 },
         battleBackAttackImpactMs: 380,
+        battleAttackVfxType: 'archer',
+        battleAttackVfxImpactFrame: 4,
+        battleAttackVfxFrames: [
+            { src: 'assets/vfx/player_attack/archer_arrow_01_v1.webp', duration: 40 },
+            { src: 'assets/vfx/player_attack/archer_arrow_02_v1.webp', duration: 45 },
+            { src: 'assets/vfx/player_attack/archer_arrow_03_v1.webp', duration: 50 },
+            { src: 'assets/vfx/player_attack/archer_arrow_04_v1.webp', duration: 55 },
+            { src: 'assets/vfx/player_attack/archer_arrow_05_v1.webp', duration: 70 },
+            { src: 'assets/vfx/player_attack/archer_arrow_06_v1.webp', duration: 80 }
+        ],
         battleBackHurtFrames: [
             { src: 'assets/characters/archer/battle_back_hurt_01_v2.webp', duration: 60 },
             { src: 'assets/characters/archer/battle_back_hurt_02_v2.webp', duration: 70 },
