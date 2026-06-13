@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-13T14:22:54.348Z",
+  "generatedAt": "2026-06-13T14:27:13.618Z",
   "model": "mature build with epic core and three relics v3",
   "mode": "mature",
   "runsPerBuildAndCheckpoint": 1000,
@@ -65,21 +65,21 @@
       "checkpoints": {
         "early": {
           "winRate": 0.992,
-          "averageTurns": 2.6,
+          "averageTurns": 2.436,
           "averageHpLeft": 90,
           "averageHpLeftOnWin": 90,
           "averageDamageTaken": 0,
-          "averageDamageDealt": 72.945,
+          "averageDamageDealt": 69.601,
           "averageHealing": 0,
-          "averageEnergyWasted": 1.498,
-          "energyWastedPerTurn": 0.5761538461538461,
+          "averageEnergyWasted": 1.509,
+          "energyWastedPerTurn": 0.6194581280788177,
           "deathCauses": {
             "回合上限": 8
           },
           "victoryCauses": {
-            "卡牌伤害": 844,
-            "荆棘": 145,
-            "反击": 3
+            "卡牌伤害": 847,
+            "荆棘": 137,
+            "反击": 8
           },
           "cardUsage": [
             {
@@ -93,10 +93,10 @@
               "directEffects": {
                 "retain": true
               },
-              "plays": 1578,
-              "opportunities": 2090,
-              "playsPerBattle": 1.578,
-              "usageRate": 0.755023923444976
+              "plays": 1334,
+              "opportunities": 1926,
+              "playsPerBattle": 1.334,
+              "usageRate": 0.6926272066458983
             },
             {
               "id": "基础斩击",
@@ -105,10 +105,10 @@
               "type": "攻击",
               "tags": [],
               "directEffects": {},
-              "plays": 1088,
-              "opportunities": 4786,
-              "playsPerBattle": 1.088,
-              "usageRate": 0.22732971165900542
+              "plays": 1080,
+              "opportunities": 4437,
+              "playsPerBattle": 1.08,
+              "usageRate": 0.2434077079107505
             },
             {
               "id": "基础防御",
@@ -117,10 +117,10 @@
               "type": "防御",
               "tags": [],
               "directEffects": {},
-              "plays": 399,
-              "opportunities": 3166,
-              "playsPerBattle": 0.399,
-              "usageRate": 0.12602653190145294
+              "plays": 358,
+              "opportunities": 2938,
+              "playsPerBattle": 0.358,
+              "usageRate": 0.12185159972770593
             },
             {
               "id": "warrior_oath_retainer",
@@ -134,9 +134,9 @@
                 "energy": true
               },
               "plays": 352,
-              "opportunities": 529,
+              "opportunities": 499,
               "playsPerBattle": 0.352,
-              "usageRate": 0.665406427221172
+              "usageRate": 0.7054108216432866
             },
             {
               "id": "warrior_soul_oath",
@@ -150,10 +150,10 @@
                 "draw": true,
                 "protection": true
               },
-              "plays": 326,
-              "opportunities": 506,
-              "playsPerBattle": 0.326,
-              "usageRate": 0.6442687747035574
+              "plays": 305,
+              "opportunities": 473,
+              "playsPerBattle": 0.305,
+              "usageRate": 0.6448202959830867
             },
             {
               "id": "warrior_crest_guard",
@@ -166,27 +166,10 @@
               "directEffects": {
                 "retain": true
               },
-              "plays": 323,
-              "opportunities": 584,
-              "playsPerBattle": 0.323,
-              "usageRate": 0.553082191780822
-            },
-            {
-              "id": "warrior_oath",
-              "name": "遗迹立誓",
-              "cost": 1,
-              "type": "能力",
-              "tags": [
-                "庇护"
-              ],
-              "directEffects": {
-                "draw": true,
-                "retain": true
-              },
-              "plays": 261,
-              "opportunities": 699,
-              "playsPerBattle": 0.261,
-              "usageRate": 0.37339055793991416
+              "plays": 258,
+              "opportunities": 505,
+              "playsPerBattle": 0.258,
+              "usageRate": 0.5108910891089109
             },
             {
               "id": "warrior_oath_charge",
@@ -200,10 +183,27 @@
                 "protection": true,
                 "draw": true
               },
-              "plays": 248,
-              "opportunities": 462,
-              "playsPerBattle": 0.248,
-              "usageRate": 0.5367965367965368
+              "plays": 244,
+              "opportunities": 433,
+              "playsPerBattle": 0.244,
+              "usageRate": 0.5635103926096998
+            },
+            {
+              "id": "warrior_oath",
+              "name": "遗迹立誓",
+              "cost": 1,
+              "type": "能力",
+              "tags": [
+                "庇护"
+              ],
+              "directEffects": {
+                "draw": true,
+                "retain": true
+              },
+              "plays": 238,
+              "opportunities": 667,
+              "playsPerBattle": 0.238,
+              "usageRate": 0.3568215892053973
             },
             {
               "id": "warrior_follow",
@@ -214,10 +214,39 @@
                 "圣剑"
               ],
               "directEffects": {},
-              "plays": 227,
-              "opportunities": 251,
-              "playsPerBattle": 0.227,
-              "usageRate": 0.9043824701195219
+              "plays": 223,
+              "opportunities": 247,
+              "playsPerBattle": 0.223,
+              "usageRate": 0.902834008097166
+            },
+            {
+              "id": "warrior_saintbreaker",
+              "name": "圣痕破势",
+              "cost": 2,
+              "type": "攻击",
+              "tags": [
+                "圣剑",
+                "易伤"
+              ],
+              "directEffects": {},
+              "plays": 200,
+              "opportunities": 244,
+              "playsPerBattle": 0.2,
+              "usageRate": 0.819672131147541
+            },
+            {
+              "id": "warrior_flash",
+              "name": "裂光一闪",
+              "cost": 1,
+              "type": "攻击",
+              "tags": [
+                "圣剑"
+              ],
+              "directEffects": {},
+              "plays": 199,
+              "opportunities": 231,
+              "playsPerBattle": 0.199,
+              "usageRate": 0.8614718614718615
             },
             {
               "id": "warrior_banner_guard",
@@ -230,39 +259,10 @@
               "directEffects": {
                 "draw": true
               },
-              "plays": 215,
-              "opportunities": 424,
-              "playsPerBattle": 0.215,
-              "usageRate": 0.5070754716981132
-            },
-            {
-              "id": "warrior_flash",
-              "name": "裂光一闪",
-              "cost": 1,
-              "type": "攻击",
-              "tags": [
-                "圣剑"
-              ],
-              "directEffects": {},
-              "plays": 205,
-              "opportunities": 238,
-              "playsPerBattle": 0.205,
-              "usageRate": 0.8613445378151261
-            },
-            {
-              "id": "warrior_saintbreaker",
-              "name": "圣痕破势",
-              "cost": 2,
-              "type": "攻击",
-              "tags": [
-                "圣剑",
-                "易伤"
-              ],
-              "directEffects": {},
-              "plays": 203,
-              "opportunities": 247,
-              "playsPerBattle": 0.203,
-              "usageRate": 0.8218623481781376
+              "plays": 199,
+              "opportunities": 386,
+              "playsPerBattle": 0.199,
+              "usageRate": 0.5155440414507773
             },
             {
               "id": "warrior_bastion_ledger",
@@ -275,113 +275,10 @@
               "directEffects": {
                 "draw": true
               },
-              "plays": 203,
-              "opportunities": 506,
-              "playsPerBattle": 0.203,
-              "usageRate": 0.40118577075098816
-            },
-            {
-              "id": "warrior_charge",
-              "name": "圣剑突击",
-              "cost": 2,
-              "type": "攻击",
-              "tags": [
-                "圣剑",
-                "重击"
-              ],
-              "directEffects": {},
-              "plays": 190,
-              "opportunities": 252,
-              "playsPerBattle": 0.19,
-              "usageRate": 0.753968253968254
-            },
-            {
-              "id": "warrior_oath_watch",
-              "name": "守誓待击",
-              "cost": 0,
-              "type": "能力",
-              "tags": [
-                "反击",
-                "销毁"
-              ],
-              "directEffects": {},
-              "plays": 187,
-              "opportunities": 201,
-              "playsPerBattle": 0.187,
-              "usageRate": 0.9303482587064676
-            },
-            {
-              "id": "warrior_release",
-              "name": "圣剑解放",
-              "cost": 3,
-              "type": "攻击",
-              "tags": [
-                "圣剑",
-                "重击"
-              ],
-              "directEffects": {},
-              "plays": 179,
-              "opportunities": 256,
-              "playsPerBattle": 0.179,
-              "usageRate": 0.69921875
-            },
-            {
-              "id": "warrior_dawn_guard",
-              "name": "破晓格挡",
-              "cost": 1,
-              "type": "防御",
-              "tags": [
-                "保留"
-              ],
-              "directEffects": {},
-              "plays": 176,
-              "opportunities": 688,
-              "playsPerBattle": 0.176,
-              "usageRate": 0.2558139534883721
-            },
-            {
-              "id": "warrior_thorn_charge",
-              "name": "棘甲冲锋",
-              "cost": 2,
-              "type": "攻击",
-              "tags": [
-                "圣剑",
-                "荆棘"
-              ],
-              "directEffects": {},
-              "plays": 172,
-              "opportunities": 257,
-              "playsPerBattle": 0.172,
-              "usageRate": 0.669260700389105
-            },
-            {
-              "id": "warrior_thorn_turn",
-              "name": "棘盾转锋",
-              "cost": 2,
-              "type": "攻击",
-              "tags": [
-                "圣剑",
-                "荆棘"
-              ],
-              "directEffects": {},
-              "plays": 163,
-              "opportunities": 259,
-              "playsPerBattle": 0.163,
-              "usageRate": 0.6293436293436293
-            },
-            {
-              "id": "warrior_wall",
-              "name": "盾墙反身",
-              "cost": 1,
-              "type": "防御",
-              "tags": [
-                "庇护"
-              ],
-              "directEffects": {},
-              "plays": 159,
-              "opportunities": 454,
-              "playsPerBattle": 0.159,
-              "usageRate": 0.3502202643171806
+              "plays": 193,
+              "opportunities": 480,
+              "playsPerBattle": 0.193,
+              "usageRate": 0.40208333333333335
             },
             {
               "id": "warrior_crown_riposte",
@@ -395,10 +292,113 @@
               "directEffects": {
                 "protection": true
               },
-              "plays": 141,
-              "opportunities": 324,
-              "playsPerBattle": 0.141,
-              "usageRate": 0.4351851851851852
+              "plays": 192,
+              "opportunities": 240,
+              "playsPerBattle": 0.192,
+              "usageRate": 0.8
+            },
+            {
+              "id": "warrior_oath_watch",
+              "name": "守誓待击",
+              "cost": 0,
+              "type": "能力",
+              "tags": [
+                "反击",
+                "销毁"
+              ],
+              "directEffects": {},
+              "plays": 185,
+              "opportunities": 200,
+              "playsPerBattle": 0.185,
+              "usageRate": 0.925
+            },
+            {
+              "id": "warrior_charge",
+              "name": "圣剑突击",
+              "cost": 2,
+              "type": "攻击",
+              "tags": [
+                "圣剑",
+                "重击"
+              ],
+              "directEffects": {},
+              "plays": 185,
+              "opportunities": 250,
+              "playsPerBattle": 0.185,
+              "usageRate": 0.74
+            },
+            {
+              "id": "warrior_release",
+              "name": "圣剑解放",
+              "cost": 3,
+              "type": "攻击",
+              "tags": [
+                "圣剑",
+                "重击"
+              ],
+              "directEffects": {},
+              "plays": 179,
+              "opportunities": 242,
+              "playsPerBattle": 0.179,
+              "usageRate": 0.7396694214876033
+            },
+            {
+              "id": "warrior_thorn_charge",
+              "name": "棘甲冲锋",
+              "cost": 2,
+              "type": "攻击",
+              "tags": [
+                "圣剑",
+                "荆棘"
+              ],
+              "directEffects": {},
+              "plays": 173,
+              "opportunities": 252,
+              "playsPerBattle": 0.173,
+              "usageRate": 0.6865079365079365
+            },
+            {
+              "id": "warrior_dawn_guard",
+              "name": "破晓格挡",
+              "cost": 1,
+              "type": "防御",
+              "tags": [
+                "保留"
+              ],
+              "directEffects": {},
+              "plays": 167,
+              "opportunities": 651,
+              "playsPerBattle": 0.167,
+              "usageRate": 0.2565284178187404
+            },
+            {
+              "id": "warrior_thorn_turn",
+              "name": "棘盾转锋",
+              "cost": 2,
+              "type": "攻击",
+              "tags": [
+                "圣剑",
+                "荆棘"
+              ],
+              "directEffects": {},
+              "plays": 162,
+              "opportunities": 251,
+              "playsPerBattle": 0.162,
+              "usageRate": 0.6454183266932271
+            },
+            {
+              "id": "warrior_wall",
+              "name": "盾墙反身",
+              "cost": 1,
+              "type": "防御",
+              "tags": [
+                "庇护"
+              ],
+              "directEffects": {},
+              "plays": 144,
+              "opportunities": 416,
+              "playsPerBattle": 0.144,
+              "usageRate": 0.34615384615384615
             },
             {
               "id": "warrior_oath_reversal",
@@ -410,10 +410,10 @@
                 "重置"
               ],
               "directEffects": {},
-              "plays": 136,
-              "opportunities": 427,
-              "playsPerBattle": 0.136,
-              "usageRate": 0.3185011709601874
+              "plays": 131,
+              "opportunities": 390,
+              "playsPerBattle": 0.131,
+              "usageRate": 0.33589743589743587
             },
             {
               "id": "warrior_guard",
@@ -427,10 +427,10 @@
                 "protection": true,
                 "draw": true
               },
-              "plays": 90,
-              "opportunities": 357,
-              "playsPerBattle": 0.09,
-              "usageRate": 0.25210084033613445
+              "plays": 87,
+              "opportunities": 339,
+              "playsPerBattle": 0.087,
+              "usageRate": 0.25663716814159293
             },
             {
               "id": "warrior_scar",
@@ -443,10 +443,10 @@
               "directEffects": {
                 "retain": true
               },
-              "plays": 53,
-              "opportunities": 518,
-              "playsPerBattle": 0.053,
-              "usageRate": 0.10231660231660232
+              "plays": 46,
+              "opportunities": 492,
+              "playsPerBattle": 0.046,
+              "usageRate": 0.09349593495934959
             },
             {
               "id": "诅咒",
@@ -456,20 +456,20 @@
               "tags": [],
               "directEffects": {},
               "plays": 0,
-              "opportunities": 156,
+              "opportunities": 135,
               "playsPerBattle": 0,
               "usageRate": 0
             }
           ],
           "playStyle": {
-            "attacks": 2.568,
-            "defenses": 3.266,
-            "abilities": 1.44,
+            "attacks": 2.593,
+            "defenses": 2.877,
+            "abilities": 1.364,
             "setup": 0,
-            "burst": 1.48,
-            "sustain": 4.209,
-            "control": 0.203,
-            "cycle": 0.649
+            "burst": 1.513,
+            "sustain": 3.861,
+            "control": 0.2,
+            "cycle": 0.621
           },
           "enemies": {
             "枯骨煞兵": {
@@ -495,22 +495,22 @@
           }
         },
         "mid": {
-          "winRate": 0.995,
-          "averageTurns": 4.028,
-          "averageHpLeft": 89.526,
-          "averageHpLeftOnWin": 89.52361809045226,
-          "averageDamageTaken": 0.474,
-          "averageDamageDealt": 191.987,
+          "winRate": 0.996,
+          "averageTurns": 4.041,
+          "averageHpLeft": 89.149,
+          "averageHpLeftOnWin": 89.14558232931726,
+          "averageDamageTaken": 0.851,
+          "averageDamageDealt": 189.689,
           "averageHealing": 0,
-          "averageEnergyWasted": 1.504,
-          "energyWastedPerTurn": 0.3733862959285005,
+          "averageEnergyWasted": 1.516,
+          "energyWastedPerTurn": 0.3751546646869587,
           "deathCauses": {
-            "回合上限": 5
+            "回合上限": 4
           },
           "victoryCauses": {
-            "卡牌伤害": 707,
-            "荆棘": 251,
-            "反击": 37
+            "卡牌伤害": 690,
+            "荆棘": 263,
+            "反击": 43
           },
           "cardUsage": [
             {
@@ -524,10 +524,10 @@
               "directEffects": {
                 "retain": true
               },
-              "plays": 2575,
-              "opportunities": 3508,
-              "playsPerBattle": 2.575,
-              "usageRate": 0.734036488027366
+              "plays": 2370,
+              "opportunities": 3522,
+              "playsPerBattle": 2.37,
+              "usageRate": 0.6729131175468483
             },
             {
               "id": "基础斩击",
@@ -536,24 +536,10 @@
               "type": "攻击",
               "tags": [],
               "directEffects": {},
-              "plays": 930,
-              "opportunities": 4392,
-              "playsPerBattle": 0.93,
-              "usageRate": 0.21174863387978143
-            },
-            {
-              "id": "warrior_follow",
-              "name": "誓约追击",
-              "cost": 1,
-              "type": "攻击",
-              "tags": [
-                "圣剑"
-              ],
-              "directEffects": {},
-              "plays": 598,
-              "opportunities": 654,
-              "playsPerBattle": 0.598,
-              "usageRate": 0.9143730886850153
+              "plays": 990,
+              "opportunities": 4460,
+              "playsPerBattle": 0.99,
+              "usageRate": 0.2219730941704036
             },
             {
               "id": "warrior_oath_retainer",
@@ -566,10 +552,24 @@
               "directEffects": {
                 "energy": true
               },
-              "plays": 590,
-              "opportunities": 1121,
-              "playsPerBattle": 0.59,
-              "usageRate": 0.5263157894736842
+              "plays": 690,
+              "opportunities": 1111,
+              "playsPerBattle": 0.69,
+              "usageRate": 0.6210621062106211
+            },
+            {
+              "id": "warrior_follow",
+              "name": "誓约追击",
+              "cost": 1,
+              "type": "攻击",
+              "tags": [
+                "圣剑"
+              ],
+              "directEffects": {},
+              "plays": 622,
+              "opportunities": 679,
+              "playsPerBattle": 0.622,
+              "usageRate": 0.9160530191458026
             },
             {
               "id": "warrior_flash",
@@ -580,10 +580,10 @@
                 "圣剑"
               ],
               "directEffects": {},
-              "plays": 569,
-              "opportunities": 639,
-              "playsPerBattle": 0.569,
-              "usageRate": 0.8904538341158059
+              "plays": 600,
+              "opportunities": 675,
+              "playsPerBattle": 0.6,
+              "usageRate": 0.8888888888888888
             },
             {
               "id": "warrior_crest_guard",
@@ -596,25 +596,10 @@
               "directEffects": {
                 "retain": true
               },
-              "plays": 558,
-              "opportunities": 1292,
-              "playsPerBattle": 0.558,
-              "usageRate": 0.43188854489164086
-            },
-            {
-              "id": "warrior_saintbreaker",
-              "name": "圣痕破势",
-              "cost": 2,
-              "type": "攻击",
-              "tags": [
-                "圣剑",
-                "易伤"
-              ],
-              "directEffects": {},
-              "plays": 511,
-              "opportunities": 683,
-              "playsPerBattle": 0.511,
-              "usageRate": 0.7481698389458272
+              "plays": 571,
+              "opportunities": 1306,
+              "playsPerBattle": 0.571,
+              "usageRate": 0.43721286370597245
             },
             {
               "id": "warrior_charge",
@@ -626,10 +611,25 @@
                 "重击"
               ],
               "directEffects": {},
-              "plays": 506,
-              "opportunities": 656,
-              "playsPerBattle": 0.506,
-              "usageRate": 0.7713414634146342
+              "plays": 544,
+              "opportunities": 702,
+              "playsPerBattle": 0.544,
+              "usageRate": 0.7749287749287749
+            },
+            {
+              "id": "warrior_saintbreaker",
+              "name": "圣痕破势",
+              "cost": 2,
+              "type": "攻击",
+              "tags": [
+                "圣剑",
+                "易伤"
+              ],
+              "directEffects": {},
+              "plays": 532,
+              "opportunities": 714,
+              "playsPerBattle": 0.532,
+              "usageRate": 0.7450980392156863
             },
             {
               "id": "warrior_soul_oath",
@@ -643,10 +643,10 @@
                 "draw": true,
                 "protection": true
               },
-              "plays": 474,
-              "opportunities": 816,
-              "playsPerBattle": 0.474,
-              "usageRate": 0.5808823529411765
+              "plays": 504,
+              "opportunities": 843,
+              "playsPerBattle": 0.504,
+              "usageRate": 0.597864768683274
             },
             {
               "id": "warrior_oath",
@@ -660,67 +660,10 @@
                 "draw": true,
                 "retain": true
               },
-              "plays": 365,
-              "opportunities": 1236,
-              "playsPerBattle": 0.365,
-              "usageRate": 0.2953074433656958
-            },
-            {
-              "id": "基础防御",
-              "name": "基础防御",
-              "cost": 1,
-              "type": "防御",
-              "tags": [],
-              "directEffects": {},
-              "plays": 347,
-              "opportunities": 4391,
-              "playsPerBattle": 0.347,
-              "usageRate": 0.07902527897973127
-            },
-            {
-              "id": "warrior_thorn_charge",
-              "name": "棘甲冲锋",
-              "cost": 2,
-              "type": "攻击",
-              "tags": [
-                "圣剑",
-                "荆棘"
-              ],
-              "directEffects": {},
-              "plays": 341,
-              "opportunities": 577,
-              "playsPerBattle": 0.341,
-              "usageRate": 0.5909878682842288
-            },
-            {
-              "id": "warrior_thorn_turn",
-              "name": "棘盾转锋",
-              "cost": 2,
-              "type": "攻击",
-              "tags": [
-                "圣剑",
-                "荆棘"
-              ],
-              "directEffects": {},
-              "plays": 335,
-              "opportunities": 637,
-              "playsPerBattle": 0.335,
-              "usageRate": 0.5259026687598116
-            },
-            {
-              "id": "warrior_oath_watch",
-              "name": "守誓待击",
-              "cost": 0,
-              "type": "能力",
-              "tags": [
-                "反击",
-                "销毁"
-              ],
-              "directEffects": {},
-              "plays": 318,
-              "opportunities": 324,
-              "playsPerBattle": 0.318,
-              "usageRate": 0.9814814814814815
+              "plays": 400,
+              "opportunities": 1245,
+              "playsPerBattle": 0.4,
+              "usageRate": 0.321285140562249
             },
             {
               "id": "warrior_release",
@@ -732,73 +675,37 @@
                 "重击"
               ],
               "directEffects": {},
-              "plays": 307,
-              "opportunities": 651,
-              "playsPerBattle": 0.307,
-              "usageRate": 0.4715821812596006
+              "plays": 353,
+              "opportunities": 662,
+              "playsPerBattle": 0.353,
+              "usageRate": 0.5332326283987915
             },
             {
-              "id": "warrior_dawn_guard",
-              "name": "破晓格挡",
+              "id": "基础防御",
+              "name": "基础防御",
               "cost": 1,
               "type": "防御",
-              "tags": [
-                "保留"
-              ],
+              "tags": [],
               "directEffects": {},
-              "plays": 294,
-              "opportunities": 1200,
-              "playsPerBattle": 0.294,
-              "usageRate": 0.245
+              "plays": 352,
+              "opportunities": 4449,
+              "playsPerBattle": 0.352,
+              "usageRate": 0.07911890312429759
             },
             {
-              "id": "warrior_crown_riposte",
-              "name": "王冠反斩",
-              "cost": 3,
+              "id": "warrior_thorn_charge",
+              "name": "棘甲冲锋",
+              "cost": 2,
               "type": "攻击",
               "tags": [
-                "反击",
-                "重击"
+                "圣剑",
+                "荆棘"
               ],
-              "directEffects": {
-                "protection": true
-              },
-              "plays": 280,
-              "opportunities": 840,
-              "playsPerBattle": 0.28,
-              "usageRate": 0.3333333333333333
-            },
-            {
-              "id": "warrior_bastion_ledger",
-              "name": "壁垒记录",
-              "cost": 1,
-              "type": "能力",
-              "tags": [
-                "庇护"
-              ],
-              "directEffects": {
-                "draw": true
-              },
-              "plays": 271,
-              "opportunities": 847,
-              "playsPerBattle": 0.271,
-              "usageRate": 0.31995277449822906
-            },
-            {
-              "id": "warrior_banner_guard",
-              "name": "誓旗护阵",
-              "cost": 1,
-              "type": "能力",
-              "tags": [
-                "庇护"
-              ],
-              "directEffects": {
-                "draw": true
-              },
-              "plays": 259,
-              "opportunities": 743,
-              "playsPerBattle": 0.259,
-              "usageRate": 0.34858681022880217
+              "directEffects": {},
+              "plays": 350,
+              "opportunities": 600,
+              "playsPerBattle": 0.35,
+              "usageRate": 0.5833333333333334
             },
             {
               "id": "warrior_oath_charge",
@@ -812,10 +719,103 @@
                 "protection": true,
                 "draw": true
               },
-              "plays": 259,
+              "plays": 350,
               "opportunities": 849,
-              "playsPerBattle": 0.259,
-              "usageRate": 0.3050647820965842
+              "playsPerBattle": 0.35,
+              "usageRate": 0.4122497055359246
+            },
+            {
+              "id": "warrior_thorn_turn",
+              "name": "棘盾转锋",
+              "cost": 2,
+              "type": "攻击",
+              "tags": [
+                "圣剑",
+                "荆棘"
+              ],
+              "directEffects": {},
+              "plays": 327,
+              "opportunities": 658,
+              "playsPerBattle": 0.327,
+              "usageRate": 0.4969604863221885
+            },
+            {
+              "id": "warrior_oath_watch",
+              "name": "守誓待击",
+              "cost": 0,
+              "type": "能力",
+              "tags": [
+                "反击",
+                "销毁"
+              ],
+              "directEffects": {},
+              "plays": 318,
+              "opportunities": 325,
+              "playsPerBattle": 0.318,
+              "usageRate": 0.9784615384615385
+            },
+            {
+              "id": "warrior_dawn_guard",
+              "name": "破晓格挡",
+              "cost": 1,
+              "type": "防御",
+              "tags": [
+                "保留"
+              ],
+              "directEffects": {},
+              "plays": 296,
+              "opportunities": 1182,
+              "playsPerBattle": 0.296,
+              "usageRate": 0.25042301184433163
+            },
+            {
+              "id": "warrior_crown_riposte",
+              "name": "王冠反斩",
+              "cost": 3,
+              "type": "攻击",
+              "tags": [
+                "反击",
+                "重击"
+              ],
+              "directEffects": {
+                "protection": true
+              },
+              "plays": 293,
+              "opportunities": 832,
+              "playsPerBattle": 0.293,
+              "usageRate": 0.35216346153846156
+            },
+            {
+              "id": "warrior_bastion_ledger",
+              "name": "壁垒记录",
+              "cost": 1,
+              "type": "能力",
+              "tags": [
+                "庇护"
+              ],
+              "directEffects": {
+                "draw": true
+              },
+              "plays": 287,
+              "opportunities": 856,
+              "playsPerBattle": 0.287,
+              "usageRate": 0.3352803738317757
+            },
+            {
+              "id": "warrior_banner_guard",
+              "name": "誓旗护阵",
+              "cost": 1,
+              "type": "能力",
+              "tags": [
+                "庇护"
+              ],
+              "directEffects": {
+                "draw": true
+              },
+              "plays": 260,
+              "opportunities": 757,
+              "playsPerBattle": 0.26,
+              "usageRate": 0.34346103038309117
             },
             {
               "id": "warrior_wall",
@@ -826,10 +826,10 @@
                 "庇护"
               ],
               "directEffects": {},
-              "plays": 180,
-              "opportunities": 731,
-              "playsPerBattle": 0.18,
-              "usageRate": 0.24623803009575923
+              "plays": 179,
+              "opportunities": 748,
+              "playsPerBattle": 0.179,
+              "usageRate": 0.2393048128342246
             },
             {
               "id": "warrior_guard",
@@ -843,10 +843,10 @@
                 "protection": true,
                 "draw": true
               },
-              "plays": 158,
-              "opportunities": 704,
-              "playsPerBattle": 0.158,
-              "usageRate": 0.22443181818181818
+              "plays": 156,
+              "opportunities": 729,
+              "playsPerBattle": 0.156,
+              "usageRate": 0.2139917695473251
             },
             {
               "id": "warrior_scar",
@@ -859,10 +859,10 @@
               "directEffects": {
                 "retain": true
               },
-              "plays": 136,
-              "opportunities": 1227,
-              "playsPerBattle": 0.136,
-              "usageRate": 0.11083944580277098
+              "plays": 139,
+              "opportunities": 1230,
+              "playsPerBattle": 0.139,
+              "usageRate": 0.11300813008130081
             },
             {
               "id": "warrior_oath_reversal",
@@ -874,10 +874,10 @@
                 "重置"
               ],
               "directEffects": {},
-              "plays": 131,
-              "opportunities": 738,
-              "playsPerBattle": 0.131,
-              "usageRate": 0.17750677506775067
+              "plays": 134,
+              "opportunities": 749,
+              "playsPerBattle": 0.134,
+              "usageRate": 0.17890520694259013
             },
             {
               "id": "诅咒",
@@ -887,20 +887,20 @@
               "tags": [],
               "directEffects": {},
               "plays": 0,
-              "opportunities": 469,
+              "opportunities": 468,
               "playsPerBattle": 0,
               "usageRate": 0
             }
           ],
           "playStyle": {
-            "attacks": 4.377,
-            "defenses": 4.969,
-            "abilities": 1.946,
+            "attacks": 4.611,
+            "defenses": 4.887,
+            "abilities": 2.119,
             "setup": 0,
-            "burst": 3.447,
-            "sustain": 6.791,
-            "control": 0.511,
-            "cycle": 0.923
+            "burst": 3.621,
+            "sustain": 6.77,
+            "control": 0.532,
+            "cycle": 0.956
           },
           "enemies": {
             "暴躁野猪": {
@@ -909,7 +909,7 @@
             },
             "铁甲巨蟹": {
               "games": 196,
-              "wins": 194
+              "wins": 195
             },
             "千载魔蛛": {
               "games": 206,
@@ -926,23 +926,23 @@
           }
         },
         "late": {
-          "winRate": 0.985,
-          "averageTurns": 6.126,
-          "averageHpLeft": 80.621,
-          "averageHpLeftOnWin": 81.75736040609137,
-          "averageDamageTaken": 9.596,
-          "averageDamageDealt": 391.298,
+          "winRate": 0.934,
+          "averageTurns": 6.252,
+          "averageHpLeft": 74.981,
+          "averageHpLeftOnWin": 80.1830835117773,
+          "averageDamageTaken": 15.963,
+          "averageDamageDealt": 384.092,
           "averageHealing": 0,
-          "averageEnergyWasted": 1.097,
-          "energyWastedPerTurn": 0.1790728044400914,
+          "averageEnergyWasted": 1.04,
+          "energyWastedPerTurn": 0.16634676903390916,
           "deathCauses": {
-            "首领主体攻击": 14,
+            "首领主体攻击": 65,
             "回合上限": 1
           },
           "victoryCauses": {
-            "卡牌伤害": 605,
-            "荆棘": 317,
-            "反击": 63
+            "荆棘": 328,
+            "卡牌伤害": 564,
+            "反击": 42
           },
           "cardUsage": [
             {
@@ -956,10 +956,10 @@
               "directEffects": {
                 "retain": true
               },
-              "plays": 3850,
-              "opportunities": 5501,
-              "playsPerBattle": 3.85,
-              "usageRate": 0.6998727504090165
+              "plays": 3524,
+              "opportunities": 5641,
+              "playsPerBattle": 3.524,
+              "usageRate": 0.624711930508775
             },
             {
               "id": "warrior_follow",
@@ -970,10 +970,10 @@
                 "圣剑"
               ],
               "directEffects": {},
-              "plays": 1416,
-              "opportunities": 1621,
-              "playsPerBattle": 1.416,
-              "usageRate": 0.8735348550277606
+              "plays": 1442,
+              "opportunities": 1708,
+              "playsPerBattle": 1.442,
+              "usageRate": 0.8442622950819673
             },
             {
               "id": "warrior_flash",
@@ -984,26 +984,10 @@
                 "圣剑"
               ],
               "directEffects": {},
-              "plays": 1315,
-              "opportunities": 1508,
-              "playsPerBattle": 1.315,
-              "usageRate": 0.8720159151193634
-            },
-            {
-              "id": "warrior_crest_guard",
-              "name": "圣徽举盾",
-              "cost": 1,
-              "type": "防御",
-              "tags": [
-                "庇护"
-              ],
-              "directEffects": {
-                "retain": true
-              },
-              "plays": 1069,
-              "opportunities": 2483,
-              "playsPerBattle": 1.069,
-              "usageRate": 0.4305275875956504
+              "plays": 1349,
+              "opportunities": 1624,
+              "playsPerBattle": 1.349,
+              "usageRate": 0.8306650246305419
             },
             {
               "id": "warrior_oath_retainer",
@@ -1016,10 +1000,26 @@
               "directEffects": {
                 "energy": true
               },
-              "plays": 1066,
-              "opportunities": 2311,
-              "playsPerBattle": 1.066,
-              "usageRate": 0.46127217654694935
+              "plays": 1266,
+              "opportunities": 2354,
+              "playsPerBattle": 1.266,
+              "usageRate": 0.5378079864061173
+            },
+            {
+              "id": "warrior_crest_guard",
+              "name": "圣徽举盾",
+              "cost": 1,
+              "type": "防御",
+              "tags": [
+                "庇护"
+              ],
+              "directEffects": {
+                "retain": true
+              },
+              "plays": 1228,
+              "opportunities": 2572,
+              "playsPerBattle": 1.228,
+              "usageRate": 0.4774494556765163
             },
             {
               "id": "基础斩击",
@@ -1028,10 +1028,10 @@
               "type": "攻击",
               "tags": [],
               "directEffects": {},
-              "plays": 981,
-              "opportunities": 6156,
-              "playsPerBattle": 0.981,
-              "usageRate": 0.15935672514619884
+              "plays": 1038,
+              "opportunities": 6525,
+              "playsPerBattle": 1.038,
+              "usageRate": 0.15908045977011495
             },
             {
               "id": "warrior_saintbreaker",
@@ -1043,25 +1043,10 @@
                 "易伤"
               ],
               "directEffects": {},
-              "plays": 978,
-              "opportunities": 1575,
-              "playsPerBattle": 0.978,
-              "usageRate": 0.6209523809523809
-            },
-            {
-              "id": "warrior_charge",
-              "name": "圣剑突击",
-              "cost": 2,
-              "type": "攻击",
-              "tags": [
-                "圣剑",
-                "重击"
-              ],
-              "directEffects": {},
-              "plays": 838,
-              "opportunities": 1373,
-              "playsPerBattle": 0.838,
-              "usageRate": 0.6103423160961399
+              "plays": 974,
+              "opportunities": 1656,
+              "playsPerBattle": 0.974,
+              "usageRate": 0.5881642512077294
             },
             {
               "id": "warrior_soul_oath",
@@ -1075,10 +1060,40 @@
                 "draw": true,
                 "protection": true
               },
-              "plays": 788,
-              "opportunities": 1535,
-              "playsPerBattle": 0.788,
-              "usageRate": 0.5133550488599349
+              "plays": 890,
+              "opportunities": 1675,
+              "playsPerBattle": 0.89,
+              "usageRate": 0.5313432835820896
+            },
+            {
+              "id": "warrior_charge",
+              "name": "圣剑突击",
+              "cost": 2,
+              "type": "攻击",
+              "tags": [
+                "圣剑",
+                "重击"
+              ],
+              "directEffects": {},
+              "plays": 850,
+              "opportunities": 1452,
+              "playsPerBattle": 0.85,
+              "usageRate": 0.5853994490358126
+            },
+            {
+              "id": "warrior_release",
+              "name": "圣剑解放",
+              "cost": 3,
+              "type": "攻击",
+              "tags": [
+                "圣剑",
+                "重击"
+              ],
+              "directEffects": {},
+              "plays": 720,
+              "opportunities": 1546,
+              "playsPerBattle": 0.72,
+              "usageRate": 0.46571798188874514
             },
             {
               "id": "warrior_oath",
@@ -1092,25 +1107,10 @@
                 "draw": true,
                 "retain": true
               },
-              "plays": 641,
-              "opportunities": 2675,
-              "playsPerBattle": 0.641,
-              "usageRate": 0.23962616822429905
-            },
-            {
-              "id": "warrior_release",
-              "name": "圣剑解放",
-              "cost": 3,
-              "type": "攻击",
-              "tags": [
-                "圣剑",
-                "重击"
-              ],
-              "directEffects": {},
-              "plays": 614,
-              "opportunities": 1459,
-              "playsPerBattle": 0.614,
-              "usageRate": 0.42083618917066484
+              "plays": 717,
+              "opportunities": 2746,
+              "playsPerBattle": 0.717,
+              "usageRate": 0.26110706482155865
             },
             {
               "id": "warrior_thorn_charge",
@@ -1122,10 +1122,10 @@
                 "荆棘"
               ],
               "directEffects": {},
-              "plays": 574,
-              "opportunities": 1293,
-              "playsPerBattle": 0.574,
-              "usageRate": 0.4439288476411446
+              "plays": 567,
+              "opportunities": 1374,
+              "playsPerBattle": 0.567,
+              "usageRate": 0.4126637554585153
             },
             {
               "id": "warrior_banner_guard",
@@ -1138,10 +1138,27 @@
               "directEffects": {
                 "draw": true
               },
-              "plays": 490,
-              "opportunities": 1586,
-              "playsPerBattle": 0.49,
-              "usageRate": 0.308953341740227
+              "plays": 560,
+              "opportunities": 1676,
+              "playsPerBattle": 0.56,
+              "usageRate": 0.3341288782816229
+            },
+            {
+              "id": "warrior_oath_charge",
+              "name": "王誓蓄锋",
+              "cost": 2,
+              "type": "能力",
+              "tags": [
+                "附魔"
+              ],
+              "directEffects": {
+                "protection": true,
+                "draw": true
+              },
+              "plays": 553,
+              "opportunities": 1665,
+              "playsPerBattle": 0.553,
+              "usageRate": 0.3321321321321321
             },
             {
               "id": "warrior_crown_riposte",
@@ -1155,10 +1172,24 @@
               "directEffects": {
                 "protection": true
               },
-              "plays": 468,
-              "opportunities": 1490,
-              "playsPerBattle": 0.468,
-              "usageRate": 0.31409395973154364
+              "plays": 503,
+              "opportunities": 1579,
+              "playsPerBattle": 0.503,
+              "usageRate": 0.31855604813172894
+            },
+            {
+              "id": "warrior_dawn_guard",
+              "name": "破晓格挡",
+              "cost": 1,
+              "type": "防御",
+              "tags": [
+                "保留"
+              ],
+              "directEffects": {},
+              "plays": 502,
+              "opportunities": 2606,
+              "playsPerBattle": 0.502,
+              "usageRate": 0.19263238679969302
             },
             {
               "id": "warrior_oath_watch",
@@ -1176,18 +1207,20 @@
               "usageRate": 0.9957356076759062
             },
             {
-              "id": "warrior_dawn_guard",
-              "name": "破晓格挡",
+              "id": "warrior_bastion_ledger",
+              "name": "壁垒记录",
               "cost": 1,
-              "type": "防御",
+              "type": "能力",
               "tags": [
-                "保留"
+                "庇护"
               ],
-              "directEffects": {},
-              "plays": 454,
-              "opportunities": 2531,
-              "playsPerBattle": 0.454,
-              "usageRate": 0.17937574081390756
+              "directEffects": {
+                "draw": true
+              },
+              "plays": 421,
+              "opportunities": 1613,
+              "playsPerBattle": 0.421,
+              "usageRate": 0.2610043397396156
             },
             {
               "id": "warrior_thorn_turn",
@@ -1199,26 +1232,10 @@
                 "荆棘"
               ],
               "directEffects": {},
-              "plays": 403,
-              "opportunities": 1328,
-              "playsPerBattle": 0.403,
-              "usageRate": 0.30346385542168675
-            },
-            {
-              "id": "warrior_bastion_ledger",
-              "name": "壁垒记录",
-              "cost": 1,
-              "type": "能力",
-              "tags": [
-                "庇护"
-              ],
-              "directEffects": {
-                "draw": true
-              },
-              "plays": 383,
-              "opportunities": 1499,
-              "playsPerBattle": 0.383,
-              "usageRate": 0.2555036691127418
+              "plays": 405,
+              "opportunities": 1398,
+              "playsPerBattle": 0.405,
+              "usageRate": 0.28969957081545067
             },
             {
               "id": "warrior_wall",
@@ -1229,27 +1246,10 @@
                 "庇护"
               ],
               "directEffects": {},
-              "plays": 339,
-              "opportunities": 1418,
-              "playsPerBattle": 0.339,
-              "usageRate": 0.2390691114245416
-            },
-            {
-              "id": "warrior_oath_charge",
-              "name": "王誓蓄锋",
-              "cost": 2,
-              "type": "能力",
-              "tags": [
-                "附魔"
-              ],
-              "directEffects": {
-                "protection": true,
-                "draw": true
-              },
-              "plays": 333,
-              "opportunities": 1553,
-              "playsPerBattle": 0.333,
-              "usageRate": 0.21442369607211847
+              "plays": 363,
+              "opportunities": 1499,
+              "playsPerBattle": 0.363,
+              "usageRate": 0.24216144096064043
             },
             {
               "id": "基础防御",
@@ -1258,10 +1258,10 @@
               "type": "防御",
               "tags": [],
               "directEffects": {},
-              "plays": 267,
-              "opportunities": 3065,
-              "playsPerBattle": 0.267,
-              "usageRate": 0.08711256117455139
+              "plays": 270,
+              "opportunities": 3223,
+              "playsPerBattle": 0.27,
+              "usageRate": 0.08377288240769469
             },
             {
               "id": "warrior_guard",
@@ -1275,10 +1275,10 @@
                 "protection": true,
                 "draw": true
               },
-              "plays": 209,
-              "opportunities": 1395,
-              "playsPerBattle": 0.209,
-              "usageRate": 0.14982078853046596
+              "plays": 244,
+              "opportunities": 1490,
+              "playsPerBattle": 0.244,
+              "usageRate": 0.16375838926174496
             },
             {
               "id": "warrior_scar",
@@ -1291,10 +1291,10 @@
               "directEffects": {
                 "retain": true
               },
-              "plays": 197,
-              "opportunities": 2473,
-              "playsPerBattle": 0.197,
-              "usageRate": 0.07966033158107562
+              "plays": 233,
+              "opportunities": 2543,
+              "playsPerBattle": 0.233,
+              "usageRate": 0.09162406606370428
             },
             {
               "id": "warrior_oath_reversal",
@@ -1306,10 +1306,10 @@
                 "重置"
               ],
               "directEffects": {},
-              "plays": 146,
-              "opportunities": 1435,
-              "playsPerBattle": 0.146,
-              "usageRate": 0.10174216027874565
+              "plays": 202,
+              "opportunities": 1505,
+              "playsPerBattle": 0.202,
+              "usageRate": 0.13421926910299004
             },
             {
               "id": "诅咒",
@@ -1319,25 +1319,25 @@
               "tags": [],
               "directEffects": {},
               "plays": 0,
-              "opportunities": 320,
+              "opportunities": 350,
               "playsPerBattle": 0,
               "usageRate": 0
             }
           ],
           "playStyle": {
-            "attacks": 7.587,
-            "defenses": 7.597,
-            "abilities": 3.102,
+            "attacks": 7.848,
+            "defenses": 7.832,
+            "abilities": 3.608,
             "setup": 0,
-            "burst": 6.606,
-            "sustain": 10.756,
-            "control": 0.978,
-            "cycle": 1.401
+            "burst": 6.81,
+            "sustain": 11.202,
+            "control": 0.974,
+            "cycle": 1.559
           },
           "enemies": {
             "巨力石魔": {
               "games": 230,
-              "wins": 216
+              "wins": 165
             },
             "堕落剑客": {
               "games": 199,
@@ -1358,23 +1358,24 @@
           }
         },
         "elite": {
-          "winRate": 0.636,
-          "averageTurns": 8.145,
-          "averageHpLeft": 43.037,
-          "averageHpLeftOnWin": 66.96069182389937,
-          "averageDamageTaken": 53.711,
-          "averageDamageDealt": 616.037,
+          "winRate": 0.561,
+          "averageTurns": 7.911,
+          "averageHpLeft": 38.57,
+          "averageHpLeftOnWin": 67.95008912655972,
+          "averageDamageTaken": 58.875,
+          "averageDamageDealt": 588.014,
           "averageHealing": 0,
-          "averageEnergyWasted": 1.053,
-          "energyWastedPerTurn": 0.1292817679558011,
+          "averageEnergyWasted": 1.017,
+          "energyWastedPerTurn": 0.1285551763367463,
           "deathCauses": {
-            "首领主体攻击": 359,
+            "首领主体攻击": 428,
+            "敌方荆棘": 6,
             "回合上限": 5
           },
           "victoryCauses": {
-            "卡牌伤害": 269,
-            "荆棘": 356,
-            "反击": 11
+            "卡牌伤害": 231,
+            "荆棘": 324,
+            "反击": 6
           },
           "cardUsage": [
             {
@@ -1388,10 +1389,10 @@
               "directEffects": {
                 "retain": true
               },
-              "plays": 5359,
-              "opportunities": 7481,
-              "playsPerBattle": 5.359,
-              "usageRate": 0.7163480818072451
+              "plays": 4556,
+              "opportunities": 7273,
+              "playsPerBattle": 4.556,
+              "usageRate": 0.6264265090059122
             },
             {
               "id": "warrior_crest_guard",
@@ -1404,24 +1405,10 @@
               "directEffects": {
                 "retain": true
               },
-              "plays": 1993,
-              "opportunities": 3772,
-              "playsPerBattle": 1.993,
-              "usageRate": 0.5283669141039237
-            },
-            {
-              "id": "warrior_follow",
-              "name": "誓约追击",
-              "cost": 1,
-              "type": "攻击",
-              "tags": [
-                "圣剑"
-              ],
-              "directEffects": {},
-              "plays": 1849,
-              "opportunities": 2083,
-              "playsPerBattle": 1.849,
-              "usageRate": 0.8876620259241479
+              "plays": 2079,
+              "opportunities": 3615,
+              "playsPerBattle": 2.079,
+              "usageRate": 0.575103734439834
             },
             {
               "id": "warrior_oath_retainer",
@@ -1434,10 +1421,24 @@
               "directEffects": {
                 "energy": true
               },
-              "plays": 1640,
-              "opportunities": 3599,
-              "playsPerBattle": 1.64,
-              "usageRate": 0.4556821339260906
+              "plays": 1932,
+              "opportunities": 3471,
+              "playsPerBattle": 1.932,
+              "usageRate": 0.5566119273984442
+            },
+            {
+              "id": "warrior_follow",
+              "name": "誓约追击",
+              "cost": 1,
+              "type": "攻击",
+              "tags": [
+                "圣剑"
+              ],
+              "directEffects": {},
+              "plays": 1769,
+              "opportunities": 2035,
+              "playsPerBattle": 1.769,
+              "usageRate": 0.8692874692874692
             },
             {
               "id": "warrior_flash",
@@ -1448,10 +1449,10 @@
                 "圣剑"
               ],
               "directEffects": {},
-              "plays": 1571,
-              "opportunities": 1868,
-              "playsPerBattle": 1.571,
-              "usageRate": 0.8410064239828694
+              "plays": 1534,
+              "opportunities": 1837,
+              "playsPerBattle": 1.534,
+              "usageRate": 0.8350571584104518
             },
             {
               "id": "基础斩击",
@@ -1460,10 +1461,10 @@
               "type": "攻击",
               "tags": [],
               "directEffects": {},
-              "plays": 1110,
-              "opportunities": 8643,
-              "playsPerBattle": 1.11,
-              "usageRate": 0.12842762929538354
+              "plays": 1179,
+              "opportunities": 8649,
+              "playsPerBattle": 1.179,
+              "usageRate": 0.13631633714880334
             },
             {
               "id": "warrior_charge",
@@ -1475,25 +1476,10 @@
                 "重击"
               ],
               "directEffects": {},
-              "plays": 1081,
-              "opportunities": 2003,
-              "playsPerBattle": 1.081,
-              "usageRate": 0.5396904643035447
-            },
-            {
-              "id": "warrior_saintbreaker",
-              "name": "圣痕破势",
-              "cost": 2,
-              "type": "攻击",
-              "tags": [
-                "圣剑",
-                "易伤"
-              ],
-              "directEffects": {},
-              "plays": 1062,
-              "opportunities": 1897,
-              "playsPerBattle": 1.062,
-              "usageRate": 0.5598313125988402
+              "plays": 1127,
+              "opportunities": 2016,
+              "playsPerBattle": 1.127,
+              "usageRate": 0.5590277777777778
             },
             {
               "id": "warrior_soul_oath",
@@ -1507,10 +1493,25 @@
                 "draw": true,
                 "protection": true
               },
-              "plays": 1053,
-              "opportunities": 2211,
-              "playsPerBattle": 1.053,
-              "usageRate": 0.4762550881953867
+              "plays": 1125,
+              "opportunities": 2213,
+              "playsPerBattle": 1.125,
+              "usageRate": 0.508359692724808
+            },
+            {
+              "id": "warrior_saintbreaker",
+              "name": "圣痕破势",
+              "cost": 2,
+              "type": "攻击",
+              "tags": [
+                "圣剑",
+                "易伤"
+              ],
+              "directEffects": {},
+              "plays": 1114,
+              "opportunities": 1960,
+              "playsPerBattle": 1.114,
+              "usageRate": 0.5683673469387756
             },
             {
               "id": "warrior_release",
@@ -1522,10 +1523,10 @@
                 "重击"
               ],
               "directEffects": {},
-              "plays": 791,
-              "opportunities": 1969,
-              "playsPerBattle": 0.791,
-              "usageRate": 0.4017267648552565
+              "plays": 874,
+              "opportunities": 1957,
+              "playsPerBattle": 0.874,
+              "usageRate": 0.44660194174757284
             },
             {
               "id": "warrior_dawn_guard",
@@ -1536,10 +1537,10 @@
                 "保留"
               ],
               "directEffects": {},
-              "plays": 756,
-              "opportunities": 3731,
-              "playsPerBattle": 0.756,
-              "usageRate": 0.2026266416510319
+              "plays": 775,
+              "opportunities": 3601,
+              "playsPerBattle": 0.775,
+              "usageRate": 0.2152179950013885
             },
             {
               "id": "warrior_oath",
@@ -1553,10 +1554,10 @@
                 "draw": true,
                 "retain": true
               },
-              "plays": 706,
-              "opportunities": 3830,
-              "playsPerBattle": 0.706,
-              "usageRate": 0.18433420365535247
+              "plays": 764,
+              "opportunities": 3716,
+              "playsPerBattle": 0.764,
+              "usageRate": 0.20559741657696448
             },
             {
               "id": "warrior_crown_riposte",
@@ -1570,10 +1571,10 @@
               "directEffects": {
                 "protection": true
               },
-              "plays": 688,
-              "opportunities": 2145,
-              "playsPerBattle": 0.688,
-              "usageRate": 0.32074592074592073
+              "plays": 705,
+              "opportunities": 2104,
+              "playsPerBattle": 0.705,
+              "usageRate": 0.3350760456273764
             },
             {
               "id": "warrior_thorn_charge",
@@ -1585,10 +1586,10 @@
                 "荆棘"
               ],
               "directEffects": {},
-              "plays": 668,
-              "opportunities": 1859,
-              "playsPerBattle": 0.668,
-              "usageRate": 0.3593329747175901
+              "plays": 690,
+              "opportunities": 1878,
+              "playsPerBattle": 0.69,
+              "usageRate": 0.36741214057507987
             },
             {
               "id": "warrior_banner_guard",
@@ -1601,10 +1602,10 @@
               "directEffects": {
                 "draw": true
               },
-              "plays": 610,
-              "opportunities": 1929,
-              "playsPerBattle": 0.61,
-              "usageRate": 0.31622602384655263
+              "plays": 661,
+              "opportunities": 1936,
+              "playsPerBattle": 0.661,
+              "usageRate": 0.34142561983471076
             },
             {
               "id": "warrior_wall",
@@ -1615,10 +1616,27 @@
                 "庇护"
               ],
               "directEffects": {},
-              "plays": 596,
-              "opportunities": 2046,
-              "playsPerBattle": 0.596,
-              "usageRate": 0.2913000977517107
+              "plays": 607,
+              "opportunities": 1999,
+              "playsPerBattle": 0.607,
+              "usageRate": 0.3036518259129565
+            },
+            {
+              "id": "warrior_oath_charge",
+              "name": "王誓蓄锋",
+              "cost": 2,
+              "type": "能力",
+              "tags": [
+                "附魔"
+              ],
+              "directEffects": {
+                "protection": true,
+                "draw": true
+              },
+              "plays": 589,
+              "opportunities": 2205,
+              "playsPerBattle": 0.589,
+              "usageRate": 0.2671201814058957
             },
             {
               "id": "warrior_thorn_turn",
@@ -1630,10 +1648,10 @@
                 "荆棘"
               ],
               "directEffects": {},
-              "plays": 537,
-              "opportunities": 1852,
-              "playsPerBattle": 0.537,
-              "usageRate": 0.28995680345572356
+              "plays": 519,
+              "opportunities": 1849,
+              "playsPerBattle": 0.519,
+              "usageRate": 0.28069226608977826
             },
             {
               "id": "warrior_oath_watch",
@@ -1651,23 +1669,6 @@
               "usageRate": 1
             },
             {
-              "id": "warrior_oath_charge",
-              "name": "王誓蓄锋",
-              "cost": 2,
-              "type": "能力",
-              "tags": [
-                "附魔"
-              ],
-              "directEffects": {
-                "protection": true,
-                "draw": true
-              },
-              "plays": 430,
-              "opportunities": 2213,
-              "playsPerBattle": 0.43,
-              "usageRate": 0.19430637144148216
-            },
-            {
               "id": "warrior_bastion_ledger",
               "name": "壁垒记录",
               "cost": 1,
@@ -1678,10 +1679,10 @@
               "directEffects": {
                 "draw": true
               },
-              "plays": 428,
-              "opportunities": 2046,
-              "playsPerBattle": 0.428,
-              "usageRate": 0.20918866080156404
+              "plays": 443,
+              "opportunities": 1988,
+              "playsPerBattle": 0.443,
+              "usageRate": 0.22283702213279677
             },
             {
               "id": "warrior_scar",
@@ -1694,10 +1695,10 @@
               "directEffects": {
                 "retain": true
               },
-              "plays": 329,
-              "opportunities": 3480,
-              "playsPerBattle": 0.329,
-              "usageRate": 0.09454022988505748
+              "plays": 357,
+              "opportunities": 3474,
+              "playsPerBattle": 0.357,
+              "usageRate": 0.10276338514680483
             },
             {
               "id": "warrior_guard",
@@ -1711,10 +1712,10 @@
                 "protection": true,
                 "draw": true
               },
-              "plays": 279,
-              "opportunities": 1890,
-              "playsPerBattle": 0.279,
-              "usageRate": 0.14761904761904762
+              "plays": 325,
+              "opportunities": 1893,
+              "playsPerBattle": 0.325,
+              "usageRate": 0.1716851558372953
             },
             {
               "id": "基础防御",
@@ -1723,10 +1724,10 @@
               "type": "防御",
               "tags": [],
               "directEffects": {},
-              "plays": 260,
-              "opportunities": 4365,
-              "playsPerBattle": 0.26,
-              "usageRate": 0.05956471935853379
+              "plays": 289,
+              "opportunities": 4338,
+              "playsPerBattle": 0.289,
+              "usageRate": 0.06662056247118488
             },
             {
               "id": "warrior_oath_reversal",
@@ -1738,30 +1739,30 @@
                 "重置"
               ],
               "directEffects": {},
-              "plays": 241,
-              "opportunities": 1981,
-              "playsPerBattle": 0.241,
-              "usageRate": 0.12165572942958101
+              "plays": 283,
+              "opportunities": 1949,
+              "playsPerBattle": 0.283,
+              "usageRate": 0.14520266803488968
             }
           ],
           "playStyle": {
-            "attacks": 9.357,
-            "defenses": 11.453,
-            "abilities": 3.706,
+            "attacks": 9.511,
+            "defenses": 11.203,
+            "abilities": 4.061,
             "setup": 0,
-            "burst": 8.247,
-            "sustain": 15.309,
-            "control": 1.062,
-            "cycle": 1.773
+            "burst": 8.332,
+            "sustain": 15.175,
+            "control": 1.114,
+            "cycle": 1.887
           },
           "enemies": {
             "【精英】狂暴牛头人": {
               "games": 327,
-              "wins": 151
+              "wins": 111
             },
             "【精英】不死骨龙": {
               "games": 343,
-              "wins": 160
+              "wins": 125
             },
             "【精英】猩红血巫": {
               "games": 330,
@@ -1770,22 +1771,22 @@
           }
         },
         "boss": {
-          "winRate": 0.191,
-          "averageTurns": 10.977,
-          "averageHpLeft": 11.684,
-          "averageHpLeftOnWin": 51.00523560209424,
-          "averageDamageTaken": 93.216,
-          "averageDamageDealt": 752.891,
+          "winRate": 0.114,
+          "averageTurns": 8.821,
+          "averageHpLeft": 7.05,
+          "averageHpLeftOnWin": 50.228070175438596,
+          "averageDamageTaken": 106.642,
+          "averageDamageDealt": 546.173,
           "averageHealing": 0,
-          "averageEnergyWasted": 0.386,
-          "energyWastedPerTurn": 0.03516443472715678,
+          "averageEnergyWasted": 0.274,
+          "energyWastedPerTurn": 0.031062237841514566,
           "deathCauses": {
-            "首领主体攻击": 769,
-            "回合上限": 40
+            "首领主体攻击": 862,
+            "回合上限": 24
           },
           "victoryCauses": {
-            "卡牌伤害": 54,
-            "荆棘": 137
+            "荆棘": 81,
+            "卡牌伤害": 33
           },
           "cardUsage": [
             {
@@ -1799,10 +1800,10 @@
               "directEffects": {
                 "retain": true
               },
-              "plays": 8078,
-              "opportunities": 10282,
-              "playsPerBattle": 8.078,
-              "usageRate": 0.7856448161836218
+              "plays": 5683,
+              "opportunities": 8156,
+              "playsPerBattle": 5.683,
+              "usageRate": 0.6967876410004904
             },
             {
               "id": "warrior_crest_guard",
@@ -1815,10 +1816,10 @@
               "directEffects": {
                 "retain": true
               },
-              "plays": 3524,
-              "opportunities": 5256,
-              "playsPerBattle": 3.524,
-              "usageRate": 0.6704718417047184
+              "plays": 2925,
+              "opportunities": 4169,
+              "playsPerBattle": 2.925,
+              "usageRate": 0.7016071000239865
             },
             {
               "id": "warrior_oath_retainer",
@@ -1831,10 +1832,10 @@
               "directEffects": {
                 "energy": true
               },
-              "plays": 2699,
-              "opportunities": 5003,
-              "playsPerBattle": 2.699,
-              "usageRate": 0.5394763142114731
+              "plays": 2455,
+              "opportunities": 4108,
+              "playsPerBattle": 2.455,
+              "usageRate": 0.5976144109055501
             },
             {
               "id": "warrior_follow",
@@ -1845,10 +1846,10 @@
                 "圣剑"
               ],
               "directEffects": {},
-              "plays": 2132,
-              "opportunities": 2391,
-              "playsPerBattle": 2.132,
-              "usageRate": 0.8916771225428691
+              "plays": 1675,
+              "opportunities": 1896,
+              "playsPerBattle": 1.675,
+              "usageRate": 0.8834388185654009
             },
             {
               "id": "warrior_flash",
@@ -1859,39 +1860,10 @@
                 "圣剑"
               ],
               "directEffects": {},
-              "plays": 2037,
-              "opportunities": 2357,
-              "playsPerBattle": 2.037,
-              "usageRate": 0.8642341960118796
-            },
-            {
-              "id": "warrior_dawn_guard",
-              "name": "破晓格挡",
-              "cost": 1,
-              "type": "防御",
-              "tags": [
-                "保留"
-              ],
-              "directEffects": {},
-              "plays": 1373,
-              "opportunities": 5032,
-              "playsPerBattle": 1.373,
-              "usageRate": 0.2728537360890302
-            },
-            {
-              "id": "warrior_saintbreaker",
-              "name": "圣痕破势",
-              "cost": 2,
-              "type": "攻击",
-              "tags": [
-                "圣剑",
-                "易伤"
-              ],
-              "directEffects": {},
-              "plays": 1286,
-              "opportunities": 2325,
-              "playsPerBattle": 1.286,
-              "usageRate": 0.5531182795698925
+              "plays": 1623,
+              "opportunities": 1902,
+              "playsPerBattle": 1.623,
+              "usageRate": 0.8533123028391167
             },
             {
               "id": "warrior_charge",
@@ -1903,10 +1875,39 @@
                 "重击"
               ],
               "directEffects": {},
-              "plays": 1276,
-              "opportunities": 2342,
-              "playsPerBattle": 1.276,
-              "usageRate": 0.5448334756618275
+              "plays": 1072,
+              "opportunities": 1924,
+              "playsPerBattle": 1.072,
+              "usageRate": 0.5571725571725572
+            },
+            {
+              "id": "warrior_saintbreaker",
+              "name": "圣痕破势",
+              "cost": 2,
+              "type": "攻击",
+              "tags": [
+                "圣剑",
+                "易伤"
+              ],
+              "directEffects": {},
+              "plays": 1047,
+              "opportunities": 1894,
+              "playsPerBattle": 1.047,
+              "usageRate": 0.5527983104540655
+            },
+            {
+              "id": "warrior_dawn_guard",
+              "name": "破晓格挡",
+              "cost": 1,
+              "type": "防御",
+              "tags": [
+                "保留"
+              ],
+              "directEffects": {},
+              "plays": 1045,
+              "opportunities": 3916,
+              "playsPerBattle": 1.045,
+              "usageRate": 0.26685393258426965
             },
             {
               "id": "warrior_soul_oath",
@@ -1920,10 +1921,10 @@
                 "draw": true,
                 "protection": true
               },
-              "plays": 1180,
-              "opportunities": 2546,
-              "playsPerBattle": 1.18,
-              "usageRate": 0.4634721131186174
+              "plays": 1039,
+              "opportunities": 2082,
+              "playsPerBattle": 1.039,
+              "usageRate": 0.4990393852065322
             },
             {
               "id": "基础斩击",
@@ -1932,10 +1933,10 @@
               "type": "攻击",
               "tags": [],
               "directEffects": {},
-              "plays": 1051,
-              "opportunities": 10593,
-              "playsPerBattle": 1.051,
-              "usageRate": 0.09921646370244501
+              "plays": 942,
+              "opportunities": 8660,
+              "playsPerBattle": 0.942,
+              "usageRate": 0.10877598152424943
             },
             {
               "id": "warrior_wall",
@@ -1946,104 +1947,10 @@
                 "庇护"
               ],
               "directEffects": {},
-              "plays": 978,
-              "opportunities": 2627,
-              "playsPerBattle": 0.978,
-              "usageRate": 0.37228778073848495
-            },
-            {
-              "id": "warrior_thorn_charge",
-              "name": "棘甲冲锋",
-              "cost": 2,
-              "type": "攻击",
-              "tags": [
-                "圣剑",
-                "荆棘"
-              ],
-              "directEffects": {},
-              "plays": 903,
-              "opportunities": 2373,
-              "playsPerBattle": 0.903,
-              "usageRate": 0.3805309734513274
-            },
-            {
-              "id": "warrior_banner_guard",
-              "name": "誓旗护阵",
-              "cost": 1,
-              "type": "能力",
-              "tags": [
-                "庇护"
-              ],
-              "directEffects": {
-                "draw": true
-              },
-              "plays": 869,
-              "opportunities": 2585,
-              "playsPerBattle": 0.869,
-              "usageRate": 0.33617021276595743
-            },
-            {
-              "id": "warrior_oath",
-              "name": "遗迹立誓",
-              "cost": 1,
-              "type": "能力",
-              "tags": [
-                "庇护"
-              ],
-              "directEffects": {
-                "draw": true,
-                "retain": true
-              },
-              "plays": 851,
-              "opportunities": 5122,
-              "playsPerBattle": 0.851,
-              "usageRate": 0.16614603670441233
-            },
-            {
-              "id": "warrior_release",
-              "name": "圣剑解放",
-              "cost": 3,
-              "type": "攻击",
-              "tags": [
-                "圣剑",
-                "重击"
-              ],
-              "directEffects": {},
-              "plays": 769,
-              "opportunities": 2453,
-              "playsPerBattle": 0.769,
-              "usageRate": 0.3134936812066857
-            },
-            {
-              "id": "warrior_thorn_turn",
-              "name": "棘盾转锋",
-              "cost": 2,
-              "type": "攻击",
-              "tags": [
-                "圣剑",
-                "荆棘"
-              ],
-              "directEffects": {},
-              "plays": 755,
-              "opportunities": 2380,
-              "playsPerBattle": 0.755,
-              "usageRate": 0.3172268907563025
-            },
-            {
-              "id": "warrior_scar",
-              "name": "铁壁圣痕",
-              "cost": 2,
-              "type": "防御",
-              "tags": [
-                "庇护"
-              ],
-              "directEffects": {
-                "retain": true
-              },
-              "plays": 655,
-              "opportunities": 5271,
-              "playsPerBattle": 0.655,
-              "usageRate": 0.12426484538038322
+              "plays": 854,
+              "opportunities": 2170,
+              "playsPerBattle": 0.854,
+              "usageRate": 0.3935483870967742
             },
             {
               "id": "warrior_crown_riposte",
@@ -2057,10 +1964,104 @@
               "directEffects": {
                 "protection": true
               },
-              "plays": 616,
-              "opportunities": 2446,
-              "playsPerBattle": 0.616,
-              "usageRate": 0.2518397383483238
+              "plays": 822,
+              "opportunities": 1965,
+              "playsPerBattle": 0.822,
+              "usageRate": 0.4183206106870229
+            },
+            {
+              "id": "warrior_release",
+              "name": "圣剑解放",
+              "cost": 3,
+              "type": "攻击",
+              "tags": [
+                "圣剑",
+                "重击"
+              ],
+              "directEffects": {},
+              "plays": 768,
+              "opportunities": 1967,
+              "playsPerBattle": 0.768,
+              "usageRate": 0.39044229791560753
+            },
+            {
+              "id": "warrior_thorn_charge",
+              "name": "棘甲冲锋",
+              "cost": 2,
+              "type": "攻击",
+              "tags": [
+                "圣剑",
+                "荆棘"
+              ],
+              "directEffects": {},
+              "plays": 753,
+              "opportunities": 1996,
+              "playsPerBattle": 0.753,
+              "usageRate": 0.3772545090180361
+            },
+            {
+              "id": "warrior_banner_guard",
+              "name": "誓旗护阵",
+              "cost": 1,
+              "type": "能力",
+              "tags": [
+                "庇护"
+              ],
+              "directEffects": {
+                "draw": true
+              },
+              "plays": 751,
+              "opportunities": 2095,
+              "playsPerBattle": 0.751,
+              "usageRate": 0.358472553699284
+            },
+            {
+              "id": "warrior_oath",
+              "name": "遗迹立誓",
+              "cost": 1,
+              "type": "能力",
+              "tags": [
+                "庇护"
+              ],
+              "directEffects": {
+                "draw": true,
+                "retain": true
+              },
+              "plays": 728,
+              "opportunities": 4094,
+              "playsPerBattle": 0.728,
+              "usageRate": 0.17782120175867122
+            },
+            {
+              "id": "warrior_scar",
+              "name": "铁壁圣痕",
+              "cost": 2,
+              "type": "防御",
+              "tags": [
+                "庇护"
+              ],
+              "directEffects": {
+                "retain": true
+              },
+              "plays": 625,
+              "opportunities": 4278,
+              "playsPerBattle": 0.625,
+              "usageRate": 0.146096306685367
+            },
+            {
+              "id": "warrior_thorn_turn",
+              "name": "棘盾转锋",
+              "cost": 2,
+              "type": "攻击",
+              "tags": [
+                "圣剑",
+                "荆棘"
+              ],
+              "directEffects": {},
+              "plays": 577,
+              "opportunities": 1975,
+              "playsPerBattle": 0.577,
+              "usageRate": 0.29215189873417724
             },
             {
               "id": "warrior_bastion_ledger",
@@ -2073,10 +2074,10 @@
               "directEffects": {
                 "draw": true
               },
-              "plays": 564,
-              "opportunities": 2510,
-              "playsPerBattle": 0.564,
-              "usageRate": 0.22470119521912352
+              "plays": 501,
+              "opportunities": 2037,
+              "playsPerBattle": 0.501,
+              "usageRate": 0.24594992636229748
             },
             {
               "id": "warrior_oath_watch",
@@ -2089,21 +2090,9 @@
               ],
               "directEffects": {},
               "plays": 482,
-              "opportunities": 489,
+              "opportunities": 490,
               "playsPerBattle": 0.482,
-              "usageRate": 0.9856850715746421
-            },
-            {
-              "id": "基础防御",
-              "name": "基础防御",
-              "cost": 1,
-              "type": "防御",
-              "tags": [],
-              "directEffects": {},
-              "plays": 448,
-              "opportunities": 5346,
-              "playsPerBattle": 0.448,
-              "usageRate": 0.08380097268986157
+              "usageRate": 0.9836734693877551
             },
             {
               "id": "warrior_oath_charge",
@@ -2117,10 +2106,22 @@
                 "protection": true,
                 "draw": true
               },
-              "plays": 410,
-              "opportunities": 2627,
-              "playsPerBattle": 0.41,
-              "usageRate": 0.15607156452226875
+              "plays": 433,
+              "opportunities": 2111,
+              "playsPerBattle": 0.433,
+              "usageRate": 0.2051160587399337
+            },
+            {
+              "id": "基础防御",
+              "name": "基础防御",
+              "cost": 1,
+              "type": "防御",
+              "tags": [],
+              "directEffects": {},
+              "plays": 381,
+              "opportunities": 4330,
+              "playsPerBattle": 0.381,
+              "usageRate": 0.08799076212471131
             },
             {
               "id": "warrior_guard",
@@ -2134,10 +2135,10 @@
                 "protection": true,
                 "draw": true
               },
-              "plays": 369,
-              "opportunities": 2432,
-              "playsPerBattle": 0.369,
-              "usageRate": 0.15172697368421054
+              "plays": 375,
+              "opportunities": 2006,
+              "playsPerBattle": 0.375,
+              "usageRate": 0.18693918245264207
             },
             {
               "id": "warrior_oath_reversal",
@@ -2149,10 +2150,10 @@
                 "重置"
               ],
               "directEffects": {},
-              "plays": 339,
-              "opportunities": 2411,
-              "playsPerBattle": 0.339,
-              "usageRate": 0.14060555785980922
+              "plays": 321,
+              "opportunities": 1886,
+              "playsPerBattle": 0.321,
+              "usageRate": 0.1702014846235419
             },
             {
               "id": "诅咒",
@@ -2162,48 +2163,48 @@
               "tags": [],
               "directEffects": {},
               "plays": 0,
-              "opportunities": 5565,
+              "opportunities": 4217,
               "playsPerBattle": 0,
               "usageRate": 0
             }
           ],
           "playStyle": {
-            "attacks": 10.825,
-            "defenses": 18.463,
-            "abilities": 4.356,
+            "attacks": 9.279,
+            "defenses": 14.664,
+            "abilities": 3.934,
             "setup": 0,
-            "burst": 9.774,
-            "sustain": 23.055,
-            "control": 1.286,
-            "cycle": 2.001
+            "burst": 8.337,
+            "sustain": 18.897,
+            "control": 1.047,
+            "cycle": 1.842
           },
           "enemies": {
             "【深渊主宰】": {
               "games": 495,
-              "wins": 143
+              "wins": 92
             },
             "【首领】鬼面修罗": {
               "games": 505,
-              "wins": 48
+              "wins": 22
             }
           }
         }
       },
       "expedition": {
-        "clearRate": 0.179,
+        "clearRate": 0.105,
         "reached": [
           1000,
           990,
           967,
-          940,
-          578
+          889,
+          475
         ],
         "deaths": {
-          "elite": 362,
+          "elite": 414,
           "early": 10,
-          "boss": 399,
+          "boss": 370,
           "mid": 23,
-          "late": 27
+          "late": 78
         }
       }
     },

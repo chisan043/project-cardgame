@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-13T14:22:51.095Z",
+  "generatedAt": "2026-06-13T14:27:10.646Z",
   "model": "reward choice and forced encounter simulation v1",
   "runsPerSeed": 300,
   "seeds": [
@@ -18,59 +18,59 @@
       "enemies": {
         "【精英】狂暴牛头人": {
           "games": 900,
-          "wins": 373,
-          "winRate": 0.41444444444444445
+          "wins": 262,
+          "winRate": 0.2911111111111111
         },
         "【精英】猩红血巫": {
           "games": 900,
-          "wins": 723,
-          "winRate": 0.8033333333333333
+          "wins": 721,
+          "winRate": 0.8011111111111111
         },
         "【精英】不死骨龙": {
           "games": 900,
-          "wins": 407,
-          "winRate": 0.45222222222222225
+          "wins": 325,
+          "winRate": 0.3611111111111111
         },
         "【首领】鬼面修罗": {
           "games": 900,
-          "wins": 104,
-          "winRate": 0.11555555555555555
+          "wins": 40,
+          "winRate": 0.044444444444444446
         },
         "【深渊主宰】": {
           "games": 900,
-          "wins": 226,
-          "winRate": 0.2511111111111111
+          "wins": 133,
+          "winRate": 0.14777777777777779
         }
       },
       "seeds": [
         {
           "seed": 20260612,
           "enemies": {
-            "【精英】狂暴牛头人": 0.42333333333333334,
-            "【精英】猩红血巫": 0.82,
-            "【精英】不死骨龙": 0.4866666666666667,
-            "【首领】鬼面修罗": 0.12333333333333334,
-            "【深渊主宰】": 0.28
+            "【精英】狂暴牛头人": 0.31,
+            "【精英】猩红血巫": 0.8133333333333334,
+            "【精英】不死骨龙": 0.4,
+            "【首领】鬼面修罗": 0.04666666666666667,
+            "【深渊主宰】": 0.16666666666666666
           }
         },
         {
           "seed": 21260615,
           "enemies": {
-            "【精英】狂暴牛头人": 0.4066666666666667,
-            "【精英】猩红血巫": 0.7866666666666666,
-            "【精英】不死骨龙": 0.4066666666666667,
-            "【首领】鬼面修罗": 0.09666666666666666,
-            "【深渊主宰】": 0.22333333333333333
+            "【精英】狂暴牛头人": 0.26,
+            "【精英】猩红血巫": 0.78,
+            "【精英】不死骨龙": 0.33,
+            "【首领】鬼面修罗": 0.04,
+            "【深渊主宰】": 0.13333333333333333
           }
         },
         {
           "seed": 22260615,
           "enemies": {
-            "【精英】狂暴牛头人": 0.41333333333333333,
-            "【精英】猩红血巫": 0.8033333333333333,
-            "【精英】不死骨龙": 0.4633333333333333,
-            "【首领】鬼面修罗": 0.12666666666666668,
-            "【深渊主宰】": 0.25
+            "【精英】狂暴牛头人": 0.30333333333333334,
+            "【精英】猩红血巫": 0.81,
+            "【精英】不死骨龙": 0.35333333333333333,
+            "【首领】鬼面修罗": 0.04666666666666667,
+            "【深渊主宰】": 0.14333333333333334
           }
         }
       ],
@@ -432,9 +432,9 @@
           "picks": 1,
           "choiceRate": 0.0031446540880503146,
           "deckInclusionRate": 0.0011111111111111111,
-          "plays": 8,
-          "opportunities": 12,
-          "drawnUsageRate": 0.6666666666666666
+          "plays": 7,
+          "opportunities": 13,
+          "drawnUsageRate": 0.5384615384615384
         },
         {
           "id": "warrior_ember_oath",
@@ -456,9 +456,9 @@
           "picks": 1,
           "choiceRate": 0.003952569169960474,
           "deckInclusionRate": 0.0011111111111111111,
-          "plays": 5,
-          "opportunities": 32,
-          "drawnUsageRate": 0.15625
+          "plays": 6,
+          "opportunities": 28,
+          "drawnUsageRate": 0.21428571428571427
         },
         {
           "id": "warrior_steel_pressure",
@@ -481,8 +481,8 @@
           "choiceRate": 0.00425531914893617,
           "deckInclusionRate": 0.0011111111111111111,
           "plays": 2,
-          "opportunities": 32,
-          "drawnUsageRate": 0.0625
+          "opportunities": 30,
+          "drawnUsageRate": 0.06666666666666667
         },
         {
           "id": "warrior_venom_scar",
@@ -503,9 +503,9 @@
           "picks": 2,
           "choiceRate": 0.008368200836820083,
           "deckInclusionRate": 0.0022222222222222222,
-          "plays": 42,
-          "opportunities": 77,
-          "drawnUsageRate": 0.5454545454545454
+          "plays": 43,
+          "opportunities": 72,
+          "drawnUsageRate": 0.5972222222222222
         },
         {
           "id": "warrior_flaw_mark",
@@ -528,9 +528,9 @@
           "picks": 3,
           "choiceRate": 0.011673151750972763,
           "deckInclusionRate": 0.0033333333333333335,
-          "plays": 62,
+          "plays": 71,
           "opportunities": 126,
-          "drawnUsageRate": 0.49206349206349204
+          "drawnUsageRate": 0.5634920634920635
         },
         {
           "id": "warrior_heart_probe",
@@ -552,9 +552,9 @@
           "picks": 3,
           "choiceRate": 0.012396694214876033,
           "deckInclusionRate": 0.0033333333333333335,
-          "plays": 29,
-          "opportunities": 90,
-          "drawnUsageRate": 0.32222222222222224
+          "plays": 21,
+          "opportunities": 70,
+          "drawnUsageRate": 0.3
         },
         {
           "id": "warrior_silent_lunge",
@@ -575,9 +575,9 @@
           "picks": 3,
           "choiceRate": 0.01282051282051282,
           "deckInclusionRate": 0.0033333333333333335,
-          "plays": 16,
-          "opportunities": 75,
-          "drawnUsageRate": 0.21333333333333335
+          "plays": 12,
+          "opportunities": 71,
+          "drawnUsageRate": 0.16901408450704225
         },
         {
           "id": "neutral_ash_marker",
@@ -599,8 +599,8 @@
           "choiceRate": 0.013513513513513514,
           "deckInclusionRate": 0.0011111111111111111,
           "plays": 7,
-          "opportunities": 27,
-          "drawnUsageRate": 0.25925925925925924
+          "opportunities": 23,
+          "drawnUsageRate": 0.30434782608695654
         },
         {
           "id": "neutral_echo",
@@ -622,8 +622,8 @@
           "choiceRate": 0.014388489208633094,
           "deckInclusionRate": 0.0022222222222222222,
           "plays": 10,
-          "opportunities": 144,
-          "drawnUsageRate": 0.06944444444444445
+          "opportunities": 127,
+          "drawnUsageRate": 0.07874015748031496
         },
         {
           "id": "neutral_old_dream_return",
@@ -642,9 +642,9 @@
           "picks": 1,
           "choiceRate": 0.014492753623188406,
           "deckInclusionRate": 0.0011111111111111111,
-          "plays": 2,
-          "opportunities": 49,
-          "drawnUsageRate": 0.04081632653061224
+          "plays": 3,
+          "opportunities": 41,
+          "drawnUsageRate": 0.07317073170731707
         },
         {
           "id": "warrior_bleed_edge",
@@ -665,9 +665,9 @@
           "picks": 5,
           "choiceRate": 0.014925373134328358,
           "deckInclusionRate": 0.005555555555555556,
-          "plays": 60,
-          "opportunities": 168,
-          "drawnUsageRate": 0.35714285714285715
+          "plays": 43,
+          "opportunities": 135,
+          "drawnUsageRate": 0.31851851851851853
         },
         {
           "id": "neutral_bloodlet_rite",
@@ -689,8 +689,8 @@
           "choiceRate": 0.01639344262295082,
           "deckInclusionRate": 0.0011111111111111111,
           "plays": 3,
-          "opportunities": 56,
-          "drawnUsageRate": 0.05357142857142857
+          "opportunities": 51,
+          "drawnUsageRate": 0.058823529411764705
         },
         {
           "id": "warrior_frenzy_cleave",
@@ -712,9 +712,9 @@
           "picks": 8,
           "choiceRate": 0.016771488469601678,
           "deckInclusionRate": 0.008888888888888889,
-          "plays": 13,
-          "opportunities": 278,
-          "drawnUsageRate": 0.046762589928057555
+          "plays": 18,
+          "opportunities": 242,
+          "drawnUsageRate": 0.0743801652892562
         },
         {
           "id": "warrior_open_vein",
@@ -739,8 +739,8 @@
           "choiceRate": 0.01875,
           "deckInclusionRate": 0.006666666666666667,
           "plays": 15,
-          "opportunities": 167,
-          "drawnUsageRate": 0.08982035928143713
+          "opportunities": 141,
+          "drawnUsageRate": 0.10638297872340426
         },
         {
           "id": "warrior_debt_scar",
@@ -763,9 +763,9 @@
           "picks": 7,
           "choiceRate": 0.0196078431372549,
           "deckInclusionRate": 0.0077777777777777776,
-          "plays": 160,
-          "opportunities": 281,
-          "drawnUsageRate": 0.5693950177935944
+          "plays": 145,
+          "opportunities": 250,
+          "drawnUsageRate": 0.58
         },
         {
           "id": "warrior_vein_oath",
@@ -786,9 +786,9 @@
           "picks": 8,
           "choiceRate": 0.02318840579710145,
           "deckInclusionRate": 0.008888888888888889,
-          "plays": 102,
-          "opportunities": 272,
-          "drawnUsageRate": 0.375
+          "plays": 109,
+          "opportunities": 254,
+          "drawnUsageRate": 0.42913385826771655
         },
         {
           "id": "warrior_break_form",
@@ -812,9 +812,9 @@
           "picks": 7,
           "choiceRate": 0.025362318840579712,
           "deckInclusionRate": 0.0077777777777777776,
-          "plays": 46,
-          "opportunities": 251,
-          "drawnUsageRate": 0.18326693227091634
+          "plays": 41,
+          "opportunities": 230,
+          "drawnUsageRate": 0.1782608695652174
         },
         {
           "id": "neutral_soul_flame",
@@ -835,9 +835,9 @@
           "picks": 2,
           "choiceRate": 0.030303030303030304,
           "deckInclusionRate": 0.0022222222222222222,
-          "plays": 11,
-          "opportunities": 66,
-          "drawnUsageRate": 0.16666666666666666
+          "plays": 8,
+          "opportunities": 57,
+          "drawnUsageRate": 0.14035087719298245
         },
         {
           "id": "warrior_scaffold_cut",
@@ -859,9 +859,9 @@
           "picks": 9,
           "choiceRate": 0.03308823529411765,
           "deckInclusionRate": 0.01,
-          "plays": 88,
-          "opportunities": 350,
-          "drawnUsageRate": 0.25142857142857145
+          "plays": 83,
+          "opportunities": 310,
+          "drawnUsageRate": 0.267741935483871
         },
         {
           "id": "warrior_red_return",
@@ -884,9 +884,9 @@
           "picks": 11,
           "choiceRate": 0.03343465045592705,
           "deckInclusionRate": 0.012222222222222223,
-          "plays": 218,
-          "opportunities": 706,
-          "drawnUsageRate": 0.3087818696883853
+          "plays": 202,
+          "opportunities": 637,
+          "drawnUsageRate": 0.31711145996860285
         },
         {
           "id": "neutral_sealed_thunder",
@@ -906,9 +906,9 @@
           "picks": 5,
           "choiceRate": 0.036231884057971016,
           "deckInclusionRate": 0.005555555555555556,
-          "plays": 24,
-          "opportunities": 45,
-          "drawnUsageRate": 0.5333333333333333
+          "plays": 23,
+          "opportunities": 44,
+          "drawnUsageRate": 0.5227272727272727
         },
         {
           "id": "warrior_gap_finder",
@@ -931,9 +931,9 @@
           "picks": 11,
           "choiceRate": 0.045454545454545456,
           "deckInclusionRate": 0.012222222222222223,
-          "plays": 79,
-          "opportunities": 373,
-          "drawnUsageRate": 0.21179624664879357
+          "plays": 86,
+          "opportunities": 358,
+          "drawnUsageRate": 0.24022346368715083
         },
         {
           "id": "neutral_exile_blade",
@@ -952,9 +952,9 @@
           "picks": 4,
           "choiceRate": 0.04597701149425287,
           "deckInclusionRate": 0.0044444444444444444,
-          "plays": 16,
-          "opportunities": 48,
-          "drawnUsageRate": 0.3333333333333333
+          "plays": 17,
+          "opportunities": 35,
+          "drawnUsageRate": 0.4857142857142857
         },
         {
           "id": "warrior_lifebite",
@@ -975,9 +975,9 @@
           "picks": 15,
           "choiceRate": 0.04918032786885246,
           "deckInclusionRate": 0.016666666666666666,
-          "plays": 170,
-          "opportunities": 499,
-          "drawnUsageRate": 0.3406813627254509
+          "plays": 161,
+          "opportunities": 446,
+          "drawnUsageRate": 0.3609865470852018
         },
         {
           "id": "neutral_guard",
@@ -996,9 +996,9 @@
           "picks": 4,
           "choiceRate": 0.05405405405405406,
           "deckInclusionRate": 0.0044444444444444444,
-          "plays": 34,
-          "opportunities": 256,
-          "drawnUsageRate": 0.1328125
+          "plays": 30,
+          "opportunities": 235,
+          "drawnUsageRate": 0.1276595744680851
         },
         {
           "id": "neutral_return_scroll",
@@ -1019,9 +1019,9 @@
           "picks": 4,
           "choiceRate": 0.05714285714285714,
           "deckInclusionRate": 0.0044444444444444444,
-          "plays": 43,
-          "opportunities": 134,
-          "drawnUsageRate": 0.3208955223880597
+          "plays": 34,
+          "opportunities": 126,
+          "drawnUsageRate": 0.2698412698412698
         },
         {
           "id": "warrior_execute_window",
@@ -1043,9 +1043,9 @@
           "picks": 28,
           "choiceRate": 0.06073752711496746,
           "deckInclusionRate": 0.03111111111111111,
-          "plays": 197,
-          "opportunities": 768,
-          "drawnUsageRate": 0.2565104166666667
+          "plays": 183,
+          "opportunities": 679,
+          "drawnUsageRate": 0.2695139911634757
         },
         {
           "id": "warrior_martyr_cut",
@@ -1088,9 +1088,9 @@
           "picks": 6,
           "choiceRate": 0.06818181818181818,
           "deckInclusionRate": 0.006666666666666667,
-          "plays": 49,
-          "opportunities": 177,
-          "drawnUsageRate": 0.2768361581920904
+          "plays": 47,
+          "opportunities": 148,
+          "drawnUsageRate": 0.31756756756756754
         },
         {
           "id": "warrior_final_measure",
@@ -1112,9 +1112,9 @@
           "picks": 32,
           "choiceRate": 0.07476635514018691,
           "deckInclusionRate": 0.035555555555555556,
-          "plays": 275,
-          "opportunities": 945,
-          "drawnUsageRate": 0.291005291005291
+          "plays": 259,
+          "opportunities": 872,
+          "drawnUsageRate": 0.29701834862385323
         },
         {
           "id": "warrior_exile_judgement",
@@ -1136,9 +1136,9 @@
           "picks": 34,
           "choiceRate": 0.07852193995381063,
           "deckInclusionRate": 0.03777777777777778,
-          "plays": 331,
-          "opportunities": 1143,
-          "drawnUsageRate": 0.289588801399825
+          "plays": 326,
+          "opportunities": 1037,
+          "drawnUsageRate": 0.31436837029893927
         },
         {
           "id": "warrior_crimson_pause",
@@ -1161,9 +1161,9 @@
           "picks": 36,
           "choiceRate": 0.11145510835913312,
           "deckInclusionRate": 0.04,
-          "plays": 48,
-          "opportunities": 2168,
-          "drawnUsageRate": 0.02214022140221402
+          "plays": 54,
+          "opportunities": 1921,
+          "drawnUsageRate": 0.028110359187922956
         },
         {
           "id": "warrior_blood_vow_slash",
@@ -1184,9 +1184,9 @@
           "picks": 40,
           "choiceRate": 0.14925373134328357,
           "deckInclusionRate": 0.044444444444444446,
-          "plays": 113,
-          "opportunities": 1148,
-          "drawnUsageRate": 0.09843205574912892
+          "plays": 120,
+          "opportunities": 1055,
+          "drawnUsageRate": 0.11374407582938388
         },
         {
           "id": "warrior_blood_wall",
@@ -1209,9 +1209,9 @@
           "picks": 37,
           "choiceRate": 0.15040650406504066,
           "deckInclusionRate": 0.04111111111111111,
-          "plays": 785,
-          "opportunities": 1313,
-          "drawnUsageRate": 0.5978674790555979
+          "plays": 746,
+          "opportunities": 1220,
+          "drawnUsageRate": 0.6114754098360655
         },
         {
           "id": "warrior_oath_pressure",
@@ -1232,9 +1232,9 @@
           "picks": 37,
           "choiceRate": 0.15040650406504066,
           "deckInclusionRate": 0.04111111111111111,
-          "plays": 1319,
-          "opportunities": 1645,
-          "drawnUsageRate": 0.8018237082066869
+          "plays": 1370,
+          "opportunities": 1650,
+          "drawnUsageRate": 0.8303030303030303
         },
         {
           "id": "neutral_vow_guard",
@@ -1255,9 +1255,9 @@
           "picks": 14,
           "choiceRate": 0.1686746987951807,
           "deckInclusionRate": 0.015555555555555555,
-          "plays": 364,
-          "opportunities": 762,
-          "drawnUsageRate": 0.4776902887139108
+          "plays": 331,
+          "opportunities": 651,
+          "drawnUsageRate": 0.5084485407066052
         },
         {
           "id": "warrior_oath_watch",
@@ -1302,9 +1302,9 @@
           "picks": 57,
           "choiceRate": 0.2007042253521127,
           "deckInclusionRate": 0.06222222222222222,
-          "plays": 220,
-          "opportunities": 1680,
-          "drawnUsageRate": 0.13095238095238096
+          "plays": 236,
+          "opportunities": 1569,
+          "drawnUsageRate": 0.1504142766093053
         },
         {
           "id": "warrior_bloodlet_cleave",
@@ -1325,9 +1325,9 @@
           "picks": 71,
           "choiceRate": 0.2897959183673469,
           "deckInclusionRate": 0.07888888888888888,
-          "plays": 193,
-          "opportunities": 2332,
-          "drawnUsageRate": 0.08276157804459691
+          "plays": 195,
+          "opportunities": 2065,
+          "drawnUsageRate": 0.09443099273607748
         },
         {
           "id": "warrior_blood_tide",
@@ -1349,9 +1349,9 @@
           "picks": 143,
           "choiceRate": 0.31777777777777777,
           "deckInclusionRate": 0.15444444444444444,
-          "plays": 104,
-          "opportunities": 4617,
-          "drawnUsageRate": 0.02252544942603422
+          "plays": 102,
+          "opportunities": 4148,
+          "drawnUsageRate": 0.02459016393442623
         },
         {
           "id": "warrior_blood_guard_step",
@@ -1372,9 +1372,9 @@
           "picks": 88,
           "choiceRate": 0.33976833976833976,
           "deckInclusionRate": 0.09555555555555556,
-          "plays": 328,
-          "opportunities": 2645,
-          "drawnUsageRate": 0.12400756143667296
+          "plays": 315,
+          "opportunities": 2445,
+          "drawnUsageRate": 0.12883435582822086
         },
         {
           "id": "warrior_blood_drive",
@@ -1397,9 +1397,9 @@
           "picks": 91,
           "choiceRate": 0.364,
           "deckInclusionRate": 0.1,
-          "plays": 875,
-          "opportunities": 3105,
-          "drawnUsageRate": 0.28180354267310787
+          "plays": 845,
+          "opportunities": 2831,
+          "drawnUsageRate": 0.29848110208406925
         },
         {
           "id": "warrior_blood_debt",
@@ -1421,9 +1421,9 @@
           "picks": 174,
           "choiceRate": 0.3717948717948718,
           "deckInclusionRate": 0.18666666666666668,
-          "plays": 587,
-          "opportunities": 5614,
-          "drawnUsageRate": 0.10456002850017812
+          "plays": 601,
+          "opportunities": 5108,
+          "drawnUsageRate": 0.11765857478465153
         },
         {
           "id": "warrior_flash",
@@ -1444,9 +1444,9 @@
           "picks": 177,
           "choiceRate": 0.4306569343065693,
           "deckInclusionRate": 0.19555555555555557,
-          "plays": 3996,
-          "opportunities": 4564,
-          "drawnUsageRate": 0.8755477651183172
+          "plays": 3605,
+          "opportunities": 4195,
+          "drawnUsageRate": 0.8593563766388558
         },
         {
           "id": "warrior_life_contract",
@@ -1469,9 +1469,9 @@
           "picks": 114,
           "choiceRate": 0.4523809523809524,
           "deckInclusionRate": 0.12444444444444444,
-          "plays": 723,
-          "opportunities": 3502,
-          "drawnUsageRate": 0.20645345516847516
+          "plays": 696,
+          "opportunities": 3236,
+          "drawnUsageRate": 0.21508034610630408
         },
         {
           "id": "warrior_follow",
@@ -1492,9 +1492,9 @@
           "picks": 211,
           "choiceRate": 0.49184149184149184,
           "deckInclusionRate": 0.22444444444444445,
-          "plays": 5013,
-          "opportunities": 5735,
-          "drawnUsageRate": 0.8741063644289451
+          "plays": 4517,
+          "opportunities": 5151,
+          "drawnUsageRate": 0.8769171034750534
         },
         {
           "id": "warrior_dawn_guard",
@@ -1515,9 +1515,9 @@
           "picks": 256,
           "choiceRate": 0.5614035087719298,
           "deckInclusionRate": 0.26555555555555554,
-          "plays": 4512,
-          "opportunities": 14816,
-          "drawnUsageRate": 0.3045356371490281
+          "plays": 4041,
+          "opportunities": 13022,
+          "drawnUsageRate": 0.3103209952388266
         },
         {
           "id": "warrior_saintbreaker",
@@ -1540,9 +1540,9 @@
           "picks": 200,
           "choiceRate": 0.5780346820809249,
           "deckInclusionRate": 0.20666666666666667,
-          "plays": 3298,
-          "opportunities": 4794,
-          "drawnUsageRate": 0.6879432624113475
+          "plays": 2965,
+          "opportunities": 4478,
+          "drawnUsageRate": 0.6621259490844127
         },
         {
           "id": "warrior_charge",
@@ -1564,9 +1564,9 @@
           "picks": 214,
           "choiceRate": 0.6407185628742516,
           "deckInclusionRate": 0.22777777777777777,
-          "plays": 3505,
-          "opportunities": 5062,
-          "drawnUsageRate": 0.6924140655867246
+          "plays": 3103,
+          "opportunities": 4644,
+          "drawnUsageRate": 0.6681739879414298
         },
         {
           "id": "warrior_bastion_ledger",
@@ -1589,9 +1589,9 @@
           "picks": 246,
           "choiceRate": 0.6473684210526316,
           "deckInclusionRate": 0.25666666666666665,
-          "plays": 2257,
-          "opportunities": 7830,
-          "drawnUsageRate": 0.28825031928480205
+          "plays": 2120,
+          "opportunities": 7054,
+          "drawnUsageRate": 0.3005387014459881
         },
         {
           "id": "warrior_devour_finish",
@@ -1613,9 +1613,9 @@
           "picks": 301,
           "choiceRate": 0.6903669724770642,
           "deckInclusionRate": 0.31,
-          "plays": 767,
-          "opportunities": 9955,
-          "drawnUsageRate": 0.07704671019588147
+          "plays": 866,
+          "opportunities": 9060,
+          "drawnUsageRate": 0.0955849889624724
         },
         {
           "id": "warrior_thorn_turn",
@@ -1637,9 +1637,9 @@
           "picks": 249,
           "choiceRate": 0.7134670487106017,
           "deckInclusionRate": 0.2588888888888889,
-          "plays": 2354,
-          "opportunities": 5304,
-          "drawnUsageRate": 0.44381598793363497
+          "plays": 1942,
+          "opportunities": 4898,
+          "drawnUsageRate": 0.39648836259697834
         },
         {
           "id": "warrior_thorn_charge",
@@ -1661,9 +1661,9 @@
           "picks": 264,
           "choiceRate": 0.7213114754098361,
           "deckInclusionRate": 0.26555555555555554,
-          "plays": 3003,
-          "opportunities": 5573,
-          "drawnUsageRate": 0.5388480172259107
+          "plays": 2645,
+          "opportunities": 5178,
+          "drawnUsageRate": 0.5108149864812669
         },
         {
           "id": "warrior_release",
@@ -1685,9 +1685,9 @@
           "picks": 276,
           "choiceRate": 0.745945945945946,
           "deckInclusionRate": 0.27555555555555555,
-          "plays": 2551,
-          "opportunities": 7257,
-          "drawnUsageRate": 0.35152266776905056
+          "plays": 2570,
+          "opportunities": 6587,
+          "drawnUsageRate": 0.3901624411720055
         },
         {
           "id": "warrior_wall",
@@ -1708,9 +1708,9 @@
           "picks": 286,
           "choiceRate": 0.7606382978723404,
           "deckInclusionRate": 0.2877777777777778,
-          "plays": 3495,
-          "opportunities": 9534,
-          "drawnUsageRate": 0.36658275645059785
+          "plays": 3154,
+          "opportunities": 8576,
+          "drawnUsageRate": 0.3677705223880597
         },
         {
           "id": "warrior_crest_guard",
@@ -1733,9 +1733,9 @@
           "picks": 327,
           "choiceRate": 0.7748815165876777,
           "deckInclusionRate": 0.32666666666666666,
-          "plays": 15927,
-          "opportunities": 21565,
-          "drawnUsageRate": 0.7385578483654069
+          "plays": 14516,
+          "opportunities": 19065,
+          "drawnUsageRate": 0.7613952268554943
         },
         {
           "id": "warrior_oath_retainer",
@@ -1758,9 +1758,9 @@
           "picks": 319,
           "choiceRate": 0.7955112219451371,
           "deckInclusionRate": 0.32,
-          "plays": 14319,
-          "opportunities": 19905,
-          "drawnUsageRate": 0.7193669932177845
+          "plays": 13886,
+          "opportunities": 17908,
+          "drawnUsageRate": 0.7754076390440027
         },
         {
           "id": "warrior_oath_charge",
@@ -1784,9 +1784,9 @@
           "picks": 288,
           "choiceRate": 0.8205128205128205,
           "deckInclusionRate": 0.28555555555555556,
-          "plays": 2675,
-          "opportunities": 9685,
-          "drawnUsageRate": 0.2762003097573567
+          "plays": 2696,
+          "opportunities": 8754,
+          "drawnUsageRate": 0.3079734978295636
         },
         {
           "id": "warrior_oath",
@@ -1810,9 +1810,9 @@
           "picks": 303,
           "choiceRate": 0.8324175824175825,
           "deckInclusionRate": 0.29444444444444445,
-          "plays": 4802,
-          "opportunities": 18140,
-          "drawnUsageRate": 0.26471885336273426
+          "plays": 4408,
+          "opportunities": 16080,
+          "drawnUsageRate": 0.27412935323383086
         },
         {
           "id": "warrior_oath_reversal",
@@ -1834,9 +1834,9 @@
           "picks": 311,
           "choiceRate": 0.8760563380281691,
           "deckInclusionRate": 0.30444444444444446,
-          "plays": 2519,
-          "opportunities": 9086,
-          "drawnUsageRate": 0.2772397094430993
+          "plays": 2347,
+          "opportunities": 8097,
+          "drawnUsageRate": 0.28986044213906387
         },
         {
           "id": "warrior_soul_oath",
@@ -1860,9 +1860,9 @@
           "picks": 333,
           "choiceRate": 0.8763157894736842,
           "deckInclusionRate": 0.31666666666666665,
-          "plays": 6203,
-          "opportunities": 11240,
-          "drawnUsageRate": 0.5518683274021352
+          "plays": 5794,
+          "opportunities": 10260,
+          "drawnUsageRate": 0.5647173489278753
         },
         {
           "id": "warrior_banner_guard",
@@ -1885,9 +1885,9 @@
           "picks": 340,
           "choiceRate": 0.8994708994708994,
           "deckInclusionRate": 0.33444444444444443,
-          "plays": 4648,
-          "opportunities": 11458,
-          "drawnUsageRate": 0.4056554372490836
+          "plays": 4396,
+          "opportunities": 10494,
+          "drawnUsageRate": 0.41890604154755096
         },
         {
           "id": "warrior_scar",
@@ -1910,9 +1910,9 @@
           "picks": 336,
           "choiceRate": 0.9256198347107438,
           "deckInclusionRate": 0.33,
-          "plays": 3501,
-          "opportunities": 20112,
-          "drawnUsageRate": 0.17407517899761338
+          "plays": 3331,
+          "opportunities": 18041,
+          "drawnUsageRate": 0.1846349980599745
         },
         {
           "id": "warrior_crown_riposte",
@@ -1936,9 +1936,9 @@
           "picks": 339,
           "choiceRate": 0.9442896935933147,
           "deckInclusionRate": 0.3233333333333333,
-          "plays": 2354,
-          "opportunities": 10451,
-          "drawnUsageRate": 0.22524160367428955
+          "plays": 2773,
+          "opportunities": 9486,
+          "drawnUsageRate": 0.292325532363483
         },
         {
           "id": "warrior_guard",
@@ -1962,9 +1962,9 @@
           "picks": 397,
           "choiceRate": 0.9566265060240964,
           "deckInclusionRate": 0.3711111111111111,
-          "plays": 2594,
-          "opportunities": 10762,
-          "drawnUsageRate": 0.24103326519234344
+          "plays": 2570,
+          "opportunities": 9741,
+          "drawnUsageRate": 0.26383328200390105
         }
       ]
     },

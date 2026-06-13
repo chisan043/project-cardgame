@@ -6024,9 +6024,9 @@
             }
             else if (card.specialId === 'w_oath_fortress') {
                 triggerVFX('p-def');
-                const armorGain = applyLowHpGuardBoost(18, '守誓护盾');
+                const armorGain = applyLowHpGuardBoost(14, '守誓护盾');
                 state.armor += armorGain;
-                let pVal = 6 + (hasRelic('r_protect_armor') ? 3 : 0);
+                let pVal = 4 + (hasRelic('r_protect_armor') ? 3 : 0);
                 pVal = applyLowHpGuardBoost(pVal, '守誓庇护');
                 state.p_reduce_dmg += pVal;
                 if (hasRelic('r_guardian_core')) state.armor += Math.floor(pVal / 2);

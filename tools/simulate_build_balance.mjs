@@ -531,7 +531,7 @@ function estimateCard(state, card, incoming, move) {
     if (card.isSpecial) {
         const synergyCards = state.hand.filter(held => held !== card && (held.tags || []).some(tag => tags.includes(tag))).length;
         const specialScores = {
-            w_oath_fortress: Math.min(incoming + 18, 32) + 8,
+            w_oath_fortress: Math.min(incoming + 14, 26) + 7,
             w_last_verdict: 54 + state.enemy.vuln * 8 + synergyCards * 10,
             a_syn_blood: state.bloodDebt > 0
                 ? 18 + state.bloodDebt * 6 + Math.min(state.maxHp - state.hp, 12)
@@ -675,8 +675,8 @@ function discardPlayedCard(state, card) {
 function executeSpecialCard(state, card) {
     const specialId = card.specialId || card.id;
     if (specialId === 'w_oath_fortress') {
-        state.armor += 18;
-        state.protection += 6 + (hasRelic(state, 'r_protect_armor') ? 3 : 0);
+        state.armor += 14;
+        state.protection += 4 + (hasRelic(state, 'r_protect_armor') ? 3 : 0);
         state.counter = 1;
     } else if (specialId === 'w_last_verdict') {
         const executionHand = state.hand.filter(held => (held.tags || []).some(tag => ['连击', '穿甲'].includes(tag))).length;
