@@ -2235,8 +2235,12 @@
         return applyCardTagBudget(card);
     }
 
+    function getRegisteredCardArtPath(card) {
+        return card?.art || CARD_ART_REGISTRY[card?.name] || null;
+    }
+
     function getDirectCardArtPath(card) {
-        return card?.art || CARD_ART_REGISTRY[card?.name] || CARD_TYPE_ART_FALLBACK[card?.type] || null;
+        return getRegisteredCardArtPath(card) || CARD_TYPE_ART_FALLBACK[card?.type] || null;
     }
 
     function normalizeCardEffectText(text = '') {
@@ -2271,6 +2275,10 @@
             Number(card.cost) || 0,
             Number(card.val) || 0
         ].join('|');
+    }
+
+    function getCardVisualSignature(card) {
+        return `${getCardFrameTheme(card)}|${getCardEffectSignature(card)}`;
     }
 
     const CARD_NAME_TAG_PRIORITY = [
@@ -2331,8 +2339,8 @@
     const CARD_EFFECT_ART_BY_SIGNATURE = (() => {
         const map = new Map();
         const register = (card) => {
-            const signature = getCardEffectSignature(card);
-            const art = getDirectCardArtPath(card);
+            const signature = getCardVisualSignature(card);
+            const art = getRegisteredCardArtPath(card);
             if (signature && art && !map.has(signature)) map.set(signature, art);
         };
         [...NEUTRAL_CARD_POOL, ...Object.values(CHARACTER_CARD_POOLS).flat()].forEach(register);
@@ -2343,7 +2351,7 @@
     const CARD_EFFECT_NAME_BY_SIGNATURE = (() => {
         const map = new Map();
         const register = (card) => {
-            const signature = getCardEffectSignature(card);
+            const signature = getCardVisualSignature(card);
             if (!signature || !card?.name) return;
             const entry = map.get(signature);
             if (entry) entry.count += 1;
@@ -2370,8 +2378,9 @@
     })();
 
     function getCardArtPath(card) {
-        const signature = getCardEffectSignature(card);
-        return CARD_EFFECT_ART_BY_SIGNATURE.get(signature) || getDirectCardArtPath(card);
+        const registeredArt = getRegisteredCardArtPath(card);
+        if (registeredArt) return registeredArt;
+        return CARD_EFFECT_ART_BY_SIGNATURE.get(getCardVisualSignature(card)) || getDirectCardArtPath(card);
     }
 
     function getCardNameVariantWord(variantTags) {
@@ -2402,8 +2411,8 @@
     function getCardDisplayName(card) {
         if (!card) return '';
         if (card.displayName) return card.displayName;
-        if (card.isSpecial || card.isJunk || card.isKnife) return card.name || '';
-        const signature = getCardEffectSignature(card);
+        if (card.isStarter || card.isSpecial || card.isJunk || card.isKnife) return card.name || '';
+        const signature = getCardVisualSignature(card);
         const exactName = CARD_EFFECT_NAME_BY_SIGNATURE.get(signature);
         if (exactName && (exactName.count > 1 || exactName.name !== card.name)) return exactName.name;
         const family = CARD_NAME_FAMILY_BY_KEY.get(getCardNameFamilyKey(card));
