@@ -582,7 +582,7 @@
 
         .combat-stage { position: absolute; top: 112px; right: 220px; text-align: center; width: 640px; height: calc(100% - 190px); z-index: 10; pointer-events:none;}
         .battle-side-player { position: absolute; left: -70px; bottom: -252px; width: 500px; height: 690px; z-index: 12; pointer-events: none; }
-        .player-avatar-frame { --player-attack-windup:-5px; --player-attack-distance:44px; --player-attack-rise:-5px; --player-attack-follow:39px; --player-attack-follow-rise:-3px; position:absolute; left:0; bottom:0; width: 430px; height: 675px; overflow:visible; filter: drop-shadow(0 24px 20px rgba(0,0,0,0.55)); background: transparent; display:flex; align-items:flex-end; justify-content:center; transform-origin:left bottom; }
+        .player-avatar-frame { --player-attack-distance:14px; position:absolute; left:0; bottom:0; width: 430px; height: 675px; overflow:visible; filter: drop-shadow(0 24px 20px rgba(0,0,0,0.55)); background: transparent; display:flex; align-items:flex-end; justify-content:center; transform-origin:left bottom; }
         .player-avatar-frame img { --player-idle-scale:1.24; --player-idle-inhale-y:1.003; width:100%; height:100%; object-fit:contain; object-position:left bottom; border: 0; transform:scale(var(--player-idle-scale)); transform-origin:left bottom; animation:playerIdleBreath 4.8s ease-in-out infinite; will-change:transform; }
         .player-avatar-frame img.character-hero_warrior,
         .player-avatar-frame img.character-hero_archer { mix-blend-mode:multiply; filter:saturate(1.18) brightness(1.12) contrast(1.04); }
@@ -592,10 +592,11 @@
         .battle-side-player:has(.character-hero_warrior) .player-avatar-frame img { animation-duration:5s; }
         .battle-side-player:has(.character-hero_archer) .player-avatar-frame img { animation-duration:4.5s; }
         .battle-side-player:has(.character-hero_mage) .player-avatar-frame img { animation-duration:5.2s; }
-        .battle-side-player:has(.character-hero_warrior) .player-avatar-frame { --player-attack-windup:-7px; --player-attack-distance:58px; --player-attack-rise:-7px; --player-attack-follow:51px; --player-attack-follow-rise:-4px; }
-        .battle-side-player:has(.character-hero_archer) .player-avatar-frame { --player-attack-windup:-4px; --player-attack-distance:32px; --player-attack-rise:-4px; --player-attack-follow:28px; --player-attack-follow-rise:-2px; }
-        .battle-side-player:has(.character-hero_mage) .player-avatar-frame { --player-attack-windup:-2px; --player-attack-distance:20px; --player-attack-rise:-2px; --player-attack-follow:17px; --player-attack-follow-rise:-1px; }
-        .player-avatar-frame.player-anim-attack { animation:playerAttackLunge 0.52s cubic-bezier(0.2, 0.82, 0.24, 1) both; }
+        .battle-side-player:has(.character-hero_warrior) .player-avatar-frame { --player-attack-distance:18px; }
+        .battle-side-player:has(.character-hero_archer) .player-avatar-frame { --player-attack-distance:12px; }
+        .battle-side-player:has(.character-hero_mage) .player-avatar-frame { --player-attack-distance:8px; }
+        .player-avatar-frame.player-anim-attack { animation:playerAttackLunge 0.48s cubic-bezier(0.2, 0.82, 0.24, 1) both; }
+        .player-avatar-frame.player-anim-attack img { animation:none; }
         .player-ground-shadow { position:absolute; left:95px; bottom:28px; width: 245px; height: 34px; border-radius: 50%; background: radial-gradient(ellipse, rgba(0,0,0,0.36), transparent 70%); transform:skewX(-16deg); }
         @keyframes playerIdleBreath {
             0%, 100% { transform:scale(var(--player-idle-scale)); }
@@ -603,10 +604,9 @@
         }
         @keyframes playerAttackLunge {
             0%, 100% { transform:translate3d(0, 0, 0); }
-            16% { transform:translate3d(var(--player-attack-windup), 2px, 0) scale(0.995); }
-            42% { transform:translate3d(var(--player-attack-distance), var(--player-attack-rise), 0) scale(1.012); }
-            58% { transform:translate3d(var(--player-attack-follow), var(--player-attack-follow-rise), 0) scale(1.006); }
-            78% { transform:translate3d(-2px, 1px, 0) scale(0.998); }
+            18% { transform:translate3d(-3px, 1px, 0); }
+            44%, 62% { transform:translate3d(var(--player-attack-distance), -2px, 0); }
+            82% { transform:translate3d(-1px, 0, 0); }
         }
         @media (prefers-reduced-motion: reduce) {
             .player-avatar-frame img,
@@ -4369,8 +4369,14 @@
         const nameplate = document.getElementById('player-nameplate');
         if (avatar) {
             avatar.src = character.battleBack;
+            avatar.dataset.idleSrc = character.battleBack;
+            avatar.dataset.attackSrc = character.battleBackAttack || character.battleBack;
             avatar.alt = character.name;
             avatar.className = `character-${character.id}`;
+            if (character.battleBackAttack) {
+                const attackFramePreload = new Image();
+                attackFramePreload.src = character.battleBackAttack;
+            }
         }
         const hudPortrait = document.getElementById('player-hud-portrait-img');
         if (hudPortrait) {
@@ -5014,14 +5020,19 @@
     let playerAttackAnimationToken = 0;
     function triggerPlayerAttackAnimation() {
         const avatarFrame = document.querySelector('.player-avatar-frame');
-        if (!avatarFrame) return;
+        const avatar = document.getElementById('player-avatar-img');
+        if (!avatarFrame || !avatar) return;
         const token = ++playerAttackAnimationToken;
         avatarFrame.classList.remove('player-anim-attack');
         void avatarFrame.offsetWidth;
+        avatar.src = avatar.dataset.attackSrc || avatar.dataset.idleSrc || avatar.src;
         avatarFrame.classList.add('player-anim-attack');
         setTimeout(() => {
+            if (token === playerAttackAnimationToken) avatar.src = avatar.dataset.idleSrc || avatar.src;
+        }, 340);
+        setTimeout(() => {
             if (token === playerAttackAnimationToken) avatarFrame.classList.remove('player-anim-attack');
-        }, 560);
+        }, 500);
     }
 
     function triggerVFX(type) {

@@ -32,6 +32,7 @@ IMAGE_LITERAL_RE = re.compile(r"(?P<path>[^'\"()<>`\\]+?\.(?:png|jpg|jpeg|webp))
 IMAGE_EXT_RE = re.compile(r"\.(png|jpg|jpeg)$", re.IGNORECASE)
 
 DYNAMIC_IMAGE_GLOBS = [
+    "assets/source/characters/*/battle_back/attack_start_v1_source.png",
     "assets/source/enemies/battle/*.png",
     "assets/source/enemies/portraits/*.png",
     "assets/source/relics/icons/*.png",
@@ -47,20 +48,31 @@ def normalize_path(raw: str) -> str:
 
 
 def webp_path_for(asset_path: Path) -> Path:
-    path = asset_path.as_posix()
+    try:
+        path = asset_path.relative_to(ROOT).as_posix()
+    except ValueError:
+        path = asset_path.as_posix()
+    character_battle_match = re.fullmatch(
+        r"assets/source/characters/([^/]+)/battle_back/([^/]+)_v1_source\.png",
+        path,
+    )
+    if character_battle_match:
+        character, action = character_battle_match.groups()
+        return ROOT / f"assets/characters/{character}/battle_back_{action}_v1.webp"
     if path.startswith("assets/source/enemies/battle/") and path.endswith("_battle_v1_source.png"):
-        return Path(path.replace("assets/source/enemies/battle/", "assets/enemies/battle/").replace("_battle_v1_source.png", "_battle_v1.webp"))
+        return ROOT / path.replace("assets/source/enemies/battle/", "assets/enemies/battle/").replace("_battle_v1_source.png", "_battle_v1.webp")
     if path.startswith("assets/source/enemies/portraits/") and path.endswith("_portrait_v1_source.png"):
-        return Path(path.replace("assets/source/enemies/portraits/", "assets/enemies/portraits/").replace("_portrait_v1_source.png", "_portrait_v1.webp"))
+        return ROOT / path.replace("assets/source/enemies/portraits/", "assets/enemies/portraits/").replace("_portrait_v1_source.png", "_portrait_v1.webp")
     if path.startswith("assets/source/relics/icons/") and path.endswith("_icon_v1_source.png"):
-        return Path(path.replace("assets/source/relics/icons/", "assets/relics/icons/").replace("_icon_v1_source.png", "_icon_v1.webp"))
+        return ROOT / path.replace("assets/source/relics/icons/", "assets/relics/icons/").replace("_icon_v1_source.png", "_icon_v1.webp")
     if path.startswith("assets/source/relics/masters/") and path.endswith("_master_v1_source.png"):
-        return Path(path.replace("assets/source/relics/masters/", "assets/relics/masters/").replace("_master_v1_source.png", "_master_v1.webp"))
+        return ROOT / path.replace("assets/source/relics/masters/", "assets/relics/masters/").replace("_master_v1_source.png", "_master_v1.webp")
     if path.startswith("assets/source/cards/art/") and path.endswith("_art_v1_source.png"):
-        return Path(path.replace("assets/source/cards/art/", "assets/cards/art/").replace("_art_v1_source.png", "_art_v1.webp"))
+        return ROOT / path.replace("assets/source/cards/art/", "assets/cards/art/").replace("_art_v1_source.png", "_art_v1.webp")
     if path.startswith("assets/source/cards/frames/") and path.endswith("_frame_v1_source.png"):
-        return Path(path.replace("assets/source/cards/frames/", "assets/cards/frames/").replace("_frame_v1_source.png", "_frame_v1.webp"))
-    return asset_path.with_suffix(".webp")
+        return ROOT / path.replace("assets/source/cards/frames/", "assets/cards/frames/").replace("_frame_v1_source.png", "_frame_v1.webp")
+    target = asset_path if asset_path.is_absolute() else ROOT / asset_path
+    return target.with_suffix(".webp")
 
 
 def collect_static_asset_paths() -> set[Path]:
