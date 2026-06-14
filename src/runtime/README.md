@@ -8,6 +8,8 @@ own DOM rendering.
 - `map-rules.js`: map node layout, path connection, and node-type assignment.
 - `state-rules.js`: initial run-state templates, save payload snapshots, and
   map node lookup helpers.
+- `card-rules.js`: card instance cloning, starter deck creation, upgrade, and
+  copy cleanup helpers.
 - `battle-rules.js`: battle-start and battle-win state cleanup helpers.
 
 Keep `src/data/*` side-effect-free. Keep DOM creation, overlay rendering, and

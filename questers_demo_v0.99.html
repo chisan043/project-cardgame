@@ -2298,6 +2298,7 @@
 <script src="src/data/enemies.js?v=20260605-enemy-ai"></script>
 <script src="src/data/characters.js?v=20260613-attack-vfx-origin"></script>
 <script src="src/runtime/state-rules.js?v=20260615-runtime-state-rules"></script>
+<script src="src/runtime/card-rules.js?v=20260615-runtime-card-rules"></script>
 <script src="src/runtime/battle-rules.js?v=20260615-runtime-battle-rules"></script>
 <script src="src/runtime/map-rules.js?v=20260615-runtime-map-rules"></script>
 <script src="src/runtime/reward-rules.js?v=20260615-runtime-reward-rules"></script>
@@ -2547,13 +2548,11 @@
     }
 
     function cloneCardDefinition(cardDef) {
-        const card = JSON.parse(JSON.stringify(cardDef));
-        card.id = Math.random().toString(36).substr(2, 9);
-        card.tags = card.tags ? normalizeTagConflicts(card.tags) : [];
-        card.rarity = card.rarity || '普通';
-        card.buildTags = getCardBuildTags(cardDef);
-        card.up = !!card.up;
-        return applyCardTagBudget(card);
+        return QuestersCardRules.cloneCardDefinition(cardDef, {
+            normalizeTagConflicts,
+            applyCardTagBudget,
+            getCardBuildTags
+        });
     }
 
     function getRegisteredCardArtPath(card) {
@@ -2783,9 +2782,12 @@
     }
 
     function cloneSpecialEpic(special) {
-        const sTags = extractTagsFromText(special.desc);
-        if (special.tags) special.tags.forEach(t => { if (!sTags.includes(t)) sTags.push(t); });
-        return applyCardTagBudget({ ...JSON.parse(JSON.stringify(special)), id: Math.random().toString(36).substr(2, 9), specialId: special.id, tags: normalizeTagConflicts(sTags), buildTags: getCardBuildTags(special), up: false });
+        return QuestersCardRules.cloneSpecialEpic(special, {
+            extractTagsFromText,
+            normalizeTagConflicts,
+            applyCardTagBudget,
+            getCardBuildTags
+        });
     }
 
     function generateRewardCard(used = new Set()) {
@@ -2906,35 +2908,11 @@
     }
 
     function upgradeCard(card) {
-        if (card.rarity === '传说' || card.up) return false;
-        const oldVal = Number(card.val) || 0;
-        const oldCost = Number(card.cost) || 0;
-        if (oldVal > 0) {
-            card.val = oldVal * 2;
-            if (card.tags && card.tags.includes('放逐') && card.type !== '能力') card.val += 2;
-        } else if (oldCost > 0 && card.type !== '能力') {
-            card.cost = Math.max(0, oldCost - 1);
-        } else if (oldVal <= 0 && oldCost <= 0) {
-            card.val = 1;
-        }
-        syncUpgradedCardDescription(card, oldVal, Number(card.val) || 0);
-        card.rarity = '史诗'; card.up = true; return true;
+        return QuestersCardRules.upgradeCard(card);
     }
 
     function syncUpgradedCardDescription(card, oldVal, newVal) {
-        if (!card.desc || !oldVal || oldVal === newVal) return;
-        const replacements = [
-            [`造成 ${oldVal}`, `造成 ${newVal}`],
-            [`获得 ${oldVal}`, `获得 ${newVal}`],
-            [`施加 ${oldVal}`, `施加 ${newVal}`],
-            [`回复 ${oldVal}`, `回复 ${newVal}`]
-        ];
-        for (const [from, to] of replacements) {
-            if (card.desc.includes(from)) {
-                card.desc = card.desc.replace(from, to);
-                return;
-            }
-        }
+        QuestersCardRules.syncUpgradedCardDescription(card, oldVal, newVal);
     }
 
     function getFrenzyBonus(card) {
@@ -3243,24 +3221,21 @@
     });
 
     function createStarterCard(cardDefinition) {
-        const definition = JSON.parse(JSON.stringify(cardDefinition));
-        delete definition.copies;
-        return applyCardTagBudget({
-            ...definition,
-            id: Math.random().toString(36).substr(2, 9),
-            tags: normalizeTagConflicts(definition.tags || []),
-            isStarter: true,
-            up: false
+        return QuestersCardRules.createStarterCard(cardDefinition, {
+            normalizeTagConflicts,
+            applyCardTagBudget
         });
     }
 
     function buildStarterDeckForCharacter(characterId) {
-        const character = CHARACTERS[characterId] || CHARACTERS.hero_warrior;
-        const starter = STARTER_DECKS[character.starterDeckId] || STARTER_DECKS.starter_warrior;
-        return starter.cards.flatMap(card => Array.from(
-            { length: Math.max(1, Number(card.copies) || 1) },
-            () => createStarterCard(card)
-        ));
+        return QuestersCardRules.buildStarterDeckForCharacter(characterId, {
+            characters: CHARACTERS,
+            starterDecks: STARTER_DECKS,
+            createStarterCardOptions: {
+                normalizeTagConflicts,
+                applyCardTagBudget
+            }
+        });
     }
 
     let starterPreviewCharacterId = state.player.characterId;
@@ -7789,12 +7764,11 @@
     }
 
     function copyDeckCard(card) {
-        const clone = cloneCardDefinition(card);
-        delete clone.instId;
-        delete clone.purchased;
-        delete clone._roleSynergyKey;
-        clone.sealed = false;
-        return clone;
+        return QuestersCardRules.copyDeckCard(card, {
+            normalizeTagConflicts,
+            applyCardTagBudget,
+            getCardBuildTags
+        });
     }
 
     function renderShopCopy() {
