@@ -42,16 +42,16 @@ const CHARACTERS = {
             shield: {
                 type: 'warrior-shield',
                 frames: [
-                    { src: 'assets/vfx/player_buff/warrior_shield_01_v1.webp', duration: 45 },
-                    { src: 'assets/vfx/player_buff/warrior_shield_02_v1.webp', duration: 55 },
-                    { src: 'assets/vfx/player_buff/warrior_shield_03_v1.webp', duration: 65 },
-                    { src: 'assets/vfx/player_buff/warrior_shield_04_v1.webp', duration: 75 },
-                    { src: 'assets/vfx/player_buff/warrior_shield_05_v1.webp', duration: 70 },
-                    { src: 'assets/vfx/player_buff/warrior_shield_06_v1.webp', duration: 70 }
+                    { src: 'assets/vfx/player_buff/warrior_shield_01_v2.webp', duration: 45 },
+                    { src: 'assets/vfx/player_buff/warrior_shield_02_v2.webp', duration: 55 },
+                    { src: 'assets/vfx/player_buff/warrior_shield_03_v2.webp', duration: 65 },
+                    { src: 'assets/vfx/player_buff/warrior_shield_04_v2.webp', duration: 75 },
+                    { src: 'assets/vfx/player_buff/warrior_shield_05_v2.webp', duration: 70 },
+                    { src: 'assets/vfx/player_buff/warrior_shield_06_v2.webp', duration: 70 }
                 ],
-                width: 390,
-                height: 520,
-                origin: { x: 0.52, y: 0.46 }
+                width: 445,
+                height: 595,
+                origin: { x: 0.52, y: 0.48 }
             }
         },
         battleBackHurtFrames: [
@@ -107,16 +107,16 @@ const CHARACTERS = {
             chant: {
                 type: 'mage-chant',
                 frames: [
-                    { src: 'assets/vfx/player_buff/mage_chant_01_v1.webp', duration: 45 },
-                    { src: 'assets/vfx/player_buff/mage_chant_02_v1.webp', duration: 55 },
-                    { src: 'assets/vfx/player_buff/mage_chant_03_v1.webp', duration: 65 },
-                    { src: 'assets/vfx/player_buff/mage_chant_04_v1.webp', duration: 75 },
-                    { src: 'assets/vfx/player_buff/mage_chant_05_v1.webp', duration: 70 },
-                    { src: 'assets/vfx/player_buff/mage_chant_06_v1.webp', duration: 70 }
+                    { src: 'assets/vfx/player_buff/mage_chant_01_v2.webp', duration: 45 },
+                    { src: 'assets/vfx/player_buff/mage_chant_02_v2.webp', duration: 55 },
+                    { src: 'assets/vfx/player_buff/mage_chant_03_v2.webp', duration: 65 },
+                    { src: 'assets/vfx/player_buff/mage_chant_04_v2.webp', duration: 75 },
+                    { src: 'assets/vfx/player_buff/mage_chant_05_v2.webp', duration: 70 },
+                    { src: 'assets/vfx/player_buff/mage_chant_06_v2.webp', duration: 70 }
                 ],
-                width: 390,
-                height: 520,
-                origin: { x: 0.54, y: 0.46 }
+                width: 440,
+                height: 590,
+                origin: { x: 0.53, y: 0.47 }
             }
         },
         battleBackHurtFrames: [
@@ -172,30 +172,30 @@ const CHARACTERS = {
             wind: {
                 type: 'archer-wind',
                 frames: [
-                    { src: 'assets/vfx/player_buff/archer_wind_01_v1.webp', duration: 45 },
-                    { src: 'assets/vfx/player_buff/archer_wind_02_v1.webp', duration: 55 },
-                    { src: 'assets/vfx/player_buff/archer_wind_03_v1.webp', duration: 65 },
-                    { src: 'assets/vfx/player_buff/archer_wind_04_v1.webp', duration: 75 },
-                    { src: 'assets/vfx/player_buff/archer_wind_05_v1.webp', duration: 70 },
-                    { src: 'assets/vfx/player_buff/archer_wind_06_v1.webp', duration: 70 }
+                    { src: 'assets/vfx/player_buff/archer_wind_01_v2.webp', duration: 45 },
+                    { src: 'assets/vfx/player_buff/archer_wind_02_v2.webp', duration: 55 },
+                    { src: 'assets/vfx/player_buff/archer_wind_03_v2.webp', duration: 65 },
+                    { src: 'assets/vfx/player_buff/archer_wind_04_v2.webp', duration: 75 },
+                    { src: 'assets/vfx/player_buff/archer_wind_05_v2.webp', duration: 70 },
+                    { src: 'assets/vfx/player_buff/archer_wind_06_v2.webp', duration: 70 }
                 ],
-                width: 390,
-                height: 520,
-                origin: { x: 0.55, y: 0.43 }
+                width: 455,
+                height: 605,
+                origin: { x: 0.54, y: 0.46 }
             },
             dodge: {
                 type: 'archer-dodge',
                 frames: [
-                    { src: 'assets/vfx/player_buff/archer_dodge_01_v1.webp', duration: 40 },
-                    { src: 'assets/vfx/player_buff/archer_dodge_02_v1.webp', duration: 50 },
-                    { src: 'assets/vfx/player_buff/archer_dodge_03_v1.webp', duration: 55 },
-                    { src: 'assets/vfx/player_buff/archer_dodge_04_v1.webp', duration: 65 },
-                    { src: 'assets/vfx/player_buff/archer_dodge_05_v1.webp', duration: 60 },
-                    { src: 'assets/vfx/player_buff/archer_dodge_06_v1.webp', duration: 60 }
+                    { src: 'assets/vfx/player_buff/archer_dodge_01_v2.webp', duration: 40 },
+                    { src: 'assets/vfx/player_buff/archer_dodge_02_v2.webp', duration: 50 },
+                    { src: 'assets/vfx/player_buff/archer_dodge_03_v2.webp', duration: 55 },
+                    { src: 'assets/vfx/player_buff/archer_dodge_04_v2.webp', duration: 65 },
+                    { src: 'assets/vfx/player_buff/archer_dodge_05_v2.webp', duration: 60 },
+                    { src: 'assets/vfx/player_buff/archer_dodge_06_v2.webp', duration: 60 }
                 ],
-                width: 390,
-                height: 520,
-                origin: { x: 0.55, y: 0.4 }
+                width: 455,
+                height: 605,
+                origin: { x: 0.53, y: 0.45 }
             }
         },
         battleBackHurtFrames: [
