@@ -2297,6 +2297,7 @@
 <script src="src/data/cards.js?v=20260614-exile-flow-text"></script>
 <script src="src/data/enemies.js?v=20260605-enemy-ai"></script>
 <script src="src/data/characters.js?v=20260613-attack-vfx-origin"></script>
+<script src="src/runtime/map-rules.js?v=20260615-runtime-map-rules"></script>
 <script src="src/runtime/reward-rules.js?v=20260615-runtime-reward-rules"></script>
 <script>
     function createEmbers() {
@@ -5122,78 +5123,11 @@
     }
 
     function generateMap() {
-        const height = 20;
-        const laneSets = {
-            1: [[2]],
-            2: [[1, 3], [0, 4]],
-            3: [[1, 2, 3], [0, 2, 4], [0, 1, 3]],
-            4: [[0, 1, 3, 4], [0, 2, 3, 4], [0, 1, 2, 4]],
-            5: [[0, 1, 2, 3, 4]]
-        };
-        const floorCounts = [3, 3, 4, 3, 4, 3, 5, 4, 3, 4, 3, 5, 4, 3, 4, 4, 3, 2, 1, 1];
-        state.mapData = [];
-
-        for(let i=0; i<height; i++) {
-            let count = floorCounts[i] || 3;
-            if (i === 0) count = 3;
-            if (i >= height - 2) count = 1;
-            const patterns = laneSets[count];
-            const lanes = patterns[Math.floor(Math.random() * patterns.length)];
-            const floor = { nodes: [] };
-            lanes.forEach((lane, j) => {
-                const drift = (i > 0 && i < height - 2) ? (Math.random() - 0.5) * 0.18 : 0;
-                floor.nodes.push({ id: `f${i}n${j}`, type: 'empty', x: lane + drift, lane, floor: i, children: [], parents: [] });
-            });
-            state.mapData.push(floor);
-        }
-
-        for(let i=0; i<height-1; i++) {
-            const curNodes = state.mapData[i].nodes;
-            const nextNodes = state.mapData[i+1].nodes;
-            curNodes.forEach(n => {
-                const sourceLane = n.lane ?? Math.round(n.x);
-                let candidates = nextNodes.filter(nx => Math.abs((nx.lane ?? Math.round(nx.x)) - sourceLane) <= 1);
-                if(candidates.length === 0) candidates = [...nextNodes].sort((a,b) => Math.abs(a.x - n.x) - Math.abs(b.x - n.x)).slice(0, 1);
-                const maxPaths = (i >= height - 3) ? 1 : (Math.random() < 0.44 ? 2 : 1);
-                const chosen = [...candidates].sort(() => 0.5 - Math.random()).slice(0, Math.min(maxPaths, candidates.length));
-                chosen.forEach(nx => connectMapNodes(n, nx));
-            });
-
-            nextNodes.forEach(nx => {
-                if (nx.parents.length > 0) return;
-                const nearest = [...curNodes].sort((a,b) => Math.abs(a.x - nx.x) - Math.abs(b.x - nx.x))[0];
-                connectMapNodes(nearest, nx);
-            });
-        }
-        
-        for(let i=0; i<height; i++) {
-            state.mapData[i].nodes.forEach(n => {
-                if (i === height - 1) n.type = 'boss';
-                else if (i === height - 2 || i === 8 || i === 14) n.type = 'rest';
-                else if (i === 0) n.type = 'battle'; 
-                else {
-                    const r = Math.random();
-                    const canElite = i >= 5 && i <= 16 && ![8, 14, 18].includes(i);
-                    if (i === 3 || i === 10 || i === 15) {
-                        n.type = r < 0.5 ? 'event' : (r < 0.78 ? 'shop' : 'battle');
-                    } else if (canElite && r < 0.22) {
-                        n.type = 'elite';
-                    } else if (r < 0.72) {
-                        n.type = 'battle';
-                    } else if (r < 0.88) {
-                        n.type = 'event';
-                    } else {
-                        n.type = 'shop';
-                    }
-                }
-            });
-        }
+        state.mapData = QuestersMapRules.generateMapData();
     }
 
     function connectMapNodes(parent, child) {
-        if (!parent || !child) return;
-        if (!parent.children.includes(child.id)) parent.children.push(child.id);
-        if (!child.parents.includes(parent.id)) child.parents.push(parent.id);
+        QuestersMapRules.connectMapNodes(parent, child);
     }
 
     const MAP_PREVIEW_PANEL_DATA = {
