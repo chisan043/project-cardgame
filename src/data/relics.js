@@ -25,7 +25,7 @@ const SPECIAL_EPIC_POOLS = {
         { id: 'm_blood_moon_rite', name: '暗月仪轨', roleId: 'hero_mage', frameTheme: 'mage', art: 'assets/cards/art/mage/mage_omen_art_v1.webp', type: '能力', cost: 1, icon: '🌙', val: 0, tags: ['诅咒', '易伤'], rarity: '史诗', isSpecial: true, desc: '施加 5[诅咒]与 2[易伤]。敌方每种负面状态造成 6 点灾厄伤害。' }
     ],
     hero_archer: [
-        { id: 's_exhaust', name: '风葬归矢', roleId: 'hero_archer', frameTheme: 'archer', art: 'assets/cards/art/archer/archer_rain_art_v1.webp', type: '能力', cost: 3, icon: '🕳️', val: 0, tags: ['放逐', '回收'], rarity: '史诗', isSpecial: true, desc: '每张放逐牌造成 20 点[流动伤害]，随后洗回牌库；每回收 2 张获得 1 层风势与 1 层[闪避]。' },
+        { id: 's_exhaust', name: '风葬归矢', roleId: 'hero_archer', frameTheme: 'archer', art: 'assets/cards/art/archer/archer_rain_art_v1.webp', type: '能力', cost: 3, icon: '🕳️', val: 0, tags: ['放逐', '回收'], rarity: '史诗', isSpecial: true, desc: '每张放逐牌造成 16 点[流动伤害]，随后洗回牌库；每回收 2 张获得 1 层风势与 1 层[闪避]。' },
         { id: 's_poison', name: '猎毒齐爆', roleId: 'hero_archer', frameTheme: 'archer', art: 'assets/cards/art/archer/archer_ambush_art_v1.webp', type: '能力', cost: 2, icon: '💥', val: 24, tags: ['剧毒', '出血'], rarity: '史诗', isSpecial: true, desc: '造成 24 真实伤害；再按剧毒与出血总层数造成 2.5 倍伤害，不清层。按总层数获得至多 8 庇护。' },
         { id: 'a_syn_poison', name: '万毒箭阵', roleId: 'hero_archer', frameTheme: 'archer', art: 'assets/cards/art/archer/archer_hawkeye_art_v1.webp', type: '能力', cost: 1, icon: '🧪', val: 0, tags: ['剧毒', '出血'], rarity: '史诗', isSpecial: true, desc: '丢弃手牌所有[剧毒]/[出血]牌。每弃 1 张，施加 6 层剧毒与出血，并造成 10 伤害。' },
         { id: 's_energy', name: '疾风整备', roleId: 'hero_archer', frameTheme: 'archer', art: 'assets/cards/art/archer/archer_ready_art_v1.webp', type: '能力', cost: 1, icon: '🍃', val: 0, tags: ['蓄力'], rarity: '史诗', isSpecial: true, desc: '获得 3 层风势并抽 2 张牌；若已有风势，回复 1 点能量。' },
@@ -134,7 +134,7 @@ const RELIC_POOL = [
     { id: 'r_skill_cost', name: '秘仪教本', icon: '📘', desc: '法师/弓手：战斗开始时，所有[能力]牌耗能 -1（最低为 0），更容易启动咏唱、回响、灾厄或风势调度。', price: 200 },
     { id: 'r_def_cost', name: '圣盾甲片', icon: '🐢', desc: '战士：战斗开始时，所有[防御]牌耗能 -1（最低为 0），更容易架起护盾节奏。', price: 200 },
     { id: 'r_bleed_return_exhaust', name: '猎魂镰刃', icon: '🪝', desc: '弓手：触发[放血]时，放逐区的所有卡牌回到手牌，把毒血引爆和放逐循环接在一起。', price: 250 },
-    { id: 'r_return_knife', name: '回风刀鞘', icon: '🪃', desc: '弓手：每当卡牌从放逐区返回并造成回流[流动伤害]，获得 1 点庇护并添加一张[销毁]飞刀。', price: 180 },
+    { id: 'r_return_knife', name: '回风刀鞘', icon: '🪃', desc: '弓手：每当卡牌从放逐区返回并造成回流[流动伤害]，添加一张[销毁]飞刀。', price: 180 },
     { id: 'r_base_energy', name: '源能核心', icon: '💠', desc: '通用：战斗开始时基础能量提高 1，让三种职业都能更早展开核心节奏。', price: 280 },
     { id: 'r_shield', name: '古誓护印', icon: '🔰', desc: '通用：所有[防御]牌额外获得 4 点护甲，适合任何需要稳住节奏的牌组。', price: 150 },
     { id: 'r_combo', name: '流转沙漏', icon: '⌛', desc: '通用：一回合内每打出 3 张牌，额外[抽牌] 1 张，帮助连段与找牌。', price: 210 },

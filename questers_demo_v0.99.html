@@ -6292,7 +6292,7 @@
         let triggered = false;
         if (hasRelic('r_return_poison')) { state.enemy.poison += 2; triggered = true; }
         if (hasRelic('r_return_bleed')) { state.enemy.bleed += 2; triggered = true; }
-        if (hasRelic('r_return_knife')) { addKnivesToHand(1); state.p_reduce_dmg += 1; triggered = true; }
+        if (hasRelic('r_return_knife')) { addKnivesToHand(1); triggered = true; }
         if (triggered) { showFloatText("归墟连动", "var(--purple)", getCenter('enemy-avatar')); updateBattleUI(); }
     }
 
@@ -6616,7 +6616,7 @@
         if (card.isSpecial) {
             if (card.type === '攻击') payBloodDebtAttackCost(card.name);
             if(card.specialId === 's_exhaust') {
-                triggerVFX('p-atk'); let count = state.exhaustPile.length + 1; let dmg = count * 20;
+                triggerVFX('p-atk'); let count = state.exhaustPile.length + 1; let dmg = count * 16;
                 applySpecialCardDamage(card, dmg);
                 state.p_aim = Math.min(6, state.p_aim + Math.floor(count / 2));
                 if (count >= 2) state.p_sidestep = Math.min(3, (state.p_sidestep || 0) + 1);

@@ -500,7 +500,6 @@ function returnFromExhaust(state, destination) {
     dealExileFlowDamage(state, card, 'return');
     if (hasRelic(state, 'r_return_knife')) {
         addKnives(state, 1);
-        state.protection += 1;
     }
     return true;
 }
@@ -644,7 +643,7 @@ function estimateCard(state, card, incoming, move) {
             s_energy: 32 + state.aim * 3,
             a_gale_verdict: 14 + Math.min(3, state.aim) * 6,
             s_poison: (state.enemy.poison + state.enemy.bleed) * 2.5 + 28,
-            s_exhaust: (state.exhaust.length + 1) * 20 + (state.exhaust.length ? 14 : 0)
+            s_exhaust: (state.exhaust.length + 1) * 16 + (state.exhaust.length ? 14 : 0)
         };
         score += specialScores[card.specialId] || 0;
     }
@@ -915,10 +914,10 @@ function executeSpecialCard(state, card, echo = false) {
     } else if (specialId === 's_exhaust') {
         const returned = state.exhaust.length + 1;
         if (hasRelic(state, 'r_exhaust_dmg')) state.battleDamage += 1;
-        hitEnemy(state, returned * 20);
+        hitEnemy(state, returned * 16);
         state.aim = Math.min(6, state.aim + Math.floor(returned / 2));
         if (returned >= 2) state.sidestep = Math.min(3, state.sidestep + 1);
-        if (hasRelic(state, 'r_return_knife')) addKnives(state, returned);
+        if (hasRelic(state, 'r_return_knife')) addKnives(state, state.exhaust.length);
         card.returnedBySpecial = true;
         for (const returnedCard of state.exhaust) dealExileFlowDamage(state, returnedCard, 'return');
         state.drawPile = shuffle(state.rng, state.drawPile.concat(state.exhaust, [card]));
