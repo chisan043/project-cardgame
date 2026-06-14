@@ -2933,7 +2933,11 @@
     }
 
     function renderTagNames(tags) {
-        return (tags || []).map(t => `<span style="color:var(--gold);">${getTagDisplayName(t)}</span>`).join('、');
+        return (tags || []).map(t => {
+            if (t === '回响') return '<span style="color:var(--gold);">本牌再触发一次</span>';
+            if (t === '复刻') return '<span style="color:var(--gold);">复制上一张非复刻牌</span>';
+            return `<span style="color:var(--gold);">${getTagDisplayName(t)}</span>`;
+        }).join('、');
     }
 
     function formatRatioText(ratio) {
