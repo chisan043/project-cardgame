@@ -2297,6 +2297,7 @@
 <script src="src/data/cards.js?v=20260614-exile-flow-text"></script>
 <script src="src/data/enemies.js?v=20260605-enemy-ai"></script>
 <script src="src/data/characters.js?v=20260613-attack-vfx-origin"></script>
+<script src="src/runtime/reward-rules.js?v=20260615-runtime-reward-rules"></script>
 <script>
     function createEmbers() {
         const layer = document.getElementById('particles-layer');
@@ -2481,15 +2482,7 @@
     }
 
     function rollWeighted(pool, weightFn) {
-        if (!pool.length) return null;
-        const weighted = pool.map(item => ({ item, weight: Math.max(0.1, weightFn(item)) }));
-        const total = weighted.reduce((sum, entry) => sum + entry.weight, 0);
-        let roll = Math.random() * total;
-        for (const entry of weighted) {
-            roll -= entry.weight;
-            if (roll <= 0) return entry.item;
-        }
-        return weighted[weighted.length - 1].item;
+        return QuestersRewardRules.rollWeighted(pool, weightFn);
     }
 
     function getOwnedBuildRewardBoostTags() {
@@ -2517,23 +2510,15 @@
 
     function getRewardCandidatePool({ mode = 'general', rarity = null, used = new Set(), primaryBuildTag = getPrimaryBuildTag() } = {}) {
         const classPool = getCharacterCardPool();
-        const allCards = [...classPool, ...NEUTRAL_CARD_POOL];
-        let candidates = allCards.filter(card => !used.has(getCardChoiceKey(card)));
-        if (rarity) candidates = candidates.filter(card => card.rarity === rarity);
-        if (mode === 'aligned' && primaryBuildTag) {
-            candidates = candidates.filter(card => getCardBuildTags(card).includes(primaryBuildTag));
-        } else if (mode === 'pivot' && primaryBuildTag) {
-            candidates = candidates.filter(card => {
-                const tags = getCardBuildTags(card);
-                return tags.length && !tags.includes(primaryBuildTag);
-            });
-        } else if (mode === 'general') {
-            candidates = candidates.filter(card => {
-                const tags = getCardBuildTags(card);
-                return !primaryBuildTag || !tags.includes(primaryBuildTag) || Math.random() < 0.68;
-            });
-        }
-        return candidates;
+        return QuestersRewardRules.getRewardCandidatePool({
+            classPool,
+            neutralPool: NEUTRAL_CARD_POOL,
+            mode,
+            rarity,
+            used,
+            primaryBuildTag,
+            getCardBuildTags
+        });
     }
 
     function generateBuildRewardCard(mode, used = new Set(), primaryBuildTag = getPrimaryBuildTag()) {
@@ -2787,11 +2772,7 @@
     }
 
     function rollRewardRarity() {
-        const floorBonus = Math.min(state.floor * 0.015, 0.14);
-        const roll = Math.random();
-        if (roll < 0.12 + floorBonus) return '史诗';
-        if (roll < 0.68) return '稀有';
-        return '普通';
+        return QuestersRewardRules.rollRewardRarity({ floor: state.floor });
     }
 
     function getSpecialEpicPool(characterId = state.player.characterId) {
@@ -2870,7 +2851,7 @@
     }
 
     function getCardChoiceKey(card) {
-        return card.specialId || card.poolId || card.name;
+        return QuestersRewardRules.getCardChoiceKey(card);
     }
 
     function generateRewardChoices(count = 3) {
@@ -7629,7 +7610,11 @@
     }
 
     function getBattleRewardSkipGold() {
-        return 25 + Math.min(30, state.floor * 2) + (hasRelic('r_reward_crown') ? 15 : 0) + (hasRelic('r_campfire_pouch') ? 10 : 0);
+        return QuestersRewardRules.getBattleRewardSkipGold({
+            floor: state.floor,
+            hasRewardCrown: hasRelic('r_reward_crown'),
+            hasCampfirePouch: hasRelic('r_campfire_pouch')
+        });
     }
     
     function openInitDeck() { showOverlay('overlay-init-deck'); renderInitDeck(); }
