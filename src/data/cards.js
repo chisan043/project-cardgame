@@ -505,7 +505,7 @@ const BUILD_EXPANSION_CARDS = {
         { poolId: 'mage_solar_refill', name: '恒星回填', type: '能力', cost: 1, icon: '🌞', val: 0, tags: ['咏唱', '抽牌', '庇护'], buildTags: ['chant'], rarity: '史诗', frameTheme: 'mage', desc: '积累[咏唱]、[抽牌]并获得[庇护]。' },
         { poolId: 'mage_mirror_trial', name: '镜页试抄', type: '能力', cost: 1, icon: '🪞', val: 0, tags: ['复刻'], directEffects: { draw: true }, buildTags: ['mirror'], rarity: '普通', frameTheme: 'mage', desc: '复制上一张非复刻牌，并抽 1 张牌。' },
         { poolId: 'mage_twin_spark', name: '双生火花', type: '攻击', cost: 1, icon: '🔥', val: 6, tags: ['回响'], buildTags: ['mirror'], rarity: '稀有', frameTheme: 'mage', desc: '造成 6 点伤害，并让本牌再触发一次。' },
-        { poolId: 'mage_echo_shift', name: '回声置换', type: '能力', cost: 1, icon: '🔁', val: 0, tags: ['重置'], directEffects: { energy: true }, buildTags: ['mirror'], rarity: '稀有', frameTheme: 'mage', desc: '重置手牌，并回复 1 点能量。' },
+        { poolId: 'mage_echo_shift', name: '回声置换', type: '能力', cost: 1, icon: '🔁', val: 0, tags: ['重置'], directEffects: { energy: true }, preserveDirectEffects: true, buildTags: ['mirror'], rarity: '稀有', frameTheme: 'mage', desc: '重置手牌，并回复 1 点能量。' },
         { poolId: 'mage_reflect_veil', name: '倒影护幕', type: '防御', cost: 1, icon: '🛡️', val: 8, tags: ['回响'], buildTags: ['mirror'], rarity: '普通', frameTheme: 'mage', desc: '获得 8 点护盾，并让本牌再触发一次。' },
         { poolId: 'mage_mirror_array', name: '镜阵留声', type: '能力', cost: 2, icon: '📜', val: 0, tags: ['复刻'], directEffects: { retain: true }, buildTags: ['mirror'], rarity: '稀有', frameTheme: 'mage', desc: '复制上一张非复刻牌，打出后下回合回到手牌。' },
         { poolId: 'mage_aftertone_flow', name: '余音导流', type: '能力', cost: 1, icon: '🎼', val: 0, tags: ['充能'], buildTags: ['mirror'], rarity: '普通', frameTheme: 'mage', desc: '回复 1 点能量。' },
