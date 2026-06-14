@@ -526,9 +526,9 @@ function estimateCard(state, card, incoming, move) {
             m_forbidden_comet: 48 + state.chant * 17,
             m_echo_archive: state.lastCard ? 22 : 8,
             m_status_supernova: 36 + enemyDebuffCount(state) * 13,
-            a_gale_verdict: 26 + Math.min(3, state.aim) * 17,
+            a_gale_verdict: 18 + Math.min(3, state.aim) * 11,
             s_poison: (state.enemy.poison + state.enemy.bleed) * 3 + 40,
-            s_exhaust: state.exhaust.length * 8 + (state.exhaust.length ? 16 : 0)
+            s_exhaust: state.exhaust.length * 6 + (state.exhaust.length ? 10 : 0)
         };
         score += specialScores[card.specialId] || 0;
     }
@@ -714,10 +714,10 @@ function executeSpecialCard(state, card) {
     } else if (specialId === 'a_gale_verdict') {
         const shots = Math.min(3, state.aim);
         state.aim -= shots;
-        const bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.03) : 0;
-        hitEnemy(state, 22 + state.battleDamage + shots * 15 + bossBonus, true);
-        state.protection += shots * 3;
-        state.sidestep = Math.min(3, state.sidestep + 1);
+        const bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.02) : 0;
+        hitEnemy(state, 18 + state.battleDamage + shots * 10 + bossBonus, true);
+        state.protection += shots * 2;
+        if (shots >= 3) state.sidestep = Math.min(3, state.sidestep + 1);
     } else if (specialId === 's_poison') {
         const layers = state.enemy.poison + state.enemy.bleed;
         hitEnemy(state, 36 + layers * 3);
@@ -725,11 +725,10 @@ function executeSpecialCard(state, card) {
     } else if (specialId === 's_exhaust') {
         const returned = state.exhaust.length + 1;
         if (hasRelic(state, 'r_exhaust_dmg')) state.battleDamage += 1;
-        const bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.16) : 0;
-        hitEnemy(state, bossBonus + returned * 21);
-        state.armor += Math.min(18, returned * 3);
-        state.protection += Math.min(18, returned * 3);
-        state.sidestep = Math.min(3, state.sidestep + 1);
+        const bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.10) : 0;
+        hitEnemy(state, bossBonus + returned * 15);
+        state.armor += Math.min(12, returned * 2);
+        state.protection += Math.min(12, returned * 2);
         if (hasRelic(state, 'r_return_knife')) addKnives(state, returned);
         card.returnedBySpecial = true;
         state.drawPile = shuffle(state.rng, state.drawPile.concat(state.exhaust, [card]));
@@ -961,7 +960,7 @@ function playPlayerTurn(state, move) {
         state.energy -= card.cost || 0;
         recordCardPlay(state, card);
         let specialWindRun = 0;
-        if (card.isSpecial && card.type === '攻击' && state.aim > 0) {
+        if (card.isSpecial && card.type === '攻击' && state.aim > 0 && (card.specialId || card.id) !== 'a_gale_verdict') {
             state.aim--;
             state.protection += 3;
             specialWindRun = 1;

@@ -5770,7 +5770,7 @@
         
         let runCount = 1;
         let windStepTriggered = false;
-        if (card.type === '攻击' && !card.isJunk && state.p_aim > 0) {
+        if (card.type === '攻击' && !card.isJunk && state.p_aim > 0 && card.specialId !== 'a_gale_verdict') {
             state.p_aim--;
             state.p_reduce_dmg += 3;
             runCount += 1;
@@ -5842,11 +5842,10 @@
         // ====== 特殊史诗核心卡 ======
         if (card.isSpecial) {
             if(card.specialId === 's_exhaust') {
-                triggerVFX('p-atk'); let count = state.exhaustPile.length; let bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.16) : 0; let dmg = bossBonus + count * 21;
+                triggerVFX('p-atk'); let count = state.exhaustPile.length; let bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.10) : 0; let dmg = bossBonus + count * 15;
                 applySpecialCardDamage(card, dmg);
-                state.armor += Math.min(18, count * 3);
-                state.p_reduce_dmg += Math.min(18, count * 3);
-                state.p_sidestep = Math.min(3, (state.p_sidestep || 0) + 1);
+                state.armor += Math.min(12, count * 2);
+                state.p_reduce_dmg += Math.min(12, count * 2);
                 state.exhaustPile.forEach(c => onCardReturnedFromExhaust());
                 state.battleDeck = state.battleDeck.concat(state.exhaustPile); state.exhaustPile = []; state.battleDeck.sort(()=>0.5-Math.random());
             }
@@ -6040,11 +6039,11 @@
                 const shots = Math.min(3, state.p_aim);
                 state.p_aim -= shots;
                 triggerVFX('p-atk');
-                let bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.03) : 0;
-                applySpecialCardDamage(card, 22 + state.p_battle_dmg + shots * 15 + bossBonus, true);
-                state.p_reduce_dmg += shots * 3;
-                state.p_sidestep = Math.min(3, (state.p_sidestep || 0) + 1);
-                showFloatText(`追射 ${shots}`, "var(--nature)", getCenter('enemy-avatar'));
+                let bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.02) : 0;
+                applySpecialCardDamage(card, 18 + state.p_battle_dmg + shots * 10 + bossBonus, true);
+                state.p_reduce_dmg += shots * 2;
+                if (shots >= 3) state.p_sidestep = Math.min(3, (state.p_sidestep || 0) + 1);
+                showFloatText(`裁决风势 ${shots}`, "var(--nature)", getCenter('enemy-avatar'));
             }
             else if (card.specialId === 'a_red_rain') {
                 const hadPoison = state.enemy.poison > 0;
