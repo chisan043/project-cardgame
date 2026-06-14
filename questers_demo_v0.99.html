@@ -2940,6 +2940,61 @@
         }).join('、');
     }
 
+    function addUniqueLine(lines, line) {
+        if (line && !lines.includes(line)) lines.push(line);
+    }
+
+    function getStatusLayerCount(card, tag) {
+        const potency = card?.type === '能力' ? getAbilityPotency(card) : 1;
+        if (tag === '剧毒' || tag === '出血') return 3 * potency;
+        if (tag === '诅咒' || tag === '易伤' || tag === '虚弱') return 2 * potency;
+        if (tag === '燃烧' || tag === '眩晕') return potency;
+        return 0;
+    }
+
+    function getTagEffectLine(card, tag, context = {}) {
+        const value = context.scaledValue ?? getScaledCardValue(card);
+        const tagHtml = `<span style="color:var(--gold);">${getTagDisplayName(tag)}</span>`;
+        if (tag === '穿甲') return context.attackBase ? null : '这次伤害无视护甲。';
+        if (tag === '重击') return '基础伤害翻倍。';
+        if (tag === '连击') return '若本回合已出过牌，伤害提高 50%。';
+        if (tag === '圣剑') return '追加当前护盾 50% 的伤害。';
+        if (tag === '吸血') return '按本次伤害回复生命。';
+        if (tag === '追击') return '额外触发 1 次轻灵追射。';
+        if (tag === '爆发') return '消耗全部咏唱，每层追加 7 点伤害。';
+        if (tag === '反击') return '进入反击姿态，招架下一次主体攻击并反击。';
+        if (tag === '荆棘') return '获得荆棘，受击时反弹伤害。';
+        if (tag === '庇护') return `+<span class="card-desc-value">${getProtectionValue(card)}</span> 庇护。`;
+        if (tag === '治愈') return `回复 <span class="card-desc-value">${getCardHealValue(card)}</span> 生命。`;
+        if (tag === '咏唱') return `+<span class="card-desc-value">${getCardChantGain(card)}</span> 咏唱。`;
+        if (tag === '蓄力') return `+<span class="card-desc-value">${getWindGain(card)}</span> 风势。`;
+        if (tag === '自然') return '回复 1 点能量；若已有风势，额外抽 1 张。';
+        if (tag === '闪避') return `+<span class="card-desc-value">${getSidestepGain(card)}</span> 闪避。`;
+        if (tag === '回响') return '本牌再触发一次。';
+        if (tag === '复刻') return '复制上一张非复刻牌。';
+        if (tag === '重置') return '重置手牌。';
+        if (tag === '回收') {
+            const recycleText = getCardRecycleModes(card).map(getRecycleModeDescription).join('；');
+            return recycleText ? `${recycleText}。` : '按说明回收牌。';
+        }
+        if (tag === '放逐') return '打出后移入放逐区。';
+        if (tag === '销毁') return '打出后彻底消失。';
+        if (tag === '保留') return '打出后下回合回到手牌。';
+        if (tag === '抽牌') return `抽 <span class="card-desc-value">${getCardDrawCount(card)}</span> 张牌。`;
+        if (tag === '充能') return '+<span class="card-desc-value">1</span> 能量。';
+        if (tag === '狂热') return `丢弃 1 张手牌，本回合伤害 +<span class="card-desc-value">${getFrenzyBonus(card)}</span>。`;
+        if (tag === '附魔') return `丢弃 1 张手牌，下一次攻击 +<span class="card-desc-value">${getEnchantBonus(card, false)}</span> 伤害并抽 1。`;
+        if (tag === '剧毒') return `施加 <span class="card-desc-value">${getStatusLayerCount(card, tag)}</span> 层剧毒。`;
+        if (tag === '出血') return `施加 <span class="card-desc-value">${getStatusLayerCount(card, tag)}</span> 层出血。`;
+        if (tag === '燃烧') return `施加 <span class="card-desc-value">${getStatusLayerCount(card, tag)}</span> 层燃烧。`;
+        if (tag === '诅咒') return `施加 <span class="card-desc-value">${getStatusLayerCount(card, tag)}</span> 层诅咒。`;
+        if (tag === '易伤') return `施加 <span class="card-desc-value">${getStatusLayerCount(card, tag)}</span> 层易伤。`;
+        if (tag === '虚弱') return `施加 <span class="card-desc-value">${getStatusLayerCount(card, tag)}</span> 层虚弱。`;
+        if (tag === '眩晕') return `施加 <span class="card-desc-value">${getStatusLayerCount(card, tag)}</span> 层眩晕。`;
+        if (tag === '放血') return '引爆敌方出血，每层造成 3 点伤害。';
+        return `${tagHtml}。`;
+    }
+
     function formatRatioText(ratio) {
         const percent = Math.round((Number(ratio) || 0) * 100);
         if (percent === 100) return '等量';
@@ -2990,36 +3045,24 @@
             }
         }
         
-        let d = "";
+        const lines = [];
         const tags = normalizeTagConflicts(card.tags || []);
-        const secondaryTags = tags.filter(x => x !== '蓄力' && x !== '闪避' && x !== '回收' && x !== '血债');
+        const value = getScaledCardValue(card);
         
         if (card.type === '攻击') {
-            d += `造成 <span class="card-desc-value">${getScaledCardValue(card)}</span> 伤害。`;
-            if (secondaryTags.length) d += `<br>${renderTagNames(secondaryTags)}。`;
-            if (tags.includes('蓄力')) d += `<br>+<span class="card-desc-value">${getWindGain(card)}</span> 风势。`;
-            if (tags.includes('闪避')) d += `<br>+<span class="card-desc-value">${getSidestepGain(card)}</span> 闪避。`;
+            const pierceText = tags.includes('穿甲') ? '穿甲伤害' : '伤害';
+            addUniqueLine(lines, `造成 <span class="card-desc-value">${value}</span> 点${pierceText}。`);
         } 
         else if (card.type === '防御') {
-            d += `获得 <span class="card-desc-value">${getScaledCardValue(card)}</span> 护盾。`;
-            if (secondaryTags.length) d += `<br>${renderTagNames(secondaryTags)}。`;
-            if (tags.includes('蓄力')) d += `<br>+<span class="card-desc-value">${getWindGain(card)}</span> 风势。`;
-            if (tags.includes('闪避')) d += `<br>+<span class="card-desc-value">${getSidestepGain(card)}</span> 闪避。`;
-        } 
-        else if (card.type === '能力') {
-            const lines = [];
-            if (tags.includes('蓄力')) lines.push(`+<span class="card-desc-value">${getWindGain(card)}</span> 风势。`);
-            if (tags.includes('闪避')) lines.push(`+<span class="card-desc-value">${getSidestepGain(card)}</span> 闪避。`);
-            if (tags.includes('咏唱')) lines.push(`+<span class="card-desc-value">${getCardChantGain(card)}</span> 咏唱。`);
-            const otherTags = tags.filter(x => x !== '蓄力' && x !== '闪避' && x !== '咏唱' && x !== '回收' && x !== '血债');
-            if (otherTags.length) lines.push(`${renderTagNames(otherTags)}。`);
-            d = lines.join('<br>');
+            addUniqueLine(lines, `获得 <span class="card-desc-value">${value}</span> 点护盾。`);
         } 
 
-        if (tags.includes('回收')) {
-            const recycleText = getCardRecycleModes(card).map(getRecycleModeDescription).join('；');
-            if (recycleText) d += `${d ? '<br>' : ''}${recycleText}。`;
+        for (const tag of tags) {
+            if (tag === '血债') continue;
+            const line = getTagEffectLine(card, tag, { attackBase: card.type === '攻击', scaledValue: value });
+            addUniqueLine(lines, line);
         }
+
         const bloodDebtLines = [];
         if (card.bloodDebtGain) bloodDebtLines.push(`借 <span class="card-desc-value">${card.bloodDebtGain}</span> 血债。`);
         if (card.bloodDebtPowerGain) bloodDebtLines.push(`本回合血债伤害 +<span class="card-desc-value">${Math.round(card.bloodDebtPowerGain * 100)}%</span>。`);
@@ -3037,16 +3080,16 @@
         if (card.bloodDebtStun) statusBits.push('眩晕');
         if (statusBits.length) bloodDebtLines.push(`施加${statusBits.join('、')}。`);
         if (card.bloodDebtDrawOnRepay) bloodDebtLines.push(`偿债后抽<span class="card-desc-value">${card.bloodDebtDrawOnRepay}</span>。`);
-        if (bloodDebtLines.length) d += `${d ? '<br>' : ''}${bloodDebtLines.join('')}`;
+        if (bloodDebtLines.length) addUniqueLine(lines, bloodDebtLines.join(''));
         const directLines = [];
         if (hasDirectCardEffect(card, 'draw')) directLines.push(`抽<span class="card-desc-value">${getCardDrawCount(card)}</span>。`);
         if (hasDirectCardEffect(card, 'energy')) directLines.push('+<span class="card-desc-value">1</span> 能量。');
         if (hasDirectCardEffect(card, 'protection')) directLines.push(`+<span class="card-desc-value">${getProtectionValue(card)}</span> 庇护。`);
         if (hasDirectCardEffect(card, 'heal')) directLines.push(`回<span class="card-desc-value">${getCardHealValue(card)}</span>生命。`);
         if (hasDirectCardEffect(card, 'retain')) directLines.push('下回合回手。');
-        if (directLines.length) d += `${d ? '<br>' : ''}${directLines.join('')}`;
+        if (directLines.length) addUniqueLine(lines, directLines.join(''));
         
-        return d || '无直接效果。';
+        return lines.join('<br>') || '无直接效果。';
     }
 
     function getRelicBottomTags(r) {
