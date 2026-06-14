@@ -292,15 +292,15 @@ const CHARACTER_CARD_POOLS = {
         { poolId: 'archer_hawkeye', name: '鹰眼贯枝', type: '攻击', cost: 2, icon: '🎯', val: 12, tags: ['蓄力', '穿甲'], rarity: '稀有' },
         { poolId: 'archer_rain', name: '回环箭雨', type: '攻击', cost: 2, icon: '🌧️', val: 6, tags: ['追击'], rarity: '史诗' },
         { poolId: 'archer_hidden_arrow', name: '回风藏箭', type: '能力', cost: 1, icon: '🪶', val: 6, tags: ['保留', '蓄力'], rarity: '稀有', art: 'assets/cards/art/archer/archer_shift_art_v1.webp', desc: '获得风势，附带[保留]与[蓄力]。' },
-        { poolId: 'archer_exile_shot', name: '逐影放矢', type: '攻击', cost: 1, icon: '🏹', val: 5, tags: ['放逐'], buildTags: ['exile'], rarity: '稀有', art: 'assets/cards/art/archer/archer_shadow_art_v1.webp', desc: '造成 5 点伤害并[放逐]；进入放逐区时触发流动伤害。' },
-        { poolId: 'archer_cycle_branch', name: '轮枝归射', type: '攻击', cost: 2, icon: '🧭', val: 7, tags: ['回收'], buildTags: ['exile'], rarity: '稀有', art: 'assets/cards/art/archer/archer_rain_art_v1.webp', desc: '造成 7 点伤害，并[回收] 1 张放逐区牌洗入牌库。' },
-        { poolId: 'archer_pick_feather', name: '拾羽连步', type: '能力', cost: 1, icon: '🍃', val: 0, tags: ['回收'], buildTags: ['exile'], rarity: '稀有', art: 'assets/cards/art/archer/archer_step_art_v1.webp', desc: '[回收] 1 张墓地牌。' },
+        { poolId: 'archer_exile_shot', name: '逐影放矢', type: '攻击', cost: 1, icon: '🏹', val: 5, tags: ['放逐'], buildTags: ['exile'], rarity: '稀有', art: 'assets/cards/art/archer/archer_shadow_art_v1.webp', desc: '造成 5 点伤害并[放逐]；进入放逐区时造成 5 点[流动伤害]。' },
+        { poolId: 'archer_cycle_branch', name: '轮枝归射', type: '攻击', cost: 2, icon: '🧭', val: 7, tags: ['回收'], buildTags: ['exile'], rarity: '稀有', art: 'assets/cards/art/archer/archer_rain_art_v1.webp', desc: '造成 7 点伤害，并[回收] 1 张放逐区牌洗入牌库；回收放逐牌时造成 7 点[流动伤害]。' },
+        { poolId: 'archer_pick_feather', name: '拾羽连步', type: '能力', cost: 1, icon: '🍃', val: 0, tags: ['回收'], buildTags: ['exile'], rarity: '稀有', art: 'assets/cards/art/archer/archer_step_art_v1.webp', desc: '[回收] 1 张墓地牌；回收放逐牌时造成 7 点[流动伤害]。' },
         { poolId: 'archer_venom_flurry', name: '翠毒连矢', type: '攻击', cost: 1, icon: '☠️', val: 5, tags: ['剧毒', '虚弱'], buildTags: ['venom'], rarity: '普通', art: 'assets/cards/art/archer/archer_ambush_art_v1.webp', desc: '造成 5 点伤害，施加[剧毒]与[虚弱]。' },
         { poolId: 'archer_ember_feather', name: '轻羽连射', type: '攻击', cost: 1, icon: '🪶', val: 5, tags: ['追击'], rarity: '普通', art: 'assets/cards/art/archer/archer_ember_feather_art_v1.png', desc: '造成 5 点伤害并触发[追击]。' },
-        { poolId: 'archer_soul_return', name: '林魂招矢', type: '能力', cost: 1, icon: '🏮', val: 0, tags: ['回收'], buildTags: ['exile'], rarity: '稀有', art: 'assets/cards/art/archer/archer_ready_art_v1.webp', desc: '[回收] 1 张放逐区牌到手牌。' },
+        { poolId: 'archer_soul_return', name: '林魂招矢', type: '能力', cost: 1, icon: '🏮', val: 0, tags: ['回收'], buildTags: ['exile'], rarity: '稀有', art: 'assets/cards/art/archer/archer_ready_art_v1.webp', desc: '[回收] 1 张放逐区牌到手牌；回收放逐牌时造成 7 点[流动伤害]。' },
         { poolId: 'archer_red_mark', name: '赤痕连矢', type: '攻击', cost: 1, icon: '🩸', val: 5, tags: ['出血', '追击'], buildTags: ['venom'], rarity: '普通', art: 'assets/cards/art/archer/archer_blood_release_art_v1.webp', desc: '造成 5 点伤害，附带[出血]与[追击]。' },
         { poolId: 'archer_blood_release', name: '赤痕放血', type: '攻击', cost: 1, icon: '🩸', val: 6, tags: ['放血', '抽牌'], buildTags: ['venom'], rarity: '稀有', art: 'assets/cards/art/archer/archer_ambush_art_v1.webp', desc: '造成 6 点伤害，触发[放血]并[抽牌]。' },
-        { poolId: 'archer_exile_storm', name: '逐风绝矢', type: '攻击', cost: 2, icon: '💨', val: 8, tags: ['放逐', '追击'], buildTags: ['exile', 'gale'], rarity: '史诗', art: 'assets/cards/art/archer/archer_rain_art_v1.webp', desc: '造成 8 点伤害，触发[追击]后[放逐]。' }
+        { poolId: 'archer_exile_storm', name: '逐风绝矢', type: '攻击', cost: 2, icon: '💨', val: 8, tags: ['放逐', '追击'], buildTags: ['exile', 'gale'], rarity: '史诗', art: 'assets/cards/art/archer/archer_rain_art_v1.webp', desc: '造成 8 点伤害，触发[追击]后[放逐]；进入放逐区时造成 5 点[流动伤害]。' }
     ]
 };
 
@@ -537,7 +537,7 @@ const BUILD_EXPANSION_CARDS = {
         { poolId: 'archer_poison_rain', name: '毒雨留弦', type: '攻击', cost: 2, icon: '🌧️', val: 7, tags: ['剧毒', '追击'], buildTags: ['venom'], rarity: '稀有', frameTheme: 'archer', desc: '造成 7 点伤害，附带[追击]并施加[剧毒]。' },
         { poolId: 'archer_hook_sinew', name: '断筋倒钩', type: '攻击', cost: 1, icon: '🪝', val: 6, tags: ['放血', '虚弱'], buildTags: ['venom'], rarity: '稀有', frameTheme: 'archer', desc: '造成 6 点伤害，触发[放血]并施加[虚弱]。' },
         { poolId: 'archer_spore_shadow', name: '孢影伏击', type: '能力', cost: 1, icon: '🍄', val: 0, tags: ['剧毒', '抽牌'], buildTags: ['venom'], rarity: '普通', frameTheme: 'archer', desc: '施加[剧毒]并[抽牌]。' },
-        { poolId: 'archer_blood_feather', name: '血羽回收', type: '能力', cost: 1, icon: '🩸', val: 0, tags: ['出血', '回收'], buildTags: ['venom', 'exile'], rarity: '史诗', frameTheme: 'archer', desc: '施加[出血]并[回收] 1 张墓地牌。' },
+        { poolId: 'archer_blood_feather', name: '血羽回收', type: '能力', cost: 1, icon: '🩸', val: 0, tags: ['出血', '回收'], buildTags: ['venom', 'exile'], rarity: '史诗', frameTheme: 'archer', desc: '施加[出血]并[回收] 1 张墓地牌；回收放逐牌时造成 7 点[流动伤害]。' },
         { poolId: 'archer_snake_eye', name: '蛇眼标记', type: '能力', cost: 1, icon: '🐍', val: 0, tags: ['剧毒', '易伤'], buildTags: ['venom'], rarity: '稀有', frameTheme: 'archer', desc: '施加[剧毒]与[易伤]。' },
         { poolId: 'archer_red_tide_bow', name: '赤潮短弓', type: '攻击', cost: 1, icon: '🏹', val: 5, tags: ['出血'], buildTags: ['venom'], rarity: '普通', frameTheme: 'archer', desc: '造成 5 点伤害并施加[出血]。' },
         { poolId: 'archer_throat_poison', name: '森毒封喉', type: '攻击', cost: 2, icon: '☠️', val: 9, tags: ['剧毒', '穿甲'], buildTags: ['venom'], rarity: '稀有', frameTheme: 'archer', desc: '造成 9 点[穿甲]伤害并施加[剧毒]。' },
@@ -549,24 +549,24 @@ const BUILD_EXPANSION_CARDS = {
         { poolId: 'archer_skin_splitter', name: '裂肤箭', type: '攻击', cost: 1, icon: '🩸', val: 7, tags: ['出血', '穿甲'], buildTags: ['venom'], rarity: '稀有', frameTheme: 'archer', desc: '造成 7 点[穿甲]伤害并施加[出血]。' },
         { poolId: 'archer_venom_blood_shift', name: '毒血换羽', type: '能力', cost: 1, icon: '🪶', val: 0, tags: ['放血', '充能'], buildTags: ['venom'], rarity: '稀有', frameTheme: 'archer', desc: '触发[放血]并[充能]。' },
         { poolId: 'archer_green_mist_end', name: '绿雾终幕', type: '攻击', cost: 2, icon: '☠️', val: 11, tags: ['剧毒', '放血'], buildTags: ['venom'], rarity: '史诗', frameTheme: 'archer', desc: '造成 11 点伤害，施加[剧毒]并触发[放血]。' },
-        { poolId: 'archer_returning_feather', name: '折返羽刃', type: '攻击', cost: 1, icon: '🪶', val: 5, tags: ['放逐'], buildTags: ['exile'], rarity: '普通', frameTheme: 'archer', desc: '造成 5 点伤害后[放逐]。' },
-        { poolId: 'archer_empty_string', name: '空弦藏牌', type: '能力', cost: 0, icon: '🏹', val: 0, tags: ['放逐'], buildTags: ['exile'], rarity: '普通', frameTheme: 'archer', desc: '自身[放逐]，触发一次入逐流动伤害。' },
-        { poolId: 'archer_outerwood_recall', name: '林外回收', type: '能力', cost: 0, icon: '🏮', val: 0, tags: ['回收'], buildTags: ['exile'], rarity: '稀有', frameTheme: 'archer', desc: '[回收] 1 张放逐区牌到手牌。' },
-        { poolId: 'archer_deadbranch_shuffle', name: '残枝洗牌', type: '能力', cost: 1, icon: '🧭', val: 0, tags: ['回收', '蓄力'], buildTags: ['exile', 'gale'], rarity: '史诗', frameTheme: 'archer', desc: '获得风势，并[回收] 1 张放逐区牌洗入牌库。' },
-        { poolId: 'archer_shadow_line', name: '影羽切线', type: '攻击', cost: 1, icon: '🗡️', val: 5, tags: ['放逐'], buildTags: ['exile'], rarity: '普通', frameTheme: 'archer', desc: '造成 5 点伤害后[放逐]。' },
-        { poolId: 'archer_lost_arrow_mark', name: '遗箭定位', type: '能力', cost: 1, icon: '📍', val: 0, tags: ['回收'], buildTags: ['exile'], rarity: '稀有', frameTheme: 'archer', desc: '[回收] 1 张墓地牌到手牌。' },
+        { poolId: 'archer_returning_feather', name: '折返羽刃', type: '攻击', cost: 1, icon: '🪶', val: 5, tags: ['放逐'], buildTags: ['exile'], rarity: '普通', frameTheme: 'archer', desc: '造成 5 点伤害后[放逐]；进入放逐区时造成 5 点[流动伤害]。' },
+        { poolId: 'archer_empty_string', name: '空弦藏牌', type: '能力', cost: 0, icon: '🏹', val: 0, tags: ['放逐'], buildTags: ['exile'], rarity: '普通', frameTheme: 'archer', desc: '自身[放逐]，进入放逐区时造成 5 点[流动伤害]。' },
+        { poolId: 'archer_outerwood_recall', name: '林外回收', type: '能力', cost: 0, icon: '🏮', val: 0, tags: ['回收'], buildTags: ['exile'], rarity: '稀有', frameTheme: 'archer', desc: '[回收] 1 张放逐区牌到手牌；回收放逐牌时造成 7 点[流动伤害]。' },
+        { poolId: 'archer_deadbranch_shuffle', name: '残枝洗牌', type: '能力', cost: 1, icon: '🧭', val: 0, tags: ['回收', '蓄力'], buildTags: ['exile', 'gale'], rarity: '史诗', frameTheme: 'archer', desc: '获得风势，并[回收] 1 张放逐区牌洗入牌库；回收放逐牌时造成 7 点[流动伤害]。' },
+        { poolId: 'archer_shadow_line', name: '影羽切线', type: '攻击', cost: 1, icon: '🗡️', val: 5, tags: ['放逐'], buildTags: ['exile'], rarity: '普通', frameTheme: 'archer', desc: '造成 5 点伤害后[放逐]；进入放逐区时造成 5 点[流动伤害]。' },
+        { poolId: 'archer_lost_arrow_mark', name: '遗箭定位', type: '能力', cost: 1, icon: '📍', val: 0, tags: ['回收'], buildTags: ['exile'], rarity: '稀有', frameTheme: 'archer', desc: '[回收] 1 张墓地牌到手牌；回收放逐牌时造成 7 点[流动伤害]。' },
         { poolId: 'archer_leaf_store', name: '飞叶封存', type: '防御', cost: 1, icon: '🍂', val: 9, tags: ['闪避', '保留'], buildTags: ['gale'], rarity: '普通', frameTheme: 'archer', desc: '获得 9 点护盾，获得 1 层[闪避]并[保留]。' },
-        { poolId: 'archer_nest_track', name: '回巢轨迹', type: '攻击', cost: 2, icon: '🧭', val: 6, tags: ['回收', '出血'], buildTags: ['exile', 'venom'], rarity: '史诗', frameTheme: 'archer', desc: '造成 6 点伤害，施加[出血]，并[回收] 1 张放逐区牌洗入牌库。' },
-        { poolId: 'archer_empty_valley_knife', name: '空谷飞刀', type: '攻击', cost: 0, icon: '🗡️', val: 2, tags: ['销毁'], buildTags: ['exile'], rarity: '普通', frameTheme: 'archer', desc: '造成 2 点伤害后[销毁]，销毁时触发流动伤害。' },
-        { poolId: 'archer_old_arrow_dream', name: '旧箭入梦', type: '能力', cost: 1, icon: '💤', val: 0, tags: ['回收'], buildTags: ['exile'], rarity: '稀有', frameTheme: 'archer', desc: '[回收] 1 张放逐区牌到手牌。' },
-        { poolId: 'archer_leaf_search', name: '叶脉检索', type: '能力', cost: 0, icon: '🔎', val: 0, tags: ['回收'], buildTags: ['exile'], rarity: '稀有', frameTheme: 'archer', desc: '[回收] 1 张墓地牌到手牌。' },
-        { poolId: 'archer_rearguard', name: '游侠断后', type: '攻击', cost: 2, icon: '🏹', val: 7, tags: ['放逐', '蓄力'], buildTags: ['exile', 'gale'], rarity: '史诗', frameTheme: 'archer', desc: '造成 7 点伤害，获得风势后[放逐]。' },
-        { poolId: 'archer_forest_specimen', name: '归林标本', type: '能力', cost: 1, icon: '📦', val: 0, tags: ['回收'], buildTags: ['exile'], rarity: '稀有', frameTheme: 'archer', desc: '[回收] 1 张放逐区牌洗入牌库。' },
-        { poolId: 'archer_shadow_box', name: '影匣齐射', type: '攻击', cost: 2, icon: '📦', val: 7, tags: ['放逐', '追击'], buildTags: ['exile', 'gale'], rarity: '史诗', frameTheme: 'archer', desc: '造成 7 点伤害，触发[追击]后[放逐]。' },
+        { poolId: 'archer_nest_track', name: '回巢轨迹', type: '攻击', cost: 2, icon: '🧭', val: 6, tags: ['回收', '出血'], buildTags: ['exile', 'venom'], rarity: '史诗', frameTheme: 'archer', desc: '造成 6 点伤害，施加[出血]，并[回收] 1 张放逐区牌洗入牌库；回收放逐牌时造成 7 点[流动伤害]。' },
+        { poolId: 'archer_empty_valley_knife', name: '空谷飞刀', type: '攻击', cost: 0, icon: '🗡️', val: 2, tags: ['销毁'], buildTags: ['exile'], rarity: '普通', frameTheme: 'archer', desc: '造成 2 点伤害后[销毁]，销毁时造成 4 点[流动伤害]。' },
+        { poolId: 'archer_old_arrow_dream', name: '旧箭入梦', type: '能力', cost: 1, icon: '💤', val: 0, tags: ['回收'], buildTags: ['exile'], rarity: '稀有', frameTheme: 'archer', desc: '[回收] 1 张放逐区牌到手牌；回收放逐牌时造成 7 点[流动伤害]。' },
+        { poolId: 'archer_leaf_search', name: '叶脉检索', type: '能力', cost: 0, icon: '🔎', val: 0, tags: ['回收'], buildTags: ['exile'], rarity: '稀有', frameTheme: 'archer', desc: '[回收] 1 张墓地牌到手牌；回收放逐牌时造成 7 点[流动伤害]。' },
+        { poolId: 'archer_rearguard', name: '游侠断后', type: '攻击', cost: 2, icon: '🏹', val: 7, tags: ['放逐', '蓄力'], buildTags: ['exile', 'gale'], rarity: '史诗', frameTheme: 'archer', desc: '造成 7 点伤害，获得风势后[放逐]；进入放逐区时造成 5 点[流动伤害]。' },
+        { poolId: 'archer_forest_specimen', name: '归林标本', type: '能力', cost: 1, icon: '📦', val: 0, tags: ['回收'], buildTags: ['exile'], rarity: '稀有', frameTheme: 'archer', desc: '[回收] 1 张放逐区牌洗入牌库；回收放逐牌时造成 7 点[流动伤害]。' },
+        { poolId: 'archer_shadow_box', name: '影匣齐射', type: '攻击', cost: 2, icon: '📦', val: 7, tags: ['放逐', '追击'], buildTags: ['exile', 'gale'], rarity: '史诗', frameTheme: 'archer', desc: '造成 7 点伤害，触发[追击]后[放逐]；进入放逐区时造成 5 点[流动伤害]。' },
         { poolId: 'archer_leaf_reload', name: '叶片换弦', type: '能力', cost: 1, icon: '🍃', val: 0, tags: ['自然', '抽牌'], buildTags: ['gale'], rarity: '普通', frameTheme: 'archer', desc: '触发[自然]并[抽牌]。' },
         { poolId: 'archer_sky_skim', name: '掠空轻矢', type: '攻击', cost: 0, icon: '🪶', val: 3, tags: ['追击', '销毁'], buildTags: ['gale'], rarity: '普通', frameTheme: 'archer', desc: '造成 3 点伤害，触发[追击]后[销毁]。' },
         { poolId: 'archer_crosswind_guard', name: '侧风护步', type: '防御', cost: 1, icon: '🥾', val: 9, tags: ['自然', '保留'], buildTags: ['gale'], rarity: '稀有', frameTheme: 'archer', desc: '获得 9 点护盾，触发[自然]并[保留]。' },
-        { poolId: 'archer_lostroad_cache', name: '失路箭袋', type: '能力', cost: 1, icon: '📦', val: 0, tags: ['放逐'], buildTags: ['exile'], rarity: '普通', frameTheme: 'archer', desc: '自身[放逐]，触发一次入逐流动伤害。' }
+        { poolId: 'archer_lostroad_cache', name: '失路箭袋', type: '能力', cost: 1, icon: '📦', val: 0, tags: ['放逐'], buildTags: ['exile'], rarity: '普通', frameTheme: 'archer', desc: '自身[放逐]，进入放逐区时造成 5 点[流动伤害]。' }
     ],
     neutral: [
         { poolId: 'neutral_blank_pact', name: '空白契约', type: '能力', cost: 0, icon: '📄', val: 0, tags: ['抽牌', '销毁'], rarity: '普通', desc: '免费[抽牌]后[销毁]，用于压缩牌组和寻找职业核心。' },
@@ -613,7 +613,7 @@ const STARTER_DECKS = {
             { poolId: 'starter_archer_step', name: '林地回避', type: '能力', cost: 1, icon: '🍃', val: 1, tags: ['闪避'], buildNeutral: true, sidestepVal: 1, rarity: '普通', frameTheme: 'archer', desc: '获得 1 层[闪避]，完全躲开本轮敌方主体的下一段攻击。' },
             { poolId: 'starter_archer_aim', name: '拉弓瞄准', type: '能力', cost: 1, icon: '🎯', val: 4, tags: ['蓄力'], buildTags: ['gale'], directEffects: { draw: true }, rarity: '普通', frameTheme: 'archer', desc: '获得风势并抽 1 张牌。' },
             { poolId: 'starter_archer_venom', name: '青牙试射', type: '攻击', cost: 1, icon: '☠️', val: 4, tags: ['剧毒'], buildTags: ['venom'], rarity: '普通', frameTheme: 'archer', desc: '造成 4 点伤害并施加[剧毒]。' },
-            { poolId: 'starter_archer_exile', name: '逐影放矢', type: '攻击', cost: 1, icon: '🏹', val: 5, tags: ['放逐'], buildTags: ['exile'], rarity: '普通', frameTheme: 'archer', desc: '造成 5 点伤害并[放逐]；进入放逐区时触发流动伤害。' },
+            { poolId: 'starter_archer_exile', name: '逐影放矢', type: '攻击', cost: 1, icon: '🏹', val: 5, tags: ['放逐'], buildTags: ['exile'], rarity: '普通', frameTheme: 'archer', desc: '造成 5 点伤害并[放逐]；进入放逐区时造成 5 点[流动伤害]。' },
             { poolId: 'starter_archer_focus', name: '整束箭袋', type: '能力', cost: 1, icon: '🪶', val: 0, tags: [], buildNeutral: true, directEffects: { draw: true }, rarity: '普通', copies: 2, frameTheme: 'archer', desc: '抽 1 张牌。' }
         ]
     }

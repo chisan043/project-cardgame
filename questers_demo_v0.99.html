@@ -2236,9 +2236,9 @@
 
 <script src="hud-runtime.js?v=20260518-forced-default-hud1"></script>
 <script src="hud-layout-data.js?v=20260518-forced-default-hud1"></script>
-<script src="src/data/relics.js?v=20260614-mirror-hallway"></script>
-<script src="src/data/card-tags.js?v=20260612-tag-simplify"></script>
-<script src="src/data/cards.js?v=20260612-tag-simplify"></script>
+<script src="src/data/relics.js?v=20260614-exile-flow-text"></script>
+<script src="src/data/card-tags.js?v=20260614-exile-flow-text"></script>
+<script src="src/data/cards.js?v=20260614-exile-flow-text"></script>
 <script src="src/data/enemies.js?v=20260605-enemy-ai"></script>
 <script src="src/data/characters.js?v=20260613-attack-vfx-origin"></script>
 <script>
@@ -2952,6 +2952,17 @@
         return 0;
     }
 
+    function isExileFlowCard(card) {
+        if (!card) return false;
+        const cardId = card.poolId || card.specialId || card.id;
+        const buildTags = card.buildTags || (typeof CARD_BUILD_TAGS_BY_ID !== 'undefined' ? CARD_BUILD_TAGS_BY_ID[cardId] : null) || [];
+        return buildTags.includes('exile');
+    }
+
+    function getFlowDamageLine(amount) {
+        return `造成 <span class="card-desc-value">${amount}</span> 点流动伤害。`;
+    }
+
     function getTagEffectLine(card, tag, context = {}) {
         const value = context.scaledValue ?? getScaledCardValue(card);
         const tagHtml = `<span style="color:var(--gold);">${getTagDisplayName(tag)}</span>`;
@@ -2975,10 +2986,11 @@
         if (tag === '重置') return '重置手牌。';
         if (tag === '回收') {
             const recycleText = getCardRecycleModes(card).map(getRecycleModeDescription).join('；');
-            return recycleText ? `${recycleText}。` : '按说明回收牌。';
+            const flowText = isExileFlowCard(card) ? '回收放逐牌时造成 7 点流动伤害。' : '';
+            return recycleText ? `${recycleText}。${flowText}` : `按说明回收牌。${flowText}`;
         }
-        if (tag === '放逐') return '打出后移入放逐区。';
-        if (tag === '销毁') return '打出后彻底消失。';
+        if (tag === '放逐') return isExileFlowCard(card) ? `打出后移入放逐区，并${getFlowDamageLine(5)}` : '打出后移入放逐区。';
+        if (tag === '销毁') return isExileFlowCard(card) ? `打出后彻底消失，并${getFlowDamageLine(4)}` : '打出后彻底消失。';
         if (tag === '保留') return '打出后下回合回到手牌。';
         if (tag === '抽牌') return `抽 <span class="card-desc-value">${getCardDrawCount(card)}</span> 张牌。`;
         if (tag === '充能') return '回复 <span class="card-desc-value">1</span> 点能量。';
