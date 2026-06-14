@@ -649,12 +649,30 @@
         .enemy-minion-row { display:flex; align-items:center; gap:8px; }
         .enemy-minion-info .hp-bar-bg { flex:1; width:auto; height: 10px; margin:0; }
         .enemy-minion-atk { min-width: 34px; color:#d6d6d6; font-size:12px; font-weight:bold; text-shadow:0 1px 2px #000; }
-        .enemy-minion-attack { animation: cloneStrike 0.38s cubic-bezier(0.2, 0.8, 0.2, 1) !important; }
+        .enemy-minion-attack { animation: cloneStrike 0.42s cubic-bezier(0.2, 0.8, 0.2, 1) !important; }
+        .enemy-minion-hurt { animation: enemyMinionHurt 0.4s cubic-bezier(0.16, 0.82, 0.24, 1) !important; }
+        #enemy-minion-wrapper::after,
+        .enemy-avatar::after {
+            content:"";
+            position:absolute;
+            inset:4% 6%;
+            border-radius:50%;
+            background:radial-gradient(circle, rgba(255,255,255,0.86) 0%, rgba(255,80,80,0.34) 28%, transparent 66%);
+            opacity:0;
+            mix-blend-mode:screen;
+            pointer-events:none;
+        }
+        #enemy-minion-wrapper.enemy-minion-hurt::after,
+        .enemy-avatar.enemy-anim-hurt::after { animation:enemyHitFlash 0.36s ease-out both; }
         @keyframes cloneFloatAnim { 0%, 100% { transform: translateY(0) translateX(0); } 50% { transform: translateY(-8px) translateX(-6px); } }
-        @keyframes cloneStrike { 0% { transform: translateY(0) translateX(0) scale(1); } 45% { transform: translateY(32px) translateX(-42px) scale(1.08); } 100% { transform: translateY(0) translateX(0) scale(1); } }
+        @keyframes cloneStrike { 0% { transform: translateY(0) translateX(0) scale(1); } 18% { transform: translateY(-9px) translateX(14px) scale(0.98); } 52% { transform: translateY(26px) translateX(-64px) scale(1.1); } 100% { transform: translateY(0) translateX(0) scale(1); } }
+        @keyframes enemyMinionHurt { 0%, 100% { transform: translateY(0) translateX(0) scale(1); filter:none; } 24% { transform: translateY(-3px) translateX(22px) scale(0.96); filter:brightness(1.75) saturate(0.65); } 52% { transform: translateY(2px) translateX(12px) scale(1.02); } }
         
-        .enemy-anim-attack { animation: enemyLunge 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) !important; filter: drop-shadow(0 0 40px var(--crimson)); }
-        @keyframes enemyLunge { 0% { transform: translateY(0) scale(1); } 30% { transform: translateY(-40px) scale(1.1); } 50% { transform: translateY(60px) scale(1.2); } 100% { transform: translateY(0) scale(1); } }
+        .enemy-anim-attack { animation: enemyLunge 0.56s cubic-bezier(0.2, 0.8, 0.2, 1) !important; filter: drop-shadow(0 0 42px var(--crimson)) brightness(1.12); }
+        .enemy-anim-hurt { animation: enemyHurtRecoil 0.42s cubic-bezier(0.16, 0.82, 0.24, 1) !important; filter: brightness(1.6) saturate(0.72) drop-shadow(0 0 36px rgba(255,64,64,0.86)); }
+        @keyframes enemyLunge { 0%, 100% { transform: translate3d(0, 0, 0) scale(1); } 16% { transform: translate3d(26px, -12px, 0) scale(0.98) rotate(1deg); } 46% { transform: translate3d(-104px, 38px, 0) scale(1.13) rotate(-2deg); } 64% { transform: translate3d(-78px, 26px, 0) scale(1.08) rotate(-1deg); } }
+        @keyframes enemyHurtRecoil { 0%, 100% { transform: translate3d(0, 0, 0) scale(1); } 18% { transform: translate3d(34px, -5px, 0) scale(0.97) rotate(1.6deg); } 38% { transform: translate3d(20px, 2px, 0) scale(1.025) rotate(-0.8deg); } 70% { transform: translate3d(8px, 0, 0) scale(1.01); } }
+        @keyframes enemyHitFlash { 0% { opacity:0; transform:scale(0.48); } 24% { opacity:0.86; transform:scale(0.9); } 100% { opacity:0; transform:scale(1.38); } }
         .enemy-anim-defend { animation: enemyShieldPulse 0.6s ease-out !important; filter: drop-shadow(0 0 50px var(--water)); }
         @keyframes enemyShieldPulse { 0% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.15); opacity: 0.8; } 100% { transform: scale(1); opacity: 1; } }
         .enemy-anim-buff { animation: enemyBuffGlow 0.8s ease-in-out !important; }
@@ -5131,6 +5149,30 @@
         }, visibleDuration);
     }
 
+    function replayClassAnimation(element, className, duration = 420) {
+        if (!element) return;
+        element.classList.remove(className);
+        void element.offsetWidth;
+        element.classList.add(className);
+        setTimeout(() => element.classList.remove(className), duration);
+    }
+
+    function triggerEnemyAttackAnimation(target = 'enemy') {
+        if (target === 'minion') {
+            replayClassAnimation(document.getElementById('enemy-minion-wrapper'), 'enemy-minion-attack', 460);
+            return;
+        }
+        replayClassAnimation(document.getElementById('enemy-avatar'), 'enemy-anim-attack', 580);
+    }
+
+    function triggerEnemyHurtAnimation(target = 'enemy') {
+        if (target === 'minion') {
+            replayClassAnimation(document.getElementById('enemy-minion-wrapper'), 'enemy-minion-hurt', 420);
+            return;
+        }
+        replayClassAnimation(document.getElementById('enemy-avatar'), 'enemy-anim-hurt', 440);
+    }
+
     let cardsPlayedThisTurn = 0;
 
     async function startBattle(type) {
@@ -6467,15 +6509,23 @@
         if (state.enemy.minion && state.enemy.minion.hp > 0) {
             let mDmg = Math.min(dmg, state.enemy.minion.hp);
             state.enemy.minion.hp -= mDmg; dmg -= mDmg;
+            if (mDmg > 0) triggerEnemyHurtAnimation('minion');
             showFloatText(`分身挡刀 -${mDmg}`, "gray", getCenter('enemy-minion-wrapper'));
             if (state.enemy.minion.hp <= 0) { state.enemy.minion = null; }
             if (dmg <= 0) return; 
         }
         
         if (isPierce) {
-            state.enemy.currentHp -= dmg; showFloatText(`穿甲 -${dmg}`, "var(--crimson)", getCenter('enemy-avatar'));
+            state.enemy.currentHp -= dmg;
+            if (dmg > 0) triggerEnemyHurtAnimation('enemy');
+            showFloatText(`穿甲 -${dmg}`, "var(--crimson)", getCenter('enemy-avatar'));
         } else {
-            let block = Math.min(state.enemy.armor, dmg); state.enemy.armor -= block; state.enemy.currentHp -= (dmg - block); showFloatText(`-${dmg}`, "white", getCenter('enemy-avatar'));
+            let block = Math.min(state.enemy.armor, dmg);
+            let hpDamage = dmg - block;
+            state.enemy.armor -= block;
+            state.enemy.currentHp -= hpDamage;
+            if (hpDamage > 0) triggerEnemyHurtAnimation('enemy');
+            showFloatText(`-${dmg}`, "white", getCenter('enemy-avatar'));
         }
     }
 
@@ -6509,12 +6559,14 @@
         
         if(state.enemy.poison > 0) { 
             state.enemy.currentHp -= state.enemy.poison; 
+            triggerEnemyHurtAnimation('enemy');
             if(!hasRelic('r_yin_yang') && !hasRelic('r_long_decay')) { state.enemy.poison--; showFloatText(`毒发 -${state.enemy.poison+1}`, "var(--nature)", getCenter('enemy-avatar')); } 
             else if (hasRelic('r_yin_yang')) { state.enemy.poison = Math.ceil(state.enemy.poison / 2); } 
             if(checkEnemyDeath()) { winBattle(); return; } 
         }
         if(state.enemy.bleed > 0) { 
             let bleedDmg = Math.ceil(state.enemy.bleed / 2); state.enemy.currentHp -= bleedDmg; 
+            triggerEnemyHurtAnimation('enemy');
             if(!hasRelic('r_yin_yang') && !hasRelic('r_long_decay')) { state.enemy.bleed--; } 
             else if (hasRelic('r_yin_yang')) { state.enemy.bleed = Math.ceil(state.enemy.bleed / 2); } 
             showFloatText(`流血 -${bleedDmg}`, "var(--crimson)", getCenter('enemy-avatar')); 
@@ -6523,6 +6575,7 @@
         if(state.enemy.burn > 0) { 
             let burnDmg = Math.max(1, Math.ceil(state.enemy.maxHp * 0.03 * state.enemy.burn));
             state.enemy.currentHp -= burnDmg; 
+            triggerEnemyHurtAnimation('enemy');
             if(!hasRelic('r_yin_yang') && !hasRelic('r_long_decay')) { state.enemy.burn--; } 
             else if (hasRelic('r_yin_yang')) { state.enemy.burn = Math.ceil(state.enemy.burn / 2); } 
             showFloatText(`燃烧 -${burnDmg}`, "var(--fire)", getCenter('enemy-avatar')); 
@@ -6545,9 +6598,7 @@
         else if (state.enemy.minion && state.enemy.minion.hp > 0) {
             playerWasAttacked = true;
             const minionActionSnapshot = getBattleActionSnapshot();
-            const minionWrapper = document.getElementById('enemy-minion-wrapper');
-            minionWrapper?.classList.add('enemy-minion-attack');
-            setTimeout(() => minionWrapper?.classList.remove('enemy-minion-attack'), 420);
+            triggerEnemyAttackAnimation('minion');
             let mDmg = state.enemy.minion.atk;
             if (state.p_reduce_dmg > 0) { let r = Math.min(mDmg, state.p_reduce_dmg); mDmg -= r; state.p_reduce_dmg -= r; showFloatText(`减免抵抗 -${r}`, "var(--water)", getCenter('ui-hp')); }
             if(state.armor > 0) { let b = Math.min(state.armor, mDmg); state.armor -= b; mDmg -= b; }
@@ -6568,7 +6619,7 @@
             if(state.enemy.charged) { baseDmg *= 2; state.enemy.charged = false; }
             
             for(let i=0; i<times; i++) {
-                avatar.classList.add('enemy-anim-attack'); setTimeout(() => avatar.classList.remove('enemy-anim-attack'), 500);
+                triggerEnemyAttackAnimation('enemy');
                 triggerVFX('e-atk'); 
                 
                 let dmg = baseDmg;
@@ -6586,6 +6637,7 @@
                     showFloatText("招架反击", "var(--gold)", getCenter('ui-hp'));
                     let b = Math.min(state.enemy.armor, counterDmg);
                     state.enemy.armor -= b; state.enemy.currentHp -= (counterDmg - b);
+                    if (counterDmg - b > 0) triggerEnemyHurtAnimation('enemy');
                     if (state.p_crown_oath) {
                         state.armor += counterDmg;
                         showFloatText(`王冠护盾 +${counterDmg}`, "var(--water)", getCenter('ui-hp'));
@@ -6601,6 +6653,7 @@
                 
                 if(state.player.thorns > 0) { 
                     state.enemy.currentHp -= state.player.thorns; 
+                    triggerEnemyHurtAnimation('enemy');
                     showFloatText(`荆棘 -${state.player.thorns}`, "var(--nature)", getCenter('enemy-avatar')); 
                     if(checkEnemyDeath()){ winBattle(); return; } 
                 }
