@@ -237,7 +237,7 @@ function encounterPool(data, checkpoint) {
 }
 
 function encounterScale(checkpoint) {
-    if (checkpoint.type === 'boss') return 1 + checkpoint.floor * 0.065;
+    if (checkpoint.type === 'boss') return 1 + checkpoint.floor * 0.058;
     if (checkpoint.type === 'elite') return 1 + checkpoint.floor * 0.085;
     return 1 + checkpoint.floor * 0.1;
 }
@@ -630,9 +630,9 @@ function estimateCard(state, card, incoming, move) {
             a_syn_sword: 28 + (state.enemy.vuln > 0 ? 18 : 0),
             a_syn_array: Math.min(incoming + 16, 30) + 8,
             w_oath_fortress: Math.min(incoming + 14, 26) + 7,
-            w_last_verdict: 46 + state.enemy.vuln * 7 + synergyCards * 7,
+            w_last_verdict: 56 + state.enemy.vuln * 6 + synergyCards * 6,
             a_syn_blood: state.bloodDebt > 0
-                ? 34 + state.bloodDebt * 11 + Math.min(state.maxHp - state.hp, 12)
+                ? 18 + state.bloodDebt * 2 + Math.min(state.maxHp - state.hp, 8)
                 : -16,
             s_magic: state.lastCard ? 44 : 18,
             s_pierce: 32 + state.chant * 14,
@@ -830,16 +830,12 @@ function executeSpecialCard(state, card, echo = false) {
     } else if (specialId === 'w_last_verdict') {
         if (card.type === '攻击') payBloodDebtAttackCost(state);
         const executionHand = state.hand.filter(held => (held.tags || []).some(tag => ['连击', '穿甲'].includes(tag))).length;
-        hitEnemy(state, 42 + state.battleDamage + state.enemy.vuln * 8 + executionHand * 10, true);
-        if (state.enemy.hp > 0) state.battleDamage += 22;
+        hitEnemy(state, 48 + state.battleDamage + state.enemy.vuln * 6 + executionHand * 6, true);
     } else if (specialId === 'a_syn_blood') {
         if (card.type === '攻击') payBloodDebtAttackCost(state);
         const spentDebt = state.bloodDebt;
         if (spentDebt > 0) repayBloodDebt(state, spentDebt);
-        const dealt = hitEnemy(state, (Number(card.val) || 42) + spentDebt * (card.bloodDebtSpendDamage || 15) + state.battleDamage, true);
-        if (state.enemy.hp > 0 && spentDebt > 0) {
-            state.battleDamage += Math.min(24, Math.max(6, Math.ceil(spentDebt * 1.4)));
-        }
+        const dealt = hitEnemy(state, (Number(card.val) || 16) + spentDebt * (card.bloodDebtSpendDamage || 2) + state.battleDamage, true);
         let healing = Math.floor(dealt * (card.lifestealRatio || 0.5));
         if (hasRelic(state, 'r_lifedebt_scale') && state.hp <= state.maxHp / 2) healing = Math.floor(healing * 1.5);
         const repayment = repayBloodDebt(state, healing);

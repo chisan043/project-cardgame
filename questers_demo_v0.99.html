@@ -5792,7 +5792,7 @@
     let cardsPlayedThisTurn = 0;
 
     function getEncounterScale(type, floor = state.floor) {
-        if (type === 'boss') return 1 + floor * 0.065;
+        if (type === 'boss') return 1 + floor * 0.058;
         if (type === 'elite') return 1 + floor * 0.085;
         return 1 + floor * 0.1;
     }
@@ -6676,13 +6676,8 @@
             else if (card.specialId === 'a_syn_blood') {
                 const spentDebt = Math.max(0, state.p_blood_debt || 0);
                 if (spentDebt > 0) repayBloodDebt(spentDebt, '血海吞债');
-                const dmg = parseInt(card.val) + spentDebt * (card.bloodDebtSpendDamage || 15) + state.p_battle_dmg;
+                const dmg = parseInt(card.val) + spentDebt * (card.bloodDebtSpendDamage || 2) + state.p_battle_dmg;
                 triggerVFX('p-atk'); const dealt = applySpecialCardDamage(card, dmg, true); let bloodHeal = Math.floor(dealt * (card.lifestealRatio || 0.5));
-                if (state.enemy.currentHp > 0 && spentDebt > 0) {
-                    const bloodMomentum = Math.min(24, Math.max(6, Math.ceil(spentDebt * 1.4)));
-                    state.p_battle_dmg += bloodMomentum;
-                    showFloatText(`血誓续势 +${bloodMomentum}`, "var(--crimson)", getCenter('ui-hp'));
-                }
                 if(hasRelic('r_lifedebt_scale') && state.hp <= Math.floor(state.maxHp / 2)) bloodHeal = Math.floor(bloodHeal * 1.5);
                 const remainingHeal = Math.max(0, bloodHeal - repayBloodDebt(bloodHeal, '血海回偿').paid);
                 const bloodOverheal = Math.max(0, remainingHeal - Math.max(0, state.maxHp - state.hp));
@@ -6737,12 +6732,8 @@
             else if (card.specialId === 'w_last_verdict') {
                 triggerVFX('p-atk');
                 const executionHand = state.hand.filter(c => c.tags && (c.tags.includes('连击') || c.tags.includes('穿甲'))).length;
-                let dmg = 42 + state.p_battle_dmg + state.enemy.vuln * 8 + executionHand * 10;
+                let dmg = 48 + state.p_battle_dmg + state.enemy.vuln * 6 + executionHand * 6;
                 applySpecialCardDamage(card, dmg, true);
-                if (state.enemy.currentHp > 0) {
-                    state.p_battle_dmg += 22;
-                    showFloatText("处刑续势 +22", "var(--gold)", getCenter('ui-hp'));
-                }
                 showFloatText("终誓处刑", "var(--gold)", getCenter('enemy-avatar'));
             }
             else if (card.specialId === 'm_chant_singularity') {
