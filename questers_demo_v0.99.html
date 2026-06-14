@@ -6247,7 +6247,7 @@
                 let extraEcho = hasRelic('r_echo_mirror_relic') ? 1 : 0;
                 for(let e=0; e<extraEcho; e++) { await new Promise(r => setTimeout(r, 300)); showFloatText("魔镜回响", "var(--purple)", getCenter('enemy-avatar')); await executeCardTags(card, true, targets); if (state.hp <= 0) return; }
                 if(hasRelic('r_echo')) { state.mp++; showFloatText("沙漏回能", "var(--gold)", getCenter('ui-mp')); }
-                if(hasRelic('r_brutal')) { state.enemy.bleed += 2; showFloatText(`暴虐出血 +2`, "var(--crimson)", getCenter('enemy-avatar')); }
+                if(hasRelic('r_brutal')) { state.enemy.burn += 1; showFloatText(`余烬燃烧 +1`, "var(--fire)", getCenter('enemy-avatar')); }
                 updateBattleUI(); 
             }
             await new Promise(r => setTimeout(r, 200));
@@ -6441,16 +6441,12 @@
                 showFloatText(`灾厄标记 +${debuffs * 2}`, "var(--purple)", getCenter('ui-hp'));
             }
             else if (card.specialId === 'm_blood_moon_rite') {
-                state.enemy.bleed += 6;
+                state.enemy.curse += 5;
                 state.enemy.vuln += 2;
                 if(hasRelic('r_status_prism')) state.p_chant = Math.min(12, state.p_chant + 1);
-                const bleedLayers = state.enemy.bleed;
-                if (bleedLayers > 0) {
-                    applyDamageToEnemy(bleedLayers * (hasRelic('r_bleed_knife') ? 5 : 3), true);
-                    await drawCards(1);
-                    if(!(hasRelic('r_execute') && state.enemy.vuln > 0)) state.enemy.bleed = 0;
-                }
-                showFloatText("血月放血", "var(--crimson)", getCenter('enemy-avatar'));
+                const debuffDamage = Math.max(1, getEnemyDebuffTypeCount()) * 6;
+                applyDamageToEnemy(debuffDamage, true);
+                showFloatText(`暗月灾厄 +${debuffDamage}`, "var(--purple)", getCenter('enemy-avatar'));
             }
             else if (card.specialId === 'm_arcane_aegis') {
                 const missing = state.maxHp - state.hp;

@@ -19,7 +19,7 @@ function loadGameData() {
     const context = vm.createContext({});
     vm.runInContext(`${source}\n;globalThis.__balanceData = {
         TAGS, BUILD_DIRECTIONS, CARD_BUILD_TAGS_BY_ID, NEUTRAL_CARD_POOL, STARTER_DECKS,
-        CHARACTER_CARD_POOLS, SPECIAL_EPIC_POOLS, RELIC_POOL, RELIC_BUILD_TAGS_BY_ID,
+        CHARACTER_CARD_POOLS, SPECIAL_EPIC_POOLS, ROLE_CARD_TAG_POLICY_DROPS, RELIC_POOL, RELIC_BUILD_TAGS_BY_ID,
         COMMON_RELIC_IDS, ROLE_RELIC_IDS, STARTING_RELIC_BY_ROLE, STARTING_RELIC_IDS, RELIC_CARD_REWARD_BONUS_BY_ID,
         ENEMIES, CHARACTERS, getScaledCardValue,
         getAbilityPotency, getCardDrawCount, getCardHealValue,

@@ -156,7 +156,7 @@ const CARD_ART_REGISTRY = {
     '毒痕护步': 'assets/cards/art/archer/archer_poison_step_art_v1.png',
     '毒血换羽': 'assets/cards/art/archer/archer_venom_blood_shift_art_v1.png',
     '毒雨留弦': 'assets/cards/art/archer/archer_poison_rain_art_v1.png',
-    '燎羽连射': 'assets/cards/art/archer/archer_ember_feather_art_v1.png',
+    '轻羽连射': 'assets/cards/art/archer/archer_ember_feather_art_v1.png',
     '断筋倒钩': 'assets/cards/art/archer/archer_hook_sinew_art_v1.png',
     '飞叶封存': 'assets/cards/art/archer/archer_leaf_store_art_v1.png',
     '风线扣弦': 'assets/cards/art/archer/archer_wind_string_art_v1.png',
@@ -283,14 +283,14 @@ const CHARACTER_CARD_POOLS = {
         { poolId: 'mage_thunder', name: '裂界紫雷', type: '攻击', cost: 3, icon: '🌩️', val: 16, tags: ['爆发', '穿甲', '回响'], rarity: '史诗' },
         { poolId: 'mage_star_copy', name: '星环复写', type: '能力', cost: 1, icon: '🪞', val: 0, tags: ['复刻', '咏唱'], rarity: '稀有', art: 'assets/cards/art/mage/mage_void_art_v1.webp', desc: '触发[复刻]并积累[咏唱]。法师联动会让复刻再额外推进咏唱。' },
         { poolId: 'mage_ember_flow', name: '燃魂导流', type: '攻击', cost: 1, icon: '🔥', val: 5, tags: ['爆发', '燃烧', '充能'], rarity: '稀有', art: 'assets/cards/art/mage/mage_ember_art_v1.webp', desc: '造成 5 点伤害。附带[爆发]、[燃烧]与[充能]，状态词条会为法师标记下一次伤害。' },
-        { poolId: 'mage_venom_sigils', name: '毒星符阵', type: '能力', cost: 1, icon: '☠️', val: 0, tags: ['剧毒', '虚弱'], buildTags: ['calamity'], rarity: '普通', art: 'assets/cards/art/mage/mage_stasis_hex_art_v1.webp', desc: '施加[剧毒]与[虚弱]。' },
-        { poolId: 'mage_blood_orbit', name: '血月星轨', type: '攻击', cost: 1, icon: '🩸', val: 5, tags: ['出血', '燃烧'], buildTags: ['calamity'], rarity: '稀有', art: 'assets/cards/art/mage/mage_omen_art_v1.webp', desc: '造成 5 点伤害，施加[出血]与[燃烧]。' },
-        { poolId: 'mage_bloodlet_omen', name: '断血预兆', type: '能力', cost: 2, icon: '🌑', val: 0, tags: ['出血', '放血', '充能'], buildTags: ['calamity'], rarity: '稀有', art: 'assets/cards/art/mage/mage_curse_echo_art_v1.webp', desc: '施加[出血]后立即触发[放血]，然后回复 1 点能量。' },
+        { poolId: 'mage_venom_sigils', name: '厄星符阵', type: '能力', cost: 1, icon: '☠️', val: 0, tags: ['虚弱'], buildTags: ['calamity'], rarity: '普通', art: 'assets/cards/art/mage/mage_stasis_hex_art_v1.webp', desc: '施加[虚弱]。' },
+        { poolId: 'mage_blood_orbit', name: '灼月星轨', type: '攻击', cost: 1, icon: '🔥', val: 5, tags: ['燃烧'], buildTags: ['calamity'], rarity: '稀有', art: 'assets/cards/art/mage/mage_omen_art_v1.webp', desc: '造成 5 点伤害并施加[燃烧]。' },
+        { poolId: 'mage_bloodlet_omen', name: '断咒预兆', type: '能力', cost: 2, icon: '🌑', val: 0, tags: ['诅咒'], buildTags: ['calamity'], rarity: '稀有', art: 'assets/cards/art/mage/mage_curse_echo_art_v1.webp', desc: '施加[诅咒]。' },
         { poolId: 'mage_echo_veil', name: '回声护幕', type: '能力', cost: 1, icon: '🛡️', val: 3, tags: ['回响', '庇护'], rarity: '稀有', art: 'assets/cards/art/mage/mage_barrier_art_v1.webp', desc: '触发[回响]，两次共获得 6 点庇护。' },
         { poolId: 'mage_void_dust', name: '虚弱星尘', type: '攻击', cost: 1, icon: '✦', val: 6, tags: ['虚弱', '抽牌'], buildTags: ['calamity'], rarity: '普通', art: 'assets/cards/art/mage/mage_omen_art_v1.webp', desc: '造成 6 点伤害，施加[虚弱]并[抽牌]。' },
         { poolId: 'mage_arcane_mark', name: '紫焰刻印', type: '能力', cost: 2, icon: '🔮', val: 3, tags: ['附魔', '易伤'], rarity: '稀有', energySink: { max: 2, enchantPerEnergy: 3 }, art: 'assets/cards/art/mage/mage_thunder_art_v1.webp', desc: '触发[附魔]并施加[易伤]。可额外消耗至多 2 点能量，每点使本次附魔 +3。' },
         { poolId: 'mage_stasis_hex', name: '星缚咒印', type: '能力', cost: 2, icon: '⛓️', val: 0, tags: ['眩晕', '诅咒', '咏唱'], rarity: '史诗', art: 'assets/cards/art/mage/mage_void_art_v1.webp', desc: '施加[眩晕]与[诅咒]，并积累[咏唱]。' },
-        { poolId: 'mage_exile_nova', name: '裂星禁术', type: '攻击', cost: 2, icon: '🌌', val: 15, tags: ['爆发', '放逐', '穿甲'], rarity: '史诗', art: 'assets/cards/art/mage/mage_thunder_art_v1.webp', desc: '造成 15 点伤害，附带[爆发]与[放逐]。' }
+        { poolId: 'mage_exile_nova', name: '裂星禁术', type: '攻击', cost: 2, icon: '🌌', val: 15, tags: ['爆发'], rarity: '史诗', art: 'assets/cards/art/mage/mage_thunder_art_v1.webp', desc: '造成 15 点伤害并触发[爆发]。' }
     ],
     hero_archer: [
         { poolId: 'archer_aim', name: '拉弓瞄准', type: '能力', cost: 1, icon: '🎯', val: 9, tags: ['蓄力', '抽牌'], rarity: '稀有' },
@@ -301,13 +301,13 @@ const CHARACTER_CARD_POOLS = {
         { poolId: 'archer_grove', name: '森冠齐射', type: '攻击', cost: 2, icon: '🏹', val: 7, tags: ['追击', '穿甲'], rarity: '史诗' },
         { poolId: 'archer_ambush', name: '森息伏击', type: '能力', cost: 0, icon: '🍃', val: 4, tags: ['蓄力', '销毁'], rarity: '普通' },
         { poolId: 'archer_hawkeye', name: '鹰眼贯枝', type: '攻击', cost: 2, icon: '🎯', val: 12, tags: ['蓄力', '穿甲'], rarity: '稀有' },
-        { poolId: 'archer_rain', name: '回环箭雨', type: '攻击', cost: 2, icon: '🌧️', val: 6, tags: ['追击', '回响'], rarity: '史诗' },
+        { poolId: 'archer_rain', name: '回环箭雨', type: '攻击', cost: 2, icon: '🌧️', val: 6, tags: ['追击'], rarity: '史诗' },
         { poolId: 'archer_hidden_arrow', name: '回风藏箭', type: '能力', cost: 1, icon: '🪶', val: 6, tags: ['保留', '蓄力'], rarity: '稀有', art: 'assets/cards/art/archer/archer_shift_art_v1.webp', desc: '获得风势，附带[保留]与[蓄力]。' },
         { poolId: 'archer_exile_shot', name: '逐影放矢', type: '攻击', cost: 1, icon: '🏹', val: 8, tags: ['放逐', '穿甲'], buildTags: ['exile'], rarity: '稀有', art: 'assets/cards/art/archer/archer_shadow_art_v1.webp', desc: '造成 8 点[穿甲]伤害并[放逐]。' },
         { poolId: 'archer_cycle_branch', name: '轮枝归射', type: '攻击', cost: 2, icon: '🧭', val: 9, tags: ['回收', '抽牌'], buildTags: ['exile'], rarity: '稀有', art: 'assets/cards/art/archer/archer_rain_art_v1.webp', desc: '造成 9 点伤害，触发[回收]并[抽牌]。' },
         { poolId: 'archer_pick_feather', name: '拾羽连步', type: '能力', cost: 1, icon: '🍃', val: 0, tags: ['回收', '自然'], rarity: '稀有', art: 'assets/cards/art/archer/archer_step_art_v1.webp', desc: '触发[回收]与[自然]。' },
         { poolId: 'archer_venom_flurry', name: '翠毒连矢', type: '攻击', cost: 1, icon: '☠️', val: 5, tags: ['剧毒', '虚弱'], buildTags: ['venom'], rarity: '普通', art: 'assets/cards/art/archer/archer_ambush_art_v1.webp', desc: '造成 5 点伤害，施加[剧毒]与[虚弱]。' },
-        { poolId: 'archer_ember_feather', name: '燎羽连射', type: '攻击', cost: 1, icon: '🔥', val: 5, tags: ['追击', '燃烧'], rarity: '普通', desc: '造成 5 点伤害，附带[追击]与[燃烧]。' },
+        { poolId: 'archer_ember_feather', name: '轻羽连射', type: '攻击', cost: 1, icon: '🪶', val: 5, tags: ['追击'], rarity: '普通', art: 'assets/cards/art/archer/archer_ember_feather_art_v1.png', desc: '造成 5 点伤害并触发[追击]。' },
         { poolId: 'archer_soul_return', name: '林魂招矢', type: '能力', cost: 1, icon: '🏮', val: 0, tags: ['回收', '自然'], rarity: '稀有', art: 'assets/cards/art/archer/archer_ready_art_v1.webp', desc: '从放逐区选择 1 张牌回到手牌，并触发[自然]。' },
         { poolId: 'archer_red_mark', name: '赤痕连矢', type: '攻击', cost: 1, icon: '🩸', val: 5, tags: ['出血', '追击'], buildTags: ['venom'], rarity: '普通', art: 'assets/cards/art/archer/archer_blood_release_art_v1.webp', desc: '造成 5 点伤害，附带[出血]与[追击]。' },
         { poolId: 'archer_blood_release', name: '赤痕放血', type: '攻击', cost: 1, icon: '🩸', val: 6, tags: ['放血', '抽牌'], buildTags: ['venom'], rarity: '稀有', art: 'assets/cards/art/archer/archer_ambush_art_v1.webp', desc: '造成 6 点伤害，触发[放血]并[抽牌]。' },
@@ -330,7 +330,7 @@ const BUILD_DIRECTIONS = {
     hero_mage: {
         chant: { name: '星火咏唱', desc: '积累咏唱后用爆发牌收束。', triggerTags: ['咏唱', '爆发', '穿甲', '充能'] },
         mirror: { name: '镜像回路', desc: '围绕回响、复刻和出牌顺序构筑。', triggerTags: ['回响', '复刻', '抽牌', '充能'] },
-        calamity: { name: '灾厄术士', desc: '堆叠多种负面状态，通过状态数量和持续压制获胜。', triggerTags: ['诅咒', '虚弱', '易伤', '燃烧', '剧毒', '出血', '眩晕'] }
+        calamity: { name: '灾厄术士', desc: '堆叠多种负面状态，通过状态数量和持续压制获胜。', triggerTags: ['诅咒', '虚弱', '易伤', '燃烧', '眩晕'] }
     },
     hero_archer: {
         gale: { name: '疾风连射', desc: '风势、蓄力、自然、闪避与追击组成当前弓手默认节奏。', triggerTags: ['追击', '蓄力', '自然', '闪避', '保留'] },
@@ -338,6 +338,44 @@ const BUILD_DIRECTIONS = {
         exile: { name: '放逐游侠', desc: '管理放逐、墓地和回收区，让牌在不同牌区循环。', triggerTags: ['放逐', '回收', '销毁'] }
     }
 };
+
+const COMMON_ROLE_CARD_TAGS = ['抽牌', '充能', '保留', '重置', '销毁'];
+const ROLE_ALLOWED_CARD_TAGS = {
+    hero_warrior: new Set([
+        ...COMMON_ROLE_CARD_TAGS,
+        '血祭', '血债', '狂热', '附魔', '庇护', '反击', '吸血', '出血', '放血',
+        '重击', '穿甲', '圣剑', '连击', '易伤', '虚弱', '眩晕', '荆棘'
+    ]),
+    hero_mage: new Set([
+        ...COMMON_ROLE_CARD_TAGS,
+        '附魔', '庇护', '回响', '复刻', '燃烧', '眩晕', '诅咒',
+        '穿甲', '咏唱', '爆发', '易伤', '虚弱', '治愈'
+    ]),
+    hero_archer: new Set([
+        ...COMMON_ROLE_CARD_TAGS,
+        '回收', '放逐', '剧毒', '出血', '放血', '穿甲',
+        '蓄力', '自然', '闪避', '追击', '易伤', '虚弱', '眩晕'
+    ])
+};
+const ROLE_CARD_TAG_POLICY_DROPS = [];
+
+function applyRoleCardTagPolicy(roleId, card) {
+    const allowedTags = ROLE_ALLOWED_CARD_TAGS[roleId];
+    if (!allowedTags || !Array.isArray(card?.tags)) return card;
+    const originalLength = card.tags.length;
+    const droppedTags = card.tags.filter(tag => !allowedTags.has(tag));
+    if (droppedTags.length) {
+        ROLE_CARD_TAG_POLICY_DROPS.push({
+            roleId,
+            cardId: card.poolId || card.specialId || card.id || card.name,
+            cardName: card.name,
+            tags: droppedTags
+        });
+    }
+    card.tags = card.tags.filter(tag => allowedTags.has(tag));
+    if (card.tags.length !== originalLength) delete card.desc;
+    return card;
+}
 
 const CARD_BUILD_TAGS_BY_ID = {
     warrior_charge: ['oathblade'],
@@ -485,13 +523,13 @@ const BUILD_EXPANSION_CARDS = {
         { poolId: 'mage_copy_pierce', name: '复写残响', type: '攻击', cost: 2, icon: '🌩️', val: 13, tags: ['回响', '穿甲'], buildTags: ['mirror'], rarity: '史诗', frameTheme: 'mage', desc: '造成 13 点[穿甲]伤害，附带[回响]。' },
         { poolId: 'mage_transcribe_ring', name: '转录法环', type: '能力', cost: 1, icon: '🔮', val: 0, tags: ['复刻', '充能'], buildTags: ['mirror'], rarity: '稀有', frameTheme: 'mage', desc: '[复刻]上一张牌，同时[充能]补回行动资源。' },
         { poolId: 'mage_double_archive', name: '双页归档', type: '能力', cost: 2, icon: '📚', val: 0, tags: ['复刻', '抽牌'], buildTags: ['mirror'], rarity: '史诗', frameTheme: 'mage', desc: '触发[复刻]并[抽牌]。' },
-        { poolId: 'mage_corrupt_mist', name: '蚀星雾', type: '能力', cost: 1, icon: '☠️', val: 0, tags: ['剧毒', '诅咒'], buildTags: ['calamity'], rarity: '普通', frameTheme: 'mage', desc: '施加[剧毒]与[诅咒]。' },
+        { poolId: 'mage_corrupt_mist', name: '蚀星雾', type: '能力', cost: 1, icon: '☠️', val: 0, tags: ['诅咒'], buildTags: ['calamity'], rarity: '普通', frameTheme: 'mage', desc: '施加[诅咒]。' },
         { poolId: 'mage_frost_hex', name: '霜咒压迫', type: '攻击', cost: 1, icon: '🌑', val: 6, tags: ['虚弱', '诅咒'], buildTags: ['calamity'], rarity: '稀有', frameTheme: 'mage', desc: '造成 6 点伤害，施加[虚弱]与[诅咒]。' },
-        { poolId: 'mage_sick_star', name: '坠星病灶', type: '攻击', cost: 2, icon: '☄️', val: 8, tags: ['剧毒', '易伤'], buildTags: ['calamity'], rarity: '稀有', frameTheme: 'mage', desc: '造成 8 点伤害，施加[剧毒]与[易伤]。' },
+        { poolId: 'mage_sick_star', name: '坠星病灶', type: '攻击', cost: 2, icon: '☄️', val: 8, tags: ['易伤'], buildTags: ['calamity'], rarity: '稀有', frameTheme: 'mage', desc: '造成 8 点伤害并施加[易伤]。' },
         { poolId: 'mage_mute_sand', name: '禁言星砂', type: '能力', cost: 2, icon: '⛓️', val: 0, tags: ['眩晕', '虚弱'], buildTags: ['calamity'], rarity: '史诗', frameTheme: 'mage', desc: '施加[眩晕]与[虚弱]。' },
-        { poolId: 'mage_decay_wire', name: '腐辉导线', type: '能力', cost: 1, icon: '🧪', val: 0, tags: ['剧毒', '抽牌'], buildTags: ['calamity'], rarity: '普通', frameTheme: 'mage', desc: '施加[剧毒]并[抽牌]。' },
+        { poolId: 'mage_decay_wire', name: '腐辉导线', type: '能力', cost: 1, icon: '🧪', val: 0, tags: ['诅咒'], buildTags: ['calamity'], rarity: '普通', frameTheme: 'mage', desc: '施加[诅咒]。' },
         { poolId: 'mage_bad_omen_chain', name: '厄兆连珠', type: '攻击', cost: 1, icon: '🔥', val: 6, tags: ['燃烧', '虚弱'], buildTags: ['calamity'], rarity: '稀有', frameTheme: 'mage', desc: '造成 6 点伤害，施加[燃烧]与[虚弱]。' },
-        { poolId: 'mage_dark_moon_scar', name: '暗月留疤', type: '能力', cost: 1, icon: '🌙', val: 0, tags: ['出血', '易伤'], buildTags: ['calamity'], rarity: '稀有', frameTheme: 'mage', desc: '施加[出血]与[易伤]。' },
+        { poolId: 'mage_dark_moon_scar', name: '暗月留疤', type: '能力', cost: 1, icon: '🌙', val: 0, tags: ['易伤'], buildTags: ['calamity'], rarity: '稀有', frameTheme: 'mage', desc: '施加[易伤]。' },
         { poolId: 'mage_withered_stars', name: '群星枯萎', type: '攻击', cost: 2, icon: '✦', val: 9, tags: ['诅咒', '虚弱'], buildTags: ['calamity'], rarity: '史诗', frameTheme: 'mage', desc: '造成 9 点伤害，施加[诅咒]与[虚弱]。' },
         { poolId: 'mage_calamity_tune', name: '灾厄调谐', type: '能力', cost: 2, icon: '💠', val: 0, tags: ['诅咒', '抽牌'], buildTags: ['calamity'], rarity: '稀有', frameTheme: 'mage', desc: '施加[诅咒]并[抽牌]。' },
         { poolId: 'mage_lantern_chant', name: '灯火续咏', type: '能力', cost: 1, icon: '🏮', val: 7, tags: ['咏唱', '庇护'], buildTags: ['chant'], rarity: '普通', frameTheme: 'mage', desc: '积累[咏唱]并获得 7 点[庇护]。' },
@@ -512,10 +550,10 @@ const BUILD_EXPANSION_CARDS = {
         { poolId: 'archer_spore_shadow', name: '孢影伏击', type: '能力', cost: 1, icon: '🍄', val: 0, tags: ['剧毒', '抽牌'], buildTags: ['venom'], rarity: '普通', frameTheme: 'archer', desc: '施加[剧毒]并[抽牌]。' },
         { poolId: 'archer_blood_feather', name: '血羽回收', type: '能力', cost: 1, icon: '🩸', val: 0, tags: ['出血', '回收'], buildTags: ['venom'], rarity: '稀有', frameTheme: 'archer', desc: '施加[出血]并触发[回收]。' },
         { poolId: 'archer_snake_eye', name: '蛇眼标记', type: '能力', cost: 1, icon: '🐍', val: 0, tags: ['剧毒', '易伤'], buildTags: ['venom'], rarity: '稀有', frameTheme: 'archer', desc: '施加[剧毒]与[易伤]。' },
-        { poolId: 'archer_red_tide_bow', name: '赤潮短弓', type: '攻击', cost: 1, icon: '🏹', val: 5, tags: ['出血', '连击'], buildTags: ['venom'], rarity: '普通', frameTheme: 'archer', desc: '造成 5 点伤害，附带[出血]与[连击]。' },
+        { poolId: 'archer_red_tide_bow', name: '赤潮短弓', type: '攻击', cost: 1, icon: '🏹', val: 5, tags: ['出血'], buildTags: ['venom'], rarity: '普通', frameTheme: 'archer', desc: '造成 5 点伤害并施加[出血]。' },
         { poolId: 'archer_throat_poison', name: '森毒封喉', type: '攻击', cost: 2, icon: '☠️', val: 9, tags: ['剧毒', '穿甲'], buildTags: ['venom'], rarity: '稀有', frameTheme: 'archer', desc: '造成 9 点[穿甲]伤害并施加[剧毒]。' },
         { poolId: 'archer_pulse_burst', name: '残脉连扣', type: '能力', cost: 1, icon: '🩸', val: 0, tags: ['放血', '抽牌'], buildTags: ['venom'], rarity: '普通', frameTheme: 'archer', desc: '触发[放血]后[抽牌]。' },
-        { poolId: 'archer_poison_step', name: '毒痕护步', type: '防御', cost: 1, icon: '🥾', val: 9, tags: ['虚弱', '治愈'], buildTags: ['venom'], rarity: '稀有', frameTheme: 'archer', desc: '获得 9 点护盾，施加[虚弱]并[治愈]。' },
+        { poolId: 'archer_poison_step', name: '毒痕护步', type: '防御', cost: 1, icon: '🥾', val: 9, tags: ['虚弱'], buildTags: ['venom'], rarity: '稀有', frameTheme: 'archer', desc: '获得 9 点护盾并施加[虚弱]。' },
         { poolId: 'archer_rotten_net', name: '腐叶陷网', type: '能力', cost: 1, icon: '🕸️', val: 0, tags: ['剧毒', '眩晕'], buildTags: ['venom'], rarity: '史诗', frameTheme: 'archer', desc: '施加[剧毒]并[眩晕]。' },
         { poolId: 'archer_redline_hunt', name: '赤线追猎', type: '攻击', cost: 1, icon: '🧵', val: 6, tags: ['出血', '易伤'], buildTags: ['venom'], rarity: '普通', frameTheme: 'archer', desc: '造成 6 点伤害，施加[出血]与[易伤]。' },
         { poolId: 'archer_bitter_vine', name: '苦藤攀附', type: '能力', cost: 1, icon: '🌿', val: 0, tags: ['剧毒', '充能'], buildTags: ['venom'], rarity: '稀有', frameTheme: 'archer', desc: '施加[剧毒]并[充能]。' },
@@ -526,14 +564,14 @@ const BUILD_EXPANSION_CARDS = {
         { poolId: 'archer_empty_string', name: '空弦藏牌', type: '能力', cost: 0, icon: '🏹', val: 0, tags: ['放逐', '抽牌', '闪避'], buildTags: ['exile'], rarity: '普通', frameTheme: 'archer', desc: '自身[放逐]并[抽牌]，同时获得[闪避]。' },
         { poolId: 'archer_outerwood_recall', name: '林外回收', type: '能力', cost: 0, icon: '🏮', val: 0, tags: ['回收', '充能'], buildTags: ['exile'], rarity: '稀有', frameTheme: 'archer', desc: '触发[回收]并[充能]。' },
         { poolId: 'archer_deadbranch_shuffle', name: '残枝洗牌', type: '能力', cost: 1, icon: '🧭', val: 0, tags: ['回收', '抽牌'], buildTags: ['exile'], rarity: '稀有', frameTheme: 'archer', desc: '触发[回收]并[抽牌]。' },
-        { poolId: 'archer_shadow_line', name: '影羽切线', type: '攻击', cost: 1, icon: '🗡️', val: 7, tags: ['放逐', '连击'], buildTags: ['exile'], rarity: '普通', frameTheme: 'archer', desc: '造成 7 点伤害；若本回合已出牌则触发[连击]，随后[放逐]。' },
+        { poolId: 'archer_shadow_line', name: '影羽切线', type: '攻击', cost: 1, icon: '🗡️', val: 9, tags: ['放逐'], buildTags: ['exile'], rarity: '普通', frameTheme: 'archer', desc: '造成 9 点伤害后[放逐]。' },
         { poolId: 'archer_lost_arrow_mark', name: '遗箭定位', type: '能力', cost: 2, icon: '📍', val: 1, tags: ['回收', '闪避'], buildTags: ['exile'], rarity: '稀有', frameTheme: 'archer', desc: '从墓地取回 1 张牌，并获得 1 层[闪避]。' },
         { poolId: 'archer_leaf_store', name: '飞叶封存', type: '防御', cost: 1, icon: '🍂', val: 9, tags: ['闪避', '保留'], buildTags: ['gale'], rarity: '普通', frameTheme: 'archer', desc: '获得 9 点护盾，获得 1 层[闪避]并[保留]。' },
         { poolId: 'archer_nest_track', name: '回巢轨迹', type: '攻击', cost: 2, icon: '🧭', val: 11, tags: ['回收', '穿甲'], buildTags: ['exile'], rarity: '稀有', frameTheme: 'archer', desc: '造成 11 点[穿甲]伤害并触发[回收]。' },
         { poolId: 'archer_empty_valley_knife', name: '空谷飞刀', type: '攻击', cost: 0, icon: '🗡️', val: 4, tags: ['销毁'], buildTags: ['exile'], rarity: '普通', frameTheme: 'archer', desc: '造成 4 点伤害后[销毁]。作为放逐游侠的低费压缩件。' },
         { poolId: 'archer_old_arrow_dream', name: '旧箭入梦', type: '能力', cost: 1, icon: '💤', val: 0, tags: ['回收', '抽牌'], buildTags: ['exile'], rarity: '稀有', frameTheme: 'archer', desc: '触发[回收]并[抽牌]。' },
         { poolId: 'archer_leaf_search', name: '叶脉检索', type: '能力', cost: 0, icon: '🔎', val: 0, tags: ['回收', '充能'], buildTags: ['exile'], rarity: '稀有', frameTheme: 'archer', desc: '触发[回收]并[充能]。' },
-        { poolId: 'archer_rearguard', name: '游侠断后', type: '攻击', cost: 2, icon: '🏹', val: 9, tags: ['放逐', '重击'], buildTags: ['exile'], rarity: '史诗', frameTheme: 'archer', desc: '造成 9 点伤害，附带[重击]后[放逐]。' },
+        { poolId: 'archer_rearguard', name: '游侠断后', type: '攻击', cost: 2, icon: '🏹', val: 12, tags: ['放逐'], buildTags: ['exile'], rarity: '史诗', frameTheme: 'archer', desc: '造成 12 点伤害后[放逐]。' },
         { poolId: 'archer_forest_specimen', name: '归林标本', type: '能力', cost: 2, icon: '📦', val: 0, tags: ['回收', '自然'], buildTags: ['exile'], rarity: '稀有', frameTheme: 'archer', desc: '触发[回收]与[自然]。' },
         { poolId: 'archer_shadow_box', name: '影匣齐射', type: '攻击', cost: 2, icon: '📦', val: 9, tags: ['放逐', '追击'], buildTags: ['exile'], rarity: '史诗', frameTheme: 'archer', desc: '造成 9 点伤害，附带[追击]后[放逐]。' },
         { poolId: 'archer_leaf_reload', name: '叶片换弦', type: '能力', cost: 1, icon: '🍃', val: 0, tags: ['自然', '抽牌'], buildTags: ['gale'], rarity: '普通', frameTheme: 'archer', desc: '触发[自然]并[抽牌]。' },
@@ -578,7 +616,7 @@ const STARTER_DECKS = {
             { poolId: 'starter_mage_heal', name: '基础愈流', type: '能力', cost: 1, icon: '✚', val: 0, tags: ['治愈'], buildNeutral: true, rarity: '普通', copies: 3, frameTheme: 'mage', desc: '回复 8 点生命。' },
             { poolId: 'starter_mage_omen', name: '秘仪预兆', type: '能力', cost: 1, icon: '🔮', val: 0, tags: ['咏唱'], buildTags: ['chant'], rarity: '普通', frameTheme: 'mage', desc: '积累[咏唱]并获得职业自带的护盾。' },
             { poolId: 'starter_mage_copy', name: '镜页试抄', type: '能力', cost: 1, icon: '🪞', val: 0, tags: ['复刻'], buildTags: ['mirror'], directEffects: { draw: true }, rarity: '普通', frameTheme: 'mage', desc: '[复刻]上一张牌的效果并抽 1 张牌。' },
-            { poolId: 'starter_mage_mist', name: '蚀星雾', type: '能力', cost: 1, icon: '☠️', val: 0, tags: ['剧毒'], buildTags: ['calamity'], rarity: '普通', frameTheme: 'mage', desc: '施加[剧毒]。' },
+            { poolId: 'starter_mage_mist', name: '蚀星雾', type: '能力', cost: 1, icon: '☠️', val: 0, tags: ['诅咒'], buildTags: ['calamity'], rarity: '普通', frameTheme: 'mage', desc: '施加[诅咒]。' },
             { poolId: 'starter_mage_release', name: '星火释放', type: '攻击', cost: 1, icon: '✨', val: 5, tags: ['爆发'], buildNeutral: true, rarity: '普通', frameTheme: 'mage', desc: '造成 5 点伤害；[爆发]会消耗全部咏唱追加伤害。' }
         ]
     },
@@ -595,7 +633,13 @@ const STARTER_DECKS = {
     }
 };
 
-Object.values(CHARACTER_CARD_POOLS).flat().forEach(applyCardTagBudget);
+Object.entries(CHARACTER_CARD_POOLS).forEach(([roleId, cards]) => {
+    cards.forEach(card => applyCardTagBudget(applyRoleCardTagPolicy(roleId, card)));
+});
 NEUTRAL_CARD_POOL.forEach(applyCardTagBudget);
-Object.values(SPECIAL_EPIC_POOLS).flat().forEach(applyCardTagBudget);
-Object.values(STARTER_DECKS).flatMap(deck => deck.cards).forEach(applyCardTagBudget);
+Object.entries(SPECIAL_EPIC_POOLS).forEach(([roleId, cards]) => {
+    cards.forEach(card => applyCardTagBudget(applyRoleCardTagPolicy(roleId, card)));
+});
+Object.values(STARTER_DECKS).forEach(deck => {
+    deck.cards.forEach(card => applyCardTagBudget(applyRoleCardTagPolicy(deck.roleId, card)));
+});

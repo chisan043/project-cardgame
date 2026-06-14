@@ -26,6 +26,24 @@ const LEGACY_OPENING_RELIC_IDS = new Set([
     'r_chant_astrolabe', 'r_mirror_catalog', 'r_calamity_orb',
     'r_gale_weatherwane', 'r_venom_seedcase', 'r_exile_roadsign'
 ]);
+const COMMON_ROLE_CARD_TAGS = ['抽牌', '充能', '保留', '重置', '销毁'];
+const ROLE_ALLOWED_CARD_TAGS = {
+    hero_warrior: new Set([
+        ...COMMON_ROLE_CARD_TAGS,
+        '血祭', '血债', '狂热', '附魔', '庇护', '反击', '吸血', '出血', '放血',
+        '重击', '穿甲', '圣剑', '连击', '易伤', '虚弱', '眩晕', '荆棘'
+    ]),
+    hero_mage: new Set([
+        ...COMMON_ROLE_CARD_TAGS,
+        '附魔', '庇护', '回响', '复刻', '燃烧', '眩晕', '诅咒',
+        '穿甲', '咏唱', '爆发', '易伤', '虚弱', '治愈'
+    ]),
+    hero_archer: new Set([
+        ...COMMON_ROLE_CARD_TAGS,
+        '回收', '放逐', '剧毒', '出血', '放血', '穿甲',
+        '蓄力', '自然', '闪避', '追击', '易伤', '虚弱', '眩晕'
+    ])
+};
 
 const source = SOURCES.map(file => fs.readFileSync(path.join(ROOT, file), 'utf8')).join('\n');
 const staleTokens = FORBIDDEN_TOKENS.filter(token => source.includes(token));
@@ -35,6 +53,31 @@ const data = loadGameData();
 const activeLegacyRelics = data.RELIC_POOL.filter(relic => LEGACY_OPENING_RELIC_IDS.has(relic.id));
 if (activeLegacyRelics.length) {
     throw new Error(`Legacy opening relics remain obtainable: ${activeLegacyRelics.map(relic => relic.id).join(', ')}`);
+}
+if (data.ROLE_CARD_TAG_POLICY_DROPS?.length) {
+    const drops = data.ROLE_CARD_TAG_POLICY_DROPS
+        .map(drop => `${drop.roleId}/${drop.cardName}:${drop.tags.join('+')}`);
+    throw new Error(`Source card tags outside role vocabulary: ${drops.join(', ')}`);
+}
+
+function checkRoleCardTags(roleId, cards, sourceName) {
+    const allowedTags = ROLE_ALLOWED_CARD_TAGS[roleId];
+    if (!allowedTags) return [];
+    return cards.flatMap(card => (card.tags || [])
+        .filter(tag => !allowedTags.has(tag))
+        .map(tag => `${sourceName}/${roleId}/${card.name}:${tag}`));
+}
+
+const offRoleTags = [
+    ...Object.entries(data.CHARACTER_CARD_POOLS)
+        .flatMap(([roleId, cards]) => checkRoleCardTags(roleId, cards, 'cardPool')),
+    ...Object.values(data.STARTER_DECKS)
+        .flatMap(deck => checkRoleCardTags(deck.roleId, deck.cards, 'starterDeck')),
+    ...Object.entries(data.SPECIAL_EPIC_POOLS)
+        .flatMap(([roleId, cards]) => checkRoleCardTags(roleId, cards, 'specialEpicPool'))
+];
+if (offRoleTags.length) {
+    throw new Error(`Off-role card tags remain: ${offRoleTags.join(', ')}`);
 }
 
 for (const roleId of Object.keys(data.CHARACTERS)) {
