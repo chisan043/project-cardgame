@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-14T18:12:27.850Z",
+  "generatedAt": "2026-06-14T18:16:46.250Z",
   "model": "reward choice and forced encounter simulation v1",
   "runsPerSeed": 300,
   "seeds": [
@@ -18,59 +18,59 @@
       "enemies": {
         "【精英】狂暴牛头人": {
           "games": 900,
-          "wins": 896,
-          "winRate": 0.9955555555555555
+          "wins": 897,
+          "winRate": 0.9966666666666667
         },
         "【精英】猩红血巫": {
           "games": 900,
-          "wins": 583,
-          "winRate": 0.6477777777777778
+          "wins": 684,
+          "winRate": 0.76
         },
         "【精英】不死骨龙": {
           "games": 900,
-          "wins": 892,
-          "winRate": 0.9911111111111112
+          "wins": 897,
+          "winRate": 0.9966666666666667
         },
         "【首领】鬼面修罗": {
           "games": 900,
-          "wins": 772,
-          "winRate": 0.8577777777777778
+          "wins": 802,
+          "winRate": 0.8911111111111111
         },
         "【深渊主宰】": {
           "games": 900,
-          "wins": 594,
-          "winRate": 0.66
+          "wins": 665,
+          "winRate": 0.7388888888888889
         }
       },
       "seeds": [
         {
           "seed": 20260615,
           "enemies": {
-            "【精英】狂暴牛头人": 0.9966666666666667,
-            "【精英】猩红血巫": 0.6233333333333333,
-            "【精英】不死骨龙": 0.9866666666666667,
-            "【首领】鬼面修罗": 0.8433333333333334,
-            "【深渊主宰】": 0.6566666666666666
+            "【精英】狂暴牛头人": 1,
+            "【精英】猩红血巫": 0.7266666666666667,
+            "【精英】不死骨龙": 0.9933333333333333,
+            "【首领】鬼面修罗": 0.8733333333333333,
+            "【深渊主宰】": 0.7233333333333334
           }
         },
         {
           "seed": 21260618,
           "enemies": {
-            "【精英】狂暴牛头人": 0.99,
-            "【精英】猩红血巫": 0.6833333333333333,
-            "【精英】不死骨龙": 0.99,
-            "【首领】鬼面修罗": 0.8666666666666667,
-            "【深渊主宰】": 0.6533333333333333
+            "【精英】狂暴牛头人": 0.9933333333333333,
+            "【精英】猩红血巫": 0.78,
+            "【精英】不死骨龙": 0.9966666666666667,
+            "【首领】鬼面修罗": 0.89,
+            "【深渊主宰】": 0.74
           }
         },
         {
           "seed": 22260618,
           "enemies": {
-            "【精英】狂暴牛头人": 1,
-            "【精英】猩红血巫": 0.6366666666666667,
-            "【精英】不死骨龙": 0.9966666666666667,
-            "【首领】鬼面修罗": 0.8633333333333333,
-            "【深渊主宰】": 0.67
+            "【精英】狂暴牛头人": 0.9966666666666667,
+            "【精英】猩红血巫": 0.7733333333333333,
+            "【精英】不死骨龙": 1,
+            "【首领】鬼面修罗": 0.91,
+            "【深渊主宰】": 0.7533333333333333
           }
         }
       ],
@@ -304,6 +304,30 @@
           "drawnUsageRate": 0
         },
         {
+          "id": "warrior_break_form",
+          "name": "破阵换位",
+          "cost": 0,
+          "rarity": "稀有",
+          "tags": [
+            "重置",
+            "销毁"
+          ],
+          "directEffects": {},
+          "buildTags": [
+            "execution"
+          ],
+          "isPrimaryBuild": false,
+          "isRelevant": false,
+          "isNeutral": false,
+          "offers": 295,
+          "picks": 1,
+          "choiceRate": 0.003389830508474576,
+          "deckInclusionRate": 0.0011111111111111111,
+          "plays": 5,
+          "opportunities": 5,
+          "drawnUsageRate": 1
+        },
+        {
           "id": "warrior_open_vein",
           "name": "禁誓开脉",
           "cost": 0,
@@ -323,33 +347,9 @@
           "picks": 2,
           "choiceRate": 0.006024096385542169,
           "deckInclusionRate": 0.0022222222222222222,
-          "plays": 9,
-          "opportunities": 26,
-          "drawnUsageRate": 0.34615384615384615
-        },
-        {
-          "id": "warrior_break_form",
-          "name": "破阵换位",
-          "cost": 0,
-          "rarity": "稀有",
-          "tags": [
-            "重置",
-            "销毁"
-          ],
-          "directEffects": {},
-          "buildTags": [
-            "execution"
-          ],
-          "isPrimaryBuild": false,
-          "isRelevant": false,
-          "isNeutral": false,
-          "offers": 295,
-          "picks": 2,
-          "choiceRate": 0.006779661016949152,
-          "deckInclusionRate": 0.0022222222222222222,
           "plays": 10,
-          "opportunities": 10,
-          "drawnUsageRate": 1
+          "opportunities": 17,
+          "drawnUsageRate": 0.5882352941176471
         },
         {
           "id": "warrior_vein_oath",
@@ -370,9 +370,9 @@
           "picks": 3,
           "choiceRate": 0.009259259259259259,
           "deckInclusionRate": 0.0033333333333333335,
-          "plays": 22,
+          "plays": 21,
           "opportunities": 117,
-          "drawnUsageRate": 0.18803418803418803
+          "drawnUsageRate": 0.1794871794871795
         },
         {
           "id": "warrior_gap_finder",
@@ -393,9 +393,9 @@
           "picks": 3,
           "choiceRate": 0.009345794392523364,
           "deckInclusionRate": 0.0033333333333333335,
-          "plays": 7,
-          "opportunities": 82,
-          "drawnUsageRate": 0.08536585365853659
+          "plays": 6,
+          "opportunities": 77,
+          "drawnUsageRate": 0.07792207792207792
         },
         {
           "id": "warrior_steel_pressure",
@@ -416,9 +416,9 @@
           "picks": 3,
           "choiceRate": 0.009554140127388535,
           "deckInclusionRate": 0.0033333333333333335,
-          "plays": 21,
-          "opportunities": 180,
-          "drawnUsageRate": 0.11666666666666667
+          "plays": 22,
+          "opportunities": 200,
+          "drawnUsageRate": 0.11
         },
         {
           "id": "warrior_debt_scar",
@@ -439,9 +439,9 @@
           "picks": 4,
           "choiceRate": 0.01282051282051282,
           "deckInclusionRate": 0.0044444444444444444,
-          "plays": 14,
-          "opportunities": 131,
-          "drawnUsageRate": 0.10687022900763359
+          "plays": 9,
+          "opportunities": 107,
+          "drawnUsageRate": 0.08411214953271028
         },
         {
           "id": "warrior_blood_wall",
@@ -462,9 +462,9 @@
           "picks": 5,
           "choiceRate": 0.01567398119122257,
           "deckInclusionRate": 0.005555555555555556,
-          "plays": 42,
-          "opportunities": 211,
-          "drawnUsageRate": 0.1990521327014218
+          "plays": 33,
+          "opportunities": 153,
+          "drawnUsageRate": 0.21568627450980393
         },
         {
           "id": "neutral_cycle",
@@ -507,9 +507,9 @@
           "picks": 7,
           "choiceRate": 0.02147239263803681,
           "deckInclusionRate": 0.0077777777777777776,
-          "plays": 122,
-          "opportunities": 247,
-          "drawnUsageRate": 0.4939271255060729
+          "plays": 100,
+          "opportunities": 222,
+          "drawnUsageRate": 0.45045045045045046
         },
         {
           "id": "warrior_oath_pressure",
@@ -530,9 +530,32 @@
           "picks": 7,
           "choiceRate": 0.02356902356902357,
           "deckInclusionRate": 0.0077777777777777776,
-          "plays": 170,
-          "opportunities": 364,
-          "drawnUsageRate": 0.46703296703296704
+          "plays": 162,
+          "opportunities": 338,
+          "drawnUsageRate": 0.47928994082840237
+        },
+        {
+          "id": "warrior_red_return",
+          "name": "残红回锋",
+          "cost": 1,
+          "rarity": "普通",
+          "tags": [
+            "吸血"
+          ],
+          "directEffects": {},
+          "buildTags": [
+            "bloodoath"
+          ],
+          "isPrimaryBuild": false,
+          "isRelevant": false,
+          "isNeutral": false,
+          "offers": 323,
+          "picks": 8,
+          "choiceRate": 0.02476780185758514,
+          "deckInclusionRate": 0.008888888888888889,
+          "plays": 22,
+          "opportunities": 241,
+          "drawnUsageRate": 0.0912863070539419
         },
         {
           "id": "warrior_heart_probe",
@@ -553,9 +576,9 @@
           "picks": 9,
           "choiceRate": 0.02608695652173913,
           "deckInclusionRate": 0.01,
-          "plays": 61,
-          "opportunities": 314,
-          "drawnUsageRate": 0.1942675159235669
+          "plays": 42,
+          "opportunities": 275,
+          "drawnUsageRate": 0.15272727272727274
         },
         {
           "id": "warrior_silent_lunge",
@@ -576,32 +599,9 @@
           "picks": 8,
           "choiceRate": 0.027491408934707903,
           "deckInclusionRate": 0.008888888888888889,
-          "plays": 168,
+          "plays": 170,
           "opportunities": 359,
-          "drawnUsageRate": 0.467966573816156
-        },
-        {
-          "id": "warrior_red_return",
-          "name": "残红回锋",
-          "cost": 1,
-          "rarity": "普通",
-          "tags": [
-            "吸血"
-          ],
-          "directEffects": {},
-          "buildTags": [
-            "bloodoath"
-          ],
-          "isPrimaryBuild": false,
-          "isRelevant": false,
-          "isNeutral": false,
-          "offers": 323,
-          "picks": 9,
-          "choiceRate": 0.02786377708978328,
-          "deckInclusionRate": 0.01,
-          "plays": 27,
-          "opportunities": 297,
-          "drawnUsageRate": 0.09090909090909091
+          "drawnUsageRate": 0.4735376044568245
         },
         {
           "id": "warrior_venom_scar",
@@ -622,9 +622,9 @@
           "picks": 9,
           "choiceRate": 0.03,
           "deckInclusionRate": 0.01,
-          "plays": 299,
-          "opportunities": 382,
-          "drawnUsageRate": 0.7827225130890052
+          "plays": 266,
+          "opportunities": 350,
+          "drawnUsageRate": 0.76
         },
         {
           "id": "warrior_blood_drive",
@@ -645,9 +645,9 @@
           "picks": 14,
           "choiceRate": 0.04964539007092199,
           "deckInclusionRate": 0.015555555555555555,
-          "plays": 172,
-          "opportunities": 436,
-          "drawnUsageRate": 0.3944954128440367
+          "plays": 159,
+          "opportunities": 427,
+          "drawnUsageRate": 0.37236533957845436
         },
         {
           "id": "neutral_sealed_thunder",
@@ -666,12 +666,12 @@
           "isRelevant": false,
           "isNeutral": true,
           "offers": 707,
-          "picks": 51,
-          "choiceRate": 0.07213578500707214,
-          "deckInclusionRate": 0.056666666666666664,
-          "plays": 214,
-          "opportunities": 675,
-          "drawnUsageRate": 0.31703703703703706
+          "picks": 50,
+          "choiceRate": 0.07072135785007072,
+          "deckInclusionRate": 0.05555555555555555,
+          "plays": 198,
+          "opportunities": 642,
+          "drawnUsageRate": 0.308411214953271
         },
         {
           "id": "warrior_bleed_edge",
@@ -692,9 +692,9 @@
           "picks": 34,
           "choiceRate": 0.09714285714285714,
           "deckInclusionRate": 0.03777777777777778,
-          "plays": 764,
-          "opportunities": 1150,
-          "drawnUsageRate": 0.6643478260869565
+          "plays": 745,
+          "opportunities": 1145,
+          "drawnUsageRate": 0.6506550218340611
         },
         {
           "id": "warrior_martyr_cut",
@@ -713,12 +713,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 347,
-          "picks": 54,
-          "choiceRate": 0.15561959654178675,
-          "deckInclusionRate": 0.06,
-          "plays": 269,
-          "opportunities": 285,
-          "drawnUsageRate": 0.9438596491228071
+          "picks": 52,
+          "choiceRate": 0.14985590778097982,
+          "deckInclusionRate": 0.057777777777777775,
+          "plays": 259,
+          "opportunities": 272,
+          "drawnUsageRate": 0.9522058823529411
         },
         {
           "id": "warrior_crimson_pause",
@@ -738,12 +738,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 341,
-          "picks": 61,
-          "choiceRate": 0.17888563049853373,
-          "deckInclusionRate": 0.06666666666666667,
-          "plays": 3980,
-          "opportunities": 4575,
-          "drawnUsageRate": 0.8699453551912568
+          "picks": 60,
+          "choiceRate": 0.17595307917888564,
+          "deckInclusionRate": 0.06555555555555556,
+          "plays": 3591,
+          "opportunities": 4114,
+          "drawnUsageRate": 0.8728731161886242
         },
         {
           "id": "warrior_oath_watch",
@@ -765,9 +765,9 @@
           "picks": 83,
           "choiceRate": 0.18485523385300667,
           "deckInclusionRate": 0.09111111111111111,
-          "plays": 415,
-          "opportunities": 423,
-          "drawnUsageRate": 0.9810874704491725
+          "plays": 414,
+          "opportunities": 424,
+          "drawnUsageRate": 0.9764150943396226
         },
         {
           "id": "warrior_life_contract",
@@ -785,12 +785,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 320,
-          "picks": 74,
-          "choiceRate": 0.23125,
-          "deckInclusionRate": 0.08222222222222222,
-          "plays": 88,
-          "opportunities": 3029,
-          "drawnUsageRate": 0.029052492571805876
+          "picks": 71,
+          "choiceRate": 0.221875,
+          "deckInclusionRate": 0.07888888888888888,
+          "plays": 91,
+          "opportunities": 2618,
+          "drawnUsageRate": 0.034759358288770054
         },
         {
           "id": "warrior_lifebite",
@@ -808,12 +808,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 328,
-          "picks": 89,
-          "choiceRate": 0.27134146341463417,
-          "deckInclusionRate": 0.09888888888888889,
-          "plays": 1789,
-          "opportunities": 3472,
-          "drawnUsageRate": 0.5152649769585254
+          "picks": 85,
+          "choiceRate": 0.25914634146341464,
+          "deckInclusionRate": 0.09444444444444444,
+          "plays": 1577,
+          "opportunities": 3185,
+          "drawnUsageRate": 0.49513343799058085
         },
         {
           "id": "warrior_blood_vow_slash",
@@ -831,12 +831,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 297,
-          "picks": 93,
-          "choiceRate": 0.31313131313131315,
-          "deckInclusionRate": 0.1,
-          "plays": 1269,
-          "opportunities": 3622,
-          "drawnUsageRate": 0.3503589177250138
+          "picks": 86,
+          "choiceRate": 0.2895622895622896,
+          "deckInclusionRate": 0.09333333333333334,
+          "plays": 1065,
+          "opportunities": 3143,
+          "drawnUsageRate": 0.33884823417117405
         },
         {
           "id": "warrior_charge",
@@ -854,12 +854,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 372,
-          "picks": 119,
-          "choiceRate": 0.31989247311827956,
-          "deckInclusionRate": 0.12777777777777777,
-          "plays": 2040,
-          "opportunities": 3061,
-          "drawnUsageRate": 0.6664488729173472
+          "picks": 116,
+          "choiceRate": 0.3118279569892473,
+          "deckInclusionRate": 0.12444444444444444,
+          "plays": 1860,
+          "opportunities": 2817,
+          "drawnUsageRate": 0.6602768903088392
         },
         {
           "id": "warrior_flash",
@@ -880,9 +880,9 @@
           "picks": 130,
           "choiceRate": 0.32338308457711445,
           "deckInclusionRate": 0.13777777777777778,
-          "plays": 2874,
-          "opportunities": 3205,
-          "drawnUsageRate": 0.8967238689547582
+          "plays": 2736,
+          "opportunities": 3088,
+          "drawnUsageRate": 0.8860103626943006
         },
         {
           "id": "warrior_thorn_charge",
@@ -900,12 +900,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 343,
-          "picks": 126,
-          "choiceRate": 0.3673469387755102,
-          "deckInclusionRate": 0.13777777777777778,
-          "plays": 2415,
-          "opportunities": 3271,
-          "drawnUsageRate": 0.7383063283399572
+          "picks": 123,
+          "choiceRate": 0.358600583090379,
+          "deckInclusionRate": 0.13444444444444445,
+          "plays": 2221,
+          "opportunities": 3073,
+          "drawnUsageRate": 0.722746501789782
         },
         {
           "id": "warrior_frenzy_cleave",
@@ -925,12 +925,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 268,
-          "picks": 100,
-          "choiceRate": 0.373134328358209,
-          "deckInclusionRate": 0.1111111111111111,
-          "plays": 2493,
-          "opportunities": 3303,
-          "drawnUsageRate": 0.7547683923705722
+          "picks": 99,
+          "choiceRate": 0.3694029850746269,
+          "deckInclusionRate": 0.11,
+          "plays": 2218,
+          "opportunities": 3023,
+          "drawnUsageRate": 0.7337082368508104
         },
         {
           "id": "warrior_follow",
@@ -948,12 +948,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 448,
-          "picks": 170,
-          "choiceRate": 0.3794642857142857,
-          "deckInclusionRate": 0.17888888888888888,
-          "plays": 3844,
-          "opportunities": 4200,
-          "drawnUsageRate": 0.9152380952380952
+          "picks": 168,
+          "choiceRate": 0.375,
+          "deckInclusionRate": 0.17666666666666667,
+          "plays": 3685,
+          "opportunities": 4041,
+          "drawnUsageRate": 0.9119029943083395
         },
         {
           "id": "warrior_saintbreaker",
@@ -972,12 +972,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 340,
-          "picks": 140,
-          "choiceRate": 0.4117647058823529,
-          "deckInclusionRate": 0.14555555555555555,
-          "plays": 2706,
-          "opportunities": 3529,
-          "drawnUsageRate": 0.7667894587701899
+          "picks": 138,
+          "choiceRate": 0.40588235294117647,
+          "deckInclusionRate": 0.14444444444444443,
+          "plays": 2536,
+          "opportunities": 3363,
+          "drawnUsageRate": 0.7540886113589057
         },
         {
           "id": "warrior_boiling_drive",
@@ -995,12 +995,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 301,
-          "picks": 133,
-          "choiceRate": 0.4418604651162791,
-          "deckInclusionRate": 0.14444444444444443,
-          "plays": 1691,
-          "opportunities": 5367,
-          "drawnUsageRate": 0.3150735979131731
+          "picks": 124,
+          "choiceRate": 0.4119601328903654,
+          "deckInclusionRate": 0.13444444444444445,
+          "plays": 1483,
+          "opportunities": 4649,
+          "drawnUsageRate": 0.3189933318993332
         },
         {
           "id": "warrior_bastion_ledger",
@@ -1020,12 +1020,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 356,
-          "picks": 159,
-          "choiceRate": 0.44662921348314605,
-          "deckInclusionRate": 0.17222222222222222,
-          "plays": 1906,
-          "opportunities": 6364,
-          "drawnUsageRate": 0.29949717159019484
+          "picks": 157,
+          "choiceRate": 0.4410112359550562,
+          "deckInclusionRate": 0.17,
+          "plays": 1800,
+          "opportunities": 5947,
+          "drawnUsageRate": 0.30267361694972256
         },
         {
           "id": "warrior_scaffold_cut",
@@ -1045,12 +1045,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 373,
-          "picks": 171,
-          "choiceRate": 0.4584450402144772,
-          "deckInclusionRate": 0.18555555555555556,
-          "plays": 2558,
-          "opportunities": 6426,
-          "drawnUsageRate": 0.39807033924680985
+          "picks": 169,
+          "choiceRate": 0.45308310991957107,
+          "deckInclusionRate": 0.18333333333333332,
+          "plays": 2274,
+          "opportunities": 5666,
+          "drawnUsageRate": 0.40134133427462054
         },
         {
           "id": "neutral_cold_iron_page",
@@ -1068,12 +1068,12 @@
           "isRelevant": true,
           "isNeutral": true,
           "offers": 402,
-          "picks": 189,
-          "choiceRate": 0.4701492537313433,
-          "deckInclusionRate": 0.20333333333333334,
-          "plays": 2729,
-          "opportunities": 7010,
-          "drawnUsageRate": 0.38930099857346645
+          "picks": 185,
+          "choiceRate": 0.4601990049751244,
+          "deckInclusionRate": 0.1988888888888889,
+          "plays": 2310,
+          "opportunities": 6285,
+          "drawnUsageRate": 0.36754176610978523
         },
         {
           "id": "neutral_guard",
@@ -1091,35 +1091,12 @@
           "isRelevant": true,
           "isNeutral": true,
           "offers": 333,
-          "picks": 169,
-          "choiceRate": 0.5075075075075075,
-          "deckInclusionRate": 0.18444444444444444,
-          "plays": 3195,
-          "opportunities": 12395,
-          "drawnUsageRate": 0.25776522791448164
-        },
-        {
-          "id": "warrior_guard",
-          "name": "圣堂守势",
-          "cost": 2,
-          "rarity": "史诗",
-          "tags": [
-            "荆棘"
-          ],
-          "directEffects": {},
-          "buildTags": [
-            "oathblade"
-          ],
-          "isPrimaryBuild": true,
-          "isRelevant": true,
-          "isNeutral": false,
-          "offers": 270,
-          "picks": 138,
-          "choiceRate": 0.5111111111111111,
-          "deckInclusionRate": 0.14888888888888888,
-          "plays": 85,
-          "opportunities": 5180,
-          "drawnUsageRate": 0.016409266409266408
+          "picks": 163,
+          "choiceRate": 0.4894894894894895,
+          "deckInclusionRate": 0.17777777777777778,
+          "plays": 2666,
+          "opportunities": 10798,
+          "drawnUsageRate": 0.24689757362474532
         },
         {
           "id": "warrior_soul_oath",
@@ -1139,36 +1116,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 341,
-          "picks": 183,
-          "choiceRate": 0.5366568914956011,
-          "deckInclusionRate": 0.1922222222222222,
-          "plays": 2131,
-          "opportunities": 7142,
-          "drawnUsageRate": 0.2983758050966116
-        },
-        {
-          "id": "warrior_crown_riposte",
-          "name": "王冠反斩",
-          "cost": 3,
-          "rarity": "史诗",
-          "tags": [
-            "反击",
-            "重击"
-          ],
-          "directEffects": {},
-          "buildTags": [
-            "oathblade"
-          ],
-          "isPrimaryBuild": true,
-          "isRelevant": true,
-          "isNeutral": false,
-          "offers": 272,
-          "picks": 147,
-          "choiceRate": 0.5404411764705882,
-          "deckInclusionRate": 0.16111111111111112,
-          "plays": 753,
-          "opportunities": 5960,
-          "drawnUsageRate": 0.12634228187919463
+          "picks": 181,
+          "choiceRate": 0.530791788856305,
+          "deckInclusionRate": 0.19,
+          "plays": 1967,
+          "opportunities": 6474,
+          "drawnUsageRate": 0.30383070744516527
         },
         {
           "id": "warrior_execute_window",
@@ -1188,12 +1141,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 288,
-          "picks": 157,
-          "choiceRate": 0.5451388888888888,
-          "deckInclusionRate": 0.17222222222222222,
-          "plays": 3556,
-          "opportunities": 4645,
-          "drawnUsageRate": 0.7655543595263724
+          "picks": 155,
+          "choiceRate": 0.5381944444444444,
+          "deckInclusionRate": 0.17,
+          "plays": 3263,
+          "opportunities": 4318,
+          "drawnUsageRate": 0.7556739231125521
         },
         {
           "id": "warrior_oath",
@@ -1213,12 +1166,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 351,
-          "picks": 201,
-          "choiceRate": 0.5726495726495726,
-          "deckInclusionRate": 0.21333333333333335,
-          "plays": 2131,
-          "opportunities": 8342,
-          "drawnUsageRate": 0.2554543274994006
+          "picks": 198,
+          "choiceRate": 0.5641025641025641,
+          "deckInclusionRate": 0.21,
+          "plays": 1836,
+          "opportunities": 7367,
+          "drawnUsageRate": 0.24921949233066376
         },
         {
           "id": "warrior_oath_charge",
@@ -1236,12 +1189,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 336,
-          "picks": 199,
-          "choiceRate": 0.5922619047619048,
-          "deckInclusionRate": 0.2111111111111111,
-          "plays": 7223,
-          "opportunities": 15125,
-          "drawnUsageRate": 0.4775537190082645
+          "picks": 193,
+          "choiceRate": 0.5744047619047619,
+          "deckInclusionRate": 0.20444444444444446,
+          "plays": 6507,
+          "opportunities": 13391,
+          "drawnUsageRate": 0.48592338137555074
         },
         {
           "id": "warrior_blood_debt",
@@ -1260,61 +1213,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 745,
-          "picks": 460,
-          "choiceRate": 0.6174496644295302,
-          "deckInclusionRate": 0.46,
-          "plays": 2330,
-          "opportunities": 17836,
-          "drawnUsageRate": 0.13063467145099797
-        },
-        {
-          "id": "warrior_release",
-          "name": "圣剑解放",
-          "cost": 3,
-          "rarity": "史诗",
-          "tags": [
-            "圣剑",
-            "重击"
-          ],
-          "directEffects": {},
-          "buildTags": [
-            "oathblade"
-          ],
-          "isPrimaryBuild": true,
-          "isRelevant": true,
-          "isNeutral": false,
-          "offers": 249,
-          "picks": 154,
-          "choiceRate": 0.6184738955823293,
-          "deckInclusionRate": 0.16555555555555557,
-          "plays": 2419,
-          "opportunities": 3600,
-          "drawnUsageRate": 0.6719444444444445
-        },
-        {
-          "id": "warrior_crest_guard",
-          "name": "圣徽举盾",
-          "cost": 1,
-          "rarity": "普通",
-          "tags": [
-            "庇护"
-          ],
-          "directEffects": {
-            "retain": true
-          },
-          "buildTags": [
-            "oathblade"
-          ],
-          "isPrimaryBuild": true,
-          "isRelevant": true,
-          "isNeutral": false,
-          "offers": 452,
-          "picks": 282,
-          "choiceRate": 0.6238938053097345,
-          "deckInclusionRate": 0.2822222222222222,
-          "plays": 16389,
-          "opportunities": 22262,
-          "drawnUsageRate": 0.7361872248674872
+          "picks": 434,
+          "choiceRate": 0.5825503355704698,
+          "deckInclusionRate": 0.43777777777777777,
+          "plays": 1995,
+          "opportunities": 15142,
+          "drawnUsageRate": 0.1317527407211729
         },
         {
           "id": "warrior_final_measure",
@@ -1334,12 +1238,61 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 264,
-          "picks": 165,
-          "choiceRate": 0.625,
-          "deckInclusionRate": 0.17888888888888888,
-          "plays": 4397,
-          "opportunities": 4852,
-          "drawnUsageRate": 0.9062242374278648
+          "picks": 157,
+          "choiceRate": 0.5946969696969697,
+          "deckInclusionRate": 0.17,
+          "plays": 3949,
+          "opportunities": 4382,
+          "drawnUsageRate": 0.9011866727521679
+        },
+        {
+          "id": "warrior_crest_guard",
+          "name": "圣徽举盾",
+          "cost": 1,
+          "rarity": "普通",
+          "tags": [
+            "庇护"
+          ],
+          "directEffects": {
+            "retain": true
+          },
+          "buildTags": [
+            "oathblade"
+          ],
+          "isPrimaryBuild": true,
+          "isRelevant": true,
+          "isNeutral": false,
+          "offers": 452,
+          "picks": 276,
+          "choiceRate": 0.6106194690265486,
+          "deckInclusionRate": 0.2777777777777778,
+          "plays": 15068,
+          "opportunities": 20733,
+          "drawnUsageRate": 0.7267640958857859
+        },
+        {
+          "id": "warrior_release",
+          "name": "圣剑解放",
+          "cost": 3,
+          "rarity": "史诗",
+          "tags": [
+            "圣剑",
+            "重击"
+          ],
+          "directEffects": {},
+          "buildTags": [
+            "oathblade"
+          ],
+          "isPrimaryBuild": true,
+          "isRelevant": true,
+          "isNeutral": false,
+          "offers": 249,
+          "picks": 153,
+          "choiceRate": 0.6144578313253012,
+          "deckInclusionRate": 0.16444444444444445,
+          "plays": 2269,
+          "opportunities": 3430,
+          "drawnUsageRate": 0.6615160349854228
         },
         {
           "id": "warrior_wall",
@@ -1357,37 +1310,35 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 262,
-          "picks": 165,
-          "choiceRate": 0.6297709923664122,
-          "deckInclusionRate": 0.17444444444444446,
-          "plays": 3269,
-          "opportunities": 6828,
-          "drawnUsageRate": 0.47876391329818396
+          "picks": 162,
+          "choiceRate": 0.6183206106870229,
+          "deckInclusionRate": 0.17222222222222222,
+          "plays": 2782,
+          "opportunities": 5924,
+          "drawnUsageRate": 0.4696151249155976
         },
         {
-          "id": "warrior_exile_judgement",
-          "name": "终誓处刑",
-          "cost": 2,
+          "id": "warrior_devour_finish",
+          "name": "噬痕终击",
+          "cost": 3,
           "rarity": "史诗",
           "tags": [
-            "穿甲",
-            "重击"
+            "吸血"
           ],
           "directEffects": {},
           "buildTags": [
-            "execution",
-            "oathblade"
+            "bloodoath"
           ],
-          "isPrimaryBuild": true,
-          "isRelevant": true,
+          "isPrimaryBuild": false,
+          "isRelevant": false,
           "isNeutral": false,
-          "offers": 292,
-          "picks": 199,
-          "choiceRate": 0.6815068493150684,
-          "deckInclusionRate": 0.20555555555555555,
-          "plays": 5094,
-          "opportunities": 5622,
-          "drawnUsageRate": 0.9060832443970117
+          "offers": 721,
+          "picks": 472,
+          "choiceRate": 0.6546463245492372,
+          "deckInclusionRate": 0.4622222222222222,
+          "plays": 2040,
+          "opportunities": 16588,
+          "drawnUsageRate": 0.12298046780805401
         },
         {
           "id": "warrior_oath_retainer",
@@ -1407,35 +1358,37 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 406,
-          "picks": 279,
-          "choiceRate": 0.687192118226601,
-          "deckInclusionRate": 0.29444444444444445,
-          "plays": 14946,
-          "opportunities": 19977,
-          "drawnUsageRate": 0.7481603844421084
+          "picks": 268,
+          "choiceRate": 0.6600985221674877,
+          "deckInclusionRate": 0.2822222222222222,
+          "plays": 12755,
+          "opportunities": 17355,
+          "drawnUsageRate": 0.7349467012388361
         },
         {
-          "id": "warrior_devour_finish",
-          "name": "噬痕终击",
-          "cost": 3,
+          "id": "warrior_exile_judgement",
+          "name": "终誓处刑",
+          "cost": 2,
           "rarity": "史诗",
           "tags": [
-            "吸血"
+            "穿甲",
+            "重击"
           ],
           "directEffects": {},
           "buildTags": [
-            "bloodoath"
+            "execution",
+            "oathblade"
           ],
-          "isPrimaryBuild": false,
-          "isRelevant": false,
+          "isPrimaryBuild": true,
+          "isRelevant": true,
           "isNeutral": false,
-          "offers": 721,
-          "picks": 499,
-          "choiceRate": 0.6920943134535368,
-          "deckInclusionRate": 0.4866666666666667,
-          "plays": 2376,
-          "opportunities": 19434,
-          "drawnUsageRate": 0.12225995677678296
+          "offers": 292,
+          "picks": 194,
+          "choiceRate": 0.6643835616438356,
+          "deckInclusionRate": 0.20222222222222222,
+          "plays": 4519,
+          "opportunities": 5034,
+          "drawnUsageRate": 0.8976956694477553
         },
         {
           "id": "warrior_blood_tide",
@@ -1454,12 +1407,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 714,
-          "picks": 543,
-          "choiceRate": 0.7605042016806722,
-          "deckInclusionRate": 0.5211111111111111,
-          "plays": 4831,
-          "opportunities": 21530,
-          "drawnUsageRate": 0.22438457965629355
+          "picks": 516,
+          "choiceRate": 0.7226890756302521,
+          "deckInclusionRate": 0.4988888888888889,
+          "plays": 3983,
+          "opportunities": 18694,
+          "drawnUsageRate": 0.21306301487108162
         },
         {
           "id": "warrior_oath_reversal",
@@ -1478,12 +1431,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 281,
-          "picks": 215,
-          "choiceRate": 0.7651245551601423,
-          "deckInclusionRate": 0.22,
-          "plays": 3251,
-          "opportunities": 8418,
-          "drawnUsageRate": 0.3861962461392255
+          "picks": 210,
+          "choiceRate": 0.7473309608540926,
+          "deckInclusionRate": 0.21444444444444444,
+          "plays": 2590,
+          "opportunities": 7409,
+          "drawnUsageRate": 0.34957484140909706
         },
         {
           "id": "warrior_banner_guard",
@@ -1503,12 +1456,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 350,
-          "picks": 275,
-          "choiceRate": 0.7857142857142857,
-          "deckInclusionRate": 0.2877777777777778,
-          "plays": 5265,
-          "opportunities": 10996,
-          "drawnUsageRate": 0.4788104765369225
+          "picks": 271,
+          "choiceRate": 0.7742857142857142,
+          "deckInclusionRate": 0.28444444444444444,
+          "plays": 4684,
+          "opportunities": 9901,
+          "drawnUsageRate": 0.4730835269164731
         },
         {
           "id": "warrior_blood_guard_step",
@@ -1526,12 +1479,35 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 293,
-          "picks": 237,
-          "choiceRate": 0.8088737201365188,
+          "picks": 229,
+          "choiceRate": 0.7815699658703071,
+          "deckInclusionRate": 0.23777777777777778,
+          "plays": 3422,
+          "opportunities": 7897,
+          "drawnUsageRate": 0.43332911232113464
+        },
+        {
+          "id": "warrior_bloodlet_cleave",
+          "name": "断誓开锋",
+          "cost": 1,
+          "rarity": "稀有",
+          "tags": [
+            "血债"
+          ],
+          "directEffects": {},
+          "buildTags": [
+            "bloodoath"
+          ],
+          "isPrimaryBuild": false,
+          "isRelevant": false,
+          "isNeutral": false,
+          "offers": 291,
+          "picks": 235,
+          "choiceRate": 0.8075601374570447,
           "deckInclusionRate": 0.24666666666666667,
-          "plays": 3935,
-          "opportunities": 8992,
-          "drawnUsageRate": 0.43761120996441283
+          "plays": 4321,
+          "opportunities": 8267,
+          "drawnUsageRate": 0.522680537075118
         },
         {
           "id": "warrior_scar",
@@ -1551,35 +1527,64 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 250,
-          "picks": 215,
-          "choiceRate": 0.86,
-          "deckInclusionRate": 0.22111111111111112,
-          "plays": 4546,
-          "opportunities": 17643,
-          "drawnUsageRate": 0.25766592983052766
+          "picks": 211,
+          "choiceRate": 0.844,
+          "deckInclusionRate": 0.21666666666666667,
+          "plays": 3274,
+          "opportunities": 14785,
+          "drawnUsageRate": 0.2214406493067298
         },
         {
-          "id": "warrior_bloodlet_cleave",
-          "name": "断誓开锋",
-          "cost": 1,
-          "rarity": "稀有",
+          "id": "warrior_crown_riposte",
+          "name": "王冠反斩",
+          "cost": 3,
+          "rarity": "史诗",
           "tags": [
-            "血债"
+            "反击",
+            "重击"
           ],
-          "directEffects": {},
+          "directEffects": {
+            "protection": true
+          },
           "buildTags": [
-            "bloodoath"
+            "oathblade"
           ],
-          "isPrimaryBuild": false,
-          "isRelevant": false,
+          "isPrimaryBuild": true,
+          "isRelevant": true,
           "isNeutral": false,
-          "offers": 291,
+          "offers": 272,
+          "picks": 252,
+          "choiceRate": 0.9264705882352942,
+          "deckInclusionRate": 0.26222222222222225,
+          "plays": 3129,
+          "opportunities": 8737,
+          "drawnUsageRate": 0.3581320819503262
+        },
+        {
+          "id": "warrior_guard",
+          "name": "圣堂守势",
+          "cost": 2,
+          "rarity": "史诗",
+          "tags": [
+            "荆棘"
+          ],
+          "directEffects": {
+            "draw": true,
+            "protection": true
+          },
+          "buildTags": [
+            "oathblade"
+          ],
+          "isPrimaryBuild": true,
+          "isRelevant": true,
+          "isNeutral": false,
+          "offers": 270,
           "picks": 255,
-          "choiceRate": 0.8762886597938144,
-          "deckInclusionRate": 0.26555555555555554,
-          "plays": 5110,
-          "opportunities": 9853,
-          "drawnUsageRate": 0.5186237694103318
+          "choiceRate": 0.9444444444444444,
+          "deckInclusionRate": 0.2511111111111111,
+          "plays": 1642,
+          "opportunities": 6005,
+          "drawnUsageRate": 0.27343880099916734
         }
       ]
     },
@@ -1592,59 +1597,59 @@
       "enemies": {
         "【精英】狂暴牛头人": {
           "games": 900,
-          "wins": 869,
-          "winRate": 0.9655555555555555
+          "wins": 875,
+          "winRate": 0.9722222222222222
         },
         "【精英】猩红血巫": {
           "games": 900,
-          "wins": 816,
-          "winRate": 0.9066666666666666
+          "wins": 844,
+          "winRate": 0.9377777777777778
         },
         "【精英】不死骨龙": {
           "games": 900,
-          "wins": 837,
-          "winRate": 0.93
+          "wins": 855,
+          "winRate": 0.95
         },
         "【首领】鬼面修罗": {
           "games": 900,
-          "wins": 757,
-          "winRate": 0.8411111111111111
+          "wins": 787,
+          "winRate": 0.8744444444444445
         },
         "【深渊主宰】": {
           "games": 900,
-          "wins": 686,
-          "winRate": 0.7622222222222222
+          "wins": 733,
+          "winRate": 0.8144444444444444
         }
       },
       "seeds": [
         {
           "seed": 20260615,
           "enemies": {
-            "【精英】狂暴牛头人": 0.9833333333333333,
-            "【精英】猩红血巫": 0.9166666666666666,
-            "【精英】不死骨龙": 0.9533333333333334,
-            "【首领】鬼面修罗": 0.86,
-            "【深渊主宰】": 0.7866666666666666
+            "【精英】狂暴牛头人": 0.9866666666666667,
+            "【精英】猩红血巫": 0.9366666666666666,
+            "【精英】不死骨龙": 0.9733333333333334,
+            "【首领】鬼面修罗": 0.8933333333333333,
+            "【深渊主宰】": 0.8366666666666667
           }
         },
         {
           "seed": 21260618,
           "enemies": {
-            "【精英】狂暴牛头人": 0.9633333333333334,
-            "【精英】猩红血巫": 0.9066666666666666,
-            "【精英】不死骨龙": 0.92,
-            "【首领】鬼面修罗": 0.83,
-            "【深渊主宰】": 0.75
+            "【精英】狂暴牛头人": 0.97,
+            "【精英】猩红血巫": 0.9366666666666666,
+            "【精英】不死骨龙": 0.93,
+            "【首领】鬼面修罗": 0.8533333333333334,
+            "【深渊主宰】": 0.7866666666666666
           }
         },
         {
           "seed": 22260618,
           "enemies": {
-            "【精英】狂暴牛头人": 0.95,
-            "【精英】猩红血巫": 0.8966666666666666,
-            "【精英】不死骨龙": 0.9166666666666666,
-            "【首领】鬼面修罗": 0.8333333333333334,
-            "【深渊主宰】": 0.75
+            "【精英】狂暴牛头人": 0.96,
+            "【精英】猩红血巫": 0.94,
+            "【精英】不死骨龙": 0.9466666666666667,
+            "【首领】鬼面修罗": 0.8766666666666667,
+            "【深渊主宰】": 0.82
           }
         }
       ],
@@ -1764,30 +1769,6 @@
           "drawnUsageRate": 0
         },
         {
-          "id": "warrior_crown_riposte",
-          "name": "王冠反斩",
-          "cost": 3,
-          "rarity": "史诗",
-          "tags": [
-            "反击",
-            "重击"
-          ],
-          "directEffects": {},
-          "buildTags": [
-            "oathblade"
-          ],
-          "isPrimaryBuild": false,
-          "isRelevant": false,
-          "isNeutral": false,
-          "offers": 370,
-          "picks": 2,
-          "choiceRate": 0.005405405405405406,
-          "deckInclusionRate": 0.0022222222222222222,
-          "plays": 21,
-          "opportunities": 26,
-          "drawnUsageRate": 0.8076923076923077
-        },
-        {
           "id": "warrior_flash",
           "name": "裂光一闪",
           "cost": 1,
@@ -1827,9 +1808,9 @@
           "picks": 1,
           "choiceRate": 0.007518796992481203,
           "deckInclusionRate": 0.0011111111111111111,
-          "plays": 1,
-          "opportunities": 14,
-          "drawnUsageRate": 0.07142857142857142
+          "plays": 0,
+          "opportunities": 13,
+          "drawnUsageRate": 0
         },
         {
           "id": "warrior_follow",
@@ -1892,12 +1873,36 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 320,
-          "picks": 9,
-          "choiceRate": 0.028125,
-          "deckInclusionRate": 0.01,
-          "plays": 75,
-          "opportunities": 142,
-          "drawnUsageRate": 0.528169014084507
+          "picks": 7,
+          "choiceRate": 0.021875,
+          "deckInclusionRate": 0.0077777777777777776,
+          "plays": 45,
+          "opportunities": 103,
+          "drawnUsageRate": 0.4368932038834951
+        },
+        {
+          "id": "warrior_release",
+          "name": "圣剑解放",
+          "cost": 3,
+          "rarity": "史诗",
+          "tags": [
+            "圣剑",
+            "重击"
+          ],
+          "directEffects": {},
+          "buildTags": [
+            "oathblade"
+          ],
+          "isPrimaryBuild": false,
+          "isRelevant": false,
+          "isNeutral": false,
+          "offers": 417,
+          "picks": 10,
+          "choiceRate": 0.023980815347721823,
+          "deckInclusionRate": 0.011111111111111112,
+          "plays": 100,
+          "opportunities": 143,
+          "drawnUsageRate": 0.6993006993006993
         },
         {
           "id": "warrior_vein_oath",
@@ -1918,56 +1923,9 @@
           "picks": 8,
           "choiceRate": 0.028368794326241134,
           "deckInclusionRate": 0.008888888888888889,
-          "plays": 58,
-          "opportunities": 122,
-          "drawnUsageRate": 0.47540983606557374
-        },
-        {
-          "id": "warrior_release",
-          "name": "圣剑解放",
-          "cost": 3,
-          "rarity": "史诗",
-          "tags": [
-            "圣剑",
-            "重击"
-          ],
-          "directEffects": {},
-          "buildTags": [
-            "oathblade"
-          ],
-          "isPrimaryBuild": false,
-          "isRelevant": false,
-          "isNeutral": false,
-          "offers": 417,
-          "picks": 13,
-          "choiceRate": 0.03117505995203837,
-          "deckInclusionRate": 0.014444444444444444,
-          "plays": 125,
-          "opportunities": 170,
-          "drawnUsageRate": 0.7352941176470589
-        },
-        {
-          "id": "warrior_thorn_charge",
-          "name": "棘甲冲锋",
-          "cost": 2,
-          "rarity": "稀有",
-          "tags": [
-            "圣剑"
-          ],
-          "directEffects": {},
-          "buildTags": [
-            "oathblade"
-          ],
-          "isPrimaryBuild": false,
-          "isRelevant": false,
-          "isNeutral": false,
-          "offers": 309,
-          "picks": 12,
-          "choiceRate": 0.038834951456310676,
-          "deckInclusionRate": 0.013333333333333334,
-          "plays": 43,
-          "opportunities": 176,
-          "drawnUsageRate": 0.24431818181818182
+          "plays": 57,
+          "opportunities": 125,
+          "drawnUsageRate": 0.456
         },
         {
           "id": "neutral_cold_iron_page",
@@ -1985,12 +1943,35 @@
           "isRelevant": false,
           "isNeutral": true,
           "offers": 305,
-          "picks": 13,
-          "choiceRate": 0.04262295081967213,
-          "deckInclusionRate": 0.014444444444444444,
-          "plays": 195,
-          "opportunities": 309,
-          "drawnUsageRate": 0.6310679611650486
+          "picks": 10,
+          "choiceRate": 0.03278688524590164,
+          "deckInclusionRate": 0.011111111111111112,
+          "plays": 143,
+          "opportunities": 238,
+          "drawnUsageRate": 0.6008403361344538
+        },
+        {
+          "id": "warrior_thorn_charge",
+          "name": "棘甲冲锋",
+          "cost": 2,
+          "rarity": "稀有",
+          "tags": [
+            "圣剑"
+          ],
+          "directEffects": {},
+          "buildTags": [
+            "oathblade"
+          ],
+          "isPrimaryBuild": false,
+          "isRelevant": false,
+          "isNeutral": false,
+          "offers": 309,
+          "picks": 11,
+          "choiceRate": 0.03559870550161812,
+          "deckInclusionRate": 0.012222222222222223,
+          "plays": 42,
+          "opportunities": 169,
+          "drawnUsageRate": 0.2485207100591716
         },
         {
           "id": "neutral_guard",
@@ -2008,12 +1989,12 @@
           "isRelevant": false,
           "isNeutral": true,
           "offers": 337,
-          "picks": 16,
-          "choiceRate": 0.04747774480712166,
-          "deckInclusionRate": 0.017777777777777778,
-          "plays": 212,
-          "opportunities": 452,
-          "drawnUsageRate": 0.4690265486725664
+          "picks": 15,
+          "choiceRate": 0.04451038575667656,
+          "deckInclusionRate": 0.016666666666666666,
+          "plays": 175,
+          "opportunities": 400,
+          "drawnUsageRate": 0.4375
         },
         {
           "id": "warrior_debt_scar",
@@ -2031,12 +2012,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 293,
-          "picks": 16,
-          "choiceRate": 0.05460750853242321,
-          "deckInclusionRate": 0.017777777777777778,
-          "plays": 107,
-          "opportunities": 297,
-          "drawnUsageRate": 0.3602693602693603
+          "picks": 15,
+          "choiceRate": 0.051194539249146756,
+          "deckInclusionRate": 0.016666666666666666,
+          "plays": 95,
+          "opportunities": 283,
+          "drawnUsageRate": 0.33568904593639576
         },
         {
           "id": "warrior_bastion_ledger",
@@ -2059,32 +2040,9 @@
           "picks": 17,
           "choiceRate": 0.056291390728476824,
           "deckInclusionRate": 0.01888888888888889,
-          "plays": 201,
-          "opportunities": 322,
-          "drawnUsageRate": 0.6242236024844721
-        },
-        {
-          "id": "warrior_guard",
-          "name": "圣堂守势",
-          "cost": 2,
-          "rarity": "史诗",
-          "tags": [
-            "荆棘"
-          ],
-          "directEffects": {},
-          "buildTags": [
-            "oathblade"
-          ],
-          "isPrimaryBuild": false,
-          "isRelevant": false,
-          "isNeutral": false,
-          "offers": 357,
-          "picks": 22,
-          "choiceRate": 0.06162464985994398,
-          "deckInclusionRate": 0.024444444444444446,
-          "plays": 83,
-          "opportunities": 375,
-          "drawnUsageRate": 0.22133333333333333
+          "plays": 191,
+          "opportunities": 315,
+          "drawnUsageRate": 0.6063492063492063
         },
         {
           "id": "warrior_oath_pressure",
@@ -2102,12 +2060,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 350,
-          "picks": 22,
-          "choiceRate": 0.06285714285714286,
-          "deckInclusionRate": 0.024444444444444446,
-          "plays": 283,
-          "opportunities": 396,
-          "drawnUsageRate": 0.7146464646464646
+          "picks": 21,
+          "choiceRate": 0.06,
+          "deckInclusionRate": 0.023333333333333334,
+          "plays": 267,
+          "opportunities": 380,
+          "drawnUsageRate": 0.7026315789473684
         },
         {
           "id": "warrior_red_return",
@@ -2125,12 +2083,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 299,
-          "picks": 27,
-          "choiceRate": 0.0903010033444816,
-          "deckInclusionRate": 0.03,
-          "plays": 222,
-          "opportunities": 393,
-          "drawnUsageRate": 0.5648854961832062
+          "picks": 24,
+          "choiceRate": 0.0802675585284281,
+          "deckInclusionRate": 0.02666666666666667,
+          "plays": 178,
+          "opportunities": 332,
+          "drawnUsageRate": 0.536144578313253
         },
         {
           "id": "warrior_oath",
@@ -2150,12 +2108,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 337,
-          "picks": 36,
-          "choiceRate": 0.10682492581602374,
-          "deckInclusionRate": 0.04,
-          "plays": 361,
-          "opportunities": 589,
-          "drawnUsageRate": 0.6129032258064516
+          "picks": 33,
+          "choiceRate": 0.09792284866468842,
+          "deckInclusionRate": 0.03666666666666667,
+          "plays": 306,
+          "opportunities": 543,
+          "drawnUsageRate": 0.56353591160221
         },
         {
           "id": "warrior_oath_charge",
@@ -2173,35 +2131,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 346,
-          "picks": 40,
-          "choiceRate": 0.11560693641618497,
-          "deckInclusionRate": 0.044444444444444446,
-          "plays": 1152,
-          "opportunities": 1620,
-          "drawnUsageRate": 0.7111111111111111
-        },
-        {
-          "id": "warrior_blood_drive",
-          "name": "不赦血契",
-          "cost": 1,
-          "rarity": "稀有",
-          "tags": [
-            "血债"
-          ],
-          "directEffects": {},
-          "buildTags": [
-            "bloodoath"
-          ],
-          "isPrimaryBuild": false,
-          "isRelevant": false,
-          "isNeutral": false,
-          "offers": 328,
-          "picks": 46,
-          "choiceRate": 0.1402439024390244,
-          "deckInclusionRate": 0.051111111111111114,
-          "plays": 327,
-          "opportunities": 729,
-          "drawnUsageRate": 0.448559670781893
+          "picks": 35,
+          "choiceRate": 0.10115606936416185,
+          "deckInclusionRate": 0.03888888888888889,
+          "plays": 988,
+          "opportunities": 1410,
+          "drawnUsageRate": 0.700709219858156
         },
         {
           "id": "neutral_ash_marker",
@@ -2219,12 +2154,12 @@
           "isRelevant": true,
           "isNeutral": true,
           "offers": 316,
-          "picks": 45,
-          "choiceRate": 0.14240506329113925,
-          "deckInclusionRate": 0.05,
-          "plays": 504,
-          "opportunities": 571,
-          "drawnUsageRate": 0.882661996497373
+          "picks": 38,
+          "choiceRate": 0.12025316455696203,
+          "deckInclusionRate": 0.042222222222222223,
+          "plays": 438,
+          "opportunities": 484,
+          "drawnUsageRate": 0.9049586776859504
         },
         {
           "id": "warrior_disarm_press",
@@ -2242,12 +2177,35 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 278,
-          "picks": 40,
-          "choiceRate": 0.14388489208633093,
-          "deckInclusionRate": 0.044444444444444446,
-          "plays": 615,
-          "opportunities": 645,
-          "drawnUsageRate": 0.9534883720930233
+          "picks": 36,
+          "choiceRate": 0.12949640287769784,
+          "deckInclusionRate": 0.04,
+          "plays": 518,
+          "opportunities": 546,
+          "drawnUsageRate": 0.9487179487179487
+        },
+        {
+          "id": "warrior_blood_drive",
+          "name": "不赦血契",
+          "cost": 1,
+          "rarity": "稀有",
+          "tags": [
+            "血债"
+          ],
+          "directEffects": {},
+          "buildTags": [
+            "bloodoath"
+          ],
+          "isPrimaryBuild": false,
+          "isRelevant": false,
+          "isNeutral": false,
+          "offers": 328,
+          "picks": 44,
+          "choiceRate": 0.13414634146341464,
+          "deckInclusionRate": 0.04888888888888889,
+          "plays": 290,
+          "opportunities": 668,
+          "drawnUsageRate": 0.4341317365269461
         },
         {
           "id": "warrior_bleed_edge",
@@ -2265,12 +2223,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 304,
-          "picks": 45,
-          "choiceRate": 0.14802631578947367,
-          "deckInclusionRate": 0.04888888888888889,
-          "plays": 575,
-          "opportunities": 710,
-          "drawnUsageRate": 0.8098591549295775
+          "picks": 44,
+          "choiceRate": 0.14473684210526316,
+          "deckInclusionRate": 0.04777777777777778,
+          "plays": 554,
+          "opportunities": 688,
+          "drawnUsageRate": 0.8052325581395349
         },
         {
           "id": "warrior_flaw_mark",
@@ -2288,12 +2246,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 276,
-          "picks": 45,
-          "choiceRate": 0.16304347826086957,
-          "deckInclusionRate": 0.05,
-          "plays": 503,
-          "opportunities": 563,
-          "drawnUsageRate": 0.8934280639431617
+          "picks": 41,
+          "choiceRate": 0.14855072463768115,
+          "deckInclusionRate": 0.04555555555555556,
+          "plays": 457,
+          "opportunities": 502,
+          "drawnUsageRate": 0.9103585657370518
         },
         {
           "id": "warrior_execute_step",
@@ -2312,12 +2270,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 620,
-          "picks": 110,
-          "choiceRate": 0.1774193548387097,
-          "deckInclusionRate": 0.12222222222222222,
-          "plays": 538,
-          "opportunities": 604,
-          "drawnUsageRate": 0.890728476821192
+          "picks": 94,
+          "choiceRate": 0.15161290322580645,
+          "deckInclusionRate": 0.10444444444444445,
+          "plays": 462,
+          "opportunities": 520,
+          "drawnUsageRate": 0.8884615384615384
         },
         {
           "id": "warrior_wall",
@@ -2335,12 +2293,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 392,
-          "picks": 73,
-          "choiceRate": 0.18622448979591838,
-          "deckInclusionRate": 0.0811111111111111,
-          "plays": 906,
-          "opportunities": 1261,
-          "drawnUsageRate": 0.71847739888977
+          "picks": 68,
+          "choiceRate": 0.17346938775510204,
+          "deckInclusionRate": 0.07555555555555556,
+          "plays": 785,
+          "opportunities": 1138,
+          "drawnUsageRate": 0.6898066783831283
         },
         {
           "id": "warrior_crest_guard",
@@ -2360,12 +2318,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 282,
-          "picks": 54,
-          "choiceRate": 0.19148936170212766,
-          "deckInclusionRate": 0.058888888888888886,
-          "plays": 2023,
-          "opportunities": 2432,
-          "drawnUsageRate": 0.8318256578947368
+          "picks": 50,
+          "choiceRate": 0.1773049645390071,
+          "deckInclusionRate": 0.05444444444444444,
+          "plays": 1738,
+          "opportunities": 2119,
+          "drawnUsageRate": 0.8201982067012742
         },
         {
           "id": "warrior_oath_retainer",
@@ -2385,12 +2343,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 288,
-          "picks": 66,
-          "choiceRate": 0.22916666666666666,
-          "deckInclusionRate": 0.07333333333333333,
-          "plays": 2084,
-          "opportunities": 2487,
-          "drawnUsageRate": 0.837957378367511
+          "picks": 62,
+          "choiceRate": 0.2152777777777778,
+          "deckInclusionRate": 0.06888888888888889,
+          "plays": 1827,
+          "opportunities": 2240,
+          "drawnUsageRate": 0.815625
         },
         {
           "id": "warrior_martyr_cut",
@@ -2409,12 +2367,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 303,
-          "picks": 74,
-          "choiceRate": 0.24422442244224424,
-          "deckInclusionRate": 0.08222222222222222,
-          "plays": 363,
-          "opportunities": 373,
-          "drawnUsageRate": 0.9731903485254692
+          "picks": 67,
+          "choiceRate": 0.22112211221122113,
+          "deckInclusionRate": 0.07444444444444444,
+          "plays": 332,
+          "opportunities": 340,
+          "drawnUsageRate": 0.9764705882352941
         },
         {
           "id": "warrior_saintbreaker",
@@ -2433,12 +2391,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 288,
-          "picks": 77,
-          "choiceRate": 0.2673611111111111,
-          "deckInclusionRate": 0.08444444444444445,
-          "plays": 390,
-          "opportunities": 1131,
-          "drawnUsageRate": 0.3448275862068966
+          "picks": 70,
+          "choiceRate": 0.24305555555555555,
+          "deckInclusionRate": 0.07666666666666666,
+          "plays": 357,
+          "opportunities": 1032,
+          "drawnUsageRate": 0.34593023255813954
         },
         {
           "id": "warrior_soul_oath",
@@ -2458,37 +2416,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 311,
-          "picks": 84,
-          "choiceRate": 0.27009646302250806,
-          "deckInclusionRate": 0.09222222222222222,
-          "plays": 935,
-          "opportunities": 1396,
-          "drawnUsageRate": 0.6697707736389685
-        },
-        {
-          "id": "warrior_frenzy_cleave",
-          "name": "狂誓裂斩",
-          "cost": 2,
-          "rarity": "史诗",
-          "tags": [
-            "狂热",
-            "重击"
-          ],
-          "directEffects": {},
-          "buildTags": [
-            "execution",
-            "oathblade"
-          ],
-          "isPrimaryBuild": true,
-          "isRelevant": true,
-          "isNeutral": false,
-          "offers": 431,
-          "picks": 133,
-          "choiceRate": 0.308584686774942,
-          "deckInclusionRate": 0.14555555555555555,
-          "plays": 1551,
-          "opportunities": 1818,
-          "drawnUsageRate": 0.8531353135313532
+          "picks": 80,
+          "choiceRate": 0.2572347266881029,
+          "deckInclusionRate": 0.08888888888888889,
+          "plays": 832,
+          "opportunities": 1311,
+          "drawnUsageRate": 0.6346300533943554
         },
         {
           "id": "warrior_scaffold_cut",
@@ -2508,12 +2441,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 333,
-          "picks": 104,
-          "choiceRate": 0.3123123123123123,
-          "deckInclusionRate": 0.11555555555555555,
-          "plays": 1253,
-          "opportunities": 1557,
-          "drawnUsageRate": 0.804752729608221
+          "picks": 86,
+          "choiceRate": 0.25825825825825827,
+          "deckInclusionRate": 0.09555555555555556,
+          "plays": 1002,
+          "opportunities": 1285,
+          "drawnUsageRate": 0.7797665369649806
         },
         {
           "id": "warrior_verdict_feint",
@@ -2532,36 +2465,37 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 592,
-          "picks": 187,
-          "choiceRate": 0.3158783783783784,
-          "deckInclusionRate": 0.2011111111111111,
-          "plays": 910,
-          "opportunities": 1004,
-          "drawnUsageRate": 0.9063745019920318
+          "picks": 163,
+          "choiceRate": 0.27533783783783783,
+          "deckInclusionRate": 0.17777777777777778,
+          "plays": 795,
+          "opportunities": 872,
+          "drawnUsageRate": 0.911697247706422
         },
         {
-          "id": "warrior_oath_reversal",
-          "name": "誓壁反转",
+          "id": "warrior_frenzy_cleave",
+          "name": "狂誓裂斩",
           "cost": 2,
           "rarity": "史诗",
           "tags": [
-            "反击",
-            "重置"
+            "狂热",
+            "重击"
           ],
           "directEffects": {},
           "buildTags": [
+            "execution",
             "oathblade"
           ],
-          "isPrimaryBuild": false,
-          "isRelevant": false,
+          "isPrimaryBuild": true,
+          "isRelevant": true,
           "isNeutral": false,
-          "offers": 388,
-          "picks": 123,
-          "choiceRate": 0.3170103092783505,
+          "offers": 431,
+          "picks": 125,
+          "choiceRate": 0.2900232018561485,
           "deckInclusionRate": 0.13666666666666666,
-          "plays": 1380,
-          "opportunities": 2039,
-          "drawnUsageRate": 0.6768023540951447
+          "plays": 1424,
+          "opportunities": 1712,
+          "drawnUsageRate": 0.8317757009345794
         },
         {
           "id": "warrior_crimson_pause",
@@ -2581,12 +2515,36 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 317,
-          "picks": 103,
-          "choiceRate": 0.3249211356466877,
-          "deckInclusionRate": 0.11222222222222222,
-          "plays": 2476,
-          "opportunities": 3190,
-          "drawnUsageRate": 0.7761755485893417
+          "picks": 97,
+          "choiceRate": 0.305993690851735,
+          "deckInclusionRate": 0.10555555555555556,
+          "plays": 2316,
+          "opportunities": 2954,
+          "drawnUsageRate": 0.7840216655382533
+        },
+        {
+          "id": "warrior_oath_reversal",
+          "name": "誓壁反转",
+          "cost": 2,
+          "rarity": "史诗",
+          "tags": [
+            "反击",
+            "重置"
+          ],
+          "directEffects": {},
+          "buildTags": [
+            "oathblade"
+          ],
+          "isPrimaryBuild": false,
+          "isRelevant": false,
+          "isNeutral": false,
+          "offers": 388,
+          "picks": 119,
+          "choiceRate": 0.30670103092783507,
+          "deckInclusionRate": 0.1322222222222222,
+          "plays": 1239,
+          "opportunities": 1940,
+          "drawnUsageRate": 0.6386597938144329
         },
         {
           "id": "warrior_banner_guard",
@@ -2606,12 +2564,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 320,
-          "picks": 106,
-          "choiceRate": 0.33125,
-          "deckInclusionRate": 0.11666666666666667,
-          "plays": 1440,
-          "opportunities": 1883,
-          "drawnUsageRate": 0.7647371216144451
+          "picks": 104,
+          "choiceRate": 0.325,
+          "deckInclusionRate": 0.11444444444444445,
+          "plays": 1336,
+          "opportunities": 1810,
+          "drawnUsageRate": 0.7381215469613259
         },
         {
           "id": "warrior_break_form",
@@ -2630,35 +2588,38 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 277,
-          "picks": 100,
-          "choiceRate": 0.36101083032490977,
-          "deckInclusionRate": 0.11,
-          "plays": 448,
-          "opportunities": 696,
-          "drawnUsageRate": 0.6436781609195402
+          "picks": 92,
+          "choiceRate": 0.33212996389891697,
+          "deckInclusionRate": 0.10111111111111111,
+          "plays": 415,
+          "opportunities": 637,
+          "drawnUsageRate": 0.6514913657770801
         },
         {
-          "id": "warrior_life_contract",
-          "name": "回生血契",
-          "cost": 1,
-          "rarity": "稀有",
+          "id": "warrior_crown_riposte",
+          "name": "王冠反斩",
+          "cost": 3,
+          "rarity": "史诗",
           "tags": [
-            "血债"
+            "反击",
+            "重击"
           ],
-          "directEffects": {},
+          "directEffects": {
+            "protection": true
+          },
           "buildTags": [
-            "bloodoath"
+            "oathblade"
           ],
           "isPrimaryBuild": false,
           "isRelevant": false,
           "isNeutral": false,
-          "offers": 339,
-          "picks": 127,
-          "choiceRate": 0.3746312684365782,
-          "deckInclusionRate": 0.1411111111111111,
-          "plays": 256,
-          "opportunities": 2157,
-          "drawnUsageRate": 0.1186833565136764
+          "offers": 370,
+          "picks": 130,
+          "choiceRate": 0.35135135135135137,
+          "deckInclusionRate": 0.14333333333333334,
+          "plays": 1450,
+          "opportunities": 1903,
+          "drawnUsageRate": 0.7619548081975828
         },
         {
           "id": "warrior_rift_probe",
@@ -2677,12 +2638,58 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 626,
-          "picks": 241,
-          "choiceRate": 0.38498402555910544,
-          "deckInclusionRate": 0.2633333333333333,
-          "plays": 1198,
-          "opportunities": 1214,
-          "drawnUsageRate": 0.9868204283360791
+          "picks": 220,
+          "choiceRate": 0.3514376996805112,
+          "deckInclusionRate": 0.24222222222222223,
+          "plays": 1094,
+          "opportunities": 1104,
+          "drawnUsageRate": 0.9909420289855072
+        },
+        {
+          "id": "warrior_life_contract",
+          "name": "回生血契",
+          "cost": 1,
+          "rarity": "稀有",
+          "tags": [
+            "血债"
+          ],
+          "directEffects": {},
+          "buildTags": [
+            "bloodoath"
+          ],
+          "isPrimaryBuild": false,
+          "isRelevant": false,
+          "isNeutral": false,
+          "offers": 339,
+          "picks": 121,
+          "choiceRate": 0.35693215339233036,
+          "deckInclusionRate": 0.13444444444444445,
+          "plays": 230,
+          "opportunities": 2005,
+          "drawnUsageRate": 0.11471321695760599
+        },
+        {
+          "id": "warrior_lone_double",
+          "name": "孤锋二连",
+          "cost": 2,
+          "rarity": "稀有",
+          "tags": [
+            "连击"
+          ],
+          "directEffects": {},
+          "buildTags": [
+            "execution"
+          ],
+          "isPrimaryBuild": true,
+          "isRelevant": true,
+          "isNeutral": false,
+          "offers": 318,
+          "picks": 128,
+          "choiceRate": 0.4025157232704403,
+          "deckInclusionRate": 0.14222222222222222,
+          "plays": 731,
+          "opportunities": 1945,
+          "drawnUsageRate": 0.3758354755784062
         },
         {
           "id": "warrior_scar",
@@ -2702,12 +2709,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 350,
-          "picks": 151,
-          "choiceRate": 0.43142857142857144,
-          "deckInclusionRate": 0.16333333333333333,
-          "plays": 2883,
-          "opportunities": 5750,
-          "drawnUsageRate": 0.5013913043478261
+          "picks": 147,
+          "choiceRate": 0.42,
+          "deckInclusionRate": 0.15888888888888889,
+          "plays": 2472,
+          "opportunities": 5351,
+          "drawnUsageRate": 0.46196972528499347
         },
         {
           "id": "warrior_lifebite",
@@ -2725,35 +2732,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 275,
-          "picks": 120,
-          "choiceRate": 0.43636363636363634,
-          "deckInclusionRate": 0.13,
-          "plays": 1637,
-          "opportunities": 1974,
-          "drawnUsageRate": 0.8292806484295846
-        },
-        {
-          "id": "warrior_lone_double",
-          "name": "孤锋二连",
-          "cost": 2,
-          "rarity": "稀有",
-          "tags": [
-            "连击"
-          ],
-          "directEffects": {},
-          "buildTags": [
-            "execution"
-          ],
-          "isPrimaryBuild": true,
-          "isRelevant": true,
-          "isNeutral": false,
-          "offers": 318,
-          "picks": 143,
-          "choiceRate": 0.449685534591195,
-          "deckInclusionRate": 0.15777777777777777,
-          "plays": 917,
-          "opportunities": 2224,
-          "drawnUsageRate": 0.4123201438848921
+          "picks": 116,
+          "choiceRate": 0.4218181818181818,
+          "deckInclusionRate": 0.12555555555555556,
+          "plays": 1519,
+          "opportunities": 1875,
+          "drawnUsageRate": 0.8101333333333334
         },
         {
           "id": "warrior_gap_finder",
@@ -2771,12 +2755,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 296,
-          "picks": 151,
-          "choiceRate": 0.5101351351351351,
-          "deckInclusionRate": 0.16,
-          "plays": 622,
-          "opportunities": 2476,
-          "drawnUsageRate": 0.25121163166397414
+          "picks": 140,
+          "choiceRate": 0.47297297297297297,
+          "deckInclusionRate": 0.14888888888888888,
+          "plays": 540,
+          "opportunities": 2292,
+          "drawnUsageRate": 0.2356020942408377
         },
         {
           "id": "warrior_blood_vow_slash",
@@ -2794,12 +2778,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 322,
-          "picks": 168,
-          "choiceRate": 0.5217391304347826,
-          "deckInclusionRate": 0.18,
-          "plays": 1788,
-          "opportunities": 2762,
-          "drawnUsageRate": 0.6473569876900797
+          "picks": 163,
+          "choiceRate": 0.5062111801242236,
+          "deckInclusionRate": 0.17555555555555555,
+          "plays": 1653,
+          "opportunities": 2638,
+          "drawnUsageRate": 0.6266110689916603
         },
         {
           "id": "warrior_duel_cut",
@@ -2817,12 +2801,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 600,
-          "picks": 339,
-          "choiceRate": 0.565,
-          "deckInclusionRate": 0.35444444444444445,
-          "plays": 4444,
-          "opportunities": 5646,
-          "drawnUsageRate": 0.7871059156925256
+          "picks": 328,
+          "choiceRate": 0.5466666666666666,
+          "deckInclusionRate": 0.34555555555555556,
+          "plays": 4077,
+          "opportunities": 5395,
+          "drawnUsageRate": 0.7556997219647822
         },
         {
           "id": "warrior_steel_pressure",
@@ -2840,12 +2824,38 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 299,
-          "picks": 177,
-          "choiceRate": 0.5919732441471572,
-          "deckInclusionRate": 0.19111111111111112,
-          "plays": 1326,
-          "opportunities": 2846,
-          "drawnUsageRate": 0.46591707659873505
+          "picks": 164,
+          "choiceRate": 0.5484949832775919,
+          "deckInclusionRate": 0.18,
+          "plays": 1058,
+          "opportunities": 2565,
+          "drawnUsageRate": 0.4124756335282651
+        },
+        {
+          "id": "warrior_guard",
+          "name": "圣堂守势",
+          "cost": 2,
+          "rarity": "史诗",
+          "tags": [
+            "荆棘"
+          ],
+          "directEffects": {
+            "draw": true,
+            "protection": true
+          },
+          "buildTags": [
+            "oathblade"
+          ],
+          "isPrimaryBuild": false,
+          "isRelevant": false,
+          "isNeutral": false,
+          "offers": 357,
+          "picks": 209,
+          "choiceRate": 0.5854341736694678,
+          "deckInclusionRate": 0.21888888888888888,
+          "plays": 1849,
+          "opportunities": 3114,
+          "drawnUsageRate": 0.5937700706486834
         },
         {
           "id": "warrior_silent_lunge",
@@ -2863,35 +2873,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 324,
-          "picks": 199,
-          "choiceRate": 0.6141975308641975,
-          "deckInclusionRate": 0.21,
-          "plays": 2263,
-          "opportunities": 3265,
-          "drawnUsageRate": 0.6931087289433384
-        },
-        {
-          "id": "warrior_boiling_drive",
-          "name": "沸血突进",
-          "cost": 1,
-          "rarity": "稀有",
-          "tags": [
-            "血债"
-          ],
-          "directEffects": {},
-          "buildTags": [
-            "bloodoath"
-          ],
-          "isPrimaryBuild": false,
-          "isRelevant": false,
-          "isNeutral": false,
-          "offers": 346,
-          "picks": 221,
-          "choiceRate": 0.638728323699422,
-          "deckInclusionRate": 0.23555555555555555,
-          "plays": 1886,
-          "opportunities": 3393,
-          "drawnUsageRate": 0.555850279988211
+          "picks": 190,
+          "choiceRate": 0.5864197530864198,
+          "deckInclusionRate": 0.20222222222222222,
+          "plays": 2034,
+          "opportunities": 3073,
+          "drawnUsageRate": 0.6618939147412951
         },
         {
           "id": "warrior_heart_probe",
@@ -2909,12 +2896,35 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 281,
-          "picks": 181,
-          "choiceRate": 0.6441281138790036,
-          "deckInclusionRate": 0.19111111111111112,
-          "plays": 1421,
-          "opportunities": 2887,
-          "drawnUsageRate": 0.4922064426740561
+          "picks": 172,
+          "choiceRate": 0.6120996441281139,
+          "deckInclusionRate": 0.18444444444444444,
+          "plays": 1265,
+          "opportunities": 2743,
+          "drawnUsageRate": 0.46117389719285456
+        },
+        {
+          "id": "warrior_boiling_drive",
+          "name": "沸血突进",
+          "cost": 1,
+          "rarity": "稀有",
+          "tags": [
+            "血债"
+          ],
+          "directEffects": {},
+          "buildTags": [
+            "bloodoath"
+          ],
+          "isPrimaryBuild": false,
+          "isRelevant": false,
+          "isNeutral": false,
+          "offers": 346,
+          "picks": 215,
+          "choiceRate": 0.6213872832369942,
+          "deckInclusionRate": 0.2311111111111111,
+          "plays": 1693,
+          "opportunities": 3240,
+          "drawnUsageRate": 0.5225308641975308
         },
         {
           "id": "warrior_venom_scar",
@@ -2932,12 +2942,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 305,
-          "picks": 201,
-          "choiceRate": 0.659016393442623,
-          "deckInclusionRate": 0.21555555555555556,
-          "plays": 2598,
-          "opportunities": 3005,
-          "drawnUsageRate": 0.8645590682196339
+          "picks": 198,
+          "choiceRate": 0.6491803278688525,
+          "deckInclusionRate": 0.21333333333333335,
+          "plays": 2489,
+          "opportunities": 2946,
+          "drawnUsageRate": 0.8448744059742023
         },
         {
           "id": "neutral_sealed_thunder",
@@ -2956,12 +2966,12 @@
           "isRelevant": true,
           "isNeutral": true,
           "offers": 430,
-          "picks": 300,
-          "choiceRate": 0.6976744186046512,
-          "deckInclusionRate": 0.3055555555555556,
-          "plays": 1365,
-          "opportunities": 1871,
-          "drawnUsageRate": 0.7295563869588455
+          "picks": 291,
+          "choiceRate": 0.6767441860465117,
+          "deckInclusionRate": 0.3,
+          "plays": 1294,
+          "opportunities": 1882,
+          "drawnUsageRate": 0.6875664187035069
         },
         {
           "id": "warrior_execute_window",
@@ -2981,37 +2991,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 453,
-          "picks": 319,
-          "choiceRate": 0.7041942604856513,
-          "deckInclusionRate": 0.31,
-          "plays": 3545,
-          "opportunities": 4146,
-          "drawnUsageRate": 0.8550410033767487
-        },
-        {
-          "id": "warrior_exile_judgement",
-          "name": "终誓处刑",
-          "cost": 2,
-          "rarity": "史诗",
-          "tags": [
-            "穿甲",
-            "重击"
-          ],
-          "directEffects": {},
-          "buildTags": [
-            "execution",
-            "oathblade"
-          ],
-          "isPrimaryBuild": true,
-          "isRelevant": true,
-          "isNeutral": false,
-          "offers": 429,
-          "picks": 314,
-          "choiceRate": 0.7319347319347319,
-          "deckInclusionRate": 0.3188888888888889,
-          "plays": 3597,
-          "opportunities": 3871,
-          "drawnUsageRate": 0.9292172565228624
+          "picks": 309,
+          "choiceRate": 0.6821192052980133,
+          "deckInclusionRate": 0.30444444444444446,
+          "plays": 3426,
+          "opportunities": 4038,
+          "drawnUsageRate": 0.8484398216939079
         },
         {
           "id": "warrior_final_measure",
@@ -3031,12 +3016,37 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 415,
-          "picks": 304,
-          "choiceRate": 0.7325301204819277,
-          "deckInclusionRate": 0.3088888888888889,
-          "plays": 3438,
-          "opportunities": 3835,
-          "drawnUsageRate": 0.8964797913950456
+          "picks": 296,
+          "choiceRate": 0.7132530120481928,
+          "deckInclusionRate": 0.30444444444444446,
+          "plays": 3328,
+          "opportunities": 3770,
+          "drawnUsageRate": 0.8827586206896552
+        },
+        {
+          "id": "warrior_exile_judgement",
+          "name": "终誓处刑",
+          "cost": 2,
+          "rarity": "史诗",
+          "tags": [
+            "穿甲",
+            "重击"
+          ],
+          "directEffects": {},
+          "buildTags": [
+            "execution",
+            "oathblade"
+          ],
+          "isPrimaryBuild": true,
+          "isRelevant": true,
+          "isNeutral": false,
+          "offers": 429,
+          "picks": 308,
+          "choiceRate": 0.717948717948718,
+          "deckInclusionRate": 0.31666666666666665,
+          "plays": 3519,
+          "opportunities": 3839,
+          "drawnUsageRate": 0.9166449596249023
         },
         {
           "id": "warrior_blood_debt",
@@ -3055,12 +3065,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 425,
-          "picks": 329,
-          "choiceRate": 0.7741176470588236,
-          "deckInclusionRate": 0.32555555555555554,
-          "plays": 2962,
-          "opportunities": 5552,
-          "drawnUsageRate": 0.5335014409221902
+          "picks": 327,
+          "choiceRate": 0.7694117647058824,
+          "deckInclusionRate": 0.3244444444444444,
+          "plays": 2796,
+          "opportunities": 5502,
+          "drawnUsageRate": 0.5081788440567067
         },
         {
           "id": "warrior_devour_finish",
@@ -3081,9 +3091,9 @@
           "picks": 351,
           "choiceRate": 0.8602941176470589,
           "deckInclusionRate": 0.3422222222222222,
-          "plays": 3122,
-          "opportunities": 5856,
-          "drawnUsageRate": 0.5331284153005464
+          "plays": 2877,
+          "opportunities": 5764,
+          "drawnUsageRate": 0.4991325468424705
         },
         {
           "id": "warrior_blood_guard_step",
@@ -3101,12 +3111,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 331,
-          "picks": 288,
-          "choiceRate": 0.8700906344410876,
+          "picks": 287,
+          "choiceRate": 0.8670694864048338,
           "deckInclusionRate": 0.2788888888888889,
-          "plays": 3622,
-          "opportunities": 4837,
-          "drawnUsageRate": 0.7488112466404796
+          "plays": 3376,
+          "opportunities": 4713,
+          "drawnUsageRate": 0.716316571186081
         },
         {
           "id": "warrior_blood_tide",
@@ -3125,12 +3135,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 411,
-          "picks": 363,
-          "choiceRate": 0.8832116788321168,
+          "picks": 360,
+          "choiceRate": 0.8759124087591241,
           "deckInclusionRate": 0.35555555555555557,
-          "plays": 3586,
-          "opportunities": 6080,
-          "drawnUsageRate": 0.5898026315789474
+          "plays": 3195,
+          "opportunities": 5885,
+          "drawnUsageRate": 0.5429056924384027
         },
         {
           "id": "warrior_bloodlet_cleave",
@@ -3148,12 +3158,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 363,
-          "picks": 335,
-          "choiceRate": 0.9228650137741047,
+          "picks": 334,
+          "choiceRate": 0.9201101928374655,
           "deckInclusionRate": 0.3333333333333333,
-          "plays": 4421,
-          "opportunities": 5568,
-          "drawnUsageRate": 0.7940014367816092
+          "plays": 4232,
+          "opportunities": 5459,
+          "drawnUsageRate": 0.7752335592599378
         }
       ]
     },
@@ -3166,63 +3176,87 @@
       "enemies": {
         "【精英】狂暴牛头人": {
           "games": 900,
-          "wins": 864,
-          "winRate": 0.96
+          "wins": 872,
+          "winRate": 0.9688888888888889
         },
         "【精英】猩红血巫": {
           "games": 900,
-          "wins": 879,
-          "winRate": 0.9766666666666667
+          "wins": 881,
+          "winRate": 0.9788888888888889
         },
         "【精英】不死骨龙": {
           "games": 900,
-          "wins": 863,
-          "winRate": 0.9588888888888889
+          "wins": 868,
+          "winRate": 0.9644444444444444
         },
         "【首领】鬼面修罗": {
           "games": 900,
-          "wins": 813,
-          "winRate": 0.9033333333333333
+          "wins": 823,
+          "winRate": 0.9144444444444444
         },
         "【深渊主宰】": {
           "games": 900,
-          "wins": 793,
-          "winRate": 0.8811111111111111
+          "wins": 808,
+          "winRate": 0.8977777777777778
         }
       },
       "seeds": [
         {
           "seed": 20260615,
           "enemies": {
-            "【精英】狂暴牛头人": 0.9366666666666666,
+            "【精英】狂暴牛头人": 0.9533333333333334,
             "【精英】猩红血巫": 0.9766666666666667,
-            "【精英】不死骨龙": 0.9466666666666667,
-            "【首领】鬼面修罗": 0.9166666666666666,
-            "【深渊主宰】": 0.9
+            "【精英】不死骨龙": 0.9566666666666667,
+            "【首领】鬼面修罗": 0.93,
+            "【深渊主宰】": 0.9133333333333333
           }
         },
         {
           "seed": 21260618,
           "enemies": {
-            "【精英】狂暴牛头人": 0.9733333333333334,
+            "【精英】狂暴牛头人": 0.9766666666666667,
             "【精英】猩红血巫": 0.9833333333333333,
-            "【精英】不死骨龙": 0.97,
-            "【首领】鬼面修罗": 0.9133333333333333,
-            "【深渊主宰】": 0.8633333333333333
+            "【精英】不死骨龙": 0.9766666666666667,
+            "【首领】鬼面修罗": 0.9333333333333333,
+            "【深渊主宰】": 0.8833333333333333
           }
         },
         {
           "seed": 22260618,
           "enemies": {
-            "【精英】狂暴牛头人": 0.97,
-            "【精英】猩红血巫": 0.97,
+            "【精英】狂暴牛头人": 0.9766666666666667,
+            "【精英】猩红血巫": 0.9766666666666667,
             "【精英】不死骨龙": 0.96,
             "【首领】鬼面修罗": 0.88,
-            "【深渊主宰】": 0.88
+            "【深渊主宰】": 0.8966666666666666
           }
         }
       ],
       "cards": [
+        {
+          "id": "warrior_break_form",
+          "name": "破阵换位",
+          "cost": 0,
+          "rarity": "稀有",
+          "tags": [
+            "重置",
+            "销毁"
+          ],
+          "directEffects": {},
+          "buildTags": [
+            "execution"
+          ],
+          "isPrimaryBuild": false,
+          "isRelevant": false,
+          "isNeutral": false,
+          "offers": 272,
+          "picks": 0,
+          "choiceRate": 0,
+          "deckInclusionRate": 0,
+          "plays": 0,
+          "opportunities": 0,
+          "drawnUsageRate": 0
+        },
         {
           "id": "neutral_blank_pact",
           "name": "空白契约",
@@ -3499,13 +3533,12 @@
           "drawnUsageRate": 0.7307692307692307
         },
         {
-          "id": "warrior_crown_riposte",
-          "name": "王冠反斩",
-          "cost": 3,
-          "rarity": "史诗",
+          "id": "warrior_follow",
+          "name": "誓约追击",
+          "cost": 1,
+          "rarity": "普通",
           "tags": [
-            "反击",
-            "重击"
+            "圣剑"
           ],
           "directEffects": {},
           "buildTags": [
@@ -3514,13 +3547,13 @@
           "isPrimaryBuild": false,
           "isRelevant": false,
           "isNeutral": false,
-          "offers": 325,
+          "offers": 388,
           "picks": 1,
-          "choiceRate": 0.003076923076923077,
+          "choiceRate": 0.002577319587628866,
           "deckInclusionRate": 0.0011111111111111111,
-          "plays": 24,
-          "opportunities": 29,
-          "drawnUsageRate": 0.8275862068965517
+          "plays": 13,
+          "opportunities": 22,
+          "drawnUsageRate": 0.5909090909090909
         },
         {
           "id": "warrior_gap_finder",
@@ -3593,30 +3626,6 @@
           "drawnUsageRate": 0.5909090909090909
         },
         {
-          "id": "warrior_break_form",
-          "name": "破阵换位",
-          "cost": 0,
-          "rarity": "稀有",
-          "tags": [
-            "重置",
-            "销毁"
-          ],
-          "directEffects": {},
-          "buildTags": [
-            "execution"
-          ],
-          "isPrimaryBuild": false,
-          "isRelevant": false,
-          "isNeutral": false,
-          "offers": 272,
-          "picks": 1,
-          "choiceRate": 0.003676470588235294,
-          "deckInclusionRate": 0.0011111111111111111,
-          "plays": 5,
-          "opportunities": 5,
-          "drawnUsageRate": 1
-        },
-        {
           "id": "warrior_thorn_charge",
           "name": "棘甲冲锋",
           "cost": 2,
@@ -3638,29 +3647,6 @@
           "plays": 6,
           "opportunities": 23,
           "drawnUsageRate": 0.2608695652173913
-        },
-        {
-          "id": "warrior_follow",
-          "name": "誓约追击",
-          "cost": 1,
-          "rarity": "普通",
-          "tags": [
-            "圣剑"
-          ],
-          "directEffects": {},
-          "buildTags": [
-            "oathblade"
-          ],
-          "isPrimaryBuild": false,
-          "isRelevant": false,
-          "isNeutral": false,
-          "offers": 388,
-          "picks": 2,
-          "choiceRate": 0.005154639175257732,
-          "deckInclusionRate": 0.0022222222222222222,
-          "plays": 22,
-          "opportunities": 45,
-          "drawnUsageRate": 0.4888888888888889
         },
         {
           "id": "warrior_release",
@@ -3705,9 +3691,9 @@
           "picks": 3,
           "choiceRate": 0.008130081300813009,
           "deckInclusionRate": 0.0033333333333333335,
-          "plays": 67,
-          "opportunities": 98,
-          "drawnUsageRate": 0.6836734693877551
+          "plays": 58,
+          "opportunities": 88,
+          "drawnUsageRate": 0.6590909090909091
         },
         {
           "id": "warrior_duel_cut",
@@ -3775,9 +3761,9 @@
           "picks": 3,
           "choiceRate": 0.009009009009009009,
           "deckInclusionRate": 0.0033333333333333335,
-          "plays": 58,
-          "opportunities": 61,
-          "drawnUsageRate": 0.9508196721311475
+          "plays": 70,
+          "opportunities": 72,
+          "drawnUsageRate": 0.9722222222222222
         },
         {
           "id": "warrior_steel_pressure",
@@ -3795,12 +3781,35 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 309,
-          "picks": 4,
-          "choiceRate": 0.012944983818770227,
-          "deckInclusionRate": 0.0044444444444444444,
-          "plays": 54,
-          "opportunities": 86,
-          "drawnUsageRate": 0.627906976744186
+          "picks": 3,
+          "choiceRate": 0.009708737864077669,
+          "deckInclusionRate": 0.0033333333333333335,
+          "plays": 29,
+          "opportunities": 64,
+          "drawnUsageRate": 0.453125
+        },
+        {
+          "id": "warrior_silent_lunge",
+          "name": "默步突刺",
+          "cost": 1,
+          "rarity": "稀有",
+          "tags": [
+            "穿甲"
+          ],
+          "directEffects": {},
+          "buildTags": [
+            "execution"
+          ],
+          "isPrimaryBuild": false,
+          "isRelevant": false,
+          "isNeutral": false,
+          "offers": 298,
+          "picks": 3,
+          "choiceRate": 0.010067114093959731,
+          "deckInclusionRate": 0.0033333333333333335,
+          "plays": 64,
+          "opportunities": 81,
+          "drawnUsageRate": 0.7901234567901234
         },
         {
           "id": "neutral_guard",
@@ -3821,14 +3830,14 @@
           "picks": 4,
           "choiceRate": 0.013422818791946308,
           "deckInclusionRate": 0.0044444444444444444,
-          "plays": 196,
-          "opportunities": 255,
-          "drawnUsageRate": 0.7686274509803922
+          "plays": 182,
+          "opportunities": 241,
+          "drawnUsageRate": 0.7551867219917012
         },
         {
-          "id": "warrior_silent_lunge",
-          "name": "默步突刺",
-          "cost": 1,
+          "id": "warrior_heart_probe",
+          "name": "穿心试探",
+          "cost": 2,
           "rarity": "稀有",
           "tags": [
             "穿甲"
@@ -3840,13 +3849,13 @@
           "isPrimaryBuild": false,
           "isRelevant": false,
           "isNeutral": false,
-          "offers": 298,
+          "offers": 289,
           "picks": 4,
-          "choiceRate": 0.013422818791946308,
+          "choiceRate": 0.01384083044982699,
           "deckInclusionRate": 0.0044444444444444444,
-          "plays": 82,
-          "opportunities": 101,
-          "drawnUsageRate": 0.8118811881188119
+          "plays": 50,
+          "opportunities": 87,
+          "drawnUsageRate": 0.5747126436781609
         },
         {
           "id": "neutral_sealed_thunder",
@@ -3869,8 +3878,8 @@
           "choiceRate": 0.01557632398753894,
           "deckInclusionRate": 0.005555555555555556,
           "plays": 25,
-          "opportunities": 26,
-          "drawnUsageRate": 0.9615384615384616
+          "opportunities": 25,
+          "drawnUsageRate": 1
         },
         {
           "id": "warrior_bastion_ledger",
@@ -3898,27 +3907,29 @@
           "drawnUsageRate": 0.823943661971831
         },
         {
-          "id": "warrior_heart_probe",
-          "name": "穿心试探",
-          "cost": 2,
+          "id": "warrior_oath",
+          "name": "遗迹立誓",
+          "cost": 1,
           "rarity": "稀有",
           "tags": [
-            "穿甲"
+            "庇护"
           ],
-          "directEffects": {},
+          "directEffects": {
+            "draw": true
+          },
           "buildTags": [
-            "execution"
+            "oathblade"
           ],
           "isPrimaryBuild": false,
           "isRelevant": false,
           "isNeutral": false,
-          "offers": 289,
-          "picks": 5,
-          "choiceRate": 0.01730103806228374,
-          "deckInclusionRate": 0.005555555555555556,
-          "plays": 70,
-          "opportunities": 106,
-          "drawnUsageRate": 0.660377358490566
+          "offers": 291,
+          "picks": 6,
+          "choiceRate": 0.020618556701030927,
+          "deckInclusionRate": 0.006666666666666667,
+          "plays": 144,
+          "opportunities": 179,
+          "drawnUsageRate": 0.8044692737430168
         },
         {
           "id": "warrior_venom_scar",
@@ -3942,54 +3953,6 @@
           "plays": 140,
           "opportunities": 147,
           "drawnUsageRate": 0.9523809523809523
-        },
-        {
-          "id": "warrior_guard",
-          "name": "圣堂守势",
-          "cost": 2,
-          "rarity": "史诗",
-          "tags": [
-            "荆棘"
-          ],
-          "directEffects": {},
-          "buildTags": [
-            "oathblade"
-          ],
-          "isPrimaryBuild": false,
-          "isRelevant": false,
-          "isNeutral": false,
-          "offers": 322,
-          "picks": 8,
-          "choiceRate": 0.024844720496894408,
-          "deckInclusionRate": 0.008888888888888889,
-          "plays": 64,
-          "opportunities": 229,
-          "drawnUsageRate": 0.2794759825327511
-        },
-        {
-          "id": "warrior_oath",
-          "name": "遗迹立誓",
-          "cost": 1,
-          "rarity": "稀有",
-          "tags": [
-            "庇护"
-          ],
-          "directEffects": {
-            "draw": true
-          },
-          "buildTags": [
-            "oathblade"
-          ],
-          "isPrimaryBuild": false,
-          "isRelevant": false,
-          "isNeutral": false,
-          "offers": 291,
-          "picks": 8,
-          "choiceRate": 0.027491408934707903,
-          "deckInclusionRate": 0.008888888888888889,
-          "plays": 204,
-          "opportunities": 256,
-          "drawnUsageRate": 0.796875
         },
         {
           "id": "warrior_oath_charge",
@@ -4035,9 +3998,9 @@
           "picks": 11,
           "choiceRate": 0.034161490683229816,
           "deckInclusionRate": 0.012222222222222223,
-          "plays": 222,
-          "opportunities": 222,
-          "drawnUsageRate": 1
+          "plays": 223,
+          "opportunities": 225,
+          "drawnUsageRate": 0.9911111111111112
         },
         {
           "id": "warrior_final_measure",
@@ -4082,12 +4045,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 333,
-          "picks": 15,
-          "choiceRate": 0.04504504504504504,
-          "deckInclusionRate": 0.016666666666666666,
-          "plays": 290,
-          "opportunities": 293,
-          "drawnUsageRate": 0.9897610921501706
+          "picks": 14,
+          "choiceRate": 0.042042042042042045,
+          "deckInclusionRate": 0.015555555555555555,
+          "plays": 273,
+          "opportunities": 276,
+          "drawnUsageRate": 0.9891304347826086
         },
         {
           "id": "warrior_wall",
@@ -4105,12 +4068,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 338,
-          "picks": 18,
-          "choiceRate": 0.05325443786982249,
-          "deckInclusionRate": 0.02,
-          "plays": 403,
-          "opportunities": 467,
-          "drawnUsageRate": 0.8629550321199143
+          "picks": 15,
+          "choiceRate": 0.04437869822485207,
+          "deckInclusionRate": 0.016666666666666666,
+          "plays": 333,
+          "opportunities": 383,
+          "drawnUsageRate": 0.8694516971279374
         },
         {
           "id": "warrior_crest_guard",
@@ -4133,9 +4096,34 @@
           "picks": 23,
           "choiceRate": 0.061170212765957445,
           "deckInclusionRate": 0.025555555555555557,
-          "plays": 1307,
-          "opportunities": 1483,
-          "drawnUsageRate": 0.8813216453135536
+          "plays": 1206,
+          "opportunities": 1387,
+          "drawnUsageRate": 0.8695025234318673
+        },
+        {
+          "id": "warrior_soul_oath",
+          "name": "魂誓换锋",
+          "cost": 1,
+          "rarity": "稀有",
+          "tags": [
+            "充能"
+          ],
+          "directEffects": {
+            "draw": true
+          },
+          "buildTags": [
+            "oathblade"
+          ],
+          "isPrimaryBuild": false,
+          "isRelevant": false,
+          "isNeutral": false,
+          "offers": 298,
+          "picks": 24,
+          "choiceRate": 0.08053691275167785,
+          "deckInclusionRate": 0.02666666666666667,
+          "plays": 466,
+          "opportunities": 596,
+          "drawnUsageRate": 0.7818791946308725
         },
         {
           "id": "warrior_oath_retainer",
@@ -4158,34 +4146,9 @@
           "picks": 32,
           "choiceRate": 0.08533333333333333,
           "deckInclusionRate": 0.035555555555555556,
-          "plays": 1690,
-          "opportunities": 1801,
-          "drawnUsageRate": 0.9383675735702388
-        },
-        {
-          "id": "warrior_soul_oath",
-          "name": "魂誓换锋",
-          "cost": 1,
-          "rarity": "稀有",
-          "tags": [
-            "充能"
-          ],
-          "directEffects": {
-            "draw": true
-          },
-          "buildTags": [
-            "oathblade"
-          ],
-          "isPrimaryBuild": false,
-          "isRelevant": false,
-          "isNeutral": false,
-          "offers": 298,
-          "picks": 26,
-          "choiceRate": 0.087248322147651,
-          "deckInclusionRate": 0.028888888888888888,
-          "plays": 525,
-          "opportunities": 658,
-          "drawnUsageRate": 0.7978723404255319
+          "plays": 1661,
+          "opportunities": 1788,
+          "drawnUsageRate": 0.9289709172259508
         },
         {
           "id": "warrior_oath_reversal",
@@ -4207,9 +4170,35 @@
           "picks": 39,
           "choiceRate": 0.12225705329153605,
           "deckInclusionRate": 0.043333333333333335,
-          "plays": 845,
-          "opportunities": 1031,
-          "drawnUsageRate": 0.8195926285160039
+          "plays": 827,
+          "opportunities": 1015,
+          "drawnUsageRate": 0.8147783251231527
+        },
+        {
+          "id": "warrior_crown_riposte",
+          "name": "王冠反斩",
+          "cost": 3,
+          "rarity": "史诗",
+          "tags": [
+            "反击",
+            "重击"
+          ],
+          "directEffects": {
+            "protection": true
+          },
+          "buildTags": [
+            "oathblade"
+          ],
+          "isPrimaryBuild": false,
+          "isRelevant": false,
+          "isNeutral": false,
+          "offers": 325,
+          "picks": 47,
+          "choiceRate": 0.14461538461538462,
+          "deckInclusionRate": 0.052222222222222225,
+          "plays": 963,
+          "opportunities": 1050,
+          "drawnUsageRate": 0.9171428571428571
         },
         {
           "id": "warrior_banner_guard",
@@ -4232,9 +4221,9 @@
           "picks": 40,
           "choiceRate": 0.14814814814814814,
           "deckInclusionRate": 0.044444444444444446,
-          "plays": 1023,
+          "plays": 1020,
           "opportunities": 1125,
-          "drawnUsageRate": 0.9093333333333333
+          "drawnUsageRate": 0.9066666666666666
         },
         {
           "id": "warrior_scar",
@@ -4254,12 +4243,38 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 347,
-          "picks": 60,
-          "choiceRate": 0.1729106628242075,
-          "deckInclusionRate": 0.06666666666666667,
-          "plays": 3315,
-          "opportunities": 4624,
-          "drawnUsageRate": 0.7169117647058824
+          "picks": 58,
+          "choiceRate": 0.16714697406340057,
+          "deckInclusionRate": 0.06444444444444444,
+          "plays": 3056,
+          "opportunities": 4332,
+          "drawnUsageRate": 0.7054478301015698
+        },
+        {
+          "id": "warrior_guard",
+          "name": "圣堂守势",
+          "cost": 2,
+          "rarity": "史诗",
+          "tags": [
+            "荆棘"
+          ],
+          "directEffects": {
+            "draw": true,
+            "protection": true
+          },
+          "buildTags": [
+            "oathblade"
+          ],
+          "isPrimaryBuild": false,
+          "isRelevant": false,
+          "isNeutral": false,
+          "offers": 322,
+          "picks": 91,
+          "choiceRate": 0.2826086956521739,
+          "deckInclusionRate": 0.10111111111111111,
+          "plays": 1526,
+          "opportunities": 1995,
+          "drawnUsageRate": 0.7649122807017544
         },
         {
           "id": "warrior_scaffold_cut",
@@ -4279,12 +4294,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 372,
-          "picks": 186,
-          "choiceRate": 0.5,
-          "deckInclusionRate": 0.19666666666666666,
-          "plays": 3666,
-          "opportunities": 4236,
-          "drawnUsageRate": 0.8654390934844193
+          "picks": 170,
+          "choiceRate": 0.45698924731182794,
+          "deckInclusionRate": 0.1811111111111111,
+          "plays": 3249,
+          "opportunities": 3829,
+          "drawnUsageRate": 0.8485244189083312
         },
         {
           "id": "warrior_open_vein",
@@ -4303,12 +4318,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 339,
-          "picks": 181,
-          "choiceRate": 0.5339233038348082,
-          "deckInclusionRate": 0.19666666666666666,
-          "plays": 877,
-          "opportunities": 1126,
-          "drawnUsageRate": 0.7788632326820604
+          "picks": 159,
+          "choiceRate": 0.4690265486725664,
+          "deckInclusionRate": 0.17222222222222222,
+          "plays": 768,
+          "opportunities": 998,
+          "drawnUsageRate": 0.7695390781563126
         },
         {
           "id": "warrior_blood_wall",
@@ -4326,12 +4341,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 365,
-          "picks": 240,
-          "choiceRate": 0.6575342465753424,
-          "deckInclusionRate": 0.25222222222222224,
-          "plays": 4232,
-          "opportunities": 6004,
-          "drawnUsageRate": 0.7048634243837442
+          "picks": 229,
+          "choiceRate": 0.6273972602739726,
+          "deckInclusionRate": 0.24222222222222223,
+          "plays": 3918,
+          "opportunities": 5641,
+          "drawnUsageRate": 0.6945577025350115
         },
         {
           "id": "warrior_vein_oath",
@@ -4349,12 +4364,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 317,
-          "picks": 219,
-          "choiceRate": 0.6908517350157729,
-          "deckInclusionRate": 0.2222222222222222,
-          "plays": 3866,
-          "opportunities": 5200,
-          "drawnUsageRate": 0.7434615384615385
+          "picks": 211,
+          "choiceRate": 0.6656151419558359,
+          "deckInclusionRate": 0.21555555555555556,
+          "plays": 3650,
+          "opportunities": 4948,
+          "drawnUsageRate": 0.7376717865804365
         },
         {
           "id": "warrior_debt_scar",
@@ -4372,58 +4387,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 326,
-          "picks": 245,
-          "choiceRate": 0.7515337423312883,
-          "deckInclusionRate": 0.25333333333333335,
-          "plays": 2736,
-          "opportunities": 6314,
-          "drawnUsageRate": 0.4333227747861894
-        },
-        {
-          "id": "warrior_blood_drive",
-          "name": "不赦血契",
-          "cost": 1,
-          "rarity": "稀有",
-          "tags": [
-            "血债"
-          ],
-          "directEffects": {},
-          "buildTags": [
-            "bloodoath"
-          ],
-          "isPrimaryBuild": true,
-          "isRelevant": true,
-          "isNeutral": false,
-          "offers": 351,
-          "picks": 270,
-          "choiceRate": 0.7692307692307693,
-          "deckInclusionRate": 0.26666666666666666,
-          "plays": 6017,
-          "opportunities": 7041,
-          "drawnUsageRate": 0.8545661127680727
-        },
-        {
-          "id": "warrior_oath_pressure",
-          "name": "誓血缚阵",
-          "cost": 1,
-          "rarity": "稀有",
-          "tags": [
-            "血债"
-          ],
-          "directEffects": {},
-          "buildTags": [
-            "bloodoath"
-          ],
-          "isPrimaryBuild": true,
-          "isRelevant": true,
-          "isNeutral": false,
-          "offers": 373,
-          "picks": 290,
-          "choiceRate": 0.7774798927613941,
-          "deckInclusionRate": 0.28888888888888886,
-          "plays": 7174,
-          "opportunities": 7685,
-          "drawnUsageRate": 0.9335068314899154
+          "picks": 235,
+          "choiceRate": 0.7208588957055214,
+          "deckInclusionRate": 0.24444444444444444,
+          "plays": 2501,
+          "opportunities": 6016,
+          "drawnUsageRate": 0.41572473404255317
         },
         {
           "id": "warrior_red_return",
@@ -4441,12 +4410,58 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 304,
-          "picks": 239,
-          "choiceRate": 0.7861842105263158,
-          "deckInclusionRate": 0.24666666666666667,
-          "plays": 3926,
-          "opportunities": 6140,
-          "drawnUsageRate": 0.639413680781759
+          "picks": 228,
+          "choiceRate": 0.75,
+          "deckInclusionRate": 0.23777777777777778,
+          "plays": 3589,
+          "opportunities": 5775,
+          "drawnUsageRate": 0.6214718614718615
+        },
+        {
+          "id": "warrior_blood_drive",
+          "name": "不赦血契",
+          "cost": 1,
+          "rarity": "稀有",
+          "tags": [
+            "血债"
+          ],
+          "directEffects": {},
+          "buildTags": [
+            "bloodoath"
+          ],
+          "isPrimaryBuild": true,
+          "isRelevant": true,
+          "isNeutral": false,
+          "offers": 351,
+          "picks": 264,
+          "choiceRate": 0.7521367521367521,
+          "deckInclusionRate": 0.26222222222222225,
+          "plays": 5892,
+          "opportunities": 6932,
+          "drawnUsageRate": 0.8499711482977496
+        },
+        {
+          "id": "warrior_oath_pressure",
+          "name": "誓血缚阵",
+          "cost": 1,
+          "rarity": "稀有",
+          "tags": [
+            "血债"
+          ],
+          "directEffects": {},
+          "buildTags": [
+            "bloodoath"
+          ],
+          "isPrimaryBuild": true,
+          "isRelevant": true,
+          "isNeutral": false,
+          "offers": 373,
+          "picks": 282,
+          "choiceRate": 0.7560321715817694,
+          "deckInclusionRate": 0.2833333333333333,
+          "plays": 6905,
+          "opportunities": 7460,
+          "drawnUsageRate": 0.925603217158177
         },
         {
           "id": "warrior_bleed_edge",
@@ -4464,36 +4479,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 345,
-          "picks": 297,
-          "choiceRate": 0.8608695652173913,
-          "deckInclusionRate": 0.29888888888888887,
-          "plays": 6438,
-          "opportunities": 6741,
-          "drawnUsageRate": 0.9550511793502447
-        },
-        {
-          "id": "warrior_martyr_cut",
-          "name": "殉誓斩",
-          "cost": 0,
-          "rarity": "普通",
-          "tags": [
-            "血债",
-            "销毁"
-          ],
-          "directEffects": {},
-          "buildTags": [
-            "bloodoath"
-          ],
-          "isPrimaryBuild": true,
-          "isRelevant": true,
-          "isNeutral": false,
-          "offers": 332,
-          "picks": 290,
-          "choiceRate": 0.8734939759036144,
-          "deckInclusionRate": 0.28444444444444444,
-          "plays": 1449,
-          "opportunities": 1457,
-          "drawnUsageRate": 0.9945092656142759
+          "picks": 288,
+          "choiceRate": 0.8347826086956521,
+          "deckInclusionRate": 0.29333333333333333,
+          "plays": 6189,
+          "opportunities": 6490,
+          "drawnUsageRate": 0.9536209553158705
         },
         {
           "id": "warrior_crimson_pause",
@@ -4513,12 +4504,36 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 367,
-          "picks": 321,
-          "choiceRate": 0.8746594005449592,
-          "deckInclusionRate": 0.30333333333333334,
-          "plays": 15997,
-          "opportunities": 17412,
-          "drawnUsageRate": 0.9187342062945095
+          "picks": 316,
+          "choiceRate": 0.8610354223433242,
+          "deckInclusionRate": 0.3022222222222222,
+          "plays": 15186,
+          "opportunities": 16521,
+          "drawnUsageRate": 0.9191937534047576
+        },
+        {
+          "id": "warrior_martyr_cut",
+          "name": "殉誓斩",
+          "cost": 0,
+          "rarity": "普通",
+          "tags": [
+            "血债",
+            "销毁"
+          ],
+          "directEffects": {},
+          "buildTags": [
+            "bloodoath"
+          ],
+          "isPrimaryBuild": true,
+          "isRelevant": true,
+          "isNeutral": false,
+          "offers": 332,
+          "picks": 289,
+          "choiceRate": 0.8704819277108434,
+          "deckInclusionRate": 0.28444444444444444,
+          "plays": 1443,
+          "opportunities": 1454,
+          "drawnUsageRate": 0.9924346629986245
         },
         {
           "id": "warrior_lifebite",
@@ -4536,12 +4551,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 327,
-          "picks": 288,
-          "choiceRate": 0.8807339449541285,
+          "picks": 286,
+          "choiceRate": 0.8746177370030581,
           "deckInclusionRate": 0.2788888888888889,
-          "plays": 7250,
-          "opportunities": 7644,
-          "drawnUsageRate": 0.9484563055991627
+          "plays": 7022,
+          "opportunities": 7439,
+          "drawnUsageRate": 0.9439440785051755
         },
         {
           "id": "warrior_life_contract",
@@ -4559,12 +4574,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 371,
-          "picks": 332,
-          "choiceRate": 0.894878706199461,
+          "picks": 331,
+          "choiceRate": 0.8921832884097035,
           "deckInclusionRate": 0.3288888888888889,
-          "plays": 1273,
-          "opportunities": 8880,
-          "drawnUsageRate": 0.14335585585585586
+          "plays": 1219,
+          "opportunities": 8634,
+          "drawnUsageRate": 0.14118600880240909
         },
         {
           "id": "warrior_blood_vow_slash",
@@ -4582,12 +4597,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 379,
-          "picks": 345,
-          "choiceRate": 0.9102902374670184,
-          "deckInclusionRate": 0.3377777777777778,
-          "plays": 7139,
-          "opportunities": 8342,
-          "drawnUsageRate": 0.8557899784224406
+          "picks": 343,
+          "choiceRate": 0.9050131926121372,
+          "deckInclusionRate": 0.33666666666666667,
+          "plays": 6944,
+          "opportunities": 8218,
+          "drawnUsageRate": 0.8449744463373083
         },
         {
           "id": "warrior_boiling_drive",
@@ -4608,9 +4623,9 @@
           "picks": 354,
           "choiceRate": 0.9267015706806283,
           "deckInclusionRate": 0.3277777777777778,
-          "plays": 6723,
-          "opportunities": 8568,
-          "drawnUsageRate": 0.7846638655462185
+          "plays": 6550,
+          "opportunities": 8485,
+          "drawnUsageRate": 0.7719505008839128
         },
         {
           "id": "warrior_devour_finish",
@@ -4628,12 +4643,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 699,
-          "picks": 671,
-          "choiceRate": 0.9599427753934192,
+          "picks": 669,
+          "choiceRate": 0.9570815450643777,
           "deckInclusionRate": 0.5388888888888889,
-          "plays": 11141,
-          "opportunities": 16420,
-          "drawnUsageRate": 0.6785018270401949
+          "plays": 10728,
+          "opportunities": 16256,
+          "drawnUsageRate": 0.6599409448818898
         },
         {
           "id": "warrior_blood_guard_step",
@@ -4654,9 +4669,9 @@
           "picks": 345,
           "choiceRate": 0.9663865546218487,
           "deckInclusionRate": 0.3188888888888889,
-          "plays": 7782,
-          "opportunities": 8806,
-          "drawnUsageRate": 0.8837156484215307
+          "plays": 7635,
+          "opportunities": 8689,
+          "drawnUsageRate": 0.8786972033605709
         },
         {
           "id": "warrior_blood_debt",
@@ -4678,9 +4693,9 @@
           "picks": 672,
           "choiceRate": 0.9753265602322206,
           "deckInclusionRate": 0.5344444444444445,
-          "plays": 11736,
-          "opportunities": 17162,
-          "drawnUsageRate": 0.6838363827059784
+          "plays": 11228,
+          "opportunities": 16928,
+          "drawnUsageRate": 0.6632797731568998
         },
         {
           "id": "warrior_bloodlet_cleave",
@@ -4701,9 +4716,9 @@
           "picks": 399,
           "choiceRate": 0.9755501222493888,
           "deckInclusionRate": 0.3622222222222222,
-          "plays": 9482,
-          "opportunities": 10330,
-          "drawnUsageRate": 0.9179090029041627
+          "plays": 9214,
+          "opportunities": 10120,
+          "drawnUsageRate": 0.9104743083003952
         },
         {
           "id": "warrior_blood_tide",
@@ -4725,9 +4740,9 @@
           "picks": 660,
           "choiceRate": 0.9836065573770492,
           "deckInclusionRate": 0.5311111111111111,
-          "plays": 13855,
-          "opportunities": 16513,
-          "drawnUsageRate": 0.8390359111003451
+          "plays": 13459,
+          "opportunities": 16370,
+          "drawnUsageRate": 0.8221747098350641
         }
       ]
     },

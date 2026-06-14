@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-14T18:12:46.683Z",
+  "generatedAt": "2026-06-14T18:17:04.447Z",
   "seed": 20260615,
   "runsPerSample": 300,
   "modes": [
@@ -37,7 +37,7 @@
       "1": 161,
       "2": 80
     },
-    "directEffectCards": 29,
+    "directEffectCards": 31,
     "byRole": [
       {
         "roleId": "hero_warrior",
@@ -104,10 +104,10 @@
       "prevalence": 0.024896265560165973,
       "samples": 18,
       "affectedBuilds": 6,
-      "meanWinRateImpact": 0.011296296296296304,
-      "meanWinRateImpactPp": 1.1296296296296304,
-      "meanHpImpact": 0.861666666666665,
-      "meanTurnImpact": 0.1274074074074075,
+      "meanWinRateImpact": 0.011666666666666678,
+      "meanWinRateImpactPp": 1.1666666666666679,
+      "meanHpImpact": 0.8061111111111102,
+      "meanTurnImpact": 0.13814814814814824,
       "maxWinRateImpactPp": 5.666666666666664,
       "minWinRateImpactPp": -0.33333333333332993
     },
@@ -179,12 +179,12 @@
       "prevalence": 0.03319502074688797,
       "samples": 6,
       "affectedBuilds": 2,
-      "meanWinRateImpact": 0.01722222222222221,
-      "meanWinRateImpactPp": 1.7222222222222212,
-      "meanHpImpact": 6.061666666666663,
-      "meanTurnImpact": 0.28611111111111126,
-      "maxWinRateImpactPp": 6.999999999999995,
-      "minWinRateImpactPp": -1.0000000000000009
+      "meanWinRateImpact": 0.006111111111111141,
+      "meanWinRateImpactPp": 0.611111111111114,
+      "meanHpImpact": 3.0644444444444425,
+      "meanTurnImpact": 0.2194444444444447,
+      "maxWinRateImpactPp": 2.0000000000000018,
+      "minWinRateImpactPp": -0.33333333333332993
     },
     {
       "tag": "反击",
@@ -194,12 +194,12 @@
       "prevalence": 0.029045643153526972,
       "samples": 6,
       "affectedBuilds": 2,
-      "meanWinRateImpact": 0.013888888888888914,
-      "meanWinRateImpactPp": 1.3888888888888915,
-      "meanHpImpact": 3.5333333333333314,
-      "meanTurnImpact": 0.49777777777777804,
-      "maxWinRateImpactPp": 4.333333333333334,
-      "minWinRateImpactPp": -0.6666666666666599
+      "meanWinRateImpact": 0.004444444444444455,
+      "meanWinRateImpactPp": 0.4444444444444455,
+      "meanHpImpact": 1.7838888888888913,
+      "meanTurnImpact": 0.3799999999999999,
+      "maxWinRateImpactPp": 1.333333333333342,
+      "minWinRateImpactPp": -0.666666666666671
     },
     {
       "tag": "回收",
@@ -254,12 +254,12 @@
       "prevalence": 0.012448132780082987,
       "samples": 6,
       "affectedBuilds": 2,
-      "meanWinRateImpact": 0.0050000000000000044,
-      "meanWinRateImpactPp": 0.5000000000000004,
-      "meanHpImpact": 2.4305555555555522,
-      "meanTurnImpact": 0.6911111111111113,
-      "maxWinRateImpactPp": 1.6666666666666607,
-      "minWinRateImpactPp": -0.33333333333332993
+      "meanWinRateImpact": 0.0027777777777777866,
+      "meanWinRateImpactPp": 0.2777777777777787,
+      "meanHpImpact": 1.1727777777777746,
+      "meanTurnImpact": 0.5550000000000005,
+      "maxWinRateImpactPp": 1.0000000000000009,
+      "minWinRateImpactPp": 0
     },
     {
       "tag": "回响",
@@ -404,10 +404,10 @@
       "prevalence": 0.04564315352697095,
       "samples": 18,
       "affectedBuilds": 6,
-      "meanWinRateImpact": 0.07037037037037039,
-      "meanWinRateImpactPp": 7.037037037037039,
-      "meanHpImpact": 5.769814814814812,
-      "meanTurnImpact": 0.6837037037037037,
+      "meanWinRateImpact": 0.06981481481481483,
+      "meanWinRateImpactPp": 6.981481481481483,
+      "meanHpImpact": 5.571851851851851,
+      "meanTurnImpact": 0.6416666666666666,
       "maxWinRateImpactPp": 35.00000000000001,
       "minWinRateImpactPp": -1.0000000000000009
     },
@@ -434,11 +434,11 @@
       "prevalence": 0.03734439834024896,
       "samples": 12,
       "affectedBuilds": 4,
-      "meanWinRateImpact": 0.16527777777777777,
-      "meanWinRateImpactPp": 16.52777777777778,
-      "meanHpImpact": -0.7933333333333362,
-      "meanTurnImpact": 5.93888888888889,
-      "maxWinRateImpactPp": 86.66666666666667,
+      "meanWinRateImpact": 0.10638888888888891,
+      "meanWinRateImpactPp": 10.638888888888891,
+      "meanHpImpact": -0.5911111111111133,
+      "meanTurnImpact": 4.135833333333333,
+      "maxWinRateImpactPp": 58.00000000000001,
       "minWinRateImpactPp": -0.666666666666671
     },
     {
@@ -584,11 +584,11 @@
       "prevalence": 0.008298755186721992,
       "samples": 12,
       "affectedBuilds": 4,
-      "meanWinRateImpact": -0.002777777777777768,
-      "meanWinRateImpactPp": -0.2777777777777768,
-      "meanHpImpact": -0.08722222222222224,
-      "meanTurnImpact": 0.04472222222222244,
-      "maxWinRateImpactPp": 0.33333333333334103,
+      "meanWinRateImpact": -0.002499999999999993,
+      "meanWinRateImpactPp": -0.2499999999999993,
+      "meanHpImpact": -0.16777777777777794,
+      "meanTurnImpact": 0.03250000000000023,
+      "maxWinRateImpactPp": 0.33333333333332993,
       "minWinRateImpactPp": -1.3333333333333308
     },
     {
@@ -599,11 +599,11 @@
       "prevalence": 0.012448132780082987,
       "samples": 6,
       "affectedBuilds": 2,
-      "meanWinRateImpact": 0.0011111111111110998,
-      "meanWinRateImpactPp": 0.11111111111110998,
-      "meanHpImpact": 0.0855555555555559,
-      "meanTurnImpact": 0.10222222222222237,
-      "maxWinRateImpactPp": 0.6666666666666599,
+      "meanWinRateImpact": 0.004444444444444473,
+      "meanWinRateImpactPp": 0.4444444444444473,
+      "meanHpImpact": 0.2722222222222233,
+      "meanTurnImpact": 0.6577777777777777,
+      "maxWinRateImpactPp": 1.333333333333342,
       "minWinRateImpactPp": 0
     },
     {
@@ -629,10 +629,10 @@
       "prevalence": 0.08713692946058091,
       "samples": 48,
       "affectedBuilds": 16,
-      "meanWinRateImpact": 0.002291666666666671,
-      "meanWinRateImpactPp": 0.2291666666666671,
-      "meanHpImpact": 0.4096527777777766,
-      "meanTurnImpact": -0.08291666666666674,
+      "meanWinRateImpact": 0.0025694444444444506,
+      "meanWinRateImpactPp": 0.2569444444444451,
+      "meanHpImpact": 0.4040277777777767,
+      "meanTurnImpact": -0.07673611111111121,
       "maxWinRateImpactPp": 9.666666666666668,
       "minWinRateImpactPp": -3.0000000000000027
     },
