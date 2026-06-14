@@ -7715,12 +7715,9 @@
     }
 
     function getShopCopyPrice(card) {
-        let price = 65;
-        if (card.rarity === '稀有') price += 20;
-        if (card.rarity === '史诗') price += 45;
-        if (card.up) price += 25;
-        if (hasRelic('r_copy_seal')) price -= 20;
-        return Math.max(30, price);
+        return QuestersRewardRules.getShopCopyPrice(card, {
+            hasCopySeal: hasRelic('r_copy_seal')
+        });
     }
 
     function copyDeckCard(card) {

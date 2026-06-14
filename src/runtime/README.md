@@ -4,7 +4,8 @@ This directory holds gameplay runtime helpers that are not raw data and do not
 own DOM rendering.
 
 - `reward-rules.js`: reward selection weights, rarity rolls, build
-  profile/bridge matching, candidate filtering, and reward skip-gold math.
+  profile/bridge matching, candidate filtering, reward skip-gold math, and
+  shop economy helpers.
 - `map-rules.js`: map node layout, path connection, and node-type assignment.
 - `state-rules.js`: initial run-state templates, save payload snapshots, map
   node lookup helpers, and character run-stat derivation.

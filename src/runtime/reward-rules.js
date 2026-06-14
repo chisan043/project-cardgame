@@ -34,6 +34,15 @@
         return 25 + Math.min(30, floor * 2) + (hasRewardCrown ? 15 : 0) + (hasCampfirePouch ? 10 : 0);
     }
 
+    function getShopCopyPrice(card = {}, { hasCopySeal = false } = {}) {
+        let price = 65;
+        if (card.rarity === '稀有') price += 20;
+        if (card.rarity === '史诗') price += 45;
+        if (card.up) price += 25;
+        if (hasCopySeal) price -= 20;
+        return Math.max(30, price);
+    }
+
     function getDeckBuildProfile({
         deck = [],
         directions = {},
@@ -140,6 +149,7 @@
         getPrimaryBuildTag,
         getRewardBridgeSpec,
         getRewardCandidatePool,
+        getShopCopyPrice,
         rollRewardRarity,
         rollWeighted
     };
