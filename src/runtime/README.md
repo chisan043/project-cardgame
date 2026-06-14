@@ -8,6 +8,7 @@ own DOM rendering.
 - `map-rules.js`: map node layout, path connection, and node-type assignment.
 - `state-rules.js`: initial run-state templates, save payload snapshots, and
   map node lookup helpers.
+- `battle-rules.js`: battle-start and battle-win state cleanup helpers.
 
 Keep `src/data/*` side-effect-free. Keep DOM creation, overlay rendering, and
 state mutation in the main runtime until those surfaces are split deliberately.
