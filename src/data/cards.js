@@ -227,18 +227,7 @@ const NEUTRAL_CARD_POOL = [
     { poolId: 'neutral_cycle', name: '星轨流转', type: '能力', cost: 1, icon: '🌌', val: 0, tags: ['重置'], rarity: '稀有' },
     { poolId: 'neutral_spark', name: '碎星短刃', type: '攻击', cost: 0, icon: '✨', val: 4, tags: ['销毁'], rarity: '普通' },
     { poolId: 'neutral_bless', name: '圣像微光', type: '能力', cost: 1, icon: '🕯️', val: 0, tags: ['治愈'], rarity: '普通' },
-    { poolId: 'neutral_echo', name: '回音残卷', type: '能力', cost: 2, icon: '📜', val: 0, tags: ['回响', '抽牌'], rarity: '史诗' },
-    { poolId: 'neutral_vow_guard', name: '巡誓护符', type: '防御', cost: 1, icon: '🔰', val: 7, tags: ['庇护', '保留'], rarity: '稀有', desc: '获得 7 点护盾。附带[庇护]与[保留]。战士可把它转成额外护盾，弓手可借保留获得风势。' },
-    { poolId: 'neutral_mirror_spark', name: '镜火短章', type: '能力', cost: 1, icon: '🪞', val: 0, tags: ['回响', '充能'], rarity: '稀有', desc: '触发[回响]并[充能]。法师会因回响额外积累咏唱。' },
-    { poolId: 'neutral_blood_mark', name: '血契刻痕', type: '能力', cost: 1, icon: '🩸', val: 5, tags: ['血祭', '附魔'], rarity: '稀有', desc: '触发[血祭]与[附魔]。用生命换取本场成长和下一次攻击强化。' },
-    { poolId: 'neutral_exile_blade', name: '流亡短刃', type: '攻击', cost: 1, icon: '🗡️', val: 9, tags: ['放逐', '穿甲'], rarity: '稀有', desc: '造成 9 点[穿甲]伤害并[放逐]。一次性强攻，弓手可借放逐获得风势。' },
-    { poolId: 'neutral_return_scroll', name: '归页残卷', type: '能力', cost: 1, icon: '📖', val: 0, tags: ['回收', '抽牌'], rarity: '稀有', desc: '从墓地选择 1 张牌回到手牌，并[抽牌]。弓手会因回收牌获得风势。' },
-    { poolId: 'neutral_soul_flame', name: '魂火祭文', type: '能力', cost: 1, icon: '🔥', val: 0, tags: ['充能', '抽牌'], rarity: '稀有', desc: '回复能量并[抽牌]。适合把手牌资源转成职业启动。' },
-    { poolId: 'neutral_frenzy_edge', name: '狂锋断章', type: '攻击', cost: 1, icon: '⚔️', val: 6, tags: ['狂热', '连击'], rarity: '稀有', desc: '丢弃 1 张牌获得[狂热]，随后造成 6 点伤害；若本回合已出牌则触发[连击]。' },
-    { poolId: 'neutral_bloodlet_rite', name: '断脉残页', type: '能力', cost: 1, icon: '🩸', val: 0, tags: ['放血', '抽牌'], rarity: '稀有', desc: '引爆敌方已有[出血]层数，然后[抽牌]。没有出血时只作为过牌。' },
-    { poolId: 'neutral_poison_burst', name: '厄毒爆发', type: '攻击', cost: 2, icon: '☠️', val: 11, tags: ['剧毒', '易伤'], rarity: '稀有', desc: '造成 11 点伤害，施加[剧毒]与[易伤]。毒系引爆的通用组件。' },
-
-    { poolId: 'neutral_sealed_thunder', name: '封雷断页', type: '攻击', cost: 2, icon: '🌩️', val: 13, tags: ['眩晕', '放逐'], rarity: '史诗', desc: '造成 13 点伤害，施加[眩晕]后[放逐]。一次性控制牌，放逐威能会额外提高伤害。' }
+    { poolId: 'neutral_sealed_thunder', name: '封雷断页', type: '攻击', cost: 2, icon: '🌩️', val: 13, tags: ['眩晕', '销毁'], rarity: '史诗', desc: '造成 13 点伤害，施加[眩晕]后[销毁]。一次性控制牌。' }
 ];
 
 const CHARACTER_CARD_POOLS = {
@@ -477,7 +466,7 @@ const CARD_BUILD_TAGS_BY_ID = {
 const BUILD_EXPANSION_CARDS = {
     hero_warrior: [
         { poolId: 'warrior_crest_guard', name: '圣徽举盾', type: '防御', cost: 1, icon: '🔰', val: 9, tags: ['庇护', '保留'], buildTags: ['oathblade'], rarity: '普通', frameTheme: 'warrior', desc: '获得 9 点护盾，触发[庇护]并[保留]。' },
-        { poolId: 'warrior_oath_charge', name: '王誓蓄锋', type: '能力', cost: 2, icon: '📜', val: 8, tags: ['附魔', '庇护', '抽牌'], buildTags: ['oathblade'], rarity: '稀有', frameTheme: 'warrior', desc: '弃 1 张牌获得[附魔]，并获得 11 点庇护、抽 2 张牌。' },
+        { poolId: 'warrior_oath_charge', name: '王誓蓄锋', type: '防御', cost: 1, icon: '📜', val: 10, tags: ['保留'], buildTags: ['oathblade'], rarity: '稀有', frameTheme: 'warrior', desc: '获得 10 点护盾，打出后下回合回到手牌。' },
         { poolId: 'warrior_rift_probe', name: '裂隙点刺', type: '攻击', cost: 0, icon: '🗡️', val: 4, tags: ['易伤', '销毁'], buildTags: ['execution'], rarity: '普通', frameTheme: 'warrior', desc: '低费施加[易伤]后[销毁]，专门打开处刑窗口。' },
         { poolId: 'warrior_disarm_press', name: '断腕缴械', type: '能力', cost: 1, icon: '⛓️', val: 0, tags: ['眩晕', '抽牌'], buildTags: ['execution'], rarity: '稀有', frameTheme: 'warrior', desc: '施加[眩晕]并[抽牌]。用控制回合换取下一次[穿甲]斩。' },
         { poolId: 'warrior_heart_probe', name: '穿心试探', type: '攻击', cost: 2, icon: '🎯', val: 11, tags: ['穿甲', '虚弱'], buildTags: ['execution'], rarity: '稀有', frameTheme: 'warrior', desc: '造成 11 点[穿甲]伤害并施加[虚弱]，在斩杀窗口未成熟时压低反扑风险。' },
@@ -582,10 +571,7 @@ const BUILD_EXPANSION_CARDS = {
     neutral: [
         { poolId: 'neutral_blank_pact', name: '空白契约', type: '能力', cost: 0, icon: '📄', val: 0, tags: ['抽牌', '销毁'], rarity: '普通', desc: '免费[抽牌]后[销毁]，用于压缩牌组和寻找职业核心。' },
         { poolId: 'neutral_cold_iron_page', name: '冷铁护页', type: '防御', cost: 1, icon: '📘', val: 7, tags: ['庇护'], rarity: '普通', desc: '获得护盾并触发[庇护]，任何职业都能用它挡下关键伤害。' },
-        { poolId: 'neutral_traveler_song', name: '旅人短歌', type: '能力', cost: 1, icon: '🎵', val: 0, tags: ['充能', '治愈'], rarity: '稀有', desc: '同时[充能]与[治愈]，是偏防守牌组的通用续航件。' },
-        { poolId: 'neutral_ash_marker', name: '灰烬路标', type: '能力', cost: 1, icon: '🔥', val: 0, tags: ['易伤', '抽牌'], rarity: '稀有', desc: '施加[易伤]并[抽牌]，为任意职业打开一次伤害窗口。' },
-        { poolId: 'neutral_old_dream_return', name: '旧梦回收', type: '能力', cost: 1, icon: '🧭', val: 0, tags: ['回收'], rarity: '稀有', desc: '从放逐区选择 1 张牌洗入抽牌堆，再从墓地选择 1 张牌回到手牌。' },
-        { poolId: 'neutral_nameless_heavy', name: '无名重锋', type: '攻击', cost: 2, icon: '⚔️', val: 8, tags: ['重击', '穿甲'], rarity: '稀有', desc: '造成 8 点伤害，附带[重击]与[穿甲]。' }
+        { poolId: 'neutral_ash_marker', name: '灰烬路标', type: '能力', cost: 1, icon: '🔥', val: 0, tags: ['易伤'], rarity: '稀有', desc: '施加[易伤]，为任意职业打开一次伤害窗口。' }
     ]
 };
 

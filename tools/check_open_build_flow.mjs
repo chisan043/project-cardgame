@@ -44,6 +44,10 @@ const ROLE_ALLOWED_CARD_TAGS = {
         '蓄力', '自然', '闪避', '追击', '易伤', '虚弱', '眩晕'
     ])
 };
+const NEUTRAL_CARD_LIMIT = 8;
+const NEUTRAL_ALLOWED_CARD_TAGS = new Set([
+    '抽牌', '充能', '保留', '重置', '销毁', '庇护', '治愈', '易伤', '虚弱', '眩晕'
+]);
 
 const source = SOURCES.map(file => fs.readFileSync(path.join(ROOT, file), 'utf8')).join('\n');
 const staleTokens = FORBIDDEN_TOKENS.filter(token => source.includes(token));
@@ -58,6 +62,15 @@ if (data.ROLE_CARD_TAG_POLICY_DROPS?.length) {
     const drops = data.ROLE_CARD_TAG_POLICY_DROPS
         .map(drop => `${drop.roleId}/${drop.cardName}:${drop.tags.join('+')}`);
     throw new Error(`Source card tags outside role vocabulary: ${drops.join(', ')}`);
+}
+if (data.NEUTRAL_CARD_POOL.length > NEUTRAL_CARD_LIMIT) {
+    throw new Error(`Neutral card pool is too large: ${data.NEUTRAL_CARD_POOL.length}/${NEUTRAL_CARD_LIMIT}`);
+}
+const neutralOffVocabulary = data.NEUTRAL_CARD_POOL.flatMap(card => (card.tags || [])
+    .filter(tag => !NEUTRAL_ALLOWED_CARD_TAGS.has(tag))
+    .map(tag => `${card.name}:${tag}`));
+if (neutralOffVocabulary.length) {
+    throw new Error(`Neutral cards use role-specific tags: ${neutralOffVocabulary.join(', ')}`);
 }
 
 function checkRoleCardTags(roleId, cards, sourceName) {
