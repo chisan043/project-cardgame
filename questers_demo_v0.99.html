@@ -795,7 +795,7 @@
             opacity:0;
             pointer-events:none;
             mix-blend-mode:screen;
-            filter:drop-shadow(0 0 22px rgba(94,205,255,0.92)) drop-shadow(0 0 12px rgba(255,221,91,0.64)) saturate(1.18) brightness(1.12);
+            filter:drop-shadow(0 0 18px rgba(122,105,82,0.52)) drop-shadow(0 0 12px rgba(214,143,62,0.42)) saturate(0.95) brightness(1.03);
             transform-origin:center;
             will-change:transform, opacity;
             animation:shieldHitVfxAnim var(--shield-hit-duration, 460ms) ease-out both;
@@ -2034,7 +2034,7 @@
 <div id="vfx-p-atk" class="vfx-layer vfx-p-atk"><img id="player-attack-vfx-img" class="player-attack-vfx-img" alt=""></div>
 <div id="vfx-p-buff" class="vfx-layer vfx-p-buff"><img id="player-buff-vfx-img" class="player-buff-vfx-img" alt=""></div>
 <div id="vfx-p-def" class="vfx-layer vfx-p-def"><div class="shield-aura"></div></div>
-<div id="vfx-shield-hit" class="vfx-layer vfx-shield-hit"><img id="shield-hit-vfx-img" class="shield-hit-vfx-img" src="assets/vfx/player_defense/shield_hit_body_01_v1.webp" alt=""></div>
+<div id="vfx-shield-hit" class="vfx-layer vfx-shield-hit"><img id="shield-hit-vfx-img" class="shield-hit-vfx-img" src="assets/vfx/player_defense/shield_hit_body_01_v2.webp" alt=""></div>
 <div id="vfx-e-atk" class="vfx-layer vfx-e-atk"><div class="enemy-attack-vfx enemy-asset-vfx"><img id="enemy-attack-vfx-img" class="enemy-attack-vfx-img" alt=""></div></div>
 <div id="vfx-e-def" class="vfx-layer vfx-e-def"><div class="shield-flash"></div></div>
 
@@ -5690,12 +5690,12 @@
     }
 
     const PLAYER_SHIELD_HIT_VFX_FRAMES = [
-        { src: 'assets/vfx/player_defense/shield_hit_body_01_v1.webp', duration: 35 },
-        { src: 'assets/vfx/player_defense/shield_hit_body_02_v1.webp', duration: 45 },
-        { src: 'assets/vfx/player_defense/shield_hit_body_03_v1.webp', duration: 55 },
-        { src: 'assets/vfx/player_defense/shield_hit_body_04_v1.webp', duration: 65 },
-        { src: 'assets/vfx/player_defense/shield_hit_body_05_v1.webp', duration: 70 },
-        { src: 'assets/vfx/player_defense/shield_hit_body_06_v1.webp', duration: 85 }
+        { src: 'assets/vfx/player_defense/shield_hit_body_01_v2.webp', duration: 35 },
+        { src: 'assets/vfx/player_defense/shield_hit_body_02_v2.webp', duration: 45 },
+        { src: 'assets/vfx/player_defense/shield_hit_body_03_v2.webp', duration: 55 },
+        { src: 'assets/vfx/player_defense/shield_hit_body_04_v2.webp', duration: 65 },
+        { src: 'assets/vfx/player_defense/shield_hit_body_05_v2.webp', duration: 70 },
+        { src: 'assets/vfx/player_defense/shield_hit_body_06_v2.webp', duration: 85 }
     ];
 
     function triggerShieldHitVFX(absorbed = 0) {
