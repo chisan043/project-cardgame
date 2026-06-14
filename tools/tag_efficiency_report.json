@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-14T18:17:04.447Z",
+  "generatedAt": "2026-06-14T18:23:35.421Z",
   "seed": 20260615,
   "runsPerSample": 300,
   "modes": [
@@ -134,11 +134,11 @@
       "prevalence": 0.0912863070539419,
       "samples": 6,
       "affectedBuilds": 2,
-      "meanWinRateImpact": 0.548888888888889,
-      "meanWinRateImpactPp": 54.8888888888889,
-      "meanHpImpact": 42.17333333333333,
-      "meanTurnImpact": 0.4344444444444444,
-      "maxWinRateImpactPp": 72,
+      "meanWinRateImpact": 0.545,
+      "meanWinRateImpactPp": 54.50000000000001,
+      "meanHpImpact": 42.06111111111111,
+      "meanTurnImpact": 0.4755555555555559,
+      "maxWinRateImpactPp": 72.66666666666667,
       "minWinRateImpactPp": 0
     },
     {
@@ -239,11 +239,11 @@
       "prevalence": 0.029045643153526972,
       "samples": 6,
       "affectedBuilds": 2,
-      "meanWinRateImpact": 0.25888888888888895,
-      "meanWinRateImpactPp": 25.888888888888893,
-      "meanHpImpact": 33.491666666666674,
-      "meanTurnImpact": -1.002777777777778,
-      "maxWinRateImpactPp": 52.33333333333334,
+      "meanWinRateImpact": 0.25499999999999995,
+      "meanWinRateImpactPp": 25.499999999999996,
+      "meanHpImpact": 33.51,
+      "meanTurnImpact": -0.9711111111111107,
+      "maxWinRateImpactPp": 50,
       "minWinRateImpactPp": 0
     },
     {
@@ -389,12 +389,12 @@
       "prevalence": 0.03734439834024896,
       "samples": 12,
       "affectedBuilds": 4,
-      "meanWinRateImpact": 0.005555555555555545,
-      "meanWinRateImpactPp": 0.5555555555555546,
-      "meanHpImpact": 0.8361111111111116,
-      "meanTurnImpact": 0.057777777777777595,
+      "meanWinRateImpact": 0.005000000000000014,
+      "meanWinRateImpactPp": 0.5000000000000014,
+      "meanHpImpact": 0.8394444444444437,
+      "meanTurnImpact": 0.07944444444444439,
       "maxWinRateImpactPp": 2.6666666666666616,
-      "minWinRateImpactPp": -0.6666666666666599
+      "minWinRateImpactPp": -0.33333333333334103
     },
     {
       "tag": "重击",
@@ -404,10 +404,10 @@
       "prevalence": 0.04564315352697095,
       "samples": 18,
       "affectedBuilds": 6,
-      "meanWinRateImpact": 0.06981481481481483,
-      "meanWinRateImpactPp": 6.981481481481483,
-      "meanHpImpact": 5.571851851851851,
-      "meanTurnImpact": 0.6416666666666666,
+      "meanWinRateImpact": 0.0688888888888889,
+      "meanWinRateImpactPp": 6.88888888888889,
+      "meanHpImpact": 5.560740740740739,
+      "meanTurnImpact": 0.6516666666666668,
       "maxWinRateImpactPp": 35.00000000000001,
       "minWinRateImpactPp": -1.0000000000000009
     },
@@ -629,11 +629,11 @@
       "prevalence": 0.08713692946058091,
       "samples": 48,
       "affectedBuilds": 16,
-      "meanWinRateImpact": 0.0025694444444444506,
-      "meanWinRateImpactPp": 0.2569444444444451,
-      "meanHpImpact": 0.4040277777777767,
-      "meanTurnImpact": -0.07673611111111121,
-      "maxWinRateImpactPp": 9.666666666666668,
+      "meanWinRateImpact": 0.0019444444444444546,
+      "meanWinRateImpactPp": 0.19444444444444545,
+      "meanHpImpact": 0.39611111111110997,
+      "meanTurnImpact": -0.07451388888888895,
+      "maxWinRateImpactPp": 7.333333333333336,
       "minWinRateImpactPp": -3.0000000000000027
     },
     {

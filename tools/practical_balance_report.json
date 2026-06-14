@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-14T18:17:54.077Z",
+  "generatedAt": "2026-06-14T18:24:08.970Z",
   "seed": 20260615,
   "runsPerSample": 800,
   "scenarios": [
@@ -277,56 +277,56 @@
           "checkpoints": {
             "late": {
               "winRate": 0.98875,
-              "averageTurns": 5.2925,
-              "averageHpLeft": 74.325,
-              "averageDamageTaken": 18.11,
-              "averageDamageDealt": 287.68,
+              "averageTurns": 5.29125,
+              "averageHpLeft": 74.49625,
+              "averageDamageTaken": 17.9275,
+              "averageDamageDealt": 287.73875,
               "deathCauses": {
                 "首领主体攻击": 9
               },
               "victoryCauses": {
                 "荆棘": 82,
-                "卡牌伤害": 679,
-                "反击": 18,
+                "卡牌伤害": 678,
+                "反击": 19,
                 "出血": 9,
                 "血债清偿": 3
               }
             },
             "elite": {
               "winRate": 0.94625,
-              "averageTurns": 7.46,
-              "averageHpLeft": 69.19625,
-              "averageDamageTaken": 24.375,
-              "averageDamageDealt": 432.77625,
+              "averageTurns": 7.45375,
+              "averageHpLeft": 69.41875,
+              "averageDamageTaken": 24.14375,
+              "averageDamageDealt": 432.80375,
               "deathCauses": {
                 "首领主体攻击": 28,
                 "血债清算": 8,
                 "回合上限": 7
               },
               "victoryCauses": {
-                "卡牌伤害": 574,
-                "荆棘": 154,
+                "卡牌伤害": 576,
+                "荆棘": 152,
                 "血债清偿": 6,
-                "反击": 18,
-                "出血": 5
+                "反击": 19,
+                "出血": 4
               }
             },
             "boss": {
-              "winRate": 0.92375,
-              "averageTurns": 11.08875,
-              "averageHpLeft": 67.71,
-              "averageDamageTaken": 27.04,
-              "averageDamageDealt": 677.1,
+              "winRate": 0.925,
+              "averageTurns": 11.10125,
+              "averageHpLeft": 68.01375,
+              "averageDamageTaken": 26.72875,
+              "averageDamageDealt": 677.13625,
               "deathCauses": {
-                "血债清算": 24,
+                "血债清算": 23,
                 "回合上限": 6,
                 "首领主体攻击": 31
               },
               "victoryCauses": {
-                "卡牌伤害": 582,
-                "荆棘": 130,
-                "反击": 15,
-                "血债清偿": 5,
+                "卡牌伤害": 584,
+                "荆棘": 127,
+                "反击": 18,
+                "血债清偿": 4,
                 "出血": 7
               }
             }
@@ -337,60 +337,60 @@
           "checkpoints": {
             "late": {
               "winRate": 0.98125,
-              "averageTurns": 5.05375,
-              "averageHpLeft": 75.30375,
-              "averageDamageTaken": 16.80125,
-              "averageDamageDealt": 290.52625,
+              "averageTurns": 5.0575,
+              "averageHpLeft": 75.475,
+              "averageDamageTaken": 16.62625,
+              "averageDamageDealt": 290.5775,
               "deathCauses": {
                 "首领主体攻击": 10,
                 "回合上限": 2,
                 "血债清算": 3
               },
               "victoryCauses": {
-                "反击": 19,
+                "反击": 18,
                 "卡牌伤害": 677,
                 "荆棘": 74,
                 "血债清偿": 10,
-                "出血": 5
+                "出血": 6
               }
             },
             "elite": {
               "winRate": 0.945,
-              "averageTurns": 7.11,
-              "averageHpLeft": 68.44875,
-              "averageDamageTaken": 25.12375,
-              "averageDamageDealt": 432.65875,
+              "averageTurns": 7.1225,
+              "averageHpLeft": 68.535,
+              "averageDamageTaken": 25.03125,
+              "averageDamageDealt": 432.49875,
               "deathCauses": {
-                "首领主体攻击": 25,
+                "首领主体攻击": 24,
                 "血债清算": 15,
-                "回合上限": 3,
+                "回合上限": 4,
                 "敌方荆棘": 1
               },
               "victoryCauses": {
-                "荆棘": 148,
-                "卡牌伤害": 579,
+                "荆棘": 147,
+                "卡牌伤害": 582,
                 "反击": 16,
-                "出血": 7,
-                "血债清偿": 6
+                "出血": 6,
+                "血债清偿": 5
               }
             },
             "boss": {
-              "winRate": 0.94375,
-              "averageTurns": 10.535,
-              "averageHpLeft": 67.7275,
-              "averageDamageTaken": 26.22625,
-              "averageDamageDealt": 688.16875,
+              "winRate": 0.9425,
+              "averageTurns": 10.50625,
+              "averageHpLeft": 68.1725,
+              "averageDamageTaken": 25.7475,
+              "averageDamageDealt": 687.4125,
               "deathCauses": {
-                "首领主体攻击": 24,
+                "首领主体攻击": 25,
                 "回合上限": 5,
                 "血债清算": 16
               },
               "victoryCauses": {
-                "荆棘": 93,
-                "反击": 19,
-                "卡牌伤害": 635,
-                "血债清偿": 4,
-                "出血": 4
+                "荆棘": 94,
+                "反击": 20,
+                "卡牌伤害": 629,
+                "血债清偿": 6,
+                "出血": 5
               }
             }
           }
@@ -643,56 +643,57 @@
           "label": "混合拿牌无核心",
           "checkpoints": {
             "late": {
-              "winRate": 0.93125,
+              "winRate": 0.9325,
               "averageTurns": 4.225,
-              "averageHpLeft": 56.625,
-              "averageDamageTaken": 37.67625,
-              "averageDamageDealt": 286.28375,
+              "averageHpLeft": 56.8025,
+              "averageDamageTaken": 37.48,
+              "averageDamageDealt": 286.31125,
               "deathCauses": {
                 "血债清算": 7,
-                "首领主体攻击": 48
+                "首领主体攻击": 47
               },
               "victoryCauses": {
-                "卡牌伤害": 720,
+                "卡牌伤害": 722,
                 "血债清偿": 4,
-                "出血": 5,
+                "出血": 4,
                 "反击": 8,
                 "荆棘": 8
               }
             },
             "elite": {
-              "winRate": 0.78625,
-              "averageTurns": 6.02875,
-              "averageHpLeft": 41.65125,
-              "averageDamageTaken": 56.76,
-              "averageDamageDealt": 412.52375,
+              "winRate": 0.79,
+              "averageTurns": 6.035,
+              "averageHpLeft": 41.86125,
+              "averageDamageTaken": 56.68375,
+              "averageDamageDealt": 412.89875,
               "deathCauses": {
-                "首领主体攻击": 129,
-                "敌方荆棘": 7,
+                "首领主体攻击": 127,
+                "敌方荆棘": 6,
                 "血债清算": 32,
                 "出血伤害": 3
               },
               "victoryCauses": {
-                "卡牌伤害": 600,
+                "卡牌伤害": 604,
                 "荆棘": 15,
                 "反击": 3,
                 "出血": 4,
-                "血债清偿": 7
+                "血债清偿": 6
               }
             },
             "boss": {
-              "winRate": 0.59375,
-              "averageTurns": 8.62,
-              "averageHpLeft": 34.01375,
-              "averageDamageTaken": 70.68125,
-              "averageDamageDealt": 562.43,
+              "winRate": 0.5925,
+              "averageTurns": 8.6225,
+              "averageHpLeft": 34.14625,
+              "averageDamageTaken": 70.48375,
+              "averageDamageDealt": 562.41,
               "deathCauses": {
-                "首领主体攻击": 263,
-                "血债清算": 60,
-                "回合上限": 2
+                "首领主体攻击": 262,
+                "血债清算": 61,
+                "回合上限": 2,
+                "召唤物攻击": 1
               },
               "victoryCauses": {
-                "卡牌伤害": 456,
+                "卡牌伤害": 455,
                 "荆棘": 14,
                 "血债清偿": 1,
                 "出血": 1,
@@ -706,57 +707,57 @@
           "checkpoints": {
             "late": {
               "winRate": 0.9475,
-              "averageTurns": 3.94,
-              "averageHpLeft": 60.56875,
-              "averageDamageTaken": 33.21375,
-              "averageDamageDealt": 290.64375,
+              "averageTurns": 3.9425,
+              "averageHpLeft": 60.77875,
+              "averageDamageTaken": 32.9925,
+              "averageDamageDealt": 290.73875,
               "deathCauses": {
                 "首领主体攻击": 34,
                 "血债清算": 7,
                 "剧毒伤害": 1
               },
               "victoryCauses": {
-                "卡牌伤害": 740,
-                "反击": 8,
+                "卡牌伤害": 742,
+                "反击": 7,
                 "荆棘": 5,
-                "血债清偿": 4,
+                "血债清偿": 3,
                 "出血": 1
               }
             },
             "elite": {
-              "winRate": 0.83375,
-              "averageTurns": 5.56875,
-              "averageHpLeft": 45.375,
-              "averageDamageTaken": 52.11625,
-              "averageDamageDealt": 416.56375,
+              "winRate": 0.8325,
+              "averageTurns": 5.575,
+              "averageHpLeft": 45.3125,
+              "averageDamageTaken": 52.17625,
+              "averageDamageDealt": 416.6625,
               "deathCauses": {
                 "首领主体攻击": 102,
-                "敌方荆棘": 4,
+                "敌方荆棘": 5,
                 "血债清算": 27
               },
               "victoryCauses": {
-                "卡牌伤害": 630,
+                "卡牌伤害": 631,
                 "荆棘": 20,
                 "出血": 1,
                 "反击": 10,
-                "血债清偿": 6
+                "血债清偿": 4
               }
             },
             "boss": {
-              "winRate": 0.6275,
-              "averageTurns": 8.39375,
-              "averageHpLeft": 35.02125,
-              "averageDamageTaken": 69.00375,
-              "averageDamageDealt": 588.765,
+              "winRate": 0.63375,
+              "averageTurns": 8.41375,
+              "averageHpLeft": 35.29,
+              "averageDamageTaken": 68.73,
+              "averageDamageDealt": 590.2475,
               "deathCauses": {
-                "首领主体攻击": 233,
-                "血债清算": 65
+                "首领主体攻击": 231,
+                "血债清算": 62
               },
               "victoryCauses": {
-                "卡牌伤害": 473,
-                "血债清偿": 4,
+                "卡牌伤害": 480,
                 "反击": 7,
-                "荆棘": 18
+                "荆棘": 18,
+                "血债清偿": 2
               }
             }
           }
@@ -818,53 +819,54 @@
           "label": "纯流派无核心",
           "checkpoints": {
             "late": {
-              "winRate": 0.94125,
-              "averageTurns": 5.29375,
-              "averageHpLeft": 63.05875,
-              "averageDamageTaken": 63.48625,
-              "averageDamageDealt": 280.1575,
+              "winRate": 0.94,
+              "averageTurns": 5.30875,
+              "averageHpLeft": 63.23875,
+              "averageDamageTaken": 63.105,
+              "averageDamageDealt": 280.2425,
               "deathCauses": {
-                "首领主体攻击": 45,
+                "首领主体攻击": 46,
                 "剧毒伤害": 1,
                 "血债清算": 1
               },
               "victoryCauses": {
-                "卡牌伤害": 596,
-                "血债清偿": 112,
-                "出血": 45
+                "卡牌伤害": 587,
+                "血债清偿": 119,
+                "出血": 46
               }
             },
             "elite": {
-              "winRate": 0.86,
-              "averageTurns": 7.625,
-              "averageHpLeft": 56.38,
-              "averageDamageTaken": 94.25125,
-              "averageDamageDealt": 411.4675,
+              "winRate": 0.86375,
+              "averageTurns": 7.68125,
+              "averageHpLeft": 56.78125,
+              "averageDamageTaken": 93.7575,
+              "averageDamageDealt": 411.965,
               "deathCauses": {
-                "首领主体攻击": 107,
-                "敌方荆棘": 3,
-                "出血伤害": 2
+                "出血伤害": 3,
+                "首领主体攻击": 100,
+                "敌方荆棘": 6
               },
               "victoryCauses": {
-                "卡牌伤害": 540,
-                "血债清偿": 100,
-                "出血": 48
+                "卡牌伤害": 551,
+                "血债清偿": 98,
+                "出血": 42
               }
             },
             "boss": {
-              "winRate": 0.73375,
-              "averageTurns": 11.955,
-              "averageHpLeft": 49.56125,
-              "averageDamageTaken": 136.815,
-              "averageDamageDealt": 595.96125,
+              "winRate": 0.7225,
+              "averageTurns": 11.81875,
+              "averageHpLeft": 49.3025,
+              "averageDamageTaken": 134.36625,
+              "averageDamageDealt": 590.8,
               "deathCauses": {
-                "首领主体攻击": 207,
-                "血债清算": 6
+                "首领主体攻击": 212,
+                "召唤物攻击": 3,
+                "血债清算": 7
               },
               "victoryCauses": {
-                "卡牌伤害": 431,
+                "卡牌伤害": 418,
                 "血债清偿": 100,
-                "出血": 56
+                "出血": 60
               }
             }
           }
@@ -874,51 +876,51 @@
           "checkpoints": {
             "late": {
               "winRate": 0.975,
-              "averageTurns": 4.83875,
-              "averageHpLeft": 70.58,
-              "averageDamageTaken": 51.995,
-              "averageDamageDealt": 282.31625,
+              "averageTurns": 4.82875,
+              "averageHpLeft": 71.38125,
+              "averageDamageTaken": 50.9075,
+              "averageDamageDealt": 281.7875,
               "deathCauses": {
                 "首领主体攻击": 20
               },
               "victoryCauses": {
-                "卡牌伤害": 619,
-                "血债清偿": 108,
-                "出血": 53
+                "卡牌伤害": 625,
+                "血债清偿": 106,
+                "出血": 49
               }
             },
             "elite": {
-              "winRate": 0.92875,
-              "averageTurns": 7.1675,
-              "averageHpLeft": 63.68,
-              "averageDamageTaken": 78.91,
-              "averageDamageDealt": 419.89125,
+              "winRate": 0.93375,
+              "averageTurns": 7.165,
+              "averageHpLeft": 63.76125,
+              "averageDamageTaken": 78.215,
+              "averageDamageDealt": 420.64125,
               "deathCauses": {
-                "首领主体攻击": 45,
-                "敌方荆棘": 10,
-                "出血伤害": 2
+                "首领主体攻击": 43,
+                "敌方荆棘": 9,
+                "出血伤害": 1
               },
               "victoryCauses": {
                 "卡牌伤害": 590,
                 "出血": 51,
-                "血债清偿": 102
+                "血债清偿": 106
               }
             },
             "boss": {
-              "winRate": 0.8225,
-              "averageTurns": 11.3575,
-              "averageHpLeft": 58.56375,
-              "averageDamageTaken": 115.84125,
-              "averageDamageDealt": 621.72125,
+              "winRate": 0.835,
+              "averageTurns": 11.42375,
+              "averageHpLeft": 59.00125,
+              "averageDamageTaken": 114.08875,
+              "averageDamageDealt": 624.085,
               "deathCauses": {
-                "首领主体攻击": 137,
-                "召唤物攻击": 3,
+                "首领主体攻击": 129,
+                "召唤物攻击": 1,
                 "血债清算": 2
               },
               "victoryCauses": {
                 "卡牌伤害": 497,
-                "血债清偿": 89,
-                "出血": 72
+                "血债清偿": 100,
+                "出血": 71
               }
             }
           }
@@ -928,49 +930,49 @@
           "checkpoints": {
             "late": {
               "winRate": 0.9875,
-              "averageTurns": 4.76375,
+              "averageTurns": 4.755,
               "averageHpLeft": 74.4925,
-              "averageDamageTaken": 48.145,
-              "averageDamageDealt": 280.64625,
+              "averageDamageTaken": 47.70875,
+              "averageDamageDealt": 280.32625,
               "deathCauses": {
                 "首领主体攻击": 10
               },
               "victoryCauses": {
-                "卡牌伤害": 617,
-                "血债清偿": 112,
-                "出血": 61
+                "卡牌伤害": 622,
+                "血债清偿": 115,
+                "出血": 53
               }
             },
             "elite": {
-              "winRate": 0.96875,
-              "averageTurns": 7.0975,
-              "averageHpLeft": 68.4775,
-              "averageDamageTaken": 77.76125,
-              "averageDamageDealt": 421.54,
+              "winRate": 0.97,
+              "averageTurns": 7.12625,
+              "averageHpLeft": 68.57875,
+              "averageDamageTaken": 76.915,
+              "averageDamageDealt": 421.5425,
               "deathCauses": {
-                "首领主体攻击": 24,
-                "敌方荆棘": 1
+                "首领主体攻击": 23,
+                "血债清算": 1
               },
               "victoryCauses": {
-                "卡牌伤害": 607,
-                "出血": 74,
-                "血债清偿": 94
+                "卡牌伤害": 605,
+                "血债清偿": 103,
+                "出血": 68
               }
             },
             "boss": {
-              "winRate": 0.91125,
-              "averageTurns": 11.58125,
-              "averageHpLeft": 66.88375,
-              "averageDamageTaken": 114.49375,
-              "averageDamageDealt": 643.7025,
+              "winRate": 0.90625,
+              "averageTurns": 11.61625,
+              "averageHpLeft": 65.49,
+              "averageDamageTaken": 114.265,
+              "averageDamageDealt": 643.70875,
               "deathCauses": {
-                "首领主体攻击": 69,
-                "召唤物攻击": 2
+                "首领主体攻击": 74,
+                "召唤物攻击": 1
               },
               "victoryCauses": {
                 "卡牌伤害": 548,
-                "血债清偿": 96,
-                "出血": 85
+                "出血": 89,
+                "血债清偿": 88
               }
             }
           }
@@ -979,50 +981,49 @@
           "label": "只有核心无遗物",
           "checkpoints": {
             "late": {
-              "winRate": 0.97875,
-              "averageTurns": 5.35875,
-              "averageHpLeft": 73.2375,
-              "averageDamageTaken": 63.42625,
-              "averageDamageDealt": 280.4375,
+              "winRate": 0.9775,
+              "averageTurns": 5.34,
+              "averageHpLeft": 72.8475,
+              "averageDamageTaken": 63.60875,
+              "averageDamageDealt": 280.285,
               "deathCauses": {
-                "首领主体攻击": 17
+                "首领主体攻击": 18
               },
               "victoryCauses": {
-                "卡牌伤害": 643,
-                "血债清偿": 93,
-                "出血": 47
-              }
-            },
-            "elite": {
-              "winRate": 0.92625,
-              "averageTurns": 7.90375,
-              "averageHpLeft": 64.45875,
-              "averageDamageTaken": 101.74125,
-              "averageDamageDealt": 418.3775,
-              "deathCauses": {
-                "首领主体攻击": 55,
-                "敌方荆棘": 4
-              },
-              "victoryCauses": {
-                "卡牌伤害": 590,
-                "血债清偿": 103,
+                "卡牌伤害": 651,
+                "血债清偿": 83,
                 "出血": 48
               }
             },
-            "boss": {
-              "winRate": 0.825,
-              "averageTurns": 12.53875,
-              "averageHpLeft": 60.46,
-              "averageDamageTaken": 145.04375,
-              "averageDamageDealt": 614.5475,
+            "elite": {
+              "winRate": 0.93125,
+              "averageTurns": 7.8825,
+              "averageHpLeft": 64.68125,
+              "averageDamageTaken": 100.92375,
+              "averageDamageDealt": 418.15,
               "deathCauses": {
-                "首领主体攻击": 139,
-                "召唤物攻击": 1
+                "首领主体攻击": 49,
+                "敌方荆棘": 6
               },
               "victoryCauses": {
-                "卡牌伤害": 519,
-                "血债清偿": 73,
-                "出血": 68
+                "卡牌伤害": 588,
+                "出血": 52,
+                "血债清偿": 105
+              }
+            },
+            "boss": {
+              "winRate": 0.8325,
+              "averageTurns": 12.5425,
+              "averageHpLeft": 61.79375,
+              "averageDamageTaken": 143.12625,
+              "averageDamageDealt": 616.3525,
+              "deathCauses": {
+                "首领主体攻击": 134
+              },
+              "victoryCauses": {
+                "卡牌伤害": 521,
+                "血债清偿": 78,
+                "出血": 67
               }
             }
           }
@@ -1032,61 +1033,61 @@
           "checkpoints": {
             "late": {
               "winRate": 0.9325,
-              "averageTurns": 5.4375,
-              "averageHpLeft": 65.9725,
-              "averageDamageTaken": 48.76875,
-              "averageDamageDealt": 282.33375,
+              "averageTurns": 5.46875,
+              "averageHpLeft": 65.7675,
+              "averageDamageTaken": 48.42875,
+              "averageDamageDealt": 282.4725,
               "deathCauses": {
                 "首领主体攻击": 49,
                 "血债清算": 5
               },
               "victoryCauses": {
-                "卡牌伤害": 622,
-                "出血": 41,
-                "反击": 7,
-                "血债清偿": 63,
-                "荆棘": 13
+                "卡牌伤害": 612,
+                "出血": 34,
+                "血债清偿": 75,
+                "反击": 9,
+                "荆棘": 16
               }
             },
             "elite": {
-              "winRate": 0.87875,
-              "averageTurns": 7.68875,
-              "averageHpLeft": 58.21875,
-              "averageDamageTaken": 70.45625,
-              "averageDamageDealt": 410.31125,
+              "winRate": 0.8775,
+              "averageTurns": 7.695,
+              "averageHpLeft": 58.88375,
+              "averageDamageTaken": 69.78375,
+              "averageDamageDealt": 409.95,
               "deathCauses": {
                 "首领主体攻击": 89,
                 "回合上限": 1,
+                "出血伤害": 2,
                 "血债清算": 2,
-                "敌方荆棘": 3,
-                "出血伤害": 2
+                "敌方荆棘": 4
               },
               "victoryCauses": {
-                "卡牌伤害": 573,
+                "卡牌伤害": 571,
                 "血债清偿": 70,
-                "出血": 25,
+                "出血": 26,
                 "荆棘": 30,
                 "反击": 5
               }
             },
             "boss": {
-              "winRate": 0.74875,
-              "averageTurns": 12.40375,
-              "averageHpLeft": 51.43375,
-              "averageDamageTaken": 99.36625,
-              "averageDamageDealt": 598.15375,
+              "winRate": 0.76,
+              "averageTurns": 12.50625,
+              "averageHpLeft": 51.97125,
+              "averageDamageTaken": 98.64875,
+              "averageDamageDealt": 601.8725,
               "deathCauses": {
-                "首领主体攻击": 186,
-                "血债清算": 11,
-                "回合上限": 3,
+                "首领主体攻击": 175,
+                "血债清算": 12,
+                "回合上限": 4,
                 "召唤物攻击": 1
               },
               "victoryCauses": {
-                "血债清偿": 60,
-                "卡牌伤害": 470,
-                "荆棘": 17,
-                "出血": 48,
-                "反击": 4
+                "卡牌伤害": 477,
+                "荆棘": 15,
+                "出血": 51,
+                "血债清偿": 58,
+                "反击": 7
               }
             }
           }
@@ -1095,61 +1096,61 @@
           "label": "混合拿牌单遗物",
           "checkpoints": {
             "late": {
-              "winRate": 0.96875,
-              "averageTurns": 5.08125,
-              "averageHpLeft": 70.32125,
-              "averageDamageTaken": 39.84625,
-              "averageDamageDealt": 282.7975,
+              "winRate": 0.97,
+              "averageTurns": 5.0875,
+              "averageHpLeft": 70.85,
+              "averageDamageTaken": 39.19125,
+              "averageDamageDealt": 282.73,
               "deathCauses": {
-                "首领主体攻击": 21,
+                "首领主体攻击": 20,
                 "剧毒伤害": 2,
                 "血债清算": 2
               },
               "victoryCauses": {
-                "出血": 40,
-                "卡牌伤害": 642,
-                "荆棘": 14,
-                "血债清偿": 74,
+                "卡牌伤害": 643,
+                "荆棘": 17,
+                "出血": 46,
+                "血债清偿": 65,
                 "反击": 5
               }
             },
             "elite": {
-              "winRate": 0.9175,
-              "averageTurns": 7.495,
-              "averageHpLeft": 60.465,
-              "averageDamageTaken": 64.17,
-              "averageDamageDealt": 418.905,
+              "winRate": 0.91125,
+              "averageTurns": 7.4625,
+              "averageHpLeft": 60.395,
+              "averageDamageTaken": 63.50125,
+              "averageDamageDealt": 417.9675,
               "deathCauses": {
-                "首领主体攻击": 54,
-                "敌方荆棘": 6,
-                "血债清算": 6
+                "首领主体攻击": 56,
+                "敌方荆棘": 8,
+                "血债清算": 7
               },
               "victoryCauses": {
-                "卡牌伤害": 584,
-                "血债清偿": 67,
-                "荆棘": 23,
-                "出血": 55,
-                "反击": 5
+                "卡牌伤害": 578,
+                "荆棘": 26,
+                "出血": 49,
+                "血债清偿": 70,
+                "反击": 6
               }
             },
             "boss": {
-              "winRate": 0.8125,
-              "averageTurns": 12.03875,
-              "averageHpLeft": 56.58625,
-              "averageDamageTaken": 84.99375,
-              "averageDamageDealt": 621.08,
+              "winRate": 0.81625,
+              "averageTurns": 12.0725,
+              "averageHpLeft": 57.165,
+              "averageDamageTaken": 84.54875,
+              "averageDamageDealt": 622.56875,
               "deathCauses": {
-                "首领主体攻击": 137,
-                "血债清算": 7,
-                "回合上限": 5,
+                "首领主体攻击": 138,
+                "血债清算": 5,
+                "回合上限": 3,
                 "召唤物攻击": 1
               },
               "victoryCauses": {
-                "卡牌伤害": 514,
-                "血债清偿": 44,
-                "荆棘": 24,
-                "出血": 66,
-                "反击": 2
+                "卡牌伤害": 512,
+                "荆棘": 28,
+                "出血": 55,
+                "血债清偿": 55,
+                "反击": 3
               }
             }
           }
@@ -1158,49 +1159,50 @@
           "label": "完整成熟",
           "checkpoints": {
             "late": {
-              "winRate": 0.99625,
-              "averageTurns": 5.00625,
-              "averageHpLeft": 78.26625,
-              "averageDamageTaken": 53.69625,
-              "averageDamageDealt": 284.53375,
+              "winRate": 0.995,
+              "averageTurns": 4.99,
+              "averageHpLeft": 77.82,
+              "averageDamageTaken": 52.91875,
+              "averageDamageDealt": 284.17125,
               "deathCauses": {
-                "首领主体攻击": 3
+                "首领主体攻击": 4
               },
               "victoryCauses": {
                 "卡牌伤害": 661,
-                "出血": 49,
-                "血债清偿": 87
+                "血债清偿": 90,
+                "出血": 45
               }
             },
             "elite": {
-              "winRate": 0.975,
-              "averageTurns": 7.39875,
-              "averageHpLeft": 72.25125,
-              "averageDamageTaken": 86.395,
-              "averageDamageDealt": 420.53375,
+              "winRate": 0.97875,
+              "averageTurns": 7.3625,
+              "averageHpLeft": 72.74375,
+              "averageDamageTaken": 84.20375,
+              "averageDamageDealt": 420.8425,
               "deathCauses": {
-                "首领主体攻击": 18,
-                "敌方荆棘": 2
+                "首领主体攻击": 16,
+                "敌方荆棘": 1
               },
               "victoryCauses": {
-                "卡牌伤害": 634,
-                "血债清偿": 88,
-                "出血": 58
+                "卡牌伤害": 642,
+                "血债清偿": 77,
+                "出血": 64
               }
             },
             "boss": {
-              "winRate": 0.9575,
-              "averageTurns": 12.33375,
-              "averageHpLeft": 73.8725,
-              "averageDamageTaken": 131.555,
-              "averageDamageDealt": 654.8525,
+              "winRate": 0.95875,
+              "averageTurns": 12.235,
+              "averageHpLeft": 73.79375,
+              "averageDamageTaken": 128.105,
+              "averageDamageDealt": 653.39625,
               "deathCauses": {
-                "首领主体攻击": 34
+                "首领主体攻击": 32,
+                "血债清算": 1
               },
               "victoryCauses": {
-                "出血": 92,
-                "血债清偿": 74,
-                "卡牌伤害": 600
+                "出血": 85,
+                "血债清偿": 80,
+                "卡牌伤害": 602
               }
             }
           }

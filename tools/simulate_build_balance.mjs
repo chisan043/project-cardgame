@@ -689,9 +689,14 @@ function estimateCard(state, card, incoming, move) {
         score -= unsafeDebt * 3;
         if (state.hp <= 12) score -= card.bloodDebtGain * 1.5;
     }
-    if (card.bloodDebtRepay) score += Math.min(state.bloodDebt, card.bloodDebtRepay) * 2.2;
+    if (card.bloodDebtRepay) {
+        const repaidDebt = Math.min(state.bloodDebt, card.bloodDebtRepay);
+        score += repaidDebt * 2.2;
+        if (repaidDebt > 0 && card.bloodDebtDrawOnRepay) score += card.bloodDebtDrawOnRepay * 5;
+        if (repaidDebt > 0 && card.bloodDebtClearDamage && state.bloodDebt <= card.bloodDebtRepay) score += card.bloodDebtClearDamage * 0.8;
+    }
     if (card.bloodDebtRepayFromBleed) score += Math.min(state.bloodDebt, state.enemy.bleed * 3 * card.bloodDebtRepayFromBleed) * 1.5;
-    if (card.bloodDebtClearDamage && state.bloodDebt > 0) score += card.bloodDebtClearDamage * 0.5;
+    if (card.bloodDebtClearDamage && state.bloodDebt > 0 && (!card.bloodDebtRepay || state.bloodDebt > card.bloodDebtRepay)) score += card.bloodDebtClearDamage * 0.5;
     if (card.bloodDebtBleed) score += card.bloodDebtBleed * 1.6;
     if (card.bloodDebtWeak) score += incoming > 0 ? card.bloodDebtWeak * 4 : card.bloodDebtWeak * 2;
     if (card.bloodDebtStun) score += 13 * card.bloodDebtStun;

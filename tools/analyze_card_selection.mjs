@@ -115,6 +115,14 @@ function generateChoices(data, rng, roleId, buildId) {
     return result;
 }
 
+function deckBloodDebtSupply(deck) {
+    return deck.reduce((sum, card) => {
+        let supply = Number(card.bloodDebtGain) || 0;
+        if ((card.tags || []).includes('血债') && card.bloodDebtDamageRatio && !card.bloodDebtRepay) supply += 2;
+        return sum + supply;
+    }, 0);
+}
+
 function cardDraftScore(data, roleId, card, build, deck, rng) {
     const tags = card.tags || [];
     const buildTags = cardBuildTags(data, roleId, card);
@@ -123,6 +131,13 @@ function cardDraftScore(data, roleId, card, build, deck, rng) {
     const cost = Number(card.cost) || 0;
     const directEffects = Object.keys(card.directEffects || {}).length;
     const sameCardCopies = deck.filter(owned => cardId(owned) === cardId(card)).length;
+    const debtSupply = deckBloodDebtSupply(deck);
+    const debtSupportRatio = Math.min(1, debtSupply / 8);
+    const pureRepaySupport = card.bloodDebtRepay
+        && !card.bloodDebtGain
+        && !card.bloodDebtDamageRatio
+        && !card.bloodDebtRepayFromBleed
+        && card.type !== '攻击';
     let score = scaledValue / Math.max(1, cost) + directEffects * 2.5 + triggerHits * 4;
     if (buildTags.includes(build.id)) score += 7;
     if (card.type === '防御') score += 2;
@@ -139,14 +154,15 @@ function cardDraftScore(data, roleId, card, build, deck, rng) {
     if (card.energySink) score += 4;
     if (card.bloodDebtGain) score += card.bloodDebtGain * 0.8;
     if (card.bloodDebtDamageRatio) score += card.bloodDebtDamageRatio * 6;
-    if (card.bloodDebtRepay) score += card.bloodDebtRepay * 1.2;
+    if (card.bloodDebtRepay) score += card.bloodDebtRepay * (pureRepaySupport ? 0.65 : 1.2) * debtSupportRatio;
     if (card.bloodDebtRepayFromBleed) score += card.bloodDebtRepayFromBleed * 6;
     if (card.bloodDebtBleed) score += card.bloodDebtBleed * 1.2;
     if (card.bloodDebtWeak) score += card.bloodDebtWeak * 3;
     if (card.bloodDebtStun) score += card.bloodDebtStun * 8;
-    if (card.bloodDebtClearDamage) score += card.bloodDebtClearDamage * 0.5;
-    if (card.bloodDebtClearHeal) score += card.bloodDebtClearHeal * 0.6;
-    if (card.bloodDebtDrawOnRepay) score += card.bloodDebtDrawOnRepay * 3;
+    if (card.bloodDebtClearDamage) score += card.bloodDebtClearDamage * 0.5 * debtSupportRatio;
+    if (card.bloodDebtClearHeal) score += card.bloodDebtClearHeal * 0.6 * debtSupportRatio;
+    if (card.bloodDebtDrawOnRepay) score += card.bloodDebtDrawOnRepay * 3 * debtSupportRatio;
+    if (pureRepaySupport && debtSupply < 5) score -= 5;
     score += RARITY_BONUS[card.rarity] || 0;
     score -= sameCardCopies * 7;
     score -= Math.max(0, cost - 2) * 1.5;
