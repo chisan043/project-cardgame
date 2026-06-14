@@ -1,0 +1,19 @@
+type,severity,subject,detail,metric,value,threshold
+通关率,high,普通难度熟练玩家,通关率不在 50%-75% 目标区间,clearRate,0,0.5-0.75
+废卡,medium,灰烬路标,出现后很少被选，抽到后也很少打出,choice/use,0.0%/0.0%,8%/18%
+废卡,medium,星轨流转,出现后很少被选，抽到后也很少打出,choice/use,2.8%/0.0%,8%/18%
+废卡,medium,猩红喘息,出现后很少被选，抽到后也很少打出,choice/use,4.8%/0.0%,8%/18%
+废卡,medium,断腕缴械,出现后很少被选，抽到后也很少打出,choice/use,0.0%/0.0%,8%/18%
+废卡,medium,星火连祷,出现后很少被选，抽到后也很少打出,choice/use,0.0%/0.0%,8%/18%
+敌人负反馈,medium,【深渊主宰】,高损血或速死反馈偏多,negativeFeedbackRate,1,0.35
+敌人负反馈,medium,【首领】鬼面修罗,高损血或速死反馈偏多,negativeFeedbackRate,1,0.35
+敌人负反馈,medium,巨力石魔,高损血或速死反馈偏多,negativeFeedbackRate,1,0.35
+过难敌人,high,【精英】不死骨龙,遭遇死亡率过高,deathRate,0.8969957081545065,0.45
+敌人负反馈,medium,【精英】不死骨龙,高损血或速死反馈偏多,negativeFeedbackRate,0.8927038626609443,0.35
+过难敌人,high,【精英】狂暴牛头人,遭遇死亡率过高,deathRate,0.8104265402843602,0.45
+敌人负反馈,medium,【精英】狂暴牛头人,高损血或速死反馈偏多,negativeFeedbackRate,0.8104265402843602,0.35
+敌人负反馈,medium,堕落剑客,高损血或速死反馈偏多,negativeFeedbackRate,0.4,0.35
+死亡热区,high,第7层,楼层死亡率过高,deathRate,0.819672131147541,0.22
+死亡热区,high,第14层,楼层死亡率过高,deathRate,0.7272727272727273,0.22
+单局过长,medium,战斗回合,存在超长战斗，需要排查无解防御或输出不足,maxBattleTurns,31,18
+无限回血风险,medium,回血链,单场回血量相对最大生命过高,maxHealingToHpRatio,4.152777777777778,2.2
