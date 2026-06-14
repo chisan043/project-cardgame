@@ -494,7 +494,7 @@ const BUILD_EXPANSION_CARDS = {
         { poolId: 'warrior_silent_lunge', name: '默步突刺', type: '攻击', cost: 1, icon: '🤫', val: 10, tags: ['穿甲', '眩晕'], buildTags: ['execution'], rarity: '稀有', frameTheme: 'warrior', desc: '造成 10 点[穿甲]伤害并[眩晕]，用一拍停顿换下一回合的斩杀空间。' },
         { poolId: 'warrior_scaffold_cut', name: '刑架削锋', type: '攻击', cost: 2, icon: '⛓️', val: 12, tags: ['重击', '虚弱'], buildTags: ['execution', 'bloodoath'], rarity: '稀有', frameTheme: 'warrior', desc: '不依赖护盾，靠[重击]制造伤害，同时用[虚弱]压低失败后的风险。' },
         { poolId: 'warrior_final_measure', name: '终裁量尺', type: '攻击', cost: 2, icon: '📏', val: 17, tags: ['穿甲', '重击'], buildTags: ['execution'], rarity: '史诗', frameTheme: 'warrior', desc: '稳定造成 17 点[穿甲][重击]伤害，适合在易伤窗口已经打开后直接下判。' },
-        { poolId: 'warrior_crimson_pause', name: '猩红喘息', type: '能力', cost: 0, icon: '🫀', val: 0, tags: ['血债', '保留'], bloodDebtRepay: 8, bloodDebtDrawOnRepay: 1, bloodDebtClearDamage: 8, buildTags: ['bloodoath'], rarity: '普通', frameTheme: 'warrior', desc: '免费偿还 8 点血债；若成功偿债，抽 1 张牌；若清偿血债，追加 8 点穿甲伤害。打出后下回合回到手牌。' }
+        { poolId: 'warrior_crimson_pause', name: '猩红喘息', type: '能力', cost: 0, icon: '🫀', val: 0, tags: ['血债'], directEffects: { retain: true }, preserveDirectEffects: true, bloodDebtRepay: 8, bloodDebtDrawOnRepay: 1, bloodDebtClearDamage: 8, buildTags: ['bloodoath'], rarity: '普通', frameTheme: 'warrior', desc: '免费偿还 8 点血债；若成功偿债，抽 1 张牌；若清偿血债，追加 8 点穿甲伤害。打出后下回合回到手牌。' }
     ],
     hero_mage: [
         { poolId: 'mage_star_precharge', name: '星核预充', type: '能力', cost: 1, icon: '🔮', val: 0, tags: ['咏唱', '充能', '庇护'], buildTags: ['chant'], rarity: '普通', frameTheme: 'mage', desc: '积累[咏唱]、[充能]并获得[庇护]，完成一次安全的等能量预备。' },
