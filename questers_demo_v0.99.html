@@ -6839,13 +6839,8 @@
                 const shots = Math.min(3, state.p_aim);
                 state.p_aim -= shots;
                 triggerVFX('p-atk');
-                applySpecialCardDamage(card, 18 + state.p_battle_dmg + shots * 10, true);
+                applySpecialCardDamage(card, 14 + state.p_battle_dmg + shots * 6, true);
                 state.p_reduce_dmg += shots;
-                if (state.enemy.currentHp > 0 && shots > 0) {
-                    const galeMomentum = Math.min(2, shots);
-                    state.p_battle_dmg += galeMomentum;
-                    showFloatText(`疾风续势 +${galeMomentum}`, "var(--nature)", getCenter('ui-hp'));
-                }
                 showFloatText(`裁决风势 ${shots}`, "var(--nature)", getCenter('enemy-avatar'));
             }
             else if (card.specialId === 'a_red_rain') {

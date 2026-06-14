@@ -642,7 +642,7 @@ function estimateCard(state, card, incoming, move) {
             m_mirror_hallway: 30,
             m_status_supernova: 52 + enemyDebuffCount(state) * 18,
             s_energy: 32 + state.aim * 3,
-            a_gale_verdict: 18 + Math.min(3, state.aim) * 8,
+            a_gale_verdict: 14 + Math.min(3, state.aim) * 6,
             s_poison: (state.enemy.poison + state.enemy.bleed) * 2.5 + 28,
             s_exhaust: (state.exhaust.length + 1) * 20 + (state.exhaust.length ? 14 : 0)
         };
@@ -901,9 +901,8 @@ function executeSpecialCard(state, card, echo = false) {
         if (card.type === '攻击') payBloodDebtAttackCost(state);
         const shots = Math.min(3, state.aim);
         state.aim -= shots;
-        hitEnemy(state, 18 + state.battleDamage + shots * 10, true);
+        hitEnemy(state, 14 + state.battleDamage + shots * 6, true);
         state.protection += shots;
-        if (state.enemy.hp > 0 && shots > 0) state.battleDamage += Math.min(2, shots);
     } else if (specialId === 's_energy') {
         const hadWind = state.aim > 0;
         state.aim = Math.min(6, state.aim + 3 + (hasRelic(state, 'r_wind_quiver') ? 1 : 0));
