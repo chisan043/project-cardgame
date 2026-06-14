@@ -2236,7 +2236,7 @@
 
 <script src="hud-runtime.js?v=20260518-forced-default-hud1"></script>
 <script src="hud-layout-data.js?v=20260518-forced-default-hud1"></script>
-<script src="src/data/relics.js?v=20260614-elite-boss-relics"></script>
+<script src="src/data/relics.js?v=20260614-mirror-hallway"></script>
 <script src="src/data/card-tags.js?v=20260612-tag-simplify"></script>
 <script src="src/data/cards.js?v=20260612-tag-simplify"></script>
 <script src="src/data/enemies.js?v=20260605-enemy-ai"></script>
@@ -6567,6 +6567,11 @@
                     state.p_chant = Math.min(12, state.p_chant + 3);
                     await drawCards(2);
                 }
+            }
+            else if (card.specialId === 'm_mirror_hallway') {
+                state.p_next_dmg += 6;
+                if (!isEcho) await drawCards(1);
+                showFloatText(isEcho ? "折廊回声 / 附魔 +6" : "折廊导流 / 抽牌 +1 / 附魔 +6", "var(--purple)", getCenter('ui-hp'));
             }
             else if (card.specialId === 'm_ember_orbit') {
                 const hadDebuff = getEnemyDebuffTypeCount() > 0;

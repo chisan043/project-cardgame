@@ -633,6 +633,7 @@ function estimateCard(state, card, incoming, move) {
             a_syn_magic: 24,
             m_forbidden_comet: 48 + state.chant * 22,
             m_echo_archive: state.lastCard ? 32 : 12,
+            m_mirror_hallway: 30,
             m_status_supernova: 40 + enemyDebuffCount(state) * 15,
             s_energy: 32 + state.aim * 3,
             a_gale_verdict: 18 + Math.min(3, state.aim) * 8,
@@ -792,7 +793,7 @@ function discardPlayedCard(state, card) {
     }
 }
 
-function executeSpecialCard(state, card) {
+function executeSpecialCard(state, card, echo = false) {
     const specialId = card.specialId || card.id;
     if (specialId === 'w_counter_crown') {
         if (card.type === '攻击') payBloodDebtAttackCost(state);
@@ -886,6 +887,9 @@ function executeSpecialCard(state, card) {
             state.chant = Math.min(12, state.chant + 3);
             draw(state, 2);
         }
+    } else if (specialId === 'm_mirror_hallway') {
+        state.nextDamage += 6;
+        if (!echo) draw(state, 1);
     } else if (specialId === 'm_status_supernova') {
         const debuffs = enemyDebuffCount(state);
         hitEnemy(state, 40 + state.battleDamage + debuffs * 12);
@@ -926,7 +930,7 @@ function executeSpecialCard(state, card) {
 
 function executeCard(state, card, echo = false) {
     const tags = card.tags || [];
-    if (card.isSpecial && executeSpecialCard(state, card)) return;
+    if (card.isSpecial && executeSpecialCard(state, card, echo)) return;
     let cycleReturned = false;
     let resetCount = 0;
     let paidDiscardCost = false;
