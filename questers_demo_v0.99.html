@@ -789,8 +789,8 @@
             position:absolute;
             left:var(--shield-hit-x, 50%);
             top:var(--shield-hit-y, 45%);
-            width:var(--shield-hit-size, 280px);
-            height:var(--shield-hit-size, 280px);
+            width:var(--shield-hit-width, var(--shield-hit-size, 420px));
+            height:var(--shield-hit-height, var(--shield-hit-size, 560px));
             object-fit:contain;
             opacity:0;
             pointer-events:none;
@@ -801,10 +801,11 @@
             animation:shieldHitVfxAnim var(--shield-hit-duration, 460ms) ease-out both;
         }
         @keyframes shieldHitVfxAnim {
-            0% { opacity:0; transform:translate(-50%, -50%) scale(0.48) rotate(-7deg); }
-            13% { opacity:1; transform:translate(-50%, -50%) scale(0.82) rotate(-2deg); }
-            55% { opacity:1; transform:translate(-50%, -50%) scale(1.06) rotate(2deg); }
-            100% { opacity:0; transform:translate(-50%, -50%) scale(1.28) rotate(6deg); }
+            0% { opacity:0; transform:translate(-50%, -50%) scale(0.86); }
+            10% { opacity:1; transform:translate(-50%, -50%) scale(0.98); }
+            42% { opacity:1; transform:translate(-50%, -50%) scale(1.04); }
+            70% { opacity:0.82; transform:translate(-50%, -50%) scale(1.01); }
+            100% { opacity:0; transform:translate(-50%, -50%) scale(1.1); }
         }
         .vfx-e-atk { position:fixed; justify-content:flex-start; align-items:flex-start; overflow:visible; }
         .enemy-attack-vfx {
@@ -2033,7 +2034,7 @@
 <div id="vfx-p-atk" class="vfx-layer vfx-p-atk"><img id="player-attack-vfx-img" class="player-attack-vfx-img" alt=""></div>
 <div id="vfx-p-buff" class="vfx-layer vfx-p-buff"><img id="player-buff-vfx-img" class="player-buff-vfx-img" alt=""></div>
 <div id="vfx-p-def" class="vfx-layer vfx-p-def"><div class="shield-aura"></div></div>
-<div id="vfx-shield-hit" class="vfx-layer vfx-shield-hit"><img id="shield-hit-vfx-img" class="shield-hit-vfx-img" src="assets/vfx/player_defense/shield_hit_arc_v2.webp" alt=""></div>
+<div id="vfx-shield-hit" class="vfx-layer vfx-shield-hit"><img id="shield-hit-vfx-img" class="shield-hit-vfx-img" src="assets/vfx/player_defense/shield_hit_body_01_v1.webp" alt=""></div>
 <div id="vfx-e-atk" class="vfx-layer vfx-e-atk"><div class="enemy-attack-vfx enemy-asset-vfx"><img id="enemy-attack-vfx-img" class="enemy-attack-vfx-img" alt=""></div></div>
 <div id="vfx-e-def" class="vfx-layer vfx-e-def"><div class="shield-flash"></div></div>
 
@@ -5688,6 +5689,15 @@
         }, visibleDuration);
     }
 
+    const PLAYER_SHIELD_HIT_VFX_FRAMES = [
+        { src: 'assets/vfx/player_defense/shield_hit_body_01_v1.webp', duration: 35 },
+        { src: 'assets/vfx/player_defense/shield_hit_body_02_v1.webp', duration: 45 },
+        { src: 'assets/vfx/player_defense/shield_hit_body_03_v1.webp', duration: 55 },
+        { src: 'assets/vfx/player_defense/shield_hit_body_04_v1.webp', duration: 65 },
+        { src: 'assets/vfx/player_defense/shield_hit_body_05_v1.webp', duration: 70 },
+        { src: 'assets/vfx/player_defense/shield_hit_body_06_v1.webp', duration: 85 }
+    ];
+
     function triggerShieldHitVFX(absorbed = 0) {
         const vfx = document.getElementById('vfx-shield-hit');
         const image = document.getElementById('shield-hit-vfx-img');
@@ -5695,26 +5705,39 @@
 
         const playerRect = document.getElementById('player-avatar-img')?.getBoundingClientRect()
             || document.querySelector('.player-avatar-frame')?.getBoundingClientRect();
-        const impactX = playerRect ? playerRect.left + playerRect.width * 0.58 : window.innerWidth * 0.36;
-        const impactY = playerRect ? playerRect.top + playerRect.height * 0.46 : window.innerHeight * 0.52;
-        const size = Math.max(250, Math.min(340, 270 + Math.max(0, absorbed) * 4));
+        const impactX = playerRect ? playerRect.left + playerRect.width * 0.52 : window.innerWidth * 0.34;
+        const impactY = playerRect ? playerRect.top + playerRect.height * 0.47 : window.innerHeight * 0.52;
+        const width = Math.max(430, Math.min(535, 430 + Math.max(0, absorbed) * 5));
+        const height = Math.round(width * 1.34);
+        const totalDuration = PLAYER_SHIELD_HIT_VFX_FRAMES.reduce((sum, frame) => sum + frame.duration, 0);
         const vfxToken = (vfx.animationToken || 0) + 1;
         vfx.animationToken = vfxToken;
 
         vfx.style.display = 'flex';
         image.style.setProperty('--shield-hit-x', `${impactX}px`);
         image.style.setProperty('--shield-hit-y', `${impactY}px`);
-        image.style.setProperty('--shield-hit-size', `${size}px`);
+        image.style.setProperty('--shield-hit-width', `${width}px`);
+        image.style.setProperty('--shield-hit-height', `${height}px`);
+        image.style.setProperty('--shield-hit-duration', `${totalDuration}ms`);
         image.style.animation = 'none';
+        image.src = PLAYER_SHIELD_HIT_VFX_FRAMES[0].src;
         void image.offsetWidth;
         image.style.animation = '';
+
+        let elapsed = PLAYER_SHIELD_HIT_VFX_FRAMES[0].duration;
+        PLAYER_SHIELD_HIT_VFX_FRAMES.slice(1).forEach(frame => {
+            setTimeout(() => {
+                if (vfx.animationToken === vfxToken) image.src = frame.src;
+            }, elapsed);
+            elapsed += frame.duration;
+        });
 
         setTimeout(() => {
             if (vfx.animationToken === vfxToken) {
                 vfx.style.display = 'none';
                 image.style.animation = 'none';
             }
-        }, 500);
+        }, totalDuration + 80);
     }
 
     function replayClassAnimation(element, className, duration = 420) {
