@@ -738,6 +738,31 @@
             filter:drop-shadow(0 0 16px rgba(218,241,112,0.74));
             animation:playerProjectileVfx var(--player-vfx-duration, 340ms) linear both;
         }
+        .vfx-p-buff { position:fixed; display:none; align-items:initial; justify-content:initial; overflow:visible; }
+        .player-buff-vfx-img {
+            position:absolute;
+            left:var(--player-buff-vfx-x, 50%);
+            top:var(--player-buff-vfx-y, 45%);
+            width:var(--player-buff-vfx-width, 390px);
+            height:var(--player-buff-vfx-height, 520px);
+            object-fit:contain;
+            opacity:0;
+            pointer-events:none;
+            mix-blend-mode:screen;
+            transform-origin:center;
+            will-change:transform, opacity;
+            animation:playerBuffVfx var(--player-buff-vfx-duration, 380ms) ease-out both;
+        }
+        .vfx-p-buff.vfx-buff-warrior-shield .player-buff-vfx-img {
+            filter:drop-shadow(0 0 24px rgba(94,205,255,0.9)) drop-shadow(0 0 14px rgba(255,221,91,0.7)) saturate(1.16) brightness(1.12);
+        }
+        .vfx-p-buff.vfx-buff-mage-chant .player-buff-vfx-img {
+            filter:drop-shadow(0 0 24px rgba(183,96,255,0.9)) drop-shadow(0 0 14px rgba(82,220,255,0.58)) saturate(1.18) brightness(1.1);
+        }
+        .vfx-p-buff.vfx-buff-archer-wind .player-buff-vfx-img,
+        .vfx-p-buff.vfx-buff-archer-dodge .player-buff-vfx-img {
+            filter:drop-shadow(0 0 22px rgba(115,255,202,0.86)) drop-shadow(0 0 12px rgba(240,238,150,0.58)) saturate(1.16) brightness(1.08);
+        }
         @keyframes playerSlashVfx {
             0% { opacity:0; transform:scale(0.84); }
             12% { opacity:1; }
@@ -751,6 +776,12 @@
             82% { opacity:1; transform:translate3d(var(--player-vfx-dx, 0px), var(--player-vfx-dy, 0px), 0) scale(1.05); }
             100% { opacity:0; transform:translate3d(var(--player-vfx-dx, 0px), var(--player-vfx-dy, 0px), 0) scale(1.05); }
         }
+        @keyframes playerBuffVfx {
+            0% { opacity:0; transform:translate(-50%, -50%) scale(0.68); }
+            12% { opacity:1; transform:translate(-50%, -50%) scale(0.9); }
+            68% { opacity:1; transform:translate(-50%, -50%) scale(1.02); }
+            100% { opacity:0; transform:translate(-50%, -50%) scale(1.12); }
+        }
         .vfx-p-def .shield-aura { width: 100px; height: 100px; border: 10px solid var(--water); border-radius: 50%; opacity: 0; position: absolute; bottom: 100px; box-shadow: 0 0 40px var(--water), inset 0 0 40px var(--water);}
         @keyframes pDefAnim { 0% { transform: scale(0.5); opacity: 0.8; } 100% { transform: scale(6); opacity: 0; border-width: 0px;} }
         .vfx-shield-hit { position:fixed; display:none; align-items:initial; justify-content:initial; overflow:visible; }
@@ -758,8 +789,8 @@
             position:absolute;
             left:var(--shield-hit-x, 50%);
             top:var(--shield-hit-y, 45%);
-            width:var(--shield-hit-size, 250px);
-            height:var(--shield-hit-size, 250px);
+            width:var(--shield-hit-size, 280px);
+            height:var(--shield-hit-size, 280px);
             object-fit:contain;
             opacity:0;
             pointer-events:none;
@@ -2000,8 +2031,9 @@
 <div id="particles-layer"></div>
 
 <div id="vfx-p-atk" class="vfx-layer vfx-p-atk"><img id="player-attack-vfx-img" class="player-attack-vfx-img" alt=""></div>
+<div id="vfx-p-buff" class="vfx-layer vfx-p-buff"><img id="player-buff-vfx-img" class="player-buff-vfx-img" alt=""></div>
 <div id="vfx-p-def" class="vfx-layer vfx-p-def"><div class="shield-aura"></div></div>
-<div id="vfx-shield-hit" class="vfx-layer vfx-shield-hit"><img id="shield-hit-vfx-img" class="shield-hit-vfx-img" src="assets/vfx/player_defense/shield_hit_vfx_v1.webp" alt=""></div>
+<div id="vfx-shield-hit" class="vfx-layer vfx-shield-hit"><img id="shield-hit-vfx-img" class="shield-hit-vfx-img" src="assets/vfx/player_defense/shield_hit_arc_v2.webp" alt=""></div>
 <div id="vfx-e-atk" class="vfx-layer vfx-e-atk"><div class="enemy-attack-vfx enemy-asset-vfx"><img id="enemy-attack-vfx-img" class="enemy-attack-vfx-img" alt=""></div></div>
 <div id="vfx-e-def" class="vfx-layer vfx-e-def"><div class="shield-flash"></div></div>
 
@@ -4677,7 +4709,8 @@
             avatar.style.setProperty('--player-attack-offset-y', `${character.battleBackAttackOffset?.y || 0}px`);
             avatar.alt = character.name;
             avatar.className = `character-${character.id}`;
-            [...avatar.attackFrames, ...avatar.hurtFrames, ...(character.battleAttackVfxFrames || [])].forEach(frame => {
+            const buffFrames = Object.values(character.battleBuffVfx || {}).flatMap(config => config.frames || []);
+            [...avatar.attackFrames, ...avatar.hurtFrames, ...(character.battleAttackVfxFrames || []), ...buffFrames].forEach(frame => {
                 const animationFramePreload = new Image();
                 animationFramePreload.src = frame.src;
             });
@@ -5421,6 +5454,7 @@
     let playerAttackAnimationToken = 0;
     let playerHurtAnimationToken = 0;
     let playerAttackVfxToken = 0;
+    let playerBuffVfxToken = 0;
     let enemyAttackAnimationToken = 0;
     function triggerPlayerAttackAnimation() {
         const avatarFrame = document.querySelector('.player-avatar-frame');
@@ -5543,6 +5577,89 @@
         return startDelay + totalDuration;
     }
 
+    function positionPlayerBuffVfx(vfx, image, config) {
+        const avatarRect = document.getElementById('player-avatar-img')?.getBoundingClientRect();
+        const size = {
+            width: config.width || 390,
+            height: config.height || 520
+        };
+        const origin = config.origin || { x: 0.52, y: 0.45 };
+        const center = avatarRect
+            ? {
+                x: avatarRect.left + avatarRect.width * origin.x,
+                y: avatarRect.top + avatarRect.height * origin.y
+            }
+            : {
+                x: window.innerWidth * 0.34,
+                y: window.innerHeight * 0.55
+            };
+
+        image.style.setProperty('--player-buff-vfx-x', `${center.x}px`);
+        image.style.setProperty('--player-buff-vfx-y', `${center.y}px`);
+        vfx.style.setProperty('--player-buff-vfx-width', `${size.width}px`);
+        vfx.style.setProperty('--player-buff-vfx-height', `${size.height}px`);
+    }
+
+    function triggerPlayerBuffVFX(kind) {
+        const character = getCurrentCharacter();
+        const config = character.battleBuffVfx?.[kind];
+        const frames = config?.frames || [];
+        const vfx = document.getElementById('vfx-p-buff');
+        const image = document.getElementById('player-buff-vfx-img');
+        if (!vfx || !image || !frames.length) return 0;
+
+        const token = ++playerBuffVfxToken;
+        const totalDuration = frames.reduce((sum, frame) => sum + frame.duration, 0);
+        vfx.animationToken = token;
+        vfx.className = `vfx-layer vfx-p-buff vfx-buff-${config.type || kind}`;
+        vfx.style.display = 'flex';
+        vfx.style.setProperty('--player-buff-vfx-duration', `${totalDuration}ms`);
+        positionPlayerBuffVfx(vfx, image, config);
+        image.style.animation = 'none';
+        image.src = frames[0].src;
+        void image.offsetWidth;
+        image.style.animation = '';
+
+        let elapsed = frames[0].duration;
+        frames.slice(1).forEach(frame => {
+            setTimeout(() => {
+                if (vfx.animationToken === token && playerBuffVfxToken === token) image.src = frame.src;
+            }, elapsed);
+            elapsed += frame.duration;
+        });
+
+        setTimeout(() => {
+            if (vfx.animationToken !== token || playerBuffVfxToken !== token) return;
+            vfx.style.display = 'none';
+            image.style.animation = 'none';
+            vfx.className = 'vfx-layer vfx-p-buff';
+        }, totalDuration + 90);
+        return totalDuration + 90;
+    }
+
+    function getCardBuffVfxKind(card) {
+        const roleId = state.player?.characterId;
+        const tags = card.tags || [];
+        if (roleId === 'hero_archer') {
+            if (tags.includes('闪避') || card.specialId === 'a_wind_dance') return 'dodge';
+            if (tags.includes('蓄力') || tags.includes('自然') || ['s_energy', 's_exhaust', 'a_green_resonance'].includes(card.specialId)) return 'wind';
+        }
+        if (roleId === 'hero_mage') {
+            if (tags.includes('咏唱') || ['m_chant_singularity', 'm_echo_archive', 'm_arcane_aegis'].includes(card.specialId)) return 'chant';
+        }
+        if (roleId === 'hero_warrior') {
+            if (
+                card.type === '防御' ||
+                tags.includes('庇护') ||
+                tags.includes('反击') ||
+                tags.includes('荆棘') ||
+                hasDirectCardEffect(card, 'protection') ||
+                ['s_thorns', 'a_syn_array', 'w_bastion_prayer', 'w_oath_fortress'].includes(card.specialId)
+            ) return 'shield';
+        }
+        return null;
+    }
+
     function triggerVFX(type) {
         const vfx = document.getElementById(`vfx-${type}`); const el = vfx.firstElementChild;
         const vfxToken = (vfx.animationToken || 0) + 1;
@@ -5580,7 +5697,7 @@
             || document.querySelector('.player-avatar-frame')?.getBoundingClientRect();
         const impactX = playerRect ? playerRect.left + playerRect.width * 0.58 : window.innerWidth * 0.36;
         const impactY = playerRect ? playerRect.top + playerRect.height * 0.46 : window.innerHeight * 0.52;
-        const size = Math.max(220, Math.min(310, 236 + Math.max(0, absorbed) * 4));
+        const size = Math.max(250, Math.min(340, 270 + Math.max(0, absorbed) * 4));
         const vfxToken = (vfx.animationToken || 0) + 1;
         vfx.animationToken = vfxToken;
 
@@ -6398,6 +6515,8 @@
         }
         
         renderHand(); 
+        const buffVfxKind = !card.isJunk ? getCardBuffVfxKind(card) : null;
+        if (buffVfxKind) triggerPlayerBuffVFX(buffVfxKind);
         
         let runCount = 1;
         let windStepTriggered = false;
