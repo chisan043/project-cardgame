@@ -73,6 +73,7 @@ const DIRECT_EFFECT_TAGS = {
     '保留': 'retain',
     '治愈': 'heal'
 };
+const DIRECT_EFFECT_PRIORITY = ['draw', 'energy', 'protection', 'retain', 'heal'];
 
 function getCardDataId(card = {}) {
     return card.poolId || card.specialId || card.id || card.name;
@@ -94,7 +95,8 @@ function applyCardTagBudget(card) {
     if (!card) return card;
     const original = normalizeTagConflicts(card.tags || []);
     card.recycleModes = [...(card.recycleModes || CARD_RECYCLE_MODES[getCardDataId(card)] || [])];
-    card.directEffects = { ...(card.directEffects || {}) };
+    const originalDirectEffects = { ...(card.directEffects || {}) };
+    card.directEffects = { ...originalDirectEffects };
 
     const semanticTags = original.filter(tag => !DIRECT_EFFECT_TAGS[tag] && tag !== '销毁');
     const keywordCandidates = [];
@@ -114,8 +116,7 @@ function applyCardTagBudget(card) {
     }
 
     let cap = card.rarity === '史诗' || card.isSpecial ? 2 : 1;
-    if (card.rarity === '稀有' && (Number(card.cost) || 0) >= 2) cap = 2;
-    if (keywordCandidates.includes('回收') || keywordCandidates.includes('销毁')) cap = 2;
+    if (!card.isSpecial && keywordCandidates.includes('销毁') && keywordCandidates.length > 1) cap = Math.max(cap, 2);
 
     const result = [];
     let highImpactCount = 0;
@@ -135,9 +136,21 @@ function applyCardTagBudget(card) {
         const directKey = DIRECT_EFFECT_TAGS[tag];
         if (directKey) card.directEffects[directKey] = true;
     }
+    if (!card.isSpecial) {
+        const visibleSemanticTags = card.tags.filter(tag => !DIRECT_EFFECT_TAGS[tag] && tag !== '销毁');
+        const allowedDirectEffects = visibleSemanticTags.length > 0 ? 0 : 1;
+        const keptDirectEffects = {};
+        for (const key of DIRECT_EFFECT_PRIORITY) {
+            if (card.directEffects?.[key] && Object.keys(keptDirectEffects).length < allowedDirectEffects) {
+                keptDirectEffects[key] = true;
+            }
+        }
+        card.directEffects = keptDirectEffects;
+    }
     if (!Object.keys(card.directEffects).length) delete card.directEffects;
     const changed = original.length !== card.tags.length || original.some((tag, index) => card.tags[index] !== tag);
-    if (changed && !card.isSpecial) delete card.desc;
+    const directChanged = JSON.stringify(originalDirectEffects) !== JSON.stringify(card.directEffects || {});
+    if ((changed || directChanged) && !card.isSpecial) delete card.desc;
     return card;
 }
 
