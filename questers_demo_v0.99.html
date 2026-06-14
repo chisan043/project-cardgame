@@ -2334,8 +2334,8 @@
                 showFloatText(`法师联动：积累 ${chantGain} 层咏唱`, "var(--purple)", getCenter('ui-hp'));
             }
             if (['易伤', '虚弱', '剧毒', '出血', '燃烧', '诅咒'].some(t => tags.includes(t))) {
-                state.p_next_dmg += 2;
-                showFloatText("星象标记 下次+2", "var(--purple)", getCenter('enemy-avatar'));
+                state.p_next_dmg += 3;
+                showFloatText("星象标记 下次+3", "var(--purple)", getCenter('enemy-avatar'));
             }
         } else if (roleId === 'hero_archer') {
             let windGain = 0;
@@ -2455,8 +2455,8 @@
         const tags = getCardBuildTags(card);
         if (!tags.length) return 1;
         const boost = getBuildRewardBoostMultiplier(tags);
-        if (primaryBuildTag && tags.includes(primaryBuildTag)) return 2 * boost;
-        return 1.15 * boost;
+        if (primaryBuildTag && tags.includes(primaryBuildTag)) return 4.2 * boost;
+        return 0.95 * boost;
     }
 
     function getRewardCandidatePool({ mode = 'general', rarity = null, used = new Set(), primaryBuildTag = getPrimaryBuildTag() } = {}) {
@@ -2474,7 +2474,7 @@
         } else if (mode === 'general') {
             candidates = candidates.filter(card => {
                 const tags = getCardBuildTags(card);
-                return !primaryBuildTag || !tags.includes(primaryBuildTag) || Math.random() < 0.35;
+                return !primaryBuildTag || !tags.includes(primaryBuildTag) || Math.random() < 0.68;
             });
         }
         return candidates;
@@ -2496,7 +2496,7 @@
         const weighted = [];
         source.forEach(card => {
             const tags = getCardBuildTags(card, characterId);
-            const weight = Math.max(1, Math.round((tags.includes(primaryBuildTag) ? 2 : 1) * getBuildRewardBoostMultiplier(tags)));
+            const weight = Math.max(1, Math.round((tags.includes(primaryBuildTag) ? 5 : 1) * getBuildRewardBoostMultiplier(tags)));
             for (let i = 0; i < weight; i++) weighted.push(card);
         });
         return weighted.length ? weighted : source;
@@ -2972,7 +2972,7 @@
         if (tag === '圣剑') return '追加当前护盾 50% 的伤害。';
         if (tag === '吸血') return '按本次伤害回复生命。';
         if (tag === '追击') return '额外触发 1 次轻灵追射。';
-        if (tag === '爆发') return '消耗全部咏唱，每层追加 8 点伤害。';
+        if (tag === '爆发') return '消耗全部咏唱，每层追加 10 点伤害。';
         if (tag === '反击') return '进入反击姿态，招架下一次主体攻击并反击。';
         if (tag === '荆棘') return '获得荆棘，受击时反弹伤害。';
         if (tag === '庇护') return `获得 <span class="card-desc-value">${getProtectionValue(card)}</span> 点庇护。`;
@@ -5599,6 +5599,12 @@
 
     let cardsPlayedThisTurn = 0;
 
+    function getEncounterScale(type, floor = state.floor) {
+        if (type === 'boss') return 1 + floor * 0.065;
+        if (type === 'elite') return 1 + floor * 0.085;
+        return 1 + floor * 0.1;
+    }
+
     async function startBattle(type) {
         let pool; if (type === 'boss') pool = ENEMIES.filter(e => e.type === 'boss'); else if (type === 'elite') pool = ENEMIES.filter(e => e.type === 'elite'); 
         else { 
@@ -5608,7 +5614,7 @@
         }
         if(!pool || pool.length === 0) pool = ENEMIES.filter(e => e.type !== 'boss' && e.type !== 'elite');
 
-        let t = pool[Math.floor(Math.random() * pool.length)]; let scale = 1 + (state.floor * 0.15); let scaledHp = Math.floor(t.baseHp * scale);
+        let t = pool[Math.floor(Math.random() * pool.length)]; let scale = getEncounterScale(type); let scaledHp = Math.floor(t.baseHp * scale);
         
         state.enemy = JSON.parse(JSON.stringify(t));
         state.enemy.currentHp = scaledHp; state.enemy.maxHp = scaledHp; 
@@ -6423,7 +6429,7 @@
                 state.exhaustPile.forEach(c => onCardReturnedFromExhaust(c));
                 state.battleDeck = state.battleDeck.concat(state.exhaustPile, [card]); state.exhaustPile = []; state.battleDeck.sort(()=>0.5-Math.random());
             }
-            else if(card.specialId === 's_poison') { let layers = state.enemy.poison + state.enemy.bleed; let dmg = 36 + layers * 3; applyDamageToEnemy(dmg); state.p_reduce_dmg += Math.min(12, layers); showFloatText(card.name, "var(--nature)", getCenter('enemy-avatar')); }
+            else if(card.specialId === 's_poison') { let layers = state.enemy.poison + state.enemy.bleed; let dmg = 44 + layers * 5; applyDamageToEnemy(dmg); state.p_reduce_dmg += Math.min(18, layers); showFloatText(card.name, "var(--nature)", getCenter('enemy-avatar')); }
             else if(card.specialId === 's_shield') { triggerVFX('p-atk'); applySpecialCardDamage(card, state.armor + state.p_battle_dmg); state.p_counter = 1; showFloatText("誓盾出锋 / 进入反击", "var(--gold)", getCenter('ui-hp')); }
             else if(card.specialId === 's_magic') {
                 const lastWasReplica = (state.lastPlayedCard?.tags || []).includes('复刻');
@@ -6556,9 +6562,9 @@
             else if (card.specialId === 'm_status_supernova') {
                 const debuffs = getEnemyDebuffTypeCount();
                 triggerVFX('p-atk');
-                applySpecialCardDamage(card, 40 + state.p_battle_dmg + debuffs * 12);
-                state.p_reduce_dmg += Math.min(24, debuffs * 5);
-                state.enemy.burn += Math.min(3, Math.max(1, debuffs));
+                applySpecialCardDamage(card, 52 + state.p_battle_dmg + debuffs * 16);
+                state.p_reduce_dmg += Math.min(30, debuffs * 6);
+                state.enemy.burn += Math.min(4, Math.max(1, debuffs));
                 if(hasRelic('r_status_prism')) state.p_chant = Math.min(12, state.p_chant + 1);
                 showFloatText(`状态共振 ${debuffs}`, "var(--fire)", getCenter('enemy-avatar'));
             }
@@ -6596,10 +6602,10 @@
             else if (card.specialId === 'm_forbidden_comet') {
                 triggerVFX('p-atk');
                 const chantSpent = state.p_chant;
-                applySpecialCardDamage(card, 48 + state.p_battle_dmg + chantSpent * 20, true);
-                state.p_reduce_dmg += Math.min(40, chantSpent * 5);
+                applySpecialCardDamage(card, 56 + state.p_battle_dmg + chantSpent * 24, true);
+                state.p_reduce_dmg += Math.min(48, chantSpent * 6);
                 if (state.enemy.currentHp > 0 && chantSpent > 0) {
-                    const cometMomentum = Math.min(28, Math.max(8, chantSpent * 4));
+                    const cometMomentum = Math.min(36, Math.max(10, chantSpent * 5));
                     state.p_battle_dmg += cometMomentum;
                     showFloatText(`裂星余势 +${cometMomentum}`, "var(--purple)", getCenter('ui-hp'));
                 }
@@ -6847,7 +6853,7 @@
                 await drawCards(1);
             }
             state.p_chant = Math.min(12, state.p_chant + chantGain);
-            state.armor += 4;
+            state.armor += 6;
             showFloatText(`积累 ${chantGain} 层咏唱`, "var(--purple)", getCenter('ui-hp'));
             if (hasRelic('r_sac_jade')) {
                 state.mp += 1;
@@ -6908,14 +6914,14 @@
             }
             if(card.tags && card.tags.includes('爆发')) {
                 const chantSpent = state.p_chant;
-                let burstBonus = chantSpent > 0 ? chantSpent * 8 : 4;
+                let burstBonus = chantSpent > 0 ? chantSpent * 10 : 5;
                 if (hasRelic('r_enchant_crys')) burstBonus += Math.max(3, chantSpent * 2);
                 finalDmg += burstBonus;
                 if (chantSpent > 0) {
-                    state.p_reduce_dmg += Math.min(8, chantSpent);
+                    state.p_reduce_dmg += Math.min(10, chantSpent);
                     state.p_chant = hasRelic('r_burst_lens') ? Math.ceil(chantSpent / 2) : 0;
                 }
-                showFloatText(chantSpent > 0 ? `爆发 +${burstBonus}` : "微光爆发 +4", "var(--purple)", getCenter('enemy-avatar'));
+                showFloatText(chantSpent > 0 ? `爆发 +${burstBonus}` : "微光爆发 +5", "var(--purple)", getCenter('enemy-avatar'));
                 if (hasRelic('r_burst_censer') && chantSpent >= 3) {
                     state.enemy.burn += 2;
                     showFloatText("聚爆燃烧 +2", "var(--fire)", getCenter('enemy-avatar'));
@@ -7009,9 +7015,9 @@
         let statusApplied = false;
         const statusLayerBonus = hasRelic('r_plague_glass') && card.type === '能力' && getEnemyDebuffTypeCount() > 0 ? 1 : 0;
         if (statusLayerBonus > 0 && !isEcho) state.p_reduce_dmg += 4;
-        if(card.tags && card.tags.includes('剧毒')) { let pVal = 3 * debuffMult + statusLayerBonus; if(hasRelic('r_poison_fang')) pVal += 1; state.enemy.poison += pVal; statusApplied = true; showFloatText(`施毒 +${pVal}`, "var(--nature)", getCenter('enemy-avatar')); }
+        if(card.tags && card.tags.includes('剧毒')) { let pVal = 4 * debuffMult + statusLayerBonus; if(hasRelic('r_poison_fang')) pVal += 1; state.enemy.poison += pVal; statusApplied = true; showFloatText(`施毒 +${pVal}`, "var(--nature)", getCenter('enemy-avatar')); }
         if(card.tags && card.tags.includes('出血')) {
-            let bVal = 3 * debuffMult + statusLayerBonus;
+            let bVal = 4 * debuffMult + statusLayerBonus;
             if(hasRelic('r_poison_fang')) bVal += 1;
             state.enemy.bleed += bVal;
             if (hasRelic('r_vein_cup')) {
@@ -7161,7 +7167,14 @@
             showFloatText(`燃烧 -${burnDmg}`, "var(--fire)", getCenter('enemy-avatar')); 
             if(checkEnemyDeath()) { winBattle(); return; } 
         }
-        if(state.enemy.curse > 0) state.enemy.curse--;
+        if(state.enemy.curse > 0) {
+            const curseDmg = state.enemy.curse * 3;
+            state.enemy.currentHp -= curseDmg;
+            triggerEnemyHurtAnimation('enemy');
+            state.enemy.curse--;
+            showFloatText(`诅咒 -${curseDmg}`, "var(--purple)", getCenter('enemy-avatar'));
+            if(checkEnemyDeath()) { winBattle(); return; }
+        }
 
         await new Promise(r => setTimeout(r, 400));
 

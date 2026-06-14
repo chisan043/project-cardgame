@@ -231,11 +231,18 @@ function chapterOf(floor) {
 
 function checkpointForNode(floor, nodeType) {
     if (nodeType === 'boss') {
-        if (floor < 20) return { id: `floor_${floor}_boss`, label: `第${chapterOf(floor)}章Boss`, floor: floor <= 7 ? 8 : 13, type: 'elite' };
+        if (floor < 20) return { id: `floor_${floor}_boss`, label: `第${chapterOf(floor)}章Boss`, floor: floor <= 7 ? 5 : 11, type: 'elite' };
         return { id: 'floor_20_final_boss', label: '最终Boss', floor: 19, type: 'boss' };
     }
     if (nodeType === 'elite') return { id: `floor_${floor}_elite`, label: `第${floor}层精英`, floor, type: 'elite' };
     return { id: `floor_${floor}_normal`, label: `第${floor}层普通战`, floor, type: 'normal' };
+}
+
+function fixedEnemyForNode(floor, nodeType) {
+    if (nodeType !== 'boss') return null;
+    if (floor === 7) return '【精英】狂暴牛头人';
+    if (floor === 14) return '【精英】猩红血巫';
+    return null;
 }
 
 function fixedNodeType(floor) {
@@ -293,10 +300,10 @@ function allRewardCards(data, roleId) {
 }
 
 function rewardRarity(rng, floor) {
-    const bonus = Math.min(0.16, floor * 0.012);
+    const bonus = Math.min(0.22, floor * 0.016);
     const roll = rng();
-    if (roll < 0.08 + bonus) return '史诗';
-    if (roll < 0.42 + bonus) return '稀有';
+    if (roll < 0.1 + bonus) return '史诗';
+    if (roll < 0.46 + bonus) return '稀有';
     return '普通';
 }
 
@@ -314,7 +321,7 @@ function generateCardChoices(data, rng, roleId, buildId, floor, profile) {
             const aligned = buildTags.includes(buildId);
             const bridge = buildTags.length > 1;
             const neutral = candidate.buildNeutral || buildTags.length === 0;
-            return (aligned ? 4.5 : bridge ? 2.5 : neutral ? 1.8 : 0.9) * (1 + rng() * noise);
+            return (aligned ? 8.5 : bridge ? 4.0 : neutral ? 1.8 : 0.6) * (1 + rng() * noise);
         });
         if (!card) break;
         used.add(cardId(card));
@@ -327,7 +334,7 @@ function estimateCardScore(data, roleId, buildId, card, deck, hpRatio, profile, 
     const buildTags = cardBuildTags(data, roleId, card);
     const tags = card.tags || [];
     let score = data.getScaledCardValue(card) / Math.max(1, Number(card.cost) || 1);
-    if (buildTags.includes(buildId)) score += 12;
+    if (buildTags.includes(buildId)) score += 18;
     else if (buildTags.length > 1) score += 6;
     else if (!buildTags.length || card.buildNeutral) score += 3;
     else score -= profile === 'novice' ? 1 : 3;
@@ -378,7 +385,7 @@ function awardRelic(data, rng, roleId, buildId, ownedRelics, floor) {
 function addCoreCardIfFound(data, rng, roleId, buildId, deck, floor, force = false) {
     const coreId = MATURE_LOADOUTS[buildId]?.core;
     if (!coreId || deck.some(card => cardId(card) === coreId)) return null;
-    const chance = floor >= 14 ? 0.28 : floor >= 7 ? 0.16 : 0.04;
+    const chance = floor >= 14 ? 0.75 : floor >= 7 ? 0.5 : 0.1;
     if (!force && rng() > chance) return null;
     const core = data.SPECIAL_EPIC_POOLS[roleId].find(card => card.id === coreId);
     if (!core) return null;
@@ -568,7 +575,9 @@ function simulateFullRun(data, stats, runConfig) {
             const checkpoint = checkpointForNode(floor, nodeType);
             const battleDeck = assignSimulationIds(deck);
             const battleLoadout = { relics: [...ownedRelics], coreCard: null };
-            const result = simulateBattle(data, rng, roleId, battleDeck, hp, checkpoint, battleLoadout);
+            const result = simulateBattle(data, rng, roleId, battleDeck, hp, checkpoint, battleLoadout, {
+                enemyName: fixedEnemyForNode(floor, nodeType)
+            });
             lastBattleResult = result;
             const floorStats = getFloorStats(stats, floor);
             const chapterStats = getChapterStats(stats, chapter);
@@ -638,7 +647,7 @@ function simulateFullRun(data, stats, runConfig) {
             } else if (nodeType === 'boss') {
                 chapterStats.bossWins++;
                 if (floor === 7) act1BossPassed = true;
-                hp = Math.min(character.maxHp, hp + Math.ceil(character.maxHp * 0.35));
+                hp = Math.min(character.maxHp, hp + Math.ceil(character.maxHp * 0.45));
                 gold += 60;
                 const relic = awardRelic(data, rng, roleId, buildId, ownedRelics, floor);
                 if (relic) {

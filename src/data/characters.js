@@ -55,7 +55,7 @@ const CHARACTERS = {
         subtitle: '法术 / 爆发 / 咏唱',
         desc: '先积累咏唱，再用爆发法术一次性倾斜战局，适合偏爱节奏铺垫与高回报连段的路线。',
         tags: ['星火咏唱', '镜像回路', '灾厄术士'],
-        maxHp: 72,
+        maxHp: 80,
         baseEnergy: 6,
         openingHand: 5,
         startingGold: 55,

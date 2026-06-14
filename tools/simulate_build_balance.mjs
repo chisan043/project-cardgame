@@ -236,12 +236,18 @@ function encounterPool(data, checkpoint) {
     return data.ENEMIES.filter(enemy => enemy.tier === tier && !enemy.type);
 }
 
+function encounterScale(checkpoint) {
+    if (checkpoint.type === 'boss') return 1 + checkpoint.floor * 0.065;
+    if (checkpoint.type === 'elite') return 1 + checkpoint.floor * 0.085;
+    return 1 + checkpoint.floor * 0.1;
+}
+
 function createEnemy(data, rng, checkpoint, enemyName = null) {
     const pool = encounterPool(data, checkpoint);
     const selected = enemyName ? pool.find(enemy => enemy.name === enemyName) : pick(rng, pool);
     if (!selected) throw new Error(`Enemy ${enemyName} is not available at checkpoint ${checkpoint.id}`);
     const template = clone(selected);
-    const scale = 1 + checkpoint.floor * 0.15;
+    const scale = encounterScale(checkpoint);
     template.maxHp = Math.floor(template.baseHp * scale);
     template.hp = template.maxHp;
     template.armor = 0;
@@ -517,7 +523,7 @@ function applyRoleSynergy(state, card, echo, cycleReturned, resetCount) {
         if (tags.includes('荆棘') && state.armor > 0) state.thorns += Math.min(8, Math.max(2, Math.ceil(state.armor / 8)));
     } else if (state.roleId === 'hero_mage') {
         if (tags.includes('回响') || tags.includes('复刻')) state.chant = Math.min(12, state.chant + 1);
-        if (['易伤', '虚弱', '剧毒', '出血', '燃烧', '诅咒'].some(tag => tags.includes(tag))) state.nextDamage += 2;
+        if (['易伤', '虚弱', '剧毒', '出血', '燃烧', '诅咒'].some(tag => tags.includes(tag))) state.nextDamage += 3;
     } else if (state.roleId === 'hero_archer') {
         let windGain = 0;
         if (tags.includes('保留')) windGain++;
@@ -631,13 +637,13 @@ function estimateCard(state, card, incoming, move) {
             s_magic: state.lastCard ? 44 : 18,
             s_pierce: 32 + state.chant * 14,
             a_syn_magic: 24,
-            m_forbidden_comet: 48 + state.chant * 22,
+            m_forbidden_comet: 56 + state.chant * 26,
             m_echo_archive: state.lastCard ? 32 : 12,
             m_mirror_hallway: 30,
-            m_status_supernova: 40 + enemyDebuffCount(state) * 15,
+            m_status_supernova: 52 + enemyDebuffCount(state) * 18,
             s_energy: 32 + state.aim * 3,
             a_gale_verdict: 18 + Math.min(3, state.aim) * 8,
-            s_poison: (state.enemy.poison + state.enemy.bleed) * 3 + 40,
+            s_poison: (state.enemy.poison + state.enemy.bleed) * 5 + 48,
             s_exhaust: (state.exhaust.length + 1) * 20 + (state.exhaust.length ? 14 : 0)
         };
         score += specialScores[card.specialId] || 0;
@@ -865,10 +871,10 @@ function executeSpecialCard(state, card, echo = false) {
     } else if (specialId === 'm_forbidden_comet') {
         if (card.type === '攻击') payBloodDebtAttackCost(state);
         const chantSpent = state.chant;
-        hitEnemy(state, 48 + state.battleDamage + chantSpent * 20, true);
-        state.protection += Math.min(40, chantSpent * 5);
+        hitEnemy(state, 56 + state.battleDamage + chantSpent * 24, true);
+        state.protection += Math.min(48, chantSpent * 6);
         if (state.enemy.hp > 0 && chantSpent > 0) {
-            state.battleDamage += Math.min(28, Math.max(8, chantSpent * 4));
+            state.battleDamage += Math.min(36, Math.max(10, chantSpent * 5));
         }
         state.chant = hasRelic(state, 'r_burst_lens') ? Math.ceil(chantSpent / 2) : 0;
     } else if (specialId === 'm_echo_archive') {
@@ -892,9 +898,9 @@ function executeSpecialCard(state, card, echo = false) {
         if (!echo) draw(state, 1);
     } else if (specialId === 'm_status_supernova') {
         const debuffs = enemyDebuffCount(state);
-        hitEnemy(state, 40 + state.battleDamage + debuffs * 12);
-        state.protection += Math.min(24, debuffs * 5);
-        state.enemy.burn += Math.min(3, Math.max(1, debuffs));
+        hitEnemy(state, 52 + state.battleDamage + debuffs * 16);
+        state.protection += Math.min(30, debuffs * 6);
+        state.enemy.burn += Math.min(4, Math.max(1, debuffs));
     } else if (specialId === 'a_gale_verdict') {
         if (card.type === '攻击') payBloodDebtAttackCost(state);
         const shots = Math.min(3, state.aim);
@@ -909,8 +915,8 @@ function executeSpecialCard(state, card, echo = false) {
         if (hadWind) state.energy++;
     } else if (specialId === 's_poison') {
         const layers = state.enemy.poison + state.enemy.bleed;
-        hitEnemy(state, 36 + layers * 3);
-        state.protection += Math.min(12, layers);
+        hitEnemy(state, 44 + layers * 5);
+        state.protection += Math.min(18, layers);
     } else if (specialId === 's_exhaust') {
         const returned = state.exhaust.length + 1;
         if (hasRelic(state, 'r_exhaust_dmg')) state.battleDamage += 1;
@@ -968,7 +974,7 @@ function executeCard(state, card, echo = false) {
             draw(state, 1);
         }
         state.chant = Math.min(12, state.chant + gain);
-        state.armor += 4;
+        state.armor += 6;
         if (hasRelic(state, 'r_sac_jade')) state.energy++;
         if (hasRelic(state, 'r_sac_jade')) state.protection += 2;
     }
@@ -1006,8 +1012,8 @@ function executeCard(state, card, echo = false) {
     if (tags.includes('荆棘')) state.thorns += hasRelic(state, 'r_thorn_shield_new') ? 16 : 8;
     const statusBonus = hasRelic(state, 'r_plague_glass') && card.type === '能力' && enemyDebuffCount(state) > 0 ? 1 : 0;
     if (statusBonus > 0 && !echo) state.protection += 4;
-    if (tags.includes('剧毒')) state.enemy.poison += 3 * (card.type === '能力' ? state.data.getAbilityPotency(card) : 1) + statusBonus + (hasRelic(state, 'r_poison_fang') ? 1 : 0);
-    if (tags.includes('出血')) state.enemy.bleed += 3 * (card.type === '能力' ? state.data.getAbilityPotency(card) : 1) + statusBonus + (hasRelic(state, 'r_poison_fang') ? 1 : 0);
+    if (tags.includes('剧毒')) state.enemy.poison += 4 * (card.type === '能力' ? state.data.getAbilityPotency(card) : 1) + statusBonus + (hasRelic(state, 'r_poison_fang') ? 1 : 0);
+    if (tags.includes('出血')) state.enemy.bleed += 4 * (card.type === '能力' ? state.data.getAbilityPotency(card) : 1) + statusBonus + (hasRelic(state, 'r_poison_fang') ? 1 : 0);
     if (card.bloodDebtBleed) {
         state.enemy.bleed += Math.max(0, Math.floor(card.bloodDebtBleed));
         if (hasRelic(state, 'r_vein_cup')) {
@@ -1060,8 +1066,8 @@ function executeCard(state, card, echo = false) {
         if (tags.includes('圣剑')) damage += Math.floor(state.armor * (hasRelic(state, 'r_sword_oath') ? 0.7 : 0.5)) + state.counter * 4;
         if (tags.includes('爆发')) {
             const chantSpent = state.chant;
-            damage += chantSpent > 0 ? chantSpent * 8 : 4;
-            state.protection += Math.min(8, chantSpent);
+            damage += chantSpent > 0 ? chantSpent * 10 : 5;
+            state.protection += Math.min(10, chantSpent);
             state.chant = hasRelic(state, 'r_burst_lens') ? Math.ceil(chantSpent / 2) : 0;
         }
         if (state.nextDamage > 0) {
@@ -1295,9 +1301,15 @@ function endRound(state) {
         takeDamage(state, Math.max(1, Math.ceil(state.maxHp * 0.03 * state.burn)), '燃烧伤害');
         state.burn--;
     }
+    if (enemy.curse > 0) {
+        const curseDamage = enemy.curse * 3;
+        enemy.hp -= curseDamage;
+        state.totalDamageDealt += curseDamage;
+        state.lastEnemyDamageSource = '诅咒';
+        enemy.curse--;
+    }
     if (enemy.vuln > 0) enemy.vuln--;
     if (enemy.weak > 0) enemy.weak--;
-    if (enemy.curse > 0) enemy.curse--;
     if (state.weak > 0) state.weak--;
     if (state.vuln > 0) state.vuln--;
     if (state.curse > 0) state.curse--;
