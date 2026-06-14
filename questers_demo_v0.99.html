@@ -753,8 +753,153 @@
         }
         .vfx-p-def .shield-aura { width: 100px; height: 100px; border: 10px solid var(--water); border-radius: 50%; opacity: 0; position: absolute; bottom: 100px; box-shadow: 0 0 40px var(--water), inset 0 0 40px var(--water);}
         @keyframes pDefAnim { 0% { transform: scale(0.5); opacity: 0.8; } 100% { transform: scale(6); opacity: 0; border-width: 0px;} }
-        .vfx-e-atk .slash { width: 0; height: 15px; background: white; box-shadow: 0 0 40px var(--crimson), 0 0 15px white; transform: rotate(45deg); opacity: 0; border-radius: 50%;}
-        @keyframes eAtkAnim { 0% { width: 0; opacity: 1; transform: translate(100px, -100px) rotate(45deg); } 50% { width: 120vw; opacity: 1; transform: translate(0, 0) rotate(45deg); } 100% { width: 120vw; opacity: 0; transform: translate(-100px, 100px) rotate(45deg); } }
+        .vfx-e-atk { position:fixed; justify-content:flex-start; align-items:flex-start; overflow:visible; }
+        .enemy-attack-vfx {
+            position:absolute;
+            left:var(--enemy-vfx-left, 50%);
+            top:var(--enemy-vfx-top, 45%);
+            width:var(--enemy-vfx-width, 320px);
+            height:var(--enemy-vfx-height, 200px);
+            opacity:0;
+            pointer-events:none;
+            mix-blend-mode:screen;
+            transform-origin:center;
+            will-change:transform, opacity, filter;
+            animation:enemyProjectileVfx var(--enemy-vfx-duration, 480ms) cubic-bezier(0.12, 0.84, 0.18, 1) both;
+        }
+        .enemy-attack-vfx .vfx-core,
+        .enemy-attack-vfx .vfx-trail,
+        .enemy-attack-vfx .vfx-burst {
+            position:absolute;
+            display:block;
+            pointer-events:none;
+        }
+        .enemy-attack-vfx .vfx-core {
+            left:24%;
+            top:42%;
+            width:52px;
+            height:40px;
+            border-radius:50%;
+            background:radial-gradient(circle at 34% 32%, #fff, var(--enemy-vfx-a, #9dff73) 24%, var(--enemy-vfx-b, #2bd66d) 62%, transparent 76%);
+            box-shadow:0 0 22px var(--enemy-vfx-a, #9dff73), 0 0 42px var(--enemy-vfx-b, #2bd66d);
+        }
+        .enemy-attack-vfx .vfx-trail {
+            left:37%;
+            top:49%;
+            width:150px;
+            height:18px;
+            border-radius:999px;
+            background:linear-gradient(90deg, var(--enemy-vfx-b, #2bd66d), rgba(255,255,255,0.55), transparent);
+            filter:blur(1px);
+        }
+        .enemy-attack-vfx .vfx-burst {
+            left:7%;
+            top:27%;
+            width:82px;
+            height:82px;
+            border-radius:50%;
+            background:radial-gradient(circle, rgba(255,255,255,0.9) 0 5%, var(--enemy-vfx-a, #9dff73) 6% 18%, transparent 48%);
+            box-shadow:0 0 30px var(--enemy-vfx-b, #2bd66d);
+            transform:scale(0);
+            animation:enemyBurstPop var(--enemy-vfx-duration, 480ms) ease-out both;
+        }
+        .enemy-attack-vfx::before,
+        .enemy-attack-vfx::after {
+            content:"";
+            position:absolute;
+            pointer-events:none;
+            opacity:0.95;
+        }
+        @keyframes enemyProjectileVfx {
+            0% { opacity:0; transform:translate3d(0, 0, 0) scale(0.72) rotate(var(--enemy-vfx-rotate, -6deg)); filter:blur(2px); }
+            10% { opacity:1; filter:blur(0); }
+            68% { opacity:1; transform:translate3d(var(--enemy-vfx-dx, -360px), var(--enemy-vfx-dy, 0px), 0) scale(1) rotate(var(--enemy-vfx-rotate, -6deg)); }
+            100% { opacity:0; transform:translate3d(var(--enemy-vfx-dx, -360px), var(--enemy-vfx-dy, 0px), 0) scale(1.1) rotate(var(--enemy-vfx-rotate, -6deg)); }
+        }
+        @keyframes enemySlashVfx {
+            0% { opacity:0; transform:translate3d(0, 0, 0) scale(0.72) rotate(var(--enemy-vfx-rotate, -18deg)); }
+            12% { opacity:1; }
+            58% { opacity:1; transform:translate3d(var(--enemy-vfx-dx, -330px), var(--enemy-vfx-dy, 18px), 0) scale(1.05) rotate(var(--enemy-vfx-rotate, -18deg)); }
+            100% { opacity:0; transform:translate3d(var(--enemy-vfx-dx, -330px), var(--enemy-vfx-dy, 18px), 0) scale(1.18) rotate(var(--enemy-vfx-rotate, -18deg)); }
+        }
+        @keyframes enemyWaveVfx {
+            0% { opacity:0; transform:translate3d(0, 0, 0) scale(0.35); }
+            18% { opacity:1; }
+            72% { opacity:0.95; transform:translate3d(var(--enemy-vfx-dx, -360px), var(--enemy-vfx-dy, -8px), 0) scale(1.14); }
+            100% { opacity:0; transform:translate3d(var(--enemy-vfx-dx, -360px), var(--enemy-vfx-dy, -8px), 0) scale(1.28); }
+        }
+        @keyframes enemyBeamVfx {
+            0% { opacity:0; transform:translate3d(0, 0, 0) scaleX(0.15) rotate(var(--enemy-vfx-rotate, -4deg)); }
+            12% { opacity:1; }
+            70% { opacity:1; transform:translate3d(calc(var(--enemy-vfx-dx, -360px) * 0.5), calc(var(--enemy-vfx-dy, 0px) * 0.5), 0) scaleX(1) rotate(var(--enemy-vfx-rotate, -4deg)); }
+            100% { opacity:0; transform:translate3d(calc(var(--enemy-vfx-dx, -360px) * 0.5), calc(var(--enemy-vfx-dy, 0px) * 0.5), 0) scaleX(1.08) rotate(var(--enemy-vfx-rotate, -4deg)); }
+        }
+        @keyframes enemyBurstPop {
+            0%, 55% { opacity:0; transform:scale(0); }
+            70% { opacity:1; transform:scale(0.86); }
+            100% { opacity:0; transform:scale(1.55); }
+        }
+        .enemy-vfx-acid-spit { --enemy-vfx-a:#c8ff54; --enemy-vfx-b:#27d363; --enemy-vfx-rotate:-7deg; }
+        .enemy-vfx-acid-spit .vfx-core { border-radius:58% 42% 64% 36%; }
+        .enemy-vfx-acid-spit::before { left:18%; top:34%; width:12px; height:12px; border-radius:50%; background:#d9ff72; box-shadow:42px -18px 0 -3px #62ec65, 84px 16px 0 -4px #9eff55; }
+        .enemy-vfx-sonic-wave { --enemy-vfx-a:#bff6ff; --enemy-vfx-b:#6c9eff; animation-name:enemyWaveVfx; }
+        .enemy-vfx-sonic-wave .vfx-core { display:none; }
+        .enemy-vfx-sonic-wave .vfx-trail { left:6%; top:12%; width:210px; height:150px; border:4px solid rgba(175,236,255,0.82); border-left:0; border-radius:50%; background:transparent; box-shadow:28px 0 0 -2px rgba(102,151,255,0.52), 58px 0 0 -4px rgba(175,236,255,0.36); filter:none; }
+        .enemy-vfx-sonic-wave .vfx-burst { left:3%; top:18%; background:radial-gradient(circle, rgba(183,240,255,0.64), transparent 58%); }
+        .enemy-vfx-bone-slash,
+        .enemy-vfx-dagger-flurry,
+        .enemy-vfx-claw-bite,
+        .enemy-vfx-dark-iaijutsu,
+        .enemy-vfx-war-axe,
+        .enemy-vfx-shura-cleave,
+        .enemy-vfx-pincer-snap { animation-name:enemySlashVfx; }
+        .enemy-vfx-bone-slash { --enemy-vfx-a:#f3ead4; --enemy-vfx-b:#bca679; --enemy-vfx-rotate:-23deg; }
+        .enemy-vfx-bone-slash .vfx-core { width:190px; height:18px; border-radius:999px 20px 999px 20px; background:linear-gradient(90deg, transparent, #fff3d0 18%, #b7a072 56%, transparent); box-shadow:0 0 20px #f0dfb8; transform:rotate(-7deg); }
+        .enemy-vfx-bone-slash::after { left:58%; top:38%; width:52px; height:18px; border-radius:50%; background:#e8d8b8; transform:rotate(28deg); }
+        .enemy-vfx-dagger-flurry { --enemy-vfx-a:#e5edf4; --enemy-vfx-b:#8c98aa; --enemy-vfx-rotate:-15deg; }
+        .enemy-vfx-dagger-flurry .vfx-core,
+        .enemy-vfx-dagger-flurry .vfx-trail { width:170px; height:8px; background:linear-gradient(90deg, transparent, #fff, #677386, transparent); box-shadow:0 0 16px #d9e8ff; transform:rotate(-10deg); }
+        .enemy-vfx-dagger-flurry .vfx-trail { top:39%; transform:rotate(12deg); }
+        .enemy-vfx-foxfire { --enemy-vfx-a:#7ff5ff; --enemy-vfx-b:#7b4dff; --enemy-vfx-rotate:-3deg; }
+        .enemy-vfx-foxfire .vfx-core { width:58px; height:72px; border-radius:58% 42% 48% 52%; background:radial-gradient(circle at 44% 34%, #fff, #7ff5ff 23%, #7248ff 58%, transparent 78%); transform:rotate(-16deg); }
+        .enemy-vfx-foxfire::before { left:39%; top:18%; width:36px; height:74px; border-radius:60% 40% 55% 45%; background:linear-gradient(180deg, rgba(144,254,255,0.82), rgba(105,72,255,0)); transform:rotate(24deg); filter:blur(1px); }
+        .enemy-vfx-claw-bite { --enemy-vfx-a:#ffd0b4; --enemy-vfx-b:#ff5d3d; --enemy-vfx-rotate:-17deg; }
+        .enemy-vfx-claw-bite .vfx-core { width:170px; height:110px; background:repeating-linear-gradient(105deg, transparent 0 18px, rgba(255,92,55,0.96) 19px 27px, transparent 28px 42px); box-shadow:none; border-radius:0; }
+        .enemy-vfx-venom-web { --enemy-vfx-a:#d8ff8a; --enemy-vfx-b:#62d85c; --enemy-vfx-rotate:-5deg; }
+        .enemy-vfx-venom-web .vfx-core { width:86px; height:86px; border:2px solid rgba(194,255,122,0.82); background:repeating-radial-gradient(circle, transparent 0 11px, rgba(151,255,116,0.75) 12px 14px), conic-gradient(from 0deg, transparent 0 12deg, rgba(218,255,160,0.85) 13deg 16deg, transparent 17deg 42deg); box-shadow:0 0 24px #72e866; }
+        .enemy-vfx-poison-spit { --enemy-vfx-a:#a4ff49; --enemy-vfx-b:#00bd68; --enemy-vfx-rotate:-8deg; }
+        .enemy-vfx-poison-spit .vfx-core { width:66px; height:46px; border-radius:48% 52% 44% 56%; filter:drop-shadow(0 0 16px #74ff55); }
+        .enemy-vfx-charge-dust { --enemy-vfx-a:#f0bd76; --enemy-vfx-b:#9a6132; --enemy-vfx-rotate:2deg; }
+        .enemy-vfx-charge-dust .vfx-core { width:170px; height:82px; border-radius:50%; background:radial-gradient(circle at 24% 54%, #fff0b8, rgba(187,111,45,0.82) 28%, transparent 68%); box-shadow:80px -18px 24px rgba(210,142,66,0.5), 38px 22px 22px rgba(111,69,38,0.64); }
+        .enemy-vfx-pincer-snap { --enemy-vfx-a:#bff2ff; --enemy-vfx-b:#d55358; --enemy-vfx-rotate:-10deg; }
+        .enemy-vfx-pincer-snap .vfx-core { width:132px; height:86px; border:9px solid #bff2ff; border-left:0; border-bottom:0; border-radius:0 80px 0 0; background:transparent; box-shadow:0 0 18px #61e6ff; }
+        .enemy-vfx-pincer-snap .vfx-trail { width:132px; height:86px; border:9px solid #ff6d6d; border-left:0; border-top:0; border-radius:0 0 80px 0; background:transparent; filter:none; }
+        .enemy-vfx-dark-iaijutsu { --enemy-vfx-a:#d8b4ff; --enemy-vfx-b:#5521a8; --enemy-vfx-rotate:-28deg; }
+        .enemy-vfx-dark-iaijutsu .vfx-core { width:260px; height:18px; border-radius:999px; background:linear-gradient(90deg, transparent, #f7e6ff 20%, #38116c 62%, transparent); box-shadow:0 0 34px #8b49ff; }
+        .enemy-vfx-ghostfire { --enemy-vfx-a:#e1c3ff; --enemy-vfx-b:#944bff; --enemy-vfx-rotate:-3deg; }
+        .enemy-vfx-ghostfire .vfx-core { width:66px; height:78px; border-radius:50% 50% 44% 44%; background:radial-gradient(circle at 48% 32%, #fff, #c796ff 32%, #5720b3 68%, transparent); }
+        .enemy-vfx-rock-shock { --enemy-vfx-a:#ffc36b; --enemy-vfx-b:#8e6c4b; --enemy-vfx-rotate:0deg; animation-name:enemyWaveVfx; }
+        .enemy-vfx-rock-shock .vfx-core { left:12%; top:54%; width:210px; height:34px; border-radius:50%; background:linear-gradient(90deg, rgba(255,211,126,0.95), rgba(129,92,60,0.32), transparent); }
+        .enemy-vfx-rock-shock::before { left:24%; top:30%; width:0; height:0; border-left:13px solid transparent; border-right:13px solid transparent; border-bottom:42px solid #d09757; filter:drop-shadow(42px 22px 0 #7b624b) drop-shadow(88px -8px 0 #f0ba6a); }
+        .enemy-vfx-shadow-darts { --enemy-vfx-a:#c6b3ff; --enemy-vfx-b:#201045; --enemy-vfx-rotate:-6deg; }
+        .enemy-vfx-shadow-darts .vfx-core,
+        .enemy-vfx-shadow-darts .vfx-trail { width:120px; height:14px; border-radius:999px 0 0 999px; background:linear-gradient(90deg, #cbb8ff, #211042 72%, transparent); box-shadow:0 0 18px #744bff; }
+        .enemy-vfx-shadow-darts .vfx-trail { top:34%; left:42%; transform:rotate(15deg); }
+        .enemy-vfx-meat-slam { --enemy-vfx-a:#ffb2a2; --enemy-vfx-b:#9a1d28; --enemy-vfx-rotate:-2deg; animation-name:enemyWaveVfx; }
+        .enemy-vfx-meat-slam .vfx-core { width:120px; height:120px; border-radius:58% 42% 46% 54%; background:radial-gradient(circle at 36% 30%, #ffd3c7, #b6373e 40%, #531017 72%, transparent); }
+        .enemy-vfx-war-axe { --enemy-vfx-a:#ffd18d; --enemy-vfx-b:#d12e22; --enemy-vfx-rotate:-30deg; }
+        .enemy-vfx-war-axe .vfx-core { width:240px; height:132px; border:16px solid rgba(255,204,117,0.95); border-left:0; border-bottom:0; border-radius:0 100% 0 0; background:transparent; box-shadow:0 0 28px #e8412e; }
+        .enemy-vfx-blood-siphon { --enemy-vfx-a:#ff6b80; --enemy-vfx-b:#9f0f2d; --enemy-vfx-rotate:-4deg; animation-name:enemyBeamVfx; }
+        .enemy-vfx-blood-siphon .vfx-core { left:2%; top:46%; width:310px; height:34px; border-radius:999px; background:linear-gradient(90deg, transparent, #ff8090, #85091d); box-shadow:0 0 28px #d9143b; }
+        .enemy-vfx-blood-siphon .vfx-trail { display:none; }
+        .enemy-vfx-dragon-breath { --enemy-vfx-a:#c6fff4; --enemy-vfx-b:#42e0b0; --enemy-vfx-rotate:-3deg; animation-name:enemyBeamVfx; }
+        .enemy-vfx-dragon-breath .vfx-core { left:0; top:30%; width:390px; height:92px; border-radius:62% 8% 8% 62%; background:linear-gradient(90deg, rgba(255,255,255,0.92), rgba(111,255,222,0.72), rgba(33,174,122,0)); box-shadow:0 0 34px #56ffd0; }
+        .enemy-vfx-dragon-breath::before { left:44%; top:20%; width:92px; height:92px; border-radius:50%; background:radial-gradient(circle, rgba(255,255,255,0.6), transparent 62%); }
+        .enemy-vfx-shura-cleave { --enemy-vfx-a:#ffb27b; --enemy-vfx-b:#d51828; --enemy-vfx-rotate:-24deg; }
+        .enemy-vfx-shura-cleave .vfx-core { width:340px; height:180px; border:18px solid rgba(255,84,63,0.9); border-left:0; border-bottom:0; border-radius:0 100% 0 0; background:linear-gradient(135deg, rgba(255,214,128,0.24), transparent 60%); box-shadow:0 0 42px #ff293b; }
+        .enemy-vfx-void-beam { --enemy-vfx-a:#f2d6ff; --enemy-vfx-b:#6a23ff; --enemy-vfx-rotate:-1deg; animation-name:enemyBeamVfx; }
+        .enemy-vfx-void-beam .vfx-core { left:0; top:42%; width:430px; height:46px; border-radius:999px; background:linear-gradient(90deg, rgba(255,255,255,0.92), #aa72ff, rgba(29,7,84,0)); box-shadow:0 0 38px #873cff, inset 0 0 18px #fff; }
+        .enemy-vfx-void-beam::after { left:21%; top:28%; width:130px; height:130px; border-radius:50%; background:radial-gradient(circle, rgba(242,214,255,0.76), rgba(111,35,255,0.2) 42%, transparent 70%); }
         .vfx-e-def .shield-flash { width: 200px; height: 200px; background: radial-gradient(circle, #aaa 0%, transparent 70%); opacity: 0; position: absolute; top: 20%;}
         @keyframes eDefAnim { 0% { transform: scale(0); opacity: 1; } 50% { transform: scale(1.5); opacity: 0.5; } 100% { transform: scale(2); opacity: 0; } }
         .screen-shake { animation: shake 0.4s both; }
@@ -1781,7 +1926,7 @@
 
 <div id="vfx-p-atk" class="vfx-layer vfx-p-atk"><img id="player-attack-vfx-img" class="player-attack-vfx-img" alt=""></div>
 <div id="vfx-p-def" class="vfx-layer vfx-p-def"><div class="shield-aura"></div></div>
-<div id="vfx-e-atk" class="vfx-layer vfx-e-atk"><div class="slash"></div></div>
+<div id="vfx-e-atk" class="vfx-layer vfx-e-atk"><div class="enemy-attack-vfx"><span class="vfx-core"></span><span class="vfx-trail"></span><span class="vfx-burst"></span></div></div>
 <div id="vfx-e-def" class="vfx-layer vfx-e-def"><div class="shield-flash"></div></div>
 
 <div class="top-bar" id="game-top-bar">
@@ -4438,6 +4583,85 @@
         return slug ? `assets/enemies/portraits/${slug}_portrait_v1.webp` : null;
     }
 
+    const ENEMY_ATTACK_VFX_BY_SLUG = {
+        sick_slime: 'acid-spit',
+        bone_soldier: 'bone-slash',
+        greedy_thief: 'dagger-flurry',
+        blood_bat: 'sonic-wave',
+        lost_fox: 'foxfire',
+        wild_wolf: 'claw-bite',
+        ancient_spider: 'venom-web',
+        venom_toad: 'poison-spit',
+        angry_boar: 'charge-dust',
+        iron_crab: 'pincer-snap',
+        fallen_swordsman: 'dark-iaijutsu',
+        nether_mage: 'ghostfire',
+        stone_golem: 'rock-shock',
+        shadow_assassin: 'shadow-darts',
+        stitched_brute: 'meat-slam',
+        elite_minotaur: 'war-axe',
+        crimson_blood_witch: 'blood-siphon',
+        undead_bone_dragon: 'dragon-breath',
+        boss_oni_shura: 'shura-cleave',
+        abyss_overlord: 'void-beam'
+    };
+
+    const ENEMY_ATTACK_VFX_LAYOUTS = {
+        'sonic-wave': { width: 360, height: 240, duration: 560, startX: 0.34, startY: 0.36, targetX: 0.68, targetY: 0.45 },
+        'dragon-breath': { width: 470, height: 220, duration: 620, startX: 0.28, startY: 0.34, targetX: 0.68, targetY: 0.42 },
+        'void-beam': { width: 520, height: 180, duration: 620, startX: 0.25, startY: 0.36, targetX: 0.66, targetY: 0.43 },
+        'shura-cleave': { width: 430, height: 300, duration: 560, startX: 0.34, startY: 0.42, targetX: 0.66, targetY: 0.50 },
+        'war-axe': { width: 390, height: 260, duration: 540, startX: 0.34, startY: 0.44, targetX: 0.66, targetY: 0.50 },
+        'rock-shock': { width: 360, height: 220, duration: 560, startX: 0.38, startY: 0.70, targetX: 0.63, targetY: 0.66 },
+        'meat-slam': { width: 340, height: 240, duration: 540, startX: 0.36, startY: 0.52, targetX: 0.65, targetY: 0.54 },
+        'blood-siphon': { width: 420, height: 190, duration: 580, startX: 0.31, startY: 0.38, targetX: 0.67, targetY: 0.43 },
+        default: { width: 330, height: 200, duration: 500, startX: 0.34, startY: 0.44, targetX: 0.67, targetY: 0.46 }
+    };
+
+    function getEnemyAttackVfxType(enemy = state.enemy, move = state.enemy?.nextMove) {
+        if (move?.type === 'attack_lifesteal') return 'blood-siphon';
+        const moveName = move?.name || '';
+        if (moveName.includes('龙息')) return 'dragon-breath';
+        if (moveName.includes('声波') || moveName.includes('超声')) return 'sonic-wave';
+        const slug = getEnemyAssetSlug(enemy);
+        return ENEMY_ATTACK_VFX_BY_SLUG[slug] || 'dark-iaijutsu';
+    }
+
+    function triggerEnemyAttackVfx(vfx, effect, vfxToken) {
+        const type = getEnemyAttackVfxType();
+        const layout = ENEMY_ATTACK_VFX_LAYOUTS[type] || ENEMY_ATTACK_VFX_LAYOUTS.default;
+        const enemyRect = document.getElementById('enemy-avatar')?.getBoundingClientRect();
+        const playerRect = document.querySelector('.player-avatar-frame')?.getBoundingClientRect();
+        effect.className = `enemy-attack-vfx enemy-vfx-${type}`;
+
+        if (enemyRect && playerRect) {
+            const startX = enemyRect.left + enemyRect.width * layout.startX;
+            const startY = enemyRect.top + enemyRect.height * layout.startY;
+            const targetX = playerRect.left + playerRect.width * layout.targetX;
+            const targetY = playerRect.top + playerRect.height * layout.targetY;
+            effect.style.setProperty('--enemy-vfx-left', `${startX - layout.width * 0.5}px`);
+            effect.style.setProperty('--enemy-vfx-top', `${startY - layout.height * 0.5}px`);
+            effect.style.setProperty('--enemy-vfx-dx', `${targetX - startX}px`);
+            effect.style.setProperty('--enemy-vfx-dy', `${targetY - startY}px`);
+        } else {
+            effect.style.setProperty('--enemy-vfx-left', '58%');
+            effect.style.setProperty('--enemy-vfx-top', '28%');
+            effect.style.setProperty('--enemy-vfx-dx', '-380px');
+            effect.style.setProperty('--enemy-vfx-dy', '20px');
+        }
+
+        effect.style.setProperty('--enemy-vfx-width', `${layout.width}px`);
+        effect.style.setProperty('--enemy-vfx-height', `${layout.height}px`);
+        effect.style.setProperty('--enemy-vfx-duration', `${layout.duration}ms`);
+        effect.style.animation = 'none';
+        void effect.offsetWidth;
+        effect.style.animation = '';
+        setTimeout(() => {
+            if (vfx.animationToken === vfxToken) effect.className = 'enemy-attack-vfx';
+        }, layout.duration + 60);
+        return layout.duration;
+    }
+
     const BATTLE_BACKGROUND_BY_ENEMY = {
         '病弱史莱姆': 'assets/scenes/battle/ancient_forest_day_v1.webp',
         '迷途妖狐': 'assets/scenes/battle/ancient_forest_sunset_v1.webp',
@@ -5138,12 +5362,17 @@
             visibleDuration = Math.max(timing.duration + 120, effectDuration + 100);
         }
         if(type==='p-def') el.style.animation = 'pDefAnim 0.4s ease-out forwards';
-        if(type==='e-atk') { el.style.animation = 'eAtkAnim 0.3s ease-in forwards'; document.getElementById('game-app').classList.add('screen-shake'); setTimeout(()=>document.getElementById('game-app').classList.remove('screen-shake'), 400); }
+        if(type==='e-atk') {
+            visibleDuration = triggerEnemyAttackVfx(vfx, el, vfxToken) + 120;
+            document.getElementById('game-app').classList.add('screen-shake');
+            setTimeout(()=>document.getElementById('game-app').classList.remove('screen-shake'), 400);
+        }
         if(type==='e-def') el.style.animation = 'eDefAnim 0.4s ease-out forwards';
         setTimeout(() => {
             if (vfx.animationToken === vfxToken) {
                 vfx.style.display = 'none';
                 el.style.animation = 'none';
+                if (type === 'e-atk') el.className = 'enemy-attack-vfx';
                 vfx.classList.remove('vfx-warrior', 'vfx-mage', 'vfx-archer');
             }
         }, visibleDuration);
