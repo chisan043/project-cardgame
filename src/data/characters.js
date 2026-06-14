@@ -42,12 +42,12 @@ const CHARACTERS = {
             shield: {
                 type: 'warrior-shield',
                 frames: [
-                    { src: 'assets/vfx/player_buff/warrior_shield_01_v3.webp', duration: 45 },
-                    { src: 'assets/vfx/player_buff/warrior_shield_02_v3.webp', duration: 55 },
-                    { src: 'assets/vfx/player_buff/warrior_shield_03_v3.webp', duration: 65 },
-                    { src: 'assets/vfx/player_buff/warrior_shield_04_v3.webp', duration: 75 },
-                    { src: 'assets/vfx/player_buff/warrior_shield_05_v3.webp', duration: 70 },
-                    { src: 'assets/vfx/player_buff/warrior_shield_06_v3.webp', duration: 70 }
+                    { src: 'assets/vfx/player_buff/warrior_shield_01_v4.webp', duration: 45 },
+                    { src: 'assets/vfx/player_buff/warrior_shield_02_v4.webp', duration: 55 },
+                    { src: 'assets/vfx/player_buff/warrior_shield_03_v4.webp', duration: 65 },
+                    { src: 'assets/vfx/player_buff/warrior_shield_04_v4.webp', duration: 75 },
+                    { src: 'assets/vfx/player_buff/warrior_shield_05_v4.webp', duration: 70 },
+                    { src: 'assets/vfx/player_buff/warrior_shield_06_v4.webp', duration: 70 }
                 ],
                 width: 560,
                 height: 840,
