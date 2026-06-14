@@ -42,16 +42,16 @@ const CHARACTERS = {
             shield: {
                 type: 'warrior-shield',
                 frames: [
-                    { src: 'assets/vfx/player_buff/warrior_shield_01_v2.webp', duration: 45 },
-                    { src: 'assets/vfx/player_buff/warrior_shield_02_v2.webp', duration: 55 },
-                    { src: 'assets/vfx/player_buff/warrior_shield_03_v2.webp', duration: 65 },
-                    { src: 'assets/vfx/player_buff/warrior_shield_04_v2.webp', duration: 75 },
-                    { src: 'assets/vfx/player_buff/warrior_shield_05_v2.webp', duration: 70 },
-                    { src: 'assets/vfx/player_buff/warrior_shield_06_v2.webp', duration: 70 }
+                    { src: 'assets/vfx/player_buff/warrior_shield_01_v3.webp', duration: 45 },
+                    { src: 'assets/vfx/player_buff/warrior_shield_02_v3.webp', duration: 55 },
+                    { src: 'assets/vfx/player_buff/warrior_shield_03_v3.webp', duration: 65 },
+                    { src: 'assets/vfx/player_buff/warrior_shield_04_v3.webp', duration: 75 },
+                    { src: 'assets/vfx/player_buff/warrior_shield_05_v3.webp', duration: 70 },
+                    { src: 'assets/vfx/player_buff/warrior_shield_06_v3.webp', duration: 70 }
                 ],
-                width: 445,
-                height: 595,
-                origin: { x: 0.52, y: 0.48 }
+                width: 560,
+                height: 840,
+                origin: { x: 0.5, y: 0.5 }
             }
         },
         battleBackHurtFrames: [
@@ -107,16 +107,16 @@ const CHARACTERS = {
             chant: {
                 type: 'mage-chant',
                 frames: [
-                    { src: 'assets/vfx/player_buff/mage_chant_01_v2.webp', duration: 45 },
-                    { src: 'assets/vfx/player_buff/mage_chant_02_v2.webp', duration: 55 },
-                    { src: 'assets/vfx/player_buff/mage_chant_03_v2.webp', duration: 65 },
-                    { src: 'assets/vfx/player_buff/mage_chant_04_v2.webp', duration: 75 },
-                    { src: 'assets/vfx/player_buff/mage_chant_05_v2.webp', duration: 70 },
-                    { src: 'assets/vfx/player_buff/mage_chant_06_v2.webp', duration: 70 }
+                    { src: 'assets/vfx/player_buff/mage_chant_01_v3.webp', duration: 45 },
+                    { src: 'assets/vfx/player_buff/mage_chant_02_v3.webp', duration: 55 },
+                    { src: 'assets/vfx/player_buff/mage_chant_03_v3.webp', duration: 65 },
+                    { src: 'assets/vfx/player_buff/mage_chant_04_v3.webp', duration: 75 },
+                    { src: 'assets/vfx/player_buff/mage_chant_05_v3.webp', duration: 70 },
+                    { src: 'assets/vfx/player_buff/mage_chant_06_v3.webp', duration: 70 }
                 ],
-                width: 440,
-                height: 590,
-                origin: { x: 0.53, y: 0.47 }
+                width: 560,
+                height: 840,
+                origin: { x: 0.5, y: 0.5 }
             }
         },
         battleBackHurtFrames: [
