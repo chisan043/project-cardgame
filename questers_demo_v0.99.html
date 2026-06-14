@@ -668,7 +668,7 @@
         @keyframes cloneStrike { 0% { transform: translateY(0) translateX(0) scale(1); } 18% { transform: translateY(-9px) translateX(14px) scale(0.98); } 52% { transform: translateY(26px) translateX(-64px) scale(1.1); } 100% { transform: translateY(0) translateX(0) scale(1); } }
         @keyframes enemyMinionHurt { 0%, 100% { transform: translateY(0) translateX(0) scale(1); filter:none; } 24% { transform: translateY(-3px) translateX(22px) scale(0.96); filter:brightness(1.75) saturate(0.65); } 52% { transform: translateY(2px) translateX(12px) scale(1.02); } }
         
-        .enemy-anim-attack { animation: enemyLunge 0.56s cubic-bezier(0.2, 0.8, 0.2, 1) !important; filter: drop-shadow(0 0 42px var(--crimson)) brightness(1.12); }
+        .enemy-anim-attack { animation:none !important; filter: drop-shadow(0 0 42px var(--crimson)) brightness(1.12); }
         .enemy-anim-hurt { animation: enemyHurtRecoil 0.42s cubic-bezier(0.16, 0.82, 0.24, 1) !important; filter: brightness(1.6) saturate(0.72) drop-shadow(0 0 36px rgba(255,64,64,0.86)); }
         @keyframes enemyLunge { 0%, 100% { transform: translate3d(0, 0, 0) scale(1); } 16% { transform: translate3d(26px, -12px, 0) scale(0.98) rotate(1deg); } 46% { transform: translate3d(-104px, 38px, 0) scale(1.13) rotate(-2deg); } 64% { transform: translate3d(-78px, 26px, 0) scale(1.08) rotate(-1deg); } }
         @keyframes enemyHurtRecoil { 0%, 100% { transform: translate3d(0, 0, 0) scale(1); } 18% { transform: translate3d(34px, -5px, 0) scale(0.97) rotate(1.6deg); } 38% { transform: translate3d(20px, 2px, 0) scale(1.025) rotate(-0.8deg); } 70% { transform: translate3d(8px, 0, 0) scale(1.01); } }
@@ -4647,6 +4647,24 @@
         return slug ? `assets/enemies/portraits/${slug}_portrait_v1.webp` : null;
     }
 
+    const ENEMY_ATTACK_FRAME_DURATIONS = [110, 120, 170, 120];
+
+    function getEnemyAttackFrames(enemy) {
+        const slug = getEnemyAssetSlug(enemy);
+        if (!slug) return [];
+        return ENEMY_ATTACK_FRAME_DURATIONS.map((duration, index) => ({
+            src: `assets/enemies/attack/${slug}_attack_${String(index + 1).padStart(2, '0')}_v1.webp`,
+            duration
+        }));
+    }
+
+    function preloadEnemyAttackFrames(enemy) {
+        getEnemyAttackFrames(enemy).forEach(frame => {
+            const image = new Image();
+            image.src = frame.src;
+        });
+    }
+
     const ENEMY_ATTACK_VFX_BY_SLUG = {
         sick_slime: 'acid-spit',
         bone_soldier: 'bone-slash',
@@ -5321,6 +5339,7 @@
     let playerAttackAnimationToken = 0;
     let playerHurtAnimationToken = 0;
     let playerAttackVfxToken = 0;
+    let enemyAttackAnimationToken = 0;
     function triggerPlayerAttackAnimation() {
         const avatarFrame = document.querySelector('.player-avatar-frame');
         const avatar = document.getElementById('player-avatar-img');
@@ -5481,9 +5500,34 @@
     function triggerEnemyAttackAnimation(target = 'enemy') {
         if (target === 'minion') {
             replayClassAnimation(document.getElementById('enemy-minion-wrapper'), 'enemy-minion-attack', 460);
-            return;
+            return { impactDelay: 190, duration: 460 };
         }
-        replayClassAnimation(document.getElementById('enemy-avatar'), 'enemy-anim-attack', 580);
+        const avatarFrame = document.getElementById('enemy-avatar');
+        const avatar = document.getElementById('enemy-avatar-img');
+        if (!avatarFrame || !avatar) return { impactDelay: 190, duration: 520 };
+        const frames = getEnemyAttackFrames(state.enemy);
+        const totalDuration = Math.max(420, frames.reduce((sum, frame) => sum + frame.duration, 0));
+        const impactDelay = Math.min(300, (frames[0]?.duration || 110) + (frames[1]?.duration || 120) + 45);
+        const token = ++enemyAttackAnimationToken;
+        avatar.dataset.animationState = 'attack';
+        avatarFrame.classList.remove('enemy-anim-attack');
+        void avatarFrame.offsetWidth;
+        avatarFrame.classList.add('enemy-anim-attack');
+
+        let elapsed = 0;
+        frames.forEach(frame => {
+            setTimeout(() => {
+                if (token === enemyAttackAnimationToken) avatar.src = frame.src;
+            }, elapsed);
+            elapsed += frame.duration;
+        });
+        setTimeout(() => {
+            if (token !== enemyAttackAnimationToken) return;
+            avatar.dataset.animationState = '';
+            avatar.src = avatar.dataset.idleSrc || getEnemyVisualPath(state.enemy);
+            avatarFrame.classList.remove('enemy-anim-attack');
+        }, totalDuration);
+        return { impactDelay, duration: totalDuration };
     }
 
     function triggerEnemyHurtAnimation(target = 'enemy') {
@@ -5512,6 +5556,7 @@
         state.enemy.armor = 0; state.enemy.poison = 0; state.enemy.bleed = 0; state.enemy.burn = 0; state.enemy.stun = 0; state.enemy.curse = 0; state.enemy.vuln = 0; state.enemy.weak = 0; state.enemy.str = 0;
         state.enemy.charged = false; state.enemy.minion = null; state.enemy.isPhase2 = false;
         state.enemy.turnCount = 0; state.enemy.moveHistory = [];
+        preloadEnemyAttackFrames(state.enemy);
         applyBattleBackgroundForEncounter(state.currentNode, state.enemy);
         resetBattleActionLog();
         addBattleActionLog('system', '遭遇', state.enemy.name);
@@ -5748,7 +5793,11 @@
                 enemyAvatarImg.style.display = 'block';
                 fallback.style.display = 'none';
             };
-            enemyAvatarImg.src = getEnemyVisualPath(state.enemy);
+            const idleSrc = getEnemyVisualPath(state.enemy);
+            enemyAvatarImg.dataset.idleSrc = idleSrc || '';
+            if (enemyAvatarImg.dataset.animationState !== 'attack') {
+                enemyAvatarImg.src = idleSrc;
+            }
         }
         let move = state.enemy.nextMove; 
         let vText = move.val;
@@ -6966,7 +7015,8 @@
             if(state.enemy.charged) { baseDmg *= 2; state.enemy.charged = false; }
             
             for(let i=0; i<times; i++) {
-                triggerEnemyAttackAnimation('enemy');
+                const enemyAttackTiming = triggerEnemyAttackAnimation('enemy');
+                await new Promise(r => setTimeout(r, enemyAttackTiming.impactDelay));
                 triggerVFX('e-atk'); 
                 
                 let dmg = baseDmg;
@@ -7012,7 +7062,7 @@
                 }
                 
                 updateBattleUI();
-                await new Promise(r => setTimeout(r, 400));
+                await new Promise(r => setTimeout(r, Math.max(220, enemyAttackTiming.duration - enemyAttackTiming.impactDelay)));
             }
         } 
         else if (!enemySkippedByStun && move.type === 'defend') {
