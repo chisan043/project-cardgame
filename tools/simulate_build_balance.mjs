@@ -643,7 +643,7 @@ function estimateCard(state, card, incoming, move) {
             m_status_supernova: 52 + enemyDebuffCount(state) * 18,
             s_energy: 32 + state.aim * 3,
             a_gale_verdict: 18 + Math.min(3, state.aim) * 8,
-            s_poison: (state.enemy.poison + state.enemy.bleed) * 5 + 48,
+            s_poison: (state.enemy.poison + state.enemy.bleed) * 2.5 + 28,
             s_exhaust: (state.exhaust.length + 1) * 20 + (state.exhaust.length ? 14 : 0)
         };
         score += specialScores[card.specialId] || 0;
@@ -911,8 +911,8 @@ function executeSpecialCard(state, card, echo = false) {
         if (hadWind) state.energy++;
     } else if (specialId === 's_poison') {
         const layers = state.enemy.poison + state.enemy.bleed;
-        hitEnemy(state, 44 + layers * 5);
-        state.protection += Math.min(18, layers);
+        hitEnemy(state, 24 + layers * 2.5);
+        state.protection += Math.min(8, layers);
     } else if (specialId === 's_exhaust') {
         const returned = state.exhaust.length + 1;
         if (hasRelic(state, 'r_exhaust_dmg')) state.battleDamage += 1;

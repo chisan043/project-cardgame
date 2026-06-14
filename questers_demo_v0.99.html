@@ -6623,7 +6623,7 @@
                 state.exhaustPile.forEach(c => onCardReturnedFromExhaust(c));
                 state.battleDeck = state.battleDeck.concat(state.exhaustPile, [card]); state.exhaustPile = []; state.battleDeck.sort(()=>0.5-Math.random());
             }
-            else if(card.specialId === 's_poison') { let layers = state.enemy.poison + state.enemy.bleed; let dmg = 44 + layers * 5; applyDamageToEnemy(dmg); state.p_reduce_dmg += Math.min(18, layers); showFloatText(card.name, "var(--nature)", getCenter('enemy-avatar')); }
+            else if(card.specialId === 's_poison') { let layers = state.enemy.poison + state.enemy.bleed; let dmg = 24 + layers * 2.5; applyDamageToEnemy(dmg); state.p_reduce_dmg += Math.min(8, layers); showFloatText(card.name, "var(--nature)", getCenter('enemy-avatar')); }
             else if(card.specialId === 's_shield') { triggerVFX('p-atk'); applySpecialCardDamage(card, state.armor + state.p_battle_dmg); state.p_counter = 1; showFloatText("誓盾出锋 / 进入反击", "var(--gold)", getCenter('ui-hp')); }
             else if(card.specialId === 's_magic') {
                 const lastWasReplica = (state.lastPlayedCard?.tags || []).includes('复刻');
