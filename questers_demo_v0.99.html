@@ -2297,6 +2297,7 @@
 <script src="src/data/cards.js?v=20260614-exile-flow-text"></script>
 <script src="src/data/enemies.js?v=20260605-enemy-ai"></script>
 <script src="src/data/characters.js?v=20260613-attack-vfx-origin"></script>
+<script src="src/runtime/state-rules.js?v=20260615-runtime-state-rules"></script>
 <script src="src/runtime/map-rules.js?v=20260615-runtime-map-rules"></script>
 <script src="src/runtime/reward-rules.js?v=20260615-runtime-reward-rules"></script>
 <script>
@@ -3216,14 +3217,7 @@
             </div>`;
     }
 
-    let state = {
-        hp: 80, maxHp: 80, mp: 5, gold: 50, floor: 0, armor: 0,
-        deck: [], battleDeck: [], discardPile: [], exhaustPile: [], hand: [], relics: [], playedRetainPile: [], lastPlayedCard: null,
-        enemy: { currentHp: 0, armor: 0, poison: 0, bleed: 0, burn: 0, stun: 0, curse: 0, vuln: 0, weak: 0, str: 0, nextMove: null, charged: false, minion: null, isPhase2: false, turnCount: 0, moveHistory: [] }, 
-        mapData: [], currentNode: null, pathHistory: [], player: { thorns: 0, characterId: 'hero_warrior', name: '勇者战士' },
-        p_poison: 0, p_bleed: 0, p_burn: 0, p_stun: 0, p_curse: 0, p_vuln: 0, p_weak: 0, p_echo_stack: 0, p_next_dmg: 0, p_reduce_dmg: 0, p_counter: 0, p_battle_dmg: 0, p_dmg_buff: 0, p_chant: 0, p_aim: 0, p_sidestep: 0, p_blood_debt: 0, p_blood_debt_turns: 0, p_blood_debt_pending_damage: 0, p_blood_debt_paid: 0, p_blood_debt_power: 1, r_discard_count: 0,
-        isNodeClickLocked: false, next_card_echo: 0, turn_first_card: true, currentShop: null, isEnemyTurn: false, battleLog: []
-    };
+    let state = QuestersStateRules.createInitialState();
     let shopDeletePrice = 50;
 
     function shouldSuppressBattleSelection(event) {
@@ -4607,21 +4601,7 @@
     }
 
     function saveRun() {
-        const payload = {
-            version: 1,
-            savedAt: Date.now(),
-            floor: state.floor,
-            hp: state.hp,
-            maxHp: state.maxHp,
-            gold: state.gold,
-            deck: state.deck,
-            relics: state.relics,
-            mapData: state.mapData,
-            pathHistory: state.pathHistory,
-            currentNodeId: state.currentNode?.id || null,
-            player: state.player,
-            shopDeletePrice
-        };
+        const payload = QuestersStateRules.createRunSavePayload(state, { shopDeletePrice });
         localStorage.setItem(RUN_SAVE_KEY, JSON.stringify(payload));
         updateContinueButton();
     }
@@ -4674,14 +4654,7 @@
     }
 
     function resolveSavedCurrentNode(savedNodeId) {
-        const fallbackId = state.pathHistory.length ? state.pathHistory[state.pathHistory.length - 1] : null;
-        const nodeId = savedNodeId || fallbackId;
-        if (!nodeId || !Array.isArray(state.mapData)) return null;
-        for (const floor of state.mapData) {
-            const node = floor?.nodes?.find(n => n.id === nodeId);
-            if (node) return node;
-        }
-        return null;
+        return QuestersStateRules.resolveSavedCurrentNode(state.mapData, state.pathHistory, savedNodeId);
     }
 
     function getCurrentCharacter() {
@@ -5197,12 +5170,7 @@
     ];
 
     function findMapNodeById(nodeId) {
-        if (!nodeId || !Array.isArray(state.mapData)) return null;
-        for (const floor of state.mapData) {
-            const node = floor?.nodes?.find(n => n.id === nodeId);
-            if (node) return node;
-        }
-        return null;
+        return QuestersStateRules.findMapNodeById(state.mapData, nodeId);
     }
 
     function getDefaultMapPreviewNode() {
