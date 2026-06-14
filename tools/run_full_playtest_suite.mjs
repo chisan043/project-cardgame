@@ -66,6 +66,16 @@ function fixed(value, digits = 1) {
     return Number.isFinite(value) ? value.toFixed(digits) : '0.0';
 }
 
+function localReportDate(value) {
+    const parts = Object.fromEntries(new Intl.DateTimeFormat('zh-CN', {
+        timeZone: 'Asia/Shanghai',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit'
+    }).formatToParts(new Date(value)).map(part => [part.type, part.value]));
+    return `${parts.year}-${parts.month}-${parts.day}`;
+}
+
 function clamp(value, min, max) {
     return Math.max(min, Math.min(max, value));
 }
@@ -570,6 +580,72 @@ function relicRating(winRate, triggerPerRun, benefitPerRun) {
     return clamp(1 + winRate * 1.6 + Math.min(1.2, triggerPerRun * 0.08) + Math.min(1.2, benefitPerRun * 0.02), 1, 5);
 }
 
+function coreStatus(data, roleId, buildId, coreCards, acquiredRelics) {
+    const mature = MATURE_LOADOUTS[buildId] || {};
+    const coreCardName = mature.core
+        ? data.SPECIAL_EPIC_POOLS[roleId].find(card => card.id === mature.core)?.name || mature.core
+        : '';
+    const ownedCoreCard = !mature.core || coreCards.some(card => card.id === mature.core || card.specialId === mature.core);
+    const wantedRelics = new Set(mature.relics || []);
+    const ownedCoreRelics = acquiredRelics.filter(relic => wantedRelics.has(relic.id)).length;
+    return {
+        coreCardName,
+        ownedCoreCard,
+        ownedCoreRelics,
+        wantedRelicCount: wantedRelics.size
+    };
+}
+
+function classifyFailure(data, context) {
+    const { roleId, buildId, floor, nodeType, result, deck, coreCards, acquiredRelics, character } = context;
+    const enemyHpRatio = result.enemyMaxHp ? result.enemyHp / result.enemyMaxHp : 1;
+    const core = coreStatus(data, roleId, buildId, coreCards, acquiredRelics);
+    const missingCoreLate = floor >= 12 && (!core.ownedCoreCard || core.ownedCoreRelics === 0);
+    const lowDeckGrowth = deck.length < 13 && floor >= 10;
+
+    if (result.deathCause === '回合上限' || result.turns >= 30) {
+        return {
+            category: '缺输出',
+            hint: `战斗拖到 ${result.turns} 回合仍未结束，敌人剩余 ${pct(enemyHpRatio)} 生命；优先补伤害牌、爆发窗口或核心启动件。`
+        };
+    }
+    if (nodeType === 'boss' && enemyHpRatio <= 0.28) {
+        return {
+            category: 'Boss窗口没抓住',
+            hint: `Boss 剩余 ${pct(enemyHpRatio)} 生命时倒下，说明斩杀窗口接近但未收束；优先保留爆发牌、升级核心输出或减少拖累牌。`
+        };
+    }
+    if (missingCoreLate) {
+        const coreText = core.coreCardName && !core.ownedCoreCard ? `未拿到 ${core.coreCardName}` : '核心遗物不足';
+        return {
+            category: '核心没启动',
+            hint: `${coreText}，第 ${floor} 层仍主要靠普通牌推进；优先走事件整理、商店补货或宝箱找关键件。`
+        };
+    }
+    if (result.damageTaken >= character.maxHp * 0.85 || result.turns <= 5) {
+        return {
+            category: '缺防线',
+            hint: `本战承受 ${Math.round(result.damageTaken)} 点伤害，在 ${result.turns} 回合内被击倒；优先补护盾、闪避、虚弱、眩晕或回复轴。`
+        };
+    }
+    if (lowDeckGrowth) {
+        return {
+            category: '牌组没长起来',
+            hint: `第 ${floor} 层牌组仍只有 ${deck.length} 张，选择过多跳过或缺少可用奖励；优先拿桥接牌和低配启动件。`
+        };
+    }
+    if (nodeType === 'boss') {
+        return {
+            category: 'Boss窗口没抓住',
+            hint: `Boss 战被 ${result.deathCause || '敌方行动'} 击倒；优先规划爆发回合和防线回合，不要把关键牌过早消耗。`
+        };
+    }
+    return {
+        category: '战斗压力过高',
+        hint: `被 ${result.deathCause || '敌方行动'} 击倒；检查当前章节是否同时缺输出、防线和牌组精简。`
+    };
+}
+
 function applyCardReward(data, stats, rng, roleId, buildId, deck, floor, hpRatio, profile, runCardsPicked) {
     const choices = generateCardChoices(data, rng, roleId, buildId, floor, profile, deck);
     for (const card of choices) getCardStats(stats, data, roleId, card).appearances++;
@@ -610,6 +686,8 @@ function simulateFullRun(data, stats, runConfig) {
     let upgrades = 0;
     let deathFloor = null;
     let deathReason = '';
+    let deathCategory = '';
+    let deathHint = '';
     let floorReached = 0;
     let act1BossReached = false;
     let act1BossPassed = false;
@@ -686,6 +764,11 @@ function simulateFullRun(data, stats, runConfig) {
                 enemyStats.negativeFeedback += result.damageTaken > character.maxHp * 0.7 || result.turns <= 4 ? 1 : 0;
                 deathFloor = floor;
                 deathReason = result.deathCause || '未知';
+                const feedback = classifyFailure(data, {
+                    roleId, buildId, floor, nodeType, result, deck, coreCards, acquiredRelics, character
+                });
+                deathCategory = feedback.category;
+                deathHint = feedback.hint;
                 hp = Math.max(0, result.hp);
                 break;
             }
@@ -834,6 +917,8 @@ function simulateFullRun(data, stats, runConfig) {
         cleared,
         deathFloor: deathFloor || '',
         deathReason: deathReason || '',
+        deathCategory,
+        deathHint,
         floorReached,
         act1BossReached,
         act1BossPassed,
@@ -962,6 +1047,38 @@ function summarizeRoutes(stats) {
     })).sort((left, right) => right.chosen - left.chosen);
 }
 
+function summarizeFailureFeedback(runs) {
+    const failed = runs.filter(run => !run.cleared);
+    const groups = {};
+    const topEntry = values => Object.entries(values)
+        .sort((left, right) => right[1] - left[1] || left[0].localeCompare(right[0]))[0]?.[0] || '';
+
+    for (const run of failed) {
+        const category = run.deathCategory || '未分类';
+        groups[category] ||= {
+            category,
+            count: 0,
+            floors: {},
+            reasons: {},
+            hints: {}
+        };
+        const group = groups[category];
+        group.count++;
+        group.floors[run.deathFloor || '-'] = (group.floors[run.deathFloor || '-'] || 0) + 1;
+        group.reasons[run.deathReason || '未知'] = (group.reasons[run.deathReason || '未知'] || 0) + 1;
+        if (run.deathHint) group.hints[run.deathHint] = (group.hints[run.deathHint] || 0) + 1;
+    }
+
+    return Object.values(groups).map(group => ({
+        category: group.category,
+        count: group.count,
+        share: failed.length ? group.count / failed.length : 0,
+        commonFloor: topEntry(group.floors),
+        commonReason: topEntry(group.reasons),
+        hint: topEntry(group.hints)
+    })).sort((left, right) => right.count - left.count || left.category.localeCompare(right.category));
+}
+
 function summarizeCombos(stats, data, cards, relics) {
     const cardNames = Object.fromEntries(cards.map(card => [card.id, card.name]));
     const relicNames = Object.fromEntries(relics.map(relic => [relic.id, relic.name]));
@@ -1056,8 +1173,9 @@ function writeCsvReports(report, outputDir) {
     fs.mkdirSync(outputDir, { recursive: true });
     fs.writeFileSync(path.join(outputDir, 'single_runs.csv'), toCsv(report.runs, [
         'runId', 'role', 'difficulty', 'profileLabel', 'targetBuild', 'cleared', 'deathFloor',
-        'deathReason', 'floorReached', 'finalBuild', 'coreCards', 'coreRelics', 'totalMinutes',
-        'eliteKills', 'shops', 'removes', 'upgrades', 'subjectiveScore'
+        'deathReason', 'deathCategory', 'deathHint', 'floorReached', 'finalBuild', 'coreCards',
+        'coreRelics', 'totalMinutes', 'eliteKills', 'shops', 'removes', 'upgrades',
+        'subjectiveScore'
     ]));
     fs.writeFileSync(path.join(outputDir, 'card_stats.csv'), toCsv(report.cards, [
         'id', 'name', 'type', 'rarity', 'tags', 'buildTags', 'appearances', 'selections',
@@ -1084,6 +1202,9 @@ function writeCsvReports(report, outputDir) {
     fs.writeFileSync(path.join(outputDir, 'anomalies.csv'), toCsv(report.anomalies, [
         'type', 'severity', 'subject', 'detail', 'metric', 'value', 'threshold'
     ]));
+    fs.writeFileSync(path.join(outputDir, 'failure_feedback.csv'), toCsv(report.failureFeedback, [
+        'category', 'count', 'share', 'commonFloor', 'commonReason', 'hint'
+    ]));
     fs.writeFileSync(path.join(outputDir, 'combo_stats.csv'), toCsv(report.combos, [
         'type', 'leftName', 'rightName', 'runs', 'wins', 'winRate'
     ]));
@@ -1098,7 +1219,7 @@ function markdownReport(report, outputDir) {
     const lines = [
         '# 完整跑局体验与平衡测试报告',
         '',
-        `测试日期：${report.generatedAt.slice(0, 10)}`,
+        `测试日期：${localReportDate(report.generatedAt)}`,
         '',
         `样本：熟练玩家 ${experiencedRuns.length} 局，新手 ${noviceRuns.length} 局；随机种子：\`${report.config.seed}\`。`,
         '',
@@ -1128,6 +1249,12 @@ function markdownReport(report, outputDir) {
         '|---|---:|---:|---:|---:|---:|---:|---:|',
         ...report.routes.map(route => `| ${route.label} | ${route.offered} | ${route.chosen} | ${pct(route.choiceRate)} | ${fixed(route.averageHpDelta)} | ${fixed(route.averageGoldDelta)} | ${fixed(route.averageCardRewards, 2)} | ${fixed(route.averageRelicRewards, 2)} |`),
         '',
+        '## 失败反馈概览',
+        '',
+        '| 分类 | 次数 | 占失败 | 常见楼层 | 常见触发 | 建议 |',
+        '|---|---:|---:|---:|---|---|',
+        ...report.failureFeedback.map(item => `| ${item.category} | ${item.count} | ${pct(item.share)} | ${item.commonFloor} | ${item.commonReason} | ${item.hint} |`),
+        '',
         '## 异常项 Top 20',
         '',
         '| 类型 | 严重度 | 对象 | 说明 | 指标 | 值 | 阈值 |',
@@ -1142,6 +1269,7 @@ function markdownReport(report, outputDir) {
         `- 敌人死亡率表：\`${path.join(outputDir, 'enemy_stats.csv')}\``,
         `- 楼层死亡热区表：\`${path.join(outputDir, 'floor_heatmap.csv')}\``,
         `- 路线选择统计表：\`${path.join(outputDir, 'route_stats.csv')}\``,
+        `- 失败反馈分类表：\`${path.join(outputDir, 'failure_feedback.csv')}\``,
         `- 异常项列表：\`${path.join(outputDir, 'anomalies.csv')}\``,
         `- 组合胜率表：\`${path.join(outputDir, 'combo_stats.csv')}\``,
         '',
@@ -1169,6 +1297,7 @@ function buildReport(data, stats, config) {
         floors: summarizeFloors(stats),
         chapters: summarizeChapters(stats),
         routes: summarizeRoutes(stats),
+        failureFeedback: summarizeFailureFeedback(stats.runs),
         combos: [],
         battleCaps: stats.battleCaps,
         anomalies: []

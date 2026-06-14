@@ -7332,7 +7332,7 @@
         if (junks.length > 0) {
             let junkDmg = junks.length * 5; state.hp -= junkDmg;
             showFloatText(`诅咒反噬 -${junkDmg}`, "var(--purple)", getCenter('ui-hp'));
-            if(state.hp <= 0) { alert("意志被暗影吞没，探索结束。"); showScene('scene-main-menu'); setTopBarVisible(false); return; }
+            if(state.hp <= 0) { showRunFailure('curse'); return; }
             await new Promise(r => setTimeout(r, 600));
         }
 
@@ -7343,7 +7343,7 @@
         if(state.p_burn > 0) { let burnDmg = Math.max(1, Math.ceil(state.maxHp * 0.03 * state.p_burn)); state.hp -= burnDmg; state.p_burn--; showFloatText(`燃烧 -${burnDmg}`, "var(--fire)", getCenter('ui-hp')); }
         if(state.p_curse > 0) state.p_curse--;
         
-        if(state.hp <= 0) { alert("旅者倒在讨魔旅途深处，探索结束。"); showScene('scene-main-menu'); setTopBarVisible(false); return; }
+        if(state.hp <= 0) { showRunFailure('status'); return; }
 
         if(state.p_vuln > 0) state.p_vuln--; if(state.p_weak > 0) state.p_weak--; state.p_dmg_buff = 0; state.p_next_dmg = 0;
 
@@ -7520,7 +7520,7 @@
             showFloatText('不屈战徽蓄势', "var(--gold)", getCenter('ui-hp'));
         }
         
-        if(state.hp <= 0) { alert("旅者倒在讨魔旅途深处，探索结束。"); showScene('scene-main-menu'); setTopBarVisible(false); return; }
+        if(state.hp <= 0) { showRunFailure('enemy'); return; }
         if(!hasRelic('r_yin_yang') && !hasRelic('r_perma_curse')) { if(state.enemy.vuln > 0) state.enemy.vuln--; if(state.enemy.weak > 0) state.enemy.weak--; } else if (hasRelic('r_yin_yang')) { state.enemy.vuln = Math.ceil(state.enemy.vuln / 2); state.enemy.weak = Math.ceil(state.enemy.weak / 2); }
         
         setTimeout(async () => { 
@@ -7586,6 +7586,33 @@
         alert(message);
         showScene('scene-main-menu');
         setTopBarVisible(false);
+    }
+
+    function getRuntimeFailureHint(cause = '') {
+        const enemyHp = Math.max(0, state.enemy?.currentHp || 0);
+        const enemyMaxHp = state.enemy?.maxHp || 0;
+        const enemyHpRatio = enemyMaxHp ? enemyHp / enemyMaxHp : 1;
+        const pendingBloodDebt = state.p_blood_debt_pending_damage || 0;
+        if (cause === 'curse') {
+            return '手牌中的诅咒反噬击倒了你：下次优先移除厄运印记，或在敌人塞牌后尽快打空手牌。';
+        }
+        if (pendingBloodDebt > 0) {
+            return '血债清算压垮了你：下次需要在倒计时前用吸血或偿债牌还清。';
+        }
+        if (cause === 'status') {
+            return '持续伤害结算击倒了你：下次要更早处理毒、流血、燃烧，或保留回复与减伤牌。';
+        }
+        if (enemyMaxHp > 0 && enemyHpRatio <= 0.25) {
+            return `敌人只剩 ${Math.round(enemyHpRatio * 100)}% 生命：斩杀窗口接近，但需要保留爆发牌或补一张收束牌。`;
+        }
+        if ((state.armor || 0) <= 0 && (state.p_reduce_dmg || 0) <= 0 && (state.p_sidestep || 0) <= 0) {
+            return '防线断档：下次需要在敌方攻击回合保留护盾、闪避、虚弱或眩晕。';
+        }
+        return '当前牌组没能同时接住输出与防线压力：下次优先补桥接牌、升级核心牌，或在事件中整理行囊。';
+    }
+
+    function showRunFailure(cause = '') {
+        loseRun(`旅者倒在讨魔旅途深处，探索结束。\n\n${getRuntimeFailureHint(cause)}`);
     }
 
     function winBattle() { 
