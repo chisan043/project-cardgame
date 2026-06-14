@@ -34,6 +34,75 @@
         return 25 + Math.min(30, floor * 2) + (hasRewardCrown ? 15 : 0) + (hasCampfirePouch ? 10 : 0);
     }
 
+    function getDeckBuildProfile({
+        deck = [],
+        directions = {},
+        characterId = null,
+        getExplicitBuildTags = () => [],
+        getCardBuildTags = () => [],
+        starterWeight = 0.25
+    } = {}) {
+        const profile = Object.fromEntries(Object.keys(directions).map(key => [key, 0]));
+        deck.forEach(card => {
+            const weight = card.isStarter ? starterWeight : 1;
+            getExplicitBuildTags(card).forEach(tag => {
+                if (profile[tag] !== undefined) profile[tag] += 2 * weight;
+            });
+            getCardBuildTags(card, characterId).forEach(tag => {
+                if (profile[tag] !== undefined) profile[tag] += 1 * weight;
+            });
+        });
+        return profile;
+    }
+
+    function getPrimaryBuildTag(profile = {}, {
+        minScore = 1,
+        minLead = 0.75
+    } = {}) {
+        const ranked = Object.entries(profile).sort((a, b) => b[1] - a[1]);
+        if (!ranked.length || ranked[0][1] <= minScore) return null;
+        if (ranked[1] && ranked[0][1] - ranked[1][1] < minLead) return null;
+        return ranked[0][0];
+    }
+
+    function deckHasTag(tag, deck = []) {
+        return deck.some(card => card.tags && card.tags.includes(tag));
+    }
+
+    function deckHasCardMatch(match, deck = []) {
+        return deck.some(card => match(card));
+    }
+
+    function getRewardBridgeSpec(deck = [], characterId = 'hero_warrior') {
+        const hasBleed = deckHasTag('出血', deck);
+        const hasBloodlet = deckHasTag('放血', deck);
+        if (hasBleed && !hasBloodlet) return { label: '出血缺放血', match: card => (card.tags || []).includes('放血') };
+        if (hasBloodlet && !hasBleed) return { label: '放血缺出血', match: card => (card.tags || []).includes('出血') };
+
+        if (characterId === 'hero_archer') {
+            const hasExile = deckHasTag('放逐', deck);
+            const hasRecycle = deckHasTag('回收', deck);
+            if (hasExile && !hasRecycle) return { label: '放逐缺回收', match: card => (card.tags || []).includes('回收') };
+            if (hasRecycle && !hasExile) return { label: '回收缺放逐', match: card => (card.tags || []).includes('放逐') };
+        }
+
+        if (characterId === 'hero_mage') {
+            const hasCopy = deckHasTag('复刻', deck);
+            const hasEcho = deckHasTag('回响', deck);
+            if (hasCopy && !hasEcho) return { label: '复刻缺回响', match: card => (card.tags || []).includes('回响') };
+            if (hasEcho && !hasCopy) return { label: '回响缺复刻', match: card => (card.tags || []).includes('复刻') };
+        }
+
+        if (characterId === 'hero_warrior') {
+            const hasDebtGain = deckHasCardMatch(card => Number(card.bloodDebtGain) > 0, deck);
+            const hasDebtRepay = deckHasCardMatch(card => Number(card.bloodDebtRepay) > 0 || Number(card.bloodDebtRepayFromBleed) > 0, deck);
+            if (hasDebtGain && !hasDebtRepay) return { label: '血债缺偿债', match: card => Number(card.bloodDebtRepay) > 0 || Number(card.bloodDebtRepayFromBleed) > 0 };
+            if (hasDebtRepay && !hasDebtGain) return { label: '偿债缺借债', match: card => Number(card.bloodDebtGain) > 0 };
+        }
+
+        return null;
+    }
+
     function getRewardCandidatePool({
         classPool = [],
         neutralPool = [],
@@ -63,8 +132,13 @@
     }
 
     global.QuestersRewardRules = {
+        deckHasCardMatch,
+        deckHasTag,
         getBattleRewardSkipGold,
         getCardChoiceKey,
+        getDeckBuildProfile,
+        getPrimaryBuildTag,
+        getRewardBridgeSpec,
         getRewardCandidatePool,
         rollRewardRarity,
         rollWeighted
