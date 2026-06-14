@@ -67,8 +67,32 @@
         state.deck = state.deck.filter(card => !card.isJunk && !card.isKnife);
     }
 
+    function getRuntimeFailureHint(state, cause = '') {
+        const enemyHp = Math.max(0, state.enemy?.currentHp || 0);
+        const enemyMaxHp = state.enemy?.maxHp || 0;
+        const enemyHpRatio = enemyMaxHp ? enemyHp / enemyMaxHp : 1;
+        const pendingBloodDebt = state.p_blood_debt_pending_damage || 0;
+        if (cause === 'curse') {
+            return '手牌中的诅咒反噬击倒了你：下次优先移除厄运印记，或在敌人塞牌后尽快打空手牌。';
+        }
+        if (pendingBloodDebt > 0) {
+            return '血债清算压垮了你：下次需要在倒计时前用吸血或偿债牌还清。';
+        }
+        if (cause === 'status') {
+            return '持续伤害结算击倒了你：下次要更早处理毒、流血、燃烧，或保留回复与减伤牌。';
+        }
+        if (enemyMaxHp > 0 && enemyHpRatio <= 0.25) {
+            return `敌人只剩 ${Math.round(enemyHpRatio * 100)}% 生命：斩杀窗口接近，但需要保留爆发牌或补一张收束牌。`;
+        }
+        if ((state.armor || 0) <= 0 && (state.p_reduce_dmg || 0) <= 0 && (state.p_sidestep || 0) <= 0) {
+            return '防线断档：下次需要在敌方攻击回合保留护盾、闪避、虚弱或眩晕。';
+        }
+        return '当前牌组没能同时接住输出与防线压力：下次优先补桥接牌、升级核心牌，或在事件中整理行囊。';
+    }
+
     global.QuestersBattleRules = {
         cleanupAfterBattleWin,
+        getRuntimeFailureHint,
         resetBattleStartState,
         resetPlayerBattleStatuses
     };
