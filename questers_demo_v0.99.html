@@ -2982,8 +2982,8 @@
         if (tag === '保留') return '打出后下回合回到手牌。';
         if (tag === '抽牌') return `抽 <span class="card-desc-value">${getCardDrawCount(card)}</span> 张牌。`;
         if (tag === '充能') return '回复 <span class="card-desc-value">1</span> 点能量。';
-        if (tag === '狂热') return `丢弃 1 张手牌，本回合伤害提高 <span class="card-desc-value">${getFrenzyBonus(card)}</span>。`;
-        if (tag === '附魔') return `丢弃 1 张手牌，下一次攻击追加 <span class="card-desc-value">${getEnchantBonus(card, false)}</span> 伤害并抽 1 张牌。`;
+        if (tag === '狂热') return `自动丢弃 1 张手牌，本回合伤害提高 <span class="card-desc-value">${getFrenzyBonus(card)}</span>。`;
+        if (tag === '附魔') return `自动丢弃 1 张手牌，下一次攻击追加 <span class="card-desc-value">${getEnchantBonus(card, false)}</span> 伤害并抽 1 张牌。`;
         if (tag === '剧毒') return `施加 <span class="card-desc-value">${getStatusLayerCount(card, tag)}</span> 层剧毒。`;
         if (tag === '出血') return `施加 <span class="card-desc-value">${getStatusLayerCount(card, tag)}</span> 层出血。`;
         if (tag === '燃烧') return `施加 <span class="card-desc-value">${getStatusLayerCount(card, tag)}</span> 层燃烧。`;
@@ -5995,6 +5995,43 @@
         });
     }
 
+    function getAutoSelectKey(card) {
+        return String(card?.instId || card?.id || card?.poolId || card?.name || '');
+    }
+
+    function getAutoCardPriority(card, mode = 'keep') {
+        if (!card) return -9999;
+        if (card.isJunk) return -5000;
+        const tags = card.tags || [];
+        const rarityScore = card.rarity === '史诗' ? 9 : card.rarity === '稀有' ? 5 : 2;
+        const valueScore = Math.min(18, Math.max(0, getScaledCardValue(card) || Number(card.val) || 0));
+        const costPenalty = Math.max(0, Number(card.cost) || 0) * 2;
+        let score = rarityScore + valueScore - costPenalty;
+        if (card.type === '攻击') score += 2;
+        if (tags.includes('抽牌') || hasDirectCardEffect(card, 'draw')) score += 5;
+        if (tags.includes('充能') || hasDirectCardEffect(card, 'energy')) score += 4;
+        if (tags.includes('回收') || tags.includes('复刻') || tags.includes('回响')) score += 5;
+        if (tags.includes('保留') || hasDirectCardEffect(card, 'retain')) score += 3;
+        if (tags.includes('销毁')) score -= 3;
+        if (mode === 'returnToHand') score += Math.max(0, 3 - (Number(card.cost) || 0)) * 3;
+        if (mode === 'returnToDraw') score += tags.includes('回收') || tags.includes('放逐') ? 2 : 0;
+        return score;
+    }
+
+    function autoSelectLowestPriorityCards(sourceArray, count, excludedKeys = new Set()) {
+        return [...sourceArray]
+            .filter(card => card && !card.sealed && !excludedKeys.has(getAutoSelectKey(card)))
+            .sort((a, b) => getAutoCardPriority(a) - getAutoCardPriority(b))
+            .slice(0, count);
+    }
+
+    function autoSelectHighestPriorityCards(sourceArray, count, excludedKeys = new Set(), mode = 'returnToHand') {
+        return [...sourceArray]
+            .filter(card => card && !card.sealed && !excludedKeys.has(getAutoSelectKey(card)))
+            .sort((a, b) => getAutoCardPriority(b, mode) - getAutoCardPriority(a, mode))
+            .slice(0, count);
+    }
+
     function addKnivesToHand(count) {
         for(let i=0; i<count; i++) {
             let knife = { id: Math.random().toString(36).substr(2, 9), instId: Math.random().toString(36).substr(2, 9), name: "飞刀", type: '攻击', cost: 0, icon: "🗡️", val: 4, tags: ['销毁'], rarity: '普通', desc: "造成 4 点伤害。<br>附带「销毁」。", isKnife: true };
@@ -6207,15 +6244,13 @@
         if (requireDiscard1.length > 0) {
             let selectableHand = state.hand.filter(c => c.instId !== instId && !c.sealed);
             if (selectableHand.length < 1) { showFloatText("无牌可丢弃", "var(--crimson)", getCenter('ui-hp')); return; }
-            let sel = await selectCardsAsync(selectableHand, 1, 1, `请选择 1 张手牌丢弃以触发能力`, true);
-            if (sel === null) return; 
+            let sel = autoSelectLowestPriorityCards(selectableHand, 1);
+            if (sel.length < 1) { showFloatText("无牌可丢弃", "var(--crimson)", getCenter('ui-hp')); return; }
             targets.discard1 = sel;
         }
         if (card.tags && card.tags.includes('重置')) {
             let selectableHand = state.hand.filter(c => c.instId !== instId && !c.sealed);
-            let sel = await selectCardsAsync(selectableHand, 0, selectableHand.length, `选择任意张手牌重置`, true);
-            if (sel === null) return; 
-            targets.reset = sel;
+            targets.reset = selectableHand;
         }
         if (card.tags && card.tags.includes('回收')) {
             targets.recycleSelections = [];
@@ -6226,19 +6261,18 @@
                     continue;
                 }
                 const sourcePile = mode === 'discardToHand' ? state.discardPile : state.exhaustPile;
-                const selectable = sourcePile.filter(candidate => !selectedRecycleIds.has(candidate.instId));
+                const selectable = sourcePile.filter(candidate => !selectedRecycleIds.has(getAutoSelectKey(candidate)));
                 const returnsToHand = mode === 'exhaustToHand' || mode === 'discardToHand';
                 const maxCount = returnsToHand && hasRelic('r_soul_lantern') ? 2 : 1;
-                const prompt = mode === 'discardToHand'
-                    ? '从墓地选择牌回到手牌'
-                    : mode === 'exhaustToHand'
-                        ? '选择放逐的牌回到手牌'
-                        : '选择放逐的牌洗入抽牌堆';
                 let selected = [];
                 if (selectable.length > 0) {
-                    selected = await selectCardsAsync(selectable, 1, Math.min(maxCount, selectable.length), prompt, true);
-                    if (selected === null) return;
-                    selected.forEach(candidate => selectedRecycleIds.add(candidate.instId));
+                    selected = autoSelectHighestPriorityCards(
+                        selectable,
+                        Math.min(maxCount, selectable.length),
+                        selectedRecycleIds,
+                        returnsToHand ? 'returnToHand' : 'returnToDraw'
+                    );
+                    selected.forEach(candidate => selectedRecycleIds.add(getAutoSelectKey(candidate)));
                 }
                 targets.recycleSelections.push({ mode, cards: selected });
                 if (mode === 'exhaustToHand') targets.zhaohun = selected;

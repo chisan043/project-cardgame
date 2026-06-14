@@ -284,6 +284,7 @@ function createBattle(data, rng, roleId, deck, hp, checkpoint, loadout, options 
         totalDamageDealt: 0, energyWasted: 0, lastDamageCause: null, lastEnemyDamageSource: null,
         cardOpportunities: {}, cardPlays: {}, cardMeta: {},
         playStyle: { attacks: 0, defenses: 0, abilities: 0, setup: 0, burst: 0, sustain: 0, control: 0, cycle: 0 },
+        discardCount: 0,
         protectArmorUsed: false, chantReservoirUsed: false, tailwindSpoolUsed: false,
         echoArchivePinUsed: false, statusLedgerUsed: false, abilityCardsPlayed: 0,
         bloodDebtReductionUsed: false, bloodClearUsed: false, scarletWhetUsed: false, oathTransfusionUsed: false, lifedebtClearUsed: false,
@@ -421,6 +422,40 @@ function dealExileFlowDamage(state, card, eventType) {
     if (damage <= 0) return 0;
     hitEnemy(state, damage, true, '牌区流动');
     return damage;
+}
+
+function getAutoDiscardPriority(card) {
+    if (!card) return 9999;
+    if (card.isJunk) return -9999;
+    const tags = card.tags || [];
+    const rarityScore = card.rarity === '史诗' ? 9 : card.rarity === '稀有' ? 5 : 2;
+    const valueScore = Math.min(18, Math.max(0, Number(card.val) || 0));
+    let score = rarityScore + valueScore - Math.max(0, Number(card.cost) || 0) * 2;
+    if (card.type === '攻击') score += 2;
+    if (tags.includes('抽牌') || stateHasDirectEffect(card, 'draw')) score += 5;
+    if (tags.includes('充能') || stateHasDirectEffect(card, 'energy')) score += 4;
+    if (tags.includes('回收') || tags.includes('复刻') || tags.includes('回响')) score += 5;
+    if (tags.includes('保留') || stateHasDirectEffect(card, 'retain')) score += 3;
+    if (tags.includes('销毁')) score -= 3;
+    return score;
+}
+
+function stateHasDirectEffect(card, key) {
+    return Boolean(card?.directEffects?.[key]);
+}
+
+function discardLowestPriorityHandCard(state) {
+    if (!state.hand.length) return null;
+    const ranked = state.hand
+        .map((card, index) => ({ card, index, score: getAutoDiscardPriority(card) }))
+        .sort((a, b) => a.score - b.score || a.index - b.index);
+    const selected = ranked[0];
+    if (!selected) return null;
+    const [discarded] = state.hand.splice(selected.index, 1);
+    state.discard.push(discarded);
+    if (!discarded.isJunk) state.discardCount++;
+    dealExileFlowDamage(state, discarded, 'discard');
+    return discarded;
 }
 
 function addKnives(state, count) {
@@ -633,6 +668,17 @@ function estimateCard(state, card, incoming, move) {
     if (card.bloodDebtStun) score += 13 * card.bloodDebtStun;
     if (tags.includes('反击')) score += incoming > 0 ? 10 : 4;
     if (tags.includes('回响') && card.type !== '攻击') score += 4;
+    const needsDiscardCost = tags.includes('狂热') || tags.includes('附魔');
+    if (needsDiscardCost) {
+        const discardCandidates = state.hand.filter(held => held !== card);
+        if (!discardCandidates.length) score -= 100;
+        else score -= Math.max(1, Math.min(8, getAutoDiscardPriority(discardCandidates.slice().sort((a, b) => getAutoDiscardPriority(a) - getAutoDiscardPriority(b))[0]) / 4));
+    }
+    if (tags.includes('狂热')) {
+        let frenzyBonus = (Number(card.val) || 4) + (card.up ? 4 : 3);
+        if (hasRelic(state, 'r_frenzy_veil')) frenzyBonus += Math.floor((state.discardCount + 1) / 2);
+        score += frenzyBonus * Math.max(1, state.hand.filter(held => held !== card && held.type === '攻击').length);
+    }
     if (tags.includes('附魔')) {
         const baseEnchant = Math.max(4, (Number(card.val) || 4) + (card.up ? 4 : 2));
         const sinkEnergy = Math.min(Number(card.energySink?.max) || 0, Math.max(0, state.energy - (card.cost || 0)));
@@ -815,8 +861,13 @@ function executeCard(state, card, echo = false) {
     if (card.isSpecial && executeSpecialCard(state, card)) return;
     let cycleReturned = false;
     let resetCount = 0;
+    let paidDiscardCost = false;
     let debtClearedByCard = false;
     let debtPaidByCard = 0;
+    if (!echo && (tags.includes('狂热') || tags.includes('附魔'))) {
+        paidDiscardCost = Boolean(discardLowestPriorityHandCard(state));
+        if (!paidDiscardCost) return;
+    }
     if (!echo && card.bloodDebtGain) addBloodDebt(state, card.bloodDebtGain);
     if (!echo && card.bloodDebtPowerGain) state.bloodDebtPower += Number(card.bloodDebtPowerGain) || 0;
     if (tags.includes('血祭')) {
@@ -849,7 +900,12 @@ function executeCard(state, card, echo = false) {
         if (hasRelic(state, 'r_sac_jade')) state.energy++;
         if (hasRelic(state, 'r_sac_jade')) state.protection += 2;
     }
-    if (tags.includes('附魔')) {
+    if (tags.includes('狂热') && paidDiscardCost) {
+        let frenzyBonus = (Number(card.val) || 4) + (card.up ? 4 : 3);
+        if (hasRelic(state, 'r_frenzy_veil')) frenzyBonus += Math.floor(state.discardCount / 2);
+        state.turnDamage += frenzyBonus;
+    }
+    if (tags.includes('附魔') && paidDiscardCost) {
         const sinkEnergy = Math.min(Number(card.energySink?.max) || 0, Math.max(0, state.energy));
         const baseEnchant = Math.max(4, (Number(card.val) || 4) + (card.up ? 4 : 2));
         state.energy -= sinkEnergy;
@@ -984,6 +1040,7 @@ function executeCard(state, card, echo = false) {
         const count = state.hand.length;
         for (const discardedCard of state.hand) {
             state.discard.push(discardedCard);
+            if (!discardedCard.isJunk) state.discardCount++;
             dealExileFlowDamage(state, discardedCard, 'discard');
         }
         resetCount = count;
