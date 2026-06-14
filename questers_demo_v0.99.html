@@ -3009,7 +3009,7 @@
             if (recycleText) d += `${d ? '<br>' : ''}${recycleText}。`;
         }
         const bloodDebtLines = [];
-        if (card.bloodDebtGain) bloodDebtLines.push(`获得 <span class="card-desc-value">${card.bloodDebtGain}</span> 点血债，并启动/刷新 3 回合死线。`);
+        if (card.bloodDebtGain) bloodDebtLines.push(`获得 <span class="card-desc-value">${card.bloodDebtGain}</span> 点血债，并启动/刷新 3 回合清算。`);
         if (card.bloodDebtPowerGain) bloodDebtLines.push(`本回合血债伤害倍率提高 <span class="card-desc-value">${Math.round(card.bloodDebtPowerGain * 100)}%</span>。`);
         if (card.bloodDebtDamageRatio) bloodDebtLines.push(`追加当前血债 <span class="card-desc-value">${Math.round(card.bloodDebtDamageRatio * 100)}%</span> 的伤害。`);
         if (card.bloodDebtRepay) bloodDebtLines.push(`偿还至多 <span class="card-desc-value">${card.bloodDebtRepay}</span> 点血债。`);
@@ -3084,7 +3084,7 @@
         deck: [], battleDeck: [], discardPile: [], exhaustPile: [], hand: [], relics: [], playedRetainPile: [], lastPlayedCard: null,
         enemy: { currentHp: 0, armor: 0, poison: 0, bleed: 0, burn: 0, stun: 0, curse: 0, vuln: 0, weak: 0, str: 0, nextMove: null, charged: false, minion: null, isPhase2: false, turnCount: 0, moveHistory: [] }, 
         mapData: [], currentNode: null, pathHistory: [], player: { thorns: 0, characterId: 'hero_warrior', name: '勇者战士' },
-        p_poison: 0, p_bleed: 0, p_burn: 0, p_stun: 0, p_curse: 0, p_vuln: 0, p_weak: 0, p_echo_stack: 0, p_next_dmg: 0, p_reduce_dmg: 0, p_counter: 0, p_battle_dmg: 0, p_dmg_buff: 0, p_chant: 0, p_aim: 0, p_sidestep: 0, p_blood_debt: 0, p_blood_debt_turns: 0, p_blood_debt_paid: 0, p_blood_debt_power: 1, r_discard_count: 0,
+        p_poison: 0, p_bleed: 0, p_burn: 0, p_stun: 0, p_curse: 0, p_vuln: 0, p_weak: 0, p_echo_stack: 0, p_next_dmg: 0, p_reduce_dmg: 0, p_counter: 0, p_battle_dmg: 0, p_dmg_buff: 0, p_chant: 0, p_aim: 0, p_sidestep: 0, p_blood_debt: 0, p_blood_debt_turns: 0, p_blood_debt_pending_damage: 0, p_blood_debt_paid: 0, p_blood_debt_power: 1, r_discard_count: 0,
         isNodeClickLocked: false, next_card_echo: 0, turn_first_card: true, currentShop: null, isEnemyTurn: false, battleLog: []
     };
     let shopDeletePrice = 50;
@@ -4045,7 +4045,7 @@
             add('echo', '回音', '🌌', state.p_echo_stack, '接下来打出的卡牌会额外触发 2 次。', 'is-magic');
             add('blood', '血祭', '🔥', state.p_battle_dmg, `本场战斗内，攻击造成的伤害提高 ${state.p_battle_dmg} 点。`, 'is-fire');
             add('frenzy', '狂热', '🔥', state.p_dmg_buff, `本回合内，所有伤害额外提高 ${state.p_dmg_buff} 点。`, 'is-fire');
-            add('blood-debt', '血债', '🩸', state.p_blood_debt, `血债存在时每次攻击失去 2 点生命但不会因此低于 1 点；剩余 ${state.p_blood_debt_turns || 0} 回合，归零或击败敌人解除，否则清算时死亡。`, 'is-bleed');
+            add('blood-debt', '血债', '🩸', state.p_blood_debt, `血债存在时每次攻击失去 4 点生命但不会因此低于 1 点，并累计等量清算伤害；剩余 ${state.p_blood_debt_turns || 0} 回合，待清算 ${state.p_blood_debt_pending_damage || 0} 点。归零或击败敌人解除。`, 'is-bleed');
             add('enchant', '附魔', '⚔️', state.p_next_dmg, `下一次攻击额外造成 ${state.p_next_dmg} 点伤害。`, 'is-power');
             add('guard', '减免', '✨', state.p_reduce_dmg, `下一次受到伤害时，减少 ${state.p_reduce_dmg} 点。`, 'is-defense');
             if (state.p_counter > 0) {
@@ -4952,7 +4952,7 @@
         if(state.p_echo_stack > 0) pStatus.innerHTML += `<div class="status-badge badge-str" style="background:rgba(142, 68, 173, 0.9);">🌌 回音: ${state.p_echo_stack}<div class="status-tooltip">接下来打出的卡牌会额外触发2次。</div></div>`;
         if(state.p_battle_dmg > 0) pStatus.innerHTML += `<div class="status-badge badge-str" style="background:#c0392b;">🔥 血祭: +${state.p_battle_dmg}<div class="status-tooltip">本场战斗内，攻击造成的伤害提高 ${state.p_battle_dmg} 点。</div></div>`;
         if(state.p_dmg_buff > 0) pStatus.innerHTML += `<div class="status-badge badge-str">🔥 狂热: +${state.p_dmg_buff}<div class="status-tooltip">本回合内，所有伤害额外提高 ${state.p_dmg_buff} 点。</div></div>`;
-        if(state.p_blood_debt > 0) pStatus.innerHTML += `<div class="status-badge badge-str" style="background:#6f1726;">🩸 血债: ${state.p_blood_debt} / ${state.p_blood_debt_turns || 0}回合<div class="status-tooltip">血债存在时每次攻击失去 2 点生命但不会因此低于 1 点；血债归零或击败敌人解除，否则倒计时结束时死亡。</div></div>`;
+        if(state.p_blood_debt > 0) pStatus.innerHTML += `<div class="status-badge badge-str" style="background:#6f1726;">🩸 血债: ${state.p_blood_debt} / ${state.p_blood_debt_turns || 0}回合<div class="status-tooltip">血债存在时每次攻击失去 4 点生命但不会因此低于 1 点，并累计等量清算伤害。当前待清算 ${state.p_blood_debt_pending_damage || 0} 点；血债归零或击败敌人解除。</div></div>`;
         if(state.p_next_dmg > 0) pStatus.innerHTML += `<div class="status-badge badge-str">⚔️ 附魔: 下次+${state.p_next_dmg}<div class="status-tooltip">下一次攻击额外造成 ${state.p_next_dmg} 点伤害。</div></div>`;
         if(state.p_reduce_dmg > 0) pStatus.innerHTML += `<div class="status-badge badge-armor">✨ 减免: ${state.p_reduce_dmg}<div class="status-tooltip">下一次受到伤害时，减少 ${state.p_reduce_dmg} 点。</div></div>`;
         if(state.p_counter > 0) pStatus.innerHTML += `<div class="status-badge badge-str" style="background:rgba(241,196,15,0.9); color:black;">⚡ 招架准备<div class="status-tooltip">已进入反击姿态；受到下一次敌方主体攻击时招架本次伤害的 50% 并反伤。此状态不可叠加。</div></div>`;
@@ -5511,7 +5511,7 @@
         state.r_signature_setup_used = false; state.r_signature_attack_ready = false; state.r_signature_archer_pending = false;
         state.r_warrior_start_used = false; state.r_warrior_start_ready = false;
         state.p_crown_oath = false;
-        state.p_blood_debt = 0; state.p_blood_debt_turns = 0; state.p_blood_debt_paid = 0; state.p_blood_debt_power = 1;
+        state.p_blood_debt = 0; state.p_blood_debt_turns = 0; state.p_blood_debt_pending_damage = 0; state.p_blood_debt_paid = 0; state.p_blood_debt_power = 1;
         state.r_counter_gate_used = false;
         state.r_protect_armor_used = false;
         state.r_bloodlet_hourglass_used = false;
@@ -5949,6 +5949,7 @@
         const cleared = before > 0 && state.p_blood_debt === 0;
         if (cleared) {
             state.p_blood_debt_turns = 0;
+            state.p_blood_debt_pending_damage = 0;
             if (hasRelic('r_bloodoath_contract') && !state.r_blood_clear_used) {
                 state.r_blood_clear_used = true;
                 const gain = Math.min(4, Math.max(1, Math.floor(state.p_blood_debt_paid / 3)));
@@ -5972,6 +5973,7 @@
         const debt = Math.max(0, state.p_blood_debt || 0);
         if (debt <= 0) {
             state.p_blood_debt_turns = 0;
+            state.p_blood_debt_pending_damage = 0;
             return;
         }
         state.p_blood_debt_turns = Math.max(0, (state.p_blood_debt_turns || 1) - 1);
@@ -5979,18 +5981,21 @@
             showFloatText(`血债倒计时 ${state.p_blood_debt_turns}`, 'var(--crimson)', getCenter('ui-hp'));
             return;
         }
-        const actualLoss = Math.max(0, state.hp);
-        state.hp = 0;
+        const pendingLoss = Math.max(0, Math.floor(state.p_blood_debt_pending_damage || 0));
+        const actualLoss = Math.min(Math.max(0, state.hp), pendingLoss);
+        state.hp -= actualLoss;
         state.p_blood_debt = 0;
         state.p_blood_debt_turns = 0;
+        state.p_blood_debt_pending_damage = 0;
         showFloatText(`血债清算 -${actualLoss}`, 'var(--crimson)', getCenter('ui-hp'));
     }
 
     function payBloodDebtAttackCost(source = '血债攻势') {
         if ((state.p_blood_debt || 0) <= 0) return 0;
-        const loss = Math.min(Math.max(0, state.hp - 1), 2);
+        const loss = Math.min(Math.max(0, state.hp - 1), 4);
         if (loss <= 0) return 0;
         state.hp -= loss;
+        state.p_blood_debt_pending_damage = (state.p_blood_debt_pending_damage || 0) + loss;
         triggerPlayerHurtAnimation();
         showFloatText(`${source} -${loss}`, 'var(--crimson)', getCenter('ui-hp'));
         return loss;
@@ -7121,7 +7126,7 @@
         if (hasRelic('r_finisher_coin') && state.enemy.vuln > 0) state.gold += 10;
         if (hasRelic('r_warm_pendant')) state.hp = Math.min(state.maxHp, state.hp + 6);
         state.armor = 0; state.player.thorns = 0; state.p_poison = 0; state.p_bleed = 0; state.p_burn = 0; state.p_stun = 0; state.p_curse = 0; state.p_vuln = 0; state.p_weak = 0;
-        state.p_next_dmg = 0; state.p_reduce_dmg = 0; state.p_dmg_buff = 0; state.p_counter = 0; state.p_echo_stack = 0; state.p_battle_dmg = 0; state.p_chant = 0; state.p_aim = 0; state.p_sidestep = 0; state.p_blood_debt = 0; state.p_blood_debt_turns = 0; state.p_crown_oath = false; state.p_buffs = {};
+        state.p_next_dmg = 0; state.p_reduce_dmg = 0; state.p_dmg_buff = 0; state.p_counter = 0; state.p_echo_stack = 0; state.p_battle_dmg = 0; state.p_chant = 0; state.p_aim = 0; state.p_sidestep = 0; state.p_blood_debt = 0; state.p_blood_debt_turns = 0; state.p_blood_debt_pending_damage = 0; state.p_crown_oath = false; state.p_buffs = {};
         
         state.deck.forEach(c => c.sealed = false);
         state.deck = state.deck.filter(c => !c.isJunk && !c.isKnife);

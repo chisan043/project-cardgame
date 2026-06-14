@@ -146,7 +146,7 @@ const MIDGAME_RELICS = {
 };
 
 const BLOOD_DEBT_WINDOW_TURNS = 3;
-const BLOOD_DEBT_ATTACK_HP_LOSS = 2;
+const BLOOD_DEBT_ATTACK_HP_LOSS = 4;
 
 function cardBuildTags(data, card) {
     return card.buildTags || data.CARD_BUILD_TAGS_BY_ID[card.poolId || card.id] || [];
@@ -276,7 +276,7 @@ function createBattle(data, rng, roleId, deck, hp, checkpoint, loadout, options 
         energy: character.baseEnergy, armor: roleId === 'hero_warrior' ? 5 : 0,
         thorns: 0, protection: 0, counter: 0, chant: 0, aim: 0, sidestep: 0,
         battleDamage: 0, turnDamage: 0, nextDamage: 0, weak: 0, vuln: 0,
-        bloodDebt: 0, bloodDebtTurns: 0, bloodDebtPaid: 0, bloodDebtPower: 1,
+        bloodDebt: 0, bloodDebtTurns: 0, bloodDebtPendingDamage: 0, bloodDebtPaid: 0, bloodDebtPower: 1,
         poison: 0, bleed: 0, burn: 0, curse: 0,
         drawPile: shuffle(rng, deck.map(clone)), discard: [], exhaust: [], destroyed: [], hand: [], retained: [],
         lastCard: null, cardsPlayed: 0, enemy, encounterName: enemy.name, turns: 0,
@@ -322,7 +322,10 @@ function repayBloodDebt(state, amount) {
     state.bloodDebt -= paid;
     state.bloodDebtPaid += paid;
     const cleared = before > 0 && state.bloodDebt === 0;
-    if (cleared) state.bloodDebtTurns = 0;
+    if (cleared) {
+        state.bloodDebtTurns = 0;
+        state.bloodDebtPendingDamage = 0;
+    }
     if (cleared && hasRelic(state, 'r_bloodoath_contract') && !state.bloodClearUsed) {
         state.bloodClearUsed = true;
         state.battleDamage += Math.min(4, Math.max(1, Math.floor(state.bloodDebtPaid / 3)));
@@ -341,16 +344,19 @@ function repayBloodDebt(state, amount) {
 function settleBloodDebt(state) {
     if (state.bloodDebt <= 0) {
         state.bloodDebtTurns = 0;
+        state.bloodDebtPendingDamage = 0;
         return 0;
     }
     state.bloodDebtTurns = Math.max(0, (state.bloodDebtTurns || 1) - 1);
     if (state.bloodDebtTurns > 0) return 0;
-    const actual = Math.max(0, state.hp);
-    state.hp = 0;
+    const pending = Math.max(0, Math.floor(state.bloodDebtPendingDamage || 0));
+    const actual = Math.min(Math.max(0, state.hp), pending);
+    state.hp -= actual;
     state.damageTaken += actual;
-    state.lastDamageCause = '血债清算';
+    if (actual > 0) state.lastDamageCause = '血债清算';
     state.bloodDebt = 0;
     state.bloodDebtTurns = 0;
+    state.bloodDebtPendingDamage = 0;
     return actual;
 }
 
@@ -358,6 +364,7 @@ function payBloodDebtAttackCost(state) {
     if (state.bloodDebt <= 0) return 0;
     const actual = Math.min(Math.max(0, state.hp - 1), BLOOD_DEBT_ATTACK_HP_LOSS);
     state.hp -= actual;
+    state.bloodDebtPendingDamage = (state.bloodDebtPendingDamage || 0) + actual;
     state.damageTaken += actual;
     if (actual > 0) state.lastDamageCause = '血债攻势';
     return actual;
@@ -1142,6 +1149,7 @@ function resolveEnemyDeath(state) {
     }
     state.bloodDebt = 0;
     state.bloodDebtTurns = 0;
+    state.bloodDebtPendingDamage = 0;
     return true;
 }
 

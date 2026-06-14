@@ -325,7 +325,7 @@ const BUILD_DIRECTIONS = {
     hero_warrior: {
         oathblade: { name: '圣剑反击', desc: '护盾、反击与圣剑互相放大，是当前勇者的默认成长方向。', triggerTags: ['圣剑', '反击', '庇护', '荆棘', '保留', '重击'] },
         execution: { name: '处刑连斩', desc: '用易伤、穿甲与连击制造短窗口爆发，减少对护盾堆叠的依赖。', triggerTags: ['易伤', '穿甲', '连击', '眩晕'] },
-        bloodoath: { name: '血誓狂战', desc: '背负三回合血债死线，靠连续攻击、自伤爆发、吸血放血清债或直接斩杀敌人过关。', triggerTags: ['血债', '吸血', '出血', '放血'] }
+        bloodoath: { name: '血誓狂战', desc: '背负三回合血债清算，靠连续攻击、自伤爆发、吸血放血清债或直接斩杀敌人免除反噬。', triggerTags: ['血债', '吸血', '出血', '放血'] }
     },
     hero_mage: {
         chant: { name: '星火咏唱', desc: '积累咏唱后用爆发牌收束。', triggerTags: ['咏唱', '爆发', '穿甲', '充能'] },
