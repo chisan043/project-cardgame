@@ -2821,22 +2821,49 @@
         return cloneCardDefinition(candidates[Math.floor(Math.random() * candidates.length)]);
     }
 
-    function deckHasTag(tag) {
-        return state.deck.some(card => card.tags && card.tags.includes(tag));
+    function deckHasTag(tag, deck = state.deck) {
+        return deck.some(card => card.tags && card.tags.includes(tag));
     }
 
-    function getBloodPartnerTagNeeded() {
-        const hasBleed = deckHasTag('出血');
-        const hasBloodlet = deckHasTag('放血');
-        if (hasBleed && !hasBloodlet) return '放血';
-        if (hasBloodlet && !hasBleed) return '出血';
+    function deckHasCardMatch(match, deck = state.deck) {
+        return deck.some(card => match(card));
+    }
+
+    function getRewardBridgeSpec(deck = state.deck, characterId = state.player?.characterId) {
+        const hasBleed = deckHasTag('出血', deck);
+        const hasBloodlet = deckHasTag('放血', deck);
+        if (hasBleed && !hasBloodlet) return { label: '出血缺放血', match: card => (card.tags || []).includes('放血') };
+        if (hasBloodlet && !hasBleed) return { label: '放血缺出血', match: card => (card.tags || []).includes('出血') };
+
+        if (characterId === 'hero_archer') {
+            const hasExile = deckHasTag('放逐', deck);
+            const hasRecycle = deckHasTag('回收', deck);
+            if (hasExile && !hasRecycle) return { label: '放逐缺回收', match: card => (card.tags || []).includes('回收') };
+            if (hasRecycle && !hasExile) return { label: '回收缺放逐', match: card => (card.tags || []).includes('放逐') };
+        }
+
+        if (characterId === 'hero_mage') {
+            const hasCopy = deckHasTag('复刻', deck);
+            const hasEcho = deckHasTag('回响', deck);
+            if (hasCopy && !hasEcho) return { label: '复刻缺回响', match: card => (card.tags || []).includes('回响') };
+            if (hasEcho && !hasCopy) return { label: '回响缺复刻', match: card => (card.tags || []).includes('复刻') };
+        }
+
+        if (characterId === 'hero_warrior') {
+            const hasDebtGain = deckHasCardMatch(card => Number(card.bloodDebtGain) > 0, deck);
+            const hasDebtRepay = deckHasCardMatch(card => Number(card.bloodDebtRepay) > 0 || Number(card.bloodDebtRepayFromBleed) > 0, deck);
+            if (hasDebtGain && !hasDebtRepay) return { label: '血债缺偿债', match: card => Number(card.bloodDebtRepay) > 0 || Number(card.bloodDebtRepayFromBleed) > 0 };
+            if (hasDebtRepay && !hasDebtGain) return { label: '偿债缺借债', match: card => Number(card.bloodDebtGain) > 0 };
+        }
+
         return null;
     }
 
-    function generateTaggedRewardCard(tag, used = new Set()) {
+    function generateBridgeRewardCard(spec, used = new Set()) {
+        if (!spec) return null;
         const classPool = getCharacterCardPool();
         const allCards = [...classPool, ...NEUTRAL_CARD_POOL];
-        let candidates = allCards.filter(card => card.tags && card.tags.includes(tag) && !used.has(getCardChoiceKey(card)));
+        let candidates = allCards.filter(card => spec.match(card) && !used.has(getCardChoiceKey(card)));
         if (!candidates.length) return null;
         candidates = candidates.sort(() => 0.5 - Math.random());
         return cloneCardDefinition(candidates[0]);
@@ -2849,12 +2876,12 @@
     function generateRewardChoices(count = 3) {
         const choices = [];
         const used = new Set();
-        const partnerTag = getBloodPartnerTagNeeded();
-        if (partnerTag) {
-            const partnerCard = generateTaggedRewardCard(partnerTag, used);
-            if (partnerCard) {
-                used.add(getCardChoiceKey(partnerCard));
-                choices.push(partnerCard);
+        const bridgeSpec = getRewardBridgeSpec();
+        if (bridgeSpec) {
+            const bridgeCard = generateBridgeRewardCard(bridgeSpec, used);
+            if (bridgeCard) {
+                used.add(getCardChoiceKey(bridgeCard));
+                choices.push(bridgeCard);
             }
         }
         const primaryBuildTag = getPrimaryBuildTag();
@@ -3154,6 +3181,7 @@
         if (hasDirectCardEffect(card, 'energy')) directLines.push('回复 <span class="card-desc-value">1</span> 点能量。');
         if (hasDirectCardEffect(card, 'protection')) directLines.push(`获得 <span class="card-desc-value">${getProtectionValue(card)}</span> 点庇护。`);
         if (hasDirectCardEffect(card, 'heal')) directLines.push(`回复 <span class="card-desc-value">${getCardHealValue(card)}</span> 点生命。`);
+        if (!(card.tags || []).includes('闪避') && Number(card.sidestepVal) > 0) directLines.push(`获得 <span class="card-desc-value">${getSidestepGain(card)}</span> 层闪避。`);
         if (hasDirectCardEffect(card, 'retain')) directLines.push('打出后下回合回到手牌。');
         if (directLines.length) addUniqueLine(lines, directLines.join(''));
         
@@ -6920,7 +6948,7 @@
             if (hasRelic('r_guardian_core')) state.armor += Math.floor(pVal / 2);
             showFloatText(`庇护 +${pVal}`, "var(--water)", getCenter('ui-hp'));
         }
-        if (card.tags && card.tags.includes('闪避')) {
+        if ((card.tags && card.tags.includes('闪避')) || Number(card.sidestepVal) > 0) {
             let sidestepVal = getSidestepGain(card) + (hasRelic('r_wind_quiver') ? 1 : 0);
             if (hasRelic('r_tailwind_spool') && !state.r_tailwind_spool_used) {
                 sidestepVal += 1;

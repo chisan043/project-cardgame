@@ -307,13 +307,65 @@ function rewardRarity(rng, floor) {
     return '普通';
 }
 
-function generateCardChoices(data, rng, roleId, buildId, floor, profile) {
+function deckHasTag(deck, tag) {
+    return deck.some(card => (card.tags || []).includes(tag));
+}
+
+function deckHasCardMatch(deck, match) {
+    return deck.some(card => match(card));
+}
+
+function getRewardBridgeSpec(roleId, deck) {
+    const hasBleed = deckHasTag(deck, '出血');
+    const hasBloodlet = deckHasTag(deck, '放血');
+    if (hasBleed && !hasBloodlet) return { label: '出血缺放血', match: card => (card.tags || []).includes('放血') };
+    if (hasBloodlet && !hasBleed) return { label: '放血缺出血', match: card => (card.tags || []).includes('出血') };
+
+    if (roleId === 'hero_archer') {
+        const hasExile = deckHasTag(deck, '放逐');
+        const hasRecycle = deckHasTag(deck, '回收');
+        if (hasExile && !hasRecycle) return { label: '放逐缺回收', match: card => (card.tags || []).includes('回收') };
+        if (hasRecycle && !hasExile) return { label: '回收缺放逐', match: card => (card.tags || []).includes('放逐') };
+    }
+
+    if (roleId === 'hero_mage') {
+        const hasCopy = deckHasTag(deck, '复刻');
+        const hasEcho = deckHasTag(deck, '回响');
+        if (hasCopy && !hasEcho) return { label: '复刻缺回响', match: card => (card.tags || []).includes('回响') };
+        if (hasEcho && !hasCopy) return { label: '回响缺复刻', match: card => (card.tags || []).includes('复刻') };
+    }
+
+    if (roleId === 'hero_warrior') {
+        const hasDebtGain = deckHasCardMatch(deck, card => Number(card.bloodDebtGain) > 0);
+        const hasDebtRepay = deckHasCardMatch(deck, card => Number(card.bloodDebtRepay) > 0 || Number(card.bloodDebtRepayFromBleed) > 0);
+        if (hasDebtGain && !hasDebtRepay) return { label: '血债缺偿债', match: card => Number(card.bloodDebtRepay) > 0 || Number(card.bloodDebtRepayFromBleed) > 0 };
+        if (hasDebtRepay && !hasDebtGain) return { label: '偿债缺借债', match: card => Number(card.bloodDebtGain) > 0 };
+    }
+
+    return null;
+}
+
+function generateBridgeChoice(data, rng, roleId, deck, used) {
+    const spec = getRewardBridgeSpec(roleId, deck);
+    if (!spec) return null;
+    const candidates = allRewardCards(data, roleId)
+        .filter(card => !used.has(cardId(card)) && spec.match(card));
+    return candidates.length ? weightedPick(rng, candidates, () => 1) : null;
+}
+
+function generateCardChoices(data, rng, roleId, buildId, floor, profile, deck = []) {
     const rarity = rewardRarity(rng, floor);
     const cards = allRewardCards(data, roleId);
     const picked = [];
     const used = new Set();
     const noise = profile === 'novice' ? 0.85 : 0.35;
+    const bridgeCard = generateBridgeChoice(data, rng, roleId, deck, used);
+    if (bridgeCard) {
+        used.add(cardId(bridgeCard));
+        picked.push(bridgeCard);
+    }
     for (let index = 0; index < 3; index++) {
+        if (picked.length >= 3) break;
         let candidates = cards.filter(card => !used.has(cardId(card)) && card.rarity === rarity);
         if (!candidates.length) candidates = cards.filter(card => !used.has(cardId(card)));
         const card = weightedPick(rng, candidates, candidate => {
@@ -515,7 +567,7 @@ function relicRating(winRate, triggerPerRun, benefitPerRun) {
 }
 
 function applyCardReward(data, stats, rng, roleId, buildId, deck, floor, hpRatio, profile, runCardsPicked) {
-    const choices = generateCardChoices(data, rng, roleId, buildId, floor, profile);
+    const choices = generateCardChoices(data, rng, roleId, buildId, floor, profile, deck);
     for (const card of choices) getCardStats(stats, data, roleId, card).appearances++;
     const selected = pickCardReward(data, rng, roleId, buildId, choices, deck, hpRatio, profile);
     if (!selected) return null;

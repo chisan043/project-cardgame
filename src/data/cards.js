@@ -285,7 +285,7 @@ const CHARACTER_CARD_POOLS = {
         { poolId: 'archer_aim', name: '拉弓瞄准', type: '能力', cost: 1, icon: '🎯', val: 9, tags: ['蓄力', '抽牌'], rarity: '稀有' },
         { poolId: 'archer_barrage', name: '疾风连射', type: '攻击', cost: 1, icon: '💨', val: 5, tags: ['追击'], rarity: '稀有' },
         { poolId: 'archer_ready', name: '林风整备', type: '能力', cost: 1, icon: '🪶', val: 6, tags: ['自然', '蓄力'], directEffects: { draw: true }, rarity: '稀有', desc: '获得风势，触发[自然]并抽 1 张牌。' },
-        { poolId: 'archer_step', name: '猎手翻步', type: '能力', cost: 1, icon: '🥾', val: 5, tags: ['自然', '保留'], rarity: '普通' },
+        { poolId: 'archer_step', name: '猎手翻步', type: '能力', cost: 1, icon: '🥾', val: 5, tags: ['自然'], directEffects: { retain: true }, preserveDirectEffects: true, sidestepVal: 1, rarity: '普通', desc: '触发[自然]，获得 1 层[闪避]；打出后下回合回到手牌。' },
         { poolId: 'archer_shadow', name: '狩影穿枝', type: '攻击', cost: 2, icon: '🗡️', val: 10, tags: ['追击', '穿甲'], rarity: '稀有' },
         { poolId: 'archer_grove', name: '森冠齐射', type: '攻击', cost: 2, icon: '🏹', val: 7, tags: ['追击', '穿甲'], rarity: '史诗' },
         { poolId: 'archer_ambush', name: '森息伏击', type: '能力', cost: 0, icon: '🍃', val: 4, tags: ['蓄力', '销毁'], rarity: '普通' },

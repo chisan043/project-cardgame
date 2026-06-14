@@ -96,6 +96,52 @@ function rewardCandidatePool(data, roleId, buildId, mode, rarity, used, rng) {
     return candidates;
 }
 
+function deckHasTag(deck, tag) {
+    return deck.some(card => (card.tags || []).includes(tag));
+}
+
+function deckHasCardMatch(deck, match) {
+    return deck.some(card => match(card));
+}
+
+function getRewardBridgeSpec(roleId, deck) {
+    const hasBleed = deckHasTag(deck, '出血');
+    const hasBloodlet = deckHasTag(deck, '放血');
+    if (hasBleed && !hasBloodlet) return { label: '出血缺放血', match: card => (card.tags || []).includes('放血') };
+    if (hasBloodlet && !hasBleed) return { label: '放血缺出血', match: card => (card.tags || []).includes('出血') };
+
+    if (roleId === 'hero_archer') {
+        const hasExile = deckHasTag(deck, '放逐');
+        const hasRecycle = deckHasTag(deck, '回收');
+        if (hasExile && !hasRecycle) return { label: '放逐缺回收', match: card => (card.tags || []).includes('回收') };
+        if (hasRecycle && !hasExile) return { label: '回收缺放逐', match: card => (card.tags || []).includes('放逐') };
+    }
+
+    if (roleId === 'hero_mage') {
+        const hasCopy = deckHasTag(deck, '复刻');
+        const hasEcho = deckHasTag(deck, '回响');
+        if (hasCopy && !hasEcho) return { label: '复刻缺回响', match: card => (card.tags || []).includes('回响') };
+        if (hasEcho && !hasCopy) return { label: '回响缺复刻', match: card => (card.tags || []).includes('复刻') };
+    }
+
+    if (roleId === 'hero_warrior') {
+        const hasDebtGain = deckHasCardMatch(deck, card => Number(card.bloodDebtGain) > 0);
+        const hasDebtRepay = deckHasCardMatch(deck, card => Number(card.bloodDebtRepay) > 0 || Number(card.bloodDebtRepayFromBleed) > 0);
+        if (hasDebtGain && !hasDebtRepay) return { label: '血债缺偿债', match: card => Number(card.bloodDebtRepay) > 0 || Number(card.bloodDebtRepayFromBleed) > 0 };
+        if (hasDebtRepay && !hasDebtGain) return { label: '偿债缺借债', match: card => Number(card.bloodDebtGain) > 0 };
+    }
+
+    return null;
+}
+
+function generateBridgeChoice(data, rng, roleId, deck, used) {
+    const spec = getRewardBridgeSpec(roleId, deck);
+    if (!spec) return null;
+    const candidates = [...data.CHARACTER_CARD_POOLS[roleId], ...data.NEUTRAL_CARD_POOL]
+        .filter(card => !used.has(cardId(card)) && spec.match(card));
+    return candidates.length ? weightedPick(rng, candidates, () => 1) : null;
+}
+
 function generateChoice(data, rng, roleId, buildId, mode, used) {
     const rarity = rollRarity(rng);
     let candidates = rewardCandidatePool(data, roleId, buildId, mode, rarity, used, rng);
@@ -103,10 +149,16 @@ function generateChoice(data, rng, roleId, buildId, mode, used) {
     return weightedPick(rng, candidates, card => rewardWeight(data, roleId, card, buildId, mode === 'aligned'));
 }
 
-function generateChoices(data, rng, roleId, buildId) {
+function generateChoices(data, rng, roleId, buildId, deck = []) {
     const used = new Set();
     const result = [];
+    const bridgeCard = generateBridgeChoice(data, rng, roleId, deck, used);
+    if (bridgeCard) {
+        used.add(cardId(bridgeCard));
+        result.push(bridgeCard);
+    }
     for (const mode of ['aligned', 'general', 'pivot']) {
+        if (result.length >= 3) break;
         const card = generateChoice(data, rng, roleId, buildId, mode, used);
         if (!card) continue;
         used.add(cardId(card));
@@ -236,7 +288,7 @@ function runBuild(data, roleId, buildId, args) {
         for (let run = 0; run < args.runs; run++) {
             const deck = initializeDeck(roleId);
             for (let round = 0; round < DRAFT_ROUNDS; round++) {
-                const choices = generateChoices(data, rng, roleId, buildId);
+                const choices = generateChoices(data, rng, roleId, buildId, deck);
                 for (const card of choices) {
                     const id = cardId(card);
                     const buildTags = cardBuildTags(data, roleId, card);

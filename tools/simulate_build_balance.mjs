@@ -720,7 +720,7 @@ function estimateCard(state, card, incoming, move) {
     }
     if (tags.includes('咏唱')) score += state.data.getCardChantGain(card) * 5;
     if (tags.includes('蓄力')) score += state.data.getWindGain(card) * 4;
-    if (tags.includes('闪避')) {
+    if (tags.includes('闪避') || Number(card.sidestepVal) > 0) {
         const availableLayers = Math.max(0, 3 - state.sidestep);
         const gainedLayers = Math.min(availableLayers, state.data.getSidestepGain(card));
         if (move?.type?.includes('attack')) {
@@ -956,7 +956,7 @@ function executeCard(state, card, echo = false) {
         state.protection += state.data.getProtectionValue(card) + (tags.includes('庇护') && hasRelic(state, 'r_protect_armor') ? 3 : 0);
     }
     if (tags.includes('反击')) state.counter = 1;
-    if (tags.includes('闪避') && !echo) {
+    if ((tags.includes('闪避') || Number(card.sidestepVal) > 0) && !echo) {
         let gain = state.data.getSidestepGain(card) + (hasRelic(state, 'r_wind_quiver') ? 1 : 0);
         if (hasRelic(state, 'r_tailwind_spool') && !state.tailwindSpoolUsed) {
             gain++;
