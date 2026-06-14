@@ -6060,6 +6060,7 @@
         const damage = getExileFlowDamage(card, eventType);
         if (damage <= 0) return 0;
         applyDamageToEnemy(damage, true);
+        if (eventType === 'exhaust' && hasRelic('r_exile_cache')) state.p_reduce_dmg += 3;
         showFloatText(`${label} ${damage}`, "var(--nature)", getCenter('enemy-avatar'));
         return damage;
     }
@@ -6390,10 +6391,11 @@
         if (card.isSpecial) {
             if (card.type === '攻击') payBloodDebtAttackCost(card.name);
             if(card.specialId === 's_exhaust') {
-                triggerVFX('p-atk'); let count = state.exhaustPile.length; let bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.10) : 0; let dmg = bossBonus + count * 10;
+                triggerVFX('p-atk'); let count = state.exhaustPile.length; let dmg = count * 14;
                 applySpecialCardDamage(card, dmg);
-                state.armor += Math.min(12, count * 2);
-                state.p_reduce_dmg += Math.min(12, count * 2);
+                state.armor += Math.min(18, count * 3);
+                state.p_reduce_dmg += Math.min(18, count * 3);
+                if (count >= 3) state.p_sidestep = Math.min(3, (state.p_sidestep || 0) + 1);
                 state.exhaustPile.forEach(c => onCardReturnedFromExhaust(c));
                 state.battleDeck = state.battleDeck.concat(state.exhaustPile); state.exhaustPile = []; state.battleDeck.sort(()=>0.5-Math.random());
             }
@@ -6430,9 +6432,9 @@
             else if (card.specialId === 'a_syn_blood') {
                 const spentDebt = Math.max(0, state.p_blood_debt || 0);
                 if (spentDebt > 0) repayBloodDebt(spentDebt, '血海吞债');
-                const bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.10) : 0;
-                const dmg = parseInt(card.val) + spentDebt * (card.bloodDebtSpendDamage || 5) + state.p_battle_dmg + bossBonus;
+                const dmg = parseInt(card.val) + spentDebt * (card.bloodDebtSpendDamage || 15) + state.p_battle_dmg;
                 triggerVFX('p-atk'); const dealt = applySpecialCardDamage(card, dmg, true); let bloodHeal = Math.floor(dealt * (card.lifestealRatio || 0.5));
+                if (state.enemy.hp > 0) state.enemy.weak += 3;
                 if(hasRelic('r_lifedebt_scale') && state.hp <= Math.floor(state.maxHp / 2)) bloodHeal = Math.floor(bloodHeal * 1.5);
                 const remainingHeal = Math.max(0, bloodHeal - repayBloodDebt(bloodHeal, '血海回偿').paid);
                 const bloodOverheal = Math.max(0, remainingHeal - Math.max(0, state.maxHp - state.hp));
@@ -6489,10 +6491,10 @@
             else if (card.specialId === 'w_last_verdict') {
                 triggerVFX('p-atk');
                 const executionHand = state.hand.filter(c => c.tags && (c.tags.includes('连击') || c.tags.includes('穿甲'))).length;
-                let bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.18) : 0;
-                let dmg = 48 + state.p_battle_dmg + state.enemy.vuln * 10 + executionHand * 14 + bossBonus;
+                let dmg = 52 + state.p_battle_dmg + state.enemy.vuln * 12 + executionHand * 16;
                 applySpecialCardDamage(card, dmg, true);
-                state.p_reduce_dmg += Math.min(28, 12 + executionHand * 4);
+                state.p_reduce_dmg += Math.min(34, 14 + executionHand * 5);
+                if (state.enemy.hp > 0) state.enemy.weak += 4;
                 showFloatText("终誓处刑", "var(--gold)", getCenter('enemy-avatar'));
             }
             else if (card.specialId === 'm_chant_singularity') {
@@ -6506,7 +6508,7 @@
             else if (card.specialId === 'm_status_supernova') {
                 const debuffs = getEnemyDebuffTypeCount();
                 triggerVFX('p-atk');
-                applySpecialCardDamage(card, 38 + state.p_battle_dmg + debuffs * 10);
+                applySpecialCardDamage(card, 40 + state.p_battle_dmg + debuffs * 12);
                 state.p_reduce_dmg += Math.min(24, debuffs * 5);
                 state.enemy.burn += Math.min(3, Math.max(1, debuffs));
                 if(hasRelic('r_status_prism')) state.p_chant = Math.min(12, state.p_chant + 1);
@@ -6516,9 +6518,8 @@
                 if (state.lastPlayedCard && !state.lastPlayedCard.isJunk) {
                     showFloatText("回声复写", "var(--purple)", getCenter('ui-hp'));
                     await executeCardTags(state.lastPlayedCard, true, null);
-                    let bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.04) : 0;
-                    if (bossBonus > 0) applyDamageToEnemy(bossBonus, true);
-                    state.p_reduce_dmg += 2;
+                    state.p_reduce_dmg += 8;
+                    state.p_next_dmg += 10;
                     await drawCards(1);
                 } else {
                     state.p_chant = Math.min(12, state.p_chant + 3);
@@ -6536,9 +6537,9 @@
             else if (card.specialId === 'm_forbidden_comet') {
                 triggerVFX('p-atk');
                 const chantSpent = state.p_chant;
-                let bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.60) : 0;
-                applySpecialCardDamage(card, 52 + state.p_battle_dmg + chantSpent * 18 + bossBonus, true);
-                state.p_reduce_dmg += Math.min(28, chantSpent * 4);
+                applySpecialCardDamage(card, 60 + state.p_battle_dmg + chantSpent * 28, true);
+                state.p_reduce_dmg += Math.min(60, chantSpent * 8);
+                if (chantSpent >= 6 && state.enemy.hp > 0) state.enemy.stun += 1;
                 state.p_chant = hasRelic('r_burst_lens') ? Math.ceil(chantSpent / 2) : 0;
                 showFloatText(`咏唱爆裂 ${chantSpent}`, "var(--purple)", getCenter('enemy-avatar'));
             }
@@ -6584,8 +6585,7 @@
                 const shots = Math.min(3, state.p_aim);
                 state.p_aim -= shots;
                 triggerVFX('p-atk');
-                let bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.02) : 0;
-                applySpecialCardDamage(card, 18 + state.p_battle_dmg + shots * 10 + bossBonus, true);
+                applySpecialCardDamage(card, 18 + state.p_battle_dmg + shots * 10, true);
                 state.p_reduce_dmg += shots * 2;
                 if (shots >= 3) state.p_sidestep = Math.min(3, (state.p_sidestep || 0) + 1);
                 showFloatText(`裁决风势 ${shots}`, "var(--nature)", getCenter('enemy-avatar'));
@@ -7003,7 +7003,7 @@
         if((card.tags && card.tags.includes('充能')) || hasDirectCardEffect(card, 'energy')) { let eAmt = 1; if(card.tags && card.tags.includes('充能') && hasRelic('r_energy_crys')) eAmt += 1; state.mp += eAmt; showFloatText(`能量 +${eAmt}`, "var(--gold)", getCenter('ui-mp')); }
         if(card.tags && card.tags.includes('荆棘')) { let tVal = 8; if(hasRelic('r_thorn_shield_new')) tVal *= 2; state.player.thorns += tVal; showFloatText(`获得荆棘 +${tVal}`, "var(--nature)", getCenter('ui-hp')); updateTopBar(); }
         if(((card.tags && card.tags.includes('抽牌')) || hasDirectCardEffect(card, 'draw')) && !isEcho) { let drawCount = getCardDrawCount(card); if(card.tags && card.tags.includes('抽牌') && hasRelic('r_luck_box')) drawCount += 1; await drawCards(drawCount); }
-        if(hasRelic('r_status_ledger') && getEnemyDebuffTypeCount() >= 4 && card.type === '能力' && !state.r_status_ledger_used && !isEcho) { state.r_status_ledger_used = true; await drawCards(1); }
+        if(hasRelic('r_status_ledger') && getEnemyDebuffTypeCount() >= 3 && card.type === '能力' && !state.r_status_ledger_used && !isEcho) { state.r_status_ledger_used = true; await drawCards(1); }
         if(hasRelic('r_double_quill') && card.type === '能力' && cardsPlayedThisTurn === 2 && !isEcho) { await drawCards(1); showFloatText("双墨抽牌", "var(--purple)", getCenter('ui-deck-count')); }
         grantRoleSynergy(card, isEcho, targets);
 
