@@ -2331,7 +2331,7 @@
             if (tags.includes('回响') || tags.includes('复刻')) chantGain += 1;
             if (chantGain > 0) {
                 state.p_chant = Math.min(9, state.p_chant + chantGain);
-                showFloatText(`法师联动 咏唱 +${chantGain}`, "var(--purple)", getCenter('ui-hp'));
+                showFloatText(`法师联动：积累 ${chantGain} 层咏唱`, "var(--purple)", getCenter('ui-hp'));
             }
             if (['易伤', '虚弱', '剧毒', '出血', '燃烧', '诅咒'].some(t => tags.includes(t))) {
                 state.p_next_dmg += 2;
@@ -2964,12 +2964,12 @@
         if (tag === '爆发') return '消耗全部咏唱，每层追加 7 点伤害。';
         if (tag === '反击') return '进入反击姿态，招架下一次主体攻击并反击。';
         if (tag === '荆棘') return '获得荆棘，受击时反弹伤害。';
-        if (tag === '庇护') return `+<span class="card-desc-value">${getProtectionValue(card)}</span> 庇护。`;
+        if (tag === '庇护') return `获得 <span class="card-desc-value">${getProtectionValue(card)}</span> 点庇护。`;
         if (tag === '治愈') return `回复 <span class="card-desc-value">${getCardHealValue(card)}</span> 生命。`;
-        if (tag === '咏唱') return `+<span class="card-desc-value">${getCardChantGain(card)}</span> 咏唱。`;
-        if (tag === '蓄力') return `+<span class="card-desc-value">${getWindGain(card)}</span> 风势。`;
+        if (tag === '咏唱') return `积累 <span class="card-desc-value">${getCardChantGain(card)}</span> 层咏唱。`;
+        if (tag === '蓄力') return `获得 <span class="card-desc-value">${getWindGain(card)}</span> 层风势。`;
         if (tag === '自然') return '回复 1 点能量；若已有风势，额外抽 1 张。';
-        if (tag === '闪避') return `+<span class="card-desc-value">${getSidestepGain(card)}</span> 闪避。`;
+        if (tag === '闪避') return `获得 <span class="card-desc-value">${getSidestepGain(card)}</span> 层闪避。`;
         if (tag === '回响') return '本牌再触发一次。';
         if (tag === '复刻') return '复制上一张非复刻牌。';
         if (tag === '重置') return '重置手牌。';
@@ -2981,9 +2981,9 @@
         if (tag === '销毁') return '打出后彻底消失。';
         if (tag === '保留') return '打出后下回合回到手牌。';
         if (tag === '抽牌') return `抽 <span class="card-desc-value">${getCardDrawCount(card)}</span> 张牌。`;
-        if (tag === '充能') return '+<span class="card-desc-value">1</span> 能量。';
-        if (tag === '狂热') return `丢弃 1 张手牌，本回合伤害 +<span class="card-desc-value">${getFrenzyBonus(card)}</span>。`;
-        if (tag === '附魔') return `丢弃 1 张手牌，下一次攻击 +<span class="card-desc-value">${getEnchantBonus(card, false)}</span> 伤害并抽 1。`;
+        if (tag === '充能') return '回复 <span class="card-desc-value">1</span> 点能量。';
+        if (tag === '狂热') return `丢弃 1 张手牌，本回合伤害提高 <span class="card-desc-value">${getFrenzyBonus(card)}</span>。`;
+        if (tag === '附魔') return `丢弃 1 张手牌，下一次攻击追加 <span class="card-desc-value">${getEnchantBonus(card, false)}</span> 伤害并抽 1 张牌。`;
         if (tag === '剧毒') return `施加 <span class="card-desc-value">${getStatusLayerCount(card, tag)}</span> 层剧毒。`;
         if (tag === '出血') return `施加 <span class="card-desc-value">${getStatusLayerCount(card, tag)}</span> 层出血。`;
         if (tag === '燃烧') return `施加 <span class="card-desc-value">${getStatusLayerCount(card, tag)}</span> 层燃烧。`;
@@ -3065,14 +3065,14 @@
 
         const bloodDebtLines = [];
         if (card.bloodDebtGain) bloodDebtLines.push(`借 <span class="card-desc-value">${card.bloodDebtGain}</span> 血债。`);
-        if (card.bloodDebtPowerGain) bloodDebtLines.push(`本回合血债伤害 +<span class="card-desc-value">${Math.round(card.bloodDebtPowerGain * 100)}%</span>。`);
+        if (card.bloodDebtPowerGain) bloodDebtLines.push(`本回合血债伤害提高 <span class="card-desc-value">${Math.round(card.bloodDebtPowerGain * 100)}%</span>。`);
         if (card.bloodDebtDamageRatio) bloodDebtLines.push(`按血债追加 <span class="card-desc-value">${formatRatioText(card.bloodDebtDamageRatio)}</span> 伤害。`);
         if (card.bloodDebtRepay) bloodDebtLines.push(`偿还 <span class="card-desc-value">${card.bloodDebtRepay}</span> 血债。`);
         if (card.bloodDebtRepayFromBleed) bloodDebtLines.push(`用放血偿债。`);
-        if (card.bloodDebtSpendAll) bloodDebtLines.push(`耗尽血债，每点 +<span class="card-desc-value">${card.bloodDebtSpendDamage}</span> 伤害。`);
+        if (card.bloodDebtSpendAll) bloodDebtLines.push(`耗尽血债，每点追加 <span class="card-desc-value">${card.bloodDebtSpendDamage}</span> 伤害。`);
         const clearBonuses = [];
-        if (card.bloodDebtClearDamage) clearBonuses.push(`+<span class="card-desc-value">${card.bloodDebtClearDamage}</span>伤害`);
-        if (card.bloodDebtClearHeal) clearBonuses.push(`回<span class="card-desc-value">${card.bloodDebtClearHeal}</span>生命`);
+        if (card.bloodDebtClearDamage) clearBonuses.push(`追加 <span class="card-desc-value">${card.bloodDebtClearDamage}</span> 伤害`);
+        if (card.bloodDebtClearHeal) clearBonuses.push(`回复 <span class="card-desc-value">${card.bloodDebtClearHeal}</span> 生命`);
         if (clearBonuses.length) bloodDebtLines.push(`清债奖励：${clearBonuses.join('、')}。`);
         const statusBits = [];
         if (card.bloodDebtBleed) statusBits.push(`<span class="card-desc-value">${card.bloodDebtBleed}</span>出血`);
@@ -3082,11 +3082,11 @@
         if (card.bloodDebtDrawOnRepay) bloodDebtLines.push(`偿债后抽<span class="card-desc-value">${card.bloodDebtDrawOnRepay}</span>。`);
         if (bloodDebtLines.length) addUniqueLine(lines, bloodDebtLines.join(''));
         const directLines = [];
-        if (hasDirectCardEffect(card, 'draw')) directLines.push(`抽<span class="card-desc-value">${getCardDrawCount(card)}</span>。`);
-        if (hasDirectCardEffect(card, 'energy')) directLines.push('+<span class="card-desc-value">1</span> 能量。');
-        if (hasDirectCardEffect(card, 'protection')) directLines.push(`+<span class="card-desc-value">${getProtectionValue(card)}</span> 庇护。`);
-        if (hasDirectCardEffect(card, 'heal')) directLines.push(`回<span class="card-desc-value">${getCardHealValue(card)}</span>生命。`);
-        if (hasDirectCardEffect(card, 'retain')) directLines.push('下回合回手。');
+        if (hasDirectCardEffect(card, 'draw')) directLines.push(`抽 <span class="card-desc-value">${getCardDrawCount(card)}</span> 张牌。`);
+        if (hasDirectCardEffect(card, 'energy')) directLines.push('回复 <span class="card-desc-value">1</span> 点能量。');
+        if (hasDirectCardEffect(card, 'protection')) directLines.push(`获得 <span class="card-desc-value">${getProtectionValue(card)}</span> 点庇护。`);
+        if (hasDirectCardEffect(card, 'heal')) directLines.push(`回复 <span class="card-desc-value">${getCardHealValue(card)}</span> 点生命。`);
+        if (hasDirectCardEffect(card, 'retain')) directLines.push('打出后下回合回到手牌。');
         if (directLines.length) addUniqueLine(lines, directLines.join(''));
         
         return lines.join('<br>') || '无直接效果。';
@@ -6316,7 +6316,7 @@
                 state.r_signature_attack_ready = false;
                 if (roleId === 'hero_mage' && hasRelic('r_start_mage')) {
                     state.p_chant = Math.min(9, state.p_chant + 1);
-                    showFloatText('余辉咏唱 +1', "var(--purple)", getCenter('ui-hp'));
+                    showFloatText('余辉积累 1 层咏唱', "var(--purple)", getCenter('ui-hp'));
                 } else if (roleId === 'hero_archer' && hasRelic('r_start_archer')) {
                     state.r_signature_archer_pending = true;
                 }
@@ -6437,7 +6437,7 @@
                 state.p_chant = Math.min(12, state.p_chant + chantGain);
                 state.mp += hasRelic('r_sac_jade') ? 2 : 1;
                 if (hasRelic('r_sac_jade')) state.p_reduce_dmg += 2;
-                showFloatText(`咏唱 +${chantGain}`, "var(--purple)", getCenter('ui-hp'));
+                showFloatText(`积累 ${chantGain} 层咏唱`, "var(--purple)", getCenter('ui-hp'));
                 if (getEnemyDebuffTypeCount() > 0) await drawCards(1);
             }
             else if (card.specialId === 'm_status_supernova') {
@@ -6711,7 +6711,7 @@
             }
             state.p_chant = Math.min(9, state.p_chant + chantGain);
             state.armor += 4;
-            showFloatText(`咏唱 +${chantGain}`, "var(--purple)", getCenter('ui-hp'));
+            showFloatText(`积累 ${chantGain} 层咏唱`, "var(--purple)", getCenter('ui-hp'));
             if (hasRelic('r_sac_jade')) {
                 state.mp += 1;
                 state.p_reduce_dmg += 2;
@@ -6934,7 +6934,7 @@
         if (debtPaidByCard > 0 && card.bloodDebtDrawOnRepay && !isEcho) await drawCards(card.bloodDebtDrawOnRepay);
         if (debtClearedByCard && card.bloodDebtClearDamage) applyDamageToEnemy(card.bloodDebtClearDamage, true);
         if (debtClearedByCard && card.bloodDebtClearHeal) healPlayer(card.bloodDebtClearHeal);
-        if(statusApplied && hasRelic('r_status_prism')) { state.p_chant = Math.min(12, state.p_chant + 1); showFloatText("棱镜咏唱 +1", "var(--purple)", getCenter('ui-hp')); }
+        if(statusApplied && hasRelic('r_status_prism')) { state.p_chant = Math.min(12, state.p_chant + 1); showFloatText("棱镜积累 1 层咏唱", "var(--purple)", getCenter('ui-hp')); }
         if((card.tags && card.tags.includes('充能')) || hasDirectCardEffect(card, 'energy')) { let eAmt = 1; if(card.tags && card.tags.includes('充能') && hasRelic('r_energy_crys')) eAmt += 1; state.mp += eAmt; showFloatText(`能量 +${eAmt}`, "var(--gold)", getCenter('ui-mp')); }
         if(card.tags && card.tags.includes('荆棘')) { let tVal = 8; if(hasRelic('r_thorn_shield_new')) tVal *= 2; state.player.thorns += tVal; showFloatText(`获得荆棘 +${tVal}`, "var(--nature)", getCenter('ui-hp')); updateTopBar(); }
         if(((card.tags && card.tags.includes('抽牌')) || hasDirectCardEffect(card, 'draw')) && !isEcho) { let drawCount = getCardDrawCount(card); if(card.tags && card.tags.includes('抽牌') && hasRelic('r_luck_box')) drawCount += 1; await drawCards(drawCount); }

@@ -277,7 +277,7 @@ const CHARACTER_CARD_POOLS = {
         { poolId: 'mage_bloodlet_omen', name: '断咒预兆', type: '能力', cost: 2, icon: '🌑', val: 0, tags: ['诅咒'], buildTags: ['calamity'], rarity: '稀有', art: 'assets/cards/art/mage/mage_curse_echo_art_v1.webp', desc: '施加[诅咒]。' },
         { poolId: 'mage_echo_veil', name: '回声护幕', type: '能力', cost: 1, icon: '🛡️', val: 3, tags: ['回响', '庇护'], rarity: '稀有', art: 'assets/cards/art/mage/mage_barrier_art_v1.webp', desc: '本牌自回放，两次共获得 6 点庇护。' },
         { poolId: 'mage_void_dust', name: '虚弱星尘', type: '攻击', cost: 1, icon: '✦', val: 6, tags: ['虚弱', '抽牌'], buildTags: ['calamity'], rarity: '普通', art: 'assets/cards/art/mage/mage_omen_art_v1.webp', desc: '造成 6 点伤害，施加[虚弱]并[抽牌]。' },
-        { poolId: 'mage_arcane_mark', name: '紫焰刻印', type: '能力', cost: 2, icon: '🔮', val: 3, tags: ['附魔', '易伤'], rarity: '稀有', energySink: { max: 2, enchantPerEnergy: 3 }, art: 'assets/cards/art/mage/mage_thunder_art_v1.webp', desc: '触发[附魔]并施加[易伤]。可额外消耗至多 2 点能量，每点使本次附魔 +3。' },
+        { poolId: 'mage_arcane_mark', name: '紫焰刻印', type: '能力', cost: 2, icon: '🔮', val: 3, tags: ['附魔', '易伤'], rarity: '稀有', energySink: { max: 2, enchantPerEnergy: 3 }, art: 'assets/cards/art/mage/mage_thunder_art_v1.webp', desc: '触发[附魔]并施加[易伤]。可额外消耗至多 2 点能量，每点使本次附魔提高 3。' },
         { poolId: 'mage_stasis_hex', name: '星缚咒印', type: '能力', cost: 2, icon: '⛓️', val: 0, tags: ['眩晕', '诅咒', '咏唱'], rarity: '史诗', art: 'assets/cards/art/mage/mage_void_art_v1.webp', desc: '施加[眩晕]与[诅咒]，并积累[咏唱]。' },
         { poolId: 'mage_exile_nova', name: '裂星禁术', type: '攻击', cost: 2, icon: '🌌', val: 15, tags: ['爆发'], rarity: '史诗', art: 'assets/cards/art/mage/mage_thunder_art_v1.webp', desc: '造成 15 点伤害并触发[爆发]。' }
     ],
@@ -500,7 +500,7 @@ const BUILD_EXPANSION_CARDS = {
         { poolId: 'mage_star_precharge', name: '星核预充', type: '能力', cost: 1, icon: '🔮', val: 0, tags: ['咏唱', '充能', '庇护'], buildTags: ['chant'], rarity: '普通', frameTheme: 'mage', desc: '积累[咏唱]、[充能]并获得[庇护]，完成一次安全的等能量预备。' },
         { poolId: 'mage_radiant_law', name: '辉烬爆律', type: '攻击', cost: 2, icon: '🔥', val: 12, tags: ['爆发', '穿甲'], buildTags: ['chant'], rarity: '稀有', frameTheme: 'mage', desc: '造成 12 点[穿甲]伤害，附带[爆发]。' },
         { poolId: 'mage_star_ward', name: '残星护文', type: '防御', cost: 1, icon: '🛡️', val: 10, tags: ['咏唱', '保留'], buildTags: ['chant'], rarity: '普通', frameTheme: 'mage', desc: '获得 10 点护盾，积累[咏唱]并[保留]。' },
-        { poolId: 'mage_countdown', name: '聚焰读秒', type: '能力', cost: 2, icon: '⏳', val: 3, tags: ['咏唱', '附魔'], buildTags: ['chant'], rarity: '稀有', energySink: { max: 2, enchantPerEnergy: 3 }, frameTheme: 'mage', desc: '积累[咏唱]并触发[附魔]。可额外消耗至多 2 点能量，每点使本次附魔 +3。' },
+        { poolId: 'mage_countdown', name: '聚焰读秒', type: '能力', cost: 2, icon: '⏳', val: 3, tags: ['咏唱', '附魔'], buildTags: ['chant'], rarity: '稀有', energySink: { max: 2, enchantPerEnergy: 3 }, frameTheme: 'mage', desc: '积累[咏唱]并触发[附魔]。可额外消耗至多 2 点能量，每点使本次附魔提高 3。' },
         { poolId: 'mage_star_surge', name: '星涌短波', type: '攻击', cost: 1, icon: '⚡', val: 8, tags: ['爆发', '充能'], buildTags: ['chant'], rarity: '普通', frameTheme: 'mage', desc: '造成 8 点伤害，附带[爆发]与[充能]。' },
         { poolId: 'mage_solar_refill', name: '恒星回填', type: '能力', cost: 2, icon: '🌞', val: 0, tags: ['咏唱', '抽牌', '庇护'], buildTags: ['chant'], rarity: '史诗', frameTheme: 'mage', desc: '积累[咏唱]、[抽牌]并获得[庇护]。' },
         { poolId: 'mage_mirror_trial', name: '镜页试抄', type: '能力', cost: 1, icon: '🪞', val: 0, tags: ['复刻'], directEffects: { draw: true }, buildTags: ['mirror'], rarity: '普通', frameTheme: 'mage', desc: '复制上一张非复刻牌，并抽 1 张牌。' },
