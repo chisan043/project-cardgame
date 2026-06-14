@@ -442,7 +442,7 @@ function applyRoleSynergy(state, card, echo, cycleReturned, resetCount) {
         if (tags.includes('庇护') && state.armor > 0) state.armor += 2;
         if (tags.includes('荆棘') && state.armor > 0) state.thorns += Math.min(8, Math.max(2, Math.ceil(state.armor / 8)));
     } else if (state.roleId === 'hero_mage') {
-        if (tags.includes('回响') || tags.includes('复刻')) state.chant = Math.min(9, state.chant + 1);
+        if (tags.includes('回响') || tags.includes('复刻')) state.chant = Math.min(12, state.chant + 1);
         if (['易伤', '虚弱', '剧毒', '出血', '燃烧', '诅咒'].some(tag => tags.includes(tag))) state.nextDamage += 2;
     } else if (state.roleId === 'hero_archer') {
         let windGain = 0;
@@ -549,9 +549,9 @@ function estimateCard(state, card, incoming, move) {
             a_syn_blood: state.bloodDebt > 0
                 ? 18 + state.bloodDebt * 6 + Math.min(state.maxHp - state.hp, 12)
                 : -16,
-            m_forbidden_comet: 48 + state.chant * 17,
-            m_echo_archive: state.lastCard ? 22 : 8,
-            m_status_supernova: 36 + enemyDebuffCount(state) * 13,
+            m_forbidden_comet: 52 + state.chant * 19,
+            m_echo_archive: state.lastCard ? 27 : 12,
+            m_status_supernova: 38 + enemyDebuffCount(state) * 14,
             a_gale_verdict: 18 + Math.min(3, state.aim) * 11,
             s_poison: (state.enemy.poison + state.enemy.bleed) * 3 + 40,
             s_exhaust: state.exhaust.length * 6 + (state.exhaust.length ? 10 : 0)
@@ -563,7 +563,7 @@ function estimateCard(state, card, incoming, move) {
     if (tags.includes('连击') && state.cardsPlayed > 0) value *= 1.5;
     let repeats = 1 + (tags.includes('追击') ? 1 : 0) + (tags.includes('回响') ? 1 : 0);
     if (card.type === '攻击') {
-        if (tags.includes('爆发')) value += state.chant ? state.chant * 7 : 4;
+        if (tags.includes('爆发')) value += state.chant ? state.chant * 8 : 4;
         if (tags.includes('圣剑')) value += Math.floor(state.armor * (hasRelic(state, 'r_sword_oath') ? 0.7 : 0.5)) + state.counter * 4;
         if (card.bloodDebtDamageRatio) value += state.bloodDebt * Number(card.bloodDebtDamageRatio) * state.bloodDebtPower;
         score += value * repeats * (tags.includes('穿甲') ? 1.12 : 1);
@@ -720,27 +720,27 @@ function executeSpecialCard(state, card) {
     } else if (specialId === 'm_forbidden_comet') {
         if (card.type === '攻击') payBloodDebtAttackCost(state);
         const chantSpent = state.chant;
-        const bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.2) : 0;
-        hitEnemy(state, 48 + state.battleDamage + chantSpent * 16 + bossBonus, true);
-        state.protection += Math.min(24, chantSpent * 4);
+        const bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.60) : 0;
+        hitEnemy(state, 52 + state.battleDamage + chantSpent * 18 + bossBonus, true);
+        state.protection += Math.min(28, chantSpent * 4);
         state.chant = hasRelic(state, 'r_burst_lens') ? Math.ceil(chantSpent / 2) : 0;
     } else if (specialId === 'm_echo_archive') {
         const lastSpecialId = state.lastCard?.specialId || state.lastCard?.id;
         if (state.lastCard && !state.lastCard.isJunk && lastSpecialId !== 'm_echo_archive') {
             executeCard(state, state.lastCard, true);
-            const bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.02) : 0;
+            const bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.04) : 0;
             if (bossBonus > 0) hitEnemy(state, bossBonus, true, '镜像余波');
             state.protection += 2;
             draw(state, 1);
         }
         else {
-            state.chant = Math.min(12, state.chant + 2);
+            state.chant = Math.min(12, state.chant + 3);
             draw(state, 2);
         }
     } else if (specialId === 'm_status_supernova') {
         const debuffs = enemyDebuffCount(state);
-        hitEnemy(state, 36 + state.battleDamage + debuffs * 9);
-        state.protection += Math.min(20, debuffs * 4);
+        hitEnemy(state, 38 + state.battleDamage + debuffs * 10);
+        state.protection += Math.min(24, debuffs * 5);
         state.enemy.burn += Math.min(3, Math.max(1, debuffs));
     } else if (specialId === 'a_gale_verdict') {
         if (card.type === '攻击') payBloodDebtAttackCost(state);
@@ -893,9 +893,9 @@ function executeCard(state, card, echo = false) {
         if (tags.includes('圣剑')) damage += Math.floor(state.armor * (hasRelic(state, 'r_sword_oath') ? 0.7 : 0.5)) + state.counter * 4;
         if (tags.includes('爆发')) {
             const chantSpent = state.chant;
-            damage += chantSpent > 0 ? chantSpent * 7 : 4;
+            damage += chantSpent > 0 ? chantSpent * 8 : 4;
             state.protection += Math.min(8, chantSpent);
-            state.chant = 0;
+            state.chant = hasRelic(state, 'r_burst_lens') ? Math.ceil(chantSpent / 2) : 0;
         }
         if (state.nextDamage > 0) {
             damage += state.nextDamage;

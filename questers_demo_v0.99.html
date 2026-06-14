@@ -2330,7 +2330,7 @@
             let chantGain = 0;
             if (tags.includes('回响') || tags.includes('复刻')) chantGain += 1;
             if (chantGain > 0) {
-                state.p_chant = Math.min(9, state.p_chant + chantGain);
+                state.p_chant = Math.min(12, state.p_chant + chantGain);
                 showFloatText(`法师联动：积累 ${chantGain} 层咏唱`, "var(--purple)", getCenter('ui-hp'));
             }
             if (['易伤', '虚弱', '剧毒', '出血', '燃烧', '诅咒'].some(t => tags.includes(t))) {
@@ -2961,7 +2961,7 @@
         if (tag === '圣剑') return '追加当前护盾 50% 的伤害。';
         if (tag === '吸血') return '按本次伤害回复生命。';
         if (tag === '追击') return '额外触发 1 次轻灵追射。';
-        if (tag === '爆发') return '消耗全部咏唱，每层追加 7 点伤害。';
+        if (tag === '爆发') return '消耗全部咏唱，每层追加 8 点伤害。';
         if (tag === '反击') return '进入反击姿态，招架下一次主体攻击并反击。';
         if (tag === '荆棘') return '获得荆棘，受击时反弹伤害。';
         if (tag === '庇护') return `获得 <span class="card-desc-value">${getProtectionValue(card)}</span> 点庇护。`;
@@ -6443,8 +6443,8 @@
             else if (card.specialId === 'm_status_supernova') {
                 const debuffs = getEnemyDebuffTypeCount();
                 triggerVFX('p-atk');
-                applySpecialCardDamage(card, 36 + state.p_battle_dmg + debuffs * 9);
-                state.p_reduce_dmg += Math.min(20, debuffs * 4);
+                applySpecialCardDamage(card, 38 + state.p_battle_dmg + debuffs * 10);
+                state.p_reduce_dmg += Math.min(24, debuffs * 5);
                 state.enemy.burn += Math.min(3, Math.max(1, debuffs));
                 if(hasRelic('r_status_prism')) state.p_chant = Math.min(12, state.p_chant + 1);
                 showFloatText(`状态共振 ${debuffs}`, "var(--fire)", getCenter('enemy-avatar'));
@@ -6453,12 +6453,12 @@
                 if (state.lastPlayedCard && !state.lastPlayedCard.isJunk) {
                     showFloatText("回声复写", "var(--purple)", getCenter('ui-hp'));
                     await executeCardTags(state.lastPlayedCard, true, null);
-                    let bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.02) : 0;
+                    let bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.04) : 0;
                     if (bossBonus > 0) applyDamageToEnemy(bossBonus, true);
                     state.p_reduce_dmg += 2;
                     await drawCards(1);
                 } else {
-                    state.p_chant = Math.min(12, state.p_chant + 2);
+                    state.p_chant = Math.min(12, state.p_chant + 3);
                     await drawCards(2);
                 }
             }
@@ -6473,9 +6473,9 @@
             else if (card.specialId === 'm_forbidden_comet') {
                 triggerVFX('p-atk');
                 const chantSpent = state.p_chant;
-                let bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.21) : 0;
-                applySpecialCardDamage(card, 48 + state.p_battle_dmg + chantSpent * 16 + bossBonus, true);
-                state.p_reduce_dmg += Math.min(24, chantSpent * 4);
+                let bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.60) : 0;
+                applySpecialCardDamage(card, 52 + state.p_battle_dmg + chantSpent * 18 + bossBonus, true);
+                state.p_reduce_dmg += Math.min(28, chantSpent * 4);
                 state.p_chant = hasRelic('r_burst_lens') ? Math.ceil(chantSpent / 2) : 0;
                 showFloatText(`咏唱爆裂 ${chantSpent}`, "var(--purple)", getCenter('enemy-avatar'));
             }
@@ -6709,7 +6709,7 @@
                 state.r_chant_reservoir_used = true;
                 await drawCards(1);
             }
-            state.p_chant = Math.min(9, state.p_chant + chantGain);
+            state.p_chant = Math.min(12, state.p_chant + chantGain);
             state.armor += 4;
             showFloatText(`积累 ${chantGain} 层咏唱`, "var(--purple)", getCenter('ui-hp'));
             if (hasRelic('r_sac_jade')) {
@@ -6770,7 +6770,7 @@
             }
             if(card.tags && card.tags.includes('爆发')) {
                 const chantSpent = state.p_chant;
-                let burstBonus = chantSpent > 0 ? chantSpent * 7 : 4;
+                let burstBonus = chantSpent > 0 ? chantSpent * 8 : 4;
                 if (hasRelic('r_enchant_crys')) burstBonus += Math.max(3, chantSpent * 2);
                 finalDmg += burstBonus;
                 if (chantSpent > 0) {
