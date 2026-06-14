@@ -125,7 +125,7 @@ const MATURE_LOADOUTS = {
     },
     venom: {
         core: 's_poison',
-        relics: ['r_poison_fang', 'r_bleed_knife', 'r_corrupt_cup']
+        relics: ['r_poison_fang', 'r_bleed_knife', 'r_bloodlet_draw']
     },
     exile: {
         core: 's_exhaust',
@@ -1058,7 +1058,6 @@ function endRound(state) {
         enemy.hp -= enemy.poison;
         state.totalDamageDealt += enemy.poison;
         state.lastEnemyDamageSource = '剧毒';
-        if (hasRelic(state, 'r_corrupt_cup')) heal(state, 2);
         enemy.poison--;
     }
     if (enemy.bleed > 0) {
