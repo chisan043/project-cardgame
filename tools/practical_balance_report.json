@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-14T17:09:52.089Z",
+  "generatedAt": "2026-06-14T17:49:29.923Z",
   "seed": 20260615,
   "runsPerSample": 800,
   "scenarios": [
@@ -1400,50 +1400,50 @@
           "label": "混合拿牌无核心",
           "checkpoints": {
             "late": {
-              "winRate": 0.9625,
-              "averageTurns": 4.51625,
-              "averageHpLeft": 59.76375,
-              "averageDamageTaken": 23.4925,
-              "averageDamageDealt": 291.39625,
+              "winRate": 0.96125,
+              "averageTurns": 4.49875,
+              "averageHpLeft": 59.99375,
+              "averageDamageTaken": 23.27,
+              "averageDamageDealt": 291.505,
               "deathCauses": {
-                "首领主体攻击": 30
+                "首领主体攻击": 31
               },
               "victoryCauses": {
-                "卡牌伤害": 685,
+                "卡牌伤害": 684,
                 "诅咒": 78,
                 "燃烧": 7
               }
             },
             "elite": {
-              "winRate": 0.92125,
-              "averageTurns": 6.43125,
-              "averageHpLeft": 49.8825,
-              "averageDamageTaken": 36.69,
-              "averageDamageDealt": 421.92375,
+              "winRate": 0.91875,
+              "averageTurns": 6.3975,
+              "averageHpLeft": 50.30375,
+              "averageDamageTaken": 36.20875,
+              "averageDamageDealt": 421.865,
               "deathCauses": {
-                "首领主体攻击": 61,
+                "首领主体攻击": 63,
                 "出血伤害": 1,
                 "敌方荆棘": 1
               },
               "victoryCauses": {
-                "卡牌伤害": 665,
-                "诅咒": 66,
+                "卡牌伤害": 662,
+                "诅咒": 67,
                 "燃烧": 6
               }
             },
             "boss": {
-              "winRate": 0.815,
-              "averageTurns": 10.56625,
-              "averageHpLeft": 47.89,
-              "averageDamageTaken": 46.33125,
-              "averageDamageDealt": 643.83875,
+              "winRate": 0.8225,
+              "averageTurns": 10.49,
+              "averageHpLeft": 48.3275,
+              "averageDamageTaken": 45.79375,
+              "averageDamageDealt": 645.24,
               "deathCauses": {
-                "首领主体攻击": 147,
+                "首领主体攻击": 141,
                 "回合上限": 1
               },
               "victoryCauses": {
-                "卡牌伤害": 557,
-                "诅咒": 84,
+                "卡牌伤害": 553,
+                "诅咒": 94,
                 "燃烧": 11
               }
             }
@@ -1454,46 +1454,46 @@
           "checkpoints": {
             "late": {
               "winRate": 0.9825,
-              "averageTurns": 4.47,
-              "averageHpLeft": 65.92375,
-              "averageDamageTaken": 16.73125,
-              "averageDamageDealt": 290.7375,
+              "averageTurns": 4.45125,
+              "averageHpLeft": 66.3125,
+              "averageDamageTaken": 16.24875,
+              "averageDamageDealt": 290.91625,
               "deathCauses": {
                 "首领主体攻击": 14
               },
               "victoryCauses": {
-                "卡牌伤害": 724,
-                "诅咒": 60,
+                "卡牌伤害": 735,
+                "诅咒": 49,
                 "燃烧": 2
               }
             },
             "elite": {
-              "winRate": 0.95875,
-              "averageTurns": 6.495,
-              "averageHpLeft": 57.62,
-              "averageDamageTaken": 27.86,
-              "averageDamageDealt": 433.0025,
+              "winRate": 0.965,
+              "averageTurns": 6.45625,
+              "averageHpLeft": 58.0425,
+              "averageDamageTaken": 27.44125,
+              "averageDamageDealt": 433.11375,
               "deathCauses": {
-                "首领主体攻击": 33
+                "首领主体攻击": 28
               },
               "victoryCauses": {
-                "诅咒": 78,
-                "卡牌伤害": 685,
+                "诅咒": 87,
+                "卡牌伤害": 681,
                 "燃烧": 4
               }
             },
             "boss": {
-              "winRate": 0.8675,
-              "averageTurns": 10.43,
-              "averageHpLeft": 53.54875,
-              "averageDamageTaken": 38.13625,
-              "averageDamageDealt": 654.185,
+              "winRate": 0.87125,
+              "averageTurns": 10.38625,
+              "averageHpLeft": 53.91875,
+              "averageDamageTaken": 37.60875,
+              "averageDamageDealt": 655.4375,
               "deathCauses": {
-                "首领主体攻击": 106
+                "首领主体攻击": 103
               },
               "victoryCauses": {
-                "卡牌伤害": 595,
-                "诅咒": 87,
+                "卡牌伤害": 589,
+                "诅咒": 96,
                 "燃烧": 12
               }
             }
@@ -1733,50 +1733,50 @@
           "label": "混合拿牌无核心",
           "checkpoints": {
             "late": {
-              "winRate": 0.97125,
-              "averageTurns": 4.37125,
-              "averageHpLeft": 60.31625,
-              "averageDamageTaken": 23.74375,
-              "averageDamageDealt": 287.17,
+              "winRate": 0.97,
+              "averageTurns": 4.3425,
+              "averageHpLeft": 60.425,
+              "averageDamageTaken": 23.605,
+              "averageDamageDealt": 287.05625,
               "deathCauses": {
-                "首领主体攻击": 23
+                "首领主体攻击": 24
               },
               "victoryCauses": {
-                "卡牌伤害": 707,
-                "诅咒": 65,
+                "卡牌伤害": 709,
+                "诅咒": 62,
                 "燃烧": 5
               }
             },
             "elite": {
-              "winRate": 0.89625,
-              "averageTurns": 6.11,
-              "averageHpLeft": 46.60875,
-              "averageDamageTaken": 41.60625,
-              "averageDamageDealt": 423.27625,
+              "winRate": 0.8975,
+              "averageTurns": 6.06375,
+              "averageHpLeft": 47.03375,
+              "averageDamageTaken": 41.05625,
+              "averageDamageDealt": 423.655,
               "deathCauses": {
-                "首领主体攻击": 79,
+                "首领主体攻击": 78,
                 "敌方荆棘": 3,
                 "出血伤害": 1
               },
               "victoryCauses": {
-                "卡牌伤害": 635,
-                "诅咒": 74,
+                "卡牌伤害": 632,
+                "诅咒": 78,
                 "燃烧": 8
               }
             },
             "boss": {
-              "winRate": 0.8225,
-              "averageTurns": 9.88875,
-              "averageHpLeft": 46.21125,
-              "averageDamageTaken": 48.9625,
-              "averageDamageDealt": 641.605,
+              "winRate": 0.82625,
+              "averageTurns": 9.79125,
+              "averageHpLeft": 46.36,
+              "averageDamageTaken": 48.65125,
+              "averageDamageDealt": 642.39375,
               "deathCauses": {
                 "回合上限": 3,
-                "首领主体攻击": 139
+                "首领主体攻击": 136
               },
               "victoryCauses": {
-                "卡牌伤害": 544,
-                "诅咒": 106,
+                "卡牌伤害": 546,
+                "诅咒": 107,
                 "燃烧": 8
               }
             }
@@ -1786,49 +1786,49 @@
           "label": "混合拿牌单遗物",
           "checkpoints": {
             "late": {
-              "winRate": 0.985,
-              "averageTurns": 3.91,
-              "averageHpLeft": 64.7425,
-              "averageDamageTaken": 17.78125,
-              "averageDamageDealt": 288.6,
+              "winRate": 0.98375,
+              "averageTurns": 3.875,
+              "averageHpLeft": 65.1525,
+              "averageDamageTaken": 17.2425,
+              "averageDamageDealt": 288.42375,
               "deathCauses": {
-                "首领主体攻击": 12
+                "首领主体攻击": 13
               },
               "victoryCauses": {
-                "卡牌伤害": 706,
+                "卡牌伤害": 705,
                 "诅咒": 74,
                 "燃烧": 8
               }
             },
             "elite": {
-              "winRate": 0.94125,
-              "averageTurns": 5.5475,
-              "averageHpLeft": 53.48875,
-              "averageDamageTaken": 32.52375,
-              "averageDamageDealt": 425.56875,
+              "winRate": 0.94625,
+              "averageTurns": 5.52625,
+              "averageHpLeft": 54.0175,
+              "averageDamageTaken": 31.92875,
+              "averageDamageDealt": 426.24125,
               "deathCauses": {
-                "首领主体攻击": 45,
+                "首领主体攻击": 41,
                 "敌方荆棘": 1,
                 "出血伤害": 1
               },
               "victoryCauses": {
-                "诅咒": 78,
+                "诅咒": 82,
                 "卡牌伤害": 668,
                 "燃烧": 7
               }
             },
             "boss": {
-              "winRate": 0.86625,
-              "averageTurns": 8.85875,
-              "averageHpLeft": 50.28125,
-              "averageDamageTaken": 42.9425,
-              "averageDamageDealt": 653.305,
+              "winRate": 0.87375,
+              "averageTurns": 8.795,
+              "averageHpLeft": 50.5725,
+              "averageDamageTaken": 42.3775,
+              "averageDamageDealt": 655.64125,
               "deathCauses": {
-                "首领主体攻击": 107
+                "首领主体攻击": 101
               },
               "victoryCauses": {
                 "卡牌伤害": 596,
-                "诅咒": 89,
+                "诅咒": 95,
                 "燃烧": 8
               }
             }
@@ -1889,48 +1889,49 @@
           "label": "纯流派无核心",
           "checkpoints": {
             "late": {
-              "winRate": 0.9725,
-              "averageTurns": 3.9975,
-              "averageHpLeft": 50.46875,
-              "averageDamageTaken": 33.0975,
-              "averageDamageDealt": 287.585,
+              "winRate": 0.97125,
+              "averageTurns": 3.88625,
+              "averageHpLeft": 52.03875,
+              "averageDamageTaken": 31.30625,
+              "averageDamageDealt": 287.5975,
               "deathCauses": {
-                "首领主体攻击": 21,
+                "首领主体攻击": 22,
                 "剧毒伤害": 1
               },
               "victoryCauses": {
-                "卡牌伤害": 380,
-                "诅咒": 398
+                "卡牌伤害": 393,
+                "诅咒": 384
               }
             },
             "elite": {
-              "winRate": 0.87,
-              "averageTurns": 5.27375,
-              "averageHpLeft": 40.3075,
-              "averageDamageTaken": 46.67375,
-              "averageDamageDealt": 419.68125,
+              "winRate": 0.8825,
+              "averageTurns": 5.15875,
+              "averageHpLeft": 41.51625,
+              "averageDamageTaken": 45.235,
+              "averageDamageDealt": 421.83,
               "deathCauses": {
-                "首领主体攻击": 101,
-                "敌方荆棘": 3
+                "首领主体攻击": 92,
+                "出血伤害": 1,
+                "敌方荆棘": 1
               },
               "victoryCauses": {
-                "卡牌伤害": 346,
-                "诅咒": 349,
+                "卡牌伤害": 369,
+                "诅咒": 336,
                 "燃烧": 1
               }
             },
             "boss": {
-              "winRate": 0.76375,
-              "averageTurns": 7.14875,
-              "averageHpLeft": 34.43625,
-              "averageDamageTaken": 59.02125,
-              "averageDamageDealt": 627.28625,
+              "winRate": 0.76875,
+              "averageTurns": 7.02375,
+              "averageHpLeft": 35.4125,
+              "averageDamageTaken": 58.05125,
+              "averageDamageDealt": 631.89,
               "deathCauses": {
-                "首领主体攻击": 189
+                "首领主体攻击": 185
               },
               "victoryCauses": {
-                "诅咒": 319,
-                "卡牌伤害": 292
+                "卡牌伤害": 292,
+                "诅咒": 323
               }
             }
           }
@@ -1939,45 +1940,46 @@
           "label": "单方向遗物",
           "checkpoints": {
             "late": {
-              "winRate": 0.98375,
-              "averageTurns": 3.87875,
-              "averageHpLeft": 57.53875,
-              "averageDamageTaken": 25.3725,
-              "averageDamageDealt": 288.35125,
+              "winRate": 0.98875,
+              "averageTurns": 3.80125,
+              "averageHpLeft": 58.5275,
+              "averageDamageTaken": 24.06125,
+              "averageDamageDealt": 289.13125,
               "deathCauses": {
-                "首领主体攻击": 13
+                "首领主体攻击": 9
               },
               "victoryCauses": {
-                "诅咒": 394,
-                "卡牌伤害": 393
+                "诅咒": 356,
+                "卡牌伤害": 435
               }
             },
             "elite": {
-              "winRate": 0.97,
-              "averageTurns": 5.1025,
-              "averageHpLeft": 49.1725,
-              "averageDamageTaken": 36.18625,
-              "averageDamageDealt": 436.10625,
+              "winRate": 0.97875,
+              "averageTurns": 4.97625,
+              "averageHpLeft": 51.8475,
+              "averageDamageTaken": 33.4225,
+              "averageDamageDealt": 438.57625,
               "deathCauses": {
-                "首领主体攻击": 24
+                "首领主体攻击": 16,
+                "敌方荆棘": 1
               },
               "victoryCauses": {
-                "卡牌伤害": 352,
-                "诅咒": 424
+                "卡牌伤害": 370,
+                "诅咒": 413
               }
             },
             "boss": {
-              "winRate": 0.92125,
-              "averageTurns": 7.14625,
-              "averageHpLeft": 46.655,
-              "averageDamageTaken": 43.155,
-              "averageDamageDealt": 681.7125,
+              "winRate": 0.9375,
+              "averageTurns": 6.97125,
+              "averageHpLeft": 48.58875,
+              "averageDamageTaken": 40.98125,
+              "averageDamageDealt": 686.0875,
               "deathCauses": {
-                "首领主体攻击": 63
+                "首领主体攻击": 50
               },
               "victoryCauses": {
-                "卡牌伤害": 327,
-                "诅咒": 410
+                "诅咒": 436,
+                "卡牌伤害": 314
               }
             }
           }
@@ -1986,45 +1988,45 @@
           "label": "成熟遗物缺核心",
           "checkpoints": {
             "late": {
-              "winRate": 0.99125,
-              "averageTurns": 3.6175,
-              "averageHpLeft": 61.66875,
-              "averageDamageTaken": 20.78125,
-              "averageDamageDealt": 291.43,
-              "deathCauses": {
-                "首领主体攻击": 7
-              },
-              "victoryCauses": {
-                "卡牌伤害": 417,
-                "诅咒": 376
-              }
-            },
-            "elite": {
               "winRate": 0.99375,
-              "averageTurns": 4.78375,
-              "averageHpLeft": 56.66625,
-              "averageDamageTaken": 27.845,
-              "averageDamageDealt": 440.52,
+              "averageTurns": 3.54125,
+              "averageHpLeft": 62.345,
+              "averageDamageTaken": 19.84125,
+              "averageDamageDealt": 290.905,
               "deathCauses": {
                 "首领主体攻击": 5
               },
               "victoryCauses": {
-                "诅咒": 405,
-                "卡牌伤害": 390
+                "卡牌伤害": 438,
+                "诅咒": 357
+              }
+            },
+            "elite": {
+              "winRate": 0.99375,
+              "averageTurns": 4.68,
+              "averageHpLeft": 56.95625,
+              "averageDamageTaken": 27.63375,
+              "averageDamageDealt": 440.35,
+              "deathCauses": {
+                "首领主体攻击": 5
+              },
+              "victoryCauses": {
+                "诅咒": 397,
+                "卡牌伤害": 398
               }
             },
             "boss": {
-              "winRate": 0.94875,
-              "averageTurns": 6.6175,
-              "averageHpLeft": 52.9175,
-              "averageDamageTaken": 36.445,
-              "averageDamageDealt": 691.92125,
+              "winRate": 0.9575,
+              "averageTurns": 6.48625,
+              "averageHpLeft": 53.29625,
+              "averageDamageTaken": 35.94375,
+              "averageDamageDealt": 692.50375,
               "deathCauses": {
-                "首领主体攻击": 41
+                "首领主体攻击": 34
               },
               "victoryCauses": {
-                "卡牌伤害": 341,
-                "诅咒": 418
+                "诅咒": 414,
+                "卡牌伤害": 352
               }
             }
           }
@@ -2033,47 +2035,47 @@
           "label": "只有核心无遗物",
           "checkpoints": {
             "late": {
-              "winRate": 0.9975,
-              "averageTurns": 3.25875,
-              "averageHpLeft": 61.7,
-              "averageDamageTaken": 19.59375,
-              "averageDamageDealt": 295.785,
+              "winRate": 0.99625,
+              "averageTurns": 3.16875,
+              "averageHpLeft": 62.90125,
+              "averageDamageTaken": 18.28625,
+              "averageDamageDealt": 296.93125,
               "deathCauses": {
-                "首领主体攻击": 2
+                "首领主体攻击": 3
               },
               "victoryCauses": {
-                "诅咒": 283,
-                "卡牌伤害": 513,
+                "诅咒": 269,
+                "卡牌伤害": 526,
                 "燃烧": 2
               }
             },
             "elite": {
               "winRate": 0.9925,
-              "averageTurns": 4.345,
-              "averageHpLeft": 54.51375,
-              "averageDamageTaken": 28.74875,
-              "averageDamageDealt": 453.6425,
+              "averageTurns": 4.25375,
+              "averageHpLeft": 55.66125,
+              "averageDamageTaken": 27.34875,
+              "averageDamageDealt": 452.52875,
               "deathCauses": {
                 "首领主体攻击": 6
               },
               "victoryCauses": {
-                "诅咒": 338,
-                "卡牌伤害": 454,
+                "卡牌伤害": 467,
+                "诅咒": 325,
                 "燃烧": 2
               }
             },
             "boss": {
-              "winRate": 0.96125,
-              "averageTurns": 5.90375,
-              "averageHpLeft": 48.825,
-              "averageDamageTaken": 38.39375,
-              "averageDamageDealt": 710.77625,
+              "winRate": 0.96875,
+              "averageTurns": 5.74875,
+              "averageHpLeft": 50.2425,
+              "averageDamageTaken": 36.59625,
+              "averageDamageDealt": 710.915,
               "deathCauses": {
-                "首领主体攻击": 31
+                "首领主体攻击": 25
               },
               "victoryCauses": {
-                "卡牌伤害": 397,
-                "诅咒": 371,
+                "诅咒": 357,
+                "卡牌伤害": 417,
                 "燃烧": 1
               }
             }
@@ -2083,48 +2085,48 @@
           "label": "混合拿牌无核心",
           "checkpoints": {
             "late": {
-              "winRate": 0.98,
-              "averageTurns": 4.15875,
-              "averageHpLeft": 56.78375,
-              "averageDamageTaken": 26.83375,
-              "averageDamageDealt": 287.89,
+              "winRate": 0.9825,
+              "averageTurns": 4.08625,
+              "averageHpLeft": 57.7775,
+              "averageDamageTaken": 25.6325,
+              "averageDamageDealt": 287.60625,
               "deathCauses": {
-                "首领主体攻击": 16
+                "首领主体攻击": 14
               },
               "victoryCauses": {
-                "诅咒": 288,
-                "卡牌伤害": 491,
-                "燃烧": 5
+                "诅咒": 271,
+                "卡牌伤害": 511,
+                "燃烧": 4
               }
             },
             "elite": {
-              "winRate": 0.925,
-              "averageTurns": 5.63375,
-              "averageHpLeft": 48.15875,
-              "averageDamageTaken": 39.23625,
-              "averageDamageDealt": 426.08625,
+              "winRate": 0.92625,
+              "averageTurns": 5.51125,
+              "averageHpLeft": 48.8925,
+              "averageDamageTaken": 38.41625,
+              "averageDamageDealt": 426.81125,
               "deathCauses": {
-                "首领主体攻击": 57,
-                "敌方荆棘": 3
+                "首领主体攻击": 58,
+                "敌方荆棘": 1
               },
               "victoryCauses": {
-                "卡牌伤害": 445,
-                "诅咒": 294,
+                "卡牌伤害": 440,
+                "诅咒": 300,
                 "燃烧": 1
               }
             },
             "boss": {
-              "winRate": 0.82125,
-              "averageTurns": 8.0725,
-              "averageHpLeft": 44.03,
-              "averageDamageTaken": 49.85875,
-              "averageDamageDealt": 643.04625,
+              "winRate": 0.84625,
+              "averageTurns": 7.91875,
+              "averageHpLeft": 45.56375,
+              "averageDamageTaken": 47.85875,
+              "averageDamageDealt": 652.9725,
               "deathCauses": {
-                "首领主体攻击": 143
+                "首领主体攻击": 123
               },
               "victoryCauses": {
-                "卡牌伤害": 370,
-                "诅咒": 285,
+                "诅咒": 301,
+                "卡牌伤害": 374,
                 "燃烧": 2
               }
             }
@@ -2134,47 +2136,47 @@
           "label": "混合拿牌单遗物",
           "checkpoints": {
             "late": {
-              "winRate": 0.98375,
-              "averageTurns": 4.08875,
-              "averageHpLeft": 63.445,
-              "averageDamageTaken": 19.66625,
-              "averageDamageDealt": 289.65375,
+              "winRate": 0.98875,
+              "averageTurns": 4.00625,
+              "averageHpLeft": 64.5675,
+              "averageDamageTaken": 18.32625,
+              "averageDamageDealt": 289.7175,
               "deathCauses": {
-                "首领主体攻击": 13
+                "首领主体攻击": 9
               },
               "victoryCauses": {
-                "卡牌伤害": 472,
-                "诅咒": 312,
-                "燃烧": 3
+                "卡牌伤害": 495,
+                "诅咒": 294,
+                "燃烧": 2
               }
             },
             "elite": {
-              "winRate": 0.99125,
-              "averageTurns": 5.54,
-              "averageHpLeft": 59.86625,
-              "averageDamageTaken": 24.86,
-              "averageDamageDealt": 435.66625,
+              "winRate": 0.995,
+              "averageTurns": 5.41375,
+              "averageHpLeft": 61.5125,
+              "averageDamageTaken": 22.975,
+              "averageDamageDealt": 436.45875,
               "deathCauses": {
-                "首领主体攻击": 6,
+                "首领主体攻击": 3,
                 "敌方荆棘": 1
               },
               "victoryCauses": {
-                "诅咒": 337,
-                "卡牌伤害": 456
+                "诅咒": 341,
+                "卡牌伤害": 455
               }
             },
             "boss": {
-              "winRate": 0.93375,
-              "averageTurns": 7.7925,
-              "averageHpLeft": 57.20125,
-              "averageDamageTaken": 32.705,
-              "averageDamageDealt": 676.32,
+              "winRate": 0.9425,
+              "averageTurns": 7.61875,
+              "averageHpLeft": 57.96375,
+              "averageDamageTaken": 31.61,
+              "averageDamageDealt": 678.1075,
               "deathCauses": {
-                "首领主体攻击": 53
+                "首领主体攻击": 46
               },
               "victoryCauses": {
-                "卡牌伤害": 383,
-                "诅咒": 362,
+                "卡牌伤害": 398,
+                "诅咒": 354,
                 "燃烧": 2
               }
             }
@@ -2185,46 +2187,46 @@
           "checkpoints": {
             "late": {
               "winRate": 0.99875,
-              "averageTurns": 2.9925,
-              "averageHpLeft": 68.97625,
-              "averageDamageTaken": 11.90875,
-              "averageDamageDealt": 303.72125,
+              "averageTurns": 2.9325,
+              "averageHpLeft": 69.32875,
+              "averageDamageTaken": 11.425,
+              "averageDamageDealt": 304.075,
               "deathCauses": {
                 "首领主体攻击": 1
               },
               "victoryCauses": {
-                "诅咒": 274,
-                "卡牌伤害": 523,
+                "诅咒": 265,
+                "卡牌伤害": 532,
                 "燃烧": 2
               }
             },
             "elite": {
-              "winRate": 0.9975,
-              "averageTurns": 3.8825,
-              "averageHpLeft": 63.68375,
-              "averageDamageTaken": 18.5575,
-              "averageDamageDealt": 452.95625,
+              "winRate": 0.99875,
+              "averageTurns": 3.81625,
+              "averageHpLeft": 64.20375,
+              "averageDamageTaken": 17.9225,
+              "averageDamageDealt": 454.15,
               "deathCauses": {
-                "首领主体攻击": 2
+                "首领主体攻击": 1
               },
               "victoryCauses": {
-                "卡牌伤害": 445,
-                "诅咒": 349,
+                "卡牌伤害": 444,
+                "诅咒": 351,
                 "燃烧": 4
               }
             },
             "boss": {
               "winRate": 0.9925,
-              "averageTurns": 5.24875,
-              "averageHpLeft": 63.28,
-              "averageDamageTaken": 20.69125,
-              "averageDamageDealt": 724.715,
+              "averageTurns": 5.1225,
+              "averageHpLeft": 63.8125,
+              "averageDamageTaken": 19.9125,
+              "averageDamageDealt": 728.1875,
               "deathCauses": {
                 "首领主体攻击": 6
               },
               "victoryCauses": {
-                "诅咒": 363,
-                "卡牌伤害": 428,
+                "卡牌伤害": 412,
+                "诅咒": 379,
                 "燃烧": 3
               }
             }

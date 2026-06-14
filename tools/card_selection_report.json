@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-14T17:08:44.354Z",
+  "generatedAt": "2026-06-14T17:33:25.570Z",
   "model": "reward choice and forced encounter simulation v1",
   "runsPerSeed": 300,
   "seeds": [
@@ -4862,12 +4862,35 @@
           "drawnUsageRate": 0
         },
         {
-          "id": "mage_bloodlet_omen",
-          "name": "断咒预兆",
+          "id": "mage_mirror_trial",
+          "name": "镜页试抄",
           "cost": 1,
-          "rarity": "稀有",
+          "rarity": "普通",
           "tags": [
-            "诅咒"
+            "复刻"
+          ],
+          "directEffects": {},
+          "buildTags": [
+            "mirror"
+          ],
+          "isPrimaryBuild": false,
+          "isRelevant": false,
+          "isNeutral": false,
+          "offers": 389,
+          "picks": 0,
+          "choiceRate": 0,
+          "deckInclusionRate": 0,
+          "plays": 0,
+          "opportunities": 0,
+          "drawnUsageRate": 0
+        },
+        {
+          "id": "mage_venom_sigils",
+          "name": "厄星符阵",
+          "cost": 0,
+          "rarity": "普通",
+          "tags": [
+            "虚弱"
           ],
           "directEffects": {},
           "buildTags": [
@@ -4876,7 +4899,7 @@
           "isPrimaryBuild": false,
           "isRelevant": false,
           "isNeutral": false,
-          "offers": 337,
+          "offers": 409,
           "picks": 0,
           "choiceRate": 0,
           "deckInclusionRate": 0,
@@ -4906,52 +4929,6 @@
           "plays": 7,
           "opportunities": 7,
           "drawnUsageRate": 1
-        },
-        {
-          "id": "mage_venom_sigils",
-          "name": "厄星符阵",
-          "cost": 0,
-          "rarity": "普通",
-          "tags": [
-            "虚弱"
-          ],
-          "directEffects": {},
-          "buildTags": [
-            "calamity"
-          ],
-          "isPrimaryBuild": false,
-          "isRelevant": false,
-          "isNeutral": false,
-          "offers": 409,
-          "picks": 1,
-          "choiceRate": 0.0024449877750611247,
-          "deckInclusionRate": 0.0011111111111111111,
-          "plays": 8,
-          "opportunities": 9,
-          "drawnUsageRate": 0.8888888888888888
-        },
-        {
-          "id": "mage_mirror_trial",
-          "name": "镜页试抄",
-          "cost": 1,
-          "rarity": "普通",
-          "tags": [
-            "复刻"
-          ],
-          "directEffects": {},
-          "buildTags": [
-            "mirror"
-          ],
-          "isPrimaryBuild": false,
-          "isRelevant": false,
-          "isNeutral": false,
-          "offers": 389,
-          "picks": 1,
-          "choiceRate": 0.002570694087403599,
-          "deckInclusionRate": 0.0011111111111111111,
-          "plays": 6,
-          "opportunities": 10,
-          "drawnUsageRate": 0.6
         },
         {
           "id": "mage_transcribe_ring",
@@ -5156,12 +5133,12 @@
           "isRelevant": false,
           "isNeutral": true,
           "offers": 414,
-          "picks": 10,
-          "choiceRate": 0.024154589371980676,
-          "deckInclusionRate": 0.011111111111111112,
-          "plays": 43,
-          "opportunities": 49,
-          "drawnUsageRate": 0.8775510204081632
+          "picks": 9,
+          "choiceRate": 0.021739130434782608,
+          "deckInclusionRate": 0.01,
+          "plays": 39,
+          "opportunities": 44,
+          "drawnUsageRate": 0.8863636363636364
         },
         {
           "id": "neutral_spark",
@@ -5185,6 +5162,27 @@
           "drawnUsageRate": 1
         },
         {
+          "id": "neutral_bless",
+          "name": "圣像微光",
+          "cost": 1,
+          "rarity": "普通",
+          "tags": [
+            "治愈"
+          ],
+          "directEffects": {},
+          "buildTags": [],
+          "isPrimaryBuild": false,
+          "isRelevant": true,
+          "isNeutral": true,
+          "offers": 141,
+          "picks": 5,
+          "choiceRate": 0.03546099290780142,
+          "deckInclusionRate": 0.005555555555555556,
+          "plays": 8,
+          "opportunities": 55,
+          "drawnUsageRate": 0.14545454545454545
+        },
+        {
           "id": "mage_twin_spark",
           "name": "双生火花",
           "cost": 1,
@@ -5206,27 +5204,6 @@
           "plays": 101,
           "opportunities": 134,
           "drawnUsageRate": 0.753731343283582
-        },
-        {
-          "id": "neutral_bless",
-          "name": "圣像微光",
-          "cost": 1,
-          "rarity": "普通",
-          "tags": [
-            "治愈"
-          ],
-          "directEffects": {},
-          "buildTags": [],
-          "isPrimaryBuild": false,
-          "isRelevant": true,
-          "isNeutral": true,
-          "offers": 141,
-          "picks": 6,
-          "choiceRate": 0.0425531914893617,
-          "deckInclusionRate": 0.006666666666666667,
-          "plays": 10,
-          "opportunities": 68,
-          "drawnUsageRate": 0.14705882352941177
         },
         {
           "id": "mage_void_dust",
@@ -5267,12 +5244,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 355,
-          "picks": 24,
-          "choiceRate": 0.0676056338028169,
-          "deckInclusionRate": 0.02666666666666667,
-          "plays": 189,
-          "opportunities": 237,
-          "drawnUsageRate": 0.7974683544303798
+          "picks": 23,
+          "choiceRate": 0.0647887323943662,
+          "deckInclusionRate": 0.025555555555555557,
+          "plays": 181,
+          "opportunities": 226,
+          "drawnUsageRate": 0.8008849557522124
         },
         {
           "id": "neutral_cycle",
@@ -5315,9 +5292,34 @@
           "picks": 32,
           "choiceRate": 0.07655502392344497,
           "deckInclusionRate": 0.035555555555555556,
-          "plays": 228,
-          "opportunities": 293,
-          "drawnUsageRate": 0.7781569965870307
+          "plays": 230,
+          "opportunities": 295,
+          "drawnUsageRate": 0.7796610169491526
+        },
+        {
+          "id": "mage_bloodlet_omen",
+          "name": "断咒预兆",
+          "cost": 1,
+          "rarity": "稀有",
+          "tags": [
+            "诅咒"
+          ],
+          "directEffects": {
+            "draw": true
+          },
+          "buildTags": [
+            "calamity"
+          ],
+          "isPrimaryBuild": false,
+          "isRelevant": false,
+          "isNeutral": false,
+          "offers": 337,
+          "picks": 27,
+          "choiceRate": 0.08011869436201781,
+          "deckInclusionRate": 0.03,
+          "plays": 169,
+          "opportunities": 248,
+          "drawnUsageRate": 0.6814516129032258
         },
         {
           "id": "mage_second_hand",
@@ -5338,9 +5340,9 @@
           "picks": 49,
           "choiceRate": 0.08990825688073395,
           "deckInclusionRate": 0.05333333333333334,
-          "plays": 247,
+          "plays": 245,
           "opportunities": 453,
-          "drawnUsageRate": 0.5452538631346578
+          "drawnUsageRate": 0.5408388520971302
         },
         {
           "id": "mage_sick_star",
@@ -5358,12 +5360,35 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 360,
+          "picks": 33,
+          "choiceRate": 0.09166666666666666,
+          "deckInclusionRate": 0.03666666666666667,
+          "plays": 236,
+          "opportunities": 295,
+          "drawnUsageRate": 0.8
+        },
+        {
+          "id": "mage_echo_veil",
+          "name": "回声护幕",
+          "cost": 1,
+          "rarity": "稀有",
+          "tags": [
+            "回响"
+          ],
+          "directEffects": {},
+          "buildTags": [
+            "mirror"
+          ],
+          "isPrimaryBuild": false,
+          "isRelevant": false,
+          "isNeutral": false,
+          "offers": 364,
           "picks": 34,
-          "choiceRate": 0.09444444444444444,
+          "choiceRate": 0.09340659340659341,
           "deckInclusionRate": 0.03777777777777778,
-          "plays": 242,
-          "opportunities": 302,
-          "drawnUsageRate": 0.8013245033112583
+          "plays": 208,
+          "opportunities": 304,
+          "drawnUsageRate": 0.6842105263157895
         },
         {
           "id": "mage_glass_recursion",
@@ -5384,32 +5409,9 @@
           "picks": 36,
           "choiceRate": 0.0962566844919786,
           "deckInclusionRate": 0.04,
-          "plays": 251,
-          "opportunities": 307,
-          "drawnUsageRate": 0.8175895765472313
-        },
-        {
-          "id": "mage_echo_veil",
-          "name": "回声护幕",
-          "cost": 1,
-          "rarity": "稀有",
-          "tags": [
-            "回响"
-          ],
-          "directEffects": {},
-          "buildTags": [
-            "mirror"
-          ],
-          "isPrimaryBuild": false,
-          "isRelevant": false,
-          "isNeutral": false,
-          "offers": 364,
-          "picks": 37,
-          "choiceRate": 0.10164835164835165,
-          "deckInclusionRate": 0.04111111111111111,
-          "plays": 230,
-          "opportunities": 334,
-          "drawnUsageRate": 0.688622754491018
+          "plays": 247,
+          "opportunities": 305,
+          "drawnUsageRate": 0.8098360655737705
         },
         {
           "id": "mage_calamity_tune",
@@ -5427,12 +5429,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 343,
-          "picks": 35,
-          "choiceRate": 0.10204081632653061,
-          "deckInclusionRate": 0.03888888888888889,
-          "plays": 221,
-          "opportunities": 320,
-          "drawnUsageRate": 0.690625
+          "picks": 34,
+          "choiceRate": 0.09912536443148688,
+          "deckInclusionRate": 0.03777777777777778,
+          "plays": 217,
+          "opportunities": 311,
+          "drawnUsageRate": 0.6977491961414791
         },
         {
           "id": "neutral_cold_iron_page",
@@ -5448,12 +5450,12 @@
           "isRelevant": true,
           "isNeutral": true,
           "offers": 141,
-          "picks": 18,
-          "choiceRate": 0.1276595744680851,
-          "deckInclusionRate": 0.02,
-          "plays": 126,
-          "opportunities": 180,
-          "drawnUsageRate": 0.7
+          "picks": 17,
+          "choiceRate": 0.12056737588652482,
+          "deckInclusionRate": 0.01888888888888889,
+          "plays": 120,
+          "opportunities": 172,
+          "drawnUsageRate": 0.6976744186046512
         },
         {
           "id": "mage_reflect_veil",
@@ -5471,12 +5473,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 400,
-          "picks": 56,
-          "choiceRate": 0.14,
-          "deckInclusionRate": 0.06222222222222222,
-          "plays": 363,
-          "opportunities": 523,
-          "drawnUsageRate": 0.6940726577437859
+          "picks": 55,
+          "choiceRate": 0.1375,
+          "deckInclusionRate": 0.06111111111111111,
+          "plays": 357,
+          "opportunities": 511,
+          "drawnUsageRate": 0.6986301369863014
         },
         {
           "id": "mage_bad_omen_chain",
@@ -5521,9 +5523,9 @@
           "picks": 91,
           "choiceRate": 0.16279069767441862,
           "deckInclusionRate": 0.10111111111111111,
-          "plays": 552,
-          "opportunities": 850,
-          "drawnUsageRate": 0.6494117647058824
+          "plays": 561,
+          "opportunities": 853,
+          "drawnUsageRate": 0.6576787807737398
         },
         {
           "id": "neutral_guard",
@@ -5542,9 +5544,9 @@
           "picks": 29,
           "choiceRate": 0.23015873015873015,
           "deckInclusionRate": 0.03222222222222222,
-          "plays": 280,
-          "opportunities": 488,
-          "drawnUsageRate": 0.5737704918032787
+          "plays": 277,
+          "opportunities": 487,
+          "drawnUsageRate": 0.5687885010266941
         },
         {
           "id": "mage_echo_shift",
@@ -5567,9 +5569,9 @@
           "picks": 99,
           "choiceRate": 0.25,
           "deckInclusionRate": 0.11,
-          "plays": 644,
-          "opportunities": 940,
-          "drawnUsageRate": 0.6851063829787234
+          "plays": 639,
+          "opportunities": 939,
+          "drawnUsageRate": 0.6805111821086262
         },
         {
           "id": "neutral_sealed_thunder",
@@ -5592,8 +5594,8 @@
           "choiceRate": 0.3321554770318021,
           "deckInclusionRate": 0.20333333333333334,
           "plays": 801,
-          "opportunities": 1003,
-          "drawnUsageRate": 0.7986041874376869
+          "opportunities": 1006,
+          "drawnUsageRate": 0.7962226640159046
         },
         {
           "id": "mage_star_precharge",
@@ -5611,12 +5613,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 354,
-          "picks": 175,
-          "choiceRate": 0.4943502824858757,
-          "deckInclusionRate": 0.1922222222222222,
-          "plays": 1016,
-          "opportunities": 1599,
-          "drawnUsageRate": 0.6353971232020013
+          "picks": 174,
+          "choiceRate": 0.4915254237288136,
+          "deckInclusionRate": 0.19111111111111112,
+          "plays": 1010,
+          "opportunities": 1590,
+          "drawnUsageRate": 0.6352201257861635
         },
         {
           "id": "mage_loop",
@@ -5634,12 +5636,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 323,
-          "picks": 174,
-          "choiceRate": 0.5386996904024768,
-          "deckInclusionRate": 0.18777777777777777,
-          "plays": 1025,
-          "opportunities": 1613,
-          "drawnUsageRate": 0.6354618722876627
+          "picks": 170,
+          "choiceRate": 0.5263157894736842,
+          "deckInclusionRate": 0.18333333333333332,
+          "plays": 994,
+          "opportunities": 1577,
+          "drawnUsageRate": 0.6303107165504122
         },
         {
           "id": "mage_void",
@@ -5658,12 +5660,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 361,
-          "picks": 198,
-          "choiceRate": 0.5484764542936288,
-          "deckInclusionRate": 0.2088888888888889,
-          "plays": 1122,
-          "opportunities": 1823,
-          "drawnUsageRate": 0.6154690071311025
+          "picks": 197,
+          "choiceRate": 0.5457063711911357,
+          "deckInclusionRate": 0.20777777777777778,
+          "plays": 1115,
+          "opportunities": 1804,
+          "drawnUsageRate": 0.6180709534368071
         },
         {
           "id": "mage_chant",
@@ -5681,12 +5683,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 362,
-          "picks": 201,
-          "choiceRate": 0.5552486187845304,
-          "deckInclusionRate": 0.2111111111111111,
-          "plays": 1147,
-          "opportunities": 1824,
-          "drawnUsageRate": 0.6288377192982456
+          "picks": 199,
+          "choiceRate": 0.5497237569060773,
+          "deckInclusionRate": 0.2088888888888889,
+          "plays": 1141,
+          "opportunities": 1802,
+          "drawnUsageRate": 0.6331853496115427
         },
         {
           "id": "mage_barrier",
@@ -5704,12 +5706,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 354,
-          "picks": 204,
-          "choiceRate": 0.576271186440678,
-          "deckInclusionRate": 0.2222222222222222,
-          "plays": 1352,
-          "opportunities": 1771,
-          "drawnUsageRate": 0.7634105025409373
+          "picks": 201,
+          "choiceRate": 0.5677966101694916,
+          "deckInclusionRate": 0.21888888888888888,
+          "plays": 1332,
+          "opportunities": 1750,
+          "drawnUsageRate": 0.7611428571428571
         },
         {
           "id": "mage_aftertone_flow",
@@ -5731,9 +5733,9 @@
           "picks": 211,
           "choiceRate": 0.581267217630854,
           "deckInclusionRate": 0.22111111111111112,
-          "plays": 1255,
-          "opportunities": 1968,
-          "drawnUsageRate": 0.6377032520325203
+          "plays": 1246,
+          "opportunities": 1961,
+          "drawnUsageRate": 0.6353901070882203
         },
         {
           "id": "mage_omen",
@@ -5755,9 +5757,9 @@
           "picks": 193,
           "choiceRate": 0.595679012345679,
           "deckInclusionRate": 0.20666666666666667,
-          "plays": 892,
+          "plays": 893,
           "opportunities": 960,
-          "drawnUsageRate": 0.9291666666666667
+          "drawnUsageRate": 0.9302083333333333
         },
         {
           "id": "mage_cascade",
@@ -5777,12 +5779,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 431,
-          "picks": 274,
-          "choiceRate": 0.6357308584686775,
-          "deckInclusionRate": 0.2833333333333333,
-          "plays": 1822,
-          "opportunities": 2196,
-          "drawnUsageRate": 0.8296903460837887
+          "picks": 273,
+          "choiceRate": 0.6334106728538283,
+          "deckInclusionRate": 0.2822222222222222,
+          "plays": 1820,
+          "opportunities": 2184,
+          "drawnUsageRate": 0.8333333333333334
         },
         {
           "id": "mage_solar_refill",
@@ -5800,12 +5802,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 456,
-          "picks": 293,
-          "choiceRate": 0.6425438596491229,
-          "deckInclusionRate": 0.3,
-          "plays": 1766,
-          "opportunities": 2594,
-          "drawnUsageRate": 0.6808018504240555
+          "picks": 291,
+          "choiceRate": 0.6381578947368421,
+          "deckInclusionRate": 0.29888888888888887,
+          "plays": 1758,
+          "opportunities": 2580,
+          "drawnUsageRate": 0.6813953488372093
         },
         {
           "id": "mage_arcane_mark",
@@ -5824,12 +5826,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 336,
-          "picks": 235,
-          "choiceRate": 0.6994047619047619,
-          "deckInclusionRate": 0.24888888888888888,
-          "plays": 718,
-          "opportunities": 2139,
-          "drawnUsageRate": 0.33567087424029923
+          "picks": 234,
+          "choiceRate": 0.6964285714285714,
+          "deckInclusionRate": 0.2477777777777778,
+          "plays": 714,
+          "opportunities": 2129,
+          "drawnUsageRate": 0.33536871770784404
         },
         {
           "id": "mage_orbit_lock",
@@ -5850,9 +5852,9 @@
           "picks": 251,
           "choiceRate": 0.7339181286549707,
           "deckInclusionRate": 0.2633333333333333,
-          "plays": 1446,
-          "opportunities": 2267,
-          "drawnUsageRate": 0.6378473753859727
+          "plays": 1443,
+          "opportunities": 2263,
+          "drawnUsageRate": 0.6376491383119752
         },
         {
           "id": "mage_ember",
@@ -5874,9 +5876,9 @@
           "picks": 254,
           "choiceRate": 0.7863777089783281,
           "deckInclusionRate": 0.26555555555555554,
-          "plays": 1233,
-          "opportunities": 1249,
-          "drawnUsageRate": 0.9871897518014412
+          "plays": 1234,
+          "opportunities": 1250,
+          "drawnUsageRate": 0.9872
         },
         {
           "id": "mage_lantern_chant",
@@ -5897,9 +5899,9 @@
           "picks": 269,
           "choiceRate": 0.7935103244837758,
           "deckInclusionRate": 0.2777777777777778,
-          "plays": 1826,
-          "opportunities": 2403,
-          "drawnUsageRate": 0.7598834789846026
+          "plays": 1829,
+          "opportunities": 2413,
+          "drawnUsageRate": 0.7579776212184003
         },
         {
           "id": "mage_ember_flow",
@@ -5921,9 +5923,9 @@
           "picks": 284,
           "choiceRate": 0.8091168091168092,
           "deckInclusionRate": 0.29555555555555557,
-          "plays": 1905,
-          "opportunities": 2545,
-          "drawnUsageRate": 0.7485265225933202
+          "plays": 1893,
+          "opportunities": 2536,
+          "drawnUsageRate": 0.7464511041009464
         },
         {
           "id": "mage_countdown",
@@ -5944,9 +5946,9 @@
           "picks": 312,
           "choiceRate": 0.8275862068965517,
           "deckInclusionRate": 0.31222222222222223,
-          "plays": 1391,
-          "opportunities": 2709,
-          "drawnUsageRate": 0.5134736064968624
+          "plays": 1386,
+          "opportunities": 2714,
+          "drawnUsageRate": 0.5106853352984525
         },
         {
           "id": "mage_spark",
@@ -5968,9 +5970,9 @@
           "picks": 284,
           "choiceRate": 0.8606060606060606,
           "deckInclusionRate": 0.2877777777777778,
-          "plays": 2306,
-          "opportunities": 2597,
-          "drawnUsageRate": 0.8879476318829419
+          "plays": 2310,
+          "opportunities": 2599,
+          "drawnUsageRate": 0.8888033859176606
         },
         {
           "id": "mage_star_surge",
@@ -5991,9 +5993,9 @@
           "picks": 298,
           "choiceRate": 0.873900293255132,
           "deckInclusionRate": 0.29,
-          "plays": 2392,
-          "opportunities": 2740,
-          "drawnUsageRate": 0.872992700729927
+          "plays": 2391,
+          "opportunities": 2737,
+          "drawnUsageRate": 0.8735842162952138
         },
         {
           "id": "mage_flame",
@@ -6015,9 +6017,9 @@
           "picks": 298,
           "choiceRate": 0.8816568047337278,
           "deckInclusionRate": 0.2877777777777778,
-          "plays": 1744,
-          "opportunities": 2751,
-          "drawnUsageRate": 0.6339512904398401
+          "plays": 1740,
+          "opportunities": 2749,
+          "drawnUsageRate": 0.6329574390687522
         },
         {
           "id": "mage_radiant_law",
@@ -6039,8 +6041,8 @@
           "choiceRate": 0.9093567251461988,
           "deckInclusionRate": 0.31333333333333335,
           "plays": 1989,
-          "opportunities": 2853,
-          "drawnUsageRate": 0.6971608832807571
+          "opportunities": 2850,
+          "drawnUsageRate": 0.6978947368421052
         },
         {
           "id": "mage_star_ward",
@@ -6061,9 +6063,9 @@
           "picks": 328,
           "choiceRate": 0.9136490250696379,
           "deckInclusionRate": 0.3244444444444444,
-          "plays": 2264,
-          "opportunities": 2970,
-          "drawnUsageRate": 0.7622895622895622
+          "plays": 2263,
+          "opportunities": 2967,
+          "drawnUsageRate": 0.7627232895180317
         },
         {
           "id": "mage_thunder",
@@ -6087,8 +6089,8 @@
           "choiceRate": 0.917184265010352,
           "deckInclusionRate": 0.4122222222222222,
           "plays": 3265,
-          "opportunities": 3733,
-          "drawnUsageRate": 0.8746316635413877
+          "opportunities": 3740,
+          "drawnUsageRate": 0.8729946524064172
         },
         {
           "id": "mage_copy_pierce",
@@ -6111,9 +6113,9 @@
           "picks": 450,
           "choiceRate": 0.9375,
           "deckInclusionRate": 0.4088888888888889,
-          "plays": 3143,
-          "opportunities": 3952,
-          "drawnUsageRate": 0.7952935222672065
+          "plays": 3153,
+          "opportunities": 3954,
+          "drawnUsageRate": 0.7974203338391502
         },
         {
           "id": "mage_exile_nova",
@@ -6134,9 +6136,9 @@
           "picks": 391,
           "choiceRate": 0.9750623441396509,
           "deckInclusionRate": 0.37444444444444447,
-          "plays": 2675,
+          "plays": 2677,
           "opportunities": 3565,
-          "drawnUsageRate": 0.7503506311360448
+          "drawnUsageRate": 0.7509116409537167
         }
       ]
     },
@@ -6181,7 +6183,7 @@
             "【精英】猩红血巫": 1,
             "【精英】不死骨龙": 1,
             "【首领】鬼面修罗": 1,
-            "【深渊主宰】": 0.9733333333333334
+            "【深渊主宰】": 0.97
           }
         },
         {
@@ -6201,7 +6203,7 @@
             "【精英】猩红血巫": 1,
             "【精英】不死骨龙": 0.9966666666666667,
             "【首领】鬼面修罗": 0.9933333333333333,
-            "【深渊主宰】": 0.9766666666666667
+            "【深渊主宰】": 0.98
           }
         }
       ],
@@ -6363,32 +6365,9 @@
           "picks": 1,
           "choiceRate": 0.003401360544217687,
           "deckInclusionRate": 0.0011111111111111111,
-          "plays": 12,
-          "opportunities": 16,
-          "drawnUsageRate": 0.75
-        },
-        {
-          "id": "mage_bloodlet_omen",
-          "name": "断咒预兆",
-          "cost": 1,
-          "rarity": "稀有",
-          "tags": [
-            "诅咒"
-          ],
-          "directEffects": {},
-          "buildTags": [
-            "calamity"
-          ],
-          "isPrimaryBuild": false,
-          "isRelevant": false,
-          "isNeutral": false,
-          "offers": 291,
-          "picks": 1,
-          "choiceRate": 0.003436426116838488,
-          "deckInclusionRate": 0.0011111111111111111,
-          "plays": 2,
-          "opportunities": 9,
-          "drawnUsageRate": 0.2222222222222222
+          "plays": 9,
+          "opportunities": 17,
+          "drawnUsageRate": 0.5294117647058824
         },
         {
           "id": "mage_barrier",
@@ -6476,12 +6455,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 551,
-          "picks": 6,
-          "choiceRate": 0.010889292196007259,
-          "deckInclusionRate": 0.006666666666666667,
-          "plays": 54,
-          "opportunities": 80,
-          "drawnUsageRate": 0.675
+          "picks": 5,
+          "choiceRate": 0.009074410163339383,
+          "deckInclusionRate": 0.005555555555555556,
+          "plays": 43,
+          "opportunities": 65,
+          "drawnUsageRate": 0.6615384615384615
         },
         {
           "id": "mage_stasis_hex",
@@ -6500,12 +6479,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 601,
-          "picks": 8,
-          "choiceRate": 0.013311148086522463,
-          "deckInclusionRate": 0.008888888888888889,
-          "plays": 62,
-          "opportunities": 102,
-          "drawnUsageRate": 0.6078431372549019
+          "picks": 7,
+          "choiceRate": 0.011647254575707155,
+          "deckInclusionRate": 0.0077777777777777776,
+          "plays": 60,
+          "opportunities": 93,
+          "drawnUsageRate": 0.6451612903225806
         },
         {
           "id": "mage_mute_sand",
@@ -6524,12 +6503,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 580,
-          "picks": 9,
-          "choiceRate": 0.015517241379310345,
-          "deckInclusionRate": 0.01,
-          "plays": 104,
-          "opportunities": 124,
-          "drawnUsageRate": 0.8387096774193549
+          "picks": 7,
+          "choiceRate": 0.01206896551724138,
+          "deckInclusionRate": 0.0077777777777777776,
+          "plays": 65,
+          "opportunities": 81,
+          "drawnUsageRate": 0.8024691358024691
         },
         {
           "id": "neutral_bless",
@@ -6592,12 +6571,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 316,
-          "picks": 13,
-          "choiceRate": 0.04113924050632911,
-          "deckInclusionRate": 0.014444444444444444,
-          "plays": 112,
-          "opportunities": 234,
-          "drawnUsageRate": 0.47863247863247865
+          "picks": 12,
+          "choiceRate": 0.0379746835443038,
+          "deckInclusionRate": 0.013333333333333334,
+          "plays": 101,
+          "opportunities": 215,
+          "drawnUsageRate": 0.4697674418604651
         },
         {
           "id": "mage_lantern_chant",
@@ -6709,9 +6688,9 @@
           "picks": 25,
           "choiceRate": 0.07163323782234957,
           "deckInclusionRate": 0.027777777777777776,
-          "plays": 85,
-          "opportunities": 438,
-          "drawnUsageRate": 0.19406392694063926
+          "plays": 80,
+          "opportunities": 435,
+          "drawnUsageRate": 0.1839080459770115
         },
         {
           "id": "mage_ember_flow",
@@ -6754,12 +6733,37 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 373,
-          "picks": 35,
-          "choiceRate": 0.0938337801608579,
-          "deckInclusionRate": 0.03888888888888889,
-          "plays": 511,
-          "opportunities": 572,
-          "drawnUsageRate": 0.8933566433566433
+          "picks": 34,
+          "choiceRate": 0.09115281501340483,
+          "deckInclusionRate": 0.03777777777777778,
+          "plays": 478,
+          "opportunities": 538,
+          "drawnUsageRate": 0.8884758364312267
+        },
+        {
+          "id": "mage_bloodlet_omen",
+          "name": "断咒预兆",
+          "cost": 1,
+          "rarity": "稀有",
+          "tags": [
+            "诅咒"
+          ],
+          "directEffects": {
+            "draw": true
+          },
+          "buildTags": [
+            "calamity"
+          ],
+          "isPrimaryBuild": false,
+          "isRelevant": false,
+          "isNeutral": false,
+          "offers": 291,
+          "picks": 29,
+          "choiceRate": 0.09965635738831616,
+          "deckInclusionRate": 0.03222222222222222,
+          "plays": 245,
+          "opportunities": 420,
+          "drawnUsageRate": 0.5833333333333334
         },
         {
           "id": "mage_blood_orbit",
@@ -6785,6 +6789,29 @@
           "drawnUsageRate": 0.7963917525773195
         },
         {
+          "id": "mage_sick_star",
+          "name": "坠星病灶",
+          "cost": 1,
+          "rarity": "稀有",
+          "tags": [
+            "易伤"
+          ],
+          "directEffects": {},
+          "buildTags": [
+            "calamity"
+          ],
+          "isPrimaryBuild": false,
+          "isRelevant": false,
+          "isNeutral": false,
+          "offers": 350,
+          "picks": 36,
+          "choiceRate": 0.10285714285714286,
+          "deckInclusionRate": 0.04,
+          "plays": 463,
+          "opportunities": 577,
+          "drawnUsageRate": 0.8024263431542461
+        },
+        {
           "id": "mage_star_surge",
           "name": "星涌短波",
           "cost": 1,
@@ -6803,32 +6830,9 @@
           "picks": 39,
           "choiceRate": 0.10512129380053908,
           "deckInclusionRate": 0.043333333333333335,
-          "plays": 508,
-          "opportunities": 592,
-          "drawnUsageRate": 0.8581081081081081
-        },
-        {
-          "id": "mage_sick_star",
-          "name": "坠星病灶",
-          "cost": 1,
-          "rarity": "稀有",
-          "tags": [
-            "易伤"
-          ],
-          "directEffects": {},
-          "buildTags": [
-            "calamity"
-          ],
-          "isPrimaryBuild": false,
-          "isRelevant": false,
-          "isNeutral": false,
-          "offers": 350,
-          "picks": 37,
-          "choiceRate": 0.10571428571428572,
-          "deckInclusionRate": 0.04111111111111111,
-          "plays": 476,
-          "opportunities": 596,
-          "drawnUsageRate": 0.7986577181208053
+          "plays": 500,
+          "opportunities": 586,
+          "drawnUsageRate": 0.8532423208191127
         },
         {
           "id": "mage_flame",
@@ -6850,9 +6854,9 @@
           "picks": 42,
           "choiceRate": 0.12962962962962962,
           "deckInclusionRate": 0.04666666666666667,
-          "plays": 331,
-          "opportunities": 583,
-          "drawnUsageRate": 0.5677530017152659
+          "plays": 329,
+          "opportunities": 580,
+          "drawnUsageRate": 0.5672413793103448
         },
         {
           "id": "neutral_cycle",
@@ -6895,9 +6899,32 @@
           "picks": 45,
           "choiceRate": 0.14331210191082802,
           "deckInclusionRate": 0.05,
-          "plays": 493,
-          "opportunities": 666,
-          "drawnUsageRate": 0.7402402402402403
+          "plays": 492,
+          "opportunities": 667,
+          "drawnUsageRate": 0.7376311844077961
+        },
+        {
+          "id": "mage_bad_omen_chain",
+          "name": "厄兆连珠",
+          "cost": 1,
+          "rarity": "稀有",
+          "tags": [
+            "燃烧"
+          ],
+          "directEffects": {},
+          "buildTags": [
+            "calamity"
+          ],
+          "isPrimaryBuild": false,
+          "isRelevant": false,
+          "isNeutral": false,
+          "offers": 320,
+          "picks": 49,
+          "choiceRate": 0.153125,
+          "deckInclusionRate": 0.05333333333333334,
+          "plays": 569,
+          "opportunities": 697,
+          "drawnUsageRate": 0.8163558106169297
         },
         {
           "id": "neutral_cold_iron_page",
@@ -6921,29 +6948,6 @@
           "drawnUsageRate": 0.6453900709219859
         },
         {
-          "id": "mage_bad_omen_chain",
-          "name": "厄兆连珠",
-          "cost": 1,
-          "rarity": "稀有",
-          "tags": [
-            "燃烧"
-          ],
-          "directEffects": {},
-          "buildTags": [
-            "calamity"
-          ],
-          "isPrimaryBuild": false,
-          "isRelevant": false,
-          "isNeutral": false,
-          "offers": 320,
-          "picks": 52,
-          "choiceRate": 0.1625,
-          "deckInclusionRate": 0.056666666666666664,
-          "plays": 624,
-          "opportunities": 754,
-          "drawnUsageRate": 0.8275862068965517
-        },
-        {
           "id": "mage_frost_hex",
           "name": "霜咒压迫",
           "cost": 1,
@@ -6962,9 +6966,9 @@
           "picks": 50,
           "choiceRate": 0.16339869281045752,
           "deckInclusionRate": 0.05555555555555555,
-          "plays": 601,
-          "opportunities": 744,
-          "drawnUsageRate": 0.8077956989247311
+          "plays": 600,
+          "opportunities": 741,
+          "drawnUsageRate": 0.8097165991902834
         },
         {
           "id": "mage_radiant_law",
@@ -6982,12 +6986,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 291,
-          "picks": 61,
-          "choiceRate": 0.20962199312714777,
-          "deckInclusionRate": 0.06777777777777778,
-          "plays": 580,
-          "opportunities": 904,
-          "drawnUsageRate": 0.6415929203539823
+          "picks": 60,
+          "choiceRate": 0.20618556701030927,
+          "deckInclusionRate": 0.06666666666666667,
+          "plays": 568,
+          "opportunities": 888,
+          "drawnUsageRate": 0.6396396396396397
         },
         {
           "id": "mage_withered_stars",
@@ -7010,8 +7014,8 @@
           "choiceRate": 0.21201413427561838,
           "deckInclusionRate": 0.1322222222222222,
           "plays": 1096,
-          "opportunities": 1662,
-          "drawnUsageRate": 0.6594464500601684
+          "opportunities": 1663,
+          "drawnUsageRate": 0.6590499098015634
         },
         {
           "id": "mage_star_ward",
@@ -7033,8 +7037,8 @@
           "choiceRate": 0.28362573099415206,
           "deckInclusionRate": 0.10666666666666667,
           "plays": 1094,
-          "opportunities": 1537,
-          "drawnUsageRate": 0.7117761873780091
+          "opportunities": 1536,
+          "drawnUsageRate": 0.7122395833333334
         },
         {
           "id": "neutral_guard",
@@ -7053,9 +7057,9 @@
           "picks": 35,
           "choiceRate": 0.2916666666666667,
           "deckInclusionRate": 0.03888888888888889,
-          "plays": 510,
-          "opportunities": 823,
-          "drawnUsageRate": 0.6196840826245443
+          "plays": 509,
+          "opportunities": 816,
+          "drawnUsageRate": 0.6237745098039216
         },
         {
           "id": "mage_void",
@@ -7074,12 +7078,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 410,
-          "picks": 146,
-          "choiceRate": 0.35609756097560974,
-          "deckInclusionRate": 0.1622222222222222,
-          "plays": 979,
-          "opportunities": 2338,
-          "drawnUsageRate": 0.4187339606501283
+          "picks": 140,
+          "choiceRate": 0.34146341463414637,
+          "deckInclusionRate": 0.15555555555555556,
+          "plays": 938,
+          "opportunities": 2236,
+          "drawnUsageRate": 0.41949910554561715
         },
         {
           "id": "neutral_sealed_thunder",
@@ -7101,9 +7105,9 @@
           "picks": 215,
           "choiceRate": 0.37132987910189985,
           "deckInclusionRate": 0.23777777777777778,
-          "plays": 1002,
+          "plays": 1001,
           "opportunities": 1210,
-          "drawnUsageRate": 0.828099173553719
+          "drawnUsageRate": 0.8272727272727273
         },
         {
           "id": "mage_exile_nova",
@@ -7124,9 +7128,9 @@
           "picks": 234,
           "choiceRate": 0.4112478031634446,
           "deckInclusionRate": 0.25,
-          "plays": 2530,
-          "opportunities": 3377,
-          "drawnUsageRate": 0.749185667752443
+          "plays": 2523,
+          "opportunities": 3367,
+          "drawnUsageRate": 0.7493317493317493
         },
         {
           "id": "mage_mirror_trial",
@@ -7144,12 +7148,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 406,
-          "picks": 192,
-          "choiceRate": 0.4729064039408867,
-          "deckInclusionRate": 0.2111111111111111,
-          "plays": 1820,
-          "opportunities": 3007,
-          "drawnUsageRate": 0.6052544063851014
+          "picks": 190,
+          "choiceRate": 0.46798029556650245,
+          "deckInclusionRate": 0.2088888888888889,
+          "plays": 1801,
+          "opportunities": 2968,
+          "drawnUsageRate": 0.6068059299191375
         },
         {
           "id": "mage_transcribe_ring",
@@ -7170,9 +7174,9 @@
           "picks": 237,
           "choiceRate": 0.5448275862068965,
           "deckInclusionRate": 0.25333333333333335,
-          "plays": 1993,
-          "opportunities": 3554,
-          "drawnUsageRate": 0.5607765897580191
+          "plays": 1995,
+          "opportunities": 3548,
+          "drawnUsageRate": 0.5622886133032694
         },
         {
           "id": "mage_star_copy",
@@ -7190,12 +7194,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 414,
-          "picks": 233,
-          "choiceRate": 0.5628019323671497,
-          "deckInclusionRate": 0.2477777777777778,
-          "plays": 2107,
-          "opportunities": 3646,
-          "drawnUsageRate": 0.5778935820076796
+          "picks": 232,
+          "choiceRate": 0.5603864734299517,
+          "deckInclusionRate": 0.24666666666666667,
+          "plays": 2088,
+          "opportunities": 3614,
+          "drawnUsageRate": 0.5777531820697288
         },
         {
           "id": "mage_mirror_array",
@@ -7213,12 +7217,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 419,
-          "picks": 239,
-          "choiceRate": 0.5704057279236276,
-          "deckInclusionRate": 0.25333333333333335,
-          "plays": 1270,
-          "opportunities": 3725,
-          "drawnUsageRate": 0.3409395973154362
+          "picks": 237,
+          "choiceRate": 0.5656324582338902,
+          "deckInclusionRate": 0.25222222222222224,
+          "plays": 1248,
+          "opportunities": 3678,
+          "drawnUsageRate": 0.33931484502446985
         },
         {
           "id": "mage_reflection_note",
@@ -7264,9 +7268,9 @@
           "picks": 284,
           "choiceRate": 0.6160520607375272,
           "deckInclusionRate": 0.29555555555555557,
-          "plays": 1997,
-          "opportunities": 4553,
-          "drawnUsageRate": 0.43861190423896335
+          "plays": 1985,
+          "opportunities": 4542,
+          "drawnUsageRate": 0.4370321444297666
         },
         {
           "id": "mage_double_archive",
@@ -7287,9 +7291,9 @@
           "picks": 286,
           "choiceRate": 0.6299559471365639,
           "deckInclusionRate": 0.2966666666666667,
-          "plays": 1416,
-          "opportunities": 4458,
-          "drawnUsageRate": 0.31763122476446837
+          "plays": 1400,
+          "opportunities": 4445,
+          "drawnUsageRate": 0.31496062992125984
         },
         {
           "id": "mage_cascade",
@@ -7309,12 +7313,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 438,
-          "picks": 289,
-          "choiceRate": 0.6598173515981736,
-          "deckInclusionRate": 0.2966666666666667,
-          "plays": 3462,
-          "opportunities": 4164,
-          "drawnUsageRate": 0.8314121037463977
+          "picks": 287,
+          "choiceRate": 0.6552511415525114,
+          "deckInclusionRate": 0.29555555555555557,
+          "plays": 3440,
+          "opportunities": 4137,
+          "drawnUsageRate": 0.8315204254290549
         },
         {
           "id": "mage_echo_index",
@@ -7332,12 +7336,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 469,
-          "picks": 322,
-          "choiceRate": 0.6865671641791045,
+          "picks": 320,
+          "choiceRate": 0.6823027718550106,
           "deckInclusionRate": 0.33111111111111113,
-          "plays": 2424,
-          "opportunities": 5402,
-          "drawnUsageRate": 0.44872269529803777
+          "plays": 2387,
+          "opportunities": 5330,
+          "drawnUsageRate": 0.44784240150093807
         },
         {
           "id": "neutral_blank_pact",
@@ -7356,12 +7360,12 @@
           "isRelevant": true,
           "isNeutral": true,
           "offers": 450,
-          "picks": 343,
-          "choiceRate": 0.7622222222222222,
-          "deckInclusionRate": 0.3466666666666667,
-          "plays": 1666,
-          "opportunities": 1753,
-          "drawnUsageRate": 0.9503707929264119
+          "picks": 342,
+          "choiceRate": 0.76,
+          "deckInclusionRate": 0.34555555555555556,
+          "plays": 1661,
+          "opportunities": 1748,
+          "drawnUsageRate": 0.950228832951945
         },
         {
           "id": "mage_twin_spark",
@@ -7382,9 +7386,9 @@
           "picks": 332,
           "choiceRate": 0.8512820512820513,
           "deckInclusionRate": 0.3377777777777778,
-          "plays": 3663,
-          "opportunities": 5063,
-          "drawnUsageRate": 0.7234841003357693
+          "plays": 3664,
+          "opportunities": 5060,
+          "drawnUsageRate": 0.7241106719367589
         },
         {
           "id": "mage_echo_shift",
@@ -7407,9 +7411,9 @@
           "picks": 336,
           "choiceRate": 0.8593350383631714,
           "deckInclusionRate": 0.33555555555555555,
-          "plays": 3125,
-          "opportunities": 4832,
-          "drawnUsageRate": 0.6467301324503312
+          "plays": 3122,
+          "opportunities": 4817,
+          "drawnUsageRate": 0.648121237284617
         },
         {
           "id": "mage_echo_veil",
@@ -7430,9 +7434,9 @@
           "picks": 381,
           "choiceRate": 0.8619909502262444,
           "deckInclusionRate": 0.37444444444444447,
-          "plays": 3403,
-          "opportunities": 6212,
-          "drawnUsageRate": 0.5478106889890535
+          "plays": 3386,
+          "opportunities": 6195,
+          "drawnUsageRate": 0.5465698143664245
         },
         {
           "id": "mage_reflect_veil",
@@ -7453,9 +7457,9 @@
           "picks": 382,
           "choiceRate": 0.8623024830699775,
           "deckInclusionRate": 0.3688888888888889,
-          "plays": 4123,
-          "opportunities": 6249,
-          "drawnUsageRate": 0.6597855656905105
+          "plays": 4091,
+          "opportunities": 6227,
+          "drawnUsageRate": 0.6569776778545046
         },
         {
           "id": "mage_second_hand",
@@ -7476,9 +7480,9 @@
           "picks": 419,
           "choiceRate": 0.8821052631578947,
           "deckInclusionRate": 0.40444444444444444,
-          "plays": 2517,
-          "opportunities": 6818,
-          "drawnUsageRate": 0.36916984452918744
+          "plays": 2493,
+          "opportunities": 6817,
+          "drawnUsageRate": 0.3657033885873551
         },
         {
           "id": "mage_glass_recursion",
@@ -7496,12 +7500,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 420,
-          "picks": 376,
-          "choiceRate": 0.8952380952380953,
+          "picks": 375,
+          "choiceRate": 0.8928571428571429,
           "deckInclusionRate": 0.3655555555555556,
-          "plays": 4557,
-          "opportunities": 5557,
-          "drawnUsageRate": 0.8200467878351628
+          "plays": 4537,
+          "opportunities": 5531,
+          "drawnUsageRate": 0.8202856626288194
         },
         {
           "id": "mage_thunder",
@@ -7524,9 +7528,9 @@
           "picks": 424,
           "choiceRate": 0.9401330376940134,
           "deckInclusionRate": 0.39111111111111113,
-          "plays": 3847,
-          "opportunities": 4363,
-          "drawnUsageRate": 0.881732752693101
+          "plays": 3848,
+          "opportunities": 4375,
+          "drawnUsageRate": 0.8795428571428572
         },
         {
           "id": "mage_copy_pierce",
@@ -7549,9 +7553,9 @@
           "picks": 407,
           "choiceRate": 0.9553990610328639,
           "deckInclusionRate": 0.3788888888888889,
-          "plays": 4249,
-          "opportunities": 5121,
-          "drawnUsageRate": 0.8297207576645187
+          "plays": 4243,
+          "opportunities": 5110,
+          "drawnUsageRate": 0.8303326810176125
         }
       ]
     },
@@ -7579,13 +7583,13 @@
         },
         "【首领】鬼面修罗": {
           "games": 900,
-          "wins": 887,
-          "winRate": 0.9855555555555555
+          "wins": 889,
+          "winRate": 0.9877777777777778
         },
         "【深渊主宰】": {
           "games": 900,
-          "wins": 888,
-          "winRate": 0.9866666666666667
+          "wins": 892,
+          "winRate": 0.9911111111111112
         }
       },
       "seeds": [
@@ -7605,8 +7609,8 @@
             "【精英】狂暴牛头人": 0.9966666666666667,
             "【精英】猩红血巫": 1,
             "【精英】不死骨龙": 1,
-            "【首领】鬼面修罗": 0.98,
-            "【深渊主宰】": 0.9833333333333333
+            "【首领】鬼面修罗": 0.9833333333333333,
+            "【深渊主宰】": 0.99
           }
         },
         {
@@ -7615,8 +7619,8 @@
             "【精英】狂暴牛头人": 1,
             "【精英】猩红血巫": 0.9966666666666667,
             "【精英】不死骨龙": 0.9933333333333333,
-            "【首领】鬼面修罗": 0.9866666666666667,
-            "【深渊主宰】": 0.9866666666666667
+            "【首领】鬼面修罗": 0.99,
+            "【深渊主宰】": 0.9933333333333333
           }
         }
       ],
@@ -7732,9 +7736,9 @@
           "picks": 1,
           "choiceRate": 0.002531645569620253,
           "deckInclusionRate": 0.0011111111111111111,
-          "plays": 9,
-          "opportunities": 11,
-          "drawnUsageRate": 0.8181818181818182
+          "plays": 5,
+          "opportunities": 9,
+          "drawnUsageRate": 0.5555555555555556
         },
         {
           "id": "mage_star_copy",
@@ -7801,9 +7805,9 @@
           "picks": 2,
           "choiceRate": 0.005681818181818182,
           "deckInclusionRate": 0.0022222222222222222,
-          "plays": 14,
-          "opportunities": 18,
-          "drawnUsageRate": 0.7777777777777778
+          "plays": 16,
+          "opportunities": 17,
+          "drawnUsageRate": 0.9411764705882353
         },
         {
           "id": "mage_reflection_note",
@@ -7825,9 +7829,9 @@
           "picks": 2,
           "choiceRate": 0.0058823529411764705,
           "deckInclusionRate": 0.0022222222222222222,
-          "plays": 9,
+          "plays": 10,
           "opportunities": 10,
-          "drawnUsageRate": 0.9
+          "drawnUsageRate": 1
         },
         {
           "id": "mage_aftertone_flow",
@@ -7873,9 +7877,9 @@
           "picks": 3,
           "choiceRate": 0.008403361344537815,
           "deckInclusionRate": 0.0033333333333333335,
-          "plays": 14,
-          "opportunities": 27,
-          "drawnUsageRate": 0.5185185185185185
+          "plays": 13,
+          "opportunities": 29,
+          "drawnUsageRate": 0.4482758620689655
         },
         {
           "id": "mage_double_archive",
@@ -7893,12 +7897,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 562,
-          "picks": 6,
-          "choiceRate": 0.010676156583629894,
-          "deckInclusionRate": 0.006666666666666667,
-          "plays": 18,
-          "opportunities": 61,
-          "drawnUsageRate": 0.29508196721311475
+          "picks": 5,
+          "choiceRate": 0.008896797153024912,
+          "deckInclusionRate": 0.005555555555555556,
+          "plays": 16,
+          "opportunities": 49,
+          "drawnUsageRate": 0.32653061224489793
         },
         {
           "id": "mage_omen",
@@ -7941,9 +7945,30 @@
           "picks": 2,
           "choiceRate": 0.015037593984962405,
           "deckInclusionRate": 0.0022222222222222222,
-          "plays": 12,
-          "opportunities": 21,
-          "drawnUsageRate": 0.5714285714285714
+          "plays": 9,
+          "opportunities": 19,
+          "drawnUsageRate": 0.47368421052631576
+        },
+        {
+          "id": "neutral_spark",
+          "name": "碎星短刃",
+          "cost": 0,
+          "rarity": "普通",
+          "tags": [
+            "销毁"
+          ],
+          "directEffects": {},
+          "buildTags": [],
+          "isPrimaryBuild": false,
+          "isRelevant": true,
+          "isNeutral": true,
+          "offers": 128,
+          "picks": 2,
+          "choiceRate": 0.015625,
+          "deckInclusionRate": 0.0022222222222222222,
+          "plays": 10,
+          "opportunities": 10,
+          "drawnUsageRate": 1
         },
         {
           "id": "mage_cascade",
@@ -7966,9 +7991,9 @@
           "picks": 8,
           "choiceRate": 0.01593625498007968,
           "deckInclusionRate": 0.008888888888888889,
-          "plays": 79,
-          "opportunities": 84,
-          "drawnUsageRate": 0.9404761904761905
+          "plays": 77,
+          "opportunities": 82,
+          "drawnUsageRate": 0.9390243902439024
         },
         {
           "id": "mage_solar_refill",
@@ -7989,9 +8014,9 @@
           "picks": 8,
           "choiceRate": 0.016129032258064516,
           "deckInclusionRate": 0.008888888888888889,
-          "plays": 70,
-          "opportunities": 87,
-          "drawnUsageRate": 0.8045977011494253
+          "plays": 68,
+          "opportunities": 88,
+          "drawnUsageRate": 0.7727272727272727
         },
         {
           "id": "mage_echo_index",
@@ -8009,33 +8034,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 339,
-          "picks": 7,
-          "choiceRate": 0.02064896755162242,
-          "deckInclusionRate": 0.0077777777777777776,
-          "plays": 51,
-          "opportunities": 66,
-          "drawnUsageRate": 0.7727272727272727
-        },
-        {
-          "id": "neutral_spark",
-          "name": "碎星短刃",
-          "cost": 0,
-          "rarity": "普通",
-          "tags": [
-            "销毁"
-          ],
-          "directEffects": {},
-          "buildTags": [],
-          "isPrimaryBuild": false,
-          "isRelevant": true,
-          "isNeutral": true,
-          "offers": 128,
-          "picks": 3,
-          "choiceRate": 0.0234375,
-          "deckInclusionRate": 0.0033333333333333335,
-          "plays": 15,
-          "opportunities": 15,
-          "drawnUsageRate": 1
+          "picks": 6,
+          "choiceRate": 0.017699115044247787,
+          "deckInclusionRate": 0.006666666666666667,
+          "plays": 41,
+          "opportunities": 55,
+          "drawnUsageRate": 0.7454545454545455
         },
         {
           "id": "neutral_blank_pact",
@@ -8054,11 +8058,11 @@
           "isRelevant": false,
           "isNeutral": true,
           "offers": 313,
-          "picks": 12,
-          "choiceRate": 0.038338658146964855,
-          "deckInclusionRate": 0.013333333333333334,
-          "plays": 60,
-          "opportunities": 60,
+          "picks": 11,
+          "choiceRate": 0.03514376996805112,
+          "deckInclusionRate": 0.012222222222222223,
+          "plays": 55,
+          "opportunities": 55,
           "drawnUsageRate": 1
         },
         {
@@ -8086,6 +8090,29 @@
           "drawnUsageRate": 1
         },
         {
+          "id": "mage_lantern_chant",
+          "name": "灯火续咏",
+          "cost": 0,
+          "rarity": "普通",
+          "tags": [
+            "咏唱"
+          ],
+          "directEffects": {},
+          "buildTags": [
+            "chant"
+          ],
+          "isPrimaryBuild": false,
+          "isRelevant": false,
+          "isNeutral": false,
+          "offers": 332,
+          "picks": 15,
+          "choiceRate": 0.045180722891566265,
+          "deckInclusionRate": 0.016666666666666666,
+          "plays": 157,
+          "opportunities": 171,
+          "drawnUsageRate": 0.9181286549707602
+        },
+        {
           "id": "mage_orbit_lock",
           "name": "星轨锁定",
           "cost": 1,
@@ -8104,32 +8131,9 @@
           "picks": 15,
           "choiceRate": 0.045317220543806644,
           "deckInclusionRate": 0.016666666666666666,
-          "plays": 113,
-          "opportunities": 191,
-          "drawnUsageRate": 0.5916230366492147
-        },
-        {
-          "id": "mage_lantern_chant",
-          "name": "灯火续咏",
-          "cost": 0,
-          "rarity": "普通",
-          "tags": [
-            "咏唱"
-          ],
-          "directEffects": {},
-          "buildTags": [
-            "chant"
-          ],
-          "isPrimaryBuild": false,
-          "isRelevant": false,
-          "isNeutral": false,
-          "offers": 332,
-          "picks": 16,
-          "choiceRate": 0.04819277108433735,
-          "deckInclusionRate": 0.017777777777777778,
-          "plays": 165,
-          "opportunities": 182,
-          "drawnUsageRate": 0.9065934065934066
+          "plays": 106,
+          "opportunities": 186,
+          "drawnUsageRate": 0.5698924731182796
         },
         {
           "id": "mage_twin_spark",
@@ -8147,12 +8151,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 357,
-          "picks": 24,
-          "choiceRate": 0.06722689075630252,
-          "deckInclusionRate": 0.02666666666666667,
-          "plays": 208,
-          "opportunities": 249,
-          "drawnUsageRate": 0.8353413654618473
+          "picks": 22,
+          "choiceRate": 0.06162464985994398,
+          "deckInclusionRate": 0.024444444444444446,
+          "plays": 191,
+          "opportunities": 228,
+          "drawnUsageRate": 0.8377192982456141
         },
         {
           "id": "mage_countdown",
@@ -8170,12 +8174,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 365,
-          "picks": 30,
-          "choiceRate": 0.0821917808219178,
-          "deckInclusionRate": 0.03333333333333333,
-          "plays": 147,
-          "opportunities": 321,
-          "drawnUsageRate": 0.45794392523364486
+          "picks": 29,
+          "choiceRate": 0.07945205479452055,
+          "deckInclusionRate": 0.03222222222222222,
+          "plays": 129,
+          "opportunities": 313,
+          "drawnUsageRate": 0.41214057507987223
         },
         {
           "id": "mage_glass_recursion",
@@ -8193,12 +8197,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 354,
-          "picks": 38,
-          "choiceRate": 0.10734463276836158,
-          "deckInclusionRate": 0.042222222222222223,
-          "plays": 365,
-          "opportunities": 416,
-          "drawnUsageRate": 0.8774038461538461
+          "picks": 35,
+          "choiceRate": 0.09887005649717515,
+          "deckInclusionRate": 0.03888888888888889,
+          "plays": 338,
+          "opportunities": 385,
+          "drawnUsageRate": 0.8779220779220779
         },
         {
           "id": "mage_star_surge",
@@ -8216,12 +8220,58 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 314,
-          "picks": 34,
-          "choiceRate": 0.10828025477707007,
-          "deckInclusionRate": 0.03777777777777778,
-          "plays": 303,
-          "opportunities": 356,
-          "drawnUsageRate": 0.851123595505618
+          "picks": 32,
+          "choiceRate": 0.10191082802547771,
+          "deckInclusionRate": 0.035555555555555556,
+          "plays": 289,
+          "opportunities": 339,
+          "drawnUsageRate": 0.8525073746312685
+        },
+        {
+          "id": "mage_second_hand",
+          "name": "第二指针",
+          "cost": 2,
+          "rarity": "史诗",
+          "tags": [
+            "回响"
+          ],
+          "directEffects": {},
+          "buildTags": [
+            "mirror"
+          ],
+          "isPrimaryBuild": false,
+          "isRelevant": false,
+          "isNeutral": false,
+          "offers": 529,
+          "picks": 58,
+          "choiceRate": 0.10964083175803403,
+          "deckInclusionRate": 0.06444444444444444,
+          "plays": 197,
+          "opportunities": 647,
+          "drawnUsageRate": 0.3044822256568779
+        },
+        {
+          "id": "mage_echo_veil",
+          "name": "回声护幕",
+          "cost": 1,
+          "rarity": "稀有",
+          "tags": [
+            "回响"
+          ],
+          "directEffects": {},
+          "buildTags": [
+            "mirror"
+          ],
+          "isPrimaryBuild": false,
+          "isRelevant": false,
+          "isNeutral": false,
+          "offers": 352,
+          "picks": 39,
+          "choiceRate": 0.11079545454545454,
+          "deckInclusionRate": 0.043333333333333335,
+          "plays": 328,
+          "opportunities": 439,
+          "drawnUsageRate": 0.7471526195899773
         },
         {
           "id": "mage_reflect_veil",
@@ -8242,55 +8292,9 @@
           "picks": 37,
           "choiceRate": 0.11178247734138973,
           "deckInclusionRate": 0.04,
-          "plays": 342,
-          "opportunities": 424,
-          "drawnUsageRate": 0.8066037735849056
-        },
-        {
-          "id": "mage_second_hand",
-          "name": "第二指针",
-          "cost": 2,
-          "rarity": "史诗",
-          "tags": [
-            "回响"
-          ],
-          "directEffects": {},
-          "buildTags": [
-            "mirror"
-          ],
-          "isPrimaryBuild": false,
-          "isRelevant": false,
-          "isNeutral": false,
-          "offers": 529,
-          "picks": 60,
-          "choiceRate": 0.11342155009451796,
-          "deckInclusionRate": 0.06666666666666667,
-          "plays": 229,
-          "opportunities": 673,
-          "drawnUsageRate": 0.34026745913818723
-        },
-        {
-          "id": "mage_echo_veil",
-          "name": "回声护幕",
-          "cost": 1,
-          "rarity": "稀有",
-          "tags": [
-            "回响"
-          ],
-          "directEffects": {},
-          "buildTags": [
-            "mirror"
-          ],
-          "isPrimaryBuild": false,
-          "isRelevant": false,
-          "isNeutral": false,
-          "offers": 352,
-          "picks": 40,
-          "choiceRate": 0.11363636363636363,
-          "deckInclusionRate": 0.044444444444444446,
           "plays": 339,
-          "opportunities": 451,
-          "drawnUsageRate": 0.7516629711751663
+          "opportunities": 430,
+          "drawnUsageRate": 0.7883720930232558
         },
         {
           "id": "neutral_cold_iron_page",
@@ -8306,12 +8310,12 @@
           "isRelevant": true,
           "isNeutral": true,
           "offers": 147,
-          "picks": 21,
-          "choiceRate": 0.14285714285714285,
-          "deckInclusionRate": 0.023333333333333334,
-          "plays": 170,
-          "opportunities": 230,
-          "drawnUsageRate": 0.7391304347826086
+          "picks": 20,
+          "choiceRate": 0.1360544217687075,
+          "deckInclusionRate": 0.022222222222222223,
+          "plays": 162,
+          "opportunities": 221,
+          "drawnUsageRate": 0.7330316742081447
         },
         {
           "id": "neutral_cycle",
@@ -8328,12 +8332,12 @@
           "isRelevant": true,
           "isNeutral": true,
           "offers": 126,
-          "picks": 19,
-          "choiceRate": 0.15079365079365079,
-          "deckInclusionRate": 0.021111111111111112,
-          "plays": 89,
-          "opportunities": 110,
-          "drawnUsageRate": 0.8090909090909091
+          "picks": 18,
+          "choiceRate": 0.14285714285714285,
+          "deckInclusionRate": 0.02,
+          "plays": 87,
+          "opportunities": 107,
+          "drawnUsageRate": 0.8130841121495327
         },
         {
           "id": "mage_echo_shift",
@@ -8353,12 +8357,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 341,
-          "picks": 71,
-          "choiceRate": 0.20821114369501467,
-          "deckInclusionRate": 0.07888888888888888,
-          "plays": 549,
-          "opportunities": 789,
-          "drawnUsageRate": 0.6958174904942965
+          "picks": 66,
+          "choiceRate": 0.1935483870967742,
+          "deckInclusionRate": 0.07333333333333333,
+          "plays": 484,
+          "opportunities": 726,
+          "drawnUsageRate": 0.6666666666666666
         },
         {
           "id": "mage_radiant_law",
@@ -8376,12 +8380,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 393,
-          "picks": 84,
-          "choiceRate": 0.21374045801526717,
-          "deckInclusionRate": 0.09222222222222222,
-          "plays": 650,
-          "opportunities": 920,
-          "drawnUsageRate": 0.7065217391304348
+          "picks": 79,
+          "choiceRate": 0.2010178117048346,
+          "deckInclusionRate": 0.08666666666666667,
+          "plays": 626,
+          "opportunities": 856,
+          "drawnUsageRate": 0.7313084112149533
         },
         {
           "id": "mage_star_ward",
@@ -8399,12 +8403,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 327,
-          "picks": 80,
-          "choiceRate": 0.24464831804281345,
-          "deckInclusionRate": 0.08666666666666667,
-          "plays": 759,
-          "opportunities": 874,
-          "drawnUsageRate": 0.868421052631579
+          "picks": 74,
+          "choiceRate": 0.22629969418960244,
+          "deckInclusionRate": 0.0811111111111111,
+          "plays": 684,
+          "opportunities": 794,
+          "drawnUsageRate": 0.8614609571788413
         },
         {
           "id": "neutral_guard",
@@ -8420,12 +8424,12 @@
           "isRelevant": true,
           "isNeutral": true,
           "offers": 131,
-          "picks": 34,
-          "choiceRate": 0.2595419847328244,
-          "deckInclusionRate": 0.03777777777777778,
-          "plays": 497,
-          "opportunities": 754,
-          "drawnUsageRate": 0.6591511936339522
+          "picks": 31,
+          "choiceRate": 0.2366412213740458,
+          "deckInclusionRate": 0.034444444444444444,
+          "plays": 439,
+          "opportunities": 675,
+          "drawnUsageRate": 0.6503703703703704
         },
         {
           "id": "mage_thunder",
@@ -8445,12 +8449,12 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 508,
-          "picks": 154,
-          "choiceRate": 0.3031496062992126,
-          "deckInclusionRate": 0.17,
-          "plays": 1430,
-          "opportunities": 1579,
-          "drawnUsageRate": 0.9056364787840405
+          "picks": 146,
+          "choiceRate": 0.2874015748031496,
+          "deckInclusionRate": 0.16111111111111112,
+          "plays": 1344,
+          "opportunities": 1496,
+          "drawnUsageRate": 0.8983957219251337
         },
         {
           "id": "mage_copy_pierce",
@@ -8470,12 +8474,35 @@
           "isRelevant": false,
           "isNeutral": false,
           "offers": 523,
-          "picks": 160,
-          "choiceRate": 0.30592734225621415,
-          "deckInclusionRate": 0.17555555555555555,
-          "plays": 1512,
-          "opportunities": 1715,
-          "drawnUsageRate": 0.8816326530612245
+          "picks": 151,
+          "choiceRate": 0.2887189292543021,
+          "deckInclusionRate": 0.16666666666666666,
+          "plays": 1435,
+          "opportunities": 1621,
+          "drawnUsageRate": 0.8852560148056755
+        },
+        {
+          "id": "mage_exile_nova",
+          "name": "裂星禁术",
+          "cost": 2,
+          "rarity": "史诗",
+          "tags": [
+            "爆发"
+          ],
+          "directEffects": {},
+          "buildTags": [
+            "chant"
+          ],
+          "isPrimaryBuild": false,
+          "isRelevant": false,
+          "isNeutral": false,
+          "offers": 502,
+          "picks": 204,
+          "choiceRate": 0.4063745019920319,
+          "deckInclusionRate": 0.22333333333333333,
+          "plays": 1906,
+          "opportunities": 2287,
+          "drawnUsageRate": 0.8334062090074333
         },
         {
           "id": "mage_decay_wire",
@@ -8497,31 +8524,8 @@
           "choiceRate": 0.4164989939637827,
           "deckInclusionRate": 0.22444444444444445,
           "plays": 1779,
-          "opportunities": 2033,
-          "drawnUsageRate": 0.8750614854894245
-        },
-        {
-          "id": "mage_exile_nova",
-          "name": "裂星禁术",
-          "cost": 2,
-          "rarity": "史诗",
-          "tags": [
-            "爆发"
-          ],
-          "directEffects": {},
-          "buildTags": [
-            "chant"
-          ],
-          "isPrimaryBuild": false,
-          "isRelevant": false,
-          "isNeutral": false,
-          "offers": 502,
-          "picks": 211,
-          "choiceRate": 0.4203187250996016,
-          "deckInclusionRate": 0.23,
-          "plays": 1975,
-          "opportunities": 2355,
-          "drawnUsageRate": 0.8386411889596603
+          "opportunities": 2037,
+          "drawnUsageRate": 0.8733431516936672
         },
         {
           "id": "mage_corrupt_mist",
@@ -8539,12 +8543,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 501,
-          "picks": 224,
-          "choiceRate": 0.4471057884231537,
-          "deckInclusionRate": 0.2388888888888889,
-          "plays": 1330,
-          "opportunities": 2256,
-          "drawnUsageRate": 0.5895390070921985
+          "picks": 223,
+          "choiceRate": 0.44510978043912175,
+          "deckInclusionRate": 0.23777777777777778,
+          "plays": 1305,
+          "opportunities": 2253,
+          "drawnUsageRate": 0.5792276964047937
         },
         {
           "id": "mage_venom_sigils",
@@ -8565,32 +8569,9 @@
           "picks": 248,
           "choiceRate": 0.4760076775431862,
           "deckInclusionRate": 0.26555555555555554,
-          "plays": 2508,
-          "opportunities": 2701,
-          "drawnUsageRate": 0.9285449833395039
-        },
-        {
-          "id": "mage_bloodlet_omen",
-          "name": "断咒预兆",
-          "cost": 1,
-          "rarity": "稀有",
-          "tags": [
-            "诅咒"
-          ],
-          "directEffects": {},
-          "buildTags": [
-            "calamity"
-          ],
-          "isPrimaryBuild": true,
-          "isRelevant": true,
-          "isNeutral": false,
-          "offers": 348,
-          "picks": 204,
-          "choiceRate": 0.5862068965517241,
-          "deckInclusionRate": 0.21888888888888888,
-          "plays": 1335,
-          "opportunities": 2105,
-          "drawnUsageRate": 0.6342042755344418
+          "plays": 2533,
+          "opportunities": 2725,
+          "drawnUsageRate": 0.9295412844036697
         },
         {
           "id": "mage_dark_moon_scar",
@@ -8608,12 +8589,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 345,
-          "picks": 205,
-          "choiceRate": 0.5942028985507246,
-          "deckInclusionRate": 0.22333333333333333,
-          "plays": 1924,
-          "opportunities": 2079,
-          "drawnUsageRate": 0.9254449254449254
+          "picks": 201,
+          "choiceRate": 0.5826086956521739,
+          "deckInclusionRate": 0.21888888888888888,
+          "plays": 1903,
+          "opportunities": 2052,
+          "drawnUsageRate": 0.9273879142300195
         },
         {
           "id": "neutral_ash_marker",
@@ -8634,9 +8615,9 @@
           "picks": 191,
           "choiceRate": 0.6025236593059937,
           "deckInclusionRate": 0.20444444444444446,
-          "plays": 1720,
-          "opportunities": 1858,
-          "drawnUsageRate": 0.9257265877287406
+          "plays": 1722,
+          "opportunities": 1854,
+          "drawnUsageRate": 0.9288025889967637
         },
         {
           "id": "mage_ember_flow",
@@ -8655,12 +8636,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 323,
-          "picks": 202,
-          "choiceRate": 0.6253869969040248,
-          "deckInclusionRate": 0.21777777777777776,
-          "plays": 1618,
-          "opportunities": 2233,
-          "drawnUsageRate": 0.7245857590685177
+          "picks": 200,
+          "choiceRate": 0.6191950464396285,
+          "deckInclusionRate": 0.21555555555555556,
+          "plays": 1549,
+          "opportunities": 2214,
+          "drawnUsageRate": 0.6996386630532972
         },
         {
           "id": "mage_arcane_mark",
@@ -8679,12 +8660,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 343,
-          "picks": 223,
-          "choiceRate": 0.6501457725947521,
-          "deckInclusionRate": 0.2388888888888889,
-          "plays": 668,
-          "opportunities": 2478,
-          "drawnUsageRate": 0.26957223567393057
+          "picks": 219,
+          "choiceRate": 0.6384839650145773,
+          "deckInclusionRate": 0.23444444444444446,
+          "plays": 638,
+          "opportunities": 2440,
+          "drawnUsageRate": 0.2614754098360656
         },
         {
           "id": "mage_spark",
@@ -8706,9 +8687,9 @@
           "picks": 341,
           "choiceRate": 0.7002053388090349,
           "deckInclusionRate": 0.34444444444444444,
-          "plays": 3302,
-          "opportunities": 3791,
-          "drawnUsageRate": 0.871010287523081
+          "plays": 3319,
+          "opportunities": 3786,
+          "drawnUsageRate": 0.8766508188061278
         },
         {
           "id": "mage_flame",
@@ -8727,12 +8708,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 330,
-          "picks": 242,
-          "choiceRate": 0.7333333333333333,
-          "deckInclusionRate": 0.2511111111111111,
-          "plays": 1742,
-          "opportunities": 2709,
-          "drawnUsageRate": 0.6430417128091547
+          "picks": 240,
+          "choiceRate": 0.7272727272727273,
+          "deckInclusionRate": 0.24888888888888888,
+          "plays": 1703,
+          "opportunities": 2689,
+          "drawnUsageRate": 0.6333209371513574
         },
         {
           "id": "mage_stasis_hex",
@@ -8751,12 +8732,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 519,
-          "picks": 408,
-          "choiceRate": 0.7861271676300579,
-          "deckInclusionRate": 0.4,
-          "plays": 2118,
-          "opportunities": 4154,
-          "drawnUsageRate": 0.5098700048146365
+          "picks": 406,
+          "choiceRate": 0.7822736030828517,
+          "deckInclusionRate": 0.3977777777777778,
+          "plays": 1935,
+          "opportunities": 4146,
+          "drawnUsageRate": 0.4667149059334298
         },
         {
           "id": "mage_mute_sand",
@@ -8775,12 +8756,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 552,
-          "picks": 436,
-          "choiceRate": 0.7898550724637681,
-          "deckInclusionRate": 0.4177777777777778,
-          "plays": 4155,
-          "opportunities": 4630,
-          "drawnUsageRate": 0.8974082073434125
+          "picks": 434,
+          "choiceRate": 0.7862318840579711,
+          "deckInclusionRate": 0.41555555555555557,
+          "plays": 4097,
+          "opportunities": 4586,
+          "drawnUsageRate": 0.8933711295246403
         },
         {
           "id": "mage_void_dust",
@@ -8801,9 +8782,9 @@
           "picks": 385,
           "choiceRate": 0.8004158004158004,
           "deckInclusionRate": 0.3688888888888889,
-          "plays": 3673,
-          "opportunities": 4221,
-          "drawnUsageRate": 0.8701729447998104
+          "plays": 3690,
+          "opportunities": 4226,
+          "drawnUsageRate": 0.8731661145291055
         },
         {
           "id": "mage_calamity_tune",
@@ -8821,12 +8802,37 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 332,
-          "picks": 280,
-          "choiceRate": 0.8433734939759037,
-          "deckInclusionRate": 0.28,
-          "plays": 2465,
-          "opportunities": 2992,
-          "drawnUsageRate": 0.8238636363636364
+          "picks": 278,
+          "choiceRate": 0.8373493975903614,
+          "deckInclusionRate": 0.2777777777777778,
+          "plays": 2463,
+          "opportunities": 2982,
+          "drawnUsageRate": 0.8259557344064387
+        },
+        {
+          "id": "mage_bloodlet_omen",
+          "name": "断咒预兆",
+          "cost": 1,
+          "rarity": "稀有",
+          "tags": [
+            "诅咒"
+          ],
+          "directEffects": {
+            "draw": true
+          },
+          "buildTags": [
+            "calamity"
+          ],
+          "isPrimaryBuild": true,
+          "isRelevant": true,
+          "isNeutral": false,
+          "offers": 348,
+          "picks": 292,
+          "choiceRate": 0.8390804597701149,
+          "deckInclusionRate": 0.3011111111111111,
+          "plays": 2111,
+          "opportunities": 2928,
+          "drawnUsageRate": 0.7209699453551912
         },
         {
           "id": "mage_frost_hex",
@@ -8844,12 +8850,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 329,
-          "picks": 284,
-          "choiceRate": 0.8632218844984803,
-          "deckInclusionRate": 0.2911111111111111,
-          "plays": 2711,
-          "opportunities": 3092,
-          "drawnUsageRate": 0.8767787839586029
+          "picks": 282,
+          "choiceRate": 0.8571428571428571,
+          "deckInclusionRate": 0.28888888888888886,
+          "plays": 2680,
+          "opportunities": 3064,
+          "drawnUsageRate": 0.8746736292428199
         },
         {
           "id": "mage_blood_orbit",
@@ -8867,12 +8873,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 303,
-          "picks": 263,
-          "choiceRate": 0.8679867986798679,
-          "deckInclusionRate": 0.25555555555555554,
-          "plays": 2376,
-          "opportunities": 2709,
-          "drawnUsageRate": 0.8770764119601329
+          "picks": 260,
+          "choiceRate": 0.858085808580858,
+          "deckInclusionRate": 0.25333333333333335,
+          "plays": 2352,
+          "opportunities": 2683,
+          "drawnUsageRate": 0.8766306373462542
         },
         {
           "id": "mage_bad_omen_chain",
@@ -8890,12 +8896,12 @@
           "isRelevant": true,
           "isNeutral": false,
           "offers": 331,
-          "picks": 290,
-          "choiceRate": 0.8761329305135952,
-          "deckInclusionRate": 0.29,
-          "plays": 2686,
+          "picks": 289,
+          "choiceRate": 0.8731117824773413,
+          "deckInclusionRate": 0.28888888888888886,
+          "plays": 2683,
           "opportunities": 3050,
-          "drawnUsageRate": 0.880655737704918
+          "drawnUsageRate": 0.879672131147541
         },
         {
           "id": "mage_sick_star",
@@ -8916,9 +8922,9 @@
           "picks": 293,
           "choiceRate": 0.8825301204819277,
           "deckInclusionRate": 0.29333333333333333,
-          "plays": 2629,
-          "opportunities": 3053,
-          "drawnUsageRate": 0.8611202096298722
+          "plays": 2624,
+          "opportunities": 3071,
+          "drawnUsageRate": 0.8544448062520351
         },
         {
           "id": "neutral_sealed_thunder",
@@ -8937,12 +8943,12 @@
           "isRelevant": true,
           "isNeutral": true,
           "offers": 549,
-          "picks": 527,
-          "choiceRate": 0.9599271402550091,
+          "picks": 525,
+          "choiceRate": 0.9562841530054644,
           "deckInclusionRate": 0.46111111111111114,
-          "plays": 2567,
-          "opportunities": 2809,
-          "drawnUsageRate": 0.9138483446066216
+          "plays": 2555,
+          "opportunities": 2805,
+          "drawnUsageRate": 0.910873440285205
         },
         {
           "id": "mage_withered_stars",
@@ -8964,9 +8970,9 @@
           "picks": 543,
           "choiceRate": 0.9731182795698925,
           "deckInclusionRate": 0.4855555555555556,
-          "plays": 4539,
-          "opportunities": 5796,
-          "drawnUsageRate": 0.7831262939958592
+          "plays": 4523,
+          "opportunities": 5814,
+          "drawnUsageRate": 0.7779497764017888
         }
       ]
     },

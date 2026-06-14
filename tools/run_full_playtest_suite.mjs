@@ -341,6 +341,7 @@ function estimateCardScore(data, roleId, buildId, card, deck, hpRatio, profile, 
     if (card.type === '防御' && hpRatio < 0.6) score += 4;
     if (tags.includes('抽牌') || card.directEffects?.draw) score += 5;
     if (tags.includes('充能') || card.directEffects?.energy) score += 3;
+    if (tags.includes('重置')) score += Math.min(5, Math.max(2, deck.length / 4));
     if (tags.includes('治愈') && hpRatio < 0.65) score += 4;
     if (tags.includes('回收')) score += deck.some(owned => (owned.tags || []).includes('放逐')) ? 5 : 1;
     if (tags.includes('放血')) score += deck.some(owned => (owned.tags || []).includes('出血')) ? 4 : 0;
@@ -403,6 +404,7 @@ function worstRemovableCard(deck) {
             if (card.type === '攻击') score += 1;
             if (tags.includes('抽牌') || card.directEffects?.draw) score += 4;
             if (tags.includes('充能') || card.directEffects?.energy) score += 3;
+            if (tags.includes('重置')) score += 3;
             if (tags.includes('治愈') || tags.includes('闪避') || tags.includes('庇护')) score += 2;
             if (card.rarity === '史诗') score += 6;
             if (card.rarity === '稀有') score += 3;
@@ -456,7 +458,7 @@ function estimateCardContribution(data, roleId, card, plays, opportunities) {
     if (tags.includes('充能') || card.directEffects?.energy) value += 4;
     if (tags.includes('治愈') || card.directEffects?.heal) value += data.getCardHealValue(card) * 0.8;
     if (tags.includes('庇护') || card.directEffects?.protection) value += data.getProtectionValue(card) * 0.6;
-    if (tags.includes('回收') || tags.includes('复刻') || tags.includes('回响')) value += 4;
+    if (tags.includes('回收') || tags.includes('复刻') || tags.includes('回响') || tags.includes('重置')) value += 4;
     if (tags.includes('放逐') && roleId === 'hero_archer') value += 5;
     return value * plays / Math.max(1, opportunities || plays || 1);
 }
