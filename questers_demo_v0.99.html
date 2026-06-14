@@ -6320,7 +6320,8 @@
             else if (card.specialId === 'a_syn_blood') {
                 const spentDebt = Math.max(0, state.p_blood_debt || 0);
                 if (spentDebt > 0) repayBloodDebt(spentDebt, '血海吞债');
-                const dmg = parseInt(card.val) + spentDebt * (card.bloodDebtSpendDamage || 5) + state.p_battle_dmg;
+                const bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.10) : 0;
+                const dmg = parseInt(card.val) + spentDebt * (card.bloodDebtSpendDamage || 5) + state.p_battle_dmg + bossBonus;
                 triggerVFX('p-atk'); const dealt = applySpecialCardDamage(card, dmg, true); let bloodHeal = Math.floor(dealt * (card.lifestealRatio || 0.5));
                 if(hasRelic('r_lifedebt_scale') && state.hp <= Math.floor(state.maxHp / 2)) bloodHeal = Math.floor(bloodHeal * 1.5);
                 const remainingHeal = Math.max(0, bloodHeal - repayBloodDebt(bloodHeal, '血海回偿').paid);
@@ -6378,8 +6379,8 @@
             else if (card.specialId === 'w_last_verdict') {
                 triggerVFX('p-atk');
                 const executionHand = state.hand.filter(c => c.tags && (c.tags.includes('连击') || c.tags.includes('穿甲'))).length;
-                let bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.15) : 0;
-                let dmg = 44 + state.p_battle_dmg + state.enemy.vuln * 8 + executionHand * 12 + bossBonus;
+                let bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.18) : 0;
+                let dmg = 48 + state.p_battle_dmg + state.enemy.vuln * 10 + executionHand * 14 + bossBonus;
                 applySpecialCardDamage(card, dmg, true);
                 state.p_reduce_dmg += Math.min(28, 12 + executionHand * 4);
                 showFloatText("终誓处刑", "var(--gold)", getCenter('enemy-avatar'));
@@ -6758,9 +6759,9 @@
 
             applyDamageToEnemy(finalDmg, isPierce);
             if(card.tags && card.tags.includes('重击') && hasRelic('r_execute_scabbard') && state.enemy.vuln > 0) {
-                applyDamageToEnemy(18, true);
-                state.p_reduce_dmg += 10;
-                showFloatText("断罪 +18 / 庇护 +10", "var(--gold)", getCenter('enemy-avatar'));
+                applyDamageToEnemy(24, true);
+                state.p_reduce_dmg += 12;
+                showFloatText("断罪 +24 / 庇护 +12", "var(--gold)", getCenter('enemy-avatar'));
             }
             if(card.tags && card.tags.includes('圣剑') && hasRelic('r_thorn_bloom') && state.player.thorns > 0) {
                 applyDamageToEnemy(state.player.thorns, true);

@@ -5,12 +5,12 @@ const SPECIAL_EPIC_POOLS = {
         { id: 's_thorns', name: '圣棘誓壁', roleId: 'hero_warrior', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_guard_art_v1.webp', type: '防御', cost: 3, icon: '🛡️', val: 0, tags: ['荆棘'], rarity: '史诗', isSpecial: true, desc: '获得 30 点护甲与 10 层[荆棘]。' },
         { id: 'a_syn_sword', name: '裁决破军', roleId: 'hero_warrior', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_flash_art_v1.webp', type: '攻击', cost: 2, icon: '🗡️', val: 10, tags: ['穿甲', '易伤'], rarity: '史诗', isSpecial: true, desc: '造成 10 点[穿甲]伤害。手牌每有 1 张[易伤]/[穿甲]/[连击]/[重击]，+12 伤害。' },
         { id: 'a_syn_array', name: '王誓阵列', roleId: 'hero_warrior', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_scar_art_v1.webp', type: '防御', cost: 2, icon: '⛩️', val: 10, tags: ['保留', '荆棘'], rarity: '史诗', isSpecial: true, desc: '获得 10 护甲。手牌每有 1 张[保留]/[荆棘]，+8 护甲与 3 层[荆棘]。' },
-        { id: 'a_syn_blood', name: '血海誓斩', roleId: 'hero_warrior', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_blood_vow_slash_art_v1.webp', type: '攻击', cost: 2, icon: '🩸', val: 24, tags: ['血债', '吸血'], lifestealRatio: 1, bloodDebtSpendAll: true, bloodDebtSpendDamage: 7, bloodDebtClearHeal: 6, rarity: '史诗', isSpecial: true, desc: '造成 24 点穿甲伤害。耗尽血债：每点 +7 伤害；全额[吸血]，若耗债则回 6 生命。' },
+        { id: 'a_syn_blood', name: '血海誓斩', roleId: 'hero_warrior', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_blood_vow_slash_art_v1.webp', type: '攻击', cost: 2, icon: '🩸', val: 28, tags: ['血债', '吸血'], lifestealRatio: 1, bloodDebtSpendAll: true, bloodDebtSpendDamage: 9, bloodDebtClearHeal: 8, rarity: '史诗', isSpecial: true, desc: '造成 28 点穿甲伤害，首领+10%最大生命。耗尽血债：每点 +9 伤害；全额[吸血]，若耗债则回 8 生命。' },
         { id: 'w_counter_crown', name: '王冠回锋', roleId: 'hero_warrior', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_crown_riposte_art_v1.webp', type: '攻击', cost: 3, icon: '👑', val: 16, tags: ['反击', '圣剑'], rarity: '史诗', isSpecial: true, desc: '造成 16 点伤害并进入[反击]姿态。本场战斗中，每次反击后获得等同本次招架值的护盾。' },
         { id: 'w_bastion_prayer', name: '圣壁祷言', roleId: 'hero_warrior', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_banner_guard_art_v1.webp', type: '能力', cost: 1, icon: '🚩', val: 10, tags: ['庇护', '抽牌'], rarity: '史诗', isSpecial: true, desc: '获得 10 点[庇护]，若当前拥有护盾，再获得等同庇护值的护盾并[抽牌]。' },
         { id: 'w_thorn_judgement', name: '荆冠审判', roleId: 'hero_warrior', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_thorn_charge_art_v1.webp', type: '攻击', cost: 2, icon: '🌹', val: 8, tags: ['圣剑', '荆棘'], rarity: '史诗', isSpecial: true, desc: '造成 8 点伤害。额外造成当前[荆棘]层数 3 倍的伤害，并获得 6 层[荆棘]。' },
         { id: 'w_oath_fortress', name: '誓约壁垒', roleId: 'hero_warrior', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_scar_art_v1.webp', type: '防御', cost: 3, icon: '🏰', val: 14, tags: ['反击', '保留'], rarity: '史诗', isSpecial: true, desc: '获得 14 点护盾与 4 点庇护并进入[反击]。打出后下回合回到手牌。' },
-        { id: 'w_last_verdict', name: '终誓处刑', roleId: 'hero_warrior', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_final_judgement_art_v1.webp', type: '攻击', cost: 2, icon: '⚔️', val: 44, tags: ['穿甲', '重击'], rarity: '史诗', isSpecial: true, desc: '造成 44 点[穿甲]。首领+15%最大生命；每层[易伤]+8，手牌每张[连击]/[穿甲]+12。' }
+        { id: 'w_last_verdict', name: '终誓处刑', roleId: 'hero_warrior', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_final_judgement_art_v1.webp', type: '攻击', cost: 2, icon: '⚔️', val: 48, tags: ['穿甲', '重击'], rarity: '史诗', isSpecial: true, desc: '造成 48 点[穿甲]。首领+18%最大生命；每层[易伤]+10，手牌每张[连击]/[穿甲]+14。' }
     ],
     hero_mage: [
         { id: 's_magic', name: '星界回音', roleId: 'hero_mage', frameTheme: 'mage', art: 'assets/cards/art/mage/mage_cascade_art_v1.webp', type: '能力', cost: 3, icon: '🌌', val: 0, tags: ['回响'], rarity: '史诗', isSpecial: true, desc: '本回合接下来打出的 3 张牌，其所有的标签效果会额外触发 2 次。' },
@@ -356,7 +356,7 @@ const BUILD_EXPANSION_RELICS = [
     { id: 'r_flaw_lens', name: '破绽透镜', icon: '🔍', desc: '战士：[穿甲]攻击命中带[易伤]的敌人时，伤害提高 15%。', price: 170 },
     { id: 'r_duel_glove', name: '决斗手甲', icon: '🥊', desc: '战士：每回合首次触发[连击]时额外[抽牌] 1 张。', price: 150 },
     { id: 'r_stun_chain', name: '缄默锁链', icon: '⛓️', desc: '战士：施加[眩晕]时，额外施加 1 层[易伤]。', price: 160 },
-    { id: 'r_execute_scabbard', name: '断罪剑鞘', icon: '🗡️', desc: '战士：[重击]命中带[易伤]的敌人时，额外造成 18 点[穿甲]伤害并获得 10 点庇护。', price: 190 },
+    { id: 'r_execute_scabbard', name: '断罪剑鞘', icon: '🗡️', desc: '战士：[重击]命中带[易伤]的敌人时，额外造成 24 点[穿甲]伤害并获得 12 点庇护。', price: 190 },
     { id: 'r_pierce_meter', name: '裂甲刻尺', icon: '📏', desc: '战士：每回合首次打出[穿甲]攻击时，获得 1 点能量。', price: 160 },
     { id: 'r_combo_warrant', name: '连斩密令', icon: '📜', desc: '战士：一回合内每打出第 2 张攻击牌，下一次伤害 +6。', price: 170 },
     { id: 'r_finisher_coin', name: '终斩金币', icon: '🪙', desc: '战士：击败敌人时若敌方带有[易伤]，战后额外获得 10 金币。', price: 150 },

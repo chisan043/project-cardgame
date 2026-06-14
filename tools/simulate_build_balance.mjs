@@ -701,14 +701,15 @@ function executeSpecialCard(state, card) {
     } else if (specialId === 'w_last_verdict') {
         if (card.type === '攻击') payBloodDebtAttackCost(state);
         const executionHand = state.hand.filter(held => (held.tags || []).some(tag => ['连击', '穿甲'].includes(tag))).length;
-        const bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.15) : 0;
-        hitEnemy(state, 44 + state.battleDamage + state.enemy.vuln * 8 + executionHand * 12 + bossBonus, true);
+        const bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.18) : 0;
+        hitEnemy(state, 48 + state.battleDamage + state.enemy.vuln * 10 + executionHand * 14 + bossBonus, true);
         state.protection += Math.min(28, 12 + executionHand * 4);
     } else if (specialId === 'a_syn_blood') {
         if (card.type === '攻击') payBloodDebtAttackCost(state);
         const spentDebt = state.bloodDebt;
         if (spentDebt > 0) repayBloodDebt(state, spentDebt);
-        const dealt = hitEnemy(state, (Number(card.val) || 24) + spentDebt * (card.bloodDebtSpendDamage || 5) + state.battleDamage, true);
+        const bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.10) : 0;
+        const dealt = hitEnemy(state, (Number(card.val) || 24) + spentDebt * (card.bloodDebtSpendDamage || 5) + state.battleDamage + bossBonus, true);
         let healing = Math.floor(dealt * (card.lifestealRatio || 0.5));
         if (hasRelic(state, 'r_lifedebt_scale') && state.hp <= state.maxHp / 2) healing = Math.floor(healing * 1.5);
         const repayment = repayBloodDebt(state, healing);
@@ -910,8 +911,8 @@ function executeCard(state, card, echo = false) {
         if (pierce && hasRelic(state, 'r_pierce_amulet')) damage = Math.floor(damage * 1.25);
         const dealt = hitEnemy(state, damage, pierce);
         if (pierce && tags.includes('重击') && state.enemy.vuln > 0 && hasRelic(state, 'r_execute_scabbard')) {
-            hitEnemy(state, 18, true);
-            state.protection += 10;
+            hitEnemy(state, 24, true);
+            state.protection += 12;
         }
         if (tags.includes('吸血')) {
             const lifestealRatio = Number.isFinite(Number(card.lifestealRatio)) ? Number(card.lifestealRatio) : (card.rarity === '史诗' ? 1 : 0.5);
