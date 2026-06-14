@@ -5,7 +5,7 @@ const CHARACTERS = {
         id: 'hero_warrior',
         name: '勇者战士',
         subtitle: '圣剑 / 处刑 / 血债',
-        desc: '以护盾反击稳步铸剑，以穿甲连击制造处刑窗口，或背负血债在三回合清算前连斩、清债或斩杀敌人。',
+        desc: '以护盾反击稳步铸剑，以穿甲连击制造处刑窗口，或借血债换爆发再用吸血偿还。',
         tags: ['圣剑反击', '处刑连斩', '血誓狂战'],
         maxHp: 90,
         baseEnergy: 5,
@@ -47,7 +47,7 @@ const CHARACTERS = {
             { src: 'assets/characters/warrior/battle_back_hurt_06_v2.webp', duration: 90 }
         ],
         accentClass: '',
-        starterHint: '起始牌组同时提供圣剑、处刑与血债信号；后续拿牌可以强化、转向或混合，血债路线不依赖护盾，而是靠三回合内清债或斩杀来免除累计清算伤害。'
+        starterHint: '起始牌组同时提供圣剑、处刑与血债信号；血债路线不依赖护盾，而是借债爆发后用吸血或偿债收束。'
     },
     hero_mage: {
         id: 'hero_mage',

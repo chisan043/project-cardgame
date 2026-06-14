@@ -146,7 +146,7 @@ const MIDGAME_RELICS = {
 };
 
 const BLOOD_DEBT_WINDOW_TURNS = 3;
-const BLOOD_DEBT_ATTACK_HP_LOSS = 4;
+const BLOOD_DEBT_ATTACK_HP_LOSS = 3;
 
 function cardBuildTags(data, card) {
     return card.buildTags || data.CARD_BUILD_TAGS_BY_ID[card.poolId || card.id] || [];

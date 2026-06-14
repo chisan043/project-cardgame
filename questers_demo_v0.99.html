@@ -3017,16 +3017,16 @@
             if (recycleText) d += `${d ? '<br>' : ''}${recycleText}。`;
         }
         const bloodDebtLines = [];
-        if (card.bloodDebtGain) bloodDebtLines.push(`+<span class="card-desc-value">${card.bloodDebtGain}</span> 血债，3回合清算。`);
-        if (card.bloodDebtPowerGain) bloodDebtLines.push(`本回合血债倍率 +<span class="card-desc-value">${Math.round(card.bloodDebtPowerGain * 100)}%</span>。`);
-        if (card.bloodDebtDamageRatio) bloodDebtLines.push(`追加血债<span class="card-desc-value">${formatRatioText(card.bloodDebtDamageRatio)}</span>伤害。`);
-        if (card.bloodDebtRepay) bloodDebtLines.push(`偿还<span class="card-desc-value">${card.bloodDebtRepay}</span>血债。`);
-        if (card.bloodDebtRepayFromBleed) bloodDebtLines.push(`放血伤害<span class="card-desc-value">${formatRatioText(card.bloodDebtRepayFromBleed)}</span>偿债。`);
+        if (card.bloodDebtGain) bloodDebtLines.push(`借 <span class="card-desc-value">${card.bloodDebtGain}</span> 血债。`);
+        if (card.bloodDebtPowerGain) bloodDebtLines.push(`本回合血债伤害 +<span class="card-desc-value">${Math.round(card.bloodDebtPowerGain * 100)}%</span>。`);
+        if (card.bloodDebtDamageRatio) bloodDebtLines.push(`按血债追加 <span class="card-desc-value">${formatRatioText(card.bloodDebtDamageRatio)}</span> 伤害。`);
+        if (card.bloodDebtRepay) bloodDebtLines.push(`偿还 <span class="card-desc-value">${card.bloodDebtRepay}</span> 血债。`);
+        if (card.bloodDebtRepayFromBleed) bloodDebtLines.push(`用放血偿债。`);
         if (card.bloodDebtSpendAll) bloodDebtLines.push(`耗尽血债，每点 +<span class="card-desc-value">${card.bloodDebtSpendDamage}</span> 伤害。`);
         const clearBonuses = [];
         if (card.bloodDebtClearDamage) clearBonuses.push(`+<span class="card-desc-value">${card.bloodDebtClearDamage}</span>伤害`);
         if (card.bloodDebtClearHeal) clearBonuses.push(`回<span class="card-desc-value">${card.bloodDebtClearHeal}</span>生命`);
-        if (clearBonuses.length) bloodDebtLines.push(`清债：${clearBonuses.join('、')}。`);
+        if (clearBonuses.length) bloodDebtLines.push(`清债奖励：${clearBonuses.join('、')}。`);
         const statusBits = [];
         if (card.bloodDebtBleed) statusBits.push(`<span class="card-desc-value">${card.bloodDebtBleed}</span>出血`);
         if (card.bloodDebtWeak) statusBits.push(`<span class="card-desc-value">${card.bloodDebtWeak}</span>虚弱`);
@@ -4057,7 +4057,7 @@
             add('echo', '回音', '🌌', state.p_echo_stack, '接下来打出的卡牌会额外触发 2 次。', 'is-magic');
             add('blood', '血祭', '🔥', state.p_battle_dmg, `本场战斗内，攻击造成的伤害提高 ${state.p_battle_dmg} 点。`, 'is-fire');
             add('frenzy', '狂热', '🔥', state.p_dmg_buff, `本回合内，所有伤害额外提高 ${state.p_dmg_buff} 点。`, 'is-fire');
-            add('blood-debt', '血债', '🩸', state.p_blood_debt, `血债存在时每次攻击失去 4 点生命但不会因此低于 1 点，并累计等量清算伤害；剩余 ${state.p_blood_debt_turns || 0} 回合，待清算 ${state.p_blood_debt_pending_damage || 0} 点。归零或击败敌人解除。`, 'is-bleed');
+            add('blood-debt', '血债', '🩸', state.p_blood_debt, `借生命换爆发。剩余 ${state.p_blood_debt_turns || 0} 回合，待清算 ${state.p_blood_debt_pending_damage || 0} 点；吸血或偿债可还清。`, 'is-bleed');
             add('enchant', '附魔', '⚔️', state.p_next_dmg, `下一次攻击额外造成 ${state.p_next_dmg} 点伤害。`, 'is-power');
             add('guard', '减免', '✨', state.p_reduce_dmg, `下一次受到伤害时，减少 ${state.p_reduce_dmg} 点。`, 'is-defense');
             if (state.p_counter > 0) {
@@ -4982,7 +4982,7 @@
         if(state.p_echo_stack > 0) pStatus.innerHTML += `<div class="status-badge badge-str" style="background:rgba(142, 68, 173, 0.9);">🌌 回音: ${state.p_echo_stack}<div class="status-tooltip">接下来打出的卡牌会额外触发2次。</div></div>`;
         if(state.p_battle_dmg > 0) pStatus.innerHTML += `<div class="status-badge badge-str" style="background:#c0392b;">🔥 血祭: +${state.p_battle_dmg}<div class="status-tooltip">本场战斗内，攻击造成的伤害提高 ${state.p_battle_dmg} 点。</div></div>`;
         if(state.p_dmg_buff > 0) pStatus.innerHTML += `<div class="status-badge badge-str">🔥 狂热: +${state.p_dmg_buff}<div class="status-tooltip">本回合内，所有伤害额外提高 ${state.p_dmg_buff} 点。</div></div>`;
-        if(state.p_blood_debt > 0) pStatus.innerHTML += `<div class="status-badge badge-str" style="background:#6f1726;">🩸 血债: ${state.p_blood_debt} / ${state.p_blood_debt_turns || 0}回合<div class="status-tooltip">血债存在时每次攻击失去 4 点生命但不会因此低于 1 点，并累计等量清算伤害。当前待清算 ${state.p_blood_debt_pending_damage || 0} 点；血债归零或击败敌人解除。</div></div>`;
+        if(state.p_blood_debt > 0) pStatus.innerHTML += `<div class="status-badge badge-str" style="background:#6f1726;">🩸 血债: ${state.p_blood_debt} / ${state.p_blood_debt_turns || 0}回合<div class="status-tooltip">借生命换爆发。当前待清算 ${state.p_blood_debt_pending_damage || 0} 点；吸血或偿债可还清。</div></div>`;
         if(state.p_next_dmg > 0) pStatus.innerHTML += `<div class="status-badge badge-str">⚔️ 附魔: 下次+${state.p_next_dmg}<div class="status-tooltip">下一次攻击额外造成 ${state.p_next_dmg} 点伤害。</div></div>`;
         if(state.p_reduce_dmg > 0) pStatus.innerHTML += `<div class="status-badge badge-armor">✨ 减免: ${state.p_reduce_dmg}<div class="status-tooltip">下一次受到伤害时，减少 ${state.p_reduce_dmg} 点。</div></div>`;
         if(state.p_counter > 0) pStatus.innerHTML += `<div class="status-badge badge-str" style="background:rgba(241,196,15,0.9); color:black;">⚡ 招架准备<div class="status-tooltip">已进入反击姿态；受到下一次敌方主体攻击时招架本次伤害的 50% 并反伤。此状态不可叠加。</div></div>`;
@@ -6053,7 +6053,7 @@
 
     function payBloodDebtAttackCost(source = '血债攻势') {
         if ((state.p_blood_debt || 0) <= 0) return 0;
-        const loss = Math.min(Math.max(0, state.hp - 1), 4);
+        const loss = Math.min(Math.max(0, state.hp - 1), 3);
         if (loss <= 0) return 0;
         state.hp -= loss;
         state.p_blood_debt_pending_damage = (state.p_blood_debt_pending_damage || 0) + loss;
