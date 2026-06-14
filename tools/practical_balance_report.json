@@ -1,0 +1,3488 @@
+{
+  "generatedAt": "2026-06-14T11:45:35.027Z",
+  "seed": 20260614,
+  "runsPerSample": 800,
+  "scenarios": [
+    {
+      "id": "pure",
+      "label": "纯流派无核心"
+    },
+    {
+      "id": "mid",
+      "label": "单方向遗物"
+    },
+    {
+      "id": "noCoreMatureRelics",
+      "label": "成熟遗物缺核心"
+    },
+    {
+      "id": "coreOnly",
+      "label": "只有核心无遗物"
+    },
+    {
+      "id": "mixedNoCore",
+      "label": "混合拿牌无核心"
+    },
+    {
+      "id": "mixedMidRelic",
+      "label": "混合拿牌单遗物"
+    },
+    {
+      "id": "mature",
+      "label": "完整成熟"
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "late",
+      "label": "后期普通",
+      "floor": 14,
+      "type": "normal"
+    },
+    {
+      "id": "elite",
+      "label": "后期精英",
+      "floor": 15,
+      "type": "elite"
+    },
+    {
+      "id": "boss",
+      "label": "最终首领",
+      "floor": 19,
+      "type": "boss"
+    }
+  ],
+  "weakFloors": {
+    "late": 0.7,
+    "elite": 0.28,
+    "boss": 0.03
+  },
+  "coreDependencyLimitPp": {
+    "late": 18,
+    "elite": 15,
+    "boss": 7
+  },
+  "results": [
+    {
+      "roleId": "hero_warrior",
+      "role": "勇者战士",
+      "buildId": "oathblade",
+      "build": "圣剑反击",
+      "scenarios": {
+        "pure": {
+          "label": "纯流派无核心",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.795,
+              "averageTurns": 6.915,
+              "averageHpLeft": 60.94375,
+              "averageDamageTaken": 33.93875,
+              "averageDamageDealt": 350.25875,
+              "deathCauses": {
+                "首领主体攻击": 162,
+                "回合上限": 2
+              },
+              "victoryCauses": {
+                "卡牌伤害": 573,
+                "反击": 42,
+                "荆棘": 21
+              }
+            },
+            "elite": {
+              "winRate": 0.34,
+              "averageTurns": 8.885,
+              "averageHpLeft": 26.32625,
+              "averageDamageTaken": 77.2525,
+              "averageDamageDealt": 468.91625,
+              "deathCauses": {
+                "首领主体攻击": 507,
+                "敌方荆棘": 15,
+                "回合上限": 5,
+                "出血伤害": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 247,
+                "反击": 13,
+                "荆棘": 12
+              }
+            },
+            "boss": {
+              "winRate": 0.0225,
+              "averageTurns": 7.30125,
+              "averageHpLeft": 3.52875,
+              "averageDamageTaken": 114.97875,
+              "averageDamageDealt": 209.7525,
+              "deathCauses": {
+                "首领主体攻击": 749,
+                "回合上限": 32,
+                "召唤物攻击": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 17,
+                "反击": 1
+              }
+            }
+          }
+        },
+        "mid": {
+          "label": "单方向遗物",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.87125,
+              "averageTurns": 6.42375,
+              "averageHpLeft": 65.60875,
+              "averageDamageTaken": 27.5375,
+              "averageDamageDealt": 361.21125,
+              "deathCauses": {
+                "首领主体攻击": 102,
+                "回合上限": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 630,
+                "荆棘": 23,
+                "反击": 44
+              }
+            },
+            "elite": {
+              "winRate": 0.33625,
+              "averageTurns": 7.9925,
+              "averageHpLeft": 25.1925,
+              "averageDamageTaken": 77.8725,
+              "averageDamageDealt": 468.79625,
+              "deathCauses": {
+                "敌方荆棘": 10,
+                "首领主体攻击": 512,
+                "回合上限": 7,
+                "出血伤害": 2
+              },
+              "victoryCauses": {
+                "卡牌伤害": 230,
+                "荆棘": 21,
+                "反击": 18
+              }
+            },
+            "boss": {
+              "winRate": 0.0375,
+              "averageTurns": 7.0725,
+              "averageHpLeft": 4.2775,
+              "averageDamageTaken": 115.975,
+              "averageDamageDealt": 258.5075,
+              "deathCauses": {
+                "首领主体攻击": 751,
+                "回合上限": 19
+              },
+              "victoryCauses": {
+                "卡牌伤害": 25,
+                "荆棘": 5
+              }
+            }
+          }
+        },
+        "noCoreMatureRelics": {
+          "label": "成熟遗物缺核心",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.8975,
+              "averageTurns": 6.07,
+              "averageHpLeft": 72.60375,
+              "averageDamageTaken": 20.26625,
+              "averageDamageDealt": 374.37,
+              "deathCauses": {
+                "首领主体攻击": 82
+              },
+              "victoryCauses": {
+                "卡牌伤害": 645,
+                "反击": 48,
+                "荆棘": 25
+              }
+            },
+            "elite": {
+              "winRate": 0.4025,
+              "averageTurns": 8.33875,
+              "averageHpLeft": 30.69125,
+              "averageDamageTaken": 70.6775,
+              "averageDamageDealt": 520.21375,
+              "deathCauses": {
+                "首领主体攻击": 464,
+                "敌方荆棘": 9,
+                "回合上限": 5
+              },
+              "victoryCauses": {
+                "卡牌伤害": 273,
+                "荆棘": 29,
+                "反击": 20
+              }
+            },
+            "boss": {
+              "winRate": 0.0725,
+              "averageTurns": 9.7775,
+              "averageHpLeft": 8.28875,
+              "averageDamageTaken": 107.965,
+              "averageDamageDealt": 423.62,
+              "deathCauses": {
+                "首领主体攻击": 691,
+                "回合上限": 51
+              },
+              "victoryCauses": {
+                "卡牌伤害": 38,
+                "反击": 5,
+                "荆棘": 15
+              }
+            }
+          }
+        },
+        "coreOnly": {
+          "label": "只有核心无遗物",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.9175,
+              "averageTurns": 8.29625,
+              "averageHpLeft": 72.80625,
+              "averageDamageTaken": 18.34375,
+              "averageDamageDealt": 370.59125,
+              "deathCauses": {
+                "首领主体攻击": 66
+              },
+              "victoryCauses": {
+                "卡牌伤害": 569,
+                "反击": 157,
+                "荆棘": 8
+              }
+            },
+            "elite": {
+              "winRate": 0.3775,
+              "averageTurns": 10.655,
+              "averageHpLeft": 30.8775,
+              "averageDamageTaken": 70.97125,
+              "averageDamageDealt": 484.40875,
+              "deathCauses": {
+                "首领主体攻击": 474,
+                "敌方荆棘": 12,
+                "回合上限": 12
+              },
+              "victoryCauses": {
+                "卡牌伤害": 257,
+                "荆棘": 11,
+                "反击": 34
+              }
+            },
+            "boss": {
+              "winRate": 0.0125,
+              "averageTurns": 8.85625,
+              "averageHpLeft": 4.91625,
+              "averageDamageTaken": 109.33,
+              "averageDamageDealt": 183.18375,
+              "deathCauses": {
+                "首领主体攻击": 730,
+                "回合上限": 60
+              },
+              "victoryCauses": {
+                "卡牌伤害": 9,
+                "荆棘": 1
+              }
+            }
+          }
+        },
+        "mixedNoCore": {
+          "label": "混合拿牌无核心",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.7225,
+              "averageTurns": 7.0275,
+              "averageHpLeft": 44.95875,
+              "averageDamageTaken": 55.24875,
+              "averageDamageDealt": 331.37125,
+              "deathCauses": {
+                "首领主体攻击": 200,
+                "血债清算": 21,
+                "剧毒伤害": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 508,
+                "反击": 29,
+                "荆棘": 35,
+                "出血": 6
+              }
+            },
+            "elite": {
+              "winRate": 0.2625,
+              "averageTurns": 8.57,
+              "averageHpLeft": 17.315,
+              "averageDamageTaken": 95.64875,
+              "averageDamageDealt": 407.02875,
+              "deathCauses": {
+                "首领主体攻击": 517,
+                "血债清算": 44,
+                "回合上限": 15,
+                "敌方荆棘": 11,
+                "出血伤害": 3
+              },
+              "victoryCauses": {
+                "反击": 10,
+                "卡牌伤害": 173,
+                "荆棘": 26,
+                "出血": 1
+              }
+            },
+            "boss": {
+              "winRate": 0.00625,
+              "averageTurns": 6.36875,
+              "averageHpLeft": 1.8375,
+              "averageDamageTaken": 119.75875,
+              "averageDamageDealt": 173.565,
+              "deathCauses": {
+                "首领主体攻击": 709,
+                "召唤物攻击": 3,
+                "血债清算": 62,
+                "回合上限": 21
+              },
+              "victoryCauses": {
+                "卡牌伤害": 3,
+                "荆棘": 2
+              }
+            }
+          }
+        },
+        "mixedMidRelic": {
+          "label": "混合拿牌单遗物",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.7125,
+              "averageTurns": 6.6425,
+              "averageHpLeft": 44.72,
+              "averageDamageTaken": 56.54125,
+              "averageDamageDealt": 336.33375,
+              "deathCauses": {
+                "首领主体攻击": 202,
+                "血债清算": 25,
+                "剧毒伤害": 3
+              },
+              "victoryCauses": {
+                "卡牌伤害": 502,
+                "反击": 38,
+                "出血": 3,
+                "荆棘": 27
+              }
+            },
+            "elite": {
+              "winRate": 0.26,
+              "averageTurns": 8.11375,
+              "averageHpLeft": 16.79875,
+              "averageDamageTaken": 95.31125,
+              "averageDamageDealt": 415.71625,
+              "deathCauses": {
+                "首领主体攻击": 522,
+                "血债清算": 52,
+                "敌方荆棘": 10,
+                "回合上限": 8
+              },
+              "victoryCauses": {
+                "卡牌伤害": 168,
+                "荆棘": 32,
+                "反击": 5,
+                "出血": 3
+              }
+            },
+            "boss": {
+              "winRate": 0.015,
+              "averageTurns": 6.0225,
+              "averageHpLeft": 1.77125,
+              "averageDamageTaken": 121.245,
+              "averageDamageDealt": 173.74125,
+              "deathCauses": {
+                "首领主体攻击": 710,
+                "血债清算": 53,
+                "召唤物攻击": 3,
+                "回合上限": 22
+              },
+              "victoryCauses": {
+                "荆棘": 5,
+                "卡牌伤害": 6,
+                "反击": 1
+              }
+            }
+          }
+        },
+        "mature": {
+          "label": "完整成熟",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.935,
+              "averageTurns": 7.19625,
+              "averageHpLeft": 76.85,
+              "averageDamageTaken": 14.065,
+              "averageDamageDealt": 379.87375,
+              "deathCauses": {
+                "首领主体攻击": 51,
+                "回合上限": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 624,
+                "反击": 117,
+                "荆棘": 7
+              }
+            },
+            "elite": {
+              "winRate": 0.41,
+              "averageTurns": 9.6325,
+              "averageHpLeft": 33.08,
+              "averageDamageTaken": 66.67125,
+              "averageDamageDealt": 525.7,
+              "deathCauses": {
+                "首领主体攻击": 454,
+                "敌方荆棘": 10,
+                "回合上限": 8
+              },
+              "victoryCauses": {
+                "卡牌伤害": 263,
+                "反击": 58,
+                "荆棘": 7
+              }
+            },
+            "boss": {
+              "winRate": 0.035,
+              "averageTurns": 11.33625,
+              "averageHpLeft": 8.6575,
+              "averageDamageTaken": 104.37125,
+              "averageDamageDealt": 354.54125,
+              "deathCauses": {
+                "首领主体攻击": 685,
+                "回合上限": 87
+              },
+              "victoryCauses": {
+                "卡牌伤害": 27,
+                "荆棘": 1
+              }
+            }
+          }
+        }
+      },
+      "diagnosis": [
+        "缺核心体验可接受"
+      ]
+    },
+    {
+      "roleId": "hero_warrior",
+      "role": "勇者战士",
+      "buildId": "execution",
+      "build": "处刑连斩",
+      "scenarios": {
+        "pure": {
+          "label": "纯流派无核心",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.42125,
+              "averageTurns": 4.5775,
+              "averageHpLeft": 16.18625,
+              "averageDamageTaken": 86.83375,
+              "averageDamageDealt": 299.22125,
+              "deathCauses": {
+                "首领主体攻击": 455,
+                "剧毒伤害": 8
+              },
+              "victoryCauses": {
+                "卡牌伤害": 337
+              }
+            },
+            "elite": {
+              "winRate": 0.02625,
+              "averageTurns": 4.795,
+              "averageHpLeft": 0.5525,
+              "averageDamageTaken": 116.44125,
+              "averageDamageDealt": 319.59625,
+              "deathCauses": {
+                "首领主体攻击": 728,
+                "敌方荆棘": 46,
+                "出血伤害": 4,
+                "召唤物攻击": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 21
+              }
+            },
+            "boss": {
+              "winRate": 0,
+              "averageTurns": 3.45375,
+              "averageHpLeft": 0,
+              "averageDamageTaken": 125.28875,
+              "averageDamageDealt": 117.25875,
+              "deathCauses": {
+                "首领主体攻击": 726,
+                "召唤物攻击": 74
+              },
+              "victoryCauses": {}
+            }
+          }
+        },
+        "mid": {
+          "label": "单方向遗物",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.52875,
+              "averageTurns": 4.32125,
+              "averageHpLeft": 21.61875,
+              "averageDamageTaken": 78.355,
+              "averageDamageDealt": 318.78625,
+              "deathCauses": {
+                "首领主体攻击": 375,
+                "剧毒伤害": 2
+              },
+              "victoryCauses": {
+                "卡牌伤害": 423
+              }
+            },
+            "elite": {
+              "winRate": 0.03875,
+              "averageTurns": 4.80875,
+              "averageHpLeft": 0.965,
+              "averageDamageTaken": 117.55625,
+              "averageDamageDealt": 353.045,
+              "deathCauses": {
+                "敌方荆棘": 47,
+                "首领主体攻击": 711,
+                "出血伤害": 9,
+                "召唤物攻击": 2
+              },
+              "victoryCauses": {
+                "卡牌伤害": 31
+              }
+            },
+            "boss": {
+              "winRate": 0,
+              "averageTurns": 3.47875,
+              "averageHpLeft": 0,
+              "averageDamageTaken": 130.845,
+              "averageDamageDealt": 142.11125,
+              "deathCauses": {
+                "首领主体攻击": 743,
+                "召唤物攻击": 57
+              },
+              "victoryCauses": {}
+            }
+          }
+        },
+        "noCoreMatureRelics": {
+          "label": "成熟遗物缺核心",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.7125,
+              "averageTurns": 3.85875,
+              "averageHpLeft": 34.56625,
+              "averageDamageTaken": 62.99125,
+              "averageDamageDealt": 360.5225,
+              "deathCauses": {
+                "首领主体攻击": 229,
+                "剧毒伤害": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 570
+              }
+            },
+            "elite": {
+              "winRate": 0.19625,
+              "averageTurns": 4.45125,
+              "averageHpLeft": 5.13375,
+              "averageDamageTaken": 108.72875,
+              "averageDamageDealt": 463.2925,
+              "deathCauses": {
+                "首领主体攻击": 605,
+                "敌方荆棘": 37,
+                "出血伤害": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 157
+              }
+            },
+            "boss": {
+              "winRate": 0.0025,
+              "averageTurns": 3.525,
+              "averageHpLeft": 0.1175,
+              "averageDamageTaken": 127.7,
+              "averageDamageDealt": 232.9325,
+              "deathCauses": {
+                "首领主体攻击": 763,
+                "召唤物攻击": 35
+              },
+              "victoryCauses": {
+                "卡牌伤害": 2
+              }
+            }
+          }
+        },
+        "coreOnly": {
+          "label": "只有核心无遗物",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.9175,
+              "averageTurns": 3.21,
+              "averageHpLeft": 50.71625,
+              "averageDamageTaken": 41.51125,
+              "averageDamageDealt": 390.92625,
+              "deathCauses": {
+                "首领主体攻击": 66
+              },
+              "victoryCauses": {
+                "卡牌伤害": 734
+              }
+            },
+            "elite": {
+              "winRate": 0.44625,
+              "averageTurns": 4.07125,
+              "averageHpLeft": 12.89125,
+              "averageDamageTaken": 93.19125,
+              "averageDamageDealt": 594.64375,
+              "deathCauses": {
+                "首领主体攻击": 417,
+                "敌方荆棘": 25,
+                "出血伤害": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 357
+              }
+            },
+            "boss": {
+              "winRate": 0.02375,
+              "averageTurns": 3.4975,
+              "averageHpLeft": 0.495,
+              "averageDamageTaken": 131.57125,
+              "averageDamageDealt": 376.2675,
+              "deathCauses": {
+                "首领主体攻击": 774,
+                "召唤物攻击": 7
+              },
+              "victoryCauses": {
+                "卡牌伤害": 19
+              }
+            }
+          }
+        },
+        "mixedNoCore": {
+          "label": "混合拿牌无核心",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.47625,
+              "averageTurns": 5.2475,
+              "averageHpLeft": 21.56625,
+              "averageDamageTaken": 85.29125,
+              "averageDamageDealt": 291.50875,
+              "deathCauses": {
+                "首领主体攻击": 367,
+                "血债清算": 49,
+                "剧毒伤害": 3
+              },
+              "victoryCauses": {
+                "卡牌伤害": 355,
+                "荆棘": 6,
+                "反击": 18,
+                "出血": 2
+              }
+            },
+            "elite": {
+              "winRate": 0.07125,
+              "averageTurns": 5.38625,
+              "averageHpLeft": 3.95,
+              "averageDamageTaken": 114.07,
+              "averageDamageDealt": 299.56625,
+              "deathCauses": {
+                "首领主体攻击": 645,
+                "血债清算": 76,
+                "敌方荆棘": 19,
+                "出血伤害": 1,
+                "召唤物攻击": 1,
+                "回合上限": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 55,
+                "反击": 2
+              }
+            },
+            "boss": {
+              "winRate": 0.00125,
+              "averageTurns": 3.9675,
+              "averageHpLeft": 0.45,
+              "averageDamageTaken": 129.7675,
+              "averageDamageDealt": 117.26375,
+              "deathCauses": {
+                "首领主体攻击": 726,
+                "召唤物攻击": 39,
+                "血债清算": 31,
+                "回合上限": 3
+              },
+              "victoryCauses": {
+                "卡牌伤害": 1
+              }
+            }
+          }
+        },
+        "mixedMidRelic": {
+          "label": "混合拿牌单遗物",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.48375,
+              "averageTurns": 4.97125,
+              "averageHpLeft": 21.755,
+              "averageDamageTaken": 85.94125,
+              "averageDamageDealt": 301.845,
+              "deathCauses": {
+                "首领主体攻击": 355,
+                "血债清算": 53,
+                "剧毒伤害": 5
+              },
+              "victoryCauses": {
+                "卡牌伤害": 363,
+                "反击": 16,
+                "出血": 4,
+                "荆棘": 4
+              }
+            },
+            "elite": {
+              "winRate": 0.095,
+              "averageTurns": 5.4475,
+              "averageHpLeft": 4.78,
+              "averageDamageTaken": 112.2875,
+              "averageDamageDealt": 322.2725,
+              "deathCauses": {
+                "首领主体攻击": 639,
+                "血债清算": 70,
+                "敌方荆棘": 12,
+                "出血伤害": 2,
+                "回合上限": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 73,
+                "荆棘": 3
+              }
+            },
+            "boss": {
+              "winRate": 0.0025,
+              "averageTurns": 3.86875,
+              "averageHpLeft": 0.0725,
+              "averageDamageTaken": 128.56,
+              "averageDamageDealt": 132.95375,
+              "deathCauses": {
+                "首领主体攻击": 741,
+                "血债清算": 36,
+                "召唤物攻击": 20,
+                "回合上限": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 2
+              }
+            }
+          }
+        },
+        "mature": {
+          "label": "完整成熟",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.95125,
+              "averageTurns": 2.97,
+              "averageHpLeft": 57.0525,
+              "averageDamageTaken": 34.5775,
+              "averageDamageDealt": 406.60375,
+              "deathCauses": {
+                "首领主体攻击": 39
+              },
+              "victoryCauses": {
+                "卡牌伤害": 761
+              }
+            },
+            "elite": {
+              "winRate": 0.63375,
+              "averageTurns": 3.88,
+              "averageHpLeft": 17.81375,
+              "averageDamageTaken": 81.4875,
+              "averageDamageDealt": 655.45125,
+              "deathCauses": {
+                "首领主体攻击": 282,
+                "敌方荆棘": 10,
+                "出血伤害": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 507
+              }
+            },
+            "boss": {
+              "winRate": 0.05125,
+              "averageTurns": 3.76875,
+              "averageHpLeft": 1.83125,
+              "averageDamageTaken": 131.03375,
+              "averageDamageDealt": 548.17,
+              "deathCauses": {
+                "首领主体攻击": 753,
+                "召唤物攻击": 6
+              },
+              "victoryCauses": {
+                "卡牌伤害": 41
+              }
+            }
+          }
+        }
+      },
+      "diagnosis": [
+        "后期普通核心依赖过高(+23.9pp)",
+        "后期精英缺核心底线偏低(19.6%)",
+        "后期精英核心依赖过高(+43.8pp)",
+        "最终首领缺核心底线偏低(0.3%)"
+      ]
+    },
+    {
+      "roleId": "hero_warrior",
+      "role": "勇者战士",
+      "buildId": "bloodoath",
+      "build": "血誓狂战",
+      "scenarios": {
+        "pure": {
+          "label": "纯流派无核心",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.44625,
+              "averageTurns": 5.925,
+              "averageHpLeft": 26.23375,
+              "averageDamageTaken": 129.20375,
+              "averageDamageDealt": 270.07,
+              "deathCauses": {
+                "首领主体攻击": 436,
+                "剧毒伤害": 4,
+                "血债清算": 2,
+                "召唤物攻击": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 335,
+                "出血": 22
+              }
+            },
+            "elite": {
+              "winRate": 0.0925,
+              "averageTurns": 6.03375,
+              "averageHpLeft": 6.21125,
+              "averageDamageTaken": 155.2225,
+              "averageDamageDealt": 273.87875,
+              "deathCauses": {
+                "首领主体攻击": 714,
+                "出血伤害": 3,
+                "敌方荆棘": 7,
+                "召唤物攻击": 2
+              },
+              "victoryCauses": {
+                "卡牌伤害": 64,
+                "出血": 10
+              }
+            },
+            "boss": {
+              "winRate": 0.00125,
+              "averageTurns": 4.1975,
+              "averageHpLeft": 0.3425,
+              "averageDamageTaken": 144.585,
+              "averageDamageDealt": 130.41625,
+              "deathCauses": {
+                "首领主体攻击": 772,
+                "召唤物攻击": 21,
+                "回合上限": 3,
+                "血债清算": 3
+              },
+              "victoryCauses": {
+                "出血": 1
+              }
+            }
+          }
+        },
+        "mid": {
+          "label": "单方向遗物",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.5675,
+              "averageTurns": 5.92,
+              "averageHpLeft": 33.15,
+              "averageDamageTaken": 118.62875,
+              "averageDamageDealt": 302.72125,
+              "deathCauses": {
+                "首领主体攻击": 342,
+                "血债清算": 2,
+                "剧毒伤害": 2
+              },
+              "victoryCauses": {
+                "卡牌伤害": 425,
+                "出血": 29
+              }
+            },
+            "elite": {
+              "winRate": 0.14125,
+              "averageTurns": 6.47125,
+              "averageHpLeft": 9.20125,
+              "averageDamageTaken": 156.57625,
+              "averageDamageDealt": 330.785,
+              "deathCauses": {
+                "首领主体攻击": 671,
+                "敌方荆棘": 10,
+                "召唤物攻击": 2,
+                "出血伤害": 2,
+                "血债清算": 2
+              },
+              "victoryCauses": {
+                "卡牌伤害": 102,
+                "出血": 11
+              }
+            },
+            "boss": {
+              "winRate": 0.00125,
+              "averageTurns": 4.5325,
+              "averageHpLeft": 0.6175,
+              "averageDamageTaken": 146.02375,
+              "averageDamageDealt": 163.81,
+              "deathCauses": {
+                "首领主体攻击": 757,
+                "召唤物攻击": 33,
+                "回合上限": 6,
+                "血债清算": 3
+              },
+              "victoryCauses": {
+                "卡牌伤害": 1
+              }
+            }
+          }
+        },
+        "noCoreMatureRelics": {
+          "label": "成熟遗物缺核心",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.60625,
+              "averageTurns": 6.04625,
+              "averageHpLeft": 40.69125,
+              "averageDamageTaken": 125.22,
+              "averageDamageDealt": 313.265,
+              "deathCauses": {
+                "首领主体攻击": 314,
+                "剧毒伤害": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 448,
+                "出血": 37
+              }
+            },
+            "elite": {
+              "winRate": 0.2225,
+              "averageTurns": 7.16,
+              "averageHpLeft": 15.37875,
+              "averageDamageTaken": 171.93375,
+              "averageDamageDealt": 364.8325,
+              "deathCauses": {
+                "首领主体攻击": 615,
+                "召唤物攻击": 3,
+                "出血伤害": 2,
+                "血债清算": 1,
+                "敌方荆棘": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 161,
+                "出血": 17
+              }
+            },
+            "boss": {
+              "winRate": 0.0025,
+              "averageTurns": 4.81625,
+              "averageHpLeft": 0.6375,
+              "averageDamageTaken": 153.9675,
+              "averageDamageDealt": 173.055,
+              "deathCauses": {
+                "首领主体攻击": 773,
+                "回合上限": 6,
+                "召唤物攻击": 17,
+                "血债清算": 2
+              },
+              "victoryCauses": {
+                "出血": 1,
+                "卡牌伤害": 1
+              }
+            }
+          }
+        },
+        "coreOnly": {
+          "label": "只有核心无遗物",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.80125,
+              "averageTurns": 4.9475,
+              "averageHpLeft": 62.52,
+              "averageDamageTaken": 99.345,
+              "averageDamageDealt": 352.955,
+              "deathCauses": {
+                "首领主体攻击": 158,
+                "剧毒伤害": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 624,
+                "出血": 17
+              }
+            },
+            "elite": {
+              "winRate": 0.3275,
+              "averageTurns": 6.15875,
+              "averageHpLeft": 24.91625,
+              "averageDamageTaken": 170.7175,
+              "averageDamageDealt": 451.6425,
+              "deathCauses": {
+                "首领主体攻击": 535,
+                "出血伤害": 1,
+                "敌方荆棘": 2
+              },
+              "victoryCauses": {
+                "卡牌伤害": 249,
+                "出血": 13
+              }
+            },
+            "boss": {
+              "winRate": 0.035,
+              "averageTurns": 4.37125,
+              "averageHpLeft": 3.02,
+              "averageDamageTaken": 152.85,
+              "averageDamageDealt": 256.405,
+              "deathCauses": {
+                "首领主体攻击": 750,
+                "召唤物攻击": 21,
+                "血债清算": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 27,
+                "出血": 1
+              }
+            }
+          }
+        },
+        "mixedNoCore": {
+          "label": "混合拿牌无核心",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.52625,
+              "averageTurns": 6.42,
+              "averageHpLeft": 30.10125,
+              "averageDamageTaken": 107.55875,
+              "averageDamageDealt": 289.21375,
+              "deathCauses": {
+                "首领主体攻击": 365,
+                "血债清算": 8,
+                "剧毒伤害": 6
+              },
+              "victoryCauses": {
+                "卡牌伤害": 382,
+                "反击": 12,
+                "出血": 16,
+                "荆棘": 11
+              }
+            },
+            "elite": {
+              "winRate": 0.13625,
+              "averageTurns": 6.955,
+              "averageHpLeft": 9.03,
+              "averageDamageTaken": 140.26875,
+              "averageDamageDealt": 301.67,
+              "deathCauses": {
+                "首领主体攻击": 661,
+                "敌方荆棘": 10,
+                "出血伤害": 2,
+                "召唤物攻击": 2,
+                "血债清算": 10,
+                "回合上限": 6
+              },
+              "victoryCauses": {
+                "出血": 14,
+                "荆棘": 5,
+                "卡牌伤害": 87,
+                "反击": 3
+              }
+            },
+            "boss": {
+              "winRate": 0.005,
+              "averageTurns": 4.80375,
+              "averageHpLeft": 1.9825,
+              "averageDamageTaken": 136.81125,
+              "averageDamageDealt": 140.91,
+              "deathCauses": {
+                "首领主体攻击": 721,
+                "召唤物攻击": 30,
+                "血债清算": 27,
+                "回合上限": 18
+              },
+              "victoryCauses": {
+                "卡牌伤害": 3,
+                "出血": 1
+              }
+            }
+          }
+        },
+        "mixedMidRelic": {
+          "label": "混合拿牌单遗物",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.56625,
+              "averageTurns": 6.0825,
+              "averageHpLeft": 34.6975,
+              "averageDamageTaken": 99.44375,
+              "averageDamageDealt": 300.2825,
+              "deathCauses": {
+                "首领主体攻击": 329,
+                "血债清算": 12,
+                "剧毒伤害": 5,
+                "召唤物攻击": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 407,
+                "出血": 27,
+                "反击": 9,
+                "荆棘": 10
+              }
+            },
+            "elite": {
+              "winRate": 0.17125,
+              "averageTurns": 7.13,
+              "averageHpLeft": 11.69625,
+              "averageDamageTaken": 138.965,
+              "averageDamageDealt": 337.78875,
+              "deathCauses": {
+                "首领主体攻击": 625,
+                "敌方荆棘": 16,
+                "出血伤害": 7,
+                "血债清算": 12,
+                "回合上限": 2,
+                "召唤物攻击": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 105,
+                "出血": 22,
+                "荆棘": 5,
+                "反击": 5
+              }
+            },
+            "boss": {
+              "winRate": 0.00875,
+              "averageTurns": 5.33,
+              "averageHpLeft": 2.23625,
+              "averageDamageTaken": 138.78375,
+              "averageDamageDealt": 170.46125,
+              "deathCauses": {
+                "首领主体攻击": 718,
+                "召唤物攻击": 27,
+                "回合上限": 21,
+                "血债清算": 27
+              },
+              "victoryCauses": {
+                "卡牌伤害": 7
+              }
+            }
+          }
+        },
+        "mature": {
+          "label": "完整成熟",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.8325,
+              "averageTurns": 5.06,
+              "averageHpLeft": 66.31375,
+              "averageDamageTaken": 101.7075,
+              "averageDamageDealt": 358.07625,
+              "deathCauses": {
+                "首领主体攻击": 133,
+                "血债清算": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 634,
+                "出血": 32
+              }
+            },
+            "elite": {
+              "winRate": 0.4025,
+              "averageTurns": 6.6625,
+              "averageHpLeft": 31.3425,
+              "averageDamageTaken": 175.4975,
+              "averageDamageDealt": 490.0375,
+              "deathCauses": {
+                "首领主体攻击": 472,
+                "出血伤害": 2,
+                "敌方荆棘": 3,
+                "召唤物攻击": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 301,
+                "出血": 21
+              }
+            },
+            "boss": {
+              "winRate": 0.03875,
+              "averageTurns": 4.78625,
+              "averageHpLeft": 3.3725,
+              "averageDamageTaken": 157.75875,
+              "averageDamageDealt": 283.97125,
+              "deathCauses": {
+                "首领主体攻击": 746,
+                "召唤物攻击": 23
+              },
+              "victoryCauses": {
+                "卡牌伤害": 30,
+                "出血": 1
+              }
+            }
+          }
+        }
+      },
+      "diagnosis": [
+        "后期普通缺核心底线偏低(60.6%)",
+        "后期普通核心依赖过高(+22.6pp)",
+        "后期精英缺核心底线偏低(22.3%)",
+        "后期精英核心依赖过高(+18.0pp)",
+        "最终首领缺核心底线偏低(0.3%)"
+      ]
+    },
+    {
+      "roleId": "hero_mage",
+      "role": "萝莉魔导士",
+      "buildId": "chant",
+      "build": "星火咏唱",
+      "scenarios": {
+        "pure": {
+          "label": "纯流派无核心",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.365,
+              "averageTurns": 4.75125,
+              "averageHpLeft": 11.36,
+              "averageDamageTaken": 79.63375,
+              "averageDamageDealt": 270.25625,
+              "deathCauses": {
+                "首领主体攻击": 497,
+                "剧毒伤害": 11
+              },
+              "victoryCauses": {
+                "卡牌伤害": 292
+              }
+            },
+            "elite": {
+              "winRate": 0.01125,
+              "averageTurns": 4.2625,
+              "averageHpLeft": 0.31375,
+              "averageDamageTaken": 98.59,
+              "averageDamageDealt": 244.46375,
+              "deathCauses": {
+                "首领主体攻击": 772,
+                "敌方荆棘": 10,
+                "出血伤害": 9
+              },
+              "victoryCauses": {
+                "卡牌伤害": 9
+              }
+            },
+            "boss": {
+              "winRate": 0,
+              "averageTurns": 2.945,
+              "averageHpLeft": 0,
+              "averageDamageTaken": 108.27625,
+              "averageDamageDealt": 65.2625,
+              "deathCauses": {
+                "首领主体攻击": 797,
+                "召唤物攻击": 3
+              },
+              "victoryCauses": {}
+            }
+          }
+        },
+        "mid": {
+          "label": "单方向遗物",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.5275,
+              "averageTurns": 4.8575,
+              "averageHpLeft": 19.76375,
+              "averageDamageTaken": 67.10625,
+              "averageDamageDealt": 298.4975,
+              "deathCauses": {
+                "首领主体攻击": 372,
+                "剧毒伤害": 6
+              },
+              "victoryCauses": {
+                "卡牌伤害": 422
+              }
+            },
+            "elite": {
+              "winRate": 0.0525,
+              "averageTurns": 5.16625,
+              "averageHpLeft": 1.91625,
+              "averageDamageTaken": 97.705,
+              "averageDamageDealt": 301.13,
+              "deathCauses": {
+                "首领主体攻击": 742,
+                "敌方荆棘": 7,
+                "出血伤害": 9
+              },
+              "victoryCauses": {
+                "卡牌伤害": 42
+              }
+            },
+            "boss": {
+              "winRate": 0,
+              "averageTurns": 3.19125,
+              "averageHpLeft": 0,
+              "averageDamageTaken": 115.3125,
+              "averageDamageDealt": 79.01375,
+              "deathCauses": {
+                "首领主体攻击": 799,
+                "召唤物攻击": 1
+              },
+              "victoryCauses": {}
+            }
+          }
+        },
+        "noCoreMatureRelics": {
+          "label": "成熟遗物缺核心",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.8725,
+              "averageTurns": 3.68625,
+              "averageHpLeft": 48.625,
+              "averageDamageTaken": 28.54375,
+              "averageDamageDealt": 369.30375,
+              "deathCauses": {
+                "首领主体攻击": 102
+              },
+              "victoryCauses": {
+                "卡牌伤害": 698
+              }
+            },
+            "elite": {
+              "winRate": 0.29375,
+              "averageTurns": 4.72375,
+              "averageHpLeft": 12.55,
+              "averageDamageTaken": 81.46625,
+              "averageDamageDealt": 505.56625,
+              "deathCauses": {
+                "首领主体攻击": 560,
+                "出血伤害": 1,
+                "敌方荆棘": 4
+              },
+              "victoryCauses": {
+                "卡牌伤害": 235
+              }
+            },
+            "boss": {
+              "winRate": 0,
+              "averageTurns": 3.5275,
+              "averageHpLeft": 0,
+              "averageDamageTaken": 112.335,
+              "averageDamageDealt": 211.5975,
+              "deathCauses": {
+                "首领主体攻击": 800
+              },
+              "victoryCauses": {}
+            }
+          }
+        },
+        "coreOnly": {
+          "label": "只有核心无遗物",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.63875,
+              "averageTurns": 3.86375,
+              "averageHpLeft": 25.575,
+              "averageDamageTaken": 58.095,
+              "averageDamageDealt": 329.14375,
+              "deathCauses": {
+                "首领主体攻击": 283,
+                "剧毒伤害": 6
+              },
+              "victoryCauses": {
+                "卡牌伤害": 511
+              }
+            },
+            "elite": {
+              "winRate": 0.11875,
+              "averageTurns": 4.11125,
+              "averageHpLeft": 3.7275,
+              "averageDamageTaken": 92.74,
+              "averageDamageDealt": 374.69625,
+              "deathCauses": {
+                "首领主体攻击": 689,
+                "出血伤害": 5,
+                "敌方荆棘": 11
+              },
+              "victoryCauses": {
+                "卡牌伤害": 95
+              }
+            },
+            "boss": {
+              "winRate": 0.00125,
+              "averageTurns": 2.9825,
+              "averageHpLeft": 0.01,
+              "averageDamageTaken": 109.00375,
+              "averageDamageDealt": 135.24875,
+              "deathCauses": {
+                "首领主体攻击": 799
+              },
+              "victoryCauses": {
+                "卡牌伤害": 1
+              }
+            }
+          }
+        },
+        "mixedNoCore": {
+          "label": "混合拿牌无核心",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.41875,
+              "averageTurns": 5.20625,
+              "averageHpLeft": 14.925,
+              "averageDamageTaken": 75.12625,
+              "averageDamageDealt": 274.49375,
+              "deathCauses": {
+                "首领主体攻击": 462,
+                "剧毒伤害": 3
+              },
+              "victoryCauses": {
+                "卡牌伤害": 328,
+                "燃烧": 7
+              }
+            },
+            "elite": {
+              "winRate": 0.065,
+              "averageTurns": 5.3,
+              "averageHpLeft": 3.1575,
+              "averageDamageTaken": 93.77125,
+              "averageDamageDealt": 270.79875,
+              "deathCauses": {
+                "首领主体攻击": 732,
+                "敌方荆棘": 11,
+                "出血伤害": 4,
+                "召唤物攻击": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 52
+              }
+            },
+            "boss": {
+              "winRate": 0.00125,
+              "averageTurns": 3.50375,
+              "averageHpLeft": 0.01875,
+              "averageDamageTaken": 107.96625,
+              "averageDamageDealt": 93.1475,
+              "deathCauses": {
+                "首领主体攻击": 791,
+                "召唤物攻击": 8
+              },
+              "victoryCauses": {
+                "卡牌伤害": 1
+              }
+            }
+          }
+        },
+        "mixedMidRelic": {
+          "label": "混合拿牌单遗物",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.50625,
+              "averageTurns": 5.3375,
+              "averageHpLeft": 21.4275,
+              "averageDamageTaken": 68.245,
+              "averageDamageDealt": 287.6375,
+              "deathCauses": {
+                "首领主体攻击": 392,
+                "剧毒伤害": 3
+              },
+              "victoryCauses": {
+                "卡牌伤害": 402,
+                "燃烧": 3
+              }
+            },
+            "elite": {
+              "winRate": 0.10125,
+              "averageTurns": 5.83875,
+              "averageHpLeft": 4.46625,
+              "averageDamageTaken": 94.14875,
+              "averageDamageDealt": 312.11375,
+              "deathCauses": {
+                "首领主体攻击": 704,
+                "敌方荆棘": 12,
+                "出血伤害": 3
+              },
+              "victoryCauses": {
+                "卡牌伤害": 79,
+                "燃烧": 2
+              }
+            },
+            "boss": {
+              "winRate": 0.00125,
+              "averageTurns": 3.81,
+              "averageHpLeft": 0.2275,
+              "averageDamageTaken": 111.92875,
+              "averageDamageDealt": 106.27625,
+              "deathCauses": {
+                "首领主体攻击": 791,
+                "召唤物攻击": 6,
+                "回合上限": 2
+              },
+              "victoryCauses": {
+                "卡牌伤害": 1
+              }
+            }
+          }
+        },
+        "mature": {
+          "label": "完整成熟",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.9325,
+              "averageTurns": 3.0275,
+              "averageHpLeft": 54.3475,
+              "averageDamageTaken": 19.9475,
+              "averageDamageDealt": 400.6925,
+              "deathCauses": {
+                "首领主体攻击": 54
+              },
+              "victoryCauses": {
+                "卡牌伤害": 746
+              }
+            },
+            "elite": {
+              "winRate": 0.5525,
+              "averageTurns": 4.04625,
+              "averageHpLeft": 24.0475,
+              "averageDamageTaken": 61.35625,
+              "averageDamageDealt": 619.675,
+              "deathCauses": {
+                "首领主体攻击": 358
+              },
+              "victoryCauses": {
+                "卡牌伤害": 442
+              }
+            },
+            "boss": {
+              "winRate": 0.03375,
+              "averageTurns": 3.85375,
+              "averageHpLeft": 1.19125,
+              "averageDamageTaken": 111.7425,
+              "averageDamageDealt": 476.27125,
+              "deathCauses": {
+                "首领主体攻击": 773
+              },
+              "victoryCauses": {
+                "卡牌伤害": 27
+              }
+            }
+          }
+        }
+      },
+      "diagnosis": [
+        "后期精英核心依赖过高(+25.9pp)",
+        "最终首领缺核心底线偏低(0.0%)"
+      ]
+    },
+    {
+      "roleId": "hero_mage",
+      "role": "萝莉魔导士",
+      "buildId": "mirror",
+      "build": "镜像回路",
+      "scenarios": {
+        "pure": {
+          "label": "纯流派无核心",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.51875,
+              "averageTurns": 4.79625,
+              "averageHpLeft": 20.8425,
+              "averageDamageTaken": 69.05875,
+              "averageDamageDealt": 290.98125,
+              "deathCauses": {
+                "首领主体攻击": 382,
+                "剧毒伤害": 3
+              },
+              "victoryCauses": {
+                "卡牌伤害": 415
+              }
+            },
+            "elite": {
+              "winRate": 0.05625,
+              "averageTurns": 4.8,
+              "averageHpLeft": 2.0375,
+              "averageDamageTaken": 97.55625,
+              "averageDamageDealt": 293.07125,
+              "deathCauses": {
+                "首领主体攻击": 733,
+                "敌方荆棘": 12,
+                "出血伤害": 9,
+                "回合上限": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 45
+              }
+            },
+            "boss": {
+              "winRate": 0,
+              "averageTurns": 3.0725,
+              "averageHpLeft": 0,
+              "averageDamageTaken": 111.68625,
+              "averageDamageDealt": 88.45125,
+              "deathCauses": {
+                "首领主体攻击": 795,
+                "召唤物攻击": 5
+              },
+              "victoryCauses": {}
+            }
+          }
+        },
+        "mid": {
+          "label": "单方向遗物",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.61875,
+              "averageTurns": 4.48375,
+              "averageHpLeft": 25.54625,
+              "averageDamageTaken": 61.94,
+              "averageDamageDealt": 317.8625,
+              "deathCauses": {
+                "首领主体攻击": 301,
+                "剧毒伤害": 4
+              },
+              "victoryCauses": {
+                "卡牌伤害": 495
+              }
+            },
+            "elite": {
+              "winRate": 0.11375,
+              "averageTurns": 5.26375,
+              "averageHpLeft": 4.6525,
+              "averageDamageTaken": 95.70375,
+              "averageDamageDealt": 351.03,
+              "deathCauses": {
+                "首领主体攻击": 688,
+                "出血伤害": 4,
+                "敌方荆棘": 16,
+                "回合上限": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 91
+              }
+            },
+            "boss": {
+              "winRate": 0,
+              "averageTurns": 3.19125,
+              "averageHpLeft": 0,
+              "averageDamageTaken": 111.83625,
+              "averageDamageDealt": 103.8975,
+              "deathCauses": {
+                "首领主体攻击": 796,
+                "召唤物攻击": 4
+              },
+              "victoryCauses": {}
+            }
+          }
+        },
+        "noCoreMatureRelics": {
+          "label": "成熟遗物缺核心",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.8425,
+              "averageTurns": 4.09625,
+              "averageHpLeft": 45.99625,
+              "averageDamageTaken": 32.71875,
+              "averageDamageDealt": 360.78,
+              "deathCauses": {
+                "首领主体攻击": 126
+              },
+              "victoryCauses": {
+                "卡牌伤害": 674
+              }
+            },
+            "elite": {
+              "winRate": 0.2825,
+              "averageTurns": 5.38375,
+              "averageHpLeft": 13.5125,
+              "averageDamageTaken": 82.44375,
+              "averageDamageDealt": 478.03125,
+              "deathCauses": {
+                "首领主体攻击": 554,
+                "敌方荆棘": 16,
+                "出血伤害": 4
+              },
+              "victoryCauses": {
+                "卡牌伤害": 226
+              }
+            },
+            "boss": {
+              "winRate": 0.00125,
+              "averageTurns": 3.89625,
+              "averageHpLeft": 0.16875,
+              "averageDamageTaken": 115.28875,
+              "averageDamageDealt": 205.01,
+              "deathCauses": {
+                "首领主体攻击": 796,
+                "召唤物攻击": 2,
+                "回合上限": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 1
+              }
+            }
+          }
+        },
+        "coreOnly": {
+          "label": "只有核心无遗物",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.68875,
+              "averageTurns": 4.15125,
+              "averageHpLeft": 28.535,
+              "averageDamageTaken": 56.39875,
+              "averageDamageDealt": 327.725,
+              "deathCauses": {
+                "首领主体攻击": 245,
+                "剧毒伤害": 4
+              },
+              "victoryCauses": {
+                "卡牌伤害": 551
+              }
+            },
+            "elite": {
+              "winRate": 0.105,
+              "averageTurns": 4.8,
+              "averageHpLeft": 3.915,
+              "averageDamageTaken": 93.75625,
+              "averageDamageDealt": 372.17625,
+              "deathCauses": {
+                "首领主体攻击": 698,
+                "敌方荆棘": 13,
+                "出血伤害": 5
+              },
+              "victoryCauses": {
+                "卡牌伤害": 84
+              }
+            },
+            "boss": {
+              "winRate": 0,
+              "averageTurns": 3.1725,
+              "averageHpLeft": 0,
+              "averageDamageTaken": 110.60875,
+              "averageDamageDealt": 134.79875,
+              "deathCauses": {
+                "首领主体攻击": 799,
+                "召唤物攻击": 1
+              },
+              "victoryCauses": {}
+            }
+          }
+        },
+        "mixedNoCore": {
+          "label": "混合拿牌无核心",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.49,
+              "averageTurns": 5.23125,
+              "averageHpLeft": 19.94,
+              "averageDamageTaken": 69.135,
+              "averageDamageDealt": 281.2125,
+              "deathCauses": {
+                "首领主体攻击": 405,
+                "剧毒伤害": 3
+              },
+              "victoryCauses": {
+                "卡牌伤害": 382,
+                "燃烧": 10
+              }
+            },
+            "elite": {
+              "winRate": 0.0975,
+              "averageTurns": 5.73375,
+              "averageHpLeft": 5.375,
+              "averageDamageTaken": 92.78625,
+              "averageDamageDealt": 302.955,
+              "deathCauses": {
+                "首领主体攻击": 697,
+                "敌方荆棘": 16,
+                "出血伤害": 5,
+                "回合上限": 4
+              },
+              "victoryCauses": {
+                "卡牌伤害": 75,
+                "燃烧": 3
+              }
+            },
+            "boss": {
+              "winRate": 0.005,
+              "averageTurns": 4.045,
+              "averageHpLeft": 0.79625,
+              "averageDamageTaken": 108.875,
+              "averageDamageDealt": 123.3425,
+              "deathCauses": {
+                "首领主体攻击": 780,
+                "召唤物攻击": 9,
+                "回合上限": 7
+              },
+              "victoryCauses": {
+                "卡牌伤害": 4
+              }
+            }
+          }
+        },
+        "mixedMidRelic": {
+          "label": "混合拿牌单遗物",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.645,
+              "averageTurns": 4.94875,
+              "averageHpLeft": 28.40375,
+              "averageDamageTaken": 56.94125,
+              "averageDamageDealt": 315.44875,
+              "deathCauses": {
+                "首领主体攻击": 280,
+                "剧毒伤害": 4
+              },
+              "victoryCauses": {
+                "卡牌伤害": 504,
+                "燃烧": 12
+              }
+            },
+            "elite": {
+              "winRate": 0.1625,
+              "averageTurns": 5.7525,
+              "averageHpLeft": 7.91,
+              "averageDamageTaken": 88.24,
+              "averageDamageDealt": 356.08125,
+              "deathCauses": {
+                "首领主体攻击": 656,
+                "出血伤害": 6,
+                "敌方荆棘": 8
+              },
+              "victoryCauses": {
+                "卡牌伤害": 128,
+                "燃烧": 2
+              }
+            },
+            "boss": {
+              "winRate": 0.00875,
+              "averageTurns": 4.3075,
+              "averageHpLeft": 1.09875,
+              "averageDamageTaken": 107.8975,
+              "averageDamageDealt": 166.99,
+              "deathCauses": {
+                "首领主体攻击": 778,
+                "回合上限": 7,
+                "召唤物攻击": 8
+              },
+              "victoryCauses": {
+                "卡牌伤害": 7
+              }
+            }
+          }
+        },
+        "mature": {
+          "label": "完整成熟",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.9225,
+              "averageTurns": 3.0975,
+              "averageHpLeft": 55.04875,
+              "averageDamageTaken": 20.1625,
+              "averageDamageDealt": 379.0075,
+              "deathCauses": {
+                "首领主体攻击": 61,
+                "剧毒伤害": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 738
+              }
+            },
+            "elite": {
+              "winRate": 0.43125,
+              "averageTurns": 4.57125,
+              "averageHpLeft": 20.59625,
+              "averageDamageTaken": 68.9725,
+              "averageDamageDealt": 561.09,
+              "deathCauses": {
+                "首领主体攻击": 436,
+                "敌方荆棘": 18,
+                "出血伤害": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 345
+              }
+            },
+            "boss": {
+              "winRate": 0.005,
+              "averageTurns": 4.09,
+              "averageHpLeft": 0.45,
+              "averageDamageTaken": 114.005,
+              "averageDamageDealt": 364.14,
+              "deathCauses": {
+                "首领主体攻击": 795,
+                "回合上限": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 4
+              }
+            }
+          }
+        }
+      },
+      "diagnosis": [
+        "最终首领缺核心底线偏低(0.1%)"
+      ]
+    },
+    {
+      "roleId": "hero_mage",
+      "role": "萝莉魔导士",
+      "buildId": "calamity",
+      "build": "灾厄术士",
+      "scenarios": {
+        "pure": {
+          "label": "纯流派无核心",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.2275,
+              "averageTurns": 6.10375,
+              "averageHpLeft": 7.5725,
+              "averageDamageTaken": 84.17,
+              "averageDamageDealt": 227.30125,
+              "deathCauses": {
+                "首领主体攻击": 613,
+                "召唤物攻击": 1,
+                "剧毒伤害": 4
+              },
+              "victoryCauses": {
+                "卡牌伤害": 167,
+                "燃烧": 15
+              }
+            },
+            "elite": {
+              "winRate": 0.03,
+              "averageTurns": 5.64375,
+              "averageHpLeft": 1.0775,
+              "averageDamageTaken": 97.84125,
+              "averageDamageDealt": 227.93875,
+              "deathCauses": {
+                "出血伤害": 4,
+                "首领主体攻击": 732,
+                "敌方荆棘": 37,
+                "召唤物攻击": 3
+              },
+              "victoryCauses": {
+                "卡牌伤害": 20,
+                "燃烧": 4
+              }
+            },
+            "boss": {
+              "winRate": 0,
+              "averageTurns": 4.44375,
+              "averageHpLeft": 0,
+              "averageDamageTaken": 107.9025,
+              "averageDamageDealt": 160.755,
+              "deathCauses": {
+                "首领主体攻击": 781,
+                "召唤物攻击": 19
+              },
+              "victoryCauses": {}
+            }
+          }
+        },
+        "mid": {
+          "label": "单方向遗物",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.36375,
+              "averageTurns": 6.83375,
+              "averageHpLeft": 11.94375,
+              "averageDamageTaken": 79.305,
+              "averageDamageDealt": 261.43625,
+              "deathCauses": {
+                "首领主体攻击": 505,
+                "剧毒伤害": 4
+              },
+              "victoryCauses": {
+                "卡牌伤害": 266,
+                "燃烧": 25
+              }
+            },
+            "elite": {
+              "winRate": 0.0675,
+              "averageTurns": 6.87125,
+              "averageHpLeft": 2.36125,
+              "averageDamageTaken": 96.52125,
+              "averageDamageDealt": 274.9825,
+              "deathCauses": {
+                "首领主体攻击": 707,
+                "敌方荆棘": 30,
+                "召唤物攻击": 2,
+                "出血伤害": 6,
+                "回合上限": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 48,
+                "燃烧": 6
+              }
+            },
+            "boss": {
+              "winRate": 0.00125,
+              "averageTurns": 5.06875,
+              "averageHpLeft": 0.14625,
+              "averageDamageTaken": 107.7525,
+              "averageDamageDealt": 180.42,
+              "deathCauses": {
+                "首领主体攻击": 761,
+                "召唤物攻击": 37,
+                "回合上限": 1
+              },
+              "victoryCauses": {
+                "燃烧": 1
+              }
+            }
+          }
+        },
+        "noCoreMatureRelics": {
+          "label": "成熟遗物缺核心",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.4675,
+              "averageTurns": 6.48375,
+              "averageHpLeft": 16.1675,
+              "averageDamageTaken": 73.41375,
+              "averageDamageDealt": 281.21375,
+              "deathCauses": {
+                "首领主体攻击": 422,
+                "剧毒伤害": 4
+              },
+              "victoryCauses": {
+                "卡牌伤害": 334,
+                "燃烧": 40
+              }
+            },
+            "elite": {
+              "winRate": 0.08375,
+              "averageTurns": 6.825,
+              "averageHpLeft": 2.98375,
+              "averageDamageTaken": 96.6575,
+              "averageDamageDealt": 302.98375,
+              "deathCauses": {
+                "首领主体攻击": 700,
+                "出血伤害": 3,
+                "敌方荆棘": 30
+              },
+              "victoryCauses": {
+                "卡牌伤害": 59,
+                "燃烧": 8
+              }
+            },
+            "boss": {
+              "winRate": 0.005,
+              "averageTurns": 5.27125,
+              "averageHpLeft": 0.17625,
+              "averageDamageTaken": 108.35,
+              "averageDamageDealt": 224.365,
+              "deathCauses": {
+                "首领主体攻击": 752,
+                "召唤物攻击": 44
+              },
+              "victoryCauses": {
+                "卡牌伤害": 3,
+                "燃烧": 1
+              }
+            }
+          }
+        },
+        "coreOnly": {
+          "label": "只有核心无遗物",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.59,
+              "averageTurns": 4.8025,
+              "averageHpLeft": 22.12875,
+              "averageDamageTaken": 61.52375,
+              "averageDamageDealt": 317.9975,
+              "deathCauses": {
+                "首领主体攻击": 327,
+                "剧毒伤害": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 339,
+                "燃烧": 133
+              }
+            },
+            "elite": {
+              "winRate": 0.19625,
+              "averageTurns": 5.22625,
+              "averageHpLeft": 6.00125,
+              "averageDamageTaken": 88.05125,
+              "averageDamageDealt": 399.135,
+              "deathCauses": {
+                "首领主体攻击": 617,
+                "敌方荆棘": 22,
+                "出血伤害": 1,
+                "召唤物攻击": 3
+              },
+              "victoryCauses": {
+                "燃烧": 71,
+                "卡牌伤害": 86
+              }
+            },
+            "boss": {
+              "winRate": 0.04375,
+              "averageTurns": 4.14125,
+              "averageHpLeft": 1.5875,
+              "averageDamageTaken": 100.425,
+              "averageDamageDealt": 380.165,
+              "deathCauses": {
+                "首领主体攻击": 740,
+                "召唤物攻击": 25
+              },
+              "victoryCauses": {
+                "燃烧": 22,
+                "卡牌伤害": 13
+              }
+            }
+          }
+        },
+        "mixedNoCore": {
+          "label": "混合拿牌无核心",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.38125,
+              "averageTurns": 6.22375,
+              "averageHpLeft": 14.565,
+              "averageDamageTaken": 75.6075,
+              "averageDamageDealt": 258.9775,
+              "deathCauses": {
+                "首领主体攻击": 491,
+                "剧毒伤害": 3,
+                "召唤物攻击": 1
+              },
+              "victoryCauses": {
+                "燃烧": 23,
+                "卡牌伤害": 282
+              }
+            },
+            "elite": {
+              "winRate": 0.105,
+              "averageTurns": 6.71875,
+              "averageHpLeft": 4.75,
+              "averageDamageTaken": 93.7925,
+              "averageDamageDealt": 285.5875,
+              "deathCauses": {
+                "首领主体攻击": 681,
+                "敌方荆棘": 30,
+                "召唤物攻击": 1,
+                "出血伤害": 3,
+                "回合上限": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 80,
+                "燃烧": 4
+              }
+            },
+            "boss": {
+              "winRate": 0.0025,
+              "averageTurns": 4.6725,
+              "averageHpLeft": 0.62875,
+              "averageDamageTaken": 105.69875,
+              "averageDamageDealt": 164.89875,
+              "deathCauses": {
+                "首领主体攻击": 759,
+                "召唤物攻击": 33,
+                "回合上限": 6
+              },
+              "victoryCauses": {
+                "卡牌伤害": 2
+              }
+            }
+          }
+        },
+        "mixedMidRelic": {
+          "label": "混合拿牌单遗物",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.52375,
+              "averageTurns": 6.8,
+              "averageHpLeft": 21.245,
+              "averageDamageTaken": 68.19,
+              "averageDamageDealt": 287.8625,
+              "deathCauses": {
+                "首领主体攻击": 376,
+                "剧毒伤害": 5
+              },
+              "victoryCauses": {
+                "卡牌伤害": 391,
+                "燃烧": 28
+              }
+            },
+            "elite": {
+              "winRate": 0.15125,
+              "averageTurns": 7.61875,
+              "averageHpLeft": 7.44625,
+              "averageDamageTaken": 90.6775,
+              "averageDamageDealt": 326.78125,
+              "deathCauses": {
+                "首领主体攻击": 647,
+                "敌方荆棘": 20,
+                "出血伤害": 7,
+                "回合上限": 5
+              },
+              "victoryCauses": {
+                "卡牌伤害": 111,
+                "燃烧": 10
+              }
+            },
+            "boss": {
+              "winRate": 0.00125,
+              "averageTurns": 5.59375,
+              "averageHpLeft": 0.52875,
+              "averageDamageTaken": 109.95375,
+              "averageDamageDealt": 191.33875,
+              "deathCauses": {
+                "召唤物攻击": 7,
+                "首领主体攻击": 780,
+                "回合上限": 12
+              },
+              "victoryCauses": {
+                "卡牌伤害": 1
+              }
+            }
+          }
+        },
+        "mature": {
+          "label": "完整成熟",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.7875,
+              "averageTurns": 4.68,
+              "averageHpLeft": 33.345,
+              "averageDamageTaken": 46.08625,
+              "averageDamageDealt": 346.8375,
+              "deathCauses": {
+                "剧毒伤害": 1,
+                "首领主体攻击": 169
+              },
+              "victoryCauses": {
+                "燃烧": 224,
+                "卡牌伤害": 406
+              }
+            },
+            "elite": {
+              "winRate": 0.37375,
+              "averageTurns": 5.53125,
+              "averageHpLeft": 13.36375,
+              "averageDamageTaken": 76.3,
+              "averageDamageDealt": 496.32125,
+              "deathCauses": {
+                "首领主体攻击": 473,
+                "敌方荆棘": 27,
+                "出血伤害": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 160,
+                "燃烧": 139
+              }
+            },
+            "boss": {
+              "winRate": 0.08,
+              "averageTurns": 4.7,
+              "averageHpLeft": 2.97125,
+              "averageDamageTaken": 102.8275,
+              "averageDamageDealt": 530.84875,
+              "deathCauses": {
+                "首领主体攻击": 715,
+                "召唤物攻击": 21
+              },
+              "victoryCauses": {
+                "燃烧": 43,
+                "卡牌伤害": 21
+              }
+            }
+          }
+        }
+      },
+      "diagnosis": [
+        "后期普通缺核心底线偏低(46.8%)",
+        "后期普通核心依赖过高(+32.0pp)",
+        "后期精英缺核心底线偏低(8.4%)",
+        "后期精英核心依赖过高(+29.0pp)",
+        "最终首领缺核心底线偏低(0.5%)",
+        "最终首领核心依赖过高(+7.5pp)"
+      ]
+    },
+    {
+      "roleId": "hero_archer",
+      "role": "精灵弓箭手",
+      "buildId": "gale",
+      "build": "疾风连射",
+      "scenarios": {
+        "pure": {
+          "label": "纯流派无核心",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.6475,
+              "averageTurns": 7.66875,
+              "averageHpLeft": 33.8075,
+              "averageDamageTaken": 51.23375,
+              "averageDamageDealt": 312.6275,
+              "deathCauses": {
+                "首领主体攻击": 277,
+                "剧毒伤害": 4,
+                "回合上限": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 481,
+                "牌区流动": 37
+              }
+            },
+            "elite": {
+              "winRate": 0.18,
+              "averageTurns": 9.07,
+              "averageHpLeft": 11.27,
+              "averageDamageTaken": 81.24,
+              "averageDamageDealt": 347.7275,
+              "deathCauses": {
+                "首领主体攻击": 568,
+                "敌方荆棘": 58,
+                "回合上限": 25,
+                "出血伤害": 5
+              },
+              "victoryCauses": {
+                "卡牌伤害": 125,
+                "牌区流动": 19
+              }
+            },
+            "boss": {
+              "winRate": 0,
+              "averageTurns": 6.59375,
+              "averageHpLeft": 0.58125,
+              "averageDamageTaken": 107.07,
+              "averageDamageDealt": 105.785,
+              "deathCauses": {
+                "首领主体攻击": 776,
+                "召唤物攻击": 9,
+                "回合上限": 15
+              },
+              "victoryCauses": {}
+            }
+          }
+        },
+        "mid": {
+          "label": "单方向遗物",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.755,
+              "averageTurns": 8.0625,
+              "averageHpLeft": 42.525,
+              "averageDamageTaken": 41.9475,
+              "averageDamageDealt": 330.21625,
+              "deathCauses": {
+                "首领主体攻击": 189,
+                "剧毒伤害": 6,
+                "回合上限": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 553,
+                "牌区流动": 51
+              }
+            },
+            "elite": {
+              "winRate": 0.28875,
+              "averageTurns": 10.3425,
+              "averageHpLeft": 16.84,
+              "averageDamageTaken": 73.24,
+              "averageDamageDealt": 414.6675,
+              "deathCauses": {
+                "首领主体攻击": 476,
+                "敌方荆棘": 70,
+                "回合上限": 21,
+                "出血伤害": 2
+              },
+              "victoryCauses": {
+                "卡牌伤害": 219,
+                "牌区流动": 12
+              }
+            },
+            "boss": {
+              "winRate": 0.00125,
+              "averageTurns": 9.96875,
+              "averageHpLeft": 4.73875,
+              "averageDamageTaken": 104.285,
+              "averageDamageDealt": 185.57125,
+              "deathCauses": {
+                "首领主体攻击": 719,
+                "召唤物攻击": 9,
+                "回合上限": 71
+              },
+              "victoryCauses": {
+                "卡牌伤害": 1
+              }
+            }
+          }
+        },
+        "noCoreMatureRelics": {
+          "label": "成熟遗物缺核心",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.83,
+              "averageTurns": 7.39375,
+              "averageHpLeft": 47.205,
+              "averageDamageTaken": 34.9825,
+              "averageDamageDealt": 345.85375,
+              "deathCauses": {
+                "首领主体攻击": 135,
+                "剧毒伤害": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 620,
+                "牌区流动": 44
+              }
+            },
+            "elite": {
+              "winRate": 0.40375,
+              "averageTurns": 10.31375,
+              "averageHpLeft": 24.83,
+              "averageDamageTaken": 64.64125,
+              "averageDamageDealt": 475.4725,
+              "deathCauses": {
+                "首领主体攻击": 379,
+                "敌方荆棘": 84,
+                "回合上限": 12,
+                "出血伤害": 2
+              },
+              "victoryCauses": {
+                "卡牌伤害": 299,
+                "牌区流动": 24
+              }
+            },
+            "boss": {
+              "winRate": 0.00875,
+              "averageTurns": 11.92125,
+              "averageHpLeft": 9.47125,
+              "averageDamageTaken": 97.665,
+              "averageDamageDealt": 280.915,
+              "deathCauses": {
+                "首领主体攻击": 672,
+                "回合上限": 119,
+                "召唤物攻击": 2
+              },
+              "victoryCauses": {
+                "卡牌伤害": 7
+              }
+            }
+          }
+        },
+        "coreOnly": {
+          "label": "只有核心无遗物",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.685,
+              "averageTurns": 6.045,
+              "averageHpLeft": 31.33625,
+              "averageDamageTaken": 52.76,
+              "averageDamageDealt": 323.04875,
+              "deathCauses": {
+                "首领主体攻击": 248,
+                "剧毒伤害": 4
+              },
+              "victoryCauses": {
+                "卡牌伤害": 515,
+                "牌区流动": 33
+              }
+            },
+            "elite": {
+              "winRate": 0.1825,
+              "averageTurns": 6.54125,
+              "averageHpLeft": 8.12375,
+              "averageDamageTaken": 86.2325,
+              "averageDamageDealt": 361.30625,
+              "deathCauses": {
+                "首领主体攻击": 612,
+                "敌方荆棘": 40,
+                "召唤物攻击": 1,
+                "出血伤害": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 138,
+                "牌区流动": 8
+              }
+            },
+            "boss": {
+              "winRate": 0.0025,
+              "averageTurns": 5.24125,
+              "averageHpLeft": 0.3075,
+              "averageDamageTaken": 111.02625,
+              "averageDamageDealt": 133.005,
+              "deathCauses": {
+                "首领主体攻击": 780,
+                "召唤物攻击": 14,
+                "回合上限": 4
+              },
+              "victoryCauses": {
+                "卡牌伤害": 2
+              }
+            }
+          }
+        },
+        "mixedNoCore": {
+          "label": "混合拿牌无核心",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.64,
+              "averageTurns": 7.32375,
+              "averageHpLeft": 30.3525,
+              "averageDamageTaken": 54.39375,
+              "averageDamageDealt": 309.54125,
+              "deathCauses": {
+                "首领主体攻击": 284,
+                "剧毒伤害": 4
+              },
+              "victoryCauses": {
+                "牌区流动": 63,
+                "卡牌伤害": 357,
+                "剧毒": 61,
+                "出血": 31
+              }
+            },
+            "elite": {
+              "winRate": 0.18,
+              "averageTurns": 8.065,
+              "averageHpLeft": 9.38,
+              "averageDamageTaken": 83.5025,
+              "averageDamageDealt": 338.28,
+              "deathCauses": {
+                "首领主体攻击": 590,
+                "敌方荆棘": 49,
+                "回合上限": 8,
+                "出血伤害": 9
+              },
+              "victoryCauses": {
+                "卡牌伤害": 95,
+                "出血": 19,
+                "剧毒": 22,
+                "牌区流动": 8
+              }
+            },
+            "boss": {
+              "winRate": 0.02,
+              "averageTurns": 6.63375,
+              "averageHpLeft": 2.24125,
+              "averageDamageTaken": 107.5325,
+              "averageDamageDealt": 173.66125,
+              "deathCauses": {
+                "首领主体攻击": 757,
+                "回合上限": 22,
+                "召唤物攻击": 5
+              },
+              "victoryCauses": {
+                "剧毒": 9,
+                "牌区流动": 1,
+                "卡牌伤害": 2,
+                "出血": 4
+              }
+            }
+          }
+        },
+        "mixedMidRelic": {
+          "label": "混合拿牌单遗物",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.705,
+              "averageTurns": 7.62625,
+              "averageHpLeft": 38.1425,
+              "averageDamageTaken": 46.6,
+              "averageDamageDealt": 323.2725,
+              "deathCauses": {
+                "首领主体攻击": 231,
+                "剧毒伤害": 5
+              },
+              "victoryCauses": {
+                "卡牌伤害": 390,
+                "剧毒": 60,
+                "出血": 48,
+                "牌区流动": 66
+              }
+            },
+            "elite": {
+              "winRate": 0.28875,
+              "averageTurns": 9.1275,
+              "averageHpLeft": 16.815,
+              "averageDamageTaken": 73.34625,
+              "averageDamageDealt": 394.2775,
+              "deathCauses": {
+                "首领主体攻击": 483,
+                "敌方荆棘": 70,
+                "回合上限": 14,
+                "出血伤害": 1,
+                "召唤物攻击": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 122,
+                "剧毒": 43,
+                "牌区流动": 28,
+                "出血": 38
+              }
+            },
+            "boss": {
+              "winRate": 0.04375,
+              "averageTurns": 8.945,
+              "averageHpLeft": 5.43375,
+              "averageDamageTaken": 103.0625,
+              "averageDamageDealt": 254.81,
+              "deathCauses": {
+                "首领主体攻击": 722,
+                "回合上限": 41,
+                "召唤物攻击": 2
+              },
+              "victoryCauses": {
+                "剧毒": 21,
+                "出血": 10,
+                "牌区流动": 1,
+                "卡牌伤害": 3
+              }
+            }
+          }
+        },
+        "mature": {
+          "label": "完整成熟",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.81,
+              "averageTurns": 5.69375,
+              "averageHpLeft": 44.22875,
+              "averageDamageTaken": 38.63875,
+              "averageDamageDealt": 352.5475,
+              "deathCauses": {
+                "首领主体攻击": 150,
+                "剧毒伤害": 2
+              },
+              "victoryCauses": {
+                "卡牌伤害": 608,
+                "牌区流动": 40
+              }
+            },
+            "elite": {
+              "winRate": 0.42625,
+              "averageTurns": 7.56625,
+              "averageHpLeft": 20.805,
+              "averageDamageTaken": 68.4875,
+              "averageDamageDealt": 495.9325,
+              "deathCauses": {
+                "首领主体攻击": 408,
+                "敌方荆棘": 51
+              },
+              "victoryCauses": {
+                "卡牌伤害": 324,
+                "牌区流动": 17
+              }
+            },
+            "boss": {
+              "winRate": 0.06875,
+              "averageTurns": 8.5825,
+              "averageHpLeft": 4.45625,
+              "averageDamageTaken": 103.2775,
+              "averageDamageDealt": 380.00125,
+              "deathCauses": {
+                "首领主体攻击": 720,
+                "回合上限": 19,
+                "召唤物攻击": 6
+              },
+              "victoryCauses": {
+                "卡牌伤害": 53,
+                "牌区流动": 2
+              }
+            }
+          }
+        }
+      },
+      "diagnosis": [
+        "最终首领缺核心底线偏低(0.9%)"
+      ]
+    },
+    {
+      "roleId": "hero_archer",
+      "role": "精灵弓箭手",
+      "buildId": "venom",
+      "build": "猎毒陷袭",
+      "scenarios": {
+        "pure": {
+          "label": "纯流派无核心",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.62125,
+              "averageTurns": 6.01,
+              "averageHpLeft": 28.955,
+              "averageDamageTaken": 56.6775,
+              "averageDamageDealt": 307.65375,
+              "deathCauses": {
+                "首领主体攻击": 303
+              },
+              "victoryCauses": {
+                "卡牌伤害": 238,
+                "出血": 127,
+                "剧毒": 120,
+                "牌区流动": 12
+              }
+            },
+            "elite": {
+              "winRate": 0.2175,
+              "averageTurns": 6.15125,
+              "averageHpLeft": 8.31125,
+              "averageDamageTaken": 85.34625,
+              "averageDamageDealt": 341.23625,
+              "deathCauses": {
+                "首领主体攻击": 597,
+                "敌方荆棘": 28,
+                "出血伤害": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 57,
+                "剧毒": 46,
+                "出血": 68,
+                "牌区流动": 3
+              }
+            },
+            "boss": {
+              "winRate": 0.0325,
+              "averageTurns": 6.185,
+              "averageHpLeft": 1.5425,
+              "averageDamageTaken": 110.99375,
+              "averageDamageDealt": 283.535,
+              "deathCauses": {
+                "首领主体攻击": 723,
+                "召唤物攻击": 51
+              },
+              "victoryCauses": {
+                "出血": 9,
+                "卡牌伤害": 6,
+                "剧毒": 11
+              }
+            }
+          }
+        },
+        "mid": {
+          "label": "单方向遗物",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.685,
+              "averageTurns": 5.60375,
+              "averageHpLeft": 31.79,
+              "averageDamageTaken": 52.6425,
+              "averageDamageDealt": 324.2775,
+              "deathCauses": {
+                "首领主体攻击": 251,
+                "剧毒伤害": 1
+              },
+              "victoryCauses": {
+                "剧毒": 148,
+                "卡牌伤害": 249,
+                "出血": 150,
+                "牌区流动": 1
+              }
+            },
+            "elite": {
+              "winRate": 0.21875,
+              "averageTurns": 6.0175,
+              "averageHpLeft": 8.8775,
+              "averageDamageTaken": 83.4025,
+              "averageDamageDealt": 366.81375,
+              "deathCauses": {
+                "首领主体攻击": 586,
+                "敌方荆棘": 31,
+                "出血伤害": 7,
+                "召唤物攻击": 1
+              },
+              "victoryCauses": {
+                "出血": 66,
+                "剧毒": 68,
+                "卡牌伤害": 38,
+                "牌区流动": 3
+              }
+            },
+            "boss": {
+              "winRate": 0.04875,
+              "averageTurns": 5.95375,
+              "averageHpLeft": 2.00625,
+              "averageDamageTaken": 110.5325,
+              "averageDamageDealt": 313.4175,
+              "deathCauses": {
+                "首领主体攻击": 717,
+                "召唤物攻击": 44
+              },
+              "victoryCauses": {
+                "卡牌伤害": 7,
+                "出血": 17,
+                "剧毒": 15
+              }
+            }
+          }
+        },
+        "noCoreMatureRelics": {
+          "label": "成熟遗物缺核心",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.72625,
+              "averageTurns": 5.155,
+              "averageHpLeft": 34.505,
+              "averageDamageTaken": 49.15875,
+              "averageDamageDealt": 335.26,
+              "deathCauses": {
+                "首领主体攻击": 216,
+                "剧毒伤害": 3
+              },
+              "victoryCauses": {
+                "卡牌伤害": 342,
+                "出血": 106,
+                "剧毒": 121,
+                "牌区流动": 12
+              }
+            },
+            "elite": {
+              "winRate": 0.30875,
+              "averageTurns": 5.9525,
+              "averageHpLeft": 13.52,
+              "averageDamageTaken": 77.94125,
+              "averageDamageDealt": 418.98375,
+              "deathCauses": {
+                "敌方荆棘": 32,
+                "首领主体攻击": 513,
+                "出血伤害": 5,
+                "召唤物攻击": 3
+              },
+              "victoryCauses": {
+                "出血": 81,
+                "卡牌伤害": 99,
+                "剧毒": 60,
+                "牌区流动": 7
+              }
+            },
+            "boss": {
+              "winRate": 0.0425,
+              "averageTurns": 5.5925,
+              "averageHpLeft": 1.49125,
+              "averageDamageTaken": 110.24375,
+              "averageDamageDealt": 307.87,
+              "deathCauses": {
+                "首领主体攻击": 730,
+                "召唤物攻击": 36
+              },
+              "victoryCauses": {
+                "卡牌伤害": 12,
+                "剧毒": 12,
+                "出血": 10
+              }
+            }
+          }
+        },
+        "coreOnly": {
+          "label": "只有核心无遗物",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.76875,
+              "averageTurns": 4.91125,
+              "averageHpLeft": 39.135,
+              "averageDamageTaken": 43.22125,
+              "averageDamageDealt": 351.99625,
+              "deathCauses": {
+                "首领主体攻击": 183,
+                "剧毒伤害": 2
+              },
+              "victoryCauses": {
+                "卡牌伤害": 474,
+                "剧毒": 58,
+                "牌区流动": 9,
+                "出血": 74
+              }
+            },
+            "elite": {
+              "winRate": 0.32875,
+              "averageTurns": 5.76375,
+              "averageHpLeft": 13.76125,
+              "averageDamageTaken": 76.88,
+              "averageDamageDealt": 443.3125,
+              "deathCauses": {
+                "首领主体攻击": 514,
+                "敌方荆棘": 20,
+                "出血伤害": 3
+              },
+              "victoryCauses": {
+                "卡牌伤害": 155,
+                "出血": 53,
+                "剧毒": 52,
+                "牌区流动": 3
+              }
+            },
+            "boss": {
+              "winRate": 0.05625,
+              "averageTurns": 5.66625,
+              "averageHpLeft": 1.93875,
+              "averageDamageTaken": 112.6625,
+              "averageDamageDealt": 369.95125,
+              "deathCauses": {
+                "首领主体攻击": 748,
+                "召唤物攻击": 7
+              },
+              "victoryCauses": {
+                "卡牌伤害": 29,
+                "剧毒": 8,
+                "出血": 8
+              }
+            }
+          }
+        },
+        "mixedNoCore": {
+          "label": "混合拿牌无核心",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.58125,
+              "averageTurns": 6.17375,
+              "averageHpLeft": 27.77,
+              "averageDamageTaken": 58.39375,
+              "averageDamageDealt": 301.305,
+              "deathCauses": {
+                "首领主体攻击": 332,
+                "剧毒伤害": 3
+              },
+              "victoryCauses": {
+                "卡牌伤害": 238,
+                "牌区流动": 27,
+                "剧毒": 84,
+                "出血": 116
+              }
+            },
+            "elite": {
+              "winRate": 0.19875,
+              "averageTurns": 6.60125,
+              "averageHpLeft": 9.09125,
+              "averageDamageTaken": 83.90125,
+              "averageDamageDealt": 336.7425,
+              "deathCauses": {
+                "首领主体攻击": 588,
+                "敌方荆棘": 42,
+                "出血伤害": 10,
+                "召唤物攻击": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 64,
+                "出血": 39,
+                "剧毒": 50,
+                "牌区流动": 6
+              }
+            },
+            "boss": {
+              "winRate": 0.0475,
+              "averageTurns": 6.03,
+              "averageHpLeft": 2.245,
+              "averageDamageTaken": 109.7225,
+              "averageDamageDealt": 250.545,
+              "deathCauses": {
+                "首领主体攻击": 734,
+                "召唤物攻击": 27,
+                "回合上限": 1
+              },
+              "victoryCauses": {
+                "出血": 17,
+                "剧毒": 13,
+                "卡牌伤害": 7,
+                "牌区流动": 1
+              }
+            }
+          }
+        },
+        "mixedMidRelic": {
+          "label": "混合拿牌单遗物",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.64875,
+              "averageTurns": 5.94625,
+              "averageHpLeft": 30.64875,
+              "averageDamageTaken": 55.225,
+              "averageDamageDealt": 318.4,
+              "deathCauses": {
+                "首领主体攻击": 280,
+                "剧毒伤害": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 251,
+                "剧毒": 116,
+                "出血": 119,
+                "牌区流动": 33
+              }
+            },
+            "elite": {
+              "winRate": 0.20875,
+              "averageTurns": 6.09125,
+              "averageHpLeft": 10.11,
+              "averageDamageTaken": 82.95625,
+              "averageDamageDealt": 346.40625,
+              "deathCauses": {
+                "首领主体攻击": 577,
+                "召唤物攻击": 3,
+                "出血伤害": 3,
+                "敌方荆棘": 50
+              },
+              "victoryCauses": {
+                "剧毒": 55,
+                "出血": 51,
+                "卡牌伤害": 51,
+                "牌区流动": 10
+              }
+            },
+            "boss": {
+              "winRate": 0.07125,
+              "averageTurns": 6.05875,
+              "averageHpLeft": 3.56125,
+              "averageDamageTaken": 105.2075,
+              "averageDamageDealt": 293.14625,
+              "deathCauses": {
+                "首领主体攻击": 730,
+                "召唤物攻击": 13
+              },
+              "victoryCauses": {
+                "剧毒": 18,
+                "出血": 27,
+                "卡牌伤害": 12
+              }
+            }
+          }
+        },
+        "mature": {
+          "label": "完整成熟",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.83875,
+              "averageTurns": 4.44125,
+              "averageHpLeft": 43.69,
+              "averageDamageTaken": 37.5425,
+              "averageDamageDealt": 370.78375,
+              "deathCauses": {
+                "首领主体攻击": 128,
+                "剧毒伤害": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 512,
+                "剧毒": 79,
+                "出血": 69,
+                "牌区流动": 11
+              }
+            },
+            "elite": {
+              "winRate": 0.39125,
+              "averageTurns": 5.3875,
+              "averageHpLeft": 16.8275,
+              "averageDamageTaken": 73.125,
+              "averageDamageDealt": 499.24125,
+              "deathCauses": {
+                "首领主体攻击": 458,
+                "敌方荆棘": 29
+              },
+              "victoryCauses": {
+                "卡牌伤害": 221,
+                "剧毒": 46,
+                "出血": 43,
+                "牌区流动": 3
+              }
+            },
+            "boss": {
+              "winRate": 0.05,
+              "averageTurns": 5.46875,
+              "averageHpLeft": 1.82875,
+              "averageDamageTaken": 108.405,
+              "averageDamageDealt": 415.365,
+              "deathCauses": {
+                "首领主体攻击": 755,
+                "召唤物攻击": 5
+              },
+              "victoryCauses": {
+                "卡牌伤害": 21,
+                "剧毒": 10,
+                "出血": 9
+              }
+            }
+          }
+        }
+      },
+      "diagnosis": [
+        "缺核心体验可接受"
+      ]
+    },
+    {
+      "roleId": "hero_archer",
+      "role": "精灵弓箭手",
+      "buildId": "exile",
+      "build": "放逐游侠",
+      "scenarios": {
+        "pure": {
+          "label": "纯流派无核心",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.5525,
+              "averageTurns": 6.00625,
+              "averageHpLeft": 19.1875,
+              "averageDamageTaken": 69.0925,
+              "averageDamageDealt": 299.61875,
+              "deathCauses": {
+                "首领主体攻击": 356,
+                "剧毒伤害": 2
+              },
+              "victoryCauses": {
+                "卡牌伤害": 145,
+                "牌区流动": 245,
+                "出血": 52
+              }
+            },
+            "elite": {
+              "winRate": 0.06125,
+              "averageTurns": 5.8725,
+              "averageHpLeft": 1.5725,
+              "averageDamageTaken": 94.41875,
+              "averageDamageDealt": 289.44875,
+              "deathCauses": {
+                "首领主体攻击": 685,
+                "敌方荆棘": 63,
+                "出血伤害": 3
+              },
+              "victoryCauses": {
+                "牌区流动": 36,
+                "出血": 8,
+                "卡牌伤害": 5
+              }
+            },
+            "boss": {
+              "winRate": 0,
+              "averageTurns": 4.22,
+              "averageHpLeft": 0,
+              "averageDamageTaken": 109.02125,
+              "averageDamageDealt": 91.47625,
+              "deathCauses": {
+                "首领主体攻击": 798,
+                "召唤物攻击": 2
+              },
+              "victoryCauses": {}
+            }
+          }
+        },
+        "mid": {
+          "label": "单方向遗物",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.66375,
+              "averageTurns": 5.58625,
+              "averageHpLeft": 26.895,
+              "averageDamageTaken": 58.6375,
+              "averageDamageDealt": 316.35125,
+              "deathCauses": {
+                "首领主体攻击": 267,
+                "剧毒伤害": 2
+              },
+              "victoryCauses": {
+                "牌区流动": 301,
+                "卡牌伤害": 180,
+                "出血": 50
+              }
+            },
+            "elite": {
+              "winRate": 0.07875,
+              "averageTurns": 5.66875,
+              "averageHpLeft": 2.275,
+              "averageDamageTaken": 92.885,
+              "averageDamageDealt": 323.40875,
+              "deathCauses": {
+                "首领主体攻击": 659,
+                "敌方荆棘": 71,
+                "出血伤害": 7
+              },
+              "victoryCauses": {
+                "出血": 19,
+                "牌区流动": 34,
+                "卡牌伤害": 10
+              }
+            },
+            "boss": {
+              "winRate": 0.00125,
+              "averageTurns": 4.48125,
+              "averageHpLeft": 0.02375,
+              "averageDamageTaken": 111.455,
+              "averageDamageDealt": 116.57125,
+              "deathCauses": {
+                "首领主体攻击": 798,
+                "召唤物攻击": 1
+              },
+              "victoryCauses": {
+                "出血": 1
+              }
+            }
+          }
+        },
+        "noCoreMatureRelics": {
+          "label": "成熟遗物缺核心",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.8225,
+              "averageTurns": 4.78375,
+              "averageHpLeft": 42.4625,
+              "averageDamageTaken": 40.23125,
+              "averageDamageDealt": 345.54625,
+              "deathCauses": {
+                "首领主体攻击": 141,
+                "剧毒伤害": 1
+              },
+              "victoryCauses": {
+                "牌区流动": 276,
+                "卡牌伤害": 347,
+                "出血": 35
+              }
+            },
+            "elite": {
+              "winRate": 0.26875,
+              "averageTurns": 5.7475,
+              "averageHpLeft": 9.76125,
+              "averageDamageTaken": 82.97375,
+              "averageDamageDealt": 447.51,
+              "deathCauses": {
+                "首领主体攻击": 508,
+                "敌方荆棘": 74,
+                "出血伤害": 3
+              },
+              "victoryCauses": {
+                "卡牌伤害": 127,
+                "出血": 20,
+                "牌区流动": 68
+              }
+            },
+            "boss": {
+              "winRate": 0.00375,
+              "averageTurns": 4.7525,
+              "averageHpLeft": 0.1275,
+              "averageDamageTaken": 112.0275,
+              "averageDamageDealt": 208.2,
+              "deathCauses": {
+                "首领主体攻击": 792,
+                "召唤物攻击": 5
+              },
+              "victoryCauses": {
+                "卡牌伤害": 3
+              }
+            }
+          }
+        },
+        "coreOnly": {
+          "label": "只有核心无遗物",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.71625,
+              "averageTurns": 5.855,
+              "averageHpLeft": 33.4475,
+              "averageDamageTaken": 51.28,
+              "averageDamageDealt": 334.60875,
+              "deathCauses": {
+                "首领主体攻击": 226,
+                "召唤物攻击": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 115,
+                "牌区流动": 425,
+                "出血": 33
+              }
+            },
+            "elite": {
+              "winRate": 0.14,
+              "averageTurns": 6.21125,
+              "averageHpLeft": 3.79375,
+              "averageDamageTaken": 88.93625,
+              "averageDamageDealt": 363.30375,
+              "deathCauses": {
+                "首领主体攻击": 614,
+                "敌方荆棘": 69,
+                "召唤物攻击": 3,
+                "出血伤害": 2
+              },
+              "victoryCauses": {
+                "牌区流动": 74,
+                "出血": 16,
+                "卡牌伤害": 22
+              }
+            },
+            "boss": {
+              "winRate": 0,
+              "averageTurns": 5.1925,
+              "averageHpLeft": 0,
+              "averageDamageTaken": 105.25625,
+              "averageDamageDealt": 144.25,
+              "deathCauses": {
+                "首领主体攻击": 778,
+                "召唤物攻击": 22
+              },
+              "victoryCauses": {}
+            }
+          }
+        },
+        "mixedNoCore": {
+          "label": "混合拿牌无核心",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.57875,
+              "averageTurns": 6.35375,
+              "averageHpLeft": 24.00625,
+              "averageDamageTaken": 62.215,
+              "averageDamageDealt": 302.66125,
+              "deathCauses": {
+                "首领主体攻击": 336,
+                "剧毒伤害": 1
+              },
+              "victoryCauses": {
+                "牌区流动": 193,
+                "出血": 55,
+                "卡牌伤害": 199,
+                "剧毒": 16
+              }
+            },
+            "elite": {
+              "winRate": 0.12125,
+              "averageTurns": 6.34125,
+              "averageHpLeft": 5.25875,
+              "averageDamageTaken": 89.09125,
+              "averageDamageDealt": 306.50375,
+              "deathCauses": {
+                "首领主体攻击": 649,
+                "敌方荆棘": 48,
+                "出血伤害": 5,
+                "回合上限": 1
+              },
+              "victoryCauses": {
+                "卡牌伤害": 28,
+                "牌区流动": 37,
+                "剧毒": 15,
+                "出血": 17
+              }
+            },
+            "boss": {
+              "winRate": 0.0175,
+              "averageTurns": 5.5875,
+              "averageHpLeft": 0.8575,
+              "averageDamageTaken": 109.44375,
+              "averageDamageDealt": 156.65375,
+              "deathCauses": {
+                "首领主体攻击": 781,
+                "召唤物攻击": 2,
+                "回合上限": 3
+              },
+              "victoryCauses": {
+                "剧毒": 4,
+                "出血": 5,
+                "牌区流动": 2,
+                "卡牌伤害": 3
+              }
+            }
+          }
+        },
+        "mixedMidRelic": {
+          "label": "混合拿牌单遗物",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.67625,
+              "averageTurns": 6.2175,
+              "averageHpLeft": 31.01875,
+              "averageDamageTaken": 54.7425,
+              "averageDamageDealt": 318.38375,
+              "deathCauses": {
+                "首领主体攻击": 257,
+                "剧毒伤害": 2
+              },
+              "victoryCauses": {
+                "牌区流动": 238,
+                "卡牌伤害": 249,
+                "剧毒": 17,
+                "出血": 37
+              }
+            },
+            "elite": {
+              "winRate": 0.15875,
+              "averageTurns": 7.17,
+              "averageHpLeft": 7.995,
+              "averageDamageTaken": 84.98375,
+              "averageDamageDealt": 357.1825,
+              "deathCauses": {
+                "首领主体攻击": 608,
+                "敌方荆棘": 56,
+                "回合上限": 4,
+                "出血伤害": 5
+              },
+              "victoryCauses": {
+                "出血": 29,
+                "卡牌伤害": 38,
+                "牌区流动": 50,
+                "剧毒": 10
+              }
+            },
+            "boss": {
+              "winRate": 0.025,
+              "averageTurns": 5.78875,
+              "averageHpLeft": 1.2875,
+              "averageDamageTaken": 112.0275,
+              "averageDamageDealt": 187.38375,
+              "deathCauses": {
+                "首领主体攻击": 770,
+                "召唤物攻击": 8,
+                "回合上限": 2
+              },
+              "victoryCauses": {
+                "剧毒": 8,
+                "牌区流动": 4,
+                "出血": 6,
+                "卡牌伤害": 2
+              }
+            }
+          }
+        },
+        "mature": {
+          "label": "完整成熟",
+          "checkpoints": {
+            "late": {
+              "winRate": 0.9075,
+              "averageTurns": 4.3025,
+              "averageHpLeft": 53.03875,
+              "averageDamageTaken": 26.79375,
+              "averageDamageDealt": 363.62375,
+              "deathCauses": {
+                "首领主体攻击": 73,
+                "剧毒伤害": 1
+              },
+              "victoryCauses": {
+                "牌区流动": 356,
+                "卡牌伤害": 351,
+                "出血": 19
+              }
+            },
+            "elite": {
+              "winRate": 0.415,
+              "averageTurns": 5.4925,
+              "averageHpLeft": 17.2125,
+              "averageDamageTaken": 70.00375,
+              "averageDamageDealt": 506.0325,
+              "deathCauses": {
+                "首领主体攻击": 389,
+                "敌方荆棘": 79
+              },
+              "victoryCauses": {
+                "卡牌伤害": 167,
+                "牌区流动": 153,
+                "出血": 12
+              }
+            },
+            "boss": {
+              "winRate": 0.0525,
+              "averageTurns": 6.15875,
+              "averageHpLeft": 1.3875,
+              "averageDamageTaken": 106.13,
+              "averageDamageDealt": 451.56375,
+              "deathCauses": {
+                "首领主体攻击": 756,
+                "召唤物攻击": 2
+              },
+              "victoryCauses": {
+                "卡牌伤害": 26,
+                "牌区流动": 16
+              }
+            }
+          }
+        }
+      },
+      "diagnosis": [
+        "后期精英缺核心底线偏低(26.9%)",
+        "最终首领缺核心底线偏低(0.4%)"
+      ]
+    }
+  ]
+}
