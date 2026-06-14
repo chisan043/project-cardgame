@@ -7731,13 +7731,12 @@
     }
 
     function triggerEventNode() {
-        // 直接触发宝库与守望者抉择，移除其他干扰项
         document.getElementById('event-title').innerText = "奇遇：命运的岔路";
-        document.getElementById('event-desc').innerText = "云层后方透出旧王国的遗迹。精灵斥候指向两处微光：一座沉默宝库，以及一位等候旅人的守望者。";
+        document.getElementById('event-desc').innerText = "云层后方透出旧王国的遗迹。三条岔路分别通向秘宝、试炼与行囊整理。";
         renderEventChoiceGrid([
             { icon: '💎', title: '探寻宝库', desc: '开启古代宝匣，获得一件随机奇珍。更适合想快速形成流派的旅程。', onClick: selectEventRelic },
             { icon: '🧙', title: '接受试炼', desc: '请守望者淬炼一张卡牌，使其获得强化。更适合稳定提升核心卡。', onClick: selectEventUpgrade },
-            { icon: '🌙', title: '绕路离开', desc: '不承担任何风险，也不获得机缘。保留状态，继续向下一层前进。', onClick: () => { closeOverlay('overlay-event'); advanceMap(); } }
+            { icon: '🎒', title: '整理行囊', desc: '遗忘一张拖累牌，再从三张卡牌中补入一张。更适合修补缺口或轻微转向。', onClick: selectEventTuneDeck }
         ]);
         setEventActions([{ label: '放弃机缘，直接离开', className: 'btn-back', onClick: () => { closeOverlay('overlay-event'); advanceMap(); } }]);
         showOverlay('overlay-event');
@@ -7763,6 +7762,48 @@
             cList.appendChild(el);
         });
         document.getElementById('event-content').innerHTML = ''; document.getElementById('event-content').appendChild(cList); setEventActions([{ label: '婉拒离开', className: 'btn-back', onClick: () => { closeOverlay('overlay-event'); advanceMap(); } }]);
+    }
+
+    function selectEventTuneDeck() {
+        document.getElementById('event-title').innerText = "奇遇：整理行囊";
+        document.getElementById('event-desc').innerText = "守望者摊开旧布袋，示意你先丢下一件负累，再从路边遗留补给中取走一张可用的牌。";
+        const cList = document.createElement('div');
+        cList.className = 'card-grid';
+        state.deck.forEach(card => {
+            const el = document.createElement('div');
+            el.innerHTML = generateCardHTML(card, true);
+            el.onclick = () => {
+                const html = `<div>${generateCardHTML(card, true)}</div><div style="font-size: 24px; color: var(--crimson);">遗忘此牌，并继续挑选一张补给牌？</div>`;
+                openConfirmPanel('确认整理', html, () => {
+                    state.deck = state.deck.filter(x => x.id !== card.id);
+                    renderEventTuneReward();
+                });
+            };
+            cList.appendChild(el);
+        });
+        document.getElementById('event-content').innerHTML = '';
+        document.getElementById('event-content').appendChild(cList);
+        setEventActions([{ label: '不整理，直接离开', className: 'btn-back', onClick: () => { closeOverlay('overlay-event'); advanceMap(); } }]);
+    }
+
+    function renderEventTuneReward() {
+        document.getElementById('event-title').innerText = "奇遇：旧路补给";
+        document.getElementById('event-desc').innerText = "负累被留在石阶旁，剩下的补给里有几张还能跟上你当前牌组的节奏。";
+        const cList = document.createElement('div');
+        cList.className = 'card-grid';
+        generateRewardChoices(3).forEach(card => {
+            const el = document.createElement('div');
+            el.innerHTML = generateCardHTML(card, true);
+            el.onclick = () => {
+                state.deck.push(card);
+                closeOverlay('overlay-event');
+                advanceMap();
+            };
+            cList.appendChild(el);
+        });
+        document.getElementById('event-content').innerHTML = '';
+        document.getElementById('event-content').appendChild(cList);
+        setEventActions([{ label: '不拿补给，继续前行', className: 'btn-back', onClick: () => { closeOverlay('overlay-event'); advanceMap(); } }]);
     }
 
     function showShopHome() {

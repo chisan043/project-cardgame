@@ -277,7 +277,7 @@ function generateRouteChoices(rng, floor, hpRatio, gold, profile) {
     return [...choices];
 }
 
-function chooseRoute(rng, choices, hpRatio, gold, profile) {
+function chooseRoute(rng, choices, hpRatio, gold, profile, deck = []) {
     const skillNoise = profile === 'novice' ? 4.5 : 2.2;
     return choices
         .map(type => {
@@ -285,7 +285,11 @@ function chooseRoute(rng, choices, hpRatio, gold, profile) {
             if (type === 'normal') score = 5;
             if (type === 'elite') score = hpRatio > 0.65 ? 5.8 : hpRatio > 0.48 ? 3.8 : -4;
             if (type === 'shop') score = gold >= 90 ? 5.8 : gold >= 55 ? 4.5 : 0;
-            if (type === 'event') score = hpRatio > 0.35 ? 4.5 : 1;
+            if (type === 'event') {
+                score = hpRatio > 0.35 ? 4.8 : 1.8;
+                if (deck.length >= 13) score += 0.7;
+                if (gold < 65) score += 0.5;
+            }
             if (type === 'rest') score = hpRatio < 0.45 ? 9 : hpRatio < 0.7 ? 5 : 1;
             if (type === 'chest') score = 5.4;
             if (type === 'boss') score = 99;
@@ -629,7 +633,7 @@ function simulateFullRun(data, stats, runConfig) {
         const removesBeforeNode = removes;
         const hpRatio = hp / character.maxHp;
         const choices = generateRouteChoices(rng, floor, hpRatio, gold, profile);
-        const nodeType = chooseRoute(rng, choices, hpRatio, gold, profile);
+        const nodeType = chooseRoute(rng, choices, hpRatio, gold, profile, deck);
         recordRouteChoices(stats, choices, nodeType);
         if (floor === 7) act1BossReached = true;
 
@@ -765,10 +769,15 @@ function simulateFullRun(data, stats, runConfig) {
         } else if (nodeType === 'event') {
             totalMinutes += 1.8;
             const roll = rng();
-            if (roll < 0.24) {
-                gold += 45;
-            } else if (roll < 0.48) {
-                hp = Math.max(1, hp - Math.ceil(character.maxHp * 0.12));
+            const wantsTune = deck.length >= 13 || gold < 65;
+            if (wantsTune && roll < 0.55) {
+                const removable = worstRemovableCard(deck);
+                if (removable && deck.length > 8) {
+                    deck.splice(removable.index, 1);
+                    removes++;
+                }
+                applyCardReward(data, stats, rng, roleId, buildId, deck, floor, hp / character.maxHp, profile, runCardsPicked);
+            } else if (roll < 0.78 && hp / character.maxHp > 0.35) {
                 const relic = awardRelic(data, rng, roleId, buildId, ownedRelics, floor);
                 if (relic) {
                     acquiredRelics.push({ id: relic, floor });
@@ -777,13 +786,11 @@ function simulateFullRun(data, stats, runConfig) {
                     relicStats.obtained++;
                     relicStats.floorTotal += floor;
                 }
-            } else if (roll < 0.72) {
-                applyCardReward(data, stats, rng, roleId, buildId, deck, floor, hp / character.maxHp, profile, runCardsPicked);
             } else {
-                const removable = worstRemovableCard(deck);
-                if (removable && deck.length > 8) {
-                    deck.splice(removable.index, 1);
-                    removes++;
+                const upgraded = upgradeBestCard(deck, rng);
+                if (upgraded) {
+                    upgrades++;
+                    getCardStats(stats, data, roleId, upgraded).upgraded++;
                 }
             }
         } else if (nodeType === 'chest') {
