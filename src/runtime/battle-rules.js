@@ -1,6 +1,39 @@
-// Battle lifecycle helpers. Damage resolution, animations, and card execution stay in the main runtime.
+// Battle lifecycle and combat math helpers. Animations and card execution stay in the main runtime.
 (function exposeBattleRules(global) {
     'use strict';
+
+    function getFrenzyBonus(card, {
+        hasFrenzyVeil = false,
+        discardCount = 0
+    } = {}) {
+        let bonus = (parseInt(card?.val) || 4) + (card?.up ? 4 : 3);
+        if (hasFrenzyVeil) bonus += Math.floor(discardCount / 2);
+        return bonus;
+    }
+
+    function getEnchantBonus(card, {
+        includeRelics = true,
+        hasEnchantCrystal = false
+    } = {}) {
+        let bonus = Math.max(4, (parseInt(card?.val) || 4) + (card?.up ? 4 : 2));
+        if (includeRelics && hasEnchantCrystal) bonus *= 2;
+        return bonus;
+    }
+
+    function getSwordBonus(card, {
+        armor = 0,
+        counter = 0,
+        hasSwordOath = false
+    } = {}) {
+        if (!card?.tags?.includes('圣剑')) return 0;
+        const swordRatio = hasSwordOath ? 0.7 : 0.5;
+        return Math.floor((armor || 0) * swordRatio) + ((counter || 0) * 4);
+    }
+
+    function getCounterParryValue(incomingDamage) {
+        const dmg = Math.max(0, Number(incomingDamage) || 0);
+        return Math.min(dmg, Math.ceil(dmg * 0.5));
+    }
 
     function resetPlayerBattleStatuses(state) {
         state.p_poison = 0;
@@ -92,7 +125,11 @@
 
     global.QuestersBattleRules = {
         cleanupAfterBattleWin,
+        getCounterParryValue,
+        getEnchantBonus,
+        getFrenzyBonus,
         getRuntimeFailureHint,
+        getSwordBonus,
         resetBattleStartState,
         resetPlayerBattleStatuses
     };

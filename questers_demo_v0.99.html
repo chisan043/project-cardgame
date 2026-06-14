@@ -2890,21 +2890,25 @@
     }
 
     function getFrenzyBonus(card) {
-        let bonus = (parseInt(card?.val) || 4) + (card?.up ? 4 : 3);
-        if (hasRelic('r_frenzy_veil')) bonus += Math.floor(state.r_discard_count / 2);
-        return bonus;
+        return QuestersBattleRules.getFrenzyBonus(card, {
+            hasFrenzyVeil: hasRelic('r_frenzy_veil'),
+            discardCount: state.r_discard_count
+        });
     }
 
     function getEnchantBonus(card, includeRelics = true) {
-        let bonus = Math.max(4, (parseInt(card?.val) || 4) + (card?.up ? 4 : 2));
-        if (includeRelics && hasRelic('r_enchant_crys')) bonus *= 2;
-        return bonus;
+        return QuestersBattleRules.getEnchantBonus(card, {
+            includeRelics,
+            hasEnchantCrystal: hasRelic('r_enchant_crys')
+        });
     }
 
     function getSwordBonus(card) {
-        if (!card?.tags?.includes('圣剑')) return 0;
-        const swordRatio = hasRelic('r_sword_oath') ? 0.7 : 0.5;
-        return Math.floor((state.armor || 0) * swordRatio) + ((state.p_counter || 0) * 4);
+        return QuestersBattleRules.getSwordBonus(card, {
+            armor: state.armor,
+            counter: state.p_counter,
+            hasSwordOath: hasRelic('r_sword_oath')
+        });
     }
 
     function addSwordBonusToDamage(card, dmg) {
@@ -2917,8 +2921,7 @@
     }
 
     function getCounterParryValue(incomingDamage) {
-        const dmg = Math.max(0, Number(incomingDamage) || 0);
-        return Math.min(dmg, Math.ceil(dmg * 0.5));
+        return QuestersBattleRules.getCounterParryValue(incomingDamage);
     }
 
     function getBottomTags(card) {
