@@ -5611,7 +5611,7 @@
         state.enemy.moves = state.enemy.moves.map(m => { let mScale = (m.type.includes('attack') || m.type === 'defend' || m.type === 'summon') ? scale : 1; return { ...m, val: Math.floor(m.val * mScale) }; });
 
         state.p_poison = 0; state.p_bleed = 0; state.p_burn = 0; state.p_stun = 0; state.p_curse = 0; state.p_vuln = 0; state.p_weak = 0; state.p_echo_stack = 0;
-        state.p_next_dmg = 0; state.p_reduce_dmg = 0; state.p_counter = 0; state.p_battle_dmg = 0; state.p_dmg_buff = 0; state.p_chant = 0; state.p_aim = 0; state.p_sidestep = 0; state.r_discard_count = 0; state.next_card_echo = 0; state.lastPlayedCard = null; state.turn_first_card = true; state.isEnemyTurn = false;
+        state.p_next_dmg = 0; state.p_reduce_dmg = 0; state.p_counter = 0; state.p_battle_dmg = 0; state.p_dmg_buff = 0; state.p_chant = 0; state.p_aim = 0; state.p_sidestep = 0; state.r_discard_count = 0; state.next_card_echo = 0; state.lastPlayedCard = null; state.turn_first_card = true; state.isEnemyTurn = false; state.r_exile_cache_sidestep_used = false;
         state.r_signature_setup_used = false; state.r_signature_attack_ready = false; state.r_signature_archer_pending = false;
         state.r_warrior_start_used = false; state.r_warrior_start_ready = false;
         state.p_crown_oath = false;
@@ -6060,7 +6060,13 @@
         const damage = getExileFlowDamage(card, eventType);
         if (damage <= 0) return 0;
         applyDamageToEnemy(damage, true);
-        if (eventType === 'exhaust' && hasRelic('r_exile_cache')) state.p_reduce_dmg += 3;
+        if (eventType === 'exhaust' && hasRelic('r_exile_cache')) {
+            state.p_aim = Math.min(6, state.p_aim + 1);
+            if (!state.r_exile_cache_sidestep_used) {
+                state.r_exile_cache_sidestep_used = true;
+                state.p_sidestep = Math.min(3, (state.p_sidestep || 0) + 1);
+            }
+        }
         showFloatText(`${label} ${damage}`, "var(--nature)", getCenter('enemy-avatar'));
         return damage;
     }
@@ -6352,8 +6358,8 @@
                 if(hasRelic('r_echo_archive_pin') && !state.r_echo_archive_pin_used) {
                     state.r_echo_archive_pin_used = true;
                     state.mp += 1;
-                    state.p_reduce_dmg += 6;
-                    showFloatText("书签回能 +1 / 庇护 +6", "var(--purple)", getCenter('ui-mp'));
+                    state.p_next_dmg += 8;
+                    showFloatText("书签回能 +1 / 附魔 +8", "var(--purple)", getCenter('ui-mp'));
                 }
                 let extraEcho = hasRelic('r_echo_mirror_relic') ? 1 : 0;
                 for(let e=0; e<extraEcho; e++) { await new Promise(r => setTimeout(r, 300)); showFloatText("魔镜回响", "var(--purple)", getCenter('enemy-avatar')); await executeCardTags(card, true, targets); if (state.hp <= 0) return; }
@@ -6391,26 +6397,43 @@
         if (card.isSpecial) {
             if (card.type === '攻击') payBloodDebtAttackCost(card.name);
             if(card.specialId === 's_exhaust') {
-                triggerVFX('p-atk'); let count = state.exhaustPile.length; let dmg = count * 14;
+                triggerVFX('p-atk'); let count = state.exhaustPile.length + 1; let dmg = count * 20;
                 applySpecialCardDamage(card, dmg);
-                state.armor += Math.min(18, count * 3);
-                state.p_reduce_dmg += Math.min(18, count * 3);
-                if (count >= 3) state.p_sidestep = Math.min(3, (state.p_sidestep || 0) + 1);
+                state.p_aim = Math.min(6, state.p_aim + Math.floor(count / 2));
+                if (count >= 2) state.p_sidestep = Math.min(3, (state.p_sidestep || 0) + 1);
                 state.exhaustPile.forEach(c => onCardReturnedFromExhaust(c));
-                state.battleDeck = state.battleDeck.concat(state.exhaustPile); state.exhaustPile = []; state.battleDeck.sort(()=>0.5-Math.random());
+                state.battleDeck = state.battleDeck.concat(state.exhaustPile, [card]); state.exhaustPile = []; state.battleDeck.sort(()=>0.5-Math.random());
             }
             else if(card.specialId === 's_poison') { let layers = state.enemy.poison + state.enemy.bleed; let dmg = 36 + layers * 3; applyDamageToEnemy(dmg); state.p_reduce_dmg += Math.min(12, layers); showFloatText(card.name, "var(--nature)", getCenter('enemy-avatar')); }
-            else if(card.specialId === 's_shield') { triggerVFX('p-atk'); applySpecialCardDamage(card, state.armor * 2); }
-            else if(card.specialId === 's_magic') { state.p_echo_stack += 3; showFloatText(card.name, "var(--purple)", getCenter('ui-hp')); }
-            else if(card.specialId === 's_pierce') { triggerVFX('p-atk'); let dmg = 40; if(state.enemy.vuln > 0) dmg += Math.floor(dmg * (state.enemy.vuln * 0.5)); if(state.p_weak > 0) dmg = Math.floor(dmg * 0.75); applyDamageToEnemy(dmg, true); }
-            else if(card.specialId === 's_thorns') { triggerVFX('p-def'); state.armor += 30; state.player.thorns += 10; showFloatText(card.name, "var(--gold)", getCenter('ui-hp')); updateTopBar(); }
-            else if(card.specialId === 's_energy') { let discardCount = state.hand.length; state.hand.forEach(c => { state.discardPile.push(c); state.r_discard_count++; triggerExileFlowDamage(c, 'discard', '入墓'); }); state.hand = []; renderHand(); if (discardCount > 0) { state.mp += discardCount; if(hasRelic('r_bone_ring')) state.p_battle_dmg += discardCount; showFloatText(`${card.name} +${discardCount}能`, "var(--gold)", getCenter('ui-mp')); await drawCards(discardCount); } }
+            else if(card.specialId === 's_shield') { triggerVFX('p-atk'); applySpecialCardDamage(card, state.armor + state.p_battle_dmg); state.p_counter = 1; showFloatText("誓盾出锋 / 进入反击", "var(--gold)", getCenter('ui-hp')); }
+            else if(card.specialId === 's_magic') {
+                const lastWasReplica = (state.lastPlayedCard?.tags || []).includes('复刻');
+                if (state.lastPlayedCard && !state.lastPlayedCard.isJunk && !lastWasReplica) {
+                    showFloatText("镜界回放", "var(--purple)", getCenter('ui-hp'));
+                    await executeCardTags(state.lastPlayedCard, true, null);
+                    if (state.enemy.currentHp > 0) await executeCardTags(state.lastPlayedCard, true, null);
+                    if(hasRelic('r_echo_archive_pin') && !state.r_echo_archive_pin_used) {
+                        state.r_echo_archive_pin_used = true;
+                        state.mp += 1;
+                        state.p_next_dmg += 8;
+                        showFloatText("书签回能 +1 / 附魔 +8", "var(--purple)", getCenter('ui-mp'));
+                    }
+                } else {
+                    await drawCards(2);
+                }
+            }
+            else if(card.specialId === 's_pierce') { triggerVFX('p-atk'); const chantSpent = state.p_chant; applySpecialCardDamage(card, 32 + state.p_battle_dmg + chantSpent * 14, true); state.p_chant = hasRelic('r_burst_lens') ? Math.ceil(chantSpent / 2) : 0; }
+            else if(card.specialId === 's_thorns') { triggerVFX('p-def'); state.armor += 18; state.player.thorns += hasRelic('r_thorn_shield_new') ? 16 : 8; showFloatText(card.name, "var(--gold)", getCenter('ui-hp')); updateTopBar(); }
+            else if(card.specialId === 's_energy') { const hadWind = state.p_aim > 0; state.p_aim = Math.min(6, state.p_aim + 3 + (hasRelic('r_wind_quiver') ? 1 : 0)); if (hadWind) state.mp += 1; await drawCards(2); showFloatText(hadWind ? "风势 +3 / 能量 +1" : "风势 +3", "var(--nature)", getCenter('ui-mp')); }
             
             // --- 词条共鸣 ---
             else if (card.specialId === 'a_syn_sword') {
-                let synergyCount = state.hand.filter(c => c.tags && (c.tags.includes('易伤') || c.tags.includes('穿甲') || c.tags.includes('连击') || c.tags.includes('重击'))).length;
-                let dmg = parseInt(card.val) + (15 * synergyCount) + state.enemy.bleed * 3 + state.p_battle_dmg;
-                triggerVFX('p-atk'); applySpecialCardDamage(card, dmg, true); showFloatText(`${card.name} 共鸣 ${synergyCount} 次`, "var(--gold)", getCenter('enemy-avatar'));
+                triggerVFX('p-atk');
+                applySpecialCardDamage(card, parseInt(card.val) + state.p_battle_dmg, true);
+                if (state.enemy.currentHp > 0 && state.enemy.vuln > 0) {
+                    state.p_battle_dmg += 12;
+                    showFloatText("断裁续势 +12", "var(--gold)", getCenter('ui-hp'));
+                }
             }
             else if (card.specialId === 'a_syn_poison') {
                 let targets = state.hand.filter(c => c.tags && (c.tags.includes('剧毒') || c.tags.includes('出血')));
@@ -6423,10 +6446,12 @@
                 } else { showFloatText("无毒可引", "#888", getCenter('ui-hp')); }
             }
             else if (card.specialId === 'a_syn_array') {
-                let synergyCount = state.hand.filter(c => c.tags && (c.tags.includes('保留') || c.tags.includes('荆棘'))).length;
-                let totalArmor = parseInt(card.val) + (8 * synergyCount);
-                state.armor += totalArmor; if(synergyCount > 0) state.player.thorns += 3 * synergyCount;
-                triggerVFX('p-def'); showFloatText(`${card.name} 护甲 +${totalArmor}`, "var(--water)", getCenter('ui-hp'));
+                triggerVFX('p-def');
+                const hadCounter = state.p_counter > 0;
+                if (hadCounter) state.p_reduce_dmg += 8;
+                else state.armor += parseInt(card.val);
+                state.p_counter = 1;
+                showFloatText(hadCounter ? "守誓阵列 / 庇护 +8" : `${card.name} 护甲 +${card.val}`, "var(--water)", getCenter('ui-hp'));
                 updateTopBar();
             }
             else if (card.specialId === 'a_syn_blood') {
@@ -6434,7 +6459,7 @@
                 if (spentDebt > 0) repayBloodDebt(spentDebt, '血海吞债');
                 const dmg = parseInt(card.val) + spentDebt * (card.bloodDebtSpendDamage || 15) + state.p_battle_dmg;
                 triggerVFX('p-atk'); const dealt = applySpecialCardDamage(card, dmg, true); let bloodHeal = Math.floor(dealt * (card.lifestealRatio || 0.5));
-                if (state.enemy.hp > 0 && spentDebt > 0) {
+                if (state.enemy.currentHp > 0 && spentDebt > 0) {
                     const bloodMomentum = Math.min(24, Math.max(6, Math.ceil(spentDebt * 1.4)));
                     state.p_battle_dmg += bloodMomentum;
                     showFloatText(`血誓续势 +${bloodMomentum}`, "var(--crimson)", getCenter('ui-hp'));
@@ -6447,11 +6472,9 @@
                 showFloatText(`${card.name} 消耗 ${spentDebt} 血债`, "var(--crimson)", getCenter('enemy-avatar'));
             }
             else if (card.specialId === 'a_syn_magic') {
-                let synergyCount = state.hand.filter(c => c.tags && (c.tags.includes('回响') || c.tags.includes('复刻'))).length;
-                if(synergyCount > 0) {
-                    for(let i=0; i<synergyCount; i++) { applyDamageToEnemy(15, true); state.mp += 1; await new Promise(r => setTimeout(r, 200)); }
-                    showFloatText(`${card.name} 天雷 ${synergyCount} 道`, "var(--purple)", getCenter('enemy-avatar'));
-                } else { showFloatText("无回音可借", "#888", getCenter('ui-hp')); }
+                state.p_next_dmg += 8;
+                await drawCards(1);
+                showFloatText("回声导线 / 附魔 +8", "var(--purple)", getCenter('ui-hp'));
             }
             else if (card.specialId === 'w_counter_crown') {
                 triggerVFX('p-atk');
@@ -6497,7 +6520,7 @@
                 const executionHand = state.hand.filter(c => c.tags && (c.tags.includes('连击') || c.tags.includes('穿甲'))).length;
                 let dmg = 42 + state.p_battle_dmg + state.enemy.vuln * 8 + executionHand * 10;
                 applySpecialCardDamage(card, dmg, true);
-                if (state.enemy.hp > 0) {
+                if (state.enemy.currentHp > 0) {
                     state.p_battle_dmg += 22;
                     showFloatText("处刑续势 +22", "var(--gold)", getCenter('ui-hp'));
                 }
@@ -6525,7 +6548,13 @@
                 if (state.lastPlayedCard && !state.lastPlayedCard.isJunk && !lastWasReplica) {
                     showFloatText("回声复写", "var(--purple)", getCenter('ui-hp'));
                     await executeCardTags(state.lastPlayedCard, true, null);
-                    state.p_next_dmg += 4;
+                    if(hasRelic('r_echo_archive_pin') && !state.r_echo_archive_pin_used) {
+                        state.r_echo_archive_pin_used = true;
+                        state.mp += 1;
+                        state.p_next_dmg += 8;
+                        showFloatText("书签回能 +1 / 附魔 +8", "var(--purple)", getCenter('ui-mp'));
+                    }
+                    state.p_next_dmg += 10;
                     await drawCards(1);
                 } else {
                     state.p_chant = Math.min(12, state.p_chant + 3);
@@ -6545,7 +6574,7 @@
                 const chantSpent = state.p_chant;
                 applySpecialCardDamage(card, 48 + state.p_battle_dmg + chantSpent * 20, true);
                 state.p_reduce_dmg += Math.min(40, chantSpent * 5);
-                if (state.enemy.hp > 0 && chantSpent > 0) {
+                if (state.enemy.currentHp > 0 && chantSpent > 0) {
                     const cometMomentum = Math.min(28, Math.max(8, chantSpent * 4));
                     state.p_battle_dmg += cometMomentum;
                     showFloatText(`裂星余势 +${cometMomentum}`, "var(--purple)", getCenter('ui-hp'));
@@ -6597,7 +6626,7 @@
                 triggerVFX('p-atk');
                 applySpecialCardDamage(card, 18 + state.p_battle_dmg + shots * 10, true);
                 state.p_reduce_dmg += shots;
-                if (state.enemy.hp > 0 && shots > 0) {
+                if (state.enemy.currentHp > 0 && shots > 0) {
                     const galeMomentum = Math.min(2, shots);
                     state.p_battle_dmg += galeMomentum;
                     showFloatText(`疾风续势 +${galeMomentum}`, "var(--nature)", getCenter('ui-hp'));
@@ -6763,6 +6792,12 @@
             if (state.lastPlayedCard) { 
                 showFloatText("发动复刻！", "var(--purple)", getCenter('ui-hp')); 
                 await executeCardTags(state.lastPlayedCard, true, null); 
+                if(hasRelic('r_echo_archive_pin') && !state.r_echo_archive_pin_used) {
+                    state.r_echo_archive_pin_used = true;
+                    state.mp += 1;
+                    state.p_next_dmg += 8;
+                    showFloatText("书签回能 +1 / 附魔 +8", "var(--purple)", getCenter('ui-mp'));
+                }
                 if(hasRelic('r_echo_mirror_relic')) { await new Promise(r => setTimeout(r, 200)); await executeCardTags(state.lastPlayedCard, true, null); } 
             } else if (hasRelic('r_copy_lattice') && !isEcho) {
                 state.p_chant = Math.min(12, state.p_chant + 1);
@@ -6886,8 +6921,8 @@
             applyDamageToEnemy(finalDmg, isPierce);
             if(card.tags && card.tags.includes('重击') && hasRelic('r_execute_scabbard') && state.enemy.vuln > 0) {
                 applyDamageToEnemy(24, true);
-                state.p_reduce_dmg += 12;
-                showFloatText("断罪 +24 / 庇护 +12", "var(--gold)", getCenter('enemy-avatar'));
+                if (state.enemy.currentHp > 0) state.p_battle_dmg += 6;
+                showFloatText(state.enemy.currentHp > 0 ? "断罪 +24 / 续势 +6" : "断罪 +24", "var(--gold)", getCenter('enemy-avatar'));
             }
             if(card.tags && card.tags.includes('圣剑') && hasRelic('r_thorn_bloom') && state.player.thorns > 0) {
                 applyDamageToEnemy(state.player.thorns, true);
