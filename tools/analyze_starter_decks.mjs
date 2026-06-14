@@ -148,7 +148,7 @@ function analyzeStarterBias(data, roleId, starter) {
         borrow: bloodoathCards.filter(card => card.bloodDebtGain > 0).map(card => card.name),
         leverage: bloodoathCards.filter(card => card.bloodDebtDamageRatio > 0 || card.bloodDebtPowerGain > 0).map(card => card.name),
         repay: bloodoathCards.filter(card => card.bloodDebtRepay > 0 || card.bloodDebtRepayFromBleed > 0 || (card.tags || []).includes('吸血')).map(card => card.name),
-        tension: bloodoathCards.filter(card => card.bloodDebtSettlementMultiplier > 1 || card.bloodDebtStun > 0).map(card => card.name)
+        tension: bloodoathCards.filter(card => card.bloodDebtGain >= 5 || card.bloodDebtStun > 0).map(card => card.name)
     } : null;
     const bloodDebtCoveragePassed = !bloodDebtRoleCoverage || Object.values(bloodDebtRoleCoverage).every(cards => cards.length >= 2);
     const directionRewardCoverage = Object.fromEntries(directions.map(buildTag => {
