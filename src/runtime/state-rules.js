@@ -107,11 +107,21 @@
         return findMapNodeById(mapData, savedNodeId || fallbackId);
     }
 
+    function getCharacterBaseEnergy(character = {}, { hasBaseEnergyRelic = false } = {}) {
+        return (character.baseEnergy || 5) + (hasBaseEnergyRelic ? 1 : 0);
+    }
+
+    function getCharacterTurnDrawCount(character = {}, { hasFirstDrawRelic = false } = {}) {
+        return (character.openingHand || 5) + (hasFirstDrawRelic ? 1 : 0);
+    }
+
     global.QuestersStateRules = {
         createEnemyState,
         createInitialState,
         createRunSavePayload,
         findMapNodeById,
+        getCharacterBaseEnergy,
+        getCharacterTurnDrawCount,
         resolveSavedCurrentNode
     };
 })(window);

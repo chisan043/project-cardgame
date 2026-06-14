@@ -4615,10 +4615,14 @@
     }
 
     function getCharacterBaseEnergy(character = getCurrentCharacter()) {
-        return (character.baseEnergy || 5) + (hasRelic('r_base_energy') ? 1 : 0);
+        return QuestersStateRules.getCharacterBaseEnergy(character, {
+            hasBaseEnergyRelic: hasRelic('r_base_energy')
+        });
     }
     function getCharacterTurnDrawCount(character = getCurrentCharacter()) {
-        return (character.openingHand || 5) + (hasRelic('r_first_draw') ? 1 : 0);
+        return QuestersStateRules.getCharacterTurnDrawCount(character, {
+            hasFirstDrawRelic: hasRelic('r_first_draw')
+        });
     }
 
     function applyCharacterRunStats(characterId) {
