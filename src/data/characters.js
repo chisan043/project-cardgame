@@ -172,30 +172,30 @@ const CHARACTERS = {
             wind: {
                 type: 'archer-wind',
                 frames: [
-                    { src: 'assets/vfx/player_buff/archer_wind_01_v2.webp', duration: 45 },
-                    { src: 'assets/vfx/player_buff/archer_wind_02_v2.webp', duration: 55 },
-                    { src: 'assets/vfx/player_buff/archer_wind_03_v2.webp', duration: 65 },
-                    { src: 'assets/vfx/player_buff/archer_wind_04_v2.webp', duration: 75 },
-                    { src: 'assets/vfx/player_buff/archer_wind_05_v2.webp', duration: 70 },
-                    { src: 'assets/vfx/player_buff/archer_wind_06_v2.webp', duration: 70 }
+                    { src: 'assets/vfx/player_buff/archer_wind_01_v3.webp', duration: 45 },
+                    { src: 'assets/vfx/player_buff/archer_wind_02_v3.webp', duration: 55 },
+                    { src: 'assets/vfx/player_buff/archer_wind_03_v3.webp', duration: 65 },
+                    { src: 'assets/vfx/player_buff/archer_wind_04_v3.webp', duration: 75 },
+                    { src: 'assets/vfx/player_buff/archer_wind_05_v3.webp', duration: 70 },
+                    { src: 'assets/vfx/player_buff/archer_wind_06_v3.webp', duration: 70 }
                 ],
-                width: 455,
-                height: 605,
-                origin: { x: 0.54, y: 0.46 }
+                width: 560,
+                height: 840,
+                origin: { x: 0.5, y: 0.5 }
             },
             dodge: {
                 type: 'archer-dodge',
                 frames: [
-                    { src: 'assets/vfx/player_buff/archer_dodge_01_v2.webp', duration: 40 },
-                    { src: 'assets/vfx/player_buff/archer_dodge_02_v2.webp', duration: 50 },
-                    { src: 'assets/vfx/player_buff/archer_dodge_03_v2.webp', duration: 55 },
-                    { src: 'assets/vfx/player_buff/archer_dodge_04_v2.webp', duration: 65 },
-                    { src: 'assets/vfx/player_buff/archer_dodge_05_v2.webp', duration: 60 },
-                    { src: 'assets/vfx/player_buff/archer_dodge_06_v2.webp', duration: 60 }
+                    { src: 'assets/vfx/player_buff/archer_dodge_01_v3.webp', duration: 40 },
+                    { src: 'assets/vfx/player_buff/archer_dodge_02_v3.webp', duration: 50 },
+                    { src: 'assets/vfx/player_buff/archer_dodge_03_v3.webp', duration: 55 },
+                    { src: 'assets/vfx/player_buff/archer_dodge_04_v3.webp', duration: 65 },
+                    { src: 'assets/vfx/player_buff/archer_dodge_05_v3.webp', duration: 60 },
+                    { src: 'assets/vfx/player_buff/archer_dodge_06_v3.webp', duration: 60 }
                 ],
-                width: 455,
-                height: 605,
-                origin: { x: 0.53, y: 0.45 }
+                width: 560,
+                height: 840,
+                origin: { x: 0.5, y: 0.5 }
             }
         },
         battleBackHurtFrames: [
