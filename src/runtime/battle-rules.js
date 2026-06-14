@@ -35,6 +35,12 @@
         return Math.min(dmg, Math.ceil(dmg * 0.5));
     }
 
+    function getEncounterScale(type, floor = 1) {
+        if (type === 'boss') return 1 + floor * 0.058;
+        if (type === 'elite') return 1 + floor * 0.085;
+        return 1 + floor * 0.1;
+    }
+
     function resetPlayerBattleStatuses(state) {
         state.p_poison = 0;
         state.p_bleed = 0;
@@ -127,6 +133,7 @@
         cleanupAfterBattleWin,
         getCounterParryValue,
         getEnchantBonus,
+        getEncounterScale,
         getFrenzyBonus,
         getRuntimeFailureHint,
         getSwordBonus,

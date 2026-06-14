@@ -5656,9 +5656,7 @@
     let cardsPlayedThisTurn = 0;
 
     function getEncounterScale(type, floor = state.floor) {
-        if (type === 'boss') return 1 + floor * 0.058;
-        if (type === 'elite') return 1 + floor * 0.085;
-        return 1 + floor * 0.1;
+        return QuestersBattleRules.getEncounterScale(type, floor);
     }
 
     async function startBattle(type) {
