@@ -299,6 +299,13 @@ function hasRelic(state, relicId) {
     return state.relics.has(relicId);
 }
 
+function applyEnemyTypeDamageBonus(state, amount) {
+    let damage = Math.max(0, Math.floor(amount));
+    if (state.enemy?.type === 'elite' && hasRelic(state, 'r_elite_hunter')) damage = Math.floor(damage * 1.15);
+    if (state.enemy?.type === 'boss' && hasRelic(state, 'r_boss_slayer')) damage = Math.floor(damage * 1.2);
+    return damage;
+}
+
 function addBloodDebt(state, amount) {
     let gain = Math.max(0, Math.floor(Number(amount) || 0));
     if (gain <= 0) return 0;
@@ -553,6 +560,7 @@ function hitEnemy(state, amount, pierce = false, source = '卡牌伤害') {
         state.enemy.minion.hp -= blocked;
         damage -= blocked;
     }
+    damage = applyEnemyTypeDamageBonus(state, damage);
     if (damage <= 0) return 0;
     if (!pierce) {
         const blocked = Math.min(damage, state.enemy.armor);

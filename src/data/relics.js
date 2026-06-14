@@ -139,6 +139,8 @@ const RELIC_POOL = [
     { id: 'r_shield', name: '古誓护印', icon: '🔰', desc: '通用：所有[防御]牌额外获得 4 点护甲，适合任何需要稳住节奏的牌组。', price: 150 },
     { id: 'r_combo', name: '流转沙漏', icon: '⌛', desc: '通用：一回合内每打出 3 张牌，额外[抽牌] 1 张，帮助连段与找牌。', price: 210 },
     { id: 'r_battle_whetstone', name: '磨锋砥石', icon: '🪨', desc: '通用：每场战斗开始时，本场战斗所有伤害提高 2。', price: 170 },
+    { id: 'r_elite_hunter', name: '猎英徽记', icon: '🎯', desc: '通用：对精英敌人造成的所有伤害提高 15%。', price: 170 },
+    { id: 'r_boss_slayer', name: '弑王刻印', icon: '👑', desc: '通用：对首领敌人造成的所有伤害提高 20%。', price: 210 },
     { id: 'r_first_draw', name: '启程星图', icon: '🌠', desc: '通用：每回合摸牌数提高 1，让任意职业都更容易凑齐核心组合。', price: 230 },
     { id: 'r_warm_pendant', name: '余烬护符', icon: '🔆', desc: '通用：每场战斗胜利后回复 6 点生命，适合长线探索。', price: 160 },
     { id: 'r_silver_purse', name: '银纹钱袋', icon: '👛', desc: '通用：每场战斗胜利后额外获得 10 枚金币，强化商栈路线。', price: 180 },
@@ -236,6 +238,8 @@ const RELIC_MASTER_ICON_BY_ID = {
     r_exhaust_knife: 'assets/relics/masters/martial_crest_master_v1.webp',
     r_return_knife: 'assets/relics/masters/martial_crest_master_v1.webp',
     r_battle_whetstone: 'assets/relics/masters/martial_crest_master_v1.webp',
+    r_elite_hunter: 'assets/relics/masters/martial_crest_master_v1.webp',
+    r_boss_slayer: 'assets/relics/masters/martial_crest_master_v1.webp',
     r_pierce: 'assets/relics/masters/martial_crest_master_v1.webp',
     r_exhaust_dmg: 'assets/relics/masters/ghost_banner_master_v1.webp',
     r_return_poison: 'assets/relics/masters/ghost_banner_master_v1.webp',
@@ -255,7 +259,8 @@ const RELIC_MASTER_ICON_BY_ID = {
 };
 const COMMON_RELIC_IDS = new Set([
     'r_base_energy', 'r_pass_draw', 'r_shield', 'r_combo',
-    'r_battle_whetstone', 'r_first_draw', 'r_warm_pendant', 'r_silver_purse',
+    'r_battle_whetstone', 'r_elite_hunter', 'r_boss_slayer',
+    'r_first_draw', 'r_warm_pendant', 'r_silver_purse',
     'r_copy_seal', 'r_reward_crown'
 ]);
 const STARTING_RELIC_BY_ROLE = {

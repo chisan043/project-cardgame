@@ -2236,7 +2236,7 @@
 
 <script src="hud-runtime.js?v=20260518-forced-default-hud1"></script>
 <script src="hud-layout-data.js?v=20260518-forced-default-hud1"></script>
-<script src="src/data/relics.js?v=20260612-tag-simplify"></script>
+<script src="src/data/relics.js?v=20260614-elite-boss-relics"></script>
 <script src="src/data/card-tags.js?v=20260612-tag-simplify"></script>
 <script src="src/data/cards.js?v=20260612-tag-simplify"></script>
 <script src="src/data/enemies.js?v=20260605-enemy-ai"></script>
@@ -6194,6 +6194,13 @@
         return ['poison', 'bleed', 'burn', 'stun', 'curse', 'vuln', 'weak'].filter(k => (state.enemy?.[k] || 0) > 0).length;
     }
 
+    function applyEnemyTypeDamageBonus(dmg) {
+        let finalDmg = Math.max(0, Math.floor(dmg));
+        if (state.enemy?.type === 'elite' && hasRelic('r_elite_hunter')) finalDmg = Math.floor(finalDmg * 1.15);
+        if (state.enemy?.type === 'boss' && hasRelic('r_boss_slayer')) finalDmg = Math.floor(finalDmg * 1.2);
+        return finalDmg;
+    }
+
     function applySpecialDamage(dmg, isPierce = false) {
         let finalDmg = Math.max(0, Math.floor(dmg));
         if(state.enemy.vuln > 0) finalDmg = Math.floor(finalDmg * (1 + state.enemy.vuln * 0.05));
@@ -7068,6 +7075,8 @@
             if (state.enemy.minion.hp <= 0) { state.enemy.minion = null; }
             if (dmg <= 0) return; 
         }
+
+        dmg = applyEnemyTypeDamageBonus(dmg);
         
         if (isPierce) {
             state.enemy.currentHp -= dmg;
