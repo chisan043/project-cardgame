@@ -25,7 +25,7 @@ const SPECIAL_EPIC_POOLS = {
         { id: 'm_blood_moon_rite', name: '暗月仪轨', roleId: 'hero_mage', frameTheme: 'mage', art: 'assets/cards/art/mage/mage_omen_art_v1.webp', type: '能力', cost: 1, icon: '🌙', val: 0, tags: ['诅咒', '易伤'], rarity: '史诗', isSpecial: true, desc: '施加 5[诅咒]与 2[易伤]。敌方每种负面状态造成 6 点灾厄伤害。' }
     ],
     hero_archer: [
-        { id: 's_exhaust', name: '风葬归矢', roleId: 'hero_archer', frameTheme: 'archer', art: 'assets/cards/art/archer/archer_rain_art_v1.webp', type: '能力', cost: 3, icon: '🕳️', val: 0, tags: ['放逐', '回收'], rarity: '史诗', isSpecial: true, desc: '每张放逐牌造成 15 伤害，并获得 2 护盾与 2 庇护；对首领追加 10% 最大生命伤害。随后洗回放逐区。' },
+        { id: 's_exhaust', name: '风葬归矢', roleId: 'hero_archer', frameTheme: 'archer', art: 'assets/cards/art/archer/archer_rain_art_v1.webp', type: '能力', cost: 3, icon: '🕳️', val: 0, tags: ['放逐', '回收'], rarity: '史诗', isSpecial: true, desc: '每张放逐牌造成 10 伤害，并获得 2 护盾与 2 庇护；对首领追加 10% 最大生命伤害。随后洗回牌库并触发回流伤害。' },
         { id: 's_poison', name: '猎毒齐爆', roleId: 'hero_archer', frameTheme: 'archer', art: 'assets/cards/art/archer/archer_ambush_art_v1.webp', type: '能力', cost: 2, icon: '💥', val: 36, tags: ['剧毒', '出血'], rarity: '史诗', isSpecial: true, desc: '造成 36 真实伤害；再按剧毒与出血总层数造成 3 倍伤害，不清层。按总层数获得至多 12 庇护。' },
         { id: 'a_syn_poison', name: '万毒箭阵', roleId: 'hero_archer', frameTheme: 'archer', art: 'assets/cards/art/archer/archer_hawkeye_art_v1.webp', type: '能力', cost: 1, icon: '🧪', val: 0, tags: ['剧毒', '出血'], rarity: '史诗', isSpecial: true, desc: '丢弃手牌所有[剧毒]/[出血]牌。每弃 1 张，施加 6 层剧毒与出血，并造成 10 伤害。' },
         { id: 's_energy', name: '林风整备', roleId: 'hero_archer', frameTheme: 'archer', art: 'assets/cards/art/archer/archer_ready_art_v1.webp', type: '能力', cost: 2, icon: '🍃', val: 0, tags: ['重置', '自然'], rarity: '史诗', isSpecial: true, desc: '丢弃你所有的手牌。每丢弃一张，回复 1 点能量并抽取 1 张牌。' },
@@ -165,7 +165,7 @@ const RELIC_POOL = [
     { id: 'r_burst_lens', name: '聚爆透镜', icon: '🔍', desc: '法师：[爆发]或裂星禁术消耗咏唱后会保留一半咏唱层数。', price: 230 },
     { id: 'r_chant_ink', name: '恒咏墨瓶', icon: '🖋️', desc: '法师：你的回合开始时，若[咏唱]低于 2 层，补到 2 层。', price: 210 },
     { id: 'r_wind_quiver', name: '踏风箭囊', icon: '🏹', desc: '弓手：每次通过卡牌或职业联动获得风势或[闪避]时，额外获得 1 层对应状态。', price: 190 },
-    { id: 'r_exile_cache', name: '流亡箭匣', icon: '📦', desc: '弓手：带[放逐]的攻击牌获得的放逐威能从 50% 提高到 75%。', price: 200 },
+    { id: 'r_exile_cache', name: '流亡箭匣', icon: '📦', desc: '弓手：牌进入放逐区时额外造成 3 点流动伤害；带[放逐]的攻击牌额外造成 2 点伤害。', price: 200 },
     { id: 'r_bloodlet_draw', name: '赤脉弦扣', icon: '🩸', desc: '弓手：触发[放血]并成功引爆出血后，额外[抽牌] 1 张。', price: 170 },
     { id: 'r_copy_seal', name: '复写印泥', icon: '📜', desc: '通用：商栈拓印卡牌的价格降低 20 金币。', price: 160 },
     { id: 'r_reward_crown', name: '弃赏王冠', icon: '👑', desc: '通用：放弃战斗后的卡牌或遗物奖励时，换取的金币额外增加 15。', price: 170 }

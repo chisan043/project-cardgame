@@ -47,7 +47,6 @@ const CARD_RECYCLE_MODES = {
     archer_pick_feather: ['discardToHand'],
     archer_soul_return: ['exhaustToHand'],
     archer_blood_feather: ['discardToHand'],
-    archer_returning_feather: ['exhaustToDraw'],
     archer_outerwood_recall: ['exhaustToHand'],
     archer_deadbranch_shuffle: ['exhaustToDraw'],
     archer_lost_arrow_mark: ['discardToHand'],

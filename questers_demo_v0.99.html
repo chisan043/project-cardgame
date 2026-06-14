@@ -6003,12 +6003,38 @@
         renderHand();
     }
 
+    function cardHasBuildTag(card, buildTag) {
+        if (!card) return false;
+        const cardId = card.poolId || card.specialId || card.id;
+        const buildTags = card.buildTags || (typeof CARD_BUILD_TAGS_BY_ID !== 'undefined' ? CARD_BUILD_TAGS_BY_ID[cardId] : null) || [];
+        return buildTags.includes(buildTag);
+    }
+
+    function getExileFlowDamage(card, eventType) {
+        if (!card || card.isJunk || card.isKnife || state.player?.characterId !== 'hero_archer') return 0;
+        if (!cardHasBuildTag(card, 'exile')) return 0;
+        const baseByEvent = { discard: 3, exhaust: 5, return: 7, destroy: 4 };
+        let damage = baseByEvent[eventType] || 0;
+        if (eventType === 'exhaust' && hasRelic('r_exile_cache')) damage += 3;
+        return damage;
+    }
+
+    function triggerExileFlowDamage(card, eventType, label = '流亡') {
+        const damage = getExileFlowDamage(card, eventType);
+        if (damage <= 0) return 0;
+        applyDamageToEnemy(damage, true);
+        showFloatText(`${label} ${damage}`, "var(--nature)", getCenter('enemy-avatar'));
+        return damage;
+    }
+
     function onCardExhausted(c) {
+        triggerExileFlowDamage(c, 'exhaust', '入逐');
         if (hasRelic('r_exhaust_dmg')) { state.p_battle_dmg += 1; showFloatText("烬火 +1伤", "var(--crimson)", getCenter('ui-hp')); }
         if (hasRelic('r_exhaust_knife') && !c.isKnife) { addKnivesToHand(2); showFloatText("飞刀出鞘", "#bbb", getCenter('ui-hp')); }
     }
 
-    function onCardReturnedFromExhaust() {
+    function onCardReturnedFromExhaust(c = null) {
+        triggerExileFlowDamage(c, 'return', '回流');
         let triggered = false;
         if (hasRelic('r_return_poison')) { state.enemy.poison += 2; triggered = true; }
         if (hasRelic('r_return_bleed')) { state.enemy.bleed += 2; triggered = true; }
@@ -6025,6 +6051,7 @@
         if(elDOM) animateCardToPile(elDOM, 'discard');
         if(hasRelic('r_bone_ring') && !dCard.isJunk) { state.p_battle_dmg += 1; showFloatText("弃骨 +1伤", "var(--crimson)", getCenter('ui-hp')); }
         if(!dCard.isJunk) state.r_discard_count++;
+        triggerExileFlowDamage(dCard, 'discard', '入墓');
     }
 
     function addBloodDebt(amount, source = '血债') {
@@ -6237,6 +6264,7 @@
         card.sealed = false; 
 
         if (isDestroy) {
+            triggerExileFlowDamage(card, 'destroy', '销毁');
             elDOM.style.transition = 'all 0.4s'; elDOM.style.transform += ' scale(0)'; elDOM.style.opacity = '0'; setTimeout(() => elDOM.remove(), 400); showFloatText("销毁", "#555", getCenter('ui-hp'));
         } else if (isExhaust) {
             animateCardToPile(elDOM, 'exhaust');
@@ -6248,6 +6276,7 @@
         } else {
             animateCardToPile(elDOM, 'discard');
             state.discardPile.push(card); 
+            triggerExileFlowDamage(card, 'discard', '入墓');
         }
         
         renderHand(); 
@@ -6327,11 +6356,11 @@
         if (card.isSpecial) {
             if (card.type === '攻击') payBloodDebtAttackCost(card.name);
             if(card.specialId === 's_exhaust') {
-                triggerVFX('p-atk'); let count = state.exhaustPile.length; let bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.10) : 0; let dmg = bossBonus + count * 15;
+                triggerVFX('p-atk'); let count = state.exhaustPile.length; let bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.10) : 0; let dmg = bossBonus + count * 10;
                 applySpecialCardDamage(card, dmg);
                 state.armor += Math.min(12, count * 2);
                 state.p_reduce_dmg += Math.min(12, count * 2);
-                state.exhaustPile.forEach(c => onCardReturnedFromExhaust());
+                state.exhaustPile.forEach(c => onCardReturnedFromExhaust(c));
                 state.battleDeck = state.battleDeck.concat(state.exhaustPile); state.exhaustPile = []; state.battleDeck.sort(()=>0.5-Math.random());
             }
             else if(card.specialId === 's_poison') { let layers = state.enemy.poison + state.enemy.bleed; let dmg = 36 + layers * 3; applyDamageToEnemy(dmg); state.p_reduce_dmg += Math.min(12, layers); showFloatText(card.name, "var(--nature)", getCenter('enemy-avatar')); }
@@ -6339,7 +6368,7 @@
             else if(card.specialId === 's_magic') { state.p_echo_stack += 3; showFloatText(card.name, "var(--purple)", getCenter('ui-hp')); }
             else if(card.specialId === 's_pierce') { triggerVFX('p-atk'); let dmg = 40; if(state.enemy.vuln > 0) dmg += Math.floor(dmg * (state.enemy.vuln * 0.5)); if(state.p_weak > 0) dmg = Math.floor(dmg * 0.75); applyDamageToEnemy(dmg, true); }
             else if(card.specialId === 's_thorns') { triggerVFX('p-def'); state.armor += 30; state.player.thorns += 10; showFloatText(card.name, "var(--gold)", getCenter('ui-hp')); updateTopBar(); }
-            else if(card.specialId === 's_energy') { let discardCount = state.hand.length; state.hand.forEach(c => { state.discardPile.push(c); state.r_discard_count++; }); state.hand = []; renderHand(); if (discardCount > 0) { state.mp += discardCount; if(hasRelic('r_bone_ring')) state.p_battle_dmg += discardCount; showFloatText(`${card.name} +${discardCount}能`, "var(--gold)", getCenter('ui-mp')); await drawCards(discardCount); } }
+            else if(card.specialId === 's_energy') { let discardCount = state.hand.length; state.hand.forEach(c => { state.discardPile.push(c); state.r_discard_count++; triggerExileFlowDamage(c, 'discard', '入墓'); }); state.hand = []; renderHand(); if (discardCount > 0) { state.mp += discardCount; if(hasRelic('r_bone_ring')) state.p_battle_dmg += discardCount; showFloatText(`${card.name} +${discardCount}能`, "var(--gold)", getCenter('ui-mp')); await drawCards(discardCount); } }
             
             // --- 词条共鸣 ---
             else if (card.specialId === 'a_syn_sword') {
@@ -6558,7 +6587,7 @@
                 if (targets && targets.shiyi) {
                     targets.shiyi.forEach(c => {
                         let dIdx = state.discardPile.findIndex(x => x.instId === c.instId);
-                        if (dIdx !== -1) { state.discardPile.splice(dIdx, 1); state.hand.push(c); broughtBack = true; }
+                        if (dIdx !== -1) { state.discardPile.splice(dIdx, 1); state.hand.push(c); broughtBack = true; triggerExileFlowDamage(c, 'return', '回流'); }
                     });
                 }
                 state.p_aim = Math.min(6, state.p_aim + 2 + (hasRelic('r_wind_quiver') ? 1 : 0));
@@ -6652,6 +6681,7 @@
                             state.discardPile.splice(index, 1);
                             if (hasRelic('r_soul_lantern') && !(c.tags || []).includes('保留')) c.tags.push('保留');
                             state.hand.push(c);
+                            triggerExileFlowDamage(c, 'return', '回流');
                             handChanged = true;
                         }
                     } else if (selection.mode === 'exhaustToHand') {
@@ -6661,7 +6691,7 @@
                             if (hasRelic('r_soul_lantern') && !(c.tags || []).includes('保留')) c.tags.push('保留');
                             state.hand.push(c);
                             handChanged = true;
-                            onCardReturnedFromExhaust();
+                            onCardReturnedFromExhaust(c);
                         }
                     } else if (selection.mode === 'exhaustToDraw') {
                         const index = state.exhaustPile.findIndex(item => item.instId === c.instId);
@@ -6670,7 +6700,7 @@
                             state.battleDeck.push(c);
                             state.battleDeck.sort(() => 0.5 - Math.random());
                             showFloatText("洗入牌库", "white", getCenter('ui-deck-count'));
-                            onCardReturnedFromExhaust();
+                            onCardReturnedFromExhaust(c);
                             if (hasRelic('r_cycle_compass')) {
                                 showFloatText("罗盘共鸣!", "var(--purple)", getCenter('ui-hp'));
                                 await executeCardTags(c, true, null);
@@ -6760,10 +6790,11 @@
                 if (debtBonus > 0) showFloatText(`血债威能 +${debtBonus}`, "var(--crimson)", getCenter('enemy-avatar'));
             }
             if(card.tags && card.tags.includes('放逐')) {
-                const exileRatio = hasRelic('r_exile_cache') ? 0.75 : 0.5;
-                const exileBonus = Math.max(5, Math.floor(val * exileRatio));
-                finalDmg += exileBonus;
-                showFloatText(`放逐威能 +${exileBonus}`, "var(--gold)", getCenter('enemy-avatar'));
+                const exileBonus = hasRelic('r_exile_cache') ? 2 : 0;
+                if (exileBonus > 0) {
+                    finalDmg += exileBonus;
+                    showFloatText(`流亡箭匣 +${exileBonus}`, "var(--gold)", getCenter('enemy-avatar'));
+                }
             }
             if(card.tags && card.tags.includes('圣剑')) {
                 finalDmg = addSwordBonusToDamage(card, finalDmg);
@@ -6905,7 +6936,7 @@
             showFloatText(`引爆出血`, "var(--crimson)", getCenter('enemy-avatar')); 
             if (hasRelic('r_bleed_return_exhaust')) {
                 let count = state.exhaustPile.length;
-                if (count > 0) { state.exhaustPile.forEach(c => { state.hand.push(c); onCardReturnedFromExhaust(); }); state.exhaustPile = []; showFloatText("血魂唤灵", "var(--purple)", getCenter('ui-hp')); }
+                if (count > 0) { state.exhaustPile.forEach(c => { state.hand.push(c); onCardReturnedFromExhaust(c); }); state.exhaustPile = []; showFloatText("血魂唤灵", "var(--purple)", getCenter('ui-hp')); }
             }
         }
 

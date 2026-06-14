@@ -400,6 +400,29 @@ function recordCardPlay(state, card) {
     if (tags.some(tag => ['抽牌', '充能', '重置', '回响', '复刻', '回收', '放逐', '销毁'].includes(tag))) state.playStyle.cycle++;
 }
 
+function cardHasBuildTag(state, card, buildTag) {
+    if (!card) return false;
+    const cardId = card.poolId || card.specialId || card.id;
+    const buildTags = card.buildTags || state.data.CARD_BUILD_TAGS_BY_ID?.[cardId] || [];
+    return buildTags.includes(buildTag);
+}
+
+function getExileFlowDamage(state, card, eventType) {
+    if (!card || card.isJunk || card.isKnife || state.roleId !== 'hero_archer') return 0;
+    if (!cardHasBuildTag(state, card, 'exile')) return 0;
+    const baseByEvent = { discard: 3, exhaust: 5, return: 7, destroy: 4 };
+    let damage = baseByEvent[eventType] || 0;
+    if (eventType === 'exhaust' && hasRelic(state, 'r_exile_cache')) damage += 3;
+    return damage;
+}
+
+function dealExileFlowDamage(state, card, eventType) {
+    const damage = getExileFlowDamage(state, card, eventType);
+    if (damage <= 0) return 0;
+    hitEnemy(state, damage, true, '牌区流动');
+    return damage;
+}
+
 function addKnives(state, count) {
     for (let i = 0; i < count; i++) {
         const knife = {
@@ -419,6 +442,7 @@ function returnFromExhaust(state, destination) {
         recordCardOpportunity(state, card);
     }
     else state.drawPile.push(card);
+    dealExileFlowDamage(state, card, 'return');
     if (hasRelic(state, 'r_return_knife')) {
         addKnives(state, 1);
         state.protection += 1;
@@ -431,6 +455,7 @@ function returnFromDiscard(state) {
     const card = state.discard.splice(Math.floor(state.rng() * state.discard.length), 1)[0];
     state.hand.push(card);
     recordCardOpportunity(state, card);
+    dealExileFlowDamage(state, card, 'return');
     return true;
 }
 
@@ -554,7 +579,7 @@ function estimateCard(state, card, incoming, move) {
             m_status_supernova: 38 + enemyDebuffCount(state) * 14,
             a_gale_verdict: 18 + Math.min(3, state.aim) * 11,
             s_poison: (state.enemy.poison + state.enemy.bleed) * 3 + 40,
-            s_exhaust: state.exhaust.length * 6 + (state.exhaust.length ? 10 : 0)
+            s_exhaust: state.exhaust.length * 10 + (state.exhaust.length ? 10 : 0)
         };
         score += specialScores[card.specialId] || 0;
     }
@@ -641,6 +666,12 @@ function estimateCard(state, card, incoming, move) {
     if (tags.includes('诅咒')) score += 4;
     if (tags.includes('放血')) score += state.enemy.bleed * 3;
     if (tags.includes('回收')) score += state.exhaust.length > 0 || state.discard.length > 0 ? 8 : 1;
+    if (cardHasBuildTag(state, card, 'exile')) {
+        if (tags.includes('放逐')) score += getExileFlowDamage(state, card, 'exhaust') + 3;
+        else if (tags.includes('回收')) score += (state.exhaust.length || state.discard.length) ? 10 : 2;
+        else if (tags.includes('销毁')) score += getExileFlowDamage(state, card, 'destroy') + 2;
+        else score += getExileFlowDamage(state, card, 'discard');
+    }
     if (tags.includes('保留') || state.data.hasDirectCardEffect(card, 'retain')) score += 2;
     if (tags.includes('血祭')) score += state.hp > 20 ? 7 : -20;
     if (tags.includes('复刻') && state.lastCard) score += 10;
@@ -676,13 +707,20 @@ function discardPlayedCard(state, card) {
         delete card.returnedBySpecial;
         return;
     }
-    if ((card.tags || []).includes('销毁')) state.destroyed.push(card);
+    if ((card.tags || []).includes('销毁')) {
+        state.destroyed.push(card);
+        dealExileFlowDamage(state, card, 'destroy');
+    }
     else if ((card.tags || []).includes('放逐')) {
         state.exhaust.push(card);
+        dealExileFlowDamage(state, card, 'exhaust');
         if (hasRelic(state, 'r_exhaust_dmg')) state.battleDamage += 1;
     }
     else if ((card.tags || []).includes('保留') || state.data.hasDirectCardEffect(card, 'retain')) state.retained.push(card);
-    else state.discard.push(card);
+    else {
+        state.discard.push(card);
+        dealExileFlowDamage(state, card, 'discard');
+    }
 }
 
 function executeSpecialCard(state, card) {
@@ -758,11 +796,12 @@ function executeSpecialCard(state, card) {
         const returned = state.exhaust.length + 1;
         if (hasRelic(state, 'r_exhaust_dmg')) state.battleDamage += 1;
         const bossBonus = state.enemy.type === 'boss' ? Math.floor(state.enemy.maxHp * 0.10) : 0;
-        hitEnemy(state, bossBonus + returned * 15);
+        hitEnemy(state, bossBonus + returned * 10);
         state.armor += Math.min(12, returned * 2);
         state.protection += Math.min(12, returned * 2);
         if (hasRelic(state, 'r_return_knife')) addKnives(state, returned);
         card.returnedBySpecial = true;
+        for (const returnedCard of state.exhaust) dealExileFlowDamage(state, returnedCard, 'return');
         state.drawPile = shuffle(state.rng, state.drawPile.concat(state.exhaust, [card]));
         state.exhaust = [];
     } else {
@@ -889,7 +928,7 @@ function executeCard(state, card, echo = false) {
         if (tags.includes('连击') && state.cardsPlayed > 0 && !echo) value = Math.floor(value * 1.5);
         let damage = value + state.battleDamage + state.turnDamage;
         if (card.bloodDebtDamageRatio) damage += Math.floor(state.bloodDebt * Number(card.bloodDebtDamageRatio) * state.bloodDebtPower);
-        if (tags.includes('放逐')) damage += Math.max(5, Math.floor(value * (hasRelic(state, 'r_exile_cache') ? 0.75 : 0.5)));
+        if (tags.includes('放逐') && hasRelic(state, 'r_exile_cache')) damage += 2;
         if (tags.includes('圣剑')) damage += Math.floor(state.armor * (hasRelic(state, 'r_sword_oath') ? 0.7 : 0.5)) + state.counter * 4;
         if (tags.includes('爆发')) {
             const chantSpent = state.chant;
@@ -942,8 +981,11 @@ function executeCard(state, card, echo = false) {
     if (debtClearedByCard && card.bloodDebtClearHeal) heal(state, card.bloodDebtClearHeal);
     if (tags.includes('复刻') && state.lastCard && !echo) executeCard(state, state.lastCard, true);
     if (tags.includes('重置') && !echo) {
-        state.discard.push(...state.hand);
         const count = state.hand.length;
+        for (const discardedCard of state.hand) {
+            state.discard.push(discardedCard);
+            dealExileFlowDamage(state, discardedCard, 'discard');
+        }
         resetCount = count;
         state.hand = [];
         draw(state, count);
