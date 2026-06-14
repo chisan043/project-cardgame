@@ -561,12 +561,12 @@ const BUILD_EXPANSION_CARDS = {
         { poolId: 'archer_old_arrow_dream', name: '旧箭入梦', type: '能力', cost: 1, icon: '💤', val: 0, tags: ['回收'], buildTags: ['exile'], rarity: '稀有', frameTheme: 'archer', desc: '[回收] 1 张放逐区牌到手牌；回收放逐牌时造成 7 点[流动伤害]。' },
         { poolId: 'archer_leaf_search', name: '叶脉检索', type: '能力', cost: 0, icon: '🔎', val: 0, tags: ['回收'], buildTags: ['exile'], rarity: '稀有', frameTheme: 'archer', desc: '[回收] 1 张墓地牌到手牌；回收放逐牌时造成 7 点[流动伤害]。' },
         { poolId: 'archer_rearguard', name: '游侠断后', type: '攻击', cost: 2, icon: '🏹', val: 9, tags: ['放逐', '蓄力'], buildTags: ['exile', 'gale'], rarity: '史诗', frameTheme: 'archer', desc: '造成 9 点伤害，获得风势后[放逐]；进入放逐区时造成 5 点[流动伤害]。' },
-        { poolId: 'archer_forest_specimen', name: '归林标本', type: '能力', cost: 1, icon: '📦', val: 0, tags: ['回收'], buildTags: ['exile'], rarity: '稀有', frameTheme: 'archer', desc: '[回收] 1 张放逐区牌洗入牌库；回收放逐牌时造成 7 点[流动伤害]。' },
+        { poolId: 'archer_forest_specimen', name: '归林标本', type: '能力', cost: 1, icon: '📦', val: 0, tags: ['回收'], directEffects: { draw: true }, preserveDirectEffects: true, buildTags: ['exile'], rarity: '稀有', frameTheme: 'archer', desc: '[回收] 1 张放逐区牌洗入牌库并抽 1 张牌；回收放逐牌时造成 7 点[流动伤害]。' },
         { poolId: 'archer_shadow_box', name: '影匣齐射', type: '攻击', cost: 2, icon: '📦', val: 9, tags: ['放逐', '追击'], buildTags: ['exile', 'gale'], rarity: '史诗', frameTheme: 'archer', desc: '造成 9 点伤害，触发[追击]后[放逐]；进入放逐区时造成 5 点[流动伤害]。' },
         { poolId: 'archer_leaf_reload', name: '叶片换弦', type: '能力', cost: 0, icon: '🍃', val: 0, tags: ['自然', '抽牌'], buildTags: ['gale'], rarity: '普通', frameTheme: 'archer', desc: '免费触发[自然]并[抽牌]。' },
         { poolId: 'archer_sky_skim', name: '掠空轻矢', type: '攻击', cost: 0, icon: '🪶', val: 3, tags: ['追击', '销毁'], buildTags: ['gale'], rarity: '普通', frameTheme: 'archer', desc: '造成 3 点伤害，触发[追击]后[销毁]。' },
         { poolId: 'archer_crosswind_guard', name: '侧风护步', type: '防御', cost: 1, icon: '🥾', val: 9, tags: ['自然', '保留'], buildTags: ['gale'], rarity: '稀有', frameTheme: 'archer', desc: '获得 9 点护盾，触发[自然]并[保留]。' },
-        { poolId: 'archer_lostroad_cache', name: '失路箭袋', type: '能力', cost: 1, icon: '📦', val: 0, tags: ['放逐'], buildTags: ['exile'], rarity: '普通', frameTheme: 'archer', desc: '自身[放逐]，进入放逐区时造成 5 点[流动伤害]。' }
+        { poolId: 'archer_lostroad_cache', name: '失路箭袋', type: '能力', cost: 1, icon: '📦', val: 0, tags: ['放逐'], directEffects: { draw: true }, preserveDirectEffects: true, buildTags: ['exile'], rarity: '普通', frameTheme: 'archer', desc: '自身[放逐]并抽 1 张牌，进入放逐区时造成 5 点[流动伤害]。' }
     ],
     neutral: [
         { poolId: 'neutral_blank_pact', name: '空白契约', type: '能力', cost: 0, icon: '📄', val: 0, tags: ['抽牌', '销毁'], rarity: '普通', desc: '免费[抽牌]后[销毁]，用于压缩牌组和寻找职业核心。' },

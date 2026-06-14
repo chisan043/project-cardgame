@@ -138,7 +138,9 @@ function applyCardTagBudget(card) {
     }
     if (!card.isSpecial) {
         const visibleSemanticTags = card.tags.filter(tag => !DIRECT_EFFECT_TAGS[tag] && tag !== '销毁');
-        const allowedDirectEffects = visibleSemanticTags.length > 0 ? 0 : 1;
+        const allowedDirectEffects = card.preserveDirectEffects
+            ? Object.keys(card.directEffects || {}).length
+            : (visibleSemanticTags.length > 0 ? 0 : 1);
         const keptDirectEffects = {};
         for (const key of DIRECT_EFFECT_PRIORITY) {
             if (card.directEffects?.[key] && Object.keys(keptDirectEffects).length < allowedDirectEffects) {

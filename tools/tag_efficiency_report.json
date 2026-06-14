@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-14T16:19:49.779Z",
-  "seed": 20260612,
-  "runsPerSample": 1000,
+  "generatedAt": "2026-06-14T16:47:06.240Z",
+  "seed": 20260615,
+  "runsPerSample": 300,
   "modes": [
     "baseline",
     "mature"
@@ -37,7 +37,7 @@
       "1": 161,
       "2": 80
     },
-    "directEffectCards": 24,
+    "directEffectCards": 26,
     "byRole": [
       {
         "roleId": "hero_warrior",
@@ -104,12 +104,12 @@
       "prevalence": 0.024896265560165973,
       "samples": 18,
       "affectedBuilds": 6,
-      "meanWinRateImpact": 0.009777777777777786,
-      "meanWinRateImpactPp": 0.9777777777777786,
-      "meanHpImpact": 0.9463333333333322,
-      "meanTurnImpact": 0.050666666666666686,
-      "maxWinRateImpactPp": 6.300000000000006,
-      "minWinRateImpactPp": -0.30000000000000027
+      "meanWinRateImpact": 0.009259259259259257,
+      "meanWinRateImpactPp": 0.9259259259259257,
+      "meanHpImpact": 0.7655555555555524,
+      "meanTurnImpact": 0.06259259259259259,
+      "maxWinRateImpactPp": 5.666666666666664,
+      "minWinRateImpactPp": 0
     },
     {
       "tag": "血祭",
@@ -134,11 +134,11 @@
       "prevalence": 0.0912863070539419,
       "samples": 6,
       "affectedBuilds": 2,
-      "meanWinRateImpact": 0.5493333333333333,
-      "meanWinRateImpactPp": 54.93333333333334,
-      "meanHpImpact": 41.204,
-      "meanTurnImpact": 0.1991666666666664,
-      "maxWinRateImpactPp": 73,
+      "meanWinRateImpact": 0.535,
+      "meanWinRateImpactPp": 53.5,
+      "meanHpImpact": 39.93611111111111,
+      "meanTurnImpact": 0.25666666666666654,
+      "maxWinRateImpactPp": 71.66666666666667,
       "minWinRateImpactPp": 0
     },
     {
@@ -149,11 +149,11 @@
       "prevalence": 0.004149377593360996,
       "samples": 6,
       "affectedBuilds": 2,
-      "meanWinRateImpact": 0.027666666666666673,
-      "meanWinRateImpactPp": 2.7666666666666675,
-      "meanHpImpact": 1.9680000000000006,
-      "meanTurnImpact": 0.14200000000000004,
-      "maxWinRateImpactPp": 7.299999999999995,
+      "meanWinRateImpact": 0.022777777777777803,
+      "meanWinRateImpactPp": 2.2777777777777803,
+      "meanHpImpact": 2.0499999999999976,
+      "meanTurnImpact": 0.15888888888888886,
+      "maxWinRateImpactPp": 7.333333333333336,
       "minWinRateImpactPp": 0
     },
     {
@@ -164,12 +164,12 @@
       "prevalence": 0.004149377593360996,
       "samples": 12,
       "affectedBuilds": 4,
-      "meanWinRateImpact": 0.0010833333333333344,
-      "meanWinRateImpactPp": 0.10833333333333343,
-      "meanHpImpact": -0.03041666666666683,
-      "meanTurnImpact": 0.01091666666666665,
-      "maxWinRateImpactPp": 1.5000000000000013,
-      "minWinRateImpactPp": -0.6000000000000005
+      "meanWinRateImpact": 0.00027777777777777496,
+      "meanWinRateImpactPp": 0.027777777777777495,
+      "meanHpImpact": -0.05777777777777852,
+      "meanTurnImpact": -0.009444444444444552,
+      "maxWinRateImpactPp": 2.0000000000000018,
+      "minWinRateImpactPp": -0.6666666666666599
     },
     {
       "tag": "庇护",
@@ -179,12 +179,12 @@
       "prevalence": 0.03319502074688797,
       "samples": 6,
       "affectedBuilds": 2,
-      "meanWinRateImpact": 0.014999999999999994,
-      "meanWinRateImpactPp": 1.4999999999999993,
-      "meanHpImpact": 5.419333333333334,
-      "meanTurnImpact": 0.29816666666666664,
-      "maxWinRateImpactPp": 4.5999999999999925,
-      "minWinRateImpactPp": -0.7000000000000006
+      "meanWinRateImpact": 0.01722222222222221,
+      "meanWinRateImpactPp": 1.7222222222222212,
+      "meanHpImpact": 6.061666666666663,
+      "meanTurnImpact": 0.28611111111111126,
+      "maxWinRateImpactPp": 6.999999999999995,
+      "minWinRateImpactPp": -1.0000000000000009
     },
     {
       "tag": "反击",
@@ -194,12 +194,12 @@
       "prevalence": 0.029045643153526972,
       "samples": 6,
       "affectedBuilds": 2,
-      "meanWinRateImpact": 0.01683333333333335,
-      "meanWinRateImpactPp": 1.683333333333335,
-      "meanHpImpact": 2.599166666666664,
-      "meanTurnImpact": 0.4945000000000001,
-      "maxWinRateImpactPp": 3.8000000000000034,
-      "minWinRateImpactPp": 0
+      "meanWinRateImpact": 0.013888888888888914,
+      "meanWinRateImpactPp": 1.3888888888888915,
+      "meanHpImpact": 3.5333333333333314,
+      "meanTurnImpact": 0.49777777777777804,
+      "maxWinRateImpactPp": 4.333333333333334,
+      "minWinRateImpactPp": -0.6666666666666599
     },
     {
       "tag": "回收",
@@ -209,12 +209,12 @@
       "prevalence": 0.06224066390041494,
       "samples": 18,
       "affectedBuilds": 6,
-      "meanWinRateImpact": 0.08399999999999998,
-      "meanWinRateImpactPp": 8.399999999999999,
-      "meanHpImpact": 4.844777777777779,
-      "meanTurnImpact": 0.29772222222222217,
-      "maxWinRateImpactPp": 53.900000000000006,
-      "minWinRateImpactPp": -1.6000000000000014
+      "meanWinRateImpact": 0.08407407407407408,
+      "meanWinRateImpactPp": 8.407407407407408,
+      "meanHpImpact": 4.579629629629628,
+      "meanTurnImpact": 0.42981481481481476,
+      "maxWinRateImpactPp": 52.33333333333334,
+      "minWinRateImpactPp": -3.0000000000000027
     },
     {
       "tag": "复刻",
@@ -224,11 +224,11 @@
       "prevalence": 0.05394190871369295,
       "samples": 12,
       "affectedBuilds": 4,
-      "meanWinRateImpact": 0.09683333333333334,
-      "meanWinRateImpactPp": 9.683333333333334,
-      "meanHpImpact": 8.115166666666667,
-      "meanTurnImpact": 0.8523333333333332,
-      "maxWinRateImpactPp": 42.4,
+      "meanWinRateImpact": 0.09583333333333334,
+      "meanWinRateImpactPp": 9.583333333333334,
+      "meanHpImpact": 8.059166666666664,
+      "meanTurnImpact": 0.8744444444444445,
+      "maxWinRateImpactPp": 43.00000000000001,
       "minWinRateImpactPp": 0
     },
     {
@@ -239,11 +239,11 @@
       "prevalence": 0.029045643153526972,
       "samples": 6,
       "affectedBuilds": 2,
-      "meanWinRateImpact": 0.32016666666666665,
-      "meanWinRateImpactPp": 32.016666666666666,
-      "meanHpImpact": 35.472833333333334,
-      "meanTurnImpact": -1.3723333333333336,
-      "maxWinRateImpactPp": 57.50000000000001,
+      "meanWinRateImpact": 0.28722222222222227,
+      "meanWinRateImpactPp": 28.72222222222223,
+      "meanHpImpact": 34.23944444444444,
+      "meanTurnImpact": -1.21,
+      "maxWinRateImpactPp": 52.66666666666667,
       "minWinRateImpactPp": 0
     },
     {
@@ -254,12 +254,12 @@
       "prevalence": 0.012448132780082987,
       "samples": 6,
       "affectedBuilds": 2,
-      "meanWinRateImpact": 0.00833333333333334,
-      "meanWinRateImpactPp": 0.833333333333334,
-      "meanHpImpact": 2.4056666666666637,
-      "meanTurnImpact": 0.7566666666666669,
-      "maxWinRateImpactPp": 2.7000000000000024,
-      "minWinRateImpactPp": 0
+      "meanWinRateImpact": 0.0050000000000000044,
+      "meanWinRateImpactPp": 0.5000000000000004,
+      "meanHpImpact": 2.4305555555555522,
+      "meanTurnImpact": 0.6911111111111113,
+      "maxWinRateImpactPp": 1.6666666666666607,
+      "minWinRateImpactPp": -0.33333333333332993
     },
     {
       "tag": "回响",
@@ -269,11 +269,11 @@
       "prevalence": 0.04564315352697095,
       "samples": 12,
       "affectedBuilds": 4,
-      "meanWinRateImpact": 0.1241666666666667,
-      "meanWinRateImpactPp": 12.41666666666667,
-      "meanHpImpact": 13.199083333333336,
-      "meanTurnImpact": 0.5671666666666667,
-      "maxWinRateImpactPp": 54.7,
+      "meanWinRateImpact": 0.11833333333333336,
+      "meanWinRateImpactPp": 11.833333333333336,
+      "meanHpImpact": 12.243611111111113,
+      "meanTurnImpact": 0.611111111111111,
+      "maxWinRateImpactPp": 50.33333333333334,
       "minWinRateImpactPp": 0
     },
     {
@@ -284,12 +284,12 @@
       "prevalence": 0.04979253112033195,
       "samples": 12,
       "affectedBuilds": 4,
-      "meanWinRateImpact": 0.22183333333333335,
-      "meanWinRateImpactPp": 22.183333333333337,
-      "meanHpImpact": 17.722083333333334,
-      "meanTurnImpact": 0.42799999999999966,
-      "maxWinRateImpactPp": 82.8,
-      "minWinRateImpactPp": 0
+      "meanWinRateImpact": 0.22277777777777777,
+      "meanWinRateImpactPp": 22.27777777777778,
+      "meanHpImpact": 16.592777777777776,
+      "meanTurnImpact": 0.32555555555555576,
+      "maxWinRateImpactPp": 81,
+      "minWinRateImpactPp": -1.0000000000000009
     },
     {
       "tag": "抽牌",
@@ -299,12 +299,12 @@
       "prevalence": 0.012448132780082987,
       "samples": 12,
       "affectedBuilds": 4,
-      "meanWinRateImpact": 0.015416666666666681,
-      "meanWinRateImpactPp": 1.541666666666668,
-      "meanHpImpact": 1.647750000000001,
-      "meanTurnImpact": 0.09774999999999996,
-      "maxWinRateImpactPp": 5.000000000000004,
-      "minWinRateImpactPp": 0
+      "meanWinRateImpact": 0.011388888888888888,
+      "meanWinRateImpactPp": 1.1388888888888888,
+      "meanHpImpact": 1.145277777777778,
+      "meanTurnImpact": 0.09722222222222228,
+      "maxWinRateImpactPp": 6.666666666666665,
+      "minWinRateImpactPp": -0.666666666666671
     },
     {
       "tag": "剧毒",
@@ -314,11 +314,11 @@
       "prevalence": 0.058091286307053944,
       "samples": 6,
       "affectedBuilds": 2,
-      "meanWinRateImpact": 0.17800000000000002,
-      "meanWinRateImpactPp": 17.8,
-      "meanHpImpact": 15.384333333333332,
-      "meanTurnImpact": 2.4761666666666664,
-      "maxWinRateImpactPp": 30.100000000000005,
+      "meanWinRateImpact": 0.17999999999999997,
+      "meanWinRateImpactPp": 17.999999999999996,
+      "meanHpImpact": 15.327777777777778,
+      "meanTurnImpact": 2.515,
+      "maxWinRateImpactPp": 29.333333333333332,
       "minWinRateImpactPp": 0
     },
     {
@@ -329,12 +329,12 @@
       "prevalence": 0.04564315352697095,
       "samples": 12,
       "affectedBuilds": 4,
-      "meanWinRateImpact": 0.03733333333333333,
-      "meanWinRateImpactPp": 3.733333333333333,
-      "meanHpImpact": 2.3034999999999983,
-      "meanTurnImpact": 0.49708333333333315,
-      "maxWinRateImpactPp": 10.899999999999999,
-      "minWinRateImpactPp": -0.5000000000000004
+      "meanWinRateImpact": 0.03444444444444445,
+      "meanWinRateImpactPp": 3.444444444444445,
+      "meanHpImpact": 2.51,
+      "meanTurnImpact": 0.5336111111111109,
+      "maxWinRateImpactPp": 12.333333333333336,
+      "minWinRateImpactPp": -0.33333333333332993
     },
     {
       "tag": "燃烧",
@@ -344,11 +344,11 @@
       "prevalence": 0.02074688796680498,
       "samples": 6,
       "affectedBuilds": 2,
-      "meanWinRateImpact": 0.009500000000000008,
-      "meanWinRateImpactPp": 0.9500000000000008,
-      "meanHpImpact": 0.7496666666666663,
-      "meanTurnImpact": 0.21799999999999997,
-      "maxWinRateImpactPp": 2.9000000000000026,
+      "meanWinRateImpact": 0.011111111111111108,
+      "meanWinRateImpactPp": 1.1111111111111107,
+      "meanHpImpact": 0.8533333333333353,
+      "meanTurnImpact": 0.24055555555555563,
+      "maxWinRateImpactPp": 2.9999999999999916,
       "minWinRateImpactPp": 0
     },
     {
@@ -359,11 +359,11 @@
       "prevalence": 0.03319502074688797,
       "samples": 18,
       "affectedBuilds": 6,
-      "meanWinRateImpact": 0.123,
-      "meanWinRateImpactPp": 12.3,
-      "meanHpImpact": 14.07672222222222,
-      "meanTurnImpact": -0.07844444444444439,
-      "maxWinRateImpactPp": 50.6,
+      "meanWinRateImpact": 0.12425925925925929,
+      "meanWinRateImpactPp": 12.42592592592593,
+      "meanHpImpact": 14.318148148148152,
+      "meanTurnImpact": -0.07814814814814815,
+      "maxWinRateImpactPp": 45.333333333333336,
       "minWinRateImpactPp": 0
     },
     {
@@ -374,11 +374,11 @@
       "prevalence": 0.04564315352697095,
       "samples": 6,
       "affectedBuilds": 2,
-      "meanWinRateImpact": 0.1431666666666667,
-      "meanWinRateImpactPp": 14.31666666666667,
-      "meanHpImpact": 14.481166666666665,
-      "meanTurnImpact": 2.231833333333333,
-      "maxWinRateImpactPp": 32.5,
+      "meanWinRateImpact": 0.14444444444444446,
+      "meanWinRateImpactPp": 14.444444444444446,
+      "meanHpImpact": 14.904444444444449,
+      "meanTurnImpact": 2.0877777777777777,
+      "maxWinRateImpactPp": 31.66666666666667,
       "minWinRateImpactPp": 0
     },
     {
@@ -389,12 +389,12 @@
       "prevalence": 0.03734439834024896,
       "samples": 12,
       "affectedBuilds": 4,
-      "meanWinRateImpact": 0.01125000000000001,
-      "meanWinRateImpactPp": 1.1250000000000009,
-      "meanHpImpact": 0.8909166666666669,
-      "meanTurnImpact": 0.04224999999999993,
-      "maxWinRateImpactPp": 3.600000000000003,
-      "minWinRateImpactPp": 0
+      "meanWinRateImpact": 0.006666666666666664,
+      "meanWinRateImpactPp": 0.6666666666666664,
+      "meanHpImpact": 1.04861111111111,
+      "meanTurnImpact": 0.052777777777777625,
+      "maxWinRateImpactPp": 2.6666666666666616,
+      "minWinRateImpactPp": -0.666666666666671
     },
     {
       "tag": "重击",
@@ -404,12 +404,12 @@
       "prevalence": 0.04564315352697095,
       "samples": 18,
       "affectedBuilds": 6,
-      "meanWinRateImpact": 0.06827777777777778,
-      "meanWinRateImpactPp": 6.827777777777778,
-      "meanHpImpact": 5.887666666666665,
-      "meanTurnImpact": 0.6826111111111112,
-      "maxWinRateImpactPp": 31.600000000000005,
-      "minWinRateImpactPp": 0
+      "meanWinRateImpact": 0.07185185185185186,
+      "meanWinRateImpactPp": 7.185185185185186,
+      "meanHpImpact": 5.891481481481478,
+      "meanTurnImpact": 0.6944444444444443,
+      "maxWinRateImpactPp": 35.00000000000001,
+      "minWinRateImpactPp": -0.33333333333334103
     },
     {
       "tag": "穿甲",
@@ -419,12 +419,12 @@
       "prevalence": 0.07883817427385892,
       "samples": 18,
       "affectedBuilds": 6,
-      "meanWinRateImpact": 0.009777777777777786,
-      "meanWinRateImpactPp": 0.9777777777777786,
-      "meanHpImpact": 1.5418888888888898,
-      "meanTurnImpact": 0.0906111111111111,
-      "maxWinRateImpactPp": 14.600000000000001,
-      "minWinRateImpactPp": -0.49999999999998934
+      "meanWinRateImpact": 0.011111111111111134,
+      "meanWinRateImpactPp": 1.1111111111111134,
+      "meanHpImpact": 1.4712962962962948,
+      "meanTurnImpact": 0.0933333333333333,
+      "maxWinRateImpactPp": 16.666666666666675,
+      "minWinRateImpactPp": -1.333333333333342
     },
     {
       "tag": "圣剑",
@@ -434,12 +434,12 @@
       "prevalence": 0.03734439834024896,
       "samples": 12,
       "affectedBuilds": 4,
-      "meanWinRateImpact": 0.17400000000000002,
-      "meanWinRateImpactPp": 17.400000000000002,
-      "meanHpImpact": -0.6816666666666684,
-      "meanTurnImpact": 6.060333333333335,
-      "maxWinRateImpactPp": 84.8,
-      "minWinRateImpactPp": -0.10000000000000009
+      "meanWinRateImpact": 0.16527777777777777,
+      "meanWinRateImpactPp": 16.52777777777778,
+      "meanHpImpact": -0.7933333333333362,
+      "meanTurnImpact": 5.93888888888889,
+      "maxWinRateImpactPp": 86.66666666666667,
+      "minWinRateImpactPp": -0.666666666666671
     },
     {
       "tag": "咏唱",
@@ -449,11 +449,11 @@
       "prevalence": 0.06639004149377593,
       "samples": 12,
       "affectedBuilds": 4,
-      "meanWinRateImpact": 0.3333333333333333,
-      "meanWinRateImpactPp": 33.33333333333333,
-      "meanHpImpact": 29.830250000000007,
-      "meanTurnImpact": 0.051583333333333314,
-      "maxWinRateImpactPp": 84.9,
+      "meanWinRateImpact": 0.34555555555555556,
+      "meanWinRateImpactPp": 34.55555555555556,
+      "meanHpImpact": 30.001666666666665,
+      "meanTurnImpact": 0.03194444444444459,
+      "maxWinRateImpactPp": 85.33333333333334,
       "minWinRateImpactPp": 0
     },
     {
@@ -464,11 +464,11 @@
       "prevalence": 0.04979253112033195,
       "samples": 18,
       "affectedBuilds": 6,
-      "meanWinRateImpact": 0.19438888888888886,
-      "meanWinRateImpactPp": 19.438888888888886,
-      "meanHpImpact": 11.978166666666668,
-      "meanTurnImpact": 1.8066111111111114,
-      "maxWinRateImpactPp": 72.50000000000001,
+      "meanWinRateImpact": 0.19166666666666674,
+      "meanWinRateImpactPp": 19.166666666666675,
+      "meanHpImpact": 11.747592592592591,
+      "meanTurnImpact": 1.854814814814815,
+      "maxWinRateImpactPp": 69.66666666666667,
       "minWinRateImpactPp": 0
     },
     {
@@ -479,12 +479,12 @@
       "prevalence": 0.04149377593360996,
       "samples": 12,
       "affectedBuilds": 4,
-      "meanWinRateImpact": 0.08908333333333335,
-      "meanWinRateImpactPp": 8.908333333333335,
-      "meanHpImpact": 6.950833333333333,
-      "meanTurnImpact": 0.47808333333333336,
-      "maxWinRateImpactPp": 29.400000000000006,
-      "minWinRateImpactPp": -4.0000000000000036
+      "meanWinRateImpact": 0.08555555555555557,
+      "meanWinRateImpactPp": 8.555555555555557,
+      "meanHpImpact": 5.634166666666666,
+      "meanTurnImpact": 0.2727777777777778,
+      "maxWinRateImpactPp": 32.00000000000001,
+      "minWinRateImpactPp": -2.9999999999999916
     },
     {
       "tag": "自然",
@@ -494,11 +494,11 @@
       "prevalence": 0.03319502074688797,
       "samples": 6,
       "affectedBuilds": 2,
-      "meanWinRateImpact": 0.12150000000000001,
-      "meanWinRateImpactPp": 12.15,
-      "meanHpImpact": 13.379,
-      "meanTurnImpact": 0.5469999999999997,
-      "maxWinRateImpactPp": 27.200000000000003,
+      "meanWinRateImpact": 0.15,
+      "meanWinRateImpactPp": 15,
+      "meanHpImpact": 13.512222222222222,
+      "meanTurnImpact": 0.555,
+      "maxWinRateImpactPp": 24,
       "minWinRateImpactPp": 0
     },
     {
@@ -509,11 +509,11 @@
       "prevalence": 0.012448132780082987,
       "samples": 18,
       "affectedBuilds": 6,
-      "meanWinRateImpact": 0.181,
-      "meanWinRateImpactPp": 18.099999999999998,
-      "meanHpImpact": 17.223277777777774,
-      "meanTurnImpact": -0.8931666666666663,
-      "maxWinRateImpactPp": 46.80000000000001,
+      "meanWinRateImpact": 0.19925925925925927,
+      "meanWinRateImpactPp": 19.925925925925927,
+      "meanHpImpact": 18.08629629629629,
+      "meanTurnImpact": -1.0809259259259258,
+      "maxWinRateImpactPp": 54.333333333333336,
       "minWinRateImpactPp": 0
     },
     {
@@ -524,11 +524,11 @@
       "prevalence": 0.058091286307053944,
       "samples": 12,
       "affectedBuilds": 4,
-      "meanWinRateImpact": 0.07600000000000001,
-      "meanWinRateImpactPp": 7.600000000000001,
-      "meanHpImpact": 3.7245000000000004,
-      "meanTurnImpact": 1.623916666666667,
-      "maxWinRateImpactPp": 30.000000000000004,
+      "meanWinRateImpact": 0.08972222222222222,
+      "meanWinRateImpactPp": 8.972222222222221,
+      "meanHpImpact": 3.1861111111111104,
+      "meanTurnImpact": 2.0252777777777777,
+      "maxWinRateImpactPp": 24.333333333333336,
       "minWinRateImpactPp": 0
     },
     {
@@ -539,12 +539,12 @@
       "prevalence": 0.016597510373443983,
       "samples": 6,
       "affectedBuilds": 2,
-      "meanWinRateImpact": 0.005500000000000005,
-      "meanWinRateImpactPp": 0.5500000000000005,
-      "meanHpImpact": 0.5945000000000018,
-      "meanTurnImpact": 0.05750000000000011,
-      "maxWinRateImpactPp": 2.100000000000002,
-      "minWinRateImpactPp": -0.40000000000000036
+      "meanWinRateImpact": 0.006111111111111141,
+      "meanWinRateImpactPp": 0.611111111111114,
+      "meanHpImpact": 0.46944444444444383,
+      "meanTurnImpact": 0.05555555555555558,
+      "maxWinRateImpactPp": 2.0000000000000018,
+      "minWinRateImpactPp": 0
     },
     {
       "tag": "易伤",
@@ -554,11 +554,11 @@
       "prevalence": 0.05394190871369295,
       "samples": 12,
       "affectedBuilds": 4,
-      "meanWinRateImpact": 0.07141666666666667,
-      "meanWinRateImpactPp": 7.141666666666667,
-      "meanHpImpact": 6.612500000000002,
-      "meanTurnImpact": 0.4735833333333334,
-      "maxWinRateImpactPp": 23.7,
+      "meanWinRateImpact": 0.06611111111111112,
+      "meanWinRateImpactPp": 6.6111111111111125,
+      "meanHpImpact": 6.491111111111111,
+      "meanTurnImpact": 0.4597222222222222,
+      "maxWinRateImpactPp": 22.666666666666668,
       "minWinRateImpactPp": 0
     },
     {
@@ -569,11 +569,11 @@
       "prevalence": 0.03319502074688797,
       "samples": 12,
       "affectedBuilds": 4,
-      "meanWinRateImpact": 0.060916666666666675,
-      "meanWinRateImpactPp": 6.091666666666668,
-      "meanHpImpact": 5.9993333333333325,
-      "meanTurnImpact": -0.061083333333333455,
-      "maxWinRateImpactPp": 21.300000000000008,
+      "meanWinRateImpact": 0.060555555555555564,
+      "meanWinRateImpactPp": 6.055555555555556,
+      "meanHpImpact": 6.306111111111111,
+      "meanTurnImpact": -0.055555555555555726,
+      "maxWinRateImpactPp": 19.333333333333325,
       "minWinRateImpactPp": 0
     },
     {
@@ -584,12 +584,12 @@
       "prevalence": 0.008298755186721992,
       "samples": 12,
       "affectedBuilds": 4,
-      "meanWinRateImpact": -0.000833333333333334,
-      "meanWinRateImpactPp": -0.0833333333333334,
-      "meanHpImpact": 0.03724999999999964,
-      "meanTurnImpact": 0.05016666666666673,
-      "maxWinRateImpactPp": 0.30000000000000027,
-      "minWinRateImpactPp": -0.7000000000000006
+      "meanWinRateImpact": -0.0022222222222222088,
+      "meanWinRateImpactPp": -0.22222222222222088,
+      "meanHpImpact": -0.10194444444444706,
+      "meanTurnImpact": 0.04305555555555559,
+      "maxWinRateImpactPp": 0.33333333333334103,
+      "minWinRateImpactPp": -1.0000000000000009
     },
     {
       "tag": "荆棘",
@@ -599,11 +599,11 @@
       "prevalence": 0.012448132780082987,
       "samples": 6,
       "affectedBuilds": 2,
-      "meanWinRateImpact": 0.0020000000000000018,
-      "meanWinRateImpactPp": 0.20000000000000018,
-      "meanHpImpact": 0.15166666666666848,
-      "meanTurnImpact": 0.12483333333333342,
-      "maxWinRateImpactPp": 0.5000000000000004,
+      "meanWinRateImpact": 0.0011111111111110998,
+      "meanWinRateImpactPp": 0.11111111111110998,
+      "meanHpImpact": 0.0855555555555559,
+      "meanTurnImpact": 0.10222222222222237,
+      "maxWinRateImpactPp": 0.6666666666666599,
       "minWinRateImpactPp": 0
     },
     {
@@ -614,11 +614,11 @@
       "prevalence": 0.004149377593360996,
       "samples": 18,
       "affectedBuilds": 6,
-      "meanWinRateImpact": 0.025388888888888905,
-      "meanWinRateImpactPp": 2.5388888888888905,
-      "meanHpImpact": 3.3764444444444437,
-      "meanTurnImpact": -0.09666666666666678,
-      "maxWinRateImpactPp": 10.90000000000001,
+      "meanWinRateImpact": 0.024259259259259265,
+      "meanWinRateImpactPp": 2.4259259259259265,
+      "meanHpImpact": 3.237407407407408,
+      "meanTurnImpact": -0.09166666666666672,
+      "maxWinRateImpactPp": 10.000000000000009,
       "minWinRateImpactPp": 0
     },
     {
@@ -629,12 +629,12 @@
       "prevalence": 0.08713692946058091,
       "samples": 48,
       "affectedBuilds": 16,
-      "meanWinRateImpact": 0.0031041666666666717,
-      "meanWinRateImpactPp": 0.3104166666666672,
-      "meanHpImpact": 0.444312500000001,
-      "meanTurnImpact": -0.07450000000000002,
-      "maxWinRateImpactPp": 6.500000000000005,
-      "minWinRateImpactPp": -5.000000000000004
+      "meanWinRateImpact": 0.0034027777777777823,
+      "meanWinRateImpactPp": 0.34027777777777823,
+      "meanHpImpact": 0.43874999999999814,
+      "meanTurnImpact": -0.08402777777777788,
+      "maxWinRateImpactPp": 7.333333333333336,
+      "minWinRateImpactPp": -3.0000000000000027
     },
     {
       "tag": "流动伤害",
