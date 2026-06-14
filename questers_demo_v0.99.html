@@ -6434,7 +6434,11 @@
                 if (spentDebt > 0) repayBloodDebt(spentDebt, '血海吞债');
                 const dmg = parseInt(card.val) + spentDebt * (card.bloodDebtSpendDamage || 15) + state.p_battle_dmg;
                 triggerVFX('p-atk'); const dealt = applySpecialCardDamage(card, dmg, true); let bloodHeal = Math.floor(dealt * (card.lifestealRatio || 0.5));
-                if (state.enemy.hp > 0) state.enemy.weak += 3;
+                if (state.enemy.hp > 0 && spentDebt > 0) {
+                    const bloodMomentum = Math.min(24, Math.max(6, Math.ceil(spentDebt * 1.4)));
+                    state.p_battle_dmg += bloodMomentum;
+                    showFloatText(`血誓续势 +${bloodMomentum}`, "var(--crimson)", getCenter('ui-hp'));
+                }
                 if(hasRelic('r_lifedebt_scale') && state.hp <= Math.floor(state.maxHp / 2)) bloodHeal = Math.floor(bloodHeal * 1.5);
                 const remainingHeal = Math.max(0, bloodHeal - repayBloodDebt(bloodHeal, '血海回偿').paid);
                 const bloodOverheal = Math.max(0, remainingHeal - Math.max(0, state.maxHp - state.hp));
@@ -6491,10 +6495,12 @@
             else if (card.specialId === 'w_last_verdict') {
                 triggerVFX('p-atk');
                 const executionHand = state.hand.filter(c => c.tags && (c.tags.includes('连击') || c.tags.includes('穿甲'))).length;
-                let dmg = 52 + state.p_battle_dmg + state.enemy.vuln * 12 + executionHand * 16;
+                let dmg = 42 + state.p_battle_dmg + state.enemy.vuln * 8 + executionHand * 10;
                 applySpecialCardDamage(card, dmg, true);
-                state.p_reduce_dmg += Math.min(34, 14 + executionHand * 5);
-                if (state.enemy.hp > 0) state.enemy.weak += 4;
+                if (state.enemy.hp > 0) {
+                    state.p_battle_dmg += 22;
+                    showFloatText("处刑续势 +22", "var(--gold)", getCenter('ui-hp'));
+                }
                 showFloatText("终誓处刑", "var(--gold)", getCenter('enemy-avatar'));
             }
             else if (card.specialId === 'm_chant_singularity') {
@@ -6515,11 +6521,11 @@
                 showFloatText(`状态共振 ${debuffs}`, "var(--fire)", getCenter('enemy-avatar'));
             }
             else if (card.specialId === 'm_echo_archive') {
-                if (state.lastPlayedCard && !state.lastPlayedCard.isJunk) {
+                const lastWasReplica = (state.lastPlayedCard?.tags || []).includes('复刻');
+                if (state.lastPlayedCard && !state.lastPlayedCard.isJunk && !lastWasReplica) {
                     showFloatText("回声复写", "var(--purple)", getCenter('ui-hp'));
                     await executeCardTags(state.lastPlayedCard, true, null);
-                    state.p_reduce_dmg += 8;
-                    state.p_next_dmg += 10;
+                    state.p_next_dmg += 4;
                     await drawCards(1);
                 } else {
                     state.p_chant = Math.min(12, state.p_chant + 3);
@@ -6537,9 +6543,13 @@
             else if (card.specialId === 'm_forbidden_comet') {
                 triggerVFX('p-atk');
                 const chantSpent = state.p_chant;
-                applySpecialCardDamage(card, 60 + state.p_battle_dmg + chantSpent * 28, true);
-                state.p_reduce_dmg += Math.min(60, chantSpent * 8);
-                if (chantSpent >= 6 && state.enemy.hp > 0) state.enemy.stun += 1;
+                applySpecialCardDamage(card, 48 + state.p_battle_dmg + chantSpent * 20, true);
+                state.p_reduce_dmg += Math.min(40, chantSpent * 5);
+                if (state.enemy.hp > 0 && chantSpent > 0) {
+                    const cometMomentum = Math.min(28, Math.max(8, chantSpent * 4));
+                    state.p_battle_dmg += cometMomentum;
+                    showFloatText(`裂星余势 +${cometMomentum}`, "var(--purple)", getCenter('ui-hp'));
+                }
                 state.p_chant = hasRelic('r_burst_lens') ? Math.ceil(chantSpent / 2) : 0;
                 showFloatText(`咏唱爆裂 ${chantSpent}`, "var(--purple)", getCenter('enemy-avatar'));
             }
@@ -6586,8 +6596,12 @@
                 state.p_aim -= shots;
                 triggerVFX('p-atk');
                 applySpecialCardDamage(card, 18 + state.p_battle_dmg + shots * 10, true);
-                state.p_reduce_dmg += shots * 2;
-                if (shots >= 3) state.p_sidestep = Math.min(3, (state.p_sidestep || 0) + 1);
+                state.p_reduce_dmg += shots;
+                if (state.enemy.hp > 0 && shots > 0) {
+                    const galeMomentum = Math.min(2, shots);
+                    state.p_battle_dmg += galeMomentum;
+                    showFloatText(`疾风续势 +${galeMomentum}`, "var(--nature)", getCenter('ui-hp'));
+                }
                 showFloatText(`裁决风势 ${shots}`, "var(--nature)", getCenter('enemy-avatar'));
             }
             else if (card.specialId === 'a_red_rain') {

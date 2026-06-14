@@ -606,14 +606,14 @@ function estimateCard(state, card, incoming, move) {
         const synergyCards = state.hand.filter(held => held !== card && (held.tags || []).some(tag => tags.includes(tag))).length;
         const specialScores = {
             w_oath_fortress: Math.min(incoming + 14, 26) + 7,
-            w_last_verdict: 58 + state.enemy.vuln * 10 + synergyCards * 12,
+            w_last_verdict: 46 + state.enemy.vuln * 7 + synergyCards * 7,
             a_syn_blood: state.bloodDebt > 0
-                ? 34 + state.bloodDebt * 10 + Math.min(state.maxHp - state.hp, 12)
+                ? 34 + state.bloodDebt * 11 + Math.min(state.maxHp - state.hp, 12)
                 : -16,
-            m_forbidden_comet: 60 + state.chant * 29,
-            m_echo_archive: state.lastCard ? 38 : 12,
+            m_forbidden_comet: 48 + state.chant * 22,
+            m_echo_archive: state.lastCard ? 24 : 12,
             m_status_supernova: 40 + enemyDebuffCount(state) * 15,
-            a_gale_verdict: 18 + Math.min(3, state.aim) * 11,
+            a_gale_verdict: 18 + Math.min(3, state.aim) * 8,
             s_poison: (state.enemy.poison + state.enemy.bleed) * 3 + 40,
             s_exhaust: (state.exhaust.length + 1) * 14 + (state.exhaust.length ? 12 : 0)
         };
@@ -786,15 +786,16 @@ function executeSpecialCard(state, card) {
     } else if (specialId === 'w_last_verdict') {
         if (card.type === '攻击') payBloodDebtAttackCost(state);
         const executionHand = state.hand.filter(held => (held.tags || []).some(tag => ['连击', '穿甲'].includes(tag))).length;
-        hitEnemy(state, 52 + state.battleDamage + state.enemy.vuln * 12 + executionHand * 16, true);
-        state.protection += Math.min(34, 14 + executionHand * 5);
-        if (state.enemy.hp > 0) state.enemy.weak += 4;
+        hitEnemy(state, 42 + state.battleDamage + state.enemy.vuln * 8 + executionHand * 10, true);
+        if (state.enemy.hp > 0) state.battleDamage += 22;
     } else if (specialId === 'a_syn_blood') {
         if (card.type === '攻击') payBloodDebtAttackCost(state);
         const spentDebt = state.bloodDebt;
         if (spentDebt > 0) repayBloodDebt(state, spentDebt);
         const dealt = hitEnemy(state, (Number(card.val) || 42) + spentDebt * (card.bloodDebtSpendDamage || 15) + state.battleDamage, true);
-        if (state.enemy.hp > 0) state.enemy.weak += 3;
+        if (state.enemy.hp > 0 && spentDebt > 0) {
+            state.battleDamage += Math.min(24, Math.max(6, Math.ceil(spentDebt * 1.4)));
+        }
         let healing = Math.floor(dealt * (card.lifestealRatio || 0.5));
         if (hasRelic(state, 'r_lifedebt_scale') && state.hp <= state.maxHp / 2) healing = Math.floor(healing * 1.5);
         const repayment = repayBloodDebt(state, healing);
@@ -805,16 +806,17 @@ function executeSpecialCard(state, card) {
     } else if (specialId === 'm_forbidden_comet') {
         if (card.type === '攻击') payBloodDebtAttackCost(state);
         const chantSpent = state.chant;
-        hitEnemy(state, 60 + state.battleDamage + chantSpent * 28, true);
-        state.protection += Math.min(60, chantSpent * 8);
-        if (chantSpent >= 6 && state.enemy.hp > 0) state.enemy.stun += 1;
+        hitEnemy(state, 48 + state.battleDamage + chantSpent * 20, true);
+        state.protection += Math.min(40, chantSpent * 5);
+        if (state.enemy.hp > 0 && chantSpent > 0) {
+            state.battleDamage += Math.min(28, Math.max(8, chantSpent * 4));
+        }
         state.chant = hasRelic(state, 'r_burst_lens') ? Math.ceil(chantSpent / 2) : 0;
     } else if (specialId === 'm_echo_archive') {
-        const lastSpecialId = state.lastCard?.specialId || state.lastCard?.id;
-        if (state.lastCard && !state.lastCard.isJunk && lastSpecialId !== 'm_echo_archive') {
+        const lastWasReplica = (state.lastCard?.tags || []).includes('复刻');
+        if (state.lastCard && !state.lastCard.isJunk && !lastWasReplica) {
             executeCard(state, state.lastCard, true);
-            state.protection += 8;
-            state.nextDamage += 10;
+            state.nextDamage += 4;
             draw(state, 1);
         }
         else {
@@ -831,8 +833,8 @@ function executeSpecialCard(state, card) {
         const shots = Math.min(3, state.aim);
         state.aim -= shots;
         hitEnemy(state, 18 + state.battleDamage + shots * 10, true);
-        state.protection += shots * 2;
-        if (shots >= 3) state.sidestep = Math.min(3, state.sidestep + 1);
+        state.protection += shots;
+        if (state.enemy.hp > 0 && shots > 0) state.battleDamage += Math.min(2, shots);
     } else if (specialId === 's_poison') {
         const layers = state.enemy.poison + state.enemy.bleed;
         hitEnemy(state, 36 + layers * 3);
