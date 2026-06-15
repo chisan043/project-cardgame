@@ -225,6 +225,15 @@
         return 0.95 * boost;
     }
 
+    function getRelicBuildRewardWeight({
+        tags = [],
+        primaryBuildTag = null
+    } = {}) {
+        if (!tags.length) return 1;
+        if (primaryBuildTag && tags.includes(primaryBuildTag)) return 2;
+        return 1.1;
+    }
+
     function getBuildRewardBoostMultiplier({
         tags = [],
         boostedTags = [],
@@ -404,6 +413,30 @@
         return choices;
     }
 
+    function getWeightedRelicOrder({
+        relics = [],
+        getWeight = () => 1,
+        rng = Math.random
+    } = {}) {
+        const result = [];
+        const rest = relics.slice();
+        while (rest.length) {
+            const picked = rollWeighted(rest, getWeight, rng);
+            const idx = rest.indexOf(picked);
+            result.push(picked);
+            rest.splice(idx, 1);
+        }
+        return result;
+    }
+
+    function pickWeightedRelic({
+        relics = [],
+        getWeight = () => 1,
+        rng = Math.random
+    } = {}) {
+        return rollWeighted(relics, getWeight, rng);
+    }
+
     global.QuestersRewardRules = {
         buildRewardChoices,
         deckHasCardMatch,
@@ -413,6 +446,7 @@
         getBuildRewardCandidates,
         getBuildRewardBoostMultiplier,
         getBuildRewardWeight,
+        getRelicBuildRewardWeight,
         getCardChoiceKey,
         getDeckBuildProfile,
         getPrimaryBuildTag,
@@ -432,7 +466,9 @@
         pickRewardCardCandidate,
         pickRewardFixedFallbackCandidate,
         pickSpecialEpicRewardCard,
+        pickWeightedRelic,
         rollRewardRarity,
+        getWeightedRelicOrder,
         rollWeighted
     };
 })(window);

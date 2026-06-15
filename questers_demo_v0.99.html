@@ -3249,20 +3249,16 @@
     }
     function getRelicBuildRewardWeight(relic, primaryBuildTag = getPrimaryBuildTag()) {
         const tags = getRelicBuildTags(relic);
-        if (!tags.length) return 1;
-        if (primaryBuildTag && tags.includes(primaryBuildTag)) return 2;
-        return 1.1;
+        return QuestersRewardRules.getRelicBuildRewardWeight({
+            tags,
+            primaryBuildTag
+        });
     }
     function weightedShuffleRelics(pool) {
-        const result = [];
-        const rest = pool.slice();
-        while (rest.length) {
-            const picked = rollWeighted(rest, relic => getRelicBuildRewardWeight(relic));
-            const idx = rest.indexOf(picked);
-            result.push(picked);
-            rest.splice(idx, 1);
-        }
-        return result;
+        return QuestersRewardRules.getWeightedRelicOrder({
+            relics: pool,
+            getWeight: relic => getRelicBuildRewardWeight(relic)
+        });
     }
     function getRolePreferredRelics(source) {
         return weightedShuffleRelics(getCurrentRoleRelicPool(source));
@@ -3270,7 +3266,10 @@
     function rollRolePreferredRelic(source) {
         const pool = getCurrentRoleRelicPool(source);
         if (!pool.length) return null;
-        return rollWeighted(pool, relic => getRelicBuildRewardWeight(relic));
+        return QuestersRewardRules.pickWeightedRelic({
+            relics: pool,
+            getWeight: relic => getRelicBuildRewardWeight(relic)
+        });
     }
     function markRelicImageLoaded(img) {
         const wrapper = img && img.parentElement;
