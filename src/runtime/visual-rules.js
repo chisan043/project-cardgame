@@ -154,6 +154,11 @@
         return `${percent}%`;
     }
 
+    function formatTurnCounterValue(value) {
+        const numeric = Math.max(1, Number(value || 1));
+        return String(numeric).padStart(2, '0');
+    }
+
     function getStatusLayerCount(card, tag, {
         getAbilityPotency = () => 1
     } = {}) {
@@ -602,6 +607,7 @@
         applyCardNameVariant,
         cleanEffectDisplayText,
         formatRatioText,
+        formatTurnCounterValue,
         getCardArtPath,
         getCardBottomTagList,
         getCardBuffVfxKind,

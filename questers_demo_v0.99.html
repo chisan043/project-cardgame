@@ -3973,8 +3973,7 @@
     }
 
     function formatTurnCounterValue(value) {
-        const numeric = Math.max(1, Number(value || 1));
-        return String(numeric).padStart(2, '0');
+        return QuestersVisualRules.formatTurnCounterValue(value);
     }
 
     function cloneStatusContent(sourceId) {
