@@ -261,7 +261,7 @@
     } = {}) {
         const fallback = relic?.icon || '❔';
         const src = resolveRelicIconPath(relic);
-        return `<span class="relic-visual ${wrapperClass}"><span class="relic-fallback ${fallbackClass}">${fallback}</span><img class="relic-image ${imgClass}" src="${src}" alt="${relic?.name || '遗物'}" loading="lazy" onload="markRelicImageLoaded(this)" onerror="fallbackRelicImage(this)"></span>`;
+        return `<span class="relic-visual ${wrapperClass}"><span class="relic-fallback ${fallbackClass}">${fallback}</span><img class="relic-image ${imgClass}" src="${src}" alt="${relic?.name || '遗物'}" loading="eager" decoding="async" onload="markRelicImageLoaded(this)" onerror="fallbackRelicImage(this)"></span>`;
     }
 
     function renderRelicCard(relic, {
