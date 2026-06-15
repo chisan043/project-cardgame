@@ -2768,7 +2768,7 @@
             }
         }
         const primaryBuildTag = getPrimaryBuildTag();
-        const slotPlan = primaryBuildTag ? ['aligned', 'general', 'pivot'] : ['general', 'general', 'general'];
+        const slotPlan = QuestersRewardRules.getRewardSlotPlan({ primaryBuildTag });
         for (const mode of slotPlan) {
             if (choices.length >= count) break;
             const card = generateBuildRewardCard(mode, used, primaryBuildTag);

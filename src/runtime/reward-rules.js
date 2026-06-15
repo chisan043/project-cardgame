@@ -202,6 +202,12 @@
         return allCards.filter(card => bridgeSpec.match(card) && !used.has(getCardChoiceKey(card)));
     }
 
+    function getRewardSlotPlan({ primaryBuildTag = null } = {}) {
+        return primaryBuildTag
+            ? ['aligned', 'general', 'pivot']
+            : ['general', 'general', 'general'];
+    }
+
     global.QuestersRewardRules = {
         deckHasCardMatch,
         deckHasTag,
@@ -216,6 +222,7 @@
         getRewardBridgeCandidates,
         getRewardCardCandidates,
         getRewardCandidatePool,
+        getRewardSlotPlan,
         getShopCopyPrice,
         rollRewardRarity,
         rollWeighted
