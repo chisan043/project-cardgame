@@ -46,6 +46,25 @@
         };
     }
 
+    function getRewardOverlayPresentation({
+        availableRelicCount = 0,
+        relicChance = 0.2,
+        rng = Math.random
+    } = {}) {
+        const isRelicReward = Number(availableRelicCount || 0) > 0 && rng() < relicChance;
+        return isRelicReward
+            ? {
+                kind: 'relic',
+                title: '奇珍战利品',
+                desc: '战斗余烬里浮出三件奇珍，请选择一件收入囊中。'
+            }
+            : {
+                kind: 'card',
+                title: '卡牌战利品',
+                desc: '战斗余烬仍在发光...请选择一张卡牌加入牌组。'
+            };
+    }
+
     function getRestHealResult({ hp = 0, maxHp = 0, heal = 30 } = {}) {
         const currentHp = Number(hp) || 0;
         const cap = Math.max(0, Number(maxHp) || 0);
@@ -171,6 +190,7 @@
         getDeckBuildProfile,
         getPrimaryBuildTag,
         getRestHealResult,
+        getRewardOverlayPresentation,
         getRewardBridgeSpec,
         getRewardCandidatePool,
         getShopCopyPrice,

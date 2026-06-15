@@ -7274,11 +7274,13 @@
     function showRewardOverlay() {
         const container = document.getElementById('reward-items'); container.innerHTML = '';
         const availableRelics = getRolePreferredRelics(RELIC_POOL.filter(r => !hasRelic(r.id) && !STARTING_RELIC_IDS.has(r.id)));
-        const showRelicReward = availableRelics.length > 0 && Math.random() < 0.2;
-        document.getElementById('reward-title').innerText = showRelicReward ? '奇珍战利品' : '卡牌战利品';
-        document.getElementById('reward-desc').innerText = showRelicReward ? '战斗余烬里浮出三件奇珍，请选择一件收入囊中。' : '战斗余烬仍在发光...请选择一张卡牌加入牌组。';
+        const rewardPresentation = QuestersRewardRules.getRewardOverlayPresentation({
+            availableRelicCount: availableRelics.length
+        });
+        document.getElementById('reward-title').innerText = rewardPresentation.title;
+        document.getElementById('reward-desc').innerText = rewardPresentation.desc;
         document.getElementById('reward-skip-btn').innerText = `放弃机缘，换取金币 +${getBattleRewardSkipGold()}`;
-        if (showRelicReward) {
+        if (rewardPresentation.kind === 'relic') {
             availableRelics.slice(0, 3).forEach(r => {
                 const el = document.createElement('div');
                 el.innerHTML = renderRelicCard(r, { iconSize: 45, iconClass: 'relic-card-icon' });
