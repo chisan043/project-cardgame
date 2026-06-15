@@ -106,6 +106,20 @@
         ].join('|');
     }
 
+    function getCardNameFamilyKey(card, options = {}) {
+        if (!card || card.isSpecial || card.isJunk || card.isKnife) return '';
+        return [
+            getCardFrameTheme(card, options),
+            card.type || '',
+            Number(card.cost) || 0,
+            Number(card.val) || 0
+        ].join('|');
+    }
+
+    function getCardVisualSignature(card, options = {}) {
+        return `${getCardFrameTheme(card, options)}|${getCardEffectSignature(card, options)}`;
+    }
+
     function getRelicIconPath(relic, {
         formalRelicIconIds = new Set(),
         relicMasterIconById = {}
@@ -348,7 +362,9 @@
         getCardEffectSignature,
         getCardFramePath,
         getCardFrameTheme,
+        getCardNameFamilyKey,
         getCardTextDensityClass,
+        getCardVisualSignature,
         getEnemyAssetSlug,
         getEnemyAttackAnimationTiming,
         getEnemyAttackFrames,

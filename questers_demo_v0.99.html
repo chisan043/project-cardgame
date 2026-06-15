@@ -2575,17 +2575,18 @@
     }
 
     function getCardNameFamilyKey(card) {
-        if (!card || card.isSpecial || card.isJunk || card.isKnife) return '';
-        return [
-            getCardFrameTheme(card),
-            card.type || '',
-            Number(card.cost) || 0,
-            Number(card.val) || 0
-        ].join('|');
+        return QuestersVisualRules.getCardNameFamilyKey(card, {
+            cardFrameAssets: CARD_FRAME_ASSETS,
+            cardFrameThemeByName: CARD_FRAME_THEME_BY_NAME
+        });
     }
 
     function getCardVisualSignature(card) {
-        return `${getCardFrameTheme(card)}|${getCardEffectSignature(card)}`;
+        return QuestersVisualRules.getCardVisualSignature(card, {
+            cardFrameAssets: CARD_FRAME_ASSETS,
+            cardFrameThemeByName: CARD_FRAME_THEME_BY_NAME,
+            normalizeTags: normalizeTagConflicts
+        });
     }
 
     const CARD_NAME_TAG_PRIORITY = [
