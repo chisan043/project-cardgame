@@ -2565,38 +2565,13 @@
     }
 
     function normalizeCardEffectText(text = '') {
-        return String(text)
-            .replace(/<br\s*\/?>/gi, '\n')
-            .replace(/<[^>]*>/g, '')
-            .replace(/\s+/g, '');
+        return QuestersVisualRules.normalizeCardEffectText(text);
     }
 
     function getCardEffectSignature(card) {
-        if (!card) return '';
-        const tags = normalizeTagConflicts(card.tags || [])
-            .filter(Boolean)
-            .sort()
-            .join('+');
-        const specialText = card.isSpecial ? normalizeCardEffectText(card.desc) : '';
-        return [
-            card.type || '',
-            Number(card.cost) || 0,
-            Number(card.val) || 0,
-            tags,
-            JSON.stringify(card.directEffects || {}),
-            JSON.stringify({
-                bloodDebtGain: card.bloodDebtGain || 0,
-                bloodDebtDamageRatio: card.bloodDebtDamageRatio || 0,
-                bloodDebtRepay: card.bloodDebtRepay || 0,
-                bloodDebtRepayFromBleed: card.bloodDebtRepayFromBleed || 0,
-                bloodDebtBleed: card.bloodDebtBleed || 0,
-                bloodDebtWeak: card.bloodDebtWeak || 0,
-                bloodDebtStun: card.bloodDebtStun || 0,
-                bloodDebtClearDamage: card.bloodDebtClearDamage || 0,
-                bloodDebtClearHeal: card.bloodDebtClearHeal || 0
-            }),
-            specialText
-        ].join('|');
+        return QuestersVisualRules.getCardEffectSignature(card, {
+            normalizeTags: normalizeTagConflicts
+        });
     }
 
     function getCardNameFamilyKey(card) {

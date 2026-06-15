@@ -69,6 +69,43 @@
         return '';
     }
 
+    function normalizeCardEffectText(text = '') {
+        return String(text)
+            .replace(/<br\s*\/?>/gi, '\n')
+            .replace(/<[^>]*>/g, '')
+            .replace(/\s+/g, '');
+    }
+
+    function getCardEffectSignature(card, {
+        normalizeTags = tags => tags
+    } = {}) {
+        if (!card) return '';
+        const tags = normalizeTags(card.tags || [])
+            .filter(Boolean)
+            .sort()
+            .join('+');
+        const specialText = card.isSpecial ? normalizeCardEffectText(card.desc) : '';
+        return [
+            card.type || '',
+            Number(card.cost) || 0,
+            Number(card.val) || 0,
+            tags,
+            JSON.stringify(card.directEffects || {}),
+            JSON.stringify({
+                bloodDebtGain: card.bloodDebtGain || 0,
+                bloodDebtDamageRatio: card.bloodDebtDamageRatio || 0,
+                bloodDebtRepay: card.bloodDebtRepay || 0,
+                bloodDebtRepayFromBleed: card.bloodDebtRepayFromBleed || 0,
+                bloodDebtBleed: card.bloodDebtBleed || 0,
+                bloodDebtWeak: card.bloodDebtWeak || 0,
+                bloodDebtStun: card.bloodDebtStun || 0,
+                bloodDebtClearDamage: card.bloodDebtClearDamage || 0,
+                bloodDebtClearHeal: card.bloodDebtClearHeal || 0
+            }),
+            specialText
+        ].join('|');
+    }
+
     function getRelicIconPath(relic, {
         formalRelicIconIds = new Set(),
         relicMasterIconById = {}
@@ -308,6 +345,7 @@
 
     global.QuestersVisualRules = {
         getCardBuffVfxKind,
+        getCardEffectSignature,
         getCardFramePath,
         getCardFrameTheme,
         getCardTextDensityClass,
@@ -326,6 +364,7 @@
         getPlayerBuffVfxLayout,
         getRelicIconPath,
         getStatusIconPath,
-        getShieldHitVfxLayout
+        getShieldHitVfxLayout,
+        normalizeCardEffectText
     };
 })(window);
