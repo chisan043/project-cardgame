@@ -2785,7 +2785,7 @@
         if (tag === '穿甲') return context.attackBase ? null : '这次伤害无视护甲。';
         if (tag === '重击') return '基础伤害翻倍。';
         if (tag === '连击') return '若本回合已出过牌，伤害提高 50%。';
-        if (tag === '圣剑') return '追加当前护盾 50% 的伤害。';
+        if (tag === '圣剑') return '追加当前护盾 40% 的伤害；持有圣剑誓印时为 55%。';
         if (tag === '吸血') return '按本次伤害回复生命。';
         if (tag === '追击') return '额外触发 1 次轻灵追射。';
         if (tag === '爆发') return '消耗全部咏唱，每层追加 10 点伤害。';
@@ -3060,8 +3060,8 @@
     function preventFirstProtectedDamage(dmg) {
         if (dmg <= 0 || !hasRelic('r_protect_armor') || state.r_protect_armor_used) return dmg;
         state.r_protect_armor_used = true;
-        showFloatText("石甲减半", "var(--water)", getCenter('ui-hp'));
-        return Math.ceil(dmg * 0.5);
+        showFloatText("石甲减伤", "var(--water)", getCenter('ui-hp'));
+        return Math.ceil(dmg * 0.6);
     }
     let activeKeywordTooltip = null;
     function removeGlobalKeywordTooltip() {
@@ -5296,7 +5296,7 @@
         const character = getCurrentCharacter();
         state.mp = getCharacterBaseEnergy(character);
         if (character.id === 'hero_warrior') state.armor += 5;
-        if(hasRelic('r_thorn_shield_new')) state.armor += 6;
+        if(hasRelic('r_thorn_shield_new')) state.armor += 4;
         
         setEnemyIntent(); 
         showScene('scene-battle'); updateBattleUI();
@@ -5604,9 +5604,9 @@
         if (gain <= 0) return 0;
         if (hasRelic('r_blood_suture') && !state.r_blood_debt_reduction_used) {
             state.r_blood_debt_reduction_used = true;
-            gain = Math.max(0, gain - 2);
-            state.p_dmg_buff += 4;
-            showFloatText('赤线缝针 +4伤', 'var(--crimson)', getCenter('ui-hp'));
+            gain = Math.max(0, gain - 1);
+            state.p_dmg_buff += 3;
+            showFloatText('赤线缝针 +3伤', 'var(--crimson)', getCenter('ui-hp'));
         }
         state.p_blood_debt = Math.min(40, (state.p_blood_debt || 0) + gain);
         state.p_blood_debt_turns = 3;
@@ -5636,14 +5636,14 @@
                 state.p_battle_dmg += gain;
                 showFloatText(`血誓清偿 +${gain}伤`, 'var(--crimson)', getCenter('ui-hp'));
             }
-            if (hasRelic('r_oath_transfusion') && !state.r_oath_transfusion_used) {
+            if (hasRelic('r_oath_transfusion') && paid >= 8 && !state.r_oath_transfusion_used) {
                 state.r_oath_transfusion_used = true;
                 state.mp += 1;
                 showFloatText('誓血导管 +1能', 'var(--gold)', getCenter('ui-mp'));
             }
             if (hasRelic('r_lifedebt_scale') && state.hp <= Math.floor(state.maxHp / 2) && !state.r_lifedebt_clear_used) {
                 state.r_lifedebt_clear_used = true;
-                healPlayer(6);
+                healPlayer(4);
             }
         }
         return { paid, cleared };
@@ -5933,7 +5933,7 @@
                 }
             }
             else if(card.specialId === 's_pierce') { triggerVFX('p-atk'); const chantSpent = state.p_chant; applySpecialCardDamage(card, 32 + state.p_battle_dmg + chantSpent * 14, true); state.p_chant = hasRelic('r_burst_lens') ? Math.ceil(chantSpent / 2) : 0; }
-            else if(card.specialId === 's_thorns') { triggerVFX('p-def'); state.armor += 18; state.player.thorns += hasRelic('r_thorn_shield_new') ? 16 : 8; showFloatText(card.name, "var(--gold)", getCenter('ui-hp')); updateTopBar(); }
+            else if(card.specialId === 's_thorns') { triggerVFX('p-def'); state.armor += 18; state.player.thorns += hasRelic('r_thorn_shield_new') ? 12 : 8; showFloatText(card.name, "var(--gold)", getCenter('ui-hp')); updateTopBar(); }
             else if(card.specialId === 's_energy') { const hadWind = state.p_aim > 0; state.p_aim = Math.min(6, state.p_aim + 3 + (hasRelic('r_wind_quiver') ? 1 : 0)); if (hadWind) state.mp += 1; await drawCards(2); showFloatText(hadWind ? "风势 +3 / 能量 +1" : "风势 +3", "var(--nature)", getCenter('ui-mp')); }
             
             // --- 词条共鸣 ---
@@ -5969,11 +5969,11 @@
                 if (spentDebt > 0) repayBloodDebt(spentDebt, '血海吞债');
                 const dmg = parseInt(card.val) + spentDebt * (card.bloodDebtSpendDamage || 2) + state.p_battle_dmg;
                 triggerVFX('p-atk'); const dealt = applySpecialCardDamage(card, dmg, true); let bloodHeal = Math.floor(dealt * (card.lifestealRatio || 0.5));
-                if(hasRelic('r_lifedebt_scale') && state.hp <= Math.floor(state.maxHp / 2)) bloodHeal = Math.floor(bloodHeal * 1.5);
+                if(hasRelic('r_lifedebt_scale') && state.hp <= Math.floor(state.maxHp / 2)) bloodHeal = Math.floor(bloodHeal * 1.25);
                 const remainingHeal = Math.max(0, bloodHeal - repayBloodDebt(bloodHeal, '血海回偿').paid);
                 const bloodOverheal = Math.max(0, remainingHeal - Math.max(0, state.maxHp - state.hp));
                 healPlayer(remainingHeal + (spentDebt > 0 ? (card.bloodDebtClearHeal || 0) : 0));
-                if (hasRelic('r_vamp_ring') && bloodOverheal > 0) state.p_battle_dmg += Math.min(5, bloodOverheal);
+                if (hasRelic('r_vamp_ring') && bloodOverheal > 0) state.p_battle_dmg += Math.min(3, bloodOverheal);
                 showFloatText(`${card.name} 消耗 ${spentDebt} 血债`, "var(--crimson)", getCenter('enemy-avatar'));
             }
             else if (card.specialId === 'a_syn_magic') {
@@ -5991,7 +5991,7 @@
                 showFloatText("王冠誓约 / 进入反击", "var(--gold)", getCenter('ui-hp'));
             }
             else if (card.specialId === 'w_bastion_prayer') {
-                let pVal = 10 + (hasRelic('r_protect_armor') ? 3 : 0);
+                let pVal = 10 + (hasRelic('r_protect_armor') ? 2 : 0);
                 pVal = applyLowHpGuardBoost(pVal, '守誓庇护');
                 const hadArmor = state.armor > 0;
                 state.p_reduce_dmg += pVal;
@@ -6004,7 +6004,7 @@
                 triggerVFX('p-atk');
                 let dmg = 8 + state.p_battle_dmg + (state.player.thorns || 0) * 3;
                 applySpecialCardDamage(card, dmg);
-                let tVal = hasRelic('r_thorn_shield_new') ? 12 : 6;
+                let tVal = hasRelic('r_thorn_shield_new') ? 9 : 6;
                 state.player.thorns += tVal;
                 showFloatText(`荆棘 +${tVal}`, "var(--nature)", getCenter('ui-hp'));
             }
@@ -6012,7 +6012,7 @@
                 triggerVFX('p-def');
                 const armorGain = applyLowHpGuardBoost(14, '守誓护盾');
                 state.armor += armorGain;
-                let pVal = 4 + (hasRelic('r_protect_armor') ? 3 : 0);
+                let pVal = 4 + (hasRelic('r_protect_armor') ? 2 : 0);
                 pVal = applyLowHpGuardBoost(pVal, '守誓庇护');
                 state.p_reduce_dmg += pVal;
                 if (hasRelic('r_guardian_core')) state.armor += Math.floor(pVal / 2);
@@ -6108,7 +6108,7 @@
             else if (card.specialId === 'm_arcane_aegis') {
                 const missing = state.maxHp - state.hp;
                 healPlayer(12);
-                let pVal = 8 + (hasRelic('r_protect_armor') ? 3 : 0);
+                let pVal = 8 + (hasRelic('r_protect_armor') ? 2 : 0);
                 pVal = applyLowHpGuardBoost(pVal, '守誓庇护');
                 state.p_reduce_dmg += pVal;
                 if (hasRelic('r_guardian_core')) state.armor += Math.floor(pVal / 2);
@@ -6200,12 +6200,12 @@
             state.hp = Math.max(1, state.hp - 4);
             state.p_battle_dmg += dmgBonus;
             showFloatText(`血祭 扣4血 / +${dmgBonus}攻`, "var(--crimson)", getCenter('ui-hp'));
-            if (hasRelic('r_blood_suture')) healPlayer(2);
+            if (hasRelic('r_blood_suture')) healPlayer(1);
         }
 
         if ((card.tags && card.tags.includes('庇护')) || hasDirectCardEffect(card, 'protection')) {
             let pVal = getProtectionValue(card);
-            if (card.tags && card.tags.includes('庇护') && hasRelic('r_protect_armor')) pVal += 3;
+            if (card.tags && card.tags.includes('庇护') && hasRelic('r_protect_armor')) pVal += 2;
             pVal = applyLowHpGuardBoost(pVal, '守誓庇护');
             state.p_reduce_dmg += pVal;
             if (hasRelic('r_guardian_core')) state.armor += Math.floor(pVal / 2);
@@ -6434,7 +6434,7 @@
                 const lifestealRatio = Number.isFinite(Number(card.lifestealRatio)) ? Number(card.lifestealRatio) : (card.up ? 1 : 0.5);
                 let hAmt = Math.floor(finalDmg * lifestealRatio);
                 if(hasRelic('r_poison_leech') && state.enemy.poison > 0) hAmt *= 2;
-                if(hasRelic('r_lifedebt_scale') && state.hp <= Math.floor(state.maxHp / 2)) hAmt = Math.floor(hAmt * 1.5);
+                if(hasRelic('r_lifedebt_scale') && state.hp <= Math.floor(state.maxHp / 2)) hAmt = Math.floor(hAmt * 1.25);
                 if (hasRelic('r_blood') && state.enemy.bleed > 0) {
                     const result = repayBloodDebt(state.enemy.bleed, '血滴石回偿');
                     debtPaidByCard += result.paid; debtClearedByCard ||= result.cleared;
@@ -6445,7 +6445,7 @@
                 const bloodOverheal = Math.max(0, remainingHeal - Math.max(0, state.maxHp - state.hp));
                 healPlayer(remainingHeal);
                 if (hasRelic('r_vamp_ring') && bloodOverheal > 0) {
-                    const damageGain = Math.min(5, bloodOverheal);
+                    const damageGain = Math.min(3, bloodOverheal);
                     state.p_battle_dmg += damageGain;
                     showFloatText(`血誓余势 +${damageGain}伤`, "var(--crimson)", getCenter('ui-hp'));
                 }
@@ -6474,14 +6474,7 @@
         if((card.tags && card.tags.includes('治愈')) || hasDirectCardEffect(card, 'heal')) {
             let healVal = getCardHealValue(card);
             if(hasRelic('r_heal_relic')) healVal += 3;
-            const beforeHp = state.hp;
             healPlayer(healVal);
-            const overheal = Math.max(0, healVal - Math.max(0, state.maxHp - beforeHp));
-            if (hasRelic('r_oath_transfusion') && overheal > 0 && !state.r_oath_transfusion_used) {
-                state.r_oath_transfusion_used = true;
-                state.p_reduce_dmg += overheal;
-                showFloatText(`导管庇护 +${overheal}`, "var(--water)", getCenter('ui-hp'));
-            }
         }
         let statusApplied = false;
         const statusLayerBonus = hasRelic('r_plague_glass') && card.type === '能力' && getEnemyDebuffTypeCount() > 0 ? 1 : 0;
@@ -6511,9 +6504,9 @@
             if(hasRelic('r_bloodlet_draw')) await drawCards(1);
             if(hasRelic('r_bloodlet_hourglass') && !state.r_bloodlet_hourglass_used) { state.r_bloodlet_hourglass_used = true; await drawCards(1); }
             if(hasRelic('r_execute') && state.enemy.vuln > 0) { showFloatText(`处决不断!`, "var(--gold)", getCenter('enemy-avatar')); } else {
-                state.enemy.bleed = hasRelic('r_rupture_charm') ? 3 : 0;
+                state.enemy.bleed = hasRelic('r_rupture_charm') ? 2 : 0;
                 if (hasRelic('r_rupture_charm')) {
-                    const result = repayBloodDebt(2, '裂口护符回偿');
+                    const result = repayBloodDebt(1, '裂口护符回偿');
                     debtPaidByCard += result.paid; debtClearedByCard ||= result.cleared;
                 }
             }
@@ -6551,7 +6544,7 @@
         if (debtClearedByCard && card.bloodDebtClearHeal) healPlayer(card.bloodDebtClearHeal);
         if(statusApplied && hasRelic('r_status_prism')) { state.p_chant = Math.min(12, state.p_chant + 1); showFloatText("棱镜积累 1 层咏唱", "var(--purple)", getCenter('ui-hp')); }
         if((card.tags && card.tags.includes('充能')) || hasDirectCardEffect(card, 'energy')) { let eAmt = 1; if(card.tags && card.tags.includes('充能') && hasRelic('r_energy_crys')) eAmt += 1; state.mp += eAmt; showFloatText(`能量 +${eAmt}`, "var(--gold)", getCenter('ui-mp')); }
-        if(card.tags && card.tags.includes('荆棘')) { let tVal = 8; if(hasRelic('r_thorn_shield_new')) tVal *= 2; state.player.thorns += tVal; showFloatText(`获得荆棘 +${tVal}`, "var(--nature)", getCenter('ui-hp')); updateTopBar(); }
+        if(card.tags && card.tags.includes('荆棘')) { let tVal = hasRelic('r_thorn_shield_new') ? 12 : 8; state.player.thorns += tVal; showFloatText(`获得荆棘 +${tVal}`, "var(--nature)", getCenter('ui-hp')); updateTopBar(); }
         if(((card.tags && card.tags.includes('抽牌')) || hasDirectCardEffect(card, 'draw')) && !isEcho) { let drawCount = getCardDrawCount(card); if(card.tags && card.tags.includes('抽牌') && hasRelic('r_luck_box')) drawCount += 1; await drawCards(drawCount); }
         if(hasRelic('r_status_ledger') && getEnemyDebuffTypeCount() >= 3 && card.type === '能力' && !state.r_status_ledger_used && !isEcho) { state.r_status_ledger_used = true; await drawCards(1); }
         if(hasRelic('r_double_quill') && card.type === '能力' && cardsPlayedThisTurn === 2 && !isEcho) { await drawCards(1); showFloatText("双墨抽牌", "var(--purple)", getCenter('ui-deck-count')); }
@@ -6801,7 +6794,6 @@
             state.r_pierce_meter_used = false;
             state.r_chant_reservoir_used = false;
             state.r_tailwind_spool_used = false;
-            state.r_oath_transfusion_used = false;
             state.p_blood_debt_paid = 0;
             state.p_blood_debt_power = 1;
             state.r_blood_debt_reduction_used = false;

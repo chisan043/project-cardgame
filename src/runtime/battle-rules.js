@@ -38,7 +38,7 @@
         hasSwordOath = false
     } = {}) {
         if (!card?.tags?.includes('圣剑')) return 0;
-        const swordRatio = hasSwordOath ? 0.7 : 0.5;
+        const swordRatio = hasSwordOath ? 0.55 : 0.4;
         return Math.floor((armor || 0) * swordRatio) + ((counter || 0) * 4);
     }
 
