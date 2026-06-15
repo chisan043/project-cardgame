@@ -64,7 +64,9 @@
             --asset-npc-shopkeeper: url('assets/npc/shopkeeper_portrait_v1.webp');
             --asset-npc-campfire-elder: url('assets/npc/campfire_elder_portrait_v1.webp');
             --asset-npc-encounter-angel: url('assets/npc/encounter_angel_portrait_v1.webp');
-            --asset-main-menu-bg: url('assets/ui/menu/main_menu_key_art_v1.webp');
+            --asset-main-menu-bg-default: url('assets/ui/menu/main_menu_key_art_v1.webp');
+            --asset-main-menu-bg-clear: url('assets/ui/menu/main_menu_clear_cover_v1.png');
+            --asset-main-menu-bg: var(--asset-main-menu-bg-default);
             --asset-role-select-bg: url('assets/scenes/battle/temple_hall_grand_v1.webp');
             --asset-role-desc-panel: url('assets/ui/role_select/panels/role_desc_panel_v1.webp');
             --asset-role-tag-plate: url('assets/ui/role_select/tags/tag_plate_blue_gold_v1.webp');
@@ -77,6 +79,7 @@
         }
         
         body, html { margin: 0; padding: 0; height: 100%; background: var(--dark-bg); color: #ddd; font-family: "STKaiti", "华文楷体", "Microsoft YaHei", serif; overflow: hidden; user-select: none; }
+        body.main-menu-clear-cover { --asset-main-menu-bg: var(--asset-main-menu-bg-clear); }
         
         #game-app { max-width: 1280px; height: 100vh; margin: 0 auto; position: relative; border-left: 1px solid #222; border-right: 1px solid #222; background: var(--ink-black); overflow: hidden; box-shadow: 0 0 50px rgba(0,0,0,1);}
 
@@ -4392,6 +4395,17 @@
         btn.style.display = localStorage.getItem(RUN_SAVE_KEY) ? 'block' : 'none';
     }
 
+    const CLEAR_MENU_COVER_UNLOCK_KEY = 'questers-clear-menu-cover-unlocked-v1';
+
+    function applyClearMenuCoverUnlock() {
+        document.body.classList.toggle('main-menu-clear-cover', localStorage.getItem(CLEAR_MENU_COVER_UNLOCK_KEY) === '1');
+    }
+
+    function unlockClearMenuCover() {
+        localStorage.setItem(CLEAR_MENU_COVER_UNLOCK_KEY, '1');
+        applyClearMenuCoverUnlock();
+    }
+
     function saveRun() {
         const payload = QuestersStateRules.createRunSavePayload(state, { shopDeletePrice });
         localStorage.setItem(RUN_SAVE_KEY, JSON.stringify(payload));
@@ -5069,7 +5083,7 @@
             mapHeight: state.mapData.length
         });
         state.floor = advanceState.floor; state.isNodeClickLocked = false;
-        if(advanceState.isComplete) { clearRunSave(); alert("恭喜你，穿越层层试炼，打败了魔王！"); showScene('scene-main-menu'); setTopBarVisible(false); }
+        if(advanceState.isComplete) { clearRunSave(); unlockClearMenuCover(); alert("恭喜你，穿越层层试炼，打败了魔王！"); showScene('scene-main-menu'); setTopBarVisible(false); }
         else { showScene('scene-map'); setTimeout(()=>renderMap(), 50); updateTopBar(); saveRun(); }
     }
 
@@ -7598,6 +7612,7 @@
         syncBattleRuntimeLayersToHud();
         syncBattlefieldStatusStripPositions();
     });
+    applyClearMenuCoverUnlock();
     renderPlayerHudAssembly();
     hydratePlayerHudLayoutFromIndexedDb();
     updateContinueButton();
