@@ -511,7 +511,7 @@ const BUILD_EXPANSION_CARDS = {
         { poolId: 'mage_aftertone_flow', name: '余音导流', type: '能力', cost: 1, icon: '🎼', val: 0, tags: ['充能'], buildTags: ['mirror'], rarity: '普通', frameTheme: 'mage', desc: '回复 1 点能量。' },
         { poolId: 'mage_copy_pierce', name: '复写残响', type: '攻击', cost: 2, icon: '🌩️', val: 14, tags: ['回响', '穿甲'], buildTags: ['mirror'], rarity: '史诗', frameTheme: 'mage', desc: '造成 14 点穿甲伤害，并让本牌再触发一次。' },
         { poolId: 'mage_transcribe_ring', name: '转录法环', type: '能力', cost: 1, icon: '🔮', val: 0, tags: ['复刻'], directEffects: { energy: true }, buildTags: ['mirror'], rarity: '稀有', frameTheme: 'mage', desc: '复制上一张非复刻牌，并回复 1 点能量。' },
-        { poolId: 'mage_double_archive', name: '双页归档', type: '能力', cost: 2, icon: '📚', val: 0, tags: ['复刻'], directEffects: { draw: true }, buildTags: ['mirror'], rarity: '史诗', frameTheme: 'mage', desc: '复制上一张非复刻牌，并抽牌。' },
+        { poolId: 'mage_double_archive', name: '双页归档', type: '能力', cost: 1, icon: '📚', val: 0, tags: ['复刻'], buildTags: ['mirror'], rarity: '史诗', frameTheme: 'mage', desc: '复制上一张非复刻牌。' },
         { poolId: 'mage_corrupt_mist', name: '蚀星雾', type: '能力', cost: 1, icon: '☠️', val: 0, tags: ['诅咒'], directEffects: { draw: true }, buildTags: ['calamity'], rarity: '普通', frameTheme: 'mage', desc: '施加[诅咒]并抽 1 张牌。' },
         { poolId: 'mage_frost_hex', name: '霜咒压迫', type: '攻击', cost: 1, icon: '🌑', val: 8, tags: ['虚弱', '诅咒'], buildTags: ['calamity'], rarity: '稀有', frameTheme: 'mage', desc: '造成 8 点伤害，施加[虚弱]与[诅咒]。' },
         { poolId: 'mage_sick_star', name: '坠星病灶', type: '攻击', cost: 1, icon: '☄️', val: 8, tags: ['易伤'], buildTags: ['calamity'], rarity: '稀有', frameTheme: 'mage', desc: '造成 8 点伤害并施加[易伤]。' },
