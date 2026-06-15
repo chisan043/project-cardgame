@@ -5332,8 +5332,10 @@
         playerHurtAnimationToken++;
         const token = ++playerAttackAnimationToken;
         const attackFrames = Array.isArray(avatar.attackFrames) ? avatar.attackFrames : [];
-        const totalDuration = Math.max(480, attackFrames.reduce((sum, frame) => sum + frame.duration, 0));
-        avatarFrame.style.setProperty('--player-attack-duration', `${totalDuration}ms`);
+        const timing = QuestersVisualRules.getPlayerAttackAnimationTiming(attackFrames, {
+            attackImpactMs: avatar.attackImpactMs
+        });
+        avatarFrame.style.setProperty('--player-attack-duration', `${timing.duration}ms`);
         avatarFrame.classList.remove('player-anim-attack');
         avatarFrame.classList.remove('player-anim-hurt');
         void avatarFrame.offsetWidth;
@@ -5350,11 +5352,8 @@
             if (token !== playerAttackAnimationToken) return;
             avatar.src = avatar.dataset.idleSrc || avatar.src;
             avatarFrame.classList.remove('player-anim-attack');
-        }, totalDuration);
-        return {
-            impactDelay: Math.min(avatar.attackImpactMs || 140, totalDuration),
-            duration: totalDuration
-        };
+        }, timing.duration);
+        return timing;
     }
 
     function triggerPlayerHurtAnimation() {
@@ -5364,7 +5363,7 @@
         playerAttackAnimationToken++;
         const token = ++playerHurtAnimationToken;
         const hurtFrames = Array.isArray(avatar.hurtFrames) ? avatar.hurtFrames : [];
-        const totalDuration = Math.max(360, hurtFrames.reduce((sum, frame) => sum + frame.duration, 0));
+        const totalDuration = QuestersVisualRules.getFrameSequenceDuration(hurtFrames, { minDuration: 360 });
         avatarFrame.style.setProperty('--player-hurt-duration', `${totalDuration}ms`);
         avatarFrame.classList.remove('player-anim-attack', 'player-anim-hurt');
         void avatarFrame.offsetWidth;

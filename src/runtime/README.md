@@ -15,8 +15,8 @@ own DOM rendering.
   copy cleanup helpers.
 - `battle-rules.js`: battle-start, battle-win, run-failure, encounter scaling,
   encounter background selection, and combat math helpers.
-- `visual-rules.js`: enemy visual asset paths, attack-frame paths/timing, and
-  enemy attack VFX type/path selection.
+- `visual-rules.js`: enemy visual asset paths, attack-frame paths/timing,
+  player animation timing, and enemy attack VFX type/path selection.
 
 Keep `src/data/*` side-effect-free. Keep DOM creation, overlay rendering, and
 state mutation in the main runtime until those surfaces are split deliberately.

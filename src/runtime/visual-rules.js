@@ -38,6 +38,13 @@
         }));
     }
 
+    function getFrameSequenceDuration(frames = [], { minDuration = 0 } = {}) {
+        return Math.max(
+            minDuration,
+            frames.reduce((sum, frame) => sum + (Number(frame.duration) || 0), 0)
+        );
+    }
+
     function getEnemyAttackAnimationTiming(frames = [], {
         defaultFirstFrameDuration = 110,
         defaultSecondFrameDuration = 120,
@@ -45,10 +52,7 @@
         maxImpactDelay = 300,
         minDuration = 420
     } = {}) {
-        const totalDuration = Math.max(
-            minDuration,
-            frames.reduce((sum, frame) => sum + (Number(frame.duration) || 0), 0)
-        );
+        const totalDuration = getFrameSequenceDuration(frames, { minDuration });
         const impactDelay = Math.min(
             maxImpactDelay,
             (Number(frames[0]?.duration) || defaultFirstFrameDuration)
@@ -56,6 +60,17 @@
                 + impactBuffer
         );
         return { impactDelay, duration: totalDuration };
+    }
+
+    function getPlayerAttackAnimationTiming(frames = [], {
+        attackImpactMs = 140,
+        minDuration = 480
+    } = {}) {
+        const totalDuration = getFrameSequenceDuration(frames, { minDuration });
+        return {
+            impactDelay: Math.min(attackImpactMs || 140, totalDuration),
+            duration: totalDuration
+        };
     }
 
     function getEnemyAttackVfxAsset(type) {
@@ -85,6 +100,8 @@
         getEnemyAttackVfxAsset,
         getEnemyAttackVfxType,
         getEnemyAvatarPath,
-        getEnemyVisualPath
+        getEnemyVisualPath,
+        getFrameSequenceDuration,
+        getPlayerAttackAnimationTiming
     };
 })(window);
