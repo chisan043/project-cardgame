@@ -182,6 +182,17 @@
         return isMapNodeReachable(node, { currentNode }) && !isNodeClickLocked;
     }
 
+    function getMapNodeEntryAction(node) {
+        const nodeType = node?.type || 'reward';
+        if (['battle', 'elite', 'boss'].includes(nodeType)) {
+            return { action: 'battle', battleType: nodeType };
+        }
+        if (nodeType === 'rest') return { action: 'rest' };
+        if (nodeType === 'shop') return { action: 'shop' };
+        if (nodeType === 'event') return { action: 'event' };
+        return { action: 'reward' };
+    }
+
     function findMapNodeById(mapData, nodeId) {
         if (!nodeId || !Array.isArray(mapData)) return null;
         for (const floor of mapData) {
@@ -383,6 +394,7 @@
         getMapDetailPanelState,
         getMapFloorLabel,
         getMapFloorLayout,
+        getMapNodeEntryAction,
         getMapNodeRenderState,
         getMapNodeRouteStatus,
         getMapNodeSlotLayout,

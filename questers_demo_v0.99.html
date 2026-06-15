@@ -5045,10 +5045,11 @@
     function handleNodeClick(node) {
         if (state.isNodeClickLocked) return;
         state.isNodeClickLocked = true; state.currentNode = node; state.pathHistory.push(node.id); 
-        if(['battle','elite','boss'].includes(node.type)) startBattle(node.type);
-        else if(node.type === 'rest') { document.getElementById('rest-options').style.display = 'flex'; document.getElementById('card-action-list').style.display = 'none'; showOverlay('overlay-rest'); }
-        else if(node.type === 'shop') { state.currentShop = null; openShop(); }
-        else if(node.type === 'event') triggerEventNode();
+        const entryAction = QuestersMapRules.getMapNodeEntryAction(node);
+        if(entryAction.action === 'battle') startBattle(entryAction.battleType);
+        else if(entryAction.action === 'rest') { document.getElementById('rest-options').style.display = 'flex'; document.getElementById('card-action-list').style.display = 'none'; showOverlay('overlay-rest'); }
+        else if(entryAction.action === 'shop') { state.currentShop = null; openShop(); }
+        else if(entryAction.action === 'event') triggerEventNode();
         else { showRewardOverlay(); }
     }
 
