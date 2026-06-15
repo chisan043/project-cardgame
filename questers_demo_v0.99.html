@@ -2705,8 +2705,10 @@
 
     function generateRewardCard(used = new Set()) {
         if (Math.random() < QuestersRewardRules.getSpecialEpicRewardChance({ floor: state.floor })) {
-            let epicPool = getWeightedSpecialEpicPool().filter(card => !used.has(getCardChoiceKey(card)));
-            let special = epicPool[Math.floor(Math.random() * epicPool.length)];
+            const special = QuestersRewardRules.pickSpecialEpicRewardCard({
+                specialPool: getWeightedSpecialEpicPool(),
+                used
+            });
             if (special) return cloneSpecialEpic(special);
         }
 
@@ -2783,11 +2785,10 @@
         }
         const fixedFallbackPool = [...getCharacterCardPool(), ...NEUTRAL_CARD_POOL];
         while (choices.length < count && fixedFallbackPool.length) {
-            const source = QuestersRewardRules.getRewardFixedFallbackCandidates({
+            const picked = QuestersRewardRules.pickRewardFixedFallbackCandidate({
                 allCards: fixedFallbackPool,
                 used
             });
-            const picked = source[Math.floor(Math.random() * source.length)];
             const card = cloneCardDefinition(picked);
             used.add(getCardChoiceKey(card));
             choices.push(card);

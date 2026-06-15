@@ -303,6 +303,17 @@
         return uniqueCandidates.length ? uniqueCandidates : allCards;
     }
 
+    function pickRewardFixedFallbackCandidate({
+        allCards = [],
+        used = new Set(),
+        rng = Math.random
+    } = {}) {
+        return pickRandomCandidate(getRewardFixedFallbackCandidates({
+            allCards,
+            used
+        }), rng);
+    }
+
     function getSpecialEpicRewardChance({ floor = 1 } = {}) {
         return 0.12 + floor * 0.01;
     }
@@ -336,6 +347,17 @@
         return weighted.length ? weighted : specialPool;
     }
 
+    function pickSpecialEpicRewardCard({
+        specialPool = [],
+        used = new Set(),
+        rng = Math.random
+    } = {}) {
+        return pickRandomCandidate(
+            specialPool.filter(card => !used.has(getCardChoiceKey(card))),
+            rng
+        );
+    }
+
     global.QuestersRewardRules = {
         deckHasCardMatch,
         deckHasTag,
@@ -361,6 +383,8 @@
         getShopCopyPrice,
         pickRewardBridgeCard,
         pickRewardCardCandidate,
+        pickRewardFixedFallbackCandidate,
+        pickSpecialEpicRewardCard,
         rollRewardRarity,
         rollWeighted
     };
