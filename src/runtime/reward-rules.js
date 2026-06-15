@@ -181,6 +181,40 @@
         return candidates;
     }
 
+    function getBuildRewardCandidates({
+        classPool = [],
+        neutralPool = [],
+        mode = 'general',
+        rarity = null,
+        used = new Set(),
+        primaryBuildTag = null,
+        getCardBuildTags = () => [],
+        rng = Math.random
+    } = {}) {
+        let candidates = getRewardCandidatePool({
+            classPool,
+            neutralPool,
+            mode,
+            rarity,
+            used,
+            primaryBuildTag,
+            getCardBuildTags,
+            rng
+        });
+        if (!candidates.length) {
+            candidates = getRewardCandidatePool({
+                classPool,
+                neutralPool,
+                mode,
+                used,
+                primaryBuildTag,
+                getCardBuildTags,
+                rng
+            });
+        }
+        return candidates;
+    }
+
     function getRewardCardCandidates({
         allCards = [],
         rarity = null,
@@ -225,6 +259,7 @@
         deckHasTag,
         getBattleRewardSkipGold,
         getBattleWinRewards,
+        getBuildRewardCandidates,
         getCardChoiceKey,
         getDeckBuildProfile,
         getPrimaryBuildTag,

@@ -2514,10 +2514,10 @@
         return 0.95 * boost;
     }
 
-    function getRewardCandidatePool({ mode = 'general', rarity = null, used = new Set(), primaryBuildTag = getPrimaryBuildTag() } = {}) {
-        const classPool = getCharacterCardPool();
-        return QuestersRewardRules.getRewardCandidatePool({
-            classPool,
+    function generateBuildRewardCard(mode, used = new Set(), primaryBuildTag = getPrimaryBuildTag()) {
+        const rarity = rollRewardRarity();
+        const candidates = QuestersRewardRules.getBuildRewardCandidates({
+            classPool: getCharacterCardPool(),
             neutralPool: NEUTRAL_CARD_POOL,
             mode,
             rarity,
@@ -2525,12 +2525,6 @@
             primaryBuildTag,
             getCardBuildTags
         });
-    }
-
-    function generateBuildRewardCard(mode, used = new Set(), primaryBuildTag = getPrimaryBuildTag()) {
-        const rarity = rollRewardRarity();
-        let candidates = getRewardCandidatePool({ mode, rarity, used, primaryBuildTag });
-        if (!candidates.length) candidates = getRewardCandidatePool({ mode, used, primaryBuildTag });
         if (!candidates.length) return null;
         const picked = rollWeighted(candidates, card => getCardBuildRewardWeight(card, mode === 'aligned' ? primaryBuildTag : null));
         return picked ? cloneCardDefinition(picked) : null;
