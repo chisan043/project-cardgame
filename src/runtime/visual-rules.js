@@ -80,6 +80,26 @@
         };
     }
 
+    function getShieldHitVfxLayout(absorbed = 0, {
+        playerRect = null,
+        viewportHeight = 0,
+        viewportWidth = 0
+    } = {}) {
+        const impactX = playerRect
+            ? playerRect.left + playerRect.width * 0.52
+            : viewportWidth * 0.34;
+        const impactY = playerRect
+            ? playerRect.top + playerRect.height * 0.47
+            : viewportHeight * 0.52;
+        const width = Math.max(430, Math.min(535, 430 + Math.max(0, absorbed) * 5));
+        return {
+            height: Math.round(width * 1.34),
+            impactX,
+            impactY,
+            width
+        };
+    }
+
     function getEnemyAttackVfxAsset(type) {
         return `assets/vfx/enemy_attack/${String(type || '').replace(/-/g, '_')}_vfx_v1.webp`;
     }
@@ -110,6 +130,7 @@
         getEnemyVisualPath,
         getFrameSequenceDuration,
         getFrameSequenceLeadDuration,
-        getPlayerAttackAnimationTiming
+        getPlayerAttackAnimationTiming,
+        getShieldHitVfxLayout
     };
 })(window);

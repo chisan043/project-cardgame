@@ -16,7 +16,7 @@ own DOM rendering.
 - `battle-rules.js`: battle-start, battle-win, run-failure, encounter scaling,
   encounter background selection, and combat math helpers.
 - `visual-rules.js`: enemy visual asset paths, attack-frame paths/timing,
-  player animation/VFX timing, and enemy attack VFX type/path selection.
+  player animation/VFX timing/layout, and enemy attack VFX type/path selection.
 
 Keep `src/data/*` side-effect-free. Keep DOM creation, overlay rendering, and
 state mutation in the main runtime until those surfaces are split deliberately.

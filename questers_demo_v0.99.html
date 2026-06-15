@@ -5572,19 +5572,20 @@
 
         const playerRect = document.getElementById('player-avatar-img')?.getBoundingClientRect()
             || document.querySelector('.player-avatar-frame')?.getBoundingClientRect();
-        const impactX = playerRect ? playerRect.left + playerRect.width * 0.52 : window.innerWidth * 0.34;
-        const impactY = playerRect ? playerRect.top + playerRect.height * 0.47 : window.innerHeight * 0.52;
-        const width = Math.max(430, Math.min(535, 430 + Math.max(0, absorbed) * 5));
-        const height = Math.round(width * 1.34);
+        const layout = QuestersVisualRules.getShieldHitVfxLayout(absorbed, {
+            playerRect,
+            viewportHeight: window.innerHeight,
+            viewportWidth: window.innerWidth
+        });
         const totalDuration = QuestersVisualRules.getFrameSequenceDuration(PLAYER_SHIELD_HIT_VFX_FRAMES);
         const vfxToken = (vfx.animationToken || 0) + 1;
         vfx.animationToken = vfxToken;
 
         vfx.style.display = 'flex';
-        image.style.setProperty('--shield-hit-x', `${impactX}px`);
-        image.style.setProperty('--shield-hit-y', `${impactY}px`);
-        image.style.setProperty('--shield-hit-width', `${width}px`);
-        image.style.setProperty('--shield-hit-height', `${height}px`);
+        image.style.setProperty('--shield-hit-x', `${layout.impactX}px`);
+        image.style.setProperty('--shield-hit-y', `${layout.impactY}px`);
+        image.style.setProperty('--shield-hit-width', `${layout.width}px`);
+        image.style.setProperty('--shield-hit-height', `${layout.height}px`);
         image.style.setProperty('--shield-hit-duration', `${totalDuration}ms`);
         image.style.animation = 'none';
         image.src = PLAYER_SHIELD_HIT_VFX_FRAMES[0].src;
