@@ -2,6 +2,18 @@
 (function exposeBattleRules(global) {
     'use strict';
 
+    const ACTION_STATUS_LABELS = {
+        poison: '剧毒',
+        bleed: '流血',
+        burn: '燃烧',
+        stun: '眩晕',
+        curse: '诅咒',
+        vuln: '易伤',
+        weak: '虚弱'
+    };
+    const ENEMY_ACTION_STATUS_KEYS = ['p_poison', 'p_bleed', 'p_burn', 'p_stun', 'p_curse', 'p_vuln', 'p_weak'];
+    const PLAYER_ACTION_STATUS_KEYS = ['poison', 'bleed', 'burn', 'stun', 'curse', 'vuln', 'weak'];
+
     function getFrenzyBonus(card, {
         hasFrenzyVeil = false,
         discardCount = 0
@@ -39,6 +51,70 @@
         if (type === 'boss') return 1 + floor * 0.058;
         if (type === 'elite') return 1 + floor * 0.085;
         return 1 + floor * 0.1;
+    }
+
+    function getEnemyActionLifeTotal(state) {
+        return Math.max(0, state?.enemy?.currentHp || 0) + Math.max(0, state?.enemy?.minion?.hp || 0);
+    }
+
+    function getBattleActionSnapshot(state = {}) {
+        return {
+            playerHp: state.hp || 0,
+            playerArmor: state.armor || 0,
+            enemyLife: getEnemyActionLifeTotal(state),
+            enemyArmor: state.enemy?.armor || 0,
+            enemyStatuses: Object.fromEntries(PLAYER_ACTION_STATUS_KEYS.map(k => [k, state.enemy?.[k] || 0])),
+            playerStatuses: Object.fromEntries(ENEMY_ACTION_STATUS_KEYS.map(k => [k, state[k] || 0])),
+            discardCount: state.discardPile?.length || 0,
+            enemyMinionHp: state.enemy?.minion?.hp || 0
+        };
+    }
+
+    function addStatusGainLines(parts, keys, beforeStatuses = {}, afterStatuses = {}) {
+        keys.forEach(key => {
+            const statusKey = key.replace(/^p_/, '');
+            const gain = (afterStatuses[key] || afterStatuses[statusKey] || 0) - (beforeStatuses[key] || beforeStatuses[statusKey] || 0);
+            if (gain > 0) parts.push(`施加${ACTION_STATUS_LABELS[statusKey]} ${gain} 层`);
+        });
+    }
+
+    function describePlayerCardResult({
+        after = {},
+        before = {}
+    } = {}) {
+        const parts = [];
+        const damage = Math.max(0, (before.enemyLife || 0) - (after.enemyLife || 0));
+        const armorBreak = Math.max(0, (before.enemyArmor || 0) - (after.enemyArmor || 0));
+        const shieldGain = Math.max(0, (after.playerArmor || 0) - (before.playerArmor || 0));
+        const healGain = Math.max(0, (after.playerHp || 0) - (before.playerHp || 0));
+        if (damage > 0) parts.push(`造成 ${damage} 点伤害`);
+        else if (armorBreak > 0) parts.push(`削减 ${armorBreak} 点护甲`);
+        if (shieldGain > 0) parts.push(`获得 ${shieldGain} 点护盾`);
+        if (healGain > 0) parts.push(`回复 ${healGain} 点生命`);
+        addStatusGainLines(parts, PLAYER_ACTION_STATUS_KEYS, before.enemyStatuses, after.enemyStatuses);
+        return parts.length ? parts.join('，') : '完成效果';
+    }
+
+    function describeEnemyMoveResult(move, {
+        after = {},
+        before = {}
+    } = {}) {
+        const parts = [];
+        const damage = Math.max(0, (before.playerHp || 0) - (after.playerHp || 0));
+        const shieldGain = Math.max(0, (after.enemyArmor || 0) - (before.enemyArmor || 0));
+        if (damage > 0) parts.push(`造成 ${damage} 点伤害`);
+        else if (move?.type?.includes('attack')) parts.push('未造成生命伤害');
+        if (shieldGain > 0) parts.push(`获得 ${shieldGain} 点护甲`);
+        addStatusGainLines(parts, ENEMY_ACTION_STATUS_KEYS, before.playerStatuses, after.playerStatuses);
+        const junkGain = Math.max(0, (after.discardCount || 0) - (before.discardCount || 0));
+        if (move?.type === 'junk' && junkGain > 0) parts.push(`塞入 ${junkGain} 张诅咒牌`);
+        const minionGain = Math.max(0, (after.enemyMinionHp || 0) - (before.enemyMinionHp || 0));
+        if (move?.type === 'summon' && minionGain > 0) parts.push(`召唤 ${minionGain} 血分身`);
+        if (move?.type === 'buff' && move.val > 0) parts.push(`力量提升 ${move.val}`);
+        if (move?.type === 'buff_thorns' && move.val > 0) parts.push(`获得荆棘 ${move.val}`);
+        if (move?.type === 'charge') parts.push('进入蓄力');
+        if (move?.type === 'seal') parts.push(`封印 ${move.val} 张牌`);
+        return parts.length ? parts.join('，') : '完成行动';
     }
 
     function getBaseEnemyName(enemy) {
@@ -154,10 +230,14 @@
 
     global.QuestersBattleRules = {
         cleanupAfterBattleWin,
+        describeEnemyMoveResult,
+        describePlayerCardResult,
         getBaseEnemyName,
         getBattleBackgroundPathForEnemy,
+        getBattleActionSnapshot,
         getCounterParryValue,
         getEnchantBonus,
+        getEnemyActionLifeTotal,
         getEncounterScale,
         getEncounterBattleBackgroundPath,
         getFrenzyBonus,
