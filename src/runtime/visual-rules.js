@@ -194,6 +194,14 @@
             .join('<br>');
     }
 
+    function getEffectOnlySpecialDesc(desc) {
+        return cleanEffectDisplayText(desc, { preserveRewardWeight: false });
+    }
+
+    function getDisplayRelicDesc(relic) {
+        return cleanEffectDisplayText(relic?.desc || '', { preserveRewardWeight: true }) || relic?.desc || '';
+    }
+
     function normalizeCardEffectText(text = '') {
         return String(text)
             .replace(/<br\s*\/?>/gi, '\n')
@@ -581,6 +589,8 @@
         getEnemyAttackVfxType,
         getEnemyAvatarPath,
         getEnemyVisualPath,
+        getDisplayRelicDesc,
+        getEffectOnlySpecialDesc,
         getFrameSequenceDuration,
         getFrameSequenceLeadDuration,
         getPlayerAttackAnimationTiming,

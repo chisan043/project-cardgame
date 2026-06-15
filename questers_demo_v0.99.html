@@ -2951,11 +2951,11 @@
     }
 
     function getEffectOnlySpecialDesc(desc) {
-        return cleanEffectDisplayText(desc, { preserveRewardWeight: false });
+        return QuestersVisualRules.getEffectOnlySpecialDesc(desc);
     }
 
     function getDisplayRelicDesc(relic) {
-        return cleanEffectDisplayText(relic?.desc || '', { preserveRewardWeight: true }) || relic?.desc || '';
+        return QuestersVisualRules.getDisplayRelicDesc(relic);
     }
 
     function parseDesc(card) {
