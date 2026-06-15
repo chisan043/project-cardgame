@@ -4859,23 +4859,18 @@
             : document.getElementById('ui-energy-pips');
         if (!pips) return;
         const visibleSlots = Math.max(1, getCharacterBaseEnergy(), state.mp);
-        const energy = playerHudMetrics.energy || {
-            firstCenterX: 194.5,
-            lastCenterX: 295.5,
-            y: 107,
-            width: 15,
-            height: 25
-        };
         pips.innerHTML = '';
-        for (let i = 0; i < visibleSlots; i++) {
+        QuestersVisualRules.getEnergyPipLayout({
+            currentEnergy: state.mp,
+            energyMetrics: playerHudMetrics.energy,
+            slotCount: visibleSlots
+        }).forEach(pipLayout => {
             const pip = document.createElement('span');
-            pip.className = `energy-crystal ${i < state.mp ? 'lit' : ''}`;
-            const t = visibleSlots === 1 ? 0.5 : i / (visibleSlots - 1);
-            const centerX = energy.firstCenterX + (energy.lastCenterX - energy.firstCenterX) * t;
-            pip.style.left = `${Math.round(centerX - energy.width / 2)}px`;
-            pip.style.top = `${Math.round(energy.y)}px`;
+            pip.className = `energy-crystal ${pipLayout.lit ? 'lit' : ''}`;
+            pip.style.left = `${pipLayout.left}px`;
+            pip.style.top = `${pipLayout.top}px`;
             pips.appendChild(pip);
-        }
+        });
     }
 
     function updateTopBar() {

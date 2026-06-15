@@ -159,6 +159,31 @@
         return String(numeric).padStart(2, '0');
     }
 
+    function getEnergyPipLayout({
+        currentEnergy = 0,
+        energyMetrics = {},
+        slotCount = 1
+    } = {}) {
+        const visibleSlots = Math.max(1, Number(slotCount) || 1);
+        const energy = {
+            firstCenterX: 194.5,
+            lastCenterX: 295.5,
+            y: 107,
+            width: 15,
+            height: 25,
+            ...energyMetrics
+        };
+        return Array.from({ length: visibleSlots }, (_, index) => {
+            const t = visibleSlots === 1 ? 0.5 : index / (visibleSlots - 1);
+            const centerX = energy.firstCenterX + (energy.lastCenterX - energy.firstCenterX) * t;
+            return {
+                lit: index < currentEnergy,
+                left: Math.round(centerX - energy.width / 2),
+                top: Math.round(energy.y)
+            };
+        });
+    }
+
     function getStatusLayerCount(card, tag, {
         getAbilityPotency = () => 1
     } = {}) {
@@ -665,6 +690,7 @@
         getEffectOnlySpecialDesc,
         getFrameSequenceDuration,
         getFrameSequenceLeadDuration,
+        getEnergyPipLayout,
         getPlayerAttackAnimationTiming,
         getPlayerAttackVfxLayout,
         getPlayerBuffVfxLayout,
