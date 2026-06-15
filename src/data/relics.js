@@ -367,7 +367,7 @@ const BUILD_EXPANSION_RELICS = [
     { id: 'r_plague_glass', name: '疫光玻片', icon: '🧫', desc: '法师：敌方已有负面状态时，能力牌状态层数增加 1，并获得 4 点庇护。', price: 170 },
     { id: 'r_status_ledger', name: '异状账簿', icon: '📒', desc: '法师：敌方负面状态达到 3 种时，每回合首次能力牌额外[抽牌] 1 张。', price: 170 },
     { id: 'r_tailwind_spool', name: '顺风线轴', icon: '🧵', desc: '弓手：每回合首次获得风势或[闪避]时，额外获得 1 层并获得 3 点庇护。', price: 160 },
-    { id: 'r_multishot_fletching', name: '分羽箭尾', icon: '🪶', desc: '弓手：[追击]攻击额外造成 2 点伤害。', price: 170 },
+    { id: 'r_multishot_fletching', name: '分羽箭尾', icon: '🪶', desc: '弓手：[追击]攻击额外造成 1 点伤害。', price: 170 },
     { id: 'r_gray_market_map', name: '灰市地图', icon: '🗺️', desc: '通用：卡牌奖励与商栈补货中，带职业构筑方向的卡牌权重提高。', price: 180 },
     { id: 'r_campfire_pouch', name: '营火锦囊', icon: '🎒', desc: '通用：放弃奖励时获得更多金币，适合慢慢寻找关键构筑件。', price: 170 }
 ];

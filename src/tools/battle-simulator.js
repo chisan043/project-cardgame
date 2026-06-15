@@ -83,7 +83,7 @@ class BattleSimulator {
     getMockArcherCards() {
         return [
             { name: '拉弓瞄准', type: '能力', cost: 1, val: 9, tags: ['蓄力', '抽牌'], rarity: '稀有' },
-            { name: '疾风连射', type: '攻击', cost: 1, val: 5, tags: ['追击'], rarity: '稀有' },
+            { name: '疾风连射', type: '攻击', cost: 1, val: 4, tags: ['追击'], rarity: '稀有' },
             { name: '林风整备', type: '能力', cost: 1, val: 6, tags: ['自然', '蓄力'], rarity: '稀有' },
             { name: '狩影穿枝', type: '攻击', cost: 2, val: 10, tags: ['追击', '穿甲'], rarity: '稀有' },
             { name: '森冠齐射', type: '攻击', cost: 2, val: 7, tags: ['追击', '穿甲'], rarity: '史诗' },

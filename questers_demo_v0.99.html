@@ -2295,9 +2295,9 @@
 
 <script src="hud-runtime.js?v=20260518-forced-default-hud1"></script>
 <script src="hud-layout-data.js?v=20260518-forced-default-hud1"></script>
-<script src="src/data/relics.js?v=20260615-noframe-relic-icons"></script>
+<script src="src/data/relics.js?v=20260615-gale-ceiling-tune"></script>
 <script src="src/data/card-tags.js?v=20260614-exile-flow-text"></script>
-<script src="src/data/cards.js?v=20260614-exile-flow-text"></script>
+<script src="src/data/cards.js?v=20260615-gale-ceiling-tune"></script>
 <script src="src/data/enemies.js?v=20260605-enemy-ai"></script>
 <script src="src/data/characters.js?v=20260613-attack-vfx-origin"></script>
 <script src="src/runtime/state-rules.js?v=20260615-runtime-state-rules"></script>
@@ -6606,7 +6606,7 @@
                 state.p_next_dmg += 6;
                 showFloatText("密令 +6", "var(--gold)", getCenter('ui-hp'));
             }
-            if (hasRelic('r_multishot_fletching') && card.tags && card.tags.includes('追击')) finalDmg += 2;
+            if (hasRelic('r_multishot_fletching') && card.tags && card.tags.includes('追击')) finalDmg += 1;
             let isPierce = (card.tags && card.tags.includes('穿甲')) || (hasRelic('r_pierce') && card.tags && card.tags.includes('追击'));
             if(isPierce && hasRelic('r_pierce_amulet')) finalDmg = Math.floor(finalDmg * 1.25);
             if(isPierce && hasRelic('r_flaw_lens') && state.enemy.vuln > 0) finalDmg = Math.floor(finalDmg * 1.15);

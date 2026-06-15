@@ -1078,7 +1078,7 @@ function executeCard(state, card, echo = false) {
             state.protection += 3;
             hitEnemy(state, Math.max(3, Math.ceil(value * 0.4)), tags.includes('穿甲'));
         }
-        if (hasRelic(state, 'r_multishot_fletching') && tags.includes('追击')) damage += 2;
+        if (hasRelic(state, 'r_multishot_fletching') && tags.includes('追击')) damage += 1;
         const pierce = tags.includes('穿甲');
         if (pierce && hasRelic(state, 'r_pierce_amulet')) damage = Math.floor(damage * 1.25);
         const dealt = hitEnemy(state, damage, pierce);
