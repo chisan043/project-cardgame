@@ -175,6 +175,13 @@
         return (currentNode.children || []).includes(node.id);
     }
 
+    function canEnterMapNode(node, {
+        currentNode = null,
+        isNodeClickLocked = false
+    } = {}) {
+        return isMapNodeReachable(node, { currentNode }) && !isNodeClickLocked;
+    }
+
     function findMapNodeById(mapData, nodeId) {
         if (!nodeId || !Array.isArray(mapData)) return null;
         for (const floor of mapData) {
@@ -248,7 +255,7 @@
         return {
             ariaLabel: panelTitle,
             desc: `${getMapNodeRouteStatus(node, { currentNode, pathHistory })}。${panelDesc}`,
-            enterDisabled: !isMapNodeReachable(node, { currentNode }) || !!isNodeClickLocked,
+            enterDisabled: !canEnterMapNode(node, { currentNode, isNodeClickLocked }),
             image: panelData?.image || '',
             previewNodeId: node?.id || null,
             title: `${getNodeFloorLabel(node)} · ${panelTitle}`
@@ -364,6 +371,7 @@
 
     global.QuestersMapRules = {
         assignMapNodeTypes,
+        canEnterMapNode,
         connectMapFloors,
         connectMapNodes,
         createMapFloors,

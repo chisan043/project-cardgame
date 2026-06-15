@@ -4952,7 +4952,10 @@
 
     function enterMapPreviewNode() {
         const node = findMapNodeById(state.mapPreviewNodeId) || getDefaultMapPreviewNode();
-        if (!isMapNodeReachable(node) || state.isNodeClickLocked) return;
+        if (!QuestersMapRules.canEnterMapNode(node, {
+            currentNode: state.currentNode,
+            isNodeClickLocked: state.isNodeClickLocked
+        })) return;
         handleNodeClick(node);
     }
     
