@@ -38,6 +38,5 @@ const MAP_NODE_META = {
     boss: { icon: "🐉", label: "首领" },
     shop: { icon: "💰", label: "商栈" }
 };
-const MAP_LANE_LEFT = [18, 32, 46, 60, 74];
 const MAP_FLOOR_GAP = 150;
 const MAP_BASE_BOTTOM = 140;

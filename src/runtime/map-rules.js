@@ -11,6 +11,7 @@
         5: [[0, 1, 2, 3, 4]]
     };
     const FLOOR_COUNTS = [3, 3, 4, 3, 4, 3, 5, 4, 3, 4, 3, 5, 4, 3, 4, 4, 3, 2, 1, 1];
+    const DEFAULT_LANE_LEFT_PERCENT_BY_LANE = [18, 32, 46, 60, 74];
     const DEFAULT_PREVIEW_PANEL_DATA = {
         battle: {
             title: '雾岭小径',
@@ -267,6 +268,19 @@
         };
     }
 
+    function getMapNodeSlotLayout(node, {
+        laneLeftPercentByLane = DEFAULT_LANE_LEFT_PERCENT_BY_LANE,
+        fallbackLeftPercent = 46,
+        driftScale = 70
+    } = {}) {
+        const x = Number(node?.x || 0);
+        const lane = Math.round(x);
+        return {
+            leftPercent: laneLeftPercentByLane[lane] || fallbackLeftPercent,
+            translateX: (x - lane) * driftScale
+        };
+    }
+
     function getMapPathLineType(parentNodeId, childNodeId, {
         currentNode = null,
         pathHistory = []
@@ -293,6 +307,7 @@
         getMapDetailPanelState,
         getMapNodeRenderState,
         getMapNodeRouteStatus,
+        getMapNodeSlotLayout,
         getMapPathLineType,
         getMapNodeType,
         getMapPreviewVariant,

@@ -172,21 +172,6 @@ const RELIC_POOL = [
     { id: 'r_copy_seal', name: '复写印泥', icon: '📜', desc: '通用：商栈拓印卡牌的价格降低 20 金币。', price: 160 },
     { id: 'r_reward_crown', name: '弃赏王冠', icon: '👑', desc: '通用：放弃战斗后的卡牌或遗物奖励时，换取的金币额外增加 15。', price: 170 }
 ];
-const FORMAL_RELIC_ICON_IDS = new Set([
-    'r_fast_foot', 'r_decay_seal', 'r_poison_leech', 'r_skill_cost', 'r_yin_yang',
-    'r_frenzy_veil', 'r_pierce', 'r_exhaust_dmg', 'r_poison_fang', 'r_ethereal',
-    'r_luck_box', 'r_echo_mirror_relic', 'r_heavy_badge', 'r_thorn_shield_new', 'r_pierce_amulet',
-    'r_bone_ring', 'r_def_cost', 'r_sac_jade', 'r_weak_mask', 'r_energy_crys',
-    'r_enchant_crys', 'r_long_decay', 'r_overheal', 'r_despair', 'r_combo_ring',
-    'r_return_poison', 'r_frenzy', 'r_return_bleed', 'r_vamp_ring',
-    'r_blood', 'r_pass_draw', 'r_perma_curse', 'r_brutal',
-    'r_omni_seal', 'r_bleed_return_exhaust', 'r_pass_thorns', 'r_life_totem',
-    'r_return_knife', 'r_pass_energy', 'r_base_energy', 'r_exhaust_knife', 'r_heal_relic',
-    'r_counter_amulet', 'r_bleed_knife', 'r_execute', 'r_cycle_compass', 'r_soul_lantern',
-    'r_protect_armor', 'r_guardian_core', 'r_sword_oath', 'r_thorn_bloom', 'r_counter_gate',
-    'r_status_prism', 'r_burst_lens', 'r_chant_ink', 'r_wind_quiver', 'r_exile_cache',
-    'r_bloodlet_draw', 'r_copy_seal', 'r_reward_crown'
-]);
 const RELIC_MASTER_ICON_BY_ID = {
     r_echo_mirror_relic: 'assets/relics/masters/echo_mirror_master_v1.webp',
     r_poison_fang: 'assets/relics/masters/venom_fang_master_v1.webp',
@@ -388,6 +373,7 @@ const BUILD_EXPANSION_RELICS = [
 ];
 
 RELIC_POOL.push(...BUILD_EXPANSION_RELICS);
+const FORMAL_RELIC_ICON_IDS = new Set(RELIC_POOL.map(relic => relic.id));
 
 [
     'r_flaw_lens', 'r_duel_glove', 'r_stun_chain',

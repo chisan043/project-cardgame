@@ -4962,8 +4962,9 @@
             const floorDiv = document.createElement('div'); floorDiv.className = 'map-floor'; floorDiv.style.position = 'absolute'; floorDiv.style.bottom = (fIdx * MAP_FLOOR_GAP + MAP_BASE_BOTTOM) + 'px';
             const label = document.createElement('div'); label.className = 'floor-label'; label.style.bottom = (fIdx * MAP_FLOOR_GAP + MAP_BASE_BOTTOM - 24) + 'px'; label.innerText = fIdx === state.mapData.length - 1 ? '首领' : `第 ${fIdx + 1} 层`; root.appendChild(label);
             floor.nodes.forEach(node => {
-                const slot = document.createElement('div'); slot.className = 'node-slot'; slot.style.left = (MAP_LANE_LEFT[Math.round(node.x)] || 46) + '%';
-                slot.style.transform = `translateX(${(node.x - Math.round(node.x)) * 70}px)`;
+                const slotLayout = QuestersMapRules.getMapNodeSlotLayout(node);
+                const slot = document.createElement('div'); slot.className = 'node-slot'; slot.style.left = slotLayout.leftPercent + '%';
+                slot.style.transform = `translateX(${slotLayout.translateX}px)`;
                 
                 const routeState = QuestersMapRules.getMapNodeRenderState(node, {
                     currentNode: state.currentNode,

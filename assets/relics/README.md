@@ -7,10 +7,10 @@ This directory contains runtime relic visuals for the demo.
 - `icons/`
   - One formal runtime icon per relic id.
   - File format: `{relic_id}_icon_v1.webp`.
-  - Icons missing from the old formal icon set were copied from their configured master fallback so `FORMAL_RELIC_ICON_IDS` never points at a missing file.
+  - The current icon set is generated as isolated no-frame prop art with transparent backgrounds.
 
 - `masters/`
-  - Shared fallback runtime masters for non-formal relics and future derivation.
+  - Shared fallback runtime masters kept for future derivation and compatibility.
   - File format: `{theme}_master_v1.webp`.
 
 ## Source
