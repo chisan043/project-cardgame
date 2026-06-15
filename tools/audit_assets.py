@@ -332,7 +332,7 @@ def collect_references(assets: list[Path], text_files: list[TextFile]) -> tuple[
 def classify_status(asset_path: Path, references: list[dict]) -> str:
     path = as_posix(asset_path)
     lowered = path.lower()
-    runtime_references = [ref for ref in references if ref["kind"] in {"runtime", "config"}]
+    runtime_references = [ref for ref in references if ref["kind"] == "runtime"]
     if runtime_references:
         return "active"
     if path.startswith("遗物/图标/") and asset_path.stem in FORMAL_RELIC_ICON_IDS:

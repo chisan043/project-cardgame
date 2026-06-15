@@ -43,6 +43,7 @@ function main() {
     }
     console.log(`Asset audit: ${auditReport.summary.assetCount} assets, 0 missing references`);
 
+    runStep('asset boundaries', process.execPath, ['tools/check_asset_boundaries.mjs', '--audit-report', path.join(auditDir, 'asset-usage-report.json')]);
     runStep('asset registries', process.execPath, ['tools/build_asset_registries.mjs', '--check']);
     runStep('procedural-card guard', process.execPath, ['tools/check_no_procedural_cards.mjs']);
     runStep('open-build-flow guard', process.execPath, ['tools/check_open_build_flow.mjs']);
