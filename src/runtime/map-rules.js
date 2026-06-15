@@ -325,6 +325,25 @@
         };
     }
 
+    function getMapNodeViewModel(node, {
+        currentNode = null,
+        nodeMeta = {},
+        pathHistory = []
+    } = {}) {
+        const routeState = getMapNodeRenderState(node, { currentNode, pathHistory });
+        const meta = nodeMeta[node?.type] || nodeMeta.battle || {};
+        return {
+            className: `node node-${node?.type || 'battle'} ${routeState.className}`.trim(),
+            icon: meta.icon || '',
+            id: node?.id || '',
+            label: meta.label || '',
+            routeState,
+            slotLayout: getMapNodeSlotLayout(node),
+            title: meta.label || '',
+            type: node?.type || 'battle'
+        };
+    }
+
     function getMapContainerHeight(floorCount = 0, {
         floorGap = DEFAULT_FLOOR_GAP,
         topPadding = 150
@@ -420,6 +439,7 @@
         getMapNodeRenderState,
         getMapNodeRouteStatus,
         getMapNodeSlotLayout,
+        getMapNodeViewModel,
         getMapPathCurve,
         getMapPathLineType,
         getMapNodeType,

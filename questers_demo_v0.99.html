@@ -2304,7 +2304,7 @@
 <script src="src/runtime/card-rules.js?v=20260615-runtime-card-rules"></script>
 <script src="src/runtime/battle-rules.js?v=20260615-runtime-battle-rules"></script>
 <script src="src/runtime/visual-rules.js?v=20260615-noframe-relic-icons"></script>
-<script src="src/runtime/map-rules.js?v=20260615-runtime-map-rules"></script>
+<script src="src/runtime/map-rules.js?v=20260615-runtime-map-node-view-model"></script>
 <script src="src/runtime/reward-rules.js?v=20260615-runtime-reward-rules"></script>
 <script>
     function createEmbers() {
@@ -4962,29 +4962,27 @@
             const floorDiv = document.createElement('div'); floorDiv.className = 'map-floor'; floorDiv.style.position = 'absolute'; floorDiv.style.bottom = floorLayout.floorBottom + 'px';
             const label = document.createElement('div'); label.className = 'floor-label'; label.style.bottom = floorLayout.labelBottom + 'px'; label.innerText = QuestersMapRules.getMapFloorLabel(fIdx, state.mapData.length); root.appendChild(label);
             floor.nodes.forEach(node => {
-                const slotLayout = QuestersMapRules.getMapNodeSlotLayout(node);
-                const slot = document.createElement('div'); slot.className = 'node-slot'; slot.style.left = slotLayout.leftPercent + '%';
-                slot.style.transform = `translateX(${slotLayout.translateX}px)`;
-                
-                const routeState = QuestersMapRules.getMapNodeRenderState(node, {
+                const nodeView = QuestersMapRules.getMapNodeViewModel(node, {
                     currentNode: state.currentNode,
+                    nodeMeta: MAP_NODE_META,
                     pathHistory: state.pathHistory
                 });
-                
+                const slot = document.createElement('div'); slot.className = 'node-slot'; slot.style.left = nodeView.slotLayout.leftPercent + '%';
+                slot.style.transform = `translateX(${nodeView.slotLayout.translateX}px)`;
+
                 const nodeDiv = document.createElement('div'); nodeDiv.id = `ui-${node.id}`; 
-                nodeDiv.className = `node node-${node.type} ${routeState.className}`;
-                const meta = MAP_NODE_META[node.type] || MAP_NODE_META.battle;
-                nodeDiv.setAttribute('title', meta.label);
-                nodeDiv.innerHTML = `<div class="node-content">${meta.icon}</div>`;
+                nodeDiv.className = nodeView.className;
+                nodeDiv.setAttribute('title', nodeView.title);
+                nodeDiv.innerHTML = `<div class="node-content">${nodeView.icon}</div>`;
                 nodeDiv.onmouseenter = () => selectMapPreviewNode(node);
                 nodeDiv.onpointerenter = () => selectMapPreviewNode(node);
                 nodeDiv.onclick = () => selectMapPreviewNode(node);
-                if(routeState.canEnter) nodeDiv.ondblclick = () => handleNodeClick(node);
-                if(routeState.canFocus) {
+                if(nodeView.routeState.canEnter) nodeDiv.ondblclick = () => handleNodeClick(node);
+                if(nodeView.routeState.canFocus) {
                     nodeDiv.onfocus = () => updateMapDetailPanel(node);
-                    if(routeState.tabIndex !== null) nodeDiv.tabIndex = routeState.tabIndex;
+                    if(nodeView.routeState.tabIndex !== null) nodeDiv.tabIndex = nodeView.routeState.tabIndex;
                 }
-                const nodeLabel = document.createElement('div'); nodeLabel.className = 'node-label'; nodeLabel.innerText = meta.label;
+                const nodeLabel = document.createElement('div'); nodeLabel.className = 'node-label'; nodeLabel.innerText = nodeView.label;
                 slot.appendChild(nodeDiv); slot.appendChild(nodeLabel); floorDiv.appendChild(slot);
             }); root.appendChild(floorDiv);
         });
