@@ -91,6 +91,10 @@ def is_template_suffix_fragment(path: str) -> bool:
     return "/" not in path and path.startswith("_")
 
 
+def is_input_asset_identifier(text: str, start: int) -> bool:
+    return text[max(0, start - len("input:")) : start] == "input:"
+
+
 def iter_files() -> Iterable[Path]:
     for current_root, dirnames, filenames in os.walk(ROOT):
         root_path = Path(current_root)
@@ -287,6 +291,8 @@ def collect_references(assets: list[Path], text_files: list[TextFile]) -> tuple[
         for match in IMAGE_LITERAL_RE.finditer(text):
             raw_path = match.group("path").split("?", 1)[0]
             if len(raw_path) > MAX_LITERAL_LENGTH:
+                continue
+            if is_input_asset_identifier(text, match.start()):
                 continue
             if is_template_suffix_fragment(raw_path):
                 continue

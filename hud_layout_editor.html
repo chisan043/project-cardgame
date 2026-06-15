@@ -2198,29 +2198,34 @@
         }
 
         const PERSISTENT_ASSET_PATHS = {
-            'player_hp_bar_long_fill_gray_base_asset_v1.png': 'assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_asset_v1.png',
-            'avatar_circle_gray_base_asset_v1.png': 'assets/ui/hud/player_panel/avatar_circle_gray_base_asset_v1.png',
-            'player_energy_tray_asset_v1_no_circles_transparent.png': 'assets/ui/hud/player_panel/player_energy_tray_asset_v1_no_circles_transparent.png',
-            'pile_count_plate_asset_v1_transparent.png': 'assets/ui/hud/piles/pile_count_plate_asset_v1_transparent.png',
-            'enemy_intent_panel_shell_asset_v1.png': 'assets/ui/hud/enemy_intent/enemy_intent_panel_shell_asset_v1.png',
-            'turn_counter_inner_dial_asset_v1.png': 'assets/ui/hud/center_controls/turn_counter_inner_dial_asset_v1.png'
+            player_hp_bar_long_fill_gray_base_asset_v1: 'assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_asset_v1.png',
+            avatar_circle_gray_base_asset_v1: 'assets/ui/hud/player_panel/avatar_circle_gray_base_asset_v1.png',
+            player_energy_tray_asset_v1_no_circles_transparent: 'assets/ui/hud/player_panel/player_energy_tray_asset_v1_no_circles_transparent.png',
+            pile_count_plate_asset_v1_transparent: 'assets/ui/hud/piles/pile_count_plate_asset_v1_transparent.png',
+            enemy_intent_panel_shell_asset_v1: 'assets/ui/hud/enemy_intent/enemy_intent_panel_shell_asset_v1.png',
+            turn_counter_inner_dial_asset_v1: 'assets/ui/hud/center_controls/turn_counter_inner_dial_asset_v1.png'
         };
+
+        function persistentAssetKey(value) {
+            const base = String(value || '').replace(/^input:/, '').split('/').pop();
+            return base.replace(/\.(?:avif|bmp|gif|jpeg|jpg|png|svg|webp)$/i, '');
+        }
 
         function compactHudSrcForStorage(item) {
             const src = String(item?.src || '');
             if (!src.startsWith('data:')) return item?.src || '';
-            const assetId = String(item.assetId || '').replace(/^input:/, '');
-            const assetBase = assetId.split('/').pop();
-            if (PERSISTENT_ASSET_PATHS[assetBase]) return PERSISTENT_ASSET_PATHS[assetBase];
+            const assetKey = persistentAssetKey(item.assetId);
+            if (PERSISTENT_ASSET_PATHS[assetKey]) return PERSISTENT_ASSET_PATHS[assetKey];
             const name = String(item.name || '');
-            for (const [base, path] of Object.entries(PERSISTENT_ASSET_PATHS)) {
-                if (name.includes(base)) return path;
+            const nameKey = persistentAssetKey(name);
+            for (const [key, path] of Object.entries(PERSISTENT_ASSET_PATHS)) {
+                if (nameKey.includes(key) || name.includes(key)) return path;
             }
-            if (/头像/.test(name)) return PERSISTENT_ASSET_PATHS['avatar_circle_gray_base_asset_v1.png'];
-            if (/意图/.test(name) || item.binding === 'enemy-intent') return PERSISTENT_ASSET_PATHS['enemy_intent_panel_shell_asset_v1.png'];
-            if (/能量槽/.test(name)) return PERSISTENT_ASSET_PATHS['player_energy_tray_asset_v1_no_circles_transparent.png'];
-            if (/灰底|状态底/.test(name)) return PERSISTENT_ASSET_PATHS['player_hp_bar_long_fill_gray_base_asset_v1.png'];
-            return assetId || '';
+            if (/头像/.test(name)) return PERSISTENT_ASSET_PATHS.avatar_circle_gray_base_asset_v1;
+            if (/意图/.test(name) || item.binding === 'enemy-intent') return PERSISTENT_ASSET_PATHS.enemy_intent_panel_shell_asset_v1;
+            if (/能量槽/.test(name)) return PERSISTENT_ASSET_PATHS.player_energy_tray_asset_v1_no_circles_transparent;
+            if (/灰底|状态底/.test(name)) return PERSISTENT_ASSET_PATHS.player_hp_bar_long_fill_gray_base_asset_v1;
+            return String(item.assetId || '').replace(/^input:/, '');
         }
 
         function compactHudItemForStorage(item) {

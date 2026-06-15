@@ -347,7 +347,7 @@ window.HUANJING_HUD_LAYOUT = {
     },
     {
       "id": "item-twdkx6f",
-      "name": "player_energy_tray_asset_v1_no_circles_transparent.png",
+      "name": "玩家能量槽",
       "src": "assets/ui/hud/player_panel/player_energy_tray_asset_v1_no_circles_transparent.webp",
       "x": 98,
       "y": 81,
@@ -1551,7 +1551,7 @@ window.HUANJING_HUD_LAYOUT = {
           "z": 2
         },
         {
-          "name": "player_energy_tray_asset_v1_no_circles_transparent.png",
+          "name": "玩家能量槽",
           "src": "assets/ui/hud/player_panel/player_energy_tray_asset_v1_no_circles_transparent.webp",
           "assetId": null,
           "sourceType": null,
