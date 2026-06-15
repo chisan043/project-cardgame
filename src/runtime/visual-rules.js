@@ -136,6 +136,16 @@
         return '';
     }
 
+    function renderTagNames(tags = [], {
+        getTagDisplayName = tag => tag
+    } = {}) {
+        return (tags || []).map(tag => {
+            if (tag === '回响') return '<span style="color:var(--gold);">本牌再触发一次</span>';
+            if (tag === '复刻') return '<span style="color:var(--gold);">复制上一张非复刻牌</span>';
+            return `<span style="color:var(--gold);">${getTagDisplayName(tag)}</span>`;
+        }).join('、');
+    }
+
     function normalizeCardEffectText(text = '') {
         return String(text)
             .replace(/<br\s*\/?>/gi, '\n')
@@ -509,6 +519,7 @@
         getCardTextDensityClass,
         getCardVariantName,
         getCardVisualSignature,
+        renderTagNames,
         getEnemyAssetSlug,
         getEnemyAttackAnimationTiming,
         getEnemyAttackFrames,
