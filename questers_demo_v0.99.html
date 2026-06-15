@@ -2292,7 +2292,7 @@
 
 <script src="hud-runtime.js?v=20260518-forced-default-hud1"></script>
 <script src="hud-layout-data.js?v=20260518-forced-default-hud1"></script>
-<script src="src/data/relics.js?v=20260614-exile-flow-text"></script>
+<script src="src/data/relics.js?v=20260615-noframe-relic-icons"></script>
 <script src="src/data/card-tags.js?v=20260614-exile-flow-text"></script>
 <script src="src/data/cards.js?v=20260614-exile-flow-text"></script>
 <script src="src/data/enemies.js?v=20260605-enemy-ai"></script>
@@ -3103,6 +3103,7 @@
     let initialDeck = buildStarterDeckForCharacter(state.player.characterId);
     const RUN_SAVE_KEY = 'mirage-scrolls-demo-run-v1';
     const AVATAR_ASSET_VERSION = '20260521-head-v2';
+    const RELIC_ICON_ASSET_VERSION = '20260615-noframe-relic-icons';
     const HUD_CENTER_BINDING_BY_ID = {
         'ui-hp': 'player-hp',
         'ui-mp': 'energy',
@@ -3223,11 +3224,15 @@
         if (!src) return src;
         return `${src}${src.includes('?') ? '&' : '?'}v=${AVATAR_ASSET_VERSION}`;
     }
+    function withRelicIconVersion(src) {
+        if (!src) return src;
+        return `${src}${src.includes('?') ? '&' : '?'}v=${RELIC_ICON_ASSET_VERSION}`;
+    }
     function resolveRelicIconPath(relic) {
-        return QuestersVisualRules.getRelicIconPath(relic, {
+        return withRelicIconVersion(QuestersVisualRules.getRelicIconPath(relic, {
             formalRelicIconIds: FORMAL_RELIC_ICON_IDS,
             relicMasterIconById: RELIC_MASTER_ICON_BY_ID
-        });
+        }));
     }
     function relicHasFormalArt(relic) {
         return !!resolveRelicIconPath(relic);
@@ -5007,7 +5012,11 @@
         });
 
         setTimeout(() => { 
-            const target = document.querySelector('.node.current') || document.querySelector('.node.reachable'); 
+            const targetSelector = QuestersMapRules.getMapAutoScrollTargetSelector({
+                hasCurrentNode: !!document.querySelector('.node.current'),
+                hasReachableNode: !!document.querySelector('.node.reachable')
+            });
+            const target = targetSelector ? document.querySelector(targetSelector) : null;
             const container = document.getElementById('map-scroll-root');
             if(target && container) { 
                 let tRect = target.getBoundingClientRect(); let cRect = container.getBoundingClientRect();

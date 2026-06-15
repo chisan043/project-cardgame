@@ -302,6 +302,15 @@
         };
     }
 
+    function getMapAutoScrollTargetSelector({
+        hasCurrentNode = false,
+        hasReachableNode = false
+    } = {}) {
+        if (hasCurrentNode) return '.node.current';
+        if (hasReachableNode) return '.node.reachable';
+        return null;
+    }
+
     function getMapPathLineType(parentNodeId, childNodeId, {
         currentNode = null,
         pathHistory = []
@@ -325,6 +334,7 @@
         createMapFloors,
         generateMapData,
         getDefaultMapPreviewNode,
+        getMapAutoScrollTargetSelector,
         getMapContainerHeight,
         getMapDetailPanelState,
         getMapFloorLayout,
