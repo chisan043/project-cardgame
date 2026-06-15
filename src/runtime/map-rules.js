@@ -320,6 +320,24 @@
         return 'gray';
     }
 
+    function getMapPathCurve(startRect, endRect, wrapperRect, {
+        controlRatio = 0.52
+    } = {}) {
+        const x1 = Number(startRect?.left || 0) + Number(startRect?.width || 0) / 2 - Number(wrapperRect?.left || 0);
+        const y1 = Number(startRect?.top || 0) + Number(startRect?.height || 0) / 2 - Number(wrapperRect?.top || 0);
+        const x2 = Number(endRect?.left || 0) + Number(endRect?.width || 0) / 2 - Number(wrapperRect?.left || 0);
+        const y2 = Number(endRect?.top || 0) + Number(endRect?.height || 0) / 2 - Number(wrapperRect?.top || 0);
+        const midY = y1 + (y2 - y1) * controlRatio;
+        return {
+            x1,
+            y1,
+            x2,
+            y2,
+            midY,
+            d: `M ${x1} ${y1} C ${x1} ${midY}, ${x2} ${midY}, ${x2} ${y2}`
+        };
+    }
+
     function generateMapData(options = {}) {
         const mapData = createMapFloors(options);
         connectMapFloors(mapData, options);
@@ -341,6 +359,7 @@
         getMapNodeRenderState,
         getMapNodeRouteStatus,
         getMapNodeSlotLayout,
+        getMapPathCurve,
         getMapPathLineType,
         getMapNodeType,
         getMapPreviewVariant,

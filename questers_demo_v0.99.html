@@ -5029,13 +5029,9 @@
         const svg = document.getElementById('map-svg-layer'); const startEl = document.getElementById(`ui-${startId}`); const endEl = document.getElementById(`ui-${endId}`); 
         if(!startEl || !endEl) return;
         const r1 = startEl.getBoundingClientRect(); const r2 = endEl.getBoundingClientRect(); const wrapperRect = document.getElementById('map-inner-wrapper').getBoundingClientRect();
-        const x1 = r1.left + r1.width/2 - wrapperRect.left;
-        const y1 = r1.top + r1.height/2 - wrapperRect.top;
-        const x2 = r2.left + r2.width/2 - wrapperRect.left;
-        const y2 = r2.top + r2.height/2 - wrapperRect.top;
-        const midY = y1 + (y2 - y1) * 0.52;
+        const curve = QuestersMapRules.getMapPathCurve(r1, r2, wrapperRect);
         const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-        path.setAttribute("d", `M ${x1} ${y1} C ${x1} ${midY}, ${x2} ${midY}, ${x2} ${y2}`);
+        path.setAttribute("d", curve.d);
         path.setAttribute("class", `map-path path-${lineType}`);
         svg.appendChild(path);
     }
