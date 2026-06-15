@@ -70,6 +70,246 @@
         };
     }
 
+    function isAttackMove(move) {
+        return (move?.type || '').includes('attack');
+    }
+
+    function getRandomMoveNoRepeat(maxCount, {
+        history = [],
+        rng = Math.random
+    } = {}) {
+        if (maxCount <= 1) return 0;
+        const lastMove = history.length > 0 ? history[history.length - 1] : -1;
+        let nextMove;
+        let attempts = 0;
+        do {
+            nextMove = Math.floor(rng() * maxCount);
+            attempts++;
+        } while (nextMove === lastMove && attempts < 20);
+        if (nextMove === lastMove) return (lastMove + 1) % maxCount;
+        return nextMove;
+    }
+
+    function getRecentEnemyNonAttackCount(enemy = {}) {
+        let count = 0;
+        const history = enemy.moveHistory || [];
+        for (let i = history.length - 1; i >= 0; i--) {
+            const move = enemy.moves?.[history[i]];
+            if (!move || isAttackMove(move)) break;
+            count++;
+        }
+        return count;
+    }
+
+    function scoreEnemyMove(move, index, {
+        aiConfig = {},
+        enemy = {},
+        maxNonAttack = 1,
+        player = {},
+        recentNonAttack = 0,
+        rng = Math.random
+    } = {}) {
+        if (!move) return 1;
+        const history = enemy.moveHistory || [];
+        const lastMove = history.length > 0 ? history[history.length - 1] : -1;
+        const enemyHpRatio = enemy.maxHp > 0 ? enemy.currentHp / enemy.maxHp : 1;
+        const playerHpRatio = player.maxHp > 0 ? player.hp / player.maxHp : 1;
+        const aggression = aiConfig.aggression || 1;
+        const isAttack = isAttackMove(move);
+        let score = 10 + rng() * 8;
+
+        if (isAttack) {
+            score += 22 * aggression + (move.val || 0) * 0.35 + ((move.times || 1) - 1) * 6;
+            if (playerHpRatio <= 0.35) score += 24;
+            if (player.p_vuln > 0 || player.p_weak > 0 || player.p_bleed > 0 || player.p_poison > 0 || player.p_burn > 0) score += 10;
+            if (player.armor > 14 && (move.times || 1) > 1) score -= 6;
+            if (enemyHpRatio <= 0.35) score += move.type === 'attack_lifesteal' ? 24 : 10;
+            if (recentNonAttack >= maxNonAttack) score += 45;
+        } else {
+            score -= recentNonAttack * 18;
+            if (recentNonAttack >= maxNonAttack) score -= 40;
+        }
+
+        if (move.type === 'defend') {
+            score += 10;
+            if (enemyHpRatio <= 0.45) score += 12;
+            if (enemy.armor > 0) score -= 16;
+        }
+        else if (move.type === 'debuff') {
+            score += 16;
+            const currentStatus = player[`p_${move.subType}`] || 0;
+            if (currentStatus > 0) score -= 8;
+            if (move.subType === 'vuln' && player.armor > 8) score += 10;
+            if ((move.subType === 'bleed' || move.subType === 'poison' || move.subType === 'burn') && enemy.turnCount <= 2) score += 8;
+            if ((move.subType === 'weak' || move.subType === 'stun') && player.armor > 12) score += 6;
+            if (playerHpRatio <= 0.35) score -= 12;
+        }
+        else if (move.type === 'buff') {
+            score += enemy.str > 4 ? 2 : 18;
+            if (enemy.turnCount <= 1) score += 8;
+        }
+        else if (move.type === 'buff_thorns') {
+            score += (enemy.thorns || 0) > 6 ? 2 : 18;
+        }
+        else if (move.type === 'charge') {
+            score += enemy.charged ? -80 : 20;
+            if (playerHpRatio <= 0.35) score -= 14;
+        }
+        else if (move.type === 'seal' || move.type === 'junk') {
+            score += enemy.turnCount <= 2 ? 14 : 8;
+            if (playerHpRatio <= 0.35) score -= 12;
+        }
+        else if (move.type === 'summon') {
+            score += enemy.minion && enemy.minion.hp > 0 ? -70 : 22;
+            if (enemyHpRatio <= 0.45) score += 8;
+        }
+
+        if (index === lastMove) score -= 18;
+        const previousMove = history.length > 1 ? history[history.length - 2] : -1;
+        if (index === lastMove && index === previousMove) score -= 60;
+        return Math.max(1, score);
+    }
+
+    function chooseWeightedMoveIndex(scoredMoves, {
+        rng = Math.random
+    } = {}) {
+        const total = scoredMoves.reduce((sum, item) => sum + Math.max(1, item.score), 0);
+        let roll = rng() * total;
+        for (const item of scoredMoves) {
+            roll -= Math.max(1, item.score);
+            if (roll <= 0) return item.index;
+        }
+        return scoredMoves[0]?.index || 0;
+    }
+
+    function getHighestScoredAttackMoveIndex({
+        aiConfig = {},
+        attackIndexes = [],
+        enemy = {},
+        player = {},
+        rng = Math.random
+    } = {}) {
+        const recentNonAttack = getRecentEnemyNonAttackCount(enemy);
+        let best = attackIndexes[0] || 0;
+        let bestScore = -Infinity;
+        attackIndexes.forEach(index => {
+            const score = scoreEnemyMove(enemy.moves?.[index], index, {
+                aiConfig,
+                enemy,
+                maxNonAttack: aiConfig.maxNonAttack || 1,
+                player,
+                recentNonAttack,
+                rng
+            });
+            if (score > bestScore) {
+                bestScore = score;
+                best = index;
+            }
+        });
+        return best;
+    }
+
+    function selectTacticalEnemyMoveIndex({
+        aiConfig = {},
+        enemy = {},
+        player = {},
+        rng = Math.random
+    } = {}) {
+        const moves = enemy.moves || [];
+        if (moves.length <= 1) return 0;
+
+        const opener = aiConfig.opener;
+        if (enemy.turnCount === 0 && Number.isInteger(opener) && moves[opener]) return opener;
+
+        const attackIndexes = moves
+            .map((move, index) => isAttackMove(move) ? index : -1)
+            .filter(index => index >= 0);
+        if (attackIndexes.length === 0) return getRandomMoveNoRepeat(moves.length, {
+            history: enemy.moveHistory,
+            rng
+        });
+
+        if (enemy.charged) return getHighestScoredAttackMoveIndex({
+            aiConfig,
+            attackIndexes,
+            enemy,
+            player,
+            rng
+        });
+
+        const recentNonAttack = getRecentEnemyNonAttackCount(enemy);
+        const maxNonAttack = Number.isInteger(aiConfig.maxNonAttack) ? aiConfig.maxNonAttack : 1;
+        if (recentNonAttack >= maxNonAttack) return getHighestScoredAttackMoveIndex({
+            aiConfig,
+            attackIndexes,
+            enemy,
+            player,
+            rng
+        });
+
+        const scores = moves.map((move, index) => ({
+            index,
+            score: scoreEnemyMove(move, index, {
+                aiConfig,
+                enemy,
+                maxNonAttack,
+                player,
+                recentNonAttack,
+                rng
+            })
+        }));
+        return chooseWeightedMoveIndex(scores, { rng });
+    }
+
+    function selectEnemyMoveIndex({
+        enemy = {},
+        player = {},
+        rng = Math.random
+    } = {}) {
+        const aiConfig = enemy.ai || { type: 'random_no_repeat' };
+        const movesCount = enemy.moves?.length || 0;
+        let moveIndex = 0;
+
+        if (aiConfig.type === 'tactical') {
+            moveIndex = selectTacticalEnemyMoveIndex({
+                aiConfig,
+                enemy,
+                player,
+                rng
+            });
+        }
+        else if (aiConfig.type === 'sequence') {
+            const patternIdx = enemy.turnCount % aiConfig.pattern.length;
+            moveIndex = aiConfig.pattern[patternIdx];
+        }
+        else if (aiConfig.type === 'first_turn_fixed') {
+            if (enemy.turnCount === 0) {
+                moveIndex = aiConfig.firstMove;
+            } else {
+                if (aiConfig.fallbackType === 'random_no_repeat') {
+                    moveIndex = getRandomMoveNoRepeat(movesCount, {
+                        history: enemy.moveHistory,
+                        rng
+                    });
+                } else {
+                    moveIndex = Math.floor(rng() * movesCount);
+                }
+            }
+        }
+        else if (aiConfig.type === 'random_no_repeat') {
+            moveIndex = getRandomMoveNoRepeat(movesCount, {
+                history: enemy.moveHistory,
+                rng
+            });
+        }
+        else {
+            moveIndex = Math.floor(rng() * movesCount);
+        }
+
+        if (!Number.isInteger(moveIndex) || moveIndex < 0 || moveIndex >= movesCount) return 0;
+        return moveIndex;
+    }
+
     function appendBattleActionLogEntry(entries = [], entry = {}, {
         limit = 30
     } = {}) {
@@ -248,8 +488,15 @@
         getEncounterScale,
         getEncounterBattleBackgroundPath,
         getFrenzyBonus,
+        getHighestScoredAttackMoveIndex,
+        getRandomMoveNoRepeat,
+        getRecentEnemyNonAttackCount,
         getRuntimeFailureHint,
         getSwordBonus,
+        chooseWeightedMoveIndex,
+        scoreEnemyMove,
+        selectEnemyMoveIndex,
+        selectTacticalEnemyMoveIndex,
         resetBattleStartState,
         resetPlayerBattleStatuses
     };

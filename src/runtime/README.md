@@ -13,8 +13,8 @@ own DOM rendering.
   node lookup helpers, and character run-stat derivation.
 - `card-rules.js`: card instance cloning, starter deck creation, upgrade, and
   copy cleanup helpers.
-- `battle-rules.js`: battle-start, battle-win, run-failure, encounter scaling,
-  encounter background selection, and combat math helpers.
+- `battle-rules.js`: battle-start, battle-win, run-failure, enemy move AI,
+  encounter scaling, encounter background selection, and combat math helpers.
 - `visual-rules.js`: enemy visual asset paths, attack-frame paths/timing,
   player animation/VFX timing/layout, and enemy attack VFX type/path selection.
 
