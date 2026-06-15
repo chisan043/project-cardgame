@@ -372,7 +372,7 @@
             createHudItem('玩家名牌', 'assets/ui/hud/player_panel/player_nameplate_shell_asset_v1.webp', 170, 20, 434, 84, 11),
             createHudItem('玩家生命条框', 'assets/ui/hud/player_panel/player_hp_bar_shell_asset_v1.webp', 202, 91, 472, 63, 12),
             createHudItem('玩家护甲条框', 'assets/ui/hud/player_panel/player_armor_bar_shell_asset_v1.webp', 198, 147, 472, 84, 13),
-            createHudItem('玩家能量槽', 'assets/ui/hud/player_panel/player_energy_tray_asset_v1.webp', 166, 221, 486, 86, 14),
+            createHudItem('玩家能量槽', 'assets/ui/hud/player_panel/player_energy_tray_asset_v1_no_circles_transparent.webp', 166, 221, 486, 86, 14),
             createHudItem('玩家状态栏', 'assets/ui/hud/status_bar/player_status_bar_shell_asset_v1.webp', 32, 275, 392, 56, 15, { fit: 'fill' }),
 
             createHudItem('敌方总图参考', 'assets/ui/hud/enemy_panel/battle_hud_enemy_panel_asset_v1.webp', 696, 18, 570, 206, 20, { opacity: 0.22, locked: true }),
