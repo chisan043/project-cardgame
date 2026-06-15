@@ -267,6 +267,15 @@
         };
     }
 
+    function getMapPathLineType(parentNodeId, childNodeId, {
+        currentNode = null,
+        pathHistory = []
+    } = {}) {
+        if (pathHistory.includes(parentNodeId) && pathHistory.includes(childNodeId)) return 'red';
+        if (currentNode && currentNode.id === parentNodeId) return 'yellow';
+        return 'gray';
+    }
+
     function generateMapData(options = {}) {
         const mapData = createMapFloors(options);
         connectMapFloors(mapData, options);
@@ -284,6 +293,7 @@
         getMapDetailPanelState,
         getMapNodeRenderState,
         getMapNodeRouteStatus,
+        getMapPathLineType,
         getMapNodeType,
         getMapPreviewVariant,
         getNodeFloorLabel,

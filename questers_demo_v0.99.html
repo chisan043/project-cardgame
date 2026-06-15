@@ -4994,9 +4994,10 @@
             state.mapData.forEach(floor => {
                 floor.nodes.forEach(node => {
                     node.children.forEach(childId => {
-                        let lineType = 'gray';
-                        if (state.pathHistory.includes(node.id) && state.pathHistory.includes(childId)) lineType = 'red';
-                        else if (state.currentNode && state.currentNode.id === node.id) lineType = 'yellow';
+                        const lineType = QuestersMapRules.getMapPathLineType(node.id, childId, {
+                            currentNode: state.currentNode,
+                            pathHistory: state.pathHistory
+                        });
                         drawMapPath(node.id, childId, lineType);
                     });
                 });
