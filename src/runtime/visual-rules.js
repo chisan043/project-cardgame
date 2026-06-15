@@ -55,6 +55,20 @@
         return cardFrameAssets[theme] || cardFrameAssets.neutral || '';
     }
 
+    function getCardTextDensityClass({
+        descHtml = '',
+        tagCount = 0
+    } = {}) {
+        const plain = String(descHtml || '')
+            .replace(/<br\s*\/?>/gi, '\n')
+            .replace(/<[^>]*>/g, '')
+            .replace(/\s+/g, '');
+        const lineHints = (String(descHtml || '').match(/<br\s*\/?>/gi) || []).length;
+        if (plain.length >= 58 || lineHints >= 2 || tagCount >= 4) return 'desc-ultra';
+        if (plain.length >= 38 || lineHints >= 1 || tagCount >= 3) return 'desc-dense';
+        return '';
+    }
+
     function getRelicIconPath(relic, {
         formalRelicIconIds = new Set(),
         relicMasterIconById = {}
@@ -296,6 +310,7 @@
         getCardBuffVfxKind,
         getCardFramePath,
         getCardFrameTheme,
+        getCardTextDensityClass,
         getEnemyAssetSlug,
         getEnemyAttackAnimationTiming,
         getEnemyAttackFrames,
