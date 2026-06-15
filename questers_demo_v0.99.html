@@ -78,7 +78,18 @@
             --asset-role-button-back: url('assets/ui/role_select/buttons/back_button_teal_gold_v1.webp');
         }
         
-        body, html { margin: 0; padding: 0; height: 100%; background: var(--dark-bg); color: #ddd; font-family: "STKaiti", "华文楷体", "Microsoft YaHei", serif; overflow: hidden; user-select: none; }
+        body, html { margin: 0; padding: 0; height: 100%; background: var(--dark-bg); color: #ddd; font-family: "STKaiti", "华文楷体", "Microsoft YaHei", serif; overflow: hidden; -webkit-user-select: none; user-select: none; }
+        body * {
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        input,
+        textarea,
+        [contenteditable="true"],
+        .allow-text-select {
+            -webkit-user-select: text;
+            user-select: text;
+        }
         body.main-menu-clear-cover {
             --asset-main-menu-bg: var(--asset-main-menu-bg-clear);
             --main-menu-bg-position: center center, 16% 0%;
@@ -2933,21 +2944,19 @@
     let state = QuestersStateRules.createInitialState();
     let shopDeletePrice = 50;
 
-    function shouldSuppressBattleSelection(event) {
-        if (!document.body.classList.contains('scene-battle-active')) return false;
+    function shouldSuppressGameSelection(event) {
         const target = event?.target;
         if (target?.closest?.('input, textarea, [contenteditable="true"], .allow-text-select')) return false;
         return true;
     }
 
     document.addEventListener('selectstart', event => {
-        if (shouldSuppressBattleSelection(event)) event.preventDefault();
+        if (shouldSuppressGameSelection(event)) event.preventDefault();
     }, true);
     document.addEventListener('dragstart', event => {
-        if (shouldSuppressBattleSelection(event)) event.preventDefault();
+        if (shouldSuppressGameSelection(event)) event.preventDefault();
     }, true);
     document.addEventListener('selectionchange', () => {
-        if (!document.body.classList.contains('scene-battle-active')) return;
         const active = document.activeElement;
         if (active?.closest?.('input, textarea, [contenteditable="true"], .allow-text-select')) return;
         const selection = window.getSelection?.();
