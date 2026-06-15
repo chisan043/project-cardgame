@@ -2708,7 +2708,7 @@
     }
 
     function generateRewardCard(used = new Set()) {
-        if (Math.random() < 0.12 + state.floor * 0.01) {
+        if (Math.random() < QuestersRewardRules.getSpecialEpicRewardChance({ floor: state.floor })) {
             let epicPool = getWeightedSpecialEpicPool().filter(card => !used.has(getCardChoiceKey(card)));
             let special = epicPool[Math.floor(Math.random() * epicPool.length)];
             if (special) return cloneSpecialEpic(special);

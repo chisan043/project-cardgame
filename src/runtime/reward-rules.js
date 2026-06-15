@@ -216,6 +216,10 @@
         return uniqueCandidates.length ? uniqueCandidates : allCards;
     }
 
+    function getSpecialEpicRewardChance({ floor = 1 } = {}) {
+        return 0.12 + floor * 0.01;
+    }
+
     global.QuestersRewardRules = {
         deckHasCardMatch,
         deckHasTag,
@@ -232,6 +236,7 @@
         getRewardCandidatePool,
         getRewardFixedFallbackCandidates,
         getRewardSlotPlan,
+        getSpecialEpicRewardChance,
         getShopCopyPrice,
         rollRewardRarity,
         rollWeighted
