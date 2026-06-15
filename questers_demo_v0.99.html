@@ -2310,7 +2310,7 @@
 <script src="src/runtime/battle-rules.js?v=20260615-runtime-battle-rules"></script>
 <script src="src/runtime/visual-rules.js?v=20260616-noframe-status-icons"></script>
 <script src="src/runtime/map-rules.js?v=20260615-runtime-map-node-view-model"></script>
-<script src="src/runtime/reward-rules.js?v=20260615-runtime-shop-spend-rules"></script>
+<script src="src/runtime/reward-rules.js?v=20260616-runtime-role-relic-rules"></script>
 <script>
     function createEmbers() {
         const layer = document.getElementById('particles-layer');
@@ -3115,28 +3115,6 @@
     function relicHasFormalArt(relic) {
         return !!resolveRelicIconPath(relic);
     }
-    function getRelicsPreferredWithArt(source) {
-        const pool = Array.isArray(source) ? source.slice() : [];
-        const withArt = pool.filter(relicHasFormalArt);
-        return withArt.length ? withArt : pool;
-    }
-    function shufflePool(pool) {
-        return (Array.isArray(pool) ? pool.slice() : []).sort(() => 0.5 - Math.random());
-    }
-    function getCurrentRelicRoleSet() {
-        return ROLE_RELIC_IDS[state.player?.characterId] || null;
-    }
-    function isCommonRelic(relic) {
-        return !!(relic && COMMON_RELIC_IDS.has(relic.id));
-    }
-    function isCurrentRoleRelic(relic) {
-        const roleSet = getCurrentRelicRoleSet();
-        return !!(roleSet && relic && (roleSet.has(relic.id) || isCommonRelic(relic)));
-    }
-    function getCurrentRoleRelicPool(source) {
-        const pool = getRelicsPreferredWithArt(source);
-        return pool.filter(relic => isCurrentRoleRelic(relic) && !STARTING_RELIC_IDS.has(relic.id));
-    }
     function getRelicBuildTags(relic, characterId = state.player?.characterId) {
         const explicit = (typeof RELIC_BUILD_TAGS_BY_ID !== 'undefined' && RELIC_BUILD_TAGS_BY_ID[relic?.id]) || [];
         const text = `${relic?.name || ''}${relic?.desc || ''}`;
@@ -3155,20 +3133,25 @@
             primaryBuildTag
         });
     }
-    function weightedShuffleRelics(pool) {
-        return QuestersRewardRules.getWeightedRelicOrder({
-            relics: pool,
+    function getRolePreferredRelics(source) {
+        return QuestersRewardRules.getRolePreferredRelics({
+            relics: source,
+            characterId: state.player?.characterId,
+            roleRelicIds: ROLE_RELIC_IDS,
+            commonRelicIds: COMMON_RELIC_IDS,
+            startingRelicIds: STARTING_RELIC_IDS,
+            preferRelic: relicHasFormalArt,
             getWeight: relic => getRelicBuildRewardWeight(relic)
         });
     }
-    function getRolePreferredRelics(source) {
-        return weightedShuffleRelics(getCurrentRoleRelicPool(source));
-    }
     function rollRolePreferredRelic(source) {
-        const pool = getCurrentRoleRelicPool(source);
-        if (!pool.length) return null;
-        return QuestersRewardRules.pickWeightedRelic({
-            relics: pool,
+        return QuestersRewardRules.pickRolePreferredRelic({
+            relics: source,
+            characterId: state.player?.characterId,
+            roleRelicIds: ROLE_RELIC_IDS,
+            commonRelicIds: COMMON_RELIC_IDS,
+            startingRelicIds: STARTING_RELIC_IDS,
+            preferRelic: relicHasFormalArt,
             getWeight: relic => getRelicBuildRewardWeight(relic)
         });
     }
@@ -7038,7 +7021,6 @@
 
     function selectEventRelic() {
         let available = RELIC_POOL.filter(r => !hasRelic(r.id) && !STARTING_RELIC_IDS.has(r.id));
-        available = getRelicsPreferredWithArt(available);
         if (available.length === 0) { document.getElementById('event-content').innerHTML = '<div style="font-size:60px;">💰</div>'; setEventActions([{ label: '离开', onClick: () => { state.gold += 50; updateTopBar(); closeOverlay('overlay-event'); advanceMap(); } }]); return; }
         let r = rollRolePreferredRelic(available); document.getElementById('event-title').innerText = "奇遇：失落的宝库"; document.getElementById('event-desc').innerText = "机关沉沉落下，宝匣中央浮起一件旧时代的秘宝。";
         document.getElementById('event-content').innerHTML = `<div class="event-result-card anime-panel"><div id="event-relic-icon" style="width:92px; height:92px; margin:0 auto; font-size:64px; filter:drop-shadow(0 4px 0 rgba(0,0,0,0.28));">${renderRelicVisual(r)}</div><h3 id="event-relic-name" style="color:#43271d; letter-spacing:2px; margin-bottom:8px;">${r.name}</h3><div id="event-relic-desc" style="color:#4e3a2e; font-size:13px; line-height:1.6; margin:10px 0; text-align:left;">${formatKeywords(getDisplayRelicDesc(r))}</div>${getRelicBottomTags(r)}</div>`;

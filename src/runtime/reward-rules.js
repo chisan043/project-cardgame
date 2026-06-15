@@ -615,6 +615,90 @@
         return rollWeighted(relics, getWeight, rng);
     }
 
+    function getRelicRoleSet(characterId = 'hero_warrior', {
+        roleRelicIds = {}
+    } = {}) {
+        return roleRelicIds[characterId] || null;
+    }
+
+    function isCommonRelic(relic, {
+        commonRelicIds = new Set()
+    } = {}) {
+        return !!(relic && commonRelicIds.has(relic.id));
+    }
+
+    function isRoleRelic(relic, {
+        characterId = 'hero_warrior',
+        commonRelicIds = new Set(),
+        roleRelicIds = {}
+    } = {}) {
+        const roleSet = getRelicRoleSet(characterId, { roleRelicIds });
+        return !!(roleSet && relic && (roleSet.has(relic.id) || isCommonRelic(relic, { commonRelicIds })));
+    }
+
+    function getRoleRelicPool({
+        characterId = 'hero_warrior',
+        commonRelicIds = new Set(),
+        preferRelic = () => true,
+        relics = [],
+        roleRelicIds = {},
+        startingRelicIds = new Set()
+    } = {}) {
+        const pool = Array.isArray(relics) ? relics.slice() : [];
+        const preferred = pool.filter(preferRelic);
+        const prioritizedPool = preferred.length ? preferred : pool;
+        return prioritizedPool.filter(relic => (
+            isRoleRelic(relic, { characterId, commonRelicIds, roleRelicIds })
+            && !startingRelicIds.has(relic.id)
+        ));
+    }
+
+    function getRolePreferredRelics({
+        characterId = 'hero_warrior',
+        commonRelicIds = new Set(),
+        getWeight = () => 1,
+        preferRelic = () => true,
+        relics = [],
+        rng = Math.random,
+        roleRelicIds = {},
+        startingRelicIds = new Set()
+    } = {}) {
+        return getWeightedRelicOrder({
+            relics: getRoleRelicPool({
+                characterId,
+                commonRelicIds,
+                preferRelic,
+                relics,
+                roleRelicIds,
+                startingRelicIds
+            }),
+            getWeight,
+            rng
+        });
+    }
+
+    function pickRolePreferredRelic({
+        characterId = 'hero_warrior',
+        commonRelicIds = new Set(),
+        getWeight = () => 1,
+        preferRelic = () => true,
+        relics = [],
+        rng = Math.random,
+        roleRelicIds = {},
+        startingRelicIds = new Set()
+    } = {}) {
+        const pool = getRoleRelicPool({
+            characterId,
+            commonRelicIds,
+            preferRelic,
+            relics,
+            roleRelicIds,
+            startingRelicIds
+        });
+        if (!pool.length) return null;
+        return pickWeightedRelic({ relics: pool, getWeight, rng });
+    }
+
     global.QuestersRewardRules = {
         buildRewardChoiceCards,
         buildRewardChoices,
@@ -629,7 +713,10 @@
         getCardChoiceKey,
         getDeckBuildProfile,
         getPrimaryBuildTag,
+        getRelicRoleSet,
         getRestHealResult,
+        getRolePreferredRelics,
+        getRoleRelicPool,
         getRewardOverlayPresentation,
         getSalePrice,
         getRewardBridgeSpec,
@@ -650,6 +737,7 @@
         pickRewardBridgeCard,
         pickRewardCardCandidate,
         pickRewardFixedFallbackCandidate,
+        pickRolePreferredRelic,
         pickSpecialEpicRewardCard,
         pickWeightedRelic,
         rollRewardRarity,

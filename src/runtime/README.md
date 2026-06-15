@@ -5,7 +5,8 @@ own DOM rendering.
 
 - `reward-rules.js`: reward selection weights, rarity rolls, build
   profile/bridge matching, candidate filtering, battle reward math,
-  rest healing, skip-gold math, shop spending, and shop economy helpers.
+  rest healing, skip-gold math, role relic-pool filtering, shop spending, and
+  shop economy helpers.
 - `map-rules.js`: map node layout, path connection, node-type assignment,
   route-state checks, render-state flags, preview-node selection, preview
   variant selection, and floor labels.
