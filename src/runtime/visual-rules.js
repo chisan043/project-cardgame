@@ -160,6 +160,43 @@
         return `assets/vfx/enemy_attack/${String(type || '').replace(/-/g, '_')}_vfx_v1.webp`;
     }
 
+    function getEnemyAttackVfxLayout({
+        enemyRect = null,
+        layout = {},
+        playerRect = null
+    } = {}) {
+        const width = layout.width || 260;
+        const height = layout.height || 260;
+        const style = {
+            deltaX: '-380px',
+            deltaY: '20px',
+            duration: layout.duration || 560,
+            endScale: layout.endScale || '1.08',
+            filter: layout.filter || 'drop-shadow(0 0 18px rgba(255,255,255,0.65)) saturate(1.18) brightness(1.12)',
+            height,
+            left: '58%',
+            motion: layout.motion || 'projectile',
+            rotate: layout.rotate || '0deg',
+            startScale: layout.startScale || '0.58',
+            top: '28%',
+            width
+        };
+
+        if (!enemyRect || !playerRect) return style;
+
+        const startX = enemyRect.left + enemyRect.width * (layout.startX ?? 0.34);
+        const startY = enemyRect.top + enemyRect.height * (layout.startY ?? 0.44);
+        const targetX = playerRect.left + playerRect.width * (layout.targetX ?? 0.67);
+        const targetY = playerRect.top + playerRect.height * (layout.targetY ?? 0.46);
+        return {
+            ...style,
+            deltaX: `${targetX - startX}px`,
+            deltaY: `${targetY - startY}px`,
+            left: `${startX - width * 0.5}px`,
+            top: `${startY - height * 0.5}px`
+        };
+    }
+
     function getEnemyAttackVfxType({
         defaultVfxType = 'dark-iaijutsu',
         enemy = null,
@@ -181,6 +218,7 @@
         getEnemyAttackAnimationTiming,
         getEnemyAttackFrames,
         getEnemyAttackVfxAsset,
+        getEnemyAttackVfxLayout,
         getEnemyAttackVfxType,
         getEnemyAvatarPath,
         getEnemyVisualPath,

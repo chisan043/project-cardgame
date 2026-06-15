@@ -4790,12 +4790,17 @@
 
     function triggerEnemyAttackVfx(vfx, effect, vfxToken) {
         const type = getEnemyAttackVfxType();
-        const layout = ENEMY_ATTACK_VFX_LAYOUTS[type] || ENEMY_ATTACK_VFX_LAYOUTS.default;
+        const config = ENEMY_ATTACK_VFX_LAYOUTS[type] || ENEMY_ATTACK_VFX_LAYOUTS.default;
         const enemyRect = document.getElementById('enemy-avatar-img')?.getBoundingClientRect()
             || document.getElementById('enemy-avatar')?.getBoundingClientRect();
         const playerRect = document.querySelector('.player-avatar-frame img')?.getBoundingClientRect()
             || document.querySelector('.player-avatar-frame')?.getBoundingClientRect();
         const image = effect.querySelector('.enemy-attack-vfx-img');
+        const layout = QuestersVisualRules.getEnemyAttackVfxLayout({
+            enemyRect,
+            layout: config,
+            playerRect
+        });
         const motion = layout.motion || 'projectile';
         effect.className = `enemy-attack-vfx enemy-asset-vfx enemy-asset-${motion}`;
         if (image) {
@@ -4803,21 +4808,10 @@
             image.alt = `${type} enemy attack effect`;
         }
 
-        if (enemyRect && playerRect) {
-            const startX = enemyRect.left + enemyRect.width * layout.startX;
-            const startY = enemyRect.top + enemyRect.height * layout.startY;
-            const targetX = playerRect.left + playerRect.width * layout.targetX;
-            const targetY = playerRect.top + playerRect.height * layout.targetY;
-            effect.style.setProperty('--enemy-vfx-left', `${startX - layout.width * 0.5}px`);
-            effect.style.setProperty('--enemy-vfx-top', `${startY - layout.height * 0.5}px`);
-            effect.style.setProperty('--enemy-vfx-dx', `${targetX - startX}px`);
-            effect.style.setProperty('--enemy-vfx-dy', `${targetY - startY}px`);
-        } else {
-            effect.style.setProperty('--enemy-vfx-left', '58%');
-            effect.style.setProperty('--enemy-vfx-top', '28%');
-            effect.style.setProperty('--enemy-vfx-dx', '-380px');
-            effect.style.setProperty('--enemy-vfx-dy', '20px');
-        }
+        effect.style.setProperty('--enemy-vfx-left', layout.left);
+        effect.style.setProperty('--enemy-vfx-top', layout.top);
+        effect.style.setProperty('--enemy-vfx-dx', layout.deltaX);
+        effect.style.setProperty('--enemy-vfx-dy', layout.deltaY);
 
         effect.style.setProperty('--enemy-vfx-width', `${layout.width}px`);
         effect.style.setProperty('--enemy-vfx-height', `${layout.height}px`);
