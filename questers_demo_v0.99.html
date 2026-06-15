@@ -5174,13 +5174,10 @@
     }
 
     function getMapPreviewVariant(node) {
-        if (!node) return MAP_PREVIEW_PANEL_DATA.battle;
-        if (node.type === 'battle') {
-            const lane = Math.round(Number(node.x || 0));
-            const idx = Math.abs((Number(node.floor || 0) * 3 + lane)) % MAP_BATTLE_PREVIEW_VARIANTS.length;
-            return MAP_BATTLE_PREVIEW_VARIANTS[idx];
-        }
-        return MAP_PREVIEW_PANEL_DATA[node.type] || MAP_PREVIEW_PANEL_DATA.battle;
+        return QuestersMapRules.getMapPreviewVariant(node, {
+            battlePreviewVariants: MAP_BATTLE_PREVIEW_VARIANTS,
+            previewPanelData: MAP_PREVIEW_PANEL_DATA
+        });
     }
 
     function updateMapDetailPanel(node = null) {

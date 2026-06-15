@@ -154,6 +154,20 @@
         return `第 ${Number(node.floor || 0) + 1} 层`;
     }
 
+    function getMapPreviewVariant(node, {
+        battlePreviewVariants = [],
+        previewPanelData = {}
+    } = {}) {
+        const defaultPanel = previewPanelData.battle || null;
+        if (!node) return defaultPanel;
+        if (node.type === 'battle' && battlePreviewVariants.length) {
+            const lane = Math.round(Number(node.x || 0));
+            const idx = Math.abs((Number(node.floor || 0) * 3 + lane)) % battlePreviewVariants.length;
+            return battlePreviewVariants[idx];
+        }
+        return previewPanelData[node.type] || defaultPanel;
+    }
+
     function getMapNodeRenderState(node, {
         currentNode = null,
         pathHistory = []
@@ -186,6 +200,7 @@
         getMapNodeRenderState,
         getMapNodeRouteStatus,
         getMapNodeType,
+        getMapPreviewVariant,
         getNodeFloorLabel,
         getSelectedMapPreviewNode,
         isMapNodeReachable
