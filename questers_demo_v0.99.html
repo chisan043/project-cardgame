@@ -3393,9 +3393,10 @@
         return `${src}${src.includes('?') ? '&' : '?'}v=${AVATAR_ASSET_VERSION}`;
     }
     function resolveRelicIconPath(relic) {
-        if (!relic || !relic.id) return '';
-        if (FORMAL_RELIC_ICON_IDS.has(relic.id)) return `assets/relics/icons/${relic.id}_icon_v1.webp`;
-        return RELIC_MASTER_ICON_BY_ID[relic.id] || '';
+        return QuestersVisualRules.getRelicIconPath(relic, {
+            formalRelicIconIds: FORMAL_RELIC_ICON_IDS,
+            relicMasterIconById: RELIC_MASTER_ICON_BY_ID
+        });
     }
     function relicHasFormalArt(relic) {
         return !!resolveRelicIconPath(relic);

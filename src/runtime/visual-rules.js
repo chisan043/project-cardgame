@@ -29,6 +29,15 @@
         return slug ? `assets/enemies/portraits/${slug}_portrait_v1.webp` : null;
     }
 
+    function getRelicIconPath(relic, {
+        formalRelicIconIds = new Set(),
+        relicMasterIconById = {}
+    } = {}) {
+        if (!relic || !relic.id) return '';
+        if (formalRelicIconIds.has(relic.id)) return `assets/relics/icons/${relic.id}_icon_v1.webp`;
+        return relicMasterIconById[relic.id] || '';
+    }
+
     function getEnemyAttackFrames(enemy, {
         frameDurations = DEFAULT_ATTACK_FRAME_DURATIONS,
         ...slugOptions
@@ -265,6 +274,7 @@
         getPlayerAttackAnimationTiming,
         getPlayerAttackVfxLayout,
         getPlayerBuffVfxLayout,
+        getRelicIconPath,
         getShieldHitVfxLayout
     };
 })(window);
