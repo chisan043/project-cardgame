@@ -87,6 +87,10 @@ def contains_non_ascii(value: str) -> bool:
     return any(ord(char) > 127 for char in value)
 
 
+def is_template_suffix_fragment(path: str) -> bool:
+    return "/" not in path and path.startswith("_")
+
+
 def iter_files() -> Iterable[Path]:
     for current_root, dirnames, filenames in os.walk(ROOT):
         root_path = Path(current_root)
@@ -283,6 +287,8 @@ def collect_references(assets: list[Path], text_files: list[TextFile]) -> tuple[
         for match in IMAGE_LITERAL_RE.finditer(text):
             raw_path = match.group("path").split("?", 1)[0]
             if len(raw_path) > MAX_LITERAL_LENGTH:
+                continue
+            if is_template_suffix_fragment(raw_path):
                 continue
             if raw_path.startswith(("http://", "https://", "data:", "blob:", "input:")):
                 continue
