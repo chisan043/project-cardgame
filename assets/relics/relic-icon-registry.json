@@ -1,0 +1,1857 @@
+{
+  "generatedBy": "tools/build_asset_registries.mjs",
+  "sourceData": [
+    "src/data/relics.js"
+  ],
+  "policy": "Runtime relic icons live under assets/relics/icons and use {relic_id}_icon_v1.webp.",
+  "assetCount": 98,
+  "missingAssetCount": 0,
+  "missingSourceCount": 0,
+  "assets": [
+    {
+      "key": "r_base_energy",
+      "path": "assets/relics/icons/r_base_energy_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_base_energy_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_base_energy",
+          "name": "源能核心",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": []
+        }
+      ]
+    },
+    {
+      "key": "r_battle_whetstone",
+      "path": "assets/relics/icons/r_battle_whetstone_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_battle_whetstone_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_battle_whetstone",
+          "name": "磨锋砥石",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "execution"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_bleed_knife",
+      "path": "assets/relics/icons/r_bleed_knife_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_bleed_knife_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_bleed_knife",
+          "name": "猎痕短刃",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "venom"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_bleed_return_exhaust",
+      "path": "assets/relics/icons/r_bleed_return_exhaust_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_bleed_return_exhaust_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_bleed_return_exhaust",
+          "name": "猎魂镰刃",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "exile",
+            "venom"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_blood",
+      "path": "assets/relics/icons/r_blood_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_blood_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_blood",
+          "name": "血池圣印",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "bloodoath"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_blood_suture",
+      "path": "assets/relics/icons/r_blood_suture_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_blood_suture_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_blood_suture",
+          "name": "赤线缝针",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "bloodoath"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_bloodlet_draw",
+      "path": "assets/relics/icons/r_bloodlet_draw_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_bloodlet_draw_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_bloodlet_draw",
+          "name": "赤脉弦扣",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "venom"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_bloodlet_hourglass",
+      "path": "assets/relics/icons/r_bloodlet_hourglass_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_bloodlet_hourglass_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_bloodlet_hourglass",
+          "name": "放血沙漏",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "bloodoath"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_bone_ring",
+      "path": "assets/relics/icons/r_bone_ring_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_bone_ring_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_bone_ring",
+          "name": "誓约骨环",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "bloodoath",
+            "execution",
+            "gale"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_boss_slayer",
+      "path": "assets/relics/icons/r_boss_slayer_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_boss_slayer_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_boss_slayer",
+          "name": "弑王刻印",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": []
+        }
+      ]
+    },
+    {
+      "key": "r_brutal",
+      "path": "assets/relics/icons/r_brutal_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_brutal_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_brutal",
+          "name": "余烬回响",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "mirror",
+            "calamity"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_burst_censer",
+      "path": "assets/relics/icons/r_burst_censer_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_burst_censer_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_burst_censer",
+          "name": "聚爆香炉",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "chant"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_burst_lens",
+      "path": "assets/relics/icons/r_burst_lens_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_burst_lens_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_burst_lens",
+          "name": "聚爆透镜",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "chant"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_campfire_pouch",
+      "path": "assets/relics/icons/r_campfire_pouch_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_campfire_pouch_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_campfire_pouch",
+          "name": "营火锦囊",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": []
+        }
+      ]
+    },
+    {
+      "key": "r_chant_ink",
+      "path": "assets/relics/icons/r_chant_ink_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_chant_ink_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_chant_ink",
+          "name": "恒咏墨瓶",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "chant"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_chant_reservoir",
+      "path": "assets/relics/icons/r_chant_reservoir_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_chant_reservoir_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_chant_reservoir",
+          "name": "蓄咏水晶",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "chant"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_combo",
+      "path": "assets/relics/icons/r_combo_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_combo_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_combo",
+          "name": "流转沙漏",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "execution"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_combo_ring",
+      "path": "assets/relics/icons/r_combo_ring_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_combo_ring_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_combo_ring",
+          "name": "连弦指环",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "gale"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_combo_warrant",
+      "path": "assets/relics/icons/r_combo_warrant_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_combo_warrant_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_combo_warrant",
+          "name": "连斩密令",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "execution"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_copy_lattice",
+      "path": "assets/relics/icons/r_copy_lattice_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_copy_lattice_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_copy_lattice",
+          "name": "复写晶格",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "mirror"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_copy_seal",
+      "path": "assets/relics/icons/r_copy_seal_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_copy_seal_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_copy_seal",
+          "name": "复写印泥",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": []
+        }
+      ]
+    },
+    {
+      "key": "r_counter_amulet",
+      "path": "assets/relics/icons/r_counter_amulet_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_counter_amulet_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_counter_amulet",
+          "name": "招架护符",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "oathblade"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_counter_gate",
+      "path": "assets/relics/icons/r_counter_gate_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_counter_gate_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_counter_gate",
+          "name": "招架门徽",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "oathblade"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_cycle_compass",
+      "path": "assets/relics/icons/r_cycle_compass_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_cycle_compass_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_cycle_compass",
+          "name": "风轮罗盘",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "exile"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_decay_seal",
+      "path": "assets/relics/icons/r_decay_seal_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_decay_seal_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_decay_seal",
+          "name": "破绽咒印",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "calamity"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_def_cost",
+      "path": "assets/relics/icons/r_def_cost_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_def_cost_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_def_cost",
+          "name": "圣盾甲片",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "oathblade"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_despair",
+      "path": "assets/relics/icons/r_despair_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_despair_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_despair",
+          "name": "虚弱星环",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "calamity"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_double_quill",
+      "path": "assets/relics/icons/r_double_quill_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_double_quill_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_double_quill",
+          "name": "双墨羽笔",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "mirror"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_duel_glove",
+      "path": "assets/relics/icons/r_duel_glove_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_duel_glove_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_duel_glove",
+          "name": "决斗手甲",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "execution"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_echo_archive_pin",
+      "path": "assets/relics/icons/r_echo_archive_pin_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_echo_archive_pin_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_echo_archive_pin",
+          "name": "回声书签",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "mirror"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_echo_mirror_relic",
+      "path": "assets/relics/icons/r_echo_mirror_relic_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_echo_mirror_relic_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_echo_mirror_relic",
+          "name": "秘仪魔镜",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "mirror"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_elite_hunter",
+      "path": "assets/relics/icons/r_elite_hunter_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_elite_hunter_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_elite_hunter",
+          "name": "猎英徽记",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": []
+        }
+      ]
+    },
+    {
+      "key": "r_enchant_crys",
+      "path": "assets/relics/icons/r_enchant_crys_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_enchant_crys_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_enchant_crys",
+          "name": "紫焰棱晶",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "chant",
+            "calamity"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_energy_crys",
+      "path": "assets/relics/icons/r_energy_crys_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_energy_crys_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_energy_crys",
+          "name": "星辉法核",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "chant"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_ethereal",
+      "path": "assets/relics/icons/r_ethereal_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_ethereal_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_ethereal",
+          "name": "风行之手",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "exile",
+            "gale"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_execute",
+      "path": "assets/relics/icons/r_execute_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_execute_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_execute",
+          "name": "猎首时刻",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "venom"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_execute_scabbard",
+      "path": "assets/relics/icons/r_execute_scabbard_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_execute_scabbard_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_execute_scabbard",
+          "name": "断罪剑鞘",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "execution"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_exhaust_dmg",
+      "path": "assets/relics/icons/r_exhaust_dmg_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_exhaust_dmg_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_exhaust_dmg",
+          "name": "狩影烬坠",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "exile"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_exhaust_knife",
+      "path": "assets/relics/icons/r_exhaust_knife_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_exhaust_knife_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_exhaust_knife",
+          "name": "猎手飞刀带",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "exile"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_exile_cache",
+      "path": "assets/relics/icons/r_exile_cache_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_exile_cache_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_exile_cache",
+          "name": "流亡箭匣",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "exile"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_fast_foot",
+      "path": "assets/relics/icons/r_fast_foot_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_fast_foot_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_fast_foot",
+          "name": "先手靴扣",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "gale"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_finisher_coin",
+      "path": "assets/relics/icons/r_finisher_coin_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_finisher_coin_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_finisher_coin",
+          "name": "终斩金币",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "execution"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_first_draw",
+      "path": "assets/relics/icons/r_first_draw_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_first_draw_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_first_draw",
+          "name": "启程星图",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": []
+        }
+      ]
+    },
+    {
+      "key": "r_flaw_lens",
+      "path": "assets/relics/icons/r_flaw_lens_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_flaw_lens_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_flaw_lens",
+          "name": "破绽透镜",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "execution"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_frenzy",
+      "path": "assets/relics/icons/r_frenzy_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_frenzy_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_frenzy",
+          "name": "连祷狂热",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "mirror"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_frenzy_veil",
+      "path": "assets/relics/icons/r_frenzy_veil_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_frenzy_veil_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_frenzy_veil",
+          "name": "疾影面纱",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "gale"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_gray_market_map",
+      "path": "assets/relics/icons/r_gray_market_map_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_gray_market_map_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_gray_market_map",
+          "name": "灰市地图",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": []
+        }
+      ]
+    },
+    {
+      "key": "r_guardian_core",
+      "path": "assets/relics/icons/r_guardian_core_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_guardian_core_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_guardian_core",
+          "name": "守誓炉心",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "oathblade"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_heal_relic",
+      "path": "assets/relics/icons/r_heal_relic_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_heal_relic_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_heal_relic",
+          "name": "月露圣物",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "chant"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_heavy_badge",
+      "path": "assets/relics/icons/r_heavy_badge_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_heavy_badge_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_heavy_badge",
+          "name": "重锋徽记",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "execution",
+            "oathblade"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_hex_incense",
+      "path": "assets/relics/icons/r_hex_incense_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_hex_incense_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_hex_incense",
+          "name": "咒雾香",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "calamity"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_life_totem",
+      "path": "assets/relics/icons/r_life_totem_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_life_totem_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_life_totem",
+          "name": "守誓图腾",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "oathblade"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_lifedebt_scale",
+      "path": "assets/relics/icons/r_lifedebt_scale_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_lifedebt_scale_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_lifedebt_scale",
+          "name": "命债天平",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "bloodoath"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_long_decay",
+      "path": "assets/relics/icons/r_long_decay_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_long_decay_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_long_decay",
+          "name": "长驻猎痕",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "venom"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_luck_box",
+      "path": "assets/relics/icons/r_luck_box_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_luck_box_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_luck_box",
+          "name": "占星牌匣",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "chant",
+            "mirror",
+            "calamity"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_multishot_fletching",
+      "path": "assets/relics/icons/r_multishot_fletching_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_multishot_fletching_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_multishot_fletching",
+          "name": "分羽箭尾",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "gale"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_oath_transfusion",
+      "path": "assets/relics/icons/r_oath_transfusion_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_oath_transfusion_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_oath_transfusion",
+          "name": "誓血导管",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "bloodoath"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_omni_seal",
+      "path": "assets/relics/icons/r_omni_seal_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_omni_seal_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_omni_seal",
+          "name": "万法空印",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "mirror"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_overheal",
+      "path": "assets/relics/icons/r_overheal_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_overheal_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_overheal",
+          "name": "圣疗溢光",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "oathblade"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_pass_draw",
+      "path": "assets/relics/icons/r_pass_draw_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_pass_draw_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_pass_draw",
+          "name": "职业秘卷",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": []
+        }
+      ]
+    },
+    {
+      "key": "r_pass_energy",
+      "path": "assets/relics/icons/r_pass_energy_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_pass_energy_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_pass_energy",
+          "name": "自然回流",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "exile",
+            "gale"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_pass_thorns",
+      "path": "assets/relics/icons/r_pass_thorns_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_pass_thorns_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_pass_thorns",
+          "name": "圣棘花冠",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": []
+        }
+      ]
+    },
+    {
+      "key": "r_perma_curse",
+      "path": "assets/relics/icons/r_perma_curse_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_perma_curse_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_perma_curse",
+          "name": "永续法印",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "calamity"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_pierce",
+      "path": "assets/relics/icons/r_pierce_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_pierce_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_pierce",
+          "name": "破甲箭锋",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "gale"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_pierce_amulet",
+      "path": "assets/relics/icons/r_pierce_amulet_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_pierce_amulet_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_pierce_amulet",
+          "name": "裂甲剑坠",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "execution"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_pierce_meter",
+      "path": "assets/relics/icons/r_pierce_meter_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_pierce_meter_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_pierce_meter",
+          "name": "裂甲刻尺",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "execution"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_plague_glass",
+      "path": "assets/relics/icons/r_plague_glass_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_plague_glass_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_plague_glass",
+          "name": "疫光玻片",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "calamity"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_poison_fang",
+      "path": "assets/relics/icons/r_poison_fang_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_poison_fang_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_poison_fang",
+          "name": "森蚀箭簇",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "venom"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_poison_leech",
+      "path": "assets/relics/icons/r_poison_leech_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_poison_leech_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_poison_leech",
+          "name": "毒脉汲取",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "venom"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_protect_armor",
+      "path": "assets/relics/icons/r_protect_armor_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_protect_armor_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_protect_armor",
+          "name": "圣壁石甲",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "oathblade"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_return_bleed",
+      "path": "assets/relics/icons/r_return_bleed_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_return_bleed_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_return_bleed",
+          "name": "赤痕归羽",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "exile",
+            "venom"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_return_knife",
+      "path": "assets/relics/icons/r_return_knife_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_return_knife_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_return_knife",
+          "name": "回风刀鞘",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "exile"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_return_poison",
+      "path": "assets/relics/icons/r_return_poison_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_return_poison_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_return_poison",
+          "name": "青毒归羽",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "exile",
+            "venom"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_reward_crown",
+      "path": "assets/relics/icons/r_reward_crown_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_reward_crown_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_reward_crown",
+          "name": "弃赏王冠",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": []
+        }
+      ]
+    },
+    {
+      "key": "r_rewind_sand",
+      "path": "assets/relics/icons/r_rewind_sand_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_rewind_sand_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_rewind_sand",
+          "name": "倒带砂瓶",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "mirror"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_rupture_charm",
+      "path": "assets/relics/icons/r_rupture_charm_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_rupture_charm_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_rupture_charm",
+          "name": "裂口护符",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "bloodoath"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_sac_jade",
+      "path": "assets/relics/icons/r_sac_jade_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_sac_jade_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_sac_jade",
+          "name": "咏唱玉坠",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "chant"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_scarlet_whet",
+      "path": "assets/relics/icons/r_scarlet_whet_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_scarlet_whet_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_scarlet_whet",
+          "name": "猩红砥石",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "bloodoath"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_shield",
+      "path": "assets/relics/icons/r_shield_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_shield_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_shield",
+          "name": "古誓护印",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": []
+        }
+      ]
+    },
+    {
+      "key": "r_silver_purse",
+      "path": "assets/relics/icons/r_silver_purse_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_silver_purse_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_silver_purse",
+          "name": "银纹钱袋",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": []
+        }
+      ]
+    },
+    {
+      "key": "r_skill_cost",
+      "path": "assets/relics/icons/r_skill_cost_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_skill_cost_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_skill_cost",
+          "name": "秘仪教本",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "gale",
+            "chant",
+            "mirror"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_soul_lantern",
+      "path": "assets/relics/icons/r_soul_lantern_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_soul_lantern_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_soul_lantern",
+          "name": "林魂灯笼",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "exile"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_start_archer",
+      "path": "assets/relics/icons/r_start_archer_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_start_archer_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_start_archer",
+          "name": "逐风羽饰",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": []
+        }
+      ]
+    },
+    {
+      "key": "r_start_mage",
+      "path": "assets/relics/icons/r_start_mage_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_start_mage_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_start_mage",
+          "name": "余辉法印",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": []
+        }
+      ]
+    },
+    {
+      "key": "r_start_warrior",
+      "path": "assets/relics/icons/r_start_warrior_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_start_warrior_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_start_warrior",
+          "name": "不屈战徽",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": []
+        }
+      ]
+    },
+    {
+      "key": "r_status_ledger",
+      "path": "assets/relics/icons/r_status_ledger_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_status_ledger_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_status_ledger",
+          "name": "异状账簿",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "calamity"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_status_prism",
+      "path": "assets/relics/icons/r_status_prism_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_status_prism_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_status_prism",
+          "name": "星蚀棱镜",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "calamity"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_stun_chain",
+      "path": "assets/relics/icons/r_stun_chain_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_stun_chain_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_stun_chain",
+          "name": "缄默锁链",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "execution"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_sword_oath",
+      "path": "assets/relics/icons/r_sword_oath_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_sword_oath_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_sword_oath",
+          "name": "圣剑誓印",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "oathblade"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_tailwind_spool",
+      "path": "assets/relics/icons/r_tailwind_spool_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_tailwind_spool_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_tailwind_spool",
+          "name": "顺风线轴",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "gale"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_thorn_bloom",
+      "path": "assets/relics/icons/r_thorn_bloom_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_thorn_bloom_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_thorn_bloom",
+          "name": "棘辉冠冕",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "oathblade"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_thorn_shield_new",
+      "path": "assets/relics/icons/r_thorn_shield_new_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_thorn_shield_new_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_thorn_shield_new",
+          "name": "蔷薇重盾",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "oathblade"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_vamp_ring",
+      "path": "assets/relics/icons/r_vamp_ring_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_vamp_ring_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_vamp_ring",
+          "name": "血誓指环",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "bloodoath"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_vein_cup",
+      "path": "assets/relics/icons/r_vein_cup_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_vein_cup_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_vein_cup",
+          "name": "脉搏圣杯",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "bloodoath"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_warm_pendant",
+      "path": "assets/relics/icons/r_warm_pendant_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_warm_pendant_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_warm_pendant",
+          "name": "余烬护符",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": []
+        }
+      ]
+    },
+    {
+      "key": "r_weak_mask",
+      "path": "assets/relics/icons/r_weak_mask_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_weak_mask_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_weak_mask",
+          "name": "破势面具",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "calamity"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_wind_quiver",
+      "path": "assets/relics/icons/r_wind_quiver_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_wind_quiver_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_wind_quiver",
+          "name": "踏风箭囊",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "gale"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "r_yin_yang",
+      "path": "assets/relics/icons/r_yin_yang_icon_v1.webp",
+      "domain": "relics",
+      "exists": true,
+      "sourcePath": "assets/source/relics/icons/r_yin_yang_icon_v1_source.png",
+      "sourceExists": true,
+      "usedBy": [
+        {
+          "id": "r_yin_yang",
+          "name": "星轨命盘",
+          "roleId": null,
+          "rarity": null,
+          "buildTags": [
+            "chant",
+            "mirror"
+          ]
+        }
+      ]
+    }
+  ]
+}

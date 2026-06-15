@@ -1,0 +1,3364 @@
+{
+  "generatedBy": "tools/build_asset_registries.mjs",
+  "sourceData": [
+    "src/data/cards.js"
+  ],
+  "policy": "Runtime card art lives under assets/cards/art/<theme>/ and is referenced by stable path keys.",
+  "assetCount": 146,
+  "missingAssetCount": 0,
+  "cardsWithArtCount": 254,
+  "themes": [
+    "archer",
+    "mage",
+    "neutral",
+    "warrior"
+  ],
+  "assets": [
+    {
+      "key": "archer/archer_aim_art_v1",
+      "path": "assets/cards/art/archer/archer_aim_art_v1.webp",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_aim",
+          "name": "拉弓瞄准",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        },
+        {
+          "id": "starter_archer_aim",
+          "name": "拉弓瞄准",
+          "roleId": "hero_archer",
+          "pool": "starter",
+          "deckId": "starter_archer",
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_ambush_art_v1",
+      "path": "assets/cards/art/archer/archer_ambush_art_v1.webp",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_ambush",
+          "name": "森息伏击",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        },
+        {
+          "id": "archer_venom_flurry",
+          "name": "翠毒连矢",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        },
+        {
+          "id": "archer_blood_release",
+          "name": "赤痕放血",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        },
+        {
+          "id": "a_bloodlet_gale",
+          "name": "断脉齐爆",
+          "roleId": "hero_archer",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "a_venom_bloom",
+          "name": "毒花齐绽",
+          "roleId": "hero_archer",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "s_poison",
+          "name": "猎毒齐爆",
+          "roleId": "hero_archer",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "a_venom_cage",
+          "name": "腐藤囚笼",
+          "roleId": "hero_archer",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_backstep_art_v1",
+      "path": "assets/cards/art/archer/archer_backstep_art_v1.png",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_backstep",
+          "name": "回风短跃",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_barrage_art_v1",
+      "path": "assets/cards/art/archer/archer_barrage_art_v1.webp",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_barrage",
+          "name": "疾风连射",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        },
+        {
+          "id": "a_gale_verdict",
+          "name": "疾风裁决",
+          "roleId": "hero_archer",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "a_gale_splinter",
+          "name": "碎风齐射",
+          "roleId": "hero_archer",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "a_gale_featherbank",
+          "name": "羽库连装",
+          "roleId": "hero_archer",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_bitter_vine_art_v1",
+      "path": "assets/cards/art/archer/archer_bitter_vine_art_v1.png",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_bitter_vine",
+          "name": "苦藤攀附",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_blood_feather_art_v1",
+      "path": "assets/cards/art/archer/archer_blood_feather_art_v1.png",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_blood_feather",
+          "name": "血羽回收",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_blood_release_art_v1",
+      "path": "assets/cards/art/archer/archer_blood_release_art_v1.webp",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_red_mark",
+          "name": "赤痕连矢",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        },
+        {
+          "id": "a_venom_burst",
+          "name": "毒脉爆箭",
+          "roleId": "hero_archer",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_cycle_branch_art_v1",
+      "path": "assets/cards/art/archer/archer_cycle_branch_art_v1.webp",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "a_exile_archive",
+          "name": "失林归档",
+          "roleId": "hero_archer",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_deadbranch_shuffle_art_v1",
+      "path": "assets/cards/art/archer/archer_deadbranch_shuffle_art_v1.png",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_deadbranch_shuffle",
+          "name": "残枝洗牌",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_ember_feather_art_v1",
+      "path": "assets/cards/art/archer/archer_ember_feather_art_v1.png",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_ember_feather",
+          "name": "轻羽连射",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_empty_string_art_v1",
+      "path": "assets/cards/art/archer/archer_empty_string_art_v1.png",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_empty_string",
+          "name": "空弦藏牌",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_empty_valley_knife_art_v1",
+      "path": "assets/cards/art/archer/archer_empty_valley_knife_art_v1.png",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_empty_valley_knife",
+          "name": "空谷飞刀",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_exile_shot_art_v1",
+      "path": "assets/cards/art/archer/archer_exile_shot_art_v1.webp",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "starter_archer_exile",
+          "name": "逐影放矢",
+          "roleId": "hero_archer",
+          "pool": "starter",
+          "deckId": "starter_archer",
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_forest_specimen_art_v1",
+      "path": "assets/cards/art/archer/archer_forest_specimen_art_v1.png",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_forest_specimen",
+          "name": "归林标本",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_green_fang_art_v1",
+      "path": "assets/cards/art/archer/archer_green_fang_art_v1.png",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_green_fang",
+          "name": "青牙试射",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        },
+        {
+          "id": "starter_archer_venom",
+          "name": "青牙试射",
+          "roleId": "hero_archer",
+          "pool": "starter",
+          "deckId": "starter_archer",
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_green_mist_end_art_v1",
+      "path": "assets/cards/art/archer/archer_green_mist_end_art_v1.png",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_green_mist_end",
+          "name": "绿雾终幕",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_grove_art_v1",
+      "path": "assets/cards/art/archer/archer_grove_art_v1.webp",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_grove",
+          "name": "森冠齐射",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_hawkeye_art_v1",
+      "path": "assets/cards/art/archer/archer_hawkeye_art_v1.webp",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_hawkeye",
+          "name": "鹰眼贯枝",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        },
+        {
+          "id": "a_syn_poison",
+          "name": "万毒箭阵",
+          "roleId": "hero_archer",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_hook_sinew_art_v1",
+      "path": "assets/cards/art/archer/archer_hook_sinew_art_v1.png",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_hook_sinew",
+          "name": "断筋倒钩",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_leaf_search_art_v1",
+      "path": "assets/cards/art/archer/archer_leaf_search_art_v1.png",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_leaf_search",
+          "name": "叶脉检索",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_leaf_sidestep_art_v1",
+      "path": "assets/cards/art/archer/archer_leaf_sidestep_art_v1.png",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_leaf_sidestep",
+          "name": "踏叶侧射",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_leaf_store_art_v1",
+      "path": "assets/cards/art/archer/archer_leaf_store_art_v1.png",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_leaf_store",
+          "name": "飞叶封存",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_lost_arrow_mark_art_v1",
+      "path": "assets/cards/art/archer/archer_lost_arrow_mark_art_v1.png",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_lost_arrow_mark",
+          "name": "遗箭定位",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_nest_track_art_v1",
+      "path": "assets/cards/art/archer/archer_nest_track_art_v1.png",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_nest_track",
+          "name": "回巢轨迹",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_old_arrow_dream_art_v1",
+      "path": "assets/cards/art/archer/archer_old_arrow_dream_art_v1.png",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_old_arrow_dream",
+          "name": "旧箭入梦",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_outerwood_recall_art_v1",
+      "path": "assets/cards/art/archer/archer_outerwood_recall_art_v1.png",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_outerwood_recall",
+          "name": "林外回收",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_poison_rain_art_v1",
+      "path": "assets/cards/art/archer/archer_poison_rain_art_v1.png",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_poison_rain",
+          "name": "毒雨留弦",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_poison_step_art_v1",
+      "path": "assets/cards/art/archer/archer_poison_step_art_v1.png",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_poison_step",
+          "name": "毒痕护步",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_pulse_burst_art_v1",
+      "path": "assets/cards/art/archer/archer_pulse_burst_art_v1.png",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_pulse_burst",
+          "name": "残脉连扣",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_quick_corridor_art_v1",
+      "path": "assets/cards/art/archer/archer_quick_corridor_art_v1.png",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_quick_corridor",
+          "name": "急羽穿廊",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_rain_art_v1",
+      "path": "assets/cards/art/archer/archer_rain_art_v1.webp",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_rain",
+          "name": "回环箭雨",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "archer_cycle_branch",
+          "name": "轮枝归射",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        },
+        {
+          "id": "archer_exile_storm",
+          "name": "逐风绝矢",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "a_red_rain",
+          "name": "赤痕箭雨",
+          "roleId": "hero_archer",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "a_venom_redfog",
+          "name": "赤雾落弦",
+          "roleId": "hero_archer",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "s_exhaust",
+          "name": "风葬归矢",
+          "roleId": "hero_archer",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_ready_art_v1",
+      "path": "assets/cards/art/archer/archer_ready_art_v1.webp",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_ready",
+          "name": "林风整备",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        },
+        {
+          "id": "archer_soul_return",
+          "name": "林魂招矢",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        },
+        {
+          "id": "a_exile_recall",
+          "name": "归途双令",
+          "roleId": "hero_archer",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "s_energy",
+          "name": "疾风整备",
+          "roleId": "hero_archer",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "a_green_resonance",
+          "name": "翠林回响",
+          "roleId": "hero_archer",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "starter_archer_focus",
+          "name": "整束箭袋",
+          "roleId": "hero_archer",
+          "pool": "starter",
+          "deckId": "starter_archer",
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_rearguard_art_v1",
+      "path": "assets/cards/art/archer/archer_rearguard_art_v1.png",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_rearguard",
+          "name": "游侠断后",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_red_tide_bow_art_v1",
+      "path": "assets/cards/art/archer/archer_red_tide_bow_art_v1.png",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_red_tide_bow",
+          "name": "赤潮短弓",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_redline_hunt_art_v1",
+      "path": "assets/cards/art/archer/archer_redline_hunt_art_v1.png",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_redline_hunt",
+          "name": "赤线追猎",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_returning_feather_art_v1",
+      "path": "assets/cards/art/archer/archer_returning_feather_art_v1.png",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_returning_feather",
+          "name": "折返羽刃",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_rotten_net_art_v1",
+      "path": "assets/cards/art/archer/archer_rotten_net_art_v1.png",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_rotten_net",
+          "name": "腐叶陷网",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_shadow_art_v1",
+      "path": "assets/cards/art/archer/archer_shadow_art_v1.webp",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_shadow",
+          "name": "狩影穿枝",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        },
+        {
+          "id": "archer_exile_shot",
+          "name": "逐影放矢",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        },
+        {
+          "id": "a_skyfall_shot",
+          "name": "坠星绝矢",
+          "roleId": "hero_archer",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "a_exile_knives",
+          "name": "影匣飞刀",
+          "roleId": "hero_archer",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "a_exile_map",
+          "name": "流亡路线图",
+          "roleId": "hero_archer",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "a_exile_piercer",
+          "name": "界外穿枝",
+          "roleId": "hero_archer",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "starter_archer_shot",
+          "name": "基础射击",
+          "roleId": "hero_archer",
+          "pool": "starter",
+          "deckId": "starter_archer",
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_shadow_box_art_v1",
+      "path": "assets/cards/art/archer/archer_shadow_box_art_v1.png",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_shadow_box",
+          "name": "影匣齐射",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_shadow_line_art_v1",
+      "path": "assets/cards/art/archer/archer_shadow_line_art_v1.png",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_shadow_line",
+          "name": "影羽切线",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_shift_art_v1",
+      "path": "assets/cards/art/archer/archer_shift_art_v1.webp",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_hidden_arrow",
+          "name": "回风藏箭",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        },
+        {
+          "id": "a_gale_updraft",
+          "name": "上升气流",
+          "roleId": "hero_archer",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "a_gale_crosswind",
+          "name": "侧风判线",
+          "roleId": "hero_archer",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "a_wind_dance",
+          "name": "踏风连步",
+          "roleId": "hero_archer",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_skin_splitter_art_v1",
+      "path": "assets/cards/art/archer/archer_skin_splitter_art_v1.png",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_skin_splitter",
+          "name": "裂肤箭",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_snake_eye_art_v1",
+      "path": "assets/cards/art/archer/archer_snake_eye_art_v1.png",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_snake_eye",
+          "name": "蛇眼标记",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_spore_shadow_art_v1",
+      "path": "assets/cards/art/archer/archer_spore_shadow_art_v1.png",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_spore_shadow",
+          "name": "孢影伏击",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_step_art_v1",
+      "path": "assets/cards/art/archer/archer_step_art_v1.webp",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_pick_feather",
+          "name": "拾羽连步",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        },
+        {
+          "id": "archer_step",
+          "name": "猎手翻步",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        },
+        {
+          "id": "starter_archer_step",
+          "name": "林地回避",
+          "roleId": "hero_archer",
+          "pool": "starter",
+          "deckId": "starter_archer",
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_throat_poison_art_v1",
+      "path": "assets/cards/art/archer/archer_throat_poison_art_v1.png",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_throat_poison",
+          "name": "森毒封喉",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_venom_blood_shift_art_v1",
+      "path": "assets/cards/art/archer/archer_venom_blood_shift_art_v1.png",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_venom_blood_shift",
+          "name": "毒血换羽",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "archer/archer_wind_string_art_v1",
+      "path": "assets/cards/art/archer/archer_wind_string_art_v1.png",
+      "domain": "cards",
+      "theme": "archer",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "archer_wind_string",
+          "name": "风线扣弦",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_aftertone_flow_art_v1",
+      "path": "assets/cards/art/mage/mage_aftertone_flow_art_v1.png",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_aftertone_flow",
+          "name": "余音导流",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_bad_omen_chain_art_v1",
+      "path": "assets/cards/art/mage/mage_bad_omen_chain_art_v1.png",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_bad_omen_chain",
+          "name": "厄兆连珠",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_barrier_art_v1",
+      "path": "assets/cards/art/mage/mage_barrier_art_v1.webp",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_echo_veil",
+          "name": "回声护幕",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        },
+        {
+          "id": "mage_barrier",
+          "name": "魔流庇护",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        },
+        {
+          "id": "m_chant_ward",
+          "name": "恒咏护星",
+          "roleId": "hero_mage",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "starter_mage_heal",
+          "name": "基础愈流",
+          "roleId": "hero_mage",
+          "pool": "starter",
+          "deckId": "starter_mage",
+          "rarity": "普通"
+        },
+        {
+          "id": "starter_mage_omen",
+          "name": "秘仪预兆",
+          "roleId": "hero_mage",
+          "pool": "starter",
+          "deckId": "starter_mage",
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_calamity_tune_art_v1",
+      "path": "assets/cards/art/mage/mage_calamity_tune_art_v1.png",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_calamity_tune",
+          "name": "灾厄调谐",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_cascade_art_v1",
+      "path": "assets/cards/art/mage/mage_cascade_art_v1.webp",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_cascade",
+          "name": "星火连祷",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "s_magic",
+          "name": "镜界回放",
+          "roleId": "hero_mage",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_chant_art_v1",
+      "path": "assets/cards/art/mage/mage_chant_art_v1.webp",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_chant",
+          "name": "遗迹咏唱",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        },
+        {
+          "id": "m_chant_singularity",
+          "name": "星核咏唱",
+          "roleId": "hero_mage",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "m_chant_overflow",
+          "name": "溢星咏唱",
+          "roleId": "hero_mage",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_copy_pierce_art_v1",
+      "path": "assets/cards/art/mage/mage_copy_pierce_art_v1.png",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_copy_pierce",
+          "name": "复写残响",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_corrupt_mist_art_v1",
+      "path": "assets/cards/art/mage/mage_corrupt_mist_art_v1.png",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_corrupt_mist",
+          "name": "蚀星雾",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        },
+        {
+          "id": "starter_mage_mist",
+          "name": "蚀星雾",
+          "roleId": "hero_mage",
+          "pool": "starter",
+          "deckId": "starter_mage",
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_countdown_art_v1",
+      "path": "assets/cards/art/mage/mage_countdown_art_v1.png",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_countdown",
+          "name": "聚焰读秒",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_curse_echo_art_v1",
+      "path": "assets/cards/art/mage/mage_curse_echo_art_v1.webp",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_bloodlet_omen",
+          "name": "断咒预兆",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_dark_moon_scar_art_v1",
+      "path": "assets/cards/art/mage/mage_dark_moon_scar_art_v1.png",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_dark_moon_scar",
+          "name": "暗月留疤",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_decay_wire_art_v1",
+      "path": "assets/cards/art/mage/mage_decay_wire_art_v1.png",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_decay_wire",
+          "name": "腐辉导线",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_double_archive_art_v1",
+      "path": "assets/cards/art/mage/mage_double_archive_art_v1.png",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_double_archive",
+          "name": "双页归档",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_echo_index_art_v1",
+      "path": "assets/cards/art/mage/mage_echo_index_art_v1.png",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_echo_index",
+          "name": "回声索引",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_echo_shift_art_v1",
+      "path": "assets/cards/art/mage/mage_echo_shift_art_v1.png",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_echo_shift",
+          "name": "回声置换",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_ember_art_v1",
+      "path": "assets/cards/art/mage/mage_ember_art_v1.webp",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_ember",
+          "name": "余烬点燃",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        },
+        {
+          "id": "mage_ember_flow",
+          "name": "燃魂导流",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        },
+        {
+          "id": "m_ember_orbit",
+          "name": "余烬星轨",
+          "roleId": "hero_mage",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_flame_art_v1",
+      "path": "assets/cards/art/mage/mage_flame_art_v1.webp",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_flame",
+          "name": "紫焰爆裂",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        },
+        {
+          "id": "m_status_supernova",
+          "name": "万象超新星",
+          "roleId": "hero_mage",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_frost_hex_art_v1",
+      "path": "assets/cards/art/mage/mage_frost_hex_art_v1.png",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_frost_hex",
+          "name": "霜咒压迫",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_glass_recursion_art_v1",
+      "path": "assets/cards/art/mage/mage_glass_recursion_art_v1.png",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_glass_recursion",
+          "name": "玻璃递归",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_lantern_chant_art_v1",
+      "path": "assets/cards/art/mage/mage_lantern_chant_art_v1.png",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_lantern_chant",
+          "name": "灯火续咏",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_loop_art_v1",
+      "path": "assets/cards/art/mage/mage_loop_art_v1.webp",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_loop",
+          "name": "法环回流",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        },
+        {
+          "id": "m_mirror_rewind",
+          "name": "倒带法环",
+          "roleId": "hero_mage",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "m_echo_archive",
+          "name": "回声秘藏",
+          "roleId": "hero_mage",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "m_mirror_hallway",
+          "name": "折廊回声",
+          "roleId": "hero_mage",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_mirror_array_art_v1",
+      "path": "assets/cards/art/mage/mage_mirror_array_art_v1.png",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_mirror_array",
+          "name": "镜阵留声",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_mirror_trial_art_v1",
+      "path": "assets/cards/art/mage/mage_mirror_trial_art_v1.png",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_mirror_trial",
+          "name": "镜页试抄",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        },
+        {
+          "id": "starter_mage_copy",
+          "name": "镜页试抄",
+          "roleId": "hero_mage",
+          "pool": "starter",
+          "deckId": "starter_mage",
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_mute_sand_art_v1",
+      "path": "assets/cards/art/mage/mage_mute_sand_art_v1.png",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_mute_sand",
+          "name": "禁言星砂",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_omen_art_v1",
+      "path": "assets/cards/art/mage/mage_omen_art_v1.webp",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_omen",
+          "name": "星屑预兆",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        },
+        {
+          "id": "mage_blood_orbit",
+          "name": "灼月星轨",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        },
+        {
+          "id": "mage_void_dust",
+          "name": "虚弱星尘",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        },
+        {
+          "id": "m_blood_moon_rite",
+          "name": "暗月仪轨",
+          "roleId": "hero_mage",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "m_calamity_silence",
+          "name": "暗月禁言",
+          "roleId": "hero_mage",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "m_calamity_black_snow",
+          "name": "黑雪预兆",
+          "roleId": "hero_mage",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_orbit_lock_art_v1",
+      "path": "assets/cards/art/mage/mage_orbit_lock_art_v1.png",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_orbit_lock",
+          "name": "星轨锁定",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_radiant_law_art_v1",
+      "path": "assets/cards/art/mage/mage_radiant_law_art_v1.png",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_radiant_law",
+          "name": "辉烬爆律",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_reflect_veil_art_v1",
+      "path": "assets/cards/art/mage/mage_reflect_veil_art_v1.png",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_reflect_veil",
+          "name": "倒影护幕",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_reflection_note_art_v1",
+      "path": "assets/cards/art/mage/mage_reflection_note_art_v1.png",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_reflection_note",
+          "name": "倒影批注",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_second_hand_art_v1",
+      "path": "assets/cards/art/mage/mage_second_hand_art_v1.png",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_second_hand",
+          "name": "第二指针",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_sick_star_art_v1",
+      "path": "assets/cards/art/mage/mage_sick_star_art_v1.png",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_sick_star",
+          "name": "坠星病灶",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_solar_refill_art_v1",
+      "path": "assets/cards/art/mage/mage_solar_refill_art_v1.png",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_solar_refill",
+          "name": "恒星回填",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_spark_art_v1",
+      "path": "assets/cards/art/mage/mage_spark_art_v1.webp",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_spark",
+          "name": "紫焰火花",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        },
+        {
+          "id": "starter_mage_bolt",
+          "name": "基础法弹",
+          "roleId": "hero_mage",
+          "pool": "starter",
+          "deckId": "starter_mage",
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_star_copy_art_v1",
+      "path": "assets/cards/art/mage/mage_star_copy_art_v1.webp",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "m_mirror_twinseal",
+          "name": "双镜印",
+          "roleId": "hero_mage",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "m_mirror_footnote",
+          "name": "镜页脚注",
+          "roleId": "hero_mage",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_star_precharge_art_v1",
+      "path": "assets/cards/art/mage/mage_star_precharge_art_v1.png",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_star_precharge",
+          "name": "星核预充",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_star_surge_art_v1",
+      "path": "assets/cards/art/mage/mage_star_surge_art_v1.png",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_star_surge",
+          "name": "星涌短波",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_star_ward_art_v1",
+      "path": "assets/cards/art/mage/mage_star_ward_art_v1.png",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_star_ward",
+          "name": "残星护文",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_stasis_hex_art_v1",
+      "path": "assets/cards/art/mage/mage_stasis_hex_art_v1.webp",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_venom_sigils",
+          "name": "厄星符阵",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        },
+        {
+          "id": "m_calamity_blacklist",
+          "name": "厄名黑册",
+          "roleId": "hero_mage",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "m_calamity_plague_star",
+          "name": "疫星坠落",
+          "roleId": "hero_mage",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_thunder_art_v1",
+      "path": "assets/cards/art/mage/mage_thunder_art_v1.webp",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_arcane_mark",
+          "name": "紫焰刻印",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        },
+        {
+          "id": "mage_exile_nova",
+          "name": "裂星禁术",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "mage_thunder",
+          "name": "裂界紫雷",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "m_chant_bolt",
+          "name": "星涌雷令",
+          "roleId": "hero_mage",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "s_pierce",
+          "name": "聚星雷矢",
+          "roleId": "hero_mage",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "m_forbidden_comet",
+          "name": "裂星禁术",
+          "roleId": "hero_mage",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "m_chant_lockstar",
+          "name": "锁星终读",
+          "roleId": "hero_mage",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "m_mirror_glassbolt",
+          "name": "镜棱短雷",
+          "roleId": "hero_mage",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_transcribe_ring_art_v1",
+      "path": "assets/cards/art/mage/mage_transcribe_ring_art_v1.png",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_transcribe_ring",
+          "name": "转录法环",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_twin_spark_art_v1",
+      "path": "assets/cards/art/mage/mage_twin_spark_art_v1.png",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_twin_spark",
+          "name": "双生火花",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_void_art_v1",
+      "path": "assets/cards/art/mage/mage_void_art_v1.webp",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_star_copy",
+          "name": "星环复写",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        },
+        {
+          "id": "mage_stasis_hex",
+          "name": "星缚咒印",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "mage_void",
+          "name": "虚空导引",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        },
+        {
+          "id": "m_curse_gravity",
+          "name": "咒星重力",
+          "roleId": "hero_mage",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "a_syn_magic",
+          "name": "回声导线",
+          "roleId": "hero_mage",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "mage/mage_withered_stars_art_v1",
+      "path": "assets/cards/art/mage/mage_withered_stars_art_v1.png",
+      "domain": "cards",
+      "theme": "mage",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "mage_withered_stars",
+          "name": "群星枯萎",
+          "roleId": "hero_mage",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "neutral/neutral_ash_marker_art_v1",
+      "path": "assets/cards/art/neutral/neutral_ash_marker_art_v1.png",
+      "domain": "cards",
+      "theme": "neutral",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "neutral_ash_marker",
+          "name": "灰烬路标",
+          "roleId": "neutral",
+          "pool": "neutral",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "neutral/neutral_blank_pact_art_v1",
+      "path": "assets/cards/art/neutral/neutral_blank_pact_art_v1.png",
+      "domain": "cards",
+      "theme": "neutral",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "neutral_blank_pact",
+          "name": "空白契约",
+          "roleId": "neutral",
+          "pool": "neutral",
+          "deckId": null,
+          "rarity": "普通"
+        },
+        {
+          "id": "starter_blank_contract",
+          "name": "空白契约",
+          "roleId": "hero_warrior",
+          "pool": "starter",
+          "deckId": "starter_warrior",
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "neutral/neutral_bless_art_v1",
+      "path": "assets/cards/art/neutral/neutral_bless_art_v1.webp",
+      "domain": "cards",
+      "theme": "neutral",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "neutral_bless",
+          "name": "圣像微光",
+          "roleId": "neutral",
+          "pool": "neutral",
+          "deckId": null,
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "neutral/neutral_cold_iron_page_art_v1",
+      "path": "assets/cards/art/neutral/neutral_cold_iron_page_art_v1.png",
+      "domain": "cards",
+      "theme": "neutral",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "neutral_cold_iron_page",
+          "name": "冷铁护页",
+          "roleId": "neutral",
+          "pool": "neutral",
+          "deckId": null,
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "neutral/neutral_cycle_art_v1",
+      "path": "assets/cards/art/neutral/neutral_cycle_art_v1.webp",
+      "domain": "cards",
+      "theme": "neutral",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "neutral_cycle",
+          "name": "星轨流转",
+          "roleId": "neutral",
+          "pool": "neutral",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "neutral/neutral_guard_art_v1",
+      "path": "assets/cards/art/neutral/neutral_guard_art_v1.webp",
+      "domain": "cards",
+      "theme": "neutral",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "neutral_guard",
+          "name": "古誓护印",
+          "roleId": "neutral",
+          "pool": "neutral",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "neutral/neutral_sealed_thunder_art_v1",
+      "path": "assets/cards/art/neutral/neutral_sealed_thunder_art_v1.png",
+      "domain": "cards",
+      "theme": "neutral",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "neutral_sealed_thunder",
+          "name": "封雷断页",
+          "roleId": "neutral",
+          "pool": "neutral",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "neutral/neutral_spark_art_v1",
+      "path": "assets/cards/art/neutral/neutral_spark_art_v1.webp",
+      "domain": "cards",
+      "theme": "neutral",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "neutral_spark",
+          "name": "碎星短刃",
+          "roleId": "neutral",
+          "pool": "neutral",
+          "deckId": null,
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_banner_guard_art_v1",
+      "path": "assets/cards/art/warrior/warrior_banner_guard_art_v1.webp",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_banner_guard",
+          "name": "誓旗护阵",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        },
+        {
+          "id": "w_bastion_prayer",
+          "name": "圣壁祷言",
+          "roleId": "hero_warrior",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_bastion_ledger_art_v1",
+      "path": "assets/cards/art/warrior/warrior_bastion_ledger_art_v1.png",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_bastion_ledger",
+          "name": "壁垒记录",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_blood_guard_step_art_v1",
+      "path": "assets/cards/art/warrior/warrior_blood_guard_step_art_v1.png",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_blood_guard_step",
+          "name": "偿血追命",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_blood_tide_art_v1",
+      "path": "assets/cards/art/warrior/warrior_blood_tide_art_v1.png",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_blood_tide",
+          "name": "血潮续斩",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_blood_vow_slash_art_v1",
+      "path": "assets/cards/art/warrior/warrior_blood_vow_slash_art_v1.webp",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_lifebite",
+          "name": "偿命追击",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        },
+        {
+          "id": "warrior_bloodlet_cleave",
+          "name": "断誓开锋",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        },
+        {
+          "id": "warrior_blood_debt",
+          "name": "血债清算",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "warrior_blood_vow_slash",
+          "name": "血誓斩",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        },
+        {
+          "id": "warrior_bleed_edge",
+          "name": "誓血裂口",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        },
+        {
+          "id": "w_blood_siphon",
+          "name": "噬誓回流",
+          "roleId": "hero_warrior",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "w_blood_lastcup",
+          "name": "末杯回命",
+          "roleId": "hero_warrior",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "a_syn_blood",
+          "name": "血海誓斩",
+          "roleId": "hero_warrior",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "w_blood_rain",
+          "name": "赤雨冲锋",
+          "roleId": "hero_warrior",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "starter_warrior_lifebite",
+          "name": "回命斩",
+          "roleId": "hero_warrior",
+          "pool": "starter",
+          "deckId": "starter_warrior",
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_blood_wall_art_v1",
+      "path": "assets/cards/art/warrior/warrior_blood_wall_art_v1.webp",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_blood_drive",
+          "name": "不赦血契",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        },
+        {
+          "id": "warrior_blood_wall",
+          "name": "血痕引路",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        },
+        {
+          "id": "w_blood_drum",
+          "name": "战血鼓点",
+          "roleId": "hero_warrior",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "w_blood_oathmark",
+          "name": "血印再立",
+          "roleId": "hero_warrior",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "w_blood_crucible",
+          "name": "血誓坩埚",
+          "roleId": "hero_warrior",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_boiling_drive_art_v1",
+      "path": "assets/cards/art/warrior/warrior_boiling_drive_art_v1.png",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_boiling_drive",
+          "name": "沸血突进",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_break_form_art_v1",
+      "path": "assets/cards/art/warrior/warrior_break_form_art_v1.png",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_break_form",
+          "name": "破阵换位",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_charge_art_v1",
+      "path": "assets/cards/art/warrior/warrior_charge_art_v1.webp",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_charge",
+          "name": "圣剑突击",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_crest_guard_art_v1",
+      "path": "assets/cards/art/warrior/warrior_crest_guard_art_v1.png",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_crest_guard",
+          "name": "圣徽举盾",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_crimson_pause_art_v1",
+      "path": "assets/cards/art/warrior/warrior_crimson_pause_art_v1.png",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_crimson_pause",
+          "name": "猩红喘息",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_crown_riposte_art_v1",
+      "path": "assets/cards/art/warrior/warrior_crown_riposte_art_v1.webp",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_crown_riposte",
+          "name": "王冠反斩",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "w_counter_crown",
+          "name": "王冠回锋",
+          "roleId": "hero_warrior",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "w_oath_clock",
+          "name": "誓钟回击",
+          "roleId": "hero_warrior",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_debt_scar_art_v1",
+      "path": "assets/cards/art/warrior/warrior_debt_scar_art_v1.png",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_debt_scar",
+          "name": "血债留痕",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_devour_finish_art_v1",
+      "path": "assets/cards/art/warrior/warrior_devour_finish_art_v1.png",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_devour_finish",
+          "name": "噬痕终击",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_disarm_press_art_v1",
+      "path": "assets/cards/art/warrior/warrior_disarm_press_art_v1.png",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_disarm_press",
+          "name": "断腕缴械",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_execute_step_art_v1",
+      "path": "assets/cards/art/warrior/warrior_execute_step_art_v1.png",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_execute_step",
+          "name": "处刑步法",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_final_judgement_art_v1",
+      "path": "assets/cards/art/warrior/warrior_final_judgement_art_v1.webp",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_execute_window",
+          "name": "斩首窗口",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "warrior_exile_judgement",
+          "name": "终誓处刑",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "w_last_verdict",
+          "name": "终誓处刑",
+          "roleId": "hero_warrior",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "w_exec_finisher",
+          "name": "裂冠终斩",
+          "roleId": "hero_warrior",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "w_exec_claim",
+          "name": "认罪剑痕",
+          "roleId": "hero_warrior",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_final_measure_art_v1",
+      "path": "assets/cards/art/warrior/warrior_final_measure_art_v1.png",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_final_measure",
+          "name": "终裁量尺",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_flash_art_v1",
+      "path": "assets/cards/art/warrior/warrior_flash_art_v1.webp",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_duel_cut",
+          "name": "断甲决斗",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        },
+        {
+          "id": "warrior_venom_scar",
+          "name": "破势剑痕",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        },
+        {
+          "id": "warrior_flaw_mark",
+          "name": "破绽刻印",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        },
+        {
+          "id": "warrior_flash",
+          "name": "裂光一闪",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        },
+        {
+          "id": "w_exec_line",
+          "name": "一线断甲",
+          "roleId": "hero_warrior",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "w_exec_silence",
+          "name": "断声处决",
+          "roleId": "hero_warrior",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "w_exec_flash",
+          "name": "白刃瞬裁",
+          "roleId": "hero_warrior",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "a_syn_sword",
+          "name": "破绽断裁",
+          "roleId": "hero_warrior",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "starter_warrior_flaw",
+          "name": "破绽刻印",
+          "roleId": "hero_warrior",
+          "pool": "starter",
+          "deckId": "starter_warrior",
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_follow_art_v1",
+      "path": "assets/cards/art/warrior/warrior_follow_art_v1.webp",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_follow",
+          "name": "誓约追击",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        },
+        {
+          "id": "starter_warrior_strike",
+          "name": "基础斩击",
+          "roleId": "hero_warrior",
+          "pool": "starter",
+          "deckId": "starter_warrior",
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_frenzy_cleave_art_v1",
+      "path": "assets/cards/art/warrior/warrior_frenzy_cleave_art_v1.webp",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_frenzy_cleave",
+          "name": "狂誓裂斩",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "w_exec_rehearse",
+          "name": "刑步预演",
+          "roleId": "hero_warrior",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "w_blood_chain",
+          "name": "赤链二斩",
+          "roleId": "hero_warrior",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_gap_finder_art_v1",
+      "path": "assets/cards/art/warrior/warrior_gap_finder_art_v1.png",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_gap_finder",
+          "name": "破隙检定",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_guard_art_v1",
+      "path": "assets/cards/art/warrior/warrior_guard_art_v1.webp",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_guard",
+          "name": "圣堂守势",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "s_thorns",
+          "name": "圣棘誓壁",
+          "roleId": "hero_warrior",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_heart_probe_art_v1",
+      "path": "assets/cards/art/warrior/warrior_heart_probe_art_v1.png",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_heart_probe",
+          "name": "穿心试探",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_life_contract_art_v1",
+      "path": "assets/cards/art/warrior/warrior_life_contract_art_v1.png",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_life_contract",
+          "name": "回生血契",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_lone_double_art_v1",
+      "path": "assets/cards/art/warrior/warrior_lone_double_art_v1.png",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_lone_double",
+          "name": "孤锋二连",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_martyr_cut_art_v1",
+      "path": "assets/cards/art/warrior/warrior_martyr_cut_art_v1.png",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_martyr_cut",
+          "name": "殉誓斩",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_oath_art_v1",
+      "path": "assets/cards/art/warrior/warrior_oath_art_v1.webp",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_oath",
+          "name": "遗迹立誓",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_oath_charge_art_v1",
+      "path": "assets/cards/art/warrior/warrior_oath_charge_art_v1.png",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_oath_charge",
+          "name": "王誓蓄锋",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_oath_pressure_art_v1",
+      "path": "assets/cards/art/warrior/warrior_oath_pressure_art_v1.png",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_oath_pressure",
+          "name": "誓血缚阵",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_oath_retainer_art_v1",
+      "path": "assets/cards/art/warrior/warrior_oath_retainer_art_v1.webp",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_oath_retainer",
+          "name": "誓约留锋",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_oath_reversal_art_v1",
+      "path": "assets/cards/art/warrior/warrior_oath_reversal_art_v1.png",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_oath_reversal",
+          "name": "誓壁反转",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_oath_watch_art_v1",
+      "path": "assets/cards/art/warrior/warrior_oath_watch_art_v1.png",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_oath_watch",
+          "name": "守誓待击",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        },
+        {
+          "id": "starter_warrior_watch",
+          "name": "守誓待击",
+          "roleId": "hero_warrior",
+          "pool": "starter",
+          "deckId": "starter_warrior",
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_open_vein_art_v1",
+      "path": "assets/cards/art/warrior/warrior_open_vein_art_v1.png",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_open_vein",
+          "name": "禁誓开脉",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_red_return_art_v1",
+      "path": "assets/cards/art/warrior/warrior_red_return_art_v1.png",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_red_return",
+          "name": "残红回锋",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_release_art_v1",
+      "path": "assets/cards/art/warrior/warrior_release_art_v1.webp",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_release",
+          "name": "圣剑解放",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "s_shield",
+          "name": "誓盾出锋",
+          "roleId": "hero_warrior",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_rift_probe_art_v1",
+      "path": "assets/cards/art/warrior/warrior_rift_probe_art_v1.png",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_rift_probe",
+          "name": "裂隙点刺",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_saintbreaker_art_v1",
+      "path": "assets/cards/art/warrior/warrior_saintbreaker_art_v1.png",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_saintbreaker",
+          "name": "圣痕破势",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_scaffold_cut_art_v1",
+      "path": "assets/cards/art/warrior/warrior_scaffold_cut_art_v1.png",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_scaffold_cut",
+          "name": "刑架削锋",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_scar_art_v1",
+      "path": "assets/cards/art/warrior/warrior_scar_art_v1.webp",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_scar",
+          "name": "铁壁圣痕",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "a_syn_array",
+          "name": "守誓阵列",
+          "roleId": "hero_warrior",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "w_oath_fortress",
+          "name": "誓约壁垒",
+          "roleId": "hero_warrior",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_silent_lunge_art_v1",
+      "path": "assets/cards/art/warrior/warrior_silent_lunge_art_v1.png",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_silent_lunge",
+          "name": "默步突刺",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_soul_oath_art_v1",
+      "path": "assets/cards/art/warrior/warrior_soul_oath_art_v1.webp",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_soul_oath",
+          "name": "魂誓换锋",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_steel_pressure_art_v1",
+      "path": "assets/cards/art/warrior/warrior_steel_pressure_art_v1.png",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_steel_pressure",
+          "name": "鸣钢压迫",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_thorn_charge_art_v1",
+      "path": "assets/cards/art/warrior/warrior_thorn_charge_art_v1.webp",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_thorn_charge",
+          "name": "棘甲冲锋",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        },
+        {
+          "id": "w_thorn_judgement",
+          "name": "荆冠审判",
+          "roleId": "hero_warrior",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_vein_oath_art_v1",
+      "path": "assets/cards/art/warrior/warrior_vein_oath_art_v1.png",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_vein_oath",
+          "name": "裂脉誓印",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_verdict_feint_art_v1",
+      "path": "assets/cards/art/warrior/warrior_verdict_feint_art_v1.png",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_verdict_feint",
+          "name": "裁决佯攻",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_wall_art_v1",
+      "path": "assets/cards/art/warrior/warrior_wall_art_v1.webp",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_wall",
+          "name": "盾墙反身",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "starter_warrior_guard",
+          "name": "基础防御",
+          "roleId": "hero_warrior",
+          "pool": "starter",
+          "deckId": "starter_warrior",
+          "rarity": "普通"
+        }
+      ]
+    }
+  ]
+}
