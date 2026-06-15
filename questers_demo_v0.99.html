@@ -5141,9 +5141,9 @@
     }
 
     function isMapNodeReachable(node) {
-        if (!node) return false;
-        if (!state.currentNode) return node.floor === 0;
-        return state.currentNode.children.includes(node.id);
+        return QuestersMapRules.isMapNodeReachable(node, {
+            currentNode: state.currentNode
+        });
     }
 
     function getSelectedMapPreviewNode() {
@@ -5165,17 +5165,14 @@
     }
 
     function getMapNodeRouteStatus(node) {
-        if (!node) return '';
-        if (state.currentNode && state.currentNode.id === node.id) return '当前驻足点';
-        if (state.pathHistory.includes(node.id)) return '已踏过';
-        if (isMapNodeReachable(node)) return '可前往';
-        return '尚未连通';
+        return QuestersMapRules.getMapNodeRouteStatus(node, {
+            currentNode: state.currentNode,
+            pathHistory: state.pathHistory
+        });
     }
 
     function getNodeFloorLabel(node) {
-        if (!node) return '';
-        if (node.type === 'boss') return '首领';
-        return `第 ${Number(node.floor || 0) + 1} 层`;
+        return QuestersMapRules.getNodeFloorLabel(node);
     }
 
     function getMapPreviewVariant(node) {

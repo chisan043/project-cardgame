@@ -102,6 +102,29 @@
         });
     }
 
+    function isMapNodeReachable(node, { currentNode = null } = {}) {
+        if (!node) return false;
+        if (!currentNode) return node.floor === 0;
+        return (currentNode.children || []).includes(node.id);
+    }
+
+    function getMapNodeRouteStatus(node, {
+        currentNode = null,
+        pathHistory = []
+    } = {}) {
+        if (!node) return '';
+        if (currentNode && currentNode.id === node.id) return '当前驻足点';
+        if (pathHistory.includes(node.id)) return '已踏过';
+        if (isMapNodeReachable(node, { currentNode })) return '可前往';
+        return '尚未连通';
+    }
+
+    function getNodeFloorLabel(node) {
+        if (!node) return '';
+        if (node.type === 'boss') return '首领';
+        return `第 ${Number(node.floor || 0) + 1} 层`;
+    }
+
     function generateMapData(options = {}) {
         const mapData = createMapFloors(options);
         connectMapFloors(mapData, options);
@@ -115,6 +138,9 @@
         connectMapNodes,
         createMapFloors,
         generateMapData,
-        getMapNodeType
+        getMapNodeRouteStatus,
+        getMapNodeType,
+        getNodeFloorLabel,
+        isMapNodeReachable
     };
 })(window);
