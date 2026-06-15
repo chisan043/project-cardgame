@@ -2557,11 +2557,16 @@
     }
 
     function getRegisteredCardArtPath(card) {
-        return card?.art || CARD_ART_REGISTRY[card?.name] || null;
+        return QuestersVisualRules.getRegisteredCardArtPath(card, {
+            cardArtRegistry: CARD_ART_REGISTRY
+        });
     }
 
     function getDirectCardArtPath(card) {
-        return getRegisteredCardArtPath(card) || CARD_TYPE_ART_FALLBACK[card?.type] || null;
+        return QuestersVisualRules.getDirectCardArtPath(card, {
+            cardArtRegistry: CARD_ART_REGISTRY,
+            cardTypeArtFallback: CARD_TYPE_ART_FALLBACK
+        });
     }
 
     function normalizeCardEffectText(text = '') {
@@ -2686,9 +2691,14 @@
     })();
 
     function getCardArtPath(card) {
-        const registeredArt = getRegisteredCardArtPath(card);
-        if (registeredArt) return registeredArt;
-        return CARD_EFFECT_ART_BY_SIGNATURE.get(getCardVisualSignature(card)) || getDirectCardArtPath(card);
+        return QuestersVisualRules.getCardArtPath(card, {
+            cardArtRegistry: CARD_ART_REGISTRY,
+            cardEffectArtBySignature: CARD_EFFECT_ART_BY_SIGNATURE,
+            cardFrameAssets: CARD_FRAME_ASSETS,
+            cardFrameThemeByName: CARD_FRAME_THEME_BY_NAME,
+            cardTypeArtFallback: CARD_TYPE_ART_FALLBACK,
+            normalizeTags: normalizeTagConflicts
+        });
     }
 
     function getCardNameVariantWord(variantTags) {

@@ -55,6 +55,21 @@
         return cardFrameAssets[theme] || cardFrameAssets.neutral || '';
     }
 
+    function getRegisteredCardArtPath(card, {
+        cardArtRegistry = {}
+    } = {}) {
+        return card?.art || cardArtRegistry[card?.name] || null;
+    }
+
+    function getDirectCardArtPath(card, {
+        cardArtRegistry = {},
+        cardTypeArtFallback = {}
+    } = {}) {
+        return getRegisteredCardArtPath(card, { cardArtRegistry })
+            || cardTypeArtFallback[card?.type]
+            || null;
+    }
+
     function getCardTextDensityClass({
         descHtml = '',
         tagCount = 0
@@ -118,6 +133,18 @@
 
     function getCardVisualSignature(card, options = {}) {
         return `${getCardFrameTheme(card, options)}|${getCardEffectSignature(card, options)}`;
+    }
+
+    function getCardArtPath(card, {
+        cardArtRegistry = {},
+        cardEffectArtBySignature = new Map(),
+        cardTypeArtFallback = {},
+        ...signatureOptions
+    } = {}) {
+        const registeredArt = getRegisteredCardArtPath(card, { cardArtRegistry });
+        if (registeredArt) return registeredArt;
+        return cardEffectArtBySignature.get(getCardVisualSignature(card, signatureOptions))
+            || getDirectCardArtPath(card, { cardArtRegistry, cardTypeArtFallback });
     }
 
     function getRelicIconPath(relic, {
@@ -358,11 +385,14 @@
     }
 
     global.QuestersVisualRules = {
+        getCardArtPath,
         getCardBuffVfxKind,
+        getDirectCardArtPath,
         getCardEffectSignature,
         getCardFramePath,
         getCardFrameTheme,
         getCardNameFamilyKey,
+        getRegisteredCardArtPath,
         getCardTextDensityClass,
         getCardVisualSignature,
         getEnemyAssetSlug,
