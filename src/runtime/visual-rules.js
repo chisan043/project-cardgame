@@ -146,6 +146,14 @@
         }).join('、');
     }
 
+    function formatRatioText(ratio) {
+        const percent = Math.round((Number(ratio) || 0) * 100);
+        if (percent === 100) return '等量';
+        if (percent === 200) return '2倍';
+        if (percent % 100 === 0) return `${percent / 100}倍`;
+        return `${percent}%`;
+    }
+
     function normalizeCardEffectText(text = '') {
         return String(text)
             .replace(/<br\s*\/?>/gi, '\n')
@@ -504,6 +512,7 @@
 
     global.QuestersVisualRules = {
         applyCardNameVariant,
+        formatRatioText,
         getCardArtPath,
         getCardBottomTagList,
         getCardBuffVfxKind,
