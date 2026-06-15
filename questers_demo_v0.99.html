@@ -2659,15 +2659,13 @@
     }
 
     function getCardDisplayName(card) {
-        if (!card) return '';
-        if (card.displayName) return card.displayName;
-        if (card.isStarter || card.isSpecial || card.isJunk || card.isKnife) return card.name || '';
-        const signature = getCardVisualSignature(card);
-        const exactName = CARD_EFFECT_NAME_BY_SIGNATURE.get(signature);
-        if (exactName && (exactName.count > 1 || exactName.name !== card.name)) return exactName.name;
-        const family = CARD_NAME_FAMILY_BY_KEY.get(getCardNameFamilyKey(card));
-        if (!family || family.signature === signature) return card.name || '';
-        return getCardVariantName(card, family);
+        return QuestersVisualRules.getCardDisplayName(card, {
+            cardEffectNameBySignature: CARD_EFFECT_NAME_BY_SIGNATURE,
+            cardFrameAssets: CARD_FRAME_ASSETS,
+            cardFrameThemeByName: CARD_FRAME_THEME_BY_NAME,
+            cardNameFamilyByKey: CARD_NAME_FAMILY_BY_KEY,
+            normalizeTags: normalizeTagConflicts
+        });
     }
 
     function getCardFrameTheme(card) {

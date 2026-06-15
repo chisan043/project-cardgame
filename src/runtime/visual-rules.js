@@ -218,6 +218,22 @@
         return applyCardNameVariant(family.name, getCardNameVariantWord(variantTags));
     }
 
+    function getCardDisplayName(card, {
+        cardEffectNameBySignature = new Map(),
+        cardNameFamilyByKey = new Map(),
+        ...signatureOptions
+    } = {}) {
+        if (!card) return '';
+        if (card.displayName) return card.displayName;
+        if (card.isStarter || card.isSpecial || card.isJunk || card.isKnife) return card.name || '';
+        const signature = getCardVisualSignature(card, signatureOptions);
+        const exactName = cardEffectNameBySignature.get(signature);
+        if (exactName && (exactName.count > 1 || exactName.name !== card.name)) return exactName.name;
+        const family = cardNameFamilyByKey.get(getCardNameFamilyKey(card, signatureOptions));
+        if (!family || family.signature === signature) return card.name || '';
+        return getCardVariantName(card, family, signatureOptions);
+    }
+
     function getCardArtPath(card, {
         cardArtRegistry = {},
         cardEffectArtBySignature = new Map(),
@@ -472,6 +488,7 @@
         getCardArtPath,
         getCardBuffVfxKind,
         getDirectCardArtPath,
+        getCardDisplayName,
         getCardEffectSignature,
         getCardFramePath,
         getCardFrameTheme,
