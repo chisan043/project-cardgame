@@ -2308,7 +2308,7 @@
 <script src="src/runtime/state-rules.js?v=20260615-runtime-state-rules-character-stats"></script>
 <script src="src/runtime/card-rules.js?v=20260615-runtime-card-rules"></script>
 <script src="src/runtime/battle-rules.js?v=20260615-runtime-battle-rules"></script>
-<script src="src/runtime/visual-rules.js?v=20260616-runtime-card-visual-indexes"></script>
+<script src="src/runtime/visual-rules.js?v=20260616-noframe-status-icons"></script>
 <script src="src/runtime/map-rules.js?v=20260615-runtime-map-node-view-model"></script>
 <script src="src/runtime/reward-rules.js?v=20260615-runtime-shop-spend-rules"></script>
 <script>
@@ -2980,6 +2980,7 @@
     const RUN_SAVE_KEY = 'mirage-scrolls-demo-run-v1';
     const AVATAR_ASSET_VERSION = '20260521-head-v2';
     const RELIC_ICON_ASSET_VERSION = '20260615-noframe-relic-icons';
+    const STATUS_ICON_ASSET_VERSION = '20260616-noframe-status-icons';
     const HUD_CENTER_BINDING_BY_ID = {
         'ui-hp': 'player-hp',
         'ui-mp': 'energy',
@@ -3103,6 +3104,10 @@
     function withRelicIconVersion(src) {
         if (!src) return src;
         return `${src}${src.includes('?') ? '&' : '?'}v=${RELIC_ICON_ASSET_VERSION}`;
+    }
+    function withStatusIconVersion(src) {
+        if (!src) return src;
+        return `${src}${src.includes('?') ? '&' : '?'}v=${STATUS_ICON_ASSET_VERSION}`;
     }
     function resolveRelicIconPath(relic) {
         return withRelicIconVersion(QuestersVisualRules.getRelicIconPath(relic, {
@@ -3859,7 +3864,7 @@
     }
 
     function getStatusIconPath(id) {
-        return QuestersVisualRules.getStatusIconPath(id);
+        return withStatusIconVersion(QuestersVisualRules.getStatusIconPath(id));
     }
 
     function renderHudStatusIcons(target) {

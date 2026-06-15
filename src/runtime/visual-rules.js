@@ -50,7 +50,8 @@
     const MAGE_CHANT_BUFF_CARD_IDS = ['m_chant_singularity', 'm_echo_archive', 'm_arcane_aegis'];
     const STATUS_ICON_IDS = new Set([
         'armor', 'thorns', 'str', 'charge', 'echo', 'blood', 'enchant', 'guard',
-        'counter', 'poison', 'bleed', 'burn', 'stun', 'curse', 'vuln', 'weak'
+        'counter', 'poison', 'bleed', 'burn', 'stun', 'curse', 'vuln', 'weak',
+        'frenzy', 'blood-debt', 'chant', 'aim', 'sidestep'
     ]);
     const WARRIOR_SHIELD_BUFF_CARD_IDS = ['s_thorns', 'a_syn_array', 'w_bastion_prayer', 'w_oath_fortress'];
 
