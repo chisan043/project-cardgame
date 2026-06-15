@@ -2508,10 +2508,11 @@
 
     function getCardBuildRewardWeight(card, primaryBuildTag) {
         const tags = getCardBuildTags(card);
-        if (!tags.length) return 1;
-        const boost = getBuildRewardBoostMultiplier(tags);
-        if (primaryBuildTag && tags.includes(primaryBuildTag)) return 4.2 * boost;
-        return 0.95 * boost;
+        return QuestersRewardRules.getBuildRewardWeight({
+            tags,
+            primaryBuildTag,
+            boost: getBuildRewardBoostMultiplier(tags)
+        });
     }
 
     function generateBuildRewardCard(mode, used = new Set(), primaryBuildTag = getPrimaryBuildTag()) {

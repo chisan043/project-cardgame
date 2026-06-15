@@ -215,6 +215,16 @@
         return candidates;
     }
 
+    function getBuildRewardWeight({
+        tags = [],
+        primaryBuildTag = null,
+        boost = 1
+    } = {}) {
+        if (!tags.length) return 1;
+        if (primaryBuildTag && tags.includes(primaryBuildTag)) return 4.2 * boost;
+        return 0.95 * boost;
+    }
+
     function getRewardCardCandidates({
         allCards = [],
         rarity = null,
@@ -260,6 +270,7 @@
         getBattleRewardSkipGold,
         getBattleWinRewards,
         getBuildRewardCandidates,
+        getBuildRewardWeight,
         getCardChoiceKey,
         getDeckBuildProfile,
         getPrimaryBuildTag,
