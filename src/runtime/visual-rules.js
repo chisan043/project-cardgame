@@ -260,6 +260,19 @@
         }).join('');
     }
 
+    function renderHudRelicIcons(relics = [], {
+        getDisplayRelicDesc = relic => relic?.desc || '',
+        getTooltipTextWithKeywords = text => text,
+        renderRelicVisual = relic => relic?.icon || ''
+    } = {}) {
+        return relics.map(relic => (
+            `<div class="relic-icon">` +
+                `${renderRelicVisual(relic)}` +
+                `<div class="status-tooltip"><span style="color:var(--gold); font-weight:bold;">${relic.name}</span><br>${getTooltipTextWithKeywords(getDisplayRelicDesc(relic))}</div>` +
+            `</div>`
+        )).join('');
+    }
+
     function normalizeCardEffectText(text = '') {
         return String(text)
             .replace(/<br\s*\/?>/gi, '\n')
@@ -660,6 +673,7 @@
         getStatusIconPath,
         getShieldHitVfxLayout,
         normalizeCardEffectText,
+        renderHudRelicIcons,
         renderHudStatusIcons,
         renderRelicCard,
         renderRelicVisual

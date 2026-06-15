@@ -4040,12 +4040,11 @@
     }
 
     function renderHudRelicIcons() {
-        return state.relics.map(relic => (
-            `<div class="relic-icon">` +
-                `${renderRelicVisual(relic)}` +
-                `<div class="status-tooltip"><span style="color:var(--gold); font-weight:bold;">${relic.name}</span><br>${getTooltipTextWithKeywords(getDisplayRelicDesc(relic))}</div>` +
-            `</div>`
-        )).join('');
+        return QuestersVisualRules.renderHudRelicIcons(state.relics, {
+            getDisplayRelicDesc,
+            getTooltipTextWithKeywords,
+            renderRelicVisual
+        });
     }
 
     function ensureBattleHudOverlayLayers() {
