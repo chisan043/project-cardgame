@@ -2537,18 +2537,12 @@
     function getWeightedSpecialEpicPool(characterId = state.player.characterId) {
         const source = getSpecialEpicPool(characterId);
         const primaryBuildTag = getPrimaryBuildTag();
-        if (!primaryBuildTag) return source;
-        const weighted = [];
-        source.forEach(card => {
-            const tags = getCardBuildTags(card, characterId);
-            const weight = QuestersRewardRules.getSpecialEpicRewardWeight({
-                tags,
-                primaryBuildTag,
-                boost: getBuildRewardBoostMultiplier(tags)
-            });
-            for (let i = 0; i < weight; i++) weighted.push(card);
+        return QuestersRewardRules.getWeightedSpecialEpicPool({
+            specialPool: source,
+            primaryBuildTag,
+            getCardBuildTags: card => getCardBuildTags(card, characterId),
+            getBoostMultiplier: tags => getBuildRewardBoostMultiplier(tags)
         });
-        return weighted.length ? weighted : source;
     }
 
     function cloneCardDefinition(cardDef) {

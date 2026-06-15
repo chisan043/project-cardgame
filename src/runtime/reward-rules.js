@@ -284,6 +284,26 @@
         return Math.max(1, Math.round(baseWeight * boost));
     }
 
+    function getWeightedSpecialEpicPool({
+        specialPool = [],
+        primaryBuildTag = null,
+        getCardBuildTags = () => [],
+        getBoostMultiplier = () => 1
+    } = {}) {
+        if (!primaryBuildTag) return specialPool;
+        const weighted = [];
+        specialPool.forEach(card => {
+            const tags = getCardBuildTags(card);
+            const weight = getSpecialEpicRewardWeight({
+                tags,
+                primaryBuildTag,
+                boost: getBoostMultiplier(tags, card)
+            });
+            for (let i = 0; i < weight; i++) weighted.push(card);
+        });
+        return weighted.length ? weighted : specialPool;
+    }
+
     global.QuestersRewardRules = {
         deckHasCardMatch,
         deckHasTag,
@@ -305,6 +325,7 @@
         getRewardSlotPlan,
         getSpecialEpicRewardChance,
         getSpecialEpicRewardWeight,
+        getWeightedSpecialEpicPool,
         getShopCopyPrice,
         rollRewardRarity,
         rollWeighted
