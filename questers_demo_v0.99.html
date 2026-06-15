@@ -2713,13 +2713,12 @@
         const classPool = getCharacterCardPool();
         const allCards = [...classPool, ...NEUTRAL_CARD_POOL];
         const rarity = rollRewardRarity();
-        const candidates = QuestersRewardRules.getRewardCardCandidates({
+        const picked = QuestersRewardRules.pickRewardCardCandidate({
             allCards,
             rarity,
             used
         });
-        if (!candidates.length) return null;
-        return cloneCardDefinition(candidates[Math.floor(Math.random() * candidates.length)]);
+        return picked ? cloneCardDefinition(picked) : null;
     }
 
     function deckHasTag(tag, deck = state.deck) {
@@ -2738,14 +2737,12 @@
         if (!spec) return null;
         const classPool = getCharacterCardPool();
         const allCards = [...classPool, ...NEUTRAL_CARD_POOL];
-        let candidates = QuestersRewardRules.getRewardBridgeCandidates({
+        const picked = QuestersRewardRules.pickRewardBridgeCard({
             allCards,
             bridgeSpec: spec,
             used
         });
-        if (!candidates.length) return null;
-        candidates = candidates.sort(() => 0.5 - Math.random());
-        return cloneCardDefinition(candidates[0]);
+        return picked ? cloneCardDefinition(picked) : null;
     }
 
     function getCardChoiceKey(card) {

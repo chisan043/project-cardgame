@@ -248,6 +248,25 @@
         return candidates;
     }
 
+    function pickRandomCandidate(pool = [], rng = Math.random) {
+        if (!pool.length) return null;
+        const index = Math.min(pool.length - 1, Math.floor(rng() * pool.length));
+        return pool[index];
+    }
+
+    function pickRewardCardCandidate({
+        allCards = [],
+        rarity = null,
+        used = new Set(),
+        rng = Math.random
+    } = {}) {
+        return pickRandomCandidate(getRewardCardCandidates({
+            allCards,
+            rarity,
+            used
+        }), rng);
+    }
+
     function getRewardBridgeCandidates({
         allCards = [],
         bridgeSpec = null,
@@ -255,6 +274,19 @@
     } = {}) {
         if (!bridgeSpec) return [];
         return allCards.filter(card => bridgeSpec.match(card) && !used.has(getCardChoiceKey(card)));
+    }
+
+    function pickRewardBridgeCard({
+        allCards = [],
+        bridgeSpec = null,
+        used = new Set(),
+        rng = Math.random
+    } = {}) {
+        return pickRandomCandidate(getRewardBridgeCandidates({
+            allCards,
+            bridgeSpec,
+            used
+        }), rng);
     }
 
     function getRewardSlotPlan({ primaryBuildTag = null } = {}) {
@@ -327,6 +359,8 @@
         getSpecialEpicRewardWeight,
         getWeightedSpecialEpicPool,
         getShopCopyPrice,
+        pickRewardBridgeCard,
+        pickRewardCardCandidate,
         rollRewardRarity,
         rollWeighted
     };
