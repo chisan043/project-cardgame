@@ -45,6 +45,13 @@
         );
     }
 
+    function getFrameSequenceLeadDuration(frames = [], frameIndex = 0) {
+        const safeIndex = Math.max(0, Math.min(Number(frameIndex) || 0, frames.length));
+        return frames
+            .slice(0, safeIndex)
+            .reduce((sum, frame) => sum + (Number(frame.duration) || 0), 0);
+    }
+
     function getEnemyAttackAnimationTiming(frames = [], {
         defaultFirstFrameDuration = 110,
         defaultSecondFrameDuration = 120,
@@ -102,6 +109,7 @@
         getEnemyAvatarPath,
         getEnemyVisualPath,
         getFrameSequenceDuration,
+        getFrameSequenceLeadDuration,
         getPlayerAttackAnimationTiming
     };
 })(window);
