@@ -3129,9 +3129,9 @@
     }
 
     function addBattleActionLog(side, title, detail) {
-        state.battleLog = state.battleLog || [];
-        state.battleLog.unshift({ side, title, detail });
-        state.battleLog = state.battleLog.slice(0, ACTION_LOG_LIMIT);
+        state.battleLog = QuestersBattleRules.appendBattleActionLogEntry(state.battleLog, { side, title, detail }, {
+            limit: ACTION_LOG_LIMIT
+        });
         renderBattleActionLog();
     }
 

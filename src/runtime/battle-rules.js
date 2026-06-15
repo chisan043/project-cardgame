@@ -70,6 +70,12 @@
         };
     }
 
+    function appendBattleActionLogEntry(entries = [], entry = {}, {
+        limit = 30
+    } = {}) {
+        return [entry, ...(Array.isArray(entries) ? entries : [])].slice(0, Math.max(1, limit));
+    }
+
     function addStatusGainLines(parts, keys, beforeStatuses = {}, afterStatuses = {}) {
         keys.forEach(key => {
             const statusKey = key.replace(/^p_/, '');
@@ -229,6 +235,7 @@
     }
 
     global.QuestersBattleRules = {
+        appendBattleActionLogEntry,
         cleanupAfterBattleWin,
         describeEnemyMoveResult,
         describePlayerCardResult,
