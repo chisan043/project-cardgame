@@ -3350,12 +3350,10 @@
         img.remove();
     }
     function renderRelicVisual(relic, options = {}) {
-        const fallbackClass = options.fallbackClass || '';
-        const imgClass = options.imgClass || '';
-        const wrapperClass = options.wrapperClass || '';
-        const fallback = relic?.icon || '❔';
-        const src = resolveRelicIconPath(relic);
-        return `<span class="relic-visual ${wrapperClass}"><span class="relic-fallback ${fallbackClass}">${fallback}</span><img class="relic-image ${imgClass}" src="${src}" alt="${relic?.name || '遗物'}" loading="lazy" onload="markRelicImageLoaded(this)" onerror="fallbackRelicImage(this)"></span>`;
+        return QuestersVisualRules.renderRelicVisual(relic, {
+            ...options,
+            resolveRelicIconPath
+        });
     }
     function renderRelicCard(relic, options = {}) {
         const iconClass = options.iconClass || '';
