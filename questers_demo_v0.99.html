@@ -4966,7 +4966,7 @@
         state.mapData.forEach((floor, fIdx) => {
             const floorLayout = QuestersMapRules.getMapFloorLayout(fIdx);
             const floorDiv = document.createElement('div'); floorDiv.className = 'map-floor'; floorDiv.style.position = 'absolute'; floorDiv.style.bottom = floorLayout.floorBottom + 'px';
-            const label = document.createElement('div'); label.className = 'floor-label'; label.style.bottom = floorLayout.labelBottom + 'px'; label.innerText = fIdx === state.mapData.length - 1 ? '首领' : `第 ${fIdx + 1} 层`; root.appendChild(label);
+            const label = document.createElement('div'); label.className = 'floor-label'; label.style.bottom = floorLayout.labelBottom + 'px'; label.innerText = QuestersMapRules.getMapFloorLabel(fIdx, state.mapData.length); root.appendChild(label);
             floor.nodes.forEach(node => {
                 const slotLayout = QuestersMapRules.getMapNodeSlotLayout(node);
                 const slot = document.createElement('div'); slot.className = 'node-slot'; slot.style.left = slotLayout.leftPercent + '%';
@@ -4985,10 +4985,10 @@
                 nodeDiv.onmouseenter = () => selectMapPreviewNode(node);
                 nodeDiv.onpointerenter = () => selectMapPreviewNode(node);
                 nodeDiv.onclick = () => selectMapPreviewNode(node);
-                if(routeState.isReachable) nodeDiv.ondblclick = () => handleNodeClick(node);
-                if(routeState.isReachable || routeState.isCurrent) {
+                if(routeState.canEnter) nodeDiv.ondblclick = () => handleNodeClick(node);
+                if(routeState.canFocus) {
                     nodeDiv.onfocus = () => updateMapDetailPanel(node);
-                    if(routeState.isReachable) nodeDiv.tabIndex = 0;
+                    if(routeState.tabIndex !== null) nodeDiv.tabIndex = routeState.tabIndex;
                 }
                 const nodeLabel = document.createElement('div'); nodeLabel.className = 'node-label'; nodeLabel.innerText = meta.label;
                 slot.appendChild(nodeDiv); slot.appendChild(nodeLabel); floorDiv.appendChild(slot);

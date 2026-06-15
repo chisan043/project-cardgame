@@ -266,6 +266,9 @@
             isCurrent,
             isPassed,
             isReachable,
+            canEnter: isReachable,
+            canFocus: isReachable || isCurrent,
+            tabIndex: isReachable ? 0 : null,
             className: `${isPassed ? 'passed' : ''} ${isCurrent ? 'current' : ''} ${isReachable ? 'reachable' : ''}`.trim()
         };
     }
@@ -300,6 +303,11 @@
             floorBottom,
             labelBottom: floorBottom - labelOffset
         };
+    }
+
+    function getMapFloorLabel(floorIndex = 0, floorCount = 0) {
+        const normalizedFloorIndex = Number(floorIndex) || 0;
+        return normalizedFloorIndex === (Number(floorCount) || 0) - 1 ? '首领' : `第 ${normalizedFloorIndex + 1} 层`;
     }
 
     function getMapAutoScrollTargetSelector({
@@ -365,6 +373,7 @@
         getMapAutoScrollTop,
         getMapContainerHeight,
         getMapDetailPanelState,
+        getMapFloorLabel,
         getMapFloorLayout,
         getMapNodeRenderState,
         getMapNodeRouteStatus,
