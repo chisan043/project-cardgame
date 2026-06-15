@@ -159,6 +159,10 @@
         return String(numeric).padStart(2, '0');
     }
 
+    function escapeAttr(value) {
+        return String(value || '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+    }
+
     function getEnergyPipLayout({
         currentEnergy = 0,
         energyMetrics = {},
@@ -296,6 +300,18 @@
                 `<div class="status-tooltip"><span style="color:var(--gold); font-weight:bold;">${relic.name}</span><br>${getTooltipTextWithKeywords(getDisplayRelicDesc(relic))}</div>` +
             `</div>`
         )).join('');
+    }
+
+    function renderBattleActionLogEntries(entries = [], {
+        emptyText = '等待交锋。'
+    } = {}) {
+        if (!entries.length) return `<div class="battle-action-empty">${escapeAttr(emptyText)}</div>`;
+        return entries.map(entry => `
+            <div class="battle-action-entry is-${escapeAttr(entry.side || 'system')}">
+                <div class="battle-action-entry-title">${escapeAttr(entry.title)}</div>
+                <div class="battle-action-entry-detail">${escapeAttr(entry.detail)}</div>
+            </div>
+        `).join('');
     }
 
     function normalizeCardEffectText(text = '') {
@@ -657,6 +673,7 @@
     global.QuestersVisualRules = {
         applyCardNameVariant,
         cleanEffectDisplayText,
+        escapeAttr,
         formatRatioText,
         formatTurnCounterValue,
         getCardArtPath,
@@ -699,6 +716,7 @@
         getStatusIconPath,
         getShieldHitVfxLayout,
         normalizeCardEffectText,
+        renderBattleActionLogEntries,
         renderHudRelicIcons,
         renderHudStatusIcons,
         renderRelicCard,

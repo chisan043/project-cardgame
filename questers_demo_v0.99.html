@@ -2795,7 +2795,7 @@
     }
 
     function escapeAttr(value) {
-        return String(value || '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+        return QuestersVisualRules.escapeAttr(value);
     }
 
     function upgradeCard(card) {
@@ -3159,17 +3159,7 @@
     function renderBattleActionLog() {
         const list = document.getElementById('battle-action-log-list');
         if (!list) return;
-        const entries = state.battleLog || [];
-        if (!entries.length) {
-            list.innerHTML = `<div class="battle-action-empty">等待交锋。</div>`;
-            return;
-        }
-        list.innerHTML = entries.map(entry => `
-            <div class="battle-action-entry is-${escapeAttr(entry.side || 'system')}">
-                <div class="battle-action-entry-title">${escapeAttr(entry.title)}</div>
-                <div class="battle-action-entry-detail">${escapeAttr(entry.detail)}</div>
-            </div>
-        `).join('');
+        list.innerHTML = QuestersVisualRules.renderBattleActionLogEntries(state.battleLog || []);
     }
 
     function describePlayerCardResult(card, before) {
