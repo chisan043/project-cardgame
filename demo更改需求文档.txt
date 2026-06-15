@@ -75,7 +75,7 @@
 
 当前战斗区：
 
-* 我方用固定 `hero.png` 裁切显示
+* 我方已改为从 `assets/characters/<role>/` 下的正式角色资源选择战斗立绘
 * 敌方主体仍由 `enemy-avatar` 文本 / emoji 驱动
 * 背景主要依赖渐变和透视网格
 * VFX 仍是几何 slash / flash 原型
@@ -363,8 +363,8 @@ const CHARACTERS = {
     cardPoolId: "pool_warrior",
     uiAccent: "blue_gold",
     visuals: {
-      selectPortrait: "assets/characters/warrior/select.png",
-      battleBackIdle: "assets/characters/warrior/back_idle.png"
+      selectPortrait: "assets/characters/warrior/select_portrait_v1.webp",
+      battleBackIdle: "assets/characters/warrior/battle_back_idle_v1.webp"
     }
   }
 };
@@ -442,13 +442,13 @@ const CHARACTERS = {
 
 优先承接：
 
-* `UI/教堂彩窗赛璐璐/战斗HUD/我方铭牌_v1.png`
-* `UI/教堂彩窗赛璐璐/战斗HUD/敌方铭牌_v1.png`
-* `UI/教堂彩窗赛璐璐/战斗HUD/通用条框_v1.png`
-* `UI/教堂彩窗赛璐璐/战斗HUD/生命条填充_v2.png`
-* `UI/教堂彩窗赛璐璐/战斗HUD/护盾条填充_v2.png`
-* `UI/教堂彩窗赛璐璐/战斗HUD/五段能量表_空槽_v2.png`
-* `UI/教堂彩窗赛璐璐/战斗HUD/单格能量晶片_点亮_v2.png`
+* `assets/ui/hud/player_panel/player_nameplate_shell_asset_v1.webp`
+* `assets/ui/hud/enemy_panel/enemy_nameplate_shell_asset_v1.webp`
+* `assets/ui/hud/player_panel/player_hp_bar_shell_asset_v1.webp`
+* `assets/ui/hud/player_panel/player_hp_bar_long_fill_editor_asset_v1.webp`
+* `assets/ui/hud/player_panel/player_armor_bar_shell_asset_v1.webp`
+* `assets/ui/hud/player_panel/player_energy_tray_asset_v1.webp`
+* `assets/ui/hud/player_panel/player_energy_gem_on_asset_v1.webp`
 
 ⸻
 
@@ -463,10 +463,10 @@ const CHARACTER_VISUALS = {
     side: "player",
     anchor: "left-bottom",
     poses: {
-      idle_back: "assets/characters/warrior/back_idle.png",
-      attack_back: "assets/characters/warrior/back_attack.png",
-      skill_back: "assets/characters/warrior/back_skill.png",
-      hurt_back: "assets/characters/warrior/back_hurt.png"
+      idle_back: "assets/characters/warrior/battle_back_idle_v1.webp",
+      attack_back: "assets/characters/warrior/battle_back_attack_01_v2.webp",
+      skill_back: "assets/characters/warrior/battle_back_skill_cast_v1.webp",
+      hurt_back: "assets/characters/warrior/battle_back_hurt_01_v2.webp"
     }
   },
   enemy_forest_slime: {
@@ -474,10 +474,10 @@ const CHARACTER_VISUALS = {
     side: "enemy",
     anchor: "right-top",
     poses: {
-      idle_front: "assets/characters/enemies/slime/front_idle.png",
-      attack_front: "assets/characters/enemies/slime/front_attack.png",
-      skill_front: "assets/characters/enemies/slime/front_skill.png",
-      hurt_front: "assets/characters/enemies/slime/front_hurt.png"
+      idle_front: "assets/enemies/battle/sick_slime_battle_v1.webp",
+      attack_front: "assets/enemies/attack/sick_slime_attack_01_v1.webp",
+      skill_front: "assets/enemies/attack/sick_slime_attack_02_v1.webp",
+      hurt_front: "assets/enemies/portraits/sick_slime_portrait_v1.webp"
     }
   }
 };
@@ -485,7 +485,7 @@ const CHARACTER_VISUALS = {
 
 8.2 改动要求
 
-* 移除我方固定 `hero.png`
+* 移除旧的固定英雄占位图，统一从 `assets/characters/<role>/` 解析
 * 移除敌方 `enemy-avatar` emoji 主体
 * 战斗动画逐步改为 pose 切换
 * 为三角色共用系统留接口
@@ -506,12 +506,12 @@ const CHARACTER_VISUALS = {
 ```js
 const BATTLE_BACKGROUNDS = {
   ancient_forest: {
-    image: "assets/bg/battle/ancient_forest.jpg",
+    image: "assets/scenes/battle/ancient_forest_day_v1.webp",
     tone: "green",
     uiSkin: "stained_cel_forest"
   },
   ruins_hall: {
-    image: "assets/bg/battle/ruins_hall.jpg",
+    image: "assets/scenes/battle/stone_ruins_day_v1.webp",
     tone: "stone",
     uiSkin: "stained_cel_ruins"
   }
@@ -768,31 +768,31 @@ UI 皮肤至少拆为：
 
 15.1 角色
 
-* `warrior_back_idle.png`
-* `warrior_back_attack.png`
-* `mage_back_skill.png`
-* `elf_back_idle.png`
-* `slime_front_idle.png`
-* `slime_front_attack.png`
+* `warrior/battle_back_idle_v1`
+* `warrior/battle_back_attack_01_v2`
+* `mage/battle_back_skill_cast_v1`
+* `archer/battle_back_idle_v1`
+* `sick_slime_battle_v1`
+* `sick_slime_attack_01_v1`
 
 15.2 背景
 
-* `bg_battle_ancient_forest_day.jpg`
-* `bg_battle_ruins_hall_dusk.jpg`
-* `bg_map_starpath_01.jpg`
+* `ancient_forest_day_v1`
+* `stone_ruins_day_v1`
+* `town_distant_day_v1`
 
 15.3 卡图
 
-* `card_art_holy_slash_01.jpg`
-* `card_art_fire_seal_01.jpg`
+* `warrior_charge_art_v1`
+* `mage_flame_art_v1`
 
 15.4 UI
 
-* `ui_stained_button_blue_gold_v1.png`
-* `ui_stained_nameplate_player_v1.png`
-* `ui_stained_nameplate_enemy_v1.png`
-* `ui_stained_hp_fill_v2.png`
-* `ui_stained_energy_slot_v2.png`
+* `end_turn_button_shell_asset_v1`
+* `player_nameplate_shell_asset_v1`
+* `enemy_nameplate_shell_asset_v1`
+* `player_hp_bar_long_fill_editor_asset_v1`
+* `player_energy_tray_asset_v1`
 
 ⸻
 
