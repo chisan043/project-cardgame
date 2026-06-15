@@ -10,6 +10,13 @@
         return JSON.parse(JSON.stringify(value));
     }
 
+    function ensureBattleCardInstanceId(card, { rng = Math.random } = {}) {
+        if (!card) return card;
+        if (!card.instId) card.instId = createId(rng);
+        if (!Array.isArray(card.tags)) card.tags = [];
+        return card;
+    }
+
     function normalizeTags(tags, normalizeTagConflicts = tags => tags) {
         return normalizeTagConflicts(Array.isArray(tags) ? tags : []);
     }
@@ -115,6 +122,12 @@
         return true;
     }
 
+    function createUpgradePreviewCard(card) {
+        const preview = clonePlain(card);
+        upgradeCard(preview);
+        return preview;
+    }
+
     function copyDeckCard(card, cloneOptions = {}) {
         const clone = cloneCardDefinition(card, cloneOptions);
         delete clone.instId;
@@ -129,7 +142,9 @@
         cloneCardDefinition,
         cloneSpecialEpic,
         copyDeckCard,
+        createUpgradePreviewCard,
         createStarterCard,
+        ensureBattleCardInstanceId,
         syncUpgradedCardDescription,
         upgradeCard
     };

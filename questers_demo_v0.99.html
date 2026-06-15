@@ -2306,7 +2306,7 @@
 <script src="src/data/enemies.js?v=20260605-enemy-ai"></script>
 <script src="src/data/characters.js?v=20260613-attack-vfx-origin"></script>
 <script src="src/runtime/state-rules.js?v=20260616-runtime-state-save-hydration"></script>
-<script src="src/runtime/card-rules.js?v=20260615-runtime-card-rules"></script>
+<script src="src/runtime/card-rules.js?v=20260616-runtime-card-instance-rules"></script>
 <script src="src/runtime/battle-rules.js?v=20260615-runtime-battle-rules"></script>
 <script src="src/runtime/visual-rules.js?v=20260616-noframe-status-icons"></script>
 <script src="src/runtime/map-rules.js?v=20260615-runtime-map-node-view-model"></script>
@@ -2628,10 +2628,7 @@
     }
 
     function ensureBattleCardInstanceId(card) {
-        if (!card) return card;
-        if (!card.instId) card.instId = Math.random().toString(36).substr(2, 9);
-        if (!Array.isArray(card.tags)) card.tags = [];
-        return card;
+        return QuestersCardRules.ensureBattleCardInstanceId(card);
     }
 
     function rollRewardRarity() {
@@ -7054,7 +7051,7 @@
         state.deck.forEach(card => {
             const el = document.createElement('div'); el.innerHTML = generateCardHTML(card, true);
             if (card.rarity === '传说' || card.up) { el.style.opacity = '0.5'; el.style.filter = 'grayscale(1)'; } 
-            else { el.onclick = () => { let clone = JSON.parse(JSON.stringify(card)); upgradeCard(clone); let html = `<div>${generateCardHTML(card, true)}</div><div style="font-size: 40px; color: var(--gold);">➡️</div><div>${generateCardHTML(clone, true)}</div>`; openConfirmPanel('确认淬炼', html, () => { upgradeCard(card); showFloatText("卡牌强化完成！", "var(--gold)", getCenter('event-content')); setTimeout(() => { closeOverlay('overlay-event'); advanceMap(); }, 800); }); }; }
+            else { el.onclick = () => { let clone = QuestersCardRules.createUpgradePreviewCard(card); let html = `<div>${generateCardHTML(card, true)}</div><div style="font-size: 40px; color: var(--gold);">➡️</div><div>${generateCardHTML(clone, true)}</div>`; openConfirmPanel('确认淬炼', html, () => { upgradeCard(card); showFloatText("卡牌强化完成！", "var(--gold)", getCenter('event-content')); setTimeout(() => { closeOverlay('overlay-event'); advanceMap(); }, 800); }); }; }
             cList.appendChild(el);
         });
         document.getElementById('event-content').innerHTML = ''; document.getElementById('event-content').appendChild(cList); setEventActions([{ label: '婉拒离开', className: 'btn-back', onClick: () => { closeOverlay('overlay-event'); advanceMap(); } }]);
@@ -7302,7 +7299,7 @@
         state.deck.forEach(card => {
             const el = document.createElement('div'); el.innerHTML = generateCardHTML(card, true);
             if(card.rarity === '传说' || card.up) { el.style.opacity = '0.5'; el.style.filter = 'grayscale(1)'; } 
-            else { el.onclick = () => { let clone = JSON.parse(JSON.stringify(card)); upgradeCard(clone); let html = `<div>${generateCardHTML(card, true)}</div><div style="font-size: 40px; color: var(--gold);">➡️</div><div>${generateCardHTML(clone, true)}</div>`; openConfirmPanel('确认淬炼', html, () => { upgradeCard(card); showFloatText("淬炼完成！", "var(--gold)", getCenter('card-action-list')); setTimeout(() => { closeOverlay('overlay-rest'); advanceMap(); }, 600); }); }; }
+            else { el.onclick = () => { let clone = QuestersCardRules.createUpgradePreviewCard(card); let html = `<div>${generateCardHTML(card, true)}</div><div style="font-size: 40px; color: var(--gold);">➡️</div><div>${generateCardHTML(clone, true)}</div>`; openConfirmPanel('确认淬炼', html, () => { upgradeCard(card); showFloatText("淬炼完成！", "var(--gold)", getCenter('card-action-list')); setTimeout(() => { closeOverlay('overlay-rest'); advanceMap(); }, 600); }); }; }
             c.appendChild(el);
         });
         const skipBtn = document.createElement('button'); skipBtn.className = 'btn-gorgeous'; skipBtn.style.marginTop = '30px'; skipBtn.style.width = '100%'; skipBtn.innerText = '放弃淬炼，继续前行'; skipBtn.onclick = () => { closeOverlay('overlay-rest'); advanceMap(); }; c.appendChild(skipBtn);
