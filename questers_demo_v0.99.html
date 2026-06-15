@@ -2310,7 +2310,7 @@
 <script src="src/runtime/battle-rules.js?v=20260615-runtime-battle-rules"></script>
 <script src="src/runtime/visual-rules.js?v=20260615-noframe-relic-icons"></script>
 <script src="src/runtime/map-rules.js?v=20260615-runtime-map-node-view-model"></script>
-<script src="src/runtime/reward-rules.js?v=20260615-runtime-shop-inventory"></script>
+<script src="src/runtime/reward-rules.js?v=20260615-runtime-shop-spend-rules"></script>
 <script>
     function createEmbers() {
         const layer = document.getElementById('particles-layer');
@@ -7196,7 +7196,24 @@
             let priceHtml = card.isSale ? `<span style="text-decoration:line-through; color:#888; font-size:13px; margin-right:5px;">${card.originalPrice}</span> <span style="color:var(--gold);">💰 ${card.price}</span>` : `💰 ${card.price}`;
             if (card.isSale) w.innerHTML += `<div class="sale-tag">特惠</div>`;
             w.innerHTML += `${generateCardHTML(card, true)}<button class="btn-gorgeous shop-price-btn">${priceHtml}</button>`;
-            w.querySelector('button').onclick = () => { if(state.gold >= card.price) { state.gold -= card.price; state.deck.push(card); card.purchased = true; updateTopBar(); saveRun(); showFloatText("交易成功", "var(--gold)", getCenter('ui-gold')); renderShopBuy(); } else { alert("金币不足！"); } }; cardRow.appendChild(w);
+            w.querySelector('button').onclick = () => {
+                const spend = QuestersRewardRules.getGoldSpendResult({
+                    gold: state.gold,
+                    price: card.price
+                });
+                if (spend.canSpend) {
+                    state.gold = spend.gold;
+                    state.deck.push(card);
+                    card.purchased = true;
+                    updateTopBar();
+                    saveRun();
+                    showFloatText("交易成功", "var(--gold)", getCenter('ui-gold'));
+                    renderShopBuy();
+                } else {
+                    alert("金币不足！");
+                }
+            };
+            cardRow.appendChild(w);
         });
         
         state.currentShop.relics.forEach(r => {
@@ -7205,7 +7222,24 @@
             let priceHtml = r.isSale ? `<span style="text-decoration:line-through; color:#888; font-size:13px; margin-right:5px;">${r.originalPrice}</span> <span style="color:var(--gold);">💰 ${r.price}</span>` : `💰 ${r.price}`;
             if (r.isSale) rw.innerHTML += `<div class="sale-tag">半价</div>`;
             rw.innerHTML += `<div class="relic-item-box shop-relic-card"><div class="shop-relic-icon">${renderRelicVisual(r)}</div><div class="shop-relic-name">${r.name}</div><div class="shop-relic-desc">${formatKeywords(getDisplayRelicDesc(r))}</div></div><button class="btn-gorgeous shop-price-btn">${priceHtml}</button>`;
-            rw.querySelector('button').onclick = () => { if(state.gold >= r.price) { state.gold -= r.price; state.relics.push(r); r.purchased = true; updateTopBar(); saveRun(); showFloatText("获取奇珍", "var(--gold)", getCenter('ui-gold')); renderShopBuy(); } else { alert("金币不足！"); } }; relicRow.appendChild(rw);
+            rw.querySelector('button').onclick = () => {
+                const spend = QuestersRewardRules.getGoldSpendResult({
+                    gold: state.gold,
+                    price: r.price
+                });
+                if (spend.canSpend) {
+                    state.gold = spend.gold;
+                    state.relics.push(r);
+                    r.purchased = true;
+                    updateTopBar();
+                    saveRun();
+                    showFloatText("获取奇珍", "var(--gold)", getCenter('ui-gold'));
+                    renderShopBuy();
+                } else {
+                    alert("金币不足！");
+                }
+            };
+            relicRow.appendChild(rw);
         });
         grid.appendChild(cardRow);
         grid.appendChild(relicRow);
@@ -7216,7 +7250,30 @@
         const grid = document.getElementById('shop-items-grid');
         grid.innerHTML = `<div style="width:100%; color:var(--gold); margin-bottom:4px; font-size:20px; text-align:center;">移除卡牌费用: 💰${shopDeletePrice}</div><div id="shop-delete-grid" class="shop-delete-grid"></div>`;
         const deleteGrid = document.getElementById('shop-delete-grid');
-        state.deck.forEach(card => { const el = document.createElement('div'); el.innerHTML = generateCardHTML(card, true); el.onclick = () => { let html = `<div>${generateCardHTML(card, true)}</div><div style="font-size: 24px; color: var(--crimson);">彻底遗忘此牌？</div>`; openConfirmPanel('确认遗忘', html, () => { if(state.gold >= shopDeletePrice) { state.gold -= shopDeletePrice; state.deck = state.deck.filter(x => x.id !== card.id); shopDeletePrice += 25; updateTopBar(); saveRun(); renderShopDelete(); } else { alert("金币不足！"); } }); }; deleteGrid.appendChild(el); });
+        state.deck.forEach(card => {
+            const el = document.createElement('div');
+            el.innerHTML = generateCardHTML(card, true);
+            el.onclick = () => {
+                let html = `<div>${generateCardHTML(card, true)}</div><div style="font-size: 24px; color: var(--crimson);">彻底遗忘此牌？</div>`;
+                openConfirmPanel('确认遗忘', html, () => {
+                    const deleteResult = QuestersRewardRules.getShopDeleteResult({
+                        deletePrice: shopDeletePrice,
+                        gold: state.gold
+                    });
+                    if (deleteResult.canDelete) {
+                        state.gold = deleteResult.gold;
+                        state.deck = state.deck.filter(x => x.id !== card.id);
+                        shopDeletePrice = deleteResult.deletePrice;
+                        updateTopBar();
+                        saveRun();
+                        renderShopDelete();
+                    } else {
+                        alert("金币不足！");
+                    }
+                });
+            };
+            deleteGrid.appendChild(el);
+        });
     }
 
     function getShopCopyPrice(card) {
@@ -7246,8 +7303,12 @@
             el.querySelector('button').onclick = () => {
                 let html = `<div>${generateCardHTML(card, true)}</div><div style="font-size: 24px; color: var(--gold);">拓印此卡牌？需支付 💰${price}</div>`;
                 openConfirmPanel('确认拓印', html, () => {
-                    if (state.gold >= price) {
-                        state.gold -= price;
+                    const spend = QuestersRewardRules.getGoldSpendResult({
+                        gold: state.gold,
+                        price
+                    });
+                    if (spend.canSpend) {
+                        state.gold = spend.gold;
                         state.deck.push(copyDeckCard(card));
                         updateTopBar();
                         saveRun();

@@ -84,6 +84,44 @@
         return Math.max(30, price);
     }
 
+    function getGoldSpendResult({
+        gold = 0,
+        price = 0
+    } = {}) {
+        const currentGold = Number(gold) || 0;
+        const cost = Math.max(0, Number(price) || 0);
+        if (currentGold < cost) {
+            return {
+                canSpend: false,
+                gold: currentGold,
+                spent: 0
+            };
+        }
+        return {
+            canSpend: true,
+            gold: currentGold - cost,
+            spent: cost
+        };
+    }
+
+    function getShopDeleteResult({
+        deletePrice = 50,
+        deleteStep = 25,
+        gold = 0
+    } = {}) {
+        const currentDeletePrice = Math.max(0, Number(deletePrice) || 0);
+        const spend = getGoldSpendResult({
+            gold,
+            price: currentDeletePrice
+        });
+        return {
+            canDelete: spend.canSpend,
+            deletePrice: spend.canSpend ? currentDeletePrice + deleteStep : currentDeletePrice,
+            gold: spend.gold,
+            spent: spend.spent
+        };
+    }
+
     function getShopRefreshResult({
         isFree = false,
         gold = 0,
@@ -603,9 +641,11 @@
         getSpecialEpicRewardChance,
         getSpecialEpicRewardWeight,
         getWeightedSpecialEpicPool,
+        getGoldSpendResult,
         buildShopInventory,
         getShopCardBasePrice,
         getShopCopyPrice,
+        getShopDeleteResult,
         getShopRefreshResult,
         pickRewardBridgeCard,
         pickRewardCardCandidate,
