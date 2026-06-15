@@ -154,6 +154,20 @@
         return `${percent}%`;
     }
 
+    function getStatusLayerCount(card, tag, {
+        getAbilityPotency = () => 1
+    } = {}) {
+        const potency = card?.type === '能力' ? getAbilityPotency(card) : 1;
+        if (tag === '剧毒' || tag === '出血') return 3 * potency;
+        if (tag === '诅咒' || tag === '易伤' || tag === '虚弱') return 2 * potency;
+        if (tag === '燃烧' || tag === '眩晕') return potency;
+        return 0;
+    }
+
+    function getFlowDamageLine(amount) {
+        return `造成 <span class="card-desc-value">${amount}</span> 点流动伤害。`;
+    }
+
     function normalizeCardEffectText(text = '') {
         return String(text)
             .replace(/<br\s*\/?>/gi, '\n')
@@ -528,6 +542,8 @@
         getCardTextDensityClass,
         getCardVariantName,
         getCardVisualSignature,
+        getFlowDamageLine,
+        getStatusLayerCount,
         renderTagNames,
         getEnemyAssetSlug,
         getEnemyAttackAnimationTiming,
