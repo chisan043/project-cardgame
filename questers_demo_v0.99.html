@@ -4034,13 +4034,9 @@
     }
 
     function renderHudStatusIcons(target) {
-        return getStatusEntries(target).map(entry => (
-            `<div class="status-badge ${entry.tone || ''}">` +
-                (getStatusIconPath(entry.id) ? `<img class="status-icon-img" src="${getStatusIconPath(entry.id)}" alt="" aria-hidden="true">` : `<span class="status-icon-glyph" aria-hidden="true">${entry.icon}</span>`) +
-                (entry.value !== null && entry.value !== undefined ? `<span class="status-stack">x${entry.value}</span>` : '') +
-                `<div class="status-tooltip"><span style="color:var(--gold); font-weight:bold;">${entry.label}</span><br>${entry.tooltip}</div>` +
-            `</div>`
-        )).join('');
+        return QuestersVisualRules.renderHudStatusIcons(getStatusEntries(target), {
+            getStatusIconPath
+        });
     }
 
     function renderHudRelicIcons() {

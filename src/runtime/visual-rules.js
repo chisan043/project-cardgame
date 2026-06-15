@@ -247,6 +247,19 @@
         return `<div class="${cardClass}"><div class="${iconClass}" style="font-size:${iconSize}px;">${renderRelicVisual(relic)}</div><div style="color:white; font-weight:bold; font-size:18px;">${relic.name}</div><div style="flex:1; color:#aaa; font-size:12px; margin:10px 0; line-height:1.5; text-align:left;">${formatKeywords(getDisplayRelicDesc(relic))}</div>${getRelicBottomTags(relic)}</div>`;
     }
 
+    function renderHudStatusIcons(entries = [], {
+        getStatusIconPath = () => ''
+    } = {}) {
+        return entries.map(entry => {
+            const iconPath = getStatusIconPath(entry.id);
+            return `<div class="status-badge ${entry.tone || ''}">` +
+                (iconPath ? `<img class="status-icon-img" src="${iconPath}" alt="" aria-hidden="true">` : `<span class="status-icon-glyph" aria-hidden="true">${entry.icon}</span>`) +
+                (entry.value !== null && entry.value !== undefined ? `<span class="status-stack">x${entry.value}</span>` : '') +
+                `<div class="status-tooltip"><span style="color:var(--gold); font-weight:bold;">${entry.label}</span><br>${entry.tooltip}</div>` +
+            `</div>`;
+        }).join('');
+    }
+
     function normalizeCardEffectText(text = '') {
         return String(text)
             .replace(/<br\s*\/?>/gi, '\n')
@@ -647,6 +660,7 @@
         getStatusIconPath,
         getShieldHitVfxLayout,
         normalizeCardEffectText,
+        renderHudStatusIcons,
         renderRelicCard,
         renderRelicVisual
     };
