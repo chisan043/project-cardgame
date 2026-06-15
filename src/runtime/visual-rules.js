@@ -33,6 +33,28 @@
         return slug ? `assets/enemies/portraits/${slug}_portrait_v1.webp` : null;
     }
 
+    function getCardFrameTheme(card, {
+        cardFrameAssets = {},
+        cardFrameThemeByName = {}
+    } = {}) {
+        if (!card) return 'neutral';
+        if (card.frameTheme && cardFrameAssets[card.frameTheme]) return card.frameTheme;
+        if (cardFrameThemeByName[card.name]) return cardFrameThemeByName[card.name];
+        if (card.poolId && card.poolId.startsWith('warrior_')) return 'warrior';
+        if (card.poolId && card.poolId.startsWith('mage_')) return 'mage';
+        if (card.poolId && card.poolId.startsWith('archer_')) return 'archer';
+        if (card.type === '诅咒' || card.isJunk || card.isKnife) return 'neutral';
+        return 'neutral';
+    }
+
+    function getCardFramePath(card, {
+        cardFrameAssets = {},
+        cardFrameThemeByName = {}
+    } = {}) {
+        const theme = getCardFrameTheme(card, { cardFrameAssets, cardFrameThemeByName });
+        return cardFrameAssets[theme] || cardFrameAssets.neutral || '';
+    }
+
     function getRelicIconPath(relic, {
         formalRelicIconIds = new Set(),
         relicMasterIconById = {}
@@ -272,6 +294,8 @@
 
     global.QuestersVisualRules = {
         getCardBuffVfxKind,
+        getCardFramePath,
+        getCardFrameTheme,
         getEnemyAssetSlug,
         getEnemyAttackAnimationTiming,
         getEnemyAttackFrames,

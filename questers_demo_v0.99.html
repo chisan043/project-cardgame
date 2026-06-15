@@ -2753,18 +2753,17 @@
     }
 
     function getCardFrameTheme(card) {
-        if (!card) return 'neutral';
-        if (card.frameTheme && CARD_FRAME_ASSETS[card.frameTheme]) return card.frameTheme;
-        if (CARD_FRAME_THEME_BY_NAME[card.name]) return CARD_FRAME_THEME_BY_NAME[card.name];
-        if (card.poolId && card.poolId.startsWith('warrior_')) return 'warrior';
-        if (card.poolId && card.poolId.startsWith('mage_')) return 'mage';
-        if (card.poolId && card.poolId.startsWith('archer_')) return 'archer';
-        if (card.type === '诅咒' || card.isJunk || card.isKnife) return 'neutral';
-        return 'neutral';
+        return QuestersVisualRules.getCardFrameTheme(card, {
+            cardFrameAssets: CARD_FRAME_ASSETS,
+            cardFrameThemeByName: CARD_FRAME_THEME_BY_NAME
+        });
     }
 
     function getCardFramePath(card) {
-        return CARD_FRAME_ASSETS[getCardFrameTheme(card)] || CARD_FRAME_ASSETS.neutral;
+        return QuestersVisualRules.getCardFramePath(card, {
+            cardFrameAssets: CARD_FRAME_ASSETS,
+            cardFrameThemeByName: CARD_FRAME_THEME_BY_NAME
+        });
     }
 
     function ensureBattleCardInstanceId(card) {
