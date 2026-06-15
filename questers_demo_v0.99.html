@@ -2300,6 +2300,7 @@
 <script src="src/runtime/state-rules.js?v=20260615-runtime-state-rules"></script>
 <script src="src/runtime/card-rules.js?v=20260615-runtime-card-rules"></script>
 <script src="src/runtime/battle-rules.js?v=20260615-runtime-battle-rules"></script>
+<script src="src/runtime/visual-rules.js?v=20260615-runtime-visual-rules"></script>
 <script src="src/runtime/map-rules.js?v=20260615-runtime-map-rules"></script>
 <script src="src/runtime/reward-rules.js?v=20260615-runtime-reward-rules"></script>
 <script>
@@ -4688,30 +4689,34 @@
     };
 
     function getEnemyAssetSlug(enemy) {
-        if (!enemy || !enemy.name) return null;
-        const cleanName = QuestersBattleRules.getBaseEnemyName(enemy);
-        return ENEMY_ASSET_SLUGS[cleanName] || null;
+        return QuestersVisualRules.getEnemyAssetSlug(enemy, {
+            enemyAssetSlugs: ENEMY_ASSET_SLUGS,
+            getBaseEnemyName: QuestersBattleRules.getBaseEnemyName
+        });
     }
 
     function getEnemyVisualPath(enemy) {
-        const slug = getEnemyAssetSlug(enemy);
-        return slug ? `assets/enemies/battle/${slug}_battle_v1.webp` : null;
+        return QuestersVisualRules.getEnemyVisualPath(enemy, {
+            enemyAssetSlugs: ENEMY_ASSET_SLUGS,
+            getBaseEnemyName: QuestersBattleRules.getBaseEnemyName
+        });
     }
 
     function getEnemyAvatarPath(enemy) {
-        const slug = getEnemyAssetSlug(enemy);
-        return slug ? `assets/enemies/portraits/${slug}_portrait_v1.webp` : null;
+        return QuestersVisualRules.getEnemyAvatarPath(enemy, {
+            enemyAssetSlugs: ENEMY_ASSET_SLUGS,
+            getBaseEnemyName: QuestersBattleRules.getBaseEnemyName
+        });
     }
 
     const ENEMY_ATTACK_FRAME_DURATIONS = [110, 120, 170, 120];
 
     function getEnemyAttackFrames(enemy) {
-        const slug = getEnemyAssetSlug(enemy);
-        if (!slug) return [];
-        return ENEMY_ATTACK_FRAME_DURATIONS.map((duration, index) => ({
-            src: `assets/enemies/attack/${slug}_attack_${String(index + 1).padStart(2, '0')}_v1.webp`,
-            duration
-        }));
+        return QuestersVisualRules.getEnemyAttackFrames(enemy, {
+            enemyAssetSlugs: ENEMY_ASSET_SLUGS,
+            frameDurations: ENEMY_ATTACK_FRAME_DURATIONS,
+            getBaseEnemyName: QuestersBattleRules.getBaseEnemyName
+        });
     }
 
     function preloadEnemyAttackFrames(enemy) {
@@ -4769,16 +4774,18 @@
     };
 
     function getEnemyAttackVfxAsset(type) {
-        return `assets/vfx/enemy_attack/${type.replace(/-/g, '_')}_vfx_v1.webp`;
+        return QuestersVisualRules.getEnemyAttackVfxAsset(type);
     }
 
     function getEnemyAttackVfxType(enemy = state.enemy, move = state.enemy?.nextMove) {
-        if (move?.type === 'attack_lifesteal') return 'blood-siphon';
-        const moveName = move?.name || '';
-        if (moveName.includes('龙息')) return 'dragon-breath';
-        if (moveName.includes('声波') || moveName.includes('超声')) return 'sonic-wave';
-        const slug = getEnemyAssetSlug(enemy);
-        return ENEMY_ATTACK_VFX_BY_SLUG[slug] || 'dark-iaijutsu';
+        return QuestersVisualRules.getEnemyAttackVfxType({
+            defaultVfxType: 'dark-iaijutsu',
+            enemy,
+            enemyAssetSlugs: ENEMY_ASSET_SLUGS,
+            enemyAttackVfxBySlug: ENEMY_ATTACK_VFX_BY_SLUG,
+            getBaseEnemyName: QuestersBattleRules.getBaseEnemyName,
+            move
+        });
     }
 
     function triggerEnemyAttackVfx(vfx, effect, vfxToken) {
