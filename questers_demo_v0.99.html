@@ -2752,48 +2752,23 @@
     }
 
     function generateRewardChoices(count = 3) {
-        const choices = [];
-        const used = new Set();
-        const bridgeSpec = getRewardBridgeSpec();
-        if (bridgeSpec) {
-            const bridgeCard = generateBridgeRewardCard(bridgeSpec, used);
-            if (bridgeCard) {
-                used.add(getCardChoiceKey(bridgeCard));
-                choices.push(bridgeCard);
-            }
-        }
-        const primaryBuildTag = getPrimaryBuildTag();
-        const slotPlan = QuestersRewardRules.getRewardSlotPlan({ primaryBuildTag });
-        for (const mode of slotPlan) {
-            if (choices.length >= count) break;
-            const card = generateBuildRewardCard(mode, used, primaryBuildTag);
-            if (!card) continue;
-            const key = getCardChoiceKey(card);
-            if (used.has(key)) continue;
-            used.add(key);
-            choices.push(card);
-        }
-        let guard = 0;
-        while (choices.length < count && guard < 40) {
-            guard++;
-            const card = generateRewardCard(used);
-            if (!card) break;
-            const key = getCardChoiceKey(card);
-            if (used.has(key)) continue;
-            used.add(key);
-            choices.push(card);
-        }
         const fixedFallbackPool = [...getCharacterCardPool(), ...NEUTRAL_CARD_POOL];
-        while (choices.length < count && fixedFallbackPool.length) {
-            const picked = QuestersRewardRules.pickRewardFixedFallbackCandidate({
-                allCards: fixedFallbackPool,
-                used
-            });
-            const card = cloneCardDefinition(picked);
-            used.add(getCardChoiceKey(card));
-            choices.push(card);
-        }
-        return choices;
+        return QuestersRewardRules.buildRewardChoices({
+            count,
+            bridgeSpec: getRewardBridgeSpec(),
+            primaryBuildTag: getPrimaryBuildTag(),
+            makeBridgeRewardCard: (spec, used) => generateBridgeRewardCard(spec, used),
+            makeBuildRewardCard: (mode, used, primaryBuildTag) => generateBuildRewardCard(mode, used, primaryBuildTag),
+            makeGeneralRewardCard: used => generateRewardCard(used),
+            makeFixedFallbackRewardCard: used => {
+                if (!fixedFallbackPool.length) return null;
+                const picked = QuestersRewardRules.pickRewardFixedFallbackCandidate({
+                    allCards: fixedFallbackPool,
+                    used
+                });
+                return picked ? cloneCardDefinition(picked) : null;
+            }
+        });
     }
 
     function escapeAttr(value) {

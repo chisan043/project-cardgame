@@ -358,7 +358,54 @@
         );
     }
 
+    function buildRewardChoices({
+        count = 3,
+        bridgeSpec = null,
+        primaryBuildTag = null,
+        makeBridgeRewardCard = () => null,
+        makeBuildRewardCard = () => null,
+        makeGeneralRewardCard = () => null,
+        makeFixedFallbackRewardCard = () => null,
+        maxGeneralAttempts = 40
+    } = {}) {
+        const choices = [];
+        const used = new Set();
+        const addChoice = (card, { allowDuplicate = false } = {}) => {
+            if (!card || choices.length >= count) return false;
+            const key = getCardChoiceKey(card);
+            if (used.has(key) && !allowDuplicate) return false;
+            used.add(key);
+            choices.push(card);
+            return true;
+        };
+
+        if (bridgeSpec) addChoice(makeBridgeRewardCard(bridgeSpec, used));
+
+        const slotPlan = getRewardSlotPlan({ primaryBuildTag });
+        for (const mode of slotPlan) {
+            if (choices.length >= count) break;
+            addChoice(makeBuildRewardCard(mode, used, primaryBuildTag));
+        }
+
+        let guard = 0;
+        while (choices.length < count && guard < maxGeneralAttempts) {
+            guard++;
+            const card = makeGeneralRewardCard(used);
+            if (!card) break;
+            addChoice(card);
+        }
+
+        while (choices.length < count) {
+            const card = makeFixedFallbackRewardCard(used);
+            if (!card) break;
+            addChoice(card, { allowDuplicate: true });
+        }
+
+        return choices;
+    }
+
     global.QuestersRewardRules = {
+        buildRewardChoices,
         deckHasCardMatch,
         deckHasTag,
         getBattleRewardSkipGold,
