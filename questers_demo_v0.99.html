@@ -5020,7 +5020,10 @@
             const container = document.getElementById('map-scroll-root');
             if(target && container) { 
                 let tRect = target.getBoundingClientRect(); let cRect = container.getBoundingClientRect();
-                container.scrollTo({ top: container.scrollTop + (tRect.top - cRect.top) - (cRect.height / 2) + (tRect.height / 2), behavior: 'smooth' });
+                container.scrollTo({
+                    top: QuestersMapRules.getMapAutoScrollTop(tRect, cRect, { scrollTop: container.scrollTop }),
+                    behavior: 'smooth'
+                });
             } 
         }, 150);
     }

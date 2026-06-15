@@ -311,6 +311,15 @@
         return null;
     }
 
+    function getMapAutoScrollTop(targetRect, containerRect, {
+        scrollTop = 0
+    } = {}) {
+        return Number(scrollTop || 0)
+            + (Number(targetRect?.top || 0) - Number(containerRect?.top || 0))
+            - (Number(containerRect?.height || 0) / 2)
+            + (Number(targetRect?.height || 0) / 2);
+    }
+
     function getMapPathLineType(parentNodeId, childNodeId, {
         currentNode = null,
         pathHistory = []
@@ -353,6 +362,7 @@
         generateMapData,
         getDefaultMapPreviewNode,
         getMapAutoScrollTargetSelector,
+        getMapAutoScrollTop,
         getMapContainerHeight,
         getMapDetailPanelState,
         getMapFloorLayout,
