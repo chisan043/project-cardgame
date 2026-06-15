@@ -4689,7 +4689,7 @@
 
     function getEnemyAssetSlug(enemy) {
         if (!enemy || !enemy.name) return null;
-        const cleanName = enemy.name.replace(/·.*?(?=】)/, '').replace(/·暴走/g, '');
+        const cleanName = QuestersBattleRules.getBaseEnemyName(enemy);
         return ENEMY_ASSET_SLUGS[cleanName] || null;
     }
 
@@ -4851,22 +4851,22 @@
         '【深渊主宰】': 'assets/scenes/battle/temple_inner_light_v1.webp'
     };
 
-    function getBaseEnemyName(enemy) {
-        return (enemy?.name || '').replace(/·.*?(?=】)/, '').replace(/·暴走/g, '');
-    }
-
     function applyBattleBackgroundForEnemy(enemy) {
-        const bgPath = BATTLE_BACKGROUND_BY_ENEMY[getBaseEnemyName(enemy)] || 'assets/scenes/battle/ancient_forest_day_v1.webp';
+        const bgPath = QuestersBattleRules.getBattleBackgroundPathForEnemy(enemy, {
+            backgroundByEnemy: BATTLE_BACKGROUND_BY_ENEMY,
+            fallbackBackground: 'assets/scenes/battle/ancient_forest_day_v1.webp'
+        });
         document.documentElement.style.setProperty('--battle-scene-bg', `url('${bgPath}')`);
     }
 
     function applyBattleBackgroundForEncounter(node, enemy) {
-        const nodeBgPath = getMapPreviewVariant(node)?.battleBg;
-        if (nodeBgPath) {
-            document.documentElement.style.setProperty('--battle-scene-bg', `url('${nodeBgPath}')`);
-            return;
-        }
-        applyBattleBackgroundForEnemy(enemy);
+        const bgPath = QuestersBattleRules.getEncounterBattleBackgroundPath({
+            backgroundByEnemy: BATTLE_BACKGROUND_BY_ENEMY,
+            enemy,
+            fallbackBackground: 'assets/scenes/battle/ancient_forest_day_v1.webp',
+            nodeBattleBackground: getMapPreviewVariant(node)?.battleBg
+        });
+        document.documentElement.style.setProperty('--battle-scene-bg', `url('${bgPath}')`);
     }
 
     function setCurrentCharacter(characterId) {

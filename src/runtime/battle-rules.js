@@ -41,6 +41,29 @@
         return 1 + floor * 0.1;
     }
 
+    function getBaseEnemyName(enemy) {
+        return (enemy?.name || '').replace(/·.*?(?=】)/, '').replace(/·暴走/g, '');
+    }
+
+    function getBattleBackgroundPathForEnemy(enemy, {
+        backgroundByEnemy = {},
+        fallbackBackground = ''
+    } = {}) {
+        return backgroundByEnemy[getBaseEnemyName(enemy)] || fallbackBackground;
+    }
+
+    function getEncounterBattleBackgroundPath({
+        backgroundByEnemy = {},
+        enemy = null,
+        fallbackBackground = '',
+        nodeBattleBackground = ''
+    } = {}) {
+        return nodeBattleBackground || getBattleBackgroundPathForEnemy(enemy, {
+            backgroundByEnemy,
+            fallbackBackground
+        });
+    }
+
     function resetPlayerBattleStatuses(state) {
         state.p_poison = 0;
         state.p_bleed = 0;
@@ -131,9 +154,12 @@
 
     global.QuestersBattleRules = {
         cleanupAfterBattleWin,
+        getBaseEnemyName,
+        getBattleBackgroundPathForEnemy,
         getCounterParryValue,
         getEnchantBonus,
         getEncounterScale,
+        getEncounterBattleBackgroundPath,
         getFrenzyBonus,
         getRuntimeFailureHint,
         getSwordBonus,
