@@ -3,6 +3,9 @@
     'use strict';
 
     const DEFAULT_ATTACK_FRAME_DURATIONS = [110, 120, 170, 120];
+    const ARCHER_WIND_BUFF_CARD_IDS = ['s_energy', 's_exhaust', 'a_green_resonance'];
+    const MAGE_CHANT_BUFF_CARD_IDS = ['m_chant_singularity', 'm_echo_archive', 'm_arcane_aegis'];
+    const WARRIOR_SHIELD_BUFF_CARD_IDS = ['s_thorns', 'a_syn_array', 'w_bastion_prayer', 'w_oath_fortress'];
 
     function defaultBaseEnemyName(enemy) {
         return (enemy?.name || '').replace(/·.*?(?=】)/, '').replace(/·暴走/g, '');
@@ -136,6 +139,40 @@
         };
     }
 
+    function getCardBuffVfxKind({
+        card = null,
+        hasDirectEffect = (candidate, effect) => !!candidate?.directEffects?.[effect],
+        roleId = ''
+    } = {}) {
+        if (!card) return null;
+        const tags = card.tags || [];
+        if (roleId === 'hero_archer') {
+            if (tags.includes('闪避') || card.specialId === 'a_wind_dance') return 'dodge';
+            if (
+                tags.includes('蓄力') ||
+                tags.includes('自然') ||
+                ARCHER_WIND_BUFF_CARD_IDS.includes(card.specialId)
+            ) return 'wind';
+        }
+        if (roleId === 'hero_mage') {
+            if (
+                tags.includes('咏唱') ||
+                MAGE_CHANT_BUFF_CARD_IDS.includes(card.specialId)
+            ) return 'chant';
+        }
+        if (roleId === 'hero_warrior') {
+            if (
+                card.type === '防御' ||
+                tags.includes('庇护') ||
+                tags.includes('反击') ||
+                tags.includes('荆棘') ||
+                hasDirectEffect(card, 'protection') ||
+                WARRIOR_SHIELD_BUFF_CARD_IDS.includes(card.specialId)
+            ) return 'shield';
+        }
+        return null;
+    }
+
     function getShieldHitVfxLayout(absorbed = 0, {
         playerRect = null,
         viewportHeight = 0,
@@ -214,6 +251,7 @@
     }
 
     global.QuestersVisualRules = {
+        getCardBuffVfxKind,
         getEnemyAssetSlug,
         getEnemyAttackAnimationTiming,
         getEnemyAttackFrames,
