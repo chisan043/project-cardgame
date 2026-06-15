@@ -84,6 +84,69 @@
         return Math.max(30, price);
     }
 
+    function getShopRefreshResult({
+        isFree = false,
+        gold = 0,
+        refreshCost = 10,
+        refreshStep = 10
+    } = {}) {
+        const currentGold = Number(gold) || 0;
+        const currentRefreshCost = Math.max(0, Number(refreshCost) || 0);
+        const cost = isFree ? 0 : currentRefreshCost;
+        if (currentGold < cost) {
+            return {
+                canRefresh: false,
+                gold: currentGold,
+                refreshCost: currentRefreshCost,
+                spent: 0
+            };
+        }
+        return {
+            canRefresh: true,
+            gold: currentGold - cost,
+            refreshCost: isFree ? currentRefreshCost : currentRefreshCost + refreshStep,
+            spent: cost
+        };
+    }
+
+    function getShopCardBasePrice({ rng = Math.random } = {}) {
+        return 40 + Math.floor(rng() * 20);
+    }
+
+    function getSalePrice(price, { isSale = false, saleMultiplier = 0.5 } = {}) {
+        const basePrice = Math.max(0, Number(price) || 0);
+        return isSale ? Math.floor(basePrice * saleMultiplier) : basePrice;
+    }
+
+    function buildShopInventory({
+        cards = [],
+        relics = [],
+        rng = Math.random
+    } = {}) {
+        const shopCards = cards.map(card => ({ ...card }));
+        const shopRelics = relics.map(relic => ({ ...relic }));
+        const allItems = [...shopCards, ...shopRelics];
+        if (allItems.length) {
+            const discountIdx = Math.min(allItems.length - 1, Math.floor(rng() * allItems.length));
+            allItems[discountIdx].isSale = true;
+        }
+
+        shopCards.forEach(card => {
+            const basePrice = getShopCardBasePrice({ rng });
+            card.originalPrice = basePrice;
+            card.price = getSalePrice(basePrice, { isSale: card.isSale });
+        });
+        shopRelics.forEach(relic => {
+            const basePrice = Number(relic.price) || 0;
+            relic.originalPrice = basePrice;
+            relic.price = getSalePrice(basePrice, { isSale: relic.isSale });
+        });
+        return {
+            cards: shopCards,
+            relics: shopRelics
+        };
+    }
+
     function getDeckBuildProfile({
         deck = [],
         directions = {},
@@ -530,6 +593,7 @@
         getPrimaryBuildTag,
         getRestHealResult,
         getRewardOverlayPresentation,
+        getSalePrice,
         getRewardBridgeSpec,
         getRewardBridgeCandidates,
         getRewardCardCandidates,
@@ -539,7 +603,10 @@
         getSpecialEpicRewardChance,
         getSpecialEpicRewardWeight,
         getWeightedSpecialEpicPool,
+        buildShopInventory,
+        getShopCardBasePrice,
         getShopCopyPrice,
+        getShopRefreshResult,
         pickRewardBridgeCard,
         pickRewardCardCandidate,
         pickRewardFixedFallbackCandidate,

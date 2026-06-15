@@ -2305,7 +2305,7 @@
 <script src="src/runtime/battle-rules.js?v=20260615-runtime-battle-rules"></script>
 <script src="src/runtime/visual-rules.js?v=20260615-noframe-relic-icons"></script>
 <script src="src/runtime/map-rules.js?v=20260615-runtime-map-node-view-model"></script>
-<script src="src/runtime/reward-rules.js?v=20260615-runtime-reward-choice-cards"></script>
+<script src="src/runtime/reward-rules.js?v=20260615-runtime-shop-inventory"></script>
 <script>
     function createEmbers() {
         const layer = document.getElementById('particles-layer');
@@ -7296,23 +7296,23 @@
     function renderShopBuyWrapper() { renderShopBuy(); }
     
     function refreshShop(isFree = false) {
-        if (!isFree) {
-            if (state.gold < state.currentShop.refreshCost) { alert("金币不足！"); return; }
-            state.gold -= state.currentShop.refreshCost;
-            state.currentShop.refreshCost += 10; updateTopBar();
-        } else { state.currentShop = { refreshCost: 10 }; }
-        
-        let cards = generateRewardChoices(3);
-        let availableRelics = RELIC_POOL.filter(r => !hasRelic(r.id) && !STARTING_RELIC_IDS.has(r.id));
-        availableRelics = getRolePreferredRelics(availableRelics);
-        let relics = availableRelics.slice(0, 3).map(r => ({...r})); 
-        
-        let allItems = [...cards, ...relics];
-        if (allItems.length > 0) { let discountIdx = Math.floor(Math.random() * allItems.length); allItems[discountIdx].isSale = true; }
-        
-        cards.forEach(c => { let basePrice = 40 + Math.floor(Math.random()*20); c.originalPrice = basePrice; c.price = c.isSale ? Math.floor(basePrice * 0.5) : basePrice; });
-        relics.forEach(r => { r.originalPrice = r.price; if(r.isSale) r.price = Math.floor(r.price * 0.5); });
-        state.currentShop.cards = cards; state.currentShop.relics = relics;
+        if (isFree) state.currentShop = { refreshCost: 10 };
+        const refreshResult = QuestersRewardRules.getShopRefreshResult({
+            isFree,
+            gold: state.gold,
+            refreshCost: state.currentShop?.refreshCost || 10
+        });
+        if (!refreshResult.canRefresh) { alert("金币不足！"); return; }
+        state.gold = refreshResult.gold;
+        state.currentShop.refreshCost = refreshResult.refreshCost;
+        if (!isFree) updateTopBar();
+
+        const availableRelics = getRolePreferredRelics(RELIC_POOL.filter(r => !hasRelic(r.id) && !STARTING_RELIC_IDS.has(r.id))).slice(0, 3);
+        const inventory = QuestersRewardRules.buildShopInventory({
+            cards: generateRewardChoices(3),
+            relics: availableRelics
+        });
+        state.currentShop.cards = inventory.cards; state.currentShop.relics = inventory.relics;
         if(!isFree) renderShopBuy();
     }
 
