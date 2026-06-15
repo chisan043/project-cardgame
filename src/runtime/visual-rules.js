@@ -80,6 +80,36 @@
         };
     }
 
+    function getPlayerAttackVfxLayout({
+        avatarRect = null,
+        enemyRect = null,
+        origin = { x: 0.5, y: 0.5 },
+        type = 'warrior'
+    } = {}) {
+        if (!avatarRect || !enemyRect) return null;
+        const target = {
+            x: enemyRect.left + enemyRect.width * 0.5,
+            y: enemyRect.top + enemyRect.height * 0.46
+        };
+        const size = type === 'warrior'
+            ? { width: 360, height: 468 }
+            : type === 'mage'
+                ? { width: 300, height: 270 }
+                : { width: 360, height: 240 };
+        const start = type === 'warrior' ? target : {
+            x: avatarRect.left + avatarRect.width * origin.x,
+            y: avatarRect.top + avatarRect.height * origin.y
+        };
+        return {
+            deltaX: target.x - start.x,
+            deltaY: target.y - start.y,
+            height: size.height,
+            left: start.x - size.width / 2,
+            top: start.y - size.height / 2,
+            width: size.width
+        };
+    }
+
     function getShieldHitVfxLayout(absorbed = 0, {
         playerRect = null,
         viewportHeight = 0,
@@ -131,6 +161,7 @@
         getFrameSequenceDuration,
         getFrameSequenceLeadDuration,
         getPlayerAttackAnimationTiming,
+        getPlayerAttackVfxLayout,
         getShieldHitVfxLayout
     };
 })(window);

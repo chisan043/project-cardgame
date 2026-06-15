@@ -5386,29 +5386,20 @@
     function positionPlayerAttackVfx(vfx, image, character, type) {
         const avatarRect = document.getElementById('player-avatar-img')?.getBoundingClientRect();
         const enemyRect = document.getElementById('enemy-avatar-wrapper')?.getBoundingClientRect();
-        if (!avatarRect || !enemyRect) return;
+        const layout = QuestersVisualRules.getPlayerAttackVfxLayout({
+            avatarRect,
+            enemyRect,
+            origin: character.battleAttackVfxOrigin || { x: 0.5, y: 0.5 },
+            type
+        });
+        if (!layout) return;
 
-        const target = {
-            x: enemyRect.left + enemyRect.width * 0.5,
-            y: enemyRect.top + enemyRect.height * 0.46
-        };
-        const size = type === 'warrior'
-            ? { width: 360, height: 468 }
-            : type === 'mage'
-                ? { width: 300, height: 270 }
-                : { width: 360, height: 240 };
-        const origin = character.battleAttackVfxOrigin || { x: 0.5, y: 0.5 };
-        const start = type === 'warrior' ? target : {
-            x: avatarRect.left + avatarRect.width * origin.x,
-            y: avatarRect.top + avatarRect.height * origin.y
-        };
-
-        image.style.left = `${start.x - size.width / 2}px`;
-        image.style.top = `${start.y - size.height / 2}px`;
-        vfx.style.setProperty('--player-vfx-width', `${size.width}px`);
-        vfx.style.setProperty('--player-vfx-height', `${size.height}px`);
-        vfx.style.setProperty('--player-vfx-dx', `${target.x - start.x}px`);
-        vfx.style.setProperty('--player-vfx-dy', `${target.y - start.y}px`);
+        image.style.left = `${layout.left}px`;
+        image.style.top = `${layout.top}px`;
+        vfx.style.setProperty('--player-vfx-width', `${layout.width}px`);
+        vfx.style.setProperty('--player-vfx-height', `${layout.height}px`);
+        vfx.style.setProperty('--player-vfx-dx', `${layout.deltaX}px`);
+        vfx.style.setProperty('--player-vfx-dy', `${layout.deltaY}px`);
     }
 
     function triggerPlayerAttackVfx(vfx, timing, vfxToken) {
