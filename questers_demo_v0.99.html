@@ -5131,13 +5131,9 @@
     }
 
     function getDefaultMapPreviewNode() {
-        if (!Array.isArray(state.mapData) || !state.mapData.length) return null;
-        if (state.currentNode) {
-            const nextNode = (state.currentNode.children || []).map(findMapNodeById).find(Boolean);
-            return nextNode || state.currentNode;
-        }
-        const firstFloor = state.mapData[0]?.nodes || [];
-        return firstFloor[Math.floor(firstFloor.length / 2)] || firstFloor[0] || null;
+        return QuestersMapRules.getDefaultMapPreviewNode(state.mapData, {
+            currentNode: state.currentNode
+        });
     }
 
     function isMapNodeReachable(node) {
@@ -5147,8 +5143,10 @@
     }
 
     function getSelectedMapPreviewNode() {
-        const selected = findMapNodeById(state.mapPreviewNodeId);
-        return selected && isMapNodeReachable(selected) ? selected : null;
+        return QuestersMapRules.getSelectedMapPreviewNode(state.mapData, {
+            currentNode: state.currentNode,
+            mapPreviewNodeId: state.mapPreviewNodeId
+        });
     }
 
     function syncMapNodeSelection() {

@@ -108,6 +108,35 @@
         return (currentNode.children || []).includes(node.id);
     }
 
+    function findMapNodeById(mapData, nodeId) {
+        if (!nodeId || !Array.isArray(mapData)) return null;
+        for (const floor of mapData) {
+            const found = floor.nodes?.find(node => node.id === nodeId);
+            if (found) return found;
+        }
+        return null;
+    }
+
+    function getDefaultMapPreviewNode(mapData, { currentNode = null } = {}) {
+        if (!Array.isArray(mapData) || !mapData.length) return null;
+        if (currentNode) {
+            const nextNode = (currentNode.children || [])
+                .map(nodeId => findMapNodeById(mapData, nodeId))
+                .find(Boolean);
+            return nextNode || currentNode;
+        }
+        const firstFloor = mapData[0]?.nodes || [];
+        return firstFloor[Math.floor(firstFloor.length / 2)] || firstFloor[0] || null;
+    }
+
+    function getSelectedMapPreviewNode(mapData, {
+        currentNode = null,
+        mapPreviewNodeId = null
+    } = {}) {
+        const selected = findMapNodeById(mapData, mapPreviewNodeId);
+        return selected && isMapNodeReachable(selected, { currentNode }) ? selected : null;
+    }
+
     function getMapNodeRouteStatus(node, {
         currentNode = null,
         pathHistory = []
@@ -153,10 +182,12 @@
         connectMapNodes,
         createMapFloors,
         generateMapData,
+        getDefaultMapPreviewNode,
         getMapNodeRenderState,
         getMapNodeRouteStatus,
         getMapNodeType,
         getNodeFloorLabel,
+        getSelectedMapPreviewNode,
         isMapNodeReachable
     };
 })(window);
