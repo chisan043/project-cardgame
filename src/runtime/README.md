@@ -7,7 +7,7 @@ own DOM rendering.
   profile/bridge matching, candidate filtering, battle reward math,
   rest healing, skip-gold math, and shop economy helpers.
 - `map-rules.js`: map node layout, path connection, node-type assignment,
-  route-state checks, and floor labels.
+  route-state checks, render-state flags, and floor labels.
 - `state-rules.js`: initial run-state templates, save payload snapshots, map
   node lookup helpers, and character run-stat derivation.
 - `card-rules.js`: card instance cloning, starter deck creation, upgrade, and

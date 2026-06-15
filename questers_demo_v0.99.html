@@ -5224,22 +5224,23 @@
                 const slot = document.createElement('div'); slot.className = 'node-slot'; slot.style.left = (MAP_LANE_LEFT[Math.round(node.x)] || 46) + '%';
                 slot.style.transform = `translateX(${(node.x - Math.round(node.x)) * 70}px)`;
                 
-                const isCurrent = state.currentNode && state.currentNode.id === node.id;
-                const isPassed = state.pathHistory.includes(node.id) && !isCurrent;
-                const isReachable = (!state.currentNode && fIdx === 0) || (state.currentNode && state.currentNode.children.includes(node.id));
+                const routeState = QuestersMapRules.getMapNodeRenderState(node, {
+                    currentNode: state.currentNode,
+                    pathHistory: state.pathHistory
+                });
                 
                 const nodeDiv = document.createElement('div'); nodeDiv.id = `ui-${node.id}`; 
-                nodeDiv.className = `node node-${node.type} ${isPassed?'passed':''} ${isCurrent?'current':''} ${isReachable?'reachable':''}`;
+                nodeDiv.className = `node node-${node.type} ${routeState.className}`;
                 const meta = MAP_NODE_META[node.type] || MAP_NODE_META.battle;
                 nodeDiv.setAttribute('title', meta.label);
                 nodeDiv.innerHTML = `<div class="node-content">${meta.icon}</div>`;
                 nodeDiv.onmouseenter = () => selectMapPreviewNode(node);
                 nodeDiv.onpointerenter = () => selectMapPreviewNode(node);
                 nodeDiv.onclick = () => selectMapPreviewNode(node);
-                if(isReachable) nodeDiv.ondblclick = () => handleNodeClick(node);
-                if(isReachable || isCurrent) {
+                if(routeState.isReachable) nodeDiv.ondblclick = () => handleNodeClick(node);
+                if(routeState.isReachable || routeState.isCurrent) {
                     nodeDiv.onfocus = () => updateMapDetailPanel(node);
-                    if(isReachable) nodeDiv.tabIndex = 0;
+                    if(routeState.isReachable) nodeDiv.tabIndex = 0;
                 }
                 const nodeLabel = document.createElement('div'); nodeLabel.className = 'node-label'; nodeLabel.innerText = meta.label;
                 slot.appendChild(nodeDiv); slot.appendChild(nodeLabel); floorDiv.appendChild(slot);

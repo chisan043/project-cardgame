@@ -125,6 +125,21 @@
         return `第 ${Number(node.floor || 0) + 1} 层`;
     }
 
+    function getMapNodeRenderState(node, {
+        currentNode = null,
+        pathHistory = []
+    } = {}) {
+        const isCurrent = !!(node && currentNode && currentNode.id === node.id);
+        const isPassed = !!(node && pathHistory.includes(node.id) && !isCurrent);
+        const isReachable = isMapNodeReachable(node, { currentNode });
+        return {
+            isCurrent,
+            isPassed,
+            isReachable,
+            className: `${isPassed ? 'passed' : ''} ${isCurrent ? 'current' : ''} ${isReachable ? 'reachable' : ''}`.trim()
+        };
+    }
+
     function generateMapData(options = {}) {
         const mapData = createMapFloors(options);
         connectMapFloors(mapData, options);
@@ -138,6 +153,7 @@
         connectMapNodes,
         createMapFloors,
         generateMapData,
+        getMapNodeRenderState,
         getMapNodeRouteStatus,
         getMapNodeType,
         getNodeFloorLabel,
