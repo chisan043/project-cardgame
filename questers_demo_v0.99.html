@@ -2717,9 +2717,11 @@
         const classPool = getCharacterCardPool();
         const allCards = [...classPool, ...NEUTRAL_CARD_POOL];
         const rarity = rollRewardRarity();
-        let candidates = allCards.filter(card => card.rarity === rarity && !used.has(getCardChoiceKey(card)));
-        if (!candidates.length) candidates = allCards.filter(card => card.rarity === '稀有' && !used.has(getCardChoiceKey(card)));
-        if (!candidates.length) candidates = allCards.filter(card => !used.has(getCardChoiceKey(card)));
+        const candidates = QuestersRewardRules.getRewardCardCandidates({
+            allCards,
+            rarity,
+            used
+        });
         if (!candidates.length) return null;
         return cloneCardDefinition(candidates[Math.floor(Math.random() * candidates.length)]);
     }

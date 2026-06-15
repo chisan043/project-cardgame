@@ -181,6 +181,18 @@
         return candidates;
     }
 
+    function getRewardCardCandidates({
+        allCards = [],
+        rarity = null,
+        used = new Set()
+    } = {}) {
+        const unused = allCards.filter(card => !used.has(getCardChoiceKey(card)));
+        let candidates = rarity ? unused.filter(card => card.rarity === rarity) : unused;
+        if (!candidates.length) candidates = unused.filter(card => card.rarity === '稀有');
+        if (!candidates.length) candidates = unused;
+        return candidates;
+    }
+
     global.QuestersRewardRules = {
         deckHasCardMatch,
         deckHasTag,
@@ -192,6 +204,7 @@
         getRestHealResult,
         getRewardOverlayPresentation,
         getRewardBridgeSpec,
+        getRewardCardCandidates,
         getRewardCandidatePool,
         getShopCopyPrice,
         rollRewardRarity,
