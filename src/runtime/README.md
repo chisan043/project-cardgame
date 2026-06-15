@@ -9,8 +9,9 @@ own DOM rendering.
 - `map-rules.js`: map node layout, path connection, node-type assignment,
   route-state checks, render-state flags, preview-node selection, preview
   variant selection, and floor labels.
-- `state-rules.js`: initial run-state templates, save payload snapshots, map
-  node lookup helpers, character resolution, and run-stat derivation.
+- `state-rules.js`: initial run-state templates, save payload snapshots,
+  saved-run hydration, map node lookup helpers, character resolution, and
+  run-stat derivation.
 - `card-rules.js`: card instance cloning, starter deck creation, upgrade, and
   copy cleanup helpers.
 - `battle-rules.js`: battle-start, battle-win, run-failure, enemy move AI,

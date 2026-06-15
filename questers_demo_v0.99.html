@@ -2305,7 +2305,7 @@
 <script src="src/data/cards.js?v=20260615-gale-ceiling-tune"></script>
 <script src="src/data/enemies.js?v=20260605-enemy-ai"></script>
 <script src="src/data/characters.js?v=20260613-attack-vfx-origin"></script>
-<script src="src/runtime/state-rules.js?v=20260615-runtime-state-rules-character-stats"></script>
+<script src="src/runtime/state-rules.js?v=20260616-runtime-state-save-hydration"></script>
 <script src="src/runtime/card-rules.js?v=20260615-runtime-card-rules"></script>
 <script src="src/runtime/battle-rules.js?v=20260615-runtime-battle-rules"></script>
 <script src="src/runtime/visual-rules.js?v=20260616-noframe-status-icons"></script>
@@ -4292,29 +4292,14 @@
         if (!raw) return;
         try {
             const payload = JSON.parse(raw);
-            state.floor = payload.floor || 0;
-            state.hp = payload.hp || 80;
-            state.maxHp = payload.maxHp || 80;
-            state.gold = payload.gold || 0;
-            state.deck = (payload.deck || [])
-                .filter(card => !REMOVED_BATTLE_IMPRINT_SPECIAL_IDS.has(card.specialId || card.id))
-                .map(card => {
-                    return applyCardTagBudget(card);
-                });
-            state.relics = payload.relics || [];
-            state.mapData = payload.mapData || [];
-            if (!state.mapData.length) generateMap();
-            state.pathHistory = payload.pathHistory || [];
-            state.player = payload.player || state.player;
+            const saveResult = QuestersStateRules.applyRunSavePayload(state, payload, {
+                createMapData: () => QuestersMapRules.generateMapData(),
+                normalizeDeckCard: applyCardTagBudget,
+                shouldKeepDeckCard: card => !REMOVED_BATTLE_IMPRINT_SPECIAL_IDS.has(card.specialId || card.id)
+            });
             ensureStartingRelic(state.player.characterId);
-            state.currentNode = resolveSavedCurrentNode(payload.currentNodeId);
-            state.currentShop = null;
-            state.isNodeClickLocked = false;
-            state.p_chant = state.p_chant || 0;
-            state.p_aim = state.p_aim || 0;
-            state.p_sidestep = 0;
-            shopDeletePrice = payload.shopDeletePrice || 50;
-            initialDeck = buildStarterDeckForCharacter(state.player.characterId);
+            shopDeletePrice = saveResult.shopDeletePrice;
+            initialDeck = buildStarterDeckForCharacter(saveResult.characterId || state.player.characterId);
             starterPreviewCharacterId = state.player.characterId;
             document.querySelectorAll('.overlay').forEach(el => el.style.display = 'none');
             setTopBarVisible(true);
@@ -4327,10 +4312,6 @@
             clearRunSave();
             alert("存档已损坏，已清除。");
         }
-    }
-
-    function resolveSavedCurrentNode(savedNodeId) {
-        return QuestersStateRules.resolveSavedCurrentNode(state.mapData, state.pathHistory, savedNodeId);
     }
 
     function getCurrentCharacter() {

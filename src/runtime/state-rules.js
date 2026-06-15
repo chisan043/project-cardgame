@@ -93,6 +93,43 @@
         };
     }
 
+    function applyRunSavePayload(state, payload, {
+        createMapData = () => [],
+        defaultShopDeletePrice = 50,
+        defaultHp = 80,
+        defaultMaxHp = 80,
+        normalizeDeckCard = card => card,
+        shouldKeepDeckCard = () => true
+    } = {}) {
+        if (!state || !payload || typeof payload !== 'object') {
+            return { shopDeletePrice: defaultShopDeletePrice, characterId: state?.player?.characterId || null };
+        }
+
+        state.floor = payload.floor || 0;
+        state.hp = payload.hp || defaultHp;
+        state.maxHp = payload.maxHp || defaultMaxHp;
+        state.gold = payload.gold || 0;
+        state.deck = (Array.isArray(payload.deck) ? payload.deck : [])
+            .filter(card => shouldKeepDeckCard(card))
+            .map(card => normalizeDeckCard(card));
+        state.relics = Array.isArray(payload.relics) ? payload.relics : [];
+        state.mapData = Array.isArray(payload.mapData) ? payload.mapData : [];
+        if (!state.mapData.length) state.mapData = createMapData();
+        state.pathHistory = Array.isArray(payload.pathHistory) ? payload.pathHistory : [];
+        state.player = payload.player || state.player;
+        state.currentNode = resolveSavedCurrentNode(state.mapData, state.pathHistory, payload.currentNodeId);
+        state.currentShop = null;
+        state.isNodeClickLocked = false;
+        state.p_chant = state.p_chant || 0;
+        state.p_aim = state.p_aim || 0;
+        state.p_sidestep = 0;
+
+        return {
+            characterId: state.player?.characterId || null,
+            shopDeletePrice: payload.shopDeletePrice || defaultShopDeletePrice
+        };
+    }
+
     function findMapNodeById(mapData, nodeId) {
         if (!nodeId || !Array.isArray(mapData)) return null;
         for (const floor of mapData) {
@@ -136,6 +173,7 @@
     }
 
     global.QuestersStateRules = {
+        applyRunSavePayload,
         createEnemyState,
         createInitialState,
         createRunSavePayload,
