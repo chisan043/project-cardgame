@@ -38,6 +38,26 @@
         }));
     }
 
+    function getEnemyAttackAnimationTiming(frames = [], {
+        defaultFirstFrameDuration = 110,
+        defaultSecondFrameDuration = 120,
+        impactBuffer = 45,
+        maxImpactDelay = 300,
+        minDuration = 420
+    } = {}) {
+        const totalDuration = Math.max(
+            minDuration,
+            frames.reduce((sum, frame) => sum + (Number(frame.duration) || 0), 0)
+        );
+        const impactDelay = Math.min(
+            maxImpactDelay,
+            (Number(frames[0]?.duration) || defaultFirstFrameDuration)
+                + (Number(frames[1]?.duration) || defaultSecondFrameDuration)
+                + impactBuffer
+        );
+        return { impactDelay, duration: totalDuration };
+    }
+
     function getEnemyAttackVfxAsset(type) {
         return `assets/vfx/enemy_attack/${String(type || '').replace(/-/g, '_')}_vfx_v1.webp`;
     }
@@ -60,6 +80,7 @@
 
     global.QuestersVisualRules = {
         getEnemyAssetSlug,
+        getEnemyAttackAnimationTiming,
         getEnemyAttackFrames,
         getEnemyAttackVfxAsset,
         getEnemyAttackVfxType,

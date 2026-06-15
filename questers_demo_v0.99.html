@@ -5625,8 +5625,7 @@
         const avatar = document.getElementById('enemy-avatar-img');
         if (!avatarFrame || !avatar) return { impactDelay: 190, duration: 520 };
         const frames = getEnemyAttackFrames(state.enemy);
-        const totalDuration = Math.max(420, frames.reduce((sum, frame) => sum + frame.duration, 0));
-        const impactDelay = Math.min(300, (frames[0]?.duration || 110) + (frames[1]?.duration || 120) + 45);
+        const timing = QuestersVisualRules.getEnemyAttackAnimationTiming(frames);
         const token = ++enemyAttackAnimationToken;
         avatar.dataset.animationState = 'attack';
         avatarFrame.classList.remove('enemy-anim-attack');
@@ -5645,8 +5644,8 @@
             avatar.dataset.animationState = '';
             avatar.src = avatar.dataset.idleSrc || getEnemyVisualPath(state.enemy);
             avatarFrame.classList.remove('enemy-anim-attack');
-        }, totalDuration);
-        return { impactDelay, duration: totalDuration };
+        }, timing.duration);
+        return timing;
     }
 
     function triggerEnemyHurtAnimation(target = 'enemy') {
