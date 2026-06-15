@@ -232,6 +232,26 @@
         return previewPanelData[node.type] || defaultPanel;
     }
 
+    function getMapDetailPanelState(node, {
+        currentNode = null,
+        isNodeClickLocked = false,
+        nodeMeta = {},
+        pathHistory = []
+    } = {}) {
+        const panelData = getMapPreviewVariant(node);
+        const meta = nodeMeta[node?.type] || nodeMeta.battle || {};
+        const panelTitle = panelData?.title || meta.label || '';
+        const panelDesc = panelData?.desc || meta.label || '';
+        return {
+            ariaLabel: panelTitle,
+            desc: `${getMapNodeRouteStatus(node, { currentNode, pathHistory })}。${panelDesc}`,
+            enterDisabled: !isMapNodeReachable(node, { currentNode }) || !!isNodeClickLocked,
+            image: panelData?.image || '',
+            previewNodeId: node?.id || null,
+            title: `${getNodeFloorLabel(node)} · ${panelTitle}`
+        };
+    }
+
     function getMapNodeRenderState(node, {
         currentNode = null,
         pathHistory = []
@@ -261,6 +281,7 @@
         createMapFloors,
         generateMapData,
         getDefaultMapPreviewNode,
+        getMapDetailPanelState,
         getMapNodeRenderState,
         getMapNodeRouteStatus,
         getMapNodeType,

@@ -4918,37 +4918,30 @@
         updateMapDetailPanel(node);
     }
 
-    function getMapNodeRouteStatus(node) {
-        return QuestersMapRules.getMapNodeRouteStatus(node, {
-            currentNode: state.currentNode,
-            pathHistory: state.pathHistory
-        });
-    }
-
-    function getNodeFloorLabel(node) {
-        return QuestersMapRules.getNodeFloorLabel(node);
-    }
-
     function getMapPreviewVariant(node) {
         return QuestersMapRules.getMapPreviewVariant(node);
     }
 
     function updateMapDetailPanel(node = null) {
         const previewNode = node || getSelectedMapPreviewNode() || getDefaultMapPreviewNode();
-        const panelData = getMapPreviewVariant(previewNode);
-        const meta = MAP_NODE_META[previewNode?.type] || MAP_NODE_META.battle;
+        const panelState = QuestersMapRules.getMapDetailPanelState(previewNode, {
+            currentNode: state.currentNode,
+            isNodeClickLocked: state.isNodeClickLocked,
+            nodeMeta: MAP_NODE_META,
+            pathHistory: state.pathHistory
+        });
         const imageEl = document.getElementById('map-preview-image');
         const titleEl = document.getElementById('map-detail-title');
         const descEl = document.getElementById('map-detail-desc');
         const enterButton = document.querySelector('.map-detail-enter');
-        state.mapPreviewNodeId = previewNode?.id || null;
+        state.mapPreviewNodeId = panelState.previewNodeId;
         if (imageEl) {
-            imageEl.style.backgroundImage = `url('${panelData.image}')`;
-            imageEl.setAttribute('aria-label', panelData.title || meta.label);
+            imageEl.style.backgroundImage = `url('${panelState.image}')`;
+            imageEl.setAttribute('aria-label', panelState.ariaLabel);
         }
-        if (titleEl) titleEl.textContent = `${getNodeFloorLabel(previewNode)} · ${panelData.title || meta.label}`;
-        if (descEl) descEl.textContent = `${getMapNodeRouteStatus(previewNode)}。${panelData.desc || meta.label}`;
-        if (enterButton) enterButton.disabled = !isMapNodeReachable(previewNode) || state.isNodeClickLocked;
+        if (titleEl) titleEl.textContent = panelState.title;
+        if (descEl) descEl.textContent = panelState.desc;
+        if (enterButton) enterButton.disabled = panelState.enterDisabled;
         syncMapNodeSelection();
     }
 
