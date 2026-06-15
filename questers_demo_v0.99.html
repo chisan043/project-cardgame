@@ -4928,7 +4928,11 @@
     }
 
     function updateMapDetailPanel(node = null) {
-        const previewNode = node || getSelectedMapPreviewNode() || getDefaultMapPreviewNode();
+        const previewNode = QuestersMapRules.resolveMapPreviewNode(state.mapData, {
+            explicitNode: node,
+            currentNode: state.currentNode,
+            mapPreviewNodeId: state.mapPreviewNodeId
+        });
         const panelState = QuestersMapRules.getMapDetailPanelState(previewNode, {
             currentNode: state.currentNode,
             isNodeClickLocked: state.isNodeClickLocked,

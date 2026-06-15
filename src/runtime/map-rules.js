@@ -233,6 +233,16 @@
         return selected && isMapNodeReachable(selected, { currentNode }) ? selected : null;
     }
 
+    function resolveMapPreviewNode(mapData, {
+        explicitNode = null,
+        currentNode = null,
+        mapPreviewNodeId = null
+    } = {}) {
+        return explicitNode
+            || getSelectedMapPreviewNode(mapData, { currentNode, mapPreviewNodeId })
+            || getDefaultMapPreviewNode(mapData, { currentNode });
+    }
+
     function getMapNodeRouteStatus(node, {
         currentNode = null,
         pathHistory = []
@@ -416,6 +426,7 @@
         getMapPreviewVariant,
         getNodeFloorLabel,
         getSelectedMapPreviewNode,
+        resolveMapPreviewNode,
         isMapNodeReachable
     };
 })(window);
