@@ -2308,7 +2308,7 @@
 <script src="src/runtime/state-rules.js?v=20260615-runtime-state-rules-character-stats"></script>
 <script src="src/runtime/card-rules.js?v=20260615-runtime-card-rules"></script>
 <script src="src/runtime/battle-rules.js?v=20260615-runtime-battle-rules"></script>
-<script src="src/runtime/visual-rules.js?v=20260615-noframe-relic-icons"></script>
+<script src="src/runtime/visual-rules.js?v=20260616-runtime-card-visual-indexes"></script>
 <script src="src/runtime/map-rules.js?v=20260615-runtime-map-node-view-model"></script>
 <script src="src/runtime/reward-rules.js?v=20260615-runtime-shop-spend-rules"></script>
 <script>
@@ -2573,46 +2573,18 @@
         });
     }
 
-    const CARD_EFFECT_ART_BY_SIGNATURE = (() => {
-        const map = new Map();
-        const register = (card) => {
-            const signature = getCardVisualSignature(card);
-            const art = getRegisteredCardArtPath(card);
-            if (signature && art && !map.has(signature)) map.set(signature, art);
-        };
-        [...NEUTRAL_CARD_POOL, ...Object.values(CHARACTER_CARD_POOLS).flat()].forEach(register);
-        if (typeof SPECIAL_EPICS !== 'undefined') SPECIAL_EPICS.forEach(register);
-        return map;
-    })();
-
-    const CARD_EFFECT_NAME_BY_SIGNATURE = (() => {
-        const map = new Map();
-        const register = (card) => {
-            const signature = getCardVisualSignature(card);
-            if (!signature || !card?.name) return;
-            const entry = map.get(signature);
-            if (entry) entry.count += 1;
-            else map.set(signature, { name: card.name, count: 1 });
-        };
-        [...NEUTRAL_CARD_POOL, ...Object.values(CHARACTER_CARD_POOLS).flat()].forEach(register);
-        if (typeof SPECIAL_EPICS !== 'undefined') SPECIAL_EPICS.forEach(register);
-        return map;
-    })();
-
-    const CARD_NAME_FAMILY_BY_KEY = (() => {
-        const map = new Map();
-        const register = (card) => {
-            const key = getCardNameFamilyKey(card);
-            if (!key || !card?.name || map.has(key)) return;
-            map.set(key, {
-                name: card.name,
-                signature: getCardEffectSignature(card),
-                tags: new Set(getCardNameTags(card))
-            });
-        };
-        [...NEUTRAL_CARD_POOL, ...Object.values(CHARACTER_CARD_POOLS).flat()].forEach(register);
-        return map;
-    })();
+    const CARD_VISUAL_INDEXES = QuestersVisualRules.buildCardVisualIndexes({
+        cards: [...NEUTRAL_CARD_POOL, ...Object.values(CHARACTER_CARD_POOLS).flat()],
+        specialCards: typeof SPECIAL_EPICS !== 'undefined' ? SPECIAL_EPICS : []
+    }, {
+        cardArtRegistry: CARD_ART_REGISTRY,
+        cardFrameAssets: CARD_FRAME_ASSETS,
+        cardFrameThemeByName: CARD_FRAME_THEME_BY_NAME,
+        normalizeTags: normalizeTagConflicts
+    });
+    const CARD_EFFECT_ART_BY_SIGNATURE = CARD_VISUAL_INDEXES.cardEffectArtBySignature;
+    const CARD_EFFECT_NAME_BY_SIGNATURE = CARD_VISUAL_INDEXES.cardEffectNameBySignature;
+    const CARD_NAME_FAMILY_BY_KEY = CARD_VISUAL_INDEXES.cardNameFamilyByKey;
 
     function getCardArtPath(card) {
         return QuestersVisualRules.getCardArtPath(card, {

@@ -433,6 +433,55 @@
             || getDirectCardArtPath(card, { cardArtRegistry, cardTypeArtFallback });
     }
 
+    function buildCardEffectArtMap(cards = [], options = {}) {
+        const map = new Map();
+        cards.forEach(card => {
+            const signature = getCardVisualSignature(card, options);
+            const art = getRegisteredCardArtPath(card, options);
+            if (signature && art && !map.has(signature)) map.set(signature, art);
+        });
+        return map;
+    }
+
+    function buildCardEffectNameMap(cards = [], options = {}) {
+        const map = new Map();
+        cards.forEach(card => {
+            const signature = getCardVisualSignature(card, options);
+            if (!signature || !card?.name) return;
+            const entry = map.get(signature);
+            if (entry) entry.count += 1;
+            else map.set(signature, { name: card.name, count: 1 });
+        });
+        return map;
+    }
+
+    function buildCardNameFamilyMap(cards = [], options = {}) {
+        const map = new Map();
+        cards.forEach(card => {
+            const key = getCardNameFamilyKey(card, options);
+            if (!key || !card?.name || map.has(key)) return;
+            map.set(key, {
+                name: card.name,
+                signature: getCardEffectSignature(card, options),
+                tags: new Set(getCardNameTags(card, options))
+            });
+        });
+        return map;
+    }
+
+    function buildCardVisualIndexes({
+        cards = [],
+        specialCards = []
+    } = {}, options = {}) {
+        const baseCards = Array.isArray(cards) ? cards : [];
+        const effectCards = [...baseCards, ...(Array.isArray(specialCards) ? specialCards : [])];
+        return {
+            cardEffectArtBySignature: buildCardEffectArtMap(effectCards, options),
+            cardEffectNameBySignature: buildCardEffectNameMap(effectCards, options),
+            cardNameFamilyByKey: buildCardNameFamilyMap(baseCards, options)
+        };
+    }
+
     function getRelicIconPath(relic, {
         formalRelicIconIds = new Set(),
         relicMasterIconById = {}
@@ -672,6 +721,10 @@
 
     global.QuestersVisualRules = {
         applyCardNameVariant,
+        buildCardEffectArtMap,
+        buildCardEffectNameMap,
+        buildCardNameFamilyMap,
+        buildCardVisualIndexes,
         cleanEffectDisplayText,
         escapeAttr,
         formatRatioText,
