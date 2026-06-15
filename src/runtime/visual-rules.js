@@ -4,6 +4,14 @@
 
     const DEFAULT_ATTACK_FRAME_DURATIONS = [110, 120, 170, 120];
     const ARCHER_WIND_BUFF_CARD_IDS = ['s_energy', 's_exhaust', 'a_green_resonance'];
+    const CARD_NAME_TAG_PRIORITY = [
+        '出血', '吸血', '放血', '血祭', '荆棘', '剧毒', '燃烧',
+        '易伤', '虚弱', '诅咒', '眩晕',
+        '圣剑', '穿甲', '重击', '连击', '追击', '爆发',
+        '咏唱', '回响', '复刻', '充能', '附魔',
+        '庇护', '闪避', '治愈', '抽牌', '保留', '蓄力', '自然', '重置',
+        '放逐', '回收', '销毁', '狂热'
+    ];
     const MAGE_CHANT_BUFF_CARD_IDS = ['m_chant_singularity', 'm_echo_archive', 'm_arcane_aegis'];
     const STATUS_ICON_IDS = new Set([
         'armor', 'thorns', 'str', 'charge', 'echo', 'blood', 'enchant', 'guard',
@@ -133,6 +141,18 @@
 
     function getCardVisualSignature(card, options = {}) {
         return `${getCardFrameTheme(card, options)}|${getCardEffectSignature(card, options)}`;
+    }
+
+    function getCardNameTags(card, {
+        normalizeTags = tags => tags
+    } = {}) {
+        return normalizeTags(card?.tags || [])
+            .filter(Boolean)
+            .sort((a, b) => {
+                const aIdx = CARD_NAME_TAG_PRIORITY.indexOf(a);
+                const bIdx = CARD_NAME_TAG_PRIORITY.indexOf(b);
+                return (aIdx === -1 ? 999 : aIdx) - (bIdx === -1 ? 999 : bIdx) || a.localeCompare(b);
+            });
     }
 
     function getCardArtPath(card, {
@@ -392,6 +412,7 @@
         getCardFramePath,
         getCardFrameTheme,
         getCardNameFamilyKey,
+        getCardNameTags,
         getRegisteredCardArtPath,
         getCardTextDensityClass,
         getCardVisualSignature,

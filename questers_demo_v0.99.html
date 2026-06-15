@@ -2594,15 +2594,6 @@
         });
     }
 
-    const CARD_NAME_TAG_PRIORITY = [
-        '出血', '吸血', '放血', '血祭', '荆棘', '剧毒', '燃烧',
-        '易伤', '虚弱', '诅咒', '眩晕',
-        '圣剑', '穿甲', '重击', '连击', '追击', '爆发',
-        '咏唱', '回响', '复刻', '充能', '附魔',
-        '庇护', '闪避', '治愈', '抽牌', '保留', '蓄力', '自然', '重置',
-        '放逐', '回收', '销毁', '狂热'
-    ];
-
     const CARD_NAME_VARIANT_WORD_BY_TAG = {
         '出血': '溢血',
         '吸血': '汲血',
@@ -2640,13 +2631,9 @@
     };
 
     function getCardNameTags(card) {
-        return normalizeTagConflicts(card?.tags || [])
-            .filter(Boolean)
-            .sort((a, b) => {
-                const aIdx = CARD_NAME_TAG_PRIORITY.indexOf(a);
-                const bIdx = CARD_NAME_TAG_PRIORITY.indexOf(b);
-                return (aIdx === -1 ? 999 : aIdx) - (bIdx === -1 ? 999 : bIdx) || a.localeCompare(b);
-            });
+        return QuestersVisualRules.getCardNameTags(card, {
+            normalizeTags: normalizeTagConflicts
+        });
     }
 
     const CARD_EFFECT_ART_BY_SIGNATURE = (() => {
