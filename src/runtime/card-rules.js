@@ -17,6 +17,52 @@
         return card;
     }
 
+    function getAutoSelectKey(card) {
+        return String(card?.instId || card?.id || card?.poolId || card?.name || '');
+    }
+
+    function getAutoCardPriority(card, {
+        mode = 'keep',
+        getScaledCardValue = candidate => Number(candidate?.val) || 0,
+        hasDirectCardEffect = () => false
+    } = {}) {
+        if (!card) return -9999;
+        if (card.isJunk) return -5000;
+        const tags = card.tags || [];
+        const rarityScore = card.rarity === '史诗' ? 9 : card.rarity === '稀有' ? 5 : 2;
+        const valueScore = Math.min(18, Math.max(0, getScaledCardValue(card) || Number(card.val) || 0));
+        const costPenalty = Math.max(0, Number(card.cost) || 0) * 2;
+        let score = rarityScore + valueScore - costPenalty;
+        if (card.type === '攻击') score += 2;
+        if (tags.includes('抽牌') || hasDirectCardEffect(card, 'draw')) score += 5;
+        if (tags.includes('充能') || hasDirectCardEffect(card, 'energy')) score += 4;
+        if (tags.includes('回收') || tags.includes('复刻') || tags.includes('回响')) score += 5;
+        if (tags.includes('保留') || hasDirectCardEffect(card, 'retain')) score += 3;
+        if (tags.includes('销毁')) score -= 3;
+        if (mode === 'returnToHand') score += Math.max(0, 3 - (Number(card.cost) || 0)) * 3;
+        if (mode === 'returnToDraw') score += tags.includes('回收') || tags.includes('放逐') ? 2 : 0;
+        return score;
+    }
+
+    function getAutoSelectableCards(sourceArray = [], {
+        excludedKeys = new Set()
+    } = {}) {
+        return (Array.isArray(sourceArray) ? sourceArray : [])
+            .filter(card => card && !card.sealed && !excludedKeys.has(getAutoSelectKey(card)));
+    }
+
+    function autoSelectLowestPriorityCards(sourceArray = [], count = 0, options = {}) {
+        return getAutoSelectableCards(sourceArray, options)
+            .sort((a, b) => getAutoCardPriority(a, options) - getAutoCardPriority(b, options))
+            .slice(0, count);
+    }
+
+    function autoSelectHighestPriorityCards(sourceArray = [], count = 0, options = {}) {
+        return getAutoSelectableCards(sourceArray, options)
+            .sort((a, b) => getAutoCardPriority(b, options) - getAutoCardPriority(a, options))
+            .slice(0, count);
+    }
+
     function normalizeTags(tags, normalizeTagConflicts = tags => tags) {
         return normalizeTagConflicts(Array.isArray(tags) ? tags : []);
     }
@@ -138,6 +184,8 @@
     }
 
     global.QuestersCardRules = {
+        autoSelectHighestPriorityCards,
+        autoSelectLowestPriorityCards,
         buildStarterDeckForCharacter,
         cloneCardDefinition,
         cloneSpecialEpic,
@@ -145,6 +193,8 @@
         createUpgradePreviewCard,
         createStarterCard,
         ensureBattleCardInstanceId,
+        getAutoCardPriority,
+        getAutoSelectKey,
         syncUpgradedCardDescription,
         upgradeCard
     };

@@ -2306,7 +2306,7 @@
 <script src="src/data/enemies.js?v=20260605-enemy-ai"></script>
 <script src="src/data/characters.js?v=20260613-attack-vfx-origin"></script>
 <script src="src/runtime/state-rules.js?v=20260616-runtime-state-save-hydration"></script>
-<script src="src/runtime/card-rules.js?v=20260616-runtime-card-instance-rules"></script>
+<script src="src/runtime/card-rules.js?v=20260616-runtime-auto-select-rules"></script>
 <script src="src/runtime/battle-rules.js?v=20260615-runtime-battle-rules"></script>
 <script src="src/runtime/visual-rules.js?v=20260616-noframe-status-icons"></script>
 <script src="src/runtime/map-rules.js?v=20260615-runtime-map-node-view-model"></script>
@@ -5495,40 +5495,32 @@
     }
 
     function getAutoSelectKey(card) {
-        return String(card?.instId || card?.id || card?.poolId || card?.name || '');
+        return QuestersCardRules.getAutoSelectKey(card);
     }
 
     function getAutoCardPriority(card, mode = 'keep') {
-        if (!card) return -9999;
-        if (card.isJunk) return -5000;
-        const tags = card.tags || [];
-        const rarityScore = card.rarity === '史诗' ? 9 : card.rarity === '稀有' ? 5 : 2;
-        const valueScore = Math.min(18, Math.max(0, getScaledCardValue(card) || Number(card.val) || 0));
-        const costPenalty = Math.max(0, Number(card.cost) || 0) * 2;
-        let score = rarityScore + valueScore - costPenalty;
-        if (card.type === '攻击') score += 2;
-        if (tags.includes('抽牌') || hasDirectCardEffect(card, 'draw')) score += 5;
-        if (tags.includes('充能') || hasDirectCardEffect(card, 'energy')) score += 4;
-        if (tags.includes('回收') || tags.includes('复刻') || tags.includes('回响')) score += 5;
-        if (tags.includes('保留') || hasDirectCardEffect(card, 'retain')) score += 3;
-        if (tags.includes('销毁')) score -= 3;
-        if (mode === 'returnToHand') score += Math.max(0, 3 - (Number(card.cost) || 0)) * 3;
-        if (mode === 'returnToDraw') score += tags.includes('回收') || tags.includes('放逐') ? 2 : 0;
-        return score;
+        return QuestersCardRules.getAutoCardPriority(card, {
+            mode,
+            getScaledCardValue,
+            hasDirectCardEffect
+        });
     }
 
     function autoSelectLowestPriorityCards(sourceArray, count, excludedKeys = new Set()) {
-        return [...sourceArray]
-            .filter(card => card && !card.sealed && !excludedKeys.has(getAutoSelectKey(card)))
-            .sort((a, b) => getAutoCardPriority(a) - getAutoCardPriority(b))
-            .slice(0, count);
+        return QuestersCardRules.autoSelectLowestPriorityCards(sourceArray, count, {
+            excludedKeys,
+            getScaledCardValue,
+            hasDirectCardEffect
+        });
     }
 
     function autoSelectHighestPriorityCards(sourceArray, count, excludedKeys = new Set(), mode = 'returnToHand') {
-        return [...sourceArray]
-            .filter(card => card && !card.sealed && !excludedKeys.has(getAutoSelectKey(card)))
-            .sort((a, b) => getAutoCardPriority(b, mode) - getAutoCardPriority(a, mode))
-            .slice(0, count);
+        return QuestersCardRules.autoSelectHighestPriorityCards(sourceArray, count, {
+            excludedKeys,
+            mode,
+            getScaledCardValue,
+            hasDirectCardEffect
+        });
     }
 
     function addKnivesToHand(count) {

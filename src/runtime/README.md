@@ -14,7 +14,8 @@ own DOM rendering.
   saved-run hydration, map node lookup helpers, character resolution, and
   run-stat derivation.
 - `card-rules.js`: card instance cloning, battle instance id normalization,
-  starter deck creation, upgrade preview/application, and copy cleanup helpers.
+  starter deck creation, upgrade preview/application, copy cleanup helpers, and
+  automatic card-selection priority helpers.
 - `battle-rules.js`: battle-start, battle-win, run-failure, enemy move AI,
   encounter scaling, encounter background selection, and combat math helpers.
 - `visual-rules.js`: card visual indexes, enemy visual asset paths,
