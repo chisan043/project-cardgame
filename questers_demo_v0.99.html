@@ -2594,42 +2594,6 @@
         });
     }
 
-    const CARD_NAME_VARIANT_WORD_BY_TAG = {
-        '出血': '溢血',
-        '吸血': '汲血',
-        '放血': '裂血',
-        '血祭': '血誓',
-        '荆棘': '棘甲',
-        '剧毒': '蚀毒',
-        '燃烧': '烬焰',
-        '易伤': '裂隙',
-        '虚弱': '虚蚀',
-        '诅咒': '咒印',
-        '眩晕': '星缚',
-        '圣剑': '圣剑',
-        '穿甲': '裂甲',
-        '重击': '重锋',
-        '连击': '连锋',
-        '追击': '疾射',
-        '爆发': '爆焰',
-        '咏唱': '咏星',
-        '回响': '回音',
-        '复刻': '复写',
-        '充能': '充灵',
-        '附魔': '魔印',
-        '庇护': '护誓',
-        '治愈': '愈光',
-        '抽牌': '灵引',
-        '保留': '留锋',
-        '蓄力': '蓄势',
-        '自然': '林息',
-        '重置': '回流',
-        '放逐': '逐影',
-        '回收': '归羽',
-        '销毁': '碎尘',
-        '狂热': '狂焰'
-    };
-
     function getCardNameTags(card) {
         return QuestersVisualRules.getCardNameTags(card, {
             normalizeTags: normalizeTagConflicts
@@ -2688,29 +2652,10 @@
         });
     }
 
-    function getCardNameVariantWord(variantTags) {
-        if (!variantTags.length) return '';
-        if (variantTags.includes('血祭') && variantTags.includes('荆棘')) return '血棘';
-        if (variantTags.includes('出血') && variantTags.includes('放血')) return '裂血';
-        if (variantTags.includes('剧毒') && variantTags.includes('出血')) return '毒血';
-        if (variantTags.includes('燃烧') && variantTags.includes('荆棘')) return '烬棘';
-        if (variantTags.includes('回响') && variantTags.includes('复刻')) return '回写';
-        if (variantTags.includes('庇护') && variantTags.includes('抽牌')) return '护引';
-        return CARD_NAME_VARIANT_WORD_BY_TAG[variantTags[0]] || variantTags[0].slice(0, 2);
-    }
-
-    function applyCardNameVariant(baseName, variantWord) {
-        if (!baseName || !variantWord) return baseName || '';
-        const chars = [...baseName];
-        if (chars.length <= 2) return variantWord;
-        return `${variantWord}${chars.slice(-2).join('')}`;
-    }
-
     function getCardVariantName(card, family) {
-        const tags = getCardNameTags(card);
-        const diffTags = tags.filter(tag => !family.tags.has(tag));
-        const variantTags = diffTags.length ? diffTags : tags;
-        return applyCardNameVariant(family.name, getCardNameVariantWord(variantTags));
+        return QuestersVisualRules.getCardVariantName(card, family, {
+            normalizeTags: normalizeTagConflicts
+        });
     }
 
     function getCardDisplayName(card) {

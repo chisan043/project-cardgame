@@ -12,6 +12,41 @@
         '庇护', '闪避', '治愈', '抽牌', '保留', '蓄力', '自然', '重置',
         '放逐', '回收', '销毁', '狂热'
     ];
+    const CARD_NAME_VARIANT_WORD_BY_TAG = {
+        '出血': '溢血',
+        '吸血': '汲血',
+        '放血': '裂血',
+        '血祭': '血誓',
+        '荆棘': '棘甲',
+        '剧毒': '蚀毒',
+        '燃烧': '烬焰',
+        '易伤': '裂隙',
+        '虚弱': '虚蚀',
+        '诅咒': '咒印',
+        '眩晕': '星缚',
+        '圣剑': '圣剑',
+        '穿甲': '裂甲',
+        '重击': '重锋',
+        '连击': '连锋',
+        '追击': '疾射',
+        '爆发': '爆焰',
+        '咏唱': '咏星',
+        '回响': '回音',
+        '复刻': '复写',
+        '充能': '充灵',
+        '附魔': '魔印',
+        '庇护': '护誓',
+        '治愈': '愈光',
+        '抽牌': '灵引',
+        '保留': '留锋',
+        '蓄力': '蓄势',
+        '自然': '林息',
+        '重置': '回流',
+        '放逐': '逐影',
+        '回收': '归羽',
+        '销毁': '碎尘',
+        '狂热': '狂焰'
+    };
     const MAGE_CHANT_BUFF_CARD_IDS = ['m_chant_singularity', 'm_echo_archive', 'm_arcane_aegis'];
     const STATUS_ICON_IDS = new Set([
         'armor', 'thorns', 'str', 'charge', 'echo', 'blood', 'enchant', 'guard',
@@ -153,6 +188,34 @@
                 const bIdx = CARD_NAME_TAG_PRIORITY.indexOf(b);
                 return (aIdx === -1 ? 999 : aIdx) - (bIdx === -1 ? 999 : bIdx) || a.localeCompare(b);
             });
+    }
+
+    function getCardNameVariantWord(variantTags = []) {
+        const tags = Array.isArray(variantTags) ? variantTags : [];
+        if (!tags.length) return '';
+        if (tags.includes('血祭') && tags.includes('荆棘')) return '血棘';
+        if (tags.includes('出血') && tags.includes('放血')) return '裂血';
+        if (tags.includes('剧毒') && tags.includes('出血')) return '毒血';
+        if (tags.includes('燃烧') && tags.includes('荆棘')) return '烬棘';
+        if (tags.includes('回响') && tags.includes('复刻')) return '回写';
+        if (tags.includes('庇护') && tags.includes('抽牌')) return '护引';
+        return CARD_NAME_VARIANT_WORD_BY_TAG[tags[0]] || String(tags[0]).slice(0, 2);
+    }
+
+    function applyCardNameVariant(baseName, variantWord) {
+        if (!baseName || !variantWord) return baseName || '';
+        const chars = [...baseName];
+        if (chars.length <= 2) return variantWord;
+        return `${variantWord}${chars.slice(-2).join('')}`;
+    }
+
+    function getCardVariantName(card, family, options = {}) {
+        if (!family) return card?.name || '';
+        const tags = getCardNameTags(card, options);
+        const familyTags = family.tags instanceof Set ? family.tags : new Set(family.tags || []);
+        const diffTags = tags.filter(tag => !familyTags.has(tag));
+        const variantTags = diffTags.length ? diffTags : tags;
+        return applyCardNameVariant(family.name, getCardNameVariantWord(variantTags));
     }
 
     function getCardArtPath(card, {
@@ -405,6 +468,7 @@
     }
 
     global.QuestersVisualRules = {
+        applyCardNameVariant,
         getCardArtPath,
         getCardBuffVfxKind,
         getDirectCardArtPath,
@@ -413,8 +477,10 @@
         getCardFrameTheme,
         getCardNameFamilyKey,
         getCardNameTags,
+        getCardNameVariantWord,
         getRegisteredCardArtPath,
         getCardTextDensityClass,
+        getCardVariantName,
         getCardVisualSignature,
         getEnemyAssetSlug,
         getEnemyAttackAnimationTiming,
