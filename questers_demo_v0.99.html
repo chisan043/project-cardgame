@@ -2363,9 +2363,10 @@
     }
 
     function getCardBottomTagList(card = {}) {
-        if (!Array.isArray(card.tags)) return [];
-        const tagSet = new Set(normalizeTagConflicts(card.tags));
-        return Object.keys(TAGS).filter(tag => tagSet.has(tag));
+        return QuestersVisualRules.getCardBottomTagList(card, {
+            normalizeTags: normalizeTagConflicts,
+            tagDefinitions: TAGS
+        });
     }
 
     function grantRoleSynergy(card, isEcho, targets = null) {

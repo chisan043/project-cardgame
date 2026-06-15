@@ -113,6 +113,15 @@
             || null;
     }
 
+    function getCardBottomTagList(card = {}, {
+        normalizeTags = tags => tags,
+        tagDefinitions = {}
+    } = {}) {
+        if (!Array.isArray(card.tags)) return [];
+        const tagSet = new Set(normalizeTags(card.tags));
+        return Object.keys(tagDefinitions).filter(tag => tagSet.has(tag));
+    }
+
     function getCardTextDensityClass({
         descHtml = '',
         tagCount = 0
@@ -486,6 +495,7 @@
     global.QuestersVisualRules = {
         applyCardNameVariant,
         getCardArtPath,
+        getCardBottomTagList,
         getCardBuffVfxKind,
         getDirectCardArtPath,
         getCardDisplayName,
