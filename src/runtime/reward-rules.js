@@ -413,6 +413,83 @@
         return choices;
     }
 
+    function buildRewardChoiceCards({
+        count = 3,
+        deck = [],
+        characterId = 'hero_warrior',
+        classPool = [],
+        neutralPool = [],
+        specialPool = [],
+        floor = 1,
+        primaryBuildTag = null,
+        getCardBuildTags = () => [],
+        getBoostMultiplier = () => 1,
+        cloneCard = card => card,
+        cloneSpecial = card => cloneCard(card),
+        rollRarity = () => rollRewardRarity({ floor }),
+        rng = Math.random
+    } = {}) {
+        const allCards = [...classPool, ...neutralPool];
+        const bridgeSpec = getRewardBridgeSpec(deck, characterId);
+        const getTags = card => getCardBuildTags(card, characterId);
+        const clonePickedCard = card => (card ? cloneCard(card) : null);
+
+        return buildRewardChoices({
+            count,
+            bridgeSpec,
+            primaryBuildTag,
+            makeBridgeRewardCard: (spec, used) => clonePickedCard(pickRewardBridgeCard({
+                allCards,
+                bridgeSpec: spec,
+                used,
+                rng
+            })),
+            makeBuildRewardCard: (mode, used, activePrimaryBuildTag) => {
+                const rarity = rollRarity({ floor, mode, used });
+                const candidates = getBuildRewardCandidates({
+                    classPool,
+                    neutralPool,
+                    mode,
+                    rarity,
+                    used,
+                    primaryBuildTag: activePrimaryBuildTag,
+                    getCardBuildTags: getTags,
+                    rng
+                });
+                if (!candidates.length) return null;
+                const weightPrimaryTag = mode === 'aligned' ? activePrimaryBuildTag : null;
+                const picked = rollWeighted(candidates, card => {
+                    const tags = getTags(card);
+                    return getBuildRewardWeight({
+                        tags,
+                        primaryBuildTag: weightPrimaryTag,
+                        boost: getBoostMultiplier(tags, card, mode)
+                    });
+                }, rng);
+                return clonePickedCard(picked);
+            },
+            makeGeneralRewardCard: used => {
+                if (rng() < getSpecialEpicRewardChance({ floor })) {
+                    const special = pickSpecialEpicRewardCard({ specialPool, used, rng });
+                    if (special) return cloneSpecial(special);
+                }
+
+                const rarity = rollRarity({ floor, mode: 'general', used });
+                return clonePickedCard(pickRewardCardCandidate({
+                    allCards,
+                    rarity,
+                    used,
+                    rng
+                }));
+            },
+            makeFixedFallbackRewardCard: used => clonePickedCard(pickRewardFixedFallbackCandidate({
+                allCards,
+                used,
+                rng
+            }))
+        });
+    }
+
     function getWeightedRelicOrder({
         relics = [],
         getWeight = () => 1,
@@ -438,6 +515,7 @@
     }
 
     global.QuestersRewardRules = {
+        buildRewardChoiceCards,
         buildRewardChoices,
         deckHasCardMatch,
         deckHasTag,

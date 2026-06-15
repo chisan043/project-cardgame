@@ -2305,7 +2305,7 @@
 <script src="src/runtime/battle-rules.js?v=20260615-runtime-battle-rules"></script>
 <script src="src/runtime/visual-rules.js?v=20260615-noframe-relic-icons"></script>
 <script src="src/runtime/map-rules.js?v=20260615-runtime-map-node-view-model"></script>
-<script src="src/runtime/reward-rules.js?v=20260615-runtime-reward-rules"></script>
+<script src="src/runtime/reward-rules.js?v=20260615-runtime-reward-choice-cards"></script>
 <script>
     function createEmbers() {
         const layer = document.getElementById('particles-layer');
@@ -2490,10 +2490,6 @@
         return getBuildDirectionsForCharacter(characterId)[buildTag]?.name || buildTag;
     }
 
-    function rollWeighted(pool, weightFn) {
-        return QuestersRewardRules.rollWeighted(pool, weightFn);
-    }
-
     function getOwnedBuildRewardBoostTags() {
         if (typeof RELIC_CARD_REWARD_BONUS_BY_ID === 'undefined') return [];
         return state.relics
@@ -2507,31 +2503,6 @@
             boostedTags: getOwnedBuildRewardBoostTags(),
             hasGrayMarketMap: hasRelic('r_gray_market_map')
         });
-    }
-
-    function getCardBuildRewardWeight(card, primaryBuildTag) {
-        const tags = getCardBuildTags(card);
-        return QuestersRewardRules.getBuildRewardWeight({
-            tags,
-            primaryBuildTag,
-            boost: getBuildRewardBoostMultiplier(tags)
-        });
-    }
-
-    function generateBuildRewardCard(mode, used = new Set(), primaryBuildTag = getPrimaryBuildTag()) {
-        const rarity = rollRewardRarity();
-        const candidates = QuestersRewardRules.getBuildRewardCandidates({
-            classPool: getCharacterCardPool(),
-            neutralPool: NEUTRAL_CARD_POOL,
-            mode,
-            rarity,
-            used,
-            primaryBuildTag,
-            getCardBuildTags
-        });
-        if (!candidates.length) return null;
-        const picked = rollWeighted(candidates, card => getCardBuildRewardWeight(card, mode === 'aligned' ? primaryBuildTag : null));
-        return picked ? cloneCardDefinition(picked) : null;
     }
 
     function getWeightedSpecialEpicPool(characterId = state.player.characterId) {
@@ -2703,71 +2674,22 @@
         });
     }
 
-    function generateRewardCard(used = new Set()) {
-        if (Math.random() < QuestersRewardRules.getSpecialEpicRewardChance({ floor: state.floor })) {
-            const special = QuestersRewardRules.pickSpecialEpicRewardCard({
-                specialPool: getWeightedSpecialEpicPool(),
-                used
-            });
-            if (special) return cloneSpecialEpic(special);
-        }
-
-        const classPool = getCharacterCardPool();
-        const allCards = [...classPool, ...NEUTRAL_CARD_POOL];
-        const rarity = rollRewardRarity();
-        const picked = QuestersRewardRules.pickRewardCardCandidate({
-            allCards,
-            rarity,
-            used
-        });
-        return picked ? cloneCardDefinition(picked) : null;
-    }
-
-    function deckHasTag(tag, deck = state.deck) {
-        return QuestersRewardRules.deckHasTag(tag, deck);
-    }
-
-    function deckHasCardMatch(match, deck = state.deck) {
-        return QuestersRewardRules.deckHasCardMatch(match, deck);
-    }
-
-    function getRewardBridgeSpec(deck = state.deck, characterId = state.player?.characterId) {
-        return QuestersRewardRules.getRewardBridgeSpec(deck, characterId);
-    }
-
-    function generateBridgeRewardCard(spec, used = new Set()) {
-        if (!spec) return null;
-        const classPool = getCharacterCardPool();
-        const allCards = [...classPool, ...NEUTRAL_CARD_POOL];
-        const picked = QuestersRewardRules.pickRewardBridgeCard({
-            allCards,
-            bridgeSpec: spec,
-            used
-        });
-        return picked ? cloneCardDefinition(picked) : null;
-    }
-
-    function getCardChoiceKey(card) {
-        return QuestersRewardRules.getCardChoiceKey(card);
-    }
-
     function generateRewardChoices(count = 3) {
-        const fixedFallbackPool = [...getCharacterCardPool(), ...NEUTRAL_CARD_POOL];
-        return QuestersRewardRules.buildRewardChoices({
+        const characterId = state.player?.characterId || 'hero_warrior';
+        return QuestersRewardRules.buildRewardChoiceCards({
             count,
-            bridgeSpec: getRewardBridgeSpec(),
+            deck: state.deck,
+            characterId,
+            classPool: getCharacterCardPool(characterId),
+            neutralPool: NEUTRAL_CARD_POOL,
+            specialPool: getWeightedSpecialEpicPool(characterId),
+            floor: state.floor,
             primaryBuildTag: getPrimaryBuildTag(),
-            makeBridgeRewardCard: (spec, used) => generateBridgeRewardCard(spec, used),
-            makeBuildRewardCard: (mode, used, primaryBuildTag) => generateBuildRewardCard(mode, used, primaryBuildTag),
-            makeGeneralRewardCard: used => generateRewardCard(used),
-            makeFixedFallbackRewardCard: used => {
-                if (!fixedFallbackPool.length) return null;
-                const picked = QuestersRewardRules.pickRewardFixedFallbackCandidate({
-                    allCards: fixedFallbackPool,
-                    used
-                });
-                return picked ? cloneCardDefinition(picked) : null;
-            }
+            getCardBuildTags,
+            getBoostMultiplier: tags => getBuildRewardBoostMultiplier(tags),
+            cloneCard: cloneCardDefinition,
+            cloneSpecial: cloneSpecialEpic,
+            rollRarity: rollRewardRarity
         });
     }
 
