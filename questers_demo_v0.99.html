@@ -2305,7 +2305,7 @@
 <script src="src/data/cards.js?v=20260615-gale-ceiling-tune"></script>
 <script src="src/data/enemies.js?v=20260605-enemy-ai"></script>
 <script src="src/data/characters.js?v=20260613-attack-vfx-origin"></script>
-<script src="src/runtime/state-rules.js?v=20260615-runtime-state-rules"></script>
+<script src="src/runtime/state-rules.js?v=20260615-runtime-state-rules-character-stats"></script>
 <script src="src/runtime/card-rules.js?v=20260615-runtime-card-rules"></script>
 <script src="src/runtime/battle-rules.js?v=20260615-runtime-battle-rules"></script>
 <script src="src/runtime/visual-rules.js?v=20260615-noframe-relic-icons"></script>
@@ -4357,7 +4357,7 @@
     }
 
     function getCurrentCharacter() {
-        return CHARACTERS[state.player.characterId] || CHARACTERS.hero_warrior;
+        return QuestersStateRules.resolveCharacter(CHARACTERS, state.player.characterId, 'hero_warrior');
     }
 
     function getCharacterBaseEnergy(character = getCurrentCharacter()) {
@@ -4372,13 +4372,16 @@
     }
 
     function applyCharacterRunStats(characterId) {
-        const character = CHARACTERS[characterId] || CHARACTERS.hero_warrior;
-        state.maxHp = character.maxHp || 80;
-        state.hp = state.maxHp;
-        state.mp = getCharacterBaseEnergy(character);
-        state.gold = character.startingGold ?? 50;
-        state.player.characterId = character.id;
-        state.player.name = character.name;
+        const character = QuestersStateRules.resolveCharacter(CHARACTERS, characterId, 'hero_warrior');
+        const runStats = QuestersStateRules.getCharacterRunStats(character, {
+            hasBaseEnergyRelic: hasRelic('r_base_energy')
+        });
+        state.maxHp = runStats.maxHp;
+        state.hp = runStats.hp;
+        state.mp = runStats.mp;
+        state.gold = runStats.gold;
+        state.player.characterId = runStats.player.characterId;
+        state.player.name = runStats.player.name;
     }
 
     function updatePlayerPresentation() {

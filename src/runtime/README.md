@@ -10,7 +10,7 @@ own DOM rendering.
   route-state checks, render-state flags, preview-node selection, preview
   variant selection, and floor labels.
 - `state-rules.js`: initial run-state templates, save payload snapshots, map
-  node lookup helpers, and character run-stat derivation.
+  node lookup helpers, character resolution, and run-stat derivation.
 - `card-rules.js`: card instance cloning, starter deck creation, upgrade, and
   copy cleanup helpers.
 - `battle-rules.js`: battle-start, battle-win, run-failure, enemy move AI,

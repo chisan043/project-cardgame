@@ -107,6 +107,10 @@
         return findMapNodeById(mapData, savedNodeId || fallbackId);
     }
 
+    function resolveCharacter(characters = {}, characterId = 'hero_warrior', fallbackCharacterId = 'hero_warrior') {
+        return characters[characterId] || characters[fallbackCharacterId] || {};
+    }
+
     function getCharacterBaseEnergy(character = {}, { hasBaseEnergyRelic = false } = {}) {
         return (character.baseEnergy || 5) + (hasBaseEnergyRelic ? 1 : 0);
     }
@@ -115,13 +119,31 @@
         return (character.openingHand || 5) + (hasFirstDrawRelic ? 1 : 0);
     }
 
+    function getCharacterRunStats(character = {}, {
+        hasBaseEnergyRelic = false
+    } = {}) {
+        const maxHp = character.maxHp || 80;
+        return {
+            gold: character.startingGold ?? 50,
+            hp: maxHp,
+            maxHp,
+            mp: getCharacterBaseEnergy(character, { hasBaseEnergyRelic }),
+            player: {
+                characterId: character.id || 'hero_warrior',
+                name: character.name || '勇者战士'
+            }
+        };
+    }
+
     global.QuestersStateRules = {
         createEnemyState,
         createInitialState,
         createRunSavePayload,
         findMapNodeById,
         getCharacterBaseEnergy,
+        getCharacterRunStats,
         getCharacterTurnDrawCount,
+        resolveCharacter,
         resolveSavedCurrentNode
     };
 })(window);
