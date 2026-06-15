@@ -7422,9 +7422,14 @@
     }
 
     function winBattle() { 
-        state.gold += 30 + (hasRelic('r_silver_purse') ? 10 : 0);
-        if (hasRelic('r_finisher_coin') && state.enemy.vuln > 0) state.gold += 10;
-        if (hasRelic('r_warm_pendant')) state.hp = Math.min(state.maxHp, state.hp + 6);
+        const rewards = QuestersRewardRules.getBattleWinRewards({
+            enemyVulnerable: state.enemy.vuln > 0,
+            hasSilverPurse: hasRelic('r_silver_purse'),
+            hasFinisherCoin: hasRelic('r_finisher_coin'),
+            hasWarmPendant: hasRelic('r_warm_pendant')
+        });
+        state.gold += rewards.gold;
+        if (rewards.heal > 0) state.hp = Math.min(state.maxHp, state.hp + rewards.heal);
         QuestersBattleRules.cleanupAfterBattleWin(state);
 
         updateTopBar(); showRewardOverlay(); 

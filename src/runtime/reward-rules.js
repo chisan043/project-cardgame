@@ -34,6 +34,18 @@
         return 25 + Math.min(30, floor * 2) + (hasRewardCrown ? 15 : 0) + (hasCampfirePouch ? 10 : 0);
     }
 
+    function getBattleWinRewards({
+        enemyVulnerable = false,
+        hasSilverPurse = false,
+        hasFinisherCoin = false,
+        hasWarmPendant = false
+    } = {}) {
+        return {
+            gold: 30 + (hasSilverPurse ? 10 : 0) + (hasFinisherCoin && enemyVulnerable ? 10 : 0),
+            heal: hasWarmPendant ? 6 : 0
+        };
+    }
+
     function getShopCopyPrice(card = {}, { hasCopySeal = false } = {}) {
         let price = 65;
         if (card.rarity === '稀有') price += 20;
@@ -144,6 +156,7 @@
         deckHasCardMatch,
         deckHasTag,
         getBattleRewardSkipGold,
+        getBattleWinRewards,
         getCardChoiceKey,
         getDeckBuildProfile,
         getPrimaryBuildTag,
