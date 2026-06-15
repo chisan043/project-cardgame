@@ -2502,11 +2502,11 @@
     }
 
     function getBuildRewardBoostMultiplier(tags = []) {
-        const boostedTags = getOwnedBuildRewardBoostTags();
-        let multiplier = 1;
-        if (hasRelic('r_gray_market_map') && tags.length) multiplier *= 1.25;
-        if (!boostedTags.length || !tags.length) return multiplier;
-        return boostedTags.some(tag => tags.includes(tag)) ? multiplier * 1.35 : multiplier;
+        return QuestersRewardRules.getBuildRewardBoostMultiplier({
+            tags,
+            boostedTags: getOwnedBuildRewardBoostTags(),
+            hasGrayMarketMap: hasRelic('r_gray_market_map')
+        });
     }
 
     function getCardBuildRewardWeight(card, primaryBuildTag) {

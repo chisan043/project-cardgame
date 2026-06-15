@@ -225,6 +225,17 @@
         return 0.95 * boost;
     }
 
+    function getBuildRewardBoostMultiplier({
+        tags = [],
+        boostedTags = [],
+        hasGrayMarketMap = false
+    } = {}) {
+        let multiplier = 1;
+        if (hasGrayMarketMap && tags.length) multiplier *= 1.25;
+        if (!boostedTags.length || !tags.length) return multiplier;
+        return boostedTags.some(tag => tags.includes(tag)) ? multiplier * 1.35 : multiplier;
+    }
+
     function getRewardCardCandidates({
         allCards = [],
         rarity = null,
@@ -279,6 +290,7 @@
         getBattleRewardSkipGold,
         getBattleWinRewards,
         getBuildRewardCandidates,
+        getBuildRewardBoostMultiplier,
         getBuildRewardWeight,
         getCardChoiceKey,
         getDeckBuildProfile,
