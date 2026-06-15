@@ -4954,13 +4954,14 @@
     function renderMap() {
         const root = document.getElementById('map-nodes-root'); const svg = document.getElementById('map-svg-layer');
         root.innerHTML = ''; while (svg.firstChild) { svg.removeChild(svg.firstChild); } 
-        let containerHeight = state.mapData.length * MAP_FLOOR_GAP + 150; 
+        let containerHeight = QuestersMapRules.getMapContainerHeight(state.mapData.length);
         document.getElementById('map-inner-wrapper').style.height = containerHeight + "px"; 
         svg.style.height = containerHeight + "px";
         
         state.mapData.forEach((floor, fIdx) => {
-            const floorDiv = document.createElement('div'); floorDiv.className = 'map-floor'; floorDiv.style.position = 'absolute'; floorDiv.style.bottom = (fIdx * MAP_FLOOR_GAP + MAP_BASE_BOTTOM) + 'px';
-            const label = document.createElement('div'); label.className = 'floor-label'; label.style.bottom = (fIdx * MAP_FLOOR_GAP + MAP_BASE_BOTTOM - 24) + 'px'; label.innerText = fIdx === state.mapData.length - 1 ? '首领' : `第 ${fIdx + 1} 层`; root.appendChild(label);
+            const floorLayout = QuestersMapRules.getMapFloorLayout(fIdx);
+            const floorDiv = document.createElement('div'); floorDiv.className = 'map-floor'; floorDiv.style.position = 'absolute'; floorDiv.style.bottom = floorLayout.floorBottom + 'px';
+            const label = document.createElement('div'); label.className = 'floor-label'; label.style.bottom = floorLayout.labelBottom + 'px'; label.innerText = fIdx === state.mapData.length - 1 ? '首领' : `第 ${fIdx + 1} 层`; root.appendChild(label);
             floor.nodes.forEach(node => {
                 const slotLayout = QuestersMapRules.getMapNodeSlotLayout(node);
                 const slot = document.createElement('div'); slot.className = 'node-slot'; slot.style.left = slotLayout.leftPercent + '%';

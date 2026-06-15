@@ -11,7 +11,9 @@
         5: [[0, 1, 2, 3, 4]]
     };
     const FLOOR_COUNTS = [3, 3, 4, 3, 4, 3, 5, 4, 3, 4, 3, 5, 4, 3, 4, 4, 3, 2, 1, 1];
+    const DEFAULT_FLOOR_GAP = 150;
     const DEFAULT_LANE_LEFT_PERCENT_BY_LANE = [18, 32, 46, 60, 74];
+    const DEFAULT_BASE_BOTTOM = 140;
     const DEFAULT_PREVIEW_PANEL_DATA = {
         battle: {
             title: '雾岭小径',
@@ -281,6 +283,25 @@
         };
     }
 
+    function getMapContainerHeight(floorCount = 0, {
+        floorGap = DEFAULT_FLOOR_GAP,
+        topPadding = 150
+    } = {}) {
+        return Math.max(0, Number(floorCount) || 0) * floorGap + topPadding;
+    }
+
+    function getMapFloorLayout(floorIndex = 0, {
+        baseBottom = DEFAULT_BASE_BOTTOM,
+        floorGap = DEFAULT_FLOOR_GAP,
+        labelOffset = 24
+    } = {}) {
+        const floorBottom = (Number(floorIndex) || 0) * floorGap + baseBottom;
+        return {
+            floorBottom,
+            labelBottom: floorBottom - labelOffset
+        };
+    }
+
     function getMapPathLineType(parentNodeId, childNodeId, {
         currentNode = null,
         pathHistory = []
@@ -304,7 +325,9 @@
         createMapFloors,
         generateMapData,
         getDefaultMapPreviewNode,
+        getMapContainerHeight,
         getMapDetailPanelState,
+        getMapFloorLayout,
         getMapNodeRenderState,
         getMapNodeRouteStatus,
         getMapNodeSlotLayout,
