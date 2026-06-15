@@ -3015,11 +3015,12 @@
     }
 
     function getRelicBottomTags(r) {
-        let tagsHtml = '';
-        getDisplayTags(r).forEach(t => {
-            if(TAGS[t]) { let tooltip = TAGS[t].replace(/\{val\}/g, 'X'); tagsHtml += `<span class="keyword-tag">${getTagDisplayName(t)}<span class="keyword-tooltip">${formatKeywords(tooltip)}</span></span>`; }
+        return QuestersVisualRules.getRelicBottomTags(r, {
+            formatKeywords,
+            getDisplayTags,
+            getTagDisplayName,
+            tagDefinitions: TAGS
         });
-        if(tagsHtml) return `<div style="display:flex; flex-wrap:wrap; align-content:flex-start; margin-top:auto; padding-top:8px; border-top:1px dashed #444; width:100%;">${tagsHtml}</div>`; return '';
     }
 
     function getCardTextDensityClass(card, descHtml) {

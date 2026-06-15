@@ -202,6 +202,23 @@
         return cleanEffectDisplayText(relic?.desc || '', { preserveRewardWeight: true }) || relic?.desc || '';
     }
 
+    function getRelicBottomTags(relic, {
+        formatKeywords = text => text,
+        getDisplayTags = () => [],
+        getTagDisplayName = tag => tag,
+        tagDefinitions = {}
+    } = {}) {
+        let tagsHtml = '';
+        getDisplayTags(relic).forEach(tag => {
+            if (tagDefinitions[tag]) {
+                const tooltip = tagDefinitions[tag].replace(/\{val\}/g, 'X');
+                tagsHtml += `<span class="keyword-tag">${getTagDisplayName(tag)}<span class="keyword-tooltip">${formatKeywords(tooltip)}</span></span>`;
+            }
+        });
+        if (tagsHtml) return `<div style="display:flex; flex-wrap:wrap; align-content:flex-start; margin-top:auto; padding-top:8px; border-top:1px dashed #444; width:100%;">${tagsHtml}</div>`;
+        return '';
+    }
+
     function normalizeCardEffectText(text = '') {
         return String(text)
             .replace(/<br\s*\/?>/gi, '\n')
@@ -596,6 +613,7 @@
         getPlayerAttackAnimationTiming,
         getPlayerAttackVfxLayout,
         getPlayerBuffVfxLayout,
+        getRelicBottomTags,
         getRelicIconPath,
         getStatusIconPath,
         getShieldHitVfxLayout,
