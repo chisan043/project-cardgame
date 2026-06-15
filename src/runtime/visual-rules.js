@@ -230,6 +230,18 @@
         return `<span class="relic-visual ${wrapperClass}"><span class="relic-fallback ${fallbackClass}">${fallback}</span><img class="relic-image ${imgClass}" src="${src}" alt="${relic?.name || '遗物'}" loading="lazy" onload="markRelicImageLoaded(this)" onerror="fallbackRelicImage(this)"></span>`;
     }
 
+    function renderRelicCard(relic, {
+        cardClass = 'relic-item-box',
+        formatKeywords = text => text,
+        getDisplayRelicDesc = item => item?.desc || '',
+        getRelicBottomTags = () => '',
+        iconClass = '',
+        iconSize = 50,
+        renderRelicVisual = item => item?.icon || ''
+    } = {}) {
+        return `<div class="${cardClass}"><div class="${iconClass}" style="font-size:${iconSize}px;">${renderRelicVisual(relic)}</div><div style="color:white; font-weight:bold; font-size:18px;">${relic.name}</div><div style="flex:1; color:#aaa; font-size:12px; margin:10px 0; line-height:1.5; text-align:left;">${formatKeywords(getDisplayRelicDesc(relic))}</div>${getRelicBottomTags(relic)}</div>`;
+    }
+
     function normalizeCardEffectText(text = '') {
         return String(text)
             .replace(/<br\s*\/?>/gi, '\n')
@@ -629,6 +641,7 @@
         getStatusIconPath,
         getShieldHitVfxLayout,
         normalizeCardEffectText,
+        renderRelicCard,
         renderRelicVisual
     };
 })(window);
