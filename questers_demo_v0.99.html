@@ -1363,8 +1363,8 @@
         body.scene-battle-active .hud-runtime-status {
             display:grid;
             grid-auto-flow:column;
-            grid-template-rows:repeat(2, 28px);
-            grid-auto-columns:28px;
+            grid-template-rows:repeat(2, 42px);
+            grid-auto-columns:42px;
             justify-content:flex-start;
             align-content:flex-start;
             gap:4px 6px;
@@ -1389,50 +1389,50 @@
         body.scene-battle-active .hud-runtime-status .status-badge {
             pointer-events:auto;
             position:relative;
-            width:28px;
-            height:28px;
+            width:42px;
+            height:42px;
             display:flex;
             align-items:center;
             justify-content:center;
             margin:0;
-            border-radius:8px;
-            border:1px solid rgba(241,223,181,0.34);
-            background:linear-gradient(180deg, rgba(16,21,31,0.96), rgba(7,10,17,0.96));
-            box-shadow:0 5px 14px rgba(0,0,0,0.42), inset 0 0 0 1px rgba(255,255,255,0.06);
+            padding:0;
+            border:0;
+            border-radius:0;
+            background:transparent !important;
+            box-shadow:none;
             white-space:normal;
             overflow:visible;
         }
         body.scene-battle-active .hud-runtime-status .status-icon-glyph {
-            font-size:15px;
+            font-size:24px;
             line-height:1;
             filter:drop-shadow(0 1px 2px rgba(0,0,0,0.7));
         }
         body.scene-battle-active .hud-runtime-status .status-icon-img {
-            width:25px;
-            height:25px;
+            width:42px;
+            height:42px;
             object-fit:contain;
             display:block;
             pointer-events:none;
-            filter:drop-shadow(0 1px 2px rgba(0,0,0,0.7));
+            filter:drop-shadow(0 2px 2px rgba(0,0,0,0.78)) drop-shadow(0 0 5px rgba(255,230,150,0.18));
         }
         body.scene-battle-active .hud-runtime-status .status-stack {
             position:absolute;
-            right:-5px;
-            bottom:-6px;
-            min-width:20px;
-            height:16px;
-            padding:0 3px;
+            right:-3px;
+            bottom:-4px;
+            min-width:auto;
+            height:auto;
+            padding:0;
             display:flex;
             align-items:center;
             justify-content:center;
-            border-radius:999px;
-            background:rgba(8,10,16,0.96);
-            border:1px solid rgba(241,223,181,0.52);
+            border:0;
+            background:transparent;
             color:#fff4d4;
-            font-size:9px;
+            font-size:11px;
             font-weight:900;
             line-height:1;
-            text-shadow:0 1px 0 rgba(0,0,0,0.8);
+            text-shadow:0 1px 0 #000, 1px 0 0 #000, -1px 0 0 #000, 0 0 6px rgba(0,0,0,0.95);
         }
         body.scene-battle-active .hud-runtime-status .status-tooltip {
             bottom:auto;
@@ -1456,24 +1456,25 @@
         body.scene-battle-active .hud-runtime-relics {
             display:grid;
             grid-auto-flow:column;
-            grid-template-rows:repeat(7, 30px);
-            grid-auto-columns:30px;
+            grid-template-rows:repeat(7, 46px);
+            grid-auto-columns:46px;
             align-content:start;
             justify-content:flex-start;
-            gap:6px;
+            gap:7px;
             overflow:visible;
             pointer-events:auto;
         }
         body.scene-battle-active .hud-runtime-relics .relic-icon {
             pointer-events:auto;
-            width:30px;
-            height:30px;
+            width:46px;
+            height:46px;
             margin:0;
-            padding:2px;
-            border-radius:8px;
-            border:1px solid rgba(241,223,181,0.34);
-            background:linear-gradient(180deg, rgba(22,18,14,0.94), rgba(10,8,7,0.96));
-            box-shadow:0 5px 14px rgba(0,0,0,0.45), inset 0 0 0 1px rgba(255,255,255,0.06);
+            padding:0;
+            border:0;
+            border-radius:0;
+            background:transparent;
+            box-shadow:none;
+            filter:drop-shadow(0 2px 2px rgba(0,0,0,0.8)) drop-shadow(0 0 7px rgba(241,196,15,0.34));
             transform:none;
         }
         body.scene-battle-active .hud-runtime-relics .status-tooltip {
@@ -2299,7 +2300,7 @@
 </div>
 
 <script src="hud-runtime.js?v=20260518-forced-default-hud1"></script>
-<script src="hud-layout-data.js?v=20260518-forced-default-hud1"></script>
+<script src="hud-layout-data.js?v=20260616-intent-tray-reuse"></script>
 <script src="src/data/relics.js?v=20260615-gale-ceiling-tune"></script>
 <script src="src/data/card-tags.js?v=20260614-exile-flow-text"></script>
 <script src="src/data/cards.js?v=20260615-gale-ceiling-tune"></script>
@@ -3197,7 +3198,7 @@
     const HUD_IDB_STORE_NAME = 'kv';
     const SHOW_RUNTIME_HUD_TEXT = true;
     const BUNDLED_ENEMY_INTENT_TRAY_SRC = 'assets/ui/hud/player_panel/player_energy_tray_asset_v1_no_circles_transparent.webp';
-    const LEGACY_BATTLE_HUD_ITEM_RE = /玩家护甲条框|玩家能量槽|玩家状态栏|敌方总图参考|敌方护甲条框|敌方状态栏|player_hp_bar_long_fill_gray_base_asset_v1|enemy_status_bar_shell_asset_v1|battle_hud_enemy_panel_asset_v1|敌方状态底/;
+    const LEGACY_BATTLE_HUD_ITEM_RE = /玩家护甲条框|玩家状态栏|敌方总图参考|敌方护甲条框|敌方状态栏|player_hp_bar_long_fill_gray_base_asset_v1|enemy_status_bar_shell_asset_v1|battle_hud_enemy_panel_asset_v1|敌方状态底/;
 
     function isLegacyBattleHudItem(item) {
         const key = `${item?.name || ''} ${item?.src || ''} ${item?.assetId || ''}`;
