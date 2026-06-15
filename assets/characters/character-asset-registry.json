@@ -1,0 +1,637 @@
+{
+  "generatedBy": "tools/build_asset_registries.mjs",
+  "sourceData": [
+    "src/data/characters.js",
+    "questers_demo_v0.99.html"
+  ],
+  "policy": "Runtime character portraits, role frames, and battle animation frames live under assets/characters/<role>/ and are registered from character data.",
+  "assetCount": 48,
+  "missingAssetCount": 0,
+  "charactersCovered": 3,
+  "assets": [
+    {
+      "key": "characters/archer/avatar_portrait_v1",
+      "path": "assets/characters/archer/avatar_portrait_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_archer",
+          "name": "精灵弓箭手",
+          "roleId": "hero_archer",
+          "kind": "hud_avatar"
+        }
+      ]
+    },
+    {
+      "key": "characters/archer/battle_back_attack_01_v2",
+      "path": "assets/characters/archer/battle_back_attack_01_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_archer",
+          "name": "精灵弓箭手",
+          "roleId": "hero_archer",
+          "kind": "battle_attack_animation"
+        }
+      ]
+    },
+    {
+      "key": "characters/archer/battle_back_attack_02_v2",
+      "path": "assets/characters/archer/battle_back_attack_02_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_archer",
+          "name": "精灵弓箭手",
+          "roleId": "hero_archer",
+          "kind": "battle_attack_animation"
+        }
+      ]
+    },
+    {
+      "key": "characters/archer/battle_back_attack_03_v2",
+      "path": "assets/characters/archer/battle_back_attack_03_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_archer",
+          "name": "精灵弓箭手",
+          "roleId": "hero_archer",
+          "kind": "battle_attack_animation"
+        }
+      ]
+    },
+    {
+      "key": "characters/archer/battle_back_attack_04_v2",
+      "path": "assets/characters/archer/battle_back_attack_04_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_archer",
+          "name": "精灵弓箭手",
+          "roleId": "hero_archer",
+          "kind": "battle_attack_animation"
+        }
+      ]
+    },
+    {
+      "key": "characters/archer/battle_back_attack_05_v2",
+      "path": "assets/characters/archer/battle_back_attack_05_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_archer",
+          "name": "精灵弓箭手",
+          "roleId": "hero_archer",
+          "kind": "battle_attack_animation"
+        }
+      ]
+    },
+    {
+      "key": "characters/archer/battle_back_attack_06_v2",
+      "path": "assets/characters/archer/battle_back_attack_06_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_archer",
+          "name": "精灵弓箭手",
+          "roleId": "hero_archer",
+          "kind": "battle_attack_animation"
+        }
+      ]
+    },
+    {
+      "key": "characters/archer/battle_back_hurt_01_v2",
+      "path": "assets/characters/archer/battle_back_hurt_01_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_archer",
+          "name": "精灵弓箭手",
+          "roleId": "hero_archer",
+          "kind": "battle_hurt_animation"
+        }
+      ]
+    },
+    {
+      "key": "characters/archer/battle_back_hurt_02_v2",
+      "path": "assets/characters/archer/battle_back_hurt_02_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_archer",
+          "name": "精灵弓箭手",
+          "roleId": "hero_archer",
+          "kind": "battle_hurt_animation"
+        }
+      ]
+    },
+    {
+      "key": "characters/archer/battle_back_hurt_03_v2",
+      "path": "assets/characters/archer/battle_back_hurt_03_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_archer",
+          "name": "精灵弓箭手",
+          "roleId": "hero_archer",
+          "kind": "battle_hurt_animation"
+        }
+      ]
+    },
+    {
+      "key": "characters/archer/battle_back_hurt_04_v2",
+      "path": "assets/characters/archer/battle_back_hurt_04_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_archer",
+          "name": "精灵弓箭手",
+          "roleId": "hero_archer",
+          "kind": "battle_hurt_animation"
+        }
+      ]
+    },
+    {
+      "key": "characters/archer/battle_back_hurt_05_v2",
+      "path": "assets/characters/archer/battle_back_hurt_05_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_archer",
+          "name": "精灵弓箭手",
+          "roleId": "hero_archer",
+          "kind": "battle_hurt_animation"
+        }
+      ]
+    },
+    {
+      "key": "characters/archer/battle_back_hurt_06_v2",
+      "path": "assets/characters/archer/battle_back_hurt_06_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_archer",
+          "name": "精灵弓箭手",
+          "roleId": "hero_archer",
+          "kind": "battle_hurt_animation"
+        }
+      ]
+    },
+    {
+      "key": "characters/archer/battle_back_idle_v1",
+      "path": "assets/characters/archer/battle_back_idle_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_archer",
+          "name": "精灵弓箭手",
+          "roleId": "hero_archer",
+          "kind": "battle_idle"
+        }
+      ]
+    },
+    {
+      "key": "characters/archer/role_select_frame_v1",
+      "path": "assets/characters/archer/role_select_frame_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_archer",
+          "name": "精灵弓箭手",
+          "roleId": "hero_archer",
+          "kind": "role_select_frame"
+        }
+      ]
+    },
+    {
+      "key": "characters/archer/select_portrait_v1",
+      "path": "assets/characters/archer/select_portrait_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_archer",
+          "name": "精灵弓箭手",
+          "roleId": "hero_archer",
+          "kind": "role_select_portrait"
+        }
+      ]
+    },
+    {
+      "key": "characters/mage/avatar_portrait_v1",
+      "path": "assets/characters/mage/avatar_portrait_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_mage",
+          "name": "萝莉魔导士",
+          "roleId": "hero_mage",
+          "kind": "hud_avatar"
+        }
+      ]
+    },
+    {
+      "key": "characters/mage/battle_back_attack_01_v2",
+      "path": "assets/characters/mage/battle_back_attack_01_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_mage",
+          "name": "萝莉魔导士",
+          "roleId": "hero_mage",
+          "kind": "battle_attack_animation"
+        }
+      ]
+    },
+    {
+      "key": "characters/mage/battle_back_attack_02_v2",
+      "path": "assets/characters/mage/battle_back_attack_02_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_mage",
+          "name": "萝莉魔导士",
+          "roleId": "hero_mage",
+          "kind": "battle_attack_animation"
+        }
+      ]
+    },
+    {
+      "key": "characters/mage/battle_back_attack_03_v2",
+      "path": "assets/characters/mage/battle_back_attack_03_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_mage",
+          "name": "萝莉魔导士",
+          "roleId": "hero_mage",
+          "kind": "battle_attack_animation"
+        }
+      ]
+    },
+    {
+      "key": "characters/mage/battle_back_attack_04_v2",
+      "path": "assets/characters/mage/battle_back_attack_04_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_mage",
+          "name": "萝莉魔导士",
+          "roleId": "hero_mage",
+          "kind": "battle_attack_animation"
+        }
+      ]
+    },
+    {
+      "key": "characters/mage/battle_back_attack_05_v2",
+      "path": "assets/characters/mage/battle_back_attack_05_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_mage",
+          "name": "萝莉魔导士",
+          "roleId": "hero_mage",
+          "kind": "battle_attack_animation"
+        }
+      ]
+    },
+    {
+      "key": "characters/mage/battle_back_attack_06_v2",
+      "path": "assets/characters/mage/battle_back_attack_06_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_mage",
+          "name": "萝莉魔导士",
+          "roleId": "hero_mage",
+          "kind": "battle_attack_animation"
+        }
+      ]
+    },
+    {
+      "key": "characters/mage/battle_back_hurt_01_v2",
+      "path": "assets/characters/mage/battle_back_hurt_01_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_mage",
+          "name": "萝莉魔导士",
+          "roleId": "hero_mage",
+          "kind": "battle_hurt_animation"
+        }
+      ]
+    },
+    {
+      "key": "characters/mage/battle_back_hurt_02_v2",
+      "path": "assets/characters/mage/battle_back_hurt_02_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_mage",
+          "name": "萝莉魔导士",
+          "roleId": "hero_mage",
+          "kind": "battle_hurt_animation"
+        }
+      ]
+    },
+    {
+      "key": "characters/mage/battle_back_hurt_03_v2",
+      "path": "assets/characters/mage/battle_back_hurt_03_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_mage",
+          "name": "萝莉魔导士",
+          "roleId": "hero_mage",
+          "kind": "battle_hurt_animation"
+        }
+      ]
+    },
+    {
+      "key": "characters/mage/battle_back_hurt_04_v2",
+      "path": "assets/characters/mage/battle_back_hurt_04_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_mage",
+          "name": "萝莉魔导士",
+          "roleId": "hero_mage",
+          "kind": "battle_hurt_animation"
+        }
+      ]
+    },
+    {
+      "key": "characters/mage/battle_back_hurt_05_v2",
+      "path": "assets/characters/mage/battle_back_hurt_05_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_mage",
+          "name": "萝莉魔导士",
+          "roleId": "hero_mage",
+          "kind": "battle_hurt_animation"
+        }
+      ]
+    },
+    {
+      "key": "characters/mage/battle_back_hurt_06_v2",
+      "path": "assets/characters/mage/battle_back_hurt_06_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_mage",
+          "name": "萝莉魔导士",
+          "roleId": "hero_mage",
+          "kind": "battle_hurt_animation"
+        }
+      ]
+    },
+    {
+      "key": "characters/mage/battle_back_idle_v1",
+      "path": "assets/characters/mage/battle_back_idle_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_mage",
+          "name": "萝莉魔导士",
+          "roleId": "hero_mage",
+          "kind": "battle_idle"
+        }
+      ]
+    },
+    {
+      "key": "characters/mage/role_select_frame_v1",
+      "path": "assets/characters/mage/role_select_frame_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_mage",
+          "name": "萝莉魔导士",
+          "roleId": "hero_mage",
+          "kind": "role_select_frame"
+        }
+      ]
+    },
+    {
+      "key": "characters/mage/select_portrait_v1",
+      "path": "assets/characters/mage/select_portrait_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_mage",
+          "name": "萝莉魔导士",
+          "roleId": "hero_mage",
+          "kind": "role_select_portrait"
+        }
+      ]
+    },
+    {
+      "key": "characters/warrior/avatar_portrait_v1",
+      "path": "assets/characters/warrior/avatar_portrait_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_warrior",
+          "name": "勇者战士",
+          "roleId": "hero_warrior",
+          "kind": "hud_avatar"
+        }
+      ]
+    },
+    {
+      "key": "characters/warrior/battle_back_attack_01_v2",
+      "path": "assets/characters/warrior/battle_back_attack_01_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_warrior",
+          "name": "勇者战士",
+          "roleId": "hero_warrior",
+          "kind": "battle_attack_animation"
+        }
+      ]
+    },
+    {
+      "key": "characters/warrior/battle_back_attack_02_v2",
+      "path": "assets/characters/warrior/battle_back_attack_02_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_warrior",
+          "name": "勇者战士",
+          "roleId": "hero_warrior",
+          "kind": "battle_attack_animation"
+        }
+      ]
+    },
+    {
+      "key": "characters/warrior/battle_back_attack_03_v2",
+      "path": "assets/characters/warrior/battle_back_attack_03_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_warrior",
+          "name": "勇者战士",
+          "roleId": "hero_warrior",
+          "kind": "battle_attack_animation"
+        }
+      ]
+    },
+    {
+      "key": "characters/warrior/battle_back_attack_04_v2",
+      "path": "assets/characters/warrior/battle_back_attack_04_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_warrior",
+          "name": "勇者战士",
+          "roleId": "hero_warrior",
+          "kind": "battle_attack_animation"
+        }
+      ]
+    },
+    {
+      "key": "characters/warrior/battle_back_attack_05_v2",
+      "path": "assets/characters/warrior/battle_back_attack_05_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_warrior",
+          "name": "勇者战士",
+          "roleId": "hero_warrior",
+          "kind": "battle_attack_animation"
+        }
+      ]
+    },
+    {
+      "key": "characters/warrior/battle_back_attack_06_v2",
+      "path": "assets/characters/warrior/battle_back_attack_06_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_warrior",
+          "name": "勇者战士",
+          "roleId": "hero_warrior",
+          "kind": "battle_attack_animation"
+        }
+      ]
+    },
+    {
+      "key": "characters/warrior/battle_back_hurt_01_v2",
+      "path": "assets/characters/warrior/battle_back_hurt_01_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_warrior",
+          "name": "勇者战士",
+          "roleId": "hero_warrior",
+          "kind": "battle_hurt_animation"
+        }
+      ]
+    },
+    {
+      "key": "characters/warrior/battle_back_hurt_02_v2",
+      "path": "assets/characters/warrior/battle_back_hurt_02_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_warrior",
+          "name": "勇者战士",
+          "roleId": "hero_warrior",
+          "kind": "battle_hurt_animation"
+        }
+      ]
+    },
+    {
+      "key": "characters/warrior/battle_back_hurt_03_v2",
+      "path": "assets/characters/warrior/battle_back_hurt_03_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_warrior",
+          "name": "勇者战士",
+          "roleId": "hero_warrior",
+          "kind": "battle_hurt_animation"
+        }
+      ]
+    },
+    {
+      "key": "characters/warrior/battle_back_hurt_04_v2",
+      "path": "assets/characters/warrior/battle_back_hurt_04_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_warrior",
+          "name": "勇者战士",
+          "roleId": "hero_warrior",
+          "kind": "battle_hurt_animation"
+        }
+      ]
+    },
+    {
+      "key": "characters/warrior/battle_back_hurt_05_v2",
+      "path": "assets/characters/warrior/battle_back_hurt_05_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_warrior",
+          "name": "勇者战士",
+          "roleId": "hero_warrior",
+          "kind": "battle_hurt_animation"
+        }
+      ]
+    },
+    {
+      "key": "characters/warrior/battle_back_hurt_06_v2",
+      "path": "assets/characters/warrior/battle_back_hurt_06_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_warrior",
+          "name": "勇者战士",
+          "roleId": "hero_warrior",
+          "kind": "battle_hurt_animation"
+        }
+      ]
+    },
+    {
+      "key": "characters/warrior/battle_back_idle_v1",
+      "path": "assets/characters/warrior/battle_back_idle_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_warrior",
+          "name": "勇者战士",
+          "roleId": "hero_warrior",
+          "kind": "battle_idle"
+        }
+      ]
+    },
+    {
+      "key": "characters/warrior/role_select_frame_v1",
+      "path": "assets/characters/warrior/role_select_frame_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_warrior",
+          "name": "勇者战士",
+          "roleId": "hero_warrior",
+          "kind": "role_select_frame"
+        }
+      ]
+    },
+    {
+      "key": "characters/warrior/select_portrait_v1",
+      "path": "assets/characters/warrior/select_portrait_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_warrior",
+          "name": "勇者战士",
+          "roleId": "hero_warrior",
+          "kind": "role_select_portrait"
+        }
+      ]
+    }
+  ]
+}

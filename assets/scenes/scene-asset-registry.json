@@ -1,0 +1,257 @@
+{
+  "generatedBy": "tools/build_asset_registries.mjs",
+  "sourceData": [
+    "assets/scenes/**",
+    "src/runtime/map-rules.js",
+    "questers_demo_v0.99.html"
+  ],
+  "policy": "Active scene backgrounds live under assets/scenes and are inventoried so additions/removals update the generated registry.",
+  "assetCount": 20,
+  "missingAssetCount": 0,
+  "groups": [
+    "battle",
+    "event"
+  ],
+  "assets": [
+    {
+      "key": "battle/ancient_forest_day_v1",
+      "path": "assets/scenes/battle/ancient_forest_day_v1.png",
+      "domain": "scenes",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "battle_background",
+          "name": "ancient_forest_day_v1"
+        }
+      ]
+    },
+    {
+      "key": "battle/ancient_forest_day_v1",
+      "path": "assets/scenes/battle/ancient_forest_day_v1.webp",
+      "domain": "scenes",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "battle_background",
+          "name": "ancient_forest_day_v1"
+        }
+      ]
+    },
+    {
+      "key": "battle/ancient_forest_sunset_v1",
+      "path": "assets/scenes/battle/ancient_forest_sunset_v1.webp",
+      "domain": "scenes",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "battle_background",
+          "name": "ancient_forest_sunset_v1"
+        }
+      ]
+    },
+    {
+      "key": "battle/cave_cold_v1",
+      "path": "assets/scenes/battle/cave_cold_v1.png",
+      "domain": "scenes",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "battle_background",
+          "name": "cave_cold_v1"
+        }
+      ]
+    },
+    {
+      "key": "battle/cave_cold_v1",
+      "path": "assets/scenes/battle/cave_cold_v1.webp",
+      "domain": "scenes",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "battle_background",
+          "name": "cave_cold_v1"
+        }
+      ]
+    },
+    {
+      "key": "battle/dungeon_corridor_torch_v1",
+      "path": "assets/scenes/battle/dungeon_corridor_torch_v1.webp",
+      "domain": "scenes",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "battle_background",
+          "name": "dungeon_corridor_torch_v1"
+        }
+      ]
+    },
+    {
+      "key": "battle/mountain_plain_day_v1",
+      "path": "assets/scenes/battle/mountain_plain_day_v1.png",
+      "domain": "scenes",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "battle_background",
+          "name": "mountain_plain_day_v1"
+        }
+      ]
+    },
+    {
+      "key": "battle/mountain_plain_day_v1",
+      "path": "assets/scenes/battle/mountain_plain_day_v1.webp",
+      "domain": "scenes",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "battle_background",
+          "name": "mountain_plain_day_v1"
+        }
+      ]
+    },
+    {
+      "key": "battle/mountain_plain_night_v1",
+      "path": "assets/scenes/battle/mountain_plain_night_v1.webp",
+      "domain": "scenes",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "battle_background",
+          "name": "mountain_plain_night_v1"
+        }
+      ]
+    },
+    {
+      "key": "battle/mountain_plain_rain_v1",
+      "path": "assets/scenes/battle/mountain_plain_rain_v1.webp",
+      "domain": "scenes",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "battle_background",
+          "name": "mountain_plain_rain_v1"
+        }
+      ]
+    },
+    {
+      "key": "battle/stone_ruins_day_v1",
+      "path": "assets/scenes/battle/stone_ruins_day_v1.png",
+      "domain": "scenes",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "battle_background",
+          "name": "stone_ruins_day_v1"
+        }
+      ]
+    },
+    {
+      "key": "battle/stone_ruins_day_v1",
+      "path": "assets/scenes/battle/stone_ruins_day_v1.webp",
+      "domain": "scenes",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "battle_background",
+          "name": "stone_ruins_day_v1"
+        }
+      ]
+    },
+    {
+      "key": "battle/stone_ruins_night_v1",
+      "path": "assets/scenes/battle/stone_ruins_night_v1.webp",
+      "domain": "scenes",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "battle_background",
+          "name": "stone_ruins_night_v1"
+        }
+      ]
+    },
+    {
+      "key": "battle/stone_ruins_sunset_v1",
+      "path": "assets/scenes/battle/stone_ruins_sunset_v1.webp",
+      "domain": "scenes",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "battle_background",
+          "name": "stone_ruins_sunset_v1"
+        }
+      ]
+    },
+    {
+      "key": "battle/temple_hall_grand_v1",
+      "path": "assets/scenes/battle/temple_hall_grand_v1.png",
+      "domain": "scenes",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "battle_background",
+          "name": "temple_hall_grand_v1"
+        }
+      ]
+    },
+    {
+      "key": "battle/temple_hall_grand_v1",
+      "path": "assets/scenes/battle/temple_hall_grand_v1.webp",
+      "domain": "scenes",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "battle_background",
+          "name": "temple_hall_grand_v1"
+        }
+      ]
+    },
+    {
+      "key": "battle/temple_inner_light_v1",
+      "path": "assets/scenes/battle/temple_inner_light_v1.webp",
+      "domain": "scenes",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "battle_background",
+          "name": "temple_inner_light_v1"
+        }
+      ]
+    },
+    {
+      "key": "battle/wasteland_dusk_v1",
+      "path": "assets/scenes/battle/wasteland_dusk_v1.png",
+      "domain": "scenes",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "battle_background",
+          "name": "wasteland_dusk_v1"
+        }
+      ]
+    },
+    {
+      "key": "battle/wasteland_dusk_v1",
+      "path": "assets/scenes/battle/wasteland_dusk_v1.webp",
+      "domain": "scenes",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "battle_background",
+          "name": "wasteland_dusk_v1"
+        }
+      ]
+    },
+    {
+      "key": "event/town_distant_day_v1",
+      "path": "assets/scenes/event/town_distant_day_v1.webp",
+      "domain": "scenes",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "event_scene",
+          "name": "town_distant_day_v1"
+        }
+      ]
+    }
+  ]
+}

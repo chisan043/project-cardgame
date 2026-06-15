@@ -1,0 +1,1088 @@
+{
+  "generatedBy": "tools/build_asset_registries.mjs",
+  "sourceData": [
+    "src/data/characters.js",
+    "src/runtime/visual-rules.js",
+    "questers_demo_v0.99.html",
+    "assets/vfx/**"
+  ],
+  "policy": "Active player, enemy, and defense VFX assets live under assets/vfx and are registered from character data plus active VFX folders.",
+  "assetCount": 82,
+  "missingAssetCount": 0,
+  "groups": [
+    "enemy_attack",
+    "player_attack",
+    "player_buff",
+    "player_defense"
+  ],
+  "assets": [
+    {
+      "key": "vfx/enemy_attack/acid_spit_vfx_v1",
+      "path": "assets/vfx/enemy_attack/acid_spit_vfx_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "acid_spit_vfx_v1"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/blood_siphon_vfx_v1",
+      "path": "assets/vfx/enemy_attack/blood_siphon_vfx_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "blood_siphon_vfx_v1"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/bone_slash_vfx_v1",
+      "path": "assets/vfx/enemy_attack/bone_slash_vfx_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "bone_slash_vfx_v1"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/charge_dust_vfx_v1",
+      "path": "assets/vfx/enemy_attack/charge_dust_vfx_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "charge_dust_vfx_v1"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/claw_bite_vfx_v1",
+      "path": "assets/vfx/enemy_attack/claw_bite_vfx_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "claw_bite_vfx_v1"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/dagger_flurry_vfx_v1",
+      "path": "assets/vfx/enemy_attack/dagger_flurry_vfx_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "dagger_flurry_vfx_v1"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/dark_iaijutsu_vfx_v1",
+      "path": "assets/vfx/enemy_attack/dark_iaijutsu_vfx_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "dark_iaijutsu_vfx_v1"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/dragon_breath_vfx_v1",
+      "path": "assets/vfx/enemy_attack/dragon_breath_vfx_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "dragon_breath_vfx_v1"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/foxfire_vfx_v1",
+      "path": "assets/vfx/enemy_attack/foxfire_vfx_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "foxfire_vfx_v1"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/ghostfire_vfx_v1",
+      "path": "assets/vfx/enemy_attack/ghostfire_vfx_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "ghostfire_vfx_v1"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/meat_slam_vfx_v1",
+      "path": "assets/vfx/enemy_attack/meat_slam_vfx_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "meat_slam_vfx_v1"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/pincer_snap_vfx_v1",
+      "path": "assets/vfx/enemy_attack/pincer_snap_vfx_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "pincer_snap_vfx_v1"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/poison_spit_vfx_v1",
+      "path": "assets/vfx/enemy_attack/poison_spit_vfx_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "poison_spit_vfx_v1"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/rock_shock_vfx_v1",
+      "path": "assets/vfx/enemy_attack/rock_shock_vfx_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "rock_shock_vfx_v1"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/shadow_darts_vfx_v1",
+      "path": "assets/vfx/enemy_attack/shadow_darts_vfx_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "shadow_darts_vfx_v1"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/shura_cleave_vfx_v1",
+      "path": "assets/vfx/enemy_attack/shura_cleave_vfx_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "shura_cleave_vfx_v1"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/sonic_wave_vfx_v1",
+      "path": "assets/vfx/enemy_attack/sonic_wave_vfx_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "sonic_wave_vfx_v1"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/venom_web_vfx_v1",
+      "path": "assets/vfx/enemy_attack/venom_web_vfx_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "venom_web_vfx_v1"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/void_beam_vfx_v1",
+      "path": "assets/vfx/enemy_attack/void_beam_vfx_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "void_beam_vfx_v1"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/war_axe_vfx_v1",
+      "path": "assets/vfx/enemy_attack/war_axe_vfx_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "war_axe_vfx_v1"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_attack/archer_arrow_01_v1",
+      "path": "assets/vfx/player_attack/archer_arrow_01_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_archer",
+          "name": "精灵弓箭手",
+          "roleId": "hero_archer",
+          "kind": "player_attack_vfx"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_attack/archer_arrow_02_v1",
+      "path": "assets/vfx/player_attack/archer_arrow_02_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_archer",
+          "name": "精灵弓箭手",
+          "roleId": "hero_archer",
+          "kind": "player_attack_vfx"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_attack/archer_arrow_03_v1",
+      "path": "assets/vfx/player_attack/archer_arrow_03_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_archer",
+          "name": "精灵弓箭手",
+          "roleId": "hero_archer",
+          "kind": "player_attack_vfx"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_attack/archer_arrow_04_v1",
+      "path": "assets/vfx/player_attack/archer_arrow_04_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_archer",
+          "name": "精灵弓箭手",
+          "roleId": "hero_archer",
+          "kind": "player_attack_vfx"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_attack/archer_arrow_05_v1",
+      "path": "assets/vfx/player_attack/archer_arrow_05_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_archer",
+          "name": "精灵弓箭手",
+          "roleId": "hero_archer",
+          "kind": "player_attack_vfx"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_attack/archer_arrow_06_v1",
+      "path": "assets/vfx/player_attack/archer_arrow_06_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_archer",
+          "name": "精灵弓箭手",
+          "roleId": "hero_archer",
+          "kind": "player_attack_vfx"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_attack/mage_magic_bolt_01_v1",
+      "path": "assets/vfx/player_attack/mage_magic_bolt_01_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_mage",
+          "name": "萝莉魔导士",
+          "roleId": "hero_mage",
+          "kind": "player_attack_vfx"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_attack/mage_magic_bolt_02_v1",
+      "path": "assets/vfx/player_attack/mage_magic_bolt_02_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_mage",
+          "name": "萝莉魔导士",
+          "roleId": "hero_mage",
+          "kind": "player_attack_vfx"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_attack/mage_magic_bolt_03_v1",
+      "path": "assets/vfx/player_attack/mage_magic_bolt_03_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_mage",
+          "name": "萝莉魔导士",
+          "roleId": "hero_mage",
+          "kind": "player_attack_vfx"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_attack/mage_magic_bolt_04_v1",
+      "path": "assets/vfx/player_attack/mage_magic_bolt_04_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_mage",
+          "name": "萝莉魔导士",
+          "roleId": "hero_mage",
+          "kind": "player_attack_vfx"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_attack/mage_magic_bolt_05_v1",
+      "path": "assets/vfx/player_attack/mage_magic_bolt_05_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_mage",
+          "name": "萝莉魔导士",
+          "roleId": "hero_mage",
+          "kind": "player_attack_vfx"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_attack/mage_magic_bolt_06_v1",
+      "path": "assets/vfx/player_attack/mage_magic_bolt_06_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_mage",
+          "name": "萝莉魔导士",
+          "roleId": "hero_mage",
+          "kind": "player_attack_vfx"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_attack/warrior_slash_01_v1",
+      "path": "assets/vfx/player_attack/warrior_slash_01_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_warrior",
+          "name": "勇者战士",
+          "roleId": "hero_warrior",
+          "kind": "player_attack_vfx"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_attack/warrior_slash_02_v1",
+      "path": "assets/vfx/player_attack/warrior_slash_02_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_warrior",
+          "name": "勇者战士",
+          "roleId": "hero_warrior",
+          "kind": "player_attack_vfx"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_attack/warrior_slash_03_v1",
+      "path": "assets/vfx/player_attack/warrior_slash_03_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_warrior",
+          "name": "勇者战士",
+          "roleId": "hero_warrior",
+          "kind": "player_attack_vfx"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_attack/warrior_slash_04_v1",
+      "path": "assets/vfx/player_attack/warrior_slash_04_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_warrior",
+          "name": "勇者战士",
+          "roleId": "hero_warrior",
+          "kind": "player_attack_vfx"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_attack/warrior_slash_05_v1",
+      "path": "assets/vfx/player_attack/warrior_slash_05_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_warrior",
+          "name": "勇者战士",
+          "roleId": "hero_warrior",
+          "kind": "player_attack_vfx"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_attack/warrior_slash_06_v1",
+      "path": "assets/vfx/player_attack/warrior_slash_06_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_warrior",
+          "name": "勇者战士",
+          "roleId": "hero_warrior",
+          "kind": "player_attack_vfx"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_buff/archer_dodge_01_v3",
+      "path": "assets/vfx/player_buff/archer_dodge_01_v3.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_archer",
+          "name": "精灵弓箭手",
+          "roleId": "hero_archer",
+          "kind": "player_buff_vfx:dodge"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_buff/archer_dodge_02_v3",
+      "path": "assets/vfx/player_buff/archer_dodge_02_v3.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_archer",
+          "name": "精灵弓箭手",
+          "roleId": "hero_archer",
+          "kind": "player_buff_vfx:dodge"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_buff/archer_dodge_03_v3",
+      "path": "assets/vfx/player_buff/archer_dodge_03_v3.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_archer",
+          "name": "精灵弓箭手",
+          "roleId": "hero_archer",
+          "kind": "player_buff_vfx:dodge"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_buff/archer_dodge_04_v3",
+      "path": "assets/vfx/player_buff/archer_dodge_04_v3.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_archer",
+          "name": "精灵弓箭手",
+          "roleId": "hero_archer",
+          "kind": "player_buff_vfx:dodge"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_buff/archer_dodge_05_v3",
+      "path": "assets/vfx/player_buff/archer_dodge_05_v3.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_archer",
+          "name": "精灵弓箭手",
+          "roleId": "hero_archer",
+          "kind": "player_buff_vfx:dodge"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_buff/archer_dodge_06_v3",
+      "path": "assets/vfx/player_buff/archer_dodge_06_v3.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_archer",
+          "name": "精灵弓箭手",
+          "roleId": "hero_archer",
+          "kind": "player_buff_vfx:dodge"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_buff/archer_wind_01_v3",
+      "path": "assets/vfx/player_buff/archer_wind_01_v3.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_archer",
+          "name": "精灵弓箭手",
+          "roleId": "hero_archer",
+          "kind": "player_buff_vfx:wind"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_buff/archer_wind_02_v3",
+      "path": "assets/vfx/player_buff/archer_wind_02_v3.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_archer",
+          "name": "精灵弓箭手",
+          "roleId": "hero_archer",
+          "kind": "player_buff_vfx:wind"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_buff/archer_wind_03_v3",
+      "path": "assets/vfx/player_buff/archer_wind_03_v3.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_archer",
+          "name": "精灵弓箭手",
+          "roleId": "hero_archer",
+          "kind": "player_buff_vfx:wind"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_buff/archer_wind_04_v3",
+      "path": "assets/vfx/player_buff/archer_wind_04_v3.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_archer",
+          "name": "精灵弓箭手",
+          "roleId": "hero_archer",
+          "kind": "player_buff_vfx:wind"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_buff/archer_wind_05_v3",
+      "path": "assets/vfx/player_buff/archer_wind_05_v3.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_archer",
+          "name": "精灵弓箭手",
+          "roleId": "hero_archer",
+          "kind": "player_buff_vfx:wind"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_buff/archer_wind_06_v3",
+      "path": "assets/vfx/player_buff/archer_wind_06_v3.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_archer",
+          "name": "精灵弓箭手",
+          "roleId": "hero_archer",
+          "kind": "player_buff_vfx:wind"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_buff/mage_chant_01_v3",
+      "path": "assets/vfx/player_buff/mage_chant_01_v3.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_mage",
+          "name": "萝莉魔导士",
+          "roleId": "hero_mage",
+          "kind": "player_buff_vfx:chant"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_buff/mage_chant_02_v3",
+      "path": "assets/vfx/player_buff/mage_chant_02_v3.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_mage",
+          "name": "萝莉魔导士",
+          "roleId": "hero_mage",
+          "kind": "player_buff_vfx:chant"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_buff/mage_chant_03_v3",
+      "path": "assets/vfx/player_buff/mage_chant_03_v3.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_mage",
+          "name": "萝莉魔导士",
+          "roleId": "hero_mage",
+          "kind": "player_buff_vfx:chant"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_buff/mage_chant_04_v3",
+      "path": "assets/vfx/player_buff/mage_chant_04_v3.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_mage",
+          "name": "萝莉魔导士",
+          "roleId": "hero_mage",
+          "kind": "player_buff_vfx:chant"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_buff/mage_chant_05_v3",
+      "path": "assets/vfx/player_buff/mage_chant_05_v3.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_mage",
+          "name": "萝莉魔导士",
+          "roleId": "hero_mage",
+          "kind": "player_buff_vfx:chant"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_buff/mage_chant_06_v3",
+      "path": "assets/vfx/player_buff/mage_chant_06_v3.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_mage",
+          "name": "萝莉魔导士",
+          "roleId": "hero_mage",
+          "kind": "player_buff_vfx:chant"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_buff/warrior_shield_01_v4",
+      "path": "assets/vfx/player_buff/warrior_shield_01_v4.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_warrior",
+          "name": "勇者战士",
+          "roleId": "hero_warrior",
+          "kind": "player_buff_vfx:shield"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_buff/warrior_shield_02_v4",
+      "path": "assets/vfx/player_buff/warrior_shield_02_v4.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_warrior",
+          "name": "勇者战士",
+          "roleId": "hero_warrior",
+          "kind": "player_buff_vfx:shield"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_buff/warrior_shield_03_v4",
+      "path": "assets/vfx/player_buff/warrior_shield_03_v4.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_warrior",
+          "name": "勇者战士",
+          "roleId": "hero_warrior",
+          "kind": "player_buff_vfx:shield"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_buff/warrior_shield_04_v4",
+      "path": "assets/vfx/player_buff/warrior_shield_04_v4.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_warrior",
+          "name": "勇者战士",
+          "roleId": "hero_warrior",
+          "kind": "player_buff_vfx:shield"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_buff/warrior_shield_05_v4",
+      "path": "assets/vfx/player_buff/warrior_shield_05_v4.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_warrior",
+          "name": "勇者战士",
+          "roleId": "hero_warrior",
+          "kind": "player_buff_vfx:shield"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_buff/warrior_shield_06_v4",
+      "path": "assets/vfx/player_buff/warrior_shield_06_v4.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "hero_warrior",
+          "name": "勇者战士",
+          "roleId": "hero_warrior",
+          "kind": "player_buff_vfx:shield"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_defense/shield_hit_arc_v2",
+      "path": "assets/vfx/player_defense/shield_hit_arc_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "player_defense_vfx",
+          "name": "shield_hit_arc_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_defense/shield_hit_body_01_v1",
+      "path": "assets/vfx/player_defense/shield_hit_body_01_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "player_defense_vfx",
+          "name": "shield_hit_body_01_v1"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_defense/shield_hit_body_01_v2",
+      "path": "assets/vfx/player_defense/shield_hit_body_01_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "player_defense_vfx",
+          "name": "shield_hit_body_01_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_defense/shield_hit_body_01_v3",
+      "path": "assets/vfx/player_defense/shield_hit_body_01_v3.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "player_defense_vfx",
+          "name": "shield_hit_body_01_v3"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_defense/shield_hit_body_02_v1",
+      "path": "assets/vfx/player_defense/shield_hit_body_02_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "player_defense_vfx",
+          "name": "shield_hit_body_02_v1"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_defense/shield_hit_body_02_v2",
+      "path": "assets/vfx/player_defense/shield_hit_body_02_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "player_defense_vfx",
+          "name": "shield_hit_body_02_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_defense/shield_hit_body_02_v3",
+      "path": "assets/vfx/player_defense/shield_hit_body_02_v3.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "player_defense_vfx",
+          "name": "shield_hit_body_02_v3"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_defense/shield_hit_body_03_v1",
+      "path": "assets/vfx/player_defense/shield_hit_body_03_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "player_defense_vfx",
+          "name": "shield_hit_body_03_v1"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_defense/shield_hit_body_03_v2",
+      "path": "assets/vfx/player_defense/shield_hit_body_03_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "player_defense_vfx",
+          "name": "shield_hit_body_03_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_defense/shield_hit_body_03_v3",
+      "path": "assets/vfx/player_defense/shield_hit_body_03_v3.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "player_defense_vfx",
+          "name": "shield_hit_body_03_v3"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_defense/shield_hit_body_04_v1",
+      "path": "assets/vfx/player_defense/shield_hit_body_04_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "player_defense_vfx",
+          "name": "shield_hit_body_04_v1"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_defense/shield_hit_body_04_v2",
+      "path": "assets/vfx/player_defense/shield_hit_body_04_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "player_defense_vfx",
+          "name": "shield_hit_body_04_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_defense/shield_hit_body_04_v3",
+      "path": "assets/vfx/player_defense/shield_hit_body_04_v3.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "player_defense_vfx",
+          "name": "shield_hit_body_04_v3"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_defense/shield_hit_body_05_v1",
+      "path": "assets/vfx/player_defense/shield_hit_body_05_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "player_defense_vfx",
+          "name": "shield_hit_body_05_v1"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_defense/shield_hit_body_05_v2",
+      "path": "assets/vfx/player_defense/shield_hit_body_05_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "player_defense_vfx",
+          "name": "shield_hit_body_05_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_defense/shield_hit_body_05_v3",
+      "path": "assets/vfx/player_defense/shield_hit_body_05_v3.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "player_defense_vfx",
+          "name": "shield_hit_body_05_v3"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_defense/shield_hit_body_06_v1",
+      "path": "assets/vfx/player_defense/shield_hit_body_06_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "player_defense_vfx",
+          "name": "shield_hit_body_06_v1"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_defense/shield_hit_body_06_v2",
+      "path": "assets/vfx/player_defense/shield_hit_body_06_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "player_defense_vfx",
+          "name": "shield_hit_body_06_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_defense/shield_hit_body_06_v3",
+      "path": "assets/vfx/player_defense/shield_hit_body_06_v3.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "player_defense_vfx",
+          "name": "shield_hit_body_06_v3"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/player_defense/shield_hit_vfx_v1",
+      "path": "assets/vfx/player_defense/shield_hit_vfx_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "player_defense_vfx",
+          "name": "shield_hit_vfx_v1"
+        }
+      ],
+      "domain": "vfx"
+    }
+  ]
+}

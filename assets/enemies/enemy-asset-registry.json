@@ -1,0 +1,2157 @@
+{
+  "generatedBy": "tools/build_asset_registries.mjs",
+  "sourceData": [
+    "src/data/enemies.js",
+    "src/runtime/visual-rules.js",
+    "tools/plan_asset_migration.py"
+  ],
+  "policy": "Runtime enemy portraits, battle sprites, and four attack frames use stable slug-based paths.",
+  "assetCount": 120,
+  "missingAssetCount": 0,
+  "enemyCount": 21,
+  "missingSlugNames": [],
+  "assets": [
+    {
+      "key": "enemies/attack/abyss_overlord_attack_01_v1",
+      "path": "assets/enemies/attack/abyss_overlord_attack_01_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "【深渊主宰·暴走】",
+          "baseName": "【深渊主宰】",
+          "slug": "abyss_overlord",
+          "tier": null,
+          "type": "boss",
+          "variant": "phase2",
+          "kind": "attack_animation",
+          "frame": 1,
+          "duration": 110
+        },
+        {
+          "name": "【深渊主宰】",
+          "baseName": "【深渊主宰】",
+          "slug": "abyss_overlord",
+          "tier": null,
+          "type": "boss",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 1,
+          "duration": 110
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/abyss_overlord_attack_02_v1",
+      "path": "assets/enemies/attack/abyss_overlord_attack_02_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "【深渊主宰·暴走】",
+          "baseName": "【深渊主宰】",
+          "slug": "abyss_overlord",
+          "tier": null,
+          "type": "boss",
+          "variant": "phase2",
+          "kind": "attack_animation",
+          "frame": 2,
+          "duration": 120
+        },
+        {
+          "name": "【深渊主宰】",
+          "baseName": "【深渊主宰】",
+          "slug": "abyss_overlord",
+          "tier": null,
+          "type": "boss",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 2,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/abyss_overlord_attack_03_v1",
+      "path": "assets/enemies/attack/abyss_overlord_attack_03_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "【深渊主宰·暴走】",
+          "baseName": "【深渊主宰】",
+          "slug": "abyss_overlord",
+          "tier": null,
+          "type": "boss",
+          "variant": "phase2",
+          "kind": "attack_animation",
+          "frame": 3,
+          "duration": 170
+        },
+        {
+          "name": "【深渊主宰】",
+          "baseName": "【深渊主宰】",
+          "slug": "abyss_overlord",
+          "tier": null,
+          "type": "boss",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 3,
+          "duration": 170
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/abyss_overlord_attack_04_v1",
+      "path": "assets/enemies/attack/abyss_overlord_attack_04_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "【深渊主宰·暴走】",
+          "baseName": "【深渊主宰】",
+          "slug": "abyss_overlord",
+          "tier": null,
+          "type": "boss",
+          "variant": "phase2",
+          "kind": "attack_animation",
+          "frame": 4,
+          "duration": 120
+        },
+        {
+          "name": "【深渊主宰】",
+          "baseName": "【深渊主宰】",
+          "slug": "abyss_overlord",
+          "tier": null,
+          "type": "boss",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 4,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/ancient_spider_attack_01_v1",
+      "path": "assets/enemies/attack/ancient_spider_attack_01_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "千载魔蛛",
+          "baseName": "千载魔蛛",
+          "slug": "ancient_spider",
+          "tier": 2,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 1,
+          "duration": 110
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/ancient_spider_attack_02_v1",
+      "path": "assets/enemies/attack/ancient_spider_attack_02_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "千载魔蛛",
+          "baseName": "千载魔蛛",
+          "slug": "ancient_spider",
+          "tier": 2,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 2,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/ancient_spider_attack_03_v1",
+      "path": "assets/enemies/attack/ancient_spider_attack_03_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "千载魔蛛",
+          "baseName": "千载魔蛛",
+          "slug": "ancient_spider",
+          "tier": 2,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 3,
+          "duration": 170
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/ancient_spider_attack_04_v1",
+      "path": "assets/enemies/attack/ancient_spider_attack_04_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "千载魔蛛",
+          "baseName": "千载魔蛛",
+          "slug": "ancient_spider",
+          "tier": 2,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 4,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/angry_boar_attack_01_v1",
+      "path": "assets/enemies/attack/angry_boar_attack_01_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "暴躁野猪",
+          "baseName": "暴躁野猪",
+          "slug": "angry_boar",
+          "tier": 2,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 1,
+          "duration": 110
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/angry_boar_attack_02_v1",
+      "path": "assets/enemies/attack/angry_boar_attack_02_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "暴躁野猪",
+          "baseName": "暴躁野猪",
+          "slug": "angry_boar",
+          "tier": 2,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 2,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/angry_boar_attack_03_v1",
+      "path": "assets/enemies/attack/angry_boar_attack_03_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "暴躁野猪",
+          "baseName": "暴躁野猪",
+          "slug": "angry_boar",
+          "tier": 2,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 3,
+          "duration": 170
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/angry_boar_attack_04_v1",
+      "path": "assets/enemies/attack/angry_boar_attack_04_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "暴躁野猪",
+          "baseName": "暴躁野猪",
+          "slug": "angry_boar",
+          "tier": 2,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 4,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/blood_bat_attack_01_v1",
+      "path": "assets/enemies/attack/blood_bat_attack_01_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "嗜血蝙蝠",
+          "baseName": "嗜血蝙蝠",
+          "slug": "blood_bat",
+          "tier": 1,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 1,
+          "duration": 110
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/blood_bat_attack_02_v1",
+      "path": "assets/enemies/attack/blood_bat_attack_02_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "嗜血蝙蝠",
+          "baseName": "嗜血蝙蝠",
+          "slug": "blood_bat",
+          "tier": 1,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 2,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/blood_bat_attack_03_v1",
+      "path": "assets/enemies/attack/blood_bat_attack_03_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "嗜血蝙蝠",
+          "baseName": "嗜血蝙蝠",
+          "slug": "blood_bat",
+          "tier": 1,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 3,
+          "duration": 170
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/blood_bat_attack_04_v1",
+      "path": "assets/enemies/attack/blood_bat_attack_04_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "嗜血蝙蝠",
+          "baseName": "嗜血蝙蝠",
+          "slug": "blood_bat",
+          "tier": 1,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 4,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/bone_soldier_attack_01_v1",
+      "path": "assets/enemies/attack/bone_soldier_attack_01_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "枯骨煞兵",
+          "baseName": "枯骨煞兵",
+          "slug": "bone_soldier",
+          "tier": 1,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 1,
+          "duration": 110
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/bone_soldier_attack_02_v1",
+      "path": "assets/enemies/attack/bone_soldier_attack_02_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "枯骨煞兵",
+          "baseName": "枯骨煞兵",
+          "slug": "bone_soldier",
+          "tier": 1,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 2,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/bone_soldier_attack_03_v1",
+      "path": "assets/enemies/attack/bone_soldier_attack_03_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "枯骨煞兵",
+          "baseName": "枯骨煞兵",
+          "slug": "bone_soldier",
+          "tier": 1,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 3,
+          "duration": 170
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/bone_soldier_attack_04_v1",
+      "path": "assets/enemies/attack/bone_soldier_attack_04_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "枯骨煞兵",
+          "baseName": "枯骨煞兵",
+          "slug": "bone_soldier",
+          "tier": 1,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 4,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/boss_oni_shura_attack_01_v1",
+      "path": "assets/enemies/attack/boss_oni_shura_attack_01_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "【首领】鬼面修罗",
+          "baseName": "【首领】鬼面修罗",
+          "slug": "boss_oni_shura",
+          "tier": null,
+          "type": "boss",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 1,
+          "duration": 110
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/boss_oni_shura_attack_02_v1",
+      "path": "assets/enemies/attack/boss_oni_shura_attack_02_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "【首领】鬼面修罗",
+          "baseName": "【首领】鬼面修罗",
+          "slug": "boss_oni_shura",
+          "tier": null,
+          "type": "boss",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 2,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/boss_oni_shura_attack_03_v1",
+      "path": "assets/enemies/attack/boss_oni_shura_attack_03_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "【首领】鬼面修罗",
+          "baseName": "【首领】鬼面修罗",
+          "slug": "boss_oni_shura",
+          "tier": null,
+          "type": "boss",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 3,
+          "duration": 170
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/boss_oni_shura_attack_04_v1",
+      "path": "assets/enemies/attack/boss_oni_shura_attack_04_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "【首领】鬼面修罗",
+          "baseName": "【首领】鬼面修罗",
+          "slug": "boss_oni_shura",
+          "tier": null,
+          "type": "boss",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 4,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/crimson_blood_witch_attack_01_v1",
+      "path": "assets/enemies/attack/crimson_blood_witch_attack_01_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "【精英】猩红血巫",
+          "baseName": "【精英】猩红血巫",
+          "slug": "crimson_blood_witch",
+          "tier": 2,
+          "type": "elite",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 1,
+          "duration": 110
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/crimson_blood_witch_attack_02_v1",
+      "path": "assets/enemies/attack/crimson_blood_witch_attack_02_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "【精英】猩红血巫",
+          "baseName": "【精英】猩红血巫",
+          "slug": "crimson_blood_witch",
+          "tier": 2,
+          "type": "elite",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 2,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/crimson_blood_witch_attack_03_v1",
+      "path": "assets/enemies/attack/crimson_blood_witch_attack_03_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "【精英】猩红血巫",
+          "baseName": "【精英】猩红血巫",
+          "slug": "crimson_blood_witch",
+          "tier": 2,
+          "type": "elite",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 3,
+          "duration": 170
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/crimson_blood_witch_attack_04_v1",
+      "path": "assets/enemies/attack/crimson_blood_witch_attack_04_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "【精英】猩红血巫",
+          "baseName": "【精英】猩红血巫",
+          "slug": "crimson_blood_witch",
+          "tier": 2,
+          "type": "elite",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 4,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/elite_minotaur_attack_01_v1",
+      "path": "assets/enemies/attack/elite_minotaur_attack_01_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "【精英】狂暴牛头人",
+          "baseName": "【精英】狂暴牛头人",
+          "slug": "elite_minotaur",
+          "tier": 1,
+          "type": "elite",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 1,
+          "duration": 110
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/elite_minotaur_attack_02_v1",
+      "path": "assets/enemies/attack/elite_minotaur_attack_02_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "【精英】狂暴牛头人",
+          "baseName": "【精英】狂暴牛头人",
+          "slug": "elite_minotaur",
+          "tier": 1,
+          "type": "elite",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 2,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/elite_minotaur_attack_03_v1",
+      "path": "assets/enemies/attack/elite_minotaur_attack_03_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "【精英】狂暴牛头人",
+          "baseName": "【精英】狂暴牛头人",
+          "slug": "elite_minotaur",
+          "tier": 1,
+          "type": "elite",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 3,
+          "duration": 170
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/elite_minotaur_attack_04_v1",
+      "path": "assets/enemies/attack/elite_minotaur_attack_04_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "【精英】狂暴牛头人",
+          "baseName": "【精英】狂暴牛头人",
+          "slug": "elite_minotaur",
+          "tier": 1,
+          "type": "elite",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 4,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/fallen_swordsman_attack_01_v1",
+      "path": "assets/enemies/attack/fallen_swordsman_attack_01_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "堕落剑客",
+          "baseName": "堕落剑客",
+          "slug": "fallen_swordsman",
+          "tier": 3,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 1,
+          "duration": 110
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/fallen_swordsman_attack_02_v1",
+      "path": "assets/enemies/attack/fallen_swordsman_attack_02_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "堕落剑客",
+          "baseName": "堕落剑客",
+          "slug": "fallen_swordsman",
+          "tier": 3,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 2,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/fallen_swordsman_attack_03_v1",
+      "path": "assets/enemies/attack/fallen_swordsman_attack_03_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "堕落剑客",
+          "baseName": "堕落剑客",
+          "slug": "fallen_swordsman",
+          "tier": 3,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 3,
+          "duration": 170
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/fallen_swordsman_attack_04_v1",
+      "path": "assets/enemies/attack/fallen_swordsman_attack_04_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "堕落剑客",
+          "baseName": "堕落剑客",
+          "slug": "fallen_swordsman",
+          "tier": 3,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 4,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/greedy_thief_attack_01_v1",
+      "path": "assets/enemies/attack/greedy_thief_attack_01_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "贪婪盗贼",
+          "baseName": "贪婪盗贼",
+          "slug": "greedy_thief",
+          "tier": 1,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 1,
+          "duration": 110
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/greedy_thief_attack_02_v1",
+      "path": "assets/enemies/attack/greedy_thief_attack_02_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "贪婪盗贼",
+          "baseName": "贪婪盗贼",
+          "slug": "greedy_thief",
+          "tier": 1,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 2,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/greedy_thief_attack_03_v1",
+      "path": "assets/enemies/attack/greedy_thief_attack_03_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "贪婪盗贼",
+          "baseName": "贪婪盗贼",
+          "slug": "greedy_thief",
+          "tier": 1,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 3,
+          "duration": 170
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/greedy_thief_attack_04_v1",
+      "path": "assets/enemies/attack/greedy_thief_attack_04_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "贪婪盗贼",
+          "baseName": "贪婪盗贼",
+          "slug": "greedy_thief",
+          "tier": 1,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 4,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/iron_crab_attack_01_v1",
+      "path": "assets/enemies/attack/iron_crab_attack_01_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "铁甲巨蟹",
+          "baseName": "铁甲巨蟹",
+          "slug": "iron_crab",
+          "tier": 2,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 1,
+          "duration": 110
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/iron_crab_attack_02_v1",
+      "path": "assets/enemies/attack/iron_crab_attack_02_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "铁甲巨蟹",
+          "baseName": "铁甲巨蟹",
+          "slug": "iron_crab",
+          "tier": 2,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 2,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/iron_crab_attack_03_v1",
+      "path": "assets/enemies/attack/iron_crab_attack_03_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "铁甲巨蟹",
+          "baseName": "铁甲巨蟹",
+          "slug": "iron_crab",
+          "tier": 2,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 3,
+          "duration": 170
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/iron_crab_attack_04_v1",
+      "path": "assets/enemies/attack/iron_crab_attack_04_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "铁甲巨蟹",
+          "baseName": "铁甲巨蟹",
+          "slug": "iron_crab",
+          "tier": 2,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 4,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/lost_fox_attack_01_v1",
+      "path": "assets/enemies/attack/lost_fox_attack_01_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "迷途妖狐",
+          "baseName": "迷途妖狐",
+          "slug": "lost_fox",
+          "tier": 1,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 1,
+          "duration": 110
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/lost_fox_attack_02_v1",
+      "path": "assets/enemies/attack/lost_fox_attack_02_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "迷途妖狐",
+          "baseName": "迷途妖狐",
+          "slug": "lost_fox",
+          "tier": 1,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 2,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/lost_fox_attack_03_v1",
+      "path": "assets/enemies/attack/lost_fox_attack_03_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "迷途妖狐",
+          "baseName": "迷途妖狐",
+          "slug": "lost_fox",
+          "tier": 1,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 3,
+          "duration": 170
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/lost_fox_attack_04_v1",
+      "path": "assets/enemies/attack/lost_fox_attack_04_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "迷途妖狐",
+          "baseName": "迷途妖狐",
+          "slug": "lost_fox",
+          "tier": 1,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 4,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/nether_mage_attack_01_v1",
+      "path": "assets/enemies/attack/nether_mage_attack_01_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "幽冥法师",
+          "baseName": "幽冥法师",
+          "slug": "nether_mage",
+          "tier": 3,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 1,
+          "duration": 110
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/nether_mage_attack_02_v1",
+      "path": "assets/enemies/attack/nether_mage_attack_02_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "幽冥法师",
+          "baseName": "幽冥法师",
+          "slug": "nether_mage",
+          "tier": 3,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 2,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/nether_mage_attack_03_v1",
+      "path": "assets/enemies/attack/nether_mage_attack_03_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "幽冥法师",
+          "baseName": "幽冥法师",
+          "slug": "nether_mage",
+          "tier": 3,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 3,
+          "duration": 170
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/nether_mage_attack_04_v1",
+      "path": "assets/enemies/attack/nether_mage_attack_04_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "幽冥法师",
+          "baseName": "幽冥法师",
+          "slug": "nether_mage",
+          "tier": 3,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 4,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/shadow_assassin_attack_01_v1",
+      "path": "assets/enemies/attack/shadow_assassin_attack_01_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "魅影刺客",
+          "baseName": "魅影刺客",
+          "slug": "shadow_assassin",
+          "tier": 3,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 1,
+          "duration": 110
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/shadow_assassin_attack_02_v1",
+      "path": "assets/enemies/attack/shadow_assassin_attack_02_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "魅影刺客",
+          "baseName": "魅影刺客",
+          "slug": "shadow_assassin",
+          "tier": 3,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 2,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/shadow_assassin_attack_03_v1",
+      "path": "assets/enemies/attack/shadow_assassin_attack_03_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "魅影刺客",
+          "baseName": "魅影刺客",
+          "slug": "shadow_assassin",
+          "tier": 3,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 3,
+          "duration": 170
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/shadow_assassin_attack_04_v1",
+      "path": "assets/enemies/attack/shadow_assassin_attack_04_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "魅影刺客",
+          "baseName": "魅影刺客",
+          "slug": "shadow_assassin",
+          "tier": 3,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 4,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/sick_slime_attack_01_v1",
+      "path": "assets/enemies/attack/sick_slime_attack_01_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "病弱史莱姆",
+          "baseName": "病弱史莱姆",
+          "slug": "sick_slime",
+          "tier": 1,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 1,
+          "duration": 110
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/sick_slime_attack_02_v1",
+      "path": "assets/enemies/attack/sick_slime_attack_02_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "病弱史莱姆",
+          "baseName": "病弱史莱姆",
+          "slug": "sick_slime",
+          "tier": 1,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 2,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/sick_slime_attack_03_v1",
+      "path": "assets/enemies/attack/sick_slime_attack_03_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "病弱史莱姆",
+          "baseName": "病弱史莱姆",
+          "slug": "sick_slime",
+          "tier": 1,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 3,
+          "duration": 170
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/sick_slime_attack_04_v1",
+      "path": "assets/enemies/attack/sick_slime_attack_04_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "病弱史莱姆",
+          "baseName": "病弱史莱姆",
+          "slug": "sick_slime",
+          "tier": 1,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 4,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/stitched_brute_attack_01_v1",
+      "path": "assets/enemies/attack/stitched_brute_attack_01_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "缝合巨怪",
+          "baseName": "缝合巨怪",
+          "slug": "stitched_brute",
+          "tier": 3,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 1,
+          "duration": 110
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/stitched_brute_attack_02_v1",
+      "path": "assets/enemies/attack/stitched_brute_attack_02_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "缝合巨怪",
+          "baseName": "缝合巨怪",
+          "slug": "stitched_brute",
+          "tier": 3,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 2,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/stitched_brute_attack_03_v1",
+      "path": "assets/enemies/attack/stitched_brute_attack_03_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "缝合巨怪",
+          "baseName": "缝合巨怪",
+          "slug": "stitched_brute",
+          "tier": 3,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 3,
+          "duration": 170
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/stitched_brute_attack_04_v1",
+      "path": "assets/enemies/attack/stitched_brute_attack_04_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "缝合巨怪",
+          "baseName": "缝合巨怪",
+          "slug": "stitched_brute",
+          "tier": 3,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 4,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/stone_golem_attack_01_v1",
+      "path": "assets/enemies/attack/stone_golem_attack_01_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "巨力石魔",
+          "baseName": "巨力石魔",
+          "slug": "stone_golem",
+          "tier": 3,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 1,
+          "duration": 110
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/stone_golem_attack_02_v1",
+      "path": "assets/enemies/attack/stone_golem_attack_02_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "巨力石魔",
+          "baseName": "巨力石魔",
+          "slug": "stone_golem",
+          "tier": 3,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 2,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/stone_golem_attack_03_v1",
+      "path": "assets/enemies/attack/stone_golem_attack_03_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "巨力石魔",
+          "baseName": "巨力石魔",
+          "slug": "stone_golem",
+          "tier": 3,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 3,
+          "duration": 170
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/stone_golem_attack_04_v1",
+      "path": "assets/enemies/attack/stone_golem_attack_04_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "巨力石魔",
+          "baseName": "巨力石魔",
+          "slug": "stone_golem",
+          "tier": 3,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 4,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/undead_bone_dragon_attack_01_v1",
+      "path": "assets/enemies/attack/undead_bone_dragon_attack_01_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "【精英】不死骨龙",
+          "baseName": "【精英】不死骨龙",
+          "slug": "undead_bone_dragon",
+          "tier": 3,
+          "type": "elite",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 1,
+          "duration": 110
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/undead_bone_dragon_attack_02_v1",
+      "path": "assets/enemies/attack/undead_bone_dragon_attack_02_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "【精英】不死骨龙",
+          "baseName": "【精英】不死骨龙",
+          "slug": "undead_bone_dragon",
+          "tier": 3,
+          "type": "elite",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 2,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/undead_bone_dragon_attack_03_v1",
+      "path": "assets/enemies/attack/undead_bone_dragon_attack_03_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "【精英】不死骨龙",
+          "baseName": "【精英】不死骨龙",
+          "slug": "undead_bone_dragon",
+          "tier": 3,
+          "type": "elite",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 3,
+          "duration": 170
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/undead_bone_dragon_attack_04_v1",
+      "path": "assets/enemies/attack/undead_bone_dragon_attack_04_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "【精英】不死骨龙",
+          "baseName": "【精英】不死骨龙",
+          "slug": "undead_bone_dragon",
+          "tier": 3,
+          "type": "elite",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 4,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/venom_toad_attack_01_v1",
+      "path": "assets/enemies/attack/venom_toad_attack_01_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "剧毒蟾蜍",
+          "baseName": "剧毒蟾蜍",
+          "slug": "venom_toad",
+          "tier": 2,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 1,
+          "duration": 110
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/venom_toad_attack_02_v1",
+      "path": "assets/enemies/attack/venom_toad_attack_02_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "剧毒蟾蜍",
+          "baseName": "剧毒蟾蜍",
+          "slug": "venom_toad",
+          "tier": 2,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 2,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/venom_toad_attack_03_v1",
+      "path": "assets/enemies/attack/venom_toad_attack_03_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "剧毒蟾蜍",
+          "baseName": "剧毒蟾蜍",
+          "slug": "venom_toad",
+          "tier": 2,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 3,
+          "duration": 170
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/venom_toad_attack_04_v1",
+      "path": "assets/enemies/attack/venom_toad_attack_04_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "剧毒蟾蜍",
+          "baseName": "剧毒蟾蜍",
+          "slug": "venom_toad",
+          "tier": 2,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 4,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/wild_wolf_attack_01_v1",
+      "path": "assets/enemies/attack/wild_wolf_attack_01_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "荒野煞狼",
+          "baseName": "荒野煞狼",
+          "slug": "wild_wolf",
+          "tier": 2,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 1,
+          "duration": 110
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/wild_wolf_attack_02_v1",
+      "path": "assets/enemies/attack/wild_wolf_attack_02_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "荒野煞狼",
+          "baseName": "荒野煞狼",
+          "slug": "wild_wolf",
+          "tier": 2,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 2,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/wild_wolf_attack_03_v1",
+      "path": "assets/enemies/attack/wild_wolf_attack_03_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "荒野煞狼",
+          "baseName": "荒野煞狼",
+          "slug": "wild_wolf",
+          "tier": 2,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 3,
+          "duration": 170
+        }
+      ]
+    },
+    {
+      "key": "enemies/attack/wild_wolf_attack_04_v1",
+      "path": "assets/enemies/attack/wild_wolf_attack_04_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "荒野煞狼",
+          "baseName": "荒野煞狼",
+          "slug": "wild_wolf",
+          "tier": 2,
+          "type": "normal",
+          "variant": "base",
+          "kind": "attack_animation",
+          "frame": 4,
+          "duration": 120
+        }
+      ]
+    },
+    {
+      "key": "enemies/battle/abyss_overlord_battle_v1",
+      "path": "assets/enemies/battle/abyss_overlord_battle_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "【深渊主宰·暴走】",
+          "baseName": "【深渊主宰】",
+          "slug": "abyss_overlord",
+          "tier": null,
+          "type": "boss",
+          "variant": "phase2",
+          "kind": "battle_sprite"
+        },
+        {
+          "name": "【深渊主宰】",
+          "baseName": "【深渊主宰】",
+          "slug": "abyss_overlord",
+          "tier": null,
+          "type": "boss",
+          "variant": "base",
+          "kind": "battle_sprite"
+        }
+      ]
+    },
+    {
+      "key": "enemies/battle/ancient_spider_battle_v1",
+      "path": "assets/enemies/battle/ancient_spider_battle_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "千载魔蛛",
+          "baseName": "千载魔蛛",
+          "slug": "ancient_spider",
+          "tier": 2,
+          "type": "normal",
+          "variant": "base",
+          "kind": "battle_sprite"
+        }
+      ]
+    },
+    {
+      "key": "enemies/battle/angry_boar_battle_v1",
+      "path": "assets/enemies/battle/angry_boar_battle_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "暴躁野猪",
+          "baseName": "暴躁野猪",
+          "slug": "angry_boar",
+          "tier": 2,
+          "type": "normal",
+          "variant": "base",
+          "kind": "battle_sprite"
+        }
+      ]
+    },
+    {
+      "key": "enemies/battle/blood_bat_battle_v1",
+      "path": "assets/enemies/battle/blood_bat_battle_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "嗜血蝙蝠",
+          "baseName": "嗜血蝙蝠",
+          "slug": "blood_bat",
+          "tier": 1,
+          "type": "normal",
+          "variant": "base",
+          "kind": "battle_sprite"
+        }
+      ]
+    },
+    {
+      "key": "enemies/battle/bone_soldier_battle_v1",
+      "path": "assets/enemies/battle/bone_soldier_battle_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "枯骨煞兵",
+          "baseName": "枯骨煞兵",
+          "slug": "bone_soldier",
+          "tier": 1,
+          "type": "normal",
+          "variant": "base",
+          "kind": "battle_sprite"
+        }
+      ]
+    },
+    {
+      "key": "enemies/battle/boss_oni_shura_battle_v1",
+      "path": "assets/enemies/battle/boss_oni_shura_battle_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "【首领】鬼面修罗",
+          "baseName": "【首领】鬼面修罗",
+          "slug": "boss_oni_shura",
+          "tier": null,
+          "type": "boss",
+          "variant": "base",
+          "kind": "battle_sprite"
+        }
+      ]
+    },
+    {
+      "key": "enemies/battle/crimson_blood_witch_battle_v1",
+      "path": "assets/enemies/battle/crimson_blood_witch_battle_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "【精英】猩红血巫",
+          "baseName": "【精英】猩红血巫",
+          "slug": "crimson_blood_witch",
+          "tier": 2,
+          "type": "elite",
+          "variant": "base",
+          "kind": "battle_sprite"
+        }
+      ]
+    },
+    {
+      "key": "enemies/battle/elite_minotaur_battle_v1",
+      "path": "assets/enemies/battle/elite_minotaur_battle_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "【精英】狂暴牛头人",
+          "baseName": "【精英】狂暴牛头人",
+          "slug": "elite_minotaur",
+          "tier": 1,
+          "type": "elite",
+          "variant": "base",
+          "kind": "battle_sprite"
+        }
+      ]
+    },
+    {
+      "key": "enemies/battle/fallen_swordsman_battle_v1",
+      "path": "assets/enemies/battle/fallen_swordsman_battle_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "堕落剑客",
+          "baseName": "堕落剑客",
+          "slug": "fallen_swordsman",
+          "tier": 3,
+          "type": "normal",
+          "variant": "base",
+          "kind": "battle_sprite"
+        }
+      ]
+    },
+    {
+      "key": "enemies/battle/greedy_thief_battle_v1",
+      "path": "assets/enemies/battle/greedy_thief_battle_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "贪婪盗贼",
+          "baseName": "贪婪盗贼",
+          "slug": "greedy_thief",
+          "tier": 1,
+          "type": "normal",
+          "variant": "base",
+          "kind": "battle_sprite"
+        }
+      ]
+    },
+    {
+      "key": "enemies/battle/iron_crab_battle_v1",
+      "path": "assets/enemies/battle/iron_crab_battle_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "铁甲巨蟹",
+          "baseName": "铁甲巨蟹",
+          "slug": "iron_crab",
+          "tier": 2,
+          "type": "normal",
+          "variant": "base",
+          "kind": "battle_sprite"
+        }
+      ]
+    },
+    {
+      "key": "enemies/battle/lost_fox_battle_v1",
+      "path": "assets/enemies/battle/lost_fox_battle_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "迷途妖狐",
+          "baseName": "迷途妖狐",
+          "slug": "lost_fox",
+          "tier": 1,
+          "type": "normal",
+          "variant": "base",
+          "kind": "battle_sprite"
+        }
+      ]
+    },
+    {
+      "key": "enemies/battle/nether_mage_battle_v1",
+      "path": "assets/enemies/battle/nether_mage_battle_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "幽冥法师",
+          "baseName": "幽冥法师",
+          "slug": "nether_mage",
+          "tier": 3,
+          "type": "normal",
+          "variant": "base",
+          "kind": "battle_sprite"
+        }
+      ]
+    },
+    {
+      "key": "enemies/battle/shadow_assassin_battle_v1",
+      "path": "assets/enemies/battle/shadow_assassin_battle_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "魅影刺客",
+          "baseName": "魅影刺客",
+          "slug": "shadow_assassin",
+          "tier": 3,
+          "type": "normal",
+          "variant": "base",
+          "kind": "battle_sprite"
+        }
+      ]
+    },
+    {
+      "key": "enemies/battle/sick_slime_battle_v1",
+      "path": "assets/enemies/battle/sick_slime_battle_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "病弱史莱姆",
+          "baseName": "病弱史莱姆",
+          "slug": "sick_slime",
+          "tier": 1,
+          "type": "normal",
+          "variant": "base",
+          "kind": "battle_sprite"
+        }
+      ]
+    },
+    {
+      "key": "enemies/battle/stitched_brute_battle_v1",
+      "path": "assets/enemies/battle/stitched_brute_battle_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "缝合巨怪",
+          "baseName": "缝合巨怪",
+          "slug": "stitched_brute",
+          "tier": 3,
+          "type": "normal",
+          "variant": "base",
+          "kind": "battle_sprite"
+        }
+      ]
+    },
+    {
+      "key": "enemies/battle/stone_golem_battle_v1",
+      "path": "assets/enemies/battle/stone_golem_battle_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "巨力石魔",
+          "baseName": "巨力石魔",
+          "slug": "stone_golem",
+          "tier": 3,
+          "type": "normal",
+          "variant": "base",
+          "kind": "battle_sprite"
+        }
+      ]
+    },
+    {
+      "key": "enemies/battle/undead_bone_dragon_battle_v1",
+      "path": "assets/enemies/battle/undead_bone_dragon_battle_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "【精英】不死骨龙",
+          "baseName": "【精英】不死骨龙",
+          "slug": "undead_bone_dragon",
+          "tier": 3,
+          "type": "elite",
+          "variant": "base",
+          "kind": "battle_sprite"
+        }
+      ]
+    },
+    {
+      "key": "enemies/battle/venom_toad_battle_v1",
+      "path": "assets/enemies/battle/venom_toad_battle_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "剧毒蟾蜍",
+          "baseName": "剧毒蟾蜍",
+          "slug": "venom_toad",
+          "tier": 2,
+          "type": "normal",
+          "variant": "base",
+          "kind": "battle_sprite"
+        }
+      ]
+    },
+    {
+      "key": "enemies/battle/wild_wolf_battle_v1",
+      "path": "assets/enemies/battle/wild_wolf_battle_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "荒野煞狼",
+          "baseName": "荒野煞狼",
+          "slug": "wild_wolf",
+          "tier": 2,
+          "type": "normal",
+          "variant": "base",
+          "kind": "battle_sprite"
+        }
+      ]
+    },
+    {
+      "key": "enemies/portraits/abyss_overlord_portrait_v1",
+      "path": "assets/enemies/portraits/abyss_overlord_portrait_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "【深渊主宰·暴走】",
+          "baseName": "【深渊主宰】",
+          "slug": "abyss_overlord",
+          "tier": null,
+          "type": "boss",
+          "variant": "phase2",
+          "kind": "hud_portrait"
+        },
+        {
+          "name": "【深渊主宰】",
+          "baseName": "【深渊主宰】",
+          "slug": "abyss_overlord",
+          "tier": null,
+          "type": "boss",
+          "variant": "base",
+          "kind": "hud_portrait"
+        }
+      ]
+    },
+    {
+      "key": "enemies/portraits/ancient_spider_portrait_v1",
+      "path": "assets/enemies/portraits/ancient_spider_portrait_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "千载魔蛛",
+          "baseName": "千载魔蛛",
+          "slug": "ancient_spider",
+          "tier": 2,
+          "type": "normal",
+          "variant": "base",
+          "kind": "hud_portrait"
+        }
+      ]
+    },
+    {
+      "key": "enemies/portraits/angry_boar_portrait_v1",
+      "path": "assets/enemies/portraits/angry_boar_portrait_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "暴躁野猪",
+          "baseName": "暴躁野猪",
+          "slug": "angry_boar",
+          "tier": 2,
+          "type": "normal",
+          "variant": "base",
+          "kind": "hud_portrait"
+        }
+      ]
+    },
+    {
+      "key": "enemies/portraits/blood_bat_portrait_v1",
+      "path": "assets/enemies/portraits/blood_bat_portrait_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "嗜血蝙蝠",
+          "baseName": "嗜血蝙蝠",
+          "slug": "blood_bat",
+          "tier": 1,
+          "type": "normal",
+          "variant": "base",
+          "kind": "hud_portrait"
+        }
+      ]
+    },
+    {
+      "key": "enemies/portraits/bone_soldier_portrait_v1",
+      "path": "assets/enemies/portraits/bone_soldier_portrait_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "枯骨煞兵",
+          "baseName": "枯骨煞兵",
+          "slug": "bone_soldier",
+          "tier": 1,
+          "type": "normal",
+          "variant": "base",
+          "kind": "hud_portrait"
+        }
+      ]
+    },
+    {
+      "key": "enemies/portraits/boss_oni_shura_portrait_v1",
+      "path": "assets/enemies/portraits/boss_oni_shura_portrait_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "【首领】鬼面修罗",
+          "baseName": "【首领】鬼面修罗",
+          "slug": "boss_oni_shura",
+          "tier": null,
+          "type": "boss",
+          "variant": "base",
+          "kind": "hud_portrait"
+        }
+      ]
+    },
+    {
+      "key": "enemies/portraits/crimson_blood_witch_portrait_v1",
+      "path": "assets/enemies/portraits/crimson_blood_witch_portrait_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "【精英】猩红血巫",
+          "baseName": "【精英】猩红血巫",
+          "slug": "crimson_blood_witch",
+          "tier": 2,
+          "type": "elite",
+          "variant": "base",
+          "kind": "hud_portrait"
+        }
+      ]
+    },
+    {
+      "key": "enemies/portraits/elite_minotaur_portrait_v1",
+      "path": "assets/enemies/portraits/elite_minotaur_portrait_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "【精英】狂暴牛头人",
+          "baseName": "【精英】狂暴牛头人",
+          "slug": "elite_minotaur",
+          "tier": 1,
+          "type": "elite",
+          "variant": "base",
+          "kind": "hud_portrait"
+        }
+      ]
+    },
+    {
+      "key": "enemies/portraits/fallen_swordsman_portrait_v1",
+      "path": "assets/enemies/portraits/fallen_swordsman_portrait_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "堕落剑客",
+          "baseName": "堕落剑客",
+          "slug": "fallen_swordsman",
+          "tier": 3,
+          "type": "normal",
+          "variant": "base",
+          "kind": "hud_portrait"
+        }
+      ]
+    },
+    {
+      "key": "enemies/portraits/greedy_thief_portrait_v1",
+      "path": "assets/enemies/portraits/greedy_thief_portrait_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "贪婪盗贼",
+          "baseName": "贪婪盗贼",
+          "slug": "greedy_thief",
+          "tier": 1,
+          "type": "normal",
+          "variant": "base",
+          "kind": "hud_portrait"
+        }
+      ]
+    },
+    {
+      "key": "enemies/portraits/iron_crab_portrait_v1",
+      "path": "assets/enemies/portraits/iron_crab_portrait_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "铁甲巨蟹",
+          "baseName": "铁甲巨蟹",
+          "slug": "iron_crab",
+          "tier": 2,
+          "type": "normal",
+          "variant": "base",
+          "kind": "hud_portrait"
+        }
+      ]
+    },
+    {
+      "key": "enemies/portraits/lost_fox_portrait_v1",
+      "path": "assets/enemies/portraits/lost_fox_portrait_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "迷途妖狐",
+          "baseName": "迷途妖狐",
+          "slug": "lost_fox",
+          "tier": 1,
+          "type": "normal",
+          "variant": "base",
+          "kind": "hud_portrait"
+        }
+      ]
+    },
+    {
+      "key": "enemies/portraits/nether_mage_portrait_v1",
+      "path": "assets/enemies/portraits/nether_mage_portrait_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "幽冥法师",
+          "baseName": "幽冥法师",
+          "slug": "nether_mage",
+          "tier": 3,
+          "type": "normal",
+          "variant": "base",
+          "kind": "hud_portrait"
+        }
+      ]
+    },
+    {
+      "key": "enemies/portraits/shadow_assassin_portrait_v1",
+      "path": "assets/enemies/portraits/shadow_assassin_portrait_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "魅影刺客",
+          "baseName": "魅影刺客",
+          "slug": "shadow_assassin",
+          "tier": 3,
+          "type": "normal",
+          "variant": "base",
+          "kind": "hud_portrait"
+        }
+      ]
+    },
+    {
+      "key": "enemies/portraits/sick_slime_portrait_v1",
+      "path": "assets/enemies/portraits/sick_slime_portrait_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "病弱史莱姆",
+          "baseName": "病弱史莱姆",
+          "slug": "sick_slime",
+          "tier": 1,
+          "type": "normal",
+          "variant": "base",
+          "kind": "hud_portrait"
+        }
+      ]
+    },
+    {
+      "key": "enemies/portraits/stitched_brute_portrait_v1",
+      "path": "assets/enemies/portraits/stitched_brute_portrait_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "缝合巨怪",
+          "baseName": "缝合巨怪",
+          "slug": "stitched_brute",
+          "tier": 3,
+          "type": "normal",
+          "variant": "base",
+          "kind": "hud_portrait"
+        }
+      ]
+    },
+    {
+      "key": "enemies/portraits/stone_golem_portrait_v1",
+      "path": "assets/enemies/portraits/stone_golem_portrait_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "巨力石魔",
+          "baseName": "巨力石魔",
+          "slug": "stone_golem",
+          "tier": 3,
+          "type": "normal",
+          "variant": "base",
+          "kind": "hud_portrait"
+        }
+      ]
+    },
+    {
+      "key": "enemies/portraits/undead_bone_dragon_portrait_v1",
+      "path": "assets/enemies/portraits/undead_bone_dragon_portrait_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "【精英】不死骨龙",
+          "baseName": "【精英】不死骨龙",
+          "slug": "undead_bone_dragon",
+          "tier": 3,
+          "type": "elite",
+          "variant": "base",
+          "kind": "hud_portrait"
+        }
+      ]
+    },
+    {
+      "key": "enemies/portraits/venom_toad_portrait_v1",
+      "path": "assets/enemies/portraits/venom_toad_portrait_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "剧毒蟾蜍",
+          "baseName": "剧毒蟾蜍",
+          "slug": "venom_toad",
+          "tier": 2,
+          "type": "normal",
+          "variant": "base",
+          "kind": "hud_portrait"
+        }
+      ]
+    },
+    {
+      "key": "enemies/portraits/wild_wolf_portrait_v1",
+      "path": "assets/enemies/portraits/wild_wolf_portrait_v1.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "name": "荒野煞狼",
+          "baseName": "荒野煞狼",
+          "slug": "wild_wolf",
+          "tier": 2,
+          "type": "normal",
+          "variant": "base",
+          "kind": "hud_portrait"
+        }
+      ]
+    }
+  ]
+}
