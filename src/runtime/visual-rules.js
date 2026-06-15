@@ -168,6 +168,32 @@
         return `造成 <span class="card-desc-value">${amount}</span> 点流动伤害。`;
     }
 
+    function hasBuildGuideCue(text) {
+        return /(适合|用于|帮助|专门|不是|而是|不必|负责|牌组|路线|节奏|窗口|寻找|补足|补强|转向|慢慢|更容易|更稳定|管理|证明|测试|值得|服务|便于|收束|铺垫|凑齐|调度|形成|转成|换取|作为|核心爆点|长线探索)/.test(text);
+    }
+
+    function cleanEffectDisplayText(desc, options = {}) {
+        if (!desc) return '';
+        const effectCues = /(造成|获得|施加|触发|回复|抽牌|放逐|销毁|重置|保留|消耗|复制|丢弃|洗入|清空|进入|引爆|改为|额外|若|每有|层|伤害|护盾|生命|能量)/;
+        const preserveRewardWeight = options.preserveRewardWeight !== false;
+        return String(desc)
+            .replace(/<br\s*\/?>/gi, '。')
+            .split(/[。；;]/)
+            .map(s => s.trim())
+            .map(s => {
+                if (preserveRewardWeight && /(卡牌奖励|商栈补货|出现权重|权重提高)/.test(s)) return s;
+                if (!hasBuildGuideCue(s)) return s;
+                return s
+                    .split(/，|,/)
+                    .map(part => part.trim())
+                    .filter(part => part && !hasBuildGuideCue(part))
+                    .join('，');
+            })
+            .filter(s => s && (effectCues.test(s) || (preserveRewardWeight && /(卡牌奖励|商栈补货|出现权重|权重提高)/.test(s))))
+            .map(s => `${s}。`)
+            .join('<br>');
+    }
+
     function normalizeCardEffectText(text = '') {
         return String(text)
             .replace(/<br\s*\/?>/gi, '\n')
@@ -526,6 +552,7 @@
 
     global.QuestersVisualRules = {
         applyCardNameVariant,
+        cleanEffectDisplayText,
         formatRatioText,
         getCardArtPath,
         getCardBottomTagList,
@@ -544,6 +571,7 @@
         getCardVisualSignature,
         getFlowDamageLine,
         getStatusLayerCount,
+        hasBuildGuideCue,
         renderTagNames,
         getEnemyAssetSlug,
         getEnemyAttackAnimationTiming,
