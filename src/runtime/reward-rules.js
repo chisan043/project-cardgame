@@ -46,6 +46,16 @@
         };
     }
 
+    function getRestHealResult({ hp = 0, maxHp = 0, heal = 30 } = {}) {
+        const currentHp = Number(hp) || 0;
+        const cap = Math.max(0, Number(maxHp) || 0);
+        const nextHp = Math.min(cap, currentHp + heal);
+        return {
+            hp: nextHp,
+            heal: Math.max(0, nextHp - currentHp)
+        };
+    }
+
     function getShopCopyPrice(card = {}, { hasCopySeal = false } = {}) {
         let price = 65;
         if (card.rarity === '稀有') price += 20;
@@ -160,6 +170,7 @@
         getCardChoiceKey,
         getDeckBuildProfile,
         getPrimaryBuildTag,
+        getRestHealResult,
         getRewardBridgeSpec,
         getRewardCandidatePool,
         getShopCopyPrice,

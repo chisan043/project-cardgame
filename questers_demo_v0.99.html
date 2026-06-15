@@ -7762,7 +7762,15 @@
         });
     }
 
-    function resolveRest() { state.hp = Math.min(state.maxHp, state.hp+30); updateTopBar(); closeOverlay('overlay-rest'); advanceMap(); }
+    function resolveRest() {
+        state.hp = QuestersRewardRules.getRestHealResult({
+            hp: state.hp,
+            maxHp: state.maxHp
+        }).hp;
+        updateTopBar();
+        closeOverlay('overlay-rest');
+        advanceMap();
+    }
     
     function renderRestDelete() {
         document.getElementById('rest-options').style.display = 'none'; const c = document.getElementById('card-action-list'); c.style.display = 'flex'; c.innerHTML = '<div style="width:100%; color:var(--gold); margin-bottom:20px; font-size:20px;">请选择一张要在营火中移除的卡牌：</div>';
