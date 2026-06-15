@@ -110,6 +110,32 @@
         };
     }
 
+    function getPlayerBuffVfxLayout({
+        avatarRect = null,
+        config = {},
+        viewportHeight = 0,
+        viewportWidth = 0
+    } = {}) {
+        const width = config.width || 390;
+        const height = config.height || 520;
+        const origin = config.origin || { x: 0.52, y: 0.45 };
+        const center = avatarRect
+            ? {
+                x: avatarRect.left + avatarRect.width * origin.x,
+                y: avatarRect.top + avatarRect.height * origin.y
+            }
+            : {
+                x: viewportWidth * 0.34,
+                y: viewportHeight * 0.55
+            };
+        return {
+            height,
+            width,
+            x: center.x,
+            y: center.y
+        };
+    }
+
     function getShieldHitVfxLayout(absorbed = 0, {
         playerRect = null,
         viewportHeight = 0,
@@ -162,6 +188,7 @@
         getFrameSequenceLeadDuration,
         getPlayerAttackAnimationTiming,
         getPlayerAttackVfxLayout,
+        getPlayerBuffVfxLayout,
         getShieldHitVfxLayout
     };
 })(window);

@@ -5438,25 +5438,17 @@
 
     function positionPlayerBuffVfx(vfx, image, config) {
         const avatarRect = document.getElementById('player-avatar-img')?.getBoundingClientRect();
-        const size = {
-            width: config.width || 390,
-            height: config.height || 520
-        };
-        const origin = config.origin || { x: 0.52, y: 0.45 };
-        const center = avatarRect
-            ? {
-                x: avatarRect.left + avatarRect.width * origin.x,
-                y: avatarRect.top + avatarRect.height * origin.y
-            }
-            : {
-                x: window.innerWidth * 0.34,
-                y: window.innerHeight * 0.55
-            };
+        const layout = QuestersVisualRules.getPlayerBuffVfxLayout({
+            avatarRect,
+            config,
+            viewportHeight: window.innerHeight,
+            viewportWidth: window.innerWidth
+        });
 
-        image.style.setProperty('--player-buff-vfx-x', `${center.x}px`);
-        image.style.setProperty('--player-buff-vfx-y', `${center.y}px`);
-        vfx.style.setProperty('--player-buff-vfx-width', `${size.width}px`);
-        vfx.style.setProperty('--player-buff-vfx-height', `${size.height}px`);
+        image.style.setProperty('--player-buff-vfx-x', `${layout.x}px`);
+        image.style.setProperty('--player-buff-vfx-y', `${layout.y}px`);
+        vfx.style.setProperty('--player-buff-vfx-width', `${layout.width}px`);
+        vfx.style.setProperty('--player-buff-vfx-height', `${layout.height}px`);
     }
 
     function triggerPlayerBuffVFX(kind) {
