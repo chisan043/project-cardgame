@@ -264,6 +264,15 @@
         return 0.12 + floor * 0.01;
     }
 
+    function getSpecialEpicRewardWeight({
+        tags = [],
+        primaryBuildTag = null,
+        boost = 1
+    } = {}) {
+        const baseWeight = primaryBuildTag && tags.includes(primaryBuildTag) ? 5 : 1;
+        return Math.max(1, Math.round(baseWeight * boost));
+    }
+
     global.QuestersRewardRules = {
         deckHasCardMatch,
         deckHasTag,
@@ -283,6 +292,7 @@
         getRewardFixedFallbackCandidates,
         getRewardSlotPlan,
         getSpecialEpicRewardChance,
+        getSpecialEpicRewardWeight,
         getShopCopyPrice,
         rollRewardRarity,
         rollWeighted

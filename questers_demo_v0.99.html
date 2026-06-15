@@ -2538,7 +2538,11 @@
         const weighted = [];
         source.forEach(card => {
             const tags = getCardBuildTags(card, characterId);
-            const weight = Math.max(1, Math.round((tags.includes(primaryBuildTag) ? 5 : 1) * getBuildRewardBoostMultiplier(tags)));
+            const weight = QuestersRewardRules.getSpecialEpicRewardWeight({
+                tags,
+                primaryBuildTag,
+                boost: getBuildRewardBoostMultiplier(tags)
+            });
             for (let i = 0; i < weight; i++) weighted.push(card);
         });
         return weighted.length ? weighted : source;
