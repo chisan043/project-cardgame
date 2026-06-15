@@ -208,6 +208,14 @@
             : ['general', 'general', 'general'];
     }
 
+    function getRewardFixedFallbackCandidates({
+        allCards = [],
+        used = new Set()
+    } = {}) {
+        const uniqueCandidates = allCards.filter(card => !used.has(getCardChoiceKey(card)));
+        return uniqueCandidates.length ? uniqueCandidates : allCards;
+    }
+
     global.QuestersRewardRules = {
         deckHasCardMatch,
         deckHasTag,
@@ -222,6 +230,7 @@
         getRewardBridgeCandidates,
         getRewardCardCandidates,
         getRewardCandidatePool,
+        getRewardFixedFallbackCandidates,
         getRewardSlotPlan,
         getShopCopyPrice,
         rollRewardRarity,

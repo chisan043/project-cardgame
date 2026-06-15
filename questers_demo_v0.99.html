@@ -2790,8 +2790,10 @@
         }
         const fixedFallbackPool = [...getCharacterCardPool(), ...NEUTRAL_CARD_POOL];
         while (choices.length < count && fixedFallbackPool.length) {
-            const uniqueCandidates = fixedFallbackPool.filter(card => !used.has(getCardChoiceKey(card)));
-            const source = uniqueCandidates.length ? uniqueCandidates : fixedFallbackPool;
+            const source = QuestersRewardRules.getRewardFixedFallbackCandidates({
+                allCards: fixedFallbackPool,
+                used
+            });
             const picked = source[Math.floor(Math.random() * source.length)];
             const card = cloneCardDefinition(picked);
             used.add(getCardChoiceKey(card));
