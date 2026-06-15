@@ -9,6 +9,12 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CARD_REGISTRY_PATH = 'assets/cards/card-art-registry.json';
 const RELIC_REGISTRY_PATH = 'assets/relics/relic-icon-registry.json';
 
+function parseArgs(argv) {
+    return {
+        check: argv.includes('--check')
+    };
+}
+
 function posixPath(...parts) {
     return parts.join('/').replace(/\\/g, '/');
 }
@@ -136,15 +142,31 @@ function writeJson(relPath, data) {
     fs.writeFileSync(path.join(ROOT, relPath), `${JSON.stringify(data, null, 2)}\n`);
 }
 
+function assertRegistryFresh(relPath, data) {
+    const absPath = path.join(ROOT, relPath);
+    const expected = `${JSON.stringify(data, null, 2)}\n`;
+    if (!fs.existsSync(absPath)) throw new Error(`Missing generated registry: ${relPath}`);
+    const current = fs.readFileSync(absPath, 'utf8');
+    if (current !== expected) throw new Error(`Generated registry is stale: ${relPath}`);
+}
+
 function run() {
+    const args = parseArgs(process.argv.slice(2));
     const data = loadGameData();
     const cardRegistry = buildCardRegistry(data);
     const relicRegistry = buildRelicRegistry(data);
-    writeJson(CARD_REGISTRY_PATH, cardRegistry);
-    writeJson(RELIC_REGISTRY_PATH, relicRegistry);
     if (cardRegistry.missingAssetCount || relicRegistry.missingAssetCount) {
         throw new Error(`Missing registry assets: cards=${cardRegistry.missingAssetCount}, relics=${relicRegistry.missingAssetCount}`);
     }
+    if (args.check) {
+        assertRegistryFresh(CARD_REGISTRY_PATH, cardRegistry);
+        assertRegistryFresh(RELIC_REGISTRY_PATH, relicRegistry);
+        console.log(`Checked ${CARD_REGISTRY_PATH}: ${cardRegistry.assetCount} assets`);
+        console.log(`Checked ${RELIC_REGISTRY_PATH}: ${relicRegistry.assetCount} assets`);
+        return;
+    }
+    writeJson(CARD_REGISTRY_PATH, cardRegistry);
+    writeJson(RELIC_REGISTRY_PATH, relicRegistry);
     console.log(`Wrote ${CARD_REGISTRY_PATH}: ${cardRegistry.assetCount} assets`);
     console.log(`Wrote ${RELIC_REGISTRY_PATH}: ${relicRegistry.assetCount} assets`);
 }
