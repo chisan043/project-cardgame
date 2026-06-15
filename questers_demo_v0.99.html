@@ -5054,8 +5054,11 @@
     }
 
     function advanceMap() {
-        state.floor++; state.isNodeClickLocked = false;
-        if(state.floor >= 20) { clearRunSave(); alert("恭喜你，穿越层层试炼，打败了魔王！"); showScene('scene-main-menu'); setTopBarVisible(false); }
+        const advanceState = QuestersMapRules.getMapAdvanceResult(state.floor, {
+            mapHeight: state.mapData.length
+        });
+        state.floor = advanceState.floor; state.isNodeClickLocked = false;
+        if(advanceState.isComplete) { clearRunSave(); alert("恭喜你，穿越层层试炼，打败了魔王！"); showScene('scene-main-menu'); setTopBarVisible(false); }
         else { showScene('scene-map'); setTimeout(()=>renderMap(), 50); updateTopBar(); saveRun(); }
     }
 

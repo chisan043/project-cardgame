@@ -193,6 +193,17 @@
         return { action: 'reward' };
     }
 
+    function getMapAdvanceResult(currentFloor = 0, {
+        mapHeight = DEFAULT_HEIGHT
+    } = {}) {
+        const nextFloor = (Number(currentFloor) || 0) + 1;
+        const height = Math.max(1, Number(mapHeight) || DEFAULT_HEIGHT);
+        return {
+            floor: nextFloor,
+            isComplete: nextFloor >= height
+        };
+    }
+
     function findMapNodeById(mapData, nodeId) {
         if (!nodeId || !Array.isArray(mapData)) return null;
         for (const floor of mapData) {
@@ -388,6 +399,7 @@
         createMapFloors,
         generateMapData,
         getDefaultMapPreviewNode,
+        getMapAdvanceResult,
         getMapAutoScrollTargetSelector,
         getMapAutoScrollTop,
         getMapContainerHeight,
