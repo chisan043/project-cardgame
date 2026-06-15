@@ -2742,7 +2742,11 @@
         if (!spec) return null;
         const classPool = getCharacterCardPool();
         const allCards = [...classPool, ...NEUTRAL_CARD_POOL];
-        let candidates = allCards.filter(card => spec.match(card) && !used.has(getCardChoiceKey(card)));
+        let candidates = QuestersRewardRules.getRewardBridgeCandidates({
+            allCards,
+            bridgeSpec: spec,
+            used
+        });
         if (!candidates.length) return null;
         candidates = candidates.sort(() => 0.5 - Math.random());
         return cloneCardDefinition(candidates[0]);

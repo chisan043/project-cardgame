@@ -193,6 +193,15 @@
         return candidates;
     }
 
+    function getRewardBridgeCandidates({
+        allCards = [],
+        bridgeSpec = null,
+        used = new Set()
+    } = {}) {
+        if (!bridgeSpec) return [];
+        return allCards.filter(card => bridgeSpec.match(card) && !used.has(getCardChoiceKey(card)));
+    }
+
     global.QuestersRewardRules = {
         deckHasCardMatch,
         deckHasTag,
@@ -204,6 +213,7 @@
         getRestHealResult,
         getRewardOverlayPresentation,
         getRewardBridgeSpec,
+        getRewardBridgeCandidates,
         getRewardCardCandidates,
         getRewardCandidatePool,
         getShopCopyPrice,
