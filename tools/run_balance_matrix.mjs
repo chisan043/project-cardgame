@@ -159,6 +159,7 @@ function summarizeEpic(report) {
         testedSamples: report.testedSamples,
         highCount: rows.filter(row => row.severity === 'high').length,
         mediumCount: rows.filter(row => row.severity === 'medium').length,
+        anomalies: rows,
         topAnomalies: rows.slice(0, 20)
     };
 }
@@ -186,8 +187,13 @@ function summarizeRelic(report) {
         highCount: rows.filter(row => row.severity === 'high').length,
         mediumCount: rows.filter(row => row.severity === 'medium').length,
         nonCombatCount: report.anomalies.filter(item => item.kind === '非战斗遗物').length,
+        anomalies: rows,
         topAnomalies: rows.slice(0, 20)
     };
+}
+
+function reportPath(outDir, ...parts) {
+    return path.join(outDir, ...parts);
 }
 
 function markdownSummary(summary) {
@@ -272,6 +278,132 @@ function markdownSummary(summary) {
     return `${lines.join('\n')}\n`;
 }
 
+function markdownCompleteReport(summary) {
+    const lines = [
+        '# 完整跑局体验与平衡测试报告',
+        '',
+        `测试时间：${localReportDateTime(summary.generatedAt)}`,
+        '',
+        `输出目录：\`${summary.outDir}\``,
+        '',
+        '## 测试覆盖',
+        '',
+        '| 测试模块 | 状态 | 原始报告 |',
+        '|---|---|---|',
+        `| 基础发布检查 | ${summary.release.status === 0 ? '通过' : '失败'} | - |`,
+        `| 路线规则检查 | ${summary.route.status === 0 ? '通过' : '失败'} | - |`,
+        `| 完整跑局 | ${summary.full.length ? `${summary.full.length} 个 seed` : '跳过'} | \`${summary.outDir}/full_<seed>/完整跑局体验与平衡测试报告.md\` |`,
+        `| 实战缺核心 | ${summary.practical.length ? `${summary.practical.length} 个 seed` : '跳过'} | \`${summary.outDir}/practical_<seed>.md\` |`,
+        `| 史诗核心审计 | ${summary.epic.length ? `${summary.epic.length} 个 seed` : '跳过'} | \`${summary.outDir}/epic_<seed>/epic_core_balance_report.md\` |`,
+        `| 遗物逐个审计 | ${summary.relic.length ? `${summary.relic.length} 个 seed` : '跳过'} | \`${summary.outDir}/relic_<seed>/relic_balance_report.md\` |`,
+        '',
+        '## 完整跑局汇总',
+        ''
+    ];
+
+    if (summary.full.length) {
+        lines.push(
+            '| Seed | 跑局 | 熟练通关 | 新手到一章Boss | 异常 | 子报告 |',
+            '|---:|---:|---:|---:|---:|---|',
+            ...summary.full.map(item => `| ${item.seed} | ${item.totalRuns} | ${pct(item.experiencedClearRate)} | ${pct(item.noviceAct1BossReachRate)} | ${item.anomalyCount} | \`${reportPath(summary.outDir, `full_${item.seed}`, '完整跑局体验与平衡测试报告.md')}\` |`),
+            `| 平均 | ${Math.round(avg(summary.full.map(item => item.totalRuns)))} | ${pct(avg(summary.full.map(item => item.experiencedClearRate)))} | ${pct(avg(summary.full.map(item => item.noviceAct1BossReachRate)))} | ${avg(summary.full.map(item => item.anomalyCount)).toFixed(1)} | - |`,
+            '',
+            '### 完整跑局数据文件',
+            '',
+            '| 文件 | 说明 |',
+            '|---|---|',
+            `| \`${reportPath(summary.outDir, 'full_playtest_report.json')}\` | 最新 seed 的完整跑局 JSON |`,
+            `| \`${reportPath(summary.outDir, 'single_runs.csv')}\` | 最新 seed 的单局记录 |`,
+            `| \`${reportPath(summary.outDir, 'card_stats.csv')}\` | 最新 seed 的卡牌选择和使用统计 |`,
+            `| \`${reportPath(summary.outDir, 'relic_stats.csv')}\` | 最新 seed 的遗物获得和通关统计 |`,
+            `| \`${reportPath(summary.outDir, 'enemy_stats.csv')}\` | 最新 seed 的敌人统计 |`,
+            `| \`${reportPath(summary.outDir, 'floor_heatmap.csv')}\` | 最新 seed 的楼层热区 |`,
+            `| \`${reportPath(summary.outDir, 'route_stats.csv')}\` | 最新 seed 的路线选择统计 |`,
+            `| \`${reportPath(summary.outDir, 'failure_feedback.csv')}\` | 最新 seed 的失败反馈分类 |`,
+            `| \`${reportPath(summary.outDir, 'anomalies.csv')}\` | 最新 seed 的完整跑局异常项 |`,
+            `| \`${reportPath(summary.outDir, 'combo_stats.csv')}\` | 最新 seed 的组合胜率统计 |`,
+            ''
+        );
+    } else {
+        lines.push('本轮跳过完整跑局。', '');
+    }
+
+    lines.push('## 实战缺核心测试', '');
+    if (summary.practical.length) {
+        lines.push(
+            '| Seed | 问题构筑数 | 原始报告 |',
+            '|---:|---:|---|',
+            ...summary.practical.map(item => `| ${item.seed} | ${item.issueCount} | \`${reportPath(summary.outDir, `practical_${item.seed}.md`)}\` |`),
+            '',
+            '### 缺核心问题明细',
+            '',
+            '| Seed | 职业 | 构筑 | 诊断 |',
+            '|---:|---|---|---|'
+        );
+        const rows = summary.practical.flatMap(item => item.issues.map(issue => ({ seed: item.seed, ...issue })));
+        lines.push(...(rows.length
+            ? rows.map(row => `| ${row.seed} | ${row.role} | ${row.build} | ${row.diagnosis.join('；')} |`)
+            : ['| - | - | - | 未发现缺核心体验问题 |']));
+        lines.push('');
+    } else {
+        lines.push('本轮跳过实战缺核心测试。', '');
+    }
+
+    lines.push('## 史诗核心审计', '');
+    if (summary.epic.length) {
+        lines.push(
+            '| Seed | 核心牌 | 样本 | High | Medium | 原始报告 |',
+            '|---:|---:|---:|---:|---:|---|',
+            ...summary.epic.map(item => `| ${item.seed} | ${item.totalCoreCards} | ${item.testedSamples} | ${item.highCount} | ${item.mediumCount} | \`${reportPath(summary.outDir, `epic_${item.seed}`, 'epic_core_balance_report.md')}\` |`),
+            '',
+            '### 史诗核心异常明细',
+            '',
+            '| Seed | 严重度 | 类型 | 职业 | 构筑 | 卡牌 | 说明 |',
+            '|---:|---|---|---|---|---|---|'
+        );
+        const rows = summary.epic.flatMap(item => item.anomalies.map(row => ({ seed: item.seed, ...row })));
+        lines.push(...(rows.length
+            ? rows.map(row => `| ${row.seed} | ${row.severity} | ${row.kind} | ${row.role} | ${row.build} | ${row.card} | ${row.detail} |`)
+            : ['| - | ok | 无 | - | - | - | 未发现史诗核心异常 |']));
+        lines.push('');
+    } else {
+        lines.push('本轮跳过史诗核心审计。', '');
+    }
+
+    lines.push('## 遗物逐个审计', '');
+    if (summary.relic.length) {
+        lines.push(
+            '| Seed | 遗物 | 样本 | High | Medium | 非战斗覆盖 | 原始报告 |',
+            '|---:|---:|---:|---:|---:|---:|---|',
+            ...summary.relic.map(item => `| ${item.seed} | ${item.totalRelics} | ${item.testedSamples} | ${item.highCount} | ${item.mediumCount} | ${item.nonCombatCount} | \`${reportPath(summary.outDir, `relic_${item.seed}`, 'relic_balance_report.md')}\` |`),
+            '',
+            '### 遗物异常明细',
+            '',
+            '| Seed | 严重度 | 类型 | 职业 | 构筑 | 遗物 | 说明 |',
+            '|---:|---|---|---|---|---|---|'
+        );
+        const rows = summary.relic.flatMap(item => item.anomalies.map(row => ({ seed: item.seed, ...row })));
+        lines.push(...(rows.length
+            ? rows.map(row => `| ${row.seed} | ${row.severity} | ${row.kind} | ${row.role} | ${row.build} | ${row.relic} | ${row.detail} |`)
+            : ['| - | ok | 无 | - | - | - | 未发现战斗遗物异常 |']));
+        lines.push(
+            '',
+            '非战斗遗物会在各 seed 的遗物原始报告中列出；它们主要影响金币、奖励、商店、路线或战后收益，不用战斗胜率直接判定强弱。',
+            ''
+        );
+    } else {
+        lines.push('本轮跳过遗物逐个审计。', '');
+    }
+
+    lines.push(
+        '## 矩阵汇总文件',
+        '',
+        `- 矩阵摘要：\`${reportPath(summary.outDir, 'balance_matrix_summary.md')}\``,
+        `- 矩阵 JSON：\`${reportPath(summary.outDir, 'balance_matrix_summary.json')}\``
+    );
+    return `${lines.join('\n')}\n`;
+}
+
 function run() {
     const args = parseArgs(process.argv.slice(2));
     const outDir = path.resolve(ROOT, args.outDir);
@@ -345,8 +477,10 @@ function run() {
 
     fs.writeFileSync(path.join(outDir, 'balance_matrix_summary.json'), `${JSON.stringify(summary, null, 2)}\n`);
     fs.writeFileSync(path.join(outDir, 'balance_matrix_summary.md'), markdownSummary(summary));
+    fs.writeFileSync(path.join(outDir, '完整跑局体验与平衡测试报告.md'), markdownCompleteReport(summary));
     console.log(`\nBalance matrix complete: ${outDir}`);
     console.log(`Summary: ${path.join(outDir, 'balance_matrix_summary.md')}`);
+    console.log(`Complete report: ${path.join(outDir, '完整跑局体验与平衡测试报告.md')}`);
 }
 
 run();
