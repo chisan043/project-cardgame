@@ -173,11 +173,23 @@ function analyzeStarterBias(data, roleId, starter) {
         ? ['oathblade+execution', 'execution+bloodoath']
         : [];
     const bridgeCoveragePassed = requiredBridgePairs.every(pair => (bridgeCoverage[pair] || []).length > 0);
-    const survivalRule = {
-        hero_warrior: { poolId: 'starter_warrior_guard', copies: 3, type: '防御', tag: null, label: '3 张护盾牌' },
-        hero_mage: { poolId: 'starter_mage_heal', copies: 3, type: '能力', tag: '治愈', label: '3 张治愈牌' },
-        hero_archer: { poolId: 'starter_archer_step', copies: 1, type: '能力', tag: '闪避', label: '1 张闪避牌' }
+    const starterRule = {
+        hero_warrior: {
+            survival: { poolId: 'starter_warrior_guard', copies: 3, type: '防御', tag: null, label: '3 张护盾牌' },
+            balancedSignals: true
+        },
+        hero_mage: {
+            survival: { poolId: 'starter_mage_heal', copies: 2, type: '能力', tag: '治愈', label: '2 张治愈牌' },
+            requiredSignals: { chant: 2 },
+            forbiddenSignals: ['mirror', 'calamity']
+        },
+        hero_archer: {
+            survival: { poolId: 'starter_archer_step', copies: 2, type: '能力', tag: '闪避', label: '2 张闪避牌' },
+            requiredSignals: { gale: 2 },
+            maxSignals: { exile: 1, venom: 0 }
+        }
     }[roleId];
+    const survivalRule = starterRule.survival;
     const survivalCard = starter.cards.find(card => card.poolId === survivalRule.poolId);
     const survivalIdentity = {
         ...survivalRule,
@@ -191,8 +203,18 @@ function analyzeStarterBias(data, roleId, starter) {
     const profileValues = Object.values(buildProfile);
     const signalSpread = Math.max(...signalValues) - Math.min(...signalValues);
     const profileSpread = Math.max(...profileValues) - Math.min(...profileValues);
-    const passed = signalValues.every(value => value === 1)
-        && profileSpread === 0
+    const balancedSignalsPassed = !starterRule.balancedSignals || (signalValues.every(value => value === 1) && profileSpread === 0);
+    const requiredSignalsPassed = Object.entries(starterRule.requiredSignals || {})
+        .every(([tag, minimum]) => (buildSignals[tag] || 0) >= minimum);
+    const maxSignalsPassed = Object.entries(starterRule.maxSignals || {})
+        .every(([tag, maximum]) => (buildSignals[tag] || 0) <= maximum);
+    const forbiddenSignalsPassed = (starterRule.forbiddenSignals || [])
+        .every(tag => (buildSignals[tag] || 0) === 0);
+    const starterTeachingPassed = balancedSignalsPassed
+        && requiredSignalsPassed
+        && maxSignalsPassed
+        && forbiddenSignalsPassed;
+    const passed = starterTeachingPassed
         && Object.values(directionRewardCoverage).every(value => value.exact > 0)
         && survivalIdentity.passed
         && bloodoathShieldViolations.length === 0
@@ -211,6 +233,7 @@ function analyzeStarterBias(data, roleId, starter) {
         requiredBridgePairs,
         bridgeCoveragePassed,
         survivalIdentity,
+        starterTeachingPassed,
         passed
     };
 }
@@ -355,7 +378,7 @@ function renderMarkdown(report) {
             .join(' / ') || '无';
         lines.push(`| ${result.role} | ${result.bias.survivalIdentity.label} | ${signals} | ${result.bias.profileSpread.toFixed(2)} | ${coverage} | ${bridges} | ${result.bias.passed ? '通过' : '失败'} |`);
     }
-    lines.push('', '通过条件：三个角色保留各自的基础生存轴；起始牌组对三个方向保持均衡信号；每个方向都有独立牌可选；战士至少保留圣剑与处刑、处刑与血债两类桥接牌；血誓不得出现护盾或庇护。', '');
+    lines.push('', '通过条件：三个角色保留各自的基础生存轴；战士初始牌仍保持三路线轻信号，法师初始牌聚焦咏唱闭环且不预塞镜像/灾厄，弓手初始牌聚焦风势与有限闪避且不预塞猎毒；每个方向都有独立牌可选；战士至少保留圣剑与处刑、处刑与血债两类桥接牌；血誓不得出现护盾或庇护。', '');
     lines.push('## 初始卡使用率', '');
     for (const result of report.results) {
         const teachingEnemies = ['early', 'mid'].flatMap(id => Object.values(result.checkpoints[id].enemies));

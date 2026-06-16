@@ -603,23 +603,20 @@ const STARTER_DECKS = {
     starter_mage: {
         roleId: 'hero_mage',
         cards: [
-            { poolId: 'starter_mage_bolt', name: '星尘法弹', type: '攻击', cost: 1, icon: '🪄', val: 10, tags: [], rarity: '普通', copies: 3, frameTheme: 'mage', desc: '造成 10 点伤害。' },
-            { poolId: 'starter_mage_heal', name: '月泉愈流', type: '能力', cost: 0, icon: '✚', val: 8, healValue: 8, tags: ['治愈'], buildNeutral: true, rarity: '普通', copies: 3, frameTheme: 'mage', desc: '免费回复 8 点生命。' },
-            { poolId: 'starter_mage_omen', name: '秘仪预兆', type: '能力', cost: 0, icon: '🔮', val: 0, tags: ['咏唱'], directEffects: { draw: true }, buildTags: ['chant'], rarity: '普通', frameTheme: 'mage', desc: '免费积累[咏唱]、获得职业护盾并抽 1 张牌。' },
-            { poolId: 'starter_mage_copy', name: '镜页摹写', type: '能力', cost: 1, icon: '🪞', val: 0, tags: ['复刻'], buildTags: ['mirror'], directEffects: { draw: true }, rarity: '普通', frameTheme: 'mage', desc: '[复刻]上一张牌的效果并抽 1 张牌。' },
-            { poolId: 'starter_mage_mist', name: '蚀星雾', type: '能力', cost: 0, icon: '☠️', val: 0, tags: ['诅咒'], directEffects: { draw: true }, buildTags: ['calamity'], rarity: '普通', frameTheme: 'mage', desc: '免费施加[诅咒]并抽 1 张牌。' },
-            { poolId: 'starter_mage_release', name: '星火破封', type: '攻击', cost: 1, icon: '✨', val: 10, tags: ['爆发'], buildNeutral: true, rarity: '普通', frameTheme: 'mage', desc: '造成 10 点伤害；[爆发]会消耗全部咏唱追加伤害。' }
+            { poolId: 'starter_mage_bolt', name: '星尘法弹', type: '攻击', cost: 1, icon: '🪄', val: 10, tags: [], rarity: '普通', copies: 4, frameTheme: 'mage', desc: '造成 10 点伤害。' },
+            { poolId: 'starter_mage_heal', name: '月泉愈流', type: '能力', cost: 0, icon: '✚', val: 8, healValue: 8, tags: ['治愈'], buildNeutral: true, rarity: '普通', copies: 2, frameTheme: 'mage', desc: '免费回复 8 点生命。' },
+            { poolId: 'starter_mage_omen', name: '秘仪预兆', type: '能力', cost: 0, icon: '🔮', val: 0, tags: ['咏唱'], directEffects: { draw: true }, buildTags: ['chant'], rarity: '普通', copies: 2, frameTheme: 'mage', desc: '免费积累[咏唱]、获得职业护盾并抽 1 张牌。' },
+            { poolId: 'starter_mage_release', name: '星火破封', type: '攻击', cost: 1, icon: '✨', val: 10, tags: ['爆发'], buildNeutral: true, rarity: '普通', copies: 2, frameTheme: 'mage', desc: '造成 10 点伤害；[爆发]会消耗全部咏唱追加伤害。' }
         ]
     },
     starter_archer: {
         roleId: 'hero_archer',
         cards: [
             { poolId: 'starter_archer_shot', name: '林影矢', type: '攻击', cost: 1, icon: '🏹', val: 7, tags: [], rarity: '普通', copies: 4, frameTheme: 'archer', desc: '造成 7 点伤害。' },
-            { poolId: 'starter_archer_step', name: '林隙闪步', type: '能力', cost: 1, icon: '🍃', val: 1, tags: ['闪避'], buildNeutral: true, sidestepVal: 1, rarity: '普通', frameTheme: 'archer', desc: '获得 1 层[闪避]，完全躲开本轮敌方主体的下一段攻击。' },
-            { poolId: 'starter_archer_aim', name: '风痕定弦', type: '能力', cost: 1, icon: '🎯', val: 4, tags: ['蓄力'], buildTags: ['gale'], directEffects: { draw: true }, rarity: '普通', frameTheme: 'archer', desc: '获得风势并抽 1 张牌。' },
-            { poolId: 'starter_archer_venom', name: '青牙初矢', type: '攻击', cost: 1, icon: '☠️', val: 8, tags: ['剧毒'], buildTags: ['venom'], rarity: '普通', frameTheme: 'archer', desc: '造成 8 点伤害并施加[剧毒]。' },
+            { poolId: 'starter_archer_step', name: '林隙闪步', type: '能力', cost: 1, icon: '🍃', val: 1, tags: ['闪避'], buildNeutral: true, sidestepVal: 1, rarity: '普通', copies: 2, frameTheme: 'archer', desc: '获得 1 层[闪避]，完全躲开本轮敌方主体的下一段攻击。' },
+            { poolId: 'starter_archer_aim', name: '风痕定弦', type: '能力', cost: 1, icon: '🎯', val: 4, tags: ['蓄力'], buildTags: ['gale'], directEffects: { draw: true }, rarity: '普通', copies: 2, frameTheme: 'archer', desc: '获得风势并抽 1 张牌。' },
             { poolId: 'starter_archer_exile', name: '逐影离弦', type: '攻击', cost: 1, icon: '🏹', val: 8, tags: ['放逐'], buildTags: ['exile'], rarity: '普通', frameTheme: 'archer', desc: '造成 8 点伤害并[放逐]；进入放逐区时造成 5 点[流动伤害]。' },
-            { poolId: 'starter_archer_focus', name: '旅箭整束', type: '能力', cost: 0, icon: '🪶', val: 0, tags: [], buildNeutral: true, directEffects: { draw: true }, rarity: '普通', copies: 2, frameTheme: 'archer', desc: '免费抽 1 张牌。' }
+            { poolId: 'starter_archer_focus', name: '旅箭整束', type: '能力', cost: 0, icon: '🪶', val: 0, tags: [], buildNeutral: true, directEffects: { draw: true }, rarity: '普通', frameTheme: 'archer', desc: '免费抽 1 张牌。' }
         ]
     }
 };

@@ -128,7 +128,7 @@ const CHARACTERS = {
             { src: 'assets/characters/mage/battle_back_hurt_06_v2.webp', duration: 90 }
         ],
         accentClass: 'featured',
-        starterHint: '治愈负责基础生存；秘仪预兆与星火破封构成完整的咏唱爆发闭环，镜像与灾厄仍保留开放信号。'
+        starterHint: '两张月泉愈流负责基础生存；两张秘仪预兆与星火破封构成咏唱爆发闭环，镜像与灾厄留给旅途奖励。'
     },
     hero_archer: {
         id: 'hero_archer',
@@ -207,6 +207,6 @@ const CHARACTERS = {
             { src: 'assets/characters/archer/battle_back_hurt_06_v2.webp', duration: 90 }
         ],
         accentClass: '',
-        starterHint: '基础射击输出，闪避可完全躲开一段主体攻击；疾风、猎毒与放逐会随旅途中的选择逐渐形成。'
+        starterHint: '林影矢负责基础输出，两张林隙闪步提供有限闪避；风势是通用节奏，猎毒与放逐会在旅途奖励中逐渐成型。'
     }
 };
