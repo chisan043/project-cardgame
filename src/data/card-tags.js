@@ -229,6 +229,8 @@ function getAbilityPotency(card) {
 }
 
 function getCardDrawCount(card) {
+    const explicit = Number(card?.drawCount);
+    if (Number.isFinite(explicit) && explicit > 0) return Math.floor(explicit);
     const cost = Math.max(0, Number(card?.cost) || 0);
     return 1 + Math.max(0, cost - 1) + (card?.tags?.includes('回响') ? 1 : 0) + (card?.up ? 1 : 0);
 }

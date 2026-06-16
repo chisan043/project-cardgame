@@ -620,23 +620,24 @@ function estimateCard(state, card, incoming, move) {
             w_oath_fortress: Math.min(incoming + 18, 32) + 9,
             w_last_verdict: 72 + state.enemy.vuln * 10 + synergyCards * 6,
             a_syn_blood: 16 + getBloodOathBonus(state, card) + Math.min(state.maxHp - state.hp, 20) + (card.magicSwordGrowth || 0) * 6,
-            s_magic: state.lastCard ? 44 : 18,
-            s_pierce: 32 + state.chant * 14,
-            a_syn_magic: 24,
+            s_magic: state.lastCard ? 62 : 24,
+            s_pierce: 38 + state.chant * 18 + (state.chant === 0 ? 12 : 0),
+            a_syn_magic: 34,
             m_chant_singularity: 30 + (enemyDebuffCount(state) > 0 ? 5 : 0),
             m_forbidden_comet: 56 + state.chant * 26,
             m_echo_archive: state.lastCard ? 32 : 12,
-            m_mirror_hallway: 42,
-            m_status_supernova: 52 + enemyDebuffCount(state) * 18,
+            m_mirror_hallway: 58,
+            m_status_supernova: 58 + enemyDebuffCount(state) * 20,
             m_ember_orbit: 26 + (enemyDebuffCount(state) > 0 ? 10 : 0),
-            m_curse_gravity: 22 + enemyDebuffCount(state) * 6,
+            m_curse_gravity: 36 + enemyDebuffCount(state) * 8,
             m_blood_moon_rite: 18 + enemyDebuffCount(state) * 8,
             s_energy: 40 + state.aim * 4,
             a_wind_dance: 38 + (state.aim > 0 ? 8 : 0),
-            a_gale_verdict: 14 + Math.min(3, state.aim) * 10,
-            a_red_rain: 28 + (state.enemy.poison > 0 ? 12 : 0),
-            a_bloodlet_gale: 16 + state.enemy.bleed * 4 + (state.enemy.poison > 0 ? 8 : 0),
-            a_green_resonance: (state.discard.length ? 22 : 8) + 10,
+            a_gale_verdict: 18 + Math.min(4, state.aim) * 15,
+            a_red_rain: 34 + (state.enemy.poison > 0 ? 14 : 0),
+            a_bloodlet_gale: 36 + state.enemy.bleed * 8 + (state.enemy.poison > 0 || state.enemy.vuln > 0 ? 10 : 0),
+            a_venom_burst: 34 + state.enemy.bleed * 8 + (state.enemy.poison > 0 ? 8 : 0),
+            a_green_resonance: (state.discard.length ? 28 : 12) + 16,
             a_skyfall_shot: 18 + Math.floor(state.exhaust.length / 2) * 4,
             s_poison: (state.enemy.poison + state.enemy.bleed) * 2 + 28,
             s_exhaust: (state.exhaust.length + 1) * 16 + (state.exhaust.length ? 14 : 0)
@@ -865,21 +866,23 @@ function executeSpecialCard(state, card, echo = false) {
         if (state.lastCard && !state.lastCard.isJunk && !lastWasReplica) {
             executeCard(state, state.lastCard, true);
             if (state.enemy.hp > 0) executeCard(state, state.lastCard, true);
+            draw(state, 1);
             if (hasRelic(state, 'r_echo_archive_pin') && !state.echoArchivePinUsed) {
                 state.echoArchivePinUsed = true;
                 state.energy++;
                 state.nextDamage += 8;
             }
         } else {
-            draw(state, 2);
+            draw(state, 3);
         }
     } else if (specialId === 's_pierce') {
         const chantSpent = state.chant;
-        hitEnemy(state, 32 + state.battleDamage + chantSpent * 14, true);
-        state.chant = hasRelic(state, 'r_burst_lens') ? Math.ceil(chantSpent / 2) : 0;
+        hitEnemy(state, 38 + state.battleDamage + chantSpent * 18, true);
+        if (chantSpent > 0) state.chant = hasRelic(state, 'r_burst_lens') ? Math.ceil(chantSpent / 2) : 0;
+        else state.chant = Math.min(12, state.chant + 3);
     } else if (specialId === 'a_syn_magic') {
-        state.nextDamage += 8;
-        draw(state, 1);
+        state.nextDamage += 12;
+        draw(state, echo ? 1 : 2);
     } else if (specialId === 'm_chant_singularity') {
         state.chant = Math.min(12, state.chant + 3 + (hasRelic(state, 'r_energy_crys') ? 1 : 0));
         state.energy += hasRelic(state, 'r_sac_jade') ? 2 : 1;
@@ -910,12 +913,13 @@ function executeSpecialCard(state, card, echo = false) {
             draw(state, 2);
         }
     } else if (specialId === 'm_mirror_hallway') {
-        state.nextDamage += 10;
+        state.nextDamage += 16;
         if (!echo) draw(state, 1);
+        else state.energy++;
     } else if (specialId === 'm_status_supernova') {
         const debuffs = enemyDebuffCount(state);
-        hitEnemy(state, 52 + state.battleDamage + debuffs * 16);
-        state.protection += Math.min(30, debuffs * 6);
+        hitEnemy(state, 58 + state.battleDamage + debuffs * 18);
+        state.protection += Math.min(36, debuffs * 8);
         state.enemy.burn += Math.min(4, Math.max(1, debuffs));
     } else if (specialId === 'm_ember_orbit') {
         const hadDebuff = enemyDebuffCount(state) > 0;
@@ -924,12 +928,13 @@ function executeSpecialCard(state, card, echo = false) {
         if (hasRelic(state, 'r_status_prism')) state.chant = Math.min(12, state.chant + 1);
         if (hadDebuff) draw(state, 2);
     } else if (specialId === 'm_curse_gravity') {
-        state.enemy.curse += 5;
-        state.enemy.weak += 3;
+        state.enemy.curse += 6;
+        state.enemy.weak += 4;
         const debuffs = Math.max(1, enemyDebuffCount(state));
-        state.nextDamage += debuffs * 2;
+        state.nextDamage += debuffs * 4;
         if (hasRelic(state, 'r_status_prism')) state.chant = Math.min(12, state.chant + 1);
-        if (debuffs >= 3) draw(state, 1);
+        draw(state, 1);
+        if (debuffs >= 3) state.energy++;
     } else if (specialId === 'm_blood_moon_rite') {
         state.enemy.curse += 5;
         state.enemy.vuln += 2;
@@ -941,10 +946,11 @@ function executeSpecialCard(state, card, echo = false) {
         state.protection += 8 + (hasRelic(state, 'r_protect_armor') ? 2 : 0);
         if (missing < 12) state.chant = Math.min(12, state.chant + 2);
     } else if (specialId === 'a_gale_verdict') {
-        const shots = Math.min(3, state.aim);
+        const shots = Math.min(4, state.aim);
         state.aim -= shots;
-        hitEnemy(state, 14 + state.battleDamage + shots * 8, true);
-        state.protection += shots * 2;
+        hitEnemy(state, 18 + state.battleDamage + shots * 12, true);
+        state.protection += shots * 3;
+        if (shots >= 2) draw(state, 1);
     } else if (specialId === 's_energy') {
         const hadWind = state.aim > 0;
         state.aim = Math.min(6, state.aim + 4 + (hasRelic(state, 'r_wind_quiver') ? 1 : 0));
@@ -959,24 +965,34 @@ function executeSpecialCard(state, card, echo = false) {
         draw(state, 1);
     } else if (specialId === 'a_red_rain') {
         const hadPoison = state.enemy.poison > 0;
-        hitEnemy(state, 7 + state.battleDamage);
-        state.enemy.bleed += hasRelic(state, 'r_poison_fang') ? 9 : 8;
+        hitEnemy(state, 10 + state.battleDamage);
+        state.enemy.bleed += hasRelic(state, 'r_poison_fang') ? 11 : 10;
         if (hadPoison) {
-            state.enemy.poison += hasRelic(state, 'r_poison_fang') ? 5 : 4;
+            state.enemy.poison += hasRelic(state, 'r_poison_fang') ? 6 : 5;
             draw(state, 1);
         }
     } else if (specialId === 'a_bloodlet_gale') {
-        hitEnemy(state, 6 + state.battleDamage);
+        hitEnemy(state, 12 + state.battleDamage);
+        state.enemy.poison += hasRelic(state, 'r_poison_fang') ? 5 : 4;
         const bleedLayers = state.enemy.bleed;
+        draw(state, 1);
+        state.protection += 8 + Math.min(12, bleedLayers);
         if (bleedLayers > 0) {
-            hitEnemy(state, bleedLayers * (hasRelic(state, 'r_bleed_knife') ? 5 : 3), true);
-            draw(state, hasRelic(state, 'r_bloodlet_draw') ? 2 : 1);
-            if (!(state.enemy.poison > 0 || (hasRelic(state, 'r_execute') && state.enemy.vuln > 0))) state.enemy.bleed = 0;
+            hitEnemy(state, bleedLayers * (hasRelic(state, 'r_bleed_knife') ? 7 : 5), true);
+            if (hasRelic(state, 'r_bloodlet_draw')) draw(state, 1);
         }
+    } else if (specialId === 'a_venom_burst') {
+        hitEnemy(state, 16 + state.battleDamage);
+        state.enemy.poison += hasRelic(state, 'r_poison_fang') ? 7 : 6;
+        const bleedLayers = state.enemy.bleed;
+        if (bleedLayers > 0) hitEnemy(state, bleedLayers * (hasRelic(state, 'r_bleed_knife') ? 7 : 5), true);
+        state.protection += 8 + Math.min(12, bleedLayers);
+        draw(state, 1);
     } else if (specialId === 'a_green_resonance') {
         const returned = returnFromDiscard(state);
-        state.aim = Math.min(6, state.aim + 2 + (hasRelic(state, 'r_wind_quiver') ? 1 : 0));
+        state.aim = Math.min(6, state.aim + 3 + (hasRelic(state, 'r_wind_quiver') ? 1 : 0));
         state.energy += hasRelic(state, 'r_pass_energy') ? 2 : 1;
+        draw(state, 1);
         if (returned) recordCardOpportunity(state, card);
     } else if (specialId === 'a_skyfall_shot') {
         hitEnemy(state, 14 + state.battleDamage + Math.floor(state.exhaust.length / 2) * 3, true);

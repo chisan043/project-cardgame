@@ -2319,8 +2319,8 @@
 
 <script src="hud-runtime.js?v=20260518-forced-default-hud1"></script>
 <script src="hud-layout-data.js?v=20260616-intent-tray-reuse"></script>
-<script src="src/data/relics.js?v=20260616-bloodoath-magic-sword"></script>
-<script src="src/data/card-tags.js?v=20260616-mage-heal-value"></script>
+<script src="src/data/relics.js?v=20260616-epic-core-buffs"></script>
+<script src="src/data/card-tags.js?v=20260616-draw-count-explicit"></script>
 <script src="src/data/cards.js?v=20260616-reward-baseline"></script>
 <script src="src/data/enemies.js?v=20260616-enemy-escalation"></script>
 <script src="src/data/characters.js?v=20260616-mage-starter-hex"></script>
@@ -6018,6 +6018,7 @@
                     showFloatText("镜界回放", "var(--purple)", getCenter('ui-hp'));
                     await executeCardTags(state.lastPlayedCard, true, null);
                     if (state.enemy.currentHp > 0) await executeCardTags(state.lastPlayedCard, true, null);
+                    await drawCards(1);
                     if(hasRelic('r_echo_archive_pin') && !state.r_echo_archive_pin_used) {
                         state.r_echo_archive_pin_used = true;
                         state.mp += 1;
@@ -6025,10 +6026,20 @@
                         showFloatText("书签回能 +1 / 附魔 +8", "var(--purple)", getCenter('ui-mp'));
                     }
                 } else {
-                    await drawCards(2);
+                    await drawCards(3);
                 }
             }
-            else if(card.specialId === 's_pierce') { triggerVFX('p-atk'); const chantSpent = state.p_chant; applySpecialCardDamage(card, 32 + state.p_battle_dmg + chantSpent * 14, true); state.p_chant = hasRelic('r_burst_lens') ? Math.ceil(chantSpent / 2) : 0; }
+            else if(card.specialId === 's_pierce') {
+                triggerVFX('p-atk');
+                const chantSpent = state.p_chant;
+                applySpecialCardDamage(card, 38 + state.p_battle_dmg + chantSpent * 18, true);
+                if (chantSpent > 0) {
+                    state.p_chant = hasRelic('r_burst_lens') ? Math.ceil(chantSpent / 2) : 0;
+                } else {
+                    state.p_chant = Math.min(12, state.p_chant + 3);
+                    showFloatText("星雷蓄鸣 +3", "var(--purple)", getCenter('ui-hp'));
+                }
+            }
             else if(card.specialId === 's_thorns') { triggerVFX('p-def'); state.armor += 18; state.player.thorns += hasRelic('r_thorn_shield_new') ? 12 : 8; showFloatText(card.name, "var(--gold)", getCenter('ui-hp')); updateTopBar(); }
             else if(card.specialId === 's_energy') { const hadWind = state.p_aim > 0; const windGain = 4 + (hasRelic('r_wind_quiver') ? 1 : 0); state.p_aim = Math.min(6, state.p_aim + windGain); if (hadWind) state.mp += 1; await drawCards(2); showFloatText(hadWind ? `风势 +${windGain} / 能量 +1` : `风势 +${windGain}`, "var(--nature)", getCenter('ui-mp')); }
             
@@ -6074,9 +6085,9 @@
                 showFloatText(oathBonus > 0 ? `血海魔誓 +${oathBonus}` : card.name, "var(--crimson)", getCenter('enemy-avatar'));
             }
             else if (card.specialId === 'a_syn_magic') {
-                state.p_next_dmg += 8;
-                await drawCards(1);
-                showFloatText("回声导线 / 附魔 +8", "var(--purple)", getCenter('ui-hp'));
+                state.p_next_dmg += 12;
+                await drawCards(isEcho ? 1 : 2);
+                showFloatText(isEcho ? "回声导线 / 附魔 +12" : "回声导线 / 抽牌 +2 / 附魔 +12", "var(--purple)", getCenter('ui-hp'));
             }
             else if (card.specialId === 'w_counter_crown') {
                 triggerVFX('p-atk');
@@ -6135,8 +6146,8 @@
             else if (card.specialId === 'm_status_supernova') {
                 const debuffs = getEnemyDebuffTypeCount();
                 triggerVFX('p-atk');
-                applySpecialCardDamage(card, 52 + state.p_battle_dmg + debuffs * 16);
-                state.p_reduce_dmg += Math.min(30, debuffs * 6);
+                applySpecialCardDamage(card, 58 + state.p_battle_dmg + debuffs * 18);
+                state.p_reduce_dmg += Math.min(36, debuffs * 8);
                 state.enemy.burn += Math.min(4, Math.max(1, debuffs));
                 if(hasRelic('r_status_prism')) state.p_chant = Math.min(12, state.p_chant + 1);
                 showFloatText(`状态共振 ${debuffs}`, "var(--fire)", getCenter('enemy-avatar'));
@@ -6160,9 +6171,10 @@
                 }
             }
             else if (card.specialId === 'm_mirror_hallway') {
-                state.p_next_dmg += 10;
+                state.p_next_dmg += 16;
                 if (!isEcho) await drawCards(1);
-                showFloatText(isEcho ? "折廊回声 / 附魔 +10" : "折廊导流 / 抽牌 +1 / 附魔 +10", "var(--purple)", getCenter('ui-hp'));
+                else state.mp += 1;
+                showFloatText(isEcho ? "折廊回声 / 回能 +1 / 附魔 +16" : "折廊导流 / 抽牌 +1 / 附魔 +16", "var(--purple)", getCenter('ui-hp'));
             }
             else if (card.specialId === 'm_ember_orbit') {
                 const hadDebuff = getEnemyDebuffTypeCount() > 0;
@@ -6186,13 +6198,14 @@
                 showFloatText(`咏唱爆裂 ${chantSpent}`, "var(--purple)", getCenter('enemy-avatar'));
             }
             else if (card.specialId === 'm_curse_gravity') {
-                state.enemy.curse += 5;
-                state.enemy.weak += 3;
+                state.enemy.curse += 6;
+                state.enemy.weak += 4;
                 const debuffs = Math.max(1, getEnemyDebuffTypeCount());
-                state.p_next_dmg += debuffs * 2;
+                state.p_next_dmg += debuffs * 4;
                 if(hasRelic('r_status_prism')) state.p_chant = Math.min(12, state.p_chant + 1);
-                if (debuffs >= 3) await drawCards(1);
-                showFloatText(`灾厄标记 +${debuffs * 2}`, "var(--purple)", getCenter('ui-hp'));
+                await drawCards(1);
+                if (debuffs >= 3) state.mp += 1;
+                showFloatText(debuffs >= 3 ? `灾厄标记 +${debuffs * 4} / 回能 +1` : `灾厄标记 +${debuffs * 4}`, "var(--purple)", getCenter('ui-hp'));
             }
             else if (card.specialId === 'm_blood_moon_rite') {
                 state.enemy.curse += 5;
@@ -6224,38 +6237,51 @@
                 await drawCards(1);
             }
             else if (card.specialId === 'a_gale_verdict') {
-                const shots = Math.min(3, state.p_aim);
+                const shots = Math.min(4, state.p_aim);
                 state.p_aim -= shots;
                 triggerVFX('p-atk');
-                applySpecialCardDamage(card, 14 + state.p_battle_dmg + shots * 8, true);
-                state.p_reduce_dmg += shots * 2;
+                applySpecialCardDamage(card, 18 + state.p_battle_dmg + shots * 12, true);
+                state.p_reduce_dmg += shots * 3;
+                if (shots >= 2) await drawCards(1);
                 showFloatText(`裁决风势 ${shots}`, "var(--nature)", getCenter('enemy-avatar'));
             }
             else if (card.specialId === 'a_red_rain') {
                 const hadPoison = state.enemy.poison > 0;
                 triggerVFX('p-atk');
-                applySpecialCardDamage(card, 7 + state.p_battle_dmg);
-                state.enemy.bleed += hasRelic('r_poison_fang') ? 9 : 8;
+                applySpecialCardDamage(card, 10 + state.p_battle_dmg);
+                state.enemy.bleed += hasRelic('r_poison_fang') ? 11 : 10;
                 if (hadPoison) {
-                    state.enemy.poison += hasRelic('r_poison_fang') ? 5 : 4;
+                    state.enemy.poison += hasRelic('r_poison_fang') ? 6 : 5;
                     await drawCards(1);
                 }
-                showFloatText("赤痕 +8", "var(--crimson)", getCenter('enemy-avatar'));
+                showFloatText("赤痕 +10", "var(--crimson)", getCenter('enemy-avatar'));
             }
             else if (card.specialId === 'a_bloodlet_gale') {
                 triggerVFX('p-atk');
-                applySpecialCardDamage(card, 6 + state.p_battle_dmg);
+                applySpecialCardDamage(card, 12 + state.p_battle_dmg);
+                state.enemy.poison += hasRelic('r_poison_fang') ? 5 : 4;
                 const bleedLayers = state.enemy.bleed;
+                await drawCards(1);
+                state.p_reduce_dmg += 8 + Math.min(12, bleedLayers);
                 if (bleedLayers > 0) {
-                    applyDamageToEnemy(bleedLayers * (hasRelic('r_bleed_knife') ? 5 : 3), true);
-                    await drawCards(hasRelic('r_bloodlet_draw') ? 2 : 1);
-                    if(state.enemy.poison > 0 || (hasRelic('r_execute') && state.enemy.vuln > 0)) {
-                        showFloatText(`伤口保留`, "var(--gold)", getCenter('enemy-avatar'));
-                    } else {
-                        state.enemy.bleed = 0;
-                    }
+                    applyDamageToEnemy(bleedLayers * (hasRelic('r_bleed_knife') ? 7 : 5), true);
+                    if (hasRelic('r_bloodlet_draw')) await drawCards(1);
+                    showFloatText(`伤口保留`, "var(--gold)", getCenter('enemy-avatar'));
                 }
                 showFloatText("断脉齐爆", "var(--crimson)", getCenter('enemy-avatar'));
+            }
+            else if (card.specialId === 'a_venom_burst') {
+                triggerVFX('p-atk');
+                applySpecialCardDamage(card, 16 + state.p_battle_dmg);
+                state.enemy.poison += hasRelic('r_poison_fang') ? 7 : 6;
+                const bleedLayers = state.enemy.bleed;
+                if (bleedLayers > 0) {
+                    applyDamageToEnemy(bleedLayers * (hasRelic('r_bleed_knife') ? 7 : 5), true);
+                    showFloatText(`毒脉保留`, "var(--gold)", getCenter('enemy-avatar'));
+                }
+                state.p_reduce_dmg += 8 + Math.min(12, bleedLayers);
+                await drawCards(1);
+                showFloatText("毒脉爆箭", "var(--nature)", getCenter('enemy-avatar'));
             }
             else if (card.specialId === 'a_green_resonance') {
                 let broughtBack = false;
@@ -6265,8 +6291,9 @@
                         if (dIdx !== -1) { state.discardPile.splice(dIdx, 1); state.hand.push(c); broughtBack = true; triggerExileFlowDamage(c, 'return', '回流'); }
                     });
                 }
-                state.p_aim = Math.min(6, state.p_aim + 2 + (hasRelic('r_wind_quiver') ? 1 : 0));
+                state.p_aim = Math.min(6, state.p_aim + 3 + (hasRelic('r_wind_quiver') ? 1 : 0));
                 state.mp += hasRelic('r_pass_energy') ? 2 : 1;
+                await drawCards(1);
                 if (broughtBack) renderHand();
                 showFloatText("翠林回响", "var(--nature)", getCenter('ui-hp'));
             }
