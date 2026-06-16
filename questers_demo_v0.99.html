@@ -1917,7 +1917,8 @@
         .card-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
         #overlay-library #lib-content { display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); justify-items:center; align-items:start; column-gap:20px; row-gap:28px; }
         #overlay-library #lib-content .lib-grid-note,
-        #overlay-library #lib-content .lib-section-title { grid-column:1 / -1; width:100%; }
+        #overlay-library #lib-content .lib-section-title,
+        #overlay-library #lib-content .starter-preview-switch { grid-column:1 / -1; width:100%; }
         #overlay-library #lib-content .static-card { transform:scale(1.3) !important; transform-origin:center top; margin:0 0 92px; }
         #overlay-library #lib-content .static-card:hover { transform:translateY(-10px) scale(1.3) !important; }
         #overlay-library #lib-content .relic-item-box,
@@ -3119,6 +3120,7 @@
     }
 
     let starterPreviewCharacterId = state.player.characterId;
+    let libraryCardPoolCharacterId = state.player.characterId;
     let selectedRoleId = null;
     let initialDeck = buildStarterDeckForCharacter(state.player.characterId);
     const RUN_SAVE_KEY = 'mirage-scrolls-demo-run-v1';
@@ -4428,6 +4430,7 @@
             shopDeletePrice = saveResult.shopDeletePrice;
             initialDeck = buildStarterDeckForCharacter(saveResult.characterId || state.player.characterId);
             starterPreviewCharacterId = state.player.characterId;
+            libraryCardPoolCharacterId = state.player.characterId;
             document.querySelectorAll('.overlay').forEach(el => el.style.display = 'none');
             setTopBarVisible(true);
             updatePlayerPresentation();
@@ -4708,6 +4711,7 @@
         state.player.characterId = character.id;
         state.player.name = character.name;
         starterPreviewCharacterId = character.id;
+        libraryCardPoolCharacterId = character.id;
         initialDeck = buildStarterDeckForCharacter(character.id);
         updatePlayerPresentation();
         renderPlayerHudAssembly();
@@ -7080,7 +7084,11 @@
         renderInitDeck(starterPreviewCharacterId);
         showFloatText(`切换预览：${CHARACTERS[starterPreviewCharacterId].name}`, "var(--gold)", getCenter('init-deck-content'));
     }
-    function openLibrary() { showOverlay('overlay-library'); renderLibTab('cards'); }
+    function openLibrary() {
+        libraryCardPoolCharacterId = state.player.characterId;
+        showOverlay('overlay-library');
+        renderLibTab('cards');
+    }
 
     function renderEnemyLibraryCard(enemy) {
         const moveText = enemy.moves.map(move => move.name).join(' / ');
@@ -7091,24 +7099,33 @@
         return `<div class="lib-enemy-card">${portraitHtml}<div class="lib-enemy-name">${enemy.name}</div><div class="lib-enemy-meta">基础生命: ${enemy.baseHp}</div><div class="lib-enemy-moves">可能行为: ${moveText}</div></div>`;
     }
 
+    function renderLibraryCardPool(characterId = libraryCardPoolCharacterId) {
+        const character = CHARACTERS[characterId] || getCurrentCharacter();
+        libraryCardPoolCharacterId = character.id;
+        const c = document.getElementById('lib-content');
+        const classCardsHtml = getCharacterCardPool(character.id)
+            .map(card => generateCardHTML(cloneCardDefinition(card), true))
+            .join('');
+        const neutralCardsHtml = NEUTRAL_CARD_POOL
+            .map(card => generateCardHTML(cloneCardDefinition(card), true))
+            .join('');
+        c.innerHTML = [
+            `<div class="lib-grid-note" style="color:#d9c28a; text-align:center; margin-bottom:12px;">选择职业查看对应卡池。实际奖励与商栈仍会优先从当前职业卡牌中抽取，并混入少量中立卡牌。</div>`,
+            `<div class="starter-preview-switch">${CHARACTER_ORDER.map(id => `<button class="starter-preview-btn ${id === character.id ? 'active' : ''}" onclick="renderLibraryCardPool('${id}')">${CHARACTERS[id].name}</button>`).join('')}</div>`,
+            `<div class="lib-section-title" style="color:#fff1c0; font-size:18px; letter-spacing:3px; padding:12px 0 4px; border-top:1px solid rgba(241,196,15,0.22);">${character.name} · 职业卡池</div>`,
+            classCardsHtml,
+            `<div class="lib-section-title" style="color:#fff1c0; font-size:18px; letter-spacing:3px; padding:12px 0 4px; border-top:1px solid rgba(241,196,15,0.22);">中立卡牌 · 通用卡池</div>`,
+            neutralCardsHtml
+        ].join('');
+    }
+
     function renderLibTab(tab) {
         document.querySelectorAll('.lib-tab-btn').forEach(b => b.classList.remove('active'));
         document.getElementById(`btn-tab-${tab}`).classList.add('active');
         const c = document.getElementById('lib-content'); c.innerHTML = '';
         
         if (tab === 'cards') {
-            c.innerHTML = `<div class="lib-grid-note" style="color:#d9c28a; text-align:center; margin-bottom:12px;">图鉴展示全部职业卡池。实际奖励与商栈仍会优先从当前职业卡牌中抽取，并混入少量中立卡牌。</div>`;
-            CHARACTER_ORDER.forEach(roleId => {
-                const character = CHARACTERS[roleId] || CHARACTERS.hero_warrior;
-                c.innerHTML += `<div class="lib-section-title" style="color:#fff1c0; font-size:18px; letter-spacing:3px; padding:12px 0 4px; border-top:1px solid rgba(241,196,15,0.22);">${character.name} · 职业卡池</div>`;
-                getCharacterCardPool(roleId).forEach(card => {
-                    c.innerHTML += generateCardHTML(cloneCardDefinition(card), true);
-                });
-            });
-            c.innerHTML += `<div class="lib-section-title" style="color:#fff1c0; font-size:18px; letter-spacing:3px; padding:12px 0 4px; border-top:1px solid rgba(241,196,15,0.22);">中立卡牌 · 通用卡池</div>`;
-            NEUTRAL_CARD_POOL.forEach(card => {
-                c.innerHTML += generateCardHTML(cloneCardDefinition(card), true);
-            });
+            renderLibraryCardPool(libraryCardPoolCharacterId);
         }
         else if (tab === 'legend') {
             const character = getCurrentCharacter();
