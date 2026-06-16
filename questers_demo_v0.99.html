@@ -2893,9 +2893,12 @@
         return QuestersVisualRules.getDisplayRelicDesc(relic);
     }
 
+    const GENERATED_SPECIAL_DESC_IDS = new Set(['w_exec_claim']);
+
     function parseDesc(card) {
         const shouldUseDynamicBloodOathText = card.isSpecial && (card.bloodOathCost || card.bloodOathMissingRatio);
-        if(card.isSpecial && !shouldUseDynamicBloodOathText) {
+        const shouldUseGeneratedSpecialText = card.isSpecial && GENERATED_SPECIAL_DESC_IDS.has(card.specialId || card.id);
+        if(card.isSpecial && !shouldUseDynamicBloodOathText && !shouldUseGeneratedSpecialText) {
             const effectText = getEffectOnlySpecialDesc(card.desc);
             if (effectText) {
                 return `<span style="color:var(--gold); font-size:12px; text-align:left; display:block; line-height:1.5;">${formatKeywords(effectText)}</span>`;
