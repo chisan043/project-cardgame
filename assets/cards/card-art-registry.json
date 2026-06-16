@@ -6,7 +6,7 @@
   "policy": "Runtime card art lives under assets/cards/art/<theme>/ and is referenced by stable path keys.",
   "assetCount": 146,
   "missingAssetCount": 0,
-  "cardsWithArtCount": 259,
+  "cardsWithArtCount": 256,
   "themes": [
     "archer",
     "mage",
@@ -369,14 +369,6 @@
           "roleId": "hero_archer",
           "pool": "character",
           "deckId": null,
-          "rarity": "普通"
-        },
-        {
-          "id": "starter_archer_venom",
-          "name": "青牙初矢",
-          "roleId": "hero_archer",
-          "pool": "starter",
-          "deckId": "starter_archer",
           "rarity": "普通"
         }
       ]
@@ -1206,14 +1198,6 @@
           "pool": "starter",
           "deckId": "starter_mage",
           "rarity": "普通"
-        },
-        {
-          "id": "starter_mage_omen",
-          "name": "秘仪预兆",
-          "roleId": "hero_mage",
-          "pool": "starter",
-          "deckId": "starter_mage",
-          "rarity": "普通"
         }
       ]
     },
@@ -1289,6 +1273,14 @@
           "pool": "special_epic",
           "deckId": null,
           "rarity": "史诗"
+        },
+        {
+          "id": "starter_mage_omen",
+          "name": "秘仪预兆",
+          "roleId": "hero_mage",
+          "pool": "starter",
+          "deckId": "starter_mage",
+          "rarity": "普通"
         }
       ]
     },
@@ -1322,14 +1314,6 @@
           "roleId": "hero_mage",
           "pool": "character",
           "deckId": null,
-          "rarity": "普通"
-        },
-        {
-          "id": "starter_mage_mist",
-          "name": "蚀星雾",
-          "roleId": "hero_mage",
-          "pool": "starter",
-          "deckId": "starter_mage",
           "rarity": "普通"
         }
       ]
@@ -1641,14 +1625,6 @@
           "roleId": "hero_mage",
           "pool": "character",
           "deckId": null,
-          "rarity": "普通"
-        },
-        {
-          "id": "starter_mage_copy",
-          "name": "镜页摹写",
-          "roleId": "hero_mage",
-          "pool": "starter",
-          "deckId": "starter_mage",
           "rarity": "普通"
         }
       ]

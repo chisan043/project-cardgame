@@ -194,7 +194,7 @@ const CARD_ART_REGISTRY = {
     '旧盾守': 'assets/cards/art/warrior/warrior_wall_art_v1.webp',
     '星尘法弹': 'assets/cards/art/mage/mage_spark_art_v1.webp',
     '月泉愈流': 'assets/cards/art/mage/mage_barrier_art_v1.webp',
-    '秘仪预兆': 'assets/cards/art/mage/mage_barrier_art_v1.webp',
+    '秘仪预兆': 'assets/cards/art/mage/mage_chant_art_v1.webp',
     '秘仪护幕': 'assets/cards/art/mage/mage_barrier_art_v1.webp',
     '星火破封': 'assets/cards/art/mage/mage_flame_art_v1.webp',
     '林影矢': 'assets/cards/art/archer/archer_shadow_art_v1.webp',
