@@ -1951,8 +1951,8 @@
         .shop-scene .scene-body { max-height: calc(100vh - 208px); padding:20px 28px 24px; overflow-y:auto; }
         .shop-scene .scene-body::-webkit-scrollbar, .event-scene .scene-body::-webkit-scrollbar, .rest-scene .scene-body::-webkit-scrollbar { width:8px; }
         .shop-scene .scene-body::-webkit-scrollbar-thumb, .event-scene .scene-body::-webkit-scrollbar-thumb, .rest-scene .scene-body::-webkit-scrollbar-thumb { background:rgba(199,162,88,0.42); border-radius:6px; }
-        .event-scene #event-content { max-height: calc(100vh - 390px) !important; padding-bottom:16px; box-sizing:border-box; }
-        .event-scene #event-actions { flex:none; margin-bottom:0; padding-bottom:18px; }
+        .event-scene .scene-body { display:flex; flex-direction:column; overflow:hidden; }
+        .event-scene #event-content { flex:1; min-height:0; max-height:none !important; overflow-y:auto !important; padding-bottom:16px; box-sizing:border-box; }
         .choice-grid { display:grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
         .choice-card { min-height: 188px; padding: 22px; cursor:pointer; transition:0.22s; position:relative; overflow:hidden; }
         .choice-card::before { content:""; position:absolute; inset:8px; border:1px solid rgba(241,223,181,0.13); pointer-events:none; }
@@ -2019,6 +2019,8 @@
         .event-result-card h3, .event-result-card #event-relic-name { color:#ffe69c !important; text-shadow:0 2px 0 #000, 0 0 12px rgba(199,162,88,0.25); }
         .event-result-card #event-relic-desc { color:#c9b994 !important; line-height:1.55; }
         .shop-command-row { display:none; }
+        .event-scene #event-actions { display:flex; justify-content:flex-end; align-items:center; gap:12px; flex:none; margin:0; padding:16px 0 0; border-top:1px solid rgba(199,162,88,0.3); }
+        .event-scene #event-actions .btn-gorgeous { min-height:36px; padding:8px 18px; font-size:15px; white-space:nowrap; }
         .shop-toolbar { display:flex; justify-content:space-between; align-items:center; gap:16px; border-bottom:1px solid rgba(241,223,181,0.18); padding-bottom:12px; margin-bottom:16px; }
         .shop-toolbar span { color:#c9b994; font-size:14px; line-height:1.5; }
         .shop-toolbar-actions { display:flex; gap:10px; align-items:center; flex-wrap:nowrap; }
