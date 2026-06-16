@@ -1915,6 +1915,11 @@
         .event-box::after { content:""; position:absolute; left:28px; right:28px; top:18px; height:2px; background:linear-gradient(90deg, transparent, rgba(241,196,15,0.58), transparent); pointer-events:none; }
         .event-box::-webkit-scrollbar { display: none; }
         .card-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+        .reward-box { width: min(960px, calc(100vw - 64px)); }
+        #reward-items { margin:30px 0; }
+        #reward-items.relic-reward-grid { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); align-items:stretch; justify-items:stretch; gap:20px; }
+        #reward-items.relic-reward-grid > div { min-width:0; display:flex; }
+        #reward-items.relic-reward-grid .relic-item-box { width:100%; min-width:0; box-sizing:border-box; }
         #overlay-library #lib-content { display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); justify-items:center; align-items:start; column-gap:20px; row-gap:28px; }
         #overlay-library #lib-content .lib-grid-note,
         #overlay-library #lib-content .lib-section-title,
@@ -2233,10 +2238,10 @@
 </div>
 
 <div class="overlay" id="overlay-reward">
-    <div class="event-box" style="width: 800px;">
+    <div class="event-box reward-box">
         <h2 id="reward-title" style="color:var(--gold);">战利品</h2>
         <p id="reward-desc" style="color:#888;">战斗余烬仍在发光...请选择一张卡牌加入牌组。</p>
-        <div id="reward-items" class="card-grid" style="margin:30px 0;"></div>
+        <div id="reward-items" class="card-grid"></div>
         <button id="reward-skip-btn" class="btn-gorgeous" onclick="skipBattleReward()">换取金币</button>
     </div>
 </div>
@@ -7194,7 +7199,9 @@
     }
 
     function showRewardOverlay() {
-        const container = document.getElementById('reward-items'); container.innerHTML = '';
+        const container = document.getElementById('reward-items');
+        container.innerHTML = '';
+        container.className = 'card-grid';
         const availableRelics = getRolePreferredRelics(RELIC_POOL.filter(r => !hasRelic(r.id) && !STARTING_RELIC_IDS.has(r.id)));
         const isBossReward = (state.enemy?.encounterType || state.enemy?.type) === 'boss';
         if (isBossReward) {
@@ -7205,6 +7212,7 @@
             document.getElementById('reward-desc').innerText = showRelics ? '首领遗留的核心遗物正在共鸣，请选择一件收入囊中。' : '首领战利品必定指向流派核心，请选择一张史诗核心牌。';
             document.getElementById('reward-skip-btn').innerText = `放弃核心，换取金币 +${getBattleRewardSkipGold()}`;
             if (showRelics) {
+                container.classList.add('relic-reward-grid');
                 coreRelics.forEach(r => {
                     const el = document.createElement('div');
                     el.innerHTML = renderRelicCard(r, { iconSize: 45, iconClass: 'relic-card-icon' });
@@ -7231,6 +7239,7 @@
         document.getElementById('reward-desc').innerText = rewardPresentation.desc;
         document.getElementById('reward-skip-btn').innerText = `放弃机缘，换取金币 +${getBattleRewardSkipGold()}`;
         if (rewardPresentation.kind === 'relic') {
+            container.classList.add('relic-reward-grid');
             availableRelics.slice(0, 3).forEach(r => {
                 const el = document.createElement('div');
                 el.innerHTML = renderRelicCard(r, { iconSize: 45, iconClass: 'relic-card-icon' });
