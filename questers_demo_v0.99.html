@@ -2312,11 +2312,11 @@
 
 <script src="hud-runtime.js?v=20260518-forced-default-hud1"></script>
 <script src="hud-layout-data.js?v=20260616-intent-tray-reuse"></script>
-<script src="src/data/relics.js?v=20260616-card-text-tighten"></script>
+<script src="src/data/relics.js?v=20260616-bloodoath-magic-sword"></script>
 <script src="src/data/card-tags.js?v=20260616-mage-heal-value"></script>
-<script src="src/data/cards.js?v=20260616-warrior-starter-magic-sword"></script>
+<script src="src/data/cards.js?v=20260616-bloodoath-magic-sword"></script>
 <script src="src/data/enemies.js?v=20260605-enemy-ai"></script>
-<script src="src/data/characters.js?v=20260616-warrior-starter-magic-sword"></script>
+<script src="src/data/characters.js?v=20260616-bloodoath-magic-sword"></script>
 <script src="src/runtime/state-rules.js?v=20260616-runtime-state-save-hydration"></script>
 <script src="src/runtime/card-rules.js?v=20260616-runtime-auto-select-rules"></script>
 <script src="src/runtime/battle-rules.js?v=20260615-runtime-battle-rules"></script>
@@ -5602,10 +5602,11 @@
     function growMagicSword(amount = 1, source = '魔剑', activeCard = null) {
         const gain = Math.max(0, Math.floor(Number(amount) || 0));
         if (gain <= 0) return;
+        const totalGain = gain + (hasRelic('r_lifedebt_scale') && state.hp <= Math.floor(state.maxHp / 2) ? 1 : 0);
         let changed = false;
         const grow = card => {
             if (!isMagicSwordCard(card)) return;
-            card.val = Math.max(0, Number(card.val) || 0) + gain;
+            card.val = Math.max(0, Number(card.val) || 0) + totalGain;
             changed = true;
         };
         [state.deck, state.battleDeck, state.hand, state.discardPile, state.exhaustPile, state.playedRetainPile]
@@ -5613,7 +5614,7 @@
             .forEach(pile => pile.forEach(grow));
         grow(activeCard);
         if (!changed) return;
-        showFloatText(`${source} +${gain}伤`, "var(--crimson)", getCenter('ui-hp'));
+        showFloatText(`${source} +${totalGain}伤`, "var(--crimson)", getCenter('ui-hp'));
         renderHand();
     }
 
@@ -5632,14 +5633,19 @@
     function applyBloodOathCost(amount, source = '血誓') {
         let loss = Math.max(0, Math.floor(Number(amount) || 0));
         if (loss <= 0) return 0;
+        let sutureApplied = false;
         if (hasRelic('r_blood_suture') && !state.r_blood_oath_reduction_used) {
             state.r_blood_oath_reduction_used = true;
+            sutureApplied = true;
             loss = Math.max(0, loss - 1);
             state.p_dmg_buff += 3;
             showFloatText('赤线缝针 +3伤', 'var(--crimson)', getCenter('ui-hp'));
         }
         const actualLoss = applyPlayerHpLoss(loss, source, { minimumHp: 1, animate: true });
         if (actualLoss <= 0) return 0;
+        if (sutureApplied) {
+            growMagicSword(1, '赤线缝针');
+        }
         if (hasRelic('r_scarlet_whet') && !state.r_scarlet_whet_used) {
             state.r_scarlet_whet_used = true;
             state.p_dmg_buff += 3;
@@ -5957,7 +5963,8 @@
                     state.r_vamp_ring_used = true;
                     state.p_battle_dmg += 3;
                 }
-                showFloatText(oathBonus > 0 ? `血誓终击 +${oathBonus}` : card.name, "var(--crimson)", getCenter('enemy-avatar'));
+                growMagicSword(card.magicSwordGrowth || 0, card.name, card);
+                showFloatText(oathBonus > 0 ? `血海魔誓 +${oathBonus}` : card.name, "var(--crimson)", getCenter('enemy-avatar'));
             }
             else if (card.specialId === 'a_syn_magic') {
                 state.p_next_dmg += 8;

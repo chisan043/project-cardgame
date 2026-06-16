@@ -128,8 +128,8 @@ function getRewardBridgeSpec(roleId, deck) {
         const hasBloodOathCost = deckHasCardMatch(deck, card => Number(card.bloodOathCost) > 0);
         const hasBloodOathPayoff = deckHasCardMatch(deck, card => Number(card.bloodOathMissingRatio) > 0);
         const hasBloodRecovery = deckHasCardMatch(deck, card => (card.tags || []).includes('吸血') || (card.tags || []).includes('治愈') || Number(card.healValue) > 0);
-        if (hasBloodOathCost && !hasBloodOathPayoff) return { label: '血誓缺爆发', match: card => Number(card.bloodOathMissingRatio) > 0 };
-        if (hasBloodOathCost && !hasBloodRecovery) return { label: '血誓缺回血', match: card => (card.tags || []).includes('吸血') || (card.tags || []).includes('治愈') || Number(card.healValue) > 0 };
+        if (hasBloodOathCost && !hasBloodOathPayoff) return { label: '血誓魔剑缺爆发', match: card => Number(card.bloodOathMissingRatio) > 0 };
+        if (hasBloodOathCost && !hasBloodRecovery) return { label: '血誓魔剑缺回血', match: card => (card.tags || []).includes('吸血') || (card.tags || []).includes('治愈') || Number(card.healValue) > 0 };
     }
 
     return null;

@@ -322,7 +322,7 @@ const BUILD_DIRECTIONS = {
     hero_warrior: {
         oathblade: { name: '圣剑反击', desc: '护盾、反击与圣剑互相放大，是当前勇者的默认成长方向。', triggerTags: ['圣剑', '反击', '庇护', '荆棘', '保留', '重击'] },
         execution: { name: '处刑连斩', desc: '用易伤、穿甲与连击制造短窗口爆发，减少对护盾堆叠的依赖。', triggerTags: ['易伤', '穿甲', '连击', '眩晕'] },
-        bloodoath: { name: '血誓狂战', desc: '主动失去生命换爆发，生命越低伤害越高；回血会降低后续输出。', triggerTags: ['血誓', '吸血', '出血', '放血'] }
+        bloodoath: { name: '血誓魔剑', desc: '承受实际失血来淬炼魔剑，并用已损生命、出血与吸血在危险血线中换取爆发。', triggerTags: ['血誓', '吸血', '出血', '放血'] }
     },
     hero_mage: {
         chant: { name: '星火咏唱', desc: '积累咏唱后用爆发牌收束。', triggerTags: ['咏唱', '爆发', '穿甲', '充能'] },

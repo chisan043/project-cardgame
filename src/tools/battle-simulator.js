@@ -20,7 +20,7 @@ class BattleSimulator {
             warrior: {
                 oathblade: { name: '圣剑反击', focus: ['庇护', '反击', '圣剑'] },
                 execution: { name: '处刑连斩', focus: ['易伤', '穿甲', '连击'] },
-                bloodoath: { name: '血誓狂战', focus: ['血祭', '吸血', '出血'] }
+                bloodoath: { name: '血誓魔剑', focus: ['血祭', '魔剑', '吸血', '出血'] }
             },
             mage: {
                 chant: { name: '星火咏唱', focus: ['咏唱', '爆发', '穿甲'] },

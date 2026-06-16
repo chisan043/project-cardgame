@@ -310,8 +310,10 @@ function applyEnemyTypeDamageBonus(state, amount) {
 function applyBloodOathCost(state, amount) {
     let loss = Math.max(0, Math.floor(Number(amount) || 0));
     if (loss <= 0) return 0;
+    let sutureApplied = false;
     if (hasRelic(state, 'r_blood_suture') && !state.bloodOathReductionUsed) {
         state.bloodOathReductionUsed = true;
+        sutureApplied = true;
         loss = Math.max(0, loss - 1);
         state.turnDamage += 3;
     }
@@ -328,6 +330,7 @@ function applyBloodOathCost(state, amount) {
         state.oathTransfusionUsed = true;
         state.energy++;
     }
+    if (sutureApplied) growMagicSword(state, 1);
     growMagicSword(state, 1);
     return actual;
 }
@@ -339,9 +342,10 @@ function isMagicSword(card) {
 function growMagicSword(state, amount = 1, activeCard = null) {
     const gain = Math.max(0, Math.floor(Number(amount) || 0));
     if (gain <= 0) return;
+    const totalGain = gain + (hasRelic(state, 'r_lifedebt_scale') && state.hp <= state.maxHp / 2 ? 1 : 0);
     const grow = card => {
         if (!isMagicSword(card)) return;
-        card.val = Math.max(0, Number(card.val) || 0) + gain;
+        card.val = Math.max(0, Number(card.val) || 0) + totalGain;
     };
     [state.sourceDeck, state.drawPile, state.discard, state.exhaust, state.destroyed, state.hand, state.retained]
         .filter(Boolean)
@@ -604,7 +608,7 @@ function estimateCard(state, card, incoming, move) {
             a_syn_array: Math.min(incoming + 16, 30) + 8,
             w_oath_fortress: Math.min(incoming + 14, 26) + 7,
             w_last_verdict: 56 + state.enemy.vuln * 6 + synergyCards * 6,
-            a_syn_blood: 16 + getBloodOathBonus(state, card) + Math.min(state.maxHp - state.hp, 20),
+            a_syn_blood: 16 + getBloodOathBonus(state, card) + Math.min(state.maxHp - state.hp, 20) + (card.magicSwordGrowth || 0) * 6,
             s_magic: state.lastCard ? 44 : 18,
             s_pierce: 32 + state.chant * 14,
             a_syn_magic: 24,
@@ -795,6 +799,7 @@ function executeSpecialCard(state, card, echo = false) {
             state.vampRingUsed = true;
             state.battleDamage += 3;
         }
+        growMagicSword(state, card.magicSwordGrowth || 0, card);
     } else if (specialId === 's_magic') {
         const lastWasReplica = (state.lastCard?.tags || []).includes('复刻');
         if (state.lastCard && !state.lastCard.isJunk && !lastWasReplica) {

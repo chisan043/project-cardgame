@@ -248,8 +248,8 @@
             const hasBloodOathCost = deckHasCardMatch(card => Number(card.bloodOathCost) > 0, deck);
             const hasBloodOathPayoff = deckHasCardMatch(card => Number(card.bloodOathMissingRatio) > 0, deck);
             const hasBloodRecovery = deckHasCardMatch(card => (card.tags || []).includes('吸血') || (card.tags || []).includes('治愈') || Number(card.healValue) > 0, deck);
-            if (hasBloodOathCost && !hasBloodOathPayoff) return { label: '血誓缺爆发', match: card => Number(card.bloodOathMissingRatio) > 0 };
-            if (hasBloodOathCost && !hasBloodRecovery) return { label: '血誓缺回血', match: card => (card.tags || []).includes('吸血') || (card.tags || []).includes('治愈') || Number(card.healValue) > 0 };
+            if (hasBloodOathCost && !hasBloodOathPayoff) return { label: '血誓魔剑缺爆发', match: card => Number(card.bloodOathMissingRatio) > 0 };
+            if (hasBloodOathCost && !hasBloodRecovery) return { label: '血誓魔剑缺回血', match: card => (card.tags || []).includes('吸血') || (card.tags || []).includes('治愈') || Number(card.healValue) > 0 };
         }
 
         return null;
