@@ -160,7 +160,7 @@ const RELIC_POOL = [
     { id: 'r_perma_curse', name: '永续法印', icon: '⛓️', desc: '法师：敌方身上的[易伤]与[虚弱]在回合结束时不再衰减。', price: 260 },
     { id: 'r_long_decay', name: '长驻猎痕', icon: '⏳', desc: '弓手：敌方的[剧毒]与[出血]层数在回合结束时不再自动衰减。', price: 260 },
     { id: 'r_guardian_core', name: '守誓炉心', icon: '🛡️', desc: '战士：获得[庇护]时，同时获得其数值一半的护盾。', price: 170 },
-    { id: 'r_sword_oath', name: '圣剑誓印', icon: '⚔️', desc: '战士：[圣剑]攻击从护盾获得的伤害提升，由 40% 提高到 55%。', price: 190 },
+    { id: 'r_sword_oath', name: '圣剑誓印', icon: '⚔️', desc: '战士：[圣剑]从护盾获得的追加伤害提高，卡面会显示当前追加伤害。', price: 190 },
     { id: 'r_thorn_bloom', name: '棘辉冠冕', icon: '🌹', desc: '战士：打出[圣剑]攻击后，若你拥有[荆棘]，额外造成等同荆棘层数的穿甲伤害。', price: 210 },
     { id: 'r_counter_gate', name: '招架门徽', icon: '🚪', desc: '战士：每场战斗第一次单张防御牌获得 15 点以上护盾时，进入[反击]姿态。', price: 180 },
     { id: 'r_status_prism', name: '星蚀棱镜', icon: '💠', desc: '法师：每张牌首次施加负面状态时，获得 1 层[咏唱]。', price: 190 },

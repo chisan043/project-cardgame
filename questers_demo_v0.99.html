@@ -2822,9 +2822,15 @@
         const value = context.scaledValue ?? getScaledCardValue(card);
         const tagHtml = `<span style="color:var(--gold);">${getTagDisplayName(tag)}</span>`;
         if (tag === '穿甲') return context.attackBase ? null : '这次伤害无视护甲。';
-        if (tag === '重击') return '基础伤害翻倍。';
+        if (tag === '重击') return context.attackBase ? null : '基础伤害翻倍。';
         if (tag === '连击') return '若本回合已出过牌，伤害提高 50%。';
-        if (tag === '圣剑') return '追加当前护盾 40% 的伤害；持有圣剑誓印时为 55%。';
+        if (tag === '圣剑') {
+            if (context.attackBase) {
+                const swordBonus = Math.max(0, Number(context.swordBonus) || 0);
+                return `圣剑追加 <span class="card-desc-value">${swordBonus}</span> 点伤害。`;
+            }
+            return '圣剑会按当前护盾追加伤害。';
+        }
         if (tag === '吸血') {
             const ratio = Number(card.lifestealRatio);
             if (Number.isFinite(ratio) && ratio > 0 && ratio < 1) return `按本次伤害 ${Math.round(ratio * 100)}% 回复生命。`;
@@ -2898,17 +2904,27 @@
         const lines = [];
         const tags = normalizeTagConflicts(card.tags || []);
         const value = getScaledCardValue(card);
+        let attackDamage = value;
+        if (card.type === '攻击' && tags.includes('重击')) {
+            attackDamage = Math.floor(attackDamage * (hasRelic('r_heavy_badge') ? 2.5 : 2));
+        }
+        const swordBonus = card.type === '攻击' && tags.includes('圣剑') ? getSwordBonus(card) : 0;
         
         if (card.type === '攻击') {
             const pierceText = tags.includes('穿甲') ? '穿甲伤害' : '伤害';
-            addUniqueLine(lines, `造成 <span class="card-desc-value">${value}</span> 点${pierceText}。`);
+            addUniqueLine(lines, `造成 <span class="card-desc-value">${attackDamage}</span> 点${pierceText}。`);
         } 
         else if (card.type === '防御') {
             addUniqueLine(lines, `获得 <span class="card-desc-value">${value}</span> 点护盾。`);
         } 
 
         for (const tag of tags) {
-            const line = getTagEffectLine(card, tag, { attackBase: card.type === '攻击', scaledValue: value });
+            const line = getTagEffectLine(card, tag, {
+                attackBase: card.type === '攻击',
+                attackDamage,
+                scaledValue: value,
+                swordBonus
+            });
             addUniqueLine(lines, line);
         }
 
