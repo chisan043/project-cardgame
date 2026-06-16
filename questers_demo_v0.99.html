@@ -2319,7 +2319,7 @@
 
 <script src="hud-runtime.js?v=20260518-forced-default-hud1"></script>
 <script src="hud-layout-data.js?v=20260616-intent-tray-reuse"></script>
-<script src="src/data/relics.js?v=20260616-epic-core-buffs"></script>
+<script src="src/data/relics.js?v=20260616-epic-core-names"></script>
 <script src="src/data/card-tags.js?v=20260616-draw-count-explicit"></script>
 <script src="src/data/cards.js?v=20260616-reward-baseline"></script>
 <script src="src/data/enemies.js?v=20260616-enemy-escalation"></script>
@@ -6011,11 +6011,11 @@
                 state.battleDeck = state.battleDeck.concat(state.exhaustPile, [card]); state.exhaustPile = []; state.battleDeck.sort(()=>0.5-Math.random());
             }
             else if(card.specialId === 's_poison') { let layers = state.enemy.poison + state.enemy.bleed; let dmg = 20 + layers * 2; applyDamageToEnemy(dmg); state.p_reduce_dmg += Math.min(12, layers); showFloatText(card.name, "var(--nature)", getCenter('enemy-avatar')); }
-            else if(card.specialId === 's_shield') { triggerVFX('p-atk'); applySpecialCardDamage(card, 12 + state.armor + state.p_battle_dmg); state.p_counter = 1; showFloatText("誓盾出锋 / 进入反击", "var(--gold)", getCenter('ui-hp')); }
+            else if(card.specialId === 's_shield') { triggerVFX('p-atk'); applySpecialCardDamage(card, 12 + state.armor + state.p_battle_dmg); state.p_counter = 1; showFloatText(`${card.name} / 进入反击`, "var(--gold)", getCenter('ui-hp')); }
             else if(card.specialId === 's_magic') {
                 const lastWasReplica = (state.lastPlayedCard?.tags || []).includes('复刻');
                 if (state.lastPlayedCard && !state.lastPlayedCard.isJunk && !lastWasReplica) {
-                    showFloatText("镜界回放", "var(--purple)", getCenter('ui-hp'));
+                    showFloatText(card.name, "var(--purple)", getCenter('ui-hp'));
                     await executeCardTags(state.lastPlayedCard, true, null);
                     if (state.enemy.currentHp > 0) await executeCardTags(state.lastPlayedCard, true, null);
                     await drawCards(1);
@@ -6082,12 +6082,12 @@
                     state.p_battle_dmg += 3;
                 }
                 growMagicSword(card.magicSwordGrowth || 0, card.name, card);
-                showFloatText(oathBonus > 0 ? `血海魔誓 +${oathBonus}` : card.name, "var(--crimson)", getCenter('enemy-avatar'));
+                showFloatText(oathBonus > 0 ? `${card.name} +${oathBonus}` : card.name, "var(--crimson)", getCenter('enemy-avatar'));
             }
             else if (card.specialId === 'a_syn_magic') {
                 state.p_next_dmg += 12;
                 await drawCards(isEcho ? 1 : 2);
-                showFloatText(isEcho ? "回声导线 / 附魔 +12" : "回声导线 / 抽牌 +2 / 附魔 +12", "var(--purple)", getCenter('ui-hp'));
+                showFloatText(isEcho ? "回声导流 / 附魔 +12" : "回声导流 / 抽牌 +2 / 附魔 +12", "var(--purple)", getCenter('ui-hp'));
             }
             else if (card.specialId === 'w_counter_crown') {
                 triggerVFX('p-atk');
@@ -6133,7 +6133,7 @@
                 const executionHand = state.hand.filter(c => c.tags && (c.tags.includes('连击') || c.tags.includes('穿甲'))).length;
                 let dmg = 64 + state.p_battle_dmg + state.enemy.vuln * 10 + executionHand * 6;
                 applySpecialCardDamage(card, dmg, true);
-                showFloatText("终誓处刑", "var(--gold)", getCenter('enemy-avatar'));
+                showFloatText(card.name, "var(--gold)", getCenter('enemy-avatar'));
             }
             else if (card.specialId === 'm_chant_singularity') {
                 let chantGain = 3 + (hasRelic('r_energy_crys') ? 1 : 0);
@@ -6174,7 +6174,7 @@
                 state.p_next_dmg += 16;
                 if (!isEcho) await drawCards(1);
                 else state.mp += 1;
-                showFloatText(isEcho ? "折廊回声 / 回能 +1 / 附魔 +16" : "折廊导流 / 抽牌 +1 / 附魔 +16", "var(--purple)", getCenter('ui-hp'));
+                showFloatText(isEcho ? "镜廊回声 / 回能 +1 / 附魔 +16" : "镜廊导流 / 抽牌 +1 / 附魔 +16", "var(--purple)", getCenter('ui-hp'));
             }
             else if (card.specialId === 'm_ember_orbit') {
                 const hadDebuff = getEnemyDebuffTypeCount() > 0;
@@ -6281,7 +6281,7 @@
                 }
                 state.p_reduce_dmg += 8 + Math.min(12, bleedLayers);
                 await drawCards(1);
-                showFloatText("毒脉爆箭", "var(--nature)", getCenter('enemy-avatar'));
+                showFloatText(card.name, "var(--nature)", getCenter('enemy-avatar'));
             }
             else if (card.specialId === 'a_green_resonance') {
                 let broughtBack = false;

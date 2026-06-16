@@ -72,7 +72,7 @@
         },
         {
           "id": "a_bloodlet_gale",
-          "name": "断脉赤绽",
+          "name": "断脉赤矢",
           "roleId": "hero_archer",
           "pool": "special_epic",
           "deckId": null,
@@ -88,7 +88,7 @@
         },
         {
           "id": "a_venom_cage",
-          "name": "腐藤囚笼",
+          "name": "腐藤缚网",
           "roleId": "hero_archer",
           "pool": "special_epic",
           "deckId": null,
@@ -138,7 +138,7 @@
         },
         {
           "id": "a_gale_featherbank",
-          "name": "百羽开匣",
+          "name": "百羽齐发",
           "roleId": "hero_archer",
           "pool": "special_epic",
           "deckId": null,
@@ -154,7 +154,7 @@
         },
         {
           "id": "a_gale_verdict",
-          "name": "风冠裁矢",
+          "name": "风冠断矢",
           "roleId": "hero_archer",
           "pool": "special_epic",
           "deckId": null,
@@ -213,7 +213,7 @@
         },
         {
           "id": "a_venom_burst",
-          "name": "毒脉爆箭",
+          "name": "毒脉裂放",
           "roleId": "hero_archer",
           "pool": "special_epic",
           "deckId": null,
@@ -230,7 +230,7 @@
       "usedBy": [
         {
           "id": "a_exile_archive",
-          "name": "失林归档",
+          "name": "失林归卷",
           "roleId": "hero_archer",
           "pool": "special_epic",
           "deckId": null,
@@ -892,7 +892,7 @@
         },
         {
           "id": "a_exile_piercer",
-          "name": "界外穿枝",
+          "name": "林外穿枝",
           "roleId": "hero_archer",
           "pool": "special_epic",
           "deckId": null,
@@ -959,7 +959,7 @@
         },
         {
           "id": "a_gale_crosswind",
-          "name": "侧风裁痕",
+          "name": "侧风留痕",
           "roleId": "hero_archer",
           "pool": "special_epic",
           "deckId": null,
@@ -1235,7 +1235,7 @@
         },
         {
           "id": "s_magic",
-          "name": "镜界回放",
+          "name": "镜界复写",
           "roleId": "hero_mage",
           "pool": "special_epic",
           "deckId": null,
@@ -1260,7 +1260,7 @@
         },
         {
           "id": "m_chant_singularity",
-          "name": "星核咏唱",
+          "name": "星核启咏",
           "roleId": "hero_mage",
           "pool": "special_epic",
           "deckId": null,
@@ -1268,7 +1268,7 @@
         },
         {
           "id": "m_chant_overflow",
-          "name": "溢星咏唱",
+          "name": "溢星续咏",
           "roleId": "hero_mage",
           "pool": "special_epic",
           "deckId": null,
@@ -1495,7 +1495,7 @@
         },
         {
           "id": "m_status_supernova",
-          "name": "万象超新星",
+          "name": "万象星爆",
           "roleId": "hero_mage",
           "pool": "special_epic",
           "deckId": null,
@@ -1578,16 +1578,16 @@
           "rarity": "稀有"
         },
         {
-          "id": "m_mirror_rewind",
-          "name": "倒带法环",
+          "id": "m_echo_archive",
+          "name": "回声秘卷",
           "roleId": "hero_mage",
           "pool": "special_epic",
           "deckId": null,
           "rarity": "史诗"
         },
         {
-          "id": "m_echo_archive",
-          "name": "回声秘藏",
+          "id": "m_mirror_rewind",
+          "name": "逆时法环",
           "roleId": "hero_mage",
           "pool": "special_epic",
           "deckId": null,
@@ -1595,7 +1595,7 @@
         },
         {
           "id": "m_mirror_hallway",
-          "name": "折廊回声",
+          "name": "镜廊回声",
           "roleId": "hero_mage",
           "pool": "special_epic",
           "deckId": null,
@@ -1687,7 +1687,7 @@
         },
         {
           "id": "m_blood_moon_rite",
-          "name": "暗月仪轨",
+          "name": "暗月祭仪",
           "roleId": "hero_mage",
           "pool": "special_epic",
           "deckId": null,
@@ -1864,7 +1864,7 @@
       "usedBy": [
         {
           "id": "m_mirror_twinseal",
-          "name": "双镜印",
+          "name": "双镜秘印",
           "roleId": "hero_mage",
           "pool": "special_epic",
           "deckId": null,
@@ -1872,7 +1872,7 @@
         },
         {
           "id": "m_mirror_footnote",
-          "name": "镜页脚注",
+          "name": "镜页批注",
           "roleId": "hero_mage",
           "pool": "special_epic",
           "deckId": null,
@@ -1948,7 +1948,7 @@
         },
         {
           "id": "m_calamity_blacklist",
-          "name": "厄名黑册",
+          "name": "厄名录",
           "roleId": "hero_mage",
           "pool": "special_epic",
           "deckId": null,
@@ -1997,7 +1997,7 @@
         },
         {
           "id": "m_chant_bolt",
-          "name": "星涌雷令",
+          "name": "星涌紫雷",
           "roleId": "hero_mage",
           "pool": "special_epic",
           "deckId": null,
@@ -2005,7 +2005,7 @@
         },
         {
           "id": "s_pierce",
-          "name": "聚星雷矢",
+          "name": "聚星紫雷",
           "roleId": "hero_mage",
           "pool": "special_epic",
           "deckId": null,
@@ -2013,7 +2013,7 @@
         },
         {
           "id": "m_forbidden_comet",
-          "name": "裂星禁术",
+          "name": "裂星禁咒",
           "roleId": "hero_mage",
           "pool": "special_epic",
           "deckId": null,
@@ -2021,7 +2021,7 @@
         },
         {
           "id": "m_chant_lockstar",
-          "name": "锁星终读",
+          "name": "锁星刻读",
           "roleId": "hero_mage",
           "pool": "special_epic",
           "deckId": null,
@@ -2029,7 +2029,7 @@
         },
         {
           "id": "m_mirror_glassbolt",
-          "name": "镜棱短雷",
+          "name": "镜棱紫雷",
           "roleId": "hero_mage",
           "pool": "special_epic",
           "deckId": null,
@@ -2104,7 +2104,7 @@
         },
         {
           "id": "m_curse_gravity",
-          "name": "咒星重力",
+          "name": "咒星沉坠",
           "roleId": "hero_mage",
           "pool": "special_epic",
           "deckId": null,
@@ -2112,7 +2112,7 @@
         },
         {
           "id": "a_syn_magic",
-          "name": "回声秘线",
+          "name": "回声导流",
           "roleId": "hero_mage",
           "pool": "special_epic",
           "deckId": null,
@@ -2290,7 +2290,7 @@
         },
         {
           "id": "w_bastion_prayer",
-          "name": "圣壁祷言",
+          "name": "圣壁祷文",
           "roleId": "hero_warrior",
           "pool": "special_epic",
           "deckId": null,
@@ -2398,7 +2398,7 @@
         },
         {
           "id": "w_blood_siphon",
-          "name": "噬誓回流",
+          "name": "噬血回锋",
           "roleId": "hero_warrior",
           "pool": "special_epic",
           "deckId": null,
@@ -2414,7 +2414,7 @@
         },
         {
           "id": "a_syn_blood",
-          "name": "血海魔誓",
+          "name": "血誓饮锋",
           "roleId": "hero_warrior",
           "pool": "special_epic",
           "deckId": null,
@@ -2422,7 +2422,7 @@
         },
         {
           "id": "w_blood_rain",
-          "name": "赤雨冲锋",
+          "name": "赤雨突进",
           "roleId": "hero_warrior",
           "pool": "special_epic",
           "deckId": null,
@@ -2454,16 +2454,8 @@
           "rarity": "稀有"
         },
         {
-          "id": "w_blood_drum",
-          "name": "战血鼓誓",
-          "roleId": "hero_warrior",
-          "pool": "special_epic",
-          "deckId": null,
-          "rarity": "史诗"
-        },
-        {
           "id": "w_blood_oathmark",
-          "name": "血印再立",
+          "name": "血印再誓",
           "roleId": "hero_warrior",
           "pool": "special_epic",
           "deckId": null,
@@ -2471,7 +2463,15 @@
         },
         {
           "id": "w_blood_crucible",
-          "name": "血誓坩埚",
+          "name": "血誓熔炉",
+          "roleId": "hero_warrior",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "w_blood_drum",
+          "name": "血鼓战誓",
           "roleId": "hero_warrior",
           "pool": "special_epic",
           "deckId": null,
@@ -2589,7 +2589,7 @@
         },
         {
           "id": "w_counter_crown",
-          "name": "王冠回锋",
+          "name": "王冠返锋",
           "roleId": "hero_warrior",
           "pool": "special_epic",
           "deckId": null,
@@ -2597,7 +2597,7 @@
         },
         {
           "id": "w_oath_clock",
-          "name": "誓钟回击",
+          "name": "誓钟返击",
           "roleId": "hero_warrior",
           "pool": "special_epic",
           "deckId": null,
@@ -2698,7 +2698,15 @@
         },
         {
           "id": "w_last_verdict",
-          "name": "终誓处刑",
+          "name": "终誓裁决",
+          "roleId": "hero_warrior",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "w_exec_claim",
+          "name": "罪痕重锋",
           "roleId": "hero_warrior",
           "pool": "special_epic",
           "deckId": null,
@@ -2707,14 +2715,6 @@
         {
           "id": "w_exec_finisher",
           "name": "裂冠终斩",
-          "roleId": "hero_warrior",
-          "pool": "special_epic",
-          "deckId": null,
-          "rarity": "史诗"
-        },
-        {
-          "id": "w_exec_claim",
-          "name": "认罪剑痕",
           "roleId": "hero_warrior",
           "pool": "special_epic",
           "deckId": null,
@@ -2780,7 +2780,7 @@
         },
         {
           "id": "w_exec_silence",
-          "name": "断声处决",
+          "name": "断声刑令",
           "roleId": "hero_warrior",
           "pool": "special_epic",
           "deckId": null,
@@ -2788,7 +2788,7 @@
         },
         {
           "id": "w_exec_flash",
-          "name": "白刃瞬裁",
+          "name": "白刃一闪",
           "roleId": "hero_warrior",
           "pool": "special_epic",
           "deckId": null,
@@ -2796,7 +2796,7 @@
         },
         {
           "id": "a_syn_sword",
-          "name": "裂隙终裁",
+          "name": "裂隙裁决",
           "roleId": "hero_warrior",
           "pool": "special_epic",
           "deckId": null,
@@ -2804,7 +2804,7 @@
         },
         {
           "id": "w_exec_line",
-          "name": "银线断甲",
+          "name": "银线破甲",
           "roleId": "hero_warrior",
           "pool": "special_epic",
           "deckId": null,
@@ -2862,7 +2862,7 @@
         },
         {
           "id": "w_exec_rehearse",
-          "name": "刑步预演",
+          "name": "刑步试探",
           "roleId": "hero_warrior",
           "pool": "special_epic",
           "deckId": null,
@@ -2870,7 +2870,7 @@
         },
         {
           "id": "w_blood_chain",
-          "name": "赤链二斩",
+          "name": "赤链双斩",
           "roleId": "hero_warrior",
           "pool": "special_epic",
           "deckId": null,
@@ -2912,7 +2912,7 @@
         },
         {
           "id": "s_thorns",
-          "name": "圣棘誓壁",
+          "name": "蔷薇誓壁",
           "roleId": "hero_warrior",
           "pool": "special_epic",
           "deckId": null,
@@ -3166,7 +3166,7 @@
         },
         {
           "id": "s_shield",
-          "name": "誓盾出锋",
+          "name": "誓盾开锋",
           "roleId": "hero_warrior",
           "pool": "special_epic",
           "deckId": null,
@@ -3242,7 +3242,7 @@
         },
         {
           "id": "a_syn_array",
-          "name": "圣誓阵列",
+          "name": "圣誓护阵",
           "roleId": "hero_warrior",
           "pool": "special_epic",
           "deckId": null,
@@ -3250,7 +3250,7 @@
         },
         {
           "id": "w_oath_fortress",
-          "name": "誓约壁垒",
+          "name": "誓垒不落",
           "roleId": "hero_warrior",
           "pool": "special_epic",
           "deckId": null,
@@ -3326,7 +3326,7 @@
         },
         {
           "id": "w_thorn_judgement",
-          "name": "荆冠审判",
+          "name": "荆冠裁决",
           "roleId": "hero_warrior",
           "pool": "special_epic",
           "deckId": null,
