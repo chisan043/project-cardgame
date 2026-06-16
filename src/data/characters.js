@@ -128,7 +128,7 @@ const CHARACTERS = {
             { src: 'assets/characters/mage/battle_back_hurt_06_v2.webp', duration: 90 }
         ],
         accentClass: 'featured',
-        starterHint: '治愈负责基础生存；秘仪预兆与星火释放构成完整的咏唱爆发闭环，镜像与灾厄仍保留开放信号。'
+        starterHint: '治愈负责基础生存；秘仪预兆与星火破封构成完整的咏唱爆发闭环，镜像与灾厄仍保留开放信号。'
     },
     hero_archer: {
         id: 'hero_archer',

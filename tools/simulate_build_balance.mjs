@@ -78,7 +78,7 @@ const FOUNDATION = {
     ],
     hero_mage: [
         { name: '星尘法弹', type: '攻击', cost: 1, val: 7, tags: ['爆发'], rarity: '普通' },
-        { name: '月泉愈流', type: '能力', cost: 1, val: 0, tags: ['治愈'], rarity: '普通' }
+        { name: '月泉愈流', type: '能力', cost: 0, val: 8, healValue: 8, tags: ['治愈'], rarity: '普通' }
     ],
     hero_archer: [
         { name: '林影矢', type: '攻击', cost: 1, val: 6, tags: [], rarity: '普通' },

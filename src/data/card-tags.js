@@ -234,6 +234,7 @@ function getCardDrawCount(card) {
 }
 
 function getCardHealValue(card) {
+    if (Number.isFinite(Number(card?.healValue))) return Number(card.healValue);
     const cost = Math.max(0, Number(card?.cost) || 0);
     const basePerCost = card?.rarity === '史诗' ? 10 : 8;
     return Math.round(cost * basePerCost * getCostPowerMultiplier(card));

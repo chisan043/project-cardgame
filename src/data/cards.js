@@ -604,7 +604,7 @@ const STARTER_DECKS = {
         roleId: 'hero_mage',
         cards: [
             { poolId: 'starter_mage_bolt', name: '星尘法弹', type: '攻击', cost: 1, icon: '🪄', val: 10, tags: [], rarity: '普通', copies: 3, frameTheme: 'mage', desc: '造成 10 点伤害。' },
-            { poolId: 'starter_mage_heal', name: '月泉愈流', type: '能力', cost: 0, icon: '✚', val: 0, tags: ['治愈'], buildNeutral: true, rarity: '普通', copies: 3, frameTheme: 'mage', desc: '免费回复 8 点生命。' },
+            { poolId: 'starter_mage_heal', name: '月泉愈流', type: '能力', cost: 0, icon: '✚', val: 8, healValue: 8, tags: ['治愈'], buildNeutral: true, rarity: '普通', copies: 3, frameTheme: 'mage', desc: '免费回复 8 点生命。' },
             { poolId: 'starter_mage_omen', name: '秘仪预兆', type: '能力', cost: 0, icon: '🔮', val: 0, tags: ['咏唱'], directEffects: { draw: true }, buildTags: ['chant'], rarity: '普通', frameTheme: 'mage', desc: '免费积累[咏唱]、获得职业护盾并抽 1 张牌。' },
             { poolId: 'starter_mage_copy', name: '镜页摹写', type: '能力', cost: 1, icon: '🪞', val: 0, tags: ['复刻'], buildTags: ['mirror'], directEffects: { draw: true }, rarity: '普通', frameTheme: 'mage', desc: '[复刻]上一张牌的效果并抽 1 张牌。' },
             { poolId: 'starter_mage_mist', name: '蚀星雾', type: '能力', cost: 0, icon: '☠️', val: 0, tags: ['诅咒'], directEffects: { draw: true }, buildTags: ['calamity'], rarity: '普通', frameTheme: 'mage', desc: '免费施加[诅咒]并抽 1 张牌。' },
