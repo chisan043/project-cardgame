@@ -2312,9 +2312,9 @@
 
 <script src="hud-runtime.js?v=20260518-forced-default-hud1"></script>
 <script src="hud-layout-data.js?v=20260616-intent-tray-reuse"></script>
-<script src="src/data/relics.js?v=20260615-gale-ceiling-tune"></script>
+<script src="src/data/relics.js?v=20260616-card-text-tighten"></script>
 <script src="src/data/card-tags.js?v=20260616-mage-heal-value"></script>
-<script src="src/data/cards.js?v=20260616-warrior-starter-oath2"></script>
+<script src="src/data/cards.js?v=20260616-card-text-tighten"></script>
 <script src="src/data/enemies.js?v=20260605-enemy-ai"></script>
 <script src="src/data/characters.js?v=20260616-warrior-starter-oath2"></script>
 <script src="src/runtime/state-rules.js?v=20260616-runtime-state-save-hydration"></script>
@@ -2870,23 +2870,23 @@
         }
 
         const bloodDebtLines = [];
-        if (card.bloodDebtGain) bloodDebtLines.push(`借 <span class="card-desc-value">${card.bloodDebtGain}</span> 血债。`);
-        if (card.bloodDebtPowerGain) bloodDebtLines.push(`本回合血债伤害提高 <span class="card-desc-value">${Math.round(card.bloodDebtPowerGain * 100)}%</span>。`);
-        if (card.bloodDebtDamageRatio) bloodDebtLines.push(`按血债追加 <span class="card-desc-value">${formatRatioText(card.bloodDebtDamageRatio)}</span> 伤害。`);
-        if (card.bloodDebtRepay) bloodDebtLines.push(`偿还 <span class="card-desc-value">${card.bloodDebtRepay}</span> 血债。`);
-        if (card.bloodDebtRepayFromBleed) bloodDebtLines.push(`用放血偿债。`);
-        if (card.bloodDebtSpendAll) bloodDebtLines.push(`耗尽血债，每点追加 <span class="card-desc-value">${card.bloodDebtSpendDamage}</span> 伤害。`);
+        if (card.bloodDebtGain) bloodDebtLines.push(`+<span class="card-desc-value">${card.bloodDebtGain}</span> 血债`);
+        if (card.bloodDebtPowerGain) bloodDebtLines.push(`血债伤害 +<span class="card-desc-value">${Math.round(card.bloodDebtPowerGain * 100)}%</span>`);
+        if (card.bloodDebtDamageRatio) bloodDebtLines.push(`血债 +<span class="card-desc-value">${formatRatioText(card.bloodDebtDamageRatio)}</span> 伤害`);
+        if (card.bloodDebtRepay) bloodDebtLines.push(`还 <span class="card-desc-value">${card.bloodDebtRepay}</span> 血债`);
+        if (card.bloodDebtRepayFromBleed) bloodDebtLines.push(`放血偿债`);
+        if (card.bloodDebtSpendAll) bloodDebtLines.push(`耗尽血债：每点 +<span class="card-desc-value">${card.bloodDebtSpendDamage}</span> 伤害`);
         const clearBonuses = [];
-        if (card.bloodDebtClearDamage) clearBonuses.push(`追加 <span class="card-desc-value">${card.bloodDebtClearDamage}</span> 伤害`);
+        if (card.bloodDebtClearDamage) clearBonuses.push(`+<span class="card-desc-value">${card.bloodDebtClearDamage}</span> 伤害`);
         if (card.bloodDebtClearHeal) clearBonuses.push(`回复 <span class="card-desc-value">${card.bloodDebtClearHeal}</span> 生命`);
-        if (clearBonuses.length) bloodDebtLines.push(`清债奖励：${clearBonuses.join('、')}。`);
+        if (clearBonuses.length) bloodDebtLines.push(`清债：${clearBonuses.join('、')}`);
         const statusBits = [];
-        if (card.bloodDebtBleed) statusBits.push(`<span class="card-desc-value">${card.bloodDebtBleed}</span>出血`);
-        if (card.bloodDebtWeak) statusBits.push(`<span class="card-desc-value">${card.bloodDebtWeak}</span>虚弱`);
+        if (card.bloodDebtBleed) statusBits.push(`<span class="card-desc-value">${card.bloodDebtBleed}</span> 出血`);
+        if (card.bloodDebtWeak) statusBits.push(`<span class="card-desc-value">${card.bloodDebtWeak}</span> 虚弱`);
         if (card.bloodDebtStun) statusBits.push('眩晕');
-        if (statusBits.length) bloodDebtLines.push(`施加${statusBits.join('、')}。`);
-        if (card.bloodDebtDrawOnRepay) bloodDebtLines.push(`偿债后抽<span class="card-desc-value">${card.bloodDebtDrawOnRepay}</span>。`);
-        if (bloodDebtLines.length) addUniqueLine(lines, bloodDebtLines.join(''));
+        if (statusBits.length) bloodDebtLines.push(`施加 ${statusBits.join('、')}`);
+        if (card.bloodDebtDrawOnRepay) bloodDebtLines.push(`偿债：抽 <span class="card-desc-value">${card.bloodDebtDrawOnRepay}</span>`);
+        if (bloodDebtLines.length) addUniqueLine(lines, `${bloodDebtLines.join('；')}。`);
         const directLines = [];
         if (hasDirectCardEffect(card, 'draw')) directLines.push(`抽 <span class="card-desc-value">${getCardDrawCount(card)}</span> 张牌。`);
         if (hasDirectCardEffect(card, 'energy')) directLines.push('回复 <span class="card-desc-value">1</span> 点能量。');
