@@ -136,7 +136,7 @@ const CHARACTERS = {
         subtitle: '连射 / 操作 / 自然',
         desc: '通过风势、自然调度与连射组织持续输出，攻击之间穿插走位与追射，更像远程游走型构筑。',
         tags: ['疾风连射', '猎毒陷袭', '放逐游侠'],
-        maxHp: 88,
+        maxHp: 100,
         baseEnergy: 5,
         openingHand: 6,
         startingGold: 45,

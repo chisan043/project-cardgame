@@ -557,7 +557,9 @@ function addCoreCardIfFound(data, rng, roleId, buildId, deck, floor, force = fal
         : plan.primaryBuildId;
     const coreId = MATURE_LOADOUTS[coreBuildId]?.core;
     if (!coreId || deck.some(card => cardId(card) === coreId)) return null;
-    const chance = floor >= 14 ? 0.75 : floor >= 7 ? 0.5 : 0.1;
+    const chance = roleId === 'hero_archer'
+        ? (floor >= 14 ? 0.95 : floor >= 7 ? 0.75 : 0.15)
+        : (floor >= 14 ? 0.75 : floor >= 7 ? 0.5 : 0.1);
     if (!force && rng() > chance) return null;
     const core = data.SPECIAL_EPIC_POOLS[roleId].find(card => card.id === coreId);
     if (!core) return null;
@@ -895,7 +897,7 @@ function simulateFullRun(data, stats, runConfig) {
             chapterStats.hpLeft += result.hp;
             enemyStats.wins++;
             hp = Math.max(1, result.hp);
-            if (ownedRelics.has('r_start_archer')) hp = Math.min(character.maxHp, hp + 8);
+            if (ownedRelics.has('r_start_archer')) hp = Math.min(character.maxHp, hp + 16);
             if (nodeType === 'elite') {
                 eliteKills++;
                 chapterStats.eliteWins++;

@@ -5,7 +5,7 @@ const SPECIAL_EPIC_POOLS = {
         { id: 's_thorns', name: '圣棘誓壁', roleId: 'hero_warrior', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_guard_art_v1.webp', type: '防御', cost: 2, icon: '🛡️', val: 18, tags: ['荆棘'], rarity: '史诗', isSpecial: true, desc: '获得 18 点护盾与 8 层[荆棘]。' },
         { id: 'a_syn_sword', name: '裂隙终裁', roleId: 'hero_warrior', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_flash_art_v1.webp', type: '攻击', cost: 2, icon: '🗡️', val: 28, tags: ['穿甲'], rarity: '史诗', isSpecial: true, desc: '造成 28 点[穿甲]伤害。若敌方已有[易伤]，提高本场伤害。' },
         { id: 'a_syn_array', name: '圣誓阵列', roleId: 'hero_warrior', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_scar_art_v1.webp', type: '防御', cost: 2, icon: '⛩️', val: 16, tags: ['反击'], rarity: '史诗', isSpecial: true, desc: '获得 16 点护盾并进入[反击]；若已处于反击，改为获得 8 点[庇护]。' },
-        { id: 'a_syn_blood', name: '血海魔誓', roleId: 'hero_warrior', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_blood_vow_slash_art_v1.webp', type: '攻击', cost: 2, icon: '🩸', val: 16, tags: ['血誓', '吸血'], lifestealRatio: 0.75, bloodOathMissingRatio: 1.25, magicSwordGrowth: 2, rarity: '史诗', isSpecial: true, desc: '造成 16 点穿甲伤害；追加已损生命 125% 的伤害；按 75% 伤害[吸血]；魔剑永久 +2 伤害。' },
+        { id: 'a_syn_blood', name: '血海魔誓', roleId: 'hero_warrior', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_blood_vow_slash_art_v1.webp', type: '攻击', cost: 2, icon: '🩸', val: 14, tags: ['血誓', '吸血'], lifestealRatio: 0.55, bloodOathMissingRatio: 0.95, magicSwordGrowth: 1, rarity: '史诗', isSpecial: true, desc: '造成 14 点穿甲伤害；追加已损生命 95% 的伤害；按 55% 伤害[吸血]；魔剑永久 +1 伤害。' },
         { id: 'w_counter_crown', name: '王冠回锋', roleId: 'hero_warrior', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_crown_riposte_art_v1.webp', type: '攻击', cost: 3, icon: '👑', val: 16, tags: ['反击', '圣剑'], rarity: '史诗', isSpecial: true, desc: '造成 16 点伤害并进入[反击]姿态。本场战斗中，每次反击后获得等同本次招架值的护盾。' },
         { id: 'w_bastion_prayer', name: '圣壁祷言', roleId: 'hero_warrior', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_banner_guard_art_v1.webp', type: '能力', cost: 1, icon: '🚩', val: 10, tags: ['庇护', '抽牌'], rarity: '史诗', isSpecial: true, desc: '获得 10 点[庇护]，若当前拥有护盾，再获得等同庇护值的护盾并[抽牌]。' },
         { id: 'w_thorn_judgement', name: '荆冠审判', roleId: 'hero_warrior', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_thorn_charge_art_v1.webp', type: '攻击', cost: 2, icon: '🌹', val: 8, tags: ['圣剑', '荆棘'], rarity: '史诗', isSpecial: true, desc: '造成 8 点伤害。额外造成当前[荆棘]层数 3 倍的伤害，并获得 6 层[荆棘]。' },
@@ -100,7 +100,7 @@ const REMOVED_BATTLE_IMPRINT_SPECIAL_IDS = new Set([
 const RELIC_POOL = [
     { id: 'r_start_warrior', name: '不屈战徽', icon: '🛡️', desc: '战士初始遗物：每场战斗第一次遭受敌方主体攻击后，下回合额外获得 1 点能量并抽 1 张牌。', price: 0 },
     { id: 'r_start_mage', name: '余辉法印', icon: '🔯', desc: '法师初始遗物：每回合第一次打出能力牌后，下一张攻击牌结算前获得 1 层[咏唱]。', price: 0 },
-    { id: 'r_start_archer', name: '逐风羽饰', icon: '🪶', desc: '弓手初始遗物：每回合第一次打出能力牌后，下一张攻击牌结算时获得 1 层风势与 3 点[庇护]；战斗胜利后回复 8 点生命。', price: 0 },
+    { id: 'r_start_archer', name: '逐风羽饰', icon: '🪶', desc: '弓手初始遗物：每回合第一次打出能力牌后，下一张攻击牌结算时获得 1 层风势与 5 点[庇护]；战斗胜利后回复 16 点生命。', price: 0 },
     { id: 'r_bone_ring', name: '誓约骨环', icon: '🦴', desc: '战士/弓手：每丢弃 1 张非诅咒手牌，本场战斗所有伤害提高 1；适合把弃牌转成血誓卖血、处刑连段或重置爆发。', price: 100 },
     { id: 'r_frenzy_veil', name: '疾影面纱', icon: '🎭', desc: '弓手：触发[重置]时额外[抽牌] 1 张；本战斗弃牌越多，[狂热]提供的伤害越高。', price: 130 },
     { id: 'r_sac_jade', name: '咏唱玉坠', icon: '📿', desc: '法师：每次获得[咏唱]时，回复 1 点能量并获得 2 点庇护。', price: 150 },

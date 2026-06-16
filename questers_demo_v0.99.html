@@ -2681,15 +2681,24 @@
 
     function getCoreCardChoices(count = 3) {
         const characterId = state.player?.characterId || 'hero_warrior';
+        const primaryBuildTag = getPrimaryBuildTag();
         const seen = new Set();
         const choices = [];
         getWeightedSpecialEpicPool(characterId).forEach(card => {
             const key = card.specialId || card.poolId || card.id || card.name;
-            if (seen.has(key) || choices.length >= count) return;
+            if (seen.has(key)) return;
             seen.add(key);
             choices.push(cloneSpecialEpic(card));
         });
-        return choices;
+        return choices
+            .sort((left, right) => {
+                const leftTags = getCardBuildTags(left, characterId);
+                const rightTags = getCardBuildTags(right, characterId);
+                const leftAligned = primaryBuildTag && leftTags.includes(primaryBuildTag) ? 1 : 0;
+                const rightAligned = primaryBuildTag && rightTags.includes(primaryBuildTag) ? 1 : 0;
+                return rightAligned - leftAligned;
+            })
+            .slice(0, count);
     }
 
     function getCoreRelicChoices(availableRelics, count = 3) {
@@ -5876,8 +5885,8 @@
                 state.r_signature_archer_pending = false;
                 if (state.enemy.currentHp > 0) {
                     state.p_aim = Math.min(6, state.p_aim + 1);
-                    state.p_reduce_dmg += 3;
-                    showFloatText('逐风续势 +1 / 庇护 +3', "var(--nature)", getCenter('ui-hp'));
+                    state.p_reduce_dmg += 5;
+                    showFloatText('逐风续势 +1 / 庇护 +5', "var(--nature)", getCenter('ui-hp'));
                 }
             }
             if (state.hp <= 0) return;

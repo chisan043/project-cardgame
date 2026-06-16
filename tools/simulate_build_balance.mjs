@@ -1125,7 +1125,7 @@ function playPlayerTurn(state, move) {
         executeCard(state, card, false);
         if (archerSignatureAfterCard && state.enemy.hp > 0) {
             state.aim = Math.min(6, state.aim + 1);
-            state.protection += 3;
+            state.protection += 5;
         }
         if (state.hp <= 0 || state.enemy.hp <= 0) break;
         if ((card.tags || []).includes('回响')) {

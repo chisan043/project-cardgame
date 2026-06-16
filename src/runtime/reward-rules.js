@@ -72,7 +72,7 @@
         const profile = getEncounterRewardProfile(encounterType);
         return {
             gold: 30 + profile.goldBonus + (hasSilverPurse ? 10 : 0) + (hasFinisherCoin && enemyVulnerable ? 10 : 0),
-            heal: (hasWarmPendant ? 6 : 0) + (hasStartArcher ? 8 : 0)
+            heal: (hasWarmPendant ? 6 : 0) + (hasStartArcher ? 16 : 0)
         };
     }
 
