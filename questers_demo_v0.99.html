@@ -5587,7 +5587,7 @@
         if (!cardHasBuildTag(card, 'exile')) return 0;
         const baseByEvent = { discard: 3, exhaust: 5, return: 7, destroy: 4 };
         let damage = baseByEvent[eventType] || 0;
-        if (eventType === 'exhaust' && hasRelic('r_exile_cache')) damage += 3;
+        if (eventType === 'exhaust' && hasRelic('r_exile_cache')) damage += 2;
         return damage;
     }
 
@@ -5942,7 +5942,7 @@
                 state.exhaustPile.forEach(c => onCardReturnedFromExhaust(c));
                 state.battleDeck = state.battleDeck.concat(state.exhaustPile, [card]); state.exhaustPile = []; state.battleDeck.sort(()=>0.5-Math.random());
             }
-            else if(card.specialId === 's_poison') { let layers = state.enemy.poison + state.enemy.bleed; let dmg = 20 + layers * 2; applyDamageToEnemy(dmg); state.p_reduce_dmg += Math.min(8, layers); showFloatText(card.name, "var(--nature)", getCenter('enemy-avatar')); }
+            else if(card.specialId === 's_poison') { let layers = state.enemy.poison + state.enemy.bleed; let dmg = 20 + layers * 2; applyDamageToEnemy(dmg); state.p_reduce_dmg += Math.min(12, layers); showFloatText(card.name, "var(--nature)", getCenter('enemy-avatar')); }
             else if(card.specialId === 's_shield') { triggerVFX('p-atk'); applySpecialCardDamage(card, state.armor + state.p_battle_dmg); state.p_counter = 1; showFloatText("誓盾出锋 / 进入反击", "var(--gold)", getCenter('ui-hp')); }
             else if(card.specialId === 's_magic') {
                 const lastWasReplica = (state.lastPlayedCard?.tags || []).includes('复刻');
@@ -6039,9 +6039,9 @@
             }
             else if (card.specialId === 'w_oath_fortress') {
                 triggerVFX('p-def');
-                const armorGain = applyLowHpGuardBoost(14, '守誓护盾');
+                const armorGain = applyLowHpGuardBoost(18, '守誓护盾');
                 state.armor += armorGain;
-                let pVal = 4 + (hasRelic('r_protect_armor') ? 2 : 0);
+                let pVal = 6 + (hasRelic('r_protect_armor') ? 2 : 0);
                 pVal = applyLowHpGuardBoost(pVal, '守誓庇护');
                 state.p_reduce_dmg += pVal;
                 if (hasRelic('r_guardian_core')) state.armor += Math.floor(pVal / 2);
@@ -6052,7 +6052,7 @@
             else if (card.specialId === 'w_last_verdict') {
                 triggerVFX('p-atk');
                 const executionHand = state.hand.filter(c => c.tags && (c.tags.includes('连击') || c.tags.includes('穿甲'))).length;
-                let dmg = 48 + state.p_battle_dmg + state.enemy.vuln * 6 + executionHand * 6;
+                let dmg = 64 + state.p_battle_dmg + state.enemy.vuln * 10 + executionHand * 6;
                 applySpecialCardDamage(card, dmg, true);
                 showFloatText("终誓处刑", "var(--gold)", getCenter('enemy-avatar'));
             }
@@ -6084,7 +6084,7 @@
                         state.p_next_dmg += 8;
                         showFloatText("书签回能 +1 / 附魔 +8", "var(--purple)", getCenter('ui-mp'));
                     }
-                    state.p_next_dmg += 10;
+                    state.p_next_dmg += 14;
                     await drawCards(1);
                 } else {
                     state.p_chant = Math.min(12, state.p_chant + 3);
@@ -6092,9 +6092,9 @@
                 }
             }
             else if (card.specialId === 'm_mirror_hallway') {
-                state.p_next_dmg += 6;
+                state.p_next_dmg += 8;
                 if (!isEcho) await drawCards(1);
-                showFloatText(isEcho ? "折廊回声 / 附魔 +6" : "折廊导流 / 抽牌 +1 / 附魔 +6", "var(--purple)", getCenter('ui-hp'));
+                showFloatText(isEcho ? "折廊回声 / 附魔 +8" : "折廊导流 / 抽牌 +1 / 附魔 +8", "var(--purple)", getCenter('ui-hp'));
             }
             else if (card.specialId === 'm_ember_orbit') {
                 const hadDebuff = getEnemyDebuffTypeCount() > 0;
@@ -6159,8 +6159,8 @@
                 const shots = Math.min(3, state.p_aim);
                 state.p_aim -= shots;
                 triggerVFX('p-atk');
-                applySpecialCardDamage(card, 14 + state.p_battle_dmg + shots * 6, true);
-                state.p_reduce_dmg += shots;
+                applySpecialCardDamage(card, 14 + state.p_battle_dmg + shots * 8, true);
+                state.p_reduce_dmg += shots * 2;
                 showFloatText(`裁决风势 ${shots}`, "var(--nature)", getCenter('enemy-avatar'));
             }
             else if (card.specialId === 'a_red_rain') {
@@ -6203,9 +6203,9 @@
                 showFloatText("翠林回响", "var(--nature)", getCenter('ui-hp'));
             }
             else if (card.specialId === 'a_skyfall_shot') {
-                const exileBonus = Math.floor(state.exhaustPile.length / 2) * 4;
+                const exileBonus = Math.floor(state.exhaustPile.length / 2) * 3;
                 triggerVFX('p-atk');
-                applySpecialCardDamage(card, 16 + state.p_battle_dmg + exileBonus, true);
+                applySpecialCardDamage(card, 14 + state.p_battle_dmg + exileBonus, true);
                 showFloatText(exileBonus > 0 ? `坠星绝矢 +${exileBonus}` : "坠星绝矢", "var(--nature)", getCenter('enemy-avatar'));
             }
             else {
@@ -6399,7 +6399,7 @@
                 if (oathBonus > 0) showFloatText(`血誓 +${oathBonus}`, "var(--crimson)", getCenter('enemy-avatar'));
             }
             if(card.tags && card.tags.includes('放逐')) {
-                const exileBonus = hasRelic('r_exile_cache') ? 2 : 0;
+                const exileBonus = hasRelic('r_exile_cache') ? 1 : 0;
                 if (exileBonus > 0) {
                     finalDmg += exileBonus;
                     showFloatText(`流亡箭匣 +${exileBonus}`, "var(--gold)", getCenter('enemy-avatar'));

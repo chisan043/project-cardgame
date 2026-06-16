@@ -409,7 +409,7 @@ function getExileFlowDamage(state, card, eventType) {
     if (!cardHasBuildTag(state, card, 'exile')) return 0;
     const baseByEvent = { discard: 3, exhaust: 5, return: 7, destroy: 4 };
     let damage = baseByEvent[eventType] || 0;
-    if (eventType === 'exhaust' && hasRelic(state, 'r_exile_cache')) damage += 3;
+    if (eventType === 'exhaust' && hasRelic(state, 'r_exile_cache')) damage += 2;
     return damage;
 }
 
@@ -614,19 +614,19 @@ function estimateCard(state, card, incoming, move) {
             s_thorns: Math.min(incoming + 18, 30) + 10,
             a_syn_sword: 28 + (state.enemy.vuln > 0 ? 18 : 0),
             a_syn_array: Math.min(incoming + 16, 30) + 8,
-            w_oath_fortress: Math.min(incoming + 14, 26) + 7,
-            w_last_verdict: 56 + state.enemy.vuln * 6 + synergyCards * 6,
+            w_oath_fortress: Math.min(incoming + 18, 32) + 9,
+            w_last_verdict: 72 + state.enemy.vuln * 10 + synergyCards * 6,
             a_syn_blood: 16 + getBloodOathBonus(state, card) + Math.min(state.maxHp - state.hp, 20) + (card.magicSwordGrowth || 0) * 6,
             s_magic: state.lastCard ? 44 : 18,
             s_pierce: 32 + state.chant * 14,
             a_syn_magic: 24,
             m_forbidden_comet: 56 + state.chant * 26,
             m_echo_archive: state.lastCard ? 32 : 12,
-            m_mirror_hallway: 30,
+            m_mirror_hallway: 34,
             m_status_supernova: 52 + enemyDebuffCount(state) * 18,
             s_energy: 32 + state.aim * 3,
-            a_gale_verdict: 14 + Math.min(3, state.aim) * 6,
-            s_poison: (state.enemy.poison + state.enemy.bleed) * 2 + 24,
+            a_gale_verdict: 14 + Math.min(3, state.aim) * 10,
+            s_poison: (state.enemy.poison + state.enemy.bleed) * 2 + 28,
             s_exhaust: (state.exhaust.length + 1) * 16 + (state.exhaust.length ? 14 : 0)
         };
         score += specialScores[card.specialId] || 0;
@@ -804,12 +804,12 @@ function executeSpecialCard(state, card, echo = false) {
         else state.armor += 16;
         state.counter = 1;
     } else if (specialId === 'w_oath_fortress') {
-        state.armor += 14;
-        state.protection += 4 + (hasRelic(state, 'r_protect_armor') ? 2 : 0);
+        state.armor += 18;
+        state.protection += 6 + (hasRelic(state, 'r_protect_armor') ? 2 : 0);
         state.counter = 1;
     } else if (specialId === 'w_last_verdict') {
         const executionHand = state.hand.filter(held => (held.tags || []).some(tag => ['连击', '穿甲'].includes(tag))).length;
-        hitEnemy(state, 48 + state.battleDamage + state.enemy.vuln * 6 + executionHand * 6, true);
+        hitEnemy(state, 64 + state.battleDamage + state.enemy.vuln * 10 + executionHand * 6, true);
     } else if (specialId === 'a_syn_blood') {
         const dealt = hitEnemy(state, (Number(card.val) || 16) + getBloodOathBonus(state, card) + state.battleDamage, true);
         let healing = Math.floor(dealt * (card.lifestealRatio || 0.5));
@@ -857,7 +857,7 @@ function executeSpecialCard(state, card, echo = false) {
                 state.energy++;
                 state.nextDamage += 8;
             }
-            state.nextDamage += 10;
+            state.nextDamage += 14;
             draw(state, 1);
         }
         else {
@@ -865,7 +865,7 @@ function executeSpecialCard(state, card, echo = false) {
             draw(state, 2);
         }
     } else if (specialId === 'm_mirror_hallway') {
-        state.nextDamage += 6;
+        state.nextDamage += 8;
         if (!echo) draw(state, 1);
     } else if (specialId === 'm_status_supernova') {
         const debuffs = enemyDebuffCount(state);
@@ -875,8 +875,8 @@ function executeSpecialCard(state, card, echo = false) {
     } else if (specialId === 'a_gale_verdict') {
         const shots = Math.min(3, state.aim);
         state.aim -= shots;
-        hitEnemy(state, 14 + state.battleDamage + shots * 6, true);
-        state.protection += shots;
+        hitEnemy(state, 14 + state.battleDamage + shots * 8, true);
+        state.protection += shots * 2;
     } else if (specialId === 's_energy') {
         const hadWind = state.aim > 0;
         state.aim = Math.min(6, state.aim + 3 + (hasRelic(state, 'r_wind_quiver') ? 1 : 0));
@@ -885,7 +885,7 @@ function executeSpecialCard(state, card, echo = false) {
     } else if (specialId === 's_poison') {
         const layers = state.enemy.poison + state.enemy.bleed;
         hitEnemy(state, 20 + layers * 2);
-        state.protection += Math.min(8, layers);
+        state.protection += Math.min(12, layers);
     } else if (specialId === 's_exhaust') {
         const returned = state.exhaust.length + 1;
         if (hasRelic(state, 'r_exhaust_dmg')) state.battleDamage += 1;
@@ -1017,7 +1017,7 @@ function executeCard(state, card, echo = false) {
         if (tags.includes('连击') && state.cardsPlayed > 0 && !echo) value = Math.floor(value * 1.5);
         let damage = value + state.battleDamage + state.turnDamage;
         if (card.bloodOathMissingRatio) damage += getBloodOathBonus(state, card);
-        if (tags.includes('放逐') && hasRelic(state, 'r_exile_cache')) damage += 2;
+        if (tags.includes('放逐') && hasRelic(state, 'r_exile_cache')) damage += 1;
         if (tags.includes('圣剑')) damage += Math.floor(state.armor * (hasRelic(state, 'r_sword_oath') ? 0.55 : 0.4)) + state.counter * 4;
         if (tags.includes('爆发')) {
             const chantSpent = state.chant;
