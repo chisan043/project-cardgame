@@ -100,7 +100,7 @@ const REMOVED_BATTLE_IMPRINT_SPECIAL_IDS = new Set([
 const RELIC_POOL = [
     { id: 'r_start_warrior', name: '不屈战徽', icon: '🛡️', desc: '战士初始遗物：每场战斗第一次遭受敌方主体攻击后，下回合额外获得 1 点能量并抽 1 张牌。', price: 0 },
     { id: 'r_start_mage', name: '余辉法印', icon: '🔯', desc: '法师初始遗物：每回合第一次打出能力牌后，下一张攻击牌结算前获得 1 层[咏唱]。', price: 0 },
-    { id: 'r_start_archer', name: '逐风羽饰', icon: '🪶', desc: '弓手初始遗物：每回合第一次打出能力牌后，下一张攻击牌结算时获得 1 层风势。', price: 0 },
+    { id: 'r_start_archer', name: '逐风羽饰', icon: '🪶', desc: '弓手初始遗物：每回合第一次打出能力牌后，下一张攻击牌结算时获得 1 层风势与 3 点[庇护]；战斗胜利后回复 8 点生命。', price: 0 },
     { id: 'r_bone_ring', name: '誓约骨环', icon: '🦴', desc: '战士/弓手：每丢弃 1 张非诅咒手牌，本场战斗所有伤害提高 1；适合把弃牌转成血誓卖血、处刑连段或重置爆发。', price: 100 },
     { id: 'r_frenzy_veil', name: '疾影面纱', icon: '🎭', desc: '弓手：触发[重置]时额外[抽牌] 1 张；本战斗弃牌越多，[狂热]提供的伤害越高。', price: 130 },
     { id: 'r_sac_jade', name: '咏唱玉坠', icon: '📿', desc: '法师：每次获得[咏唱]时，回复 1 点能量并获得 2 点庇护。', price: 150 },

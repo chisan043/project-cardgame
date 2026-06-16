@@ -5274,7 +5274,10 @@
     }
 
     async function startBattle(type) {
-        let pool; if (type === 'boss') pool = ENEMIES.filter(e => e.type === 'boss'); else if (type === 'elite') pool = ENEMIES.filter(e => e.type === 'elite'); 
+        let pool; if (type === 'boss') pool = ENEMIES.filter(e => e.type === 'boss'); else if (type === 'elite') {
+            const eliteTier = state.floor < 8 ? 1 : state.floor < 15 ? 2 : 3;
+            pool = ENEMIES.filter(e => e.type === 'elite' && e.tier === eliteTier);
+        }
         else { 
             if (state.floor < 5) pool = ENEMIES.filter(e => e.tier === 1 && e.type !== 'elite'); 
             else if (state.floor < 12) pool = ENEMIES.filter(e => e.tier === 2 && e.type !== 'elite'); 
@@ -5873,7 +5876,8 @@
                 state.r_signature_archer_pending = false;
                 if (state.enemy.currentHp > 0) {
                     state.p_aim = Math.min(6, state.p_aim + 1);
-                    showFloatText('逐风续势 +1', "var(--nature)", getCenter('ui-hp'));
+                    state.p_reduce_dmg += 3;
+                    showFloatText('逐风续势 +1 / 庇护 +3', "var(--nature)", getCenter('ui-hp'));
                 }
             }
             if (state.hp <= 0) return;
@@ -6877,7 +6881,8 @@
             enemyVulnerable: state.enemy.vuln > 0,
             hasSilverPurse: hasRelic('r_silver_purse'),
             hasFinisherCoin: hasRelic('r_finisher_coin'),
-            hasWarmPendant: hasRelic('r_warm_pendant')
+            hasWarmPendant: hasRelic('r_warm_pendant'),
+            hasStartArcher: hasRelic('r_start_archer')
         });
         state.gold += rewards.gold;
         if (rewards.heal > 0) state.hp = Math.min(state.maxHp, state.hp + rewards.heal);

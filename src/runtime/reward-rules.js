@@ -66,12 +66,13 @@
         enemyVulnerable = false,
         hasSilverPurse = false,
         hasFinisherCoin = false,
-        hasWarmPendant = false
+        hasWarmPendant = false,
+        hasStartArcher = false
     } = {}) {
         const profile = getEncounterRewardProfile(encounterType);
         return {
             gold: 30 + profile.goldBonus + (hasSilverPurse ? 10 : 0) + (hasFinisherCoin && enemyVulnerable ? 10 : 0),
-            heal: hasWarmPendant ? 6 : 0
+            heal: (hasWarmPendant ? 6 : 0) + (hasStartArcher ? 8 : 0)
         };
     }
 

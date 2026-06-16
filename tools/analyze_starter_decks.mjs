@@ -251,6 +251,7 @@ function runEncounter(data, roleId, checkpoint, enemyName, runs, seed) {
     for (let index = 0; index < runs; index++) {
         const rng = createRng(seed + index * 7919);
         const deck = makeStarterDeck(data, rng, roleId);
+        const startingRelic = data.STARTING_RELIC_BY_ROLE[roleId];
         const result = simulateBattle(
             data,
             rng,
@@ -258,7 +259,7 @@ function runEncounter(data, roleId, checkpoint, enemyName, runs, seed) {
             deck,
             data.CHARACTERS[roleId].maxHp,
             checkpoint,
-            { core: null, coreCard: null, relics: [] },
+            { core: null, coreCard: null, relics: startingRelic ? [startingRelic] : [] },
             { enemyName }
         );
         wins += result.win ? 1 : 0;

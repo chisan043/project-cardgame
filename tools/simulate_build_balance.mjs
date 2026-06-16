@@ -226,7 +226,10 @@ function upgradeRandomCard(rng, deck) {
 
 function encounterPool(data, checkpoint) {
     if (checkpoint.type === 'boss') return data.ENEMIES.filter(enemy => enemy.type === 'boss');
-    if (checkpoint.type === 'elite') return data.ENEMIES.filter(enemy => enemy.type === 'elite');
+    if (checkpoint.type === 'elite') {
+        const tier = checkpoint.floor <= 7 ? 1 : checkpoint.floor <= 14 ? 2 : 3;
+        return data.ENEMIES.filter(enemy => enemy.type === 'elite' && enemy.tier === tier);
+    }
     const tier = checkpoint.floor < 5 ? 1 : checkpoint.floor < 12 ? 2 : 3;
     return data.ENEMIES.filter(enemy => enemy.tier === tier && !enemy.type);
 }
@@ -1122,6 +1125,7 @@ function playPlayerTurn(state, move) {
         executeCard(state, card, false);
         if (archerSignatureAfterCard && state.enemy.hp > 0) {
             state.aim = Math.min(6, state.aim + 1);
+            state.protection += 3;
         }
         if (state.hp <= 0 || state.enemy.hp <= 0) break;
         if ((card.tags || []).includes('回响')) {

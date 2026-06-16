@@ -329,10 +329,11 @@ function generateRouteChoices(rng, floor, hpRatio, gold, profile) {
     const fixedType = fixedNodeType(floor);
     if (fixedType) return [fixedType];
     const weights = routeChoiceWeights(floor);
+    if (floor < 6) delete weights.elite;
     if (hpRatio < 0.45) weights.rest += 3.5;
     if (gold >= 80) weights.shop += 2;
     if (profile === 'novice') {
-        weights.elite *= 0.45;
+        if (weights.elite !== undefined) weights.elite *= 0.45;
         weights.rest += 1.3;
         weights.normal += 1;
     }
@@ -783,7 +784,8 @@ function simulateFullRun(data, stats, runConfig) {
         delete copy.simId;
         return copy;
     });
-    const ownedRelics = new Set();
+    const startingRelic = data.STARTING_RELIC_BY_ROLE[roleId];
+    const ownedRelics = new Set(startingRelic ? [startingRelic] : []);
     const acquiredRelics = [];
     const coreCards = [];
     const coreRelics = new Set(MATURE_LOADOUTS[buildId]?.relics || []);
@@ -893,6 +895,7 @@ function simulateFullRun(data, stats, runConfig) {
             chapterStats.hpLeft += result.hp;
             enemyStats.wins++;
             hp = Math.max(1, result.hp);
+            if (ownedRelics.has('r_start_archer')) hp = Math.min(character.maxHp, hp + 8);
             if (nodeType === 'elite') {
                 eliteKills++;
                 chapterStats.eliteWins++;
