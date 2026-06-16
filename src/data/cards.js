@@ -598,7 +598,8 @@ const STARTER_DECKS = {
         cards: [
             { poolId: 'starter_warrior_strike', name: '铁誓斩', type: '攻击', cost: 1, icon: '⚔️', val: 8, tags: [], rarity: '普通', copies: 3, frameTheme: 'warrior', desc: '造成 8 点伤害。' },
             { poolId: 'starter_warrior_guard', name: '誓盾守', type: '防御', cost: 1, icon: '🛡️', val: 7, tags: [], rarity: '普通', copies: 4, frameTheme: 'warrior', desc: '获得 7 点护盾。' },
-            { poolId: 'starter_warrior_oath', name: '誓光斩', type: '攻击', cost: 1, icon: '✨', val: 6, tags: ['圣剑'], buildTags: ['oathblade'], rarity: '普通', copies: 2, frameTheme: 'warrior', desc: '造成 6 点伤害；[圣剑]会追加当前护盾的一部分伤害。' },
+            { poolId: 'starter_warrior_oath', name: '誓光斩', type: '攻击', cost: 1, icon: '✨', val: 6, tags: ['圣剑'], buildTags: ['oathblade'], rarity: '普通', copies: 1, frameTheme: 'warrior', desc: '造成 6 点伤害；[圣剑]会追加当前护盾的一部分伤害。' },
+            { poolId: 'warrior_magic_sword', name: '魔剑', type: '攻击', cost: 1, icon: '🗡️', val: 4, tags: [], magicSwordGrowth: 1, buildTags: ['bloodoath'], rarity: '稀有', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_blood_vow_slash_art_v1.webp', desc: '造成 4 点伤害；自身实际失去生命或本牌击杀敌人时，永久 +1 伤害。' },
             { poolId: 'starter_warrior_flaw', name: '裂隙刻印', type: '能力', cost: 0, icon: '🎯', val: 0, tags: ['易伤'], buildTags: ['execution'], directEffects: { draw: true }, rarity: '普通', frameTheme: 'warrior', desc: '免费施加[易伤]并抽 1 张牌。' }
         ]
     },

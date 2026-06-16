@@ -176,8 +176,8 @@ function analyzeStarterBias(data, roleId, starter) {
     const starterRule = {
         hero_warrior: {
             survival: { poolId: 'starter_warrior_guard', copies: 4, type: '防御', tag: null, label: '4 张护盾牌' },
-            requiredSignals: { oathblade: 2, execution: 1 },
-            maxSignals: { bloodoath: 0 }
+            requiredSignals: { oathblade: 1, execution: 1, bloodoath: 1 },
+            maxSignals: { bloodoath: 1 }
         },
         hero_mage: {
             survival: { poolId: 'starter_mage_heal', copies: 2, type: '能力', tag: '治愈', label: '2 张治愈牌' },
@@ -379,7 +379,7 @@ function renderMarkdown(report) {
             .join(' / ') || '无';
         lines.push(`| ${result.role} | ${result.bias.survivalIdentity.label} | ${signals} | ${result.bias.profileSpread.toFixed(2)} | ${coverage} | ${bridges} | ${result.bias.passed ? '通过' : '失败'} |`);
     }
-    lines.push('', '通过条件：三个角色保留各自的基础生存轴；战士初始牌聚焦基础攻防、圣剑与易伤且不预塞血誓或反击，法师初始牌聚焦咏唱闭环且不预塞镜像/灾厄，弓手初始牌聚焦风势与有限闪避且不预塞猎毒；每个方向都有独立牌可选；战士至少保留圣剑与处刑、处刑与血誓两类桥接牌；血誓不得出现护盾或庇护。', '');
+    lines.push('', '通过条件：三个角色保留各自的基础生存轴；战士初始牌聚焦基础攻防，并各保留 1 个圣剑、处刑、血誓信号且不预塞反击，法师初始牌聚焦咏唱闭环且不预塞镜像/灾厄，弓手初始牌聚焦风势与有限闪避且不预塞猎毒；每个方向都有独立牌可选；战士至少保留圣剑与处刑、处刑与血誓两类桥接牌；血誓不得出现护盾或庇护。', '');
     lines.push('## 初始卡使用率', '');
     for (const result of report.results) {
         const teachingEnemies = ['early', 'mid'].flatMap(id => Object.values(result.checkpoints[id].enemies));
