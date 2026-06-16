@@ -176,7 +176,7 @@ function analyzeStarterBias(data, roleId, starter) {
     const starterRule = {
         hero_warrior: {
             survival: { poolId: 'starter_warrior_guard', copies: 4, type: '防御', tag: null, label: '4 张护盾牌' },
-            requiredSignals: { oathblade: 1, execution: 1 },
+            requiredSignals: { oathblade: 2, execution: 1 },
             maxSignals: { bloodoath: 0 }
         },
         hero_mage: {

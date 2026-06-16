@@ -192,6 +192,7 @@ const CARD_ART_REGISTRY = {
     // Starter and temporary cards reuse the closest generated art so the demo does not fall back to emoji.
     '铁誓斩': 'assets/cards/art/warrior/warrior_follow_art_v1.webp',
     '旧盾守': 'assets/cards/art/warrior/warrior_wall_art_v1.webp',
+    '誓光斩': 'assets/cards/art/warrior/warrior_charge_art_v1.webp',
     '星尘法弹': 'assets/cards/art/mage/mage_spark_art_v1.webp',
     '月泉愈流': 'assets/cards/art/mage/mage_barrier_art_v1.webp',
     '秘仪预兆': 'assets/cards/art/mage/mage_chant_art_v1.webp',
@@ -218,7 +219,7 @@ const CARD_FRAME_ASSETS = {
 };
 
 const CARD_FRAME_THEME_BY_NAME = {
-    '誓光破阵': 'warrior', '遗迹立誓': 'warrior', '圣垒回身': 'warrior', '誓约追击': 'warrior', '圣堂守势': 'warrior', '誓刃解封': 'warrior', '裂光一闪': 'warrior', '王冠反斩': 'warrior', '铁壁圣痕': 'warrior', '血誓裂锋': 'warrior', '棘甲冲锋': 'warrior', '誓旗护阵': 'warrior', '血痕引路': 'warrior', '血誓开锋': 'warrior', '偿血追命': 'warrior', '誓约留锋': 'warrior', '魂誓换锋': 'warrior', '狂誓裂斩': 'warrior', '终誓处刑': 'warrior', '铁誓斩': 'warrior', '旧盾守': 'warrior',
+    '誓光破阵': 'warrior', '遗迹立誓': 'warrior', '圣垒回身': 'warrior', '誓约追击': 'warrior', '圣堂守势': 'warrior', '誓刃解封': 'warrior', '裂光一闪': 'warrior', '王冠反斩': 'warrior', '铁壁圣痕': 'warrior', '血誓裂锋': 'warrior', '棘甲冲锋': 'warrior', '誓旗护阵': 'warrior', '血痕引路': 'warrior', '血誓开锋': 'warrior', '偿血追命': 'warrior', '誓约留锋': 'warrior', '魂誓换锋': 'warrior', '狂誓裂斩': 'warrior', '终誓处刑': 'warrior', '铁誓斩': 'warrior', '旧盾守': 'warrior', '誓光斩': 'warrior',
     '紫焰爆裂': 'mage', '遗迹咏唱': 'mage', '紫焰火花': 'mage', '魔流庇护': 'mage', '虚空导引': 'mage', '星火连祷': 'mage', '星屑预兆': 'mage', '余烬点燃': 'mage', '法环回流': 'mage', '裂界紫雷': 'mage', '星环复写': 'mage', '燃魂导流': 'mage', '回声护幕': 'mage', '衰星尘': 'mage', '紫焰烙印': 'mage', '星缚咒印': 'mage', '裂星禁术': 'mage', '星尘法弹': 'mage', '月泉愈流': 'mage', '秘仪预兆': 'mage', '秘仪护幕': 'mage',
     '风痕定弦': 'archer', '逐风连矢': 'archer', '林风束羽': 'archer', '踏叶掠影': 'archer', '狩影穿枝': 'archer', '森冠齐射': 'archer', '森息伏击': 'archer', '鹰眼贯枝': 'archer', '回环箭雨': 'archer', '回风藏箭': 'archer', '逐影离弦': 'archer', '轮枝归矢': 'archer', '拾羽连步': 'archer', '翠毒连矢': 'archer', '林魂招矢': 'archer', '赤痕裂放': 'archer', '逐风绝矢': 'archer', '林影矢': 'archer', '林隙闪步': 'archer',
     '古誓护印': 'neutral', '星轨流转': 'neutral', '碎星短刃': 'neutral', '圣像微光': 'neutral', '回音残卷': 'neutral', '飞刀': 'neutral', '厄运印记': 'neutral',
@@ -592,8 +593,9 @@ const STARTER_DECKS = {
     starter_warrior: {
         roleId: 'hero_warrior',
         cards: [
-            { poolId: 'starter_warrior_strike', name: '铁誓斩', type: '攻击', cost: 1, icon: '⚔️', val: 8, tags: [], rarity: '普通', copies: 4, frameTheme: 'warrior', desc: '造成 8 点伤害。' },
+            { poolId: 'starter_warrior_strike', name: '铁誓斩', type: '攻击', cost: 1, icon: '⚔️', val: 8, tags: [], rarity: '普通', copies: 3, frameTheme: 'warrior', desc: '造成 8 点伤害。' },
             { poolId: 'starter_warrior_guard', name: '旧盾守', type: '防御', cost: 1, icon: '🛡️', val: 7, tags: [], rarity: '普通', copies: 4, frameTheme: 'warrior', desc: '获得 7 点护盾。' },
+            { poolId: 'starter_warrior_oath', name: '誓光斩', type: '攻击', cost: 1, icon: '✨', val: 6, tags: ['圣剑'], buildTags: ['oathblade'], rarity: '普通', frameTheme: 'warrior', desc: '造成 6 点伤害；[圣剑]会追加当前护盾的一部分伤害。' },
             { poolId: 'starter_warrior_watch', name: '守誓待击', type: '能力', cost: 0, icon: '👁️', val: 0, tags: ['反击', '销毁'], buildTags: ['oathblade'], rarity: '普通', frameTheme: 'warrior', desc: '免费进入[反击]姿态，使用后[销毁]。' },
             { poolId: 'starter_warrior_flaw', name: '裂隙刻印', type: '能力', cost: 0, icon: '🎯', val: 0, tags: ['易伤'], buildTags: ['execution'], directEffects: { draw: true }, rarity: '普通', frameTheme: 'warrior', desc: '免费施加[易伤]并抽 1 张牌。' }
         ]
