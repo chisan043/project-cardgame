@@ -84,6 +84,20 @@ function localReportDate(value) {
     return `${parts.year}-${parts.month}-${parts.day}`;
 }
 
+function localReportDateTime(value) {
+    const parts = Object.fromEntries(new Intl.DateTimeFormat('zh-CN', {
+        timeZone: 'Asia/Shanghai',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false
+    }).formatToParts(new Date(value)).map(part => [part.type, part.value]));
+    return `${parts.year}-${parts.month}-${parts.day} ${parts.hour}:${parts.minute}:${parts.second}`;
+}
+
 function clamp(value, min, max) {
     return Math.max(min, Math.min(max, value));
 }
@@ -1377,6 +1391,7 @@ function markdownReport(report, outputDir) {
     const lines = [
         '# 完整跑局体验与平衡测试报告',
         '',
+        `测试时间：${localReportDateTime(report.generatedAt)}`,
         `测试日期：${localReportDate(report.generatedAt)}`,
         '',
         `样本：熟练玩家 ${experiencedRuns.length} 局，新手 ${noviceRuns.length} 局；随机种子：\`${report.config.seed}\`。`,

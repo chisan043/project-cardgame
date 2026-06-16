@@ -1,18 +1,31 @@
 #!/usr/bin/env node
 
 import fs from 'node:fs';
-import os from 'node:os';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DEFAULT_SEEDS = [20260614, 20260615, 20260616];
+const DEFAULT_REPORT_DIR = 'tools/playtest_reports';
+const FULL_REPORT_FILES = [
+    '完整跑局体验与平衡测试报告.md',
+    'full_playtest_report.json',
+    'single_runs.csv',
+    'card_stats.csv',
+    'relic_stats.csv',
+    'enemy_stats.csv',
+    'floor_heatmap.csv',
+    'route_stats.csv',
+    'failure_feedback.csv',
+    'anomalies.csv',
+    'combo_stats.csv'
+];
 
 function parseArgs(argv) {
     const result = {
         seeds: [...DEFAULT_SEEDS],
-        outDir: path.join(os.tmpdir(), `questers_balance_matrix_${Date.now()}`),
+        outDir: DEFAULT_REPORT_DIR,
         fullRunsPerBuild: 40,
         noviceRunsPerBuild: 12,
         practicalRuns: 500,
@@ -57,6 +70,20 @@ function avg(values) {
     return values.reduce((sum, value) => sum + value, 0) / Math.max(1, values.length);
 }
 
+function localReportDateTime(value) {
+    const parts = Object.fromEntries(new Intl.DateTimeFormat('zh-CN', {
+        timeZone: 'Asia/Shanghai',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false
+    }).formatToParts(new Date(value)).map(part => [part.type, part.value]));
+    return `${parts.year}-${parts.month}-${parts.day} ${parts.hour}:${parts.minute}:${parts.second}`;
+}
+
 function runStep(label, args, options = {}) {
     console.log(`\n== ${label} ==`);
     console.log([process.execPath, ...args].join(' '));
@@ -74,6 +101,13 @@ function runStep(label, args, options = {}) {
         stdout: result.stdout || '',
         stderr: result.stderr || ''
     };
+}
+
+function mirrorLatestFullReport(sourceDir, outputDir) {
+    for (const fileName of FULL_REPORT_FILES) {
+        const sourcePath = path.join(sourceDir, fileName);
+        if (fs.existsSync(sourcePath)) fs.copyFileSync(sourcePath, path.join(outputDir, fileName));
+    }
 }
 
 function summarizeFull(report) {
@@ -160,7 +194,7 @@ function markdownSummary(summary) {
     const lines = [
         '# Questers 平衡矩阵总报告',
         '',
-        `生成时间：${summary.generatedAt}`,
+        `生成时间：${localReportDateTime(summary.generatedAt)}`,
         '',
         `输出目录：\`${summary.outDir}\``,
         '',
@@ -269,6 +303,7 @@ function run() {
                 '--report-dir', reportDir
             ]);
             if (result.status !== 0) throw new Error(`full playtest failed for seed ${seed}`);
+            mirrorLatestFullReport(reportDir, outDir);
             summary.full.push({ seed, ...summarizeFull(readJson(path.join(reportDir, 'full_playtest_report.json'))) });
         }
         if (!args.skipPractical) {
