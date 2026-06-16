@@ -2851,8 +2851,18 @@
         if (tag === '复刻') return '复制上一张非复刻牌。';
         if (tag === '重置') return '重置手牌。';
         if (tag === '回收') {
-            if (context.cardFace) return null;
             const recycleText = getCardRecycleModes(card).map(getRecycleModeDescription).join('；');
+            if (context.cardFace) {
+                if (!context.onlyKeywordTag) return null;
+                const modes = getCardRecycleModes(card);
+                if (modes.includes('allExhaustToDraw')) return '回收放逐区所有牌。';
+                const recyclesExhaust = modes.some(mode => mode === 'exhaustToHand' || mode === 'exhaustToDraw');
+                const recyclesDiscard = modes.includes('discardToHand');
+                if (recyclesExhaust && recyclesDiscard) return '回收 1 张墓地牌与 1 张放逐牌。';
+                if (recyclesExhaust) return '回收 1 张放逐牌。';
+                if (recyclesDiscard) return '回收 1 张墓地牌。';
+                return '回收 1 张牌。';
+            }
             const flowText = isExileFlowCard(card) ? '每回收 1 张放逐牌，造成 7 点流动伤害。' : '';
             return recycleText ? `${recycleText}。${flowText}` : `按说明回收牌。${flowText}`;
         }
@@ -2968,6 +2978,7 @@
                 attackBase: card.type === '攻击',
                 attackDamage,
                 cardFace: true,
+                onlyKeywordTag: tags.length === 1,
                 scaledValue: value,
                 swordBonus
             });
