@@ -261,7 +261,7 @@ function createEnemy(data, rng, checkpoint, enemyName = null) {
     template.lastMove = -1;
     template.moves = template.moves.map(move => ({
         ...move,
-        val: Math.floor(move.val * ((move.type.includes('attack') || ['defend', 'summon'].includes(move.type)) ? scale : 1))
+        val: Math.floor(move.val * ((move.type.includes('attack') || ['defend', 'summon', 'heal'].includes(move.type)) ? scale : 1))
     }));
     return template;
 }
@@ -556,7 +556,7 @@ function hitEnemy(state, amount, pierce = false, source = '卡牌伤害') {
     return damage;
 }
 
-function takeDamage(state, amount, cause = '敌方攻击', { allowSidestep = false } = {}) {
+function takeDamage(state, amount, cause = '敌方攻击', { allowSidestep = false, pierce = false } = {}) {
     let damage = Math.max(0, Math.floor(amount));
     if (allowSidestep && state.sidestep > 0 && damage > 0) {
         state.sidestep--;
@@ -574,9 +574,11 @@ function takeDamage(state, amount, cause = '敌方攻击', { allowSidestep = fal
         hitEnemy(state, parry, false, '反击');
         if (state.crownOath) state.armor += parry;
     }
-    const blocked = Math.min(damage, state.armor);
-    state.armor -= blocked;
-    damage -= blocked;
+    if (!pierce) {
+        const blocked = Math.min(damage, state.armor);
+        state.armor -= blocked;
+        damage -= blocked;
+    }
     if (damage > 0 && hasRelic(state, 'r_protect_armor') && !state.protectArmorUsed) {
         state.protectArmorUsed = true;
         damage = Math.ceil(damage * 0.6);
@@ -1160,8 +1162,11 @@ function applyEnemyMove(state, move) {
             enemy.charged = false;
         }
         for (let i = 0; i < (move.times || 1); i++) {
-            const dealt = takeDamage(state, damage, '首领主体攻击', { allowSidestep: true });
-            if (move.type === 'attack_lifesteal' && enemy.curse <= 0) enemy.hp = Math.min(enemy.maxHp, enemy.hp + Math.floor(dealt / 2));
+            const dealt = takeDamage(state, damage, '首领主体攻击', { allowSidestep: true, pierce: !!move.pierce });
+            if (move.type === 'attack_lifesteal' && enemy.curse <= 0) {
+                const ratio = Number.isFinite(Number(move.lifestealRatio)) ? Number(move.lifestealRatio) : 0.5;
+                enemy.hp = Math.min(enemy.maxHp, enemy.hp + Math.floor(dealt * ratio));
+            }
             if (state.hp <= 0 || enemy.hp <= 0) break;
         }
         if (hasRelic(state, 'r_start_warrior') && !state.warriorStartUsed) {
@@ -1177,6 +1182,8 @@ function applyEnemyMove(state, move) {
         for (let i = 0; i < move.val; i++) state.discard.push({ name: '诅咒', type: '能力', cost: 99, val: 0, tags: [], isJunk: true });
     } else if (move.type === 'seal') {
         for (let i = 0; i < move.val && state.drawPile.length; i++) state.drawPile[Math.floor(state.rng() * state.drawPile.length)].cost += 1;
+    } else if (move.type === 'heal') {
+        enemy.hp = Math.min(enemy.maxHp, enemy.hp + move.val);
     } else if (move.type === 'debuff') {
         const key = move.subType;
         if (key === 'weak') state.weak += move.val;

@@ -120,6 +120,7 @@
 
         if (isAttack) {
             score += 22 * aggression + (move.val || 0) * 0.35 + ((move.times || 1) - 1) * 6;
+            if (move.pierce && player.armor > 0) score += Math.min(18, player.armor * 0.7);
             if (playerHpRatio <= 0.35) score += 24;
             if (player.p_vuln > 0 || player.p_weak > 0 || player.p_bleed > 0 || player.p_poison > 0 || player.p_burn > 0) score += 10;
             if (player.armor > 14 && (move.times || 1) > 1) score -= 6;
@@ -162,6 +163,9 @@
         else if (move.type === 'summon') {
             score += enemy.minion && enemy.minion.hp > 0 ? -70 : 22;
             if (enemyHpRatio <= 0.45) score += 8;
+        }
+        else if (move.type === 'heal') {
+            score += enemyHpRatio <= 0.35 ? 32 : enemyHpRatio <= 0.6 ? 14 : -20;
         }
 
         if (index === lastMove) score -= 18;
@@ -356,6 +360,8 @@
         if (move?.type === 'junk' && junkGain > 0) parts.push(`塞入 ${junkGain} 张诅咒牌`);
         const minionGain = Math.max(0, (after.enemyMinionHp || 0) - (before.enemyMinionHp || 0));
         if (move?.type === 'summon' && minionGain > 0) parts.push(`召唤 ${minionGain} 血分身`);
+        const enemyHealGain = Math.max(0, (after.enemyLife || 0) - (before.enemyLife || 0));
+        if (move?.type === 'heal' && enemyHealGain > 0) parts.push(`回复 ${enemyHealGain} 点生命`);
         if (move?.type === 'buff' && move.val > 0) parts.push(`力量提升 ${move.val}`);
         if (move?.type === 'buff_thorns' && move.val > 0) parts.push(`获得荆棘 ${move.val}`);
         if (move?.type === 'charge') parts.push('进入蓄力');

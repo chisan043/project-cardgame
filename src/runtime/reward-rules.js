@@ -14,11 +14,36 @@
         return weighted[weighted.length - 1].item;
     }
 
-    function rollRewardRarity({ floor = 1, rng = Math.random } = {}) {
-        const floorBonus = Math.min(floor * 0.015, 0.14);
+    function getEncounterRewardProfile(encounterType = 'battle') {
+        if (encounterType === 'boss') return {
+            goldBonus: 80,
+            skipGoldBonus: 45,
+            floorRarityBonus: 0.16,
+            relicChanceBonus: 0.26,
+            cardChoices: 5
+        };
+        if (encounterType === 'elite') return {
+            goldBonus: 35,
+            skipGoldBonus: 20,
+            floorRarityBonus: 0.1,
+            relicChanceBonus: 0.16,
+            cardChoices: 5
+        };
+        return {
+            goldBonus: 0,
+            skipGoldBonus: 0,
+            floorRarityBonus: 0,
+            relicChanceBonus: 0,
+            cardChoices: 3
+        };
+    }
+
+    function rollRewardRarity({ floor = 1, encounterType = 'battle', rng = Math.random } = {}) {
+        const profile = getEncounterRewardProfile(encounterType);
+        const floorBonus = Math.min(floor * 0.015 + profile.floorRarityBonus, 0.26);
         const roll = rng();
         if (roll < 0.12 + floorBonus) return '史诗';
-        if (roll < 0.68) return '稀有';
+        if (roll < 0.68 + profile.floorRarityBonus * 0.5) return '稀有';
         return '普通';
     }
 
@@ -28,40 +53,47 @@
 
     function getBattleRewardSkipGold({
         floor = 1,
+        encounterType = 'battle',
         hasRewardCrown = false,
         hasCampfirePouch = false
     } = {}) {
-        return 25 + Math.min(30, floor * 2) + (hasRewardCrown ? 15 : 0) + (hasCampfirePouch ? 10 : 0);
+        const profile = getEncounterRewardProfile(encounterType);
+        return 25 + Math.min(30, floor * 2) + profile.skipGoldBonus + (hasRewardCrown ? 15 : 0) + (hasCampfirePouch ? 10 : 0);
     }
 
     function getBattleWinRewards({
+        encounterType = 'battle',
         enemyVulnerable = false,
         hasSilverPurse = false,
         hasFinisherCoin = false,
         hasWarmPendant = false
     } = {}) {
+        const profile = getEncounterRewardProfile(encounterType);
         return {
-            gold: 30 + (hasSilverPurse ? 10 : 0) + (hasFinisherCoin && enemyVulnerable ? 10 : 0),
+            gold: 30 + profile.goldBonus + (hasSilverPurse ? 10 : 0) + (hasFinisherCoin && enemyVulnerable ? 10 : 0),
             heal: hasWarmPendant ? 6 : 0
         };
     }
 
     function getRewardOverlayPresentation({
         availableRelicCount = 0,
+        encounterType = 'battle',
         relicChance = 0.2,
         rng = Math.random
     } = {}) {
-        const isRelicReward = Number(availableRelicCount || 0) > 0 && rng() < relicChance;
+        const profile = getEncounterRewardProfile(encounterType);
+        const finalRelicChance = Math.min(0.65, relicChance + profile.relicChanceBonus);
+        const isRelicReward = Number(availableRelicCount || 0) > 0 && rng() < finalRelicChance;
         return isRelicReward
             ? {
                 kind: 'relic',
-                title: '奇珍战利品',
-                desc: '战斗余烬里浮出三件奇珍，请选择一件收入囊中。'
+                title: encounterType === 'boss' ? '首领奇珍' : encounterType === 'elite' ? '精英奇珍' : '奇珍战利品',
+                desc: encounterType === 'battle' ? '战斗余烬里浮出三件奇珍，请选择一件收入囊中。' : '强敌遗留的战利品更丰厚，请选择一件收入囊中。'
             }
             : {
                 kind: 'card',
-                title: '卡牌战利品',
-                desc: '战斗余烬仍在发光...请选择一张卡牌加入牌组。'
+                title: encounterType === 'boss' ? '首领卡牌战利品' : encounterType === 'elite' ? '精英卡牌战利品' : '卡牌战利品',
+                desc: encounterType === 'battle' ? '战斗余烬仍在发光...请选择一张卡牌加入牌组。' : '强敌战利品会提供更多选择，并提高稀有牌出现概率。'
             };
     }
 
@@ -707,6 +739,7 @@
         deckHasTag,
         getBattleRewardSkipGold,
         getBattleWinRewards,
+        getEncounterRewardProfile,
         getBuildRewardCandidates,
         getBuildRewardBoostMultiplier,
         getBuildRewardWeight,

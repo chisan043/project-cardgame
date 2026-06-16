@@ -370,11 +370,12 @@ function allRewardCards(data, roleId) {
     return [...data.CHARACTER_CARD_POOLS[roleId], ...data.NEUTRAL_CARD_POOL];
 }
 
-function rewardRarity(rng, floor) {
-    const bonus = Math.min(0.22, floor * 0.016);
+function rewardRarity(rng, floor, encounterType = 'battle') {
+    const encounterBonus = encounterType === 'boss' ? 0.12 : encounterType === 'elite' ? 0.07 : 0;
+    const bonus = Math.min(0.26, floor * 0.016 + encounterBonus);
     const roll = rng();
     if (roll < 0.1 + bonus) return '史诗';
-    if (roll < 0.46 + bonus) return '稀有';
+    if (roll < 0.46 + bonus + encounterBonus * 0.5) return '稀有';
     return '普通';
 }
 
@@ -425,20 +426,38 @@ function generateBridgeChoice(data, rng, roleId, deck, used) {
     return candidates.length ? weightedPick(rng, candidates, () => 1) : null;
 }
 
-function generateCardChoices(data, rng, roleId, buildId, floor, profile, deck = [], buildPlan = null) {
+function generateCardChoices(data, rng, roleId, buildId, floor, profile, deck = [], buildPlan = null, encounterType = 'battle') {
     const plan = buildPlan || { draftStyle: 'focused', primaryBuildId: buildId, secondaryBuildId: '', buildIds: [buildId] };
-    const rarity = rewardRarity(rng, floor);
+    const rarity = rewardRarity(rng, floor, encounterType);
+    const choiceCount = encounterType === 'boss' || encounterType === 'elite' ? 5 : 3;
     const cards = allRewardCards(data, roleId);
     const picked = [];
     const used = new Set();
     const noise = profile === 'novice' ? 0.85 : 0.35;
+    if (encounterType === 'boss') {
+        const specialPool = data.SPECIAL_EPIC_POOLS[roleId] || [];
+        while (picked.length < Math.min(3, choiceCount) && picked.length < specialPool.length) {
+            const candidates = specialPool.filter(card => !used.has(cardId(card)));
+            const card = weightedPick(rng, candidates, candidate => {
+                const buildTags = cardBuildTags(data, roleId, candidate);
+                const affinity = buildTagAffinity(buildTags, plan);
+                if (affinity.primary) return plan.draftStyle === 'mixed' ? 8 : 11;
+                if (affinity.secondary) return 6;
+                return 2;
+            });
+            if (!card) break;
+            used.add(cardId(card));
+            picked.push(card);
+        }
+        if (picked.length) return picked;
+    }
     const bridgeCard = generateBridgeChoice(data, rng, roleId, deck, used);
     if (bridgeCard) {
         used.add(cardId(bridgeCard));
         picked.push(bridgeCard);
     }
-    for (let index = 0; index < 3; index++) {
-        if (picked.length >= 3) break;
+    for (let index = 0; index < choiceCount; index++) {
+        if (picked.length >= choiceCount) break;
         let candidates = cards.filter(card => !used.has(cardId(card)) && card.rarity === rarity);
         if (!candidates.length) candidates = cards.filter(card => !used.has(cardId(card)));
         const card = weightedPick(rng, candidates, candidate => {
@@ -501,11 +520,20 @@ function relicPool(data, roleId, owned) {
         && (data.COMMON_RELIC_IDS.has(relic.id) || roleRelics.has(relic.id)));
 }
 
-function awardRelic(data, rng, roleId, buildId, ownedRelics, floor, buildPlan = null) {
+function awardRelic(data, rng, roleId, buildId, ownedRelics, floor, buildPlan = null, coreOnly = false) {
     const plan = buildPlan || { draftStyle: 'focused', primaryBuildId: buildId, secondaryBuildId: '', buildIds: [buildId] };
     const matureRelics = new Set(MATURE_LOADOUTS[plan.primaryBuildId]?.relics || []);
     const secondaryRelics = new Set(plan.secondaryBuildId ? MATURE_LOADOUTS[plan.secondaryBuildId]?.relics || [] : []);
-    const candidates = relicPool(data, roleId, ownedRelics);
+    let candidates = relicPool(data, roleId, ownedRelics);
+    if (coreOnly) {
+        const coreCandidates = candidates.filter(candidate => (
+            matureRelics.has(candidate.id)
+            || secondaryRelics.has(candidate.id)
+            || data.RELIC_BUILD_TAGS_BY_ID[candidate.id] === plan.primaryBuildId
+            || data.RELIC_BUILD_TAGS_BY_ID[candidate.id] === plan.secondaryBuildId
+        ));
+        if (coreCandidates.length) candidates = coreCandidates;
+    }
     if (!candidates.length) return null;
     const relic = weightedPick(rng, candidates, candidate => {
         let weight = 1;
@@ -729,8 +757,8 @@ function classifyFailure(data, context) {
     };
 }
 
-function applyCardReward(data, stats, rng, roleId, buildId, deck, floor, hpRatio, profile, runCardsPicked, buildPlan = null) {
-    const choices = generateCardChoices(data, rng, roleId, buildId, floor, profile, deck, buildPlan);
+function applyCardReward(data, stats, rng, roleId, buildId, deck, floor, hpRatio, profile, runCardsPicked, buildPlan = null, encounterType = 'battle') {
+    const choices = generateCardChoices(data, rng, roleId, buildId, floor, profile, deck, buildPlan, encounterType);
     for (const card of choices) getCardStats(stats, data, roleId, card).appearances++;
     const selected = pickCardReward(data, rng, roleId, buildId, choices, deck, hpRatio, profile, buildPlan);
     if (!selected) return null;
@@ -876,13 +904,13 @@ function simulateFullRun(data, stats, runConfig) {
                     relicStats.obtained++;
                     relicStats.floorTotal += floor;
                 }
-                gold += 35;
+                gold += 65;
             } else if (nodeType === 'boss') {
                 chapterStats.bossWins++;
                 if (floor === 7) act1BossPassed = true;
                 hp = Math.min(character.maxHp, hp + Math.ceil(character.maxHp * 0.45));
-                gold += 60;
-                const relic = awardRelic(data, rng, roleId, buildId, ownedRelics, floor, buildPlan);
+                gold += 110;
+                const relic = awardRelic(data, rng, roleId, buildId, ownedRelics, floor, buildPlan, true);
                 if (relic) {
                     acquiredRelics.push({ id: relic, floor });
                     runRelicsPicked.add(relic);
@@ -895,7 +923,7 @@ function simulateFullRun(data, stats, runConfig) {
             } else {
                 gold += 18;
             }
-            if (floor < 20) applyCardReward(data, stats, rng, roleId, buildId, deck, floor, hp / character.maxHp, profile, runCardsPicked, buildPlan);
+            if (floor < 20) applyCardReward(data, stats, rng, roleId, buildId, deck, floor, hp / character.maxHp, profile, runCardsPicked, buildPlan, nodeType);
         } else if (nodeType === 'shop') {
             shops++;
             totalMinutes += 2.4;

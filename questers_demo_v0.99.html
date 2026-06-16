@@ -2315,14 +2315,14 @@
 <script src="src/data/relics.js?v=20260616-bloodoath-magic-sword"></script>
 <script src="src/data/card-tags.js?v=20260616-mage-heal-value"></script>
 <script src="src/data/cards.js?v=20260616-reward-baseline"></script>
-<script src="src/data/enemies.js?v=20260605-enemy-ai"></script>
+<script src="src/data/enemies.js?v=20260616-enemy-escalation"></script>
 <script src="src/data/characters.js?v=20260616-mage-starter-hex"></script>
 <script src="src/runtime/state-rules.js?v=20260616-runtime-state-save-hydration"></script>
 <script src="src/runtime/card-rules.js?v=20260616-runtime-auto-select-rules"></script>
-<script src="src/runtime/battle-rules.js?v=20260615-runtime-battle-rules"></script>
+<script src="src/runtime/battle-rules.js?v=20260616-enemy-escalation"></script>
 <script src="src/runtime/visual-rules.js?v=20260616-noframe-status-icons"></script>
 <script src="src/runtime/map-rules.js?v=20260615-runtime-map-node-view-model"></script>
-<script src="src/runtime/reward-rules.js?v=20260616-runtime-role-relic-rules"></script>
+<script src="src/runtime/reward-rules.js?v=20260616-enemy-reward-scaling"></script>
 <script>
     function createEmbers() {
         const layer = document.getElementById('particles-layer');
@@ -2643,8 +2643,8 @@
         return QuestersCardRules.ensureBattleCardInstanceId(card);
     }
 
-    function rollRewardRarity() {
-        return QuestersRewardRules.rollRewardRarity({ floor: state.floor });
+    function rollRewardRarity(options = {}) {
+        return QuestersRewardRules.rollRewardRarity({ ...options, floor: state.floor, encounterType: state.enemy?.encounterType || state.enemy?.type || 'battle' });
     }
 
     function getSpecialEpicPool(characterId = state.player.characterId) {
@@ -2677,6 +2677,29 @@
             cloneSpecial: cloneSpecialEpic,
             rollRarity: rollRewardRarity
         });
+    }
+
+    function getCoreCardChoices(count = 3) {
+        const characterId = state.player?.characterId || 'hero_warrior';
+        const seen = new Set();
+        const choices = [];
+        getWeightedSpecialEpicPool(characterId).forEach(card => {
+            const key = card.specialId || card.poolId || card.id || card.name;
+            if (seen.has(key) || choices.length >= count) return;
+            seen.add(key);
+            choices.push(cloneSpecialEpic(card));
+        });
+        return choices;
+    }
+
+    function getCoreRelicChoices(availableRelics, count = 3) {
+        const primaryBuildTag = getPrimaryBuildTag();
+        const preferred = getRolePreferredRelics(availableRelics);
+        const coreRelics = preferred.filter(relic => {
+            const tags = getRelicBuildTags(relic);
+            return tags.includes(primaryBuildTag) || getRelicBuildRewardWeight(relic, primaryBuildTag) > 1;
+        });
+        return (coreRelics.length ? coreRelics : preferred).slice(0, count);
     }
 
     function escapeAttr(value) {
@@ -5263,6 +5286,7 @@
         
         state.enemy = JSON.parse(JSON.stringify(t));
         state.enemy.currentHp = scaledHp; state.enemy.maxHp = scaledHp; 
+        state.enemy.encounterType = type;
         state.enemy.armor = 0; state.enemy.poison = 0; state.enemy.bleed = 0; state.enemy.burn = 0; state.enemy.stun = 0; state.enemy.curse = 0; state.enemy.vuln = 0; state.enemy.weak = 0; state.enemy.str = 0;
         state.enemy.charged = false; state.enemy.minion = null; state.enemy.isPhase2 = false;
         state.enemy.turnCount = 0; state.enemy.moveHistory = [];
@@ -5271,7 +5295,7 @@
         resetBattleActionLog();
         addBattleActionLog('system', '遭遇', state.enemy.name);
         
-        state.enemy.moves = state.enemy.moves.map(m => { let mScale = (m.type.includes('attack') || m.type === 'defend' || m.type === 'summon') ? scale : 1; return { ...m, val: Math.floor(m.val * mScale) }; });
+        state.enemy.moves = state.enemy.moves.map(m => { let mScale = (m.type.includes('attack') || m.type === 'defend' || m.type === 'summon' || m.type === 'heal') ? scale : 1; return { ...m, val: Math.floor(m.val * mScale) }; });
 
         QuestersBattleRules.resetBattleStartState(state, {
             hasBattleWhetstone: hasRelic('r_battle_whetstone')
@@ -5362,19 +5386,21 @@
             if(state.enemy.charged) vText *= 2;
             
             iIcon = "🗡️"; 
-            if (move.times && move.times > 1) { iDesc = `造成 ${vText} 伤害，连续 ${move.times} 次！`; vText = `${vText} x ${move.times}`; }
-            else { iDesc = `造成 ${vText} 伤害。`; }
+            const damageText = move.pierce ? '穿甲伤害' : '伤害';
+            if (move.times && move.times > 1) { iDesc = `造成 ${vText} ${damageText}，连续 ${move.times} 次！`; vText = `${vText} x ${move.times}`; }
+            else { iDesc = `造成 ${vText} ${damageText}。`; }
             if (move.type === 'attack_lifesteal') iDesc += " (并将附带50%吸血效果)";
         } else if (move.type === 'defend') { iIcon = "🛡️"; iDesc = `获得 ${move.val} 护甲。`; 
         } else if (move.type === 'debuff') { let dName = {'poison':'剧毒', 'bleed':'流血', 'burn':'燃烧', 'stun':'眩晕', 'curse':'诅咒', 'vuln':'易伤', 'weak':'虚弱'}[move.subType]; iIcon = "☠️"; iDesc = `给予你 ${move.val} 层${dName}。`; 
         } else if (move.type === 'buff') { iIcon = "💪"; iDesc = `增加自身 ${move.val} 力量。`; 
         } else if (move.type === 'buff_thorns') { iIcon = "🌵"; iDesc = `获得 ${move.val} 层荆棘。`; 
+        } else if (move.type === 'heal') { iIcon = "✚"; iDesc = `回复 ${move.val} 点生命。`;
         } else if (move.type === 'charge') { iIcon = "🔥"; iDesc = `进入蓄力状态，下一次攻击伤害翻倍！`; vText = "";
         } else if (move.type === 'seal') { iIcon = "🔒"; iDesc = `封印你手牌中的 ${move.val} 张卡牌。`; vText = "";
         } else if (move.type === 'junk') { iIcon = "👁️"; iDesc = `向你手牌塞入 ${move.val} 张诅咒牌。`; vText = "";
         } else if (move.type === 'summon') { iIcon = "◐"; iDesc = `召唤一个拥有 ${move.val} 血量的分身为你挡刀。`; vText = ""; }
 
-        const intentLabel = move.type.includes('attack') || move.type === 'defend' || move.type === 'summon' || move.type === 'buff' || move.type === 'buff_thorns' ? `${move.name} (${vText})` : move.name;
+        const intentLabel = move.type.includes('attack') || move.type === 'defend' || move.type === 'summon' || move.type === 'buff' || move.type === 'buff_thorns' || move.type === 'heal' ? `${move.name} (${vText})` : move.name;
         state.enemy.intentIcon = iIcon;
         state.enemy.intentText = intentLabel;
         state.enemy.intentTooltip = iDesc;
@@ -6693,7 +6719,8 @@
                     if(checkEnemyDeath()) { winBattle(); return; }
                 }
 
-                if(state.armor > 0 && dmg > 0) { let b = Math.min(state.armor, dmg); state.armor -= b; dmg -= b; if (b > 0) triggerShieldHitVFX(b); }
+                if(!move.pierce && state.armor > 0 && dmg > 0) { let b = Math.min(state.armor, dmg); state.armor -= b; dmg -= b; if (b > 0) triggerShieldHitVFX(b); }
+                else if (move.pierce && state.armor > 0 && dmg > 0) { showFloatText("穿甲", "var(--gold)", getCenter('ui-hp')); }
                 let actualDmg = dmg;
                 if(actualDmg > 0) actualDmg = preventFirstProtectedDamage(actualDmg);
                 if(actualDmg > 0) {
@@ -6709,7 +6736,7 @@
                 }
                 
                 if (move.type === 'attack_lifesteal') {
-                    let heal = Math.floor(actualDmg / 2);
+                    let heal = Math.floor(actualDmg * (Number.isFinite(Number(move.lifestealRatio)) ? Number(move.lifestealRatio) : 0.5));
                     if (heal > 0 && state.enemy.curse > 0) { showFloatText("诅咒阻断吸血", "var(--purple)", getCenter('enemy-avatar')); }
                     else if (heal > 0) { state.enemy.currentHp = Math.min(state.enemy.maxHp, state.enemy.currentHp + heal); showFloatText(`吸血 +${heal}`, "var(--nature)", getCenter('enemy-avatar')); }
                 }
@@ -6736,6 +6763,11 @@
             } 
             else if (move.type === 'buff') { state.enemy.str += move.val; showFloatText("力量提升", "var(--fire)", getCenter('enemy-avatar')); }
             else if (move.type === 'buff_thorns') { state.enemy.thorns = (state.enemy.thorns || 0) + move.val; showFloatText("骨刺", "var(--nature)", getCenter('enemy-avatar')); }
+            else if (move.type === 'heal') {
+                const heal = Math.max(0, Math.min(move.val, state.enemy.maxHp - state.enemy.currentHp));
+                state.enemy.currentHp += heal;
+                showFloatText(`回复 +${heal}`, "var(--nature)", getCenter('enemy-avatar'));
+            }
             else if (move.type === 'charge') { state.enemy.charged = true; showFloatText("蓄力状态", "var(--crimson)", getCenter('enemy-avatar')); }
             else if (move.type === 'seal') { 
                 let unsealed = state.battleDeck; 
@@ -6841,6 +6873,7 @@
 
     function winBattle() { 
         const rewards = QuestersRewardRules.getBattleWinRewards({
+            encounterType: state.enemy?.encounterType || state.enemy?.type || 'battle',
             enemyVulnerable: state.enemy.vuln > 0,
             hasSilverPurse: hasRelic('r_silver_purse'),
             hasFinisherCoin: hasRelic('r_finisher_coin'),
@@ -6856,6 +6889,7 @@
     function getBattleRewardSkipGold() {
         return QuestersRewardRules.getBattleRewardSkipGold({
             floor: state.floor,
+            encounterType: state.enemy?.encounterType || state.enemy?.type || 'battle',
             hasRewardCrown: hasRelic('r_reward_crown'),
             hasCampfirePouch: hasRelic('r_campfire_pouch')
         });
@@ -6964,8 +6998,36 @@
     function showRewardOverlay() {
         const container = document.getElementById('reward-items'); container.innerHTML = '';
         const availableRelics = getRolePreferredRelics(RELIC_POOL.filter(r => !hasRelic(r.id) && !STARTING_RELIC_IDS.has(r.id)));
+        const isBossReward = (state.enemy?.encounterType || state.enemy?.type) === 'boss';
+        if (isBossReward) {
+            const coreRelics = getCoreRelicChoices(availableRelics);
+            const coreCards = getCoreCardChoices(3);
+            const showRelics = coreRelics.length > 0 && (coreCards.length === 0 || Math.random() < 0.5);
+            document.getElementById('reward-title').innerText = showRelics ? '首领核心遗物' : '首领史诗核心';
+            document.getElementById('reward-desc').innerText = showRelics ? '首领遗留的核心遗物正在共鸣，请选择一件收入囊中。' : '首领战利品必定指向流派核心，请选择一张史诗核心牌。';
+            document.getElementById('reward-skip-btn').innerText = `放弃核心，换取金币 +${getBattleRewardSkipGold()}`;
+            if (showRelics) {
+                coreRelics.forEach(r => {
+                    const el = document.createElement('div');
+                    el.innerHTML = renderRelicCard(r, { iconSize: 45, iconClass: 'relic-card-icon' });
+                    el.onclick = () => { state.relics.push(r); closeOverlay('overlay-reward'); updateTopBar(); advanceMap(); };
+                    container.appendChild(el);
+                });
+            } else {
+                const choices = coreCards.length ? coreCards : generateRewardChoices(3);
+                choices.forEach(card => {
+                    const el = document.createElement('div');
+                    el.innerHTML = generateCardHTML(card, true);
+                    el.onclick = () => { state.deck.push(card); closeOverlay('overlay-reward'); advanceMap(); };
+                    container.appendChild(el);
+                });
+            }
+            showOverlay('overlay-reward');
+            return;
+        }
         const rewardPresentation = QuestersRewardRules.getRewardOverlayPresentation({
-            availableRelicCount: availableRelics.length
+            availableRelicCount: availableRelics.length,
+            encounterType: state.enemy?.encounterType || state.enemy?.type || 'battle'
         });
         document.getElementById('reward-title').innerText = rewardPresentation.title;
         document.getElementById('reward-desc').innerText = rewardPresentation.desc;
@@ -6978,7 +7040,8 @@
                 container.appendChild(el);
             });
         } else {
-            generateRewardChoices(3).forEach(card => {
+            const rewardProfile = QuestersRewardRules.getEncounterRewardProfile(state.enemy?.encounterType || state.enemy?.type || 'battle');
+            generateRewardChoices(rewardProfile.cardChoices || 3).forEach(card => {
                 const el = document.createElement('div');
                 el.innerHTML = generateCardHTML(card, true);
                 el.onclick = () => { state.deck.push(card); closeOverlay('overlay-reward'); advanceMap(); };
