@@ -115,7 +115,7 @@ const RELIC_POOL = [
     { id: 'r_pierce_amulet', name: '裂甲剑坠', icon: '⛓️', desc: '战士/弓手：[穿甲]伤害额外提升 25%，适合处刑破甲或放逐穿枝路线。', price: 110 },
     { id: 'r_combo_ring', name: '连弦指环', icon: '🤜', desc: '弓手：[连击]增幅提高至 70%；[追击]额外多触发 1 次。', price: 130 },
     { id: 'r_heavy_badge', name: '重锋徽记', icon: '⚔️', desc: '战士：[重击]倍数提升至 2.5 倍，是易伤、穿甲和处刑收束牌的核心爆点。', price: 150 },
-    { id: 'r_fast_foot', name: '先手靴扣', icon: '🥾', desc: '弓手：每回合第一张攻击牌伤害提高 50%，适合用[蓄力]与[闪避]打开安全的起手窗口。', price: 160 },
+    { id: 'r_fast_foot', name: '先手靴扣', icon: '🥾', desc: '弓手：每回合第一张攻击牌伤害提高 50%，适合用[风势]与[闪避]打开安全的起手窗口。', price: 160 },
     { id: 'r_soul_lantern', name: '林魂灯笼', icon: '🏮', desc: '弓手：[回收]到手牌时可选数量增加 1，带回的牌获得[保留]。', price: 140 },
     { id: 'r_cycle_compass', name: '风轮罗盘', icon: '🧭', desc: '弓手：通过[回收]洗入牌库的牌会立刻免费触发一次效果。', price: 170 },
     { id: 'r_echo_mirror_relic', name: '秘仪魔镜', icon: '🪞', desc: '法师：[回响]额外触发 1 次；[复刻]可复制双倍效果。', price: 190 },

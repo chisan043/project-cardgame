@@ -39,7 +39,9 @@ const TAGS = {
     '流动伤害': '放逐游侠专属伤害：放逐流派牌进入墓地造成 3 点穿甲伤害，进入放逐区造成 5 点，每回收 1 张放逐牌造成 7 点，销毁造成 4 点。'
 };
 
-const TAG_DISPLAY_NAMES = {};
+const TAG_DISPLAY_NAMES = {
+    '蓄力': '风势'
+};
 
 const CARD_RECYCLE_MODES = {
     neutral_return_scroll: ['discardToHand'],

@@ -299,7 +299,7 @@ const CHARACTER_CARD_POOLS = {
         { poolId: 'archer_ambush', name: '森息伏击', type: '能力', cost: 1, icon: '🍃', val: 4, tags: ['蓄力', '销毁'], rarity: '普通' },
         { poolId: 'archer_hawkeye', name: '鹰眼贯枝', type: '攻击', cost: 2, icon: '🎯', val: 12, tags: ['蓄力', '穿甲'], rarity: '稀有' },
         { poolId: 'archer_rain', name: '回环箭雨', type: '攻击', cost: 2, icon: '🌧️', val: 11, tags: ['追击'], rarity: '史诗' },
-        { poolId: 'archer_hidden_arrow', name: '回风藏箭', type: '能力', cost: 1, icon: '🪶', val: 6, tags: ['保留', '蓄力'], buildTags: ['gale', 'venom', 'exile'], rarity: '稀有', art: 'assets/cards/art/archer/archer_shift_art_v1.webp', desc: '获得风势，附带[保留]与[蓄力]。' },
+        { poolId: 'archer_hidden_arrow', name: '回风藏箭', type: '能力', cost: 1, icon: '🪶', val: 6, tags: ['保留', '蓄力'], buildTags: ['gale', 'venom', 'exile'], rarity: '稀有', art: 'assets/cards/art/archer/archer_shift_art_v1.webp', desc: '获得风势，附带[保留]。' },
         { poolId: 'archer_exile_shot', name: '逐影离弦', type: '攻击', cost: 1, icon: '🏹', val: 9, tags: ['放逐'], buildTags: ['exile'], rarity: '稀有', art: 'assets/cards/art/archer/archer_shadow_art_v1.webp', desc: '造成 9 点伤害并[放逐]；进入放逐区时造成 5 点[流动伤害]。' },
         { poolId: 'archer_cycle_branch', name: '轮枝归矢', type: '攻击', cost: 2, icon: '🧭', val: 11, tags: ['回收'], buildTags: ['exile'], rarity: '稀有', art: 'assets/cards/art/archer/archer_rain_art_v1.webp', desc: '造成 11 点伤害，并[回收] 1 张放逐区牌洗入牌库；回收放逐牌时造成 7 点[流动伤害]。' },
         { poolId: 'archer_pick_feather', name: '拾羽连步', type: '能力', cost: 1, icon: '🍃', val: 0, tags: ['回收'], buildTags: ['exile'], rarity: '稀有', art: 'assets/cards/art/archer/archer_step_art_v1.webp', desc: '[回收] 1 张墓地牌；回收放逐牌时造成 7 点[流动伤害]。' },
