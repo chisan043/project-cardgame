@@ -485,6 +485,19 @@ function estimateCardScore(data, roleId, buildId, card, deck, hpRatio, profile, 
     const buildTags = cardBuildTags(data, roleId, card);
     const tags = card.tags || [];
     let score = data.getScaledCardValue(card) / Math.max(1, Number(card.cost) || 1);
+    if (card.isSpecial) {
+        const specialId = card.specialId || card.id;
+        const specialPickBonus = {
+            s_energy: 24,
+            m_blood_moon_rite: 14,
+            w_exec_silence: 34,
+            w_exec_rehearse: 12,
+            m_mirror_hallway: 12,
+            s_shield: 14,
+            w_thorn_judgement: 12
+        };
+        score += specialPickBonus[specialId] || 8;
+    }
     const affinity = buildTagAffinity(buildTags, plan);
     if (affinity.primary) score += plan.draftStyle === 'mixed' ? 13 : 18;
     else if (affinity.secondary) score += 12;

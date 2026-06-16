@@ -2893,7 +2893,47 @@
         return QuestersVisualRules.getDisplayRelicDesc(relic);
     }
 
-    const GENERATED_SPECIAL_DESC_IDS = new Set(['w_exec_claim']);
+    const GENERATED_SPECIAL_DESC_IDS = new Set([
+        'w_oath_clock',
+        'w_exec_silence',
+        'w_exec_line',
+        'w_exec_flash',
+        'w_exec_claim',
+        'w_exec_rehearse',
+        'w_exec_finisher',
+        'w_blood_crucible',
+        'w_blood_rain',
+        'w_blood_siphon',
+        'w_blood_drum',
+        'w_blood_chain',
+        'w_blood_oathmark',
+        'w_blood_lastcup',
+        'm_chant_overflow',
+        'm_chant_bolt',
+        'm_chant_ward',
+        'm_chant_lockstar',
+        'm_mirror_twinseal',
+        'm_mirror_rewind',
+        'm_mirror_footnote',
+        'm_mirror_glassbolt',
+        'm_calamity_plague_star',
+        'm_calamity_black_snow',
+        'm_calamity_silence',
+        'm_calamity_blacklist',
+        'a_gale_updraft',
+        'a_gale_splinter',
+        'a_gale_crosswind',
+        'a_gale_featherbank',
+        'a_venom_bloom',
+        'a_venom_burst',
+        'a_venom_cage',
+        'a_venom_redfog',
+        'a_exile_map',
+        'a_exile_recall',
+        'a_exile_knives',
+        'a_exile_piercer',
+        'a_exile_archive'
+    ]);
 
     function parseDesc(card) {
         const shouldUseDynamicBloodOathText = card.isSpecial && (card.bloodOathCost || card.bloodOathMissingRatio);
@@ -5971,7 +6011,7 @@
                 state.battleDeck = state.battleDeck.concat(state.exhaustPile, [card]); state.exhaustPile = []; state.battleDeck.sort(()=>0.5-Math.random());
             }
             else if(card.specialId === 's_poison') { let layers = state.enemy.poison + state.enemy.bleed; let dmg = 20 + layers * 2; applyDamageToEnemy(dmg); state.p_reduce_dmg += Math.min(12, layers); showFloatText(card.name, "var(--nature)", getCenter('enemy-avatar')); }
-            else if(card.specialId === 's_shield') { triggerVFX('p-atk'); applySpecialCardDamage(card, state.armor + state.p_battle_dmg); state.p_counter = 1; showFloatText("誓盾出锋 / 进入反击", "var(--gold)", getCenter('ui-hp')); }
+            else if(card.specialId === 's_shield') { triggerVFX('p-atk'); applySpecialCardDamage(card, 12 + state.armor + state.p_battle_dmg); state.p_counter = 1; showFloatText("誓盾出锋 / 进入反击", "var(--gold)", getCenter('ui-hp')); }
             else if(card.specialId === 's_magic') {
                 const lastWasReplica = (state.lastPlayedCard?.tags || []).includes('复刻');
                 if (state.lastPlayedCard && !state.lastPlayedCard.isJunk && !lastWasReplica) {
@@ -5990,7 +6030,7 @@
             }
             else if(card.specialId === 's_pierce') { triggerVFX('p-atk'); const chantSpent = state.p_chant; applySpecialCardDamage(card, 32 + state.p_battle_dmg + chantSpent * 14, true); state.p_chant = hasRelic('r_burst_lens') ? Math.ceil(chantSpent / 2) : 0; }
             else if(card.specialId === 's_thorns') { triggerVFX('p-def'); state.armor += 18; state.player.thorns += hasRelic('r_thorn_shield_new') ? 12 : 8; showFloatText(card.name, "var(--gold)", getCenter('ui-hp')); updateTopBar(); }
-            else if(card.specialId === 's_energy') { const hadWind = state.p_aim > 0; state.p_aim = Math.min(6, state.p_aim + 3 + (hasRelic('r_wind_quiver') ? 1 : 0)); if (hadWind) state.mp += 1; await drawCards(2); showFloatText(hadWind ? "风势 +3 / 能量 +1" : "风势 +3", "var(--nature)", getCenter('ui-mp')); }
+            else if(card.specialId === 's_energy') { const hadWind = state.p_aim > 0; const windGain = 4 + (hasRelic('r_wind_quiver') ? 1 : 0); state.p_aim = Math.min(6, state.p_aim + windGain); if (hadWind) state.mp += 1; await drawCards(2); showFloatText(hadWind ? `风势 +${windGain} / 能量 +1` : `风势 +${windGain}`, "var(--nature)", getCenter('ui-mp')); }
             
             // --- 词条共鸣 ---
             else if (card.specialId === 'a_syn_sword') {
@@ -6059,9 +6099,9 @@
             }
             else if (card.specialId === 'w_thorn_judgement') {
                 triggerVFX('p-atk');
-                let dmg = 8 + state.p_battle_dmg + (state.player.thorns || 0) * 3;
+                let dmg = 10 + state.p_battle_dmg + (state.player.thorns || 0) * 4;
                 applySpecialCardDamage(card, dmg);
-                let tVal = hasRelic('r_thorn_shield_new') ? 9 : 6;
+                let tVal = hasRelic('r_thorn_shield_new') ? 12 : 8;
                 state.player.thorns += tVal;
                 showFloatText(`荆棘 +${tVal}`, "var(--nature)", getCenter('ui-hp'));
             }
@@ -6120,9 +6160,9 @@
                 }
             }
             else if (card.specialId === 'm_mirror_hallway') {
-                state.p_next_dmg += 8;
+                state.p_next_dmg += 10;
                 if (!isEcho) await drawCards(1);
-                showFloatText(isEcho ? "折廊回声 / 附魔 +8" : "折廊导流 / 抽牌 +1 / 附魔 +8", "var(--purple)", getCenter('ui-hp'));
+                showFloatText(isEcho ? "折廊回声 / 附魔 +10" : "折廊导流 / 抽牌 +1 / 附魔 +10", "var(--purple)", getCenter('ui-hp'));
             }
             else if (card.specialId === 'm_ember_orbit') {
                 const hadDebuff = getEnemyDebuffTypeCount() > 0;
