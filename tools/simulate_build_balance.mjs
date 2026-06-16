@@ -222,7 +222,12 @@ function upgradeRandomCard(rng, deck) {
     const card = pick(rng, candidates);
     card.up = true;
     card.rarity = '史诗';
-    if ((Number(card.val) || 0) > 0) card.val *= 2;
+    if (isMagicSword(card)) {
+        const oldGrowth = Math.max(1, Math.floor(Number(card.magicSwordGrowth) || 1));
+        card.magicSwordGrowth = Math.max(2, oldGrowth + 1);
+    } else if ((Number(card.val) || 0) > 0) {
+        card.val *= 2;
+    }
 }
 
 function encounterPool(data, checkpoint) {

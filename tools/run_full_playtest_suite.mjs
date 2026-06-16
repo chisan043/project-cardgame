@@ -620,6 +620,10 @@ function dataValue(card) {
     return Math.max(0, Number(card.val) || 0) / Math.max(1, Number(card.cost) || 1);
 }
 
+function isMagicSwordCard(card) {
+    return card && (card.poolId === 'warrior_magic_sword' || card.name === '魔剑');
+}
+
 function upgradeBestCard(deck, rng) {
     const candidates = deck.filter(card => !card.up && !card.isSpecial);
     if (!candidates.length) return null;
@@ -635,7 +639,12 @@ function upgradeBestCard(deck, rng) {
         .sort((left, right) => right.score - left.score)[0].card;
     target.up = true;
     target.rarity = '史诗';
-    if ((Number(target.val) || 0) > 0) target.val *= 2;
+    if (isMagicSwordCard(target)) {
+        const oldGrowth = Math.max(1, Math.floor(Number(target.magicSwordGrowth) || 1));
+        target.magicSwordGrowth = Math.max(2, oldGrowth + 1);
+    } else if ((Number(target.val) || 0) > 0) {
+        target.val *= 2;
+    }
     return target;
 }
 

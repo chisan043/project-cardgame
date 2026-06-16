@@ -150,11 +150,25 @@
         }
     }
 
+    function isMagicSwordCard(card) {
+        return card && (card.poolId === 'warrior_magic_sword' || card.name === '魔剑');
+    }
+
+    function upgradeMagicSword(card) {
+        const oldGrowth = Math.max(1, Math.floor(Number(card.magicSwordGrowth) || 1));
+        card.magicSwordGrowth = Math.max(2, oldGrowth + 1);
+        if (card.desc) {
+            card.desc = card.desc.replace(`永久 +${oldGrowth} 伤害`, `永久 +${card.magicSwordGrowth} 伤害`);
+        }
+    }
+
     function upgradeCard(card) {
         if (card.rarity === '传说' || card.up) return false;
         const oldVal = Number(card.val) || 0;
         const oldCost = Number(card.cost) || 0;
-        if (oldVal > 0) {
+        if (isMagicSwordCard(card)) {
+            upgradeMagicSword(card);
+        } else if (oldVal > 0) {
             card.val = oldVal * 2;
             if (card.tags && card.tags.includes('放逐') && card.type !== '能力') card.val += 2;
         } else if (oldCost > 0 && card.type !== '能力') {
@@ -162,7 +176,7 @@
         } else if (oldVal <= 0 && oldCost <= 0) {
             card.val = 1;
         }
-        syncUpgradedCardDescription(card, oldVal, Number(card.val) || 0);
+        if (!isMagicSwordCard(card)) syncUpgradedCardDescription(card, oldVal, Number(card.val) || 0);
         card.rarity = '史诗';
         card.up = true;
         return true;

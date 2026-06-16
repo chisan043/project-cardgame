@@ -97,13 +97,22 @@ function shuffle(rng, items) {
     return result;
 }
 
+function isMagicSwordCard(card) {
+    return card && (card.poolId === 'warrior_magic_sword' || card.name === '魔剑');
+}
+
 function upgradeRandomCard(rng, deck) {
     const candidates = deck.filter(card => !card.up && !card.isSpecial);
     if (!candidates.length) return;
     const card = candidates[Math.floor(rng() * candidates.length)];
     card.up = true;
     card.rarity = '史诗';
-    if ((Number(card.val) || 0) > 0) card.val *= 2;
+    if (isMagicSwordCard(card)) {
+        const oldGrowth = Math.max(1, Math.floor(Number(card.magicSwordGrowth) || 1));
+        card.magicSwordGrowth = Math.max(2, oldGrowth + 1);
+    } else if ((Number(card.val) || 0) > 0) {
+        card.val *= 2;
+    }
 }
 
 function makeMixedDeck(data, rng, roleId, buildId, checkpoint, loadout) {
