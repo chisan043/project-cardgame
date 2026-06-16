@@ -598,7 +598,7 @@ const STARTER_DECKS = {
         cards: [
             { poolId: 'starter_warrior_strike', name: '铁誓斩', type: '攻击', cost: 1, icon: '⚔️', val: 8, tags: [], rarity: '普通', copies: 3, frameTheme: 'warrior', desc: '造成 8 点伤害。' },
             { poolId: 'starter_warrior_guard', name: '誓盾守', type: '防御', cost: 2, icon: '🛡️', val: 10, tags: [], rarity: '普通', copies: 4, frameTheme: 'warrior', desc: '获得 10 点护盾。' },
-            { poolId: 'starter_warrior_oath', name: '誓光斩', type: '攻击', cost: 2, icon: '✨', val: 8, tags: ['圣剑'], buildTags: ['oathblade'], rarity: '普通', copies: 1, frameTheme: 'warrior', desc: '造成 8 点伤害；[圣剑]会追加当前护盾的一部分伤害。' },
+            { poolId: 'starter_warrior_oath', name: '誓光斩', type: '攻击', cost: 2, icon: '✨', val: 8, tags: ['圣剑'], buildTags: ['oathblade'], rarity: '普通', copies: 1, frameTheme: 'warrior', desc: '造成 8 点伤害；[圣剑]追加当前护盾 40% 的伤害。' },
             { poolId: 'warrior_magic_sword', name: '魔剑', type: '攻击', cost: 1, icon: '🗡️', val: 3, tags: [], magicSwordGrowth: 1, buildTags: ['bloodoath'], rarity: '稀有', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_magic_sword_art_v1.png', desc: '造成 3 点伤害；自身实际失去生命或本牌击杀敌人时，永久 +1 伤害。' },
             { poolId: 'starter_warrior_flaw', name: '裂隙刻印', type: '能力', cost: 0, icon: '🎯', val: 0, tags: ['易伤', '眩晕'], buildTags: ['execution'], directEffects: { draw: true }, rarity: '普通', frameTheme: 'warrior', desc: '施加[易伤]与[眩晕]并抽 1 张牌。' }
         ]
@@ -609,7 +609,7 @@ const STARTER_DECKS = {
             { poolId: 'starter_mage_bolt', name: '星尘法弹', type: '攻击', cost: 1, icon: '🪄', val: 10, tags: [], rarity: '普通', copies: 3, frameTheme: 'mage', desc: '造成 10 点伤害。' },
             { poolId: 'starter_mage_heal', name: '月泉愈流', type: '能力', cost: 2, icon: '✚', val: 10, healValue: 10, tags: ['治愈'], buildNeutral: true, rarity: '普通', copies: 2, frameTheme: 'mage', desc: '回复 10 点生命。' },
             { poolId: 'starter_mage_omen', name: '秘仪预兆', type: '能力', cost: 2, icon: '🔮', val: 0, tags: ['咏唱'], directEffects: { draw: true }, buildTags: ['chant'], rarity: '普通', copies: 2, frameTheme: 'mage', desc: '积累[咏唱]、获得职业护盾并抽 1 张牌。' },
-            { poolId: 'starter_mage_release', name: '星火破封', type: '攻击', cost: 2, icon: '✨', val: 13, tags: ['爆发'], buildNeutral: true, rarity: '普通', copies: 2, frameTheme: 'mage', desc: '造成 13 点伤害；[爆发]会消耗全部咏唱追加伤害。' },
+            { poolId: 'starter_mage_release', name: '星火破封', type: '攻击', cost: 2, icon: '✨', val: 13, tags: ['爆发'], buildNeutral: true, rarity: '普通', copies: 2, frameTheme: 'mage', desc: '造成 13 点伤害；[爆发]消耗全部咏唱，每层追加 10 点伤害；无咏唱时追加 5 点。' },
             { poolId: 'starter_mage_curse', name: '蚀星雾', type: '能力', cost: 1, icon: '☠️', val: 0, tags: ['诅咒'], buildTags: ['calamity'], rarity: '普通', copies: 1, frameTheme: 'mage', desc: '施加[诅咒]。' }
         ]
     },

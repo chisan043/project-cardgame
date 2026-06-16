@@ -2319,9 +2319,9 @@
 
 <script src="hud-runtime.js?v=20260518-forced-default-hud1"></script>
 <script src="hud-layout-data.js?v=20260616-intent-tray-reuse"></script>
-<script src="src/data/relics.js?v=20260616-epic-core-names"></script>
-<script src="src/data/card-tags.js?v=20260616-draw-count-explicit"></script>
-<script src="src/data/cards.js?v=20260616-reward-baseline"></script>
+<script src="src/data/relics.js?v=20260616-explicit-damage-text"></script>
+<script src="src/data/card-tags.js?v=20260616-explicit-damage-text"></script>
+<script src="src/data/cards.js?v=20260616-explicit-damage-text"></script>
 <script src="src/data/enemies.js?v=20260616-enemy-escalation"></script>
 <script src="src/data/characters.js?v=20260616-mage-starter-hex"></script>
 <script src="src/runtime/state-rules.js?v=20260616-runtime-state-save-hydration"></script>
@@ -2838,7 +2838,7 @@
         }
         if (tag === '血誓') return context.cardFace ? null : '失去生命不会低于 1；按已损生命追加伤害。';
         if (tag === '追击') return '额外触发 1 次轻灵追射。';
-        if (tag === '爆发') return '消耗全部咏唱，每层追加 10 点伤害。';
+        if (tag === '爆发') return '消耗全部咏唱，每层追加 10 点伤害；无咏唱追加 5 点。';
         if (tag === '反击') return context.cardFace ? '进入反击姿态。' : '进入反击姿态，招架下一次主体攻击并反击。';
         if (tag === '荆棘') return '获得荆棘，受击时反弹伤害。';
         if (tag === '庇护') return `获得 <span class="card-desc-value">${getProtectionValue(card)}</span> 点庇护。`;
