@@ -17,7 +17,9 @@ const DEFAULT_OUT_DIR = '/tmp/questers_epic_core_balance';
 const SCENARIOS = [
     { id: 'baselineNoCore', label: '无核心纯卡', withCore: false, withMatureRelics: false },
     { id: 'coreOnly', label: '单核心无遗物', withCore: true, withMatureRelics: false },
+    { id: 'benchmarkOnly', label: '优质非核心无遗物', withBenchmark: true, withMatureRelics: false },
     { id: 'matureRelicsNoCore', label: '成熟遗物无核心', withCore: false, withMatureRelics: true },
+    { id: 'benchmarkWithMatureRelics', label: '优质非核心加成熟遗物', withBenchmark: true, withMatureRelics: true },
     { id: 'coreWithMatureRelics', label: '核心加成熟遗物', withCore: true, withMatureRelics: true }
 ];
 
@@ -89,6 +91,38 @@ function relicNames(data, relicIds) {
     return relicIds.map(id => data.RELIC_POOL.find(relic => relic.id === id)?.name || id);
 }
 
+function scaledCardValue(data, card) {
+    return data.getScaledCardValue(card) + (card.directEffects?.draw ? 5 : 0) + (card.directEffects?.energy ? 4 : 0);
+}
+
+function benchmarkScore(data, roleId, buildId, card, targetCost) {
+    const tags = card.tags || [];
+    let score = scaledCardValue(data, card) / Math.max(1, Number(card.cost) || 1);
+    if (cardBuildTags(data, roleId, card).includes(buildId)) score += 8;
+    if (card.rarity === '稀有') score += 2;
+    if (tags.includes('抽牌') || card.directEffects?.draw) score += 4;
+    if (tags.includes('充能') || card.directEffects?.energy) score += 3;
+    if (tags.includes('重置') || tags.includes('回收') || tags.includes('复刻') || tags.includes('回响')) score += 3;
+    if (tags.includes('穿甲') || tags.includes('重击') || tags.includes('追击') || tags.includes('爆发')) score += 2;
+    score -= Math.abs((Number(card.cost) || 0) - targetCost) * 4;
+    return score;
+}
+
+function pickBenchmarkCard(data, roleId, buildId, coreCard) {
+    const targetCost = Number(coreCard.cost) || 0;
+    const allCards = [...(data.CHARACTER_CARD_POOLS[roleId] || []), ...(data.NEUTRAL_CARD_POOL || [])]
+        .filter(card => !card.isSpecial && ['普通', '稀有'].includes(card.rarity))
+        .filter(card => Math.abs((Number(card.cost) || 0) - targetCost) <= 1);
+    const preferred = allCards.filter(card => {
+        const tags = cardBuildTags(data, roleId, card);
+        return tags.includes(buildId) || card.buildNeutral || tags.length === 0;
+    });
+    const candidates = preferred.length ? preferred : allCards;
+    return candidates
+        .map(card => ({ card, score: benchmarkScore(data, roleId, buildId, card, targetCost) }))
+        .sort((left, right) => right.score - left.score)[0]?.card || null;
+}
+
 function makeSeed(base, roleIndex, cardIndex, buildIndex, checkpointIndex, scenarioIndex) {
     return base
         + roleIndex * 1000003
@@ -114,10 +148,11 @@ function extractSpecialBranches(source) {
     return branches;
 }
 
-function scenarioLoadout(buildId, card, scenario) {
+function scenarioLoadout(buildId, card, benchmark, scenario) {
     const matureRelics = MATURE_LOADOUTS[buildId]?.relics || [];
     return {
         core: scenario.withCore ? card.id : null,
+        coreCard: scenario.withBenchmark && benchmark ? benchmark : null,
         relics: scenario.withMatureRelics ? [...matureRelics] : []
     };
 }
@@ -150,6 +185,7 @@ function compactCheckpoint(result, coreId) {
 
 function runSample(data, branchSets, roleId, buildId, card, indexes, args) {
     const checkpoints = {};
+    const benchmark = pickBenchmarkCard(data, roleId, buildId, card);
     for (let scenarioIndex = 0; scenarioIndex < SCENARIOS.length; scenarioIndex++) {
         const scenario = SCENARIOS[scenarioIndex];
         const scenarioEntry = { label: scenario.label, checkpoints: {} };
@@ -163,9 +199,9 @@ function runSample(data, branchSets, roleId, buildId, card, indexes, args) {
                 args.runs,
                 makeSeed(args.seed, indexes.roleIndex, indexes.cardIndex, indexes.buildIndex, checkpointIndex, scenarioIndex),
                 'pure',
-                { loadoutOverride: scenarioLoadout(buildId, card, scenario) }
+                { loadoutOverride: scenarioLoadout(buildId, card, benchmark, scenario) }
             );
-            scenarioEntry.checkpoints[checkpoint.id] = compactCheckpoint(result, card.id);
+            scenarioEntry.checkpoints[checkpoint.id] = compactCheckpoint(result, scenario.withBenchmark && benchmark ? cardId(benchmark) : card.id);
         }
         checkpoints[scenario.id] = scenarioEntry;
     }
@@ -188,7 +224,15 @@ function runSample(data, branchSets, roleId, buildId, card, indexes, args) {
         loadout: {
             matureCore: MATURE_LOADOUTS[buildId]?.core || null,
             matureRelics,
-            matureRelicNames: relicNames(data, matureRelics)
+            matureRelicNames: relicNames(data, matureRelics),
+            benchmark: benchmark ? {
+                id: cardId(benchmark),
+                name: benchmark.name,
+                rarity: benchmark.rarity,
+                cost: benchmark.cost,
+                type: benchmark.type,
+                tags: benchmark.tags || []
+            } : null
         },
         branchCoverage: {
             runtimeSpecialBranch: branchSets.runtime.has(card.id),
@@ -209,14 +253,21 @@ function sampleMetrics(sample) {
         const id = checkpoint.id;
         const baseline = sample.scenarios.baselineNoCore.checkpoints[id];
         const coreOnly = sample.scenarios.coreOnly.checkpoints[id];
+        const benchmarkOnly = sample.scenarios.benchmarkOnly.checkpoints[id];
         const relicsNoCore = sample.scenarios.matureRelicsNoCore.checkpoints[id];
+        const benchmarkFull = sample.scenarios.benchmarkWithMatureRelics.checkpoints[id];
         const full = sample.scenarios.coreWithMatureRelics.checkpoints[id];
         metrics[id] = {
             coreOnlyLiftPp: (coreOnly.winRate - baseline.winRate) * 100,
+            benchmarkOnlyLiftPp: (benchmarkOnly.winRate - baseline.winRate) * 100,
+            coreVsBenchmarkPp: (coreOnly.winRate - benchmarkOnly.winRate) * 100,
             matureLiftPp: (full.winRate - relicsNoCore.winRate) * 100,
+            matureVsBenchmarkPp: (full.winRate - benchmarkFull.winRate) * 100,
             coreOnlyUsageRate: coreOnly.coreUsage.usageRate,
+            benchmarkOnlyUsageRate: benchmarkOnly.coreUsage.usageRate,
             fullUsageRate: full.coreUsage.usageRate,
             coreOnlyPlaysPerBattle: coreOnly.coreUsage.playsPerBattle,
+            benchmarkOnlyPlaysPerBattle: benchmarkOnly.coreUsage.playsPerBattle,
             fullPlaysPerBattle: full.coreUsage.playsPerBattle
         };
     }
@@ -257,6 +308,23 @@ function diagnoseSample(sample) {
             kind: '成熟低贡献',
             detail: `成熟遗物下首领抬升 ${pp(bossFullLift)}，使用率 ${pct(bossFullUsage)}`
         });
+    }
+    if (sample.loadout.benchmark) {
+        const bossCoreVsBenchmark = sample.metrics.boss.coreVsBenchmarkPp;
+        const matureCoreVsBenchmark = sample.metrics.boss.matureVsBenchmarkPp;
+        if (bossCoreVsBenchmark < -4 && matureCoreVsBenchmark < 0) {
+            issues.push({
+                severity: 'high',
+                kind: '不如非核心',
+                detail: `首领低于 ${sample.loadout.benchmark.name} ${pp(-bossCoreVsBenchmark)}，成熟对照 ${pp(matureCoreVsBenchmark)}`
+            });
+        } else if (bossCoreVsBenchmark < -2) {
+            issues.push({
+                severity: 'medium',
+                kind: '非核心压制',
+                detail: `首领单核心低于 ${sample.loadout.benchmark.name} ${pp(-bossCoreVsBenchmark)}`
+            });
+        }
     }
     const fullBoss = sample.scenarios.coreWithMatureRelics.checkpoints.boss;
     const relicBoss = sample.scenarios.matureRelicsNoCore.checkpoints.boss;
@@ -380,6 +448,10 @@ function flatRows(results) {
         lateMatureLiftPp: sample.metrics.late?.matureLiftPp ?? 0,
         eliteMatureLiftPp: sample.metrics.elite?.matureLiftPp ?? 0,
         bossMatureLiftPp: sample.metrics.boss?.matureLiftPp ?? 0,
+        bossCoreVsBenchmarkPp: sample.metrics.boss?.coreVsBenchmarkPp ?? 0,
+        bossMatureVsBenchmarkPp: sample.metrics.boss?.matureVsBenchmarkPp ?? 0,
+        benchmarkId: sample.loadout.benchmark?.id || '',
+        benchmarkName: sample.loadout.benchmark?.name || '',
         bossCoreUsage: sample.metrics.boss?.coreOnlyUsageRate ?? 0,
         bossFullUsage: sample.metrics.boss?.fullUsageRate ?? 0,
         anomalies: sample.anomalies.map(anomaly => `${anomaly.severity}:${anomaly.kind}`).join(';')
@@ -422,7 +494,7 @@ function markdownReport(report) {
         '',
         `样本量：每张史诗核心、每个构筑、每个节点、每个场景 ${report.runsPerSample} 局；随机种子：\`${report.seed}\`。`,
         '',
-        '场景：无核心纯卡、单核心无遗物、成熟遗物无核心、核心加成熟遗物。节点：后期普通 / 后期精英 / 最终首领。',
+        '场景：无核心纯卡、单核心无遗物、优质非核心替换、成熟遗物无核心、优质非核心加成熟遗物、核心加成熟遗物。节点：后期普通 / 后期精英 / 最终首领。',
         '',
         '## 异常概览',
         '',
@@ -433,13 +505,14 @@ function markdownReport(report) {
         '',
         '## 核心对照表',
         '',
-        '| 职业 | 构筑 | 史诗核心 | 无核心 后期/精英/首领 | 单核心 后期/精英/首领 | 成熟无核心 后期/精英/首领 | 成熟完整 后期/精英/首领 | 单核心抬升 | 成熟抬升 | 首领使用率 单核/成熟 | 诊断 |',
-        '|---|---|---|---|---|---|---|---|---|---|---|',
+        '| 职业 | 构筑 | 史诗核心 | 非核心对照 | 无核心 后期/精英/首领 | 单核心 后期/精英/首领 | 非核心 后期/精英/首领 | 成熟完整 后期/精英/首领 | 单核心抬升 | 核心对非核心 首领/成熟 | 首领使用率 单核/成熟 | 诊断 |',
+        '|---|---|---|---|---|---|---|---|---|---|---|---|',
         ...report.results.map(sample => {
             const bossCoreUsage = sample.metrics.boss?.coreOnlyUsageRate || 0;
             const bossFullUsage = sample.metrics.boss?.fullUsageRate || 0;
             const diagnosis = sample.anomalies.map(anomaly => `${anomaly.severity}:${anomaly.kind}`).join('；');
-            return `| ${sample.role} | ${sample.build} | ${sample.card.name} | ${checkpointRates(sample, 'baselineNoCore')} | ${checkpointRates(sample, 'coreOnly')} | ${checkpointRates(sample, 'matureRelicsNoCore')} | ${checkpointRates(sample, 'coreWithMatureRelics')} | ${checkpointLifts(sample, 'coreOnlyLiftPp')} | ${checkpointLifts(sample, 'matureLiftPp')} | ${pct(bossCoreUsage)} / ${pct(bossFullUsage)} | ${diagnosis} |`;
+            const benchmark = sample.loadout.benchmark?.name || '-';
+            return `| ${sample.role} | ${sample.build} | ${sample.card.name} | ${benchmark} | ${checkpointRates(sample, 'baselineNoCore')} | ${checkpointRates(sample, 'coreOnly')} | ${checkpointRates(sample, 'benchmarkOnly')} | ${checkpointRates(sample, 'coreWithMatureRelics')} | ${checkpointLifts(sample, 'coreOnlyLiftPp')} | ${pp(sample.metrics.boss?.coreVsBenchmarkPp || 0)} / ${pp(sample.metrics.boss?.matureVsBenchmarkPp || 0)} | ${pct(bossCoreUsage)} / ${pct(bossFullUsage)} | ${diagnosis} |`;
         }),
         '',
         '## 分支覆盖',

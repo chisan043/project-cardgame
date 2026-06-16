@@ -1526,4 +1526,17 @@ function run() {
     console.log(`报告目录\t${args.reportDir}`);
 }
 
-run();
+const isDirectRun = process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
+if (isDirectRun) run();
+
+export {
+    addCoreCardIfFound,
+    chapterOf,
+    chooseRoute,
+    fixedEnemyForNode,
+    fixedNodeType,
+    generateCardChoices,
+    generateRouteChoices,
+    routeChoiceWeights,
+    runSuite
+};

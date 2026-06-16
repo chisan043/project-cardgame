@@ -47,6 +47,7 @@ function main() {
     runStep('asset registries', process.execPath, ['tools/build_asset_registries.mjs', '--check']);
     runStep('procedural-card guard', process.execPath, ['tools/check_no_procedural_cards.mjs']);
     runStep('open-build-flow guard', process.execPath, ['tools/check_open_build_flow.mjs']);
+    runStep('route-rules guard', process.execPath, ['tools/check_route_rules.mjs']);
 
     console.log('\nRelease checks: pass');
 }

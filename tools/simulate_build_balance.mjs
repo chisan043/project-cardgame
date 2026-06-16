@@ -159,10 +159,10 @@ function getBuildPool(data, roleId, buildId) {
 
 function getLoadout(data, roleId, buildId, mode, override = null) {
     if (override) {
-        const coreCard = override.core
-            ? data.SPECIAL_EPIC_POOLS[roleId].find(card => card.id === override.core)
-            : null;
-        return { core: override.core || null, coreCard, relics: [...(override.relics || [])] };
+        let coreCard = null;
+        if (override.coreCard) coreCard = clone(override.coreCard);
+        else if (override.core) coreCard = data.SPECIAL_EPIC_POOLS[roleId].find(card => card.id === override.core) || null;
+        return { core: override.core || coreCard?.poolId || coreCard?.id || null, coreCard, relics: [...(override.relics || [])] };
     }
     if (mode === 'pure' || mode === 'baseline') return { core: null, coreCard: null, relics: [] };
     if (mode === 'mid') {
