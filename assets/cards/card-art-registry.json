@@ -6,7 +6,7 @@
   "policy": "Runtime card art lives under assets/cards/art/<theme>/ and is referenced by stable path keys.",
   "assetCount": 146,
   "missingAssetCount": 0,
-  "cardsWithArtCount": 255,
+  "cardsWithArtCount": 254,
   "themes": [
     "archer",
     "mage",
@@ -3079,14 +3079,6 @@
           "pool": "character",
           "deckId": null,
           "rarity": "普通"
-        },
-        {
-          "id": "starter_warrior_watch",
-          "name": "守誓待击",
-          "roleId": "hero_warrior",
-          "pool": "starter",
-          "deckId": "starter_warrior",
-          "rarity": "普通"
         }
       ]
     },
@@ -3360,7 +3352,7 @@
         },
         {
           "id": "starter_warrior_guard",
-          "name": "旧盾守",
+          "name": "誓盾守",
           "roleId": "hero_warrior",
           "pool": "starter",
           "deckId": "starter_warrior",

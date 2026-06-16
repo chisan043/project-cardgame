@@ -57,7 +57,7 @@ class BattleSimulator {
             { name: '王冠反斩', type: '能力', cost: 3, val: 12, tags: ['反击', '庇护', '抽牌'], rarity: '史诗' },
             { name: '誓刃解封', type: '攻击', cost: 3, val: 11, tags: ['圣剑', '穿甲', '重击'], rarity: '史诗' },
             { name: '铁誓斩', type: '攻击', cost: 1, val: 5, tags: ['连击'], rarity: '普通' },
-            { name: '旧盾守', type: '防御', cost: 1, val: 6, tags: ['庇护'], rarity: '普通' }
+            { name: '誓盾守', type: '防御', cost: 1, val: 6, tags: ['庇护'], rarity: '普通' }
         ];
     }
 

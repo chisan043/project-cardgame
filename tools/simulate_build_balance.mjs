@@ -74,7 +74,7 @@ function clone(value) {
 const FOUNDATION = {
     hero_warrior: [
         { name: '铁誓斩', type: '攻击', cost: 1, val: 8, tags: [], rarity: '普通' },
-        { name: '旧盾守', type: '防御', cost: 1, val: 7, tags: [], rarity: '普通' }
+        { name: '誓盾守', type: '防御', cost: 1, val: 7, tags: [], rarity: '普通' }
     ],
     hero_mage: [
         { name: '星尘法弹', type: '攻击', cost: 1, val: 7, tags: ['爆发'], rarity: '普通' },

@@ -63,7 +63,7 @@ const CHARACTERS = {
             { src: 'assets/characters/warrior/battle_back_hurt_06_v2.webp', duration: 90 }
         ],
         accentClass: '',
-        starterHint: '铁誓斩与旧盾守负责基础攻防；誓光斩教会圣剑借护盾增伤，守誓待击与裂隙刻印分别提示反击和易伤窗口。'
+        starterHint: '铁誓斩与誓盾守负责基础攻防；两张誓光斩教会圣剑借护盾增伤，裂隙刻印提示易伤窗口。'
     },
     hero_mage: {
         id: 'hero_mage',
