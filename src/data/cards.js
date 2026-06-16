@@ -17,7 +17,7 @@ const CARD_ART_REGISTRY = {
     '王冠反斩': 'assets/cards/art/warrior/warrior_crown_riposte_art_v1.webp',
     '铁壁圣痕': 'assets/cards/art/warrior/warrior_scar_art_v1.webp',
     '血誓裂锋': 'assets/cards/art/warrior/warrior_blood_vow_slash_art_v1.webp',
-    '魔剑': 'assets/cards/art/warrior/warrior_blood_vow_slash_art_v1.webp',
+    '魔剑': 'assets/cards/art/warrior/warrior_magic_sword_art_v1.png',
     '血火回命': 'assets/cards/art/warrior/warrior_blood_vow_slash_art_v1.webp',
     '裂隙刻印': 'assets/cards/art/warrior/warrior_flash_art_v1.webp',
     '誓反架势': 'assets/cards/art/warrior/warrior_guard_art_v1.webp',
@@ -249,7 +249,7 @@ const CHARACTER_CARD_POOLS = {
         { poolId: 'warrior_crown_riposte', name: '王冠反斩', type: '攻击', cost: 3, icon: '👑', val: 12, tags: ['反击', '重击'], directEffects: { protection: true }, preserveDirectEffects: true, rarity: '史诗', desc: '造成 12 点[重击]伤害，获得[庇护]并进入[反击]。' },
         { poolId: 'warrior_scar', name: '铁壁圣痕', type: '防御', cost: 2, icon: '🛡️', val: 13, tags: ['庇护', '保留'], rarity: '史诗' },
         { poolId: 'warrior_blood_vow_slash', name: '血誓裂锋', type: '攻击', cost: 1, icon: '🩸', val: 9, tags: ['血誓'], bloodOathCost: 4, bloodOathMissingRatio: 0.5, buildTags: ['bloodoath'], rarity: '稀有', art: 'assets/cards/art/warrior/warrior_blood_vow_slash_art_v1.webp', desc: '失去 4 点生命；造成 9 点伤害；追加已损生命 50% 的伤害。' },
-        { poolId: 'warrior_magic_sword', name: '魔剑', type: '攻击', cost: 1, icon: '🗡️', val: 4, tags: [], magicSwordGrowth: 1, buildTags: ['bloodoath'], rarity: '稀有', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_blood_vow_slash_art_v1.webp', desc: '造成 4 点伤害；自身实际失去生命或本牌击杀敌人时，永久 +1 伤害。' },
+        { poolId: 'warrior_magic_sword', name: '魔剑', type: '攻击', cost: 1, icon: '🗡️', val: 4, tags: [], magicSwordGrowth: 1, buildTags: ['bloodoath'], rarity: '稀有', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_magic_sword_art_v1.png', desc: '造成 4 点伤害；自身实际失去生命或本牌击杀敌人时，永久 +1 伤害。' },
         { poolId: 'warrior_thorn_charge', name: '棘甲冲锋', type: '攻击', cost: 2, icon: '🌹', val: 10, tags: ['圣剑', '荆棘'], rarity: '稀有', art: 'assets/cards/art/warrior/warrior_thorn_charge_art_v1.webp', desc: '造成 10 点[圣剑]伤害并触发[荆棘]。' },
         { poolId: 'warrior_banner_guard', name: '誓旗护阵', type: '能力', cost: 1, icon: '🚩', val: 6, tags: ['庇护', '抽牌'], rarity: '稀有', art: 'assets/cards/art/warrior/warrior_banner_guard_art_v1.webp', desc: '获得 6 点庇护并抽 1 张牌。' },
         { poolId: 'warrior_blood_wall', name: '血痕引路', type: '能力', cost: 1, icon: '🩸', val: 0, tags: ['血誓'], bloodOathCost: 5, bloodDebtBleed: 6, buildTags: ['bloodoath'], rarity: '稀有', art: 'assets/cards/art/warrior/warrior_blood_wall_art_v1.webp', desc: '失去 5 点生命并施加 6 层出血。' },
@@ -599,7 +599,7 @@ const STARTER_DECKS = {
             { poolId: 'starter_warrior_strike', name: '铁誓斩', type: '攻击', cost: 1, icon: '⚔️', val: 8, tags: [], rarity: '普通', copies: 3, frameTheme: 'warrior', desc: '造成 8 点伤害。' },
             { poolId: 'starter_warrior_guard', name: '誓盾守', type: '防御', cost: 1, icon: '🛡️', val: 7, tags: [], rarity: '普通', copies: 4, frameTheme: 'warrior', desc: '获得 7 点护盾。' },
             { poolId: 'starter_warrior_oath', name: '誓光斩', type: '攻击', cost: 1, icon: '✨', val: 6, tags: ['圣剑'], buildTags: ['oathblade'], rarity: '普通', copies: 1, frameTheme: 'warrior', desc: '造成 6 点伤害；[圣剑]会追加当前护盾的一部分伤害。' },
-            { poolId: 'warrior_magic_sword', name: '魔剑', type: '攻击', cost: 1, icon: '🗡️', val: 4, tags: [], magicSwordGrowth: 1, buildTags: ['bloodoath'], rarity: '稀有', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_blood_vow_slash_art_v1.webp', desc: '造成 4 点伤害；自身实际失去生命或本牌击杀敌人时，永久 +1 伤害。' },
+            { poolId: 'warrior_magic_sword', name: '魔剑', type: '攻击', cost: 1, icon: '🗡️', val: 4, tags: [], magicSwordGrowth: 1, buildTags: ['bloodoath'], rarity: '稀有', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_magic_sword_art_v1.png', desc: '造成 4 点伤害；自身实际失去生命或本牌击杀敌人时，永久 +1 伤害。' },
             { poolId: 'starter_warrior_flaw', name: '裂隙刻印', type: '能力', cost: 0, icon: '🎯', val: 0, tags: ['易伤'], buildTags: ['execution'], directEffects: { draw: true }, rarity: '普通', frameTheme: 'warrior', desc: '免费施加[易伤]并抽 1 张牌。' }
         ]
     },

@@ -4,9 +4,9 @@
     "src/data/cards.js"
   ],
   "policy": "Runtime card art lives under assets/cards/art/<theme>/ and is referenced by stable path keys.",
-  "assetCount": 146,
+  "assetCount": 147,
   "missingAssetCount": 0,
-  "cardsWithArtCount": 254,
+  "cardsWithArtCount": 256,
   "themes": [
     "archer",
     "mage",
@@ -2365,8 +2365,8 @@
           "rarity": "稀有"
         },
         {
-          "id": "warrior_blood_debt",
-          "name": "血债清算",
+          "id": "warrior_blood_oath_finish",
+          "name": "血誓终击",
           "roleId": "hero_warrior",
           "pool": "character",
           "deckId": null,
@@ -2406,7 +2406,7 @@
         },
         {
           "id": "a_syn_blood",
-          "name": "血海终誓",
+          "name": "血海魔誓",
           "roleId": "hero_warrior",
           "pool": "special_epic",
           "deckId": null,
@@ -2606,7 +2606,7 @@
       "usedBy": [
         {
           "id": "warrior_debt_scar",
-          "name": "血债留痕",
+          "name": "血痕留锋",
           "roleId": "hero_warrior",
           "pool": "character",
           "deckId": null,
@@ -2959,6 +2959,31 @@
           "roleId": "hero_warrior",
           "pool": "character",
           "deckId": null,
+          "rarity": "稀有"
+        }
+      ]
+    },
+    {
+      "key": "warrior/warrior_magic_sword_art_v1",
+      "path": "assets/cards/art/warrior/warrior_magic_sword_art_v1.png",
+      "domain": "cards",
+      "theme": "warrior",
+      "exists": true,
+      "usedBy": [
+        {
+          "id": "warrior_magic_sword",
+          "name": "魔剑",
+          "roleId": "hero_warrior",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        },
+        {
+          "id": "warrior_magic_sword",
+          "name": "魔剑",
+          "roleId": "hero_warrior",
+          "pool": "starter",
+          "deckId": "starter_warrior",
           "rarity": "稀有"
         }
       ]
