@@ -145,10 +145,10 @@ function analyzeStarterBias(data, roleId, starter) {
         ? classPool.filter(card => getCardBuildTags(data, roleId, card).includes('bloodoath'))
         : [];
     const bloodDebtRoleCoverage = roleId === 'hero_warrior' ? {
-        borrow: bloodoathCards.filter(card => card.bloodDebtGain > 0).map(card => card.name),
-        leverage: bloodoathCards.filter(card => card.bloodDebtDamageRatio > 0 || card.bloodDebtPowerGain > 0).map(card => card.name),
-        repay: bloodoathCards.filter(card => card.bloodDebtRepay > 0 || card.bloodDebtRepayFromBleed > 0 || (card.tags || []).includes('吸血')).map(card => card.name),
-        tension: bloodoathCards.filter(card => card.bloodDebtGain >= 5 || card.bloodDebtStun > 0).map(card => card.name)
+        selfDamage: bloodoathCards.filter(card => card.bloodOathCost > 0).map(card => card.name),
+        lowHpPayoff: bloodoathCards.filter(card => card.bloodOathMissingRatio > 0).map(card => card.name),
+        recovery: bloodoathCards.filter(card => (card.tags || []).includes('吸血') || (card.tags || []).includes('治愈') || Number(card.healValue) > 0).map(card => card.name),
+        tension: bloodoathCards.filter(card => card.bloodOathCost >= 5 || card.bloodDebtStun > 0).map(card => card.name)
     } : null;
     const bloodDebtCoveragePassed = !bloodDebtRoleCoverage || Object.values(bloodDebtRoleCoverage).every(cards => cards.length >= 2);
     const directionRewardCoverage = Object.fromEntries(directions.map(buildTag => {
@@ -379,7 +379,7 @@ function renderMarkdown(report) {
             .join(' / ') || '无';
         lines.push(`| ${result.role} | ${result.bias.survivalIdentity.label} | ${signals} | ${result.bias.profileSpread.toFixed(2)} | ${coverage} | ${bridges} | ${result.bias.passed ? '通过' : '失败'} |`);
     }
-    lines.push('', '通过条件：三个角色保留各自的基础生存轴；战士初始牌聚焦基础攻防、圣剑与易伤且不预塞血誓或反击，法师初始牌聚焦咏唱闭环且不预塞镜像/灾厄，弓手初始牌聚焦风势与有限闪避且不预塞猎毒；每个方向都有独立牌可选；战士至少保留圣剑与处刑、处刑与血债两类桥接牌；血誓不得出现护盾或庇护。', '');
+    lines.push('', '通过条件：三个角色保留各自的基础生存轴；战士初始牌聚焦基础攻防、圣剑与易伤且不预塞血誓或反击，法师初始牌聚焦咏唱闭环且不预塞镜像/灾厄，弓手初始牌聚焦风势与有限闪避且不预塞猎毒；每个方向都有独立牌可选；战士至少保留圣剑与处刑、处刑与血誓两类桥接牌；血誓不得出现护盾或庇护。', '');
     lines.push('## 初始卡使用率', '');
     for (const result of report.results) {
         const teachingEnemies = ['early', 'mid'].flatMap(id => Object.values(result.checkpoints[id].enemies));

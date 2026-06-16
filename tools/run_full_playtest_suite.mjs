@@ -407,10 +407,11 @@ function getRewardBridgeSpec(roleId, deck) {
     }
 
     if (roleId === 'hero_warrior') {
-        const hasDebtGain = deckHasCardMatch(deck, card => Number(card.bloodDebtGain) > 0);
-        const hasDebtRepay = deckHasCardMatch(deck, card => Number(card.bloodDebtRepay) > 0 || Number(card.bloodDebtRepayFromBleed) > 0);
-        if (hasDebtGain && !hasDebtRepay) return { label: '血债缺偿债', match: card => Number(card.bloodDebtRepay) > 0 || Number(card.bloodDebtRepayFromBleed) > 0 };
-        if (hasDebtRepay && !hasDebtGain) return { label: '偿债缺借债', match: card => Number(card.bloodDebtGain) > 0 };
+        const hasBloodOathCost = deckHasCardMatch(deck, card => Number(card.bloodOathCost) > 0);
+        const hasBloodOathPayoff = deckHasCardMatch(deck, card => Number(card.bloodOathMissingRatio) > 0);
+        const hasBloodRecovery = deckHasCardMatch(deck, card => (card.tags || []).includes('吸血') || (card.tags || []).includes('治愈') || Number(card.healValue) > 0);
+        if (hasBloodOathCost && !hasBloodOathPayoff) return { label: '血誓缺爆发', match: card => Number(card.bloodOathMissingRatio) > 0 };
+        if (hasBloodOathCost && !hasBloodRecovery) return { label: '血誓缺回血', match: card => (card.tags || []).includes('吸血') || (card.tags || []).includes('治愈') || Number(card.healValue) > 0 };
     }
 
     return null;
@@ -546,8 +547,8 @@ function worstRemovableCard(deck) {
             if (tags.includes('抽牌') || card.directEffects?.draw) score += 4;
             if (tags.includes('充能') || card.directEffects?.energy) score += 3;
             if (tags.includes('重置')) score += 3;
-            if (card.bloodDebtRepay) score += 2;
-            if (card.bloodDebtDrawOnRepay) score += 2;
+            if (card.bloodOathMissingRatio) score += 2;
+            if (card.bloodOathCost) score += 1;
             if (tags.includes('治愈') || tags.includes('闪避') || tags.includes('庇护')) score += 2;
             if (card.rarity === '史诗') score += 6;
             if (card.rarity === '稀有') score += 3;
@@ -612,9 +613,8 @@ function estimateCardContribution(data, roleId, card, plays, opportunities) {
     if (tags.includes('自然')) value += 5;
     if (tags.includes('蓄力')) value += data.getWindGain(card) * 3;
     if (tags.includes('保留') || card.directEffects?.retain) value += 2;
-    if (card.bloodDebtRepay) value += card.bloodDebtRepay * 1.8;
-    if (card.bloodDebtDrawOnRepay) value += card.bloodDebtDrawOnRepay * 5;
-    if (card.bloodDebtClearDamage) value += card.bloodDebtClearDamage * 0.45;
+    if (card.bloodOathMissingRatio) value += card.bloodOathMissingRatio * 8;
+    if (card.bloodOathCost) value += Math.max(0, 5 - card.bloodOathCost * 0.4);
     if (tags.includes('放逐') && roleId === 'hero_archer') value += 5;
     return value * plays / Math.max(1, opportunities || plays || 1);
 }

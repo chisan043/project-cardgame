@@ -5,7 +5,7 @@
     const DEFAULT_ATTACK_FRAME_DURATIONS = [110, 120, 170, 120];
     const ARCHER_WIND_BUFF_CARD_IDS = ['s_energy', 's_exhaust', 'a_green_resonance'];
     const CARD_NAME_TAG_PRIORITY = [
-        '出血', '吸血', '放血', '血祭', '荆棘', '剧毒', '燃烧',
+        '出血', '吸血', '放血', '血誓', '血祭', '荆棘', '剧毒', '燃烧',
         '易伤', '虚弱', '诅咒', '眩晕',
         '圣剑', '穿甲', '重击', '连击', '追击', '爆发',
         '咏唱', '回响', '复刻', '充能', '附魔',
@@ -16,7 +16,8 @@
         '出血': '溢血',
         '吸血': '汲血',
         '放血': '裂血',
-        '血祭': '血誓',
+        '血誓': '血誓',
+        '血祭': '血祭',
         '荆棘': '棘甲',
         '剧毒': '蚀毒',
         '燃烧': '烬焰',
@@ -51,7 +52,7 @@
     const STATUS_ICON_IDS = new Set([
         'armor', 'thorns', 'str', 'charge', 'echo', 'blood', 'enchant', 'guard',
         'counter', 'poison', 'bleed', 'burn', 'stun', 'curse', 'vuln', 'weak',
-        'frenzy', 'blood-debt', 'chant', 'aim', 'sidestep'
+        'frenzy', 'blood-oath', 'chant', 'aim', 'sidestep'
     ]);
     const WARRIOR_SHIELD_BUFF_CARD_IDS = ['s_thorns', 'a_syn_array', 'w_bastion_prayer', 'w_oath_fortress'];
 
@@ -338,15 +339,11 @@
             tags,
             JSON.stringify(card.directEffects || {}),
             JSON.stringify({
-                bloodDebtGain: card.bloodDebtGain || 0,
-                bloodDebtDamageRatio: card.bloodDebtDamageRatio || 0,
-                bloodDebtRepay: card.bloodDebtRepay || 0,
-                bloodDebtRepayFromBleed: card.bloodDebtRepayFromBleed || 0,
+                bloodOathCost: card.bloodOathCost || 0,
+                bloodOathMissingRatio: card.bloodOathMissingRatio || 0,
                 bloodDebtBleed: card.bloodDebtBleed || 0,
                 bloodDebtWeak: card.bloodDebtWeak || 0,
-                bloodDebtStun: card.bloodDebtStun || 0,
-                bloodDebtClearDamage: card.bloodDebtClearDamage || 0,
-                bloodDebtClearHeal: card.bloodDebtClearHeal || 0
+                bloodDebtStun: card.bloodDebtStun || 0
             }),
             specialText
         ].join('|');

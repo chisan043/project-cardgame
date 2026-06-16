@@ -30,7 +30,7 @@ const COMMON_ROLE_CARD_TAGS = ['抽牌', '充能', '保留', '重置', '销毁']
 const ROLE_ALLOWED_CARD_TAGS = {
     hero_warrior: new Set([
         ...COMMON_ROLE_CARD_TAGS,
-        '血祭', '血债', '狂热', '附魔', '庇护', '反击', '吸血', '出血', '放血',
+        '血祭', '血誓', '狂热', '附魔', '庇护', '反击', '吸血', '治愈', '出血', '放血',
         '重击', '穿甲', '圣剑', '连击', '易伤', '虚弱', '眩晕', '荆棘'
     ]),
     hero_mage: new Set([

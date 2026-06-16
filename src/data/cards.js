@@ -116,7 +116,7 @@ const CARD_ART_REGISTRY = {
     '王誓蓄锋': 'assets/cards/art/warrior/warrior_oath_charge_art_v1.png',
     '刑架削锋': 'assets/cards/art/warrior/warrior_scaffold_cut_art_v1.png',
     '血潮续斩': 'assets/cards/art/warrior/warrior_blood_tide_art_v1.png',
-    '血债留痕': 'assets/cards/art/warrior/warrior_debt_scar_art_v1.png',
+    '血痕留锋': 'assets/cards/art/warrior/warrior_debt_scar_art_v1.png',
     '殉誓斩': 'assets/cards/art/warrior/warrior_martyr_cut_art_v1.png',
     '终裁量尺': 'assets/cards/art/warrior/warrior_final_measure_art_v1.png',
     '暗月留疤': 'assets/cards/art/mage/mage_dark_moon_scar_art_v1.png',
@@ -247,23 +247,23 @@ const CHARACTER_CARD_POOLS = {
         { poolId: 'warrior_flash', name: '裂光一闪', type: '攻击', cost: 1, icon: '⚡', val: 7, tags: ['圣剑', '穿甲'], rarity: '普通' },
         { poolId: 'warrior_crown_riposte', name: '王冠反斩', type: '攻击', cost: 3, icon: '👑', val: 12, tags: ['反击', '重击'], directEffects: { protection: true }, preserveDirectEffects: true, rarity: '史诗', desc: '造成 12 点[重击]伤害，获得[庇护]并进入[反击]。' },
         { poolId: 'warrior_scar', name: '铁壁圣痕', type: '防御', cost: 2, icon: '🛡️', val: 13, tags: ['庇护', '保留'], rarity: '史诗' },
-        { poolId: 'warrior_blood_vow_slash', name: '血誓裂锋', type: '攻击', cost: 1, icon: '🩸', val: 9, tags: ['血债'], bloodDebtGain: 3, bloodDebtDamageRatio: 1.5, buildTags: ['bloodoath'], rarity: '稀有', art: 'assets/cards/art/warrior/warrior_blood_vow_slash_art_v1.webp', desc: '获得 3 点[血债]。造成 9 点伤害，并追加当前血债 150% 的伤害。' },
+        { poolId: 'warrior_blood_vow_slash', name: '血誓裂锋', type: '攻击', cost: 1, icon: '🩸', val: 9, tags: ['血誓'], bloodOathCost: 4, bloodOathMissingRatio: 0.5, buildTags: ['bloodoath'], rarity: '稀有', art: 'assets/cards/art/warrior/warrior_blood_vow_slash_art_v1.webp', desc: '失去 4 点生命；造成 9 点伤害；追加已损生命 50% 的伤害。' },
         { poolId: 'warrior_thorn_charge', name: '棘甲冲锋', type: '攻击', cost: 2, icon: '🌹', val: 10, tags: ['圣剑', '荆棘'], rarity: '稀有', art: 'assets/cards/art/warrior/warrior_thorn_charge_art_v1.webp', desc: '造成 10 点[圣剑]伤害并触发[荆棘]。' },
         { poolId: 'warrior_banner_guard', name: '誓旗护阵', type: '能力', cost: 1, icon: '🚩', val: 6, tags: ['庇护', '抽牌'], rarity: '稀有', art: 'assets/cards/art/warrior/warrior_banner_guard_art_v1.webp', desc: '获得 6 点庇护并抽 1 张牌。' },
-        { poolId: 'warrior_blood_wall', name: '血痕引路', type: '能力', cost: 1, icon: '🩸', val: 0, tags: ['血债'], bloodDebtGain: 2, bloodDebtBleed: 5, buildTags: ['bloodoath'], rarity: '稀有', art: 'assets/cards/art/warrior/warrior_blood_wall_art_v1.webp', desc: '获得 2 点[血债]并施加 5 层出血。' },
+        { poolId: 'warrior_blood_wall', name: '血痕引路', type: '能力', cost: 1, icon: '🩸', val: 0, tags: ['血誓'], bloodOathCost: 5, bloodDebtBleed: 6, buildTags: ['bloodoath'], rarity: '稀有', art: 'assets/cards/art/warrior/warrior_blood_wall_art_v1.webp', desc: '失去 5 点生命并施加 6 层出血。' },
         { poolId: 'warrior_oath_retainer', name: '誓约留锋', type: '防御', cost: 1, icon: '🔰', val: 6, tags: ['保留', '充能'], rarity: '普通', art: 'assets/cards/art/warrior/warrior_oath_retainer_art_v1.webp', desc: '获得 6 点护盾，[保留]并回复 1 点能量。' },
         { poolId: 'warrior_soul_oath', name: '魂誓换锋', type: '能力', cost: 1, icon: '📖', val: 4, tags: ['充能', '庇护'], rarity: '稀有', art: 'assets/cards/art/warrior/warrior_soul_oath_art_v1.webp', desc: '获得 4 点庇护并回复 1 点能量。' },
-        { poolId: 'warrior_bleed_edge', name: '誓血裂口', type: '攻击', cost: 1, icon: '🩸', val: 8, tags: ['血债'], bloodDebtGain: 2, bloodDebtBleed: 5, buildTags: ['bloodoath'], rarity: '普通', art: 'assets/cards/art/warrior/warrior_blood_vow_slash_art_v1.webp', desc: '获得 2 点[血债]，造成 8 点伤害并施加 5 层出血。' },
-        { poolId: 'warrior_bloodlet_cleave', name: '断誓开锋', type: '攻击', cost: 1, icon: '⚔️', val: 10, tags: ['血债'], bloodDebtDamageRatio: 1.25, bloodDebtRepay: 6, bloodDebtWeak: 1, bloodDebtClearDamage: 6, buildTags: ['bloodoath'], rarity: '稀有', art: 'assets/cards/art/warrior/warrior_blood_vow_slash_art_v1.webp', desc: '造成 10 点伤害；追加血债 125% 伤害；施加 1 层[虚弱]；偿还 6 点血债；清偿：6 点穿甲。' },
+        { poolId: 'warrior_bleed_edge', name: '誓血裂口', type: '攻击', cost: 1, icon: '🩸', val: 8, tags: ['血誓'], bloodOathCost: 3, bloodDebtBleed: 5, buildTags: ['bloodoath'], rarity: '普通', art: 'assets/cards/art/warrior/warrior_blood_vow_slash_art_v1.webp', desc: '失去 3 点生命；造成 8 点伤害并施加 5 层出血。' },
+        { poolId: 'warrior_bloodlet_cleave', name: '断誓开锋', type: '攻击', cost: 1, icon: '⚔️', val: 10, tags: ['血誓'], bloodOathMissingRatio: 0.7, bloodDebtWeak: 1, buildTags: ['bloodoath'], rarity: '稀有', art: 'assets/cards/art/warrior/warrior_blood_vow_slash_art_v1.webp', desc: '造成 10 点伤害；追加已损生命 70% 的伤害；施加 1 层[虚弱]。' },
         { poolId: 'warrior_venom_scar', name: '破势剑痕', type: '攻击', cost: 1, icon: '☠️', val: 11, tags: ['易伤', '穿甲'], buildTags: ['execution'], rarity: '稀有', art: 'assets/cards/art/warrior/warrior_flash_art_v1.webp', desc: '造成 11 点[穿甲]伤害并施加[易伤]。' },
         { poolId: 'warrior_frenzy_cleave', name: '狂誓裂斩', type: '攻击', cost: 2, icon: '🔥', val: 8, tags: ['狂热', '重击'], buildTags: ['execution'], rarity: '史诗', art: 'assets/cards/art/warrior/warrior_frenzy_cleave_art_v1.webp', desc: '触发[狂热]，造成 8 点[重击]伤害。' },
         { poolId: 'warrior_exile_judgement', name: '终誓处刑', type: '攻击', cost: 2, icon: '⚔️', val: 18, tags: ['穿甲', '重击'], buildTags: ['execution'], rarity: '史诗', art: 'assets/cards/art/warrior/warrior_final_judgement_art_v1.webp', desc: '造成 18 点[穿甲][重击]伤害。' },
         { poolId: 'warrior_flaw_mark', name: '裂隙刻印', type: '能力', cost: 0, icon: '🎯', val: 0, tags: ['易伤'], directEffects: { draw: true }, preserveDirectEffects: true, buildTags: ['execution', 'bloodoath'], rarity: '稀有', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_flash_art_v1.webp', desc: '免费施加[易伤]并抽 1 张牌。' },
         { poolId: 'warrior_duel_cut', name: '破甲誓斗', type: '攻击', cost: 1, icon: '🗡️', val: 12, tags: ['穿甲', '连击', '虚弱'], buildTags: ['execution'], rarity: '普通', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_flash_art_v1.webp', desc: '造成 12 点[穿甲]伤害并施加[虚弱]；若本回合已出牌，触发[连击]。' },
         { poolId: 'warrior_execute_window', name: '断首星隙', type: '攻击', cost: 2, icon: '⚔️', val: 15, tags: ['易伤', '重击'], buildTags: ['execution'], rarity: '史诗', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_final_judgement_art_v1.webp', desc: '造成 15 点[重击]伤害并施加[易伤]。' },
-        { poolId: 'warrior_blood_drive', name: '不赦血契', type: '能力', cost: 1, icon: '🩸', val: 0, tags: ['血债'], bloodDebtGain: 6, bloodDebtStun: 1, buildTags: ['bloodoath'], rarity: '稀有', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_blood_wall_art_v1.webp', desc: '获得 6 点[血债]并眩晕敌人。' },
-        { poolId: 'warrior_lifebite', name: '偿命追击', type: '攻击', cost: 1, icon: '🩸', val: 10, tags: ['吸血'], lifestealRatio: 1, bloodDebtDamageRatio: 1.25, bloodDebtWeak: 1, buildTags: ['bloodoath'], rarity: '普通', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_blood_vow_slash_art_v1.webp', desc: '造成 10 点伤害；追加血债 125% 伤害；施加 1 层[虚弱]；以全部伤害[吸血]。' },
-        { poolId: 'warrior_blood_debt', name: '血债清算', type: '攻击', cost: 2, icon: '🩸', val: 12, tags: ['血债', '吸血'], bloodDebtDamageRatio: 2, buildTags: ['bloodoath'], rarity: '史诗', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_blood_vow_slash_art_v1.webp', desc: '造成 12 点伤害；追加血债 200% 伤害；以全部伤害[吸血]。' }
+        { poolId: 'warrior_blood_drive', name: '不赦血契', type: '能力', cost: 1, icon: '🩸', val: 0, tags: ['血誓'], bloodOathCost: 6, bloodDebtStun: 1, buildTags: ['bloodoath'], rarity: '稀有', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_blood_wall_art_v1.webp', desc: '失去 6 点生命并眩晕敌人。' },
+        { poolId: 'warrior_lifebite', name: '偿命追击', type: '攻击', cost: 1, icon: '🩸', val: 10, tags: ['吸血', '血誓'], lifestealRatio: 0.5, bloodOathMissingRatio: 0.5, bloodDebtWeak: 1, buildTags: ['bloodoath'], rarity: '普通', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_blood_vow_slash_art_v1.webp', desc: '造成 10 点伤害；追加已损生命 50% 的伤害；施加 1 层[虚弱]；按一半伤害[吸血]。' },
+        { poolId: 'warrior_blood_oath_finish', name: '血誓终击', type: '攻击', cost: 2, icon: '🩸', val: 12, tags: ['血誓', '吸血'], lifestealRatio: 0.75, bloodOathMissingRatio: 1, buildTags: ['bloodoath'], rarity: '史诗', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_blood_vow_slash_art_v1.webp', desc: '造成 12 点伤害；追加已损生命 100% 的伤害；按 75% 伤害[吸血]。' }
     ],
     hero_mage: [
         { poolId: 'mage_flame', name: '紫焰爆裂', type: '攻击', cost: 2, icon: '💥', val: 12, tags: ['爆发', '易伤'], rarity: '稀有' },
@@ -320,7 +320,7 @@ const BUILD_DIRECTIONS = {
     hero_warrior: {
         oathblade: { name: '圣剑反击', desc: '护盾、反击与圣剑互相放大，是当前勇者的默认成长方向。', triggerTags: ['圣剑', '反击', '庇护', '荆棘', '保留', '重击'] },
         execution: { name: '处刑连斩', desc: '用易伤、穿甲与连击制造短窗口爆发，减少对护盾堆叠的依赖。', triggerTags: ['易伤', '穿甲', '连击', '眩晕'] },
-        bloodoath: { name: '血誓狂战', desc: '借入血债换爆发，在清算前用吸血或偿债还清，或直接斩杀敌人。', triggerTags: ['血债', '吸血', '出血', '放血'] }
+        bloodoath: { name: '血誓狂战', desc: '主动失去生命换爆发，生命越低伤害越高；回血会降低后续输出。', triggerTags: ['血誓', '吸血', '出血', '放血'] }
     },
     hero_mage: {
         chant: { name: '星火咏唱', desc: '积累咏唱后用爆发牌收束。', triggerTags: ['咏唱', '爆发', '穿甲', '充能'] },
@@ -338,7 +338,7 @@ const COMMON_ROLE_CARD_TAGS = ['抽牌', '充能', '保留', '重置', '销毁']
 const ROLE_ALLOWED_CARD_TAGS = {
     hero_warrior: new Set([
         ...COMMON_ROLE_CARD_TAGS,
-        '血祭', '血债', '狂热', '附魔', '庇护', '反击', '吸血', '出血', '放血',
+        '血祭', '血誓', '狂热', '附魔', '庇护', '反击', '吸血', '治愈', '出血', '放血',
         '重击', '穿甲', '圣剑', '连击', '易伤', '虚弱', '眩晕', '荆棘'
     ]),
     hero_mage: new Set([
@@ -398,7 +398,7 @@ const CARD_BUILD_TAGS_BY_ID = {
     warrior_execute_window: ['execution'],
     warrior_blood_drive: ['bloodoath'],
     warrior_lifebite: ['bloodoath'],
-    warrior_blood_debt: ['bloodoath'],
+    warrior_blood_oath_finish: ['bloodoath'],
     mage_flame: ['chant', 'calamity'],
     mage_chant: ['chant'],
     mage_spark: ['chant', 'calamity'],
@@ -480,17 +480,17 @@ const BUILD_EXPANSION_CARDS = {
         { poolId: 'warrior_break_form', name: '破阵换位', type: '能力', cost: 0, icon: '🚩', val: 0, tags: ['重置', '销毁'], buildTags: ['execution'], rarity: '稀有', frameTheme: 'warrior', desc: '自动丢弃除本牌外的未封印手牌并抽取等量的牌，随后[销毁]。' },
         { poolId: 'warrior_steel_pressure', name: '鸣钢镇压', type: '攻击', cost: 2, icon: '🔨', val: 14, tags: ['穿甲', '虚弱'], buildTags: ['execution'], rarity: '稀有', frameTheme: 'warrior', desc: '造成 14 点[穿甲]伤害并施加[虚弱]。' },
         { poolId: 'warrior_execute_step', name: '断刑步', type: '能力', cost: 0, icon: '👣', val: 0, tags: ['易伤', '销毁'], directEffects: { draw: true }, preserveDirectEffects: true, buildTags: ['execution'], rarity: '普通', frameTheme: 'warrior', desc: '免费施加[易伤]并抽 1 张牌，随后[销毁]。' },
-        { poolId: 'warrior_vein_oath', name: '裂脉誓印', type: '能力', cost: 1, icon: '🩸', val: 0, tags: ['血债'], bloodDebtGain: 4, bloodDebtBleed: 6, buildTags: ['bloodoath'], rarity: '普通', frameTheme: 'warrior', desc: '获得 4 点[血债]并施加 6 层出血。' },
-        { poolId: 'warrior_blood_guard_step', name: '偿血追命', type: '攻击', cost: 1, icon: '🩸', val: 9, tags: ['血债'], bloodDebtDamageRatio: 1.1, bloodDebtRepay: 5, bloodDebtWeak: 1, bloodDebtClearDamage: 5, buildTags: ['bloodoath'], rarity: '稀有', frameTheme: 'warrior', desc: '造成 9 点伤害；追加血债 110% 伤害；施加 1 层[虚弱]；偿还 5 点血债；清偿：5 点穿甲。' },
-        { poolId: 'warrior_boiling_drive', name: '沸血突进', type: '攻击', cost: 1, icon: '🔥', val: 8, tags: ['血债'], bloodDebtGain: 3, bloodDebtDamageRatio: 1.75, buildTags: ['bloodoath'], rarity: '稀有', frameTheme: 'warrior', desc: '获得 3 点[血债]；造成 8 点伤害；追加血债 175% 伤害。' },
-        { poolId: 'warrior_red_return', name: '残红回锋', type: '攻击', cost: 1, icon: '💍', val: 7, tags: ['吸血'], lifestealRatio: 1, bloodDebtDamageRatio: 1, buildTags: ['bloodoath'], rarity: '普通', frameTheme: 'warrior', desc: '造成 7 点伤害；追加血债 100% 伤害；以全部伤害[吸血]。' },
-        { poolId: 'warrior_blood_tide', name: '血潮续斩', type: '攻击', cost: 2, icon: '🌊', val: 13, tags: ['放血', '血债'], bloodDebtDamageRatio: 1.75, bloodDebtWeak: 2, bloodDebtRepayFromBleed: 0.35, buildTags: ['bloodoath'], rarity: '史诗', frameTheme: 'warrior', desc: '造成 13 点伤害；追加血债 175% 伤害；施加 2 层[虚弱]；触发[放血]并偿债。' },
-        { poolId: 'warrior_open_vein', name: '禁誓开脉', type: '能力', cost: 0, icon: '🕯️', val: 0, tags: ['血债', '销毁'], bloodDebtGain: 5, directEffects: { energy: true }, buildTags: ['bloodoath'], rarity: '普通', frameTheme: 'warrior', desc: '获得 5 点[血债]并回复 1 点能量，随后[销毁]。' },
-        { poolId: 'warrior_life_contract', name: '回生血契', type: '能力', cost: 1, icon: '📖', val: 0, tags: ['血债'], bloodDebtRepay: 8, bloodDebtDrawOnRepay: 1, bloodDebtClearDamage: 10, buildTags: ['bloodoath'], rarity: '稀有', frameTheme: 'warrior', desc: '偿还 8 点血债；偿债：抽 1 张牌；清偿：10 点穿甲。' },
-        { poolId: 'warrior_debt_scar', name: '血债留痕', type: '攻击', cost: 1, icon: '🩸', val: 7, tags: ['血债'], bloodDebtDamageRatio: 0.75, buildTags: ['bloodoath'], rarity: '普通', frameTheme: 'warrior', desc: '造成 7 点伤害；追加血债 75% 伤害。' },
-        { poolId: 'warrior_oath_pressure', name: '誓血缚阵', type: '能力', cost: 1, icon: '🚩', val: 0, tags: ['血债'], bloodDebtGain: 3, bloodDebtStun: 1, buildTags: ['bloodoath'], rarity: '稀有', frameTheme: 'warrior', desc: '获得 3 点[血债]并眩晕敌人。' },
-        { poolId: 'warrior_martyr_cut', name: '殉誓斩', type: '攻击', cost: 0, icon: '🗡️', val: 6, tags: ['血债', '销毁'], bloodDebtGain: 3, bloodDebtDamageRatio: 1.25, buildTags: ['bloodoath'], rarity: '普通', frameTheme: 'warrior', desc: '获得 3 点[血债]；造成 6 点伤害；追加血债 125% 伤害；随后[销毁]。' },
-        { poolId: 'warrior_devour_finish', name: '噬痕终击', type: '攻击', cost: 3, icon: '🩸', val: 18, tags: ['吸血'], lifestealRatio: 1, bloodDebtDamageRatio: 2, buildTags: ['bloodoath'], rarity: '史诗', frameTheme: 'warrior', desc: '造成 18 点伤害；追加血债 200% 伤害；以全部伤害[吸血]。' },
+        { poolId: 'warrior_vein_oath', name: '裂脉誓印', type: '能力', cost: 1, icon: '🩸', val: 0, tags: ['血誓'], bloodOathCost: 4, bloodDebtBleed: 6, buildTags: ['bloodoath'], rarity: '普通', frameTheme: 'warrior', desc: '失去 4 点生命并施加 6 层出血。' },
+        { poolId: 'warrior_blood_guard_step', name: '偿血追命', type: '攻击', cost: 1, icon: '🩸', val: 9, tags: ['血誓', '吸血'], lifestealRatio: 0.5, bloodOathMissingRatio: 0.55, bloodDebtWeak: 1, buildTags: ['bloodoath'], rarity: '稀有', frameTheme: 'warrior', desc: '造成 9 点伤害；追加已损生命 55% 的伤害；施加 1 层[虚弱]；按一半伤害[吸血]。' },
+        { poolId: 'warrior_boiling_drive', name: '沸血突进', type: '攻击', cost: 1, icon: '🔥', val: 8, tags: ['血誓'], bloodOathCost: 4, bloodOathMissingRatio: 0.75, buildTags: ['bloodoath'], rarity: '稀有', frameTheme: 'warrior', desc: '失去 4 点生命；造成 8 点伤害；追加已损生命 75% 的伤害。' },
+        { poolId: 'warrior_red_return', name: '残红回锋', type: '攻击', cost: 1, icon: '💍', val: 7, tags: ['吸血', '血誓'], lifestealRatio: 0.5, bloodOathMissingRatio: 0.45, buildTags: ['bloodoath'], rarity: '普通', frameTheme: 'warrior', desc: '造成 7 点伤害；追加已损生命 45% 的伤害；按一半伤害[吸血]。' },
+        { poolId: 'warrior_blood_tide', name: '血潮续斩', type: '攻击', cost: 2, icon: '🌊', val: 13, tags: ['放血', '血誓'], bloodOathCost: 4, bloodOathMissingRatio: 0.7, bloodDebtWeak: 2, buildTags: ['bloodoath'], rarity: '史诗', frameTheme: 'warrior', desc: '失去 4 点生命；造成 13 点伤害；追加已损生命 70% 的伤害；施加 2 层[虚弱]并触发[放血]。' },
+        { poolId: 'warrior_open_vein', name: '禁誓开脉', type: '能力', cost: 0, icon: '🕯️', val: 0, tags: ['血誓', '销毁'], bloodOathCost: 6, directEffects: { energy: true }, buildTags: ['bloodoath'], rarity: '普通', frameTheme: 'warrior', desc: '失去 6 点生命并回复 1 点能量，随后[销毁]。' },
+        { poolId: 'warrior_life_contract', name: '回生血契', type: '能力', cost: 1, icon: '📖', val: 0, tags: ['治愈'], healValue: 10, directEffects: { draw: true }, preserveDirectEffects: true, buildTags: ['bloodoath'], rarity: '稀有', frameTheme: 'warrior', desc: '回复 10 点生命并抽 1 张牌。' },
+        { poolId: 'warrior_debt_scar', name: '血痕留锋', type: '攻击', cost: 1, icon: '🩸', val: 7, tags: ['血誓'], bloodOathMissingRatio: 0.5, buildTags: ['bloodoath'], rarity: '普通', frameTheme: 'warrior', desc: '造成 7 点伤害；追加已损生命 50% 的伤害。' },
+        { poolId: 'warrior_oath_pressure', name: '誓血缚阵', type: '能力', cost: 1, icon: '🚩', val: 0, tags: ['血誓'], bloodOathCost: 4, bloodDebtStun: 1, buildTags: ['bloodoath'], rarity: '稀有', frameTheme: 'warrior', desc: '失去 4 点生命并眩晕敌人。' },
+        { poolId: 'warrior_martyr_cut', name: '殉誓斩', type: '攻击', cost: 0, icon: '🗡️', val: 6, tags: ['血誓', '销毁'], bloodOathCost: 3, bloodOathMissingRatio: 0.6, buildTags: ['bloodoath'], rarity: '普通', frameTheme: 'warrior', desc: '失去 3 点生命；造成 6 点伤害；追加已损生命 60% 的伤害，随后[销毁]。' },
+        { poolId: 'warrior_devour_finish', name: '噬痕终击', type: '攻击', cost: 3, icon: '🩸', val: 18, tags: ['吸血', '血誓'], lifestealRatio: 0.75, bloodOathMissingRatio: 1.05, buildTags: ['bloodoath'], rarity: '史诗', frameTheme: 'warrior', desc: '造成 18 点伤害；追加已损生命 105% 的伤害；按 75% 伤害[吸血]。' },
         { poolId: 'warrior_oath_watch', name: '守誓待击', type: '能力', cost: 0, icon: '👁️', val: 0, tags: ['反击', '销毁'], buildTags: ['oathblade'], rarity: '普通', frameTheme: 'warrior', desc: '免费进入[反击]姿态，使用后[销毁]。' },
         { poolId: 'warrior_bastion_ledger', name: '垒誓残页', type: '能力', cost: 1, icon: '📒', val: 0, tags: ['庇护', '抽牌'], buildTags: ['oathblade'], rarity: '稀有', frameTheme: 'warrior', desc: '获得[庇护]并[抽牌]。' },
         { poolId: 'warrior_saintbreaker', name: '圣痕破势', type: '攻击', cost: 2, icon: '✨', val: 11, tags: ['圣剑', '易伤'], buildTags: ['oathblade', 'execution'], rarity: '稀有', frameTheme: 'warrior', desc: '造成 11 点[圣剑]伤害并施加[易伤]。' },
@@ -500,7 +500,7 @@ const BUILD_EXPANSION_CARDS = {
         { poolId: 'warrior_silent_lunge', name: '默步突刺', type: '攻击', cost: 1, icon: '🤫', val: 10, tags: ['穿甲', '眩晕'], buildTags: ['execution'], rarity: '稀有', frameTheme: 'warrior', desc: '造成 10 点[穿甲]伤害并[眩晕]。' },
         { poolId: 'warrior_scaffold_cut', name: '刑架削锋', type: '攻击', cost: 2, icon: '⛓️', val: 12, tags: ['重击', '虚弱'], buildTags: ['execution', 'bloodoath'], rarity: '稀有', frameTheme: 'warrior', desc: '造成 12 点[重击]伤害并施加[虚弱]。' },
         { poolId: 'warrior_final_measure', name: '终裁量尺', type: '攻击', cost: 2, icon: '📏', val: 17, tags: ['穿甲', '重击'], buildTags: ['execution'], rarity: '史诗', frameTheme: 'warrior', desc: '造成 17 点[穿甲][重击]伤害。' },
-        { poolId: 'warrior_crimson_pause', name: '猩红喘息', type: '能力', cost: 0, icon: '🫀', val: 0, tags: ['血债'], directEffects: { retain: true }, preserveDirectEffects: true, bloodDebtRepay: 6, bloodDebtDrawOnRepay: 1, bloodDebtClearDamage: 6, buildTags: ['bloodoath'], rarity: '普通', frameTheme: 'warrior', desc: '偿还 6 点血债；偿债：抽 1 张牌；清偿：6 点穿甲。下回合回到手牌。' }
+        { poolId: 'warrior_crimson_pause', name: '猩红喘息', type: '能力', cost: 0, icon: '🫀', val: 0, tags: ['治愈', '保留'], healValue: 8, directEffects: { draw: true, retain: true }, preserveDirectEffects: true, buildTags: ['bloodoath'], rarity: '普通', frameTheme: 'warrior', desc: '回复 8 点生命并抽 1 张牌。下回合回到手牌。' }
     ],
     hero_mage: [
         { poolId: 'mage_star_precharge', name: '星核预充', type: '能力', cost: 1, icon: '🔮', val: 0, tags: ['咏唱', '充能', '庇护'], directEffects: { draw: true }, preserveDirectEffects: true, buildTags: ['chant'], rarity: '普通', frameTheme: 'mage', desc: '积累[咏唱]、回复能量并抽 1 张牌。' },

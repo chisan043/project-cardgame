@@ -403,9 +403,6 @@
         state.p_chant = 0;
         state.p_aim = 0;
         state.p_sidestep = 0;
-        state.p_blood_debt = 0;
-        state.p_blood_debt_turns = 0;
-        state.p_blood_debt_pending_damage = 0;
         state.p_crown_oath = false;
     }
 
@@ -422,16 +419,13 @@
         state.r_signature_archer_pending = false;
         state.r_warrior_start_used = false;
         state.r_warrior_start_ready = false;
-        state.p_blood_debt_paid = 0;
-        state.p_blood_debt_power = 1;
         state.r_counter_gate_used = false;
         state.r_protect_armor_used = false;
         state.r_bloodlet_hourglass_used = false;
-        state.r_blood_debt_reduction_used = false;
-        state.r_blood_clear_used = false;
+        state.r_blood_oath_reduction_used = false;
         state.r_scarlet_whet_used = false;
+        state.r_vamp_ring_used = false;
         state.r_oath_transfusion_used = false;
-        state.r_lifedebt_clear_used = false;
         if (hasBattleWhetstone) state.p_battle_dmg += 2;
 
         state.playedRetainPile = [];
@@ -455,12 +449,8 @@
         const enemyHp = Math.max(0, state.enemy?.currentHp || 0);
         const enemyMaxHp = state.enemy?.maxHp || 0;
         const enemyHpRatio = enemyMaxHp ? enemyHp / enemyMaxHp : 1;
-        const pendingBloodDebt = state.p_blood_debt_pending_damage || 0;
         if (cause === 'curse') {
             return '手牌中的诅咒反噬击倒了你：下次优先移除厄运印记，或在敌人塞牌后尽快打空手牌。';
-        }
-        if (pendingBloodDebt > 0) {
-            return '血债清算压垮了你：下次需要在倒计时前用吸血或偿债牌还清。';
         }
         if (cause === 'status') {
             return '持续伤害结算击倒了你：下次要更早处理毒、流血、燃烧，或保留回复与减伤牌。';
