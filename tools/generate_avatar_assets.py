@@ -24,6 +24,29 @@ ROLE_PROFILES = {
     "hero_archer": (0.50, 0.12, 0.56, "width"),
 }
 
+ENEMY_PROFILES = {
+    "abyss_overlord": (0.50, 0.31, 0.88, "mixed"),
+    "ancient_spider": (0.50, 0.53, 0.82, "mixed"),
+    "angry_boar": (0.50, 0.49, 0.92, "mixed"),
+    "blood_bat": (0.50, 0.54, 0.76, "mixed"),
+    "bone_soldier": (0.52, 0.24, 0.98, "mixed"),
+    "boss_oni_shura": (0.50, 0.27, 0.94, "mixed"),
+    "crimson_blood_witch": (0.50, 0.27, 0.98, "mixed"),
+    "elite_minotaur": (0.50, 0.30, 0.98, "mixed"),
+    "fallen_swordsman": (0.50, 0.27, 1.00, "mixed"),
+    "greedy_thief": (0.53, 0.26, 0.98, "mixed"),
+    "iron_crab": (0.50, 0.38, 0.92, "mixed"),
+    "lost_fox": (0.42, 0.41, 0.46, "width"),
+    "nether_mage": (0.50, 0.25, 0.98, "mixed"),
+    "shadow_assassin": (0.50, 0.25, 1.00, "mixed"),
+    "sick_slime": (0.50, 0.36, 1.02, "mixed"),
+    "stitched_brute": (0.50, 0.26, 0.98, "mixed"),
+    "stone_golem": (0.50, 0.24, 1.00, "mixed"),
+    "undead_bone_dragon": (0.48, 0.50, 0.74, "mixed"),
+    "venom_toad": (0.50, 0.36, 1.02, "mixed"),
+    "wild_wolf": (0.38, 0.50, 0.62, "mixed"),
+}
+
 
 def alpha_bbox(image):
     if image.mode != "RGBA":
@@ -71,21 +94,8 @@ def crop_avatar(src, dest, cx_ratio=0.5, cy_ratio=0.25, size_ratio=1.1, side_mod
 
 
 def monster_profile(name):
-    if "lost_fox" in name:
-        return (0.42, 0.41, 0.46, "width")
-    if "blood_bat" in name:
-        return (0.5, 0.32, 1.34, "mixed")
-    if "iron_crab" in name:
-        return (0.5, 0.28, 1.28, "mixed")
-    if "venom_toad" in name or "sick_slime" in name:
-        return (0.5, 0.36, 1.18, "mixed")
-    if "ancient_spider" in name:
-        return (0.5, 0.30, 1.2, "mixed")
-    if "abyss_overlord" in name:
-        return (0.5, 0.34, 1.16, "mixed")
-    if "undead_bone_dragon" in name:
-        return (0.5, 0.28, 1.24, "mixed")
-    return (0.5, 0.24, 1.12, "mixed")
+    slug = name.replace("_battle_v1_source", "")
+    return ENEMY_PROFILES.get(slug, (0.5, 0.24, 1.12, "mixed"))
 
 
 def write_preview(files):
