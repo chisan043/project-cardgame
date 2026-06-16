@@ -581,6 +581,7 @@ function takeDamage(state, amount, cause = '敌方攻击', { allowSidestep = fal
         state.hp -= damage;
         state.damageTaken += damage;
         state.lastDamageCause = cause;
+        growMagicSword(state, 1);
     }
     if (amount > 0 && state.thorns > 0) {
         state.enemy.hp -= state.thorns;

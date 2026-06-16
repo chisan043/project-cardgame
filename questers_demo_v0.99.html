@@ -5617,6 +5617,18 @@
         renderHand();
     }
 
+    function applyPlayerHpLoss(amount, source = '受伤', options = {}) {
+        const loss = Math.max(0, Math.floor(Number(amount) || 0));
+        if (loss <= 0) return 0;
+        const minimumHp = Number.isFinite(Number(options.minimumHp)) ? Math.max(0, Math.floor(Number(options.minimumHp))) : 0;
+        const actualLoss = Math.min(Math.max(0, state.hp - minimumHp), loss);
+        if (actualLoss <= 0) return 0;
+        state.hp -= actualLoss;
+        if (options.animate) triggerPlayerHurtAnimation();
+        growMagicSword(1, source, options.activeCard || null);
+        return actualLoss;
+    }
+
     function applyBloodOathCost(amount, source = '血誓') {
         let loss = Math.max(0, Math.floor(Number(amount) || 0));
         if (loss <= 0) return 0;
@@ -5626,10 +5638,8 @@
             state.p_dmg_buff += 3;
             showFloatText('赤线缝针 +3伤', 'var(--crimson)', getCenter('ui-hp'));
         }
-        const actualLoss = Math.min(Math.max(0, state.hp - 1), loss);
+        const actualLoss = applyPlayerHpLoss(loss, source, { minimumHp: 1, animate: true });
         if (actualLoss <= 0) return 0;
-        state.hp -= actualLoss;
-        triggerPlayerHurtAnimation();
         if (hasRelic('r_scarlet_whet') && !state.r_scarlet_whet_used) {
             state.r_scarlet_whet_used = true;
             state.p_dmg_buff += 3;
@@ -5641,7 +5651,6 @@
             showFloatText('誓血导管 +1能', 'var(--gold)', getCenter('ui-mp'));
         }
         showFloatText(`${source} -${actualLoss}`, 'var(--crimson)', getCenter('ui-hp'));
-        growMagicSword(1, source);
         return actualLoss;
     }
 
@@ -6168,11 +6177,7 @@
         if (card.tags && card.tags.includes('血祭')) {
             let dmgBonus = card.up ? 5 : 3;
             if (hasRelic('r_scarlet_whet')) dmgBonus += 3;
-            const hpBeforeSacrifice = state.hp;
-            state.hp = Math.max(1, state.hp - 4);
-            if (hpBeforeSacrifice > state.hp) {
-                growMagicSword(1, card.name);
-            }
+            applyPlayerHpLoss(4, card.name, { minimumHp: 1 });
             state.p_battle_dmg += dmgBonus;
             showFloatText(`血祭 扣4血 / +${dmgBonus}攻`, "var(--crimson)", getCenter('ui-hp'));
             if (hasRelic('r_blood_suture')) healPlayer(1);
@@ -6546,15 +6551,31 @@
 
         let junks = state.hand.filter(c => c.isJunk);
         if (junks.length > 0) {
-            let junkDmg = junks.length * 5; state.hp -= junkDmg;
-            showFloatText(`诅咒反噬 -${junkDmg}`, "var(--purple)", getCenter('ui-hp'));
+            let junkDmg = junks.length * 5;
+            const actualJunkDmg = applyPlayerHpLoss(junkDmg, '诅咒反噬');
+            showFloatText(`诅咒反噬 -${actualJunkDmg}`, "var(--purple)", getCenter('ui-hp'));
             if(state.hp <= 0) { showRunFailure('curse'); return; }
             await new Promise(r => setTimeout(r, 600));
         }
 
-        if(state.p_poison > 0) { state.hp -= state.p_poison; state.p_poison--; showFloatText(`毒发 -${state.p_poison+1}`, "var(--nature)", getCenter('ui-hp')); }
-        if(state.p_bleed > 0) { let bDmg = Math.ceil(state.p_bleed/2); state.hp -= bDmg; state.p_bleed--; showFloatText(`流血 -${bDmg}`, "var(--crimson)", getCenter('ui-hp')); }
-        if(state.p_burn > 0) { let burnDmg = Math.max(1, Math.ceil(state.maxHp * 0.03 * state.p_burn)); state.hp -= burnDmg; state.p_burn--; showFloatText(`燃烧 -${burnDmg}`, "var(--fire)", getCenter('ui-hp')); }
+        if(state.p_poison > 0) {
+            const poisonDmg = state.p_poison;
+            const actualPoisonDmg = applyPlayerHpLoss(poisonDmg, '毒发');
+            state.p_poison--;
+            showFloatText(`毒发 -${actualPoisonDmg}`, "var(--nature)", getCenter('ui-hp'));
+        }
+        if(state.p_bleed > 0) {
+            let bDmg = Math.ceil(state.p_bleed/2);
+            const actualBleedDmg = applyPlayerHpLoss(bDmg, '流血');
+            state.p_bleed--;
+            showFloatText(`流血 -${actualBleedDmg}`, "var(--crimson)", getCenter('ui-hp'));
+        }
+        if(state.p_burn > 0) {
+            let burnDmg = Math.max(1, Math.ceil(state.maxHp * 0.03 * state.p_burn));
+            const actualBurnDmg = applyPlayerHpLoss(burnDmg, '燃烧');
+            state.p_burn--;
+            showFloatText(`燃烧 -${actualBurnDmg}`, "var(--fire)", getCenter('ui-hp'));
+        }
         if(state.p_curse > 0) state.p_curse--;
         
         if(state.hp <= 0) { showRunFailure('status'); return; }
@@ -6618,7 +6639,10 @@
             if (state.p_reduce_dmg > 0) { let r = Math.min(mDmg, state.p_reduce_dmg); mDmg -= r; state.p_reduce_dmg -= r; showFloatText(`减免抵抗 -${r}`, "var(--water)", getCenter('ui-hp')); }
             if(state.armor > 0) { let b = Math.min(state.armor, mDmg); state.armor -= b; mDmg -= b; if (b > 0) triggerShieldHitVFX(b); }
             if(mDmg > 0) mDmg = preventFirstProtectedDamage(mDmg);
-            if(mDmg > 0) { state.hp -= mDmg; triggerPlayerHurtAnimation(); showFloatText(`分身攻击 -${mDmg}`, "var(--crimson)", getCenter('ui-hp')); }
+            if(mDmg > 0) {
+                mDmg = applyPlayerHpLoss(mDmg, '分身攻击', { animate: true });
+                showFloatText(`分身攻击 -${mDmg}`, "var(--crimson)", getCenter('ui-hp'));
+            }
             const minionDamage = Math.max(0, minionActionSnapshot.playerHp - state.hp);
             addBattleActionLog('enemy', '敌方分身攻击', minionDamage > 0 ? `造成 ${minionDamage} 点伤害` : '未造成生命伤害');
             await new Promise(r => setTimeout(r, 300));
@@ -6665,7 +6689,10 @@
                 if(state.armor > 0 && dmg > 0) { let b = Math.min(state.armor, dmg); state.armor -= b; dmg -= b; if (b > 0) triggerShieldHitVFX(b); }
                 let actualDmg = dmg;
                 if(actualDmg > 0) actualDmg = preventFirstProtectedDamage(actualDmg);
-                if(actualDmg > 0) { state.hp -= actualDmg; triggerPlayerHurtAnimation(); showFloatText(`-${actualDmg}`, "var(--crimson)", getCenter('ui-hp')); }
+                if(actualDmg > 0) {
+                    actualDmg = applyPlayerHpLoss(actualDmg, '敌方攻击', { animate: true });
+                    showFloatText(`-${actualDmg}`, "var(--crimson)", getCenter('ui-hp'));
+                }
                 
                 if(state.player.thorns > 0) { 
                     state.enemy.currentHp -= state.player.thorns; 
