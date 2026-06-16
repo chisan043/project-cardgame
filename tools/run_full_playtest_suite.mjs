@@ -27,6 +27,11 @@ const PROFILE_LABELS = {
     experienced: '熟练玩家',
     novice: '新手'
 };
+const DRAFT_STYLE_LABELS = {
+    mixed: '混合构筑',
+    focused: '纯流派对照'
+};
+const DEFAULT_MIXED_RUN_SHARE = 0.8;
 const TARGETS = {
     experiencedClearRate: { min: 0.50, max: 0.75 },
     noviceAct1BossReachRate: { min: 0.65 },
@@ -41,16 +46,19 @@ function parseArgs(argv) {
         runsPerBuild: 40,
         noviceRunsPerBuild: 12,
         seed: 20260614,
-        reportDir: DEFAULT_REPORT_DIR
+        reportDir: DEFAULT_REPORT_DIR,
+        mixedRunShare: DEFAULT_MIXED_RUN_SHARE
     };
     for (let index = 0; index < argv.length; index++) {
         if (argv[index] === '--runs-per-build') result.runsPerBuild = Number(argv[++index]);
         else if (argv[index] === '--novice-runs-per-build') result.noviceRunsPerBuild = Number(argv[++index]);
         else if (argv[index] === '--seed') result.seed = Number(argv[++index]);
         else if (argv[index] === '--report-dir') result.reportDir = argv[++index];
+        else if (argv[index] === '--mixed-run-share') result.mixedRunShare = Number(argv[++index]);
     }
     if (!Number.isFinite(result.runsPerBuild) || result.runsPerBuild < 5) throw new Error('--runs-per-build must be at least 5');
     if (!Number.isFinite(result.noviceRunsPerBuild) || result.noviceRunsPerBuild < 0) throw new Error('--novice-runs-per-build must be at least 0');
+    if (!Number.isFinite(result.mixedRunShare) || result.mixedRunShare < 0 || result.mixedRunShare > 1) throw new Error('--mixed-run-share must be between 0 and 1');
     return result;
 }
 
@@ -95,6 +103,55 @@ function cardBuildTags(data, roleId, card) {
         .filter(([, config]) => (card.tags || []).some(tag => (config.triggerTags || []).includes(tag)))
         .map(([buildTag]) => buildTag);
     return [...new Set([...explicit, ...inferred])];
+}
+
+function buildName(data, roleId, buildId) {
+    return buildId ? data.BUILD_DIRECTIONS[roleId]?.[buildId]?.name || buildId : '';
+}
+
+function makeBuildPlan(data, roleId, buildId, rng, draftStyle) {
+    if (draftStyle !== 'mixed') {
+        return {
+            draftStyle: 'focused',
+            primaryBuildId: buildId,
+            secondaryBuildId: '',
+            buildIds: [buildId]
+        };
+    }
+    const otherBuilds = Object.keys(data.BUILD_DIRECTIONS[roleId] || {}).filter(id => id !== buildId);
+    const secondaryBuildId = otherBuilds[Math.floor(rng() * otherBuilds.length)] || '';
+    return {
+        draftStyle: 'mixed',
+        primaryBuildId: buildId,
+        secondaryBuildId,
+        buildIds: [buildId, secondaryBuildId].filter(Boolean)
+    };
+}
+
+function buildTagAffinity(buildTags, buildPlan) {
+    const tags = new Set(buildTags || []);
+    const primary = tags.has(buildPlan.primaryBuildId);
+    const secondary = buildPlan.secondaryBuildId ? tags.has(buildPlan.secondaryBuildId) : false;
+    return {
+        primary,
+        secondary,
+        planned: primary || secondary,
+        bridge: (buildTags || []).length > 1
+    };
+}
+
+function buildMixSummary(data, roleId, deck) {
+    const counts = {};
+    for (const card of deck) {
+        for (const tag of cardBuildTags(data, roleId, card)) counts[tag] = (counts[tag] || 0) + 1;
+    }
+    const entries = Object.entries(counts)
+        .sort((left, right) => right[1] - left[1] || left[0].localeCompare(right[0]));
+    if (!entries.length) return '通用';
+    return entries
+        .slice(0, 3)
+        .map(([buildId, count]) => `${buildName(data, roleId, buildId)} ${count}`)
+        .join(' / ');
 }
 
 function shuffle(rng, items) {
@@ -367,7 +424,8 @@ function generateBridgeChoice(data, rng, roleId, deck, used) {
     return candidates.length ? weightedPick(rng, candidates, () => 1) : null;
 }
 
-function generateCardChoices(data, rng, roleId, buildId, floor, profile, deck = []) {
+function generateCardChoices(data, rng, roleId, buildId, floor, profile, deck = [], buildPlan = null) {
+    const plan = buildPlan || { draftStyle: 'focused', primaryBuildId: buildId, secondaryBuildId: '', buildIds: [buildId] };
     const rarity = rewardRarity(rng, floor);
     const cards = allRewardCards(data, roleId);
     const picked = [];
@@ -384,10 +442,15 @@ function generateCardChoices(data, rng, roleId, buildId, floor, profile, deck = 
         if (!candidates.length) candidates = cards.filter(card => !used.has(cardId(card)));
         const card = weightedPick(rng, candidates, candidate => {
             const buildTags = cardBuildTags(data, roleId, candidate);
-            const aligned = buildTags.includes(buildId);
-            const bridge = buildTags.length > 1;
+            const affinity = buildTagAffinity(buildTags, plan);
             const neutral = candidate.buildNeutral || buildTags.length === 0;
-            return (aligned ? 8.5 : bridge ? 4.0 : neutral ? 1.8 : 0.6) * (1 + rng() * noise);
+            let weight = 0.6;
+            if (affinity.primary) weight = plan.draftStyle === 'mixed' ? 5.8 : 8.5;
+            else if (affinity.secondary) weight = 5.2;
+            else if (affinity.bridge) weight = plan.draftStyle === 'mixed' ? 3.8 : 4.0;
+            else if (neutral) weight = plan.draftStyle === 'mixed' ? 2.2 : 1.8;
+            else weight = plan.draftStyle === 'mixed' ? 1.4 : 0.6;
+            return weight * (1 + rng() * noise);
         });
         if (!card) break;
         used.add(cardId(card));
@@ -396,14 +459,17 @@ function generateCardChoices(data, rng, roleId, buildId, floor, profile, deck = 
     return picked;
 }
 
-function estimateCardScore(data, roleId, buildId, card, deck, hpRatio, profile, rng) {
+function estimateCardScore(data, roleId, buildId, card, deck, hpRatio, profile, rng, buildPlan = null) {
+    const plan = buildPlan || { draftStyle: 'focused', primaryBuildId: buildId, secondaryBuildId: '', buildIds: [buildId] };
     const buildTags = cardBuildTags(data, roleId, card);
     const tags = card.tags || [];
     let score = data.getScaledCardValue(card) / Math.max(1, Number(card.cost) || 1);
-    if (buildTags.includes(buildId)) score += 18;
+    const affinity = buildTagAffinity(buildTags, plan);
+    if (affinity.primary) score += plan.draftStyle === 'mixed' ? 13 : 18;
+    else if (affinity.secondary) score += 12;
     else if (buildTags.length > 1) score += 6;
     else if (!buildTags.length || card.buildNeutral) score += 3;
-    else score -= profile === 'novice' ? 1 : 3;
+    else score -= plan.draftStyle === 'mixed' ? 0.5 : profile === 'novice' ? 1 : 3;
     if (card.type === '防御' && hpRatio < 0.6) score += 4;
     if (tags.includes('抽牌') || card.directEffects?.draw) score += 5;
     if (tags.includes('充能') || card.directEffects?.energy) score += 3;
@@ -418,10 +484,10 @@ function estimateCardScore(data, roleId, buildId, card, deck, hpRatio, profile, 
     return score;
 }
 
-function pickCardReward(data, rng, roleId, buildId, choices, deck, hpRatio, profile) {
+function pickCardReward(data, rng, roleId, buildId, choices, deck, hpRatio, profile, buildPlan = null) {
     const skipScore = profile === 'novice' ? 2 : 4 + Math.max(0, deck.length - 16) * 1.2;
     const ranked = choices
-        .map(card => ({ card, score: estimateCardScore(data, roleId, buildId, card, deck, hpRatio, profile, rng) }))
+        .map(card => ({ card, score: estimateCardScore(data, roleId, buildId, card, deck, hpRatio, profile, rng, buildPlan) }))
         .sort((left, right) => right.score - left.score);
     if (!ranked.length || ranked[0].score < skipScore) return null;
     return ranked[0].card;
@@ -434,14 +500,19 @@ function relicPool(data, roleId, owned) {
         && (data.COMMON_RELIC_IDS.has(relic.id) || roleRelics.has(relic.id)));
 }
 
-function awardRelic(data, rng, roleId, buildId, ownedRelics, floor) {
-    const matureRelics = new Set(MATURE_LOADOUTS[buildId]?.relics || []);
+function awardRelic(data, rng, roleId, buildId, ownedRelics, floor, buildPlan = null) {
+    const plan = buildPlan || { draftStyle: 'focused', primaryBuildId: buildId, secondaryBuildId: '', buildIds: [buildId] };
+    const matureRelics = new Set(MATURE_LOADOUTS[plan.primaryBuildId]?.relics || []);
+    const secondaryRelics = new Set(plan.secondaryBuildId ? MATURE_LOADOUTS[plan.secondaryBuildId]?.relics || [] : []);
     const candidates = relicPool(data, roleId, ownedRelics);
     if (!candidates.length) return null;
     const relic = weightedPick(rng, candidates, candidate => {
         let weight = 1;
         if (matureRelics.has(candidate.id)) weight += 5;
-        if (data.RELIC_BUILD_TAGS_BY_ID[candidate.id] === buildId) weight += 4;
+        if (secondaryRelics.has(candidate.id)) weight += 3.5;
+        const relicBuildTag = data.RELIC_BUILD_TAGS_BY_ID[candidate.id];
+        if (relicBuildTag === plan.primaryBuildId) weight += plan.draftStyle === 'mixed' ? 3 : 4;
+        if (relicBuildTag === plan.secondaryBuildId) weight += 2.7;
         if (floor >= 12 && candidate.price >= 180) weight += 1;
         return weight;
     });
@@ -449,8 +520,12 @@ function awardRelic(data, rng, roleId, buildId, ownedRelics, floor) {
     return relic.id;
 }
 
-function addCoreCardIfFound(data, rng, roleId, buildId, deck, floor, force = false) {
-    const coreId = MATURE_LOADOUTS[buildId]?.core;
+function addCoreCardIfFound(data, rng, roleId, buildId, deck, floor, force = false, buildPlan = null) {
+    const plan = buildPlan || { draftStyle: 'focused', primaryBuildId: buildId, secondaryBuildId: '', buildIds: [buildId] };
+    const coreBuildId = plan.draftStyle === 'mixed' && plan.secondaryBuildId && rng() < 0.45
+        ? plan.secondaryBuildId
+        : plan.primaryBuildId;
+    const coreId = MATURE_LOADOUTS[coreBuildId]?.core;
     if (!coreId || deck.some(card => cardId(card) === coreId)) return null;
     const chance = floor >= 14 ? 0.75 : floor >= 7 ? 0.5 : 0.1;
     if (!force && rng() > chance) return null;
@@ -514,8 +589,15 @@ function dominantBuild(data, roleId, deck) {
     for (const card of deck) {
         for (const tag of cardBuildTags(data, roleId, card)) counts[tag] = (counts[tag] || 0) + 1;
     }
-    const [buildId] = Object.entries(counts).sort((left, right) => right[1] - left[1])[0] || [];
-    return buildId ? data.BUILD_DIRECTIONS[roleId][buildId]?.name || buildId : '混合通用';
+    const entries = Object.entries(counts).sort((left, right) => right[1] - left[1] || left[0].localeCompare(right[0]));
+    const [topId, topCount] = entries[0] || [];
+    const [secondId, secondCount = 0] = entries[1] || [];
+    const total = entries.reduce((sum, [, count]) => sum + count, 0);
+    if (!topId) return '混合通用';
+    if (secondId && (secondCount >= topCount * 0.55 || topCount / Math.max(1, total) < 0.6)) {
+        return `混合：${buildName(data, roleId, topId)} / ${buildName(data, roleId, secondId)}`;
+    }
+    return buildName(data, roleId, topId);
 }
 
 function estimateCardContribution(data, roleId, card, plays, opportunities) {
@@ -646,10 +728,10 @@ function classifyFailure(data, context) {
     };
 }
 
-function applyCardReward(data, stats, rng, roleId, buildId, deck, floor, hpRatio, profile, runCardsPicked) {
-    const choices = generateCardChoices(data, rng, roleId, buildId, floor, profile, deck);
+function applyCardReward(data, stats, rng, roleId, buildId, deck, floor, hpRatio, profile, runCardsPicked, buildPlan = null) {
+    const choices = generateCardChoices(data, rng, roleId, buildId, floor, profile, deck, buildPlan);
     for (const card of choices) getCardStats(stats, data, roleId, card).appearances++;
-    const selected = pickCardReward(data, rng, roleId, buildId, choices, deck, hpRatio, profile);
+    const selected = pickCardReward(data, rng, roleId, buildId, choices, deck, hpRatio, profile, buildPlan);
     if (!selected) return null;
     getCardStats(stats, data, roleId, selected).selections++;
     deck.push(clone(selected));
@@ -663,8 +745,9 @@ function recordRouteChoices(stats, choices, chosenType) {
 }
 
 function simulateFullRun(data, stats, runConfig) {
-    const { runId, roleId, buildId, profile, difficulty, seed } = runConfig;
+    const { runId, roleId, buildId, profile, difficulty, seed, draftStyle = 'mixed' } = runConfig;
     const rng = createRng(seed);
+    const buildPlan = makeBuildPlan(data, roleId, buildId, rng, draftStyle);
     const character = data.CHARACTERS[roleId];
     const deck = makeStarterDeck(data, rng, roleId, { relics: [], coreCard: null }).map(card => {
         const copy = clone(card);
@@ -784,7 +867,7 @@ function simulateFullRun(data, stats, runConfig) {
             if (nodeType === 'elite') {
                 eliteKills++;
                 chapterStats.eliteWins++;
-                const relic = awardRelic(data, rng, roleId, buildId, ownedRelics, floor);
+                const relic = awardRelic(data, rng, roleId, buildId, ownedRelics, floor, buildPlan);
                 if (relic) {
                     acquiredRelics.push({ id: relic, floor });
                     runRelicsPicked.add(relic);
@@ -798,7 +881,7 @@ function simulateFullRun(data, stats, runConfig) {
                 if (floor === 7) act1BossPassed = true;
                 hp = Math.min(character.maxHp, hp + Math.ceil(character.maxHp * 0.45));
                 gold += 60;
-                const relic = awardRelic(data, rng, roleId, buildId, ownedRelics, floor);
+                const relic = awardRelic(data, rng, roleId, buildId, ownedRelics, floor, buildPlan);
                 if (relic) {
                     acquiredRelics.push({ id: relic, floor });
                     runRelicsPicked.add(relic);
@@ -806,17 +889,17 @@ function simulateFullRun(data, stats, runConfig) {
                     relicStats.obtained++;
                     relicStats.floorTotal += floor;
                 }
-                const core = addCoreCardIfFound(data, rng, roleId, buildId, deck, floor, floor >= 14 && profile === 'experienced' && rng() < 0.18);
+                const core = addCoreCardIfFound(data, rng, roleId, buildId, deck, floor, floor >= 14 && profile === 'experienced' && rng() < 0.18, buildPlan);
                 if (core) coreCards.push(core);
             } else {
                 gold += 18;
             }
-            if (floor < 20) applyCardReward(data, stats, rng, roleId, buildId, deck, floor, hp / character.maxHp, profile, runCardsPicked);
+            if (floor < 20) applyCardReward(data, stats, rng, roleId, buildId, deck, floor, hp / character.maxHp, profile, runCardsPicked, buildPlan);
         } else if (nodeType === 'shop') {
             shops++;
             totalMinutes += 2.4;
             if (gold >= 95 && rng() < 0.6) {
-                const relic = awardRelic(data, rng, roleId, buildId, ownedRelics, floor);
+                const relic = awardRelic(data, rng, roleId, buildId, ownedRelics, floor, buildPlan);
                 if (relic) {
                     gold -= 95;
                     acquiredRelics.push({ id: relic, floor });
@@ -835,7 +918,7 @@ function simulateFullRun(data, stats, runConfig) {
                 }
             }
             if (gold >= 45 && rng() < 0.75) {
-                const selected = applyCardReward(data, stats, rng, roleId, buildId, deck, floor, hp / character.maxHp, profile, runCardsPicked);
+                const selected = applyCardReward(data, stats, rng, roleId, buildId, deck, floor, hp / character.maxHp, profile, runCardsPicked, buildPlan);
                 if (selected) gold -= 45;
             }
         } else if (nodeType === 'rest') {
@@ -859,9 +942,9 @@ function simulateFullRun(data, stats, runConfig) {
                     deck.splice(removable.index, 1);
                     removes++;
                 }
-                applyCardReward(data, stats, rng, roleId, buildId, deck, floor, hp / character.maxHp, profile, runCardsPicked);
+                applyCardReward(data, stats, rng, roleId, buildId, deck, floor, hp / character.maxHp, profile, runCardsPicked, buildPlan);
             } else if (roll < 0.78 && hp / character.maxHp > 0.35) {
-                const relic = awardRelic(data, rng, roleId, buildId, ownedRelics, floor);
+                const relic = awardRelic(data, rng, roleId, buildId, ownedRelics, floor, buildPlan);
                 if (relic) {
                     acquiredRelics.push({ id: relic, floor });
                     runRelicsPicked.add(relic);
@@ -878,7 +961,7 @@ function simulateFullRun(data, stats, runConfig) {
             }
         } else if (nodeType === 'chest') {
             totalMinutes += 0.8;
-            const relic = awardRelic(data, rng, roleId, buildId, ownedRelics, floor);
+            const relic = awardRelic(data, rng, roleId, buildId, ownedRelics, floor, buildPlan);
             if (relic) {
                 acquiredRelics.push({ id: relic, floor });
                 runRelicsPicked.add(relic);
@@ -887,7 +970,7 @@ function simulateFullRun(data, stats, runConfig) {
                 relicStats.floorTotal += floor;
             }
             if (rng() < 0.22) {
-                const core = addCoreCardIfFound(data, rng, roleId, buildId, deck, floor);
+                const core = addCoreCardIfFound(data, rng, roleId, buildId, deck, floor, false, buildPlan);
                 if (core) coreCards.push(core);
             }
             gold += 20;
@@ -912,8 +995,12 @@ function simulateFullRun(data, stats, runConfig) {
         difficulty,
         profile,
         profileLabel: PROFILE_LABELS[profile],
+        draftStyle: buildPlan.draftStyle,
+        draftStyleLabel: DRAFT_STYLE_LABELS[buildPlan.draftStyle],
         targetBuildId: buildId,
         targetBuild: data.BUILD_DIRECTIONS[roleId][buildId].name,
+        secondaryBuildId: buildPlan.secondaryBuildId,
+        secondaryBuild: buildName(data, roleId, buildPlan.secondaryBuildId),
         cleared,
         deathFloor: deathFloor || '',
         deathReason: deathReason || '',
@@ -923,6 +1010,7 @@ function simulateFullRun(data, stats, runConfig) {
         act1BossReached,
         act1BossPassed,
         finalBuild: dominantBuild(data, roleId, deck),
+        buildMix: buildMixSummary(data, roleId, deck),
         coreCards: [...new Set(coreCards.map(card => card.name))].join('/'),
         coreRelics: acquiredRelics.filter(relic => coreRelics.has(relic.id)).map(relic => relicName(data, relic.id)).join('/'),
         totalMinutes,
@@ -1079,6 +1167,27 @@ function summarizeFailureFeedback(runs) {
     })).sort((left, right) => right.count - left.count || left.category.localeCompare(right.category));
 }
 
+function summarizeRunGroups(runs, keyOf) {
+    const groups = {};
+    for (const run of runs) {
+        const key = keyOf(run);
+        groups[key] ||= { label: key, runs: 0, wins: 0, score: 0, floor: 0 };
+        const group = groups[key];
+        group.runs++;
+        if (run.cleared) group.wins++;
+        group.score += run.subjectiveScore || 0;
+        group.floor += run.floorReached || 0;
+    }
+    return Object.values(groups)
+        .map(group => ({
+            ...group,
+            clearRate: group.wins / Math.max(1, group.runs),
+            averageScore: group.score / Math.max(1, group.runs),
+            averageFloor: group.floor / Math.max(1, group.runs)
+        }))
+        .sort((left, right) => right.runs - left.runs || left.label.localeCompare(right.label));
+}
+
 function summarizeCombos(stats, data, cards, relics) {
     const cardNames = Object.fromEntries(cards.map(card => [card.id, card.name]));
     const relicNames = Object.fromEntries(relics.map(relic => [relic.id, relic.name]));
@@ -1172,9 +1281,10 @@ function toCsv(rows, columns) {
 function writeCsvReports(report, outputDir) {
     fs.mkdirSync(outputDir, { recursive: true });
     fs.writeFileSync(path.join(outputDir, 'single_runs.csv'), toCsv(report.runs, [
-        'runId', 'role', 'difficulty', 'profileLabel', 'targetBuild', 'cleared', 'deathFloor',
-        'deathReason', 'deathCategory', 'deathHint', 'floorReached', 'finalBuild', 'coreCards',
-        'coreRelics', 'totalMinutes', 'eliteKills', 'shops', 'removes', 'upgrades',
+        'runId', 'role', 'difficulty', 'profileLabel', 'draftStyleLabel', 'targetBuild',
+        'secondaryBuild', 'cleared', 'deathFloor', 'deathReason', 'deathCategory', 'deathHint',
+        'floorReached', 'finalBuild', 'buildMix', 'coreCards', 'coreRelics',
+        'totalMinutes', 'eliteKills', 'shops', 'removes', 'upgrades',
         'subjectiveScore'
     ]));
     fs.writeFileSync(path.join(outputDir, 'card_stats.csv'), toCsv(report.cards, [
@@ -1213,6 +1323,7 @@ function writeCsvReports(report, outputDir) {
 function markdownReport(report, outputDir) {
     const experiencedRuns = report.runs.filter(run => run.profile === 'experienced');
     const noviceRuns = report.runs.filter(run => run.profile === 'novice');
+    const draftGroups = summarizeRunGroups(report.runs, run => run.draftStyleLabel || run.draftStyle || '未知');
     const experiencedClear = experiencedRuns.filter(run => run.cleared).length / Math.max(1, experiencedRuns.length);
     const noviceAct1Reach = noviceRuns.filter(run => run.act1BossReached).length / Math.max(1, noviceRuns.length);
     const averageScore = report.runs.reduce((sum, run) => sum + run.subjectiveScore, 0) / Math.max(1, report.runs.length);
@@ -1222,6 +1333,7 @@ function markdownReport(report, outputDir) {
         `测试日期：${localReportDate(report.generatedAt)}`,
         '',
         `样本：熟练玩家 ${experiencedRuns.length} 局，新手 ${noviceRuns.length} 局；随机种子：\`${report.config.seed}\`。`,
+        `构筑口径：默认 ${pct(report.config.mixedRunShare)} 跑局按多流派混合构筑，${pct(1 - report.config.mixedRunShare)} 作为纯流派对照。`,
         '',
         '## 关键判定',
         '',
@@ -1230,6 +1342,12 @@ function markdownReport(report, outputDir) {
         `- 平均主观评分：${fixed(averageScore, 2)} / 5。`,
         `- 最大战斗回合：${report.battleCaps.maxTurns}；最大单场回血/最大生命：${fixed(report.battleCaps.maxHealingToHpRatio, 2)}。`,
         `- 异常项：${report.anomalies.length} 条。`,
+        '',
+        '## 构筑策略',
+        '',
+        '| 策略 | 样本 | 通关率 | 平均到达楼层 | 平均评分 |',
+        '|---|---:|---:|---:|---:|',
+        ...draftGroups.map(group => `| ${group.label} | ${group.runs} | ${pct(group.clearRate)} | ${fixed(group.averageFloor)} | ${fixed(group.averageScore, 2)} |`),
         '',
         '## 楼层死亡热区',
         '',
@@ -1287,6 +1405,7 @@ function buildReport(data, stats, config) {
             seed: config.seed,
             runsPerBuild: config.runsPerBuild,
             noviceRunsPerBuild: config.noviceRunsPerBuild,
+            mixedRunShare: config.mixedRunShare,
             totalRuns: stats.runs.length,
             targets: TARGETS
         },
@@ -1314,22 +1433,26 @@ function runSuite(data, args) {
     for (const roleId of roles) {
         for (const buildId of Object.keys(data.BUILD_DIRECTIONS[roleId])) {
             for (let index = 0; index < args.runsPerBuild; index++) {
+                const draftStyle = index / Math.max(1, args.runsPerBuild) < args.mixedRunShare ? 'mixed' : 'focused';
                 simulateFullRun(data, stats, {
                     runId: `E${String(++runNumber).padStart(4, '0')}`,
                     roleId,
                     buildId,
                     profile: 'experienced',
                     difficulty: 'normal',
+                    draftStyle,
                     seed: args.seed + runNumber * 100003
                 });
             }
             for (let index = 0; index < args.noviceRunsPerBuild; index++) {
+                const draftStyle = args.noviceRunsPerBuild === 0 || index / Math.max(1, args.noviceRunsPerBuild) < args.mixedRunShare ? 'mixed' : 'focused';
                 simulateFullRun(data, stats, {
                     runId: `N${String(++runNumber).padStart(4, '0')}`,
                     roleId,
                     buildId,
                     profile: 'novice',
                     difficulty: 'normal',
+                    draftStyle,
                     seed: args.seed + runNumber * 100003 + 777
                 });
             }

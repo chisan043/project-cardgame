@@ -36,6 +36,7 @@ const CORE_DEPENDENCY_LIMIT = {
     elite: 15,
     boss: 7
 };
+const NORMAL_MIXED_SHARE = 0.8;
 
 function parseArgs(argv) {
     const result = {
@@ -109,8 +110,8 @@ function makeMixedDeck(data, rng, roleId, buildId, checkpoint, loadout) {
     const ownPool = shuffle(rng, getBuildPool(data, roleId, buildId));
     const mixedPool = shuffle(rng, roleMixedPool(data, roleId, buildId));
     const foundationCards = checkpoint.id === 'mid' ? 4 : 3;
-    const ownCards = checkpoint.id === 'mid' ? 5 : 7;
-    const offBuildCards = checkpoint.id === 'mid' ? 2 : 3;
+    const ownCards = checkpoint.id === 'mid' ? 3 : 5;
+    const offBuildCards = checkpoint.id === 'mid' ? 3 : 5;
     const deck = [];
     for (let index = 0; index < foundationCards; index++) {
         deck.push(clone(FOUNDATION[roleId][index % FOUNDATION[roleId].length]));
@@ -244,10 +245,21 @@ function diagnoseEntry(entry) {
     const mixedLate = entry.scenarios.mixedNoCore.checkpoints.late.winRate;
     const pureLate = entry.scenarios.pure.checkpoints.late.winRate;
     if ((pureLate - mixedLate) * 100 > 12) issues.push(`混合拿牌后期掉点明显(${pp((mixedLate - pureLate) * 100)})`);
+    for (const checkpoint of FOCUS_CHECKPOINTS) {
+        const normalNoCore = weightedNormalRate(entry, 'mixedNoCore', 'pure', checkpoint.id);
+        if (normalNoCore < WEAK_FLOORS[checkpoint.id]) {
+            issues.push(`${checkpoint.label}正常混合底线偏低(${pct(normalNoCore)})`);
+        }
+    }
     const bossCoreOnly = entry.scenarios.coreOnly.checkpoints.boss.winRate;
     const bossNoCore = entry.scenarios.noCoreMatureRelics.checkpoints.boss.winRate;
     if ((bossCoreOnly - bossNoCore) * 100 > 8) issues.push(`首领战过度依赖核心牌(${pp((bossCoreOnly - bossNoCore) * 100)})`);
     return issues.length ? issues : ['缺核心体验可接受'];
+}
+
+function weightedNormalRate(entry, mixedScenario, pureScenario, checkpointId) {
+    return entry.scenarios[mixedScenario].checkpoints[checkpointId].winRate * NORMAL_MIXED_SHARE
+        + entry.scenarios[pureScenario].checkpoints[checkpointId].winRate * (1 - NORMAL_MIXED_SHARE);
 }
 
 function runPracticalBalance(data, args) {
@@ -313,15 +325,18 @@ function markdownReport(report) {
         '',
         '## 混合拿牌测试',
         '',
-        '混合拿牌牌组用同职业其他流派牌替换约 30% 流派牌，模拟实际奖励里没一直刷到目标牌的情况。',
+        `正常玩家测试口径：约 ${Math.round(NORMAL_MIXED_SHARE * 100)}% 跑局按多流派混合构筑理解，混合牌组中目标流派与其它流派牌接近各半；纯流派只保留为 ${Math.round((1 - NORMAL_MIXED_SHARE) * 100)}% 对照组。`,
         '',
-        '| 职业 | 构筑 | 混合无核心 后期/精英/首领 | 混合单遗物 后期/精英/首领 | 纯卡对照 后期/精英/首领 |',
-        '|---|---|---|---|---|',
+        '| 职业 | 构筑 | 正常无核心加权 后期/精英/首领 | 混合无核心 后期/精英/首领 | 混合单遗物 后期/精英/首领 | 纯卡对照 后期/精英/首领 |',
+        '|---|---|---|---|---|---|',
         ...report.results.map(entry => {
             const rates = scenario => ['late', 'elite', 'boss']
                 .map(id => pct(entry.scenarios[scenario].checkpoints[id].winRate))
                 .join(' / ');
-            return `| ${entry.role} | ${entry.build} | ${rates('mixedNoCore')} | ${rates('mixedMidRelic')} | ${rates('pure')} |`;
+            const normalRates = ['late', 'elite', 'boss']
+                .map(id => pct(weightedNormalRate(entry, 'mixedNoCore', 'pure', id)))
+                .join(' / ');
+            return `| ${entry.role} | ${entry.build} | ${normalRates} | ${rates('mixedNoCore')} | ${rates('mixedMidRelic')} | ${rates('pure')} |`;
         }),
         '',
         '## 核心依赖差值',
@@ -378,6 +393,7 @@ function run() {
         checkpoints: FOCUS_CHECKPOINTS,
         weakFloors: WEAK_FLOORS,
         coreDependencyLimitPp: CORE_DEPENDENCY_LIMIT,
+        normalMixedShare: NORMAL_MIXED_SHARE,
         results: compactResults(results)
     };
     fs.writeFileSync(path.resolve(ROOT, args.json), `${JSON.stringify(report, null, 2)}\n`);
