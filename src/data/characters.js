@@ -128,7 +128,7 @@ const CHARACTERS = {
             { src: 'assets/characters/mage/battle_back_hurt_06_v2.webp', duration: 90 }
         ],
         accentClass: 'featured',
-        starterHint: '两张月泉愈流负责基础生存；两张秘仪预兆与星火破封构成咏唱爆发闭环，镜像与灾厄留给旅途奖励。'
+        starterHint: '两张月泉愈流负责基础生存；两张秘仪预兆与星火破封构成咏唱爆发闭环，蚀星雾提供一张简单异常信号。'
     },
     hero_archer: {
         id: 'hero_archer',

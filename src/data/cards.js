@@ -606,10 +606,11 @@ const STARTER_DECKS = {
     starter_mage: {
         roleId: 'hero_mage',
         cards: [
-            { poolId: 'starter_mage_bolt', name: '星尘法弹', type: '攻击', cost: 1, icon: '🪄', val: 10, tags: [], rarity: '普通', copies: 4, frameTheme: 'mage', desc: '造成 10 点伤害。' },
+            { poolId: 'starter_mage_bolt', name: '星尘法弹', type: '攻击', cost: 1, icon: '🪄', val: 10, tags: [], rarity: '普通', copies: 3, frameTheme: 'mage', desc: '造成 10 点伤害。' },
             { poolId: 'starter_mage_heal', name: '月泉愈流', type: '能力', cost: 0, icon: '✚', val: 8, healValue: 8, tags: ['治愈'], buildNeutral: true, rarity: '普通', copies: 2, frameTheme: 'mage', desc: '免费回复 8 点生命。' },
             { poolId: 'starter_mage_omen', name: '秘仪预兆', type: '能力', cost: 0, icon: '🔮', val: 0, tags: ['咏唱'], directEffects: { draw: true }, buildTags: ['chant'], rarity: '普通', copies: 2, frameTheme: 'mage', desc: '免费积累[咏唱]、获得职业护盾并抽 1 张牌。' },
-            { poolId: 'starter_mage_release', name: '星火破封', type: '攻击', cost: 1, icon: '✨', val: 10, tags: ['爆发'], buildNeutral: true, rarity: '普通', copies: 2, frameTheme: 'mage', desc: '造成 10 点伤害；[爆发]会消耗全部咏唱追加伤害。' }
+            { poolId: 'starter_mage_release', name: '星火破封', type: '攻击', cost: 1, icon: '✨', val: 10, tags: ['爆发'], buildNeutral: true, rarity: '普通', copies: 2, frameTheme: 'mage', desc: '造成 10 点伤害；[爆发]会消耗全部咏唱追加伤害。' },
+            { poolId: 'starter_mage_curse', name: '蚀星雾', type: '能力', cost: 1, icon: '☠️', val: 0, tags: ['诅咒'], buildTags: ['calamity'], rarity: '普通', copies: 1, frameTheme: 'mage', desc: '施加[诅咒]。' }
         ]
     },
     starter_archer: {

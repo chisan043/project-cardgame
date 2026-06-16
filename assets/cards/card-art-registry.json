@@ -6,7 +6,7 @@
   "policy": "Runtime card art lives under assets/cards/art/<theme>/ and is referenced by stable path keys.",
   "assetCount": 147,
   "missingAssetCount": 0,
-  "cardsWithArtCount": 256,
+  "cardsWithArtCount": 257,
   "themes": [
     "archer",
     "mage",
@@ -1314,6 +1314,14 @@
           "roleId": "hero_mage",
           "pool": "character",
           "deckId": null,
+          "rarity": "普通"
+        },
+        {
+          "id": "starter_mage_curse",
+          "name": "蚀星雾",
+          "roleId": "hero_mage",
+          "pool": "starter",
+          "deckId": "starter_mage",
           "rarity": "普通"
         }
       ]
