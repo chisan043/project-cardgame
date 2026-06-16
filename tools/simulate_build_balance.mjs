@@ -539,6 +539,12 @@ function heal(state, amount) {
     state.healing += actual;
 }
 
+function getSwordBonus(state) {
+    const swordRatio = hasRelic(state, 'r_sword_oath') ? 0.7 : 0.4;
+    const counterBonus = state.counter * (hasRelic(state, 'r_sword_oath') ? 8 : 4);
+    return Math.floor(state.armor * swordRatio) + counterBonus;
+}
+
 function hitEnemy(state, amount, pierce = false, source = '卡牌伤害') {
     let damage = Math.max(0, Math.floor(amount));
     if (state.enemy.vuln > 0) damage = Math.floor(damage * (1 + state.enemy.vuln * 0.05));
@@ -621,7 +627,7 @@ function estimateCard(state, card, incoming, move) {
             w_last_verdict: 72 + state.enemy.vuln * 10 + synergyCards * 6,
             a_syn_blood: 16 + getBloodOathBonus(state, card) + Math.min(state.maxHp - state.hp, 20) + (card.magicSwordGrowth || 0) * 6,
             s_magic: state.lastCard ? 62 : 24,
-            s_pierce: 38 + state.chant * 18 + (state.chant === 0 ? 12 : 0),
+            s_pierce: 44 + state.chant * 20 + (state.chant === 0 ? 16 : 0),
             a_syn_magic: 34,
             m_chant_singularity: 30 + (enemyDebuffCount(state) > 0 ? 5 : 0),
             m_forbidden_comet: 56 + state.chant * 26,
@@ -629,18 +635,18 @@ function estimateCard(state, card, incoming, move) {
             m_mirror_hallway: 58,
             m_status_supernova: 58 + enemyDebuffCount(state) * 20,
             m_ember_orbit: 26 + (enemyDebuffCount(state) > 0 ? 10 : 0),
-            m_curse_gravity: 36 + enemyDebuffCount(state) * 8,
+            m_curse_gravity: 40 + enemyDebuffCount(state) * 10,
             m_blood_moon_rite: 18 + enemyDebuffCount(state) * 8,
-            s_energy: 40 + state.aim * 4,
-            a_wind_dance: 38 + (state.aim > 0 ? 8 : 0),
-            a_gale_verdict: 18 + Math.min(4, state.aim) * 15,
+            s_energy: 30 + state.aim * 3,
+            a_wind_dance: 34 + (state.aim > 0 ? 5 : 0),
+            a_gale_verdict: 18 + Math.min(4, state.aim) * 12,
             a_red_rain: 34 + (state.enemy.poison > 0 ? 14 : 0),
             a_bloodlet_gale: 36 + state.enemy.bleed * 8 + (state.enemy.poison > 0 || state.enemy.vuln > 0 ? 10 : 0),
             a_venom_burst: 34 + state.enemy.bleed * 8 + (state.enemy.poison > 0 ? 8 : 0),
             a_green_resonance: (state.discard.length ? 28 : 12) + 16,
-            a_skyfall_shot: 18 + Math.floor(state.exhaust.length / 2) * 4,
+            a_skyfall_shot: 22 + Math.floor(state.exhaust.length / 2) * 5,
             s_poison: (state.enemy.poison + state.enemy.bleed) * 2 + 28,
-            s_exhaust: (state.exhaust.length + 1) * 16 + (state.exhaust.length ? 14 : 0)
+            s_exhaust: (state.exhaust.length + 1) * 14 + (state.exhaust.length ? 14 : 0)
         };
         score += specialScores[card.specialId] || 0;
     }
@@ -650,7 +656,7 @@ function estimateCard(state, card, incoming, move) {
     let repeats = 1 + (tags.includes('追击') ? 1 : 0) + (tags.includes('回响') ? 1 : 0);
     if (card.type === '攻击') {
         if (tags.includes('爆发')) value += state.chant ? state.chant * 8 : 4;
-        if (tags.includes('圣剑')) value += Math.floor(state.armor * (hasRelic(state, 'r_sword_oath') ? 0.55 : 0.4)) + state.counter * 4;
+        if (tags.includes('圣剑')) value += getSwordBonus(state);
         if (card.bloodOathMissingRatio) value += getBloodOathBonus(state, card);
         score += value * repeats * (tags.includes('穿甲') ? 1.12 : 1);
         if (tags.includes('放血')) score += state.enemy.bleed * 3;
@@ -798,14 +804,12 @@ function discardPlayedCard(state, card) {
 function executeSpecialCard(state, card, echo = false) {
     const specialId = card.specialId || card.id;
     if (specialId === 'w_counter_crown') {
-        const swordRatio = hasRelic(state, 'r_sword_oath') ? 0.55 : 0.4;
-        const swordBonus = Math.floor(state.armor * swordRatio) + state.counter * 4;
+        const swordBonus = getSwordBonus(state);
         hitEnemy(state, 16 + state.battleDamage + swordBonus);
         state.counter = 1;
         state.crownOath = true;
     } else if (specialId === 's_shield') {
-        const swordRatio = hasRelic(state, 'r_sword_oath') ? 0.55 : 0.4;
-        const swordBonus = Math.floor(state.armor * swordRatio) + state.counter * 4;
+        const swordBonus = getSwordBonus(state);
         hitEnemy(state, 12 + state.armor + state.battleDamage + swordBonus);
         state.counter = 1;
     } else if (specialId === 's_thorns') {
@@ -840,8 +844,7 @@ function executeSpecialCard(state, card, echo = false) {
         if (hadArmor) state.armor += protect;
         draw(state, 1);
     } else if (specialId === 'w_thorn_judgement') {
-        const swordRatio = hasRelic(state, 'r_sword_oath') ? 0.55 : 0.4;
-        const swordBonus = Math.floor(state.armor * swordRatio) + state.counter * 4;
+        const swordBonus = getSwordBonus(state);
         hitEnemy(state, 10 + state.battleDamage + state.thorns * 4 + swordBonus);
         state.thorns += hasRelic(state, 'r_thorn_shield_new') ? 12 : 8;
     } else if (specialId === 'w_oath_fortress') {
@@ -877,9 +880,9 @@ function executeSpecialCard(state, card, echo = false) {
         }
     } else if (specialId === 's_pierce') {
         const chantSpent = state.chant;
-        hitEnemy(state, 38 + state.battleDamage + chantSpent * 18, true);
+        hitEnemy(state, 44 + state.battleDamage + chantSpent * 20, true);
         if (chantSpent > 0) state.chant = hasRelic(state, 'r_burst_lens') ? Math.ceil(chantSpent / 2) : 0;
-        else state.chant = Math.min(12, state.chant + 3);
+        else state.chant = Math.min(12, state.chant + 4);
     } else if (specialId === 'a_syn_magic') {
         state.nextDamage += 12;
         draw(state, echo ? 1 : 2);
@@ -931,7 +934,7 @@ function executeSpecialCard(state, card, echo = false) {
         state.enemy.curse += 6;
         state.enemy.weak += 4;
         const debuffs = Math.max(1, enemyDebuffCount(state));
-        state.nextDamage += debuffs * 4;
+        state.nextDamage += debuffs * 6;
         if (hasRelic(state, 'r_status_prism')) state.chant = Math.min(12, state.chant + 1);
         draw(state, 1);
         if (debuffs >= 3) state.energy++;
@@ -948,20 +951,20 @@ function executeSpecialCard(state, card, echo = false) {
     } else if (specialId === 'a_gale_verdict') {
         const shots = Math.min(4, state.aim);
         state.aim -= shots;
-        hitEnemy(state, 18 + state.battleDamage + shots * 12, true);
-        state.protection += shots * 3;
+        hitEnemy(state, 18 + state.battleDamage + shots * 10, true);
+        state.protection += shots * 2;
         if (shots >= 2) draw(state, 1);
     } else if (specialId === 's_energy') {
         const hadWind = state.aim > 0;
-        state.aim = Math.min(6, state.aim + 4 + (hasRelic(state, 'r_wind_quiver') ? 1 : 0));
-        draw(state, 2);
+        state.aim = Math.min(6, state.aim + 3 + (hasRelic(state, 'r_wind_quiver') ? 1 : 0));
+        draw(state, 1);
         if (hadWind) state.energy++;
     } else if (specialId === 'a_wind_dance') {
         const hadWind = state.aim > 0;
-        state.aim = Math.min(6, state.aim + 4 + (hasRelic(state, 'r_wind_quiver') ? 1 : 0));
+        state.aim = Math.min(6, state.aim + 3 + (hasRelic(state, 'r_wind_quiver') ? 1 : 0));
         state.sidestep = Math.min(3, state.sidestep + 1 + (hasRelic(state, 'r_wind_quiver') ? 1 : 0));
         state.energy += hasRelic(state, 'r_pass_energy') ? 2 : 1;
-        if (hadWind) state.protection += 6;
+        if (hadWind) state.protection += 4;
         draw(state, 1);
     } else if (specialId === 'a_red_rain') {
         const hadPoison = state.enemy.poison > 0;
@@ -995,7 +998,7 @@ function executeSpecialCard(state, card, echo = false) {
         draw(state, 1);
         if (returned) recordCardOpportunity(state, card);
     } else if (specialId === 'a_skyfall_shot') {
-        hitEnemy(state, 14 + state.battleDamage + Math.floor(state.exhaust.length / 2) * 3, true);
+        hitEnemy(state, 18 + state.battleDamage + Math.floor(state.exhaust.length / 2) * 4, true);
     } else if (specialId === 's_poison') {
         const layers = state.enemy.poison + state.enemy.bleed;
         hitEnemy(state, 20 + layers * 2);
@@ -1003,7 +1006,7 @@ function executeSpecialCard(state, card, echo = false) {
     } else if (specialId === 's_exhaust') {
         const returned = state.exhaust.length + 1;
         if (hasRelic(state, 'r_exhaust_dmg')) state.battleDamage += 1;
-        hitEnemy(state, returned * 16);
+        hitEnemy(state, returned * 14);
         state.aim = Math.min(6, state.aim + Math.floor(returned / 2));
         if (returned >= 2) state.sidestep = Math.min(3, state.sidestep + 1);
         if (hasRelic(state, 'r_return_knife')) addKnives(state, state.exhaust.length);
@@ -1132,7 +1135,7 @@ function executeCard(state, card, echo = false) {
         let damage = value + state.battleDamage + state.turnDamage;
         if (card.bloodOathMissingRatio) damage += getBloodOathBonus(state, card);
         if (tags.includes('放逐') && hasRelic(state, 'r_exile_cache')) damage += 1;
-        if (tags.includes('圣剑')) damage += Math.floor(state.armor * (hasRelic(state, 'r_sword_oath') ? 0.55 : 0.4)) + state.counter * 4;
+        if (tags.includes('圣剑')) damage += getSwordBonus(state);
         if (tags.includes('爆发')) {
             const chantSpent = state.chant;
             damage += chantSpent > 0 ? chantSpent * 10 : 5;
@@ -1145,8 +1148,8 @@ function executeCard(state, card, echo = false) {
         }
         if (state.aim > 0 && !echo) {
             state.aim--;
-            state.protection += 3;
-            hitEnemy(state, Math.max(3, Math.ceil(value * 0.4)), tags.includes('穿甲'));
+            state.protection += 2;
+            hitEnemy(state, Math.max(3, Math.ceil(value * 0.3)), tags.includes('穿甲'));
         }
         if (hasRelic(state, 'r_multishot_fletching') && tags.includes('追击')) damage += 1;
         const pierce = tags.includes('穿甲');
@@ -1232,11 +1235,11 @@ function playPlayerTurn(state, move) {
         state.hand.splice(state.hand.indexOf(card), 1);
         state.energy -= card.cost || 0;
         recordCardPlay(state, card);
-        let specialWindRun = 0;
+        let specialWindRun = false;
         if (card.isSpecial && card.type === '攻击' && state.aim > 0 && (card.specialId || card.id) !== 'a_gale_verdict') {
             state.aim--;
-            state.protection += 3;
-            specialWindRun = 1;
+            state.protection += 2;
+            specialWindRun = true;
         }
         if (card.type === '能力') {
             state.abilityCardsPlayed++;
@@ -1248,13 +1251,17 @@ function playPlayerTurn(state, move) {
             state.signatureAttackReady = true;
         } else if (card.type === '攻击' && state.signatureAttackReady) {
             state.signatureAttackReady = false;
-            if (hasRelic(state, 'r_start_mage')) state.chant = Math.min(12, state.chant + 1);
+            if (hasRelic(state, 'r_start_mage')) state.chant = Math.min(12, state.chant + 2);
             else if (hasRelic(state, 'r_start_archer')) archerSignatureAfterCard = true;
         }
         executeCard(state, card, false);
+        if (specialWindRun && state.enemy.hp > 0) {
+            const value = state.data.getScaledCardValue(card);
+            hitEnemy(state, Math.max(3, Math.ceil(value * 0.3)), (card.tags || []).includes('穿甲'));
+        }
         if (archerSignatureAfterCard && state.enemy.hp > 0) {
             state.aim = Math.min(6, state.aim + 1);
-            state.protection += 5;
+            state.protection += 3;
         }
         if (state.hp <= 0 || state.enemy.hp <= 0) break;
         if ((card.tags || []).includes('回响')) {
@@ -1267,7 +1274,7 @@ function playPlayerTurn(state, move) {
             if (hasRelic(state, 'r_echo_mirror_relic')) executeCard(state, card, true);
         }
         if (state.hp <= 0 || state.enemy.hp <= 0) break;
-        const extraRuns = specialWindRun + ((card.tags || []).includes('追击') ? 1 : 0);
+        const extraRuns = ((card.tags || []).includes('追击') ? 1 : 0);
         for (let i = 0; i < extraRuns && state.enemy.hp > 0; i++) executeCard(state, card, true);
         discardPlayedCard(state, card);
         if (!(card.tags || []).includes('复刻')) state.lastCard = card;

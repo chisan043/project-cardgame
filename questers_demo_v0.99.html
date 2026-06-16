@@ -5885,6 +5885,16 @@
         return false;
     }
 
+    function getWindChaseDamage(card) {
+        let value = getScaledCardValue(card);
+        if (card.tags && card.tags.includes('重击')) value *= hasRelic('r_heavy_badge') ? 2.5 : 2;
+        if (card.tags && card.tags.includes('连击') && cardsPlayedThisTurn > 1) {
+            value = Math.floor(value * (hasRelic('r_combo_ring') ? 1.7 : 1.5));
+        }
+        if (hasRelic('r_fast_foot') && cardsPlayedThisTurn === 1) value = Math.floor(value * 1.5);
+        return Math.max(3, Math.ceil(value * 0.3));
+    }
+
     async function playCard(instId, elDOM) {
         if (state.isEnemyTurn) return;
         const idx = state.hand.findIndex(c => c.instId == instId); if(idx === -1) return;
@@ -5976,10 +5986,9 @@
         let windStepTriggered = false;
         if (card.type === '攻击' && !card.isJunk && state.p_aim > 0 && card.specialId !== 'a_gale_verdict') {
             state.p_aim--;
-            state.p_reduce_dmg += 3;
-            runCount += 1;
+            state.p_reduce_dmg += 2;
             windStepTriggered = true;
-            showFloatText("踏风追射 / 庇护 +3", "var(--nature)", getCenter('hand-area'));
+            showFloatText("踏风追射 / 庇护 +2", "var(--nature)", getCenter('hand-area'));
         }
         if (card.tags && card.tags.includes('追击')) {
             runCount += 1;
@@ -5993,12 +6002,17 @@
 
         for(let i=0; i<runCount; i++) {
             await executeCardTags(card, i > 0, targets);
+            if (i === 0 && windStepTriggered && state.enemy.currentHp > 0) {
+                const chaseDmg = getWindChaseDamage(card);
+                applyDamageToEnemy(chaseDmg, card.tags && card.tags.includes('穿甲'));
+                showFloatText(`轻灵追射 +${chaseDmg}`, "var(--nature)", getCenter('enemy-avatar'));
+            }
             if (i === 0 && state.r_signature_archer_pending) {
                 state.r_signature_archer_pending = false;
                 if (state.enemy.currentHp > 0) {
                     state.p_aim = Math.min(6, state.p_aim + 1);
-                    state.p_reduce_dmg += 5;
-                    showFloatText('逐风续势 +1 / 庇护 +5', "var(--nature)", getCenter('ui-hp'));
+                    state.p_reduce_dmg += 3;
+                    showFloatText('逐风续势 +1 / 庇护 +3', "var(--nature)", getCenter('ui-hp'));
                 }
             }
             if (state.hp <= 0) return;
@@ -6036,8 +6050,8 @@
             } else if (card.type === '攻击' && state.r_signature_attack_ready) {
                 state.r_signature_attack_ready = false;
                 if (roleId === 'hero_mage' && hasRelic('r_start_mage')) {
-                    state.p_chant = Math.min(9, state.p_chant + 1);
-                    showFloatText('余辉积累 1 层咏唱', "var(--purple)", getCenter('ui-hp'));
+                    state.p_chant = Math.min(12, state.p_chant + 2);
+                    showFloatText('余辉积累 2 层咏唱', "var(--purple)", getCenter('ui-hp'));
                 } else if (roleId === 'hero_archer' && hasRelic('r_start_archer')) {
                     state.r_signature_archer_pending = true;
                 }
@@ -6047,7 +6061,7 @@
         // ====== 特殊史诗核心卡 ======
         if (card.isSpecial) {
             if(card.specialId === 's_exhaust') {
-                triggerVFX('p-atk'); let count = state.exhaustPile.length + 1; let dmg = count * 16;
+                triggerVFX('p-atk'); let count = state.exhaustPile.length + 1; let dmg = count * 14;
                 applySpecialCardDamage(card, dmg);
                 state.p_aim = Math.min(6, state.p_aim + Math.floor(count / 2));
                 if (count >= 2) state.p_sidestep = Math.min(3, (state.p_sidestep || 0) + 1);
@@ -6076,16 +6090,16 @@
             else if(card.specialId === 's_pierce') {
                 triggerVFX('p-atk');
                 const chantSpent = state.p_chant;
-                applySpecialCardDamage(card, 38 + state.p_battle_dmg + chantSpent * 18, true);
+                applySpecialCardDamage(card, 44 + state.p_battle_dmg + chantSpent * 20, true);
                 if (chantSpent > 0) {
                     state.p_chant = hasRelic('r_burst_lens') ? Math.ceil(chantSpent / 2) : 0;
                 } else {
-                    state.p_chant = Math.min(12, state.p_chant + 3);
-                    showFloatText("星雷蓄鸣 +3", "var(--purple)", getCenter('ui-hp'));
+                    state.p_chant = Math.min(12, state.p_chant + 4);
+                    showFloatText("星雷蓄鸣 +4", "var(--purple)", getCenter('ui-hp'));
                 }
             }
             else if(card.specialId === 's_thorns') { triggerVFX('p-def'); state.armor += 18; state.player.thorns += hasRelic('r_thorn_shield_new') ? 12 : 8; showFloatText(card.name, "var(--gold)", getCenter('ui-hp')); updateTopBar(); }
-            else if(card.specialId === 's_energy') { const hadWind = state.p_aim > 0; const windGain = 4 + (hasRelic('r_wind_quiver') ? 1 : 0); state.p_aim = Math.min(6, state.p_aim + windGain); if (hadWind) state.mp += 1; await drawCards(2); showFloatText(hadWind ? `风势 +${windGain} / 能量 +1` : `风势 +${windGain}`, "var(--nature)", getCenter('ui-mp')); }
+            else if(card.specialId === 's_energy') { const hadWind = state.p_aim > 0; const windGain = 3 + (hasRelic('r_wind_quiver') ? 1 : 0); state.p_aim = Math.min(6, state.p_aim + windGain); if (hadWind) state.mp += 1; await drawCards(1); showFloatText(hadWind ? `风势 +${windGain} / 能量 +1` : `风势 +${windGain}`, "var(--nature)", getCenter('ui-mp')); }
             
             // --- 词条共鸣 ---
             else if (card.specialId === 'a_syn_sword') {
@@ -6245,11 +6259,11 @@
                 state.enemy.curse += 6;
                 state.enemy.weak += 4;
                 const debuffs = Math.max(1, getEnemyDebuffTypeCount());
-                state.p_next_dmg += debuffs * 4;
+                state.p_next_dmg += debuffs * 6;
                 if(hasRelic('r_status_prism')) state.p_chant = Math.min(12, state.p_chant + 1);
                 await drawCards(1);
                 if (debuffs >= 3) state.mp += 1;
-                showFloatText(debuffs >= 3 ? `灾厄标记 +${debuffs * 4} / 回能 +1` : `灾厄标记 +${debuffs * 4}`, "var(--purple)", getCenter('ui-hp'));
+                showFloatText(debuffs >= 3 ? `灾厄标记 +${debuffs * 6} / 回能 +1` : `灾厄标记 +${debuffs * 6}`, "var(--purple)", getCenter('ui-hp'));
             }
             else if (card.specialId === 'm_blood_moon_rite') {
                 state.enemy.curse += 5;
@@ -6271,12 +6285,12 @@
             }
             else if (card.specialId === 'a_wind_dance') {
                 const hadWind = state.p_aim > 0;
-                const windGain = 4 + (hasRelic('r_wind_quiver') ? 1 : 0);
+                const windGain = 3 + (hasRelic('r_wind_quiver') ? 1 : 0);
                 const sidestepGain = 1 + (hasRelic('r_wind_quiver') ? 1 : 0);
                 state.p_aim = Math.min(6, state.p_aim + windGain);
                 state.p_sidestep = Math.min(3, (state.p_sidestep || 0) + sidestepGain);
                 state.mp += hasRelic('r_pass_energy') ? 2 : 1;
-                if (hadWind) state.p_reduce_dmg += 6;
+                if (hadWind) state.p_reduce_dmg += 4;
                 showFloatText(`风势 +${windGain} / 闪避 +${sidestepGain}`, "var(--nature)", getCenter('ui-hp'));
                 await drawCards(1);
             }
@@ -6284,8 +6298,8 @@
                 const shots = Math.min(4, state.p_aim);
                 state.p_aim -= shots;
                 triggerVFX('p-atk');
-                applySpecialCardDamage(card, 18 + state.p_battle_dmg + shots * 12, true);
-                state.p_reduce_dmg += shots * 3;
+                applySpecialCardDamage(card, 18 + state.p_battle_dmg + shots * 10, true);
+                state.p_reduce_dmg += shots * 2;
                 if (shots >= 2) await drawCards(1);
                 showFloatText(`裁决风势 ${shots}`, "var(--nature)", getCenter('enemy-avatar'));
             }
@@ -6342,9 +6356,9 @@
                 showFloatText("翠林回响", "var(--nature)", getCenter('ui-hp'));
             }
             else if (card.specialId === 'a_skyfall_shot') {
-                const exileBonus = Math.floor(state.exhaustPile.length / 2) * 3;
+                const exileBonus = Math.floor(state.exhaustPile.length / 2) * 4;
                 triggerVFX('p-atk');
-                applySpecialCardDamage(card, 14 + state.p_battle_dmg + exileBonus, true);
+                applySpecialCardDamage(card, 18 + state.p_battle_dmg + exileBonus, true);
                 showFloatText(exileBonus > 0 ? `坠星绝矢 +${exileBonus}` : "坠星绝矢", "var(--nature)", getCenter('enemy-avatar'));
             }
             else {

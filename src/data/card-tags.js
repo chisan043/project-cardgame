@@ -22,7 +22,7 @@ const TAGS = {
     '放血': '引爆敌方的出血状态，每层造成 3 点伤害，随后清空。',
     '重击': '攻击牌卡面伤害已计入重击；实际结算为基础数值伤害翻倍。',
     '穿甲': '无视敌方护甲，直接扣除生命。',
-    '圣剑': '战士专属攻击词条：额外造成当前护盾 40% 的伤害，反击姿态再 +4；拥有圣剑誓印时护盾比例提高到 55%。',
+    '圣剑': '战士专属攻击词条：额外造成当前护盾 40% 的伤害，反击姿态再 +4；拥有圣剑誓印时护盾比例提高到 70%，反击追加提高到 +8。',
     '咏唱': '法师通用资源：积累 {val} 层咏唱并获得 4 点护盾；爆发牌会消耗咏唱，每层追加 10 点伤害。',
     '爆发': '法师专属：攻击会消耗所有咏唱层数，每层追加 10 点伤害并获得 1 点庇护，庇护最多 10 点；没有咏唱时仍追加 5 点伤害。',
     '蓄力': '弓箭手专属：获得风势。打出攻击牌时消耗 1 层风势，追加一次轻灵追射并获得少量庇护。',
@@ -173,7 +173,7 @@ const STATUS_DESC = {
     thorns: '<span style="color:var(--nature); font-weight:bold;">荆棘</span><br>被攻击时反弹等于荆棘层数的伤害。<br>战士打出荆棘牌时，会根据当前护盾额外获得荆棘。',
     charge: '<span style="color:var(--crimson); font-weight:bold;">蓄力</span><br>下一次攻击造成的伤害翻倍！',
     chant: '<span style="color:var(--purple); font-weight:bold;">咏唱</span><br>法师的爆发牌会消耗咏唱层数，每层追加 10 点伤害。',
-    aim: '<span style="color:var(--nature); font-weight:bold;">风势</span><br>弓箭手的灵动身法。攻击时消耗 1 层，追加一次轻灵追射并获得 3 点庇护。'
+    aim: '<span style="color:var(--nature); font-weight:bold;">风势</span><br>弓箭手的灵动身法。攻击时消耗 1 层，追加一次轻灵追射并获得 2 点庇护。'
 };
 
 function getTagDisplayName(tag) {
