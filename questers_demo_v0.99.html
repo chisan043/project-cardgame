@@ -7097,10 +7097,16 @@
         const c = document.getElementById('lib-content'); c.innerHTML = '';
         
         if (tab === 'cards') {
-            const character = getCurrentCharacter();
-            const classPool = getCharacterCardPool(character.id);
-            c.innerHTML = `<div class="lib-grid-note" style="color:#d9c28a; text-align:center; margin-bottom:12px;">当前职业：${character.name}。奖励与商栈会优先从这些职业卡牌中抽取，并混入少量中立卡牌。</div>`;
-            [...classPool, ...NEUTRAL_CARD_POOL].forEach(card => {
+            c.innerHTML = `<div class="lib-grid-note" style="color:#d9c28a; text-align:center; margin-bottom:12px;">图鉴展示全部职业卡池。实际奖励与商栈仍会优先从当前职业卡牌中抽取，并混入少量中立卡牌。</div>`;
+            CHARACTER_ORDER.forEach(roleId => {
+                const character = CHARACTERS[roleId] || CHARACTERS.hero_warrior;
+                c.innerHTML += `<div class="lib-section-title" style="color:#fff1c0; font-size:18px; letter-spacing:3px; padding:12px 0 4px; border-top:1px solid rgba(241,196,15,0.22);">${character.name} · 职业卡池</div>`;
+                getCharacterCardPool(roleId).forEach(card => {
+                    c.innerHTML += generateCardHTML(cloneCardDefinition(card), true);
+                });
+            });
+            c.innerHTML += `<div class="lib-section-title" style="color:#fff1c0; font-size:18px; letter-spacing:3px; padding:12px 0 4px; border-top:1px solid rgba(241,196,15,0.22);">中立卡牌 · 通用卡池</div>`;
+            NEUTRAL_CARD_POOL.forEach(card => {
                 c.innerHTML += generateCardHTML(cloneCardDefinition(card), true);
             });
         }
