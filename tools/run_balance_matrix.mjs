@@ -17,9 +17,11 @@ function parseArgs(argv) {
         noviceRunsPerBuild: 12,
         practicalRuns: 500,
         epicRuns: 120,
+        relicRuns: 100,
         skipFull: false,
         skipPractical: false,
-        skipEpic: false
+        skipEpic: false,
+        skipRelic: false
     };
     for (let index = 0; index < argv.length; index++) {
         const arg = argv[index];
@@ -29,9 +31,11 @@ function parseArgs(argv) {
         else if (arg === '--novice-runs-per-build') result.noviceRunsPerBuild = Number(argv[++index]);
         else if (arg === '--practical-runs') result.practicalRuns = Number(argv[++index]);
         else if (arg === '--epic-runs') result.epicRuns = Number(argv[++index]);
+        else if (arg === '--relic-runs') result.relicRuns = Number(argv[++index]);
         else if (arg === '--skip-full') result.skipFull = true;
         else if (arg === '--skip-practical') result.skipPractical = true;
         else if (arg === '--skip-epic') result.skipEpic = true;
+        else if (arg === '--skip-relic') result.skipRelic = true;
     }
     if (!result.seeds.length) throw new Error('--seeds must include at least one number');
     return result;
@@ -125,6 +129,33 @@ function summarizeEpic(report) {
     };
 }
 
+function summarizeRelic(report) {
+    const rows = report.anomalies
+        .filter(item => item.severity !== 'info')
+        .map(item => ({
+            severity: item.severity,
+            kind: item.kind,
+            role: item.role,
+            build: item.build,
+            relic: item.relic,
+            detail: item.detail
+        })).sort((left, right) => {
+            const rank = { high: 0, medium: 1 };
+            return (rank[left.severity] ?? 2) - (rank[right.severity] ?? 2)
+                || left.role.localeCompare(right.role, 'zh-CN')
+                || left.build.localeCompare(right.build, 'zh-CN')
+                || left.relic.localeCompare(right.relic, 'zh-CN');
+        });
+    return {
+        totalRelics: report.totalRelics,
+        testedSamples: report.testedSamples,
+        highCount: rows.filter(row => row.severity === 'high').length,
+        mediumCount: rows.filter(row => row.severity === 'medium').length,
+        nonCombatCount: report.anomalies.filter(item => item.kind === '非战斗遗物').length,
+        topAnomalies: rows.slice(0, 20)
+    };
+}
+
 function markdownSummary(summary) {
     const lines = [
         '# Questers 平衡矩阵总报告',
@@ -142,6 +173,7 @@ function markdownSummary(summary) {
         `| 完整跑局 seeds | ${summary.full.length ? summary.full.map(item => item.seed).join(', ') : '跳过'} |`,
         `| 实战缺核心 seeds | ${summary.practical.length ? summary.practical.map(item => item.seed).join(', ') : '跳过'} |`,
         `| 史诗核心审计 seeds | ${summary.epic.length ? summary.epic.map(item => item.seed).join(', ') : '跳过'} |`,
+        `| 遗物审计 seeds | ${summary.relic.length ? summary.relic.map(item => item.seed).join(', ') : '跳过'} |`,
         ''
     ];
     if (summary.full.length) {
@@ -184,6 +216,25 @@ function markdownSummary(summary) {
             ''
         );
     }
+    if (summary.relic.length) {
+        lines.push(
+            '## 遗物审计',
+            '',
+            '| Seed | 遗物 | 样本 | High | Medium | 非战斗覆盖 |',
+            '|---:|---:|---:|---:|---:|---:|',
+            ...summary.relic.map(item => `| ${item.seed} | ${item.totalRelics} | ${item.testedSamples} | ${item.highCount} | ${item.mediumCount} | ${item.nonCombatCount} |`),
+            ''
+        );
+        const top = summary.relic[0].topAnomalies.slice(0, 16);
+        lines.push(
+            '### 首个 seed 遗物异常样例',
+            '',
+            '| 严重度 | 类型 | 职业 | 构筑 | 遗物 | 说明 |',
+            '|---|---|---|---|---|---|',
+            ...(top.length ? top.map(row => `| ${row.severity} | ${row.kind} | ${row.role} | ${row.build} | ${row.relic} | ${row.detail} |`) : ['| ok | 无 | - | - | - | 未发现战斗遗物异常 |']),
+            ''
+        );
+    }
     return `${lines.join('\n')}\n`;
 }
 
@@ -199,7 +250,8 @@ function run() {
         route: runStep('route rules', ['tools/check_route_rules.mjs']),
         full: [],
         practical: [],
-        epic: []
+        epic: [],
+        relic: []
     };
     if (summary.release.status !== 0 || summary.route.status !== 0) {
         fs.writeFileSync(path.join(outDir, 'balance_matrix_summary.json'), `${JSON.stringify(summary, null, 2)}\n`);
@@ -242,6 +294,17 @@ function run() {
             ]);
             if (result.status !== 0) throw new Error(`epic core audit failed for seed ${seed}`);
             summary.epic.push({ seed, ...summarizeEpic(readJson(path.join(epicDir, 'epic_core_balance_report.json'))) });
+        }
+        if (!args.skipRelic) {
+            const relicDir = path.join(outDir, `relic_${seed}`);
+            const result = runStep(`relic audit ${seed}`, [
+                'tools/analyze_relic_balance.mjs',
+                '--runs', String(args.relicRuns),
+                '--seed', String(seed),
+                '--out-dir', relicDir
+            ]);
+            if (result.status !== 0) throw new Error(`relic audit failed for seed ${seed}`);
+            summary.relic.push({ seed, ...summarizeRelic(readJson(path.join(relicDir, 'relic_balance_report.json'))) });
         }
     }
 
