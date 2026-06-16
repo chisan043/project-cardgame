@@ -175,8 +175,9 @@ function analyzeStarterBias(data, roleId, starter) {
     const bridgeCoveragePassed = requiredBridgePairs.every(pair => (bridgeCoverage[pair] || []).length > 0);
     const starterRule = {
         hero_warrior: {
-            survival: { poolId: 'starter_warrior_guard', copies: 3, type: '防御', tag: null, label: '3 张护盾牌' },
-            balancedSignals: true
+            survival: { poolId: 'starter_warrior_guard', copies: 4, type: '防御', tag: null, label: '4 张护盾牌' },
+            requiredSignals: { oathblade: 1, execution: 1 },
+            maxSignals: { bloodoath: 0 }
         },
         hero_mage: {
             survival: { poolId: 'starter_mage_heal', copies: 2, type: '能力', tag: '治愈', label: '2 张治愈牌' },
@@ -378,7 +379,7 @@ function renderMarkdown(report) {
             .join(' / ') || '无';
         lines.push(`| ${result.role} | ${result.bias.survivalIdentity.label} | ${signals} | ${result.bias.profileSpread.toFixed(2)} | ${coverage} | ${bridges} | ${result.bias.passed ? '通过' : '失败'} |`);
     }
-    lines.push('', '通过条件：三个角色保留各自的基础生存轴；战士初始牌仍保持三路线轻信号，法师初始牌聚焦咏唱闭环且不预塞镜像/灾厄，弓手初始牌聚焦风势与有限闪避且不预塞猎毒；每个方向都有独立牌可选；战士至少保留圣剑与处刑、处刑与血债两类桥接牌；血誓不得出现护盾或庇护。', '');
+    lines.push('', '通过条件：三个角色保留各自的基础生存轴；战士初始牌聚焦基础攻防、反击与易伤且不预塞血誓，法师初始牌聚焦咏唱闭环且不预塞镜像/灾厄，弓手初始牌聚焦风势与有限闪避且不预塞猎毒；每个方向都有独立牌可选；战士至少保留圣剑与处刑、处刑与血债两类桥接牌；血誓不得出现护盾或庇护。', '');
     lines.push('## 初始卡使用率', '');
     for (const result of report.results) {
         const teachingEnemies = ['early', 'mid'].flatMap(id => Object.values(result.checkpoints[id].enemies));

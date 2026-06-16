@@ -6,7 +6,7 @@
   "policy": "Runtime card art lives under assets/cards/art/<theme>/ and is referenced by stable path keys.",
   "assetCount": 146,
   "missingAssetCount": 0,
-  "cardsWithArtCount": 256,
+  "cardsWithArtCount": 254,
   "themes": [
     "archer",
     "mage",
@@ -2160,14 +2160,6 @@
           "pool": "neutral",
           "deckId": null,
           "rarity": "普通"
-        },
-        {
-          "id": "starter_blank_contract",
-          "name": "空白契约",
-          "roleId": "hero_warrior",
-          "pool": "starter",
-          "deckId": "starter_warrior",
-          "rarity": "普通"
         }
       ]
     },
@@ -2427,14 +2419,6 @@
           "pool": "special_epic",
           "deckId": null,
           "rarity": "史诗"
-        },
-        {
-          "id": "starter_warrior_lifebite",
-          "name": "血火回命",
-          "roleId": "hero_warrior",
-          "pool": "starter",
-          "deckId": "starter_warrior",
-          "rarity": "普通"
         }
       ]
     },

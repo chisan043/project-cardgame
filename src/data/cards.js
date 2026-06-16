@@ -592,12 +592,10 @@ const STARTER_DECKS = {
     starter_warrior: {
         roleId: 'hero_warrior',
         cards: [
-            { poolId: 'starter_warrior_strike', name: '铁誓斩', type: '攻击', cost: 1, icon: '⚔️', val: 8, tags: [], rarity: '普通', copies: 3, frameTheme: 'warrior', desc: '造成 8 点伤害。' },
-            { poolId: 'starter_warrior_guard', name: '旧盾守', type: '防御', cost: 1, icon: '🛡️', val: 7, tags: [], rarity: '普通', copies: 3, frameTheme: 'warrior', desc: '获得 7 点护盾。' },
+            { poolId: 'starter_warrior_strike', name: '铁誓斩', type: '攻击', cost: 1, icon: '⚔️', val: 8, tags: [], rarity: '普通', copies: 4, frameTheme: 'warrior', desc: '造成 8 点伤害。' },
+            { poolId: 'starter_warrior_guard', name: '旧盾守', type: '防御', cost: 1, icon: '🛡️', val: 7, tags: [], rarity: '普通', copies: 4, frameTheme: 'warrior', desc: '获得 7 点护盾。' },
             { poolId: 'starter_warrior_watch', name: '守誓待击', type: '能力', cost: 0, icon: '👁️', val: 0, tags: ['反击', '销毁'], buildTags: ['oathblade'], rarity: '普通', frameTheme: 'warrior', desc: '免费进入[反击]姿态，使用后[销毁]。' },
-            { poolId: 'starter_warrior_flaw', name: '裂隙刻印', type: '能力', cost: 0, icon: '🎯', val: 0, tags: ['易伤'], buildTags: ['execution'], directEffects: { draw: true }, rarity: '普通', frameTheme: 'warrior', desc: '免费施加[易伤]并抽 1 张牌。' },
-            { poolId: 'starter_warrior_lifebite', name: '血火回命', type: '攻击', cost: 1, icon: '🩸', val: 8, tags: ['吸血'], buildTags: ['bloodoath'], rarity: '普通', frameTheme: 'warrior', desc: '造成 8 点伤害并[吸血]。' },
-            { poolId: 'starter_blank_contract', name: '空白契约', type: '能力', cost: 0, icon: '📄', val: 0, tags: ['销毁'], directEffects: { draw: true }, rarity: '普通', frameTheme: 'neutral', desc: '抽 1 张牌，随后[销毁]。' }
+            { poolId: 'starter_warrior_flaw', name: '裂隙刻印', type: '能力', cost: 0, icon: '🎯', val: 0, tags: ['易伤'], buildTags: ['execution'], directEffects: { draw: true }, rarity: '普通', frameTheme: 'warrior', desc: '免费施加[易伤]并抽 1 张牌。' }
         ]
     },
     starter_mage: {

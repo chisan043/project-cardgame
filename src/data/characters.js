@@ -63,7 +63,7 @@ const CHARACTERS = {
             { src: 'assets/characters/warrior/battle_back_hurt_06_v2.webp', duration: 90 }
         ],
         accentClass: '',
-        starterHint: '起始牌组同时提供圣剑、处刑与血债信号；血债路线不依赖护盾，而是借债爆发后用吸血或偿债收束。'
+        starterHint: '铁誓斩与旧盾守负责基础攻防；守誓待击教会反击，裂隙刻印教会易伤窗口，血誓留给旅途奖励。'
     },
     hero_mage: {
         id: 'hero_mage',
