@@ -11,12 +11,13 @@ const DATA_FILES = [
     'src/data/card-tags.js',
     'src/data/cards.js',
     'src/data/enemies.js',
-    'src/data/characters.js'
+    'src/data/characters.js',
+    'src/runtime/battle-rules.js'
 ];
 
 function loadGameData() {
     const source = DATA_FILES.map(file => fs.readFileSync(path.join(ROOT, file), 'utf8')).join('\n');
-    const context = vm.createContext({});
+    const context = vm.createContext({ window: {} });
     vm.runInContext(`${source}\n;globalThis.__balanceData = {
         TAGS, BUILD_DIRECTIONS, CARD_BUILD_TAGS_BY_ID, NEUTRAL_CARD_POOL, STARTER_DECKS,
         CHARACTER_CARD_POOLS, SPECIAL_EPIC_POOLS, ROLE_CARD_TAG_POLICY_DROPS, RELIC_POOL, RELIC_BUILD_TAGS_BY_ID,
@@ -24,7 +25,7 @@ function loadGameData() {
         ENEMIES, CHARACTERS, getScaledCardValue,
         getAbilityPotency, getCardDrawCount, getCardHealValue,
         getCardChantGain, getProtectionValue, getWindGain, getSidestepGain,
-        getCardRecycleModes, hasDirectCardEffect
+        getCardRecycleModes, hasDirectCardEffect, QuestersBattleRules: window.QuestersBattleRules
     };`, context);
     return context.__balanceData;
 }
@@ -262,6 +263,8 @@ function createEnemy(data, rng, checkpoint, enemyName = null) {
     template.minion = null;
     template.turn = 0;
     template.lastMove = -1;
+    template.turnCount = 0;
+    template.moveHistory = [];
     template.moves = template.moves.map(move => ({
         ...move,
         val: Math.floor(move.val * ((move.type.includes('attack') || ['defend', 'summon', 'heal'].includes(move.type)) ? scale : 1))
@@ -724,18 +727,30 @@ function estimateCard(state, card, incoming, move) {
 }
 
 function chooseMove(state) {
-    const enemy = state.enemy;
-    const opener = enemy.ai?.opener;
-    if (enemy.turn === 0 && Number.isInteger(opener) && enemy.moves[opener]) return opener;
-    const candidates = enemy.moves.map((move, index) => ({ move, index })).filter(entry => entry.index !== enemy.lastMove || enemy.moves.length === 1);
-    const attackBias = enemy.ai?.aggression || 1;
-    const weights = candidates.map(({ move }) => move.type.includes('attack') ? 3 * attackBias : move.type === 'charge' ? 1.2 : 1);
-    let roll = state.rng() * weights.reduce((sum, value) => sum + value, 0);
-    for (let i = 0; i < candidates.length; i++) {
-        roll -= weights[i];
-        if (roll <= 0) return candidates[i].index;
+    const rules = state.data.QuestersBattleRules;
+    if (rules?.selectEnemyMoveIndex) {
+        const moveIndex = rules.selectEnemyMoveIndex({
+            enemy: {
+                ...state.enemy,
+                currentHp: state.enemy.hp,
+                turnCount: state.enemy.turnCount,
+                moveHistory: state.enemy.moveHistory
+            },
+            player: {
+                armor: state.armor,
+                hp: state.hp,
+                maxHp: state.maxHp,
+                p_bleed: state.bleed,
+                p_burn: state.burn,
+                p_poison: state.poison,
+                p_vuln: state.vuln,
+                p_weak: state.weak
+            },
+            rng: state.rng
+        });
+        if (Number.isInteger(moveIndex) && moveIndex >= 0 && moveIndex < state.enemy.moves.length) return moveIndex;
     }
-    return candidates[candidates.length - 1].index;
+    return 0;
 }
 
 function expectedIncoming(state, move) {
@@ -1312,6 +1327,8 @@ function simulateBattle(data, rng, roleId, deck, hp, checkpoint, loadout, option
         if (resolveEnemyDeath(state)) return battleResult(state, true);
         state.enemy.lastMove = moveIndex;
         state.enemy.turn++;
+        state.enemy.moveHistory.push(moveIndex);
+        state.enemy.turnCount++;
     }
     return battleResult(state, false, state.hp > 0 ? '回合上限' : null);
 }
