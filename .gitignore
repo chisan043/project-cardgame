@@ -1,3 +1,9 @@
 .DS_Store
 **/.DS_Store
 *.before-cache-restore.html
+
+# Generated test reports
+*测试报告*.md
+*诊断报告.md
+tools/*report*.json
+tools/playtest_reports/
