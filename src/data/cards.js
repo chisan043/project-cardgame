@@ -17,6 +17,7 @@ const CARD_ART_REGISTRY = {
     '王冠反斩': 'assets/cards/art/warrior/warrior_crown_riposte_art_v1.webp',
     '铁壁圣痕': 'assets/cards/art/warrior/warrior_scar_art_v1.webp',
     '血誓裂锋': 'assets/cards/art/warrior/warrior_blood_vow_slash_art_v1.webp',
+    '魔剑': 'assets/cards/art/warrior/warrior_blood_vow_slash_art_v1.webp',
     '血火回命': 'assets/cards/art/warrior/warrior_blood_vow_slash_art_v1.webp',
     '裂隙刻印': 'assets/cards/art/warrior/warrior_flash_art_v1.webp',
     '誓反架势': 'assets/cards/art/warrior/warrior_guard_art_v1.webp',
@@ -219,7 +220,7 @@ const CARD_FRAME_ASSETS = {
 };
 
 const CARD_FRAME_THEME_BY_NAME = {
-    '誓光破阵': 'warrior', '遗迹立誓': 'warrior', '圣垒回身': 'warrior', '誓约追击': 'warrior', '圣堂守势': 'warrior', '誓刃解封': 'warrior', '裂光一闪': 'warrior', '王冠反斩': 'warrior', '铁壁圣痕': 'warrior', '血誓裂锋': 'warrior', '棘甲冲锋': 'warrior', '誓旗护阵': 'warrior', '血痕引路': 'warrior', '血誓开锋': 'warrior', '偿血追命': 'warrior', '誓约留锋': 'warrior', '魂誓换锋': 'warrior', '狂誓裂斩': 'warrior', '终誓处刑': 'warrior', '铁誓斩': 'warrior', '誓盾守': 'warrior', '誓光斩': 'warrior',
+    '誓光破阵': 'warrior', '遗迹立誓': 'warrior', '圣垒回身': 'warrior', '誓约追击': 'warrior', '圣堂守势': 'warrior', '誓刃解封': 'warrior', '裂光一闪': 'warrior', '王冠反斩': 'warrior', '铁壁圣痕': 'warrior', '血誓裂锋': 'warrior', '魔剑': 'warrior', '棘甲冲锋': 'warrior', '誓旗护阵': 'warrior', '血痕引路': 'warrior', '血誓开锋': 'warrior', '偿血追命': 'warrior', '誓约留锋': 'warrior', '魂誓换锋': 'warrior', '狂誓裂斩': 'warrior', '终誓处刑': 'warrior', '铁誓斩': 'warrior', '誓盾守': 'warrior', '誓光斩': 'warrior',
     '紫焰爆裂': 'mage', '遗迹咏唱': 'mage', '紫焰火花': 'mage', '魔流庇护': 'mage', '虚空导引': 'mage', '星火连祷': 'mage', '星屑预兆': 'mage', '余烬点燃': 'mage', '法环回流': 'mage', '裂界紫雷': 'mage', '星环复写': 'mage', '燃魂导流': 'mage', '回声护幕': 'mage', '衰星尘': 'mage', '紫焰烙印': 'mage', '星缚咒印': 'mage', '裂星禁术': 'mage', '星尘法弹': 'mage', '月泉愈流': 'mage', '秘仪预兆': 'mage', '秘仪护幕': 'mage',
     '风痕定弦': 'archer', '逐风连矢': 'archer', '林风束羽': 'archer', '踏叶掠影': 'archer', '狩影穿枝': 'archer', '森冠齐射': 'archer', '森息伏击': 'archer', '鹰眼贯枝': 'archer', '回环箭雨': 'archer', '回风藏箭': 'archer', '逐影离弦': 'archer', '轮枝归矢': 'archer', '拾羽连步': 'archer', '翠毒连矢': 'archer', '林魂招矢': 'archer', '赤痕裂放': 'archer', '逐风绝矢': 'archer', '林影矢': 'archer', '林隙闪步': 'archer',
     '古誓护印': 'neutral', '星轨流转': 'neutral', '碎星短刃': 'neutral', '圣像微光': 'neutral', '回音残卷': 'neutral', '飞刀': 'neutral', '厄运印记': 'neutral',
@@ -248,6 +249,7 @@ const CHARACTER_CARD_POOLS = {
         { poolId: 'warrior_crown_riposte', name: '王冠反斩', type: '攻击', cost: 3, icon: '👑', val: 12, tags: ['反击', '重击'], directEffects: { protection: true }, preserveDirectEffects: true, rarity: '史诗', desc: '造成 12 点[重击]伤害，获得[庇护]并进入[反击]。' },
         { poolId: 'warrior_scar', name: '铁壁圣痕', type: '防御', cost: 2, icon: '🛡️', val: 13, tags: ['庇护', '保留'], rarity: '史诗' },
         { poolId: 'warrior_blood_vow_slash', name: '血誓裂锋', type: '攻击', cost: 1, icon: '🩸', val: 9, tags: ['血誓'], bloodOathCost: 4, bloodOathMissingRatio: 0.5, buildTags: ['bloodoath'], rarity: '稀有', art: 'assets/cards/art/warrior/warrior_blood_vow_slash_art_v1.webp', desc: '失去 4 点生命；造成 9 点伤害；追加已损生命 50% 的伤害。' },
+        { poolId: 'warrior_magic_sword', name: '魔剑', type: '攻击', cost: 1, icon: '🗡️', val: 4, tags: [], magicSwordGrowth: 1, buildTags: ['bloodoath'], rarity: '稀有', frameTheme: 'warrior', art: 'assets/cards/art/warrior/warrior_blood_vow_slash_art_v1.webp', desc: '造成 4 点伤害；自身实际失去生命或本牌击杀敌人时，永久 +1 伤害。' },
         { poolId: 'warrior_thorn_charge', name: '棘甲冲锋', type: '攻击', cost: 2, icon: '🌹', val: 10, tags: ['圣剑', '荆棘'], rarity: '稀有', art: 'assets/cards/art/warrior/warrior_thorn_charge_art_v1.webp', desc: '造成 10 点[圣剑]伤害并触发[荆棘]。' },
         { poolId: 'warrior_banner_guard', name: '誓旗护阵', type: '能力', cost: 1, icon: '🚩', val: 6, tags: ['庇护', '抽牌'], rarity: '稀有', art: 'assets/cards/art/warrior/warrior_banner_guard_art_v1.webp', desc: '获得 6 点庇护并抽 1 张牌。' },
         { poolId: 'warrior_blood_wall', name: '血痕引路', type: '能力', cost: 1, icon: '🩸', val: 0, tags: ['血誓'], bloodOathCost: 5, bloodDebtBleed: 6, buildTags: ['bloodoath'], rarity: '稀有', art: 'assets/cards/art/warrior/warrior_blood_wall_art_v1.webp', desc: '失去 5 点生命并施加 6 层出血。' },
@@ -387,6 +389,7 @@ const CARD_BUILD_TAGS_BY_ID = {
     warrior_oath_retainer: ['oathblade'],
     warrior_soul_oath: ['oathblade'],
     warrior_blood_vow_slash: ['bloodoath'],
+    warrior_magic_sword: ['bloodoath'],
     warrior_blood_wall: ['bloodoath'],
     warrior_bleed_edge: ['bloodoath'],
     warrior_bloodlet_cleave: ['bloodoath'],

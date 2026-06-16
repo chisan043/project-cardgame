@@ -2882,6 +2882,7 @@
         if (card.bloodDebtStun) statusBits.push('眩晕');
         if (statusBits.length) bloodOathLines.push(`施加 ${statusBits.join('、')}`);
         if (bloodOathLines.length) addUniqueLine(lines, `${bloodOathLines.join('；')}。`);
+        if (card.magicSwordGrowth) addUniqueLine(lines, `自身实际失去生命或本牌击杀敌人时，永久 +<span class="card-desc-value">${card.magicSwordGrowth}</span> 伤害。`);
         const directLines = [];
         if (hasDirectCardEffect(card, 'draw')) directLines.push(`抽 <span class="card-desc-value">${getCardDrawCount(card)}</span> 张牌。`);
         if (hasDirectCardEffect(card, 'energy')) directLines.push('回复 <span class="card-desc-value">1</span> 点能量。');
@@ -5594,6 +5595,28 @@
         triggerExileFlowDamage(dCard, 'discard', '入墓');
     }
 
+    function isMagicSwordCard(card) {
+        return card && (card.poolId === 'warrior_magic_sword' || card.name === '魔剑');
+    }
+
+    function growMagicSword(amount = 1, source = '魔剑', activeCard = null) {
+        const gain = Math.max(0, Math.floor(Number(amount) || 0));
+        if (gain <= 0) return;
+        let changed = false;
+        const grow = card => {
+            if (!isMagicSwordCard(card)) return;
+            card.val = Math.max(0, Number(card.val) || 0) + gain;
+            changed = true;
+        };
+        [state.deck, state.battleDeck, state.hand, state.discardPile, state.exhaustPile, state.playedRetainPile]
+            .filter(Boolean)
+            .forEach(pile => pile.forEach(grow));
+        grow(activeCard);
+        if (!changed) return;
+        showFloatText(`${source} +${gain}伤`, "var(--crimson)", getCenter('ui-hp'));
+        renderHand();
+    }
+
     function applyBloodOathCost(amount, source = '血誓') {
         let loss = Math.max(0, Math.floor(Number(amount) || 0));
         if (loss <= 0) return 0;
@@ -5618,6 +5641,7 @@
             showFloatText('誓血导管 +1能', 'var(--gold)', getCenter('ui-mp'));
         }
         showFloatText(`${source} -${actualLoss}`, 'var(--crimson)', getCenter('ui-hp'));
+        growMagicSword(1, source);
         return actualLoss;
     }
 
@@ -6144,7 +6168,11 @@
         if (card.tags && card.tags.includes('血祭')) {
             let dmgBonus = card.up ? 5 : 3;
             if (hasRelic('r_scarlet_whet')) dmgBonus += 3;
+            const hpBeforeSacrifice = state.hp;
             state.hp = Math.max(1, state.hp - 4);
+            if (hpBeforeSacrifice > state.hp) {
+                growMagicSword(1, card.name);
+            }
             state.p_battle_dmg += dmgBonus;
             showFloatText(`血祭 扣4血 / +${dmgBonus}攻`, "var(--crimson)", getCenter('ui-hp'));
             if (hasRelic('r_blood_suture')) healPlayer(1);
@@ -6365,7 +6393,15 @@
                 showFloatText("刻尺回能 +1", "var(--gold)", getCenter('ui-mp'));
             }
 
+            const enemyHpBeforeMainHit = state.enemy.currentHp;
             applyDamageToEnemy(finalDmg, isPierce);
+            const killedByMainHit = enemyHpBeforeMainHit > 0
+                && state.enemy.currentHp <= 0
+                && !(state.enemy.revives > 0)
+                && !(state.enemy.phase2 && !state.enemy.isPhase2);
+            if (!isEcho && card.magicSwordGrowth && killedByMainHit) {
+                growMagicSword(card.magicSwordGrowth, card.name, card);
+            }
             if(card.tags && card.tags.includes('重击') && hasRelic('r_execute_scabbard') && state.enemy.vuln > 0) {
                 applyDamageToEnemy(24, true);
                 if (state.enemy.currentHp > 0) state.p_battle_dmg += 6;

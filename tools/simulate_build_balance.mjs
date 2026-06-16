@@ -278,6 +278,7 @@ function createBattle(data, rng, roleId, deck, hp, checkpoint, loadout, options 
         thorns: 0, protection: 0, counter: 0, chant: 0, aim: 0, sidestep: 0,
         battleDamage: 0, turnDamage: 0, nextDamage: 0, weak: 0, vuln: 0,
         poison: 0, bleed: 0, burn: 0, curse: 0,
+        sourceDeck: deck,
         drawPile: shuffle(rng, deck.map(clone)), discard: [], exhaust: [], destroyed: [], hand: [], retained: [],
         lastCard: null, cardsPlayed: 0, enemy, encounterName: enemy.name, turns: 0,
         damageTaken: 0, healing: 0, relics: new Set(relicIds),
@@ -327,7 +328,25 @@ function applyBloodOathCost(state, amount) {
         state.oathTransfusionUsed = true;
         state.energy++;
     }
+    growMagicSword(state, 1);
     return actual;
+}
+
+function isMagicSword(card) {
+    return card && (card.poolId === 'warrior_magic_sword' || card.name === '魔剑');
+}
+
+function growMagicSword(state, amount = 1, activeCard = null) {
+    const gain = Math.max(0, Math.floor(Number(amount) || 0));
+    if (gain <= 0) return;
+    const grow = card => {
+        if (!isMagicSword(card)) return;
+        card.val = Math.max(0, Number(card.val) || 0) + gain;
+    };
+    [state.sourceDeck, state.drawPile, state.discard, state.exhaust, state.destroyed, state.hand, state.retained]
+        .filter(Boolean)
+        .forEach(pile => pile.forEach(grow));
+    grow(activeCard);
 }
 
 function getBloodOathBonus(state, card) {
@@ -679,6 +698,7 @@ function estimateCard(state, card, incoming, move) {
     if (tags.includes('燃烧')) score += 8;
     if (tags.includes('诅咒')) score += 4;
     if (tags.includes('放血')) score += state.enemy.bleed * 3;
+    if (card.magicSwordGrowth) score += (state.hp > 1 ? 5 : 1) + Math.min(12, Math.max(0, Number(card.val) || 0));
     if (tags.includes('回收')) score += state.exhaust.length > 0 || state.discard.length > 0 ? 8 : 1;
     if (cardHasBuildTag(state, card, 'exile')) {
         if (tags.includes('放逐')) score += getExileFlowDamage(state, card, 'exhaust') + 3;
@@ -869,7 +889,9 @@ function executeCard(state, card, echo = false) {
     }
     if (!echo && card.bloodOathCost) applyBloodOathCost(state, card.bloodOathCost);
     if (tags.includes('血祭')) {
+        const hpBeforeSacrifice = state.hp;
         state.hp = Math.max(1, state.hp - 4);
+        if (hpBeforeSacrifice > state.hp) growMagicSword(state, 1);
         state.battleDamage += card.up ? 5 : 3;
         if (hasRelic(state, 'r_blood_suture')) heal(state, 1);
     }
@@ -989,7 +1011,13 @@ function executeCard(state, card, echo = false) {
         if (hasRelic(state, 'r_multishot_fletching') && tags.includes('追击')) damage += 1;
         const pierce = tags.includes('穿甲');
         if (pierce && hasRelic(state, 'r_pierce_amulet')) damage = Math.floor(damage * 1.25);
+        const enemyHpBeforeMainHit = state.enemy.hp;
         const dealt = hitEnemy(state, damage, pierce);
+        const killedByMainHit = enemyHpBeforeMainHit > 0
+            && state.enemy.hp <= 0
+            && !(state.enemy.revives > 0)
+            && !(state.enemy.phase2 && !state.enemy.isPhase2);
+        if (!echo && card.magicSwordGrowth && killedByMainHit) growMagicSword(state, card.magicSwordGrowth, card);
         if (pierce && tags.includes('重击') && state.enemy.vuln > 0 && hasRelic(state, 'r_execute_scabbard')) {
             hitEnemy(state, 24, true);
             if (state.enemy.hp > 0) state.battleDamage += 6;

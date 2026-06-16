@@ -203,6 +203,7 @@ function cardDraftScore(data, roleId, card, build, deck, rng) {
     if (card.bloodDebtBleed) score += card.bloodDebtBleed * 1.2;
     if (card.bloodDebtWeak) score += card.bloodDebtWeak * 3;
     if (card.bloodDebtStun) score += card.bloodDebtStun * 8;
+    if (card.magicSwordGrowth) score += 6 + bloodOathSupportRatio * 5;
     if (bloodOathPressure > 0 && (tags.includes('吸血') || tags.includes('治愈') || Number(card.healValue) > 0)) score += 5;
     score += RARITY_BONUS[card.rarity] || 0;
     score -= sameCardCopies * 7;

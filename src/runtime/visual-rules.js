@@ -343,7 +343,8 @@
                 bloodOathMissingRatio: card.bloodOathMissingRatio || 0,
                 bloodDebtBleed: card.bloodDebtBleed || 0,
                 bloodDebtWeak: card.bloodDebtWeak || 0,
-                bloodDebtStun: card.bloodDebtStun || 0
+                bloodDebtStun: card.bloodDebtStun || 0,
+                magicSwordGrowth: card.magicSwordGrowth || 0
             }),
             specialText
         ].join('|');

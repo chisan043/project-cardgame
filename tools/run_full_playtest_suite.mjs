@@ -615,6 +615,7 @@ function estimateCardContribution(data, roleId, card, plays, opportunities) {
     if (tags.includes('保留') || card.directEffects?.retain) value += 2;
     if (card.bloodOathMissingRatio) value += card.bloodOathMissingRatio * 8;
     if (card.bloodOathCost) value += Math.max(0, 5 - card.bloodOathCost * 0.4);
+    if (card.magicSwordGrowth) value += 8 + Math.min(8, Math.max(0, Number(card.val) || 0) * 0.5);
     if (tags.includes('放逐') && roleId === 'hero_archer') value += 5;
     return value * plays / Math.max(1, opportunities || plays || 1);
 }
