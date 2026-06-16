@@ -2319,8 +2319,8 @@
 
 <script src="hud-runtime.js?v=20260518-forced-default-hud1"></script>
 <script src="hud-layout-data.js?v=20260616-intent-tray-reuse"></script>
-<script src="src/data/relics.js?v=20260616-explicit-damage-text"></script>
-<script src="src/data/card-tags.js?v=20260616-explicit-damage-text"></script>
+<script src="src/data/relics.js?v=20260616-recycle-tooltip-text"></script>
+<script src="src/data/card-tags.js?v=20260616-recycle-tooltip-text"></script>
 <script src="src/data/cards.js?v=20260616-explicit-damage-text"></script>
 <script src="src/data/enemies.js?v=20260616-enemy-escalation"></script>
 <script src="src/data/characters.js?v=20260616-mage-starter-hex"></script>
@@ -2851,8 +2851,9 @@
         if (tag === '复刻') return '复制上一张非复刻牌。';
         if (tag === '重置') return '重置手牌。';
         if (tag === '回收') {
+            if (context.cardFace) return null;
             const recycleText = getCardRecycleModes(card).map(getRecycleModeDescription).join('；');
-            const flowText = isExileFlowCard(card) ? '回收放逐牌时造成 7 点流动伤害。' : '';
+            const flowText = isExileFlowCard(card) ? '每回收 1 张放逐牌，造成 7 点流动伤害。' : '';
             return recycleText ? `${recycleText}。${flowText}` : `按说明回收牌。${flowText}`;
         }
         if (tag === '放逐') return isExileFlowCard(card) ? `打出后移入放逐区，并${getFlowDamageLine(5)}` : '打出后移入放逐区。';
