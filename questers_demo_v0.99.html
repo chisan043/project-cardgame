@@ -2327,7 +2327,7 @@
 <script src="src/runtime/state-rules.js?v=20260616-runtime-state-save-hydration"></script>
 <script src="src/runtime/card-rules.js?v=20260616-runtime-auto-select-rules"></script>
 <script src="src/runtime/battle-rules.js?v=20260616-enemy-escalation"></script>
-<script src="src/runtime/visual-rules.js?v=20260616-noframe-status-icons"></script>
+<script src="src/runtime/visual-rules.js?v=20260616-status-icon-aliases"></script>
 <script src="src/runtime/map-rules.js?v=20260615-runtime-map-node-view-model"></script>
 <script src="src/runtime/reward-rules.js?v=20260616-enemy-reward-scaling"></script>
 <script>
@@ -3049,6 +3049,35 @@
             </div>`;
     }
 
+    function refreshDynamicHandCardFace(card, cardEl) {
+        if (!card || !cardEl) return;
+        const descHtml = card.isJunk ? `<span style="color:var(--crimson); font-size:11px;">${card.desc}</span>` : parseDesc(card);
+        const descEl = cardEl.querySelector('.card-desc');
+        if (descEl) descEl.innerHTML = descHtml;
+
+        const tagsRow = cardEl.querySelector('.card-tags-row');
+        const newTagsWrapper = document.createElement('div');
+        newTagsWrapper.innerHTML = getBottomTags(card);
+        const newTagsRow = newTagsWrapper.firstElementChild;
+        if (tagsRow && newTagsRow) {
+            tagsRow.replaceWith(newTagsRow);
+        } else if (tagsRow) {
+            tagsRow.remove();
+        } else if (newTagsRow) {
+            cardEl.querySelector('.card-text')?.appendChild(newTagsRow);
+        }
+
+        cardEl.classList.remove('desc-dense', 'desc-ultra');
+        const densityClass = getCardTextDensityClass(card, descHtml);
+        if (densityClass) cardEl.classList.add(densityClass);
+    }
+
+    function refreshDynamicHandCardFaces() {
+        const area = document.getElementById('hand-area');
+        if (!area || !state?.hand?.length) return;
+        state.hand.forEach(card => refreshDynamicHandCardFace(card, area.querySelector(`[data-inst-id="${card.instId}"]`)));
+    }
+
     let state = QuestersStateRules.createInitialState();
     let shopDeletePrice = 50;
 
@@ -3095,7 +3124,7 @@
     const RUN_SAVE_KEY = 'mirage-scrolls-demo-run-v1';
     const AVATAR_ASSET_VERSION = '20260616-enemy-portrait-crops';
     const RELIC_ICON_ASSET_VERSION = '20260615-noframe-relic-icons';
-    const STATUS_ICON_ASSET_VERSION = '20260616-noframe-status-icons';
+    const STATUS_ICON_ASSET_VERSION = '20260616-status-icon-aliases';
     const HUD_CENTER_BINDING_BY_ID = {
         'ui-hp': 'player-hp',
         'ui-mp': 'energy',
@@ -4848,6 +4877,7 @@
 
         const rBar = document.getElementById('ui-relics-bar'); rBar.innerHTML = '';
         state.relics.forEach(r => { rBar.innerHTML += `<div class="relic-icon">${renderRelicVisual(r)}<div class="status-tooltip"><span style="color:var(--gold); font-weight:bold;">${r.name}</span><br>${getTooltipTextWithKeywords(getDisplayRelicDesc(r))}</div></div>`; });
+        refreshDynamicHandCardFaces();
         updateBattlefieldStatusStrips();
         if (!isRenderingPlayerHudAssembly) refreshRuntimeHudBindings();
     }
@@ -5579,6 +5609,8 @@
                 cardEl.style.opacity = '0'; cardEl.style.transform = `translate(${startTx}px, ${startTy}px) scale(0.2) rotate(-45deg)`; 
                 void cardEl.offsetWidth; cardEl.style.transition = 'all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1)';
             }
+
+            refreshDynamicHandCardFace(card, cardEl);
             
             if (card.sealed) { cardEl.classList.add('sealed'); } else { cardEl.classList.remove('sealed'); }
             

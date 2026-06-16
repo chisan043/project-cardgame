@@ -54,6 +54,9 @@
         'counter', 'poison', 'bleed', 'burn', 'stun', 'curse', 'vuln', 'weak',
         'frenzy', 'blood-oath', 'chant', 'aim', 'sidestep'
     ]);
+    const STATUS_ICON_FILE_ID_BY_STATUS_ID = {
+        'blood-oath': 'blood-debt'
+    };
     const WARRIOR_SHIELD_BUFF_CARD_IDS = ['s_thorns', 'a_syn_array', 'w_bastion_prayer', 'w_oath_fortress'];
 
     function defaultBaseEnemyName(enemy) {
@@ -494,7 +497,8 @@
         statusIconIds = STATUS_ICON_IDS
     } = {}) {
         if (!statusIconIds.has(id)) return '';
-        return `assets/ui/hud/status_icons/status_${id}_asset_v1.webp`;
+        const fileId = STATUS_ICON_FILE_ID_BY_STATUS_ID[id] || id;
+        return `assets/ui/hud/status_icons/status_${fileId}_asset_v1.webp`;
     }
 
     function getEnemyAttackFrames(enemy, {
