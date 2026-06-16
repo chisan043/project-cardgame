@@ -6,7 +6,7 @@
   "policy": "Runtime card art lives under assets/cards/art/<theme>/ and is referenced by stable path keys.",
   "assetCount": 146,
   "missingAssetCount": 0,
-  "cardsWithArtCount": 254,
+  "cardsWithArtCount": 259,
   "themes": [
     "archer",
     "mage",
@@ -23,7 +23,7 @@
       "usedBy": [
         {
           "id": "archer_aim",
-          "name": "拉弓瞄准",
+          "name": "风痕定弦",
           "roleId": "hero_archer",
           "pool": "character",
           "deckId": null,
@@ -31,7 +31,7 @@
         },
         {
           "id": "starter_archer_aim",
-          "name": "拉弓瞄准",
+          "name": "风痕定弦",
           "roleId": "hero_archer",
           "pool": "starter",
           "deckId": "starter_archer",
@@ -64,7 +64,7 @@
         },
         {
           "id": "archer_blood_release",
-          "name": "赤痕放血",
+          "name": "赤痕裂放",
           "roleId": "hero_archer",
           "pool": "character",
           "deckId": null,
@@ -72,7 +72,7 @@
         },
         {
           "id": "a_bloodlet_gale",
-          "name": "断脉齐爆",
+          "name": "断脉赤绽",
           "roleId": "hero_archer",
           "pool": "special_epic",
           "deckId": null,
@@ -87,16 +87,16 @@
           "rarity": "史诗"
         },
         {
-          "id": "s_poison",
-          "name": "猎毒齐爆",
+          "id": "a_venom_cage",
+          "name": "腐藤囚笼",
           "roleId": "hero_archer",
           "pool": "special_epic",
           "deckId": null,
           "rarity": "史诗"
         },
         {
-          "id": "a_venom_cage",
-          "name": "腐藤囚笼",
+          "id": "s_poison",
+          "name": "青毒终绽",
           "roleId": "hero_archer",
           "pool": "special_epic",
           "deckId": null,
@@ -113,7 +113,7 @@
       "usedBy": [
         {
           "id": "archer_backstep",
-          "name": "回风短跃",
+          "name": "回风掠步",
           "roleId": "hero_archer",
           "pool": "character",
           "deckId": null,
@@ -130,15 +130,15 @@
       "usedBy": [
         {
           "id": "archer_barrage",
-          "name": "疾风连射",
+          "name": "逐风连矢",
           "roleId": "hero_archer",
           "pool": "character",
           "deckId": null,
           "rarity": "稀有"
         },
         {
-          "id": "a_gale_verdict",
-          "name": "疾风裁决",
+          "id": "a_gale_featherbank",
+          "name": "百羽开匣",
           "roleId": "hero_archer",
           "pool": "special_epic",
           "deckId": null,
@@ -153,8 +153,8 @@
           "rarity": "史诗"
         },
         {
-          "id": "a_gale_featherbank",
-          "name": "羽库连装",
+          "id": "a_gale_verdict",
+          "name": "风冠裁矢",
           "roleId": "hero_archer",
           "pool": "special_epic",
           "deckId": null,
@@ -188,7 +188,7 @@
       "usedBy": [
         {
           "id": "archer_blood_feather",
-          "name": "血羽回收",
+          "name": "血羽归魂",
           "roleId": "hero_archer",
           "pool": "character",
           "deckId": null,
@@ -247,7 +247,7 @@
       "usedBy": [
         {
           "id": "archer_deadbranch_shuffle",
-          "name": "残枝洗牌",
+          "name": "残枝回轮",
           "roleId": "hero_archer",
           "pool": "character",
           "deckId": null,
@@ -262,6 +262,14 @@
       "theme": "archer",
       "exists": true,
       "usedBy": [
+        {
+          "id": "archer_sky_skim",
+          "name": "掠空羽矢",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        },
         {
           "id": "archer_ember_feather",
           "name": "轻羽连射",
@@ -280,8 +288,16 @@
       "exists": true,
       "usedBy": [
         {
+          "id": "archer_lostroad_cache",
+          "name": "失路羽囊",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        },
+        {
           "id": "archer_empty_string",
-          "name": "空弦藏牌",
+          "name": "空弦匿羽",
           "roleId": "hero_archer",
           "pool": "character",
           "deckId": null,
@@ -298,7 +314,7 @@
       "usedBy": [
         {
           "id": "archer_empty_valley_knife",
-          "name": "空谷飞刀",
+          "name": "空谷飞刃",
           "roleId": "hero_archer",
           "pool": "character",
           "deckId": null,
@@ -315,7 +331,7 @@
       "usedBy": [
         {
           "id": "starter_archer_exile",
-          "name": "逐影放矢",
+          "name": "逐影离弦",
           "roleId": "hero_archer",
           "pool": "starter",
           "deckId": "starter_archer",
@@ -332,7 +348,7 @@
       "usedBy": [
         {
           "id": "archer_forest_specimen",
-          "name": "归林标本",
+          "name": "归林遗羽",
           "roleId": "hero_archer",
           "pool": "character",
           "deckId": null,
@@ -349,7 +365,7 @@
       "usedBy": [
         {
           "id": "archer_green_fang",
-          "name": "青牙试射",
+          "name": "青牙初矢",
           "roleId": "hero_archer",
           "pool": "character",
           "deckId": null,
@@ -357,7 +373,7 @@
         },
         {
           "id": "starter_archer_venom",
-          "name": "青牙试射",
+          "name": "青牙初矢",
           "roleId": "hero_archer",
           "pool": "starter",
           "deckId": "starter_archer",
@@ -416,7 +432,7 @@
         },
         {
           "id": "a_syn_poison",
-          "name": "万毒箭阵",
+          "name": "万毒森阵",
           "roleId": "hero_archer",
           "pool": "special_epic",
           "deckId": null,
@@ -433,7 +449,7 @@
       "usedBy": [
         {
           "id": "archer_hook_sinew",
-          "name": "断筋倒钩",
+          "name": "裂筋倒钩",
           "roleId": "hero_archer",
           "pool": "character",
           "deckId": null,
@@ -450,7 +466,7 @@
       "usedBy": [
         {
           "id": "archer_leaf_search",
-          "name": "叶脉检索",
+          "name": "叶脉寻踪",
           "roleId": "hero_archer",
           "pool": "character",
           "deckId": null,
@@ -483,6 +499,14 @@
       "exists": true,
       "usedBy": [
         {
+          "id": "archer_crosswind_guard",
+          "name": "侧风护步",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "稀有"
+        },
+        {
           "id": "archer_leaf_store",
           "name": "飞叶封存",
           "roleId": "hero_archer",
@@ -501,7 +525,7 @@
       "usedBy": [
         {
           "id": "archer_lost_arrow_mark",
-          "name": "遗箭定位",
+          "name": "遗矢星标",
           "roleId": "hero_archer",
           "pool": "character",
           "deckId": null,
@@ -518,7 +542,7 @@
       "usedBy": [
         {
           "id": "archer_nest_track",
-          "name": "回巢轨迹",
+          "name": "归巢血轨",
           "roleId": "hero_archer",
           "pool": "character",
           "deckId": null,
@@ -552,7 +576,7 @@
       "usedBy": [
         {
           "id": "archer_outerwood_recall",
-          "name": "林外回收",
+          "name": "林外归魂",
           "roleId": "hero_archer",
           "pool": "character",
           "deckId": null,
@@ -569,7 +593,7 @@
       "usedBy": [
         {
           "id": "archer_poison_rain",
-          "name": "毒雨留弦",
+          "name": "毒雨留痕",
           "roleId": "hero_archer",
           "pool": "character",
           "deckId": null,
@@ -586,7 +610,7 @@
       "usedBy": [
         {
           "id": "archer_poison_step",
-          "name": "毒痕护步",
+          "name": "毒荆护步",
           "roleId": "hero_archer",
           "pool": "character",
           "deckId": null,
@@ -603,7 +627,7 @@
       "usedBy": [
         {
           "id": "archer_pulse_burst",
-          "name": "残脉连扣",
+          "name": "残脉连矢",
           "roleId": "hero_archer",
           "pool": "character",
           "deckId": null,
@@ -620,7 +644,7 @@
       "usedBy": [
         {
           "id": "archer_quick_corridor",
-          "name": "急羽穿廊",
+          "name": "急羽破廊",
           "roleId": "hero_archer",
           "pool": "character",
           "deckId": null,
@@ -645,7 +669,7 @@
         },
         {
           "id": "archer_cycle_branch",
-          "name": "轮枝归射",
+          "name": "轮枝归矢",
           "roleId": "hero_archer",
           "pool": "character",
           "deckId": null,
@@ -694,7 +718,7 @@
       "usedBy": [
         {
           "id": "archer_ready",
-          "name": "林风整备",
+          "name": "林风束羽",
           "roleId": "hero_archer",
           "pool": "character",
           "deckId": null,
@@ -710,15 +734,7 @@
         },
         {
           "id": "a_exile_recall",
-          "name": "归途双令",
-          "roleId": "hero_archer",
-          "pool": "special_epic",
-          "deckId": null,
-          "rarity": "史诗"
-        },
-        {
-          "id": "s_energy",
-          "name": "疾风整备",
+          "name": "归巢双令",
           "roleId": "hero_archer",
           "pool": "special_epic",
           "deckId": null,
@@ -733,8 +749,16 @@
           "rarity": "史诗"
         },
         {
+          "id": "s_energy",
+          "name": "风王束羽",
+          "roleId": "hero_archer",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
           "id": "starter_archer_focus",
-          "name": "整束箭袋",
+          "name": "旅箭整束",
           "roleId": "hero_archer",
           "pool": "starter",
           "deckId": "starter_archer",
@@ -768,7 +792,7 @@
       "usedBy": [
         {
           "id": "archer_red_tide_bow",
-          "name": "赤潮短弓",
+          "name": "赤潮弦",
           "roleId": "hero_archer",
           "pool": "character",
           "deckId": null,
@@ -802,7 +826,7 @@
       "usedBy": [
         {
           "id": "archer_returning_feather",
-          "name": "折返羽刃",
+          "name": "归羽刃",
           "roleId": "hero_archer",
           "pool": "character",
           "deckId": null,
@@ -844,7 +868,7 @@
         },
         {
           "id": "archer_exile_shot",
-          "name": "逐影放矢",
+          "name": "逐影离弦",
           "roleId": "hero_archer",
           "pool": "character",
           "deckId": null,
@@ -859,16 +883,16 @@
           "rarity": "史诗"
         },
         {
-          "id": "a_exile_knives",
-          "name": "影匣飞刀",
+          "id": "a_exile_map",
+          "name": "失林星图",
           "roleId": "hero_archer",
           "pool": "special_epic",
           "deckId": null,
           "rarity": "史诗"
         },
         {
-          "id": "a_exile_map",
-          "name": "流亡路线图",
+          "id": "a_exile_knives",
+          "name": "影匣短刃",
           "roleId": "hero_archer",
           "pool": "special_epic",
           "deckId": null,
@@ -884,7 +908,7 @@
         },
         {
           "id": "starter_archer_shot",
-          "name": "基础射击",
+          "name": "林影矢",
           "roleId": "hero_archer",
           "pool": "starter",
           "deckId": "starter_archer",
@@ -918,7 +942,7 @@
       "usedBy": [
         {
           "id": "archer_shadow_line",
-          "name": "影羽切线",
+          "name": "影羽裂线",
           "roleId": "hero_archer",
           "pool": "character",
           "deckId": null,
@@ -942,16 +966,16 @@
           "rarity": "稀有"
         },
         {
-          "id": "a_gale_updraft",
-          "name": "上升气流",
+          "id": "a_gale_crosswind",
+          "name": "侧风裁痕",
           "roleId": "hero_archer",
           "pool": "special_epic",
           "deckId": null,
           "rarity": "史诗"
         },
         {
-          "id": "a_gale_crosswind",
-          "name": "侧风判线",
+          "id": "a_gale_updraft",
+          "name": "扶摇羽誓",
           "roleId": "hero_archer",
           "pool": "special_epic",
           "deckId": null,
@@ -993,7 +1017,7 @@
       "usedBy": [
         {
           "id": "archer_snake_eye",
-          "name": "蛇眼标记",
+          "name": "蛇瞳烙印",
           "roleId": "hero_archer",
           "pool": "character",
           "deckId": null,
@@ -1035,7 +1059,7 @@
         },
         {
           "id": "archer_step",
-          "name": "猎手翻步",
+          "name": "踏叶掠影",
           "roleId": "hero_archer",
           "pool": "character",
           "deckId": null,
@@ -1043,7 +1067,7 @@
         },
         {
           "id": "starter_archer_step",
-          "name": "林地回避",
+          "name": "林隙闪步",
           "roleId": "hero_archer",
           "pool": "starter",
           "deckId": "starter_archer",
@@ -1060,7 +1084,7 @@
       "usedBy": [
         {
           "id": "archer_throat_poison",
-          "name": "森毒封喉",
+          "name": "森毒锁喉",
           "roleId": "hero_archer",
           "pool": "character",
           "deckId": null,
@@ -1093,8 +1117,16 @@
       "exists": true,
       "usedBy": [
         {
+          "id": "archer_leaf_reload",
+          "name": "叶脉换弦",
+          "roleId": "hero_archer",
+          "pool": "character",
+          "deckId": null,
+          "rarity": "普通"
+        },
+        {
           "id": "archer_wind_string",
-          "name": "风线扣弦",
+          "name": "风誓扣弦",
           "roleId": "hero_archer",
           "pool": "character",
           "deckId": null,
@@ -1169,7 +1201,7 @@
         },
         {
           "id": "starter_mage_heal",
-          "name": "基础愈流",
+          "name": "月泉愈流",
           "roleId": "hero_mage",
           "pool": "starter",
           "deckId": "starter_mage",
@@ -1194,7 +1226,7 @@
       "usedBy": [
         {
           "id": "mage_calamity_tune",
-          "name": "灾厄调谐",
+          "name": "厄星调律",
           "roleId": "hero_mage",
           "pool": "character",
           "deckId": null,
@@ -1396,7 +1428,7 @@
       "usedBy": [
         {
           "id": "mage_echo_index",
-          "name": "回声索引",
+          "name": "回声页标",
           "roleId": "hero_mage",
           "pool": "character",
           "deckId": null,
@@ -1413,7 +1445,7 @@
       "usedBy": [
         {
           "id": "mage_echo_shift",
-          "name": "回声置换",
+          "name": "回声换位",
           "roleId": "hero_mage",
           "pool": "character",
           "deckId": null,
@@ -1476,6 +1508,14 @@
           "pool": "special_epic",
           "deckId": null,
           "rarity": "史诗"
+        },
+        {
+          "id": "starter_mage_release",
+          "name": "星火破封",
+          "roleId": "hero_mage",
+          "pool": "starter",
+          "deckId": "starter_mage",
+          "rarity": "普通"
         }
       ]
     },
@@ -1505,7 +1545,7 @@
       "usedBy": [
         {
           "id": "mage_glass_recursion",
-          "name": "玻璃递归",
+          "name": "镜璃递归",
           "roleId": "hero_mage",
           "pool": "character",
           "deckId": null,
@@ -1597,7 +1637,7 @@
       "usedBy": [
         {
           "id": "mage_mirror_trial",
-          "name": "镜页试抄",
+          "name": "镜页摹写",
           "roleId": "hero_mage",
           "pool": "character",
           "deckId": null,
@@ -1605,7 +1645,7 @@
         },
         {
           "id": "starter_mage_copy",
-          "name": "镜页试抄",
+          "name": "镜页摹写",
           "roleId": "hero_mage",
           "pool": "starter",
           "deckId": "starter_mage",
@@ -1655,7 +1695,7 @@
         },
         {
           "id": "mage_void_dust",
-          "name": "虚弱星尘",
+          "name": "衰星尘",
           "roleId": "hero_mage",
           "pool": "character",
           "deckId": null,
@@ -1764,7 +1804,7 @@
       "usedBy": [
         {
           "id": "mage_second_hand",
-          "name": "第二指针",
+          "name": "逆时针护刻",
           "roleId": "hero_mage",
           "pool": "character",
           "deckId": null,
@@ -1823,7 +1863,7 @@
         },
         {
           "id": "starter_mage_bolt",
-          "name": "基础法弹",
+          "name": "星尘法弹",
           "roleId": "hero_mage",
           "pool": "starter",
           "deckId": "starter_mage",
@@ -1949,7 +1989,7 @@
       "usedBy": [
         {
           "id": "mage_arcane_mark",
-          "name": "紫焰刻印",
+          "name": "紫焰烙印",
           "roleId": "hero_mage",
           "pool": "character",
           "deckId": null,
@@ -2022,7 +2062,7 @@
       "usedBy": [
         {
           "id": "mage_transcribe_ring",
-          "name": "转录法环",
+          "name": "抄录星环",
           "roleId": "hero_mage",
           "pool": "character",
           "deckId": null,
@@ -2088,7 +2128,7 @@
         },
         {
           "id": "a_syn_magic",
-          "name": "回声导线",
+          "name": "回声秘线",
           "roleId": "hero_mage",
           "pool": "special_epic",
           "deckId": null,
@@ -2291,7 +2331,7 @@
       "usedBy": [
         {
           "id": "warrior_bastion_ledger",
-          "name": "壁垒记录",
+          "name": "垒誓残页",
           "roleId": "hero_warrior",
           "pool": "character",
           "deckId": null,
@@ -2366,7 +2406,7 @@
         },
         {
           "id": "warrior_blood_vow_slash",
-          "name": "血誓斩",
+          "name": "血誓裂锋",
           "roleId": "hero_warrior",
           "pool": "character",
           "deckId": null,
@@ -2398,7 +2438,7 @@
         },
         {
           "id": "a_syn_blood",
-          "name": "血海誓斩",
+          "name": "血海终誓",
           "roleId": "hero_warrior",
           "pool": "special_epic",
           "deckId": null,
@@ -2414,7 +2454,7 @@
         },
         {
           "id": "starter_warrior_lifebite",
-          "name": "回命斩",
+          "name": "血火回命",
           "roleId": "hero_warrior",
           "pool": "starter",
           "deckId": "starter_warrior",
@@ -2447,7 +2487,7 @@
         },
         {
           "id": "w_blood_drum",
-          "name": "战血鼓点",
+          "name": "战血鼓誓",
           "roleId": "hero_warrior",
           "pool": "special_epic",
           "deckId": null,
@@ -2514,7 +2554,7 @@
       "usedBy": [
         {
           "id": "warrior_charge",
-          "name": "圣剑突击",
+          "name": "誓光破阵",
           "roleId": "hero_warrior",
           "pool": "character",
           "deckId": null,
@@ -2632,7 +2672,7 @@
       "usedBy": [
         {
           "id": "warrior_disarm_press",
-          "name": "断腕缴械",
+          "name": "锁腕断誓",
           "roleId": "hero_warrior",
           "pool": "character",
           "deckId": null,
@@ -2649,7 +2689,7 @@
       "usedBy": [
         {
           "id": "warrior_execute_step",
-          "name": "处刑步法",
+          "name": "断刑步",
           "roleId": "hero_warrior",
           "pool": "character",
           "deckId": null,
@@ -2666,7 +2706,7 @@
       "usedBy": [
         {
           "id": "warrior_execute_window",
-          "name": "斩首窗口",
+          "name": "断首星隙",
           "roleId": "hero_warrior",
           "pool": "character",
           "deckId": null,
@@ -2731,14 +2771,6 @@
       "exists": true,
       "usedBy": [
         {
-          "id": "warrior_duel_cut",
-          "name": "断甲决斗",
-          "roleId": "hero_warrior",
-          "pool": "character",
-          "deckId": null,
-          "rarity": "普通"
-        },
-        {
           "id": "warrior_venom_scar",
           "name": "破势剑痕",
           "roleId": "hero_warrior",
@@ -2747,12 +2779,12 @@
           "rarity": "稀有"
         },
         {
-          "id": "warrior_flaw_mark",
-          "name": "破绽刻印",
+          "id": "warrior_duel_cut",
+          "name": "破甲誓斗",
           "roleId": "hero_warrior",
           "pool": "character",
           "deckId": null,
-          "rarity": "稀有"
+          "rarity": "普通"
         },
         {
           "id": "warrior_flash",
@@ -2763,12 +2795,12 @@
           "rarity": "普通"
         },
         {
-          "id": "w_exec_line",
-          "name": "一线断甲",
+          "id": "warrior_flaw_mark",
+          "name": "裂隙刻印",
           "roleId": "hero_warrior",
-          "pool": "special_epic",
+          "pool": "character",
           "deckId": null,
-          "rarity": "史诗"
+          "rarity": "稀有"
         },
         {
           "id": "w_exec_silence",
@@ -2788,7 +2820,15 @@
         },
         {
           "id": "a_syn_sword",
-          "name": "破绽断裁",
+          "name": "裂隙终裁",
+          "roleId": "hero_warrior",
+          "pool": "special_epic",
+          "deckId": null,
+          "rarity": "史诗"
+        },
+        {
+          "id": "w_exec_line",
+          "name": "银线断甲",
           "roleId": "hero_warrior",
           "pool": "special_epic",
           "deckId": null,
@@ -2796,7 +2836,7 @@
         },
         {
           "id": "starter_warrior_flaw",
-          "name": "破绽刻印",
+          "name": "裂隙刻印",
           "roleId": "hero_warrior",
           "pool": "starter",
           "deckId": "starter_warrior",
@@ -2821,7 +2861,7 @@
         },
         {
           "id": "starter_warrior_strike",
-          "name": "基础斩击",
+          "name": "铁誓斩",
           "roleId": "hero_warrior",
           "pool": "starter",
           "deckId": "starter_warrior",
@@ -2871,7 +2911,7 @@
       "usedBy": [
         {
           "id": "warrior_gap_finder",
-          "name": "破隙检定",
+          "name": "窥隙烙印",
           "roleId": "hero_warrior",
           "pool": "character",
           "deckId": null,
@@ -3125,7 +3165,7 @@
       "usedBy": [
         {
           "id": "warrior_release",
-          "name": "圣剑解放",
+          "name": "誓刃解封",
           "roleId": "hero_warrior",
           "pool": "character",
           "deckId": null,
@@ -3209,7 +3249,7 @@
         },
         {
           "id": "a_syn_array",
-          "name": "守誓阵列",
+          "name": "圣誓阵列",
           "roleId": "hero_warrior",
           "pool": "special_epic",
           "deckId": null,
@@ -3268,7 +3308,7 @@
       "usedBy": [
         {
           "id": "warrior_steel_pressure",
-          "name": "鸣钢压迫",
+          "name": "鸣钢镇压",
           "roleId": "hero_warrior",
           "pool": "character",
           "deckId": null,
@@ -3327,7 +3367,7 @@
       "usedBy": [
         {
           "id": "warrior_verdict_feint",
-          "name": "裁决佯攻",
+          "name": "裁决虚锋",
           "roleId": "hero_warrior",
           "pool": "character",
           "deckId": null,
@@ -3344,7 +3384,7 @@
       "usedBy": [
         {
           "id": "warrior_wall",
-          "name": "盾墙反身",
+          "name": "圣垒回身",
           "roleId": "hero_warrior",
           "pool": "character",
           "deckId": null,
@@ -3352,7 +3392,7 @@
         },
         {
           "id": "starter_warrior_guard",
-          "name": "基础防御",
+          "name": "旧盾守",
           "roleId": "hero_warrior",
           "pool": "starter",
           "deckId": "starter_warrior",

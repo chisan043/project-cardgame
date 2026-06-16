@@ -28,7 +28,7 @@ class BattleSimulator {
                 calamity: { name: '灾厄术士', focus: ['诅咒', '虚弱', '易伤'] }
             },
             archer: {
-                gale: { name: '疾风连射', focus: ['追击', '蓄力', '自然'] },
+                gale: { name: '逐风连矢', focus: ['追击', '蓄力', '自然'] },
                 venom: { name: '猎毒陷袭', focus: ['剧毒', '出血', '放血'] },
                 exile: { name: '放逐游侠', focus: ['放逐', '回收'] }
             }
@@ -50,14 +50,14 @@ class BattleSimulator {
      */
     getMockWarriorCards() {
         return [
-            { name: '圣剑突击', type: '攻击', cost: 2, val: 8, tags: ['圣剑', '重击'], rarity: '稀有' },
-            { name: '盾墙反身', type: '防御', cost: 1, val: 10, tags: ['庇护'], rarity: '史诗' },
+            { name: '誓光破阵', type: '攻击', cost: 2, val: 8, tags: ['圣剑', '重击'], rarity: '稀有' },
+            { name: '圣垒回身', type: '防御', cost: 1, val: 10, tags: ['庇护'], rarity: '史诗' },
             { name: '誓约追击', type: '攻击', cost: 1, val: 8, tags: ['圣剑', '连击'], rarity: '普通' },
-            { name: '血誓斩', type: '攻击', cost: 1, val: 7, tags: ['吸血', '连击'], rarity: '稀有' },
+            { name: '血誓裂锋', type: '攻击', cost: 1, val: 7, tags: ['吸血', '连击'], rarity: '稀有' },
             { name: '王冠反斩', type: '能力', cost: 3, val: 12, tags: ['反击', '庇护', '抽牌'], rarity: '史诗' },
-            { name: '圣剑解放', type: '攻击', cost: 3, val: 11, tags: ['圣剑', '穿甲', '重击'], rarity: '史诗' },
-            { name: '基础斩击', type: '攻击', cost: 1, val: 5, tags: ['连击'], rarity: '普通' },
-            { name: '基础防御', type: '防御', cost: 1, val: 6, tags: ['庇护'], rarity: '普通' }
+            { name: '誓刃解封', type: '攻击', cost: 3, val: 11, tags: ['圣剑', '穿甲', '重击'], rarity: '史诗' },
+            { name: '铁誓斩', type: '攻击', cost: 1, val: 5, tags: ['连击'], rarity: '普通' },
+            { name: '旧盾守', type: '防御', cost: 1, val: 6, tags: ['庇护'], rarity: '普通' }
         ];
     }
 
@@ -72,8 +72,8 @@ class BattleSimulator {
             { name: '魔流庇护', type: '能力', cost: 1, val: 0, tags: ['咏唱', '治愈'], rarity: '稀有' },
             { name: '裂界紫雷', type: '攻击', cost: 3, val: 16, tags: ['爆发', '穿甲', '回响'], rarity: '史诗' },
             { name: '星环复写', type: '能力', cost: 1, val: 0, tags: ['复刻', '咏唱'], rarity: '稀有' },
-            { name: '基础法弹', type: '攻击', cost: 1, val: 5, tags: ['爆发'], rarity: '普通' },
-            { name: '秘仪屏障', type: '能力', cost: 1, val: 0, tags: ['咏唱'], rarity: '普通' }
+            { name: '星尘法弹', type: '攻击', cost: 1, val: 5, tags: ['爆发'], rarity: '普通' },
+            { name: '秘仪护幕', type: '能力', cost: 1, val: 0, tags: ['咏唱'], rarity: '普通' }
         ];
     }
 
@@ -82,14 +82,14 @@ class BattleSimulator {
      */
     getMockArcherCards() {
         return [
-            { name: '拉弓瞄准', type: '能力', cost: 1, val: 9, tags: ['蓄力', '抽牌'], rarity: '稀有' },
-            { name: '疾风连射', type: '攻击', cost: 1, val: 4, tags: ['追击'], rarity: '稀有' },
-            { name: '林风整备', type: '能力', cost: 1, val: 6, tags: ['自然', '蓄力'], rarity: '稀有' },
+            { name: '风痕定弦', type: '能力', cost: 1, val: 9, tags: ['蓄力', '抽牌'], rarity: '稀有' },
+            { name: '逐风连矢', type: '攻击', cost: 1, val: 4, tags: ['追击'], rarity: '稀有' },
+            { name: '林风束羽', type: '能力', cost: 1, val: 6, tags: ['自然', '蓄力'], rarity: '稀有' },
             { name: '狩影穿枝', type: '攻击', cost: 2, val: 10, tags: ['追击', '穿甲'], rarity: '稀有' },
             { name: '森冠齐射', type: '攻击', cost: 2, val: 7, tags: ['追击', '穿甲'], rarity: '史诗' },
             { name: '鹰眼贯枝', type: '攻击', cost: 2, val: 12, tags: ['蓄力', '穿甲'], rarity: '稀有' },
-            { name: '基础射击', type: '攻击', cost: 1, val: 5, tags: ['追击'], rarity: '普通' },
-            { name: '林地回避', type: '能力', cost: 1, val: 5, tags: ['自然'], rarity: '普通' }
+            { name: '林影矢', type: '攻击', cost: 1, val: 5, tags: ['追击'], rarity: '普通' },
+            { name: '林隙闪步', type: '能力', cost: 1, val: 5, tags: ['自然'], rarity: '普通' }
         ];
     }
 

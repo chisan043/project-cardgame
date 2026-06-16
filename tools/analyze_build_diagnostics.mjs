@@ -191,7 +191,7 @@ function diagnoseBuild(entry) {
     if (elite.winRate < TARGETS.elite.min && elite.averageDamageTaken > 75) issues.push('精英生存不足');
     if (boss.energyWastedPerTurn > 0.35) issues.push('能量利用偏低');
     if (boss.averageTurns <= 4.5 && boss.winRate < TARGETS.boss.min) issues.push('启动前即被压垮');
-    const foundationNames = new Set(['基础斩击', '基础防御', '基础法弹', '基础愈流', '基础射击', '林地回避']);
+    const foundationNames = new Set(['铁誓斩', '旧盾守', '星尘法弹', '月泉愈流', '林影矢', '林隙闪步']);
     const lowUsage = boss.cardUsage.filter(card => card.opportunities >= 50
         && card.usageRate < 0.2
         && card.playsPerBattle < 0.2
