@@ -1,0 +1,56 @@
+# Questers Shop UI Asset Rules v1
+
+This note records the approved shop UI asset direction for the stained-glass cel event-screen redesign.
+
+## Style Anchor
+
+- Match `assets/source/ui/concepts/event_screens_stained_glass_cel_concept_v1.png`.
+- 1990s Japanese cel-animation fantasy game UI.
+- Dark cathedral stained glass, deep navy/teal enamel panels, antique gold filigree trim, hard ink outlines, aged hand-painted texture, blue jewel nodes, small red/green stained-glass accents, and candlelit gold highlights.
+- Match the existing Questers card/relic art mood; avoid generic gothic UI, modern mobile-game chunkiness, and unrelated decorative frames.
+
+## Shop Boundary
+
+- The actual shop interface starts at the merchant portrait arch.
+- Do not include the separate event-introduction panel/module on the far left.
+- The shop screen body should include:
+  - left merchant portrait arch,
+  - top function tabs,
+  - central goods shelf,
+  - right item detail panel,
+  - currency/exit area,
+  - bottom restock strip.
+
+## Proportions
+
+- Use the cropped shop concept as the layout reference.
+- Overall shop body is a compact wide rectangle, roughly `1.6:1`.
+- Left merchant arch takes roughly one quarter of the width.
+- Central goods shelf takes roughly one half of the width.
+- Right detail panel takes roughly one quarter of the width.
+- Preserve the concept's thin border weight, tight spacing, and dense but readable old-console UI rhythm.
+
+## Flexible Goods Shelf Rule
+
+- The central goods shelf asset must be a flexible stage frame, not a fixed item grid.
+- Draw only:
+  - outer ornate frame,
+  - blank top title plaque,
+  - broad upper content area for cards,
+  - broad lower content area for relics,
+  - one subtle horizontal divider,
+  - optional faint row-label ornaments with no text.
+- Do not draw:
+  - individual card slots,
+  - individual relic slots,
+  - fixed five-item wells,
+  - price plaques under individual items,
+  - discount badges,
+  - card or relic placeholders.
+- Real cards, relics, prices, half-price badges, hover states, and item spacing must be controlled by the game UI layer.
+
+## Asset Output Rules
+
+- Transparent-background PNG assets are preferred for production.
+- For built-in image generation, generate on a flat chroma-key background first, then remove the key locally.
+- Each asset should avoid readable text, Chinese characters, numbers, watermarks, full-screen mockups, and baked-in game content unless explicitly requested.
