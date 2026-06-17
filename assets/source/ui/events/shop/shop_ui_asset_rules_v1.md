@@ -74,6 +74,41 @@ This note records the approved shop UI asset direction for the stained-glass cel
 - Do not bake click effects into the main shelf/detail/arch frame; keep them controllable per button.
 - Keep button ornamentation restrained enough that it does not overlap adjacent UI or force fixed text sizes.
 
+## Overlay And Badge Split Rule
+
+- Hover, selected, disabled, discounted, and warning visuals must be separate overlay assets.
+- Do not bake these states into cards, relics, goods shelf slots, or button base frames.
+- Required overlay and badge assets:
+  - card hover outline,
+  - card selected outline,
+  - relic hover outline,
+  - relic selected outline,
+  - disabled or unavailable veil,
+  - compact half-price corner ribbon,
+  - compact sale seal badge,
+  - normal price plaque,
+  - discounted price plaque,
+  - warning or note strip.
+- Badges must be small enough to avoid covering important card/relic art.
+- Price plaques should not include coin icons, numbers, or labels; those belong to the game UI layer.
+- Disabled overlays should be translucent and reusable over cards, relics, and buttons.
+
+## Secondary Menu Asset Rule
+
+- Copy-card, remove-card, and choose-card flows need their own flexible panel assets.
+- These panels must support large player decks through HTML/CSS scrolling rather than fixed art slots.
+- Required secondary-menu assets:
+  - flexible card-selection grid background panel,
+  - compact filter/dropdown frame,
+  - vertical scrollbar track,
+  - vertical scrollbar thumb,
+  - selected-card detail mini panel,
+  - empty-state plaque,
+  - confirmation warning strip,
+  - cancel/back button frame.
+- Do not draw individual card slots, fixed grid cells, baked card silhouettes, text, numbers, or icons.
+- Actual cards, filters, selected state, scroll position, labels, and counts are rendered by the game UI layer.
+
 ## Asset Output Rules
 
 - Transparent-background PNG assets are preferred for production.
