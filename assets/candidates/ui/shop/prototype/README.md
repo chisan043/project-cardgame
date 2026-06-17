@@ -5,11 +5,15 @@
 ## 文件
 
 - `shop_prototype.html`：可直接打开的交互原型。
-- `shop_prototype_plate_v1.png`：原型用商店美术底板。
+- `shop_art_plate_v2.png`：当前接入的商店美术底板。
+- `shop_art_service_workbench.png`：拓印 / 精简服务页的透明 PNG 装饰件。
+- `shop_art_relic_tray.png`：奇珍页的透明 PNG 陈列托盘。
+- `shop_prototype_plate_v1.png`：上一版原型底板，保留用于对比。
 - `shop_prototype_market.png`：货架状态验证截图。
 - `shop_prototype_relic.png`：奇珍状态验证截图。
 - `shop_prototype_copy.png`：拓印状态验证截图。
 - `shop_prototype_delete.png`：精简状态验证截图。
+- `build_shop_art_assets.py`：当前候选 PNG 的生成脚本，方便继续调底板布局和功能装饰件。
 
 ## 范围
 
