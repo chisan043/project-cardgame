@@ -1,0 +1,73 @@
+Use the approved Questers shop concept direction as strict reference.
+
+Create one isolated production game UI asset on a perfectly flat solid #ff00ff chroma-key background for later transparency processing.
+
+Asset id: shop_detail_panel_frame
+Asset type: right item detail panel frame only
+Target path: assets/source/ui/events/shop/frames/shop_detail_panel_frame_v1.png
+
+Proportion:
+- Narrow vertical right-side panel, about 0.55:1 width-to-height.
+- Intended canvas: 896x1632.
+- Matches the right item-detail column in the cropped Questers shop concept.
+- It should sit to the right of the goods shelf.
+
+Structure:
+- Compact ornate item detail column.
+- Antique-gold outer frame.
+- Dark navy/teal stained-glass surround.
+- Warm aged parchment detail area.
+- Blank title band.
+- Blank item description area.
+- Blank price plaque zone below the description.
+- Blank buy-button zone at the bottom.
+- Optional blank small currency and exit backing areas above only if they remain empty and compact.
+
+Critical rules:
+- Keep the column tight and vertical.
+- Do not make it wide.
+- Do not include a coin icon.
+- Do not include item art.
+- Do not include price numbers.
+- Do not include readable labels.
+- Do not bake the buy button text into the art.
+
+Style:
+- Questers-specific 1990s Japanese cel-animation fantasy UI.
+- Dark cathedral stained glass.
+- Deep navy and teal enamel surrounds.
+- Delicate antique-gold filigree trim.
+- Thin gothic borders.
+- Hard ink outlines.
+- Aged hand-painted texture.
+- Restrained blue jewel nodes.
+- Tiny red/green stained-glass accents.
+- Warm parchment interior.
+- Candlelit gold highlights.
+- Match existing Questers card and relic art.
+- Avoid generic gothic UI, oversized decoration, and chunky modern mobile-game frames.
+
+Content constraints:
+- Output only the empty right detail panel frame asset.
+- No item art.
+- No card.
+- No relic icon.
+- No merchant.
+- No button text.
+- No price numbers.
+- No coin symbols.
+- No readable text.
+- No Chinese characters.
+- No numbers.
+- No watermark.
+- No full-screen mockup.
+- Full object visible, centered, generous padding, crisp edges.
+
+Background:
+- One uniform #ff00ff background only.
+- No shadow.
+- No gradient.
+- No texture.
+- No floor plane.
+- No lighting variation.
+- Do not use #ff00ff anywhere in the asset artwork.

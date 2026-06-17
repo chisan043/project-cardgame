@@ -1,0 +1,69 @@
+Use the approved Questers shop concept direction as strict reference.
+
+Create one isolated production game UI asset on a perfectly flat solid #ff00ff chroma-key background for later transparency processing.
+
+Asset id: shop_merchant_arch_frame
+Asset type: left merchant portrait arch frame only
+Target path: assets/source/ui/events/shop/frames/shop_merchant_arch_frame_v1.png
+
+Proportion:
+- Narrow tall portrait column, about 0.42:1 width-to-height.
+- Intended canvas: 768x1792.
+- Matches the left merchant portrait window in the cropped Questers shop concept.
+- This is not the separate event-introduction panel.
+
+Structure:
+- Tall gothic stained-glass arch frame.
+- Rectangular lower continuation like an old card-game portrait window.
+- Antique-gold outer trim.
+- Dark navy/teal side rails.
+- Blue stained-glass interior behind where a merchant portrait can be layered later.
+- Delicate small jewel nodes and restrained filigree at top and bottom.
+- Large open central portrait area for a separate character illustration.
+
+Critical rules:
+- No merchant character.
+- No shop title area.
+- No paragraph/list area.
+- No service description bullets.
+- No large left information module.
+- Do not make this a standalone decorative icon; it must read as the narrow merchant portrait window.
+
+Style:
+- Questers-specific 1990s Japanese cel-animation fantasy UI.
+- Dark cathedral stained glass.
+- Deep navy and teal enamel.
+- Delicate antique-gold filigree trim.
+- Thin gothic borders.
+- Hard ink outlines.
+- Aged hand-painted texture.
+- Restrained blue jewel nodes.
+- Tiny red/green stained-glass accents.
+- Candlelit gold highlights.
+- Match existing Questers card and relic art.
+- Avoid generic gothic UI, oversized decoration, and chunky modern mobile-game frames.
+
+Content constraints:
+- Output only the empty merchant arch frame asset.
+- No merchant.
+- No character.
+- No cards.
+- No relic icons.
+- No buttons.
+- No prices.
+- No coin symbols.
+- No readable text.
+- No Chinese characters.
+- No numbers.
+- No watermark.
+- No full-screen mockup.
+- Full object visible, centered, generous padding, crisp edges.
+
+Background:
+- One uniform #ff00ff background only.
+- No shadow.
+- No gradient.
+- No texture.
+- No floor plane.
+- No lighting variation.
+- Do not use #ff00ff anywhere in the asset artwork.

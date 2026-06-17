@@ -1,0 +1,75 @@
+Use the approved Questers shop concept direction as strict reference.
+
+Create one isolated production game UI asset on a perfectly flat solid #ff00ff chroma-key background for later transparency processing.
+
+Asset id: shop_goods_shelf_frame
+Asset type: central shop goods shelf frame only
+Target path: assets/source/ui/events/shop/frames/shop_goods_shelf_frame_v1.png
+
+Proportion:
+- Wide horizontal panel, about 1.6:1 width-to-height.
+- Intended canvas: 1792x1120.
+- Fits below the top mode tabs and between the merchant portrait arch and the right detail panel.
+
+Structure:
+- Ornate antique-gold outer frame.
+- Deep navy/teal stained-glass interior.
+- Broad upper empty content area for cards.
+- Broad lower empty content area for relics.
+- One subtle horizontal divider between upper and lower zones.
+- Optional very low blank title strip inside the frame only.
+- Optional faint row-label ornaments with no text.
+
+Critical rules:
+- The top edge must be clean, straight, low, and restrained.
+- No protruding top ornament.
+- No crown shape.
+- No large jewel plaque.
+- No crooked crest.
+- No tall title banner.
+- No decoration entering the top function-tab area.
+- Do not draw individual card slots.
+- Do not draw relic slots.
+- Do not draw fixed five-item wells.
+- Do not draw per-item price plaques.
+- Do not draw discount badges.
+- Do not draw card silhouettes or circular relic wells.
+- Do not draw repeated dot rows.
+
+Style:
+- Questers-specific 1990s Japanese cel-animation fantasy UI.
+- Dark cathedral stained glass.
+- Deep navy and teal enamel panels.
+- Delicate antique-gold filigree trim.
+- Thin gothic borders.
+- Hard ink outlines.
+- Aged hand-painted texture.
+- Restrained blue jewel nodes.
+- Tiny red/green stained-glass accents.
+- Candlelit gold highlights.
+- Match existing Questers card and relic art.
+- Avoid generic gothic UI, oversized decoration, and chunky modern mobile-game frames.
+
+Content constraints:
+- Output only the empty goods shelf frame asset.
+- No cards.
+- No relic icons.
+- No merchant.
+- No buttons.
+- No prices.
+- No coin symbols.
+- No readable text.
+- No Chinese characters.
+- No numbers.
+- No watermark.
+- No full-screen mockup.
+- Full object visible, centered, generous padding, crisp edges.
+
+Background:
+- One uniform #ff00ff background only.
+- No shadow.
+- No gradient.
+- No texture.
+- No floor plane.
+- No lighting variation.
+- Do not use #ff00ff anywhere in the asset artwork.
