@@ -54,6 +54,26 @@ This note records the approved shop UI asset direction for the stained-glass cel
 - The shelf top edge must stay clean and low so the `货架` / `拓印` / `精简` function tabs have unobstructed space above it.
 - Real cards, relics, prices, half-price badges, hover states, and item spacing must be controlled by the game UI layer.
 
+## Interactive Button Split Rule
+
+- Clickable controls must be separate assets from the large shop frames.
+- Button frame assets should be blank; text, icons, coin symbols, prices, and keyboard hints are rendered by the game UI layer.
+- Required button families:
+  - top mode tab button,
+  - primary action button for purchase/confirm/restock,
+  - small exit button,
+  - service/action button for copy/remove/choose-card flows,
+  - square icon button for actions such as remove/copy when an icon-only affordance is clearer.
+- Required visual states:
+  - idle,
+  - hover or pressed,
+  - disabled,
+  - active-selected for top tabs.
+- Hover/pressed should use brighter gold rim light or subtle blue inner glow.
+- Disabled should be desaturated and dim but still readable.
+- Do not bake click effects into the main shelf/detail/arch frame; keep them controllable per button.
+- Keep button ornamentation restrained enough that it does not overlap adjacent UI or force fixed text sizes.
+
 ## Asset Output Rules
 
 - Transparent-background PNG assets are preferred for production.
