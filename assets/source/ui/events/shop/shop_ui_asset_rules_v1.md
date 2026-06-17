@@ -35,18 +35,23 @@ This note records the approved shop UI asset direction for the stained-glass cel
 - The central goods shelf asset must be a flexible stage frame, not a fixed item grid.
 - Draw only:
   - outer ornate frame,
-  - blank top title plaque,
+  - optional low blank title plaque that stays inside the shelf frame,
   - broad upper content area for cards,
   - broad lower content area for relics,
   - one subtle horizontal divider,
   - optional faint row-label ornaments with no text.
 - Do not draw:
+  - tall or protruding top ornaments,
+  - crown-like top decorations,
+  - large jewel plaques above the shelf,
+  - any shelf decoration that enters the top function-tab area,
   - individual card slots,
   - individual relic slots,
   - fixed five-item wells,
   - price plaques under individual items,
   - discount badges,
   - card or relic placeholders.
+- The shelf top edge must stay clean and low so the `货架` / `拓印` / `精简` function tabs have unobstructed space above it.
 - Real cards, relics, prices, half-price badges, hover states, and item spacing must be controlled by the game UI layer.
 
 ## Asset Output Rules
