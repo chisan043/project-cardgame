@@ -1,0 +1,55 @@
+Use the approved Questers shop concept direction as strict reference.
+
+Create one transparent-ready concept sheet on a perfectly flat solid #ff00ff chroma-key background for later slicing and transparency processing.
+
+Asset family: shop_icon_button_square
+Asset type: square icon-only button frame states
+Target paths:
+- assets/source/ui/events/shop/buttons/shop_icon_button_square_idle_v1.png
+- assets/source/ui/events/shop/buttons/shop_icon_button_square_hover_v1.png
+- assets/source/ui/events/shop/buttons/shop_icon_button_square_pressed_v1.png
+- assets/source/ui/events/shop/buttons/shop_icon_button_square_disabled_v1.png
+
+Proportion:
+- Square button frame, 1:1.
+- Intended single-state canvas: 192x192.
+- The sheet should show four separate states with generous spacing.
+- Used for icon-only remove, copy, close, or small utility actions.
+
+States:
+- Idle: dark teal enamel center, thin antique-gold square frame.
+- Hover: brighter gold rim light and subtle blue inner glow.
+- Pressed: slightly darker inset center, compressed highlight.
+- Disabled: desaturated teal and worn dim gold.
+
+Critical rules:
+- Blank frame only.
+- No icon baked into the art.
+- No readable text.
+- No Chinese characters.
+- No numbers.
+- No coin symbols.
+- No item art.
+- Keep the center clear for a DOM or sprite icon.
+- Keep all states the same silhouette and size.
+
+Style:
+- Questers-specific 1990s Japanese cel-animation fantasy UI.
+- Dark cathedral stained glass.
+- Deep navy and teal enamel.
+- Delicate antique-gold filigree trim.
+- Thin gothic borders.
+- Hard ink outlines.
+- Aged hand-painted texture.
+- Restrained blue jewel nodes.
+- Candlelit gold highlights.
+- Avoid generic gothic UI, chunky mobile-game buttons, and glossy casino UI.
+
+Background:
+- One uniform #ff00ff background only.
+- No shadow.
+- No gradient.
+- No texture.
+- No floor plane.
+- No lighting variation.
+- Do not use #ff00ff anywhere in the asset artwork.

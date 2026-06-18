@@ -1,0 +1,55 @@
+Use the approved Questers shop concept direction as strict reference.
+
+Create one transparent-ready concept sheet on a perfectly flat solid #ff00ff chroma-key background for later slicing and transparency processing.
+
+Asset family: shop_empty_warning_panels
+Asset type: empty-state plaque and confirmation warning strip
+Target paths:
+- assets/source/ui/events/shop/secondary/shop_empty_state_plaque_v1.png
+- assets/source/ui/events/shop/secondary/shop_confirm_warning_strip_v1.png
+- assets/source/ui/events/shop/badges/shop_warning_note_strip_v1.png
+
+Purpose:
+- Blank backing assets for empty deck lists, no valid targets, irreversible remove/copy warnings, and compact shop notices.
+- Actual text and icons are rendered by the game UI layer.
+
+Variants:
+- Empty-state plaque: medium parchment plaque, about 2.2:1, intended canvas 704x320.
+- Confirmation warning strip: low red/dark parchment strip, about 5:1, intended canvas 960x192.
+- General warning/note strip: low parchment/dark-red strip, about 5:1, intended canvas 960x192.
+
+Critical rules:
+- Blank panels only.
+- No title strip.
+- No section label.
+- No grouping label.
+- No explanatory label.
+- No readable text.
+- No Chinese characters.
+- No numbers.
+- No icons.
+- No coin symbols.
+- No baked exclamation mark.
+- No card art.
+- No relic art.
+- Keep centers clear for DOM-rendered text.
+
+Style:
+- Questers-specific 1990s Japanese cel-animation fantasy UI.
+- Warm aged parchment and dark red stained-glass warning accents.
+- Delicate antique-gold filigree trim.
+- Thin gothic borders.
+- Hard ink outlines.
+- Aged hand-painted texture.
+- Candlelit gold highlights.
+- Match existing Questers card/relic art.
+- Avoid generic warning banners and modern flat alert boxes.
+
+Background:
+- One uniform #ff00ff background only.
+- No shadow.
+- No gradient.
+- No texture.
+- No floor plane.
+- No lighting variation.
+- Do not use #ff00ff anywhere in the asset artwork.

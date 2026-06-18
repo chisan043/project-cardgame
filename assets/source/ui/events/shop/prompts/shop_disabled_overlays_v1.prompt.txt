@@ -1,0 +1,52 @@
+Use the approved Questers shop concept direction as strict reference.
+
+Create one transparent-ready concept sheet on a perfectly flat solid #ff00ff chroma-key background for later slicing and transparency processing.
+
+Asset family: shop_disabled_overlays
+Asset type: reusable disabled / unavailable overlay veils
+Target paths:
+- assets/source/ui/events/shop/overlays/shop_disabled_veil_card_v1.png
+- assets/source/ui/events/shop/overlays/shop_disabled_veil_rect_v1.png
+- assets/source/ui/events/shop/badges/shop_unavailable_corner_tag_v1.png
+
+Purpose:
+- Reusable overlays for unaffordable cards, unavailable services, exhausted items, disabled buttons, and invalid card targets.
+- Actual disabled reason text belongs to the game UI layer.
+
+Variants:
+- Card veil: card-ratio semi-transparent dark navy overlay, intended canvas 384x560.
+- Rect veil: low rectangle semi-transparent dark navy overlay, intended canvas 512x160.
+- Corner tag: small desaturated navy/worn-gold corner tag, intended canvas 224x160.
+
+Critical rules:
+- Keep overlays translucent enough that underlying art remains recognizable; target a veil-like effect, not a solid panel.
+- No title strip.
+- No section label.
+- No grouping label.
+- No explanatory label.
+- No readable text.
+- No Chinese characters.
+- No numbers.
+- No icons.
+- No coin symbols.
+- No large slash icon.
+- No giant warning symbol.
+- Do not make these look like sale badges.
+
+Style:
+- Questers-specific 1990s Japanese cel-animation fantasy UI.
+- Dark navy translucent veil.
+- Subtle worn antique-gold edge or diagonal texture is allowed.
+- Hard ink outlines.
+- Aged hand-painted texture.
+- Restrained, readable, not noisy.
+- Avoid modern flat UI opacity blocks and chunky mobile-game disabled overlays.
+
+Background:
+- One uniform #ff00ff background only.
+- No shadow.
+- No gradient.
+- No texture.
+- No floor plane.
+- No lighting variation.
+- Do not use #ff00ff anywhere in the asset artwork.
