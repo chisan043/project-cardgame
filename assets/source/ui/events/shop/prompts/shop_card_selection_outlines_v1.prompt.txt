@@ -1,0 +1,57 @@
+Use the approved Questers shop concept direction as strict reference.
+
+Create one transparent-ready concept sheet on a perfectly flat solid #ff00ff chroma-key background for later slicing and transparency processing.
+
+Asset family: shop_card_selection_outlines
+Asset type: card hover and selected overlay frames
+Target paths:
+- assets/source/ui/events/shop/overlays/shop_card_hover_outline_v1.png
+- assets/source/ui/events/shop/overlays/shop_card_selected_outline_v1.png
+
+Proportion:
+- Each outline follows the current Questers card art ratio.
+- Intended single-state canvas: 384x560.
+- The sheet should show two separate card-shaped overlay frames with generous spacing.
+- Centers must be transparent/empty so real card art remains visible.
+
+Variants:
+- Hover outline: thin luminous blue-gold card frame, subtle glow, restrained corner highlights.
+- Selected outline: stronger antique-gold and blue frame, slightly brighter corner jewels, still thin enough not to cover card text or art.
+- The painted border thickness should stay under about 5% of the card width.
+- Corner jewels and glow must stay outside or near the edge, never over the central card art/text area.
+
+Critical rules:
+- Outline only.
+- No fill covering the card.
+- No card art.
+- No card back.
+- No readable text.
+- No Chinese characters.
+- No numbers.
+- No icons.
+- No coin symbols.
+- No oversized corner ornaments.
+- No thick selected frame that eats into the card face.
+- Keep both outlines the same outer size so the UI can swap states without layout shift.
+
+Style:
+- Questers-specific 1990s Japanese cel-animation fantasy UI.
+- Dark cathedral stained glass accents.
+- Deep navy and teal enamel edge tint.
+- Delicate antique-gold filigree trim.
+- Thin gothic borders.
+- Hard ink outlines.
+- Aged hand-painted texture.
+- Restrained blue jewel nodes.
+- Candlelit gold highlights.
+- Hover/selected glow should feel cel-painted, not modern neon.
+- Match existing Questers card and relic art.
+
+Background:
+- One uniform #ff00ff background only.
+- No shadow.
+- No gradient.
+- No texture.
+- No floor plane.
+- No lighting variation.
+- Do not use #ff00ff anywhere in the asset artwork.

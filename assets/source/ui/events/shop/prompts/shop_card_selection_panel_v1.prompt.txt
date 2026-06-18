@@ -1,0 +1,75 @@
+Use the approved Questers shop concept direction as strict reference.
+
+Create one isolated production game UI asset on a perfectly flat solid #ff00ff chroma-key background for later transparency processing.
+
+Asset id: shop_card_selection_panel
+Asset type: flexible secondary-menu card selection panel with optional right-side detail area
+Target path: assets/source/ui/events/shop/secondary/shop_card_selection_panel_v1.png
+
+Purpose:
+- Background panel for shop copy-card, remove-card, and choose-card flows.
+- Must support large player decks through HTML/CSS scrolling.
+- Actual cards, filters, labels, selected state, and counts are rendered by the game UI layer.
+
+Proportion:
+- Wide panel, about 1.7:1 width-to-height.
+- Intended canvas: 1792x1056.
+- Fits inside the shop secondary-menu area.
+
+Structure:
+- Ornate antique-gold outer frame.
+- Deep navy/teal stained-glass interior.
+- Large open scrollable content area.
+- Optional low blank header strip inside the frame.
+- Optional subtle right-side area reserved for scrollbar.
+- Optional subtle lower/side parchment accent for selected-card summary, only if it does not reduce the main open area too much.
+- If a right-side selected-card detail area is included, keep the left deck area dominant and open.
+- This prompt is for the "deck grid plus selected detail" layout. A pure full-width grid panel should be generated separately if needed.
+
+Critical rules:
+- No fixed card slots.
+- No grid cells.
+- No card silhouettes.
+- No individual item wells.
+- No baked scroll position.
+- No text.
+- No Chinese characters.
+- No numbers.
+- No icons.
+- No coin symbols.
+- Do not force a specific deck size.
+- Keep the interior open enough for dynamic card layout.
+
+Style:
+- Questers-specific 1990s Japanese cel-animation fantasy UI.
+- Dark cathedral stained glass.
+- Deep navy and teal enamel panels.
+- Delicate antique-gold filigree trim.
+- Thin gothic borders.
+- Hard ink outlines.
+- Aged hand-painted texture.
+- Restrained blue jewel nodes.
+- Tiny red/green stained-glass accents.
+- Candlelit gold highlights.
+- Match existing Questers card and relic art.
+- Avoid generic gothic UI, oversized decoration, and chunky modern mobile-game frames.
+
+Content constraints:
+- Output only the empty flexible panel asset.
+- No cards.
+- No card backs.
+- No merchant.
+- No buttons.
+- No price plaques.
+- No watermark.
+- No full-screen mockup.
+- Full object visible, centered, generous padding, crisp edges.
+
+Background:
+- One uniform #ff00ff background only.
+- No shadow.
+- No gradient.
+- No texture.
+- No floor plane.
+- No lighting variation.
+- Do not use #ff00ff anywhere in the asset artwork.

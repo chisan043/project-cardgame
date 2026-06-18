@@ -1,0 +1,57 @@
+Use the approved Questers shop concept direction as strict reference.
+
+Create one transparent-ready concept sheet on a perfectly flat solid #ff00ff chroma-key background for later slicing and transparency processing.
+
+Asset family: shop_scrollbar_parts
+Asset type: vertical scrollbar track and thumb for secondary shop menus
+Target paths:
+- assets/source/ui/events/shop/secondary/shop_scrollbar_track_v1.png
+- assets/source/ui/events/shop/secondary/shop_scrollbar_thumb_v1.png
+
+Purpose:
+- Scrollbar art for large player deck lists in copy-card, remove-card, and choose-card flows.
+- Track and thumb must be separate pieces.
+- Scroll position and thumb height are controlled by the game UI layer.
+
+Proportion:
+- Track: very narrow vertical rail, about 0.12:1 width-to-height; intended canvas 128x1024.
+- Thumb: compact vertical handle, about 0.25:1 width-to-height; intended canvas 128x512.
+- The sheet should show the track and thumb separately with generous spacing.
+
+Structure:
+- Track: thin dark teal/navy gothic rail with antique-gold edge lines and subtle stained-glass depth.
+- Thumb: small movable gold/teal handle with restrained jewel accent and clear grip shape.
+
+Critical rules:
+- No arrows unless extremely subtle and blank.
+- Prefer flat or jewel-capped ends over obvious arrowheads, so the scrollbar does not imply a clickable arrow button unless code implements one.
+- No text.
+- No Chinese characters.
+- No numbers.
+- No icons.
+- No fixed scroll position.
+- No baked list background.
+- Track and thumb must be visually compatible but not connected.
+- Keep ornamentation thin so the scrollbar does not steal attention from cards.
+
+Style:
+- Questers-specific 1990s Japanese cel-animation fantasy UI.
+- Dark cathedral stained glass.
+- Deep navy and teal enamel.
+- Delicate antique-gold filigree trim.
+- Thin gothic borders.
+- Hard ink outlines.
+- Aged hand-painted texture.
+- Restrained blue jewel nodes.
+- Candlelit gold highlights.
+- Match existing Questers card and relic art.
+- Avoid modern browser scrollbar styling and chunky mobile-game UI.
+
+Background:
+- One uniform #ff00ff background only.
+- No shadow.
+- No gradient.
+- No texture.
+- No floor plane.
+- No lighting variation.
+- Do not use #ff00ff anywhere in the asset artwork.
