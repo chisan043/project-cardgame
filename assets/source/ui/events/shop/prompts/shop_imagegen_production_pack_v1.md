@@ -30,7 +30,7 @@ Avoid:
 ## Intended Imagegen Sequence
 
 1. Generate `shop_shell_component_sheet_v1.prompt.txt`.
-   - Purpose: lock the proportions of the merchant arch, goods shelf, right detail panel, top tabs, exit button zone, and bottom restock strip.
+   - Purpose: lock the proportions of the shared portrait arch, goods shelf, right detail panel, top tabs, exit button zone, and bottom restock strip.
    - Review first. If this proportion fails, do not generate the smaller parts yet.
 2. Generate `shop_goods_tab_source_v1.prompt.txt`.
    - Purpose: clean goods-tab source frame with a flexible upper card area and lower relic area.
@@ -65,7 +65,7 @@ assets/source/ui/events/shop/secondary/
 
 A source image passes only if:
 
-- the shop starts at the portrait arch and excludes the old far-left intro module,
+- the shop starts at the shared portrait arch and excludes the old far-left intro module,
 - the top `货架 / 拓印 / 精简` tab zone is visually reserved and unobstructed,
 - the `离开` button area is reserved in the upper right,
 - the goods shelf is one flexible large frame, not fixed slots,

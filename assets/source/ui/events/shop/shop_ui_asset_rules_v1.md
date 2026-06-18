@@ -11,10 +11,10 @@ This note records the approved shop UI asset direction for the stained-glass cel
 
 ## Shop Boundary
 
-- The actual shop interface starts at the merchant portrait arch.
+- The actual shop interface starts at the shared event portrait arch.
 - Do not include the separate event-introduction panel/module on the far left.
 - The shop screen body should include:
-  - left merchant portrait arch,
+  - shared left event portrait arch,
   - top function tabs,
   - central goods shelf,
   - right item detail panel,
@@ -25,7 +25,7 @@ This note records the approved shop UI asset direction for the stained-glass cel
 
 - Use the cropped shop concept as the layout reference.
 - Overall shop body is a compact wide rectangle, roughly `1.6:1`.
-- Left merchant arch takes roughly one quarter of the width.
+- Left shared portrait arch takes roughly one quarter of the width.
 - Central goods shelf takes roughly one half of the width.
 - Right detail panel takes roughly one quarter of the width.
 - Preserve the concept's thin border weight, tight spacing, and dense but readable old-console UI rhythm.
@@ -106,6 +106,13 @@ This note records the approved shop UI asset direction for the stained-glass cel
   - cancel/back button frame.
 - Do not draw individual card slots, fixed grid cells, baked card silhouettes, text, numbers, or icons.
 - Actual cards, filters, selected state, scroll position, labels, and counts are rendered by the game UI layer.
+
+## Shared Portrait Arch Rule
+
+- The left arch frame is not shop-specific.
+- Use one shared `event_portrait_arch_frame` asset for shop, encounter, and campfire screens.
+- Runtime content decides what appears inside the arch: merchant portrait for shop, event subject art for encounters, and campfire art for campfire.
+- Do not generate separate merchant/event/campfire arch frames unless a future approved concept changes the silhouette substantially.
 
 ## Asset Output Rules
 

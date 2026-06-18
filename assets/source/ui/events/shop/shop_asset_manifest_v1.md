@@ -19,7 +19,7 @@ Imagegen production pack: `assets/source/ui/events/shop/prompts/shop_imagegen_pr
 
 - Shop body starts at the merchant portrait arch and excludes the separate event-introduction panel.
 - Overall shop body ratio: about `1.6:1`.
-- Left merchant arch: about `22-24%` of shop width.
+- Left shared portrait arch: about `22-24%` of shop width.
 - Center goods shelf: about `50-52%` of shop width.
 - Right detail column: about `24%` of shop width.
 - Top mode tabs sit above the center shelf.
@@ -36,6 +36,8 @@ assets/source/ui/events/shop/
 Recommended subfolders once real PNGs are generated:
 
 ```text
+assets/source/ui/events/common/frames/
+assets/source/ui/events/common/prompts/
 assets/source/ui/events/shop/frames/
 assets/source/ui/events/shop/buttons/
 assets/source/ui/events/shop/overlays/
@@ -48,7 +50,7 @@ assets/source/ui/events/shop/prompts/
 
 | Asset id | Suggested final path | Ratio | Suggested canvas | Purpose | Notes |
 | --- | --- | ---: | ---: | --- | --- |
-| `shop_merchant_arch_frame` | `frames/shop_merchant_arch_frame_v1.png` | `0.42:1` | `768x1792` | Left merchant portrait window | Empty blue stained-glass arch only; no merchant, no intro panel. |
+| `event_portrait_arch_frame` | `../common/frames/event_portrait_arch_frame_v1.png` | `0.42:1` | `768x1792` | Shared left portrait/event-subject window | Reused by shop, encounter, and campfire; empty blue stained-glass arch only; no merchant, no campfire, no intro panel. |
 | `shop_goods_shelf_frame` | `frames/shop_goods_shelf_frame_v1.png` | `1.6:1` | `1792x1120` | Center goods shelf | Flexible large container with upper/lower zones only; no fixed product slots. |
 | `shop_detail_panel_frame` | `frames/shop_detail_panel_frame_v1.png` | `0.55:1` | `896x1632` | Right item detail panel | Blank parchment detail area, blank price plaque zone, blank buy button zone. |
 | `shop_top_tab_bar_frame` | `frames/shop_top_tab_bar_frame_v1.png` | `4.5:1` | `1536x352` | Optional connected tab-bar backing | Use only if separate tab buttons need a shared rail. |
@@ -160,7 +162,7 @@ Generate and review source images in this order before slicing final transparent
 After those source images pass review, slice/clean the following production assets in this order:
 
 1. `shop_goods_shelf_frame`
-2. `shop_merchant_arch_frame`
+2. `event_portrait_arch_frame`
 3. `shop_detail_panel_frame`
 4. `shop_tab_button` states
 5. `shop_primary_button` states

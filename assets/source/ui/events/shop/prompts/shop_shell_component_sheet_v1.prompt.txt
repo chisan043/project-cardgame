@@ -10,8 +10,8 @@ Reference style:
 
 Composition:
 - One compact wide shop body, roughly 1.6:1.
-- The actual shop starts at the merchant portrait arch; do not include the separate far-left event-introduction panel.
-- Left column: tall empty merchant portrait arch frame, about 22-24% of the width.
+- The actual shop starts at the shared event portrait arch; do not include the separate far-left event-introduction panel.
+- Left column: tall empty shared event portrait arch frame, about 22-24% of the width.
 - Center: top tab rail area, central flexible goods shelf area, and bottom restock strip area, about 50-52% of the width.
 - Right column: item detail panel and permanent exit/currency area, about 24% of the width.
 - Reserve a clear upper-right exit button zone.
@@ -19,7 +19,7 @@ Composition:
 - Keep the goods shelf top edge clean and low so nothing blocks the tabs.
 
 Important component boundaries:
-- Draw the merchant arch, goods shelf frame, right detail frame, tab button silhouettes, exit button silhouette, primary button silhouette, restock strip, price plaque silhouettes, and scrollbar silhouettes as separable source parts.
+- Draw the shared portrait arch, goods shelf frame, right detail frame, tab button silhouettes, exit button silhouette, primary button silhouette, restock strip, price plaque silhouettes, and scrollbar silhouettes as separable source parts.
 - Leave interiors blank enough for runtime HTML cards, relics, text, prices, icons, and click states.
 - The goods shelf must have a broad upper card area, broad lower relic area, one subtle horizontal divider, and no individual item slots.
 - The right panel may contain blank parchment surfaces and blank button/plaque zones, but no readable text.

@@ -9,7 +9,7 @@ Target path: assets/source/ui/events/shop/frames/shop_goods_shelf_frame_v1.png
 Proportion:
 - Wide horizontal panel, about 1.6:1 width-to-height.
 - Intended canvas: 1792x1120.
-- Fits below the top mode tabs and between the merchant portrait arch and the right detail panel.
+- Fits below the top mode tabs and between the shared event portrait arch and the right detail panel.
 
 Structure:
 - Ornate antique-gold outer frame.

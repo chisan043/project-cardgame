@@ -8,7 +8,7 @@ Reference style:
 
 Composition:
 - Same compact shop shell proportions as the other shop states.
-- Left: empty merchant portrait arch frame, no intro panel and no merchant character.
+- Left: empty shared event portrait arch frame, no intro panel and no merchant character.
 - Top: three low blank mode tabs with the right tab visually active.
 - Upper right: permanent blank exit button zone and compact blank currency plaque zone.
 - Center: a large blank scrollable deck-browser backing panel for many removable cards.

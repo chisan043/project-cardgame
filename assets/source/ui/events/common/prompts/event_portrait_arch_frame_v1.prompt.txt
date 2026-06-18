@@ -1,15 +1,15 @@
-Use the approved Questers shop concept direction as strict reference.
+Use the approved Questers event-screen concept direction as strict reference.
 
-Create one isolated production game UI asset on a perfectly flat solid #ff00ff chroma-key background for later transparency processing.
+Create one isolated shared production game UI asset on a perfectly flat solid #ff00ff chroma-key background for later transparency processing.
 
-Asset id: shop_merchant_arch_frame
-Asset type: left merchant portrait arch frame only
-Target path: assets/source/ui/events/shop/frames/shop_merchant_arch_frame_v1.png
+Asset id: event_portrait_arch_frame
+Asset type: shared event portrait arch frame only
+Target path: assets/source/ui/events/common/frames/event_portrait_arch_frame_v1.png
 
 Proportion:
 - Narrow tall portrait column, about 0.42:1 width-to-height.
 - Intended canvas: 768x1792.
-- Matches the left merchant portrait window in the cropped Questers shop concept.
+- Reusable for shop, encounter, and campfire event screens.
 - This is not the separate event-introduction panel.
 
 Structure:
@@ -17,17 +17,19 @@ Structure:
 - Rectangular lower continuation like an old card-game portrait window.
 - Antique-gold outer trim.
 - Dark navy/teal side rails.
-- Blue stained-glass interior behind where a merchant portrait can be layered later.
+- Blue stained-glass interior behind where a character, campfire, or event subject can be layered later.
 - Delicate small jewel nodes and restrained filigree at top and bottom.
-- Large open central portrait area for a separate character illustration.
+- Large open central portrait area for separate runtime illustration.
 
 Critical rules:
 - No merchant character.
+- No campfire.
+- No event subject.
 - No shop title area.
 - No paragraph/list area.
 - No service description bullets.
 - No large left information module.
-- Do not make this a standalone decorative icon; it must read as the narrow merchant portrait window.
+- Do not make this a standalone decorative icon; it must read as the narrow event portrait window.
 
 Style:
 - Questers-specific 1990s Japanese cel-animation fantasy UI.
@@ -44,9 +46,10 @@ Style:
 - Avoid generic gothic UI, oversized decoration, and chunky modern mobile-game frames.
 
 Content constraints:
-- Output only the empty merchant arch frame asset.
+- Output only the empty shared event portrait arch frame asset.
 - No merchant.
 - No character.
+- No campfire.
 - No cards.
 - No relic icons.
 - No buttons.
