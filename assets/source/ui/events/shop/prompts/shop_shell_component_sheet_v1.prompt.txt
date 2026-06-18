@@ -1,0 +1,46 @@
+Use case: stylized-concept
+Asset type: source component sheet for Questers shop UI production assets
+Primary request: Generate a real imagegen source sheet for the approved Questers shop interface shell. This is not a final screenshot and not a mockup for players; it is a production source image to review proportions and later slice into transparent UI assets.
+
+Reference style:
+- Match the approved Questers event-screen concept direction.
+- Match existing Questers card, relic, HUD, and map assets.
+- 1990s Japanese cel-animation fantasy UI fused with gothic stained-glass cathedral interface.
+- Deep navy and teal enamel panels, antique gold filigree, thin gold linework, hard ink outlines, blue jewel nodes, small red/green stained-glass accents, parchment insets, aged hand-painted texture, candlelit highlights over cool blue shadows.
+
+Composition:
+- One compact wide shop body, roughly 1.6:1.
+- The actual shop starts at the merchant portrait arch; do not include the separate far-left event-introduction panel.
+- Left column: tall empty merchant portrait arch frame, about 22-24% of the width.
+- Center: top tab rail area, central flexible goods shelf area, and bottom restock strip area, about 50-52% of the width.
+- Right column: item detail panel and permanent exit/currency area, about 24% of the width.
+- Reserve a clear upper-right exit button zone.
+- Reserve the top mode tabs zone for three low tabs.
+- Keep the goods shelf top edge clean and low so nothing blocks the tabs.
+
+Important component boundaries:
+- Draw the merchant arch, goods shelf frame, right detail frame, tab button silhouettes, exit button silhouette, primary button silhouette, restock strip, price plaque silhouettes, and scrollbar silhouettes as separable source parts.
+- Leave interiors blank enough for runtime HTML cards, relics, text, prices, icons, and click states.
+- The goods shelf must have a broad upper card area, broad lower relic area, one subtle horizontal divider, and no individual item slots.
+- The right panel may contain blank parchment surfaces and blank button/plaque zones, but no readable text.
+
+Critical rules:
+- No merchant character.
+- No cards.
+- No relic icons.
+- No item placeholders.
+- No fixed five-item wells.
+- No per-item price plaques baked into the shelf.
+- No discount badges baked into the shelf.
+- No readable text, no Chinese characters, no numbers, no coin symbols, no watermark.
+- No tall crest, no crown, no crooked top ornament, no decoration entering the tab row.
+- Avoid generic tavern wood shop, modern CSS panels, flat vector UI, chunky mobile-game buttons, glossy gradients.
+
+Background:
+- Perfectly flat solid #ff00ff chroma-key background for later transparency processing.
+- The background must be one uniform color with no shadows, gradients, texture, floor plane, reflections, or lighting variation.
+- Do not use #ff00ff anywhere in the UI artwork.
+- Keep all components fully visible with generous padding and crisp separable edges.
+
+Output expectation:
+- A single source sheet image that can be saved as `assets/source/ui/events/shop/review/shop_shell_component_sheet_v1_source.png`.

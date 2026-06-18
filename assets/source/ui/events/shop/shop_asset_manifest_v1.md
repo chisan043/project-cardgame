@@ -4,6 +4,7 @@ This manifest lists the production assets needed to implement the approved Quest
 
 Companion rules: `assets/source/ui/events/shop/shop_ui_asset_rules_v1.md`
 Style reference: `assets/source/ui/concepts/event_screens_stained_glass_cel_concept_v1.png`
+Imagegen production pack: `assets/source/ui/events/shop/prompts/shop_imagegen_production_pack_v1.md`
 
 ## Production Principles
 
@@ -150,7 +151,15 @@ The art layer should provide:
 
 ## First Generation Batch
 
-Generate and review in this order:
+Generate and review source images in this order before slicing final transparent PNGs:
+
+1. `prompts/shop_shell_component_sheet_v1.prompt.txt`
+2. `prompts/shop_goods_tab_source_v1.prompt.txt`
+3. `prompts/shop_copy_tab_source_v1.prompt.txt`
+4. `prompts/shop_remove_tab_source_v1.prompt.txt`
+5. `prompts/shop_buttons_and_overlays_sheet_v1.prompt.txt`
+
+After those source images pass review, slice/clean the following production assets in this order:
 
 1. `shop_goods_shelf_frame`
 2. `shop_merchant_arch_frame`

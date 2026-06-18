@@ -1,0 +1,42 @@
+Use case: stylized-concept
+Asset type: source image for the Questers shop remove-card tab
+Primary request: Generate a real imagegen source for the `精简` shop state, focused on reusable blank UI assets for a large-deck remove-card workflow.
+
+Reference style:
+- Match the approved Questers event-screen concept and existing Questers assets.
+- 1990s Japanese cel-animation fantasy UI, gothic stained-glass cathedral frame language, deep navy/teal enamel, antique gold filigree, thin ink outlines, parchment, blue jewel nodes, candlelit gold over cool shadows.
+
+Composition:
+- Same compact shop shell proportions as the other shop states.
+- Left: empty merchant portrait arch frame, no intro panel and no merchant character.
+- Top: three low blank mode tabs with the right tab visually active.
+- Upper right: permanent blank exit button zone and compact blank currency plaque zone.
+- Center: a large blank scrollable deck-browser backing panel for many removable cards.
+- Top of browser: compact blank filter/dropdown plaques.
+- Right side: blank selected-card preview/detail panel with blank cost plaque and blank confirm button area.
+- Bottom or lower center: a blank warning/note strip for the runtime to render confirmation text.
+- Include a slim ornate vertical scrollbar track and thumb as sliceable visual parts.
+
+Large-deck UX requirement:
+- The center panel should clearly support many runtime card thumbnails through scrolling.
+- Do not draw actual card thumbnails, fixed cells, baked selected cards, or readable warnings.
+- Runtime controls card list, selected state, cost, labels, and confirmation behavior.
+
+Mood:
+- Removing a card should feel solemn and careful: dimmer blue-black enamel, restrained ash-like vignette, parchment warning surface, antique gold trim still consistent with the shop.
+
+Critical rules:
+- No readable text, no Chinese characters, no numbers, no coin symbols.
+- No cards, no card silhouettes, no item art, no merchant character.
+- No fixed grid wells.
+- No decorations that block the tab row.
+- Avoid generic tavern wood shop, modern CSS panels, flat vector UI, chunky mobile-game buttons, glossy gradients.
+
+Background:
+- Perfectly flat solid #ff00ff chroma-key background.
+- Uniform background only, no shadow, no gradient, no texture, no floor plane, no lighting variation.
+- Do not use #ff00ff anywhere in the UI artwork.
+- Full UI source visible with generous padding and crisp edges.
+
+Output expectation:
+- Save approved raw source as `assets/source/ui/events/shop/review/shop_remove_tab_source_v1.png`.
