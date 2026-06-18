@@ -86,12 +86,10 @@ Button-state art direction:
 
 These are placed above real cards, relics, and buttons.
 
+Card and relic hover/selected feedback should not be generated as fixed image assets. Use runtime glow/filter/box-shadow effects on the real rendered card or relic element so the outline matches its actual size, rounded corners, and crop.
+
 | Asset id | Suggested final path | Ratio | Suggested canvas | Use | Notes |
 | --- | --- | ---: | ---: | --- | --- |
-| `shop_card_hover_outline` | `overlays/shop_card_hover_outline_v1.png` | card ratio | `384x560` | Card hover feedback | Thin glowing frame, transparent center. |
-| `shop_card_selected_outline` | `overlays/shop_card_selected_outline_v1.png` | card ratio | `384x560` | Card selected feedback | Stronger gold/blue frame, transparent center. |
-| `shop_relic_hover_outline` | `overlays/shop_relic_hover_outline_v1.png` | `1:1` | `256x256` | Relic hover feedback | Oval/circular frame, transparent center. |
-| `shop_relic_selected_outline` | `overlays/shop_relic_selected_outline_v1.png` | `1:1` | `256x256` | Relic selected feedback | Stronger frame, transparent center. |
 | `shop_disabled_veil_card` | `overlays/shop_disabled_veil_card_v1.png` | card ratio | `384x560` | Unavailable card overlay | Translucent, reusable. |
 | `shop_disabled_veil_rect` | `overlays/shop_disabled_veil_rect_v1.png` | `3.2:1` | `512x160` | Disabled button/service overlay | Translucent, reusable. |
 | `shop_attention_glint` | `overlays/shop_attention_glint_v1.png` | `1:1` | `256x256` | Small sparkle/rim accent | Keep restrained, no icon. |
@@ -135,6 +133,7 @@ The game UI layer should render:
 - discount numbers,
 - disabled reasons,
 - hover/focus state switching,
+- card/relic hover and selected glow using the actual rendered element bounds,
 - scroll position,
 - item counts,
 - all click handlers,
@@ -146,7 +145,6 @@ The art layer should provide:
 - ornate frame silhouettes,
 - stained-glass depth,
 - parchment surfaces,
-- hover/selected visual frames,
 - badge and plaque shapes.
 
 ## First Generation Batch
@@ -168,8 +166,7 @@ After those source images pass review, slice/clean the following production asse
 5. `shop_primary_button` states
 6. `shop_price_plaque_normal`, `shop_price_plaque_discount`
 7. `shop_half_price_corner_ribbon`
-8. `shop_card_hover_outline`, `shop_card_selected_outline`
-9. `shop_card_selection_panel`
-10. `shop_scrollbar_track`, `shop_scrollbar_thumb`
+8. `shop_card_selection_panel`
+9. `shop_scrollbar_track`, `shop_scrollbar_thumb`
 
 After these pass visual review, generate the remaining smaller variants.

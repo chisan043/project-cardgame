@@ -39,7 +39,8 @@ Avoid:
 4. Generate `shop_remove_tab_source_v1.prompt.txt`.
    - Purpose: large-deck remove-card browser source with warning strip and right preview panel.
 5. Generate `shop_buttons_and_overlays_sheet_v1.prompt.txt`.
-   - Purpose: stateful buttons, price plaques, half-price badge, hover/selected outlines, scrollbars, and warning strips as sliceable parts.
+   - Purpose: stateful buttons, price plaques, half-price badge, disabled veils, scrollbars, and warning strips as sliceable parts.
+   - Card/relic hover and selected feedback should stay in runtime CSS/SVG glow so it matches the actual card/relic bounds.
 
 ## Post-Generation Landing Rules
 

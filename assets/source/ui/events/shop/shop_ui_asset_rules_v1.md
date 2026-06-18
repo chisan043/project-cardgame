@@ -76,13 +76,10 @@ This note records the approved shop UI asset direction for the stained-glass cel
 
 ## Overlay And Badge Split Rule
 
-- Hover, selected, disabled, discounted, and warning visuals must be separate overlay assets.
+- Disabled, discounted, warning, and service-note visuals should be separate overlay/badge assets.
 - Do not bake these states into cards, relics, goods shelf slots, or button base frames.
+- Card and relic hover/selected outlines are not imagegen assets. They should be runtime glow/filter/box-shadow effects so they match the real card/relic ratio, rounded corners, and crop exactly.
 - Required overlay and badge assets:
-  - card hover outline,
-  - card selected outline,
-  - relic hover outline,
-  - relic selected outline,
   - disabled or unavailable veil,
   - compact half-price corner ribbon,
   - compact sale seal badge,
@@ -92,6 +89,7 @@ This note records the approved shop UI asset direction for the stained-glass cel
 - Badges must be small enough to avoid covering important card/relic art.
 - Price plaques should not include coin icons, numbers, or labels; those belong to the game UI layer.
 - Disabled overlays should be translucent and reusable over cards, relics, and buttons.
+- Runtime hover/selected effects should use the actual rendered element bounds instead of pre-generated fixed-ratio art.
 
 ## Secondary Menu Asset Rule
 
