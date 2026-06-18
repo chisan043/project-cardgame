@@ -1,0 +1,59 @@
+Use the approved Questers shop concept direction as strict reference.
+
+Create one transparent-ready concept sheet on a perfectly flat solid #ff00ff chroma-key background for later slicing and transparency processing.
+
+Asset family: shop_tab_button
+Asset type: top shop mode tab button states
+Target paths:
+- assets/source/ui/events/shop/buttons/shop_tab_button_idle_v1.png
+- assets/source/ui/events/shop/buttons/shop_tab_button_hover_v1.png
+- assets/source/ui/events/shop/buttons/shop_tab_button_active_v1.png
+- assets/source/ui/events/shop/buttons/shop_tab_button_disabled_v1.png
+
+Proportion:
+- Each tab button is a low compact ornate tab, about 3.2:1 width-to-height.
+- Intended single-state canvas: 512x160.
+- The sheet should show four separate states with generous spacing between each piece.
+- The button shape should fit above the central goods shelf and must not have tall protruding ornaments.
+- Keep the tab thin and old-console-like; it should feel like the cropped shop concept tabs, not a thick standalone gemstone button.
+
+States:
+- Idle: dark teal enamel center, thin antique-gold frame, restrained jewel accents.
+- Hover: brighter gold rim light and subtle blue inner glow.
+- Active selected: stronger gold/blue frame and slightly richer enamel center, still low and compact.
+- Disabled: desaturated dark teal, worn dim gold, lower contrast.
+
+Critical rules:
+- No readable text.
+- No Chinese characters.
+- No numbers.
+- No icons.
+- No coin symbols.
+- No tall crest, no crown, no large jewel plaque.
+- No large side gems.
+- No bulky beveled casino-button corners.
+- No decoration that would overlap the goods shelf or adjacent tabs.
+- Keep all states the same silhouette and size for stable layout.
+
+Style:
+- Questers-specific 1990s Japanese cel-animation fantasy UI.
+- Dark cathedral stained glass.
+- Deep navy and teal enamel.
+- Delicate antique-gold filigree trim.
+- Thin gothic borders.
+- Hard ink outlines.
+- Aged hand-painted texture.
+- Restrained blue jewel nodes.
+- Tiny red/green stained-glass accents.
+- Candlelit gold highlights.
+- Match existing Questers card and relic art.
+- Avoid generic gothic UI, oversized decoration, casino buttons, and chunky modern mobile-game frames.
+
+Background:
+- One uniform #ff00ff background only.
+- No shadow.
+- No gradient.
+- No texture.
+- No floor plane.
+- No lighting variation.
+- Do not use #ff00ff anywhere in the asset artwork.

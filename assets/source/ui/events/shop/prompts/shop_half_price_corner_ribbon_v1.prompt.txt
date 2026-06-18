@@ -1,0 +1,53 @@
+Use the approved Questers shop concept direction as strict reference.
+
+Create one isolated transparent-ready small badge asset on a perfectly flat solid #ff00ff chroma-key background for later transparency processing.
+
+Asset id: shop_half_price_corner_ribbon
+Asset type: compact half-price corner ribbon badge
+Target path: assets/source/ui/events/shop/badges/shop_half_price_corner_ribbon_v1.png
+
+Proportion:
+- Compact corner badge, about 1:1 canvas.
+- Intended canvas: 192x192.
+- The painted badge should occupy a small corner-triangle footprint, not a long banner.
+- Designed to overlay one corner of a card or relic item without covering important art.
+- It should cover no more than about 18% of a card width and 18% of a card height.
+
+Structure:
+- Small diagonal red fabric ribbon or wax-ribbon corner badge.
+- Prefer a triangular folded corner tab shape.
+- Thin antique-gold edge highlight.
+- A tiny restrained jewel or stamped texture is allowed.
+- The badge must remain blank.
+
+Critical rules:
+- No readable text.
+- No Chinese characters.
+- No numbers.
+- No icons.
+- No coin symbols.
+- No large round seal.
+- No oversized banner.
+- No long ribbon strip.
+- No huge gold frame.
+- Do not cover too much product art.
+- Keep shape compact and easy to position at a corner.
+
+Style:
+- Questers-specific 1990s Japanese cel-animation fantasy UI.
+- Hand-painted red wax/fabric surface.
+- Antique-gold worn edge.
+- Hard ink outlines.
+- Aged cel-era texture.
+- Candlelit highlights.
+- Match existing Questers card and relic art.
+- Avoid modern sale sticker design, glossy casino UI, and chunky mobile-game badges.
+
+Background:
+- One uniform #ff00ff background only.
+- No shadow.
+- No gradient.
+- No texture.
+- No floor plane.
+- No lighting variation.
+- Do not use #ff00ff anywhere in the asset artwork.

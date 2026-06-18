@@ -1,0 +1,57 @@
+Use the approved Questers shop concept direction as strict reference.
+
+Create one transparent-ready concept sheet on a perfectly flat solid #ff00ff chroma-key background for later slicing and transparency processing.
+
+Asset family: shop_primary_button
+Asset type: primary action button states for purchase, confirm, and restock actions
+Target paths:
+- assets/source/ui/events/shop/buttons/shop_primary_button_idle_v1.png
+- assets/source/ui/events/shop/buttons/shop_primary_button_hover_v1.png
+- assets/source/ui/events/shop/buttons/shop_primary_button_pressed_v1.png
+- assets/source/ui/events/shop/buttons/shop_primary_button_disabled_v1.png
+
+Proportion:
+- Each button is a medium-wide low rectangle, about 3.8:1 width-to-height.
+- Intended single-state canvas: 608x160.
+- The sheet should show four separate states with generous spacing between each piece.
+- Shape must fit inside the right detail panel bottom and the bottom restock strip without forcing fixed text size.
+
+States:
+- Idle: dark teal enamel center, thin antique-gold frame, readable blank center for text overlay.
+- Hover: brighter gold rim light and subtle blue inner glow.
+- Pressed: slightly darker inset center, compressed highlight, clear rim.
+- Disabled: desaturated dark teal, worn dim gold, lower contrast.
+
+Critical rules:
+- Blank frame only.
+- No readable text.
+- No Chinese characters.
+- No numbers.
+- No icons.
+- No coin symbols.
+- No item art.
+- No oversized corner jewels.
+- Keep all states the same silhouette and size for stable layout.
+
+Style:
+- Questers-specific 1990s Japanese cel-animation fantasy UI.
+- Dark cathedral stained glass.
+- Deep navy and teal enamel.
+- Delicate antique-gold filigree trim.
+- Thin gothic borders.
+- Hard ink outlines.
+- Aged hand-painted texture.
+- Restrained blue jewel nodes.
+- Tiny red/green stained-glass accents.
+- Candlelit gold highlights.
+- Match existing Questers card and relic art.
+- Avoid generic gothic UI, oversized decoration, glossy casino buttons, and chunky modern mobile-game frames.
+
+Background:
+- One uniform #ff00ff background only.
+- No shadow.
+- No gradient.
+- No texture.
+- No floor plane.
+- No lighting variation.
+- Do not use #ff00ff anywhere in the asset artwork.

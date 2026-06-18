@@ -1,0 +1,57 @@
+Use the approved Questers shop concept direction as strict reference.
+
+Create one transparent-ready concept sheet on a perfectly flat solid #ff00ff chroma-key background for later slicing and transparency processing.
+
+Asset family: shop_price_plaques
+Asset type: small price and fee plaque backgrounds
+Target paths:
+- assets/source/ui/events/shop/badges/shop_price_plaque_normal_v1.png
+- assets/source/ui/events/shop/badges/shop_price_plaque_discount_v1.png
+- assets/source/ui/events/shop/badges/shop_service_fee_plaque_v1.png
+
+Proportion:
+- Normal and discount price plaques: small commodity price tags, about 2.8:1 width-to-height.
+- Intended single-state canvas: 448x160, but the painted plaque should leave padding and feel visually small.
+- Service fee plaque: compact horizontal frame, about 3.2:1 width-to-height.
+- The sheet should show all plaque variants as separate pieces with generous spacing.
+- The normal and discount price plaques must be small enough to sit under one shop card or one relic without feeling like a main action button.
+
+Variants:
+- Normal price plaque: dark teal enamel center, thin antique-gold border.
+- Discount price plaque: same size, slightly brighter gold rim and small red accent, but no baked discount text.
+- Service fee plaque: slightly longer blank frame for copy/remove fee panels.
+
+Critical rules:
+- No coin icon.
+- No numbers.
+- No readable text.
+- No Chinese characters.
+- No icons.
+- No oversized seal.
+- No item art.
+- No fixed item-slot decoration.
+- Do not make these look like large detail-panel buttons.
+- Do not make these look like top mode tabs.
+- Keep the plaque center clear for DOM-rendered price text and coin icon.
+
+Style:
+- Questers-specific 1990s Japanese cel-animation fantasy UI.
+- Dark cathedral stained glass.
+- Deep navy and teal enamel.
+- Delicate antique-gold filigree trim.
+- Thin gothic borders.
+- Hard ink outlines.
+- Aged hand-painted texture.
+- Tiny red/green stained-glass accents.
+- Candlelit gold highlights.
+- Small enough to sit below cards or relics without covering item art.
+- Avoid generic gothic UI, oversized decoration, and chunky modern mobile-game frames.
+
+Background:
+- One uniform #ff00ff background only.
+- No shadow.
+- No gradient.
+- No texture.
+- No floor plane.
+- No lighting variation.
+- Do not use #ff00ff anywhere in the asset artwork.
