@@ -3046,6 +3046,454 @@
             font-size:15px;
             background-image:var(--asset-shop-warning-note-strip);
         }
+        #overlay-event .quest-event-shell.event-scene,
+        #overlay-rest .quest-event-shell.rest-scene {
+            --event-shell-width: 1160px;
+            --event-shell-height: 650px;
+            --event-rail-width: 318px;
+            --event-topbar-height: 88px;
+            --event-card-gap: 26px;
+            --event-choice-top: 0px;
+            --event-choice-side: 18px;
+            --event-choice-bottom: 26px;
+            --event-option-glass-a: rgba(26, 94, 91, 0.62);
+            --event-option-glass-b: rgba(6, 23, 34, 0.9);
+            width:min(var(--event-shell-width), calc(100vw - 36px));
+            height:min(var(--event-shell-height), calc(100vh - 36px));
+            grid-template-columns:var(--event-rail-width) minmax(0, 1fr);
+            border:0;
+            background-color:rgba(2, 8, 13, 0.94);
+            background-image:
+                var(--asset-shop-module-outer-frame),
+                linear-gradient(90deg, rgba(1,7,12,0.74), rgba(1,7,12,0.34) 28%, rgba(1,7,12,0.4) 70%, rgba(1,7,12,0.82)),
+                linear-gradient(180deg, rgba(1,7,12,0.34), rgba(1,7,12,0.74)),
+                var(--event-scene-bg);
+            background-position:center, center, center, center;
+            background-size:100% 100%, 100% 100%, 100% 100%, cover;
+            background-repeat:no-repeat;
+            box-shadow:0 28px 70px rgba(0,0,0,0.92);
+        }
+        #overlay-event .quest-event-shell.event-scene {
+            --event-scene-bg: url('assets/scenes/battle/stone_ruins_night_v1.webp');
+            --event-title-size: 44px;
+            --event-portrait-frame-left: 42px;
+            --event-portrait-frame-top: 88px;
+            --event-portrait-frame-width: 238px;
+            --event-portrait-frame-height: 520px;
+            --event-portrait-image-height: 456px;
+            --event-portrait-image-y: 54px;
+        }
+        #overlay-rest .quest-event-shell.rest-scene {
+            --event-scene-bg: url('assets/scenes/battle/dungeon_corridor_torch_v1.webp');
+            --event-title-size: 42px;
+            --event-portrait-frame-left: 38px;
+            --event-portrait-frame-top: 88px;
+            --event-portrait-frame-width: 242px;
+            --event-portrait-frame-height: 520px;
+            --event-portrait-image-height: 430px;
+            --event-portrait-image-y: 66px;
+        }
+        #overlay-event .quest-event-shell.event-scene::before,
+        #overlay-event .quest-event-shell.event-scene::after,
+        #overlay-rest .quest-event-shell.rest-scene::before,
+        #overlay-rest .quest-event-shell.rest-scene::after {
+            display:none;
+        }
+        #overlay-event .quest-event-rail,
+        #overlay-rest .quest-event-rail {
+            padding:0;
+            border-right:0;
+            background:transparent;
+            overflow:hidden;
+        }
+        #overlay-event .quest-event-kicker,
+        #overlay-event .quest-event-rail h2,
+        #overlay-event .quest-event-rail p,
+        #overlay-event .quest-event-legend,
+        #overlay-rest .quest-event-kicker,
+        #overlay-rest .quest-event-rail h2,
+        #overlay-rest .quest-event-rail p,
+        #overlay-rest .quest-event-legend {
+            display:none;
+        }
+        #overlay-event .quest-event-rail::after,
+        #overlay-rest .quest-event-rail::after {
+            left:var(--event-portrait-frame-left);
+            right:auto;
+            top:var(--event-portrait-frame-top);
+            width:var(--event-portrait-frame-width);
+            height:var(--event-portrait-frame-height);
+            border:0;
+            border-radius:0;
+            background:var(--asset-shop-portrait-arch-frame) center / 100% 100% no-repeat;
+            box-shadow:none;
+            z-index:3;
+        }
+        #overlay-event .quest-event-rail::before,
+        #overlay-rest .quest-event-rail::before {
+            top:var(--event-portrait-frame-top);
+            left:calc(var(--event-portrait-frame-left) + 12px);
+            right:auto;
+            width:calc(var(--event-portrait-frame-width) - 24px);
+            height:var(--event-portrait-frame-height);
+            background-image:var(--event-npc-image), var(--asset-shop-merchant-glass-bg);
+            background-position:50% var(--event-portrait-image-y), center;
+            background-size:auto var(--event-portrait-image-height), 100% 100%;
+            background-repeat:no-repeat, no-repeat;
+            filter:drop-shadow(0 18px 12px rgba(0,0,0,0.66));
+            z-index:2;
+        }
+        #overlay-event .quest-event-main,
+        #overlay-rest .quest-event-main {
+            min-height:0;
+            background:transparent;
+            position:relative;
+        }
+        #overlay-event .quest-event-topbar,
+        #overlay-rest .quest-event-topbar {
+            height:var(--event-topbar-height);
+            min-height:var(--event-topbar-height);
+            padding:32px 34px 0 28px;
+            border-bottom:0;
+            background:transparent;
+            box-sizing:border-box;
+        }
+        #overlay-event .quest-event-tabs,
+        #overlay-rest .quest-event-tabs {
+            gap:26px;
+            align-items:center;
+        }
+        #overlay-event .quest-event-tabs {
+            position:absolute;
+            left:-172px;
+            top:34px;
+        }
+        #overlay-rest .rest-mode-home .quest-event-tabs {
+            position:absolute;
+            left:-214px;
+            top:34px;
+        }
+        #overlay-event .quest-event-tab,
+        #overlay-rest .rest-mode-home #rest-tab-home {
+            width:auto;
+            min-width:0;
+            height:auto;
+            min-height:0;
+            padding:0;
+            border:0;
+            background:none;
+            color:#ffe69c;
+            font-size:var(--event-title-size);
+            letter-spacing:10px;
+            text-indent:10px;
+            line-height:1;
+            pointer-events:none;
+            text-shadow:0 4px 0 #140c05, 0 0 16px rgba(241,196,15,0.3), 0 0 30px rgba(0,0,0,0.92);
+        }
+        #overlay-rest .rest-mode-home #rest-tab-upgrade,
+        #overlay-rest .rest-mode-home #rest-tab-delete {
+            display:none;
+        }
+        #overlay-rest .rest-scene:not(.rest-mode-home) .quest-event-tab {
+            width:154px;
+            min-width:154px;
+            height:52px;
+            min-height:52px;
+            padding:0 16px 3px;
+            font-size:18px;
+            letter-spacing:3px;
+        }
+        #overlay-event .quest-event-actions,
+        #overlay-rest .quest-event-actions {
+            position:absolute;
+            right:36px;
+            top:34px;
+            z-index:12;
+            gap:0;
+        }
+        #overlay-event #event-actions .btn-gorgeous,
+        #overlay-rest .quest-event-actions .btn-gorgeous {
+            width:178px;
+            height:58px;
+            min-height:58px;
+            padding:0 18px 4px;
+            font-size:20px;
+            background:var(--asset-shop-exit-button-idle) center / 100% 100% no-repeat;
+        }
+        #overlay-event #event-actions .btn-gorgeous.btn-confirm {
+            background:var(--asset-shop-primary-button-idle) center / 100% 100% no-repeat;
+        }
+        #overlay-event .scene-body,
+        #overlay-rest .scene-body {
+            position:relative;
+            flex:1;
+            min-height:0;
+            max-height:none;
+            padding:0;
+            background:transparent;
+            overflow:hidden;
+            box-sizing:border-box;
+        }
+        #overlay-event #event-content,
+        #overlay-rest #card-action-list {
+            width:100%;
+            height:100%;
+            min-height:0;
+            padding:0;
+            overflow:hidden !important;
+            box-sizing:border-box;
+        }
+        #overlay-event .event-mode-home #event-content {
+            overflow:hidden !important;
+        }
+        #overlay-event .event-mode-deck #event-content,
+        #overlay-event .event-mode-reward #event-content,
+        #overlay-rest .rest-scene:not(.rest-mode-home) #card-action-list {
+            padding:0 20px 18px 16px;
+        }
+        #overlay-event .choice-grid {
+            height:100%;
+            padding:var(--event-choice-top) var(--event-choice-side) var(--event-choice-bottom);
+            display:grid;
+            grid-template-columns:repeat(3, minmax(0, 1fr));
+            gap:var(--event-card-gap);
+            box-sizing:border-box;
+        }
+        #overlay-rest #rest-options {
+            height:100%;
+            margin:0 !important;
+            padding:0 22px 26px 12px;
+            display:grid !important;
+            grid-template-columns:repeat(3, minmax(0, 1fr));
+            gap:28px;
+            align-items:stretch;
+            background:transparent;
+            border:0;
+            box-shadow:none;
+            box-sizing:border-box;
+        }
+        #overlay-event .choice-card,
+        #overlay-rest .rest-action-card {
+            min-height:0;
+            height:100%;
+            padding:0;
+            border:0;
+            border-radius:0;
+            background:
+                linear-gradient(180deg, rgba(230,212,169,0.98), rgba(177,136,78,0.98)) center 288px / calc(100% - 38px) 184px no-repeat,
+                linear-gradient(180deg, rgba(4,24,33,0.92), rgba(2,9,15,0.96)) center 56px / calc(100% - 30px) 244px no-repeat,
+                transparent;
+            box-shadow:none;
+            color:#2f2418;
+            font-family:"STKaiti", "Microsoft YaHei", serif;
+            isolation:isolate;
+            overflow:hidden;
+        }
+        #overlay-event .choice-card::before,
+        #overlay-rest .rest-action-card::before {
+            content:"";
+            position:absolute;
+            left:28px;
+            right:28px;
+            top:92px;
+            height:178px;
+            border-radius:50%;
+            background:
+                radial-gradient(circle at 50% 24%, rgba(255,255,255,0.16), transparent 24%),
+                linear-gradient(180deg, var(--event-option-glass-a), var(--event-option-glass-b));
+            box-shadow:inset 0 0 0 2px rgba(199,162,88,0.62), inset 0 -18px 28px rgba(0,0,0,0.28), 0 0 0 1px rgba(20,12,6,0.72), 0 16px 20px rgba(0,0,0,0.32);
+            z-index:0;
+            pointer-events:none;
+        }
+        #overlay-event .choice-card::after,
+        #overlay-rest .rest-action-card::after {
+            content:"";
+            position:absolute;
+            inset:2px;
+            border:1px solid rgba(224,181,84,0.82);
+            border-radius:10px 10px 4px 4px;
+            background:
+                linear-gradient(90deg, transparent 0 7%, rgba(224,181,84,0.82) 7% 8%, transparent 8% 92%, rgba(224,181,84,0.82) 92% 93%, transparent 93%),
+                linear-gradient(180deg, transparent 0 9%, rgba(224,181,84,0.68) 9% 10%, transparent 10% 90%, rgba(224,181,84,0.68) 90% 91%, transparent 91%);
+            box-shadow:inset 0 0 0 2px rgba(30,17,8,0.82), inset 0 0 0 4px rgba(181,120,42,0.38), 0 16px 18px rgba(0,0,0,0.54);
+            z-index:3;
+            pointer-events:none;
+        }
+        #overlay-event .choice-card h3::before,
+        #overlay-rest .rest-action-card h3::before,
+        #overlay-event .choice-card-action::before,
+        #overlay-rest .rest-action-card .choice-card-action::before {
+            content:"";
+            position:absolute;
+            inset:0;
+            z-index:-1;
+            background:var(--asset-shop-warning-note-strip) center / 100% 100% no-repeat;
+            filter:saturate(0.86) brightness(0.96);
+            pointer-events:none;
+        }
+        #overlay-event .choice-card[data-tone="treasure"],
+        #overlay-rest .rest-action-card[data-tone="rest"] {
+            --event-option-glass-a: rgba(35, 112, 79, 0.7);
+            --event-option-glass-b: rgba(8, 35, 31, 0.94);
+        }
+        #overlay-event .choice-card[data-tone="trial"],
+        #overlay-rest .rest-action-card[data-tone="upgrade"] {
+            --event-option-glass-a: rgba(118, 50, 42, 0.72);
+            --event-option-glass-b: rgba(38, 12, 18, 0.95);
+        }
+        #overlay-event .choice-card[data-tone="pack"],
+        #overlay-rest .rest-action-card[data-tone="delete"] {
+            --event-option-glass-a: rgba(91, 55, 124, 0.72);
+            --event-option-glass-b: rgba(27, 15, 44, 0.95);
+        }
+        #overlay-event .choice-card:hover,
+        #overlay-rest .rest-action-card:hover {
+            transform:translateY(-6px);
+            filter:brightness(1.08);
+            box-shadow:none;
+        }
+        #overlay-event .choice-card-icon,
+        #overlay-rest .rest-action-card .choice-card-icon {
+            position:absolute;
+            left:50%;
+            top:124px;
+            width:118px;
+            height:118px;
+            margin:0;
+            transform:translateX(-50%);
+            z-index:2;
+            border:0;
+            border-radius:50%;
+            background:radial-gradient(circle at 42% 32%, rgba(255,236,160,0.32), rgba(56,138,177,0.36) 35%, rgba(7,22,35,0.88) 70%, rgba(2,8,14,0.94));
+            color:#ffe8a8;
+            font-size:46px;
+            letter-spacing:0;
+            text-shadow:0 3px 0 #000, 0 0 12px rgba(241,196,15,0.28);
+            box-shadow:0 0 18px rgba(241,196,15,0.18), inset 0 0 0 2px rgba(199,162,88,0.5);
+        }
+        #overlay-event .choice-card h3,
+        #overlay-rest .rest-action-card h3 {
+            position:absolute;
+            left:28px;
+            right:28px;
+            top:22px;
+            z-index:2;
+            margin:0;
+            height:54px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:#2c1e14;
+            font-size:28px;
+            letter-spacing:5px;
+            text-align:center;
+            text-shadow:0 1px 0 rgba(255,255,255,0.28);
+            pointer-events:none;
+        }
+        #overlay-event .choice-card p,
+        #overlay-rest .rest-action-card p {
+            position:absolute;
+            left:34px;
+            right:34px;
+            top:324px;
+            z-index:2;
+            margin:0;
+            color:#3c2e22;
+            font-size:15px;
+            line-height:1.58;
+            text-align:left;
+            text-shadow:0 1px 0 rgba(255,255,255,0.18);
+            pointer-events:none;
+        }
+        #overlay-event .choice-card-action,
+        #overlay-rest .rest-action-card .choice-card-action {
+            position:absolute;
+            left:34px;
+            right:34px;
+            bottom:18px;
+            z-index:4;
+            height:56px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            padding-bottom:4px;
+            box-sizing:border-box;
+            background:var(--asset-shop-primary-button-idle) center / 100% 100% no-repeat;
+            color:#f6e2ac;
+            font-size:22px;
+            letter-spacing:5px;
+            text-shadow:0 2px 0 #000, 0 0 10px rgba(241,196,15,0.24);
+            pointer-events:none;
+        }
+        #overlay-event .event-result-card {
+            width:360px;
+            min-height:420px;
+            margin:28px auto 0;
+            padding:86px 58px 44px;
+            position:relative;
+            border:0;
+            background:transparent;
+            box-shadow:none;
+            box-sizing:border-box;
+            color:#3c2e22;
+            overflow:hidden;
+        }
+        #overlay-event .event-result-card::before {
+            content:"";
+            position:absolute;
+            inset:0;
+            background:var(--asset-shop-parchment-panel) center / 100% 100% no-repeat;
+            z-index:0;
+            pointer-events:none;
+        }
+        #overlay-event .event-result-card > * {
+            position:relative;
+            z-index:1;
+        }
+        #overlay-event .event-result-card h3,
+        #overlay-event .event-result-card #event-relic-name {
+            color:#372719 !important;
+            text-shadow:0 1px 0 rgba(255,255,255,0.22);
+        }
+        #overlay-event .event-result-card #event-relic-desc {
+            color:#4d3926 !important;
+        }
+        #overlay-event .event-mode-reward #event-content {
+            display:flex !important;
+            align-items:center;
+            justify-content:center;
+        }
+        #overlay-event .event-mode-reward #event-content .card-grid {
+            width:100%;
+            height:100%;
+            align-items:center;
+            justify-content:center;
+            gap:28px;
+            padding:10px 34px 30px;
+            box-sizing:border-box;
+        }
+        #overlay-event .event-mode-deck .deck-browser-shell,
+        #overlay-rest .rest-scene:not(.rest-mode-home) .deck-browser-shell {
+            --shop-board-width: 760px;
+            --shop-board-height: 466px;
+            --shop-detail-width: 224px;
+            --shop-detail-height: 454px;
+            --shop-board-gap: 8px;
+            --shop-detail-offset-x: 0px;
+            --shop-detail-offset-y: 0px;
+            --shop-parchment-left: 22px;
+            --shop-parchment-top: 40px;
+            --shop-parchment-width: 180px;
+            --shop-parchment-height: 300px;
+            --shop-price-left: 28px;
+            --shop-price-bottom: 84px;
+            --shop-price-width: 168px;
+            --shop-price-height: 32px;
+            --shop-action-left: 20px;
+            --shop-action-bottom: 24px;
+            --shop-action-width: 184px;
+            --shop-action-height: 52px;
+        }
         .shop-layout-editor-toggle {
             position:fixed;
             right:18px;
@@ -3556,9 +4004,9 @@
             </div>
             <div class="scene-body">
                 <div id="rest-options" style="display:flex; gap:16px; align-items:stretch; margin-top:0;">
-                    <button class="choice-card anime-panel rest-action-card" type="button" onclick="resolveRest()"><div class="choice-card-icon">✚</div><h3>休息</h3><p>恢复 30 点生命，不超过最大生命。</p></button>
-                    <button class="choice-card anime-panel rest-action-card" type="button" onclick="renderRestUpgrade()"><div class="choice-card-icon">✦</div><h3>淬炼</h3><p>选择一张可强化卡牌，提升数值或降低费用。</p></button>
-                    <button class="choice-card anime-panel rest-action-card" type="button" onclick="renderRestDelete()"><div class="choice-card-icon">⌫</div><h3>遗忘</h3><p>免费从牌组中移除一张卡牌。</p></button>
+                    <button class="choice-card anime-panel rest-action-card" data-tone="rest" type="button" onclick="resolveRest()"><div class="choice-card-icon">休</div><h3>休息</h3><p>恢复 30 点生命，不超过最大生命。</p><span class="choice-card-action">休 息</span></button>
+                    <button class="choice-card anime-panel rest-action-card" data-tone="upgrade" type="button" onclick="renderRestUpgrade()"><div class="choice-card-icon">炼</div><h3>淬炼</h3><p>选择一张可强化卡牌，提升数值或降低费用。</p><span class="choice-card-action">淬 炼</span></button>
+                    <button class="choice-card anime-panel rest-action-card" data-tone="delete" type="button" onclick="renderRestDelete()"><div class="choice-card-icon">忘</div><h3>遗忘</h3><p>免费从牌组中移除一张卡牌。</p><span class="choice-card-action">遗 忘</span></button>
                 </div>
                 <div id="card-action-list" class="card-grid rest-card-action-list" style="display:none;"></div>
             </div>
@@ -8468,9 +8916,11 @@
         grid.className = 'choice-grid';
         grid.style.width = '100%';
         choices.forEach(choice => {
-            const card = document.createElement('div');
+            const card = document.createElement('button');
+            card.type = 'button';
             card.className = 'choice-card anime-panel';
-            card.innerHTML = `<div class="choice-card-icon">${choice.icon}</div><h3>${choice.title}</h3><p>${choice.desc}</p>`;
+            if (choice.tone) card.dataset.tone = choice.tone;
+            card.innerHTML = `<div class="choice-card-icon">${choice.icon}</div><h3>${choice.title}</h3><p>${choice.desc}</p><span class="choice-card-action">${choice.actionLabel || choice.title}</span>`;
             card.onclick = choice.onClick;
             grid.appendChild(card);
         });
@@ -8490,6 +8940,20 @@
         document.querySelectorAll(`[id^="${prefix}-tab-"]`).forEach(tab => {
             tab.classList.toggle('active', tab.id === `${prefix}-tab-${activeId}`);
         });
+    }
+
+    function setEventShellMode(mode) {
+        const shell = document.querySelector('#overlay-event .quest-event-shell');
+        if (!shell) return;
+        shell.classList.remove('event-mode-home', 'event-mode-result', 'event-mode-deck', 'event-mode-reward');
+        shell.classList.add(`event-mode-${mode}`);
+    }
+
+    function setRestShellMode(mode) {
+        const shell = document.querySelector('#overlay-rest .quest-event-shell');
+        if (!shell) return;
+        shell.classList.remove('rest-mode-home', 'rest-mode-upgrade', 'rest-mode-delete');
+        shell.classList.add(`rest-mode-${mode}`);
     }
 
     function renderDeckBrowser({
@@ -8657,19 +9121,21 @@
     }
 
     function triggerEventNode() {
+        setEventShellMode('home');
         document.getElementById('event-title').innerText = "奇遇：命运的岔路";
         document.getElementById('event-desc').innerText = "云层后方透出旧王国的遗迹。三条岔路分别通向秘宝、试炼与行囊整理。";
         renderEventChoiceGrid([
-            { icon: '💎', title: '探寻宝库', desc: '开启古代宝匣，获得一件随机奇珍。更适合想快速形成流派的旅程。', onClick: selectEventRelic },
-            { icon: '🧙', title: '接受试炼', desc: '请守望者淬炼一张卡牌，使其获得强化。更适合稳定提升核心卡。', onClick: selectEventUpgrade },
-            { icon: '🎒', title: '整理行囊', desc: '遗忘一张拖累牌，再从三张卡牌中补入一张。更适合修补缺口或轻微转向。', onClick: selectEventTuneDeck }
+            { icon: '宝', title: '探寻宝库', desc: '开启古代宝匣，获得一件随机奇珍。更适合想快速形成流派的旅程。', actionLabel: '探寻宝库', tone: 'treasure', onClick: selectEventRelic },
+            { icon: '试', title: '接受试炼', desc: '请守望者淬炼一张卡牌，使其获得强化。更适合稳定提升核心卡。', actionLabel: '接受试炼', tone: 'trial', onClick: selectEventUpgrade },
+            { icon: '囊', title: '整理行囊', desc: '遗忘一张拖累牌，再从三张卡牌中补入一张。更适合修补缺口或轻微转向。', actionLabel: '整理行囊', tone: 'pack', onClick: selectEventTuneDeck }
         ]);
-        setEventActions([{ label: '放弃机缘，直接离开', className: 'btn-back', onClick: () => { closeOverlay('overlay-event'); advanceMap(); } }]);
+        setEventActions([{ label: '离开', className: 'btn-back', onClick: () => { closeOverlay('overlay-event'); advanceMap(); } }]);
         showOverlay('overlay-event');
     }
 
 
     function selectEventRelic() {
+        setEventShellMode('result');
         let available = RELIC_POOL.filter(r => !hasRelic(r.id) && !STARTING_RELIC_IDS.has(r.id));
         if (available.length === 0) { document.getElementById('event-content').innerHTML = '<div style="font-size:60px;">💰</div>'; setEventActions([{ label: '离开', onClick: () => { state.gold += 50; updateTopBar(); closeOverlay('overlay-event'); advanceMap(); } }]); return; }
         let r = rollRolePreferredRelic(available); document.getElementById('event-title').innerText = "奇遇：失落的宝库"; document.getElementById('event-desc').innerText = "机关沉沉落下，宝匣中央浮起一件旧时代的秘宝。";
@@ -8678,6 +9144,7 @@
     }
 
     function selectEventUpgrade() {
+        setEventShellMode('deck');
         document.getElementById('event-title').innerText = "奇遇：守望者的试炼"; document.getElementById('event-desc').innerText = "对方没有多说，只在地上点亮古老的纹章。请选择一张要淬炼的卡牌。";
         const content = document.getElementById('event-content');
         content.style.display = 'block';
@@ -8707,10 +9174,11 @@
                 });
             }
         });
-        setEventActions([{ label: '婉拒离开', className: 'btn-back', onClick: () => { closeOverlay('overlay-event'); advanceMap(); } }]);
+        setEventActions([{ label: '离开', className: 'btn-back', onClick: () => { closeOverlay('overlay-event'); advanceMap(); } }]);
     }
 
     function selectEventTuneDeck() {
+        setEventShellMode('deck');
         document.getElementById('event-title').innerText = "奇遇：整理行囊";
         document.getElementById('event-desc').innerText = "守望者摊开旧布袋，示意你先丢下一件负累，再从路边遗留补给中取走一张可用的牌。";
         const content = document.getElementById('event-content');
@@ -8731,10 +9199,11 @@
                 });
             }
         });
-        setEventActions([{ label: '不整理，直接离开', className: 'btn-back', onClick: () => { closeOverlay('overlay-event'); advanceMap(); } }]);
+        setEventActions([{ label: '离开', className: 'btn-back', onClick: () => { closeOverlay('overlay-event'); advanceMap(); } }]);
     }
 
     function renderEventTuneReward() {
+        setEventShellMode('reward');
         document.getElementById('event-title').innerText = "奇遇：旧路补给";
         document.getElementById('event-desc').innerText = "负累被留在石阶旁，剩下的补给里有几张还能跟上你当前牌组的节奏。";
         const cList = document.createElement('div');
@@ -8753,7 +9222,7 @@
         content.style.display = 'flex';
         content.innerHTML = '';
         content.appendChild(cList);
-        setEventActions([{ label: '不拿补给，继续前行', className: 'btn-back', onClick: () => { closeOverlay('overlay-event'); advanceMap(); } }]);
+        setEventActions([{ label: '不拿补给', className: 'btn-back', onClick: () => { closeOverlay('overlay-event'); advanceMap(); } }]);
     }
 
     const SHOP_LAYOUT_STORAGE_KEY = 'questers-shop-layout-editor-v5';
@@ -9871,6 +10340,7 @@
     }
 
     function showRestHome() {
+        setRestShellMode('home');
         setEventTabActive('rest', 'home');
         document.getElementById('rest-options').style.display = 'flex';
         const c = document.getElementById('card-action-list');
@@ -9879,6 +10349,7 @@
     }
     
     function renderRestDelete() {
+        setRestShellMode('delete');
         setEventTabActive('rest', 'delete');
         document.getElementById('rest-options').style.display = 'none';
         const c = document.getElementById('card-action-list');
@@ -9903,6 +10374,7 @@
     }
 
     function renderRestUpgrade() {
+        setRestShellMode('upgrade');
         setEventTabActive('rest', 'upgrade');
         document.getElementById('rest-options').style.display = 'none';
         const c = document.getElementById('card-action-list');
