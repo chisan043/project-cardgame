@@ -9236,6 +9236,7 @@
             mode: 'delete',
             getPreviewNote: () => '整理行囊会先遗忘这张牌，再从三张补给牌中选择一张加入，也可以不拿补给。',
             getActionLabel: () => '遗忘并继续',
+            getPreviewHtml: card => `<div class="deck-browser-preview-card upgrade-preview">${generateCardHTML(card, true)}</div>`,
             onAction: card => {
                 const html = `<div>${generateCardHTML(card, true)}</div><div style="font-size: 24px; color: var(--crimson);">遗忘此牌，并继续挑选一张补给牌？</div>`;
                 openConfirmPanel('确认整理', html, () => {
