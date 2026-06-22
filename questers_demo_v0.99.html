@@ -63,7 +63,7 @@
             --battle-scene-bg: var(--battle-forest-bg);
             --asset-npc-shopkeeper: url('assets/npc/shopkeeper_portrait_v1.webp');
             --asset-npc-campfire-elder: url('assets/npc/campfire_elder_portrait_v1.webp');
-            --asset-npc-encounter-angel: url('assets/npc/encounter_angel_portrait_bust_v1.png');
+            --asset-npc-encounter-angel: url('assets/npc/encounter_angel_portrait_bust_v2.png');
             --asset-shop-module-outer-frame: url('assets/ui/events/shop/thin_v6/shop_outer_lines_hairline_v6.png');
             --asset-event-portrait-arch: url('assets/ui/events/common/frames/event_portrait_arch_frame_v1.png');
             --asset-shop-merchant-glass-bg: url('assets/ui/events/shop/thin_v6/shop_merchant_glass_bg_hairline_v6.png');
@@ -106,7 +106,7 @@
             --asset-shop-disabled-veil-card: url('assets/ui/events/shop/generated_v2_components/shop_content_backplate_v2_component.png');
             --asset-shop-disabled-veil-rect: url('assets/ui/events/shop/generated_v2_components/shop_content_backplate_v2_component.png');
             --asset-event-encounter-bg: url('assets/ui/events/encounter/backgrounds/event_encounter_cathedral_bg_v1.png');
-            --asset-event-choice-panel-frame: url('assets/ui/events/encounter/frames/event_choice_panel_frame_v1.png?v=2');
+            --asset-event-choice-panel-frame: url('assets/ui/events/encounter/frames/event_choice_panel_frame_v2.png?v=1');
             --asset-event-choice-icon-treasure: url('assets/ui/events/encounter/icons/event_choice_icon_treasure_v1.png');
             --asset-event-choice-icon-trial: url('assets/ui/events/encounter/icons/event_choice_icon_trial_v1.png');
             --asset-event-choice-icon-pack: url('assets/ui/events/encounter/icons/event_choice_icon_pack_v1.png');
@@ -3477,28 +3477,28 @@
             pointer-events:none;
         }
         #overlay-event .quest-event-shell.event-scene.event-mode-home {
-            --event-rail-width: 310px;
+            --event-rail-width: 352px;
             --event-topbar-height: 118px;
-            --event-card-gap: 28px;
-            --event-choice-top: 0px;
-            --event-choice-side: 38px;
-            --event-choice-bottom: 82px;
-            --event-choice-card-width: 216px;
-            --event-choice-card-height: 432px;
-            --event-portrait-frame-left: 54px;
-            --event-portrait-frame-top: 88px;
-            --event-portrait-frame-width: 236px;
-            --event-portrait-frame-height: 520px;
+            --event-card-gap: 31px;
+            --event-choice-top: 18px;
+            --event-choice-side: 0px;
+            --event-choice-bottom: 70px;
+            --event-choice-card-width: 213px;
+            --event-choice-card-height: 443px;
+            --event-portrait-frame-left: 72px;
+            --event-portrait-frame-top: 95px;
+            --event-portrait-frame-width: 220px;
+            --event-portrait-frame-height: 484px;
             --event-portrait-image-height: 690px;
-            --event-portrait-image-y: -22px;
+            --event-portrait-image-y: -52px;
         }
         #overlay-event .event-mode-home .quest-event-tabs {
-            left:-100px;
+            left:-226px;
             top:34px;
         }
         #overlay-event .event-mode-home .quest-event-rail::before {
-            background-position:52% -16px, center !important;
-            background-size:auto 690px, 100% 100% !important;
+            background-position:50% var(--event-portrait-image-y), center !important;
+            background-size:auto var(--event-portrait-image-height), 100% 100% !important;
         }
         #overlay-event .event-mode-home .choice-grid {
             display:flex;
@@ -3541,19 +3541,19 @@
         #overlay-event .event-mode-home .choice-card h3 {
             left:11%;
             right:11%;
-            top:7.6%;
+            top:7.1%;
             height:8.6%;
             color:#2c1e14;
-            font-size:22px;
+            font-size:21px;
             letter-spacing:2px;
             text-indent:2px;
             text-shadow:0 1px 0 rgba(255,255,255,0.28);
         }
         #overlay-event .event-mode-home .choice-card p {
-            left:16.5%;
-            right:16.5%;
-            top:64%;
-            max-height:20%;
+            left:16%;
+            right:16%;
+            top:58%;
+            max-height:22%;
             color:#3c2e22;
             font-size:13px;
             line-height:1.5;
@@ -3561,10 +3561,10 @@
             text-shadow:0 1px 0 rgba(255,255,255,0.18);
         }
         #overlay-event .event-mode-home .choice-card-action {
-            left:16%;
-            right:16%;
-            bottom:2.6%;
-            height:10.5%;
+            left:10%;
+            right:10%;
+            bottom:4.2%;
+            height:9.8%;
             background:var(--asset-event-choice-button) center / 100% 100% no-repeat;
             color:#f6e2ac;
             font-size:21px;
