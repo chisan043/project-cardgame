@@ -3478,13 +3478,13 @@
         }
         #overlay-event .quest-event-shell.event-scene.event-mode-home {
             --event-rail-width: 310px;
-            --event-topbar-height: 104px;
-            --event-card-gap: 0px;
+            --event-topbar-height: 118px;
+            --event-card-gap: 28px;
             --event-choice-top: 0px;
-            --event-choice-side: 28px;
-            --event-choice-bottom: 34px;
-            --event-choice-card-width: 250px;
-            --event-choice-card-height: 480px;
+            --event-choice-side: 38px;
+            --event-choice-bottom: 82px;
+            --event-choice-card-width: 216px;
+            --event-choice-card-height: 432px;
             --event-portrait-frame-left: 54px;
             --event-portrait-frame-top: 88px;
             --event-portrait-frame-width: 236px;
@@ -3497,12 +3497,13 @@
             top:34px;
         }
         #overlay-event .event-mode-home .quest-event-rail::before {
-            background-position:50% -30px, center !important;
-            background-size:auto 760px, 100% 100% !important;
+            background-position:52% -16px, center !important;
+            background-size:auto 690px, 100% 100% !important;
         }
         #overlay-event .event-mode-home .choice-grid {
             display:flex;
-            justify-content:space-between;
+            justify-content:flex-start;
+            gap:var(--event-card-gap);
             align-items:stretch;
         }
         #overlay-event .event-mode-home .choice-card {
