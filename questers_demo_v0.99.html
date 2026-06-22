@@ -63,7 +63,7 @@
             --battle-scene-bg: var(--battle-forest-bg);
             --asset-npc-shopkeeper: url('assets/npc/shopkeeper_portrait_v1.webp');
             --asset-npc-campfire-elder: url('assets/npc/campfire_elder_portrait_v1.webp');
-            --asset-npc-encounter-angel: url('assets/npc/encounter_angel_portrait_v1.webp');
+            --asset-npc-encounter-angel: url('assets/npc/encounter_angel_portrait_bust_v1.png');
             --asset-shop-module-outer-frame: url('assets/ui/events/shop/thin_v6/shop_outer_lines_hairline_v6.png');
             --asset-event-portrait-arch: url('assets/ui/events/common/frames/event_portrait_arch_frame_v1.png');
             --asset-shop-merchant-glass-bg: url('assets/ui/events/shop/thin_v6/shop_merchant_glass_bg_hairline_v6.png');
@@ -105,6 +105,13 @@
             --asset-shop-confirm-warning-strip: url('assets/ui/events/shop/generated_v2_components/shop_warning_strip_v2_component.png');
             --asset-shop-disabled-veil-card: url('assets/ui/events/shop/generated_v2_components/shop_content_backplate_v2_component.png');
             --asset-shop-disabled-veil-rect: url('assets/ui/events/shop/generated_v2_components/shop_content_backplate_v2_component.png');
+            --asset-event-encounter-bg: url('assets/ui/events/encounter/backgrounds/event_encounter_cathedral_bg_v1.png');
+            --asset-event-choice-panel-frame: url('assets/ui/events/encounter/frames/event_choice_panel_frame_v1.png?v=2');
+            --asset-event-choice-icon-treasure: url('assets/ui/events/encounter/icons/event_choice_icon_treasure_v1.png');
+            --asset-event-choice-icon-trial: url('assets/ui/events/encounter/icons/event_choice_icon_trial_v1.png');
+            --asset-event-choice-icon-pack: url('assets/ui/events/encounter/icons/event_choice_icon_pack_v1.png');
+            --asset-event-choice-button: url('assets/ui/events/encounter/buttons/event_choice_button_v1.png');
+            --asset-event-exit-button: url('assets/ui/events/encounter/buttons/event_exit_button_v1.png');
             --shop-shell-width: 960px;
             --shop-shell-height: 636px;
             --shop-rail-width: 222px;
@@ -3108,14 +3115,14 @@
             box-shadow:0 28px 70px rgba(0,0,0,0.92);
         }
         #overlay-event .quest-event-shell.event-scene {
-            --event-scene-bg: url('assets/scenes/battle/stone_ruins_night_v1.webp');
+            --event-scene-bg: var(--asset-event-encounter-bg);
             --event-title-size: 44px;
             --event-portrait-frame-left: 38px;
             --event-portrait-frame-top: 88px;
             --event-portrait-frame-width: 226px;
             --event-portrait-frame-height: 520px;
-            --event-portrait-image-height: 456px;
-            --event-portrait-image-y: 54px;
+            --event-portrait-image-height: 690px;
+            --event-portrait-image-y: -22px;
         }
         #overlay-rest .quest-event-shell.rest-scene {
             --event-scene-bg: url('assets/scenes/battle/dungeon_corridor_torch_v1.webp');
@@ -3468,6 +3475,107 @@
             letter-spacing:5px;
             text-shadow:0 2px 0 #000, 0 0 10px rgba(241,196,15,0.24);
             pointer-events:none;
+        }
+        #overlay-event .quest-event-shell.event-scene.event-mode-home {
+            --event-rail-width: 310px;
+            --event-topbar-height: 104px;
+            --event-card-gap: 0px;
+            --event-choice-top: 0px;
+            --event-choice-side: 28px;
+            --event-choice-bottom: 34px;
+            --event-choice-card-width: 250px;
+            --event-choice-card-height: 480px;
+            --event-portrait-frame-left: 54px;
+            --event-portrait-frame-top: 88px;
+            --event-portrait-frame-width: 236px;
+            --event-portrait-frame-height: 520px;
+            --event-portrait-image-height: 690px;
+            --event-portrait-image-y: -22px;
+        }
+        #overlay-event .event-mode-home .quest-event-tabs {
+            left:-100px;
+            top:34px;
+        }
+        #overlay-event .event-mode-home .quest-event-rail::before {
+            background-position:50% -30px, center !important;
+            background-size:auto 760px, 100% 100% !important;
+        }
+        #overlay-event .event-mode-home .choice-grid {
+            display:flex;
+            justify-content:space-between;
+            align-items:stretch;
+        }
+        #overlay-event .event-mode-home .choice-card {
+            flex:0 0 var(--event-choice-card-width);
+            width:var(--event-choice-card-width);
+            max-width:var(--event-choice-card-width);
+            height:min(var(--event-choice-card-height), 100%);
+            background:var(--asset-event-choice-panel-frame) center / 100% 100% no-repeat;
+            color:#2f2418;
+            overflow:visible;
+        }
+        #overlay-event .event-mode-home .choice-card::before,
+        #overlay-event .event-mode-home .choice-card::after,
+        #overlay-event .event-mode-home .choice-card h3::before,
+        #overlay-event .event-mode-home .choice-card-action::before {
+            display:none;
+        }
+        #overlay-event .event-mode-home .choice-card[data-tone="treasure"] { --event-choice-icon-image: var(--asset-event-choice-icon-treasure); }
+        #overlay-event .event-mode-home .choice-card[data-tone="trial"] { --event-choice-icon-image: var(--asset-event-choice-icon-trial); }
+        #overlay-event .event-mode-home .choice-card[data-tone="pack"] { --event-choice-icon-image: var(--asset-event-choice-icon-pack); }
+        #overlay-event .event-mode-home .choice-card-icon {
+            left:50%;
+            top:17.5%;
+            width:72%;
+            height:35%;
+            transform:translateX(-50%);
+            border-radius:0;
+            background:var(--event-choice-icon-image) center / contain no-repeat;
+            box-shadow:none;
+            filter:drop-shadow(0 12px 10px rgba(0,0,0,0.42));
+            color:transparent;
+            font-size:0;
+            text-shadow:none;
+        }
+        #overlay-event .event-mode-home .choice-card h3 {
+            left:11%;
+            right:11%;
+            top:7.6%;
+            height:8.6%;
+            color:#2c1e14;
+            font-size:22px;
+            letter-spacing:2px;
+            text-indent:2px;
+            text-shadow:0 1px 0 rgba(255,255,255,0.28);
+        }
+        #overlay-event .event-mode-home .choice-card p {
+            left:16.5%;
+            right:16.5%;
+            top:64%;
+            max-height:20%;
+            color:#3c2e22;
+            font-size:13px;
+            line-height:1.5;
+            overflow:hidden;
+            text-shadow:0 1px 0 rgba(255,255,255,0.18);
+        }
+        #overlay-event .event-mode-home .choice-card-action {
+            left:16%;
+            right:16%;
+            bottom:2.6%;
+            height:10.5%;
+            background:var(--asset-event-choice-button) center / 100% 100% no-repeat;
+            color:#f6e2ac;
+            font-size:21px;
+            letter-spacing:4px;
+            text-indent:4px;
+            text-shadow:0 2px 0 #000, 0 0 10px rgba(241,196,15,0.24);
+        }
+        #overlay-event .event-mode-home #event-actions .btn-gorgeous {
+            width:178px;
+            height:58px;
+            min-height:58px;
+            background:var(--asset-event-exit-button) center / 100% 100% no-repeat;
         }
         #overlay-event .event-result-card {
             width:360px;
