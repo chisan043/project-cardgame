@@ -18,6 +18,7 @@ Generated project assets:
 - `assets/ui/events/encounter/backgrounds/event_encounter_cathedral_bg_v1.png`
 - `assets/ui/events/encounter/frames/event_choice_panel_frame_v1.png`
 - `assets/ui/events/encounter/frames/event_choice_panel_frame_v2.png`
+- `assets/ui/events/encounter/frames/event_choice_panel_frame_v3.png`
 - `assets/ui/events/encounter/icons/event_choice_icon_treasure_v1.png`
 - `assets/ui/events/encounter/icons/event_choice_icon_trial_v1.png`
 - `assets/ui/events/encounter/icons/event_choice_icon_pack_v1.png`
@@ -25,11 +26,14 @@ Generated project assets:
 - `assets/ui/events/encounter/buttons/event_exit_button_v1.png`
 - `assets/npc/encounter_angel_portrait_bust_v1.png`
 - `assets/npc/encounter_angel_portrait_bust_v2.png`
+- `assets/npc/encounter_angel_window_v1.png`
 
 Generation rules:
 - Component assets use a flat chroma-key source and local alpha extraction.
 - `event_choice_panel_frame_v2.png` uses a flat `#ff00ff` chroma-key source so the blue/teal glass stays intact.
 - `encounter_angel_portrait_bust_v2.png` is the encounter-home half-body portrait; it replaces the earlier full-body/wing-heavy portrait for concept-match layout.
+- `event_choice_panel_frame_v3.png` is the preferred home choice panel: darker, thinner gold linework, no bottom hole, no baked button slot.
+- `encounter_angel_window_v1.png` is the preferred encounter-home portrait insert: NPC and stained glass are baked together, then placed under the shared arch frame.
 - Runtime/source copies are both kept in the repository.
 - Do not bake Chinese text, numbers, prices, cards, relics, or clickable state into the frame assets.
 - Runtime renders all text and click targets.
