@@ -2880,6 +2880,24 @@
             overflow:hidden !important;
             z-index:2 !important;
         }
+        #overlay-event .quest-event-shell.event-scene .deck-browser-preview-title,
+        #overlay-rest .quest-event-shell.rest-scene .deck-browser-preview-title {
+            display:none;
+        }
+        #overlay-event .quest-event-shell.event-scene .deck-browser-preview-card.upgrade-preview,
+        #overlay-rest .quest-event-shell.rest-scene .deck-browser-preview-card.upgrade-preview {
+            top:calc(var(--shop-parchment-top) - 2px);
+            height:260px;
+            min-height:260px;
+            max-height:260px;
+            padding-top:0;
+        }
+        #overlay-event .quest-event-shell.event-scene .deck-browser-preview-card.upgrade-preview + .deck-browser-preview-note,
+        #overlay-rest .quest-event-shell.rest-scene .deck-browser-preview-card.upgrade-preview + .deck-browser-preview-note {
+            top:calc(var(--shop-parchment-top) + 246px);
+            max-height:72px;
+            line-height:1.36;
+        }
         .quest-event-shell .deck-browser-preview-price {
             position:absolute;
             left:var(--shop-price-left);
@@ -9029,11 +9047,12 @@
         let selected = cards.find(card => !isDisabled(card)) || cards[0];
         const renderPreview = card => {
             const disabled = isDisabled(card);
+            const previewPrice = getPreviewPrice(card);
             preview.innerHTML = `
                 <div class="deck-browser-preview-title">${getPreviewTitle(card)}</div>
                 ${getPreviewHtml(card)}
                 <div class="deck-browser-preview-note">${getPreviewNote(card)}</div>
-                <div class="deck-browser-preview-price">${getPreviewPrice(card)}</div>
+                ${previewPrice ? `<div class="deck-browser-preview-price">${previewPrice}</div>` : ''}
                 <button class="btn-gorgeous btn-confirm deck-browser-action" ${disabled ? 'disabled' : ''}>${getActionLabel(card)}</button>
             `;
             preview.querySelector('button').onclick = () => {
@@ -9169,7 +9188,7 @@
             getActionLabel: () => '接受试炼',
             getPreviewHtml: card => {
                 const clone = QuestersCardRules.createUpgradePreviewCard(card);
-                return `<div class="deck-browser-preview-card compare"><div>${generateCardHTML(card, true)}</div><div class="deck-browser-arrow">→</div><div>${generateCardHTML(clone, true)}</div></div>`;
+                return `<div class="deck-browser-preview-card upgrade-preview">${generateCardHTML(clone, true)}</div>`;
             },
             onAction: card => {
                 const clone = QuestersCardRules.createUpgradePreviewCard(card);
@@ -10400,7 +10419,7 @@
             getActionLabel: () => '确认淬炼',
             getPreviewHtml: card => {
                 const clone = QuestersCardRules.createUpgradePreviewCard(card);
-                return `<div class="deck-browser-preview-card compare"><div>${generateCardHTML(card, true)}</div><div class="deck-browser-arrow">→</div><div>${generateCardHTML(clone, true)}</div></div>`;
+                return `<div class="deck-browser-preview-card upgrade-preview">${generateCardHTML(clone, true)}</div>`;
             },
             onAction: card => {
                 const clone = QuestersCardRules.createUpgradePreviewCard(card);
