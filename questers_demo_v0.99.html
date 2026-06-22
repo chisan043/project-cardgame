@@ -2891,6 +2891,22 @@
             min-height:260px;
             max-height:260px;
             padding-top:0;
+            align-items:flex-start;
+        }
+        #overlay-event .quest-event-shell.event-scene .deck-browser-preview-card.upgrade-preview .static-card,
+        #overlay-rest .quest-event-shell.rest-scene .deck-browser-preview-card.upgrade-preview .static-card {
+            position:absolute !important;
+            left:50% !important;
+            top:0 !important;
+            bottom:auto !important;
+            transform:translateX(-50%) scale(0.84) !important;
+            transform-origin:center top !important;
+            margin:0 !important;
+            pointer-events:none;
+        }
+        #overlay-event .quest-event-shell.event-scene .deck-browser-preview-card.upgrade-preview .static-card:hover,
+        #overlay-rest .quest-event-shell.rest-scene .deck-browser-preview-card.upgrade-preview .static-card:hover {
+            transform:translateX(-50%) scale(0.84) !important;
         }
         #overlay-event .quest-event-shell.event-scene .deck-browser-preview-card.upgrade-preview + .deck-browser-preview-note,
         #overlay-rest .quest-event-shell.rest-scene .deck-browser-preview-card.upgrade-preview + .deck-browser-preview-note {
