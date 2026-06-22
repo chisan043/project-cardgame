@@ -63,7 +63,7 @@
             --battle-scene-bg: var(--battle-forest-bg);
             --asset-npc-shopkeeper: url('assets/npc/shopkeeper_portrait_v1.webp');
             --asset-npc-campfire-elder: url('assets/npc/campfire_elder_portrait_v1.webp');
-            --asset-npc-encounter-angel: url('assets/npc/encounter_angel_window_v1.png');
+            --asset-npc-encounter-angel: url('assets/npc/encounter_angel_window_v2.png');
             --asset-shop-module-outer-frame: url('assets/ui/events/shop/thin_v6/shop_outer_lines_hairline_v6.png');
             --asset-event-portrait-arch: url('assets/ui/events/common/frames/event_portrait_arch_frame_v1.png');
             --asset-shop-merchant-glass-bg: url('assets/ui/events/shop/thin_v6/shop_merchant_glass_bg_hairline_v6.png');
@@ -3478,19 +3478,19 @@
         }
         #overlay-event .quest-event-shell.event-scene.event-mode-home {
             --event-rail-width: 352px;
-            --event-topbar-height: 118px;
-            --event-card-gap: 24px;
-            --event-choice-top: 8px;
+            --event-topbar-height: 92px;
+            --event-card-gap: 18px;
+            --event-choice-top: -12px;
             --event-choice-side: 0px;
-            --event-choice-bottom: 58px;
-            --event-choice-card-width: 232px;
-            --event-choice-card-height: 462px;
-            --event-portrait-frame-left: 56px;
-            --event-portrait-frame-top: 82px;
-            --event-portrait-frame-width: 254px;
-            --event-portrait-frame-height: 536px;
-            --event-portrait-image-height: 114%;
-            --event-portrait-image-y: 48%;
+            --event-choice-bottom: 42px;
+            --event-choice-card-width: 244px;
+            --event-choice-card-height: 500px;
+            --event-portrait-frame-left: 30px;
+            --event-portrait-frame-top: 64px;
+            --event-portrait-frame-width: 314px;
+            --event-portrait-frame-height: 578px;
+            --event-portrait-image-height: 100%;
+            --event-portrait-image-y: 50%;
         }
         #overlay-event .event-mode-home .quest-event-tabs {
             left:-226px;
@@ -3498,8 +3498,16 @@
         }
         #overlay-event .event-mode-home .quest-event-rail::before {
             background-image:var(--event-npc-image) !important;
+            left:var(--event-portrait-frame-left) !important;
+            top:var(--event-portrait-frame-top) !important;
+            width:var(--event-portrait-frame-width) !important;
+            height:var(--event-portrait-frame-height) !important;
             background-position:50% var(--event-portrait-image-y) !important;
-            background-size:auto var(--event-portrait-image-height) !important;
+            background-size:contain !important;
+            filter:drop-shadow(0 18px 12px rgba(0,0,0,0.66));
+        }
+        #overlay-event .event-mode-home .quest-event-rail::after {
+            display:none;
         }
         #overlay-event .event-mode-home .choice-grid {
             display:flex;

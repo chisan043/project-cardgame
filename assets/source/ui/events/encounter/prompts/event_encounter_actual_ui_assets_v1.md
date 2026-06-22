@@ -27,6 +27,7 @@ Generated project assets:
 - `assets/npc/encounter_angel_portrait_bust_v1.png`
 - `assets/npc/encounter_angel_portrait_bust_v2.png`
 - `assets/npc/encounter_angel_window_v1.png`
+- `assets/npc/encounter_angel_window_v2.png`
 
 Generation rules:
 - Component assets use a flat chroma-key source and local alpha extraction.
@@ -34,6 +35,7 @@ Generation rules:
 - `encounter_angel_portrait_bust_v2.png` is the encounter-home half-body portrait; it replaces the earlier full-body/wing-heavy portrait for concept-match layout.
 - `event_choice_panel_frame_v3.png` is the preferred home choice panel: darker, thinner gold linework, no bottom hole, no baked button slot.
 - `encounter_angel_window_v1.png` is the preferred encounter-home portrait insert: NPC and stained glass are baked together, then placed under the shared arch frame.
+- `encounter_angel_window_v2.png` is the preferred encounter-home portrait window: a full window/half-body guardian composition, used without the shared shop arch overlay to match the concept image more closely.
 - Runtime/source copies are both kept in the repository.
 - Do not bake Chinese text, numbers, prices, cards, relics, or clickable state into the frame assets.
 - Runtime renders all text and click targets.
