@@ -112,6 +112,10 @@
             --asset-event-choice-icon-pack: url('assets/ui/events/encounter/icons/event_choice_icon_pack_v1.png');
             --asset-event-choice-button: url('assets/ui/events/encounter/buttons/event_choice_button_v1.png');
             --asset-event-exit-button: url('assets/ui/events/encounter/buttons/event_exit_button_v1.png');
+            --asset-rest-campfire-bg: url('assets/ui/events/rest/backgrounds/rest_campfire_hall_bg_v1.png');
+            --asset-rest-option-card-rest: url('assets/ui/events/rest/frames/rest_option_card_rest_v1.png');
+            --asset-rest-option-card-upgrade: url('assets/ui/events/rest/frames/rest_option_card_upgrade_v1.png');
+            --asset-rest-option-card-delete: url('assets/ui/events/rest/frames/rest_option_card_delete_v1.png');
             --shop-shell-width: 960px;
             --shop-shell-height: 636px;
             --shop-rail-width: 222px;
@@ -3125,14 +3129,14 @@
             --event-portrait-image-y: -22px;
         }
         #overlay-rest .quest-event-shell.rest-scene {
-            --event-scene-bg: url('assets/scenes/battle/dungeon_corridor_torch_v1.webp');
+            --event-scene-bg: var(--asset-rest-campfire-bg);
             --event-title-size: 42px;
-            --event-portrait-frame-left: 38px;
-            --event-portrait-frame-top: 88px;
-            --event-portrait-frame-width: 226px;
+            --event-portrait-frame-left: 54px;
+            --event-portrait-frame-top: 92px;
+            --event-portrait-frame-width: 248px;
             --event-portrait-frame-height: 520px;
-            --event-portrait-image-height: 430px;
-            --event-portrait-image-y: 66px;
+            --event-portrait-image-height: 538px;
+            --event-portrait-image-y: 52px;
         }
         #overlay-event .quest-event-shell.event-scene::before,
         #overlay-event .quest-event-shell.event-scene::after,
@@ -3211,8 +3215,19 @@
         }
         #overlay-rest .rest-mode-home .quest-event-tabs {
             position:absolute;
-            left:-160px;
-            top:34px;
+            left:calc(-1 * var(--event-rail-width) + 94px);
+            top:38px;
+        }
+        #overlay-rest .rest-mode-home .quest-event-tabs::before {
+            content:"";
+            position:absolute;
+            left:-70px;
+            top:-20px;
+            width:64px;
+            height:64px;
+            background:var(--asset-map-node-rest) center / contain no-repeat;
+            filter:drop-shadow(0 7px 6px rgba(0,0,0,0.62));
+            pointer-events:none;
         }
         #overlay-event .quest-event-tab,
         #overlay-rest .rest-mode-home #rest-tab-home {
@@ -3303,15 +3318,19 @@
         #overlay-rest #rest-options {
             height:100%;
             margin:0 !important;
-            padding:2px 84px 26px;
+            padding:22px 18px 54px;
             display:grid !important;
             grid-template-columns:repeat(3, minmax(0, 1fr));
-            gap:38px;
-            align-items:stretch;
+            gap:36px;
+            align-items:start;
+            justify-content:start;
             background:transparent;
             border:0;
             box-shadow:none;
             box-sizing:border-box;
+        }
+        #overlay-rest .rest-scene:not(.rest-mode-home) #rest-options {
+            display:none !important;
         }
         #overlay-event .choice-card,
         #overlay-rest .rest-action-card {
@@ -3586,6 +3605,193 @@
             height:58px;
             min-height:58px;
             background:var(--asset-event-exit-button) center / 100% 100% no-repeat;
+        }
+        #overlay-rest .quest-event-shell.rest-scene.rest-mode-home {
+            --event-rail-width: 350px;
+            --event-topbar-height: 124px;
+            --event-title-size: 46px;
+            --event-portrait-frame-left: 56px;
+            --event-portrait-frame-top: 92px;
+            --event-portrait-frame-width: 248px;
+            --event-portrait-frame-height: 520px;
+            --event-portrait-image-height: 612px;
+            --event-portrait-image-y: 20px;
+            --rest-option-card-width: 190px;
+            --rest-option-card-height: 456px;
+            --rest-option-card-gap: 36px;
+            background-image:
+                var(--asset-shop-module-outer-frame),
+                linear-gradient(90deg, rgba(1,7,12,0.68), rgba(1,7,12,0.28) 28%, rgba(1,7,12,0.22) 70%, rgba(1,7,12,0.18)),
+                linear-gradient(180deg, rgba(1,7,12,0.26), rgba(1,7,12,0.42)),
+                var(--event-scene-bg);
+        }
+        #overlay-rest .rest-mode-home #rest-options {
+            display:flex !important;
+            gap:var(--rest-option-card-gap);
+            align-items:flex-start;
+            justify-content:flex-start;
+            padding:22px 18px 54px;
+        }
+        #overlay-rest .rest-mode-home .rest-action-card {
+            flex:0 0 var(--rest-option-card-width);
+            width:var(--rest-option-card-width);
+            max-width:var(--rest-option-card-width);
+            height:min(var(--rest-option-card-height), 100%);
+            overflow:visible;
+            background:var(--rest-option-card-image) center / 100% 100% no-repeat;
+            color:#2f2418;
+            transition:transform 180ms ease, filter 180ms ease;
+        }
+        #overlay-rest .rest-mode-home .rest-action-card[data-tone="rest"] { --rest-option-card-image: var(--asset-rest-option-card-rest); }
+        #overlay-rest .rest-mode-home .rest-action-card[data-tone="upgrade"] { --rest-option-card-image: var(--asset-rest-option-card-upgrade); }
+        #overlay-rest .rest-mode-home .rest-action-card[data-tone="delete"] { --rest-option-card-image: var(--asset-rest-option-card-delete); }
+        #overlay-rest .rest-mode-home .rest-action-card::before,
+        #overlay-rest .rest-mode-home .rest-action-card::after,
+        #overlay-rest .rest-mode-home .rest-action-card h3::before,
+        #overlay-rest .rest-mode-home .rest-action-card .choice-card-action::before,
+        #overlay-rest .rest-mode-home .rest-action-card .choice-card-icon {
+            display:none;
+        }
+        #overlay-rest .rest-mode-home .rest-action-card h3 {
+            left:14%;
+            right:14%;
+            top:54.8%;
+            height:10%;
+            color:#2c1e14;
+            font-size:28px;
+            letter-spacing:6px;
+            text-indent:6px;
+            text-shadow:0 1px 0 rgba(255,255,255,0.35);
+        }
+        #overlay-rest .rest-mode-home .rest-action-card p {
+            left:17%;
+            right:17%;
+            top:66.4%;
+            max-height:15.5%;
+            color:#392b20;
+            font-size:14px;
+            line-height:1.48;
+            overflow:hidden;
+            text-align:left;
+            text-shadow:0 1px 0 rgba(255,255,255,0.2);
+        }
+        #overlay-rest .rest-mode-home .rest-action-card .choice-card-action {
+            left:6.4%;
+            right:6.4%;
+            bottom:-0.8%;
+            height:12.6%;
+            background:var(--asset-event-choice-button) center / 100% 100% no-repeat;
+            color:#f6e2ac;
+            font-size:24px;
+            letter-spacing:7px;
+            text-indent:7px;
+            text-shadow:0 2px 0 #000, 0 0 10px rgba(241,196,15,0.24);
+        }
+        #overlay-rest .rest-mode-home .quest-event-actions .btn-gorgeous {
+            width:210px;
+            height:62px;
+            min-height:62px;
+            font-size:24px;
+            letter-spacing:8px;
+            text-indent:8px;
+            background:var(--asset-event-exit-button) center / 100% 100% no-repeat;
+        }
+        #overlay-rest .rest-mode-result #card-action-list {
+            display:flex !important;
+            align-items:center;
+            justify-content:center;
+            padding:0 88px 56px;
+            overflow:hidden !important;
+        }
+        #overlay-rest .rest-result-view {
+            width:520px;
+            min-height:360px;
+            position:relative;
+            padding:78px 64px 42px;
+            box-sizing:border-box;
+            color:#3d2e20;
+            font-family:"STKaiti", "Microsoft YaHei", serif;
+            text-align:left;
+            background:var(--asset-shop-parchment-panel) center / 100% 100% no-repeat;
+            filter:drop-shadow(0 24px 18px rgba(0,0,0,0.62));
+        }
+        #overlay-rest .rest-result-view h3 {
+            margin:0 0 18px;
+            color:#302116;
+            font-size:28px;
+            letter-spacing:8px;
+            text-indent:8px;
+            text-align:center;
+            text-shadow:0 1px 0 rgba(255,255,255,0.28);
+        }
+        #overlay-rest .rest-result-strip {
+            width:260px;
+            min-height:32px;
+            margin:0 auto 22px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:#2e2117;
+            font-size:16px;
+            letter-spacing:2px;
+            background:var(--asset-event-choice-button) center / 100% 100% no-repeat;
+            color:#f6e2ac;
+            text-shadow:0 2px 0 #000;
+        }
+        #overlay-rest .rest-result-hp {
+            margin:0 0 22px;
+        }
+        #overlay-rest .rest-result-hp-label {
+            display:flex;
+            justify-content:space-between;
+            color:#433323;
+            font-size:15px;
+            margin-bottom:8px;
+        }
+        #overlay-rest .rest-result-hp-bar {
+            height:28px;
+            border:1px solid rgba(106,68,26,0.82);
+            background:rgba(43,24,17,0.68);
+            box-shadow:inset 0 0 0 2px rgba(255,236,170,0.12);
+            overflow:hidden;
+        }
+        #overlay-rest .rest-result-hp-fill {
+            height:100%;
+            width:var(--rest-result-hp-percent, 0%);
+            background:linear-gradient(90deg, #8f1820, #d64232 70%, #477b4d);
+            box-shadow:inset 0 1px 0 rgba(255,236,170,0.24), 0 0 16px rgba(214,66,50,0.22);
+        }
+        #overlay-rest .rest-result-body {
+            display:grid;
+            grid-template-columns:92px 1fr;
+            gap:20px;
+            align-items:center;
+            color:#3d2e20;
+            font-size:16px;
+            line-height:1.6;
+        }
+        #overlay-rest .rest-result-potion {
+            width:82px;
+            height:96px;
+            margin:auto;
+            background:
+                radial-gradient(circle at 50% 68%, rgba(138, 23, 18, 0.92), rgba(215, 71, 45, 0.86) 46%, rgba(58, 15, 13, 0.64) 66%, transparent 68%),
+                linear-gradient(180deg, rgba(224,205,145,0.92), rgba(98,65,38,0.72));
+            clip-path:polygon(42% 0, 58% 0, 60% 21%, 78% 42%, 86% 78%, 74% 100%, 26% 100%, 14% 78%, 22% 42%, 40% 21%);
+            filter:drop-shadow(0 10px 8px rgba(0,0,0,0.36));
+        }
+        #overlay-rest .rest-result-action {
+            width:240px;
+            height:58px;
+            min-height:58px;
+            margin:24px auto 0;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-size:22px;
+            letter-spacing:6px;
+            text-indent:6px;
+            background:var(--asset-event-choice-button) center / 100% 100% no-repeat;
         }
         #overlay-event .event-result-card {
             width:360px;
@@ -9114,7 +9320,7 @@
     function setRestShellMode(mode) {
         const shell = document.querySelector('#overlay-rest .quest-event-shell');
         if (!shell) return;
-        shell.classList.remove('rest-mode-home', 'rest-mode-upgrade', 'rest-mode-delete');
+        shell.classList.remove('rest-mode-home', 'rest-mode-result', 'rest-mode-upgrade', 'rest-mode-delete');
         shell.classList.add(`rest-mode-${mode}`);
     }
 
@@ -10494,13 +10700,34 @@
     }
 
     function resolveRest() {
-        state.hp = QuestersRewardRules.getRestHealResult({
+        const hpBefore = state.hp;
+        const restResult = QuestersRewardRules.getRestHealResult({
             hp: state.hp,
             maxHp: state.maxHp
-        }).hp;
+        });
+        state.hp = restResult.hp;
         updateTopBar();
-        closeOverlay('overlay-rest');
-        advanceMap();
+        setRestShellMode('result');
+        setEventTabActive('rest', 'home');
+        document.getElementById('rest-options').style.display = 'none';
+        const c = document.getElementById('card-action-list');
+        const hpPercent = state.maxHp ? Math.round((state.hp / state.maxHp) * 100) : 0;
+        c.style.display = 'flex';
+        c.innerHTML = `
+            <div class="rest-result-view">
+                <h3>休 息</h3>
+                <div class="rest-result-strip">在温暖的火光中恢复体力。</div>
+                <div class="rest-result-hp">
+                    <div class="rest-result-hp-label"><span>生命值</span><span>${hpBefore}/${state.maxHp} → ${state.hp}/${state.maxHp}</span></div>
+                    <div class="rest-result-hp-bar"><div class="rest-result-hp-fill" style="--rest-result-hp-percent:${hpPercent}%;"></div></div>
+                </div>
+                <div class="rest-result-body">
+                    <div class="rest-result-potion" aria-hidden="true"></div>
+                    <p>恢复 ${state.hp - hpBefore} 点生命，不超过最大生命。</p>
+                </div>
+                <button class="btn-gorgeous btn-confirm rest-result-action" type="button" onclick="closeOverlay('overlay-rest'); advanceMap();">休息完毕</button>
+            </div>
+        `;
     }
 
     function showRestHome() {
