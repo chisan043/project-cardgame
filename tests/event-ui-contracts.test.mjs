@@ -148,6 +148,10 @@ test('upgrade result cards are centered in the shared parchment panel compositio
   );
   assert.match(
     html,
-    /#overlay-event \.quest-event-shell\.event-scene\.event-mode-deck \.deck-browser-preview-card\.upgrade-preview\.event-upgrade-result \.static-card,\s*#overlay-rest \.quest-event-shell\.rest-scene\.rest-mode-upgrade \.deck-browser-preview-card\.upgrade-preview\.rest-upgrade-result \.static-card\s*\{[\s\S]*?transform-origin:center center !important;[\s\S]*?margin:0 !important;/
+    /#overlay-event \.event-mode-deck \.deck-browser-shell,\s*#overlay-rest \.rest-mode-upgrade \.deck-browser-shell\s*\{[\s\S]*?--shop-parchment-top: 26px;[\s\S]*?--shop-parchment-height: 344px;/
+  );
+  assert.match(
+    html,
+    /#overlay-event \.quest-event-shell\.event-scene\.event-mode-deck \.deck-browser-preview-card\.upgrade-preview\.event-upgrade-result \.static-card,\s*#overlay-rest \.quest-event-shell\.rest-scene\.rest-mode-upgrade \.deck-browser-preview-card\.upgrade-preview\.rest-upgrade-result \.static-card\s*\{[\s\S]*?transform:scale\(1\.28\) !important;[\s\S]*?transform-origin:center center !important;[\s\S]*?margin:0 !important;/
   );
 });
