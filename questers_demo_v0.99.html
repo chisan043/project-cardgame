@@ -112,6 +112,7 @@
             --asset-event-choice-icon-pack: url('assets/ui/events/encounter/icons/event_choice_icon_pack_v1.png');
             --asset-event-choice-button: url('assets/ui/events/encounter/buttons/event_choice_button_v1.png');
             --asset-event-exit-button: url('assets/ui/events/encounter/buttons/event_exit_button_v1.png');
+            --asset-event-relic-medallion-frame: url('assets/ui/events/encounter/frames/event_relic_medallion_frame_v1.png');
             --asset-rest-campfire-bg: url('assets/ui/events/rest/backgrounds/rest_campfire_hall_bg_v1.png');
             --asset-rest-campfire-icon: url('assets/ui/events/rest/icons/rest_campfire_brazier_icon_v1.png');
             --asset-rest-option-card-rest: url('assets/ui/events/rest/frames/rest_option_card_rest_v1.png');
@@ -3931,34 +3932,17 @@
             display:flex;
             align-items:center;
             justify-content:center;
-            border-radius:50%;
-            background:
-                radial-gradient(circle at 44% 32%, rgba(120, 226, 165, 0.34), transparent 28%),
-                radial-gradient(circle at 50% 54%, rgba(41, 128, 92, 0.9), rgba(6, 32, 29, 0.96) 66%, rgba(3, 9, 14, 0.98) 78%);
-            box-shadow:
-                inset 0 0 0 4px rgba(39, 24, 12, 0.9),
-                inset 0 0 0 9px rgba(199, 162, 88, 0.82),
-                inset 0 0 38px rgba(0,0,0,0.58),
-                0 22px 24px rgba(0,0,0,0.48),
-                0 0 24px rgba(91, 192, 142, 0.22);
+            background:var(--asset-event-relic-medallion-frame) center / contain no-repeat;
+            filter:drop-shadow(0 22px 18px rgba(0,0,0,0.54)) drop-shadow(0 0 18px rgba(43, 109, 114, 0.22));
         }
         #overlay-event .event-relic-medallion::before {
-            content:"";
-            position:absolute;
-            inset:-18px;
-            border-radius:50%;
-            background:
-                linear-gradient(0deg, transparent 47%, rgba(199,162,88,0.88) 47% 53%, transparent 53%),
-                linear-gradient(90deg, transparent 47%, rgba(199,162,88,0.88) 47% 53%, transparent 53%);
-            opacity:0.82;
-            filter:drop-shadow(0 3px 0 rgba(0,0,0,0.42));
-            pointer-events:none;
+            display:none;
         }
         #overlay-event .event-relic-icon {
             position:relative;
             z-index:1;
-            min-width:128px;
-            min-height:128px;
+            min-width:118px;
+            min-height:118px;
             display:flex;
             align-items:center;
             justify-content:center;
@@ -3966,8 +3950,8 @@
             filter:drop-shadow(0 14px 12px rgba(0,0,0,0.54)) drop-shadow(0 0 22px rgba(241,196,15,0.28));
         }
         #overlay-event .event-relic-icon img {
-            width:132px;
-            height:132px;
+            width:118px;
+            height:118px;
             object-fit:contain;
         }
         #overlay-event .event-relic-claim {
@@ -3988,11 +3972,11 @@
             box-sizing:border-box;
             background:var(--asset-shop-parchment-panel) center / 100% 100% no-repeat;
             filter:drop-shadow(0 22px 18px rgba(0,0,0,0.58));
-            color:#3f2e20;
+            color:#2f2418;
         }
         #overlay-event .event-relic-parchment h3 {
             margin:0 0 18px;
-            color:#302116;
+            color:#24160d;
             font-size:26px;
             letter-spacing:5px;
             text-indent:5px;
@@ -4001,16 +3985,36 @@
         }
         #overlay-event .event-relic-parchment p {
             margin:0;
-            color:#4d3926;
+            color:#2f2418;
             font-size:15px;
             line-height:1.64;
             text-align:left;
+            font-weight:600;
+            text-shadow:0 1px 0 rgba(255,255,255,0.16);
+        }
+        #overlay-event .event-relic-parchment p span {
+            color:#7b3f00 !important;
+            font-weight:800 !important;
+            text-shadow:0 1px 0 rgba(255,255,255,0.2);
         }
         #overlay-event .event-relic-tags {
             margin-top:18px;
-            color:#6b4a24;
+            color:#3b2819;
             font-size:13px;
             text-align:center;
+        }
+        #overlay-event .event-relic-tags > div {
+            border-top-color:rgba(75, 48, 26, 0.46) !important;
+            gap:5px;
+        }
+        #overlay-event .event-relic-tags .keyword-tag {
+            color:#4b2e14;
+            background:rgba(112, 70, 28, 0.14);
+            border-color:rgba(104, 61, 20, 0.38);
+            box-shadow:none;
+            font-size:12px;
+            line-height:1.2;
+            padding:2px 5px;
         }
         #overlay-event .event-mode-deck .deck-browser-upgrade {
             --shop-board-width: 760px;

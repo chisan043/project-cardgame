@@ -55,6 +55,37 @@ test('encounter reward states use concept-specific compositions', () => {
   assert.match(html, /deck-browser-preview-card compare event-upgrade-compare/);
 });
 
+test('encounter relic reward uses authored medallion art and readable parchment ink', () => {
+  const frameFile = `${['event', 'relic', 'medallion', 'frame', 'v1'].join('_')}.${['p', 'ng'].join('')}`;
+  const frameAssetPath = ['assets', 'ui', 'events', 'encounter', 'frames', frameFile].join('/');
+  assert.match(
+    html,
+    new RegExp(`--asset-event-relic-medallion-frame:\\s*url\\('${escapeRegExp(frameAssetPath)}'\\);`)
+  );
+  assert.match(
+    html,
+    /#overlay-event \.event-relic-medallion\s*\{[^}]*background:var\(--asset-event-relic-medallion-frame\) center \/ contain no-repeat;/
+  );
+  assert.doesNotMatch(
+    html,
+    /#overlay-event \.event-relic-medallion\s*\{[^}]*radial-gradient/
+  );
+  assert.match(
+    html,
+    /#overlay-event \.event-relic-medallion::before\s*\{[^}]*display:none;/
+  );
+  assert.match(
+    html,
+    /#overlay-event \.event-relic-parchment p\s*\{[^}]*color:#2f2418;/
+  );
+  assert.match(
+    html,
+    /#overlay-event \.event-relic-parchment p span\s*\{[^}]*color:#7b3f00 !important;/
+  );
+  const framePath = ['..', frameAssetPath].join('/');
+  assert.equal(existsSync(new URL(framePath, import.meta.url)), true);
+});
+
 test('encounter pack reward uses the two-step concept panel', () => {
   assert.match(html, /class="event-pack-reward-view"/);
   assert.match(html, /class="event-pack-forgotten-slot"/);
