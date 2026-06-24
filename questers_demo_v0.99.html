@@ -2758,12 +2758,13 @@
             align-items:flex-start;
         }
         .quest-event-shell .deck-browser-preview-card .static-card {
-            position:relative !important;
-            left:auto !important;
-            top:auto !important;
+            position:absolute !important;
+            left:calc(50% - 86.5px) !important;
+            top:0 !important;
             transform:scale(0.84) !important;
             transform-origin:center top !important;
-            margin:0 0 -62px !important;
+            margin:0 !important;
+            pointer-events:none;
         }
         .quest-event-shell .deck-browser-preview-card .static-card:hover {
             transform:scale(0.84) !important;
@@ -2895,6 +2896,42 @@
         #overlay-rest .quest-event-shell.rest-scene .deck-browser-preview-title {
             display:none;
         }
+        #overlay-event .quest-event-shell.event-scene .deck-browser-preview-card,
+        #overlay-rest .quest-event-shell.rest-scene .deck-browser-preview-card {
+            position:absolute;
+            left:var(--shop-parchment-left);
+            top:calc(var(--shop-parchment-top) + 48px);
+            width:var(--shop-parchment-width);
+            height:230px;
+            min-height:230px;
+            max-height:230px;
+            margin:0;
+            padding-top:4px;
+            overflow:hidden;
+            z-index:2;
+            display:flex;
+            justify-content:center;
+            align-items:flex-start;
+        }
+        #overlay-event .quest-event-shell.event-scene .deck-browser-preview-note,
+        #overlay-rest .quest-event-shell.rest-scene .deck-browser-preview-note {
+            position:absolute;
+            left:calc(var(--shop-parchment-left) + 18px);
+            top:calc(var(--shop-parchment-top) + 268px);
+            width:calc(var(--shop-parchment-width) - 36px);
+            max-height:54px;
+            margin:0;
+            padding:4px 8px 6px;
+            box-sizing:border-box;
+            color:#4d3926;
+            font-size:11px;
+            line-height:1.32;
+            text-align:left;
+            background:transparent;
+            text-shadow:none;
+            overflow:hidden;
+            z-index:2;
+        }
         #overlay-event .quest-event-shell.event-scene .deck-browser-preview-card.upgrade-preview,
         #overlay-rest .quest-event-shell.rest-scene .deck-browser-preview-card.upgrade-preview {
             top:calc(var(--shop-parchment-top) - 2px);
@@ -2907,17 +2944,17 @@
         #overlay-event .quest-event-shell.event-scene .deck-browser-preview-card.upgrade-preview .static-card,
         #overlay-rest .quest-event-shell.rest-scene .deck-browser-preview-card.upgrade-preview .static-card {
             position:absolute !important;
-            left:calc(50% - 18px) !important;
+            left:calc(50% - 86.5px) !important;
             top:0 !important;
             bottom:auto !important;
-            transform:translateX(-50%) scale(0.84) !important;
+            transform:scale(0.84) !important;
             transform-origin:center top !important;
             margin:0 !important;
             pointer-events:none;
         }
         #overlay-event .quest-event-shell.event-scene .deck-browser-preview-card.upgrade-preview .static-card:hover,
         #overlay-rest .quest-event-shell.rest-scene .deck-browser-preview-card.upgrade-preview .static-card:hover {
-            transform:translateX(-50%) scale(0.84) !important;
+            transform:scale(0.84) !important;
         }
         #overlay-event .quest-event-shell.event-scene .deck-browser-preview-card.upgrade-preview + .deck-browser-preview-note,
         #overlay-rest .quest-event-shell.rest-scene .deck-browser-preview-card.upgrade-preview + .deck-browser-preview-note {
