@@ -4265,30 +4265,30 @@
             grid-template-columns:repeat(4, minmax(0, 1fr));
             gap:12px 14px;
         }
-        #overlay-rest .rest-mode-upgrade .rest-upgrade-result {
+        #overlay-rest .quest-event-shell.rest-scene.rest-mode-upgrade .deck-browser-preview-card.upgrade-preview.rest-upgrade-result {
             position:absolute;
             left:var(--shop-parchment-left);
-            top:calc(var(--shop-parchment-top) + 30px);
+            top:var(--shop-parchment-top);
             width:var(--shop-parchment-width);
-            height:292px;
-            min-height:292px;
-            max-height:292px;
+            height:var(--shop-parchment-height);
+            min-height:var(--shop-parchment-height);
+            max-height:var(--shop-parchment-height);
             display:flex;
-            align-items:flex-start;
+            align-items:center;
             justify-content:center;
             overflow:hidden;
-            padding:2px 0 0;
+            padding:0;
         }
-        #overlay-rest .rest-mode-upgrade .rest-upgrade-result .static-card {
+        #overlay-rest .quest-event-shell.rest-scene.rest-mode-upgrade .deck-browser-preview-card.upgrade-preview.rest-upgrade-result .static-card {
             position:relative !important;
             left:auto !important;
             top:auto !important;
             transform:scale(0.92) !important;
-            transform-origin:center top !important;
-            margin:0 0 -42px !important;
+            transform-origin:center center !important;
+            margin:0 !important;
             pointer-events:none;
         }
-        #overlay-rest .rest-mode-upgrade .rest-upgrade-result .static-card:hover {
+        #overlay-rest .quest-event-shell.rest-scene.rest-mode-upgrade .deck-browser-preview-card.upgrade-preview.rest-upgrade-result .static-card:hover {
             transform:scale(0.92) !important;
         }
         #overlay-rest .rest-mode-upgrade .deck-browser-preview-note {

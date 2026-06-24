@@ -76,3 +76,14 @@ test('campfire deck browser states keep a unified four-column card rhythm', () =
     /#overlay-rest \.rest-mode-upgrade \.deck-browser-grid\s*\{[\s\S]*?grid-template-columns:repeat\(4, minmax\(0, 1fr\)\);/
   );
 });
+
+test('campfire upgrade result card is centered in the parchment panel', () => {
+  assert.match(
+    html,
+    /#overlay-rest \.quest-event-shell\.rest-scene\.rest-mode-upgrade \.deck-browser-preview-card\.upgrade-preview\.rest-upgrade-result\s*\{[\s\S]*?top:var\(--shop-parchment-top\);[\s\S]*?height:var\(--shop-parchment-height\);[\s\S]*?align-items:center;/
+  );
+  assert.match(
+    html,
+    /#overlay-rest \.quest-event-shell\.rest-scene\.rest-mode-upgrade \.deck-browser-preview-card\.upgrade-preview\.rest-upgrade-result \.static-card\s*\{[\s\S]*?transform-origin:center center !important;[\s\S]*?margin:0 !important;/
+  );
+});
