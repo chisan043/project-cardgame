@@ -138,6 +138,10 @@ test('upgrade result cards are centered in the shared parchment panel compositio
   assert.doesNotMatch(html, /event-upgrade-card-before/);
   assert.doesNotMatch(html, /event-upgrade-card-after/);
   assert.doesNotMatch(html, /event-upgrade-arrow/);
+  assert.doesNotMatch(html, /title: '选择试炼中要淬炼的卡牌'/);
+  assert.doesNotMatch(html, /getActionLabel: \(\) => '接受试炼'/);
+  assert.match(html, /title: '选择要淬炼的卡牌'/);
+  assert.match(html, /getActionLabel: \(\) => '确认淬炼'/);
   assert.match(
     html,
     /#overlay-event \.quest-event-shell\.event-scene\.event-mode-deck \.deck-browser-preview-card\.upgrade-preview\.event-upgrade-result,\s*#overlay-rest \.quest-event-shell\.rest-scene\.rest-mode-upgrade \.deck-browser-preview-card\.upgrade-preview\.rest-upgrade-result\s*\{[\s\S]*?top:var\(--shop-parchment-top\);[\s\S]*?height:var\(--shop-parchment-height\);[\s\S]*?align-items:center;/

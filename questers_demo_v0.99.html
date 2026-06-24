@@ -9987,18 +9987,18 @@
 
     function selectEventUpgrade() {
         setEventShellMode('deck');
-        document.getElementById('event-title').innerText = "奇遇：守望者的试炼"; document.getElementById('event-desc').innerText = "对方没有多说，只在地上点亮古老的纹章。请选择一张要淬炼的卡牌。";
+        document.getElementById('event-title').innerText = "奇遇：守望者的淬炼"; document.getElementById('event-desc').innerText = "对方没有多说，只在地上点亮古老的纹章。请选择一张要淬炼的卡牌。";
         const content = document.getElementById('event-content');
         content.style.display = 'block';
         renderDeckBrowser({
             container: content,
             cards: state.deck,
-            title: '选择试炼中要淬炼的卡牌',
+            title: '选择要淬炼的卡牌',
             countLabel: '非传说、未强化',
             mode: 'upgrade',
             isDisabled: card => card.rarity === '传说' || card.up,
-            getPreviewNote: card => card.rarity === '传说' || card.up ? '这张牌无法接受试炼。' : '试炼会强化选中的卡牌，并在确认后推进地图。',
-            getActionLabel: () => '接受试炼',
+            getPreviewNote: card => card.rarity === '传说' || card.up ? '这张牌无法继续淬炼。' : '淬炼会强化选中的卡牌，并在确认后推进地图。',
+            getActionLabel: () => '确认淬炼',
             getPreviewHtml: card => renderUpgradeResultPreview(card, 'event-upgrade-result'),
             onAction: card => {
                 const clone = QuestersCardRules.createUpgradePreviewCard(card);
