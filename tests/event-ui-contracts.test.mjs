@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 
 const html = readFileSync(new URL('../questers_demo_v0.99.html', import.meta.url), 'utf8');
 
@@ -71,6 +71,8 @@ test('campfire follow-up states use concept-specific compositions', () => {
 });
 
 test('campfire rest result uses prose and authored scene art instead of button-like generated elements', () => {
+  const iconFile = `${['rest', 'campfire', 'brazier', 'icon', 'v1'].join('_')}.${['p', 'ng'].join('')}`;
+  const iconAssetPath = ['assets', 'ui', 'events', 'rest', 'icons', iconFile].join('/');
   assert.match(html, /<p class="rest-result-strip">在温暖的火光中恢复体力。<\/p>/);
   assert.doesNotMatch(
     html,
@@ -78,9 +80,19 @@ test('campfire rest result uses prose and authored scene art instead of button-l
   );
   assert.match(
     html,
-    /#overlay-rest \.rest-result-campfire-art\s*\{[^}]*background:[^}]*var\(--event-scene-bg\)/
+    new RegExp(`--asset-rest-campfire-icon:\\s*url\\('${escapeRegExp(iconAssetPath)}'\\);`)
   );
+  assert.match(
+    html,
+    /#overlay-rest \.rest-result-campfire-art\s*\{[^}]*background:var\(--asset-rest-campfire-icon\) center \/ contain no-repeat;/
+  );
+  assert.doesNotMatch(html, /#overlay-rest \.rest-result-campfire-art\s*\{[^}]*var\(--event-scene-bg\)/);
   assert.doesNotMatch(html, /rest-result-firebowl/);
+  const iconPath = ['..', iconAssetPath].join('/');
+  assert.equal(
+    existsSync(new URL(iconPath, import.meta.url)),
+    true
+  );
 });
 
 test('campfire deck browser states keep a unified four-column card rhythm', () => {
