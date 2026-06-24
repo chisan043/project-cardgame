@@ -52,7 +52,7 @@ test('encounter reward states use concept-specific compositions', () => {
   assert.match(html, /class="event-relic-medallion"/);
   assert.match(html, /class="event-relic-parchment"/);
   assert.match(html, /class="btn-gorgeous btn-confirm event-relic-claim"/);
-  assert.match(html, /deck-browser-preview-card compare event-upgrade-compare/);
+  assert.match(html, /renderUpgradeResultPreview\(card, 'event-upgrade-result'\)/);
 });
 
 test('encounter relic reward uses authored medallion art and readable parchment ink', () => {
@@ -96,7 +96,7 @@ test('encounter pack reward uses the two-step concept panel', () => {
 test('campfire follow-up states use concept-specific compositions', () => {
   assert.match(html, /class="rest-result-view rest-result-campfire-view"/);
   assert.match(html, /class="rest-result-campfire-art"/);
-  assert.match(html, /deck-browser-preview-card upgrade-preview rest-upgrade-result/);
+  assert.match(html, /renderUpgradeResultPreview\(card, 'rest-upgrade-result'\)/);
   assert.doesNotMatch(html, /rest-upgrade-compare/);
   assert.match(html, /class="rest-delete-preview"/);
 });
@@ -129,17 +129,21 @@ test('campfire rest result uses prose and authored scene art instead of button-l
 test('campfire deck browser states keep a unified four-column card rhythm', () => {
   assert.match(
     html,
-    /#overlay-rest \.rest-mode-upgrade \.deck-browser-grid\s*\{[\s\S]*?grid-template-columns:repeat\(4, minmax\(0, 1fr\)\);/
+    /#overlay-event \.event-mode-deck \.deck-browser-grid,\s*#overlay-rest \.rest-mode-upgrade \.deck-browser-grid\s*\{[\s\S]*?grid-template-columns:repeat\(4, minmax\(0, 1fr\)\);/
   );
 });
 
-test('campfire upgrade result card is centered in the parchment panel', () => {
+test('upgrade result cards are centered in the shared parchment panel composition', () => {
+  assert.doesNotMatch(html, /event-upgrade-compare/);
+  assert.doesNotMatch(html, /event-upgrade-card-before/);
+  assert.doesNotMatch(html, /event-upgrade-card-after/);
+  assert.doesNotMatch(html, /event-upgrade-arrow/);
   assert.match(
     html,
-    /#overlay-rest \.quest-event-shell\.rest-scene\.rest-mode-upgrade \.deck-browser-preview-card\.upgrade-preview\.rest-upgrade-result\s*\{[\s\S]*?top:var\(--shop-parchment-top\);[\s\S]*?height:var\(--shop-parchment-height\);[\s\S]*?align-items:center;/
+    /#overlay-event \.quest-event-shell\.event-scene\.event-mode-deck \.deck-browser-preview-card\.upgrade-preview\.event-upgrade-result,\s*#overlay-rest \.quest-event-shell\.rest-scene\.rest-mode-upgrade \.deck-browser-preview-card\.upgrade-preview\.rest-upgrade-result\s*\{[\s\S]*?top:var\(--shop-parchment-top\);[\s\S]*?height:var\(--shop-parchment-height\);[\s\S]*?align-items:center;/
   );
   assert.match(
     html,
-    /#overlay-rest \.quest-event-shell\.rest-scene\.rest-mode-upgrade \.deck-browser-preview-card\.upgrade-preview\.rest-upgrade-result \.static-card\s*\{[\s\S]*?transform-origin:center center !important;[\s\S]*?margin:0 !important;/
+    /#overlay-event \.quest-event-shell\.event-scene\.event-mode-deck \.deck-browser-preview-card\.upgrade-preview\.event-upgrade-result \.static-card,\s*#overlay-rest \.quest-event-shell\.rest-scene\.rest-mode-upgrade \.deck-browser-preview-card\.upgrade-preview\.rest-upgrade-result \.static-card\s*\{[\s\S]*?transform-origin:center center !important;[\s\S]*?margin:0 !important;/
   );
 });

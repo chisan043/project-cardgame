@@ -4023,39 +4023,8 @@
             grid-template-columns:minmax(0, 1fr) var(--shop-detail-width);
         }
         #overlay-event .event-mode-deck .deck-browser-upgrade .deck-browser-grid {
-            grid-template-columns:repeat(3, minmax(0, 1fr));
-            gap:12px 12px;
-        }
-        #overlay-event .event-mode-deck .event-upgrade-compare {
-            width:100%;
-            height:232px;
-            min-height:232px;
-            max-height:232px;
-            display:grid;
-            grid-template-columns:1fr 42px 1fr;
-            align-items:start;
-            justify-items:center;
-            gap:0;
-            padding-top:4px;
-            overflow:visible;
-        }
-        #overlay-event .event-mode-deck .event-upgrade-compare .static-card {
-            position:relative !important;
-            left:auto !important;
-            top:auto !important;
-            transform:scale(0.62) !important;
-            transform-origin:center top !important;
-            margin:0 -34px -92px !important;
-        }
-        #overlay-event .event-mode-deck .event-upgrade-compare .static-card:hover {
-            transform:scale(0.62) !important;
-        }
-        #overlay-event .event-mode-deck .event-upgrade-arrow {
-            margin-top:82px;
-            color:#f6d36e;
-            font-size:34px;
-            line-height:1;
-            text-shadow:0 2px 0 #000, 0 0 14px rgba(241,196,15,0.28);
+            grid-template-columns:repeat(4, minmax(0, 1fr));
+            gap:12px 14px;
         }
         #overlay-event .event-mode-deck .deck-browser-upgrade .deck-browser-preview-note {
             display:none;
@@ -4222,6 +4191,7 @@
             --shop-action-width: 184px;
             --shop-action-height: 52px;
         }
+        #overlay-event .event-mode-deck .deck-browser-shell,
         #overlay-rest .rest-mode-upgrade .deck-browser-shell {
             --shop-detail-width: 356px;
             --shop-detail-height: 454px;
@@ -4234,10 +4204,12 @@
             --shop-action-width: 214px;
             grid-template-columns:minmax(0, 1fr) var(--shop-detail-width);
         }
+        #overlay-event .event-mode-deck .deck-browser-grid,
         #overlay-rest .rest-mode-upgrade .deck-browser-grid {
             grid-template-columns:repeat(4, minmax(0, 1fr));
             gap:12px 14px;
         }
+        #overlay-event .quest-event-shell.event-scene.event-mode-deck .deck-browser-preview-card.upgrade-preview.event-upgrade-result,
         #overlay-rest .quest-event-shell.rest-scene.rest-mode-upgrade .deck-browser-preview-card.upgrade-preview.rest-upgrade-result {
             position:absolute;
             left:var(--shop-parchment-left);
@@ -4252,6 +4224,7 @@
             overflow:hidden;
             padding:0;
         }
+        #overlay-event .quest-event-shell.event-scene.event-mode-deck .deck-browser-preview-card.upgrade-preview.event-upgrade-result .static-card,
         #overlay-rest .quest-event-shell.rest-scene.rest-mode-upgrade .deck-browser-preview-card.upgrade-preview.rest-upgrade-result .static-card {
             position:relative !important;
             left:auto !important;
@@ -4261,9 +4234,11 @@
             margin:0 !important;
             pointer-events:none;
         }
+        #overlay-event .quest-event-shell.event-scene.event-mode-deck .deck-browser-preview-card.upgrade-preview.event-upgrade-result .static-card:hover,
         #overlay-rest .quest-event-shell.rest-scene.rest-mode-upgrade .deck-browser-preview-card.upgrade-preview.rest-upgrade-result .static-card:hover {
             transform:scale(0.92) !important;
         }
+        #overlay-event .event-mode-deck .deck-browser-preview-note,
         #overlay-rest .rest-mode-upgrade .deck-browser-preview-note {
             display:none;
         }
@@ -10000,6 +9975,16 @@
         setEventActions([{ label: '离开', className: 'btn-back', onClick: () => { closeOverlay('overlay-event'); advanceMap(); } }]);
     }
 
+    function renderUpgradeResultPreview(card, resultClassName = '') {
+        const clone = QuestersCardRules.createUpgradePreviewCard(card);
+        const extraClass = resultClassName ? ` ${resultClassName}` : '';
+        return `
+            <div class="deck-browser-preview-card upgrade-preview${extraClass}">
+                ${generateCardHTML(clone, true)}
+            </div>
+        `;
+    }
+
     function selectEventUpgrade() {
         setEventShellMode('deck');
         document.getElementById('event-title').innerText = "奇遇：守望者的试炼"; document.getElementById('event-desc').innerText = "对方没有多说，只在地上点亮古老的纹章。请选择一张要淬炼的卡牌。";
@@ -10014,16 +9999,7 @@
             isDisabled: card => card.rarity === '传说' || card.up,
             getPreviewNote: card => card.rarity === '传说' || card.up ? '这张牌无法接受试炼。' : '试炼会强化选中的卡牌，并在确认后推进地图。',
             getActionLabel: () => '接受试炼',
-            getPreviewHtml: card => {
-                const clone = QuestersCardRules.createUpgradePreviewCard(card);
-                return `
-                    <div class="deck-browser-preview-card compare event-upgrade-compare">
-                        <div class="event-upgrade-card-before">${generateCardHTML(card, true)}</div>
-                        <div class="event-upgrade-arrow">➜</div>
-                        <div class="event-upgrade-card-after">${generateCardHTML(clone, true)}</div>
-                    </div>
-                `;
-            },
+            getPreviewHtml: card => renderUpgradeResultPreview(card, 'event-upgrade-result'),
             onAction: card => {
                 const clone = QuestersCardRules.createUpgradePreviewCard(card);
                 const html = `<div>${generateCardHTML(card, true)}</div><div style="font-size: 40px; color: var(--gold);">➡️</div><div>${generateCardHTML(clone, true)}</div>`;
@@ -11297,14 +11273,7 @@
             isDisabled: card => card.rarity === '传说' || card.up,
             getPreviewNote: card => card.rarity === '传说' || card.up ? '这张牌无法继续淬炼。' : '淬炼通常提升基础数值；若没有数值但有费用，则降低非能力牌费用。',
             getActionLabel: () => '确认淬炼',
-            getPreviewHtml: card => {
-                const clone = QuestersCardRules.createUpgradePreviewCard(card);
-                return `
-                    <div class="deck-browser-preview-card upgrade-preview rest-upgrade-result">
-                        ${generateCardHTML(clone, true)}
-                    </div>
-                `;
-            },
+            getPreviewHtml: card => renderUpgradeResultPreview(card, 'rest-upgrade-result'),
             onAction: card => {
                 const clone = QuestersCardRules.createUpgradePreviewCard(card);
                 const html = `<div>${generateCardHTML(card, true)}</div><div style="font-size: 40px; color: var(--gold);">➡️</div><div>${generateCardHTML(clone, true)}</div>`;
