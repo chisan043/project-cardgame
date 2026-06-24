@@ -626,115 +626,1337 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "assets/ui/map/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_v1.webp",
-      "suggestedPath": "assets/demo/review/map_stained_window_ancient_forest_imagegen_transparent_v1.webp",
-      "suggestedDirectory": "assets/demo/review",
-      "status": "active",
+      "sourcePath": "assets/enemies/attack/abyss_overlord_attack_01_v1.webp",
+      "suggestedPath": "assets/enemies/attack/abyss_overlord_attack_01_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
       "referenceModules": [
-        "demo"
+        "enemies"
       ],
       "requiresHumanNameReview": false,
       "risks": [
-        "long_component"
+        "unreferenced"
       ],
-      "derivedFrom": "assets/ui/map/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_v1.webp",
-      "visualGroup": "visual_c8266cbef0",
+      "derivedFrom": "assets/enemies/attack/abyss_overlord_attack_01_v1.webp",
+      "visualGroup": "visual_94cab51bcc",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "assets/ui/map/stained_windows/map_stained_window_cold_cave_imagegen_transparent_v1.webp",
-      "suggestedPath": "assets/demo/review/map_stained_window_cold_cave_imagegen_transparent_v1.webp",
-      "suggestedDirectory": "assets/demo/review",
-      "status": "active",
+      "sourcePath": "assets/enemies/attack/abyss_overlord_attack_02_v1.webp",
+      "suggestedPath": "assets/enemies/attack/abyss_overlord_attack_02_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
       "referenceModules": [
-        "demo"
+        "enemies"
       ],
       "requiresHumanNameReview": false,
       "risks": [
-        "long_component"
+        "unreferenced"
       ],
-      "derivedFrom": "assets/ui/map/stained_windows/map_stained_window_cold_cave_imagegen_transparent_v1.webp",
-      "visualGroup": "visual_b61d4a51a6",
+      "derivedFrom": "assets/enemies/attack/abyss_overlord_attack_02_v1.webp",
+      "visualGroup": "visual_f090173ff8",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "assets/ui/map/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_v1.webp",
-      "suggestedPath": "assets/demo/review/map_stained_window_mountain_plain_imagegen_transparent_v1.webp",
-      "suggestedDirectory": "assets/demo/review",
-      "status": "active",
+      "sourcePath": "assets/enemies/attack/abyss_overlord_attack_03_v1.webp",
+      "suggestedPath": "assets/enemies/attack/abyss_overlord_attack_03_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
       "referenceModules": [
-        "demo"
+        "enemies"
       ],
       "requiresHumanNameReview": false,
       "risks": [
-        "long_component"
+        "unreferenced"
       ],
-      "derivedFrom": "assets/ui/map/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_v1.webp",
-      "visualGroup": "visual_9ca5aae00e",
+      "derivedFrom": "assets/enemies/attack/abyss_overlord_attack_03_v1.webp",
+      "visualGroup": "visual_44270307af",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "assets/ui/map/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_v1.webp",
-      "suggestedPath": "assets/demo/review/map_stained_window_stone_ruins_imagegen_transparent_v1.webp",
-      "suggestedDirectory": "assets/demo/review",
-      "status": "active",
+      "sourcePath": "assets/enemies/attack/abyss_overlord_attack_04_v1.webp",
+      "suggestedPath": "assets/enemies/attack/abyss_overlord_attack_04_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
       "referenceModules": [
-        "demo"
+        "enemies"
       ],
       "requiresHumanNameReview": false,
       "risks": [
-        "long_component"
+        "unreferenced"
       ],
-      "derivedFrom": "assets/ui/map/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_v1.webp",
-      "visualGroup": "visual_7c7814fc1e",
+      "derivedFrom": "assets/enemies/attack/abyss_overlord_attack_04_v1.webp",
+      "visualGroup": "visual_15c903656d",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "assets/ui/map/stained_windows/map_stained_window_temple_hall_imagegen_transparent_v1.webp",
-      "suggestedPath": "assets/demo/review/map_stained_window_temple_hall_imagegen_transparent_v1.webp",
-      "suggestedDirectory": "assets/demo/review",
-      "status": "active",
+      "sourcePath": "assets/enemies/attack/ancient_spider_attack_01_v1.webp",
+      "suggestedPath": "assets/enemies/attack/ancient_spider_attack_01_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
       "referenceModules": [
-        "demo"
+        "enemies"
       ],
       "requiresHumanNameReview": false,
       "risks": [
-        "long_component"
+        "unreferenced"
       ],
-      "derivedFrom": "assets/ui/map/stained_windows/map_stained_window_temple_hall_imagegen_transparent_v1.webp",
-      "visualGroup": "visual_c9da038d62",
+      "derivedFrom": "assets/enemies/attack/ancient_spider_attack_01_v1.webp",
+      "visualGroup": "visual_69e51a18a4",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "assets/ui/map/stained_windows/map_stained_window_town_castle_imagegen_transparent_v1.webp",
-      "suggestedPath": "assets/demo/review/map_stained_window_town_castle_imagegen_transparent_v1.webp",
-      "suggestedDirectory": "assets/demo/review",
-      "status": "active",
+      "sourcePath": "assets/enemies/attack/ancient_spider_attack_02_v1.webp",
+      "suggestedPath": "assets/enemies/attack/ancient_spider_attack_02_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
       "referenceModules": [
-        "demo"
+        "enemies"
       ],
       "requiresHumanNameReview": false,
       "risks": [
-        "long_component"
+        "unreferenced"
       ],
-      "derivedFrom": "assets/ui/map/stained_windows/map_stained_window_town_castle_imagegen_transparent_v1.webp",
-      "visualGroup": "visual_bed47bc5e0",
+      "derivedFrom": "assets/enemies/attack/ancient_spider_attack_02_v1.webp",
+      "visualGroup": "visual_b3b7ac64bd",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "assets/ui/map/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_v1.webp",
-      "suggestedPath": "assets/demo/review/map_stained_window_wasteland_dusk_imagegen_transparent_v1.webp",
-      "suggestedDirectory": "assets/demo/review",
-      "status": "active",
+      "sourcePath": "assets/enemies/attack/ancient_spider_attack_03_v1.webp",
+      "suggestedPath": "assets/enemies/attack/ancient_spider_attack_03_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
       "referenceModules": [
-        "demo"
+        "enemies"
       ],
       "requiresHumanNameReview": false,
       "risks": [
-        "long_component"
+        "unreferenced"
       ],
-      "derivedFrom": "assets/ui/map/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_v1.webp",
-      "visualGroup": "visual_d66e9d2079",
+      "derivedFrom": "assets/enemies/attack/ancient_spider_attack_03_v1.webp",
+      "visualGroup": "visual_c2dcab863b",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/ancient_spider_attack_04_v1.webp",
+      "suggestedPath": "assets/enemies/attack/ancient_spider_attack_04_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/ancient_spider_attack_04_v1.webp",
+      "visualGroup": "visual_3533c0c72d",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/angry_boar_attack_01_v1.webp",
+      "suggestedPath": "assets/enemies/attack/angry_boar_attack_01_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/angry_boar_attack_01_v1.webp",
+      "visualGroup": "visual_1318e7a07d",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/angry_boar_attack_02_v1.webp",
+      "suggestedPath": "assets/enemies/attack/angry_boar_attack_02_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/angry_boar_attack_02_v1.webp",
+      "visualGroup": "visual_4654ac505c",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/angry_boar_attack_03_v1.webp",
+      "suggestedPath": "assets/enemies/attack/angry_boar_attack_03_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/angry_boar_attack_03_v1.webp",
+      "visualGroup": "visual_403545d199",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/angry_boar_attack_04_v1.webp",
+      "suggestedPath": "assets/enemies/attack/angry_boar_attack_04_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/angry_boar_attack_04_v1.webp",
+      "visualGroup": "visual_8e722b5934",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/blood_bat_attack_01_v1.webp",
+      "suggestedPath": "assets/enemies/attack/blood_bat_attack_01_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/blood_bat_attack_01_v1.webp",
+      "visualGroup": "visual_49eadec60e",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/blood_bat_attack_02_v1.webp",
+      "suggestedPath": "assets/enemies/attack/blood_bat_attack_02_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/blood_bat_attack_02_v1.webp",
+      "visualGroup": "visual_6dad6ee4aa",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/blood_bat_attack_03_v1.webp",
+      "suggestedPath": "assets/enemies/attack/blood_bat_attack_03_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/blood_bat_attack_03_v1.webp",
+      "visualGroup": "visual_6ffffc3a40",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/blood_bat_attack_04_v1.webp",
+      "suggestedPath": "assets/enemies/attack/blood_bat_attack_04_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/blood_bat_attack_04_v1.webp",
+      "visualGroup": "visual_5e219c0a24",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/bone_soldier_attack_01_v1.webp",
+      "suggestedPath": "assets/enemies/attack/bone_soldier_attack_01_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/bone_soldier_attack_01_v1.webp",
+      "visualGroup": "visual_d8468b925b",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/bone_soldier_attack_02_v1.webp",
+      "suggestedPath": "assets/enemies/attack/bone_soldier_attack_02_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/bone_soldier_attack_02_v1.webp",
+      "visualGroup": "visual_18de8d6454",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/bone_soldier_attack_03_v1.webp",
+      "suggestedPath": "assets/enemies/attack/bone_soldier_attack_03_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/bone_soldier_attack_03_v1.webp",
+      "visualGroup": "visual_390d3a6e8d",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/bone_soldier_attack_04_v1.webp",
+      "suggestedPath": "assets/enemies/attack/bone_soldier_attack_04_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/bone_soldier_attack_04_v1.webp",
+      "visualGroup": "visual_bb4a367769",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/boss_oni_shura_attack_01_v1.webp",
+      "suggestedPath": "assets/enemies/attack/boss_oni_shura_attack_01_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/boss_oni_shura_attack_01_v1.webp",
+      "visualGroup": "visual_6b5b9a3f2d",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/boss_oni_shura_attack_02_v1.webp",
+      "suggestedPath": "assets/enemies/attack/boss_oni_shura_attack_02_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/boss_oni_shura_attack_02_v1.webp",
+      "visualGroup": "visual_4d1c7dd433",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/boss_oni_shura_attack_03_v1.webp",
+      "suggestedPath": "assets/enemies/attack/boss_oni_shura_attack_03_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/boss_oni_shura_attack_03_v1.webp",
+      "visualGroup": "visual_8ba80df7da",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/boss_oni_shura_attack_04_v1.webp",
+      "suggestedPath": "assets/enemies/attack/boss_oni_shura_attack_04_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/boss_oni_shura_attack_04_v1.webp",
+      "visualGroup": "visual_a296d7c557",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/crimson_blood_witch_attack_01_v1.webp",
+      "suggestedPath": "assets/enemies/attack/crimson_blood_witch_attack_01_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/crimson_blood_witch_attack_01_v1.webp",
+      "visualGroup": "visual_0025396722",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/crimson_blood_witch_attack_02_v1.webp",
+      "suggestedPath": "assets/enemies/attack/crimson_blood_witch_attack_02_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/crimson_blood_witch_attack_02_v1.webp",
+      "visualGroup": "visual_405212d401",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/crimson_blood_witch_attack_03_v1.webp",
+      "suggestedPath": "assets/enemies/attack/crimson_blood_witch_attack_03_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/crimson_blood_witch_attack_03_v1.webp",
+      "visualGroup": "visual_3df0f8e256",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/crimson_blood_witch_attack_04_v1.webp",
+      "suggestedPath": "assets/enemies/attack/crimson_blood_witch_attack_04_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/crimson_blood_witch_attack_04_v1.webp",
+      "visualGroup": "visual_ae5d96aeff",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/elite_minotaur_attack_01_v1.webp",
+      "suggestedPath": "assets/enemies/attack/elite_minotaur_attack_01_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/elite_minotaur_attack_01_v1.webp",
+      "visualGroup": "visual_1aa2f678a5",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/elite_minotaur_attack_02_v1.webp",
+      "suggestedPath": "assets/enemies/attack/elite_minotaur_attack_02_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/elite_minotaur_attack_02_v1.webp",
+      "visualGroup": "visual_b8484f26c2",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/elite_minotaur_attack_03_v1.webp",
+      "suggestedPath": "assets/enemies/attack/elite_minotaur_attack_03_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/elite_minotaur_attack_03_v1.webp",
+      "visualGroup": "visual_5100a6306c",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/elite_minotaur_attack_04_v1.webp",
+      "suggestedPath": "assets/enemies/attack/elite_minotaur_attack_04_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/elite_minotaur_attack_04_v1.webp",
+      "visualGroup": "visual_1822c3e71b",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/fallen_swordsman_attack_01_v1.webp",
+      "suggestedPath": "assets/enemies/attack/fallen_swordsman_attack_01_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/fallen_swordsman_attack_01_v1.webp",
+      "visualGroup": "visual_e9c8fcc2be",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/fallen_swordsman_attack_02_v1.webp",
+      "suggestedPath": "assets/enemies/attack/fallen_swordsman_attack_02_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/fallen_swordsman_attack_02_v1.webp",
+      "visualGroup": "visual_36ea9ddbff",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/fallen_swordsman_attack_03_v1.webp",
+      "suggestedPath": "assets/enemies/attack/fallen_swordsman_attack_03_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/fallen_swordsman_attack_03_v1.webp",
+      "visualGroup": "visual_5f838b0f36",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/fallen_swordsman_attack_04_v1.webp",
+      "suggestedPath": "assets/enemies/attack/fallen_swordsman_attack_04_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/fallen_swordsman_attack_04_v1.webp",
+      "visualGroup": "visual_3b4e90cc6f",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/greedy_thief_attack_01_v1.webp",
+      "suggestedPath": "assets/enemies/attack/greedy_thief_attack_01_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/greedy_thief_attack_01_v1.webp",
+      "visualGroup": "visual_c75596781d",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/greedy_thief_attack_02_v1.webp",
+      "suggestedPath": "assets/enemies/attack/greedy_thief_attack_02_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/greedy_thief_attack_02_v1.webp",
+      "visualGroup": "visual_cc34ba959a",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/greedy_thief_attack_03_v1.webp",
+      "suggestedPath": "assets/enemies/attack/greedy_thief_attack_03_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/greedy_thief_attack_03_v1.webp",
+      "visualGroup": "visual_cfa41717cc",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/greedy_thief_attack_04_v1.webp",
+      "suggestedPath": "assets/enemies/attack/greedy_thief_attack_04_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/greedy_thief_attack_04_v1.webp",
+      "visualGroup": "visual_109d7b8468",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/iron_crab_attack_01_v1.webp",
+      "suggestedPath": "assets/enemies/attack/iron_crab_attack_01_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/iron_crab_attack_01_v1.webp",
+      "visualGroup": "visual_995e5f2a58",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/iron_crab_attack_02_v1.webp",
+      "suggestedPath": "assets/enemies/attack/iron_crab_attack_02_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/iron_crab_attack_02_v1.webp",
+      "visualGroup": "visual_f19c703b1c",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/iron_crab_attack_03_v1.webp",
+      "suggestedPath": "assets/enemies/attack/iron_crab_attack_03_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/iron_crab_attack_03_v1.webp",
+      "visualGroup": "visual_d3ffbabd2a",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/iron_crab_attack_04_v1.webp",
+      "suggestedPath": "assets/enemies/attack/iron_crab_attack_04_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/iron_crab_attack_04_v1.webp",
+      "visualGroup": "visual_e1f860e0e3",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/lost_fox_attack_01_v1.webp",
+      "suggestedPath": "assets/enemies/attack/lost_fox_attack_01_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/lost_fox_attack_01_v1.webp",
+      "visualGroup": "visual_fe4cc2d60a",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/lost_fox_attack_02_v1.webp",
+      "suggestedPath": "assets/enemies/attack/lost_fox_attack_02_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/lost_fox_attack_02_v1.webp",
+      "visualGroup": "visual_a4946e61e2",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/lost_fox_attack_03_v1.webp",
+      "suggestedPath": "assets/enemies/attack/lost_fox_attack_03_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/lost_fox_attack_03_v1.webp",
+      "visualGroup": "visual_a189114525",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/lost_fox_attack_04_v1.webp",
+      "suggestedPath": "assets/enemies/attack/lost_fox_attack_04_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/lost_fox_attack_04_v1.webp",
+      "visualGroup": "visual_66638b6aa7",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/nether_mage_attack_01_v1.webp",
+      "suggestedPath": "assets/enemies/attack/nether_mage_attack_01_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/nether_mage_attack_01_v1.webp",
+      "visualGroup": "visual_14b9fe784a",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/nether_mage_attack_02_v1.webp",
+      "suggestedPath": "assets/enemies/attack/nether_mage_attack_02_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/nether_mage_attack_02_v1.webp",
+      "visualGroup": "visual_0922bddd85",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/nether_mage_attack_03_v1.webp",
+      "suggestedPath": "assets/enemies/attack/nether_mage_attack_03_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/nether_mage_attack_03_v1.webp",
+      "visualGroup": "visual_b3fc41715c",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/nether_mage_attack_04_v1.webp",
+      "suggestedPath": "assets/enemies/attack/nether_mage_attack_04_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/nether_mage_attack_04_v1.webp",
+      "visualGroup": "visual_a640024767",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/shadow_assassin_attack_01_v1.webp",
+      "suggestedPath": "assets/enemies/attack/shadow_assassin_attack_01_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/shadow_assassin_attack_01_v1.webp",
+      "visualGroup": "visual_0fcea662a2",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/shadow_assassin_attack_02_v1.webp",
+      "suggestedPath": "assets/enemies/attack/shadow_assassin_attack_02_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/shadow_assassin_attack_02_v1.webp",
+      "visualGroup": "visual_2c5ea2666c",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/shadow_assassin_attack_03_v1.webp",
+      "suggestedPath": "assets/enemies/attack/shadow_assassin_attack_03_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/shadow_assassin_attack_03_v1.webp",
+      "visualGroup": "visual_fc950efe25",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/shadow_assassin_attack_04_v1.webp",
+      "suggestedPath": "assets/enemies/attack/shadow_assassin_attack_04_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/shadow_assassin_attack_04_v1.webp",
+      "visualGroup": "visual_055e159cab",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/sick_slime_attack_01_v1.webp",
+      "suggestedPath": "assets/enemies/attack/sick_slime_attack_01_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced",
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/enemies/attack/sick_slime_attack_01_v1.webp",
+      "visualGroup": "visual_67d40193aa",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/sick_slime_attack_02_v1.webp",
+      "suggestedPath": "assets/enemies/attack/sick_slime_attack_02_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced",
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/enemies/attack/sick_slime_attack_02_v1.webp",
+      "visualGroup": "visual_6a12674eb9",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/sick_slime_attack_03_v1.webp",
+      "suggestedPath": "assets/enemies/attack/sick_slime_attack_03_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/sick_slime_attack_03_v1.webp",
+      "visualGroup": "visual_adcaa5a4ba",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/sick_slime_attack_04_v1.webp",
+      "suggestedPath": "assets/enemies/attack/sick_slime_attack_04_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/sick_slime_attack_04_v1.webp",
+      "visualGroup": "visual_0d31d29030",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/stitched_brute_attack_01_v1.webp",
+      "suggestedPath": "assets/enemies/attack/stitched_brute_attack_01_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/stitched_brute_attack_01_v1.webp",
+      "visualGroup": "visual_589ede07f1",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/stitched_brute_attack_02_v1.webp",
+      "suggestedPath": "assets/enemies/attack/stitched_brute_attack_02_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/stitched_brute_attack_02_v1.webp",
+      "visualGroup": "visual_eb92131ae9",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/stitched_brute_attack_03_v1.webp",
+      "suggestedPath": "assets/enemies/attack/stitched_brute_attack_03_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/stitched_brute_attack_03_v1.webp",
+      "visualGroup": "visual_02cfecde44",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/stitched_brute_attack_04_v1.webp",
+      "suggestedPath": "assets/enemies/attack/stitched_brute_attack_04_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/stitched_brute_attack_04_v1.webp",
+      "visualGroup": "visual_799824a2cf",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/stone_golem_attack_01_v1.webp",
+      "suggestedPath": "assets/enemies/attack/stone_golem_attack_01_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/stone_golem_attack_01_v1.webp",
+      "visualGroup": "visual_1df6921623",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/stone_golem_attack_02_v1.webp",
+      "suggestedPath": "assets/enemies/attack/stone_golem_attack_02_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/stone_golem_attack_02_v1.webp",
+      "visualGroup": "visual_f0f7f733b6",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/stone_golem_attack_03_v1.webp",
+      "suggestedPath": "assets/enemies/attack/stone_golem_attack_03_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/stone_golem_attack_03_v1.webp",
+      "visualGroup": "visual_f8635b9ace",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/stone_golem_attack_04_v1.webp",
+      "suggestedPath": "assets/enemies/attack/stone_golem_attack_04_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/stone_golem_attack_04_v1.webp",
+      "visualGroup": "visual_9b104d7181",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/undead_bone_dragon_attack_01_v1.webp",
+      "suggestedPath": "assets/enemies/attack/undead_bone_dragon_attack_01_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/undead_bone_dragon_attack_01_v1.webp",
+      "visualGroup": "visual_49ae99b705",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/undead_bone_dragon_attack_02_v1.webp",
+      "suggestedPath": "assets/enemies/attack/undead_bone_dragon_attack_02_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/undead_bone_dragon_attack_02_v1.webp",
+      "visualGroup": "visual_932d481a91",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/undead_bone_dragon_attack_03_v1.webp",
+      "suggestedPath": "assets/enemies/attack/undead_bone_dragon_attack_03_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/undead_bone_dragon_attack_03_v1.webp",
+      "visualGroup": "visual_fcc674bf04",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/undead_bone_dragon_attack_04_v1.webp",
+      "suggestedPath": "assets/enemies/attack/undead_bone_dragon_attack_04_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/undead_bone_dragon_attack_04_v1.webp",
+      "visualGroup": "visual_23c06b3c4c",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/venom_toad_attack_01_v1.webp",
+      "suggestedPath": "assets/enemies/attack/venom_toad_attack_01_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/venom_toad_attack_01_v1.webp",
+      "visualGroup": "visual_1bdc3c6908",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/venom_toad_attack_02_v1.webp",
+      "suggestedPath": "assets/enemies/attack/venom_toad_attack_02_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/venom_toad_attack_02_v1.webp",
+      "visualGroup": "visual_0b125526c5",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/venom_toad_attack_03_v1.webp",
+      "suggestedPath": "assets/enemies/attack/venom_toad_attack_03_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/venom_toad_attack_03_v1.webp",
+      "visualGroup": "visual_1f3d7cec50",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/venom_toad_attack_04_v1.webp",
+      "suggestedPath": "assets/enemies/attack/venom_toad_attack_04_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/venom_toad_attack_04_v1.webp",
+      "visualGroup": "visual_0b2f5be006",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/wild_wolf_attack_01_v1.webp",
+      "suggestedPath": "assets/enemies/attack/wild_wolf_attack_01_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/wild_wolf_attack_01_v1.webp",
+      "visualGroup": "visual_7ea10a326e",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/wild_wolf_attack_02_v1.webp",
+      "suggestedPath": "assets/enemies/attack/wild_wolf_attack_02_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/wild_wolf_attack_02_v1.webp",
+      "visualGroup": "visual_5fe9baa8fd",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/wild_wolf_attack_03_v1.webp",
+      "suggestedPath": "assets/enemies/attack/wild_wolf_attack_03_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/wild_wolf_attack_03_v1.webp",
+      "visualGroup": "visual_b3a3a07c03",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/attack/wild_wolf_attack_04_v1.webp",
+      "suggestedPath": "assets/enemies/attack/wild_wolf_attack_04_v1.webp",
+      "suggestedDirectory": "assets/enemies/attack",
+      "status": "unreferenced",
+      "referenceModules": [
+        "enemies"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/enemies/attack/wild_wolf_attack_04_v1.webp",
+      "visualGroup": "visual_d07a974514",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/battle/sick_slime_battle_v1.webp",
+      "suggestedPath": "assets/enemies/battle/sick_slime_battle_v1.webp",
+      "suggestedDirectory": "assets/enemies/battle",
+      "status": "active",
+      "referenceModules": [
+        "enemies",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/enemies/battle/sick_slime_battle_v1.webp",
+      "visualGroup": "visual_f64565b6a8",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/enemies/portraits/sick_slime_portrait_v1.webp",
+      "suggestedPath": "assets/enemies/portraits/sick_slime_portrait_v1.webp",
+      "suggestedDirectory": "assets/enemies/portraits",
+      "status": "active",
+      "referenceModules": [
+        "enemies",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/enemies/portraits/sick_slime_portrait_v1.webp",
+      "visualGroup": "visual_1b904ab0ad",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/candidates/scenes/review/scene_palette_overview_v1.png",
+      "suggestedPath": "assets/misc/review/scene_palette_overview_v1.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "documented",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/candidates/scenes/review/scene_palette_overview_v1.png",
+      "visualGroup": "visual_4394781dcd",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -767,6 +1989,89 @@
       ],
       "derivedFrom": "assets/candidates/ui/role_select/frames/role_card_frame_selected_v1.png",
       "visualGroup": "visual_23dbdae760",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/characters/warrior/battle_back_skill_cast_v1.webp",
+      "suggestedPath": "assets/misc/review/battle_back_skill_cast_v1.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "documented",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/characters/warrior/battle_back_skill_cast_v1.webp",
+      "visualGroup": "visual_662521a4d7",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/npc/encounter_angel_portrait_bust_v1.png",
+      "suggestedPath": "assets/misc/review/encounter_angel_portrait_bust_v1.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "documented",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced",
+        "identical_content"
+      ],
+      "derivedFrom": "assets/npc/encounter_angel_portrait_bust_v1.png",
+      "visualGroup": "visual_fab44a2da9",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/npc/encounter_angel_portrait_bust_v2.png",
+      "suggestedPath": "assets/misc/review/encounter_angel_portrait_bust_v2.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "documented",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced",
+        "identical_content"
+      ],
+      "derivedFrom": "assets/npc/encounter_angel_portrait_bust_v2.png",
+      "visualGroup": "visual_f8c22b4b7d",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/npc/encounter_angel_portrait_v1.webp",
+      "suggestedPath": "assets/misc/review/encounter_angel_portrait_v1.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "documented",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/npc/encounter_angel_portrait_v1.webp",
+      "visualGroup": "visual_0aa2de6017",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/npc/encounter_angel_window_v1.png",
+      "suggestedPath": "assets/misc/review/encounter_angel_window_v1.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "documented",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced",
+        "identical_content"
+      ],
+      "derivedFrom": "assets/npc/encounter_angel_window_v1.png",
+      "visualGroup": "visual_2ce5d2ab02",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -866,6 +2171,104 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
+      "sourcePath": "assets/source/ui/concepts/event_encounter_actual_ui_concept_v1.png",
+      "suggestedPath": "assets/misc/review/event_encounter_actual_ui_concept_v1.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "documented",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/ui/concepts/event_encounter_actual_ui_concept_v1.png",
+      "visualGroup": "visual_b2b5a039df",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/concepts/event_screens_stained_glass_cel_concept_v1.png",
+      "suggestedPath": "assets/misc/review/event_screens_stained_glass_cel_concept_v1.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "documented",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/ui/concepts/event_screens_stained_glass_cel_concept_v1.png",
+      "visualGroup": "visual_6afdf3986e",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/concepts/stained_glass_cel_fusion_direction_v1.png",
+      "suggestedPath": "assets/misc/review/stained_glass_cel_fusion_direction_v1.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "documented",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/ui/concepts/stained_glass_cel_fusion_direction_v1.png",
+      "visualGroup": "visual_feba749afd",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/events/common/frames/event_portrait_arch_frame_v1.png",
+      "suggestedPath": "assets/misc/review/event_portrait_arch_frame_v1.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "documented",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced",
+        "identical_content"
+      ],
+      "derivedFrom": "assets/source/ui/events/common/frames/event_portrait_arch_frame_v1.png",
+      "visualGroup": "visual_c782c66b41",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/map/review/map_ui_imagegen_component_sheet_transparent_v1_source.png",
+      "suggestedPath": "assets/misc/review/map_ui_imagegen_component_sheet_transparent_v1_source.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "documented",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component",
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/ui/map/review/map_ui_imagegen_component_sheet_transparent_v1_source.png",
+      "visualGroup": "visual_03dbcbc44d",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/source/ui/menu/main_menu_key_art_v1_source.png",
+      "suggestedPath": "assets/misc/review/main_menu_key_art_v1_source.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "documented",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/source/ui/menu/main_menu_key_art_v1_source.png",
+      "visualGroup": "visual_3b18ddca5c",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
       "sourcePath": "assets/source/ui/role_select/panels/role_desc_panel_v1_source.png",
       "suggestedPath": "assets/misc/review/role_desc_panel_v1_source.png",
       "suggestedDirectory": "assets/misc/review",
@@ -898,32 +2301,683 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "assets/archive/unused/2026-06-05/ui_hud/assembly_cache/player_energy_tray_asset_v1_no_circles_transparent.png",
-      "suggestedPath": "assets/review/player_energy_tray_asset_v1_no_circles_transparent.png",
-      "suggestedDirectory": "assets/review",
-      "status": "legacy",
-      "referenceModules": [],
+      "sourcePath": "assets/ui/events/encounter/frames/event_choice_panel_frame_v1.png",
+      "suggestedPath": "assets/misc/review/event_choice_panel_frame_v1.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "documented",
+      "referenceModules": [
+        "misc"
+      ],
       "requiresHumanNameReview": false,
       "risks": [
-        "long_component",
+        "unreferenced",
         "identical_content"
       ],
-      "derivedFrom": "assets/archive/unused/2026-06-05/ui_hud/assembly_cache/player_energy_tray_asset_v1_no_circles_transparent.png",
-      "visualGroup": "visual_83e1325bdd",
+      "derivedFrom": "assets/ui/events/encounter/frames/event_choice_panel_frame_v1.png",
+      "visualGroup": "visual_92f9615384",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "assets/archive/unused/2026-06-05/ui_hud/player_panel/player_hp_bar_long_fill_damage_trail_asset_v1.png",
-      "suggestedPath": "assets/review/player_hp_bar_long_fill_damage_trail_asset_v1.png",
-      "suggestedDirectory": "assets/review",
-      "status": "legacy",
-      "referenceModules": [],
+      "sourcePath": "assets/ui/events/encounter/frames/event_choice_panel_frame_v2.png",
+      "suggestedPath": "assets/misc/review/event_choice_panel_frame_v2.png",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "documented",
+      "referenceModules": [
+        "misc"
+      ],
       "requiresHumanNameReview": false,
       "risks": [
-        "long_component"
+        "unreferenced",
+        "identical_content"
       ],
-      "derivedFrom": "assets/archive/unused/2026-06-05/ui_hud/player_panel/player_hp_bar_long_fill_damage_trail_asset_v1.png",
-      "visualGroup": "visual_f06f0070dc",
+      "derivedFrom": "assets/ui/events/encounter/frames/event_choice_panel_frame_v2.png",
+      "visualGroup": "visual_03055c9dc9",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/map/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_v1.webp",
+      "suggestedPath": "assets/misc/review/map_stained_window_ancient_forest_imagegen_transparent_v1.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component",
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/ui/map/stained_windows/map_stained_window_ancient_forest_imagegen_transparent_v1.webp",
+      "visualGroup": "visual_c8266cbef0",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/map/stained_windows/map_stained_window_cold_cave_imagegen_transparent_v1.webp",
+      "suggestedPath": "assets/misc/review/map_stained_window_cold_cave_imagegen_transparent_v1.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component",
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/ui/map/stained_windows/map_stained_window_cold_cave_imagegen_transparent_v1.webp",
+      "visualGroup": "visual_b61d4a51a6",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/map/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_v1.webp",
+      "suggestedPath": "assets/misc/review/map_stained_window_stone_ruins_imagegen_transparent_v1.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component",
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/ui/map/stained_windows/map_stained_window_stone_ruins_imagegen_transparent_v1.webp",
+      "visualGroup": "visual_7c7814fc1e",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/map/stained_windows/map_stained_window_temple_hall_imagegen_transparent_v1.webp",
+      "suggestedPath": "assets/misc/review/map_stained_window_temple_hall_imagegen_transparent_v1.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component",
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/ui/map/stained_windows/map_stained_window_temple_hall_imagegen_transparent_v1.webp",
+      "visualGroup": "visual_c9da038d62",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/map/stained_windows/map_stained_window_town_castle_imagegen_transparent_v1.webp",
+      "suggestedPath": "assets/misc/review/map_stained_window_town_castle_imagegen_transparent_v1.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component",
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/ui/map/stained_windows/map_stained_window_town_castle_imagegen_transparent_v1.webp",
+      "visualGroup": "visual_bed47bc5e0",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/map/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_v1.webp",
+      "suggestedPath": "assets/misc/review/map_stained_window_wasteland_dusk_imagegen_transparent_v1.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component",
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/ui/map/stained_windows/map_stained_window_wasteland_dusk_imagegen_transparent_v1.webp",
+      "visualGroup": "visual_d66e9d2079",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/enemy_attack/acid_spit_vfx_v1.webp",
+      "suggestedPath": "assets/misc/review/acid_spit_vfx_v1.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/enemy_attack/acid_spit_vfx_v1.webp",
+      "visualGroup": "visual_0506d9c23f",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/enemy_attack/blood_siphon_vfx_v1.webp",
+      "suggestedPath": "assets/misc/review/blood_siphon_vfx_v1.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/enemy_attack/blood_siphon_vfx_v1.webp",
+      "visualGroup": "visual_4a949bae85",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/enemy_attack/bone_slash_vfx_v1.webp",
+      "suggestedPath": "assets/misc/review/bone_slash_vfx_v1.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/enemy_attack/bone_slash_vfx_v1.webp",
+      "visualGroup": "visual_822b4621c6",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/enemy_attack/charge_dust_vfx_v1.webp",
+      "suggestedPath": "assets/misc/review/charge_dust_vfx_v1.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/enemy_attack/charge_dust_vfx_v1.webp",
+      "visualGroup": "visual_293d79544c",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/enemy_attack/claw_bite_vfx_v1.webp",
+      "suggestedPath": "assets/misc/review/claw_bite_vfx_v1.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/enemy_attack/claw_bite_vfx_v1.webp",
+      "visualGroup": "visual_dd9c158234",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/enemy_attack/dagger_flurry_vfx_v1.webp",
+      "suggestedPath": "assets/misc/review/dagger_flurry_vfx_v1.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/enemy_attack/dagger_flurry_vfx_v1.webp",
+      "visualGroup": "visual_7ba348620f",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/enemy_attack/dark_iaijutsu_vfx_v1.webp",
+      "suggestedPath": "assets/misc/review/dark_iaijutsu_vfx_v1.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/enemy_attack/dark_iaijutsu_vfx_v1.webp",
+      "visualGroup": "visual_ae04d37c55",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/enemy_attack/dragon_breath_vfx_v1.webp",
+      "suggestedPath": "assets/misc/review/dragon_breath_vfx_v1.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/enemy_attack/dragon_breath_vfx_v1.webp",
+      "visualGroup": "visual_2d7b59bdd9",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/enemy_attack/foxfire_vfx_v1.webp",
+      "suggestedPath": "assets/misc/review/foxfire_vfx_v1.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/enemy_attack/foxfire_vfx_v1.webp",
+      "visualGroup": "visual_6ee3093e6f",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/enemy_attack/ghostfire_vfx_v1.webp",
+      "suggestedPath": "assets/misc/review/ghostfire_vfx_v1.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/enemy_attack/ghostfire_vfx_v1.webp",
+      "visualGroup": "visual_53c9d944b1",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/enemy_attack/meat_slam_vfx_v1.webp",
+      "suggestedPath": "assets/misc/review/meat_slam_vfx_v1.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/enemy_attack/meat_slam_vfx_v1.webp",
+      "visualGroup": "visual_b20d2cda9d",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/enemy_attack/pincer_snap_vfx_v1.webp",
+      "suggestedPath": "assets/misc/review/pincer_snap_vfx_v1.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/enemy_attack/pincer_snap_vfx_v1.webp",
+      "visualGroup": "visual_2ebf4c7a8d",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/enemy_attack/poison_spit_vfx_v1.webp",
+      "suggestedPath": "assets/misc/review/poison_spit_vfx_v1.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/enemy_attack/poison_spit_vfx_v1.webp",
+      "visualGroup": "visual_9b6c829b74",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/enemy_attack/rock_shock_vfx_v1.webp",
+      "suggestedPath": "assets/misc/review/rock_shock_vfx_v1.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/enemy_attack/rock_shock_vfx_v1.webp",
+      "visualGroup": "visual_536002031d",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/enemy_attack/shadow_darts_vfx_v1.webp",
+      "suggestedPath": "assets/misc/review/shadow_darts_vfx_v1.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/enemy_attack/shadow_darts_vfx_v1.webp",
+      "visualGroup": "visual_1aefd980d3",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/enemy_attack/shura_cleave_vfx_v1.webp",
+      "suggestedPath": "assets/misc/review/shura_cleave_vfx_v1.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/enemy_attack/shura_cleave_vfx_v1.webp",
+      "visualGroup": "visual_92ddb4bb37",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/enemy_attack/sonic_wave_vfx_v1.webp",
+      "suggestedPath": "assets/misc/review/sonic_wave_vfx_v1.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/enemy_attack/sonic_wave_vfx_v1.webp",
+      "visualGroup": "visual_3a047aa8c6",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/enemy_attack/venom_web_vfx_v1.webp",
+      "suggestedPath": "assets/misc/review/venom_web_vfx_v1.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/enemy_attack/venom_web_vfx_v1.webp",
+      "visualGroup": "visual_d5d4297050",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/enemy_attack/void_beam_vfx_v1.webp",
+      "suggestedPath": "assets/misc/review/void_beam_vfx_v1.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/enemy_attack/void_beam_vfx_v1.webp",
+      "visualGroup": "visual_77c3b5d4ec",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/enemy_attack/war_axe_vfx_v1.webp",
+      "suggestedPath": "assets/misc/review/war_axe_vfx_v1.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/enemy_attack/war_axe_vfx_v1.webp",
+      "visualGroup": "visual_977db1c1f4",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_defense/shield_hit_arc_v2.webp",
+      "suggestedPath": "assets/misc/review/shield_hit_arc_v2.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_defense/shield_hit_arc_v2.webp",
+      "visualGroup": "visual_28221c2366",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_defense/shield_hit_body_01_v1.webp",
+      "suggestedPath": "assets/misc/review/shield_hit_body_01_v1.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_defense/shield_hit_body_01_v1.webp",
+      "visualGroup": "visual_5119645a2d",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_defense/shield_hit_body_01_v2.webp",
+      "suggestedPath": "assets/misc/review/shield_hit_body_01_v2.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_defense/shield_hit_body_01_v2.webp",
+      "visualGroup": "visual_560af80731",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_defense/shield_hit_body_02_v1.webp",
+      "suggestedPath": "assets/misc/review/shield_hit_body_02_v1.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_defense/shield_hit_body_02_v1.webp",
+      "visualGroup": "visual_306368eb56",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_defense/shield_hit_body_02_v2.webp",
+      "suggestedPath": "assets/misc/review/shield_hit_body_02_v2.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_defense/shield_hit_body_02_v2.webp",
+      "visualGroup": "visual_e39108c2b6",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_defense/shield_hit_body_03_v1.webp",
+      "suggestedPath": "assets/misc/review/shield_hit_body_03_v1.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_defense/shield_hit_body_03_v1.webp",
+      "visualGroup": "visual_ef267058d4",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_defense/shield_hit_body_03_v2.webp",
+      "suggestedPath": "assets/misc/review/shield_hit_body_03_v2.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_defense/shield_hit_body_03_v2.webp",
+      "visualGroup": "visual_a67cd9b6f8",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_defense/shield_hit_body_04_v1.webp",
+      "suggestedPath": "assets/misc/review/shield_hit_body_04_v1.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_defense/shield_hit_body_04_v1.webp",
+      "visualGroup": "visual_af43c27d61",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_defense/shield_hit_body_04_v2.webp",
+      "suggestedPath": "assets/misc/review/shield_hit_body_04_v2.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_defense/shield_hit_body_04_v2.webp",
+      "visualGroup": "visual_d44bb243a8",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_defense/shield_hit_body_05_v1.webp",
+      "suggestedPath": "assets/misc/review/shield_hit_body_05_v1.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_defense/shield_hit_body_05_v1.webp",
+      "visualGroup": "visual_48674f5b3a",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_defense/shield_hit_body_05_v2.webp",
+      "suggestedPath": "assets/misc/review/shield_hit_body_05_v2.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_defense/shield_hit_body_05_v2.webp",
+      "visualGroup": "visual_8db0889a7b",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_defense/shield_hit_body_06_v1.webp",
+      "suggestedPath": "assets/misc/review/shield_hit_body_06_v1.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_defense/shield_hit_body_06_v1.webp",
+      "visualGroup": "visual_fac598e468",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_defense/shield_hit_body_06_v2.webp",
+      "suggestedPath": "assets/misc/review/shield_hit_body_06_v2.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_defense/shield_hit_body_06_v2.webp",
+      "visualGroup": "visual_2f58d795d4",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_defense/shield_hit_vfx_v1.webp",
+      "suggestedPath": "assets/misc/review/shield_hit_vfx_v1.webp",
+      "suggestedDirectory": "assets/misc/review",
+      "status": "unreferenced",
+      "referenceModules": [
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_defense/shield_hit_vfx_v1.webp",
+      "visualGroup": "visual_607b0a4ee3",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -1263,6 +3317,51 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
+      "sourcePath": "assets/characters/archer/battle_back_attack_start_v1.webp",
+      "suggestedPath": "assets/review/battle_back_attack_start_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/characters/archer/battle_back_attack_start_v1.webp",
+      "visualGroup": "visual_7376200d5c",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/characters/archer/battle_back_skill_cast_v1.webp",
+      "suggestedPath": "assets/review/battle_back_skill_cast_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/characters/archer/battle_back_skill_cast_v1.webp",
+      "visualGroup": "visual_6da562868e",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/characters/archer/role_select_frame_v1.webp",
+      "suggestedPath": "assets/review/role_select_frame_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "demo"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/characters/archer/role_select_frame_v1.webp",
+      "visualGroup": "visual_e6088552f2",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
       "sourcePath": "assets/characters/archer/select_portrait_v1.webp",
       "suggestedPath": "assets/review/select_portrait_v1.webp",
       "suggestedDirectory": "assets/review",
@@ -1277,6 +3376,51 @@
       ],
       "derivedFrom": "assets/characters/archer/select_portrait_v1.webp",
       "visualGroup": "visual_8773787f05",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/characters/mage/battle_back_attack_start_v1.webp",
+      "suggestedPath": "assets/review/battle_back_attack_start_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/characters/mage/battle_back_attack_start_v1.webp",
+      "visualGroup": "visual_087a040fea",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/characters/mage/battle_back_skill_cast_v1.webp",
+      "suggestedPath": "assets/review/battle_back_skill_cast_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/characters/mage/battle_back_skill_cast_v1.webp",
+      "visualGroup": "visual_3c6d9ad6c3",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/characters/mage/role_select_frame_v1.webp",
+      "suggestedPath": "assets/review/role_select_frame_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "demo"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/characters/mage/role_select_frame_v1.webp",
+      "visualGroup": "visual_8d9ce99aba",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -1297,8 +3441,74 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
+      "sourcePath": "assets/characters/warrior/battle_back_attack_01_v2.webp",
+      "suggestedPath": "assets/review/battle_back_attack_01_v2.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/characters/warrior/battle_back_attack_01_v2.webp",
+      "visualGroup": "visual_2df0069c94",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/characters/warrior/battle_back_attack_start_v1.webp",
+      "suggestedPath": "assets/review/battle_back_attack_start_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/characters/warrior/battle_back_attack_start_v1.webp",
+      "visualGroup": "visual_cf0e128f31",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/characters/warrior/battle_back_hurt_01_v2.webp",
+      "suggestedPath": "assets/review/battle_back_hurt_01_v2.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/characters/warrior/battle_back_hurt_01_v2.webp",
+      "visualGroup": "visual_bad1e56653",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
       "sourcePath": "assets/characters/warrior/battle_back_idle_v1.webp",
       "suggestedPath": "assets/review/battle_back_idle_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "demo",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/characters/warrior/battle_back_idle_v1.webp",
+      "visualGroup": "visual_6e283abab2",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/characters/warrior/role_select_frame_v1.webp",
+      "suggestedPath": "assets/review/role_select_frame_v1.webp",
       "suggestedDirectory": "assets/review",
       "status": "active",
       "referenceModules": [
@@ -1309,8 +3519,25 @@
       "risks": [
         "multi_module_reference"
       ],
-      "derivedFrom": "assets/characters/warrior/battle_back_idle_v1.webp",
-      "visualGroup": "visual_6e283abab2",
+      "derivedFrom": "assets/characters/warrior/role_select_frame_v1.webp",
+      "visualGroup": "visual_6ba5afc268",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/characters/warrior/select_portrait_v1.webp",
+      "suggestedPath": "assets/review/select_portrait_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/characters/warrior/select_portrait_v1.webp",
+      "visualGroup": "visual_ab27a556ff",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -1331,8 +3558,8 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "assets/npc/encounter_angel_portrait_v1.webp",
-      "suggestedPath": "assets/review/encounter_angel_portrait_v1.webp",
+      "sourcePath": "assets/npc/encounter_angel_window_v2.png",
+      "suggestedPath": "assets/review/encounter_angel_window_v2.png",
       "suggestedDirectory": "assets/review",
       "status": "active",
       "referenceModules": [
@@ -1341,10 +3568,11 @@
       ],
       "requiresHumanNameReview": false,
       "risks": [
-        "multi_module_reference"
+        "multi_module_reference",
+        "identical_content"
       ],
-      "derivedFrom": "assets/npc/encounter_angel_portrait_v1.webp",
-      "visualGroup": "visual_0aa2de6017",
+      "derivedFrom": "assets/npc/encounter_angel_window_v2.png",
+      "visualGroup": "visual_d7e857700a",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -1365,12 +3593,31 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
+      "sourcePath": "assets/scenes/battle/ancient_forest_day_v1.png",
+      "suggestedPath": "assets/review/ancient_forest_day_v1.png",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "misc",
+        "ui.hud"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference",
+        "identical_content"
+      ],
+      "derivedFrom": "assets/scenes/battle/ancient_forest_day_v1.png",
+      "visualGroup": "visual_e122084cfb",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
       "sourcePath": "assets/scenes/battle/ancient_forest_day_v1.webp",
       "suggestedPath": "assets/review/ancient_forest_day_v1.webp",
       "suggestedDirectory": "assets/review",
       "status": "active",
       "referenceModules": [
         "demo",
+        "misc",
         "ui.hud"
       ],
       "requiresHumanNameReview": false,
@@ -1379,6 +3626,317 @@
       ],
       "derivedFrom": "assets/scenes/battle/ancient_forest_day_v1.webp",
       "visualGroup": "visual_a6f0d83d7d",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/scenes/battle/ancient_forest_sunset_v1.webp",
+      "suggestedPath": "assets/review/ancient_forest_sunset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/scenes/battle/ancient_forest_sunset_v1.webp",
+      "visualGroup": "visual_5d92b4e856",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/scenes/battle/cave_cold_v1.png",
+      "suggestedPath": "assets/review/cave_cold_v1.png",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "misc",
+        "ui.hud"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference",
+        "identical_content"
+      ],
+      "derivedFrom": "assets/scenes/battle/cave_cold_v1.png",
+      "visualGroup": "visual_6d9cecc7be",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/scenes/battle/cave_cold_v1.webp",
+      "suggestedPath": "assets/review/cave_cold_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/scenes/battle/cave_cold_v1.webp",
+      "visualGroup": "visual_81133644bd",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/scenes/battle/dungeon_corridor_torch_v1.webp",
+      "suggestedPath": "assets/review/dungeon_corridor_torch_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/scenes/battle/dungeon_corridor_torch_v1.webp",
+      "visualGroup": "visual_09397f0b58",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/scenes/battle/mountain_plain_day_v1.png",
+      "suggestedPath": "assets/review/mountain_plain_day_v1.png",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "misc",
+        "ui.hud"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference",
+        "identical_content"
+      ],
+      "derivedFrom": "assets/scenes/battle/mountain_plain_day_v1.png",
+      "visualGroup": "visual_e0c067a624",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/scenes/battle/mountain_plain_day_v1.webp",
+      "suggestedPath": "assets/review/mountain_plain_day_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/scenes/battle/mountain_plain_day_v1.webp",
+      "visualGroup": "visual_1951276e53",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/scenes/battle/mountain_plain_night_v1.webp",
+      "suggestedPath": "assets/review/mountain_plain_night_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/scenes/battle/mountain_plain_night_v1.webp",
+      "visualGroup": "visual_1e2b7afb02",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/scenes/battle/mountain_plain_rain_v1.webp",
+      "suggestedPath": "assets/review/mountain_plain_rain_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/scenes/battle/mountain_plain_rain_v1.webp",
+      "visualGroup": "visual_a2665d7e81",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/scenes/battle/stone_ruins_day_v1.png",
+      "suggestedPath": "assets/review/stone_ruins_day_v1.png",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "misc",
+        "ui.hud"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference",
+        "identical_content"
+      ],
+      "derivedFrom": "assets/scenes/battle/stone_ruins_day_v1.png",
+      "visualGroup": "visual_223d5dad54",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/scenes/battle/stone_ruins_day_v1.webp",
+      "suggestedPath": "assets/review/stone_ruins_day_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/scenes/battle/stone_ruins_day_v1.webp",
+      "visualGroup": "visual_21e2c1cbd7",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/scenes/battle/stone_ruins_night_v1.webp",
+      "suggestedPath": "assets/review/stone_ruins_night_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/scenes/battle/stone_ruins_night_v1.webp",
+      "visualGroup": "visual_dc9f2fb1bb",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/scenes/battle/stone_ruins_sunset_v1.webp",
+      "suggestedPath": "assets/review/stone_ruins_sunset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/scenes/battle/stone_ruins_sunset_v1.webp",
+      "visualGroup": "visual_34cff14743",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/scenes/battle/temple_hall_grand_v1.png",
+      "suggestedPath": "assets/review/temple_hall_grand_v1.png",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "misc",
+        "ui.hud"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference",
+        "identical_content"
+      ],
+      "derivedFrom": "assets/scenes/battle/temple_hall_grand_v1.png",
+      "visualGroup": "visual_b63f68c3d9",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/scenes/battle/temple_hall_grand_v1.webp",
+      "suggestedPath": "assets/review/temple_hall_grand_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/scenes/battle/temple_hall_grand_v1.webp",
+      "visualGroup": "visual_ae1d89a5f1",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/scenes/battle/temple_inner_light_v1.webp",
+      "suggestedPath": "assets/review/temple_inner_light_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/scenes/battle/temple_inner_light_v1.webp",
+      "visualGroup": "visual_908ad347bb",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/scenes/battle/wasteland_dusk_v1.png",
+      "suggestedPath": "assets/review/wasteland_dusk_v1.png",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "misc",
+        "ui.hud"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference",
+        "identical_content"
+      ],
+      "derivedFrom": "assets/scenes/battle/wasteland_dusk_v1.png",
+      "visualGroup": "visual_81bfee3250",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/scenes/battle/wasteland_dusk_v1.webp",
+      "suggestedPath": "assets/review/wasteland_dusk_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/scenes/battle/wasteland_dusk_v1.webp",
+      "visualGroup": "visual_3d4fe008e8",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/scenes/event/town_distant_day_v1.webp",
+      "suggestedPath": "assets/review/town_distant_day_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/scenes/event/town_distant_day_v1.webp",
+      "visualGroup": "visual_1a55d19ee1",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -1591,20 +4149,6 @@
       ],
       "derivedFrom": "assets/source/ui/map/review/map_ui_imagegen_component_sheet_chromakey_v1_source.png",
       "visualGroup": "visual_4ff03a1a01",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
-      "sourcePath": "assets/source/ui/map/review/map_ui_imagegen_component_sheet_transparent_v1_source.png",
-      "suggestedPath": "assets/review/map_ui_imagegen_component_sheet_transparent_v1_source.png",
-      "suggestedDirectory": "assets/review",
-      "status": "source",
-      "referenceModules": [],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "long_component"
-      ],
-      "derivedFrom": "assets/source/ui/map/review/map_ui_imagegen_component_sheet_transparent_v1_source.png",
-      "visualGroup": "visual_03dbcbc44d",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -1874,6 +4418,132 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
+      "sourcePath": "assets/ui/events/encounter/backgrounds/event_encounter_cathedral_bg_v1.png",
+      "suggestedPath": "assets/review/event_encounter_cathedral_bg_v1.png",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference",
+        "identical_content"
+      ],
+      "derivedFrom": "assets/ui/events/encounter/backgrounds/event_encounter_cathedral_bg_v1.png",
+      "visualGroup": "visual_738a7aa591",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/events/encounter/buttons/event_choice_button_v1.png",
+      "suggestedPath": "assets/review/event_choice_button_v1.png",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference",
+        "identical_content"
+      ],
+      "derivedFrom": "assets/ui/events/encounter/buttons/event_choice_button_v1.png",
+      "visualGroup": "visual_1aafd23c98",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/events/encounter/buttons/event_exit_button_v1.png",
+      "suggestedPath": "assets/review/event_exit_button_v1.png",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference",
+        "identical_content"
+      ],
+      "derivedFrom": "assets/ui/events/encounter/buttons/event_exit_button_v1.png",
+      "visualGroup": "visual_bf1c24fea5",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/events/encounter/frames/event_choice_panel_frame_v3.png",
+      "suggestedPath": "assets/review/event_choice_panel_frame_v3.png",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference",
+        "identical_content"
+      ],
+      "derivedFrom": "assets/ui/events/encounter/frames/event_choice_panel_frame_v3.png",
+      "visualGroup": "visual_659149c8d0",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/events/encounter/icons/event_choice_icon_pack_v1.png",
+      "suggestedPath": "assets/review/event_choice_icon_pack_v1.png",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference",
+        "identical_content"
+      ],
+      "derivedFrom": "assets/ui/events/encounter/icons/event_choice_icon_pack_v1.png",
+      "visualGroup": "visual_48385ceda7",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/events/encounter/icons/event_choice_icon_treasure_v1.png",
+      "suggestedPath": "assets/review/event_choice_icon_treasure_v1.png",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference",
+        "identical_content"
+      ],
+      "derivedFrom": "assets/ui/events/encounter/icons/event_choice_icon_treasure_v1.png",
+      "visualGroup": "visual_7d46ed89d0",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/events/encounter/icons/event_choice_icon_trial_v1.png",
+      "suggestedPath": "assets/review/event_choice_icon_trial_v1.png",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference",
+        "identical_content"
+      ],
+      "derivedFrom": "assets/ui/events/encounter/icons/event_choice_icon_trial_v1.png",
+      "visualGroup": "visual_788fd352fb",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
       "sourcePath": "assets/ui/hud/center_controls/end_turn_button_shell_asset_v1.webp",
       "suggestedPath": "assets/review/end_turn_button_shell_asset_v1.webp",
       "suggestedDirectory": "assets/review",
@@ -1939,6 +4609,23 @@
       ],
       "derivedFrom": "assets/ui/hud/enemy_panel/battle_hud_enemy_panel_asset_v1.webp",
       "visualGroup": "visual_23a8d3166e",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/enemy_panel/enemy_nameplate_shell_asset_v1.webp",
+      "suggestedPath": "assets/review/enemy_nameplate_shell_asset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "misc",
+        "ui.hud"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/ui/hud/enemy_panel/enemy_nameplate_shell_asset_v1.webp",
+      "visualGroup": "visual_6d2dbb5f8e",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -2033,6 +4720,7 @@
       "status": "active",
       "referenceModules": [
         "demo",
+        "misc",
         "ui.hud"
       ],
       "requiresHumanNameReview": false,
@@ -2050,6 +4738,7 @@
       "status": "active",
       "referenceModules": [
         "demo",
+        "misc",
         "ui.hud"
       ],
       "requiresHumanNameReview": false,
@@ -2061,29 +4750,13 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
-      "sourcePath": "assets/ui/hud/player_panel/player_energy_tray_asset_v1.webp",
-      "suggestedPath": "assets/review/player_energy_tray_asset_v1.webp",
-      "suggestedDirectory": "assets/review",
-      "status": "active",
-      "referenceModules": [
-        "demo",
-        "ui.hud"
-      ],
-      "requiresHumanNameReview": false,
-      "risks": [
-        "multi_module_reference"
-      ],
-      "derivedFrom": "assets/ui/hud/player_panel/player_energy_tray_asset_v1.webp",
-      "visualGroup": "visual_f5d05f1b72",
-      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
-    },
-    {
       "sourcePath": "assets/ui/hud/player_panel/player_energy_tray_asset_v1_no_circles_transparent.webp",
       "suggestedPath": "assets/review/player_energy_tray_asset_v1_no_circles_transparent.webp",
       "suggestedDirectory": "assets/review",
       "status": "active",
       "referenceModules": [
         "demo",
+        "misc",
         "ui.hud"
       ],
       "requiresHumanNameReview": false,
@@ -2096,12 +4769,30 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
+      "sourcePath": "assets/ui/hud/player_panel/player_hp_bar_long_fill_editor_asset_v1.webp",
+      "suggestedPath": "assets/review/player_hp_bar_long_fill_editor_asset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "misc",
+        "ui.hud"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/ui/hud/player_panel/player_hp_bar_long_fill_editor_asset_v1.webp",
+      "visualGroup": "visual_f568c834e9",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
       "sourcePath": "assets/ui/hud/player_panel/player_hp_bar_shell_asset_v1.webp",
       "suggestedPath": "assets/review/player_hp_bar_shell_asset_v1.webp",
       "suggestedDirectory": "assets/review",
       "status": "active",
       "referenceModules": [
         "demo",
+        "misc",
         "ui.hud"
       ],
       "requiresHumanNameReview": false,
@@ -2119,6 +4810,7 @@
       "status": "active",
       "referenceModules": [
         "demo",
+        "misc",
         "ui.hud"
       ],
       "requiresHumanNameReview": false,
@@ -2181,6 +4873,20 @@
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
+      "sourcePath": "assets/ui/hud/status_icons/status_aim_asset_v1.webp",
+      "suggestedPath": "assets/review/status_aim_asset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/ui/hud/status_icons/status_aim_asset_v1.webp",
+      "visualGroup": "visual_368b2d2b1f",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
       "sourcePath": "assets/ui/hud/status_icons/status_armor_asset_v1.webp",
       "suggestedPath": "assets/review/status_armor_asset_v1.webp",
       "suggestedDirectory": "assets/review",
@@ -2191,7 +4897,7 @@
         "unreferenced"
       ],
       "derivedFrom": "assets/ui/hud/status_icons/status_armor_asset_v1.webp",
-      "visualGroup": "visual_1b6bfc824a",
+      "visualGroup": "visual_61f54ad626",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -2205,7 +4911,21 @@
         "unreferenced"
       ],
       "derivedFrom": "assets/ui/hud/status_icons/status_bleed_asset_v1.webp",
-      "visualGroup": "visual_bb43a7df63",
+      "visualGroup": "visual_bdb81d4f4c",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_icons/status_blood-debt_asset_v1.webp",
+      "suggestedPath": "assets/review/status_blood_debt_asset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/ui/hud/status_icons/status_blood-debt_asset_v1.webp",
+      "visualGroup": "visual_828301a208",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -2219,7 +4939,7 @@
         "unreferenced"
       ],
       "derivedFrom": "assets/ui/hud/status_icons/status_blood_asset_v1.webp",
-      "visualGroup": "visual_dcc814bec2",
+      "visualGroup": "visual_ad110ee51e",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -2233,7 +4953,21 @@
         "unreferenced"
       ],
       "derivedFrom": "assets/ui/hud/status_icons/status_burn_asset_v1.webp",
-      "visualGroup": "visual_9ff09d611f",
+      "visualGroup": "visual_3607bf6fbd",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_icons/status_chant_asset_v1.webp",
+      "suggestedPath": "assets/review/status_chant_asset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/ui/hud/status_icons/status_chant_asset_v1.webp",
+      "visualGroup": "visual_69cae27f29",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -2247,7 +4981,7 @@
         "unreferenced"
       ],
       "derivedFrom": "assets/ui/hud/status_icons/status_charge_asset_v1.webp",
-      "visualGroup": "visual_fc42ca0526",
+      "visualGroup": "visual_ca98baa962",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -2261,7 +4995,7 @@
         "unreferenced"
       ],
       "derivedFrom": "assets/ui/hud/status_icons/status_counter_asset_v1.webp",
-      "visualGroup": "visual_63e6af357f",
+      "visualGroup": "visual_999a44797c",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -2275,7 +5009,7 @@
         "unreferenced"
       ],
       "derivedFrom": "assets/ui/hud/status_icons/status_curse_asset_v1.webp",
-      "visualGroup": "visual_972bd17ac3",
+      "visualGroup": "visual_086c6bc65b",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -2289,7 +5023,7 @@
         "unreferenced"
       ],
       "derivedFrom": "assets/ui/hud/status_icons/status_echo_asset_v1.webp",
-      "visualGroup": "visual_d15008713c",
+      "visualGroup": "visual_6d6c4564cb",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -2303,7 +5037,21 @@
         "unreferenced"
       ],
       "derivedFrom": "assets/ui/hud/status_icons/status_enchant_asset_v1.webp",
-      "visualGroup": "visual_dd885be818",
+      "visualGroup": "visual_d2b7039398",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_icons/status_frenzy_asset_v1.webp",
+      "suggestedPath": "assets/review/status_frenzy_asset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/ui/hud/status_icons/status_frenzy_asset_v1.webp",
+      "visualGroup": "visual_7b3bad04d7",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -2317,7 +5065,7 @@
         "unreferenced"
       ],
       "derivedFrom": "assets/ui/hud/status_icons/status_guard_asset_v1.webp",
-      "visualGroup": "visual_69a8b78da3",
+      "visualGroup": "visual_85168c8721",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -2331,7 +5079,21 @@
         "unreferenced"
       ],
       "derivedFrom": "assets/ui/hud/status_icons/status_poison_asset_v1.webp",
-      "visualGroup": "visual_404d5be621",
+      "visualGroup": "visual_3b4e739fd7",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/hud/status_icons/status_sidestep_asset_v1.webp",
+      "suggestedPath": "assets/review/status_sidestep_asset_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/ui/hud/status_icons/status_sidestep_asset_v1.webp",
+      "visualGroup": "visual_5a48a2ae8e",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -2345,7 +5107,7 @@
         "unreferenced"
       ],
       "derivedFrom": "assets/ui/hud/status_icons/status_str_asset_v1.webp",
-      "visualGroup": "visual_4e1ee31c6b",
+      "visualGroup": "visual_02ed698b93",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -2359,7 +5121,7 @@
         "unreferenced"
       ],
       "derivedFrom": "assets/ui/hud/status_icons/status_stun_asset_v1.webp",
-      "visualGroup": "visual_a59f28d0f6",
+      "visualGroup": "visual_674997395a",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -2373,7 +5135,7 @@
         "unreferenced"
       ],
       "derivedFrom": "assets/ui/hud/status_icons/status_thorns_asset_v1.webp",
-      "visualGroup": "visual_11d33d45e4",
+      "visualGroup": "visual_fb4200f0f8",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -2387,7 +5149,7 @@
         "unreferenced"
       ],
       "derivedFrom": "assets/ui/hud/status_icons/status_vuln_asset_v1.webp",
-      "visualGroup": "visual_70fc0c9597",
+      "visualGroup": "visual_10f5d72167",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -2401,7 +5163,1597 @@
         "unreferenced"
       ],
       "derivedFrom": "assets/ui/hud/status_icons/status_weak_asset_v1.webp",
-      "visualGroup": "visual_8857306897",
+      "visualGroup": "visual_adcea07c96",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/ui/map/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_v1.webp",
+      "suggestedPath": "assets/review/map_stained_window_mountain_plain_imagegen_transparent_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "long_component",
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/ui/map/stained_windows/map_stained_window_mountain_plain_imagegen_transparent_v1.webp",
+      "visualGroup": "visual_9ca5aae00e",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_attack/archer_arrow_01_v1.webp",
+      "suggestedPath": "assets/review/archer_arrow_01_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_attack/archer_arrow_01_v1.webp",
+      "visualGroup": "visual_ccbd23ad17",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_attack/archer_arrow_02_v1.webp",
+      "suggestedPath": "assets/review/archer_arrow_02_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_attack/archer_arrow_02_v1.webp",
+      "visualGroup": "visual_e5a3314c43",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_attack/archer_arrow_03_v1.webp",
+      "suggestedPath": "assets/review/archer_arrow_03_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_attack/archer_arrow_03_v1.webp",
+      "visualGroup": "visual_cbd07b90e4",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_attack/archer_arrow_04_v1.webp",
+      "suggestedPath": "assets/review/archer_arrow_04_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_attack/archer_arrow_04_v1.webp",
+      "visualGroup": "visual_ccb1a9884d",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_attack/archer_arrow_05_v1.webp",
+      "suggestedPath": "assets/review/archer_arrow_05_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_attack/archer_arrow_05_v1.webp",
+      "visualGroup": "visual_b2e9fdd655",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_attack/archer_arrow_06_v1.webp",
+      "suggestedPath": "assets/review/archer_arrow_06_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_attack/archer_arrow_06_v1.webp",
+      "visualGroup": "visual_fe6e199db1",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_attack/mage_magic_bolt_01_v1.webp",
+      "suggestedPath": "assets/review/mage_magic_bolt_01_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_attack/mage_magic_bolt_01_v1.webp",
+      "visualGroup": "visual_24a8c881f9",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_attack/mage_magic_bolt_02_v1.webp",
+      "suggestedPath": "assets/review/mage_magic_bolt_02_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_attack/mage_magic_bolt_02_v1.webp",
+      "visualGroup": "visual_a8f64ba2a8",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_attack/mage_magic_bolt_03_v1.webp",
+      "suggestedPath": "assets/review/mage_magic_bolt_03_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_attack/mage_magic_bolt_03_v1.webp",
+      "visualGroup": "visual_5464524089",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_attack/mage_magic_bolt_04_v1.webp",
+      "suggestedPath": "assets/review/mage_magic_bolt_04_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_attack/mage_magic_bolt_04_v1.webp",
+      "visualGroup": "visual_563dc10ebe",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_attack/mage_magic_bolt_05_v1.webp",
+      "suggestedPath": "assets/review/mage_magic_bolt_05_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_attack/mage_magic_bolt_05_v1.webp",
+      "visualGroup": "visual_763914aad1",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_attack/mage_magic_bolt_06_v1.webp",
+      "suggestedPath": "assets/review/mage_magic_bolt_06_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_attack/mage_magic_bolt_06_v1.webp",
+      "visualGroup": "visual_59c36c1113",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_attack/warrior_slash_01_v1.webp",
+      "suggestedPath": "assets/review/warrior_slash_01_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_attack/warrior_slash_01_v1.webp",
+      "visualGroup": "visual_7323376789",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_attack/warrior_slash_02_v1.webp",
+      "suggestedPath": "assets/review/warrior_slash_02_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_attack/warrior_slash_02_v1.webp",
+      "visualGroup": "visual_b72cd492ee",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_attack/warrior_slash_03_v1.webp",
+      "suggestedPath": "assets/review/warrior_slash_03_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_attack/warrior_slash_03_v1.webp",
+      "visualGroup": "visual_7d98a77961",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_attack/warrior_slash_04_v1.webp",
+      "suggestedPath": "assets/review/warrior_slash_04_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_attack/warrior_slash_04_v1.webp",
+      "visualGroup": "visual_3a7b289cf4",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_attack/warrior_slash_05_v1.webp",
+      "suggestedPath": "assets/review/warrior_slash_05_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_attack/warrior_slash_05_v1.webp",
+      "visualGroup": "visual_2e6feaceac",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_attack/warrior_slash_06_v1.webp",
+      "suggestedPath": "assets/review/warrior_slash_06_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_attack/warrior_slash_06_v1.webp",
+      "visualGroup": "visual_df4f7073a7",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/archer_dodge_01_v1.webp",
+      "suggestedPath": "assets/review/archer_dodge_01_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/archer_dodge_01_v1.webp",
+      "visualGroup": "visual_f050e22c9f",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/archer_dodge_01_v2.webp",
+      "suggestedPath": "assets/review/archer_dodge_01_v2.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/archer_dodge_01_v2.webp",
+      "visualGroup": "visual_e5ea1f18ae",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/archer_dodge_01_v3.webp",
+      "suggestedPath": "assets/review/archer_dodge_01_v3.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/archer_dodge_01_v3.webp",
+      "visualGroup": "visual_1d8d568f3f",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/archer_dodge_02_v1.webp",
+      "suggestedPath": "assets/review/archer_dodge_02_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/archer_dodge_02_v1.webp",
+      "visualGroup": "visual_b63b788bbe",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/archer_dodge_02_v2.webp",
+      "suggestedPath": "assets/review/archer_dodge_02_v2.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/archer_dodge_02_v2.webp",
+      "visualGroup": "visual_c3c242d9da",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/archer_dodge_02_v3.webp",
+      "suggestedPath": "assets/review/archer_dodge_02_v3.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/archer_dodge_02_v3.webp",
+      "visualGroup": "visual_016be50cf0",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/archer_dodge_03_v1.webp",
+      "suggestedPath": "assets/review/archer_dodge_03_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/archer_dodge_03_v1.webp",
+      "visualGroup": "visual_a62ddb7eec",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/archer_dodge_03_v2.webp",
+      "suggestedPath": "assets/review/archer_dodge_03_v2.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/archer_dodge_03_v2.webp",
+      "visualGroup": "visual_db696fb304",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/archer_dodge_03_v3.webp",
+      "suggestedPath": "assets/review/archer_dodge_03_v3.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/archer_dodge_03_v3.webp",
+      "visualGroup": "visual_71157ff786",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/archer_dodge_04_v1.webp",
+      "suggestedPath": "assets/review/archer_dodge_04_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/archer_dodge_04_v1.webp",
+      "visualGroup": "visual_1a5ab69027",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/archer_dodge_04_v2.webp",
+      "suggestedPath": "assets/review/archer_dodge_04_v2.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/archer_dodge_04_v2.webp",
+      "visualGroup": "visual_42c5e26944",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/archer_dodge_04_v3.webp",
+      "suggestedPath": "assets/review/archer_dodge_04_v3.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/archer_dodge_04_v3.webp",
+      "visualGroup": "visual_f5c44f83a4",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/archer_dodge_05_v1.webp",
+      "suggestedPath": "assets/review/archer_dodge_05_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/archer_dodge_05_v1.webp",
+      "visualGroup": "visual_ee6fbd5f15",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/archer_dodge_05_v2.webp",
+      "suggestedPath": "assets/review/archer_dodge_05_v2.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/archer_dodge_05_v2.webp",
+      "visualGroup": "visual_79ba41b29d",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/archer_dodge_05_v3.webp",
+      "suggestedPath": "assets/review/archer_dodge_05_v3.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/archer_dodge_05_v3.webp",
+      "visualGroup": "visual_65d92428bf",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/archer_dodge_06_v1.webp",
+      "suggestedPath": "assets/review/archer_dodge_06_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/archer_dodge_06_v1.webp",
+      "visualGroup": "visual_1a4996a4d2",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/archer_dodge_06_v2.webp",
+      "suggestedPath": "assets/review/archer_dodge_06_v2.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/archer_dodge_06_v2.webp",
+      "visualGroup": "visual_b81cbd93ab",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/archer_dodge_06_v3.webp",
+      "suggestedPath": "assets/review/archer_dodge_06_v3.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/archer_dodge_06_v3.webp",
+      "visualGroup": "visual_292e7c0b60",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/archer_wind_01_v1.webp",
+      "suggestedPath": "assets/review/archer_wind_01_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/archer_wind_01_v1.webp",
+      "visualGroup": "visual_5b4a8f67f3",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/archer_wind_01_v2.webp",
+      "suggestedPath": "assets/review/archer_wind_01_v2.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/archer_wind_01_v2.webp",
+      "visualGroup": "visual_0c120807f7",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/archer_wind_01_v3.webp",
+      "suggestedPath": "assets/review/archer_wind_01_v3.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/archer_wind_01_v3.webp",
+      "visualGroup": "visual_53b790feb9",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/archer_wind_02_v1.webp",
+      "suggestedPath": "assets/review/archer_wind_02_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/archer_wind_02_v1.webp",
+      "visualGroup": "visual_c4cc624602",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/archer_wind_02_v2.webp",
+      "suggestedPath": "assets/review/archer_wind_02_v2.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/archer_wind_02_v2.webp",
+      "visualGroup": "visual_ba2e089d9c",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/archer_wind_02_v3.webp",
+      "suggestedPath": "assets/review/archer_wind_02_v3.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/archer_wind_02_v3.webp",
+      "visualGroup": "visual_8176024d4a",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/archer_wind_03_v1.webp",
+      "suggestedPath": "assets/review/archer_wind_03_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/archer_wind_03_v1.webp",
+      "visualGroup": "visual_649b15400d",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/archer_wind_03_v2.webp",
+      "suggestedPath": "assets/review/archer_wind_03_v2.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/archer_wind_03_v2.webp",
+      "visualGroup": "visual_978918c97a",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/archer_wind_03_v3.webp",
+      "suggestedPath": "assets/review/archer_wind_03_v3.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/archer_wind_03_v3.webp",
+      "visualGroup": "visual_bc6123b48f",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/archer_wind_04_v1.webp",
+      "suggestedPath": "assets/review/archer_wind_04_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/archer_wind_04_v1.webp",
+      "visualGroup": "visual_dc7433e04a",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/archer_wind_04_v2.webp",
+      "suggestedPath": "assets/review/archer_wind_04_v2.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/archer_wind_04_v2.webp",
+      "visualGroup": "visual_5564ea7337",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/archer_wind_04_v3.webp",
+      "suggestedPath": "assets/review/archer_wind_04_v3.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/archer_wind_04_v3.webp",
+      "visualGroup": "visual_ab2cbc2fa7",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/archer_wind_05_v1.webp",
+      "suggestedPath": "assets/review/archer_wind_05_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/archer_wind_05_v1.webp",
+      "visualGroup": "visual_8a7d7801d1",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/archer_wind_05_v2.webp",
+      "suggestedPath": "assets/review/archer_wind_05_v2.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/archer_wind_05_v2.webp",
+      "visualGroup": "visual_060f830a1b",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/archer_wind_05_v3.webp",
+      "suggestedPath": "assets/review/archer_wind_05_v3.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/archer_wind_05_v3.webp",
+      "visualGroup": "visual_ffc0f3afb8",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/archer_wind_06_v1.webp",
+      "suggestedPath": "assets/review/archer_wind_06_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/archer_wind_06_v1.webp",
+      "visualGroup": "visual_bd743f7d5f",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/archer_wind_06_v2.webp",
+      "suggestedPath": "assets/review/archer_wind_06_v2.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/archer_wind_06_v2.webp",
+      "visualGroup": "visual_32127eff89",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/archer_wind_06_v3.webp",
+      "suggestedPath": "assets/review/archer_wind_06_v3.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/archer_wind_06_v3.webp",
+      "visualGroup": "visual_43a2d917d1",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/mage_chant_01_v1.webp",
+      "suggestedPath": "assets/review/mage_chant_01_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/mage_chant_01_v1.webp",
+      "visualGroup": "visual_3b2e3a555f",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/mage_chant_01_v2.webp",
+      "suggestedPath": "assets/review/mage_chant_01_v2.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/mage_chant_01_v2.webp",
+      "visualGroup": "visual_1ef12a25ec",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/mage_chant_01_v3.webp",
+      "suggestedPath": "assets/review/mage_chant_01_v3.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/mage_chant_01_v3.webp",
+      "visualGroup": "visual_67335f8bfc",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/mage_chant_02_v1.webp",
+      "suggestedPath": "assets/review/mage_chant_02_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/mage_chant_02_v1.webp",
+      "visualGroup": "visual_f734a88af0",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/mage_chant_02_v2.webp",
+      "suggestedPath": "assets/review/mage_chant_02_v2.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/mage_chant_02_v2.webp",
+      "visualGroup": "visual_a9d22366bd",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/mage_chant_02_v3.webp",
+      "suggestedPath": "assets/review/mage_chant_02_v3.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/mage_chant_02_v3.webp",
+      "visualGroup": "visual_73af539495",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/mage_chant_03_v1.webp",
+      "suggestedPath": "assets/review/mage_chant_03_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/mage_chant_03_v1.webp",
+      "visualGroup": "visual_a7bf91345b",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/mage_chant_03_v2.webp",
+      "suggestedPath": "assets/review/mage_chant_03_v2.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/mage_chant_03_v2.webp",
+      "visualGroup": "visual_9cd1bc12e1",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/mage_chant_03_v3.webp",
+      "suggestedPath": "assets/review/mage_chant_03_v3.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/mage_chant_03_v3.webp",
+      "visualGroup": "visual_22f09b5ba0",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/mage_chant_04_v1.webp",
+      "suggestedPath": "assets/review/mage_chant_04_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/mage_chant_04_v1.webp",
+      "visualGroup": "visual_1fc30e593e",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/mage_chant_04_v2.webp",
+      "suggestedPath": "assets/review/mage_chant_04_v2.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/mage_chant_04_v2.webp",
+      "visualGroup": "visual_c6897119d5",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/mage_chant_04_v3.webp",
+      "suggestedPath": "assets/review/mage_chant_04_v3.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/mage_chant_04_v3.webp",
+      "visualGroup": "visual_82466e1ae5",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/mage_chant_05_v1.webp",
+      "suggestedPath": "assets/review/mage_chant_05_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/mage_chant_05_v1.webp",
+      "visualGroup": "visual_c87f96c984",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/mage_chant_05_v2.webp",
+      "suggestedPath": "assets/review/mage_chant_05_v2.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/mage_chant_05_v2.webp",
+      "visualGroup": "visual_254c3d98cc",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/mage_chant_05_v3.webp",
+      "suggestedPath": "assets/review/mage_chant_05_v3.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/mage_chant_05_v3.webp",
+      "visualGroup": "visual_575953979b",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/mage_chant_06_v1.webp",
+      "suggestedPath": "assets/review/mage_chant_06_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/mage_chant_06_v1.webp",
+      "visualGroup": "visual_df076649ad",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/mage_chant_06_v2.webp",
+      "suggestedPath": "assets/review/mage_chant_06_v2.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/mage_chant_06_v2.webp",
+      "visualGroup": "visual_89cde1704c",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/mage_chant_06_v3.webp",
+      "suggestedPath": "assets/review/mage_chant_06_v3.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/mage_chant_06_v3.webp",
+      "visualGroup": "visual_9f6445a731",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/warrior_shield_01_v1.webp",
+      "suggestedPath": "assets/review/warrior_shield_01_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/warrior_shield_01_v1.webp",
+      "visualGroup": "visual_37e800ed63",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/warrior_shield_01_v2.webp",
+      "suggestedPath": "assets/review/warrior_shield_01_v2.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/warrior_shield_01_v2.webp",
+      "visualGroup": "visual_5edcb1ee2d",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/warrior_shield_01_v3.webp",
+      "suggestedPath": "assets/review/warrior_shield_01_v3.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/warrior_shield_01_v3.webp",
+      "visualGroup": "visual_47981a0a1f",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/warrior_shield_01_v4.webp",
+      "suggestedPath": "assets/review/warrior_shield_01_v4.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/warrior_shield_01_v4.webp",
+      "visualGroup": "visual_7a2e1ce69d",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/warrior_shield_02_v1.webp",
+      "suggestedPath": "assets/review/warrior_shield_02_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/warrior_shield_02_v1.webp",
+      "visualGroup": "visual_ed283b35d7",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/warrior_shield_02_v2.webp",
+      "suggestedPath": "assets/review/warrior_shield_02_v2.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/warrior_shield_02_v2.webp",
+      "visualGroup": "visual_53c04d793b",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/warrior_shield_02_v3.webp",
+      "suggestedPath": "assets/review/warrior_shield_02_v3.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/warrior_shield_02_v3.webp",
+      "visualGroup": "visual_5856b50435",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/warrior_shield_02_v4.webp",
+      "suggestedPath": "assets/review/warrior_shield_02_v4.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/warrior_shield_02_v4.webp",
+      "visualGroup": "visual_34007c31af",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/warrior_shield_03_v1.webp",
+      "suggestedPath": "assets/review/warrior_shield_03_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/warrior_shield_03_v1.webp",
+      "visualGroup": "visual_5d39b8315f",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/warrior_shield_03_v2.webp",
+      "suggestedPath": "assets/review/warrior_shield_03_v2.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/warrior_shield_03_v2.webp",
+      "visualGroup": "visual_b997108b58",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/warrior_shield_03_v3.webp",
+      "suggestedPath": "assets/review/warrior_shield_03_v3.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/warrior_shield_03_v3.webp",
+      "visualGroup": "visual_6ed4cc850d",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/warrior_shield_03_v4.webp",
+      "suggestedPath": "assets/review/warrior_shield_03_v4.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/warrior_shield_03_v4.webp",
+      "visualGroup": "visual_81fb530066",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/warrior_shield_04_v1.webp",
+      "suggestedPath": "assets/review/warrior_shield_04_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/warrior_shield_04_v1.webp",
+      "visualGroup": "visual_85db437f77",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/warrior_shield_04_v2.webp",
+      "suggestedPath": "assets/review/warrior_shield_04_v2.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/warrior_shield_04_v2.webp",
+      "visualGroup": "visual_0ca5fbb6d9",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/warrior_shield_04_v3.webp",
+      "suggestedPath": "assets/review/warrior_shield_04_v3.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/warrior_shield_04_v3.webp",
+      "visualGroup": "visual_e95924235d",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/warrior_shield_04_v4.webp",
+      "suggestedPath": "assets/review/warrior_shield_04_v4.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/warrior_shield_04_v4.webp",
+      "visualGroup": "visual_d8d71d6a6b",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/warrior_shield_05_v1.webp",
+      "suggestedPath": "assets/review/warrior_shield_05_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/warrior_shield_05_v1.webp",
+      "visualGroup": "visual_0a9f524f71",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/warrior_shield_05_v2.webp",
+      "suggestedPath": "assets/review/warrior_shield_05_v2.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/warrior_shield_05_v2.webp",
+      "visualGroup": "visual_c4311e9cd5",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/warrior_shield_05_v3.webp",
+      "suggestedPath": "assets/review/warrior_shield_05_v3.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/warrior_shield_05_v3.webp",
+      "visualGroup": "visual_c92cf72430",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/warrior_shield_05_v4.webp",
+      "suggestedPath": "assets/review/warrior_shield_05_v4.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/warrior_shield_05_v4.webp",
+      "visualGroup": "visual_5d291d753d",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/warrior_shield_06_v1.webp",
+      "suggestedPath": "assets/review/warrior_shield_06_v1.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/warrior_shield_06_v1.webp",
+      "visualGroup": "visual_37b7a85ad5",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/warrior_shield_06_v2.webp",
+      "suggestedPath": "assets/review/warrior_shield_06_v2.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/warrior_shield_06_v2.webp",
+      "visualGroup": "visual_86ce569d61",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/warrior_shield_06_v3.webp",
+      "suggestedPath": "assets/review/warrior_shield_06_v3.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "unreferenced",
+      "referenceModules": [],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "unreferenced"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/warrior_shield_06_v3.webp",
+      "visualGroup": "visual_f69a74a8dd",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_buff/warrior_shield_06_v4.webp",
+      "suggestedPath": "assets/review/warrior_shield_06_v4.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "characters",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_buff/warrior_shield_06_v4.webp",
+      "visualGroup": "visual_904029390f",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_defense/shield_hit_body_01_v3.webp",
+      "suggestedPath": "assets/review/shield_hit_body_01_v3.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_defense/shield_hit_body_01_v3.webp",
+      "visualGroup": "visual_e90573b173",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_defense/shield_hit_body_02_v3.webp",
+      "suggestedPath": "assets/review/shield_hit_body_02_v3.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_defense/shield_hit_body_02_v3.webp",
+      "visualGroup": "visual_1560c94f61",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_defense/shield_hit_body_03_v3.webp",
+      "suggestedPath": "assets/review/shield_hit_body_03_v3.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_defense/shield_hit_body_03_v3.webp",
+      "visualGroup": "visual_0a8f5c6e3f",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_defense/shield_hit_body_04_v3.webp",
+      "suggestedPath": "assets/review/shield_hit_body_04_v3.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_defense/shield_hit_body_04_v3.webp",
+      "visualGroup": "visual_23098843a6",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_defense/shield_hit_body_05_v3.webp",
+      "suggestedPath": "assets/review/shield_hit_body_05_v3.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_defense/shield_hit_body_05_v3.webp",
+      "visualGroup": "visual_aac1f34ec8",
+      "notes": "Suggested path is advisory. Migration must be reviewed before execution."
+    },
+    {
+      "sourcePath": "assets/vfx/player_defense/shield_hit_body_06_v3.webp",
+      "suggestedPath": "assets/review/shield_hit_body_06_v3.webp",
+      "suggestedDirectory": "assets/review",
+      "status": "active",
+      "referenceModules": [
+        "demo",
+        "misc"
+      ],
+      "requiresHumanNameReview": false,
+      "risks": [
+        "multi_module_reference"
+      ],
+      "derivedFrom": "assets/vfx/player_defense/shield_hit_body_06_v3.webp",
+      "visualGroup": "visual_25f684c8f0",
       "notes": "Suggested path is advisory. Migration must be reviewed before execution."
     },
     {
@@ -2509,8 +6861,7 @@
       ],
       "requiresHumanNameReview": false,
       "risks": [
-        "long_component",
-        "identical_content"
+        "long_component"
       ],
       "derivedFrom": "assets/ui/hud/player_panel/player_hp_bar_long_fill_gray_base_editor_asset_v1.png",
       "visualGroup": "visual_0d9845fb0c",
