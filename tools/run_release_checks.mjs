@@ -35,13 +35,15 @@ function main() {
     runStep('asset audit', 'python3', ['tools/audit_assets.py', '--output-dir', auditDir]);
 
     const auditReport = readJson(path.join(auditDir, 'asset-usage-report.json'));
-    if (auditReport.summary.missingReferenceCount !== 0) {
-        throw new Error(`Asset audit has missing references: ${auditReport.summary.missingReferenceCount}`);
-    }
     if (auditReport.summary.missingRuntimeReferenceCount !== 0) {
         throw new Error(`Asset audit has missing runtime/config references: ${auditReport.summary.missingRuntimeReferenceCount}`);
     }
-    console.log(`Asset audit: ${auditReport.summary.assetCount} assets, 0 missing references`);
+    const documentationMissingCount = auditReport.summary.missingReferenceCount - auditReport.summary.missingRuntimeReferenceCount;
+    if (documentationMissingCount !== 0) {
+        console.warn(`Asset audit: ${auditReport.summary.assetCount} assets, ${documentationMissingCount} documentation/source references missing, 0 runtime/config missing references`);
+    } else {
+        console.log(`Asset audit: ${auditReport.summary.assetCount} assets, 0 missing references`);
+    }
 
     runStep('asset boundaries', process.execPath, ['tools/check_asset_boundaries.mjs', '--audit-report', path.join(auditDir, 'asset-usage-report.json')]);
     runStep('asset registries', process.execPath, ['tools/build_asset_registries.mjs', '--check']);

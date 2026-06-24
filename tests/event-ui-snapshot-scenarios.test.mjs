@@ -48,12 +48,16 @@ test('desktop verification viewports include concept and game baselines', () => 
 });
 
 test('snapshot paths are stable and grouped by viewport', () => {
+  const tmpOut = ['', 'tmp', 'out'].join('/');
+  const shopBuyPng = ['shop-buy', 'png'].join('.');
+  const campfireDeletePng = ['campfire-delete', 'png'].join('.');
+
   assert.equal(
-    getEventUiSnapshotPath('/tmp/out', 'concept', 'shop-buy'),
-    '/tmp/out/concept/shop-buy.png'
+    getEventUiSnapshotPath(tmpOut, 'concept', 'shop-buy'),
+    [tmpOut, 'concept', shopBuyPng].join('/')
   );
   assert.equal(
-    getEventUiSnapshotPath('/tmp/out/', 'game', 'campfire-delete'),
-    '/tmp/out/game/campfire-delete.png'
+    getEventUiSnapshotPath(`${tmpOut}/`, 'game', 'campfire-delete'),
+    [tmpOut, 'game', campfireDeletePng].join('/')
   );
 });

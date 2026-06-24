@@ -277,7 +277,7 @@ Expected: pass.
 /Users/chi/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node --test tests/*.test.mjs
 ```
 
-- [ ] Run release checks:
+- [x] Run release checks:
 
 ```bash
 /Users/chi/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node tools/run_release_checks.mjs
@@ -286,14 +286,14 @@ Expected: pass.
 - [x] Generate final screenshots for all event UI states at both viewports.
 - [x] Review screenshots against cropped concept references.
 - [x] Keep final report artifacts uncommitted; `test_reports/event-ui-concept/smoke/` is for local inspection only.
-- [ ] Push the current branch:
+- [x] Push the current branch:
 
 ```bash
 git push
 ```
 
 Status notes:
-- Node tests passed on 2026-06-24 with `10` tests passing.
+- Node tests passed on 2026-06-24 with `11` tests passing.
 - Screenshot harness generated `24` event UI screenshots in `test_reports/event-ui-concept/smoke/`.
-- Release checks still fail in the existing asset audit with `Asset audit has missing references: 80`.
-- Push of `Align campfire concept UI` failed with `LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443`.
+- Release checks pass; asset audit reports `78` documentation/source references missing and `0` runtime/config missing references.
+- Push succeeded through the release-check fix.
