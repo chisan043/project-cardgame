@@ -3788,18 +3788,14 @@
             text-shadow:0 1px 0 rgba(255,255,255,0.28);
         }
         #overlay-rest .rest-result-strip {
-            width:260px;
-            min-height:32px;
-            margin:0 auto 22px;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            color:#2e2117;
-            font-size:16px;
+            max-width:420px;
+            margin:0 auto 24px;
+            color:#4a3320;
+            font-size:17px;
+            line-height:1.45;
             letter-spacing:2px;
-            background:var(--asset-event-choice-button) center / 100% 100% no-repeat;
-            color:#f6e2ac;
-            text-shadow:0 2px 0 #000;
+            text-align:center;
+            text-shadow:0 1px 0 rgba(255,255,255,0.32);
         }
         #overlay-rest .rest-result-hp {
             margin:0 0 22px;
@@ -3846,40 +3842,25 @@
             clip-path:polygon(42% 0, 58% 0, 60% 21%, 78% 42%, 86% 78%, 74% 100%, 26% 100%, 14% 78%, 22% 42%, 40% 21%);
             filter:drop-shadow(0 10px 8px rgba(0,0,0,0.36));
         }
-        #overlay-rest .rest-result-firebowl {
-            width:112px;
-            height:104px;
+        #overlay-rest .rest-result-campfire-art {
+            width:128px;
+            height:112px;
             margin:auto;
             position:relative;
-            filter:drop-shadow(0 12px 10px rgba(0,0,0,0.42));
+            border:1px solid rgba(106,68,26,0.72);
+            border-radius:4px;
+            background:
+                linear-gradient(180deg, rgba(255,232,161,0.12), rgba(38,22,15,0.18)),
+                var(--event-scene-bg) 92% 67% / 420px auto no-repeat;
+            box-shadow:inset 0 0 0 2px rgba(255,236,170,0.16), 0 12px 10px rgba(0,0,0,0.32);
+            overflow:hidden;
         }
-        #overlay-rest .rest-result-firebowl::before {
+        #overlay-rest .rest-result-campfire-art::after {
             content:"";
             position:absolute;
-            left:15px;
-            right:15px;
-            bottom:6px;
-            height:30px;
-            border-radius:50% 50% 12px 12px;
-            background:
-                radial-gradient(ellipse at 50% 20%, rgba(255,213,114,0.54), transparent 54%),
-                linear-gradient(180deg, #6f4a29, #27140f);
-            box-shadow:inset 0 0 0 3px rgba(36,20,8,0.9), inset 0 0 0 6px rgba(199,162,88,0.46);
-        }
-        #overlay-rest .rest-result-firebowl::after {
-            content:"";
-            position:absolute;
-            left:24px;
-            right:24px;
-            bottom:28px;
-            height:66px;
-            background:
-                radial-gradient(circle at 48% 70%, rgba(255,216,91,0.92), transparent 28%),
-                radial-gradient(circle at 58% 58%, rgba(235,71,33,0.82), transparent 42%),
-                linear-gradient(30deg, transparent 18%, #d33c22 19% 39%, #ffcf55 40% 58%, transparent 59%),
-                linear-gradient(-28deg, transparent 18%, #a82a1e 19% 42%, #f09b32 43% 61%, transparent 62%);
-            clip-path:polygon(50% 0, 68% 26%, 64% 43%, 84% 60%, 72% 100%, 25% 100%, 14% 62%, 34% 44%, 31% 26%);
-            box-shadow:0 0 28px rgba(222,87,32,0.36);
+            inset:0;
+            border:1px solid rgba(235,194,98,0.42);
+            pointer-events:none;
         }
         #overlay-rest .rest-result-action {
             width:240px;
@@ -11255,13 +11236,13 @@
         c.innerHTML = `
             <div class="rest-result-view rest-result-campfire-view">
                 <h3>休 息</h3>
-                <div class="rest-result-strip">在温暖的火光中恢复体力。</div>
+                <p class="rest-result-strip">在温暖的火光中恢复体力。</p>
                 <div class="rest-result-hp">
                     <div class="rest-result-hp-label"><span>生命值</span><span>${hpBefore}/${state.maxHp} → ${state.hp}/${state.maxHp}</span></div>
                     <div class="rest-result-hp-bar"><div class="rest-result-hp-fill" style="--rest-result-hp-percent:${hpPercent}%;"></div></div>
                 </div>
                 <div class="rest-result-body">
-                    <div class="rest-result-firebowl" aria-hidden="true"></div>
+                    <div class="rest-result-campfire-art" aria-hidden="true"></div>
                     <p>恢复 ${state.hp - hpBefore} 点生命，不超过最大生命。</p>
                 </div>
                 <button class="btn-gorgeous btn-confirm rest-result-action" type="button" onclick="closeOverlay('overlay-rest'); advanceMap();">休息完毕</button>

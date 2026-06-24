@@ -64,10 +64,23 @@ test('encounter pack reward uses the two-step concept panel', () => {
 
 test('campfire follow-up states use concept-specific compositions', () => {
   assert.match(html, /class="rest-result-view rest-result-campfire-view"/);
-  assert.match(html, /class="rest-result-firebowl"/);
+  assert.match(html, /class="rest-result-campfire-art"/);
   assert.match(html, /deck-browser-preview-card upgrade-preview rest-upgrade-result/);
   assert.doesNotMatch(html, /rest-upgrade-compare/);
   assert.match(html, /class="rest-delete-preview"/);
+});
+
+test('campfire rest result uses prose and authored scene art instead of button-like generated elements', () => {
+  assert.match(html, /<p class="rest-result-strip">在温暖的火光中恢复体力。<\/p>/);
+  assert.doesNotMatch(
+    html,
+    /#overlay-rest \.rest-result-strip\s*\{[^}]*background:var\(--asset-event-choice-button\)/
+  );
+  assert.match(
+    html,
+    /#overlay-rest \.rest-result-campfire-art\s*\{[^}]*background:[^}]*var\(--event-scene-bg\)/
+  );
+  assert.doesNotMatch(html, /rest-result-firebowl/);
 });
 
 test('campfire deck browser states keep a unified four-column card rhythm', () => {
