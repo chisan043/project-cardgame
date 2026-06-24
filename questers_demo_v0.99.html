@@ -4265,40 +4265,31 @@
             grid-template-columns:repeat(4, minmax(0, 1fr));
             gap:12px 14px;
         }
-        #overlay-rest .rest-mode-upgrade .rest-upgrade-compare {
+        #overlay-rest .rest-mode-upgrade .rest-upgrade-result {
             position:absolute;
             left:var(--shop-parchment-left);
-            top:calc(var(--shop-parchment-top) + 56px);
+            top:calc(var(--shop-parchment-top) + 30px);
             width:var(--shop-parchment-width);
-            height:218px;
-            min-height:218px;
-            max-height:218px;
-            display:grid;
-            grid-template-columns:1fr 34px 1fr;
-            align-items:start;
-            justify-items:center;
-            gap:0;
-            overflow:visible;
-            padding:0;
+            height:292px;
+            min-height:292px;
+            max-height:292px;
+            display:flex;
+            align-items:flex-start;
+            justify-content:center;
+            overflow:hidden;
+            padding:2px 0 0;
         }
-        #overlay-rest .rest-mode-upgrade .rest-upgrade-compare .static-card {
+        #overlay-rest .rest-mode-upgrade .rest-upgrade-result .static-card {
             position:relative !important;
             left:auto !important;
             top:auto !important;
-            transform:scale(0.54) !important;
+            transform:scale(0.92) !important;
             transform-origin:center top !important;
-            margin:0 -42px -110px !important;
+            margin:0 0 -42px !important;
             pointer-events:none;
         }
-        #overlay-rest .rest-mode-upgrade .rest-upgrade-compare .static-card:hover {
-            transform:scale(0.54) !important;
-        }
-        #overlay-rest .rest-mode-upgrade .rest-upgrade-arrow {
-            margin-top:72px;
-            color:#f6d36e;
-            font-size:30px;
-            line-height:1;
-            text-shadow:0 2px 0 #000, 0 0 14px rgba(241,196,15,0.28);
+        #overlay-rest .rest-mode-upgrade .rest-upgrade-result .static-card:hover {
+            transform:scale(0.92) !important;
         }
         #overlay-rest .rest-mode-upgrade .deck-browser-preview-note {
             display:none;
@@ -11336,9 +11327,7 @@
             getPreviewHtml: card => {
                 const clone = QuestersCardRules.createUpgradePreviewCard(card);
                 return `
-                    <div class="deck-browser-preview-card compare rest-upgrade-compare">
-                        ${generateCardHTML(card, true)}
-                        <div class="rest-upgrade-arrow" aria-hidden="true">→</div>
+                    <div class="deck-browser-preview-card upgrade-preview rest-upgrade-result">
                         ${generateCardHTML(clone, true)}
                     </div>
                 `;
