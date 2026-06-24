@@ -240,7 +240,7 @@ Expected: pass.
 - [x] Tighten `--shop-shell-width`, `--shop-shell-height`, `--shop-rail-width`, tab placement, gold placement, leave placement, goods board height, detail column width, card scale, relic row placement, and restock placement to better match `compare_shop.png`.
 - [x] Capture `shop-buy`, `shop-copy`, and `shop-delete` at both viewports.
 - [x] Verify no card, price, button, or tab text overlaps.
-- [ ] Commit with `git commit -m "Align shop concept UI"`.
+- [x] Commit with `git commit -m "Align shop concept UI"`.
 
 ### Task 5: Encounter Follow-Up State Tightening
 
@@ -252,7 +252,7 @@ Expected: pass.
 - [x] Keep the home state aligned with `event_encounter_actual_ui_concept_v1.png`.
 - [x] Align result/deck/reward states with the concept-board selected option panels.
 - [x] Verify leave/confirm/skip actions remain readable and stable.
-- [ ] Commit with `git commit -m "Align encounter concept UI"`.
+- [x] Commit with `git commit -m "Align encounter concept UI"`.
 
 ### Task 6: Campfire Follow-Up State Tightening
 
@@ -271,7 +271,7 @@ Expected: pass.
 **Files:**
 - Generate: `test_reports/event-ui-concept/<run>/`
 
-- [ ] Run all Node tests:
+- [x] Run all Node tests:
 
 ```bash
 /Users/chi/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node --test tests/*.test.mjs
@@ -283,11 +283,17 @@ Expected: pass.
 /Users/chi/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node tools/run_release_checks.mjs
 ```
 
-- [ ] Generate final screenshots for all event UI states at both viewports.
-- [ ] Review screenshots against cropped concept references.
-- [ ] Commit final report artifacts if they are intended for repo inspection.
+- [x] Generate final screenshots for all event UI states at both viewports.
+- [x] Review screenshots against cropped concept references.
+- [x] Keep final report artifacts uncommitted; `test_reports/event-ui-concept/smoke/` is for local inspection only.
 - [ ] Push the current branch:
 
 ```bash
 git push
 ```
+
+Status notes:
+- Node tests passed on 2026-06-24 with `10` tests passing.
+- Screenshot harness generated `24` event UI screenshots in `test_reports/event-ui-concept/smoke/`.
+- Release checks still fail in the existing asset audit with `Asset audit has missing references: 80`.
+- Push of `Align campfire concept UI` failed with `LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443`.
