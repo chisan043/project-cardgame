@@ -129,7 +129,7 @@ test('campfire rest result uses prose and authored scene art instead of button-l
 test('campfire deck browser states keep a unified four-column card rhythm', () => {
   assert.match(
     html,
-    /#overlay-event \.event-mode-deck \.deck-browser-grid,\s*#overlay-rest \.rest-mode-upgrade \.deck-browser-grid\s*\{[\s\S]*?grid-template-columns:repeat\(4, minmax\(0, 1fr\)\);/
+    /#overlay-event \.event-mode-deck \.deck-browser-grid,\s*#overlay-rest \.rest-scene\.rest-mode-upgrade \.deck-browser-grid\s*\{[\s\S]*?grid-template-columns:repeat\(4, minmax\(0, 1fr\)\);/
   );
 });
 
@@ -148,10 +148,10 @@ test('upgrade result cards are centered in the shared parchment panel compositio
   );
   assert.match(
     html,
-    /#overlay-event \.event-mode-deck \.deck-browser-shell,\s*#overlay-rest \.rest-mode-upgrade \.deck-browser-shell\s*\{[\s\S]*?--shop-parchment-top: 26px;[\s\S]*?--shop-parchment-height: 344px;/
+    /#overlay-event \.event-mode-deck \.deck-browser-shell,\s*#overlay-rest \.rest-scene\.rest-mode-upgrade \.deck-browser-shell\s*\{[\s\S]*?--shop-board-height: 560px;[\s\S]*?--shop-detail-height: 536px;[\s\S]*?--shop-parchment-left: 53px;[\s\S]*?--shop-parchment-top: 26px;[\s\S]*?--shop-parchment-width: 250px;[\s\S]*?--shop-parchment-height: 400px;/
   );
   assert.match(
     html,
-    /#overlay-event \.quest-event-shell\.event-scene\.event-mode-deck \.deck-browser-preview-card\.upgrade-preview\.event-upgrade-result \.static-card,\s*#overlay-rest \.quest-event-shell\.rest-scene\.rest-mode-upgrade \.deck-browser-preview-card\.upgrade-preview\.rest-upgrade-result \.static-card\s*\{[\s\S]*?transform:scale\(1\.28\) !important;[\s\S]*?transform-origin:center center !important;[\s\S]*?margin:0 !important;/
+    /#overlay-event \.quest-event-shell\.event-scene\.event-mode-deck \.deck-browser-preview-card\.upgrade-preview\.event-upgrade-result \.static-card,\s*#overlay-rest \.quest-event-shell\.rest-scene\.rest-mode-upgrade \.deck-browser-preview-card\.upgrade-preview\.rest-upgrade-result \.static-card\s*\{[\s\S]*?transform:scale\(1\.14\) !important;[\s\S]*?transform-origin:center center !important;[\s\S]*?margin:0 !important;/
   );
 });
