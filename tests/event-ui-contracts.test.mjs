@@ -61,3 +61,10 @@ test('encounter pack reward uses the two-step concept panel', () => {
   assert.match(html, /class="event-pack-reward-options"/);
   assert.match(html, /event-pack-skip/);
 });
+
+test('campfire follow-up states use concept-specific compositions', () => {
+  assert.match(html, /class="rest-result-view rest-result-campfire-view"/);
+  assert.match(html, /class="rest-result-firebowl"/);
+  assert.match(html, /deck-browser-preview-card compare rest-upgrade-compare/);
+  assert.match(html, /class="rest-delete-preview"/);
+});

@@ -260,11 +260,11 @@ Expected: pass.
 - Modify: `questers_demo_v0.99.html`
 - Use: `tools/capture_event_ui_states.mjs`
 
-- [ ] Capture `campfire-home`, `campfire-rest`, `campfire-upgrade`, and `campfire-delete`.
-- [ ] Keep the home state aligned with `rest_campfire_actual_ui_concept_v1.png`.
-- [ ] Align rest, upgrade, and forget flows with the concept-board compositions.
-- [ ] Verify the continue action and card browser states are stable at both viewports.
-- [ ] Commit with `git commit -m "Align campfire concept UI"`.
+- [x] Capture `campfire-home`, `campfire-rest`, `campfire-upgrade`, and `campfire-delete`.
+- [x] Keep the home state aligned with `rest_campfire_actual_ui_concept_v1.png`.
+- [x] Align rest, upgrade, and forget flows with the concept-board compositions.
+- [x] Verify the continue action and card browser states are stable at both viewports.
+- [x] Commit with `git commit -m "Align campfire concept UI"`.
 
 ### Task 7: Final Verification And Push
 
