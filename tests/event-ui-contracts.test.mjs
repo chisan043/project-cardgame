@@ -68,3 +68,10 @@ test('campfire follow-up states use concept-specific compositions', () => {
   assert.match(html, /deck-browser-preview-card compare rest-upgrade-compare/);
   assert.match(html, /class="rest-delete-preview"/);
 });
+
+test('campfire deck browser states keep a unified four-column card rhythm', () => {
+  assert.match(
+    html,
+    /#overlay-rest \.rest-mode-upgrade \.deck-browser-grid\s*\{[\s\S]*?grid-template-columns:repeat\(4, minmax\(0, 1fr\)\);/
+  );
+});
