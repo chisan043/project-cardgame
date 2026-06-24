@@ -237,9 +237,9 @@ Expected: pass.
 - Modify: `questers_demo_v0.99.html`
 - Use: `tools/capture_event_ui_states.mjs`
 
-- [ ] Tighten `--shop-shell-width`, `--shop-shell-height`, `--shop-rail-width`, tab placement, gold placement, leave placement, goods board height, detail column width, card scale, relic row placement, and restock placement to better match `compare_shop.png`.
-- [ ] Capture `shop-buy`, `shop-copy`, and `shop-delete` at both viewports.
-- [ ] Verify no card, price, button, or tab text overlaps.
+- [x] Tighten `--shop-shell-width`, `--shop-shell-height`, `--shop-rail-width`, tab placement, gold placement, leave placement, goods board height, detail column width, card scale, relic row placement, and restock placement to better match `compare_shop.png`.
+- [x] Capture `shop-buy`, `shop-copy`, and `shop-delete` at both viewports.
+- [x] Verify no card, price, button, or tab text overlaps.
 - [ ] Commit with `git commit -m "Align shop concept UI"`.
 
 ### Task 5: Encounter Follow-Up State Tightening
