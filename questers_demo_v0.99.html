@@ -3883,6 +3883,166 @@
         #overlay-event .event-result-card #event-relic-desc {
             color:#4d3926 !important;
         }
+        #overlay-event .event-mode-result #event-content {
+            display:flex !important;
+            align-items:center;
+            justify-content:center;
+            padding:0 64px 48px;
+            box-sizing:border-box;
+        }
+        #overlay-event .event-relic-result-view {
+            width:min(760px, 100%);
+            height:430px;
+            display:grid;
+            grid-template-columns:300px minmax(0, 1fr);
+            gap:34px;
+            align-items:center;
+            justify-content:center;
+            margin:4px auto 0;
+            color:#3c2e22;
+            font-family:"STKaiti", "Microsoft YaHei", serif;
+        }
+        #overlay-event .event-relic-display {
+            min-width:0;
+            height:100%;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+            gap:18px;
+        }
+        #overlay-event .event-relic-medallion {
+            width:252px;
+            height:252px;
+            position:relative;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            border-radius:50%;
+            background:
+                radial-gradient(circle at 44% 32%, rgba(120, 226, 165, 0.34), transparent 28%),
+                radial-gradient(circle at 50% 54%, rgba(41, 128, 92, 0.9), rgba(6, 32, 29, 0.96) 66%, rgba(3, 9, 14, 0.98) 78%);
+            box-shadow:
+                inset 0 0 0 4px rgba(39, 24, 12, 0.9),
+                inset 0 0 0 9px rgba(199, 162, 88, 0.82),
+                inset 0 0 38px rgba(0,0,0,0.58),
+                0 22px 24px rgba(0,0,0,0.48),
+                0 0 24px rgba(91, 192, 142, 0.22);
+        }
+        #overlay-event .event-relic-medallion::before {
+            content:"";
+            position:absolute;
+            inset:-18px;
+            border-radius:50%;
+            background:
+                linear-gradient(0deg, transparent 47%, rgba(199,162,88,0.88) 47% 53%, transparent 53%),
+                linear-gradient(90deg, transparent 47%, rgba(199,162,88,0.88) 47% 53%, transparent 53%);
+            opacity:0.82;
+            filter:drop-shadow(0 3px 0 rgba(0,0,0,0.42));
+            pointer-events:none;
+        }
+        #overlay-event .event-relic-icon {
+            position:relative;
+            z-index:1;
+            min-width:128px;
+            min-height:128px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-size:86px;
+            filter:drop-shadow(0 14px 12px rgba(0,0,0,0.54)) drop-shadow(0 0 22px rgba(241,196,15,0.28));
+        }
+        #overlay-event .event-relic-icon img {
+            width:132px;
+            height:132px;
+            object-fit:contain;
+        }
+        #overlay-event .event-relic-claim {
+            width:230px;
+            height:58px;
+            min-height:58px;
+            padding:0 24px 4px;
+            font-size:24px;
+            letter-spacing:8px;
+            text-indent:8px;
+            background:var(--asset-event-choice-button) center / 100% 100% no-repeat;
+        }
+        #overlay-event .event-relic-parchment {
+            min-width:0;
+            min-height:320px;
+            position:relative;
+            padding:74px 54px 44px;
+            box-sizing:border-box;
+            background:var(--asset-shop-parchment-panel) center / 100% 100% no-repeat;
+            filter:drop-shadow(0 22px 18px rgba(0,0,0,0.58));
+            color:#3f2e20;
+        }
+        #overlay-event .event-relic-parchment h3 {
+            margin:0 0 18px;
+            color:#302116;
+            font-size:26px;
+            letter-spacing:5px;
+            text-indent:5px;
+            text-align:center;
+            text-shadow:0 1px 0 rgba(255,255,255,0.28);
+        }
+        #overlay-event .event-relic-parchment p {
+            margin:0;
+            color:#4d3926;
+            font-size:15px;
+            line-height:1.64;
+            text-align:left;
+        }
+        #overlay-event .event-relic-tags {
+            margin-top:18px;
+            color:#6b4a24;
+            font-size:13px;
+            text-align:center;
+        }
+        #overlay-event .event-mode-deck .deck-browser-upgrade {
+            --shop-board-width: 760px;
+            --shop-detail-width: 356px;
+            --shop-detail-height: 454px;
+            grid-template-columns:minmax(0, 1fr) var(--shop-detail-width);
+        }
+        #overlay-event .event-mode-deck .deck-browser-upgrade .deck-browser-grid {
+            grid-template-columns:repeat(3, minmax(0, 1fr));
+            gap:12px 12px;
+        }
+        #overlay-event .event-mode-deck .event-upgrade-compare {
+            width:100%;
+            height:232px;
+            min-height:232px;
+            max-height:232px;
+            display:grid;
+            grid-template-columns:1fr 42px 1fr;
+            align-items:start;
+            justify-items:center;
+            gap:0;
+            padding-top:4px;
+            overflow:visible;
+        }
+        #overlay-event .event-mode-deck .event-upgrade-compare .static-card {
+            position:relative !important;
+            left:auto !important;
+            top:auto !important;
+            transform:scale(0.62) !important;
+            transform-origin:center top !important;
+            margin:0 -34px -92px !important;
+        }
+        #overlay-event .event-mode-deck .event-upgrade-compare .static-card:hover {
+            transform:scale(0.62) !important;
+        }
+        #overlay-event .event-mode-deck .event-upgrade-arrow {
+            margin-top:82px;
+            color:#f6d36e;
+            font-size:34px;
+            line-height:1;
+            text-shadow:0 2px 0 #000, 0 0 14px rgba(241,196,15,0.28);
+        }
+        #overlay-event .event-mode-deck .deck-browser-upgrade .deck-browser-preview-note {
+            display:none;
+        }
         #overlay-event .event-mode-reward #event-content {
             display:flex !important;
             align-items:center;
@@ -9565,8 +9725,28 @@
         let available = RELIC_POOL.filter(r => !hasRelic(r.id) && !STARTING_RELIC_IDS.has(r.id));
         if (available.length === 0) { document.getElementById('event-content').innerHTML = '<div style="font-size:60px;">💰</div>'; setEventActions([{ label: '离开', onClick: () => { state.gold += 50; updateTopBar(); closeOverlay('overlay-event'); advanceMap(); } }]); return; }
         let r = rollRolePreferredRelic(available); document.getElementById('event-title').innerText = "奇遇：失落的宝库"; document.getElementById('event-desc').innerText = "机关沉沉落下，宝匣中央浮起一件旧时代的秘宝。";
-        document.getElementById('event-content').innerHTML = `<div class="event-result-card anime-panel"><div id="event-relic-icon" style="width:92px; height:92px; margin:0 auto; font-size:64px; filter:drop-shadow(0 4px 0 rgba(0,0,0,0.28));">${renderRelicVisual(r)}</div><h3 id="event-relic-name" style="color:#43271d; letter-spacing:2px; margin-bottom:8px;">${r.name}</h3><div id="event-relic-desc" style="color:#4e3a2e; font-size:13px; line-height:1.6; margin:10px 0; text-align:left;">${formatKeywords(getDisplayRelicDesc(r))}</div>${getRelicBottomTags(r)}</div>`;
-        setEventActions([{ label: '收入囊中', className: 'btn-confirm', onClick: () => { state.relics.push(r); closeOverlay('overlay-event'); updateTopBar(); advanceMap(); } }]);
+        const content = document.getElementById('event-content');
+        content.style.display = 'flex';
+        content.innerHTML = `
+            <div class="event-relic-result-view">
+                <div class="event-relic-display">
+                    <div class="event-relic-medallion"><div class="event-relic-icon">${renderRelicVisual(r)}</div></div>
+                    <button class="btn-gorgeous btn-confirm event-relic-claim" type="button">获得</button>
+                </div>
+                <section class="event-relic-parchment">
+                    <h3 id="event-relic-name">${r.name}</h3>
+                    <p id="event-relic-desc">${formatKeywords(getDisplayRelicDesc(r))}</p>
+                    <div class="event-relic-tags">${getRelicBottomTags(r)}</div>
+                </section>
+            </div>
+        `;
+        content.querySelector('.event-relic-claim').onclick = () => {
+            state.relics.push(r);
+            closeOverlay('overlay-event');
+            updateTopBar();
+            advanceMap();
+        };
+        setEventActions([{ label: '离开', className: 'btn-back', onClick: () => { closeOverlay('overlay-event'); advanceMap(); } }]);
     }
 
     function selectEventUpgrade() {
@@ -9585,7 +9765,13 @@
             getActionLabel: () => '接受试炼',
             getPreviewHtml: card => {
                 const clone = QuestersCardRules.createUpgradePreviewCard(card);
-                return `<div class="deck-browser-preview-card upgrade-preview">${generateCardHTML(clone, true)}</div>`;
+                return `
+                    <div class="deck-browser-preview-card compare event-upgrade-compare">
+                        <div class="event-upgrade-card-before">${generateCardHTML(card, true)}</div>
+                        <div class="event-upgrade-arrow">➜</div>
+                        <div class="event-upgrade-card-after">${generateCardHTML(clone, true)}</div>
+                    </div>
+                `;
             },
             onAction: card => {
                 const clone = QuestersCardRules.createUpgradePreviewCard(card);

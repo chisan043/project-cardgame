@@ -248,10 +248,10 @@ Expected: pass.
 - Modify: `questers_demo_v0.99.html`
 - Use: `tools/capture_event_ui_states.mjs`
 
-- [ ] Capture `encounter-home`, `encounter-treasure`, `encounter-trial`, and `encounter-pack`.
-- [ ] Keep the home state aligned with `event_encounter_actual_ui_concept_v1.png`.
+- [x] Capture `encounter-home`, `encounter-treasure`, `encounter-trial`, and `encounter-pack`.
+- [x] Keep the home state aligned with `event_encounter_actual_ui_concept_v1.png`.
 - [ ] Align result/deck/reward states with the concept-board selected option panels.
-- [ ] Verify leave/confirm/skip actions remain readable and stable.
+- [x] Verify leave/confirm/skip actions remain readable and stable.
 - [ ] Commit with `git commit -m "Align encounter concept UI"`.
 
 ### Task 6: Campfire Follow-Up State Tightening

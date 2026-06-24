@@ -46,3 +46,11 @@ test('shop defaults use the approved concept layout proportions', () => {
     );
   }
 });
+
+test('encounter reward states use concept-specific compositions', () => {
+  assert.match(html, /class="event-relic-result-view"/);
+  assert.match(html, /class="event-relic-medallion"/);
+  assert.match(html, /class="event-relic-parchment"/);
+  assert.match(html, /class="btn-gorgeous btn-confirm event-relic-claim"/);
+  assert.match(html, /deck-browser-preview-card compare event-upgrade-compare/);
+});
