@@ -18,6 +18,7 @@ test('defines every concept state that must be visually verified', () => {
       'encounter-treasure',
       'encounter-trial',
       'encounter-pack',
+      'encounter-pack-reward',
       'campfire-home',
       'campfire-rest',
       'campfire-upgrade',

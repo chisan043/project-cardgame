@@ -13,6 +13,7 @@ export const EVENT_UI_SCENARIOS = [
   { id: 'encounter-treasure', family: 'encounter', openExpression: 'triggerEventNode(); selectEventRelic();' },
   { id: 'encounter-trial', family: 'encounter', openExpression: 'triggerEventNode(); selectEventUpgrade();' },
   { id: 'encounter-pack', family: 'encounter', openExpression: 'triggerEventNode(); selectEventTuneDeck();' },
+  { id: 'encounter-pack-reward', family: 'encounter', openExpression: 'triggerEventNode(); renderEventTuneReward();' },
   { id: 'campfire-home', family: 'campfire', openExpression: "showRestHome(); showOverlay('overlay-rest');" },
   { id: 'campfire-rest', family: 'campfire', openExpression: "showRestHome(); showOverlay('overlay-rest'); resolveRest();" },
   { id: 'campfire-upgrade', family: 'campfire', openExpression: "showRestHome(); showOverlay('overlay-rest'); renderRestUpgrade();" },

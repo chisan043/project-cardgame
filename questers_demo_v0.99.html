@@ -4047,6 +4047,8 @@
             display:flex !important;
             align-items:center;
             justify-content:center;
+            padding:0 52px 48px;
+            box-sizing:border-box;
         }
         #overlay-event .event-mode-reward #event-content .card-grid {
             width:100%;
@@ -4056,6 +4058,130 @@
             gap:28px;
             padding:10px 34px 30px;
             box-sizing:border-box;
+        }
+        #overlay-event .event-pack-reward-view {
+            width:min(800px, 100%);
+            height:430px;
+            display:grid;
+            grid-template-columns:250px minmax(0, 1fr);
+            gap:28px;
+            align-items:stretch;
+            justify-content:center;
+            color:#3c2e22;
+            font-family:"STKaiti", "Microsoft YaHei", serif;
+        }
+        #overlay-event .event-pack-forgotten-slot,
+        #overlay-event .event-pack-reward-panel {
+            position:relative;
+            min-width:0;
+            overflow:hidden;
+            isolation:isolate;
+        }
+        #overlay-event .event-pack-forgotten-slot {
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+            padding:56px 28px 48px;
+            box-sizing:border-box;
+            background:
+                radial-gradient(circle at 50% 38%, rgba(143,39,43,0.3), transparent 45%),
+                linear-gradient(180deg, rgba(4,20,31,0.86), rgba(1,7,12,0.94));
+        }
+        #overlay-event .event-pack-forgotten-slot::before,
+        #overlay-event .event-pack-reward-panel::before {
+            content:"";
+            position:absolute;
+            inset:0;
+            z-index:-1;
+            background:var(--asset-shop-card-selection-panel) center / 100% 100% no-repeat;
+            opacity:0.96;
+            pointer-events:none;
+        }
+        #overlay-event .event-pack-step-label {
+            position:absolute;
+            left:32px;
+            right:32px;
+            top:26px;
+            color:#f1dfb5;
+            font-size:16px;
+            letter-spacing:2px;
+            text-align:center;
+            text-shadow:0 2px 0 #000;
+        }
+        #overlay-event .event-pack-trash-seal {
+            width:122px;
+            height:122px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            border-radius:50%;
+            color:#f1dfb5;
+            font-size:58px;
+            background:
+                radial-gradient(circle at 50% 36%, rgba(221,95,82,0.34), transparent 42%),
+                linear-gradient(180deg, rgba(85,22,26,0.94), rgba(24,8,13,0.98));
+            box-shadow:inset 0 0 0 4px rgba(37,20,8,0.86), inset 0 0 0 8px rgba(199,162,88,0.72), 0 18px 18px rgba(0,0,0,0.42);
+            text-shadow:0 3px 0 #000;
+        }
+        #overlay-event .event-pack-forgotten-copy {
+            margin:24px 0 0;
+            color:#d7c69a;
+            font-size:15px;
+            line-height:1.5;
+            text-align:center;
+            text-shadow:0 2px 0 #000;
+        }
+        #overlay-event .event-pack-reward-panel {
+            padding:54px 34px 76px;
+            box-sizing:border-box;
+            background:linear-gradient(180deg, rgba(4,20,31,0.76), rgba(1,7,12,0.9));
+        }
+        #overlay-event .event-pack-reward-options {
+            height:100%;
+            display:grid;
+            grid-template-columns:repeat(3, minmax(0, 1fr));
+            gap:14px;
+            align-items:start;
+            justify-items:center;
+        }
+        #overlay-event .event-pack-reward-card {
+            width:132px;
+            height:230px;
+            position:relative;
+            padding:0;
+            border:0;
+            background:transparent;
+            cursor:pointer;
+            overflow:visible;
+            color:inherit;
+        }
+        #overlay-event .event-pack-reward-card .static-card {
+            position:relative !important;
+            left:auto !important;
+            top:auto !important;
+            transform:scale(0.66) !important;
+            transform-origin:center top !important;
+            margin:0 -21px -84px !important;
+            pointer-events:none;
+        }
+        #overlay-event .event-pack-reward-card:hover .static-card {
+            transform:translateY(-4px) scale(0.66) !important;
+            filter:drop-shadow(0 0 10px rgba(83,188,224,0.36)) brightness(1.06);
+        }
+        #overlay-event .event-pack-skip {
+            position:absolute;
+            left:50%;
+            bottom:18px;
+            transform:translateX(-50%);
+            width:230px;
+            height:56px;
+            min-height:56px;
+            padding:0 22px 4px;
+            font-size:21px;
+            letter-spacing:5px;
+            text-indent:5px;
+            background:var(--asset-event-choice-button) center / 100% 100% no-repeat;
         }
         #overlay-event .event-mode-deck .deck-browser-shell,
         #overlay-rest .rest-scene:not(.rest-mode-home) .deck-browser-shell {
@@ -9819,23 +9945,41 @@
         setEventShellMode('reward');
         document.getElementById('event-title').innerText = "奇遇：旧路补给";
         document.getElementById('event-desc').innerText = "负累被留在石阶旁，剩下的补给里有几张还能跟上你当前牌组的节奏。";
-        const cList = document.createElement('div');
-        cList.className = 'card-grid';
-        generateRewardChoices(3).forEach(card => {
-            const el = document.createElement('div');
+        const content = document.getElementById('event-content');
+        const rewardChoices = generateRewardChoices(3);
+        content.style.display = 'flex';
+        content.innerHTML = `
+            <div class="event-pack-reward-view">
+                <section class="event-pack-forgotten-slot">
+                    <div class="event-pack-step-label">1. 遗忘一张牌</div>
+                    <div class="event-pack-trash-seal" aria-hidden="true">删</div>
+                    <p class="event-pack-forgotten-copy">负累已留在旧阶旁，牌组变得更轻。</p>
+                </section>
+                <section class="event-pack-reward-panel">
+                    <div class="event-pack-step-label">2. 选择一张补给牌加入</div>
+                    <div class="event-pack-reward-options"></div>
+                    <button class="btn-gorgeous btn-back event-pack-skip" type="button">不拿补给</button>
+                </section>
+            </div>
+        `;
+        const options = content.querySelector('.event-pack-reward-options');
+        rewardChoices.forEach(card => {
+            const el = document.createElement('button');
+            el.type = 'button';
+            el.className = 'event-pack-reward-card';
             el.innerHTML = generateCardHTML(card, true);
             el.onclick = () => {
                 state.deck.push(card);
                 closeOverlay('overlay-event');
                 advanceMap();
             };
-            cList.appendChild(el);
+            options.appendChild(el);
         });
-        const content = document.getElementById('event-content');
-        content.style.display = 'flex';
-        content.innerHTML = '';
-        content.appendChild(cList);
-        setEventActions([{ label: '不拿补给', className: 'btn-back', onClick: () => { closeOverlay('overlay-event'); advanceMap(); } }]);
+        content.querySelector('.event-pack-skip').onclick = () => {
+            closeOverlay('overlay-event');
+            advanceMap();
+        };
+        setEventActions([{ label: '离开', className: 'btn-back', onClick: () => { closeOverlay('overlay-event'); advanceMap(); } }]);
     }
 
     const SHOP_LAYOUT_STORAGE_KEY = 'questers-shop-layout-editor-v5';
