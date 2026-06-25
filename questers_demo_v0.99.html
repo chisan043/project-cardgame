@@ -4243,6 +4243,35 @@
         #overlay-rest .rest-scene.rest-mode-upgrade .deck-browser-preview-note {
             display:none;
         }
+        #overlay-event .event-mode-deck .event-forget-preview {
+            position:absolute;
+            left:var(--shop-parchment-left);
+            top:calc(var(--shop-parchment-top) + 42px);
+            width:var(--shop-parchment-width);
+            height:236px;
+            min-height:236px;
+            max-height:236px;
+            display:flex;
+            align-items:flex-start;
+            justify-content:center;
+            padding:0;
+            overflow:visible;
+        }
+        #overlay-event .event-mode-deck .event-forget-preview .static-card {
+            position:relative !important;
+            left:auto !important;
+            top:auto !important;
+            transform:scale(0.84) !important;
+            transform-origin:center top !important;
+            margin:0 0 -62px !important;
+            pointer-events:none;
+        }
+        #overlay-event .event-mode-deck .event-forget-preview .static-card:hover {
+            transform:scale(0.84) !important;
+        }
+        #overlay-event .event-mode-deck .event-forget-preview + .deck-browser-preview-note {
+            display:none;
+        }
         #overlay-rest .rest-mode-delete .rest-delete-preview {
             position:absolute;
             left:var(--shop-parchment-left);
@@ -10031,7 +10060,7 @@
             mode: 'delete',
             getPreviewNote: () => '整理行囊会先遗忘这张牌，再从三张补给牌中选择一张加入，也可以不拿补给。',
             getActionLabel: () => '遗忘并继续',
-            getPreviewHtml: card => `<div class="deck-browser-preview-card upgrade-preview">${generateCardHTML(card, true)}</div>`,
+            getPreviewHtml: card => `<div class="event-forget-preview">${generateCardHTML(card, true)}</div>`,
             onAction: card => {
                 const html = `<div>${generateCardHTML(card, true)}</div><div style="font-size: 24px; color: var(--crimson);">遗忘此牌，并继续挑选一张补给牌？</div>`;
                 openConfirmPanel('确认整理', html, () => {

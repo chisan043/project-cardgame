@@ -93,6 +93,25 @@ test('encounter pack reward uses the two-step concept panel', () => {
   assert.match(html, /event-pack-skip/);
 });
 
+test('encounter pack forget preview uses the standard parchment card slot', () => {
+  const tuneDeckMatch = html.match(/function selectEventTuneDeck\(\) \{[\s\S]*?setEventActions/);
+  assert.ok(tuneDeckMatch, 'selectEventTuneDeck should be present');
+  assert.doesNotMatch(tuneDeckMatch[0], /deck-browser-preview-card upgrade-preview/);
+  assert.match(tuneDeckMatch[0], /class="event-forget-preview"/);
+  assert.match(
+    html,
+    /#overlay-event \.event-mode-deck \.event-forget-preview\s*\{[\s\S]*?left:var\(--shop-parchment-left\);[\s\S]*?top:calc\(var\(--shop-parchment-top\) \+ 42px\);[\s\S]*?width:var\(--shop-parchment-width\);[\s\S]*?align-items:flex-start;/
+  );
+  assert.match(
+    html,
+    /#overlay-event \.event-mode-deck \.event-forget-preview \.static-card\s*\{[\s\S]*?position:relative !important;[\s\S]*?transform:scale\(0\.84\) !important;[\s\S]*?margin:0 0 -62px !important;/
+  );
+  assert.match(
+    html,
+    /#overlay-event \.event-mode-deck \.event-forget-preview \+ \.deck-browser-preview-note\s*\{[\s\S]*?display:none;/
+  );
+});
+
 test('campfire follow-up states use concept-specific compositions', () => {
   assert.match(html, /class="rest-result-view rest-result-campfire-view"/);
   assert.match(html, /class="rest-result-campfire-art"/);
