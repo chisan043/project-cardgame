@@ -133,7 +133,7 @@ test('campfire deck browser states keep a unified four-column card rhythm', () =
   );
 });
 
-test('upgrade result cards use the campfire upgrade panel proportions', () => {
+test('upgrade result cards use the campfire panel and fit inside the parchment', () => {
   assert.doesNotMatch(html, /event-upgrade-compare/);
   assert.doesNotMatch(html, /event-upgrade-card-before/);
   assert.doesNotMatch(html, /event-upgrade-card-after/);
@@ -152,6 +152,6 @@ test('upgrade result cards use the campfire upgrade panel proportions', () => {
   );
   assert.match(
     html,
-    /#overlay-event \.quest-event-shell\.event-scene\.event-mode-deck \.deck-browser-preview-card\.upgrade-preview\.event-upgrade-result \.static-card,\s*#overlay-rest \.quest-event-shell\.rest-scene\.rest-mode-upgrade \.deck-browser-preview-card\.upgrade-preview\.rest-upgrade-result \.static-card\s*\{[\s\S]*?transform:scale\(1\.28\) !important;[\s\S]*?transform-origin:center center !important;[\s\S]*?margin:0 !important;/
+    /#overlay-event \.quest-event-shell\.event-scene\.event-mode-deck \.deck-browser-preview-card\.upgrade-preview\.event-upgrade-result \.static-card,\s*#overlay-rest \.quest-event-shell\.rest-scene\.rest-mode-upgrade \.deck-browser-preview-card\.upgrade-preview\.rest-upgrade-result \.static-card\s*\{[\s\S]*?transform:scale\(0\.94\) !important;[\s\S]*?transform-origin:center center !important;[\s\S]*?margin:0 !important;/
   );
 });
