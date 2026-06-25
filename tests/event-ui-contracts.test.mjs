@@ -133,7 +133,7 @@ test('campfire deck browser states keep a unified four-column card rhythm', () =
   );
 });
 
-test('upgrade result cards are centered in the shared parchment panel composition', () => {
+test('upgrade result cards use the campfire upgrade panel proportions', () => {
   assert.doesNotMatch(html, /event-upgrade-compare/);
   assert.doesNotMatch(html, /event-upgrade-card-before/);
   assert.doesNotMatch(html, /event-upgrade-card-after/);
@@ -148,10 +148,10 @@ test('upgrade result cards are centered in the shared parchment panel compositio
   );
   assert.match(
     html,
-    /#overlay-event \.event-mode-deck \.deck-browser-shell,\s*#overlay-rest \.rest-scene\.rest-mode-upgrade \.deck-browser-shell\s*\{[\s\S]*?--shop-board-height: 560px;[\s\S]*?--shop-detail-height: 536px;[\s\S]*?--shop-parchment-left: 53px;[\s\S]*?--shop-parchment-top: 26px;[\s\S]*?--shop-parchment-width: 250px;[\s\S]*?--shop-parchment-height: 400px;/
+    /#overlay-event \.event-mode-deck \.deck-browser-shell,\s*#overlay-rest \.rest-scene\.rest-mode-upgrade \.deck-browser-shell\s*\{[\s\S]*?--shop-board-height: 466px;[\s\S]*?--shop-detail-width: 224px;[\s\S]*?--shop-detail-height: 454px;[\s\S]*?--shop-parchment-left: 22px;[\s\S]*?--shop-parchment-top: 40px;[\s\S]*?--shop-parchment-width: 180px;[\s\S]*?--shop-parchment-height: 300px;[\s\S]*?--shop-action-left: 20px;[\s\S]*?--shop-action-bottom: 24px;[\s\S]*?--shop-action-width: 184px;/
   );
   assert.match(
     html,
-    /#overlay-event \.quest-event-shell\.event-scene\.event-mode-deck \.deck-browser-preview-card\.upgrade-preview\.event-upgrade-result \.static-card,\s*#overlay-rest \.quest-event-shell\.rest-scene\.rest-mode-upgrade \.deck-browser-preview-card\.upgrade-preview\.rest-upgrade-result \.static-card\s*\{[\s\S]*?transform:scale\(1\.14\) !important;[\s\S]*?transform-origin:center center !important;[\s\S]*?margin:0 !important;/
+    /#overlay-event \.quest-event-shell\.event-scene\.event-mode-deck \.deck-browser-preview-card\.upgrade-preview\.event-upgrade-result \.static-card,\s*#overlay-rest \.quest-event-shell\.rest-scene\.rest-mode-upgrade \.deck-browser-preview-card\.upgrade-preview\.rest-upgrade-result \.static-card\s*\{[\s\S]*?transform:scale\(1\.28\) !important;[\s\S]*?transform-origin:center center !important;[\s\S]*?margin:0 !important;/
   );
 });
