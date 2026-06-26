@@ -62,6 +62,18 @@ def parse_args() -> argparse.Namespace:
         help="Fraction of the target frame occupied by the largest source frame. Default: 0.94.",
     )
     parser.add_argument(
+        "--frame-width",
+        type=int,
+        default=FRAME_WIDTH,
+        help=f"Output frame width in pixels. Default: {FRAME_WIDTH}.",
+    )
+    parser.add_argument(
+        "--frame-height",
+        type=int,
+        default=FRAME_HEIGHT,
+        help=f"Output frame height in pixels. Default: {FRAME_HEIGHT}.",
+    )
+    parser.add_argument(
         "--extract-mode",
         choices=("auto", "components", "slots"),
         default="auto",
@@ -260,24 +272,34 @@ def crop_content(image: Image.Image, alpha_threshold: int) -> Image.Image | None
     return image.crop(bbox)
 
 
-def get_shared_scale(contents: list[Image.Image | None], padding_ratio: float) -> float:
+def get_shared_scale(
+    contents: list[Image.Image | None],
+    padding_ratio: float,
+    frame_size: tuple[int, int],
+) -> float:
     visible = [content for content in contents if content is not None]
     if not visible:
         raise SystemExit("No visible frame content found after chroma-key removal.")
     max_width = max(content.width for content in visible)
     max_height = max(content.height for content in visible)
-    return min((FRAME_WIDTH * padding_ratio) / max_width, (FRAME_HEIGHT * padding_ratio) / max_height)
+    frame_width, frame_height = frame_size
+    return min((frame_width * padding_ratio) / max_width, (frame_height * padding_ratio) / max_height)
 
 
-def compose_frame(content: Image.Image | None, scale: float) -> Image.Image:
-    canvas = Image.new("RGBA", (FRAME_WIDTH, FRAME_HEIGHT), (0, 0, 0, 0))
+def compose_frame(
+    content: Image.Image | None,
+    scale: float,
+    frame_size: tuple[int, int],
+) -> Image.Image:
+    frame_width, frame_height = frame_size
+    canvas = Image.new("RGBA", (frame_width, frame_height), (0, 0, 0, 0))
     if content is None:
         return canvas
     width = max(1, int(round(content.width * scale)))
     height = max(1, int(round(content.height * scale)))
     resized = content.resize((width, height), Image.Resampling.LANCZOS)
-    x = (FRAME_WIDTH - width) // 2
-    y = FRAME_HEIGHT - height
+    x = (frame_width - width) // 2
+    y = frame_height - height
     canvas.alpha_composite(resized, (x, y))
     return canvas
 
@@ -389,17 +411,22 @@ def paint_checkerboard(image: Image.Image, tile: int = 24) -> None:
             )
 
 
-def render_preview(frames: list[Image.Image], output: Path) -> None:
+def render_preview(
+    frames: list[Image.Image],
+    output: Path,
+    frame_size: tuple[int, int],
+) -> None:
     gap = 16
     columns = 6
     rows = math.ceil(len(frames) / columns)
-    width = columns * FRAME_WIDTH + (columns - 1) * gap
-    height = rows * FRAME_HEIGHT + max(0, rows - 1) * gap
+    frame_width, frame_height = frame_size
+    width = columns * frame_width + (columns - 1) * gap
+    height = rows * frame_height + max(0, rows - 1) * gap
     preview = Image.new("RGBA", (width, height), (255, 255, 255, 255))
     paint_checkerboard(preview)
     for index, frame in enumerate(frames):
-        x = (index % columns) * (FRAME_WIDTH + gap)
-        y = (index // columns) * (FRAME_HEIGHT + gap)
+        x = (index % columns) * (frame_width + gap)
+        y = (index // columns) * (frame_height + gap)
         preview.alpha_composite(frame, (x, y))
     output.parent.mkdir(parents=True, exist_ok=True)
     preview.save(output)
@@ -407,6 +434,9 @@ def render_preview(frames: list[Image.Image], output: Path) -> None:
 
 def main() -> None:
     args = parse_args()
+    if args.frame_width <= 0 or args.frame_height <= 0:
+        raise SystemExit("Frame dimensions must be positive integers.")
+    frame_size = (args.frame_width, args.frame_height)
     source = Image.open(args.input).convert("RGBA")
     keyed = remove_chroma_key(source, args.key_color, args.key_threshold)
     component_frames = None
@@ -420,10 +450,10 @@ def main() -> None:
             for slot in split_strip(keyed)
         ]
     contents = [crop_content(frame, args.alpha_threshold) for frame in component_frames]
-    scale = get_shared_scale(contents, args.padding_ratio)
+    scale = get_shared_scale(contents, args.padding_ratio, frame_size)
     frames = [
         remove_small_components(
-            remove_chroma_fringe(compose_frame(content, scale), args.alpha_threshold),
+            remove_chroma_fringe(compose_frame(content, scale, frame_size), args.alpha_threshold),
             args.alpha_threshold,
             args.min_component_area,
             min(args.min_component_ratio, 0.005),
@@ -438,7 +468,7 @@ def main() -> None:
         frame.save(output, format="WEBP", lossless=True, quality=95, method=6)
 
     if args.preview:
-        render_preview(frames, Path(args.preview))
+        render_preview(frames, Path(args.preview), frame_size)
 
 
 if __name__ == "__main__":

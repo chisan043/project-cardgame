@@ -2,9 +2,9 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Replace the five rejected enemy `v2` attack samples with six-frame attack frames derived from the existing 1990s cel-style enemy battle illustrations while preserving the existing runtime integration and left-down attack direction.
+**Goal:** Replace the rejected enemy `v2` attack samples with six-frame attack frames derived from the existing 1990s cel-style enemy battle illustrations while preserving runtime integration and left-down attack direction. The scope has since expanded from the original five sample enemies to the full current enemy roster.
 
-**Architecture:** Keep the current runtime contract unchanged: five sample enemies still resolve to `assets/enemies/attack/<slug>_attack_01_v2.webp` through `_06_v2.webp`, and all other enemies keep `v1` fallback behavior. Generate one six-slot strip per enemy, normalize with `tools/build_enemy_attack_frames.py`, and review outputs through contact sheets before committing.
+**Architecture:** Keep the runtime contract unchanged: configured enemies resolve to `assets/enemies/attack/<slug>_attack_01_v2.webp` through `_06_v2.webp`, while each `v2` frame keeps a `v1` fallback source. Generate one six-slot strip per enemy, normalize with `tools/build_enemy_attack_frames.py`, and review outputs through contact sheets before committing. For scale correctness, output canvases use 900px height and a width derived from each enemy's battle-art aspect ratio, so wide enemies do not shrink during the attack swap.
 
 **Tech Stack:** Built-in `image_gen` for raster strip generation, Pillow/Python for contact sheets and alpha validation, existing `tools/build_enemy_attack_frames.py` for normalization, Node test runner for runtime/asset checks.
 
@@ -12,7 +12,7 @@
 
 ## File Structure
 
-- Modify regenerated runtime assets: `assets/enemies/attack/<slug>_attack_01_v2.webp` through `_06_v2.webp` for `sick_slime`, `wild_wolf`, `greedy_thief`, `nether_mage`, and `undead_bone_dragon`.
+- Modify regenerated runtime assets: `assets/enemies/attack/<slug>_attack_01_v2.webp` through `_06_v2.webp` for all current enemy slugs.
 - Modify regenerated source previews: `assets/source/enemies/attack/v2_samples/<slug>_attack_preview_v2.png`.
 - Modify source strips only after a strip is accepted: `assets/source/enemies/attack/v2_samples/<slug>_attack_strip_v2_source.png`.
 - Read style spec: `docs/superpowers/specs/2026-06-27-enemy-attack-90s-cel-style-design.md`.

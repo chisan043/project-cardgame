@@ -2,6 +2,8 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
+> Status note: this plan records the original five-enemy pilot. The current implementation has expanded the same `v2` six-frame pipeline to the full enemy roster, with per-enemy canvas widths derived from battle-art aspect ratio instead of a single fixed `675x900` canvas.
+
 **Goal:** Generate and integrate real six-frame attack animations for five sample enemies without relying on CSS stretch effects.
 
 **Architecture:** Use existing battle sprites as identity seeds, generate one six-slot strip per enemy, normalize each strip into `675x900` transparent WebP frames, and update runtime frame lookup to prefer configured `v2` six-frame sets. Keep non-sample enemies on the existing `v1` four-frame convention.

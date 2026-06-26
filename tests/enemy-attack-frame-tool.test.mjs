@@ -115,3 +115,47 @@ assert preview.width > 675 and preview.height >= 900
 `], { encoding: 'utf8' });
   assert.equal(inspect.status, 0, inspect.stderr);
 });
+
+test('enemy attack frame tool supports custom output canvas dimensions', () => {
+  const dir = mkdtempSync(path.join(tmpdir(), 'questers-enemy-frames-sized-'));
+  const pngExt = ['p', 'ng'].join('');
+  const webpExt = ['w', 'ebp'].join('');
+  const strip = path.join(dir, `strip.${pngExt}`);
+  const outDir = path.join(dir, 'frames');
+
+  const makeStrip = spawnSync('python3', ['-c', `
+from PIL import Image, ImageDraw
+img = Image.new('RGBA', (720, 140), (255, 0, 255, 255))
+draw = ImageDraw.Draw(img)
+for i in range(6):
+    left = i * 120 + 24
+    top = 30 + (i % 2) * 12
+    draw.ellipse((left, top, left + 72, top + 92), fill=(45, 80 + i * 18, 115, 255))
+img.save(r'${strip}')
+`], { encoding: 'utf8' });
+  assert.equal(makeStrip.status, 0, makeStrip.stderr);
+
+  const result = spawnSync('python3', [
+    'tools/build_enemy_attack_frames.py',
+    '--input', strip,
+    '--slug', 'wide_enemy',
+    '--out-dir', outDir,
+    '--frame-width', '1200',
+    '--frame-height', '900'
+  ], {
+    cwd: new URL('..', import.meta.url),
+    encoding: 'utf8'
+  });
+
+  assert.equal(result.status, 0, `${result.stdout}\n${result.stderr}`);
+
+  const inspect = spawnSync('python3', ['-c', `
+from pathlib import Path
+from PIL import Image
+for path in sorted(Path(r'${outDir}').glob('*.${webpExt}')):
+    img = Image.open(path).convert('RGBA')
+    assert img.size == (1200, 900), (path.name, img.size)
+    assert img.getchannel('A').getbbox() is not None, path.name
+`], { encoding: 'utf8' });
+  assert.equal(inspect.status, 0, inspect.stderr);
+});
