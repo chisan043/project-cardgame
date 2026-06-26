@@ -7136,10 +7136,18 @@
     }
 
     const ENEMY_ATTACK_FRAME_DURATIONS = [110, 120, 170, 120];
+    const ENEMY_ATTACK_FRAME_SETS = {
+        sick_slime: { version: 'v2', frameCount: 6, durations: [70, 80, 95, 125, 90, 80] },
+        wild_wolf: { version: 'v2', frameCount: 6, durations: [65, 75, 90, 120, 90, 75] },
+        greedy_thief: { version: 'v2', frameCount: 6, durations: [60, 70, 85, 95, 85, 75] },
+        nether_mage: { version: 'v2', frameCount: 6, durations: [85, 95, 115, 125, 95, 80] },
+        undead_bone_dragon: { version: 'v2', frameCount: 6, durations: [90, 100, 125, 140, 105, 90] }
+    };
 
     function getEnemyAttackFrames(enemy) {
         return QuestersVisualRules.getEnemyAttackFrames(enemy, {
             enemyAssetSlugs: ENEMY_ASSET_SLUGS,
+            enemyAttackFrameSets: ENEMY_ATTACK_FRAME_SETS,
             frameDurations: ENEMY_ATTACK_FRAME_DURATIONS,
             getBaseEnemyName: QuestersBattleRules.getBaseEnemyName
         });
@@ -7959,13 +7967,18 @@
         let elapsed = 0;
         frames.forEach(frame => {
             setTimeout(() => {
-                if (token === enemyAttackAnimationToken) avatar.src = frame.src;
+                if (token !== enemyAttackAnimationToken) return;
+                avatar.dataset.frameFallbackSrc = frame.fallbackSrc || '';
+                avatar.dataset.frameFallbackTried = '';
+                avatar.src = frame.src;
             }, elapsed);
             elapsed += frame.duration;
         });
         setTimeout(() => {
             if (token !== enemyAttackAnimationToken) return;
             avatar.dataset.animationState = '';
+            avatar.dataset.frameFallbackSrc = '';
+            avatar.dataset.frameFallbackTried = '';
             avatar.src = avatar.dataset.idleSrc || getEnemyVisualPath(state.enemy);
             avatarFrame.classList.remove('enemy-anim-attack');
         }, timing.duration);
@@ -8077,6 +8090,12 @@
             }
             enemyAvatarImg.alt = state.enemy.name;
             enemyAvatarImg.onerror = () => {
+                const fallbackSrc = enemyAvatarImg.dataset.frameFallbackSrc || '';
+                if (enemyAvatarImg.dataset.animationState === 'attack' && fallbackSrc && enemyAvatarImg.dataset.frameFallbackTried !== '1') {
+                    enemyAvatarImg.dataset.frameFallbackTried = '1';
+                    enemyAvatarImg.src = fallbackSrc;
+                    return;
+                }
                 enemyAvatarImg.style.display = 'none';
                 fallback.innerText = state.enemy.icon || '？';
                 fallback.style.display = 'block';
@@ -8088,6 +8107,8 @@
             const idleSrc = getEnemyVisualPath(state.enemy);
             enemyAvatarImg.dataset.idleSrc = idleSrc || '';
             if (enemyAvatarImg.dataset.animationState !== 'attack') {
+                enemyAvatarImg.dataset.frameFallbackSrc = '';
+                enemyAvatarImg.dataset.frameFallbackTried = '';
                 enemyAvatarImg.src = idleSrc;
             }
         }

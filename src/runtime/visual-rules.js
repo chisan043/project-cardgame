@@ -502,15 +502,34 @@
     }
 
     function getEnemyAttackFrames(enemy, {
+        enemyAttackFrameSets = {},
         frameDurations = DEFAULT_ATTACK_FRAME_DURATIONS,
         ...slugOptions
     } = {}) {
         const slug = getEnemyAssetSlug(enemy, slugOptions);
         if (!slug) return [];
-        return frameDurations.map((duration, index) => ({
-            src: `assets/enemies/attack/${slug}_attack_${String(index + 1).padStart(2, '0')}_v1.webp`,
-            duration
-        }));
+        const configuredSet = enemyAttackFrameSets[slug] || {};
+        const version = configuredSet.version || 'v1';
+        const configuredDurations = Array.isArray(configuredSet.durations)
+            ? configuredSet.durations
+            : [];
+        const frameCount = Math.max(
+            1,
+            Number(configuredSet.frameCount) || configuredDurations.length || frameDurations.length
+        );
+        const fallbackFrameCount = frameDurations.length;
+        return Array.from({ length: frameCount }, (_, index) => {
+            const frameNumber = String(index + 1).padStart(2, '0');
+            const fallbackIndex = Math.min(index, fallbackFrameCount - 1);
+            const fallbackNumber = String(fallbackIndex + 1).padStart(2, '0');
+            return {
+                src: `assets/enemies/attack/${slug}_attack_${frameNumber}_${version}.webp`,
+                duration: Number(configuredDurations[index]) || Number(frameDurations[index]) || Number(frameDurations[fallbackFrameCount - 1]) || 100,
+                fallbackSrc: version === 'v1'
+                    ? null
+                    : `assets/enemies/attack/${slug}_attack_${fallbackNumber}_v1.webp`
+            };
+        });
     }
 
     function getFrameSequenceDuration(frames = [], { minDuration = 0 } = {}) {

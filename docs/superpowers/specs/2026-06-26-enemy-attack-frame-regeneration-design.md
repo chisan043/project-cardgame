@@ -36,6 +36,7 @@ The five sample enemies should demonstrate distinct body language:
 - `undead_bone_dragon`: spread wings, rear back, breathe or strike, fold back toward idle.
 
 The frames must keep each enemy's existing silhouette family, palette, facing direction, proportions, and key readable features.
+Because enemies stand on the right side of the battle screen, every attack pose must aim diagonally left-down toward the player character. Any rightward attack thrust, slash, pounce, or projectile direction is invalid.
 
 ## Asset Pipeline
 
