@@ -20,6 +20,8 @@ draw = ImageDraw.Draw(img)
 for i in range(6):
     left = 80 if i == 0 else i * 100 + 30
     top = 70 - i * 4
+    draw.rectangle((left - 7, top - 7, left + 41 + i, 119), fill=(188, 118, 180, 255))
+    draw.rectangle((left - 5, top - 5, left + 39 + i, 117), fill=(224, 42, 78, 210))
     draw.rectangle((left - 3, top - 3, left + 37 + i, 115), fill=(210, 40, 210, 128))
     draw.rectangle((left, top, left + 34 + i, 112), fill=(20 + i * 25, 40, 90, 255))
     draw.rectangle((i * 100 + 82, 20, i * 100 + 99, 90), fill=(40, 40, 40, 255))
@@ -55,12 +57,38 @@ for path in sorted(out_dir.glob('*.${webpExt}')):
     bbox = img.getchannel('A').getbbox()
     assert bbox is not None, path.name
     widths.append(bbox[2] - bbox[0])
-    opaque_magenta = [
-        pixel for pixel in img.getdata()
-        if pixel[3] > 16 and pixel[0] > 170 and pixel[1] < 100 and pixel[2] > 170
-    ]
-    assert not opaque_magenta, path.name
+    pixels = img.load()
     alpha = img.getchannel('A')
+    alpha_pixels = alpha.load()
+    red_or_pink_edge = []
+    for y in range(img.height):
+        for x in range(img.width):
+            r, g, b, a = pixels[x, y]
+            if a <= 16:
+                continue
+            is_red_or_pink = (
+                r > 170
+                and (g < 120 and (b > 60 or r - g > 100))
+                or (r > 170 and b > 145 and g < 130 and (r + b - (2 * g)) > 95)
+            )
+            if not is_red_or_pink:
+                continue
+            near_transparency = a < 245
+            if not near_transparency:
+                for ny in range(max(0, y - 1), min(img.height, y + 2)):
+                    for nx in range(max(0, x - 1), min(img.width, x + 2)):
+                        if alpha_pixels[nx, ny] <= 16:
+                            near_transparency = True
+                            break
+                    if near_transparency:
+                        break
+            if near_transparency:
+                red_or_pink_edge.append((x, y, (r, g, b, a)))
+                if len(red_or_pink_edge) >= 8:
+                    break
+        if len(red_or_pink_edge) >= 8:
+            break
+    assert not red_or_pink_edge, (path.name, red_or_pink_edge)
     pix = alpha.load()
     seen = set()
     components = []

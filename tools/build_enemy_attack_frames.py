@@ -100,6 +100,42 @@ def remove_chroma_key(
             distance_sq = (r - key_r) ** 2 + (g - key_g) ** 2 + (b - key_b) ** 2
             if distance_sq <= threshold_sq:
                 pixels[x, y] = (r, g, b, 0)
+    return remove_connected_chroma_fringe(image, 0)
+
+
+def remove_connected_chroma_fringe(image: Image.Image, alpha_threshold: int) -> Image.Image:
+    pixels = image.load()
+    width, height = image.size
+    visited = bytearray(width * height)
+    queue: deque[tuple[int, int]] = deque()
+
+    def push(x: int, y: int) -> None:
+        index = (y * width) + x
+        if visited[index]:
+            return
+        visited[index] = 1
+        queue.append((x, y))
+
+    for x in range(width):
+        push(x, 0)
+        push(x, height - 1)
+    for y in range(1, height - 1):
+        push(0, y)
+        push(width - 1, y)
+
+    while queue:
+        x, y = queue.popleft()
+        r, g, b, a = pixels[x, y]
+        traversable_background = a <= alpha_threshold or is_chroma_fringe_pixel(r, g, b, a)
+        if not traversable_background:
+            continue
+        if a > alpha_threshold:
+            pixels[x, y] = (r, g, b, 0)
+        for ny in range(max(0, y - 1), min(height, y + 2)):
+            for nx in range(max(0, x - 1), min(width, x + 2)):
+                if nx == x and ny == y:
+                    continue
+                push(nx, ny)
     return image
 
 
@@ -246,24 +282,99 @@ def compose_frame(content: Image.Image | None, scale: float) -> Image.Image:
     return canvas
 
 
-def remove_magenta_fringe(image: Image.Image) -> Image.Image:
+def has_transparent_neighbor(
+    alpha_pixels,
+    x: int,
+    y: int,
+    width: int,
+    height: int,
+    alpha_threshold: int,
+    radius: int = 1,
+) -> bool:
+    if x < radius or y < radius or x >= width - radius or y >= height - radius:
+        return True
+    for ny in range(max(0, y - radius), min(height, y + radius + 1)):
+        for nx in range(max(0, x - radius), min(width, x + radius + 1)):
+            if nx == x and ny == y:
+                continue
+            if alpha_pixels[nx, ny] <= alpha_threshold:
+                return True
+    return False
+
+
+def is_chroma_fringe_pixel(r: int, g: int, b: int, a: int) -> bool:
+    pink_key_bleed = (
+        r > 150
+        and b > 120
+        and g < 140
+        and (r + b - (2 * g)) > 160
+    )
+    hot_red_key_bleed = (
+        r > 200
+        and b > 55
+        and g < 90
+        and (r + b - (2 * g)) > 150
+    )
+    soft_pink_key_bleed = (
+        r > 165
+        and b > 140
+        and g < 135
+        and abs(r - b) < 90
+        and (r + b - (2 * g)) > 80
+    )
+    red_key_bleed = (
+        r > 170
+        and b > 30
+        and g < 95
+        and (r + b - (2 * g)) > 120
+    )
+    faint_red_key_bleed = (
+        a < 96
+        and r > 160
+        and b > 45
+        and g < 110
+        and (r + b - (2 * g)) > 95
+    )
+    return (
+        pink_key_bleed
+        or hot_red_key_bleed
+        or soft_pink_key_bleed
+        or red_key_bleed
+        or faint_red_key_bleed
+    )
+
+
+def remove_chroma_fringe(image: Image.Image, alpha_threshold: int, passes: int = 3) -> Image.Image:
     image = image.convert("RGBA")
     pixels = image.load()
     width, height = image.size
-    for y in range(height):
-        for x in range(width):
-            r, g, b, a = pixels[x, y]
-            if a == 0:
-                continue
-            is_magenta_edge = (
-                a < 245
-                and r > 170
-                and b > 170
-                and g < 120
-                and abs(r - b) < 90
-            )
-            if is_magenta_edge:
-                pixels[x, y] = (r, g, b, 0)
+    edge_alpha_threshold = max(alpha_threshold, 16)
+    edge_radius = 12
+    for _pass_index in range(passes):
+        alpha_pixels = image.getchannel("A").load()
+        fringe_pixels: list[tuple[int, int, int, int, int]] = []
+        for y in range(height):
+            for x in range(width):
+                r, g, b, a = pixels[x, y]
+                if a == 0:
+                    continue
+                if not is_chroma_fringe_pixel(r, g, b, a):
+                    continue
+                is_edge = a < 250 or has_transparent_neighbor(
+                    alpha_pixels,
+                    x,
+                    y,
+                    width,
+                    height,
+                    edge_alpha_threshold,
+                    edge_radius,
+                )
+                if is_edge:
+                    fringe_pixels.append((x, y, r, g, b))
+        if not fringe_pixels:
+            break
+        for x, y, r, g, b in fringe_pixels:
+            pixels[x, y] = (r, g, b, 0)
     return image
 
 
@@ -310,7 +421,15 @@ def main() -> None:
         ]
     contents = [crop_content(frame, args.alpha_threshold) for frame in component_frames]
     scale = get_shared_scale(contents, args.padding_ratio)
-    frames = [remove_magenta_fringe(compose_frame(content, scale)) for content in contents]
+    frames = [
+        remove_small_components(
+            remove_chroma_fringe(compose_frame(content, scale), args.alpha_threshold),
+            args.alpha_threshold,
+            args.min_component_area,
+            min(args.min_component_ratio, 0.005),
+        )
+        for content in contents
+    ]
 
     out_dir = Path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
