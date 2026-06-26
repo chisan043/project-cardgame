@@ -2,31 +2,31 @@
 
 ## Context
 
-The five `v2` enemy attack samples solved the frame-count, per-enemy motion, fallback, and left-down attack direction requirements, but the generated art direction is wrong. The current samples read as modern dark fantasy illustration: dense rendering, soft gradients, material texture, painterly volume, and concept-art detail. The approved correction is to regenerate the sample attack frames in a generic 1990s cel-animation action-frame style.
+The five `v2` enemy attack samples solved the frame-count, per-enemy motion, fallback, and left-down attack direction requirements, but the generated art direction is wrong. The current samples read as modern dark fantasy illustration: dense rendering, soft gradients, material texture, painterly volume, and concept-art detail. The approved correction is to regenerate the sample attack frames from the real enemy battle illustrations, preserving the project's 1990s Japanese cel-animation fantasy style.
 
 This is a style redo of the existing five-enemy sample batch, not a new roster expansion and not a runtime behavior change.
 
 ## Approved Style Target
 
-The new attack frames must read as 1990s cel-animation game sprites:
+The new attack frames must read as source-locked 1990s cel-animation enemy battle frames:
 
-- clean bold animation linework
-- flat color shapes
-- two or three hard-edged shadow levels
-- limited highlights
-- low texture density
-- minimal gradients
-- stable readable silhouettes
+- same monster identity, palette, silhouette, and face/key features as `assets/enemies/battle/<slug>_battle_v1.webp`
+- hand-drawn organic linework matching the enemy battle illustration
+- two or three hard-edged cel shadow levels
+- restrained highlights and film-era color values
+- low texture density without glossy modern rendering
+- stable readable silhouettes and consistent bottom anchoring
 - transparent background after processing
 - one horizontal six-frame animation strip per enemy before normalization
 
-The result should feel closer to an animation production frame than to a painted card illustration or concept sheet.
+The result should feel like missing keyframes drawn from the existing monster battle stand, not a new generic reinterpretation of that monster.
 
 ## Explicit Anti-Targets
 
 The new assets must avoid:
 
 - modern painterly rendering
+- generic monster redesigns that drift from the battle illustration
 - realistic fur, cloth, slime, bone, smoke, or metal materials
 - soft airbrushed gradients
 - cinematic lighting
@@ -70,20 +70,21 @@ The five enemies should still have distinct attack language:
 
 ## Asset Pipeline
 
-Use the existing in-game enemy identity as the subject anchor. Generate or edit one six-slot horizontal strip per enemy rather than producing isolated frames independently. This preserves identity and reduces frame drift.
+Use the existing in-game enemy battle illustration as the primary subject and style anchor. Generate or edit one six-slot horizontal strip per enemy rather than producing isolated frames independently. This preserves identity and reduces frame drift.
 
-Use a removable flat chroma-key background or another clean extraction method, then run the existing normalization tool so final frames share the current frame size, bottom-center alignment, transparency, and WebP format. The existing red/pink chroma-fringe cleanup remains part of the export pipeline.
+Use a removable flat background or another clean extraction method, then run the existing normalization tool so final frames share the current frame size, bottom-center alignment, transparency, and WebP format. For black-background source-locked strips, remove only border-connected near-black background so internal dark linework and shadow shapes are not punched out.
 
 Source strips and preview sheets should stay under `assets/source/enemies/attack/v2_samples/`. Runtime references should continue to point only at normalized `assets/enemies/attack/*_v2.webp` frames.
 
 ## Comparison Standard
 
-The current player-character back-view attack frames are the internal style reference because they are closer to the desired animation-frame language than the current enemy samples. They are not a strict copy target; they define the level of simplification, readable outline, and animation-frame feel.
+The current enemy battle illustrations are the primary style reference. The player-character back-view attack frames may help with timing and action readability, but they must not override the enemy battle illustration's linework, palette, silhouette, or rendering language.
 
 During review, compare the regenerated enemy frames against:
 
 - current rejected enemy `v2` frames for what to avoid
-- player-character attack frames for desired simplification and animation readability
+- corresponding enemy `assets/enemies/battle/<slug>_battle_v1.webp` files for identity and style fidelity
+- player-character attack frames only for broad animation readability
 - the live battle screen for size, direction, and frame timing
 
 ## Chosen Approach
@@ -112,4 +113,4 @@ Before committing the style redo:
 
 ## Acceptance
 
-The redo is acceptable when the user can look at the five sample attacks and read them as 1990s cel-animation action frames rather than modern painted enemy illustrations, while still preserving each enemy identity and the correct left-down attack direction.
+The redo is acceptable when the user can look at the five sample attacks and read them as usable keyframes derived from the existing 1990s cel-style enemy battle illustrations, while still preserving each enemy identity and the correct left-down attack direction.

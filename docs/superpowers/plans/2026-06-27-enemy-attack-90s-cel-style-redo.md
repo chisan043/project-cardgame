@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Replace the five rejected enemy `v2` attack samples with six-frame 1990s cel-animation style attack frames while preserving the existing runtime integration and left-down attack direction.
+**Goal:** Replace the five rejected enemy `v2` attack samples with six-frame attack frames derived from the existing 1990s cel-style enemy battle illustrations while preserving the existing runtime integration and left-down attack direction.
 
 **Architecture:** Keep the current runtime contract unchanged: five sample enemies still resolve to `assets/enemies/attack/<slug>_attack_01_v2.webp` through `_06_v2.webp`, and all other enemies keep `v1` fallback behavior. Generate one six-slot strip per enemy, normalize with `tools/build_enemy_attack_frames.py`, and review outputs through contact sheets before committing.
 
@@ -24,11 +24,12 @@
 Use this shared style block in every image generation prompt:
 
 ```text
-Style target: generic 1990s cel-animation action-frame sprite art, not modern illustration.
-Visual language: clean bold animation linework, flat color shapes, 2-3 hard-edged shadow levels, limited highlights, low texture density, minimal gradients, stable readable silhouette.
-Composition: one horizontal six-frame spritesheet, exactly six equal slots, one enemy only, transparent-looking subject on a perfectly flat solid #ff00ff chroma-key background, generous padding, no scenery, no labels, no UI, no cast shadow.
+Input image role: the matching assets/enemies/battle/<slug>_battle_v1.webp image is the strict identity, palette, linework, cel-shading, edge-treatment, and rendering reference.
+Style target: source-locked 1990s Japanese cel fantasy anime keyframes, not a generic monster reinterpretation and not modern illustration.
+Visual language: hand-drawn organic linework matching the battle illustration, 2-3 hard-edged shadow levels, restrained highlights, film-era colors, stable readable silhouette.
+Composition: one horizontal six-frame spritesheet, exactly six equal slots, one enemy only, solid pure black #000000 background for style review, generous padding, no scenery, no labels, no UI, no cast shadow.
 Animation direction: the enemy is on the right side of the battle screen, so all attacks must aim diagonally left-down toward the player.
-Avoid: modern painterly rendering, realistic material texture, soft airbrushed gradients, cinematic lighting, high-frequency brushwork, concept-art detail, poster composition, extra characters.
+Avoid: generic redesign, modern painterly rendering, realistic material texture, soft airbrushed gradients, cinematic lighting, high-frequency brushwork, concept-art detail, poster composition, extra characters.
 ```
 
 Use these enemy action clauses:
@@ -50,26 +51,26 @@ undead_bone_dragon: rear back or spread wings, breathe or rake diagonally left-d
 
 - [ ] **Step 1: Generate a single pilot strip for `wild_wolf`**
 
-Use built-in `image_gen` with this prompt:
+View `assets/enemies/battle/wild_wolf_battle_v1.webp`, then use built-in `image_gen` with this prompt:
 
 ```text
 Use case: stylized-concept
 Asset type: 2D browser game enemy attack spritesheet
 Primary request: Create a six-frame attack spritesheet for the Questers wild wolf enemy.
-Subject: a dark grey-black fantasy wolf with red eyes and a lean aggressive body, same silhouette family as an in-game wolf enemy.
+Subject: the exact wild wolf from wild_wolf_battle_v1, preserving the huge ragged mane, red eyes, red crack markings, tan-gray legs, dark claws, and low stalking posture.
 Action: wild_wolf: crouch, spring forward, bite or claw diagonally left-down, land and recover.
-Style target: generic 1990s cel-animation action-frame sprite art, not modern illustration.
-Visual language: clean bold animation linework, flat color shapes, 2-3 hard-edged shadow levels, limited highlights, low texture density, minimal gradients, stable readable silhouette.
-Composition: one horizontal six-frame spritesheet, exactly six equal slots, one enemy only, transparent-looking subject on a perfectly flat solid #ff00ff chroma-key background, generous padding, no scenery, no labels, no UI, no cast shadow.
+Style target: source-locked 1990s Japanese cel fantasy anime keyframes, not a generic monster reinterpretation and not modern illustration.
+Visual language: hand-drawn organic linework matching the battle illustration, 2-3 hard-edged shadow levels, restrained highlights, film-era colors, stable readable silhouette.
+Composition: one horizontal six-frame spritesheet, exactly six equal slots, one enemy only, solid pure black #000000 background, generous padding, no scenery, no labels, no UI, no cast shadow.
 Animation direction: the enemy is on the right side of the battle screen, so all attacks must aim diagonally left-down toward the player.
-Avoid: modern painterly rendering, realistic material texture, soft airbrushed gradients, cinematic lighting, high-frequency brushwork, concept-art detail, poster composition, extra characters.
+Avoid: generic redesign, modern painterly rendering, realistic material texture, soft airbrushed gradients, cinematic lighting, high-frequency brushwork, concept-art detail, poster composition, extra characters.
 ```
 
-Expected: one generated image containing exactly six horizontal frame slots, with a flat #ff00ff background.
+Expected: one generated image containing exactly six horizontal frame slots, with a flat black background and no cropped body parts.
 
 - [ ] **Step 2: Save the generated pilot strip**
 
-Move or copy the selected generated image to:
+Copy the selected generated image, remove only border-connected near-black background to preserve internal dark linework, then save to:
 
 ```text
 assets/source/enemies/attack/v2_samples/wild_wolf_attack_strip_v2_source.png
@@ -87,7 +88,10 @@ python3 tools/build_enemy_attack_frames.py \
   --input assets/source/enemies/attack/v2_samples/wild_wolf_attack_strip_v2_source.png \
   --slug wild_wolf \
   --out-dir assets/enemies/attack \
-  --preview assets/source/enemies/attack/v2_samples/wild_wolf_attack_preview_v2.png
+  --preview assets/source/enemies/attack/v2_samples/wild_wolf_attack_preview_v2.png \
+  --key-color '#ff00ff' \
+  --key-threshold 4 \
+  --padding-ratio 0.92
 ```
 
 Expected: six `wild_wolf_attack_*_v2.webp` files and one preview PNG are written.
@@ -100,7 +104,7 @@ Open:
 assets/source/enemies/attack/v2_samples/wild_wolf_attack_preview_v2.png
 ```
 
-Accept only if it has clean cel-style linework, flat shapes, hard shadows, no modern painterly fur rendering, and attacks left-down. If it fails, repeat Steps 1-4 with a stricter prompt that adds: `simplify the fur into large animation color shapes; no individual hair rendering; no painterly brush texture`.
+Accept only if it reads like keyframes derived from the wild wolf battle illustration, keeps the original palette and face/key features, has no modern glossy rendering, no clipped body parts, and attacks left-down. If it fails, repeat Steps 1-4 with stricter source-lock language.
 
 - [ ] **Step 5: Run pilot validation**
 
@@ -194,7 +198,7 @@ Save selected output to:
 assets/source/enemies/attack/v2_samples/undead_bone_dragon_attack_strip_v2_source.png
 ```
 
-Expected: four saved source strips, each one row of six slots on a flat #ff00ff background.
+Expected: four saved source strips, each one row of six slots with alpha after border-connected black-background removal.
 
 ### Task 3: Normalize the Full Five-Enemy Batch
 
@@ -213,7 +217,10 @@ for slug in sick_slime wild_wolf greedy_thief nether_mage undead_bone_dragon; do
     --input assets/source/enemies/attack/v2_samples/${slug}_attack_strip_v2_source.png \
     --slug ${slug} \
     --out-dir assets/enemies/attack \
-    --preview assets/source/enemies/attack/v2_samples/${slug}_attack_preview_v2.png
+    --preview assets/source/enemies/attack/v2_samples/${slug}_attack_preview_v2.png \
+    --key-color '#ff00ff' \
+    --key-threshold 4 \
+    --padding-ratio 0.92
 done
 ```
 
@@ -280,8 +287,8 @@ Expected: `/tmp/questers_enemy_attack_90s_cel_contact.png`.
 Open `/tmp/questers_enemy_attack_90s_cel_contact.png` and check:
 
 ```text
-PASS if each enemy reads as flat cel-animation action art with hard shadows and left-down attacks.
-FAIL if any enemy still reads as modern painted illustration, has heavy texture, uses soft cinematic rendering, attacks rightward, or has obvious chroma fringe.
+PASS if each enemy reads as an action-keyframe extension of its matching battle illustration, preserves identity, has transparent output, avoids obvious clipping, and attacks left-down.
+FAIL if any enemy reads as a generic redesign, has heavy modern rendering, attacks rightward, has obvious chroma fringe, or has clipped body parts.
 ```
 
 If any enemy fails, return to Task 2 for that enemy only and regenerate its strip with a stricter prompt.
