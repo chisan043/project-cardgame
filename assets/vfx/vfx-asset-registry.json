@@ -7,7 +7,7 @@
     "assets/vfx/**"
   ],
   "policy": "Active player, enemy, and defense VFX assets live under assets/vfx and are registered from character data plus active VFX folders.",
-  "assetCount": 82,
+  "assetCount": 202,
   "missingAssetCount": 0,
   "groups": [
     "enemy_attack",
@@ -17,6 +17,78 @@
   ],
   "assets": [
     {
+      "key": "vfx/enemy_attack/acid_spit_vfx_01_v2",
+      "path": "assets/vfx/enemy_attack/acid_spit_vfx_01_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "acid_spit_vfx_01_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/acid_spit_vfx_02_v2",
+      "path": "assets/vfx/enemy_attack/acid_spit_vfx_02_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "acid_spit_vfx_02_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/acid_spit_vfx_03_v2",
+      "path": "assets/vfx/enemy_attack/acid_spit_vfx_03_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "acid_spit_vfx_03_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/acid_spit_vfx_04_v2",
+      "path": "assets/vfx/enemy_attack/acid_spit_vfx_04_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "acid_spit_vfx_04_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/acid_spit_vfx_05_v2",
+      "path": "assets/vfx/enemy_attack/acid_spit_vfx_05_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "acid_spit_vfx_05_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/acid_spit_vfx_06_v2",
+      "path": "assets/vfx/enemy_attack/acid_spit_vfx_06_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "acid_spit_vfx_06_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
       "key": "vfx/enemy_attack/acid_spit_vfx_v1",
       "path": "assets/vfx/enemy_attack/acid_spit_vfx_v1.webp",
       "exists": true,
@@ -24,6 +96,78 @@
         {
           "kind": "enemy_attack_vfx",
           "name": "acid_spit_vfx_v1"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/blood_siphon_vfx_01_v2",
+      "path": "assets/vfx/enemy_attack/blood_siphon_vfx_01_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "blood_siphon_vfx_01_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/blood_siphon_vfx_02_v2",
+      "path": "assets/vfx/enemy_attack/blood_siphon_vfx_02_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "blood_siphon_vfx_02_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/blood_siphon_vfx_03_v2",
+      "path": "assets/vfx/enemy_attack/blood_siphon_vfx_03_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "blood_siphon_vfx_03_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/blood_siphon_vfx_04_v2",
+      "path": "assets/vfx/enemy_attack/blood_siphon_vfx_04_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "blood_siphon_vfx_04_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/blood_siphon_vfx_05_v2",
+      "path": "assets/vfx/enemy_attack/blood_siphon_vfx_05_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "blood_siphon_vfx_05_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/blood_siphon_vfx_06_v2",
+      "path": "assets/vfx/enemy_attack/blood_siphon_vfx_06_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "blood_siphon_vfx_06_v2"
         }
       ],
       "domain": "vfx"
@@ -41,6 +185,78 @@
       "domain": "vfx"
     },
     {
+      "key": "vfx/enemy_attack/bone_slash_vfx_01_v2",
+      "path": "assets/vfx/enemy_attack/bone_slash_vfx_01_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "bone_slash_vfx_01_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/bone_slash_vfx_02_v2",
+      "path": "assets/vfx/enemy_attack/bone_slash_vfx_02_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "bone_slash_vfx_02_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/bone_slash_vfx_03_v2",
+      "path": "assets/vfx/enemy_attack/bone_slash_vfx_03_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "bone_slash_vfx_03_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/bone_slash_vfx_04_v2",
+      "path": "assets/vfx/enemy_attack/bone_slash_vfx_04_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "bone_slash_vfx_04_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/bone_slash_vfx_05_v2",
+      "path": "assets/vfx/enemy_attack/bone_slash_vfx_05_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "bone_slash_vfx_05_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/bone_slash_vfx_06_v2",
+      "path": "assets/vfx/enemy_attack/bone_slash_vfx_06_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "bone_slash_vfx_06_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
       "key": "vfx/enemy_attack/bone_slash_vfx_v1",
       "path": "assets/vfx/enemy_attack/bone_slash_vfx_v1.webp",
       "exists": true,
@@ -48,6 +264,78 @@
         {
           "kind": "enemy_attack_vfx",
           "name": "bone_slash_vfx_v1"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/charge_dust_vfx_01_v2",
+      "path": "assets/vfx/enemy_attack/charge_dust_vfx_01_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "charge_dust_vfx_01_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/charge_dust_vfx_02_v2",
+      "path": "assets/vfx/enemy_attack/charge_dust_vfx_02_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "charge_dust_vfx_02_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/charge_dust_vfx_03_v2",
+      "path": "assets/vfx/enemy_attack/charge_dust_vfx_03_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "charge_dust_vfx_03_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/charge_dust_vfx_04_v2",
+      "path": "assets/vfx/enemy_attack/charge_dust_vfx_04_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "charge_dust_vfx_04_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/charge_dust_vfx_05_v2",
+      "path": "assets/vfx/enemy_attack/charge_dust_vfx_05_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "charge_dust_vfx_05_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/charge_dust_vfx_06_v2",
+      "path": "assets/vfx/enemy_attack/charge_dust_vfx_06_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "charge_dust_vfx_06_v2"
         }
       ],
       "domain": "vfx"
@@ -65,6 +353,78 @@
       "domain": "vfx"
     },
     {
+      "key": "vfx/enemy_attack/claw_bite_vfx_01_v2",
+      "path": "assets/vfx/enemy_attack/claw_bite_vfx_01_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "claw_bite_vfx_01_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/claw_bite_vfx_02_v2",
+      "path": "assets/vfx/enemy_attack/claw_bite_vfx_02_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "claw_bite_vfx_02_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/claw_bite_vfx_03_v2",
+      "path": "assets/vfx/enemy_attack/claw_bite_vfx_03_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "claw_bite_vfx_03_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/claw_bite_vfx_04_v2",
+      "path": "assets/vfx/enemy_attack/claw_bite_vfx_04_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "claw_bite_vfx_04_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/claw_bite_vfx_05_v2",
+      "path": "assets/vfx/enemy_attack/claw_bite_vfx_05_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "claw_bite_vfx_05_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/claw_bite_vfx_06_v2",
+      "path": "assets/vfx/enemy_attack/claw_bite_vfx_06_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "claw_bite_vfx_06_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
       "key": "vfx/enemy_attack/claw_bite_vfx_v1",
       "path": "assets/vfx/enemy_attack/claw_bite_vfx_v1.webp",
       "exists": true,
@@ -72,6 +432,78 @@
         {
           "kind": "enemy_attack_vfx",
           "name": "claw_bite_vfx_v1"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/dagger_flurry_vfx_01_v2",
+      "path": "assets/vfx/enemy_attack/dagger_flurry_vfx_01_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "dagger_flurry_vfx_01_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/dagger_flurry_vfx_02_v2",
+      "path": "assets/vfx/enemy_attack/dagger_flurry_vfx_02_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "dagger_flurry_vfx_02_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/dagger_flurry_vfx_03_v2",
+      "path": "assets/vfx/enemy_attack/dagger_flurry_vfx_03_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "dagger_flurry_vfx_03_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/dagger_flurry_vfx_04_v2",
+      "path": "assets/vfx/enemy_attack/dagger_flurry_vfx_04_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "dagger_flurry_vfx_04_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/dagger_flurry_vfx_05_v2",
+      "path": "assets/vfx/enemy_attack/dagger_flurry_vfx_05_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "dagger_flurry_vfx_05_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/dagger_flurry_vfx_06_v2",
+      "path": "assets/vfx/enemy_attack/dagger_flurry_vfx_06_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "dagger_flurry_vfx_06_v2"
         }
       ],
       "domain": "vfx"
@@ -89,6 +521,78 @@
       "domain": "vfx"
     },
     {
+      "key": "vfx/enemy_attack/dark_iaijutsu_vfx_01_v2",
+      "path": "assets/vfx/enemy_attack/dark_iaijutsu_vfx_01_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "dark_iaijutsu_vfx_01_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/dark_iaijutsu_vfx_02_v2",
+      "path": "assets/vfx/enemy_attack/dark_iaijutsu_vfx_02_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "dark_iaijutsu_vfx_02_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/dark_iaijutsu_vfx_03_v2",
+      "path": "assets/vfx/enemy_attack/dark_iaijutsu_vfx_03_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "dark_iaijutsu_vfx_03_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/dark_iaijutsu_vfx_04_v2",
+      "path": "assets/vfx/enemy_attack/dark_iaijutsu_vfx_04_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "dark_iaijutsu_vfx_04_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/dark_iaijutsu_vfx_05_v2",
+      "path": "assets/vfx/enemy_attack/dark_iaijutsu_vfx_05_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "dark_iaijutsu_vfx_05_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/dark_iaijutsu_vfx_06_v2",
+      "path": "assets/vfx/enemy_attack/dark_iaijutsu_vfx_06_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "dark_iaijutsu_vfx_06_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
       "key": "vfx/enemy_attack/dark_iaijutsu_vfx_v1",
       "path": "assets/vfx/enemy_attack/dark_iaijutsu_vfx_v1.webp",
       "exists": true,
@@ -96,6 +600,78 @@
         {
           "kind": "enemy_attack_vfx",
           "name": "dark_iaijutsu_vfx_v1"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/dragon_breath_vfx_01_v2",
+      "path": "assets/vfx/enemy_attack/dragon_breath_vfx_01_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "dragon_breath_vfx_01_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/dragon_breath_vfx_02_v2",
+      "path": "assets/vfx/enemy_attack/dragon_breath_vfx_02_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "dragon_breath_vfx_02_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/dragon_breath_vfx_03_v2",
+      "path": "assets/vfx/enemy_attack/dragon_breath_vfx_03_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "dragon_breath_vfx_03_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/dragon_breath_vfx_04_v2",
+      "path": "assets/vfx/enemy_attack/dragon_breath_vfx_04_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "dragon_breath_vfx_04_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/dragon_breath_vfx_05_v2",
+      "path": "assets/vfx/enemy_attack/dragon_breath_vfx_05_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "dragon_breath_vfx_05_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/dragon_breath_vfx_06_v2",
+      "path": "assets/vfx/enemy_attack/dragon_breath_vfx_06_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "dragon_breath_vfx_06_v2"
         }
       ],
       "domain": "vfx"
@@ -113,6 +689,78 @@
       "domain": "vfx"
     },
     {
+      "key": "vfx/enemy_attack/foxfire_vfx_01_v2",
+      "path": "assets/vfx/enemy_attack/foxfire_vfx_01_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "foxfire_vfx_01_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/foxfire_vfx_02_v2",
+      "path": "assets/vfx/enemy_attack/foxfire_vfx_02_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "foxfire_vfx_02_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/foxfire_vfx_03_v2",
+      "path": "assets/vfx/enemy_attack/foxfire_vfx_03_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "foxfire_vfx_03_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/foxfire_vfx_04_v2",
+      "path": "assets/vfx/enemy_attack/foxfire_vfx_04_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "foxfire_vfx_04_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/foxfire_vfx_05_v2",
+      "path": "assets/vfx/enemy_attack/foxfire_vfx_05_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "foxfire_vfx_05_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/foxfire_vfx_06_v2",
+      "path": "assets/vfx/enemy_attack/foxfire_vfx_06_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "foxfire_vfx_06_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
       "key": "vfx/enemy_attack/foxfire_vfx_v1",
       "path": "assets/vfx/enemy_attack/foxfire_vfx_v1.webp",
       "exists": true,
@@ -120,6 +768,78 @@
         {
           "kind": "enemy_attack_vfx",
           "name": "foxfire_vfx_v1"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/ghostfire_vfx_01_v2",
+      "path": "assets/vfx/enemy_attack/ghostfire_vfx_01_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "ghostfire_vfx_01_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/ghostfire_vfx_02_v2",
+      "path": "assets/vfx/enemy_attack/ghostfire_vfx_02_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "ghostfire_vfx_02_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/ghostfire_vfx_03_v2",
+      "path": "assets/vfx/enemy_attack/ghostfire_vfx_03_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "ghostfire_vfx_03_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/ghostfire_vfx_04_v2",
+      "path": "assets/vfx/enemy_attack/ghostfire_vfx_04_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "ghostfire_vfx_04_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/ghostfire_vfx_05_v2",
+      "path": "assets/vfx/enemy_attack/ghostfire_vfx_05_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "ghostfire_vfx_05_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/ghostfire_vfx_06_v2",
+      "path": "assets/vfx/enemy_attack/ghostfire_vfx_06_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "ghostfire_vfx_06_v2"
         }
       ],
       "domain": "vfx"
@@ -137,6 +857,78 @@
       "domain": "vfx"
     },
     {
+      "key": "vfx/enemy_attack/meat_slam_vfx_01_v2",
+      "path": "assets/vfx/enemy_attack/meat_slam_vfx_01_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "meat_slam_vfx_01_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/meat_slam_vfx_02_v2",
+      "path": "assets/vfx/enemy_attack/meat_slam_vfx_02_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "meat_slam_vfx_02_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/meat_slam_vfx_03_v2",
+      "path": "assets/vfx/enemy_attack/meat_slam_vfx_03_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "meat_slam_vfx_03_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/meat_slam_vfx_04_v2",
+      "path": "assets/vfx/enemy_attack/meat_slam_vfx_04_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "meat_slam_vfx_04_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/meat_slam_vfx_05_v2",
+      "path": "assets/vfx/enemy_attack/meat_slam_vfx_05_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "meat_slam_vfx_05_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/meat_slam_vfx_06_v2",
+      "path": "assets/vfx/enemy_attack/meat_slam_vfx_06_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "meat_slam_vfx_06_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
       "key": "vfx/enemy_attack/meat_slam_vfx_v1",
       "path": "assets/vfx/enemy_attack/meat_slam_vfx_v1.webp",
       "exists": true,
@@ -144,6 +936,78 @@
         {
           "kind": "enemy_attack_vfx",
           "name": "meat_slam_vfx_v1"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/pincer_snap_vfx_01_v2",
+      "path": "assets/vfx/enemy_attack/pincer_snap_vfx_01_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "pincer_snap_vfx_01_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/pincer_snap_vfx_02_v2",
+      "path": "assets/vfx/enemy_attack/pincer_snap_vfx_02_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "pincer_snap_vfx_02_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/pincer_snap_vfx_03_v2",
+      "path": "assets/vfx/enemy_attack/pincer_snap_vfx_03_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "pincer_snap_vfx_03_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/pincer_snap_vfx_04_v2",
+      "path": "assets/vfx/enemy_attack/pincer_snap_vfx_04_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "pincer_snap_vfx_04_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/pincer_snap_vfx_05_v2",
+      "path": "assets/vfx/enemy_attack/pincer_snap_vfx_05_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "pincer_snap_vfx_05_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/pincer_snap_vfx_06_v2",
+      "path": "assets/vfx/enemy_attack/pincer_snap_vfx_06_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "pincer_snap_vfx_06_v2"
         }
       ],
       "domain": "vfx"
@@ -161,6 +1025,78 @@
       "domain": "vfx"
     },
     {
+      "key": "vfx/enemy_attack/poison_spit_vfx_01_v2",
+      "path": "assets/vfx/enemy_attack/poison_spit_vfx_01_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "poison_spit_vfx_01_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/poison_spit_vfx_02_v2",
+      "path": "assets/vfx/enemy_attack/poison_spit_vfx_02_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "poison_spit_vfx_02_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/poison_spit_vfx_03_v2",
+      "path": "assets/vfx/enemy_attack/poison_spit_vfx_03_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "poison_spit_vfx_03_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/poison_spit_vfx_04_v2",
+      "path": "assets/vfx/enemy_attack/poison_spit_vfx_04_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "poison_spit_vfx_04_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/poison_spit_vfx_05_v2",
+      "path": "assets/vfx/enemy_attack/poison_spit_vfx_05_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "poison_spit_vfx_05_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/poison_spit_vfx_06_v2",
+      "path": "assets/vfx/enemy_attack/poison_spit_vfx_06_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "poison_spit_vfx_06_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
       "key": "vfx/enemy_attack/poison_spit_vfx_v1",
       "path": "assets/vfx/enemy_attack/poison_spit_vfx_v1.webp",
       "exists": true,
@@ -168,6 +1104,78 @@
         {
           "kind": "enemy_attack_vfx",
           "name": "poison_spit_vfx_v1"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/rock_shock_vfx_01_v2",
+      "path": "assets/vfx/enemy_attack/rock_shock_vfx_01_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "rock_shock_vfx_01_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/rock_shock_vfx_02_v2",
+      "path": "assets/vfx/enemy_attack/rock_shock_vfx_02_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "rock_shock_vfx_02_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/rock_shock_vfx_03_v2",
+      "path": "assets/vfx/enemy_attack/rock_shock_vfx_03_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "rock_shock_vfx_03_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/rock_shock_vfx_04_v2",
+      "path": "assets/vfx/enemy_attack/rock_shock_vfx_04_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "rock_shock_vfx_04_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/rock_shock_vfx_05_v2",
+      "path": "assets/vfx/enemy_attack/rock_shock_vfx_05_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "rock_shock_vfx_05_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/rock_shock_vfx_06_v2",
+      "path": "assets/vfx/enemy_attack/rock_shock_vfx_06_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "rock_shock_vfx_06_v2"
         }
       ],
       "domain": "vfx"
@@ -185,6 +1193,78 @@
       "domain": "vfx"
     },
     {
+      "key": "vfx/enemy_attack/shadow_darts_vfx_01_v2",
+      "path": "assets/vfx/enemy_attack/shadow_darts_vfx_01_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "shadow_darts_vfx_01_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/shadow_darts_vfx_02_v2",
+      "path": "assets/vfx/enemy_attack/shadow_darts_vfx_02_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "shadow_darts_vfx_02_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/shadow_darts_vfx_03_v2",
+      "path": "assets/vfx/enemy_attack/shadow_darts_vfx_03_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "shadow_darts_vfx_03_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/shadow_darts_vfx_04_v2",
+      "path": "assets/vfx/enemy_attack/shadow_darts_vfx_04_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "shadow_darts_vfx_04_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/shadow_darts_vfx_05_v2",
+      "path": "assets/vfx/enemy_attack/shadow_darts_vfx_05_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "shadow_darts_vfx_05_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/shadow_darts_vfx_06_v2",
+      "path": "assets/vfx/enemy_attack/shadow_darts_vfx_06_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "shadow_darts_vfx_06_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
       "key": "vfx/enemy_attack/shadow_darts_vfx_v1",
       "path": "assets/vfx/enemy_attack/shadow_darts_vfx_v1.webp",
       "exists": true,
@@ -192,6 +1272,78 @@
         {
           "kind": "enemy_attack_vfx",
           "name": "shadow_darts_vfx_v1"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/shura_cleave_vfx_01_v2",
+      "path": "assets/vfx/enemy_attack/shura_cleave_vfx_01_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "shura_cleave_vfx_01_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/shura_cleave_vfx_02_v2",
+      "path": "assets/vfx/enemy_attack/shura_cleave_vfx_02_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "shura_cleave_vfx_02_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/shura_cleave_vfx_03_v2",
+      "path": "assets/vfx/enemy_attack/shura_cleave_vfx_03_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "shura_cleave_vfx_03_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/shura_cleave_vfx_04_v2",
+      "path": "assets/vfx/enemy_attack/shura_cleave_vfx_04_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "shura_cleave_vfx_04_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/shura_cleave_vfx_05_v2",
+      "path": "assets/vfx/enemy_attack/shura_cleave_vfx_05_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "shura_cleave_vfx_05_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/shura_cleave_vfx_06_v2",
+      "path": "assets/vfx/enemy_attack/shura_cleave_vfx_06_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "shura_cleave_vfx_06_v2"
         }
       ],
       "domain": "vfx"
@@ -209,6 +1361,78 @@
       "domain": "vfx"
     },
     {
+      "key": "vfx/enemy_attack/sonic_wave_vfx_01_v2",
+      "path": "assets/vfx/enemy_attack/sonic_wave_vfx_01_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "sonic_wave_vfx_01_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/sonic_wave_vfx_02_v2",
+      "path": "assets/vfx/enemy_attack/sonic_wave_vfx_02_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "sonic_wave_vfx_02_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/sonic_wave_vfx_03_v2",
+      "path": "assets/vfx/enemy_attack/sonic_wave_vfx_03_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "sonic_wave_vfx_03_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/sonic_wave_vfx_04_v2",
+      "path": "assets/vfx/enemy_attack/sonic_wave_vfx_04_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "sonic_wave_vfx_04_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/sonic_wave_vfx_05_v2",
+      "path": "assets/vfx/enemy_attack/sonic_wave_vfx_05_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "sonic_wave_vfx_05_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/sonic_wave_vfx_06_v2",
+      "path": "assets/vfx/enemy_attack/sonic_wave_vfx_06_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "sonic_wave_vfx_06_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
       "key": "vfx/enemy_attack/sonic_wave_vfx_v1",
       "path": "assets/vfx/enemy_attack/sonic_wave_vfx_v1.webp",
       "exists": true,
@@ -216,6 +1440,78 @@
         {
           "kind": "enemy_attack_vfx",
           "name": "sonic_wave_vfx_v1"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/venom_web_vfx_01_v2",
+      "path": "assets/vfx/enemy_attack/venom_web_vfx_01_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "venom_web_vfx_01_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/venom_web_vfx_02_v2",
+      "path": "assets/vfx/enemy_attack/venom_web_vfx_02_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "venom_web_vfx_02_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/venom_web_vfx_03_v2",
+      "path": "assets/vfx/enemy_attack/venom_web_vfx_03_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "venom_web_vfx_03_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/venom_web_vfx_04_v2",
+      "path": "assets/vfx/enemy_attack/venom_web_vfx_04_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "venom_web_vfx_04_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/venom_web_vfx_05_v2",
+      "path": "assets/vfx/enemy_attack/venom_web_vfx_05_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "venom_web_vfx_05_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/venom_web_vfx_06_v2",
+      "path": "assets/vfx/enemy_attack/venom_web_vfx_06_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "venom_web_vfx_06_v2"
         }
       ],
       "domain": "vfx"
@@ -233,6 +1529,78 @@
       "domain": "vfx"
     },
     {
+      "key": "vfx/enemy_attack/void_beam_vfx_01_v2",
+      "path": "assets/vfx/enemy_attack/void_beam_vfx_01_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "void_beam_vfx_01_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/void_beam_vfx_02_v2",
+      "path": "assets/vfx/enemy_attack/void_beam_vfx_02_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "void_beam_vfx_02_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/void_beam_vfx_03_v2",
+      "path": "assets/vfx/enemy_attack/void_beam_vfx_03_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "void_beam_vfx_03_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/void_beam_vfx_04_v2",
+      "path": "assets/vfx/enemy_attack/void_beam_vfx_04_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "void_beam_vfx_04_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/void_beam_vfx_05_v2",
+      "path": "assets/vfx/enemy_attack/void_beam_vfx_05_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "void_beam_vfx_05_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/void_beam_vfx_06_v2",
+      "path": "assets/vfx/enemy_attack/void_beam_vfx_06_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "void_beam_vfx_06_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
       "key": "vfx/enemy_attack/void_beam_vfx_v1",
       "path": "assets/vfx/enemy_attack/void_beam_vfx_v1.webp",
       "exists": true,
@@ -240,6 +1608,78 @@
         {
           "kind": "enemy_attack_vfx",
           "name": "void_beam_vfx_v1"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/war_axe_vfx_01_v2",
+      "path": "assets/vfx/enemy_attack/war_axe_vfx_01_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "war_axe_vfx_01_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/war_axe_vfx_02_v2",
+      "path": "assets/vfx/enemy_attack/war_axe_vfx_02_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "war_axe_vfx_02_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/war_axe_vfx_03_v2",
+      "path": "assets/vfx/enemy_attack/war_axe_vfx_03_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "war_axe_vfx_03_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/war_axe_vfx_04_v2",
+      "path": "assets/vfx/enemy_attack/war_axe_vfx_04_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "war_axe_vfx_04_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/war_axe_vfx_05_v2",
+      "path": "assets/vfx/enemy_attack/war_axe_vfx_05_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "war_axe_vfx_05_v2"
+        }
+      ],
+      "domain": "vfx"
+    },
+    {
+      "key": "vfx/enemy_attack/war_axe_vfx_06_v2",
+      "path": "assets/vfx/enemy_attack/war_axe_vfx_06_v2.webp",
+      "exists": true,
+      "usedBy": [
+        {
+          "kind": "enemy_attack_vfx",
+          "name": "war_axe_vfx_06_v2"
         }
       ],
       "domain": "vfx"

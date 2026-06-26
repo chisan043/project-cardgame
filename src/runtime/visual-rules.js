@@ -688,6 +688,29 @@
         return `assets/vfx/enemy_attack/${String(type || '').replace(/-/g, '_')}_vfx_v1.webp`;
     }
 
+    function getEnemyAttackVfxFrames(type, {
+        attackFrames = [],
+        frameCount = 6,
+        version = 'v2'
+    } = {}) {
+        const fileType = String(type || '').replace(/-/g, '_');
+        const fallbackSrc = getEnemyAttackVfxAsset(type);
+        const normalizedFrameCount = Math.max(
+            1,
+            Number(frameCount) || attackFrames.length || 6
+        );
+        const fallbackDuration = Number(attackFrames[attackFrames.length - 1]?.duration) || 90;
+
+        return Array.from({ length: normalizedFrameCount }, (_, index) => {
+            const frameNumber = String(index + 1).padStart(2, '0');
+            return {
+                duration: Number(attackFrames[index]?.duration) || fallbackDuration,
+                fallbackSrc,
+                src: `assets/vfx/enemy_attack/${fileType}_vfx_${frameNumber}_${version}.webp`
+            };
+        });
+    }
+
     function getEnemyAttackVfxLayout({
         enemyRect = null,
         layout = {},
@@ -774,6 +797,7 @@
         getEnemyAttackAnimationTiming,
         getEnemyAttackFrames,
         getEnemyAttackVfxAsset,
+        getEnemyAttackVfxFrames,
         getEnemyAttackVfxLayout,
         getEnemyAttackVfxType,
         getEnemyAvatarPath,
