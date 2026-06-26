@@ -33,7 +33,8 @@ enemy_box_w = 760
 enemy_box_h = 570
 frame_h = 900
 ready_min_ratio = 0.97
-motion_min_major_ratio = 0.74
+motion_min_area_ratio = 0.72
+motion_min_major_ratio = 0.92
 failures = []
 
 def content_size(path):
@@ -69,8 +70,11 @@ for slug in slugs:
         if frame_index in (1, 6):
             if width_ratio < ready_min_ratio or height_ratio < ready_min_ratio:
                 failures.append(f'{slug} frame {frame_index}: ready ratio {width_ratio:.3f}w/{height_ratio:.3f}h')
-        elif max(width_ratio, height_ratio) < motion_min_major_ratio:
-            failures.append(f'{slug} frame {frame_index}: motion ratio {width_ratio:.3f}w/{height_ratio:.3f}h')
+        else:
+            area_ratio = width_ratio * height_ratio
+            major_ratio = max(width_ratio, height_ratio)
+            if area_ratio < motion_min_area_ratio and major_ratio < motion_min_major_ratio:
+                failures.append(f'{slug} frame {frame_index}: motion ratio {width_ratio:.3f}w/{height_ratio:.3f}h area {area_ratio:.3f}')
 
 assert not failures, failures
 `], {

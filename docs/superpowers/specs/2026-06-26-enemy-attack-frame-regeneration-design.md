@@ -80,6 +80,7 @@ Basic verification after implementation:
 
 - Confirm the new files exist and match the naming convention.
 - Confirm attack frame canvas sizes match each enemy's battle-art aspect ratio.
+- Confirm motion frames are not visually tiny in the real enemy display box: if a frame's visible area is below the guard threshold, at least one displayed dimension must still read near battle-stand scale.
 - Run the existing release or asset checks available for this repository.
 - Inspect a full-roster contact sheet for direction, scale, and obvious cropping problems.
 - Confirm the runtime now resolves all current enemies to six `v2` frames.
