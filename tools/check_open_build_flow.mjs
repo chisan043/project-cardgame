@@ -138,4 +138,51 @@ if (bloodoathShieldViolations.length) {
     throw new Error(`Bloodoath shield regression: ${bloodoathShieldViolations.map(card => card.name).join(', ')}`);
 }
 
+const specialCards = Object.values(data.SPECIAL_EPIC_POOLS).flat();
+function findSpecialCard(id) {
+    const card = specialCards.find(item => item.id === id);
+    if (!card) throw new Error(`Missing special card: ${id}`);
+    return card;
+}
+
+const executionClaim = findSpecialCard('w_exec_claim');
+if ((Number(executionClaim.val) || 0) < 15 || !data.hasDirectCardEffect(executionClaim, 'draw')) {
+    throw new Error('Execution core contract failed: w_exec_claim needs at least 15 base value and direct draw');
+}
+
+const bloodCrucible = findSpecialCard('w_blood_crucible');
+if (bloodCrucible.directEffects?.protection || (bloodCrucible.tags || []).includes('庇护') || bloodCrucible.type === '防御') {
+    throw new Error('Bloodoath identity contract failed: w_blood_crucible must not rely on shield/protection');
+}
+if ((Number(bloodCrucible.drawCount) || 0) < 3 || (Number(bloodCrucible.bloodDebtWeak) || 0) < 2) {
+    throw new Error('Bloodoath floor contract failed: w_blood_crucible needs draw and weak pressure');
+}
+
+const mirrorFlow = findSpecialCard('a_syn_magic');
+if ((Number(mirrorFlow.nextDamageBonus) || 0) < 16) {
+    throw new Error('Mirror core contract failed: a_syn_magic next damage bonus is too low');
+}
+
+const statusSupernova = findSpecialCard('m_status_supernova');
+const supernovaTags = statusSupernova.tags || [];
+const supernovaMappedBuilds = data.CARD_BUILD_TAGS_BY_ID.m_status_supernova || [];
+if (supernovaTags.includes('爆发') || supernovaMappedBuilds.includes('chant') || (statusSupernova.buildTags || []).includes('chant')) {
+    throw new Error('Calamity core contract failed: m_status_supernova must not be classified as chant');
+}
+
+const poisonArray = findSpecialCard('a_syn_poison');
+for (const [field, minimum] of Object.entries({ basePoison: 1, baseBleed: 1, baseDamage: 1, poisonPerDiscard: 1, bleedPerDiscard: 1, damagePerDiscard: 1, protectVal: 1 })) {
+    if ((Number(poisonArray[field]) || 0) < minimum) {
+        throw new Error(`Venom core contract failed: a_syn_poison missing ${field}`);
+    }
+}
+if ((Number(poisonArray.drawCount) || 0) < 1 || (Number(poisonArray.energyOnDiscard) || 0) < 1) {
+    throw new Error('Venom core contract failed: a_syn_poison needs draw and discard energy compensation');
+}
+
+const poisonStep = data.CHARACTER_CARD_POOLS.hero_archer.find(card => card.poolId === 'archer_poison_step');
+if (!poisonStep || (Number(poisonStep.val) || 0) > 13) {
+    throw new Error('Venom non-core contract failed: archer_poison_step should no longer outclass venom cores');
+}
+
 console.log('Open build flow guard: pass');

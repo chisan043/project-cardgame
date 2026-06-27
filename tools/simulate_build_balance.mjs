@@ -624,21 +624,21 @@ function estimateCard(state, card, incoming, move) {
             s_shield: state.armor + 30,
             s_thorns: Math.min(incoming + 18, 30) + 10,
             a_syn_sword: 28 + (state.enemy.vuln > 0 ? 18 : 0),
-            a_syn_poison: state.hand.filter(held => held !== card && (held.tags || []).some(tag => ['剧毒', '出血'].includes(tag))).length * 28 + 12,
+            a_syn_poison: 36 + state.hand.filter(held => held !== card && (held.tags || []).some(tag => ['剧毒', '出血'].includes(tag))).length * 30,
             a_syn_array: Math.min(incoming + 16, 30) + 8,
             w_bastion_prayer: Math.min(incoming + 10, 24) + (state.armor > 0 ? 12 : 0) + 5,
             w_thorn_judgement: 10 + state.thorns * 4 + state.armor * 0.4 + 10,
             w_oath_fortress: Math.min(incoming + 18, 32) + 9,
             w_last_verdict: 72 + state.enemy.vuln * 10 + synergyCards * 6,
-            a_syn_blood: 16 + getBloodOathBonus(state, card) + Math.min(state.maxHp - state.hp, 20) + (card.magicSwordGrowth || 0) * 6,
+            a_syn_blood: (Number(card.val) || 12) + getBloodOathBonus(state, card) + Math.min(state.maxHp - state.hp, 18) + (card.magicSwordGrowth || 0) * 6,
             s_magic: state.lastCard ? 62 : 24,
             s_pierce: 44 + state.chant * 20 + (state.chant === 0 ? 16 : 0),
-            a_syn_magic: 34,
+            a_syn_magic: 46,
             m_chant_singularity: 30 + (enemyDebuffCount(state) > 0 ? 5 : 0),
             m_forbidden_comet: 56 + state.chant * 26,
             m_echo_archive: state.lastCard ? 32 : 12,
             m_mirror_hallway: 58,
-            m_status_supernova: 58 + enemyDebuffCount(state) * 20,
+            m_status_supernova: (Number(card.val) || 60) + enemyDebuffCount(state) * (Number(card.debuffDamageBonus) || 20),
             m_ember_orbit: 26 + (enemyDebuffCount(state) > 0 ? 10 : 0),
             m_curse_gravity: 40 + enemyDebuffCount(state) * 10,
             m_blood_moon_rite: 18 + enemyDebuffCount(state) * 8,
@@ -825,6 +825,7 @@ function executeSpecialCard(state, card, echo = false) {
         if (state.enemy.hp > 0 && state.enemy.vuln > 0) state.battleDamage += 12;
     } else if (specialId === 'a_syn_poison') {
         const targets = state.hand.filter(held => (held.tags || []).some(tag => ['剧毒', '出血'].includes(tag)));
+        const targetCount = targets.length;
         for (const target of targets) {
             const index = state.hand.indexOf(target);
             if (index !== -1) state.hand.splice(index, 1);
@@ -832,11 +833,12 @@ function executeSpecialCard(state, card, echo = false) {
             state.discardCount++;
             dealExileFlowDamage(state, target, 'discard');
         }
-        if (targets.length > 0) {
-            state.enemy.poison += 6 * targets.length;
-            state.enemy.bleed += 6 * targets.length;
-            hitEnemy(state, 10 * targets.length);
-        }
+        state.enemy.poison += (Number(card.basePoison) || 5) + (Number(card.poisonPerDiscard) || 5) * targetCount;
+        state.enemy.bleed += (Number(card.baseBleed) || 5) + (Number(card.bleedPerDiscard) || 5) * targetCount;
+        hitEnemy(state, (Number(card.baseDamage) || 8) + (Number(card.damagePerDiscard) || 8) * targetCount);
+        state.protection += Number(card.protectVal) || 0;
+        draw(state, Number(card.drawCount) || 0);
+        if (targetCount > 0) state.energy += Number(card.energyOnDiscard) || 0;
     } else if (specialId === 'a_syn_array') {
         if (state.counter > 0) state.protection += 8;
         else state.armor += 16;
@@ -889,8 +891,8 @@ function executeSpecialCard(state, card, echo = false) {
         if (chantSpent > 0) state.chant = hasRelic(state, 'r_burst_lens') ? Math.ceil(chantSpent / 2) : 0;
         else state.chant = Math.min(12, state.chant + 4);
     } else if (specialId === 'a_syn_magic') {
-        state.nextDamage += 12;
-        draw(state, echo ? 1 : 2);
+        state.nextDamage += Number(card.nextDamageBonus) || 16;
+        draw(state, echo ? (Number(card.echoDrawCount) || 1) : state.data.getCardDrawCount(card));
     } else if (specialId === 'm_chant_singularity') {
         state.chant = Math.min(12, state.chant + 3 + (hasRelic(state, 'r_energy_crys') ? 1 : 0));
         state.energy += hasRelic(state, 'r_sac_jade') ? 2 : 1;
@@ -926,9 +928,9 @@ function executeSpecialCard(state, card, echo = false) {
         else state.energy++;
     } else if (specialId === 'm_status_supernova') {
         const debuffs = enemyDebuffCount(state);
-        hitEnemy(state, 58 + state.battleDamage + debuffs * 18);
+        hitEnemy(state, (Number(card.val) || 60) + state.battleDamage + debuffs * (Number(card.debuffDamageBonus) || 20));
         state.protection += Math.min(36, debuffs * 8);
-        state.enemy.burn += Math.min(4, Math.max(1, debuffs));
+        state.enemy.burn += Math.min(Number(card.burnCap) || 5, Math.max(1, debuffs));
     } else if (specialId === 'm_ember_orbit') {
         const hadDebuff = enemyDebuffCount(state) > 0;
         state.enemy.burn += 6;

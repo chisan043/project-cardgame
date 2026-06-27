@@ -8599,12 +8599,23 @@
             else if (card.specialId === 'a_syn_poison') {
                 let targets = state.hand.filter(c => c.tags && (c.tags.includes('剧毒') || c.tags.includes('出血')));
                 let count = targets.length;
-                if (count > 0) {
-                    targets.forEach(c => discardCardFromHand(c));
-                    state.enemy.poison += 6 * count; state.enemy.bleed += 6 * count;
-                    applyDamageToEnemy(10 * count);
-                    showFloatText(`${card.name} 引爆 ${count} 张`, "var(--nature)", getCenter('enemy-avatar'));
-                } else { showFloatText("无毒可引", "#888", getCenter('ui-hp')); }
+                if (count > 0) targets.forEach(c => discardCardFromHand(c));
+                const basePoison = Number(card.basePoison) || 5;
+                const baseBleed = Number(card.baseBleed) || 5;
+                const baseDamage = Number(card.baseDamage) || 8;
+                const poisonPerDiscard = Number(card.poisonPerDiscard) || 5;
+                const bleedPerDiscard = Number(card.bleedPerDiscard) || 5;
+                const damagePerDiscard = Number(card.damagePerDiscard) || 8;
+                state.enemy.poison += basePoison + poisonPerDiscard * count;
+                state.enemy.bleed += baseBleed + bleedPerDiscard * count;
+                applyDamageToEnemy(baseDamage + damagePerDiscard * count);
+                let pVal = getProtectionValue(card);
+                state.p_reduce_dmg += pVal;
+                const drawCount = Number(card.drawCount) || 0;
+                if (drawCount > 0) await drawCards(drawCount);
+                const energyGain = count > 0 ? (Number(card.energyOnDiscard) || 0) : 0;
+                if (energyGain > 0) state.mp += energyGain;
+                showFloatText(count > 0 ? `${card.name} 引爆 ${count} 张 / 能量 +${energyGain} / 庇护 +${pVal}` : `${card.name} 布阵 / 庇护 +${pVal}`, "var(--nature)", getCenter('enemy-avatar'));
             }
             else if (card.specialId === 'a_syn_array') {
                 triggerVFX('p-def');
@@ -8629,9 +8640,11 @@
                 showFloatText(oathBonus > 0 ? `${card.name} +${oathBonus}` : card.name, "var(--crimson)", getCenter('enemy-avatar'));
             }
             else if (card.specialId === 'a_syn_magic') {
-                state.p_next_dmg += 12;
-                await drawCards(isEcho ? 1 : 2);
-                showFloatText(isEcho ? "回声导流 / 附魔 +12" : "回声导流 / 抽牌 +2 / 附魔 +12", "var(--purple)", getCenter('ui-hp'));
+                const bonus = Number(card.nextDamageBonus) || 16;
+                const drawCount = isEcho ? (Number(card.echoDrawCount) || 1) : getCardDrawCount(card);
+                state.p_next_dmg += bonus;
+                await drawCards(drawCount);
+                showFloatText(isEcho ? `回声导流 / 附魔 +${bonus}` : `回声导流 / 抽牌 +${drawCount} / 附魔 +${bonus}`, "var(--purple)", getCenter('ui-hp'));
             }
             else if (card.specialId === 'w_counter_crown') {
                 triggerVFX('p-atk');
@@ -8690,9 +8703,9 @@
             else if (card.specialId === 'm_status_supernova') {
                 const debuffs = getEnemyDebuffTypeCount();
                 triggerVFX('p-atk');
-                applySpecialCardDamage(card, 58 + state.p_battle_dmg + debuffs * 18);
+                applySpecialCardDamage(card, (Number(card.val) || 60) + state.p_battle_dmg + debuffs * (Number(card.debuffDamageBonus) || 20));
                 state.p_reduce_dmg += Math.min(36, debuffs * 8);
-                state.enemy.burn += Math.min(4, Math.max(1, debuffs));
+                state.enemy.burn += Math.min(Number(card.burnCap) || 5, Math.max(1, debuffs));
                 if(hasRelic('r_status_prism')) state.p_chant = Math.min(12, state.p_chant + 1);
                 showFloatText(`状态共振 ${debuffs}`, "var(--fire)", getCenter('enemy-avatar'));
             }
