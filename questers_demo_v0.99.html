@@ -7916,7 +7916,7 @@
         const character = getCurrentCharacter();
         state.mp = getCharacterBaseEnergy(character);
         if (character.id === 'hero_warrior') state.armor += 5;
-        if(hasRelic('r_thorn_shield_new')) state.armor += 4;
+        if(hasRelic('r_thorn_shield_new')) state.armor += 6;
         
         setEnemyIntent(); 
         showScene('scene-battle'); updateBattleUI();
@@ -8202,6 +8202,13 @@
         }
         showFloatText(`${label} ${damage}`, "var(--nature)", getCenter('enemy-avatar'));
         return damage;
+    }
+
+    async function triggerBloodletDrawRelic() {
+        if (!hasRelic('r_bloodlet_draw')) return;
+        await drawCards(1);
+        applyDamageToEnemy(4, true);
+        showFloatText("赤脉弦扣 +4", "var(--crimson)", getCenter('enemy-avatar'));
     }
 
     function onCardExhausted(c) {
@@ -8822,7 +8829,7 @@
                 state.p_reduce_dmg += 8 + Math.min(12, bleedLayers);
                 if (bleedLayers > 0) {
                     applyDamageToEnemy(bleedLayers * (hasRelic('r_bleed_knife') ? 7 : 5), true);
-                    if (hasRelic('r_bloodlet_draw')) await drawCards(1);
+                    await triggerBloodletDrawRelic();
                     showFloatText(`伤口保留`, "var(--gold)", getCenter('enemy-avatar'));
                 }
                 showFloatText("断脉齐爆", "var(--crimson)", getCenter('enemy-avatar'));
@@ -8834,6 +8841,7 @@
                 const bleedLayers = state.enemy.bleed;
                 if (bleedLayers > 0) {
                     applyDamageToEnemy(bleedLayers * (hasRelic('r_bleed_knife') ? 7 : 5), true);
+                    await triggerBloodletDrawRelic();
                     showFloatText(`毒脉保留`, "var(--gold)", getCenter('enemy-avatar'));
                 }
                 state.p_reduce_dmg += 8 + Math.min(12, bleedLayers);
@@ -8855,9 +8863,9 @@
                 showFloatText("翠林回响", "var(--nature)", getCenter('ui-hp'));
             }
             else if (card.specialId === 'a_skyfall_shot') {
-                const exileBonus = Math.floor(state.exhaustPile.length / 2) * 4;
+                const exileBonus = Math.floor(state.exhaustPile.length / 2) * 5;
                 triggerVFX('p-atk');
-                applySpecialCardDamage(card, 18 + state.p_battle_dmg + exileBonus, true);
+                applySpecialCardDamage(card, 22 + state.p_battle_dmg + exileBonus, true);
                 showFloatText(exileBonus > 0 ? `坠星绝矢 +${exileBonus}` : "坠星绝矢", "var(--nature)", getCenter('enemy-avatar'));
             }
             else {
@@ -8926,6 +8934,10 @@
             if(actuallyDiscarded > 0 && hasRelic('r_frenzy_veil')) drawC++; 
             if(actuallyDiscarded > 0 && hasRelic('r_rewind_sand')) drawC++;
             if(drawC > 0) await drawCards(drawC); 
+        }
+        if (!isEcho && Number(card.drawOnExhaustPile) > 0 && state.exhaustPile.length > 0) {
+            await drawCards(Math.floor(Number(card.drawOnExhaustPile)));
+            showFloatText("归巢补给", "var(--nature)", getCenter('ui-deck-count'));
         }
         if (card.tags && card.tags.includes('回收') && targets?.recycleSelections) {
             let handChanged = false;
@@ -9176,7 +9188,7 @@
         
         if(card.tags && card.tags.includes('放血') && state.enemy.bleed > 0) { 
             let boomDmg = state.enemy.bleed * (hasRelic('r_bleed_knife') ? 5 : 3); applyDamageToEnemy(boomDmg, true); 
-            if(hasRelic('r_bloodlet_draw')) await drawCards(1);
+            await triggerBloodletDrawRelic();
             if(hasRelic('r_bloodlet_hourglass') && !state.r_bloodlet_hourglass_used) { state.r_bloodlet_hourglass_used = true; await drawCards(1); }
             if(hasRelic('r_execute') && state.enemy.vuln > 0) { showFloatText(`处决不断!`, "var(--gold)", getCenter('enemy-avatar')); } else {
                 state.enemy.bleed = hasRelic('r_rupture_charm') ? 2 : 0;
@@ -9189,6 +9201,7 @@
         }
 
         if(card.tags && card.tags.includes('易伤')) { let vVal = 2 * debuffMult + statusLayerBonus; if(hasRelic('r_weak_mask')) vVal += 1; state.enemy.vuln += vVal; statusApplied = true; showFloatText("易伤", "var(--purple)", getCenter('enemy-avatar')); }
+        if(card.extraVulnerable) { let vVal = Math.max(0, Math.floor(Number(card.extraVulnerable) || 0)); state.enemy.vuln += vVal; statusApplied = true; showFloatText(`易伤 +${vVal}`, "var(--purple)", getCenter('enemy-avatar')); }
         if(card.tags && card.tags.includes('虚弱')) { let wVal = 2 * debuffMult + statusLayerBonus; if(hasRelic('r_weak_mask')) wVal += 1; state.enemy.weak += wVal; statusApplied = true; showFloatText("虚弱", "#bbb", getCenter('enemy-avatar')); }
         if (card.bloodDebtBleed) {
             state.enemy.bleed += Math.max(0, Math.floor(card.bloodDebtBleed));
@@ -9209,7 +9222,7 @@
         if((card.tags && card.tags.includes('充能')) || hasDirectCardEffect(card, 'energy')) { let eAmt = 1; if(card.tags && card.tags.includes('充能') && hasRelic('r_energy_crys')) eAmt += 1; state.mp += eAmt; showFloatText(`能量 +${eAmt}`, "var(--gold)", getCenter('ui-mp')); }
         if(card.tags && card.tags.includes('荆棘')) { let tVal = hasRelic('r_thorn_shield_new') ? 12 : 8; state.player.thorns += tVal; showFloatText(`获得荆棘 +${tVal}`, "var(--nature)", getCenter('ui-hp')); updateTopBar(); }
         if(((card.tags && card.tags.includes('抽牌')) || hasDirectCardEffect(card, 'draw')) && !isEcho) { let drawCount = getCardDrawCount(card); if(card.tags && card.tags.includes('抽牌') && hasRelic('r_luck_box')) drawCount += 1; await drawCards(drawCount); }
-        if(hasRelic('r_status_ledger') && getEnemyDebuffTypeCount() >= 3 && card.type === '能力' && !state.r_status_ledger_used && !isEcho) { state.r_status_ledger_used = true; await drawCards(1); }
+        if(hasRelic('r_status_ledger') && getEnemyDebuffTypeCount() >= 2 && card.type === '能力' && !state.r_status_ledger_used && !isEcho) { state.r_status_ledger_used = true; await drawCards(1); }
         if(hasRelic('r_double_quill') && card.type === '能力' && cardsPlayedThisTurn === 2 && !isEcho) { await drawCards(1); showFloatText("双墨抽牌", "var(--purple)", getCenter('ui-deck-count')); }
         grantRoleSynergy(card, isEcho, targets);
 

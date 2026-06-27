@@ -303,7 +303,7 @@ function createBattle(data, rng, roleId, deck, hp, checkpoint, loadout, options 
         knifeSequence: 0, signatureSetupUsed: false, signatureAttackReady: false,
         warriorStartUsed: false, warriorStartReady: false, crownOath: false
     };
-    if (hasRelic(state, 'r_thorn_shield_new')) state.armor += 4;
+    if (hasRelic(state, 'r_thorn_shield_new')) state.armor += 6;
     return state;
 }
 
@@ -544,6 +544,12 @@ function heal(state, amount) {
     state.healing += actual;
 }
 
+function triggerBloodletDrawRelic(state) {
+    if (!hasRelic(state, 'r_bloodlet_draw')) return;
+    draw(state, 1);
+    hitEnemy(state, 4, true, '赤脉弦扣');
+}
+
 function getSwordBonus(state) {
     const swordRatio = hasRelic(state, 'r_sword_oath') ? 0.7 : 0.4;
     const counterBonus = state.counter * (hasRelic(state, 'r_sword_oath') ? 8 : 4);
@@ -663,6 +669,7 @@ function estimateCard(state, card, incoming, move) {
         if (tags.includes('爆发')) value += state.chant ? state.chant * 8 : 4;
         if (tags.includes('圣剑')) value += getSwordBonus(state);
         if (card.bloodOathMissingRatio) value += getBloodOathBonus(state, card);
+        if (card.drawOnExhaustPile && state.exhaust.length > 0) value += 5;
         score += value * repeats * (tags.includes('穿甲') ? 1.12 : 1);
         if (tags.includes('放血')) score += state.enemy.bleed * 3;
         if (tags.includes('吸血')) {
@@ -989,13 +996,16 @@ function executeSpecialCard(state, card, echo = false) {
         state.protection += 8 + Math.min(12, bleedLayers);
         if (bleedLayers > 0) {
             hitEnemy(state, bleedLayers * (hasRelic(state, 'r_bleed_knife') ? 7 : 5), true);
-            if (hasRelic(state, 'r_bloodlet_draw')) draw(state, 1);
+            triggerBloodletDrawRelic(state);
         }
     } else if (specialId === 'a_venom_burst') {
         hitEnemy(state, 16 + state.battleDamage);
         state.enemy.poison += hasRelic(state, 'r_poison_fang') ? 7 : 6;
         const bleedLayers = state.enemy.bleed;
-        if (bleedLayers > 0) hitEnemy(state, bleedLayers * (hasRelic(state, 'r_bleed_knife') ? 7 : 5), true);
+        if (bleedLayers > 0) {
+            hitEnemy(state, bleedLayers * (hasRelic(state, 'r_bleed_knife') ? 7 : 5), true);
+            triggerBloodletDrawRelic(state);
+        }
         state.protection += 8 + Math.min(12, bleedLayers);
         draw(state, 1);
     } else if (specialId === 'a_green_resonance') {
@@ -1005,7 +1015,7 @@ function executeSpecialCard(state, card, echo = false) {
         draw(state, 1);
         if (returned) recordCardOpportunity(state, card);
     } else if (specialId === 'a_skyfall_shot') {
-        hitEnemy(state, 18 + state.battleDamage + Math.floor(state.exhaust.length / 2) * 4, true);
+        hitEnemy(state, 22 + state.battleDamage + Math.floor(state.exhaust.length / 2) * 5, true);
     } else if (specialId === 's_poison') {
         const layers = state.enemy.poison + state.enemy.bleed;
         hitEnemy(state, 20 + layers * 2);
@@ -1118,10 +1128,14 @@ function executeCard(state, card, echo = false) {
         if (hasRelic(state, 'r_hex_incense')) state.enemy.weak++;
     }
     if (tags.includes('易伤')) state.enemy.vuln += 2 * (card.type === '能力' ? state.data.getAbilityPotency(card) : 1);
+    if (card.extraVulnerable) state.enemy.vuln += Math.max(0, Math.floor(Number(card.extraVulnerable) || 0));
     if (tags.includes('虚弱')) state.enemy.weak += 2 * (card.type === '能力' ? state.data.getAbilityPotency(card) : 1);
     if (card.bloodDebtWeak) state.enemy.weak += Math.max(0, Math.floor(card.bloodDebtWeak));
     if (card.bloodDebtStun) state.enemy.stun += Math.max(0, Math.floor(card.bloodDebtStun));
     if (tags.includes('眩晕')) state.enemy.stun += 1;
+    if (!echo && Number(card.drawOnExhaustPile) > 0 && state.exhaust.length > 0) {
+        draw(state, Math.floor(Number(card.drawOnExhaustPile)));
+    }
     if (tags.includes('回收') && !echo) {
         for (const mode of state.data.getCardRecycleModes(card)) {
             if (mode === 'exhaustToHand') cycleReturned = returnFromExhaust(state, 'hand') || cycleReturned;
@@ -1132,6 +1146,7 @@ function executeCard(state, card, echo = false) {
     if (tags.includes('放血') && state.enemy.bleed > 0) {
         const bloodletDamage = state.enemy.bleed * (hasRelic(state, 'r_bleed_knife') ? 5 : 3);
         hitEnemy(state, bloodletDamage, true);
+        triggerBloodletDrawRelic(state);
         state.enemy.bleed = hasRelic(state, 'r_rupture_charm') ? 2 : 0;
     }
     if (card.type === '防御') state.armor += state.data.getScaledCardValue(card);
@@ -1205,7 +1220,7 @@ function executeCard(state, card, echo = false) {
         state.hand = [];
         draw(state, count);
     }
-    if (hasRelic(state, 'r_status_ledger') && enemyDebuffCount(state) >= 3 && card.type === '能力' && !state.statusLedgerUsed && !echo) {
+    if (hasRelic(state, 'r_status_ledger') && enemyDebuffCount(state) >= 2 && card.type === '能力' && !state.statusLedgerUsed && !echo) {
         state.statusLedgerUsed = true;
         draw(state, 1);
     }
