@@ -8576,6 +8576,11 @@
                         state.p_next_dmg += 8;
                         showFloatText("书签回能 +1 / 附魔 +8", "var(--purple)", getCenter('ui-mp'));
                     }
+                    const energyRefund = Number(card.energyOnCopy) || 0;
+                    if (energyRefund > 0) {
+                        state.mp += energyRefund;
+                        showFloatText(`镜界回能 +${energyRefund}`, "var(--purple)", getCenter('ui-mp'));
+                    }
                 } else {
                     await drawCards(3);
                 }
@@ -8699,6 +8704,24 @@
                 applySpecialCardDamage(card, dmg, true);
                 showFloatText(card.name, "var(--gold)", getCenter('enemy-avatar'));
             }
+            else if (card.specialId === 'w_exec_line') {
+                state.enemy.vuln += 2;
+                let dmg = Number(card.val) || 34;
+                if (cardsPlayedThisTurn > 1) {
+                    dmg = Math.floor(dmg * (hasRelic('r_combo_ring') ? 1.7 : 1.5));
+                    await drawCards(Number(card.drawOnCombo) || 1);
+                }
+                triggerVFX('p-atk');
+                applySpecialCardDamage(card, dmg + state.p_battle_dmg, true);
+                showFloatText(cardsPlayedThisTurn > 1 ? "银线破甲 / 连击抽牌" : "银线破甲", "var(--gold)", getCenter('enemy-avatar'));
+            }
+            else if (card.specialId === 'w_blood_drum') {
+                if (!isEcho && card.bloodOathCost) applyBloodOathCost(card.bloodOathCost, card.name);
+                state.mp += 1;
+                await drawCards(Number(card.drawCount) || 2);
+                state.p_dmg_buff += Number(card.turnDamageBonus) || 4;
+                showFloatText(`血鼓战誓 +${Number(card.turnDamageBonus) || 4}伤`, "var(--crimson)", getCenter('ui-hp'));
+            }
             else if (card.specialId === 'm_chant_singularity') {
                 let chantGain = 3 + (hasRelic('r_energy_crys') ? 1 : 0);
                 state.p_chant = Math.min(12, state.p_chant + chantGain);
@@ -8770,6 +8793,19 @@
                 await drawCards(1);
                 if (debuffs >= 3) state.mp += 1;
                 showFloatText(debuffs >= 3 ? `灾厄标记 +${debuffs * 6} / 回能 +1` : `灾厄标记 +${debuffs * 6}`, "var(--purple)", getCenter('ui-hp'));
+            }
+            else if (card.specialId === 'm_calamity_black_snow') {
+                triggerVFX('p-atk');
+                applySpecialCardDamage(card, (Number(card.val) || 18) + state.p_battle_dmg);
+                state.enemy.weak += 2;
+                state.enemy.burn += 1;
+                state.enemy.curse += 2;
+                if(hasRelic('r_status_prism')) state.p_chant = Math.min(12, state.p_chant + 1);
+                await drawCards(1);
+                const debuffTypes = Math.min(Number(card.debuffDamageCap) || 5, getEnemyDebuffTypeCount());
+                const calamityDamage = debuffTypes * (Number(card.debuffDamageBonus) || 6);
+                if (calamityDamage > 0) applyDamageToEnemy(calamityDamage, true);
+                showFloatText(`黑雪灾厄 +${calamityDamage}`, "var(--purple)", getCenter('enemy-avatar'));
             }
             else if (card.specialId === 'm_blood_moon_rite') {
                 state.enemy.curse += 5;
@@ -8861,13 +8897,13 @@
                 await drawCards(1);
                 if (broughtBack) renderHand();
                 showFloatText("翠林回响", "var(--nature)", getCenter('ui-hp'));
-            }
-            else if (card.specialId === 'a_skyfall_shot') {
-                const exileBonus = Math.floor(state.exhaustPile.length / 2) * 5;
-                triggerVFX('p-atk');
-                applySpecialCardDamage(card, 22 + state.p_battle_dmg + exileBonus, true);
-                showFloatText(exileBonus > 0 ? `坠星绝矢 +${exileBonus}` : "坠星绝矢", "var(--nature)", getCenter('enemy-avatar'));
-            }
+	            }
+	            else if (card.specialId === 'a_skyfall_shot') {
+	                const exileBonus = Math.min(Number(card.exileDamageCap) || 24, state.exhaustPile.length * (Number(card.exileDamagePerCard) || 3));
+	                triggerVFX('p-atk');
+	                applySpecialCardDamage(card, 26 + state.p_battle_dmg + exileBonus, true);
+	                showFloatText(exileBonus > 0 ? `坠星绝矢 +${exileBonus}` : "坠星绝矢", "var(--nature)", getCenter('enemy-avatar'));
+	            }
             else {
                 const fallbackCard = { ...card, isSpecial: false };
                 await executeCardTags(fallbackCard, isEcho, targets);

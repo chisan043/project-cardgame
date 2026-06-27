@@ -637,7 +637,7 @@ function estimateCard(state, card, incoming, move) {
             w_oath_fortress: Math.min(incoming + 18, 32) + 9,
             w_last_verdict: 72 + state.enemy.vuln * 10 + synergyCards * 6,
             a_syn_blood: (Number(card.val) || 12) + getBloodOathBonus(state, card) + Math.min(state.maxHp - state.hp, 18) + (card.magicSwordGrowth || 0) * 6,
-            s_magic: state.lastCard ? 62 : 24,
+            s_magic: state.lastCard ? 68 : 24,
             s_pierce: 44 + state.chant * 20 + (state.chant === 0 ? 16 : 0),
             a_syn_magic: 46,
             m_chant_singularity: 30 + (enemyDebuffCount(state) > 0 ? 5 : 0),
@@ -647,6 +647,7 @@ function estimateCard(state, card, incoming, move) {
             m_status_supernova: (Number(card.val) || 60) + enemyDebuffCount(state) * (Number(card.debuffDamageBonus) || 20),
             m_ember_orbit: 26 + (enemyDebuffCount(state) > 0 ? 10 : 0),
             m_curse_gravity: 40 + enemyDebuffCount(state) * 10,
+            m_calamity_black_snow: (Number(card.val) || 18) + Math.min(Number(card.debuffDamageCap) || 5, Math.max(3, enemyDebuffCount(state))) * (Number(card.debuffDamageBonus) || 6) + 14,
             m_blood_moon_rite: 18 + enemyDebuffCount(state) * 8,
             s_energy: 30 + state.aim * 3,
             a_wind_dance: 34 + (state.aim > 0 ? 5 : 0),
@@ -655,7 +656,7 @@ function estimateCard(state, card, incoming, move) {
             a_bloodlet_gale: 36 + state.enemy.bleed * 8 + (state.enemy.poison > 0 || state.enemy.vuln > 0 ? 10 : 0),
             a_venom_burst: 34 + state.enemy.bleed * 8 + (state.enemy.poison > 0 ? 8 : 0),
             a_green_resonance: (state.discard.length ? 28 : 12) + 16,
-            a_skyfall_shot: 22 + Math.floor(state.exhaust.length / 2) * 5,
+            a_skyfall_shot: 26 + Math.min(Number(card.exileDamageCap) || 24, (state.exhaust.length + 1) * (Number(card.exileDamagePerCard) || 3)),
             s_poison: (state.enemy.poison + state.enemy.bleed) * 2 + 28,
             s_exhaust: (state.exhaust.length + 1) * 14 + (state.exhaust.length ? 14 : 0)
         };
@@ -868,6 +869,19 @@ function executeSpecialCard(state, card, echo = false) {
     } else if (specialId === 'w_last_verdict') {
         const executionHand = state.hand.filter(held => (held.tags || []).some(tag => ['连击', '穿甲'].includes(tag))).length;
         hitEnemy(state, 64 + state.battleDamage + state.enemy.vuln * 10 + executionHand * 6, true);
+    } else if (specialId === 'w_exec_line') {
+        state.enemy.vuln += 2;
+        let damage = Number(card.val) || 34;
+        if (state.cardsPlayed > 0) {
+            damage = Math.floor(damage * 1.5);
+            draw(state, Number(card.drawOnCombo) || 1);
+        }
+        hitEnemy(state, damage + state.battleDamage, true);
+    } else if (specialId === 'w_blood_drum') {
+        if (!echo && card.bloodOathCost) applyBloodOathCost(state, card.bloodOathCost);
+        state.energy++;
+        draw(state, Number(card.drawCount) || 2);
+        state.turnDamage += Number(card.turnDamageBonus) || 4;
     } else if (specialId === 'a_syn_blood') {
         const dealt = hitEnemy(state, (Number(card.val) || 16) + getBloodOathBonus(state, card) + state.battleDamage, true);
         let healing = Math.floor(dealt * (card.lifestealRatio || 0.5));
@@ -889,6 +903,7 @@ function executeSpecialCard(state, card, echo = false) {
                 state.energy++;
                 state.nextDamage += 8;
             }
+            state.energy += Number(card.energyOnCopy) || 0;
         } else {
             draw(state, 3);
         }
@@ -952,6 +967,15 @@ function executeSpecialCard(state, card, echo = false) {
         if (hasRelic(state, 'r_status_prism')) state.chant = Math.min(12, state.chant + 1);
         draw(state, 1);
         if (debuffs >= 3) state.energy++;
+    } else if (specialId === 'm_calamity_black_snow') {
+        hitEnemy(state, (Number(card.val) || 18) + state.battleDamage);
+        state.enemy.weak += 2;
+        state.enemy.burn += 1;
+        state.enemy.curse += 2;
+        if (hasRelic(state, 'r_status_prism')) state.chant = Math.min(12, state.chant + 1);
+        draw(state, 1);
+        const debuffs = Math.min(Number(card.debuffDamageCap) || 5, enemyDebuffCount(state));
+        hitEnemy(state, debuffs * (Number(card.debuffDamageBonus) || 6), true);
     } else if (specialId === 'm_blood_moon_rite') {
         state.enemy.curse += 5;
         state.enemy.vuln += 2;
@@ -1015,7 +1039,9 @@ function executeSpecialCard(state, card, echo = false) {
         draw(state, 1);
         if (returned) recordCardOpportunity(state, card);
     } else if (specialId === 'a_skyfall_shot') {
-        hitEnemy(state, 22 + state.battleDamage + Math.floor(state.exhaust.length / 2) * 5, true);
+        const exileCount = state.exhaust.length + 1;
+        const exileBonus = Math.min(Number(card.exileDamageCap) || 24, exileCount * (Number(card.exileDamagePerCard) || 3));
+        hitEnemy(state, 26 + state.battleDamage + exileBonus, true);
     } else if (specialId === 's_poison') {
         const layers = state.enemy.poison + state.enemy.bleed;
         hitEnemy(state, 20 + layers * 2);

@@ -83,8 +83,29 @@ assert(recall.drawOnExhaustPile === 1, '归巢双令 should draw when the exile 
 assert(/放逐区有牌/.test(recall.desc) && /抽 1/.test(recall.desc), '归巢双令 text should mention conditional draw');
 
 const skyfall = special('a_skyfall_shot');
-assert(skyfall.val === 22, '坠星绝矢 should deal 22 base damage');
-assert(/造成 22/.test(skyfall.desc) && /额外造成 5/.test(skyfall.desc), '坠星绝矢 text should match 22/+5 tuning');
+assert(skyfall.val === 26, '坠星绝矢 should deal 26 base damage');
+assert(skyfall.exileDamagePerCard === 3, '坠星绝矢 should gain 3 damage per exiled card');
+assert(skyfall.exileDamageCap === 24, '坠星绝矢 exile bonus should cap at 24');
+assert(/造成 26/.test(skyfall.desc) && /每有 1 张牌/.test(skyfall.desc) && /最多 24/.test(skyfall.desc), '坠星绝矢 text should match 26/+3 capped tuning');
+
+const mirrorRewrite = special('s_magic');
+assert(mirrorRewrite.energyOnCopy === 1, '镜界复写 should refund 1 energy when it copies a card');
+assert(/回复 1 点能量/.test(mirrorRewrite.desc), '镜界复写 text should mention successful-copy energy refund');
+
+const blackSnow = special('m_calamity_black_snow');
+assert(blackSnow.val === 18, '黑雪预兆 should deal 18 base damage');
+assert(blackSnow.debuffDamageBonus === 6, '黑雪预兆 should deal 6 calamity damage per debuff type');
+assert(blackSnow.debuffDamageCap === 5, '黑雪预兆 should count up to 5 debuff types');
+assert(/每种负面状态追加 6/.test(blackSnow.desc) && /最多 5 种/.test(blackSnow.desc), '黑雪预兆 text should mention debuff-type finisher damage');
+
+const executionLine = special('w_exec_line');
+assert(executionLine.drawOnCombo === 1, '银线破甲 should draw when played after another card');
+assert(/先施加/.test(executionLine.desc) && /抽 1/.test(executionLine.desc), '银线破甲 text should mention pre-damage vulnerability and combo draw');
+
+const bloodDrum = special('w_blood_drum');
+assert(bloodDrum.drawCount === 2, '血鼓战誓 should draw 2 cards');
+assert(bloodDrum.turnDamageBonus === 4, '血鼓战誓 should grant +4 attack damage this turn');
+assert(/抽 2/.test(bloodDrum.desc) && /本回合攻击伤害 \+4/.test(bloodDrum.desc), '血鼓战誓 text should mention draw 2 and turn attack damage');
 
 assert(/2 种/.test(relic('r_status_ledger').desc), '异状账簿 should trigger at 2 debuff types');
 assert(/4 点流动伤害/.test(relic('r_bloodlet_draw').desc), '赤脉弦扣 should mention flow damage');
@@ -95,8 +116,16 @@ const simulator = readSource('tools/simulate_build_balance.mjs');
 
 assert(hasPattern(html, /r_status_ledger.*getEnemyDebuffTypeCount\(\) >= 2/), 'HTML should use 2-debuff ledger threshold');
 assert(hasPattern(simulator, /r_status_ledger.*enemyDebuffCount\(state\) >= 2/), 'Simulator should use 2-debuff ledger threshold');
-assert(hasPattern(html, /a_skyfall_shot.*Math\.floor\(state\.exhaustPile\.length \/ 2\) \* 5.*22/s), 'HTML should resolve 坠星绝矢 as 22/+5');
-assert(hasPattern(simulator, /a_skyfall_shot.*22 \+ state\.battleDamage \+ Math\.floor\(state\.exhaust\.length \/ 2\) \* 5/s), 'Simulator should resolve 坠星绝矢 as 22/+5');
+assert(hasPattern(html, /a_skyfall_shot.*Math\.min\(Number\(card\.exileDamageCap\).*state\.exhaustPile\.length \* \(Number\(card\.exileDamagePerCard\).*26/s), 'HTML should resolve 坠星绝矢 as 26/+3 capped');
+assert(hasPattern(simulator, /a_skyfall_shot.*exileCount = state\.exhaust\.length \+ 1.*Math\.min\(Number\(card\.exileDamageCap\).*exileCount \* \(Number\(card\.exileDamagePerCard\).*26/s), 'Simulator should resolve 坠星绝矢 as 26/+3 capped');
+assert(hasPattern(html, /s_magic.*energyRefund = Number\(card\.energyOnCopy\).*state\.mp \+= energyRefund/s), 'HTML should refund energy for successful 镜界复写 copies');
+assert(hasPattern(simulator, /s_magic.*state\.energy \+= Number\(card\.energyOnCopy\)/s), 'Simulator should refund energy for successful 镜界复写 copies');
+assert(hasPattern(html, /m_calamity_black_snow.*Math\.min\(Number\(card\.debuffDamageCap\).*getEnemyDebuffTypeCount\(\)\).*Number\(card\.debuffDamageBonus\)/s), 'HTML should apply 黑雪预兆 debuff-type damage');
+assert(hasPattern(simulator, /m_calamity_black_snow.*Math\.min\(Number\(card\.debuffDamageCap\).*enemyDebuffCount\(state\)\).*Number\(card\.debuffDamageBonus\)/s), 'Simulator should apply 黑雪预兆 debuff-type damage');
+assert(hasPattern(html, /w_exec_line.*state\.enemy\.vuln \+= 2.*cardsPlayedThisTurn > 1.*drawCards\(Number\(card\.drawOnCombo\)/s), 'HTML should apply 银线破甲 pre-hit vulnerability and combo draw');
+assert(hasPattern(simulator, /w_exec_line.*state\.enemy\.vuln \+= 2.*state\.cardsPlayed > 0.*draw\(state, Number\(card\.drawOnCombo\)/s), 'Simulator should apply 银线破甲 pre-hit vulnerability and combo draw');
+assert(hasPattern(html, /w_blood_drum.*state\.p_dmg_buff \+= Number\(card\.turnDamageBonus\)/s), 'HTML should apply 血鼓战誓 turn damage bonus');
+assert(hasPattern(simulator, /w_blood_drum.*state\.turnDamage \+= Number\(card\.turnDamageBonus\)/s), 'Simulator should apply 血鼓战誓 turn damage bonus');
 assert(html.includes('drawOnExhaustPile') && simulator.includes('drawOnExhaustPile'), 'HTML and simulator should implement 归巢双令 conditional draw');
 assert(html.includes('extraVulnerable') && simulator.includes('extraVulnerable'), 'HTML and simulator should implement 疫星坠落 explicit vulnerability');
 assert(html.includes('triggerBloodletDrawRelic') && simulator.includes('triggerBloodletDrawRelic'), 'HTML and simulator should share 赤脉弦扣 battle behavior');
