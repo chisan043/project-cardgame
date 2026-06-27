@@ -4,7 +4,7 @@ const CHARACTERS = {
     hero_warrior: {
         id: 'hero_warrior',
         name: '勇者战士',
-        subtitle: '圣剑 / 处刑 / 血誓魔剑',
+        subtitle: '圣剑 / 处刑 / 魔剑',
         desc: '以护盾反击稳步铸剑，以穿甲连击制造处刑窗口，或让失血淬炼魔剑再用吸血回稳。',
         tags: ['圣剑反击', '处刑连斩', '血誓魔剑'],
         maxHp: 90,

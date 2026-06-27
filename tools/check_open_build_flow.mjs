@@ -54,6 +54,9 @@ const staleTokens = FORBIDDEN_TOKENS.filter(token => source.includes(token));
 if (staleTokens.length) throw new Error(`Opening archetype selection returned: ${staleTokens.join(', ')}`);
 
 const data = loadGameData();
+if (data.CHARACTERS.hero_warrior.subtitle !== '圣剑 / 处刑 / 魔剑') {
+    throw new Error(`Warrior subtitle should be 圣剑 / 处刑 / 魔剑, got ${data.CHARACTERS.hero_warrior.subtitle}`);
+}
 const activeLegacyRelics = data.RELIC_POOL.filter(relic => LEGACY_OPENING_RELIC_IDS.has(relic.id));
 if (activeLegacyRelics.length) {
     throw new Error(`Legacy opening relics remain obtainable: ${activeLegacyRelics.map(relic => relic.id).join(', ')}`);
