@@ -8700,7 +8700,7 @@
             else if (card.specialId === 'w_last_verdict') {
                 triggerVFX('p-atk');
                 const executionHand = state.hand.filter(c => c.tags && (c.tags.includes('连击') || c.tags.includes('穿甲'))).length;
-                let dmg = 64 + state.p_battle_dmg + state.enemy.vuln * 10 + executionHand * 6;
+                let dmg = 64 + state.p_battle_dmg + state.enemy.vuln * 10 + executionHand * 10;
                 applySpecialCardDamage(card, dmg, true);
                 showFloatText(card.name, "var(--gold)", getCenter('enemy-avatar'));
             }

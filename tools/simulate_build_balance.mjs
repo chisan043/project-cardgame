@@ -635,7 +635,7 @@ function estimateCard(state, card, incoming, move) {
             w_bastion_prayer: Math.min(incoming + 10, 24) + (state.armor > 0 ? 12 : 0) + 5,
             w_thorn_judgement: 10 + state.thorns * 4 + state.armor * 0.4 + 10,
             w_oath_fortress: Math.min(incoming + 18, 32) + 9,
-            w_last_verdict: 72 + state.enemy.vuln * 10 + synergyCards * 6,
+            w_last_verdict: 72 + state.enemy.vuln * 10 + synergyCards * 10,
             a_syn_blood: (Number(card.val) || 12) + getBloodOathBonus(state, card) + Math.min(state.maxHp - state.hp, 18) + (card.magicSwordGrowth || 0) * 6,
             s_magic: state.lastCard ? 68 : 24,
             s_pierce: 44 + state.chant * 20 + (state.chant === 0 ? 16 : 0),
@@ -868,7 +868,7 @@ function executeSpecialCard(state, card, echo = false) {
         state.counter = 1;
     } else if (specialId === 'w_last_verdict') {
         const executionHand = state.hand.filter(held => (held.tags || []).some(tag => ['连击', '穿甲'].includes(tag))).length;
-        hitEnemy(state, 64 + state.battleDamage + state.enemy.vuln * 10 + executionHand * 6, true);
+        hitEnemy(state, 64 + state.battleDamage + state.enemy.vuln * 10 + executionHand * 10, true);
     } else if (specialId === 'w_exec_line') {
         state.enemy.vuln += 2;
         let damage = Number(card.val) || 34;

@@ -118,6 +118,9 @@ const executionLine = special('w_exec_line');
 assert(executionLine.drawOnCombo === 1, '银线破甲 should draw when played after another card');
 assert(/先施加/.test(executionLine.desc) && /抽 1/.test(executionLine.desc), '银线破甲 text should mention pre-damage vulnerability and combo draw');
 
+const lastVerdict = special('w_last_verdict');
+assert(/手牌每张\[连击\]\/\[穿甲\]牌追加 10 伤害/.test(lastVerdict.desc), '终誓裁决 text should mention +10 damage per execution hand card');
+
 const bloodDrum = special('w_blood_drum');
 assert(bloodDrum.drawCount === 2, '血鼓战誓 should draw 2 cards');
 assert(bloodDrum.turnDamageBonus === 4, '血鼓战誓 should grant +4 attack damage this turn');
@@ -140,6 +143,9 @@ assert(hasPattern(html, /m_calamity_black_snow.*Math\.min\(Number\(card\.debuffD
 assert(hasPattern(simulator, /m_calamity_black_snow.*Math\.min\(Number\(card\.debuffDamageCap\).*enemyDebuffCount\(state\)\).*Number\(card\.debuffDamageBonus\)/s), 'Simulator should apply 黑雪预兆 debuff-type damage');
 assert(hasPattern(html, /w_exec_line.*state\.enemy\.vuln \+= 2.*cardsPlayedThisTurn > 1.*drawCards\(Number\(card\.drawOnCombo\)/s), 'HTML should apply 银线破甲 pre-hit vulnerability and combo draw');
 assert(hasPattern(simulator, /w_exec_line.*state\.enemy\.vuln \+= 2.*state\.cardsPlayed > 0.*draw\(state, Number\(card\.drawOnCombo\)/s), 'Simulator should apply 银线破甲 pre-hit vulnerability and combo draw');
+assert(hasPattern(html, /w_last_verdict.*executionHand \* 10/s), 'HTML should apply 终誓裁决 +10 damage per execution hand card');
+assert(hasPattern(simulator, /w_last_verdict: 72 \+ state\.enemy\.vuln \* 10 \+ synergyCards \* 10/s), 'Simulator should score 终誓裁决 with +10 per execution hand card');
+assert(hasPattern(simulator, /w_last_verdict.*executionHand \* 10/s), 'Simulator should apply 终誓裁决 +10 damage per execution hand card');
 assert(hasPattern(html, /w_blood_drum.*state\.p_dmg_buff \+= Number\(card\.turnDamageBonus\)/s), 'HTML should apply 血鼓战誓 turn damage bonus');
 assert(hasPattern(simulator, /w_blood_drum.*state\.turnDamage \+= Number\(card\.turnDamageBonus\)/s), 'Simulator should apply 血鼓战誓 turn damage bonus');
 assert(html.includes('drawOnExhaustPile') && simulator.includes('drawOnExhaustPile'), 'HTML and simulator should implement 归巢双令 conditional draw');
