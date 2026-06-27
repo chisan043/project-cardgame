@@ -73,6 +73,22 @@ assert(bloodGuardStep.val === 9, '偿血追命 should deal 9 base damage');
 assert(bloodGuardStep.lifestealRatio === 0.55, '偿血追命 should lifesteal 55%');
 assert(/poolId: 'warrior_blood_guard_step'[\s\S]*?55%/.test(cardsSource), '偿血追命 source text should mention 55% lifesteal');
 
+const warriorDuelCut = card('warrior_duel_cut');
+assert(warriorDuelCut.val === 13, '破甲誓斗 should deal 13 pierce damage');
+assert(/poolId: 'warrior_duel_cut'[\s\S]*?造成 13 点\[穿甲\]伤害/.test(cardsSource), '破甲誓斗 source text should mention 13 pierce damage');
+
+const warriorHeartProbe = card('warrior_heart_probe');
+assert(warriorHeartProbe.val === 16, '穿心试探 should deal 16 pierce damage');
+assert(/poolId: 'warrior_heart_probe'[\s\S]*?造成 16 点\[穿甲\]伤害/.test(cardsSource), '穿心试探 source text should mention 16 pierce damage');
+
+const warriorSteelPressure = card('warrior_steel_pressure');
+assert(warriorSteelPressure.val === 14, '鸣钢镇压 should deal 14 pierce damage');
+assert(/poolId: 'warrior_steel_pressure'[\s\S]*?造成 14 点\[穿甲\]伤害/.test(cardsSource), '鸣钢镇压 source text should mention 14 pierce damage');
+
+const warriorSilentLunge = card('warrior_silent_lunge');
+assert(warriorSilentLunge.val === 13, '默步突刺 should deal 13 pierce damage');
+assert(/poolId: 'warrior_silent_lunge'[\s\S]*?造成 13 点\[穿甲\]伤害/.test(cardsSource), '默步突刺 source text should mention 13 pierce damage');
+
 const plagueStar = special('m_calamity_plague_star');
 assert(plagueStar.extraVulnerable === 1, '疫星坠落 should add 1 explicit vulnerability');
 assert(/易伤/.test(plagueStar.desc), '疫星坠落 text should mention vulnerability');
