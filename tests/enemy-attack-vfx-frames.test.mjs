@@ -150,6 +150,32 @@ assert not failures, failures
   assert.equal(result.status, 0, result.stderr);
 });
 
+test('enemy attack VFX layout anchors the generated impact frame on the player body', () => {
+  const layout = visualRules.getEnemyAttackVfxLayout({
+    enemyRect: { left: 780, top: 180, width: 300, height: 360 },
+    playerRect: { left: 90, top: 260, width: 220, height: 390 },
+    layout: {
+      width: 260,
+      height: 260,
+      startX: 0.34,
+      startY: 0.44,
+      targetX: 0.52,
+      targetY: 0.47
+    }
+  });
+
+  const left = Number.parseFloat(layout.left);
+  const top = Number.parseFloat(layout.top);
+  const impactX = left + layout.width * (146 / 384);
+  const impactY = top + layout.height * (248 / 384);
+  const playerImpactX = 90 + 220 * 0.52;
+  const playerImpactY = 260 + 390 * 0.47;
+
+  assert.ok(Math.abs(impactX - playerImpactX) <= 1, `impact x ${impactX} should match player ${playerImpactX}`);
+  assert.ok(Math.abs(impactY - playerImpactY) <= 1, `impact y ${impactY} should match player ${playerImpactY}`);
+  assert.ok(left < playerImpactX && top < playerImpactY, 'VFX should cover the player impact point instead of staying at enemy start');
+});
+
 test('enemy attack VFX starts with the body attack instead of after impact wait', () => {
   const source = readFileSync(new URL('../questers_demo_v0.99.html', import.meta.url), 'utf8');
   const attackLoop = source.match(/const enemyAttackTiming = triggerEnemyAttackAnimation\('enemy'\);[\s\S]*?let dmg = baseDmg;/);

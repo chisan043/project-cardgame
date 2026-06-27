@@ -711,6 +711,19 @@
         });
     }
 
+    const ENEMY_ATTACK_VFX_IMPACT_ANCHOR = {
+        x: 146 / 384,
+        y: 248 / 384
+    };
+
+    function getContainAnchorOffset(width, height, anchor = ENEMY_ATTACK_VFX_IMPACT_ANCHOR) {
+        const contentSize = Math.min(width, height);
+        return {
+            x: Math.max(0, (width - contentSize) * 0.5) + contentSize * anchor.x,
+            y: Math.max(0, (height - contentSize) * 0.5) + contentSize * anchor.y
+        };
+    }
+
     function getEnemyAttackVfxLayout({
         enemyRect = null,
         layout = {},
@@ -739,12 +752,13 @@
         const startY = enemyRect.top + enemyRect.height * (layout.startY ?? 0.44);
         const targetX = playerRect.left + playerRect.width * (layout.targetX ?? 0.67);
         const targetY = playerRect.top + playerRect.height * (layout.targetY ?? 0.46);
+        const impactOffset = getContainAnchorOffset(width, height);
         return {
             ...style,
             deltaX: `${targetX - startX}px`,
             deltaY: `${targetY - startY}px`,
-            left: `${startX - width * 0.5}px`,
-            top: `${startY - height * 0.5}px`
+            left: `${targetX - impactOffset.x}px`,
+            top: `${targetY - impactOffset.y}px`
         };
     }
 
